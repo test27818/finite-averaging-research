@@ -6,9 +6,9 @@ English: **perfect mixability**, **binary averaging**, **pairwise averaging**, *
 
 二平均将选中的两个数都替换为其平均值，要求有限步精确全等。请区分可达性判定、构造一条路径和认证最短路径。
 
-**$n=4$：任意输入，无条件可平均，固定四次操作足够。** $n=8,16,32,\ldots$同样由固定网络完成；其余$n\ge5$的非全等有理输入才用$G$是2的幂这一判据筛选。$n=1,2$恒可，$n=3$恰为等差数列。
+**$`n=4`$：任意输入，无条件可平均，固定四次操作足够。** $`n=8,16,32,\ldots`$同样由固定网络完成；其余$`n\ge5`$的非全等有理输入才用$`G`$是2的幂这一判据筛选。$`n=1,2`$恒可，$`n=3`$恰为等差数列。
 
-**Every four-entry input is mixable, unconditionally, using four fixed operations.** Larger powers-of-two sizes are also unconditional. At the remaining sizes $n\ge5$, the power-of-two gcd criterion selects eligible nonconstant rational inputs. Sizes one and two are always mixable; size three is mixable exactly for an arithmetic progression.
+**Every four-entry input is mixable, unconditionally, using four fixed operations.** Larger powers-of-two sizes are also unconditional. At the remaining sizes $`n\ge5`$, the power-of-two gcd criterion selects eligible nonconstant rational inputs. Sizes one and two are always mixable; size three is mixable exactly for an arithmetic progression.
 
 - [完整分类与四元固定网络证明 / Complete classification and four-entry proof](../../docs/BINARY_CLASSIFICATION.md)。
 

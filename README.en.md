@@ -2,7 +2,7 @@
 
 **[中文](README.md) · English · [Proof guide](docs/PROOF_GUIDE.md) · [Verification](docs/VERIFICATION.md) · [Terminology](docs/TERMINOLOGY.md)**
 
-**When can rational numbers on fixed positions be made exactly equal by finitely many averaging operations?** Each operation selects exactly $k$ distinct positions and replaces all their values by their arithmetic mean. No additional copies or discarded outputs are allowed. This repository studies **perfect mixability**, **mixing graphs**, binary, ternary, prime-arity and general k-ary averaging.
+**When can rational numbers on fixed positions be made exactly equal by finitely many averaging operations?** Each operation selects exactly $`k`$ distinct positions and replaces all their values by their arithmetic mean. No additional copies or discarded outputs are allowed. This repository studies **perfect mixability**, **mixing graphs**, binary, ternary, prime-arity and general k-ary averaging.
 
 > **Highlights: an independent direct proof for ternary averaging; the optimal final threshold for every prime arity; a precise composite-arity threshold conjecture with a proved universal lower bound and several completed families. Work continues toward more natural, readable and structurally unified proofs, and the remaining composite-arity cases.**
 
@@ -10,30 +10,32 @@ The project's new results were developed primarily through sustained collaborati
 
 ## Main achievements
 
-For a nonconstant rational input, center it, clear denominators, and divide out the coordinate gcd to obtain a primitive integer zero-sum vector $X$. Set
+For a nonconstant rational input, center it, clear denominators, and divide out the coordinate gcd to obtain a primitive integer zero-sum vector $`X`$. Set
 
-$$G(X)=\gcd_{i<j}|X_i-X_j|.$$
+```math
+G(X)=\gcd_{i\lt j}|X_i-X_j|.
+```
 
-Here $\operatorname{rad}(m)$ is the product of the distinct primes dividing $m$. General $k$-averaging requires $\operatorname{rad}(G)\mid k$; the table specifies ranges where sufficiency has been established. Constant input always takes zero steps.
+Here $`\mathrm{rad}(m)`$ is the product of the distinct primes dividing $`m`$. General $`k`$-averaging requires $`\mathrm{rad}(G)\mid k`$; the table specifies ranges where sufficiency has been established. Constant input always takes zero steps.
 
 | Achievement | Precise scope and significance | Proof source |
 |---|---|---|
-| **Complete binary classification: literature foundation** | **Every four-entry input is unconditionally mixable with four fixed operations.** Other powers-of-two sizes are also unconditional. For remaining $n\ge5$, the criterion is that $G$ is a power of 2; at $n=3$, the input must be an arithmetic progression | [Classification and four-operation proof](docs/BINARY_CLASSIFICATION.md) |
-| **Independent direct ternary proof** | For every $n\ge7$, mixability iff $G$ is a power of 3. A two-triple invariant handles all $n\ge11$, with separate bases at 7, 8, 9 and 10; no general prime/composite dimension reduction is needed | [Direct proof](archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/proofs/triple_average_all_dimensions_double_triple_invariant.md) |
-| **Optimal final threshold for every odd prime** | $\boxed{N(p)=2p+1}$ for every odd prime $p$. At all $n\ge2p+1$, the criterion is $G=p^e$, with $e$ a nonnegative integer. Eligible but unreachable inputs at $n=2p$ establish sharpness | [Full proof and dimension coverage](archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proof.md) |
-| **Common endpoint and linear tail for arbitrary arity** | Every $k\ge2$ has the complete $G=1$ criterion at $n=2k+1$; every $k\ge3$ satisfies $N(k)\le4k+\lceil\log_2k\rceil+1\le5k$ | [Endpoints and status](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/general_k_three_tasks_progress_20260915.md) · [Linear tail](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/arbitrary_arity_linear_threshold.md) |
-| **Families of dimensions and block-mean transfer** | Complete arithmetic criteria for all $n=jk$, $j\ge3$, at any arity $k\ge2$; also every odd $2k<n<3k$ for odd prime-power arity $k=p^a$ | [Block-mean transfer](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/averaging_proof_strategy_and_composite_frontier_20260915.md) · [Odd middle band](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/odd_composite_coprime_middle_band_completion.md) |
-| **Unconditional fixed-network families** | Four operations for $k=m(m-1)$ on $n=m^2$ positions, integer $m\ge2$; $2b+2$ operations for $k=2(4^b-1)/3$ on $n=4^b$, integer $b\ge1$, including a fixed six-operation network for ten-averaging on sixteen positions | [Four-operation family](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/composite_critical_scale_and_conjecture.md) · [Ten-averaging and recurrence](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/ten_average_sixteen_and_dyadic_network_family.md) |
-| **GRH square family and selected optimal critical points** | Every $k=t^2$, integer $t\ge2$, has a complete criterion at $n=t^2+t+1$. All prime powers with even exponent and all powers of 2 and 3 attain their respective earliest critical lower bounds under GRH. **These are not final-threshold results for every later dimension** | [Square family](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/general_k_grh_stage_and_remaining_tasks_20260915.md) · [Odd powers of 2 and 3](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/two_three_odd_power_critical_grh_completion.md) |
+| **Complete binary classification: literature foundation** | **Every four-entry input is unconditionally mixable with four fixed operations.** Other powers-of-two sizes are also unconditional. For remaining $`n\ge5`$, the criterion is that $`G`$ is a power of 2; at $`n=3`$, the input must be an arithmetic progression | [Classification and four-operation proof](docs/BINARY_CLASSIFICATION.md) |
+| **Independent direct ternary proof** | For every $`n\ge7`$, mixability iff $`G`$ is a power of 3. A two-triple invariant handles all $`n\ge11`$, with separate bases at 7, 8, 9 and 10; no general prime/composite dimension reduction is needed | [Direct proof](archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/proofs/triple_average_all_dimensions_double_triple_invariant.md) |
+| **Optimal final threshold for every odd prime** | $`\boxed{N(p)=2p+1}`$ for every odd prime $`p`$. At all $`n\ge2p+1`$, the criterion is $`G=p^e`$, with $`e`$ a nonnegative integer. Eligible but unreachable inputs at $`n=2p`$ establish sharpness | [Full proof and dimension coverage](archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proof.md) |
+| **Common endpoint and linear tail for arbitrary arity** | Every $`k\ge2`$ has the complete $`G=1`$ criterion at $`n=2k+1`$; every $`k\ge3`$ satisfies $`N(k)\le4k+\lceil\log_2k\rceil+1\le5k`$ | [Endpoints and status](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/general_k_three_tasks_progress_20260915.md) · [Linear tail](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/arbitrary_arity_linear_threshold.md) |
+| **Families of dimensions and block-mean transfer** | Complete arithmetic criteria for all $`n=jk`$, $`j\ge3`$, at any arity $`k\ge2`$; also every odd $`2k\lt n\lt 3k`$ for odd prime-power arity $`k=p^a`$ | [Block-mean transfer](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/averaging_proof_strategy_and_composite_frontier_20260915.md) · [Odd middle band](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/odd_composite_coprime_middle_band_completion.md) |
+| **Unconditional fixed-network families** | Four operations for $`k=m(m-1)`$ on $`n=m^2`$ positions, integer $`m\ge2`$; $`2b+2`$ operations for $`k=2(4^b-1)/3`$ on $`n=4^b`$, integer $`b\ge1`$, including a fixed six-operation network for ten-averaging on sixteen positions | [Four-operation family](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/composite_critical_scale_and_conjecture.md) · [Ten-averaging and recurrence](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/ten_average_sixteen_and_dyadic_network_family.md) |
+| **GRH square family and selected optimal critical points** | Every $`k=t^2`$, integer $`t\ge2`$, has a complete criterion at $`n=t^2+t+1`$. All prime powers with even exponent and all powers of 2 and 3 attain their respective earliest critical lower bounds under GRH. **These are not final-threshold results for every later dimension** | [Square family](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/general_k_grh_stage_and_remaining_tasks_20260915.md) · [Odd powers of 2 and 3](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/two_three_odd_power_critical_grh_completion.md) |
 | **Uniform dyadic column lifting** | Squares, commutators and lifting of three existing physical returns replace two interior orbit tables with 64 and 256 parameter classes, retaining both direction and scale | [Independent 2026-09-16 improvement](archive/2026-09-07/3-3-triple-average-research-note/research/prime_arity_padic/structural_reassessment_and_uniform_dyadic_orbits.md) |
 
 **Algorithms:** binary tools include Python, a JavaScript webpage, Prolog and 1,636 benchmark instances with 538 verified paths. Ternary/prime-arity work includes difficult instances, exact position-based path checkers, a PDF/LaTeX paper and construction scripts. Decision, construction and certified shortest paths are separate tasks; exhausted search budgets do not prove unreachability.
 
 ## The methods that make the proofs work
 
-**1. Repeated values protect arithmetic witnesses; discrete energy proves termination.** The binary source preserves two distinct repeated values, while the direct ternary proof preserves two distinct triply repeated values. Surviving copies keep nonconstant residue witnesses at dangerous primes. Reserving one extra precision digit permits safe nontrivial operations on an integer lattice, with strictly decreasing $\sum_iX_i^2$, until an explicit terminal configuration is reached. This is how the direct ternary proof avoids the old seed-search approach. Four-entry binary averaging and other powers-of-two sizes use a fixed network directly.
+**1. Repeated values protect arithmetic witnesses; discrete energy proves termination.** The binary source preserves two distinct repeated values, while the direct ternary proof preserves two distinct triply repeated values. Surviving copies keep nonconstant residue witnesses at dangerous primes. Reserving one extra precision digit permits safe nontrivial operations on an integer lattice, with strictly decreasing $`\sum_iX_i^2`$, until an explicit terminal configuration is reached. This is how the direct ternary proof avoids the old seed-search approach. Four-entry binary averaging and other powers-of-two sizes use a fixed network directly.
 
-**2. Critical dimensions use controlled cores and genuinely positive inverses.** Safe grouping reduces an input to a few equal-value blocks on its original positions. Explicit nonnegative counts produce returns $J$ with $J^2=cI$, $c\ne0$, on the entire core, providing executable projective inverses. Quotients and commutators of neighboring count constructions yield shear roots. Their parameter ideals and actual multipliers determine the localization ring. An abstract inverse matrix is never substituted for an executable averaging operation.
+**2. Critical dimensions use controlled cores and genuinely positive inverses.** Safe grouping reduces an input to a few equal-value blocks on its original positions. Explicit nonnegative counts produce returns $`J`$ with $`J^2=cI`$, $`c\ne0`$, on the entire core, providing executable projective inverses. Quotients and commutators of neighboring count constructions yield shear roots. Their parameter ideals and actual multipliers determine the localization ring. An abstract inverse matrix is never substituted for an executable averaging operation.
 
 **3. The integral mean lattice explains congruences; exact fibers reach rational terminals.** Gluing the constant direction to the integer zero-sum lattice supplies natural congruence markings. Actual roots, together with the cited Morris/Serre tools, give deep congruence control. Finite adjustments must preserve **both direction and allowed unit scale**; exact congruence fibers then reach a genuine zero-sum terminal. The new dyadic column lemma replaces some orbit tables by one linear error-correction rule.
 
@@ -43,68 +45,68 @@ Here $\operatorname{rad}(m)$ is the product of the distinct primes dividing $m$.
 
 ## The precise general-k threshold conjecture
 
-Let $\mathcal P(k,n)$ mean that every rational input in that dimension obeys the complete characterization: mixability iff $\operatorname{rad}(G)\mid k$, treating constant input separately. Three quantities matter:
+Let $`\mathcal P(k,n)`$ mean that every rational input in that dimension obeys the complete characterization: mixability iff $`\mathrm{rad}(G)\mid k`$, treating constant input separately. Three quantities matter:
 
 | Quantity | Definition | Example |
 |---|---|---|
-| $M(k)$ | The first dimension $n>k$ satisfying $\mathcal P(k,n)$; the trivial point $n=k$ is excluded | $M(6)=9$, via an unconditional network |
-| $H(k)$ | The first such dimension with $\operatorname{rad}(n)\nmid k$, where the gcd condition actually excludes some inputs | $H(6)=10$; binary $M(2)=4$ but $H(2)=5$ |
-| $N(k)$ | The smallest starting dimension above $k$ such that **every subsequent dimension** satisfies $\mathcal P(k,n)$ | $N(3)=7$; general composite final thresholds remain open |
+| $`M(k)`$ | The first dimension $`n\gt k`$ satisfying $`\mathcal P(k,n)`$; the trivial point $`n=k`$ is excluded | $`M(6)=9`$, via an unconditional network |
+| $`H(k)`$ | The first such dimension with $`\mathrm{rad}(n)\nmid k`$, where the gcd condition actually excludes some inputs | $`H(6)=10`$; binary $`M(2)=4`$ but $`H(2)=5`$ |
+| $`N(k)`$ | The smallest starting dimension above $`k`$ such that **every subsequent dimension** satisfies $`\mathcal P(k,n)`$ | $`N(3)=7`$; general composite final thresholds remain open |
 
-Write $k=\prod_p p^{a_p}$ and define the local critical scale
+Write $`k=\prod_p p^{a_p}`$ and define the local critical scale
 
-$$
+```math
 S(k)=\max_{p\mid k}p^{\lceil a_p/2\rceil},
-$$
+```
 
 and
 
-$$
+```math
 B(k)=k+S(k)+
 \begin{cases}
-0,&\operatorname{rad}(k+S(k))\mid k,\\
-1,&\operatorname{rad}(k+S(k))\nmid k.
+0,&\mathrm{rad}(k+S(k))\mid k,\\
+1,&\mathrm{rad}(k+S(k))\nmid k.
 \end{cases}
-$$
+```
 
-**Proved lower bounds: $M(k)\ge B(k)$ and $N(k)\ge B(k)$. The main conjecture has two parts:**
+**Proved lower bounds: $`M(k)\ge B(k)`$ and $`N(k)\ge B(k)`$. The main conjecture has two parts:**
 
-$$
+```math
 \boxed{M(k)=B(k)}
 \qquad\text{and}\qquad
 \boxed{N(k)=M(k)}.
-$$
+```
 
-Together they predict $\boxed{N(k)=B(k)}$. The first asks whether the lower bound is attainable; the second asks whether any gaps remain after the first success. **Neither follows from finitely many successful examples.** The corresponding conjecture for the first nonautomatic arithmetic dimension is
+Together they predict $`\boxed{N(k)=B(k)}`$. The first asks whether the lower bound is attainable; the second asks whether any gaps remain after the first success. **Neither follows from finitely many successful examples.** The corresponding conjecture for the first nonautomatic arithmetic dimension is
 
-$$
+```math
 H(k)=C(k),\qquad
-C(k)=\min\{n>k+S(k):\operatorname{rad}(n)\nmid k\}.
-$$
+C(k)=\min\{n\gt k+S(k):\mathrm{rad}(n)\nmid k\}.
+```
 
-**Why this formula is structural:** for each $p^a\parallel k$, fewer than $p^{\lceil a/2\rceil}$ remaining positions cannot break a minimal-valuation $k$-fold block: every nontrivial averaging recreates the trap. Taking the worst local scale gives $S(k)$. At the boundary, escaping the valuation trap can introduce a forbidden common residue, explaining the possible extra 1 in $B(k)$. This accounts for the odd-prime threshold $2p+1$, four-averaging at seven positions and eight-averaging at thirteen positions in the same framework.
+**Why this formula is structural:** for each $`p^a\parallel k`$, fewer than $`p^{\lceil a/2\rceil}`$ remaining positions cannot break a minimal-valuation $`k`$-fold block: every nontrivial averaging recreates the trap. Taking the worst local scale gives $`S(k)`$. At the boundary, escaping the valuation trap can introduce a forbidden common residue, explaining the possible extra 1 in $`B(k)`$. This accounts for the odd-prime threshold $`2p+1`$, four-averaging at seven positions and eight-averaging at thirteen positions in the same framework.
 
-| Arity $k$ | Predicted critical point $B(k)$ | Proved earliest-point result | Final threshold $N(k)$ |
+| Arity $`k`$ | Predicted critical point $`B(k)`$ | Proved earliest-point result | Final threshold $`N(k)`$ |
 |---|---:|---|---|
-| 2 | 4 | $M=4,\ H=5$; four entries unconditional | **Proved: 4** |
-| Odd prime $p$ | $2p+1$ | $M=H=2p+1$ | **Proved for every odd prime: $2p+1$** |
-| 4, 8, 9 | 7, 13, 13 | Respectively $M=H=7,13,13$, unconditionally proved | Not determined |
-| 6 | 9 | $M=9,\ H=10$ | Not determined |
-| 10, 12 | 16, 16 | Both have $M=16,\ H=17$, unconditionally proved | Not determined |
-| $p^{2a}$, $a\ge1$ | $p^{2a}+p^a+1$ | $M=H=B$ under GRH; some small cases also unconditionally proved | Not determined in general |
-| $p^{2a+1}$, $a\ge1$, $p=2,3$ | $p^{2a+1}+p^{a+1}+1$ | $M=H=B$ under GRH | Not determined in general |
+| 2 | 4 | $`M=4,\ H=5`$; four entries unconditional | **Proved: 4** |
+| Odd prime $`p`$ | $`2p+1`$ | $`M=H=2p+1`$ | **Proved for every odd prime: $`2p+1`$** |
+| 4, 8, 9 | 7, 13, 13 | Respectively $`M=H=7,13,13`$, unconditionally proved | Not determined |
+| 6 | 9 | $`M=9,\ H=10`$ | Not determined |
+| 10, 12 | 16, 16 | Both have $`M=16,\ H=17`$, unconditionally proved | Not determined |
+| $`p^{2a}`$, $`a\ge1`$ | $`p^{2a}+p^a+1`$ | $`M=H=B`$ under GRH; some small cases also unconditionally proved | Not determined in general |
+| $`p^{2a+1}`$, $`a\ge1`$, $`p=2,3`$ | $`p^{2a+1}+p^{a+1}+1`$ | $`M=H=B`$ under GRH | Not determined in general |
 | 14, 15, 18 | 22, 21, 22 | Lower bounds proved; sufficiency at the critical point remains open | Not determined |
 
-For squares with mixed prime factors, the square-family theorem need not attain $B(k)$: for $k=36$, it gives $n=43$ under GRH, while $B(36)=40$. Also, $\operatorname{rad}(n)\mid k$ makes the gcd condition automatic but **does not by itself provide a mixing network**: an eligible unreachable input is known for $k=24,n=27$.
+For squares with mixed prime factors, the square-family theorem need not attain $`B(k)`$: for $`k=36`$, it gives $`n=43`$ under GRH, while $`B(36)=40`$. Also, $`\mathrm{rad}(n)\mid k`$ makes the gcd condition automatic but **does not by itself provide a mixing network**: an eligible unreachable input is known for $`k=24,n=27`$.
 
 [Original critical lower bounds and conjectures](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/composite_critical_scale_and_conjecture.md) · [Latest established scope and remaining tasks](archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/general_k_three_tasks_progress_20260915.md)
 
 ## Current research priorities and limits
 
 - **Unifying the proof:** extract common count constructions, root ideals and column-lifting mechanisms from the completed prime proof. The 162 nine-offset physical/root-ideal certificates and other finite evidence remain; the entire proof is not yet certificate-free.
-- **Composite critical points:** handle high odd powers of primes $p\ge5$ and mixed arities such as 14, 15 and 18. Local carry mechanisms at different allowed primes must coexist along one actual path.
-- **Propagation through dimensions:** extend from $M(k)$ or the $2k+1$ endpoint to every later dimension. Odd bands, divisibility transfers and the wide tail do not yet give general $N(k)=B(k)$.
-- **Constructive efficiency:** extract shorter executable averaging sequences from existence proofs. No uniform polynomial operation-length or shortest-path algorithm is established for all varying $k,n$.
+- **Composite critical points:** handle high odd powers of primes $`p\ge5`$ and mixed arities such as 14, 15 and 18. Local carry mechanisms at different allowed primes must coexist along one actual path.
+- **Propagation through dimensions:** extend from $`M(k)`$ or the $`2k+1`$ endpoint to every later dimension. Odd bands, divisibility transfers and the wide tail do not yet give general $`N(k)=B(k)`$.
+- **Constructive efficiency:** extract shorter executable averaging sequences from existence proofs. No uniform polynomial operation-length or shortest-path algorithm is established for all varying $`k,n`$.
 
 The prime result is unconditional but uses the cited Morris/Serre theorems. Composite GRH assumptions are explicitly labeled. Repeated internal review is not external peer review or proof-assistant certification. Each program's PASS has its stated scope, and failed approaches, historical claims and software issues remain visible.
 

@@ -67,7 +67,7 @@ cd archive/2026-09-07/3-3-triple-average-research-note
 python -B work/run_verifications.py --id transverse-root-shallow-lifting
 ~~~
 
-该项包含精确切向恒等式、162组小参数证书和统一公式实例检查；$p\ge83$的无限范围仍由容量公式正文承担，Morris／Serre由明确引用承担。
+该项包含精确切向恒等式、162组小参数证书和统一公式实例检查；$`p\ge83`$的无限范围仍由容量公式正文承担，Morris／Serre由明确引用承担。
 
 This check covers exact tangent identities, the 162-case certificate and formula instances. The unbounded range follows from the written capacity proof; the external group-theoretic input remains a cited theorem.
 
