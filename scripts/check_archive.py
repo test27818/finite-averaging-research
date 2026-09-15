@@ -17,7 +17,8 @@ def check():
             bad.append(item["path"])
     if bad:
         raise AssertionError({"missing_or_changed": bad})
-    documents = list(ROOT.glob("*.md")) + list((ROOT/"topics").rglob("*.md")) + [ROOT/"catalog/FILES.md"]
+    documents = (list(ROOT.glob("*.md")) + list((ROOT/"topics").rglob("*.md"))
+                 + list((ROOT/"docs").rglob("*.md")) + list((ROOT/"catalog").glob("*.md")))
     checked_links = 0
     for path in documents:
         text = path.read_text(encoding="utf-8")
@@ -37,4 +38,3 @@ def check():
 
 if __name__ == "__main__":
     print(json.dumps(check(), ensure_ascii=False, indent=2))
-

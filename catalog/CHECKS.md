@@ -1,0 +1,6956 @@
+# 命题—脚本—证据索引 / Claim-to-check index
+
+[中文首页](../README.md) · [English](../README.en.md) · [核验指南 / Verification](../docs/VERIFICATION.md)
+
+由冻结的verification_manifest.json自动生成，包含185项注册检查。不是按名称猜测数学范围，也不是重新审定所有命题。
+
+Generated from the frozen registry. Each entry preserves its claim status, evidence scope, exclusions, dependencies and executable commands.
+
+注意：部分条目的status保留该局部结果建立时的历史措辞（如boundaries-open），不代表这些边界在整个项目中仍未解决。全局当前状态见[证明指南](../docs/PROOF_GUIDE.md)。
+
+Some status strings preserve the historical scope of that local result, such as boundaries-open. They are not the current global frontier; consult the proof guide for completed coverage.
+
+证据类别 / Evidence levels:
+
+- **theorem-certificate**: An exact finite certificate that closes a stated finite subproblem in a proof; the surrounding general reductions remain in the cited document.
+- **symbolic-check**: Exact rational or integer verification of identities, macros, and finite parameter instances.
+- **finite-sanity**: Bounded exhaustive or deterministic randomized checks that guard formulas and implementations but are not a proof of unbounded quantifiers.
+- **exploratory-search**: A bounded search or diagnostic. Failure to find a witness is not a nonexistence proof.
+
+## 按ID定位 / Find a check
+
+| ID | 状态 / Status | 证据 / Evidence |
+|---|---|---|
+| [transverse-root-shallow-lifting](#transverse-root-shallow-lifting) | proved-shallow-global-lift-with-stated-Morris-Serre-dependencies | theorem-certificate |
+| [padic-quadratic-group](#padic-quadratic-group) | proved-local-structure-and-defect-classification-no-threshold-change | symbolic-check |
+| [carrier-interval-reduction](#carrier-interval-reduction) | proved-proof-simplification-with180-remaining-finite-reflection-cases-and-original-two-repairs | theorem-certificate |
+| [prime-final-independent-audit](#prime-final-independent-audit) | supports-final-prime-theorem-with-explicit-supplementary-multiplier-localization | theorem-certificate |
+| [large-prime-high-odd-power-reflections](#large-prime-high-odd-power-reflections) | proved-positive-reflection-resources-only-roots-and-cubic-boundary-open | symbolic-check |
+| [two-three-odd-power-critical](#two-three-odd-power-critical) | proved-two-three-square-multiple-dimensions-and-odd-power-critical-points-under-GRH | theorem-certificate |
+| [even-arity-all-endpoints](#even-arity-all-endpoints) | proved-all-even-arity-endpoints-with-stated-Morris-Serre-dependencies | symbolic-check |
+| [ten-sixteen-dyadic-network-family](#ten-sixteen-dyadic-network-family) | proved-fixed-network-family-and-ten-average-sixteen-first-success | theorem-certificate |
+| [odd-composite-coprime-middle-band](#odd-composite-coprime-middle-band) | proved-odd-composite-coprime-band-and-all-odd-prime-power-odd-middle-dimensions | symbolic-check |
+| [ht-literature-interfaces](#ht-literature-interfaces) | proved-eventual-and-prime-modulus-Ht-plus-finite-range-all-t-only-under-GRH | theorem-certificate |
+| [square-core-entry-review](#square-core-entry-review) | proved-all-square-core-entry-and-terminal-scale-restriction-uniform-H_t-fullness-open | symbolic-check |
+| [square-arity-controller-nine-thirteen](#square-arity-controller-nine-thirteen) | proved-uniform-square-core-resources-and-nine-average-thirteen-with-stated-Morris-Serre-dependencies | symbolic-check |
+| [prime-factor-block-mean-transfer](#prime-factor-block-mean-transfer) | proved-prime-factor-transfer-and-all-higher-multiples-using-completed-prime-theorem | symbolic-check |
+| [nine-offsets-large-symmetric-carrier](#nine-offsets-large-symmetric-carrier) | proved-all-nine-offsets-and-optimal-prime-threshold-with-stated-Morris-Serre-dependencies-and-complete-finite-parameter-certificate | theorem-certificate |
+| [triadic-packed-carrier-completion](#triadic-packed-carrier-completion) | proved-offset3-residue1-and-offset6-residue2-with-stated-Morris-Serre-dependencies-opposite-branches-open | symbolic-check |
+| [nine-offset-residue-one](#nine-offset-residue-one) | proved-offset9-residue1-and-classwise-three-p-plus8-bound-other-prime-class-open | symbolic-check |
+| [even-low-offsets-common-controller](#even-low-offsets-common-controller) | proved-all-prime-offsets2-4-8-and-general-even-nontriadic-regime-with-stated-Morris-Serre-dependencies | symbolic-check |
+| [three-p-plus-one-residue-four](#three-p-plus-one-residue-four) | proved-three-p-plus-one-residue-four-with-stated-Morris-Serre-dependencies-other-low-offsets-open | symbolic-check |
+| [low-offset-reflection-interface](#low-offset-reflection-interface) | proved-parameterized-physical-reflection-interface-not-full-terminal-coverage | symbolic-check |
+| [two-p-plus-two-uniform](#two-p-plus-two-uniform) | proved-all-two-p-plus-two-with-stated-Morris-Serre-dependencies | symbolic-check |
+| [three-p-minus-one-completion](#three-p-minus-one-completion) | proved-all-three-p-minus-one-and-five-average-optimal-threshold-with-stated-Morris-Serre-dependencies | symbolic-check |
+| [upper-band-small-prime-interface](#upper-band-small-prime-interface) | proved-all-prime-three-p-plus10-threshold-with-stated-Morris-Serre-dependencies | symbolic-check |
+| [four-p-tail-completion](#four-p-tail-completion) | proved-all-four-p-tail-and-three-p-plus10-threshold-with-stated-Morris-Serre-dependencies | symbolic-check |
+| [upper-band-overlap-completion](#upper-band-overlap-completion) | proved-near-four-p-and-both-upper-boundaries-for-p-at-least37-with-stated-external-dependencies | symbolic-check |
+| [upper-band-unrestricted-completion](#upper-band-unrestricted-completion) | proved-unrestricted-upper-interior-with-stated-Morris-Serre-dependencies-fringes-and-tail-open | symbolic-check |
+| [even-interior-completion](#even-interior-completion) | proved-all-internal-even-remainders-with-unrestricted-entry-and-stated-Morris-Serre-dependencies-boundaries-open | symbolic-check |
+| [unrestricted-endpoint-entry](#unrestricted-endpoint-entry) | proved-unrestricted-endpoint-all-input-and-all-odd-lower-band-with-existing-core-dependencies-even-core-termination-open | symbolic-check |
+| [core-gap-four-lifts](#core-gap-four-lifts) | proved-exact-one-stage-boundary-and-uniform-small-denominator-core-completion-finite-exception-reduction-with-external-topological-dependency | symbolic-check |
+| [two-prime-neighbour-complete](#two-prime-neighbour-complete) | proved-full-neighbour-family-by-direct-integer-descent-including-five-average12 | symbolic-check |
+| [even-core-dyadic-depth](#even-core-dyadic-depth) | proved-uniform-all-even-core-dyadic-depth-descent-terminal-coverage-still-open | symbolic-check |
+| [seven-average-sharp-completion](#seven-average-sharp-completion) | proved-dimensions20-and22-and-sharp-seven-average-threshold15-with-stated-external-dependencies | theorem-certificate |
+| [uniform-two-block-entry](#uniform-two-block-entry) | proved-uniform-two-block-entry-and-exact-weighted-orbit-framework-general-even-core-completion-open | symbolic-check |
+| [upper-band-coprime-six-complete](#upper-band-coprime-six-complete) | proved-uniform-full-input-upper-band-coprime-six-family-via-stated-external-theorems | symbolic-check |
+| [upper-band-four-return-congruence](#upper-band-four-return-congruence) | proved-uniform-upper-band-deep-congruence-interface-terminal-coverage-open | symbolic-check |
+| [even-middle-eighteen-congruence](#even-middle-eighteen-congruence) | proved-general-deep-congruence-interface-and-seven-average-eighteen-via-external-theorems-and-complete-finite-certificate | theorem-certificate |
+| [uniform-odd-middle-cores](#uniform-odd-middle-cores) | proved-uniform-odd-remainder-cores-and-qualified-full-input-dimensions-no-threshold-drop | symbolic-check |
+| [five-thirteen-congruence](#five-thirteen-congruence) | proved-fixed-dimension-via-stated-external-group-theorems-no-efficient-full-word-extractor | symbolic-check |
+| [endpoint-congruence-completion](#endpoint-congruence-completion) | proved-using-stated-external-arithmetic-group-theorems-general-entry-and-threshold-open | symbolic-check |
+| [complete-local-unit-recovery](#complete-local-unit-recovery) | proved-uniform-local-unit-recovery-all-parameters-recursive-output-closure-open | symbolic-check |
+| [sharp-multiplicity-precision](#sharp-multiplicity-precision) | proved-sharp-safety-and-precision-boundaries-no-new-dimension-threshold | symbolic-check |
+| [euclidean-witness-transfer](#euclidean-witness-transfer) | proved-arbitrary-h-local-transfers-and-upper-output-height-drop-recursive-closure-open | symbolic-check |
+| [unit-witness-replenishment](#unit-witness-replenishment) | proved-local-two-and-three-atom-stages-and-uniform-one-step-obstruction-recursive-closure-open | symbolic-check |
+| [provenance-dynamic-integer-stages](#provenance-dynamic-integer-stages) | proved-second-step-local-protection-and-stage-obstructions-recursive-closure-open | symbolic-check |
+| [core-exit-potential-scope](#core-exit-potential-scope) | proved-core-integer-exit-and-local-protection-recursive-closure-open | symbolic-check |
+| [distinct-entry-gaussian-transfer](#distinct-entry-gaussian-transfer) | proved-distinct-entry-and-general-norm-cycles-conditional-closure-boundaries | symbolic-check |
+| [sharp-monochromatic-escape](#sharp-monochromatic-escape) | proved-sharp-residue-bound-and-uniform-extremal-zero-trigger | symbolic-check |
+| [single-value-zero-sum-conjecture](#single-value-zero-sum-conjecture) | disproved-old-conjecture-corrected-sharp-bound-and-extremal-paths | symbolic-check |
+| [shape-changing-integer-potential](#shape-changing-integer-potential) | valid-conditional-potential-argument-universal-macro-existence-open | symbolic-check |
+| [dominant-residue-reservoir](#dominant-residue-reservoir) | proved-local-dominant-reservoir-and-rigidity-global-closure-open | symbolic-check |
+| [binary-collision-lattice](#binary-collision-lattice) | proved-lattice-integrality-and-integer-continuation-branches-general-closure-open | symbolic-check |
+| [upper-band-descent-boundary](#upper-band-descent-boundary) | proved-specific-descent-obstruction-and-uniform-escape-family-general-termination-open | symbolic-check |
+| [upper-band-three-value-reduction](#upper-band-three-value-reduction) | proved-uniform-upper-band-entry-and-core-identities-terminal-coverage-open | symbolic-check |
+| [ten-twelve-seventeen-complete](#ten-twelve-seventeen-complete) | proved-ten-and-twelve-average-seventeen-full-G-criterion | theorem-certificate |
+| [six-prime-endpoint-entry](#six-prime-endpoint-entry) | proved-six-prime-general-entry | symbolic-check |
+| [arena-triple-solver-review](#arena-triple-solver-review) | finite-external-solver-audit-and-benchmark | finite-sanity |
+| [four-prime-entry-and-band](#four-prime-entry-and-band) | proved-four-prime-entry-eight-complete-endpoints-and-band-structure | symbolic-check |
+| [composite-endpoint-transfer](#composite-endpoint-transfer) | proved-finite-composite-endpoint-family-full-input | theorem-certificate |
+| [averaging-algorithm-benchmark](#averaging-algorithm-benchmark) | validated-offline-algorithm-benchmark | finite-sanity |
+| [seven-average-fifteen-complete](#seven-average-fifteen-complete) | proved-seven-average-fifteen-full-G-criterion | theorem-certificate |
+| [six-average-ten-complete](#six-average-ten-complete) | proved-six-average-ten-full-nonautomatic-G-criterion | theorem-certificate |
+| [endpoint-reverse-diagnostic](#endpoint-reverse-diagnostic) | finite-diagnostic-no-counterexample | finite-sanity |
+| [composite-critical-scale](#composite-critical-scale) | proved-critical-lower-edge-and-infinite-first-success-family | symbolic-check |
+| [eight-average-thirteen-complete](#eight-average-thirteen-complete) | proved-eight-average-first-success-thirteen | theorem-certificate |
+| [six-average-nine-fixed-network](#six-average-nine-fixed-network) | proved-six-average-nine-universal-network | theorem-certificate |
+| [four-average-seven-complete](#four-average-seven-complete) | proved-four-average-seven-position-criterion | theorem-certificate |
+| [strategy-reassessment-20260912](#strategy-reassessment-20260912) | research-survey-and-structural-audit | finite-sanity |
+| [arbitrary-arity-linear-threshold](#arbitrary-arity-linear-threshold) | proved-all-integer-arities-linear-threshold | symbolic-check |
+| [four-average-nine-complete](#four-average-nine-complete) | proved-four-average-nine-position-criterion | theorem-certificate |
+| [carrier-energy-dyadic-neighbour](#carrier-energy-dyadic-neighbour) | proved-dyadic-neighbour-complete-family-and-general-pair-reduction | symbolic-check |
+| [composite-four-six-transfer](#composite-four-six-transfer) | proved-composite-infinite-families-and-counterexamples | symbolic-check |
+| [prime-power-endpoint-completion](#prime-power-endpoint-completion) | proved-prime-power-endpoint | theorem-certificate |
+| [prime-power-endpoint-entry](#prime-power-endpoint-entry) | proved-entry-lemma-not-endpoint-consensus | symbolic-check |
+| [uniform-collision-structure](#uniform-collision-structure) | proved-uniform-state-branches-not-full-threshold | symbolic-check |
+| [seven-average-three-p-plus-two](#seven-average-three-p-plus-two) | proved-seven-averaging-three-p-plus-two-threshold | theorem-certificate |
+| [minimal-protection-and-exchange](#minimal-protection-and-exchange) | proved-initialization-protected-exchange-and-five-step-family | symbolic-check |
+| [five-average-three-p-threshold](#five-average-three-p-threshold) | proved-five-averaging-three-p-uniform-threshold | theorem-certificate |
+| [three-p-two-anchor-interface](#three-p-two-anchor-interface) | proved-three-p-candidate-and-zero-free-branch-only | symbolic-check |
+| [inverse-egz-threshold](#inverse-egz-threshold) | proved-inverse-egz-improved-uniform-threshold | symbolic-check |
+| [inverse-zero-sum-transfer](#inverse-zero-sum-transfer) | proved-local-inverse-transfer-and-uniform-seven-step-family | symbolic-check |
+| [prime-arity-zero-trigger-bridge](#prime-arity-zero-trigger-bridge) | proved-all-dimension-zero-trigger-and-lattice-interfaces | symbolic-check |
+| [prime-arity-middle-band](#prime-arity-middle-band) | proved-three-p-dimension-and-same-residue-heavy-closure | symbolic-check |
+| [uniform-endpoint-controller](#uniform-endpoint-controller) | proved-uniform-positive-seeds-and-prime-dimension-endpoints | symbolic-check |
+| [seven-endpoint-structure](#seven-endpoint-structure) | proved-alternative-seven-point-endpoint-structure | theorem-certificate |
+| [prime-arity-four-p-threshold](#prime-arity-four-p-threshold) | proved-four-p-upper-bound-and-three-p-invariant-boundary | finite-sanity |
+| [five-average-eleven-complete](#five-average-eleven-complete) | proved-full-five-average-n11-criterion | theorem-certificate |
+| [five-average-n11-random-experiment](#five-average-n11-random-experiment) | verified-finite-positive-witnesses-only | finite-sanity |
+| [prime-arity-boundary-progress](#prime-arity-boundary-progress) | proved-improved-bound-critical-tails-and-specified-interface-obstructions | finite-sanity |
+| [prime-arity-linear-threshold](#prime-arity-linear-threshold) | proved-linear-upper-bound-and-critical-dimension-obstructions | finite-sanity |
+| [prime-arity-large-dimension](#prime-arity-large-dimension) | proved-by-uniform-invariant-and-arithmetic-progression-termination | finite-sanity |
+| [pair-triple-solver-optimality](#pair-triple-solver-optimality) | proved-individual-optima-and-strong-NP-hardness-reduction | symbolic-check |
+| [double-triple-sequence-length](#double-triple-sequence-length) | proved-potential-fixed-n-upper-and-logarithmic-lower-bounds | symbolic-check |
+| [all-dimensions-double-triple-invariant](#all-dimensions-double-triple-invariant) | proved-by-general-case-analysis | finite-sanity |
+| [prime-double-triple-invariant](#prime-double-triple-invariant) | proved-by-general-case-analysis | finite-sanity |
+| [final-hecke-manin-audit](#final-hecke-manin-audit) | proved-obstructions-to-specified-direct-interfaces | symbolic-check |
+| [carrier-sweep-catalyst](#carrier-sweep-catalyst) | proved-uniform-sweep-and-finite-index-local-arithmetic-controller | symbolic-check |
+| [carrier-catalyst-local-descent](#carrier-catalyst-local-descent) | proved-complete-ten-position-local-collision | theorem-certificate |
+| [carrier-collision-global-interface](#carrier-collision-global-interface) | proved-global-entry-and-overlap-height-obstruction | symbolic-check |
+| [equal-carrier-formal-freezing](#equal-carrier-formal-freezing) | proved-formal-zero-leaf-normal-form | symbolic-check |
+| [iwahori-hecke-modular-interface](#iwahori-hecke-modular-interface) | proved-finite-algebra-only-global-interface-unproved | symbolic-check |
+| [nonsplit-hecke-chart-boundary](#nonsplit-hecke-chart-boundary) | bounded-one-to-three-layer-chart-obstruction | exploratory-search |
+| [atomic-hecke-wall-boundary](#atomic-hecke-wall-boundary) | bounded-depth-five-atomic-wall-obstruction | exploratory-search |
+| [b71-symbolic-directed-terminal-cover](#b71-symbolic-directed-terminal-cover) | bounded-symbolic-directed-terminal-cover | exploratory-search |
+| [n59-complete](#n59-complete) | proved-complete-dimension | theorem-certificate |
+| [mixed-singleton-conditional-controller](#mixed-singleton-conditional-controller) | proved-conditional-uniform-controller-and-replica-target | symbolic-check |
+| [n53-complete](#n53-complete) | proved-complete-dimension | theorem-certificate |
+| [reynolds-hodge-structure](#reynolds-hodge-structure) | proved-general-algebra-and-local-duality-boundaries | symbolic-check |
+| [contingency-layer-semigroup](#contingency-layer-semigroup) | proved-exact-finite-layer-model-and-rank-stratification | symbolic-check |
+| [n47-complete](#n47-complete) | proved-complete-dimension | theorem-certificate |
+| [localized-iwahori-generation](#localized-iwahori-generation) | proved-uniform-algebraic-generation-with-positive-interface | symbolic-check |
+| [b47-root-activation](#b47-root-activation) | proved-whole-library-positive-inverses-and-relative-root-subgroup | theorem-certificate |
+| [b47-extra-atom-involutions](#b47-extra-atom-involutions) | proved-new-positive-macros-and-localized-root-group | symbolic-check |
+| [adjoint-return-domain-audit](#adjoint-return-domain-audit) | proved-adjoint-interface-and-audited-domain-boundary | symbolic-check |
+| [projective-spectral-balance](#projective-spectral-balance) | proved-classical-spectral-criterion-integrated-with-macros | symbolic-check |
+| [b47-short-cycle-boundary](#b47-short-cycle-boundary) | proved-exclusion-for-fixed-library-and-word-forms | symbolic-check |
+| [paired-carrier-two-adic-reset](#paired-carrier-two-adic-reset) | proved-uniform-rank-preserving-two-adic-reset | symbolic-check |
+| [n41-complete](#n41-complete) | proved-complete-dimension41 | theorem-certificate |
+| [modular-primitive-height-barrier](#modular-primitive-height-barrier) | proved-uniform-height-counterexample | symbolic-check |
+| [two-carrier-modular-bridge](#two-carrier-modular-bridge) | proved-uniform-positive-two-exception-reduction | symbolic-check |
+| [n29-complete](#n29-complete) | proved-complete-dimension29 | theorem-certificate |
+| [nonsplit-projective-layer-boundary](#nonsplit-projective-layer-boundary) | verified-boundary-for-specified-projective-construction | symbolic-check |
+| [split-prime-gaussian-controller](#split-prime-gaussian-controller) | proved-uniform-split-prime-family | symbolic-check |
+| [flat-star-formal-arithmeticity](#flat-star-formal-arithmeticity) | proved-formal-arithmeticity-and-first-level-product | symbolic-check |
+| [cyclotomic-level-entanglement](#cyclotomic-level-entanglement) | proved-level-coupling-and-strict-container-refinement | symbolic-check |
+| [balanced-digit-congruence-group](#balanced-digit-congruence-group) | proved-arithmetic-group-and-orbit-classification | symbolic-check |
+| [b29-current-cycle-boundary](#b29-current-cycle-boundary) | proved-boundary-for-specified-library | symbolic-check |
+| [one-tripling-stabilization](#one-tripling-stabilization) | proved-uniform-tripling-and-three-divisible-family | symbolic-check |
+| [all-dimensions-prime-reduction](#all-dimensions-prime-reduction) | proved-general-equivalence | theorem-certificate |
+| [even-prime-power-halving](#even-prime-power-halving) | proved-uniform-halving | theorem-certificate |
+| [n25-complete](#n25-complete) | proved | theorem-certificate |
+| [odd-composite-factor-closure](#odd-composite-factor-closure) | proved-general-closure-and-n35 | theorem-certificate |
+| [other-ai-local-global-synthesis](#other-ai-local-global-synthesis) | proved-structural-interfaces | symbolic-check |
+| [ai3-template-report-audit](#ai3-template-report-audit) | audited-supporting-implementation | symbolic-check |
+| [ai5-synchronized-replica-audit](#ai5-synchronized-replica-audit) | audited-restricted-replica-interfaces | symbolic-check |
+| [prime-factor-carry-bridge](#prime-factor-carry-bridge) | proved-interface-and-sharp-family-bound | symbolic-check |
+| [n23-complete](#n23-complete) | proved | theorem-certificate |
+| [n19-complete](#n19-complete) | proved | theorem-certificate |
+| [bn-integer-template-compiler](#bn-integer-template-compiler) | verified-compiler | symbolic-check |
+| [prime-congruence-structure](#prime-congruence-structure) | proved-structural-lemmas | symbolic-check |
+| [n17-complete](#n17-complete) | proved | theorem-certificate |
+| [b17-old-integral-return-audit](#b17-old-integral-return-audit) | proved-old-schedule-limitation | symbolic-check |
+| [b17-universal-subproblem-lattice](#b17-universal-subproblem-lattice) | proved-macros-and-local-scheduler | symbolic-check |
+| [b17-guarded-library-trap](#b17-guarded-library-trap) | proved-library-obstruction | symbolic-check |
+| [b17-cross-stratum-escape](#b17-cross-stratum-escape) | proved-restricted-escape | symbolic-check |
+| [finite-orbit-method-boundary](#finite-orbit-method-boundary) | proved-method-boundary | symbolic-check |
+| [b17-guarded-subproblem-experiment](#b17-guarded-subproblem-experiment) | open-bounded-controller | exploratory-search |
+| [subproblem-prime-obstruction](#subproblem-prime-obstruction) | proved-general-obstruction | symbolic-check |
+| [all-even-B-kernel-halving](#all-even-B-kernel-halving) | proved-bridge | symbolic-check |
+| [two-three-smooth-complete](#two-three-smooth-complete) | proved | theorem-certificate |
+| [n14-complete](#n14-complete) | proved | theorem-certificate |
+| [blocker-graph-safe-core](#blocker-graph-safe-core) | proved-general-bound | finite-sanity |
+| [n15-via-subblocks-complete](#n15-via-subblocks-complete) | proved | theorem-certificate |
+| [even-kernel-halving](#even-kernel-halving) | proved-bridge | symbolic-check |
+| [n18-via-twelve-complete](#n18-via-twelve-complete) | proved | theorem-certificate |
+| [n12-complete](#n12-complete) | proved | theorem-certificate |
+| [b12-six-step-local-branches](#b12-six-step-local-branches) | proved-identities-with-prose | symbolic-check |
+| [b12-return-frontier-certificates](#b12-return-frontier-certificates) | finite-search-found | exploratory-search |
+| [n7-n8-complete](#n7-n8-complete) | proved | theorem-certificate |
+| [n10-complete](#n10-complete) | proved | theorem-certificate |
+| [n11-complete](#n11-complete) | proved | theorem-certificate |
+| [n13-complete](#n13-complete) | proved | theorem-certificate |
+| [stabilization-theorem](#stabilization-theorem) | proved | finite-sanity |
+| [power-partition-compression](#power-partition-compression) | proved | finite-sanity |
+| [burau-power-chain](#burau-power-chain) | proved | symbolic-check |
+| [general-lifting](#general-lifting) | supporting | finite-sanity |
+| [zero-padding](#zero-padding) | proved | finite-sanity |
+| [isolated-prime-core](#isolated-prime-core) | supporting | finite-sanity |
+| [multi-prime-core](#multi-prime-core) | supporting | finite-sanity |
+| [power-block-macro](#power-block-macro) | supporting | symbolic-check |
+| [cyclotomic-macros](#cyclotomic-macros) | supporting | symbolic-check |
+| [arithmetic-geometry-structure](#arithmetic-geometry-structure) | supporting | finite-sanity |
+| [cascade-bound](#cascade-bound) | historical-support | finite-sanity |
+| [n5-bounded-search](#n5-bounded-search) | historical-exploration | exploratory-search |
+| [n91-congruence-container](#n91-congruence-container) | proved-container-computation | symbolic-check |
+| [n91-corrected-witness](#n91-corrected-witness) | proved-witness | theorem-certificate |
+| [n91-search-optimization](#n91-search-optimization) | proved-regression | symbolic-check |
+| [n91-cusp-depth4](#n91-cusp-depth4) | open-1-cusp | exploratory-search |
+| [n91-cusp29-depth5](#n91-cusp29-depth5) | finite-search-found | exploratory-search |
+| [standard-kernel-interface](#standard-kernel-interface) | supporting | finite-sanity |
+| [search-contracts](#search-contracts) | supporting | finite-sanity |
+| [bn-arithmetic-structure](#bn-arithmetic-structure) | proved-identities-with-prose | symbolic-check |
+| [b12-complete-bounded-domain](#b12-complete-bounded-domain) | finite-search-found | exploratory-search |
+| [bn-comparison-depth4](#bn-comparison-depth4) | bounded-comparison | exploratory-search |
+| [b15-two-depth5](#b15-two-depth5) | finite-search-found | exploratory-search |
+| [b21-depth5](#b21-depth5) | finite-search-found | exploratory-search |
+| [bn-symbolic-returns-depth5](#bn-symbolic-returns-depth5) | bounded-discovery | exploratory-search |
+
+## 独立新增引理 / Independent addition
+
+2026-09-16二进列提升未写入冻结注册，另见[证明](../archive/2026-09-07/3-3-triple-average-research-note/research/prime_arity_padic/structural_reassessment_and_uniform_dyadic_orbits.md)、[核验器](../archive/2026-09-07/3-3-triple-average-research-note/research/prime_arity_padic/verify_uniform_dyadic_column_lifting.py)及[结果](../archive/2026-09-07/3-3-triple-average-research-note/research/prime_arity_padic/uniform_dyadic_column_lifting_verification.json)。
+
+The independent dyadic lemma has its own proof, verifier and evidence; it is not silently substituted into the archived registry.
+
+## transverse-root-shallow-lifting
+
+**Claim / 命题：** Three conjugate tangent roots lift the retained nine-offset local control to a shallow congruence kernel: Gamma(n,R) for odd n and Gamma(2 delta n,R) for even n, reducing the uniform formula boundary to p>=83 and retaining162 physical cases below83.
+
+**Status:** proved-shallow-global-lift-with-stated-Morris-Serre-dependencies · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/structure/transverse_root_lifting_without_long_orbits.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/transverse_root_lifting_without_long_orbits.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_nine_offsets_large_symmetric_carrier_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_nine_offsets_large_symmetric_carrier_completion.md)
+
+**Scripts / 脚本：** [work/verify_transverse_root_lifting.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_transverse_root_lifting.py)
+
+**Evidence scope / 核验范围：** Direct exact determinant identity;36 local layer corrections in finite tangent models; exhaustive162 retained physical cases11<=p<83 with676 root records; 387 uniform formula instances83<=p<307; finite interval cover check. The written proof supplies all p>=83 inequalities, shallow congruence induction and even residue class bound. No long orbit enumeration. Morris/Serre and physical original-position hypotheses remain inherited.
+
+**Does not establish / 不建立：** Does not remove162 physical boundary cases or two exceptional local repairs, replace external group theorems, prove a new modular-form correspondence, or give word-length bounds. The previous180-case and522-case certificates remain historical cross-checks.
+
+**Dependencies / 依赖：**
+
+- Python standard library and existing exact physical macro primitives
+- work/large_symmetric_carrier_shallow_certificate.json
+- Written three-conjugate tangent lifting and shallow terminal proof
+- Morris/Serre inherited deep-kernel theorem
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id transverse-root-shallow-lifting
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+three conjugate tangent determinant: PASS
+exact layer corrections without orbit enumeration: PASS 36
+shallow-kernel retained physical certificates: PASS 162 676
+three-row uniform formulas from83: PASS 387
+small-unit interval covers: PASS 15
+transverse root lifting and shallow terminal interfaces: PASS
+~~~
+
+## padic-quadratic-group
+
+**Claim / 命题：** Local homographic returns are translations in a degenerating quadratic group; first-lift valuation controls orbit defects at all levels. Applies to all180 retained direction certificates.
+
+**Status:** proved-local-structure-and-defect-classification-no-threshold-change · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/structure/padic_quadratic_group_and_orbit_defect.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/padic_quadratic_group_and_orbit_defect.md) · [outputs/prime_arity/structure/padic_leading_symbols_and_kneser_boundary.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/padic_leading_symbols_and_kneser_boundary.md)
+
+**Scripts / 脚本：** [work/verify_padic_quadratic_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_padic_quadratic_group.py)
+
+**Evidence scope / 核验范围：** Polynomial associativity, inverse and doubling/tripling identities;36 fixed finite orbit examples,5 level40 order checks by repeated squaring; all180 retained macros normalized at364 relevant local places. Infinite-level classification uses the written formal-logarithm argument. Kneser identity and connectivity are proved directly in text, not by this script.
+
+**Does not establish / 不建立：** Does not remove physical capacity certificates, select a new executable macro, prove a modular-form correspondence, or give a global short-word bound. External homographic classification paper was not read in full.
+
+**Dependencies / 依赖：**
+
+- Python standard library and existing exact matrix/local lift primitives
+- work/large_symmetric_carrier_reduced_certificate.json
+- Direct written quadratic group, formal logarithm, and orbit-defect proof
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id padic-quadratic-group
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+quadratic local group symbolic identities: PASS 4
+local defect cycles and deep orders: PASS 36 5
+retained certificate quadratic normal forms: PASS 180 364 100
+p-adic quadratic group and orbit defect interfaces: PASS
+~~~
+
+## carrier-interval-reduction
+
+**Claim / 命题：** Nine offsets use a uniform physical count interval for every prime p>=97, a reduced180-case reflection certificate below97, direct entry formulas and written small-unit descent.
+
+**Status:** proved-proof-simplification-with180-remaining-finite-reflection-cases-and-original-two-repairs · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/structure/carrier_interval_and_unit_descent.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/carrier_interval_and_unit_descent.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_nine_offsets_large_symmetric_carrier_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_nine_offsets_large_symmetric_carrier_completion.md)
+
+**Scripts / 脚本：** [work/verify_carrier_interval_reduction.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_carrier_interval_reduction.py)
+
+**Evidence scope / 核验范围：** Exhaustive180 finite reflection cases11<=p<97, plus the18-row capacity inequality table and15 four-unit rational interval covers. The342 former certificate cases and45 large cases only cross-check formulas; unbounded quantifiers follow from written inequalities, least-missing-unit descent and inherited group/fiber arguments. No new word search or full unit-group enumeration.
+
+**Does not establish / 不建立：** Does not remove the remaining180 cases, original(11,3)/(13,3)repairs, Morris/Serre dependencies, or prove uniform polynomial path length. Not an independent audit of all original imported primitives.
+
+**Dependencies / 依赖：**
+
+- Python standard library and existing exact physical/reflection/local-lift checker
+- work/large_symmetric_carrier_reduced_certificate.json
+- Written general interval proof, unit descent, and inherited group realization theorem
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id carrier-interval-reduction
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+carrier capacity bound table: PASS 18
+small-unit interval covers: PASS 15
+reduced small carrier certificate: PASS 180 752
+former certificate cases replaced by formulas: PASS 342
+large-parameter formula sanity: PASS 45
+carrier interval and unit descent interfaces: PASS
+~~~
+
+## prime-final-independent-audit
+
+**Claim / 命题：** Independent fixed-certificate audit for the final nine offsets: reconstructs literal means, checks principal-level divisibility, identifies necessary extra binary localizations, and verifies the auxiliary group at 13.
+
+**Status:** supports-final-prime-theorem-with-explicit-supplementary-multiplier-localization · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/audits/prime_arity_optimal_threshold_independent_audit_20260915.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/audits/prime_arity_optimal_threshold_independent_audit_20260915.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_nine_offsets_large_symmetric_carrier_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_nine_offsets_large_symmetric_carrier_completion.md) · [outputs/prime_arity/verification.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/verification.md)
+
+**Scripts / 脚本：** [work/audit_prime_final_certificate_20260915.py](../archive/2026-09-07/3-3-triple-average-research-note/work/audit_prime_final_certificate_20260915.py)
+
+**Evidence scope / 核验范围：** Exhausts the 522 fixed small parameter pairs, reconstructing 3540 role records from exact physical means without importing research formula functions. Identifies 99 records requiring the written extra-localization lemma; 521 ordinary level checks and the full 2184-element auxiliary group at 13 are checked. Counts do not represent complete averaging words for arbitrary inputs.
+
+**Does not establish / 不建立：** Does not independently prove all large-parameter inequalities, Morris/Serre, all earlier interval results, formal verification, polynomial word length, or any composite GRH claim.
+
+**Dependencies / 依赖：**
+
+- Python standard library; work/large_symmetric_carrier_small_certificate.json
+- Written multiplier-localization lemma and previously audited infinite-parameter reductions
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-final-independent-audit
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+independent physical-mean certificate audit: PASS 522 3540
+ordinary principal-level divisibility: PASS 521
+binary ratios needing additional legitimate localization: 99
+independent auxiliary13 full group: PASS 2184
+~~~
+
+## large-prime-high-odd-power-reflections
+
+**Claim / 命题：** For integers p>=5,s>=(p-1)(p-2), the k=p*s^2,r=p*s singleton core has two uniform three-atom trace-zero returns retaining old u or old v. Their squares are nonzero scalars and lambda=k^6 modn, so both have genuine positive projective inverses and preserve legality. This includes prime odd exponents>=5 but does not establish core termination.
+
+**Status:** proved-positive-reflection-resources-only-roots-and-cubic-boundary-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/large_prime_high_odd_power_three_step_reflections.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/large_prime_high_odd_power_three_step_reflections.md)
+
+**Scripts / 脚本：** [work/verify_large_prime_odd_power_reflections.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_large_prime_odd_power_reflections.py)
+
+**Evidence scope / 核验范围：** Written formulas prove the full count capacities, trace-zero identities and lambda modn.54 finite parameter checks and4 literal two-basis scalar cycles audit the implementation. No word search is used in the verifier.
+
+**Does not establish / 不建立：** Does not prove roots, deep congruence, full input termination, the prime cubic case, or any new complete dimension or threshold.
+
+**Dependencies / 依赖：**
+
+- Python standard library and exact original-position Ledger/matrix primitives
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id large-prime-high-odd-power-reflections
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+large-prime high-odd-exponent three-atom reflections: PASS 54
+large-prime high-odd-exponent literal cycles: PASS 4
+scope: reversible core resources only; roots and full reachability not proved
+~~~
+
+## two-three-odd-power-critical
+
+**Claim / 命题：** Under Dirichlet GRH, every k=m*s^2,n=k+m*s+1 with m in{2,3},s>=2 has the complete G=1 criterion. This proves all2/3 odd-exponent critical points; combined with the square family, all powers of2 and3 reach their conjectured first critical dimension.
+
+**Status:** proved-two-three-square-multiple-dimensions-and-odd-power-critical-points-under-GRH · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/two_three_odd_power_critical_grh_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/two_three_odd_power_critical_grh_completion.md)
+
+**Scripts / 脚本：** [work/verify_two_three_odd_prime_power_critical.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_two_three_odd_prime_power_critical.py)
+
+**Evidence scope / 核验范围：** Exact C^4/C^6 cycles, the uniform two-step identity M_d=C^2*Delta(d), inverse sandwiches and complete root groups are proved by formulas. Full input entry uses a three-singleton commutator with no failing prime. The complete508-case unit certificates cover2<=s<256; GRH covers all larger s. Checks also replay32 physical returns and2 forced entry paths.
+
+**Does not establish / 不建立：** Does not prove optimal final N, general p>=5 odd-power critical points, or all mixed arities. Some mixed square multiples are solved at a dimension above their conjectured first threshold.
+
+**Dependencies / 依赖：**
+
+- Python standard library and existing exact Fraction/Ledger primitives
+- Explicitly cited original-position entry, root and terminal lemmas; Dirichlet GRH, Morris/Serre and finite-ring inverses
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id two-three-odd-power-critical
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+two-three odd-power uniform controller and entry identities: PASS 24
+two-three odd-power literal cyclic and multiplier returns: PASS 32
+two-three odd-power forced singleton-entry replay: PASS 2
+two-three odd-power complete finite small-unit certificates: PASS 11
+two-three square-multiple full finite small-unit certificates: PASS 508
+two-three odd-prime-power critical completion interfaces: PASS
+~~~
+
+## even-arity-all-endpoints
+
+**Claim / 命题：** Every even arity k>=2 has the full G=1 criterion in dimension2k+1. Together with the established odd-arity endpoint theorem, all integer arities now have the2k+1 endpoint. Uses the old even seed plus a uniform inverse sandwich, full dyadic roots and small balanced unit representatives.
+
+**Status:** proved-all-even-arity-endpoints-with-stated-Morris-Serre-dependencies · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/even_arity_all_endpoints_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/even_arity_all_endpoints_completion.md)
+
+**Scripts / 脚本：** [work/verify_even_arity_endpoint_uniform.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_even_arity_endpoint_uniform.py)
+
+**Evidence scope / 核验范围：** Written proof covers both parity classes of k/2, actual scalar cycles, positive inverse activation, root groups, all units mod2k+1, full input entry and precise terminal.199 arity checks and26 literal cycles audit formulas; they do not replace all-arity quantifiers.
+
+**Does not establish / 不建立：** Does not prove N(k)<=2k+1 or the conjectured composite first critical threshold. No uniform path complexity or shortest solution claim.
+
+**Dependencies / 依赖：**
+
+- Python standard library and existing exact Fraction/Ledger primitives
+- Explicitly cited original-position entry, root and terminal lemmas; Morris/Serre where specified in the proof
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id even-arity-all-endpoints
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+even-arity uniform endpoint roots and inverse formulas: PASS 199
+even-arity literal full-system scalar cycles: PASS 26
+even-arity all-parameter endpoint interfaces: PASS
+~~~
+
+## ten-sixteen-dyadic-network-family
+
+**Claim / 命题：** For b>=1,k=2(4^b-1)/3,n=4^b, a fixed2b+2-step original-position k-average network averages every real input. In particular ten-average16 positions admits a six-step network and M(10)=16, while H(10)=17 was already proved.
+
+**Status:** proved-fixed-network-family-and-ten-average-sixteen-first-success · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/ten_average_sixteen_and_dyadic_network_family.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/ten_average_sixteen_and_dyadic_network_family.md)
+
+**Scripts / 脚本：** [work/verify_dyadic_three_block_fixed_network.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_dyadic_three_block_fixed_network.py)
+
+**Evidence scope / 核验范围：** The three equal-block recurrence has a closed rational formula matching global mean at step2b-1, followed by a global-sum cleanup.84 exact basis columns for4,16,64 positions certify the fixed networks;40 recurrence instances check the written identity. No word search.
+
+**Does not establish / 不建立：** Does not prove six steps optimal, N(10)=16, or that every network-family dimension is the minimal threshold for its arity.
+
+**Dependencies / 依赖：**
+
+- Python standard library and existing exact Fraction/Ledger primitives
+- Explicitly cited original-position entry, root and terminal lemmas; Morris/Serre where specified in the proof
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id ten-sixteen-dyadic-network-family
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+dyadic three-block fixed networks exact basis: PASS 84
+dyadic three-block general recurrence: PASS 40
+ten-average sixteen-position universal six-step network: PASS
+~~~
+
+## odd-composite-coprime-middle-band
+
+**Claim / 命题：** For odd integers k,r with1<=r<k and gcd(k,r)=1, dimension2k+r has the complete G=1 criterion. For every odd prime power k=p^a, all odd2k<n<3k satisfy the complete p-supported G criterion, including shared p factors, by exact nonuniform-block-mean transfer.
+
+**Status:** proved-odd-composite-coprime-band-and-all-odd-prime-power-odd-middle-dimensions · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/odd_composite_coprime_middle_band_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/odd_composite_coprime_middle_band_completion.md)
+
+**Scripts / 脚本：** [work/verify_odd_composite_coprime_band.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_odd_composite_coprime_band.py)
+
+**Evidence scope / 核验范围：** The proof reviews each use of primality in the old odd-band argument and replaces it with actual coprimality and short-sieve capacity.144 composite systems,114 literal returns and432 terminal transports verify formulas;9894 divisor reductions verify prime-power arithmetic. Full entry and conditional equal-block simulation are supplied by written proofs.
+
+**Does not establish / 不建立：** Does not solve even dimensions, all mixed-arity noncoprime bands, general odd-power critical points or final thresholds.
+
+**Dependencies / 依赖：**
+
+- Python standard library and existing exact Fraction/Ledger primitives
+- Explicitly cited original-position entry, root and terminal lemmas; Morris/Serre where specified in the proof
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id odd-composite-coprime-middle-band
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+odd-composite coprime-band exact algebra and terminal interfaces: PASS 144 114
+odd-prime-power band divisor reduction identities: PASS 9894
+odd-composite coprime-band extension interfaces: PASS
+~~~
+
+## ht-literature-interfaces
+
+**Claim / 命题：** For n=t^2+t+1, H_t is full for every sufficiently large t by Pollack2017 Theorem1.1 (or2.7), and for every t with prime n by a pigeonhole ratio lemma. Exact finite certificates cover all2<=t<1000. With the explicitly cited GRH bound n_chi<=3(log n)^2, these finite certificates give the all-t statement CONDITIONALLY on GRH. Unconditional all-t fullness and final square-arity thresholds remain open in the project.
+
+**Status:** proved-eventual-and-prime-modulus-Ht-plus-finite-range-all-t-only-under-GRH · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/ht_literature_and_eventual_square_completion_20260915.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/ht_literature_and_eventual_square_completion_20260915.md)
+
+**Scripts / 脚本：** [work/verify_ht_literature_interfaces.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_ht_literature_interfaces.py)
+
+**Evidence scope / 核验范围：** The finite checker uses CRT cyclic factors and full rank in G/G^ell for every prime ell in the group order, saving actual small-generator witnesses; it does not enumerate whole groups or characters.188 prime moduli use the written pigeonhole proof and810 composite parameters use exact quotient ranks. The reported unconditional eventual result is a written application of the directly read Pollack2017 theorem, not established by the checker. The GRH corollary uses the Bach bound as explicitly stated in the directly read Martin-Pollack2013 published paper; Bach original text was not obtained.
+
+**Does not establish / 不建立：** Does not prove unconditional H_t fullness for all t, give a numerical unconditional cutoff that joins the finite range, establish N(t^2)=t^2+t+1, or settle arbitrary composite arity. The2025 explicit Burgess paper is a preprint and its large thresholds and primitive/cubefree conditions were not silently discarded. Search absence does not prove the exact H_t statement is unpublished or open in the literature.
+
+**Dependencies / 依赖：**
+
+- Python standard library; elementary finite abelian group structure and prime-power primitive-root order checks
+- Pollack2017 Bounds for the first several prime character nonresidues, Theorem1.1/2.7, author PDF read
+- Bach1990 Theorem3 bound cited explicitly by Martin-Pollack2013, for the GRH-conditional corollary only
+- Previously completed square-core entry and U(R_t),L(nR_t),Gamma1 interface, with their stated Morris/Serre dependencies
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id ht-literature-interfaces
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+Ht finite abelian quotient certificates t2..999: PASS 998 188
+Ht literature hypothesis and prime-ratio boundary checks: PASS
+Ht literature interfaces: PASS
+~~~
+
+## square-core-entry-review
+
+**Claim / 命题：** For every integer t>=2, every legal input with q=t^2,n=t^2+t+1 enters the legal full-system (q,t,1) core. The one-block/three-singleton commutator only fails at the possible prime3, whose witness is retained in the chosen target role. All one-step zero-sum terminal y-scales belong to the subgroup H_t generated by -1 and safe integers<=t; H_t fullness remains open in general.
+
+**Status:** proved-all-square-core-entry-and-terminal-scale-restriction-uniform-H_t-fullness-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/general_k_plan_review_and_square_entry_20260915.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/general_k_plan_review_and_square_entry_20260915.md) · [outputs/general_arity/general_k_review_response_20260915.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/general_k_review_response_20260915.md) · [outputs/general_arity/general_k_averaging_proof_plan_20260915.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/general_k_averaging_proof_plan_20260915.md)
+
+**Scripts / 脚本：** [work/verify_square_core_entry_review_20260915.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_square_core_entry_review_20260915.py)
+
+**Evidence scope / 核验范围：** The written entry proof applies to all t, using omega(n)<=t, the finite-ring positive commutator, gcd(t^2-1,n)=gcd(t+2,3), CRT witness transfer and a literal final fold. The independent script imports no project implementation and replays10 paths with404 atoms, including3 actual witness-transfer stages. Its199 finite H_t computations are diagnostics only. The complete one-step terminal restriction is proved by the two count formulas in the document.
+
+**Does not establish / 不建立：** Does not prove H_t equals the unit group for all t, all square-arity critical dimensions, optimal composite thresholds or word complexity. Does not supply an external Burgess-type theorem. Entry alone does not imply core termination.
+
+**Dependencies / 依赖：**
+
+- Python standard library, exact Fraction replay
+- Previously proved one-block three-singleton commutator; finite-ring positive powers and CRT
+- Root/Gamma1 infrastructure is used only in the stated conditional consequence of H_t fullness
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id square-core-entry-review
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+square entry literal exact paths: PASS 10 3 404
+finite unit-image diagnostic t=2..200: 0 failures []
+square entry and terminal-class review checks: PASS
+~~~
+
+## square-arity-controller-nine-thirteen
+
+**Claim / 命题：** For every integer t>=2, the (t^2,t,1) core has uniform positive scalar cycles and Gamma((t-1)^2*(t^2+t+1)^3,Z[1/t]) control. An odd-t sandwich or the even-t safe inverse lemma inverts the physical multiplier2. The NEW commutator with Sigma gives U(1/2), hence U(R),L(nR) for ALL t, R=Z[1/(2t)],n=t^2+t+1. At t=3 the all-input nine-average criterion in dimension13 follows, proving M(9)=H(9)=13.
+
+**Status:** proved-uniform-square-core-resources-and-nine-average-thirteen-with-stated-Morris-Serre-dependencies · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/square_arity_uniform_controller_and_nine_thirteen.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/square_arity_uniform_controller_and_nine_thirteen.md) · [outputs/general_arity/averaging_proof_strategy_and_composite_frontier_20260915.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/averaging_proof_strategy_and_composite_frontier_20260915.md)
+
+**Scripts / 脚本：** [work/verify_square_arity_controller_and_nine_thirteen.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_square_arity_controller_and_nine_thirteen.py)
+
+**Evidence scope / 核验范围：** Written count and Cayley-Hamilton identities prove uniform cycles for all integer t, including genuine inverses of the three macros. The explicit integral SL2 sandwich proves the dyadic inverse without assuming2 already inverted. Exact checks cover200 parameters,72 literal original-position cycles/returns,100 all-input-entry instances and152 Bezout/Gamma1 interfaces. The finite mod13 unit claim follows from the explicitly proved order12 of2. General input and group quantifiers are supplied by the written proof.
+
+**Does not establish / 不建立：** Does not establish N(9)=13, all square-arity critical endpoints, the composite optimal-threshold conjecture, high-efficiency word extraction, or an executable full projective-plane group action. It does not replace the stated Morris/Serre dependencies.
+
+**Dependencies / 依赖：**
+
+- Python standard library and existing exact matrix/Ledger primitives
+- Morris2007 Theorem6.1(2), Serre strong CSP, deep congruence and safe inverse lemmas
+- Existing Gamma1 generation lemma and composite prime-power lower bound
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id square-arity-controller-nine-thirteen
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+square-arity uniform positive cycles and dyadic inverse: PASS 200
+square-arity all-parameter full upper and n-lower roots: PASS 200
+square-arity literal original-position cycles and returns: PASS 72
+nine-average13 exact entry and terminal interfaces: PASS 100 152
+nine-average thirteen-position full criterion interfaces: PASS
+~~~
+
+## prime-factor-block-mean-transfer
+
+**Claim / 命题：** For p|q prime and q/p|n, absorb all other allowed prime powers into equal block size c. If the quotient m=n/c is p, or m>=N(p), exact block-mean simulation gives the full q-averaging criterion. Initial blocks need not be constant; a final covering pass eliminates internal differences. In particular every q>=2 and every n=kq with k>=3 satisfy the complete rad(G)|q criterion.
+
+**Status:** proved-prime-factor-transfer-and-all-higher-multiples-using-completed-prime-theorem · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/averaging_proof_strategy_and_composite_frontier_20260915.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/averaging_proof_strategy_and_composite_frontier_20260915.md)
+
+**Scripts / 脚本：** [work/verify_prime_factor_block_mean_transfer.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_prime_factor_block_mean_transfer.py)
+
+**Evidence scope / 核验范围：** The proof uses simultaneously good equal-block partitions and exact semiconjugacy of block means through a fixed q-average network on pc positions. It separately proves the final within-block cleanup. Tests replay34 initially nonconstant-block simulations and3582 finite parameter instances; the arbitrary-q,k quantifiers follow from the written prime-factor argument, not those tests.
+
+**Does not establish / 不建立：** Does not imply N(q)<=3q, cover nondivisible dimensions, settle odd-q dimension2q, or prove the optimal composite threshold. It does not simulate a smaller-arity averaging matrix on the full original space.
+
+**Dependencies / 依赖：**
+
+- Completed prime-arity theorem, including N(2)=4
+- Existing simultaneous good-partition lemma and fixed tensor averaging networks
+- Python standard library and existing independent Fraction replay
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-factor-block-mean-transfer
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+prime-factor nonuniform block-mean simulation and cleanup: PASS 34
+prime-factor all higher multiples arithmetic: PASS 3582
+prime-factor transfer theorem interfaces: PASS
+~~~
+
+## nine-offsets-large-symmetric-carrier
+
+**Claim / 命题：** All prime-arity dimensions n=3p+s,1<=s<=9 satisfy the complete G criterion. Together with the completed lower band, n>=3p+10 and the n=2p obstruction, this establishes N(p)=2p+1 for every odd prime p; N(2)=4 remains separate. A common (p,p,p+s) carrier shape restores block exchange, gives paired physical reflections, transverse roots, full unit lifts and exact terminal transport.
+
+**Status:** proved-all-nine-offsets-and-optimal-prime-threshold-with-stated-Morris-Serre-dependencies-and-complete-finite-parameter-certificate · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/upper_band/prime_arity_nine_offsets_large_symmetric_carrier_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_nine_offsets_large_symmetric_carrier_completion.md) · [outputs/prime_arity/audits/prime_arity_nine_offsets_completion_audit.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/audits/prime_arity_nine_offsets_completion_audit.md) · [outputs/prime_arity/audits/prime_arity_optimal_threshold_independent_audit_20260915.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/audits/prime_arity_optimal_threshold_independent_audit_20260915.md)
+
+**Scripts / 脚本：** [work/check_large_symmetric_carrier_certificate.py](../archive/2026-09-07/3-3-triple-average-research-note/work/check_large_symmetric_carrier_certificate.py)
+
+**Evidence scope / 核验范围：** The fixed certificate exhausts all primes11<=p<307 and offsets1<=s<=9. The separate checker recomputes physical capacities, trace-zero identities,2206 root-reflection counts, reduced-multiplier localization, root gcds, complete small unit images and local direction lifts. Two explicit repairs handle auxiliary13 at(11,3) and a binary principal unit at(13,3). Infinite p>=307 quantifiers follow from written count, density and local-cycle arguments;1440 checks there are only symbolic sanity. Literal original-position replay uses two basis inputs. Arbitrary inputs are handled by the written entry and exact fiber proofs, not bounded-height sampling. The final localization ring also includes every supplementary binary or skip-one multiplier, as explicitly proved in section 6; the independent audit identifies 99 extra-support cases.
+
+**Does not establish / 不建立：** Does not give shortest paths, uniform polynomial word length or bit complexity, an efficient generic group-word extractor, or the optimal threshold for arbitrary composite arity. Does not replace the explicitly cited Morris/Serre theorems or constitute external peer review or formal proof-assistant certification.
+
+**Dependencies / 依赖：**
+
+- Python standard library; fixed large_symmetric_carrier_small_certificate.json
+- Existing exact matrix primitives, original-position Ledger and local prime-power lift
+- Unrestricted upper-core entry, lower-band completion, n>=3p+10 theorem and zero-trigger tail
+- Morris2007 Theorem6.1(2), Serre strong CSP, deep-congruence lemma and perfect-solvable splitting
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id nine-offsets-large-symmetric-carrier
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+large symmetric carrier finite parameter certificate: PASS 522 2206
+large symmetric carrier uniform formulas and local lifts: PASS 1440
+large symmetric carrier completion interfaces: PASS
+~~~
+
+## triadic-packed-carrier-completion
+
+**Claim / 命题：** For every prime p>=5 and b=p mod3 in{1,2}, n=3(p+b) has the complete G=1 criterion. This completes offset3 for p=1mod3 and offset6 for p=2mod3. One packed-carrier inverse supplies U(3R); a transverse reflection gives Gamma(9g^3,R) through a rational change of basis, and a finite mod3 phase plus two state-dependent CRT returns set an exact terminal scale.
+
+**Status:** proved-offset3-residue1-and-offset6-residue2-with-stated-Morris-Serre-dependencies-opposite-branches-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_triadic_packed_carrier_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_triadic_packed_carrier_completion.md) · [outputs/prime_arity/history/prime_arity_low_offset_unified_frontier.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_low_offset_unified_frontier.md)
+
+**Scripts / 脚本：** [work/verify_triadic_packed_carrier_completion.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_triadic_packed_carrier_completion.py)
+
+**Evidence scope / 核验范围：** Written proof establishes the count formulas, transverse-root rational-basis containment with an explicit integral level, the entire legal mod3 phase adjustment, odd representatives, two primitive CRT returns and exact principal fibers. Verification checks92 parameter systems below500,66 literal original-position cycles,828 exact CRT terminal matrices and20 conditional primitive3-carries. Small p=5,b=2 uses the previously proved n>=4p result. No word or finite-group orbit search is used.
+
+**Does not establish / 不建立：** Does not solve opposite p residue classes for offsets3 and6, all other low remainders, N(p)=2p+1, or polynomial word length. Conditional primitive3-carry is not an unconditional phase-entry or termination theorem. Infinite group containment uses the explicitly cited Morris/Serre results.
+
+**Dependencies / 依赖：**
+
+- Python standard library and exact original-position Ledger
+- Unrestricted upper-core entry and zero-trigger tail
+- Morris2007 Theorem6.1(2), Serre strong CSP and deep congruence lemma
+- Carrier-packing inverse, two transverse root groups, CRT, Bezout and exact principal fibers
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id triadic-packed-carrier-completion
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+triadic carrier conditional primitive3-carry: PASS 20
+triadic carrier common reflection and deep-level interfaces: PASS 92
+triadic carrier literal packing and reflection cycles: PASS 66
+triadic carrier CRT exact terminal transports: PASS 828
+offset3-residue1 and offset6-residue2 completion interfaces: PASS
+~~~
+
+## nine-offset-residue-one
+
+**Claim / 命题：** For every prime p=1mod3, n=3p+9 satisfies the complete G=1 criterion. The existing four returns remain available at r=9. A single forbidden-residue sieve selects a full3-adic direction cycle; the n/3 unit representative lemma and known principal units complete exact termination. With the completed offset8, this gives N(p)<=3p+8 for primes p=1mod3.
+
+**Status:** proved-offset9-residue1-and-classwise-three-p-plus8-bound-other-prime-class-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_triadic_packed_carrier_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_triadic_packed_carrier_completion.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_unrestricted_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_unrestricted_completion.md)
+
+**Scripts / 脚本：** [work/verify_nine_offset_residue_one.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_nine_offset_residue_one.py)
+
+**Evidence scope / 核验范围：** The written argument extends exact four-return capacities to every p=1mod3,p>=13, proves the short sieve from inclusion-exclusion and small-factor interval bounds, extends the unit representative inequalities and gives the explicit5/13/-1 unit basis at n48. Verification checks44 parameter systems,10 literal selected returns,9592 full unit representatives and132 modular direction-scale transports. The infinite-input fiber argument is the cited exact principal-congruence theorem. p7 is covered by its known optimal threshold.
+
+**Does not establish / 不建立：** Does not prove offset9 for p=2mod3, an all-prime N(p)<=3p+8 bound, the sharp threshold or efficient complete word extraction.
+
+**Dependencies / 依赖：**
+
+- Python standard library and exact Ledger/modular helpers
+- Four-return deep congruence theorem and unrestricted upper entry
+- Morris2007 Theorem6.1(2), Serre strong CSP and deep congruence lemma
+- Elementary short-interval forbidden-residue sieve, local cycles, LTE, CRT and principal fibers
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id nine-offset-residue-one
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+offset9 residue1mod3 exact four-return systems: PASS 44
+offset9 residue1mod3 literal3-adic returns: PASS 10
+offset9 residue1mod3 complete unit lifts: PASS 9592
+offset9 residue1mod3 complete direction-scale transports: PASS 132
+offset9 residue1mod3 completion interfaces: PASS
+~~~
+
+## even-low-offsets-common-controller
+
+**Claim / 命题：** For every prime p>=5, n=3p+r has the complete G=1 criterion for r in{2,4,8}. One carrier-packing and affine-reflection controller also proves every even r with3 not dividing r and p>=2r. Its roots are exactly nR, with no auxiliary-prime support, and a diagonal direction upgrades Gamma(n^2,R) to Gamma(n,R). A single modular translation, safe unit digits and an exact fiber terminate.
+
+**Status:** proved-all-prime-offsets2-4-8-and-general-even-nontriadic-regime-with-stated-Morris-Serre-dependencies · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_even_low_offsets_common_controller.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_even_low_offsets_common_controller.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_three_value_reduction.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_three_value_reduction.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_unrestricted_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_unrestricted_completion.md)
+
+**Scripts / 脚本：** [work/verify_even_low_offsets_common_controller.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_even_low_offsets_common_controller.py)
+
+**Evidence scope / 核验范围：** The written argument supplies general carrier-packing inverses, positive scalar-cycle activation, a three-point rational orbit, the exact root ideal nR, elementary Gamma(n)/Gamma(n^2) lifting, safe digit capacities, all unit residues, and exact terminal fibers. Verification checks150 low-offset systems,119 broader even-remainder systems,96 literal positive-inverse cycles,47718 full unit representatives and450 modular transports including45 exact rational power/fiber computations. No word, p-subset or finite-group search is used. Small(13,47) uses existing adjacent A returns through the same interface.
+
+**Does not establish / 不建立：** Does not solve all prime-arity averaging, the remaining offsets1,3,5,6,7,9, N(p)<=3p, N(p)=2p+1, shortest words, polynomial word lengths or replace the cited external infinite-group theorems. The final bound remains N(p)<=3p+10.
+
+**Dependencies / 依赖：**
+
+- Python standard library and exact original-position Ledger
+- Established unrestricted upper-core entry and zero-trigger tail
+- Morris2007 Theorem6.1(2), Serre strong CSP and the deep congruence lemma
+- Safe integer-return inverse and exact principal-congruence fibers
+- Elementary affine commutators, integer modular inversion and Bezout
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id even-low-offsets-common-controller
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+even nontriadic general remainder controllers: PASS 119
+even nontriadic low-offset common controllers: PASS 150
+even nontriadic low-offset literal inverse cycles: PASS 96
+even nontriadic low-offset complete unit lifts: PASS 47718
+even nontriadic low-offset terminal transports: PASS 450 45
+all-prime offsets2-4-8 completion interfaces: PASS
+~~~
+
+## three-p-plus-one-residue-four
+
+**Claim / 命题：** For every prime p=4 mod9, all n=3p+1 inputs have the complete G=1 criterion. A fixed four-atom construction inverts the standard carrier contraction for every p=1 mod3; at p=4 mod9 a fixed trace-zero product supplies localized roots. Perfect auxiliary local groups split from solvable dangerous-prime images, then safe returns, unit representatives, local cycles and exact fibers terminate.
+
+**Status:** proved-three-p-plus-one-residue-four-with-stated-Morris-Serre-dependencies-other-low-offsets-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_three_p_plus_one_residue_four.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_three_p_plus_one_residue_four.md) · [outputs/prime_arity/history/prime_arity_low_offset_unified_frontier.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_low_offset_unified_frontier.md)
+
+**Scripts / 脚本：** [work/verify_three_p_plus_one_residue_four.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_three_p_plus_one_residue_four.py)
+
+**Evidence scope / 核验范围：** Written proof gives original-position counts, exact scalar cycles, root ideals, a perfect-versus-solvable finite quotient splitting lemma, local SL2 lifting, all unit residues, directions and exact termination. The script checks27 prime systems below1000,24 literal positive-inverse cycles,30 auxiliary-prime interfaces,16770 complete unit representatives and162 local direction-scale transports. It does not enumerate averaging words or large finite groups. Infinite principal-congruence containment uses the cited Morris/Serre dependencies.
+
+**Does not establish / 不建立：** Does not prove every p case of3p+1, the other low remainders, N(p)<=3p or N(p)=2p+1, efficient general arithmetic-group word extraction or shortest paths.
+
+**Dependencies / 依赖：**
+
+- Python standard library and exact original-position Ledger
+- Existing unrestricted upper-band entry and zero-trigger tail
+- Morris2007 Theorem6.1(2), Serre strong CSP and the deep congruence lemma
+- Finite inverse lifting, Goursat lemma, finite local SL2 generation, PSL2 simplicity, LTE and CRT
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id three-p-plus-one-residue-four
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+3p+1 residue4mod9 fixed controller systems: PASS 27
+3p+1 residue4mod9 literal positive inverse cycles: PASS 24
+3p+1 residue4mod9 perfect-solvable local interfaces: PASS 30
+3p+1 residue4mod9 complete unit representatives: PASS 16770
+3p+1 residue4mod9 direction-scale terminal transports: PASS 162
+3p+1 residue4mod9 completion interfaces: PASS
+~~~
+
+## low-offset-reflection-interface
+
+**Claim / 命题：** For n=3p+s,1<=s<p, one initial average containing b carriers and t B-values followed by two identical output groups gives a trace-zero original-position return exactly when its integer capacities and (3t+b)(3v+s)=bs modp count equation hold. Each feasible reflection squares to a scalar congruent to p^4 modn, so it is nonzero and preserves every legal direction.
+
+**Status:** proved-parameterized-physical-reflection-interface-not-full-terminal-coverage · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_low_offset_unified_frontier.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_low_offset_unified_frontier.md)
+
+**Scripts / 脚本：** [work/verify_low_offset_reflection_interface.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_low_offset_reflection_interface.py)
+
+**Evidence scope / 核验范围：** The explicit count formulas and scalar congruence are proved in the document. For primes11 through103 and s1 through9,10005 feasible identities and88 original-position basis replays guard the formulas. A single modular inverse determines each fresh-block count; no word or p-subset search is used.
+
+**Does not establish / 不建立：** Does not guarantee a feasible reflection for every p,s, sufficient roots or group containment, terminal coverage, or a complete p-averaging theorem. The modular-hyperbola analogy does not invoke or prove a Kloosterman-sum estimate.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing exact original-position Ledger
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id low-offset-reflection-interface
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+low-offset modular-hyperbola reflection identities: PASS 10005
+low-offset literal four-atom scalar returns: PASS 88
+low-offset reflection-interface scope only: PASS
+~~~
+
+## two-p-plus-two-uniform
+
+**Claim / 命题：** For every prime p>=5, every n=2p+2 input has the complete G=1 criterion without omega(p+1) restrictions. A corrected one-output three-atom overlap reflection yields U(Z[1/p]), L(h Z[1/p]) and Gamma(h^2,Z[1/p]); state-dependent Mp and Mq returns set the carrier coordinate to +-1 modulo h^2, then an integer upper shift and exact principal fiber terminate.
+
+**Status:** proved-all-two-p-plus-two-with-stated-Morris-Serre-dependencies · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/lower_band/prime_arity_two_p_plus_two_uniform.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/lower_band/prime_arity_two_p_plus_two_uniform.md) · [outputs/prime_arity/tools/prime_arity_unified_weighted_core_theorem.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/tools/prime_arity_unified_weighted_core_theorem.md)
+
+**Scripts / 脚本：** [work/verify_two_p_plus_two_uniform.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_two_p_plus_two_uniform.py)
+
+**Evidence scope / 核验范围：** The written proof gives uniform original-position capacities, a real four-atom inverse for carrier shrinkage, CRT choices preserving primitivity and legality, and exact Gamma(h^2) fibers. The verifier checks166 prime systems,80 original-position cycles,1992 random CRT normalizations and the former p=29 one-step obstruction. It does not search averaging words or finite groups; Morris/Serre remain explicit external dependencies.
+
+**Does not establish / 不建立：** Does not prove N(p)=2p+1, the nine upper offsets3p+1 through3p+9, shortest or polynomial-length words.
+
+**Dependencies / 依赖：**
+
+- Python standard library and exact Ledger/matrix helpers
+- Unrestricted lower-band entry and zero-trigger tail
+- Morris2007 Theorem6.1(2), Serre strong CSP and deep congruence lemma
+- Finite inverse lifting, LTE, CRT and exact principal fibers
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id two-p-plus-two-uniform
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+2p+2 corrected one-carrier reflection returns: PASS 166
+2p+2 original-position reflection replays: PASS 80
+2p+2 state-dependent M_p/M_q CRT normalization: PASS 1992
+2p+2 former p29 two-prime descent obstruction: PASS
+2p+2 exact terminal congruence interface: PASS
+~~~
+
+## three-p-minus-one-completion
+
+**Claim / 命题：** For every prime p>=5, all n=3p-1 inputs satisfy the complete G=1 criterion. For p>=7, two overlapping reflection families give roots with ideal 2n, multiplication by3 folds every unit representative below p, one fixed reflection supplies a universal local direction cycle, and exact principal fibers finish. The p=5,n=14 case is closed by one explicit affine sandwich and the same local interface, yielding N(5)=11.
+
+**Status:** proved-all-three-p-minus-one-and-five-average-optimal-threshold-with-stated-Morris-Serre-dependencies · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/lower_band/prime_arity_three_p_minus_one_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/lower_band/prime_arity_three_p_minus_one_completion.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_all_prime_three_p_plus_ten.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_all_prime_three_p_plus_ten.md) · [outputs/prime_arity/proofs/lower_band/prime_arity_unrestricted_endpoint_and_odd_band.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/lower_band/prime_arity_unrestricted_endpoint_and_odd_band.md)
+
+**Scripts / 脚本：** [work/verify_three_p_minus_one_completion.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_three_p_minus_one_completion.py)
+
+**Evidence scope / 核验范围：** The written proof supplies uniform return capacities, affine commutator formulas, multiplication-by3 unit descent, local projective cycles, principal units and exact fibers. The verifier checks50 prime systems,7874 complete units,200 direction/fiber transports and78 literal original-position returns, plus all336 units modulo784 for the p=5 case and12 terminal interfaces. It does not use word or finite-orbit discovery search; Morris/Serre remain explicit external dependencies.
+
+**Does not establish / 不建立：** Does not solve general2p+2, the nine upper offsets3p+1 through3p+9, N(p)=2p+1 or N(p)=3p for arbitrary p, nor provide shortest or polynomial-length words.
+
+**Dependencies / 依赖：**
+
+- Python standard library and exact Ledger/matrix helpers
+- Unrestricted lower-band entry and zero-trigger tail
+- Morris2007 Theorem6.1(2), Serre strong CSP and deep congruence lemma
+- Finite inverse lifting, LTE, CRT and finite local-ring elementary generation
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id three-p-minus-one-completion
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+three-p-minus-one uniform reflections and roots: PASS 50
+three-p-minus-one complete odd unit representatives: PASS 7874
+three-p-minus-one direction-scale and exact-fiber checks: PASS 200
+three-p-minus-one literal original-position returns: PASS 78
+five-average fourteen inverse sandwich and unit generators: PASS 336
+five-average fourteen exact terminal interfaces: PASS 12
+all-prime three-p-minus-one completion: PASS
+~~~
+
+## upper-band-small-prime-interface
+
+**Claim / 命题：** A common capacity, affine-minor, unit-density and local-congruence interface completes the eight upper-boundary pairs for p19,23,29,31 and the three remaining pairs(13,50),(13,51),(17,66). Together with the old prime-position43/67 cases, the existing p>=37 upper band and the completed4p tail, this proves N(p)<=3p+10 for every prime p>=5, without small-prime threshold exceptions.
+
+**Status:** proved-all-prime-three-p-plus10-threshold-with-stated-Morris-Serre-dependencies · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/upper_band/prime_arity_all_prime_three_p_plus_ten.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_all_prime_three_p_plus_ten.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_overlap_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_overlap_completion.md) · [outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_four_p_tail_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_four_p_tail_completion.md)
+
+**Scripts / 脚本：** [work/verify_upper_band_small_prime_interface.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_upper_band_small_prime_interface.py) · [work/verify_upper_band_three_residual_interfaces.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_upper_band_three_residual_interfaces.py)
+
+**Evidence scope / 核验范围：** A written common proof converts finite parameter capacities into original-position involutions, localized roots, exact principal-congruence inclusion, complete unit images, local cycles and terminal fibers for every input. The first script verifies8 parameter interfaces,32 literal scalar cycles,436 unit representatives and40 direction/fiber lifts. The second verifies3 affine-minor and two-level local-p saturation interfaces, an auxiliary2 removal,36 literal returns,72 unit representatives and15 direction-scale lifts. The finite data enumerate parameters or entire stated unit sets, not a bounded-height sample used to infer infinite reachability.
+
+**Does not establish / 不建立：** Does not prove N(p)<=3p, complete all3p+1 through3p+9 families or eleven-average34 through42, establish the sharp2p+1 threshold, extract polynomial-length averaging words, or replace the explicitly cited Morris/Serre infinite-group theorems.
+
+**Dependencies / 依赖：**
+
+- Python standard library and existing exact Ledger/matrix helpers
+- Existing unrestricted upper-core entry, zero-trigger tail and4p tail completion
+- Morris2007 Theorem6.1(2), Serre strong CSP and the deep congruence lemma
+- Finite local-ring elementary generation and two-level congruence lifting
+- Safe integer return inverse, unit-group pigeonhole, LTE, CRT and exact principal fibers
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id upper-band-small-prime-interface
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+small-prime upper-boundary capacity interfaces: PASS 8
+small-prime upper-boundary literal scalar returns: PASS 32
+small-prime upper-boundary full unit representatives: PASS 436
+small-prime upper-boundary exact local terminal interfaces: PASS 40
+uniform upper boundaries for every prime at least19: PASS
+~~~
+
+~~~text
+three residual affine-minor and saturation interfaces: PASS 3
+three residual original-position returns: PASS 36
+three residual full unit representatives: PASS 72
+three residual complete direction-scale transports: PASS 15
+all-prime three-p-plus10 threshold interfaces: PASS
+~~~
+
+## four-p-tail-completion
+
+**Claim / 命题：** Every prime p>=5 has the complete p-power G criterion for all n>=4p. Every dimension missed by n>=4p-2+d_p(n) has n=4p+s and omega(n)>=s+3, which forces explicit capacities and unit density. Unrestricted entry to a (2p,p,p+s) core, four five-atom involutions, root gcd equal to gcd(n,5), local directions and all-unit scales give exact termination. Together with the established upper band this proves N(p)<=3p+10 for every prime p>=37.
+
+**Status:** proved-all-four-p-tail-and-three-p-plus10-threshold-with-stated-Morris-Serre-dependencies · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_four_p_tail_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_four_p_tail_completion.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_overlap_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_overlap_completion.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_unrestricted_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_unrestricted_completion.md) · [outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_inverse_egz_threshold.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_inverse_egz_threshold.md)
+
+**Scripts / 脚本：** [work/verify_four_p_tail_completion.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_four_p_tail_completion.py)
+
+**Evidence scope / 核验范围：** Written proof handles all quantifiers through primorial/phi estimates, an original-position two-fold entry, closed five-atom capacities, localized root groups and the cited deep congruence lemma, a more-than-half unit-group argument, prime-power cycles, principal units and exact congruence fibers. Exact verification covers365 omitted parameters at p<=20000 plus a six-prime s=3 case at p10103843,39 extra capacity systems,32 literal return cycles,732 modular direction-scale transports and3 arbitrary integer input entry paths. Large examples use only small matrices and modular arithmetic, not millions of physical positions. No averaging-word or large finite-group search is performed.
+
+**Does not establish / 不建立：** Does not prove N(p)<=3p or N(p)=2p+1, complete the3p+1 through3p+9 offset families, give all small-p upper-band missing dimensions, prove polynomial word length, or preserve the old one-extra-p-adic-digit bound in the new tail construction. External infinite-group theorems are explicitly cited rather than certified by these computations.
+
+**Dependencies / 依赖：**
+
+- Python standard library, exact Ledger and modular2x2 helpers
+- Existing inverse-EGZ large-dimension bound and independently solved4p dimension
+- Morris2007 Theorem6.1(2), Serre strong CSP and deep congruence lemma
+- Safe integer return inverse and exact principal-congruence fibers
+- Prime-power projective cycles, LTE, CRT and elementary inclusion-exclusion
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id four-p-tail-completion
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+four-p tail arithmetic and unit-density bounds: PASS 366
+four-p tail five-atom systems and root gcd: PASS 366 39
+four-p tail literal return cycles: PASS 32
+four-p tail complete direction-scale transports: PASS 732
+four-p tail formerly missing761-3045: PASS
+four-p tail unrestricted original-input entries: PASS 3 22
+four-p tail repair interfaces: PASS
+~~~
+
+## upper-band-overlap-completion
+
+**Claim / 命题：** For every prime p>=37 and (p+21)/2<=r<=p-1, all inputs at n=3p+r have the G=1 criterion. This completes both4p-2 and4p-1 uniformly, and combines with the previous interior theorem to cover3p+10<=n<=4p-1. A carrier replacement using one overlapping average gives a trace-zero matrix independent of the block weight m whenever its explicit capacities hold.
+
+**Status:** proved-near-four-p-and-both-upper-boundaries-for-p-at-least37-with-stated-external-dependencies · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_overlap_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_overlap_completion.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_unrestricted_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_unrestricted_completion.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_three_value_reduction.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_three_value_reduction.md)
+
+**Scripts / 脚本：** [work/verify_upper_band_overlap_completion.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_upper_band_overlap_completion.py)
+
+**Evidence scope / 核验范围：** Written algebra proves the original-position overlap involution, adjacent affine commutator, local-p root basis and deep-to-shallow congruence inclusion, all-prime projective cycles, unit-scale coverage and exact terminal lifting. Exact checks cover1666 systems,40 original-position double returns,3332 direction-scale/fiber checks,70 upper-boundary parameter pairs and36 weighted return replays for m=1,3,4. No word or large finite-group search is used. External Morris/Serre theorems remain stated dependencies.
+
+**Does not establish / 不建立：** Does not solve every3p<n<4p, the small upper-band remainders, remaining d_p tail above4p, arbitrary block-weight reachability, or N(p)<=3p+10. Does not cover all small primes p<37 by this theorem or provide a polynomial-length averaging algorithm.
+
+**Dependencies / 依赖：**
+
+- Python standard library and exact Ledger helpers
+- Existing unrestricted upper-band input entry and zero-trigger tail
+- Morris2007 Theorem6.1(2), Serre strong CSP and the established deep congruence lemma
+- Safe integer return inverse lemma and principal congruence fibers
+- Prime-power projective cycle lemma, finite local-ring elementary generation, LTE and CRT
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id upper-band-overlap-completion
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+overlap upper-band capacities and root identities: PASS 1666
+overlap upper-band local-p congruence removal: PASS 1666
+overlap upper-band literal scalar returns: PASS 40
+overlap upper-band complete direction-scale transports: PASS 3332
+overlap upper-band two final dimensions: PASS 70
+overlap arity-independent weighted return formula: PASS 36
+overlap upper-band completion: PASS
+~~~
+
+## upper-band-unrestricted-completion
+
+**Claim / 命题：** For every prime p>=13 and every 3p+10<=n<=4p-3, all legal original inputs have the complete G=1 criterion without parity, mod3 or prime-factor-count restrictions. Existing deep congruence control activates actual return inverses, removes the auxiliary factors of r, and supports full projective direction and unit-scale transport to an exact zero terminal.
+
+**Status:** proved-unrestricted-upper-interior-with-stated-Morris-Serre-dependencies-fringes-and-tail-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_unrestricted_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_unrestricted_completion.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_four_return_congruence.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_four_return_congruence.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_coprime_six_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_coprime_six_complete.md) · [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_three_value_reduction.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_three_value_reduction.md)
+
+**Scripts / 脚本：** [work/verify_upper_band_unrestricted_completion.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_upper_band_unrestricted_completion.py)
+
+**Evidence scope / 核验范围：** Written proof establishes capacities, real return inverse sandwiches, removal of auxiliary primes, all-unit residue representatives, prime-power projective cycles, principal-unit kernels and exact principal-congruence terminal fibers. Bounded exact checks cover3707 parameter systems with p<200, replay192 actual position-level returns, verify7414 combined local direction transports and322 unit-scale lifts with exact rational fiber matrices. The program does not search words and does not prove the external infinite-group theorems.
+
+**Does not establish / 不建立：** Does not solve all3p<=n<=5p, the lower upper-band fringe, the4p boundary or the remaining d_p tail. Does not prove N(p)<=3p or a polynomial-length averaging algorithm. The direct m=3 repeated-row template lacks A trace-zero returns at4p+1 and4p+2.
+
+**Dependencies / 依赖：**
+
+- Python standard library and existing exact Ledger/matrix helpers
+- Unrestricted upper-band input entry
+- Four-return localized roots and deep congruence lemma
+- Morris2007 Theorem6.1(2) and Serre strong CSP as explicitly cited
+- Safe integer return Smith-CRT inverse and finite-inverse lifting
+- Prime-power binomial lifting, LTE and CRT
+- Existing zero-trigger tail theorem
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id upper-band-unrestricted-completion
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+upper interior capacity, inverse and unit formulas: PASS 3707
+upper interior literal original-position returns: PASS 192
+upper interior all-prime direction transports: PASS 7414
+upper interior unit-scale lifts and exact fibers: PASS 322
+upper interior unrestricted completion interfaces: PASS
+~~~
+
+## even-interior-completion
+
+**Claim / 命题：** For every prime p>=7 and every even remainder 4<=r<=p-3, all legal (p,p,r) cores and all legal original inputs at n=2p+r have the complete G=1 criterion. The proof combines a finite-inverse lifting lemma, odd-divisor carrier scaling, prime-power projective cycles, principal-unit scale generation and exhaustive dyadic parameter certificates. The two remaining even single-involution boundaries r=2 and r=p-1 are excluded.
+
+**Status:** proved-all-internal-even-remainders-with-unrestricted-entry-and-stated-Morris-Serre-dependencies-boundaries-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/lower_band/prime_arity_even_interior_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/lower_band/prime_arity_even_interior_completion.md) · [outputs/prime_arity/proofs/lower_band/prime_arity_unrestricted_endpoint_and_odd_band.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/lower_band/prime_arity_unrestricted_endpoint_and_odd_band.md) · [outputs/prime_arity/history/prime_arity_even_middle_congruence_and_eighteen.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_even_middle_congruence_and_eighteen.md)
+
+**Scripts / 脚本：** [work/verify_even_odd_half_core.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_even_odd_half_core.py) · [work/verify_even_interior_completion.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_even_interior_completion.py)
+
+**Evidence scope / 核验范围：** Written algebra proves the return identities, finite-inverse lifting, local cycle and unit-kernel lemmas, and connects exact principal-congruence fibers to zero terminals. The first script checks 110 odd-half systems, 880 prime-power cycles and 880 unit lifts, plus exact physical paths. The second exhausts all stated parameter classes modulo 64/16, replays 30 general original-position returns and7 trace-return parameter systems, and checks255 three-return plus48 boundary modular direction-and-scale transports. Those48 are not full physical averaging words. Finite certificates do not replace the stated Morris/Serre infinite subgroup theorems.
+
+**Does not establish / 不建立：** Does not solve the r=2 or r=p-1 single-involution boundaries, upper-band remaining dimensions, N(p)<=3p or N(p)=2p+1, shortest or polynomial-length averaging words. The even-core proof uses the established unrestricted entry and dyadic-depth reduction.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing original-position Ledger and triple-return formulas
+- Existing unrestricted endpoint/lower-band entry
+- Existing even-core dyadic-depth descent
+- Morris 2007 finite-index elementary generation and Serre strong CSP as stated in cited documents
+- Finite-prime-power LTE and CRT
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id even-interior-completion
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+all interior odd-half even-core systems: PASS 110
+finite congruence bridge activates odd t inverse: PASS 110
+prime-power projective cycles and principal-unit lifts: PASS 880 880
+exceptional mod9 return repaired by adjacent choice: PASS 5
+beyond balanced-capacity exact terminal matrices: PASS 2
+uniform odd-half even-remainder completion: PASS
+~~~
+
+~~~text
+uniform r4 normalized dyadic certificate: PASS 64 2048
+uniform r=p-3 normalized dyadic certificate: PASS 256 128
+uniform safe trace-two returns and root-ideal improvement: PASS 7
+general interior returns and odd-divisor inverse sandwiches: PASS 30 6
+all 4-divisible interior remainders finite terminal lifts: PASS 255
+r4 and r=p-3 complete normalized terminal lifts: PASS 48
+all internal even-remainder completion: PASS
+~~~
+
+## unrestricted-endpoint-entry
+
+**Claim / 命题：** A three-singleton exchange commutator gives the explicit transfer I+((p-1)/p)(e_k-e_j)e_i^T. Formal inverses are compiled into positive powers only modulo rad(n), which is sufficient for entry. Degenerate primes divide gcd(p-1,n)=gcd(p-1,r+2), so r surviving singleton roles protect them while CRT or a short sieve transfers all other witnesses. This proves unrestricted legal two-block entry for coprime n=2p+r, 1<=r<p. Joining existing core theorems proves the complete G=1 criterion for every odd-p endpoint n=2p+1 and all odd lower-band dimensions for prime p, with no factor-count or density restriction.
+
+**Status:** proved-unrestricted-endpoint-all-input-and-all-odd-lower-band-with-existing-core-dependencies-even-core-termination-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/lower_band/prime_arity_unrestricted_endpoint_and_odd_band.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/lower_band/prime_arity_unrestricted_endpoint_and_odd_band.md) · [outputs/prime_arity/proofs/lower_band/prime_arity_endpoint_congruence_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/lower_band/prime_arity_endpoint_congruence_completion.md) · [outputs/prime_arity/proofs/lower_band/prime_arity_uniform_odd_middle_cores.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/lower_band/prime_arity_uniform_odd_middle_cores.md) · [outputs/prime_arity/tools/prime_arity_unified_weighted_core_theorem.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/tools/prime_arity_unified_weighted_core_theorem.md)
+
+**Scripts / 脚本：** [work/verify_unrestricted_endpoint_entry.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_unrestricted_endpoint_entry.py)
+
+**Evidence scope / 核验范围：** The written theorem proves the exact rational commutator, finite-ring positive inverse compilation, protected-role capacity, unrestricted entry and connection to established core sufficiency.79 rational identities and1965 finite modular cases guard formulas;28 entry and16 weighted-core paths replay original positions with Fraction and safety per atom. A compressed genuine seven-prime input retains an old complete exponent-cover obstruction and is handled by the fixed positive transfer word. Large records evaluate modular four-role programs without allocating huge repeated arrays. The external core theorems are not proved by these tests.
+
+**Does not establish / 不建立：** Does not solve all even lower-band cores, all upper-band dimensions, N(p)<=3p or N(p)=2p+1, or provide short or polynomial-length full averaging words. Finite modular inverses are not rational physical inverses. The large seven-prime program is not expanded into a full rational zero path. Morris and Serre dependencies of the established core proofs remain explicit.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing original-position Ledger and independent replay
+- Block-singleton local invertibility
+- Finite-field orders, CRT and existing short residue sieve
+- Existing endpoint core sufficiency with Morris/Serre
+- Existing odd-remainder core theorem
+- Existing fixed-anchor support merge and two-round repair
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id unrestricted-endpoint-entry
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+three-singleton exact rational commutator: PASS 79
+positive modular inverses roots and reserve capacity: PASS 1965
+unrestricted original-position two-block entries: PASS 28
+unrestricted entry joined to weighted-core reduction: PASS 16
+seven-prime covering obstruction crossed by fixed positive roots: PASS 53127847 106255695
+old r-below-prime-count entry gaps crossed: PASS 3
+unrestricted endpoint and lower-band entry: PASS
+~~~
+
+## core-gap-four-lifts
+
+**Claim / 命题：** An exact four-lift criterion exhausts integer translations, block sign and one M_q descent. An infinite p29 failure cone admits explicit multistage and carrier-fixed escapes. A constant-denominator preparation implements p/d modulo v after state-dependent cancellation, including odd d dividing p+1. For every odd p>=5, all legal two-carrier cores with primitive denominator v<=p+1 have a uniform complete Bezout-based solution. Separately, the cited Furstenberg topological theorem implies only finitely many exceptional denominators for each fixed prime p.
+
+**Status:** proved-exact-one-stage-boundary-and-uniform-small-denominator-core-completion-finite-exception-reduction-with-external-topological-dependency · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_core_gap_reassessment_20260915.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_core_gap_reassessment_20260915.md) · [work/core_gap_literature_20260914/README.md](../archive/2026-09-07/3-3-triple-average-research-note/work/core_gap_literature_20260914/README.md)
+
+**Scripts / 脚本：** [work/verify_core_gap_four_lifts.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_core_gap_four_lifts.py)
+
+**Evidence scope / 核验范围：** The document proves the universal arithmetic lemmas and small-denominator termination. The script compares equivalent selectors, validates a complete rational interval certificate for p29, and independently replays literal original-position paths. Prefix determinant content and terminal formulas are checked exactly. Furstenberg's infinite-closed-invariant-set theorem is an explicitly cited external dependency, not numerically checked; its finite-exception application is proved in the document.
+
+**Does not establish / 不建立：** Does not show that all finite exceptional orbits terminate, give an effective V(p), solve unrestricted two-carrier cores or their arbitrary-input entry, handle every even remainder, lower the general final threshold, or provide polynomial-length or shortest averaging paths. The infinite one-stage failure cone is not an unreachable family and does not obstruct carrier-fixed preparation.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing original-position PairLedger and RecordedPair
+- Explicit U(k), M_q and carrier-fixed return counts
+- Direct Bezout and primitive-content arguments
+- Furstenberg 1967 topological theorem for the separate finite-exception reduction; original proof not obtained
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id core-gap-four-lifts
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+four-lift exact one-stage criterion: PASS 5726
+infinite no-one-stage cone certificate: PASS 112
+uniform eight-atom cone escape samples: PASS 5
+base multi-prime obstruction full path: PASS 19
+fixed-word prefix content and exact slope cells: PASS 850
+uniform multiple terminal denominator classes: PASS 3230
+carrier-fixed height-preserving cone preparation: PASS 5
+uniform constant-height preparation arithmetic and physical: PASS 9264 35
+uniform all-small-denominator core completion: PASS 15076 6
+core gap exact criterion and multistage interface: PASS
+~~~
+
+## two-prime-neighbour-complete
+
+**Claim / 命题：** For every odd arity p>=5 with omega(p+1)<=2, all n=2p+2 inputs have the full G=1 criterion. Every legal(p,p,2) core admits an explicit translated M_q return that strictly decreases primitive |v|: choose the nearest odd unit, reflect the unavailable digit1, or repair the unique odd-prime obstruction by one division-by2 count adjustment. The uniform input entry completes the all-input result. In particular five-averaging12 is solved.
+
+**Status:** proved-full-neighbour-family-by-direct-integer-descent-including-five-average12 · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/tools/prime_arity_unified_weighted_core_theorem.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/tools/prime_arity_unified_weighted_core_theorem.md)
+
+**Scripts / 脚本：** [work/verify_two_prime_neighbour_complete.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_two_prime_neighbour_complete.py)
+
+**Evidence scope / 核验范围：** A universal closed integer selector and positive-odd-integer descent prove termination in document section11.62870 steps across43 arities guard all four selection branches;18 whole core paths and24 whole arbitrary-input paths are independently replayed to zero with primitive-G checks on every physical atom, including composite arity9 and the old p5 (3,11) rule failure. No arithmetic-group theorem, word discovery or finite congruence-group certificate is used.
+
+**Does not establish / 不建立：** Does not complete all2p<n<3p dimensions, five-average14, the case where p+1 has more than one odd prime factor, or a sharp general threshold. Does not assert infinitely many qualifying prime arities. The p29 one-stage counterexample only obstructs the specified descent criterion, not all positive paths. No shortest-path, fixed-precision or polynomial-length claim is made.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing literal U(integer) and M_q two-singleton returns
+- Uniform two-block input entry
+- Direct nearest-odd selection and primitive-gcd identities
+- Literal opposite-block zero tail
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id two-prime-neighbour-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+multiple-odd-prime one-stage boundary retained: PASS
+two-prime-neighbour uniform arithmetic descent: PASS 43 62870
+two-prime-neighbour all selector branches: PASS
+two-prime-neighbour literal full core paths: PASS 18
+two-prime-neighbour literal full input paths: PASS 24
+two-prime-neighbour full G1 criterion; five-average12 complete: PASS
+~~~
+
+## even-core-dyadic-depth
+
+**Claim / 命题：** For every prime p>=5 and every even2<=r<p, every nonterminal legal(p,p,r) core can be carried in at most4(v2(a*z)-1) real averages to a legal primitive core with v2(a*z)=1. A standard involution orients the even coordinate, and an explicit state-dependent return with determinant of2-adic valuation one reduces depth exactly by one. This includes r=2 andr=p-1 and does not rely on p7 cycles or arithmetic-group theorems.
+
+**Status:** proved-uniform-all-even-core-dyadic-depth-descent-terminal-coverage-still-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/tools/prime_arity_unified_weighted_core_theorem.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/tools/prime_arity_unified_weighted_core_theorem.md)
+
+**Scripts / 脚本：** [work/verify_even_core_dyadic_depth.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_even_core_dyadic_depth.py)
+
+**Evidence scope / 核验范围：** Closed count formulas, original-position Fraction replay and primitive-G validation per atom.472 paths include both coordinate orientations and depths1,2,4,7, with1180 strict depth decrements. The universal result is proved directly in section10 of the document; finite checks do not infer infinite coverage. Normalization selects subsequent physical indices and is not a free averaging operation.
+
+**Does not establish / 不建立：** Does not solve the remaining depth-one direction and unit-scale orbit problem, five-averaging12 or14, all even-dimensional reachability, unrestricted input entry or a general threshold. Does not say all higher congruence information vanishes at depth one. The failure of natural p7 cycles to generalize is separately audited.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing original-position odd-s involution for all remainders
+- Unified repeated-row return formula
+- Primitive-G necessity under positive averaging
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id even-core-dyadic-depth
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+all-even-core valuation-one return counts: PASS 59
+all-even-core literal depth descents: PASS 472
+all-even-core total strictly descending stages: PASS 1180
+uniform even-core dyadic-depth descent: PASS
+~~~
+
+## seven-average-sharp-completion
+
+**Claim / 命题：** Seven-averaging in dimensions20 and22 has the complete G=1 criterion, giving the sharp final threshold N(7)=15 when joined to the previously completed dimensions. Fixed scalar cycles (PQF)^2=1449I and(FA^2)^2=-7I supply positive inverses. Exact commutator roots and the deep-congruence lemma give principal subgroups. For22, a648-element complete mod9 certificate removes an auxiliary3-primary level, and the full3872-state quotient retains the two unit-scale classes. Both complete finite quotients reach a literal zero-sum seven-tuple.
+
+**Status:** proved-dimensions20-and22-and-sharp-seven-average-threshold15-with-stated-external-dependencies · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/examples/seven_average_sharp_threshold_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/examples/seven_average_sharp_threshold_complete.md)
+
+**Scripts / 脚本：** [work/verify_seven_average_sharp_completion.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_seven_average_sharp_completion.py)
+
+**Evidence scope / 核验范围：** Fixed positive scalar cycles, positive inverse/root words and per-atom legality are checked on independent core bases. Exhaustive finite group and direction-plus-unit-scale certificates close the fixed finite subproblems;5472 primitive lifts receive exact principal target matrices.96 large-integer input entries and two literal zero-trigger tails are replayed. Infinite containment uses the previously proved deep lemma with Morris6.1(2) and Serre strong CSP, plus the document's3-adic layer argument; it is not inferred from sampled finite images. The threshold also invokes the previously proved15-19,21,>=23 criteria and the fractional-path14-dimensional lower bound.
+
+**Does not establish / 不建立：** Does not prove N(p)=2p+1 for arbitrary prime p, five-averaging12 or14, all variable-arity even cores, efficient principal-group word extraction, short physical words or fixed precision. Finite graph depths8/9 are not uniform full averaging-length bounds. Serre original full text remains unacquired and explicitly cited as an external theorem.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Uniform two-block input entry and upper-band unrestricted input entry
+- Morris 2007 Theorem6.1(2)
+- Serre strong CSP for rational S-integer SL2
+- Deep-congruence and scale-sensitive finite-orbit theorems
+- Previously completed seven-average dimensions and14-dimensional lower bound
+- Zero-trigger completion
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id seven-average-sharp-completion
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+seven-average natural cycles have isolated p7 trace zero: PASS 2
+seven-average fixed scalar cycles and inverse/root replays: PASS 38
+twenty-two auxiliary3 removal: PASS 648 440
+seven-average complete finite direction/scale quotient: PASS 20 640 1600 9
+seven-average exact principal terminal lifts: PASS 20 1600
+seven-average complete finite direction/scale quotient: PASS 22 440 3872 8
+seven-average exact principal terminal lifts: PASS 22 3872
+seven-average full-input entries and literal tails: PASS 96 2
+seven-average known14-dimensional lower-bound input: PASS
+seven-average dimensions20 and22 complete; N7=15: PASS
+~~~
+
+## uniform-two-block-entry
+
+**Claim / 命题：** For every prime p>=5,n=2p+r,1<=r<p andr>=omega(n), all legal inputs enter a legal(p,p,r) core in at most9+3omega(n) physical averages, without period-density or gcd(2p-1,n) restrictions. Two mixing-and-singleton rounds precondition the exceptional primes. The document also proves common m=1,2 integer-lattice/energy/return/terminal formulas and a finite-orbit equivalence retaining the image of realizable R units, conditional on already proved principal-subgroup containment.
+
+**Status:** proved-uniform-two-block-entry-and-exact-weighted-orbit-framework-general-even-core-completion-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/tools/prime_arity_unified_weighted_core_theorem.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/tools/prime_arity_unified_weighted_core_theorem.md)
+
+**Scripts / 脚本：** [work/verify_uniform_two_block_entry.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_uniform_two_block_entry.py)
+
+**Evidence scope / 核验范围：** Exact per-atom original-position replay of482 new entries, including cases outside both previous entry conditions;5520 basis replays of the unified repeated-row formulas;384 lattice, energy and terminal systems;26 first-layer terminal sets. Mathematical quantifiers for the two-round algorithm and scale-sensitive finite-orbit theorem are proved in the document. The new entry proof itself does not invoke arithmetic-group theorems or averaging-word discovery search.
+
+**Does not establish / 不建立：** Does not prove all even lower-band cores, arbitrary entry whenr<omega(n), higher-prime-power or simultaneous global terminal coverage, short-boundary reversible generators, all middle dimensions or a reduced final threshold. Ordinary finite projective coverage alone is insufficient unless the relevant unit-scale image is justified. The first2-adic congruence layer cannot be treated by an unrestricted odd-prime power formula.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing safe two-block initialization
+- Existing short residue selector for n<4p
+- Existing fixed-singleton support merger
+- Original-position ledger and direct matrix arithmetic
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id uniform-two-block-entry
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+unit-scale and first-dyadic-layer distinctions: PASS 2
+uniform two-round original-position entries: PASS 482
+former density/gcd/both restrictions removed: PASS 100 94 30
+exceptional-prime midpoint repair: PASS
+unified weighted lattice and terminal formulas: PASS 384
+unified two-band physical return formulas: PASS 5520
+terminal coverage at block-count primes: PASS 26
+uniform weighted-core entry: PASS
+~~~
+
+## upper-band-coprime-six-complete
+
+**Claim / 命题：** For every prime p>=13 and3p+10<=n<=4p-3 with gcd(n,6)=1, the full p-average reachability criterion is G=1. One extra carrier involution localizes r; three explicit tangent directions upgrade deep control to Gamma(n,R0). A general Smith-CRT sandwich gives positive inverses for existing safe integer returns, a half-carrier return activates3, and a universal2,3-unit small-representative descent supplies terminal transport. Existing upper-band entry applies to arbitrary many prime factors.
+
+**Status:** proved-uniform-full-input-upper-band-coprime-six-family-via-stated-external-theorems · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_coprime_six_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_coprime_six_complete.md)
+
+**Scripts / 脚本：** [work/verify_upper_band_six_unit_completion.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_upper_band_six_unit_completion.py)
+
+**Evidence scope / 核验范围：** Exact finite checks of the document's universal capacity, ring-localization, tangent-layer, Smith-inverse, integer small-representative and terminal-transport proofs. Original-position returns and full-input entries are replayed; arbitrary principal matrices are checked algebraically, not compiled to their complete physical words. Infinite principal containment explicitly invokes Morris6.1(2), Serre strong CSP for rational S-integer SL2 and the previously proved all-modulus deep lemma. The verifier does not establish infinite quantifiers from samples.
+
+**Does not establish / 不建立：** Does not solve n divisible by2 or3 in the upper band, the small strips adjacent to3p or4p, the fringe above4p, five-averaging12/14, seven-averaging20/22, all lower even cores, a complete final-threshold improvement, short words, bounded precision or efficient general group-word extraction. Serre's original full text remains an explicitly unacquired external source.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing upper-band unrestricted input entry
+- Four-return root construction and deep-congruence lemma
+- Morris 2007 Theorem6.1(2)
+- Serre strong CSP for rational S-integer SL2
+- Existing zero-trigger completion theorem
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id upper-band-coprime-six-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+2,3-unit short representative descent: PASS 24168
+upper-band uniform2r localization and3 activation: PASS 274
+upper-band principal-layer identities: PASS 3465
+upper-band augmented literal returns: PASS 230
+upper-band exact all-core target constructions: PASS 822
+upper-band existing complete input entries: PASS 23
+upper-band contraction inverse sandwiches: PASS 4
+upper-band general Smith inverse sandwiches: PASS 2
+upper-band literal terminal tails: PASS 4
+uniform upper-band coprime-six dimensions: PASS
+~~~
+
+## upper-band-four-return-congruence
+
+**Claim / 命题：** For n=3p+r, whenever both existing carrier-involution parameter intervals contain adjacent pairs, four literal returns yield U(rn^2R), L(rn^2R), hence Gamma(r^2n^4,R) by the previously proved deep-congruence lemma. R=Z[1/(de*mu*nu)] is justified by the two multiplier rings. The capacity condition holds for every prime p>=13 and10<=r<=p-3. This is a group-control theorem, not terminal coverage or a new solved dimension.
+
+**Status:** proved-uniform-upper-band-deep-congruence-interface-terminal-coverage-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_four_return_congruence.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_four_return_congruence.md)
+
+**Scripts / 脚本：** [work/verify_upper_band_four_return_congruence.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_upper_band_four_return_congruence.py)
+
+**Evidence scope / 核验范围：** Exact four-return commutator and localization identities checked on2188 parameter systems,2172 uniform-interior capacity cases and344 original-position double-basis round trips. General formulas and capacities are proved in the document. Infinite containment uses the previous all-modulus elimination lemma with Morris finite-index generation and Serre strong CSP, not finite modular sampling.
+
+**Does not establish / 不建立：** Does not prove finite terminal or unit-scale coverage for general p,r, solve the whole3p-to4p band, solve any additional complete dimension, cover3p+1 or the upper fringe, or lower the final threshold. Lack of standard involutions is only a boundary of the specified disjoint trace-zero menu.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing upper-band A-carrier and B-carrier involutions
+- Previously proved deep-congruence lemma
+- Morris 2007 Theorem6.1(2)
+- Serre strong CSP for rational S-integer SL2
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id upper-band-four-return-congruence
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+upper-band four-return matrix systems: PASS 2188
+upper-band uniform interior capacities: PASS 2172
+upper-band literal four-return checks: PASS 344
+upper-band first-fringe capacity boundary: PASS
+upper-band deep congruence interface: PASS
+~~~
+
+## even-middle-eighteen-congruence
+
+**Claim / 命题：** For every prime p>=7 and even4<=r<=p-3, the two standard involutions give U(rnR), L(rnR) and Gamma((rn)^2,R), with n=2p+r and R=Z[1/(de)] using adjacent odd determinants. A short-mixing entry works when r>=omega(n) and gcd(2p-1,n)=1. For p=7,n=18 the proved modulus5184 has exactly two legal terminal orbits and the R=Z[1/65] unit image is full, completing the all-input G=1 criterion.
+
+**Status:** proved-general-deep-congruence-interface-and-seven-average-eighteen-via-external-theorems-and-complete-finite-certificate · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_even_middle_congruence_and_eighteen.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_even_middle_congruence_and_eighteen.md)
+
+**Scripts / 脚本：** [work/verify_even_middle_congruence_and_eighteen.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_even_middle_congruence_and_eighteen.py)
+
+**Evidence scope / 核验范围：** Complete unit and legal-direction enumeration at the rigorously specified modulus5184, all generator edges and a decreasing parent forest to two literal terminals. Exact primitive lifts and principal target matrices checked for every quotient direction. General identities, labelled involutions and new input-entry formulas are independently replayed. Infinite group containment invokes Morris6.1(2), Serre strong CSP over the stated rational S-integer rings, and the document's all-modulus elimination proof; it is not inferred from finite images.
+
+**Does not establish / 不建立：** Does not prove all even middle dimensions, r=2 or r=p-1, general terminal coverage at variable levels, unrestricted full-input entry, seven-averaging20 or22, five-averaging12 or14, a lower final threshold or efficient extraction of the whole physical word for an arbitrary principal-subgroup matrix. The general 2-adic quantity is proved invariant, not asserted to be a complete orbit classification.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Morris 2007 Theorem6.1(2)
+- Serre strong CSP for rational S-integer SL2, including Z[1/65]
+- Existing original-position involutions
+- Existing short residue sieve and fixed-singleton support merger
+- Principal-subgroup transitivity on congruent unimodular columns over a PID
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id even-middle-eighteen-congruence
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+even middle pair and root identities: PASS 62
+even middle original-position involutions: PASS 84
+short-mixing full-input entries: PASS 100
+eighteen complete unit image: PASS 1728
+eighteen complete congruence quotient: PASS 5184 {0: 2592, 1: 2592} 35
+eighteen exact principal target lifts: PASS 5184
+eighteen literal zero-trigger terminals: PASS 2
+even middle congruence and seven-average eighteen: PASS
+~~~
+
+## uniform-odd-middle-cores
+
+**Claim / 命题：** For every prime p>=5 and odd3<=r<p, all legal (p,p,r) cores are reachable. Two universally available returns yield U(nZ[1/2]) and L(nZ[1/2]); integer conjugate nilpotents and finite-index/strong-CSP theorems give Gamma(n,Z[1/2]). A CRT matrix sandwich makes the carrier-preserving F1 contraction positively invertible. A balanced representative and one dyadic fold replace primitive-root assumptions, giving exact terminal transport. With the existing entry criterion this solves all prime dimensions2p<n<3p and qualifying odd composite dimensions, including seven-averaging17 and19.
+
+**Status:** proved-uniform-odd-remainder-cores-and-qualified-full-input-dimensions-no-threshold-drop · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/lower_band/prime_arity_uniform_odd_middle_cores.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/lower_band/prime_arity_uniform_odd_middle_cores.md)
+
+**Scripts / 脚本：** [work/verify_uniform_odd_middle_cores.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_uniform_odd_middle_cores.py)
+
+**Evidence scope / 核验范围：** Finite exact formulas, labelled return replay, CRT determinant-one inverse-activation matrices and primitive terminal matrices. General n and all congruence layers are handled in the document using explicitly cited Morris and Serre theorems. The verifier does not extract the full physical word for an arbitrary principal-subgroup matrix.
+
+**Does not establish / 不建立：** Does not establish arbitrary-input entry outside the stated period-density criterion, general even remainders, the upper middle band, any final-threshold decrease, short words, bounded precision or polynomial word extraction. Does not use finite modular data alone to infer infinite-group containment.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Morris 2007 Theorem6.1(2)
+- Serre strong CSP for SL2(Z[1/2])
+- Existing all-r physical involutions and period-density input entry
+- CRT and finite-ring elementary generation
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id uniform-odd-middle-cores
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+odd middle core parameter systems: PASS 71
+odd middle literal return checks: PASS 426
+odd middle exact terminal transports: PASS 284 52
+CRT principal inverse activation: PASS 6
+odd middle existing full-input entries: PASS 69
+uniform odd middle core theorem: PASS
+~~~
+
+## five-thirteen-congruence
+
+**Claim / 命题：** Five-averaging in dimension13 has the full G=1 reachability criterion. Existing (5,5,3) returns J and Q yield an invertible multiplier -12 and U(13/4), hence both 13Z[1/2] root groups. Morris finite-index generation and Serre strong CSP, together with three nilpotents spanning sl2(F13), give the whole principal level13 subgroup. A fixed return is an upper translation modulo13 in the legal chart, and powers of2 plus an exact principal-kernel Bezout matrix reach the global zero-carrier terminal. Existing full-input entry completes the criterion.
+
+**Status:** proved-fixed-dimension-via-stated-external-group-theorems-no-efficient-full-word-extractor · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/examples/five_average_thirteen_congruence_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/examples/five_average_thirteen_congruence_complete.md)
+
+**Scripts / 脚本：** [work/verify_five_thirteen_congruence.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_five_thirteen_congruence.py)
+
+**Evidence scope / 核验范围：** Exact original-position macro replay and independent finite congruence algebra check the explicit formulas. The document proves arbitrary congruence-layer and CRT coverage using external finite-index and strong-CSP theorems. Large-input tests construct the exact target matrix in the principal subgroup but do not extract a full averaging word for that matrix.
+
+**Does not establish / 不建立：** Does not prove five-averaging in dimensions12 or14, reduce N(5) below15, solve all middle-band cores, provide bounded precision or an efficient general full-word algorithm, or infer infinite-group containment from finite images alone.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Morris 2007 Theorem6.1(2)
+- Serre strong CSP for SL2(Z[1/2])
+- Existing middle-band entry and all-r involution formulas
+- Exact original-position ledger
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id five-thirteen-congruence
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+five-thirteen physical returns and roots: PASS 25
+five-thirteen first congruence layer: PASS 2197
+five-thirteen higher-layer identities: PASS 24
+five-thirteen legal residue transport: PASS 156
+five-thirteen exact principal-kernel transport: PASS 160
+five-thirteen existing full-input entries: PASS 80
+five-thirteen congruence completion: PASS
+~~~
+
+## endpoint-congruence-completion
+
+**Claim / 命题：** For A=Z[1/2] and every odd n, U(A) and L(nA) generate Gamma1(n,A): Morris 2007 Theorem6.1(2) gives finite index, Serre's strong congruence subgroup property gives a principal congruence subgroup, and the document supplies explicit generation in every finite quotient. A balanced small unit representative then places integer Gamma0(2p+1) in the existing positive endpoint controller for every odd arity p>=3. All legal endpoint cores are reachable. Existing omega(n)<=6 or Theta(n)<1 entry theorems yield full-input endpoint criteria in those ranges.
+
+**Status:** proved-using-stated-external-arithmetic-group-theorems-general-entry-and-threshold-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/lower_band/prime_arity_endpoint_congruence_completion.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/lower_band/prime_arity_endpoint_congruence_completion.md)
+
+**Scripts / 脚本：** [work/verify_endpoint_congruence_completion.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_endpoint_congruence_completion.py)
+
+**Evidence scope / 核验范围：** Independent finite group comparisons and exact decompositions validate the explicit algebra, not the external infinite-group theorems. Morris's original Theorem6.1(2), definitions and relative-group lemmas were read in full relevant sections. Serre's standard strong CSP special case for SL2(Z[1/2]) is explicitly cited and cross-checked with an expert reference; the original Serre full text was not obtained. The general finite-modulus construction is proved in the document. Positive compiler checks cover the small coset representatives, not a general Gamma1 word extraction algorithm.
+
+**Does not establish / 不建立：** Does not solve unrestricted many-prime endpoint entry, n>2p+1, an optimal threshold, bounded physical precision, efficient or short words, or verify the external finite-index/CSP theorems by computation. Does not require or prove that every integer pivot is a supported unit.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Morris 2007 Theorem6.1(2)
+- Serre strong congruence subgroup property for SL2(Z[1/2])
+- Existing uniform positive endpoint controller
+- Existing six-prime and Theta entry theorem
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id endpoint-congruence-completion
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+finite congruence images: PASS 34 184597
+constructive quotient decompositions: PASS 4947
+balanced unit and coset reduction: PASS 9422 9422
+existing positive compiler coset representatives: PASS 28
+endpoint congruence completion algebra: PASS
+~~~
+
+## complete-local-unit-recovery
+
+**Claim / 命题：** Every parameter in the all-collision unit-gap core branch admits local recovery after the prescribed carrier step: at most three further safe nonconstant integer averages restore an adjacent p-heavy pair, with at most five atoms from the original core. A carrier construction resolves small negative inverses; one overlap followed by a modulus h^2-2 count construction resolves every e=1,h>=4 case. The output pair does not move above the old A.
+
+**Status:** proved-uniform-local-unit-recovery-all-parameters-recursive-output-closure-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/structure/prime_arity_complete_unit_collision_recovery.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/prime_arity_complete_unit_collision_recovery.md)
+
+**Scripts / 脚本：** [work/verify_complete_unit_collision_recovery.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_complete_unit_collision_recovery.py)
+
+**Evidence scope / 核验范围：** The document gives universal arithmetic and capacity proofs. The verifier checks3305 critical count systems and replays627 actual original-position core inputs through p1000, with at most five atoms and a legal positive adjacent-heavy output pair. It recomputes the earlier menu boundary independently and covers all10 former gaps. The p983 example verifies the inventory obstruction and an actual overlapping construction.
+
+**Does not establish / 不建立：** Does not prove that the multivalue outputs re-enter the core branch, that every adjacent-heavy state admits the same stage, complete p-averaging reachability in the middle band, or a reduced N(p). The theorem is a nontrivial recovery after the prescribed carrier step, not a claim that finding an already present unit pair solves the state.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Unit-gap core parameterization and noncritical capacity theorem
+- Earlier upper and short-remainder transfer formulas
+- Modular inverses and O(h) residue counting
+- Exact original-position ledger
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id complete-local-unit-recovery
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+uniform critical recovery count systems: PASS
+uniform critical original-position recoveries: PASS 627
+previous critical menu gaps recovered: PASS 10
+verified shortage of disjoint integer groups: PASS 1
+complete local unit-collision recovery: PASS
+~~~
+
+## sharp-multiplicity-precision
+
+**Claim / 命题：** Capped multiplicity S_p>=2p-1+h guarantees a safe nonconstant integer average with h protected witnesses. Pure integer-frozen legal states have second multiplicity at most p-2, sharply. An explicit G=1 family with a p-heavy and a (p-1)-heavy value in arbitrarily large dimensions has only one nonconstant integer move, whose output has G=n. At n=5p-4 this family needs exactly one extra p-adic digit by the existing large-dimension sufficiency theorem. A separate safe three-step fractional prefix freezes a one-digit grid despite an alternative two-step integer zero trigger.
+
+**Status:** proved-sharp-safety-and-precision-boundaries-no-new-dimension-threshold · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/structure/prime_arity_sharp_repetition_and_precision_barriers.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/prime_arity_sharp_repetition_and_precision_barriers.md)
+
+**Scripts / 脚本：** [work/verify_sharp_multiplicity_and_precision.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_sharp_multiplicity_and_precision.py)
+
+**Evidence scope / 核验范围：** The document proves the general claims. The verifier checks all integer type groups for132 safety-deadlock examples,44 existing-theorem dimension interfaces,24 sharp frozen examples,161 protected capped-pool choices and8 independently replayed precision-policy contrasts. One-digit sufficiency invokes the prior large-dimension theorem; this verifier does not replay a complete consensus word for each deadlock-family input.
+
+**Does not establish / 不建立：** Does not refute the G reachability criterion, moving-witness multi-step methods or stronger history-dependent invariants. Does not show every weak-invariant state is trapped or initialization reaches the counterexamples. Does not reduce N(p), prove general recursion, or validate the exploratory four-value diagnostic as a safety certificate.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- EGZ theorem
+- Necessary non-p congruence obstruction
+- Existing one-extra-digit large-dimension theorem
+- Exact original-position replay
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id sharp-multiplicity-precision
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+sharp near-heavy safety deadlocks: PASS 132
+one-extra-digit optimality interface: PASS 44
+integer frozen second-multiplicity sharpness: PASS 24
+capped mass protected integer selection: PASS 161 45
+safe fixed-precision policy obstruction and alternative: PASS 8
+sharp multiplicity and precision: PASS
+~~~
+
+## euclidean-witness-transfer
+
+**Claim / 命题：** For the critical unit-gap core branch p=hs+d, all d>h cases and the e=h-d>=2 cases with 2d*eta>=e, eta=-(s+1)^(-1) mod e, admit explicit two-disjoint-group integer transfers after the carrier step. The short positive remainder has an exact inverse formula. Every upper-defect output admits a further three-atom continuation that removes the old high values, strictly lowers the global maximum and restores a lower adjacent-heavy pair.
+
+**Status:** proved-arbitrary-h-local-transfers-and-upper-output-height-drop-recursive-closure-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_euclidean_witness_transfer.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_euclidean_witness_transfer.md)
+
+**Scripts / 脚本：** [work/verify_euclidean_witness_transfer.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_euclidean_witness_transfer.py)
+
+**Evidence scope / 核验范围：** General proofs are in the document. Exact checks cover4957 coprime residue systems,1191 lower-defect and1222 upper-defect count systems,226 lower-defect and248 upper-defect original-position transfers, and the additional upper-output continuation for all248 instances. The test uses a sieve, two possible defects per h, quotient intervals, modular inverses and O(n+p) labelled updates. Ten finite-range uncovered menu entries remain explicit.
+
+**Does not establish / 不建立：** Does not prove recursive re-entry of the multivalue outputs, nonreachability of the uncovered entries, exhaustion of all useful invariants or stages, any new complete dimension, or a reduced N(p). The inverse criterion is exact for the specified short-remainder menu, not necessary for all physical paths.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Unit-gap core parameterization
+- Euclidean modular inverse
+- Exact integer count identities and original-position replay
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id euclidean-witness-transfer
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+short positive remainder inverse criterion: PASS 4957
+euclidean witness count systems: PASS
+euclidean witness labelled disjoint transfers: PASS
+upper-defect actual output continuations: PASS 248
+remaining menu boundaries through p1000: 10
+euclidean witness transfer: PASS
+~~~
+
+## unit-witness-replenishment
+
+**Claim / 命题：** The all-collision unit-gap core branch has a complete hs<p parameterization. The nonnegative relations among deviations 1,s+1,-s have an explicit Hilbert basis, yielding an exact two-atom witness-replenishment capacity criterion. Three-atom stages resolve all defect-one cases and h=3,defect=2. For any arity k and n>3k with k not dividing n, adjacent heavy values alone are not a one-step closed invariant. A literal p29,n95 core has this local obstruction but admits a four-step zero trigger.
+
+**Status:** proved-local-two-and-three-atom-stages-and-uniform-one-step-obstruction-recursive-closure-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_unit_witness_replenishment.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_unit_witness_replenishment.md)
+
+**Scripts / 脚本：** [work/verify_unit_witness_replenishment.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_unit_witness_replenishment.py)
+
+**Evidence scope / 核验范围：** The document proves the parameterization, Hilbert basis, capacity equivalence, extended stages and arbitrary-arity obstruction. Checks enumerate241187 bounded integer-capacity systems, replay1051 two-atom stages,8 defect-one stages,3 h3-defect2 stages and3 direct continuations from the finite p<=101 core parameter range. Exact elimination verifies the actual p29 one-step obstruction and original-position replay verifies its four-step zero trigger.49 examples include composite arities and dimensions above4k.
+
+**Does not establish / 不建立：** Does not prove that replenishment outputs re-enter the same state class, a global moving-witness policy, failure of all multi-step adjacent-heavy policies, any new all-input dimension, or a reduced threshold. Coverage through p101 concerns only the explicitly parameterized all-collision branch.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Core source relation and unit-gap lemma
+- Bounded nonnegative integer relations
+- Exact original-position replay
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id unit-witness-replenishment
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+unit witness exact capacity criterion: PASS 241187 238655 2532
+unit witness original-position replenishment stages: PASS 1051 14 68
+actual core unit-heavy one-step obstruction: PASS 29 95
+uniform one-step adjacent-heavy obstruction: PASS 49
+extended unit witness stages through p101: PASS
+p29 n95 four-step zero trigger: PASS
+unit witness replenishment and boundary: PASS
+~~~
+
+## provenance-dynamic-integer-stages
+
+**Claim / 命题：** Every specified integer exit from a primitive G=1 (2p,p,r) core has another safe nonconstant integer step retaining two distinct p-heavy values, unless already at a zero trigger. Its dangerous primes share one support and are determined by gcd(3alpha-2,n). Actual integer descendants can freeze. Fixed original A,C witnesses exclude content cancellation at a genuinely fractional checkpoint; explicit cores then obstruct primitive square energy, and at r=1 also integer pair-distance descent. An odd-prime excursion from and back to the same integer lattice requires at least five averages.
+
+**Status:** proved-second-step-local-protection-and-stage-obstructions-recursive-closure-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/structure/prime_arity_provenance_dynamic_and_integer_stages.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/prime_arity_provenance_dynamic_and_integer_stages.md)
+
+**Scripts / 脚本：** [work/verify_provenance_dynamic_stages.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_provenance_dynamic_stages.py)
+
+**Evidence scope / 核验范围：** The document supplies the general proofs, using the earlier planar collision lemma for one subcase. Exact original-position replay verifies5926 second steps,902 danger supports, a seven-step reachable frozen state with an alternative zero branch,11 fixed-anchor examples,9 legal five-step excursions and arithmetic lower bounds. The optional bounded deterministic diagnostic is not used by the formal verification command.
+
+**Does not establish / 不建立：** Does not prove closure after the second step, failure of every moving-witness strategy, nonreachability of the frozen state, a new all-input dimension, or any lower N(p) bound. The five-step lower bound concerns return to the original integer lattice, not rescaling, normalization, or merely creating a zero trigger.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Core exit and binary collision lemmas
+- Exact modular inverses and original-position replay
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id provenance-dynamic-integer-stages
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+core successor second integer step: PASS 5566
+r1 successor second integer step: PASS 360
+successor common danger support: PASS 902
+provenance closure counterexample and r1 elimination: PASS 7 76
+uniform fixed-heavy-anchor obstruction: PASS 11
+normalization-aware protection and five-step returns: PASS 9 3
+anchored denominator floor and four-step obstruction: PASS 308 17760
+anchored integer pair-distance obstruction at r1: PASS 10
+provenance and dynamic stages: PASS
+~~~
+
+## core-exit-potential-scope
+
+**Claim / 命题：** For prime p>=5, 1<=r<p and primitive integer zero-sum G=1 (2p,p,r) cores, one explicit safe nonconstant integer p-average always retains two distinct p-heavy values. A collision to the retained value would force n to divide 3j+1 with 1<=3j+1<n. Original-residue protection is automatic except at q=3 when 3 divides r and the move selects all carrier positions. Pairwise absolute distance is a strictly decreasing nonquadratic potential for all averaging arities.
+
+**Status:** proved-core-integer-exit-and-local-protection-recursive-closure-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/structure/prime_arity_invariant_improvements_and_core_exit.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/prime_arity_invariant_improvements_and_core_exit.md)
+
+**Scripts / 脚本：** [work/verify_core_exit_and_potential_scope.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_core_exit_and_potential_scope.py)
+
+**Evidence scope / 核验范围：** The document proves the universal exit and local-residue classification. The verifier checks10800 type selections,944 exact integer original-position steps and180 nonquadratic decreases. It distinguishes loss of raw residue witnesses from failure of normalized G. Integer exits need no macro search and do not assume a fixed shape on output.
+
+**Does not establish / 不建立：** Does not prove recursive closure of the four-value successor class, universal integer-return macros, any new all-input dimension, or N(p)<=3p. Common-quadratic uniqueness does not exclude nonquadratic or state-dependent potentials.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Core zero-sum and G=1 constraints
+- Integer modular inverse
+- Convexity of pairwise absolute distances
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id core-exit-potential-scope
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+core protection exactly mod3 only: PASS 144 10800
+upper-band core one-step integer exits: PASS 944
+nonquadratic pair-distance integer decrease: PASS 180
+core exit and energy uniqueness scope: PASS
+~~~
+
+## distinct-entry-gaussian-transfer
+
+**Claim / 命题：** For any averaging arity k>=2 and n>2k, a legal integer state with at least d+2k-1 distinct actual values has a safe nonconstant integer average, yielding finite reduction to at most d+2k-2 values. For odd prime arity p and prime dimension ell=1 mod p, actual Gaussian layers admit a global positive norm cycle and positive projective inverses. The old ternary unit identity and the prime-to-composite closure do not transfer automatically, and there are no split prime dimensions in 3p<ell<4p.
+
+**Status:** proved-distinct-entry-and-general-norm-cycles-conditional-closure-boundaries · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_distinct_value_integer_reduction.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_distinct_value_integer_reduction.md) · [outputs/prime_arity/history/prime_arity_revisiting_ternary_factor_gaussian_route.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_revisiting_ternary_factor_gaussian_route.md)
+
+**Scripts / 脚本：** [work/verify_distinct_entry_and_gaussian_transfer.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_distinct_entry_and_gaussian_transfer.py)
+
+**Evidence scope / 核验范围：** EGZ and the explicit protected-value proof establish the universal integer entry lemma. The cyclotomic period norm establishes global positive inverses on the stated flat kernel. The verifier checks six original-position integer entries, six Gaussian products on complete coefficient bases and4503 finite factor-capacity cases. Bareiss elimination and exact Fractions are used; no averaging-word search.
+
+**Does not establish / 不建立：** Does not prove arbitrary-p root generation, prime-dimension termination, arbitrary composite closure, seven-averaging n22, all upper-band termination, or a lower final threshold. A nonunit determinant alone is not an impossibility theorem after localization. The integer entry lemma stops at few distinct values.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Classical EGZ
+- Cyclotomic period norm identity
+- Original-position subgroup-orbit averaging
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id distinct-entry-gaussian-transfer
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+distinct-value safe integer entry general arity: PASS 6
+Gaussian transfer: 5 11 2 3 4
+general Gaussian global positive cycles and ternary unit boundary: PASS 6
+critical band split-prime and factor capacity boundaries: PASS 4503
+distinct-value entry and historical-route transfer: PASS
+~~~
+
+## sharp-monochromatic-escape
+
+**Claim / 命题：** The old two-largest-multiplicity bound 3p-2 is false: at p13,n40, 0^32 1^4 2^4 has no mixed p-zero-sum and top-two sum36. The corrected optimal bound is N-floor((p-1)/3), using Balandraud plus a layered sumset argument. The explicit extremal integer frozen family has a three-average zero trigger for all primes p>=13 and also p11.
+
+**Status:** proved-sharp-residue-bound-and-uniform-extremal-zero-trigger · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_sharp_concentration_and_escape.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_sharp_concentration_and_escape.md)
+
+**Scripts / 脚本：** [work/verify_sharp_monochromatic_and_escape.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_sharp_monochromatic_and_escape.py)
+
+**Evidence scope / 核验范围：** Full proofs in the report with an explicit cited external theorem. Finite exact checks validate319015 residue configurations,45408 zero-free sequences and91 labelled paths. Replaces an old print-only placeholder and unsupported claims of complete enumerations.
+
+**Does not establish / 不建立：** Does not prove any new full dimension, N(p)<=3p, all safe local-minimum escapes or arbitrary actual lifts of the extremal residue pattern.
+
+**Dependencies / 依赖：**
+
+- EGZ
+- Balandraud subset-sum theorem and published erratum
+- Cauchy-Davenport
+- Existing zero-trigger completion
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id sharp-monochromatic-escape
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+zero-free sharp defect exhaustive checks: PASS 45408
+exact no-mixed residue classification: PASS 319015
+sharp concentration counterexample and three-step escapes: PASS 91
+sharp monochromatic structure and extremal escape: PASS
+~~~
+
+## single-value-zero-sum-conjecture
+
+**Claim / 命题：** The old two-largest-multiplicity bound 3p-2 is false: at p13,n40, 0^32 1^4 2^4 has no mixed p-zero-sum and top-two sum36. The corrected optimal bound is N-floor((p-1)/3), using Balandraud plus a layered sumset argument. The explicit extremal integer frozen family has a three-average zero trigger for all primes p>=13 and also p11.
+
+**Status:** disproved-old-conjecture-corrected-sharp-bound-and-extremal-paths · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/structure/prime_arity_single_value_zero_sum_conjecture.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/prime_arity_single_value_zero_sum_conjecture.md) · [outputs/prime_arity/history/prime_arity_sharp_concentration_and_escape.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_sharp_concentration_and_escape.md)
+
+**Scripts / 脚本：** [work/verify_sharp_monochromatic_and_escape.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_sharp_monochromatic_and_escape.py)
+
+**Evidence scope / 核验范围：** Full proofs in the report with an explicit cited external theorem. Finite exact checks validate319015 residue configurations,45408 zero-free sequences and91 labelled paths. Replaces an old print-only placeholder and unsupported claims of complete enumerations.
+
+**Does not establish / 不建立：** Does not prove any new full dimension, N(p)<=3p, all safe local-minimum escapes or arbitrary actual lifts of the extremal residue pattern.
+
+**Dependencies / 依赖：**
+
+- EGZ
+- Balandraud subset-sum theorem and published erratum
+- Cauchy-Davenport
+- Existing zero-trigger completion
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id single-value-zero-sum-conjecture
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+zero-free sharp defect exhaustive checks: PASS 45408
+exact no-mixed residue classification: PASS 319015
+sharp concentration counterexample and three-step escapes: PASS 91
+sharp monochromatic structure and extremal escape: PASS
+~~~
+
+## shape-changing-integer-potential
+
+**Claim / 命题：** Allowing block shapes to change, record the integer-checkpoint potential E=sum x_i^2. Every nonconstant p-average strictly decreases the actual rational energy, so any nonconstant safe macro returning to the integer lattice strictly decreases the integer checkpoint energy. The two-step overlapping zero family (2^(2p),(-1)^p,-3p) and collision background-growth formula are explicit instances. The remaining task is an existence lemma for such integer-return macros in every legal state.
+
+**Status:** valid-conditional-potential-argument-universal-macro-existence-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/structure/prime_arity_shape_changing_integer_potential.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/prime_arity_shape_changing_integer_potential.md)
+
+**Scripts / 脚本：** [work/verify_upper_band_descent_boundary.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_upper_band_descent_boundary.py)
+
+**Evidence scope / 核验范围：** The document proves the energy identity symbolically and explains the checkpoint argument; the cited verifier independently replays 93 two-step zero macros and the complete ten-return n22 one-step diagnostic. The framework permits shape changes and intermediate rational states, but does not invent a universal macro.
+
+**Does not establish / 不建立：** Does not prove universal integer-return existence; with unrestricted words that existence condition is essentially equivalent to the reachability objective. Old fixed top-two residue bound is false. No new full dimension or final threshold.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing upper-band ledger
+- Actual energy projection identity
+- Existing zero-trigger theorem
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id shape-changing-integer-potential
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+uniform two-step overlapping integer escape: PASS 93
+explicit core trap complete disjoint-return audit: PASS 10
+~~~
+
+## dominant-residue-reservoir
+
+**Claim / 命题：** When an unprotected light residue class modulo p has at least p-alpha positions in a state (a^(p+alpha),b^p,light), all-collision equations first force its actual lift to an integer t in [1,alpha]. Every other residue has at least one legal integer count pair; two different pairs cannot sustain a nonintegral collision lift. If the resulting integer light parameters have excess at least p, a prefix packing yields a strict-energy-decreasing p-average retaining both heavy values. The residue-count condition r-h >= (s-1)(p-alpha-1) guarantees the dominant branch when s light residue classes remain.
+
+**Status:** proved-local-dominant-reservoir-and-rigidity-global-closure-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_dominant_residue_reservoir.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_dominant_residue_reservoir.md)
+
+**Scripts / 脚本：** [work/verify_dominant_residue_reservoir.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_dominant_residue_reservoir.py)
+
+**Evidence scope / 核验范围：** The document gives the dominant lift, pigeonhole count-pair existence, two-pair collision rigidity and excess-prefix construction. The script checks the formulas over bounded prime ranges and independently replays 834 original-position Fraction continuations, including protected and multi-residue examples.
+
+**Does not establish / 不建立：** Does not prove closure when every exception has only one admissible pair, arbitrary two-or-more light residue interactions after a continuation, all upper-band termination, seven-averaging n22 for every input, or N(p)<=3p. The residue-count inequality is a sufficient branch condition, not a universal condition.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing labelled averaging ledger
+- Planar collision lattice lemma
+- Elementary pigeonhole and prefix-sum packing
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id dominant-residue-reservoir
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+binary collision lift bounded by reserve: PASS 367224 15497
+exception lift rigidity after dominant collision: PASS 37754 37754 0
+dominant reservoir excess packing: PASS 13301
+dominant residue labelled integer continuations: PASS 834
+dominant residue reservoir integer closure: PASS
+~~~
+
+## binary-collision-lattice
+
+**Claim / 命题：** For prime p>=5, the critical two-type collision equations on an alpha by (p-alpha) count rectangle, 2<=alpha<=p-2, force an integer lift; with alpha+L=p+e the collision mass lies strictly between 0 and 3p+e. This yields a safe nonconstant integer average preserving two distinct p-heavy values for upper-band states (a^(p+alpha),b^p,light) with a single light residue modulo p and a minimal witness set of size h<=r. A single actual light value has h<=1. Three-actual-value states with all three values p-heavy also have an integer continuation or a zero trigger, including r=1.
+
+**Status:** proved-lattice-integrality-and-integer-continuation-branches-general-closure-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/structure/prime_arity_binary_collision_lattice.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/prime_arity_binary_collision_lattice.md)
+
+**Scripts / 脚本：** [work/verify_binary_collision_lattice.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_binary_collision_lattice.py)
+
+**Evidence scope / 核验范围：** The document proves integrality using an empty triangle in an index-p planar lattice and a separate one-candidate interval argument, then proves the mass bound and actual witness-preserving selection. Finite systems check the formulas; 2560 labelled sample continuations independently preserve integer values, mass, G, two distinct heavy values, and strictly decrease energy. The p29/n90 sample needs three private witnesses at the exact p count budget. All inputs are in the stated branches.
+
+**Does not establish / 不建立：** Does not prove closure for two or more light residue classes, arbitrary multiplicities with both heavy values exceeding p, cases with h>r, every three-value state under every multiplicity pattern, all upper-band termination, n22 for all seven-averaging inputs, or N(p)<=3p. The output may have two light residue classes and leave the proved branch.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing labelled averaging ledger and normalized G replay
+- Planar lattice index lemma
+- Elementary modular count and mass identities
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id binary-collision-lattice
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+critical two-type collision integrality: PASS 130420 58 5818
+surplus two-type collision mass bound: PASS 113628 4872
+one-light-type labelled integer continuations: PASS 2133 816 169
+three-heavy labelled integer continuations including r1: PASS 300 21
+middle-collision primitive hypothesis control: PASS
+one-residue multi-value integer continuations: PASS 127 3
+binary lattice collision and critical integer branches: PASS
+~~~
+
+## upper-band-descent-boundary
+
+**Claim / 命题：** The seven-averaging n22 state (2^14,(-1)^7,-21) admits no primitive-energy decrease or terminal successor from any nonidentity three-disjoint-group return to its (14,7,1) core, yet two overlapping integer averages create seven zeros. A two-step zero-trigger formula holds for every prime p>=5 on (2^(2p),(-1)^p,-3p). A second physical carrier involution exists for all upper-band r>=4. Uniform bounded word lengths cannot solve all legal core directions, and the old threshold inequality leaves the p761/n3045 fringe point uncovered.
+
+**Status:** proved-specific-descent-obstruction-and-uniform-escape-family-general-termination-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_three_p_remaining_gap.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_three_p_remaining_gap.md)
+
+**Scripts / 脚本：** [work/verify_upper_band_descent_boundary.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_upper_band_descent_boundary.py)
+
+**Evidence scope / 核验范围：** The document proves the general carrier capacity, two-step family, unbounded-length necessity and completeness of the ten-return menu for the explicit n22 state. Exact original-position replay checks all ten returns, with the true normalized G condition, 484 global scalar cycles and 93 two-step escapes. The 9344-direction audit is finite diagnostic evidence only and enumerates one disjoint row-count family, not longer words or all overlapping macros.
+
+**Does not establish / 不建立：** Does not prove general core termination, seven-averaging n22 for all inputs, N(p)<=3p, impossibility of overlapping or longer energy-descending phases, or unreachability of the fringe point. The two-step formula creates p zeros and invokes the existing zero-trigger theorem for full completion.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing upper-band labelled ledger and core parametrization
+- Elementary integer count formulas
+- Existing zero-trigger completion theorem
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id upper-band-descent-boundary
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+second-carrier global involutions: PASS 2544 484
+one-return finite descent diagnostic: PASS 9344 1703
+explicit core trap complete disjoint-return audit: PASS 10
+uniform two-step overlapping integer escape: PASS 93
+upper fringe not covered by previous inequality: PASS 761 3045
+~~~
+
+## upper-band-three-value-reduction
+
+**Claim / 命题：** For every prime p>=5 and 3p<n<4p, every primitive zero-sum G=1 input reaches a legal weighted (2p,p,n-3p) core in at most 12+3*omega(n) original-position averages. No remainder or prime-factor-count condition is needed. The core has G=gcd(y,n), an explicit energy of discriminant -8*n*(n-3p), and physical three-step trace-zero returns for every remainder r>=4.
+
+**Status:** proved-uniform-upper-band-entry-and-core-identities-terminal-coverage-open · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_three_value_reduction.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_three_value_reduction.md)
+
+**Scripts / 脚本：** [work/verify_upper_band_three_value_reduction.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_upper_band_three_value_reduction.py)
+
+**Evidence scope / 核验范围：** Unbounded quantifiers are proved in the document by elementary inclusion-exclusion, bounded affine residue selection, witness support growth and labelled duplicate-row transport. The program checks 385 entry/core-reduction sample paths with every atom independently replayed, 700 six-atom global scalar cycles, and exact local/energy formulas. Five-prime forced support growth is included. The sieve selects physical multiplicities, not averaging words.
+
+**Does not establish / 不建立：** Does not prove terminal coverage of the (2p,p,r) core, seven-averaging n22, all upper-band reachability, a lowered final threshold N(p), complete congruence-group containment, or one-extra-digit precision. No general external Jacobsthal bound is assumed.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing Ledger for labelled averages
+- Elementary CRT and inclusion-exclusion
+- Original-position block-singleton exchange
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id upper-band-three-value-reduction
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+upper-band elementary residue selector: PASS 1770 106534
+upper-band all-remainder labelled entries: PASS 376 18 17
+upper-band forced multi-prime support growth: PASS 5 5
+upper-band simultaneous main-block repair and fold: PASS 4
+upper-band quadratic core and primitive-height boundary: PASS 564 544
+upper-band physical trace-zero core returns: PASS 700
+upper-band uniform three-value reduction: PASS
+~~~
+
+## ten-twelve-seventeen-complete
+
+**Claim / 命题：** At n=17, both ten-averaging and twelve-averaging have the complete nonautomatic G criterion G=1. Two-step entries reach weighted cores (10,6,1) and (12,4,1), so G=gcd(y,17). Explicit return templates give positive inverses, Sigma and dyadic roots; ten-averaging additionally activates Delta(5), twelve-averaging Delta(3). Both complete Gamma_0(17) Schreier covers compile and Bezout reaches a terminal. Thus H(10)=H(12)=17.
+
+**Status:** proved-ten-and-twelve-average-seventeen-full-G-criterion · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/ten_twelve_average_seventeen_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/ten_twelve_average_seventeen_complete.md) · [outputs/general_arity/composite_critical_scale_and_conjecture.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/composite_critical_scale_and_conjecture.md)
+
+**Scripts / 脚本：** [work/verify_ten_twelve_average_seventeen.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_ten_twelve_average_seventeen.py)
+
+**Evidence scope / 核验范围：** Universal entry, macro identities, local units, complete mod17 Schreier covers and Bezout terminal are given in the report. The verifier checks17 automatic-B points throughq<=200,12 and10 macro basis replays,288 primitive mod17 rows and54 loops for each arity,60 large-coordinate entries for each, and three fully expanded original-position paths per arity. Paths are exact Fraction replays; random path samples are filtered for compiled expansion below5000 atoms only to keep verification finite.
+
+**Does not establish / 不建立：** Does not prove n16, N(10)=17, N(12)=17, all larger dimensions, nine-averaging n13, shortest paths, one-extra-digit precision, or a uniform polynomial expanded word bound. The automatic-B table only identifies dimensions where G cannot screen inputs.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing positive odd-arity macro DAG
+- Gamma_0(17) Schreier generation
+- Integer Euclid and Bezout
+- Explicit (q,16-q,1) return templates
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id ten-twelve-seventeen-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+old B automatic-G arities through200: PASS 17
+arity 10 n17 physical macros and full Gamma0(17): PASS 12 288 54
+arity 10 n17 large-coordinate entry and transport: PASS 60
+arity 10 n17 literal full paths: PASS 3 35
+arity 12 n17 physical macros and full Gamma0(17): PASS 10 288 54
+arity 12 n17 large-coordinate entry and transport: PASS 60
+arity 12 n17 literal full paths: PASS 3 131
+ten and twelve averaging seventeen-position G criteria: PASS
+~~~
+
+## six-prime-endpoint-entry
+
+**Claim / 命题：** Every primitive centered G1 endpoint input with odd p>=3, n=2p+1 and at most six distinct prime factors has a finite original-position entry to a legal K_p. Five arbitrary forbidden classes modulo ord_ell(2) cannot cover Z, and a non-full-support exchange singleton contributes at most d-1 bad classes. The old six-prime K4 direct-partition obstruction enters K_p in at most five averages. More generally Theta(n)=sum1/ord_ell(2)-min1/ord_ell(2)<1 suffices for entry with arbitrary d. Six forbidden classes can cover modulo24, limiting the arbitrary-pair powering lemma but not proving nonreachability.
+
+**Status:** proved-six-prime-general-entry · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_six_prime_endpoint_entry.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_six_prime_endpoint_entry.md) · [outputs/prime_arity/history/prime_arity_four_prime_endpoint_entry.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_four_prime_endpoint_entry.md)
+
+**Scripts / 脚本：** [work/verify_six_prime_endpoint_entry.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_six_prime_endpoint_entry.py)
+
+**Evidence scope / 核验范围：** General proof classifies low multiplicative orders, uses parity/mod4/mod8 restrictions and periodic densities, then strict support growth. Finite tests cover211040 arbitrary forbidden-class assignments, the exact six-class covering, six large inputs using physical multiplicity accounting, and a complete labelled Fraction entry at n15015. Uses modular exponent choices, not averaging-word searches; large repetitive states stay compressed. The shared earlier verifier retains its default four-prime scope and was rerun after the compatible input-limit extension.
+
+**Does not establish / 不建立：** Does not prove complete reachability at every six-prime endpoint without a core-group theorem, solve the huge K4 input beyond entry, prove failure for seven or more factors, show six is the largest possible entry bound, or cover the full intermediate dimension band. The numeric n<4849845 corollary concerns entry only. No shortest or polynomial expanded path-length bound.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing physical carrier exchange and first-block entry
+- Exact low-order arithmetic and CRT
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id six-prime-endpoint-entry
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+five-prime arbitrary forbidden classes: PASS 211040
+six forbidden classes exactly cover all exponents: PASS 24
+six-prime exact multiplicity entries and direct-partition trap: PASS 6 7
+five-prime independently labelled entry: PASS 15015 6
+six-prime endpoint entry: PASS
+~~~
+
+## arena-triple-solver-review
+
+**Claim / 命题：** Review of the captured external Arena ternary solver: exact BigInt state updates and final replay coexist with floating-point heuristic selection. Zero-sum subset macros are correct and fast on small integers. In48 old same-input cases the page solved33 and existing constructive methods solved48; on24 small cases,22 path lengths matched,one improved andone worsened. A warm persistent-JS run averaged about0.85ms versus1.95ms for the old Python portfolio, while32/64/128-bit samples exhausted the page search budget. Multiplying a known solved input by10^310 makes the page generate no candidates, although its old path independently still solves it.
+
+**Status:** finite-external-solver-audit-and-benchmark · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/algorithms/arena_triple_solver_review.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/algorithms/arena_triple_solver_review.md) · [work/arena_triple_solver_review/README.md](../archive/2026-09-07/3-3-triple-average-research-note/work/arena_triple_solver_review/README.md)
+
+**Scripts / 脚本：** [work/arena_triple_solver_review/verify_saved_review.py](../archive/2026-09-07/3-3-triple-average-research-note/work/arena_triple_solver_review/verify_saved_review.py)
+
+**Evidence scope / 核验范围：** Read and captured the actual iframe algorithm using headless Edge; SHA256 binds snapshot and unmodified computational source. Comparison uses sequential Node VM workers with the original default single-solve budget, followed by sequential current-machine Python baseline measurements. A separate warm run uses one persistent JS context. The fast verifier replays every saved successful external path with independent Fraction arithmetic, all33 zero-sum macro basis inputs, and scaled inputs using the unchanged base path. It recomputes counts from saved results without rerunning browser code, network calls or beam search.
+
+**Does not establish / 不建立：** Does not prove general performance dominance, shortest paths, mathematical nonreachability of timed-out cases, language-independent complexity, or current behavior of future website versions. Reported algorithm times exclude rendering/loading and include differing JS/Python implementation costs. Node workers are review isolation, not a feature present in the original web app. No online edits or changes to the mathematical solver were made.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Saved Arena snapshot and review artifacts
+- Historical paired and bit-length benchmark inputs
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id arena-triple-solver-review
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+Arena captured algorithm provenance: PASS
+Arena saved independent solution replays: PASS 37 24 33
+Arena same-input success and step comparison: PASS 48 33 48 22 1 1
+Arena scaled-input heuristic counterexample: PASS
+Arena triple solver review artifacts: PASS
+~~~
+
+## four-prime-entry-and-band
+
+**Claim / 命题：** For every odd arity p>=3 whose endpoint n=2p+1 has at most four distinct prime factors, every primitive centered G1 input has a finite legal entry to K_p. At each factor a repeated carrier exchange forbids at most one exponent class modulo ord_ell(2); a universal parity and mod4 sieve proves four such classes cannot cover. This joins the existing complete core certificates at n195,231,255,315,399,435,455,1155 to full-input reachability. Separately, for prime p and n=2p+r with r>=d and sum of reciprocal local carrier orders<1, all legal inputs enter (p,p,r). Every such equal-carrier core, for any1<=r<p, has an explicit safe two-atom projective involution.
+
+**Status:** proved-four-prime-entry-eight-complete-endpoints-and-band-structure · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_four_prime_endpoint_entry.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_four_prime_endpoint_entry.md) · [outputs/prime_arity/history/prime_arity_band_period_and_involutions.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_band_period_and_involutions.md)
+
+**Scripts / 脚本：** [work/verify_four_prime_entry_and_band.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_four_prime_entry_and_band.py)
+
+**Evidence scope / 核验范围：** General four-prime entry is proved by forbidden residue-class densities, strict growth of witness support, and physical carrier powers. All integer and rational sample operations are replayed from original labelled inputs. Existing core data are rechecked only at the eight newly completed endpoints for complete labels, all edges, determinants and exact supported-unit decompositions; no new pivot search is performed. The intermediate-band condition is an explicit local-order inequality; the all-r involution is a symbolic matrix identity with separate odd/even parameter lattices. Finite instances guard formulas and ledger implementation, not the unbounded quantifiers.
+
+**Does not establish / 不建立：** Does not prove core Gamma_0 containment at every unlisted endpoint, all four-prime endpoint consensus without a core proof, arbitrary many-prime entry, that four is maximal, or all intermediate dimensions reachable. The general (p,p,r) projective involution supplies a reversible seed, not full root generation or termination. No polynomial atomic-length or minimal path bound. Seven exponent classes covering Z only refute a one-pair powering module, not reachability.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing composite_endpoint_pivot_certificates.json and decomposition checker
+- Existing safe labelled-block initialization
+- Existing uniform positive endpoint controller
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id four-prime-entry-and-band
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+four-prime arbitrary forbidden-exponent classes: PASS 35784
+seven-prime exponent-cover boundary retained: PASS
+four-prime endpoint labelled entries and forced merges: PASS 64 12 5
+previous core certificates now joined to full entry: PASS 8 18192
+band full-input reductions under period-density criterion: PASS 127 381 6
+all-r actual four-atom scalar periods and local safety: PASS 1119
+four-prime entry and intermediate-band structures: PASS
+~~~
+
+## composite-endpoint-transfer
+
+**Claim / 命题：** A reusable CRT/Schreier pivot certificate proves Gamma_0(n) containment in the already physically realized endpoint root group for36 listed composite levels n=2p+1 with odd p. Complete independent checking covers32112 loops. At all36 listed levels, the finite CRT group certificate combines with the two-to-four-prime entry theorems to prove G=1 iff reachable for all inputs. The list includes every two-prime n<=219 congruent3 mod4 and eight three/four-prime levels. Together with the existing prime-power theorem, all odd p from3 through109 have a complete endpoint criterion. This is a finite level family, not an arbitrary-level theorem.
+
+**Status:** proved-finite-composite-endpoint-family-full-input · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/composite_endpoint_crt_transfer.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/composite_endpoint_crt_transfer.md) · [outputs/prime_arity/examples/seven_average_fifteen_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/examples/seven_average_fifteen_complete.md)
+
+**Scripts / 脚本：** [work/verify_composite_endpoint_transfer.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_composite_endpoint_transfer.py)
+
+**Evidence scope / 核验范围：** The verifier treats the certificate matrices and pivot choices as untrusted, verifies full CRT label cardinality and distinctness, every representative determinant, every source/generator transition, the n-multiple lower entry, allowed-unit factorization and exact Gauss identities. It does not import the builder or pivot search.960 loops at n35,39,63,75 are compiled into positive DAGs and98 macro basis instances are physically replayed.168 general and84 forced two-prime entries are checked, plus5 fully expanded controller words with deliberately chosen kernel inputs. The report proves the certificate-to-group-to-input theorem and cites the existing all-odd-arity positive root realization.
+
+**Does not establish / 不建立：** Does not prove arbitrary composite level containment, that the fixed short shear menu always succeeds, arbitrary-level entry beyond the proved finite two-to-four-prime theorem, final thresholds N(p)=2p+1, minimal endpoints for odd composite averaging arities, shortest paths, or polynomial expanded word length. The36 listed levels are not all n<=1155. A failed pivot search would not disprove the underlying group containment or reachability.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- composite_endpoint_pivot_certificates.json
+- Uniform positive odd-arity endpoint controller
+- General two-prime entry theorem
+- CRT projective-line cardinality and Schreier generation
+- Existing prime-power endpoint theorem for the finite p<=109 corollary
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id composite-endpoint-transfer
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+composite CRT finite certificates complete loops: PASS 36 32112
+composite positive loop DAGs and physical basis leaves: PASS 960 98
+composite two-prime general and forced entries: PASS 168 84
+composite full-input levels and core-only levels: PASS 28 8
+composite literal positive controller paths: PASS 5 596
+composite endpoint transfer certificates: PASS
+~~~
+
+## averaging-algorithm-benchmark
+
+**Claim / 命题：** Portable construction benchmark with584 unique inputs, including196 proved-reachable p7,n15 integer-frozen inputs,384 structured p19/p37 extension inputs, one p23 protection-regression input and three controls. Includes108 exact positive paths and one genuine negative control.332 extension inputs without an imported theorem or direct certificate have no reachability ground truth. Historical failed searches are construction budgets, not counterexamples.
+
+**Status:** validated-offline-algorithm-benchmark · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/algorithms/averaging_algorithm_benchmark.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/algorithms/averaging_algorithm_benchmark.md)
+
+**Scripts / 脚本：** [work/verify_averaging_benchmark_package.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_averaging_benchmark_package.py) · [work/build_averaging_algorithm_benchmark.py](../archive/2026-09-07/3-3-triple-average-research-note/work/build_averaging_algorithm_benchmark.py)
+
+**Evidence scope / 核验范围：** All reference paths are independently replayed from original input using exact Fraction arithmetic and1-based original-position indices. Input uniqueness, centered G and frozen zero-sum-free exception structure are checked. Mutated paths test duplicate, out-of-range, wrong-cardinality and floating indices, incomplete paths and floating coordinates. No solver searches or theorem proofs are rerun. Portable files are in the current chat outputs/averaging_algorithm_benchmark directory.
+
+**Does not establish / 不建立：** Does not prove reference paths shortest, assess all solver abilities, treat historical depth limits as nonreachability, or extend the p7,n15 theorem to unproved p19,p37 inputs. Runtime performance requires a separately specified machine and harness.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Portable benchmark artifacts in the current chat outputs directory
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id averaging-algorithm-benchmark
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+reference paths and known negative control: PASS {'valid': 108, 'known_negative_correct': 1}
+strict rational and invalid-path guards: PASS 7
+unique input and frozen-state invariants: PASS 584 580
+averaging algorithm benchmark package: PASS
+~~~
+
+## seven-average-fifteen-complete
+
+**Claim / 命题：** Seven-averaging on fifteen original positions has the complete G=1 criterion, establishing the nonautomatic arithmetic edge H(7)=15. For n=2p+1 with at most two distinct prime divisors, any legal input enters a legal double-p block in at most three physical averages: a single block-singleton exchange combines complementary local witnesses. At p7,n15 the existing positive seed over Z[1/2] compiles all72 Schreier loops of the complete24-coset CRT projective line;62 use an upper pivot,8 a lower pivot,2 a half-integer row shear. Hence Gamma_0(15) acts positively, and Bezout plus the physical terminal solve every legal parameter.
+
+**Status:** proved-seven-average-fifteen-full-G-criterion · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/examples/seven_average_fifteen_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/examples/seven_average_fifteen_complete.md) · [outputs/general_arity/composite_critical_scale_and_conjecture.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/composite_critical_scale_and_conjecture.md)
+
+**Scripts / 脚本：** [work/verify_seven_average_fifteen_complete.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_seven_average_fifteen_complete.py)
+
+**Evidence scope / 核验范围：** The report proves the general at-most-two-prime entry, lists all exceptional pivot loops, invokes complete Schreier generation and gives unrestricted Bezout transport and a four-atom terminal. Exact checks cover192 primitive mod15 rows,72 loops,10 physical macro basis replays,1800 complementary-type and safety checks,160 large-integer entries,72 forced three-step labelled entries,7 complete independently Fraction-replayed paths including an integer-frozen input and a forced-entry example, plus three excluded G classes. No seed search, new unexplained macro, or localization at7,11,17 is required; the existing dyadic positive resources suffice.
+
+**Does not establish / 不建立：** Does not prove N(7)=15, all n>=15 for seven-averaging, p-average endpoints with arbitrary multiprime level, a general three-or-more-prime entry, shortest paths, a uniform polynomial expanded word bound, or a one-extra-digit precision theorem. The general two-prime lemma only establishes entry; group coverage at other levels remains separate. Large-coordinate tests do not expand all corresponding long words.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Previously proved uniform odd-arity positive endpoint controller
+- Dyadic Gauss and Euclid compiler
+- CRT projective line and standard Schreier generation
+- Critical lower-edge counterexamples for H minimality
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id seven-average-fifteen-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+seven-average n15 complete CRT cosets and positive pivots: PASS 192 72 62 8 2 10
+seven-average n15 two-prime entry logic and large inputs: PASS 1800 160 72
+seven-average n15 literal full paths and excluded G: PASS 7 7746 3
+seven-average fifteen-position full G criterion: PASS
+~~~
+
+## six-average-ten-complete
+
+**Claim / 命题：** Six-averaging on ten original positions has the genuine full criterion: primitive centered G is1 or2 iff reachable; G5 and10 are impossible. A two-atom entry reaches the (6,3,1) core with5 not dividing y. Three actual periods R^4=-I/324, (AR)^2=I/36 and (RAC)^2=I/216 make the four explicit macros reversible projectively. A physically realized Sigma gives dyadic upper roots; the commutator D F D^-1 F^-1=L(-5/3) gives L(5), and all18 loops of the six-coset Gamma_0(5) cover compile. Bezout and one final six-average finish. Hence H(6)=10 under the nonautomatic-G definition, without asserting an eventual threshold.
+
+**Status:** proved-six-average-ten-full-nonautomatic-G-criterion · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/examples/six_average_ten_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/examples/six_average_ten_complete.md) · [outputs/general_arity/composite_critical_scale_and_conjecture.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/composite_critical_scale_and_conjecture.md)
+
+**Scripts / 脚本：** [work/verify_six_average_ten_complete.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_six_average_ten_complete.py)
+
+**Evidence scope / 核验范围：** The universal entry, actual-scale cycles, physical inverse implementation, root commutator, complete Schreier decomposition and Bezout terminal are proved in the report. Exact checks audit four macros on two basis inputs, all24 primitive mod5 rows and18 loops,196 complete residue multiplicity patterns,60 large-integer entries for each ofG1/G2, six full independently Fraction-replayed original-input paths, and explicit G5/G10 obstructions. The verifier uses only the four displayed physical macros and never imports the bounded discovery table. Unequal blocks are not freely swapped.
+
+**Does not establish / 不建立：** Does not prove all n>=9 or n>=10 for six-averaging, N(6)=9 or10, the six-average n11 case, exact shortest paths, a uniform polynomial expanded word bound, or a one-additional-digit precision theorem. The no-short-period diagnostic for the old three-letter alphabet is not a nonexistence proof.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing positive macro expression DAG
+- Dyadic Gauss and integer Euclid compiler
+- Standard Schreier generation
+- Existing low-dimensional six-average counterexamples for minimal H
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id six-average-ten-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+six-average n10 actual periods and complete Gamma0(5): PASS 8 24 18
+six-average n10 complete residue entries and both legal G classes: PASS 196 60 60
+six-average n10 literal full paths and excluded classes: PASS 6 1931 2
+six-average ten-position full G criterion: PASS
+~~~
+
+## endpoint-reverse-diagnostic
+
+**Claim / 命题：** Historical reverse diagnostic: all35714 bounded-height5 p7,n15 legal states have certificates after resolving seven integer-frozen cases by explicit rational paths. The corrected verifier checks all87 first-step value types and replays all seven full labelled paths. It proves neither a new endpoint theorem nor the withdrawn claim that minimal-layer overlap improves valuation; partial overlap instead increases denominator depth.
+
+**Status:** finite-diagnostic-no-counterexample · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_endpoint_counterexample_reverse.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_endpoint_counterexample_reverse.md)
+
+**Scripts / 脚本：** [work/verify_endpoint_reverse_diagnostic.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_endpoint_reverse_diagnostic.py)
+
+**Evidence scope / 核验范围：** Uses the saved bounded enumeration, directly checks no nonconstant integer out-edge, checks every first rational value pattern, saves and independently replays full original-position certificates, and reconstructs all bounded frozen cases by their zero-free exception sequence. Uniform formulas and valuation direction are checked separately. The later full n15 theorem is independent.
+
+**Does not establish / 不建立：** Does not prove unbounded endpoint completeness or minimal word length. The earlier lowest-layer-overlap conjecture was withdrawn. Integer-frozen states are not rationally unreachable; they are algorithm construction benchmarks.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- exact bounded n15 enumeration output
+- zero-trigger tail theorem
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id endpoint-reverse-diagnostic
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+n15 bounded integer-trap states: PASS 7
+n15 exhaustive first rational layers avoid zero triggers: PASS 87
+n15 independently replayed rational complete paths: PASS 7 8
+n15 bounded frozen-state structural classification: PASS 7
+uniform integer-frozen family and rational escapes: PASS 33 18
+partial minimal-layer overlap increases denominator depth: PASS 150
+endpoint reverse diagnostic: PASS
+~~~
+
+## composite-critical-scale
+
+**Claim / 命题：** For arbitrary arity q, let S(q)=max p^ceil(v_p(q)/2) over primes dividing q. Every q<n<q+S(q) has a G1 counterexample, and n=q+S(q) also does unless n has only prime factors dividing q. Consequently the explicit lower edge B(q)=q+S(q)+indicator(rad(q+S(q)) not dividing q) bounds both the first post-q success M(q) and eventual threshold N(q). A uniform four-step network for q=kr with k+1 dividing r averages n=q+r, including q=m(m-1), n=m^2. If m or m-1 is prime, this matches the lower edge and proves M(m(m-1))=m^2. M=N=B remains a conjecture, not a consequence of these examples.
+
+**Status:** proved-critical-lower-edge-and-infinite-first-success-family · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/composite_critical_scale_and_conjecture.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/composite_critical_scale_and_conjecture.md)
+
+**Scripts / 脚本：** [work/verify_composite_critical_scale.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_composite_critical_scale.py)
+
+**Evidence scope / 核验范围：** Universal proofs use a p-adic gap h=a-(ceil(a/2)-1), complete k<s preservation, the k=s boundary exit with G=q/s+1, and an explicit four-layer linear identity. The program audits25865 compressed original-atom transitions,368 boundary exits,199 lower-edge arithmetic instances and14 full network matrices. The q+1 G1 counterexample uses the existing exact q+1 criterion. New exact first-success cases include q12/n16,q20/n25,q30/n36,q42/n49,q56/n64 and the infinite consecutive-product family when one factor is prime.
+
+**Does not establish / 不建立：** Does not prove M(q)=B(q) outside the specifically matched constructions, prove N(q)=M(q), solve six-averaging n10, nine-averaging n13 or ten-averaging n16, or infer reachability merely because the boundary exit G is supported. Fixed-word four-step optimality does not imply four steps are necessary for every individual input. The lower edge applies after excluding trivial n=q.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Elementary p-adic valuation laws
+- Existing exact q+1 criterion
+- Original-position uniform matrix construction
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id composite-critical-scale
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+composite critical prime-power trap transitions: PASS 25865 368
+composite critical lower-edge arithmetic: PASS 199
+composite critical universal four-step networks: PASS 14
+composite prime-power critical scale and square networks: PASS
+~~~
+
+## eight-average-thirteen-complete
+
+**Claim / 命题：** Eight-averaging on thirteen original positions has the full G=1 criterion. A two-atom entry reaches the (8,4,1) core. Actual matrices satisfy C^4=-I/64 and (A^2 C^2)^3=I/4096, giving positive inverses and a physically realized Sigma. Dyadic roots and signed powers-of2 representatives modulo13 compile all42 loops of a14-coset Gamma_0(13) cover. Bezout and a one-atom terminal finish. Combined with the new prime-power gap obstruction through n12, this proves M(8)=13, not N(8)=13.
+
+**Status:** proved-eight-average-first-success-thirteen · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/composite_critical_scale_and_conjecture.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/composite_critical_scale_and_conjecture.md)
+
+**Scripts / 脚本：** [work/verify_eight_average_thirteen_complete.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_eight_average_thirteen_complete.py)
+
+**Evidence scope / 核验范围：** Exact actual-scale period identities, all three physical atoms on two basis parameters, all168 primitive mod13 rows and42 Schreier loops,120 large-integer entries and five full original-input Fraction paths. Every nonidentity expression leaf is one eight-average; no free unequal-block swap is used. The short period was discovered by a separate bounded matrix diagnostic, then replaced by the displayed exact identity in the proof. This verifier never runs discovery.
+
+**Does not establish / 不建立：** Does not prove eventual N(8)=13, all n>=13 for eight-averaging, the nine-average n13 criterion, arbitrary prime-power sufficiency at the proposed lower edge, shortest paths or a polynomial expanded word bound. Large-integer tests check entry and Bezout without expanding all long paths.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing positive expression DAG and dyadic Gauss compiler
+- Standard Schreier generation
+- Integer Euclid and Bezout
+- Composite prime-power gap obstruction
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id eight-average-thirteen-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+eight-average n13 actual periods and complete Schreier cover: PASS 6 168 42
+eight-average n13 large-integer entry and Bezout: PASS 120
+eight-average n13 literal full paths: PASS 5 3577
+eight-average thirteen-position complete criterion: PASS
+~~~
+
+## six-average-nine-fixed-network
+
+**Claim / 命题：** Every nine-position input reaches its mean with the same four original-position six-averaging operations. Thus the rad(G)|6 criterion holds at n9 and is automatic since G divides9. Four operations are optimal among fixed words that work for every input: after any two operations no matrix row equals the global uniform row, and a third operation leaves three rows unchanged.
+
+**Status:** proved-six-average-nine-universal-network · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/examples/six_average_nine_fixed_network.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/examples/six_average_nine_fixed_network.md) · [outputs/general_arity/composite_arity_four_six_transfer.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/composite_arity_four_six_transfer.md)
+
+**Scripts / 脚本：** [work/verify_six_average_nine_fixed_network.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_six_average_nine_fixed_network.py)
+
+**Evidence scope / 核验范围：** An independent standard-library-only verifier replays the explicit word on all9 standard bases, confirms every row after each of84 possible second operations is nonuniform, and replays160 rational inputs. The report proves both the fixed J9/9 identity and the universal three-step exclusion. This is a separate audit of the previously known network, with a new fixed-word optimality proof.
+
+**Does not establish / 不建立：** Does not show every individual input needs four steps, solve six-averaging n10,11 or other unresolved dimensions, establish N(6)=9, or provide an endpoint-to-all-larger-dimensions propagation theorem.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Exact projection matrices
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id six-average-nine-fixed-network
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+six-average n9 fixed network exact basis: PASS 9
+six-average n9 three-step fixed-network exclusion: PASS 756
+six-average n9 original rational samples: PASS 160
+six-average nine-position universal four-step network: PASS
+~~~
+
+## four-average-seven-complete
+
+**Claim / 命题：** Four-averaging on seven original positions has the complete G=1 criterion. A two-step original-position entry reaches the (4,2,1) weighted core. Three explicit one-average macros have actual identities C^3=I/8, (CA)^2=I/8 and C^2B=Sigma/8, so even the unequal-block Sigma action is compiled from real averages. Dyadic upper and7-multiple lower roots and signed-power-of2 Schreier representatives give Gamma_0(7) containment, Bezout transport and a one-average terminal. This settles the seven-position case, not the global threshold.
+
+**Status:** proved-four-average-seven-position-criterion · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/examples/four_average_seven_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/examples/four_average_seven_complete.md)
+
+**Scripts / 脚本：** [work/verify_four_average_seven_complete.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_four_average_seven_complete.py)
+
+**Evidence scope / 核验范围：** Universal two-atom core entry, exact-scale macro identities, physical positive inverses, complete finite-field Schreier cover, Bezout transport and one-atom terminal are proved in the report. Exact checks cover six basis macro replays,48 primitive rows,24 loops,16806 residue entries,80 large integer entries and12 complete independently Fraction-replayed labelled paths. No free swap of the unequal blocks is allowed; every nonidentity leaf is one of A,B,C. Signed powers of2 replace centered residues so all Gauss pivots are dyadic units.
+
+**Does not establish / 不建立：** Does not solve four-averaging n11,13,15, prove N(4)=7, give endpoint-to-interval propagation, exact shortest paths, a uniform polynomial expanded word bound, or a fixed one-additional-digit precision bound. The n6 counterexample and n7 theorem bound the candidate endpoint but do not solve higher dimensions.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing positive macro DAG
+- Gamma_0(7) Schreier generation
+- Integer Euclid and Bezout
+- Four-average n6 counterexample
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id four-average-seven-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+four-average n7 physical periods and dyadic Schreier cover: PASS 6 48 24
+four-average n7 exact-entry residue and large-integer audits: PASS 16806 80
+four-average n7 literal full paths: PASS 12 527
+four-average seven-position complete criterion: PASS
+~~~
+
+## strategy-reassessment-20260912
+
+**Claim / 命题：** A second broad literature survey and structural audit compares collision-mass, critical-kernel, carrier-scale and modular-form routes. It identifies path-complete discrete Lyapunov graphs and relative S-arithmetic generation as the only plausible cross-dimensional interfaces, while recording exact multiprime unit-separation and general r-carrier compression obstructions.
+
+**Status:** research-survey-and-structural-audit · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_strategy_reassessment_20260912.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_strategy_reassessment_20260912.md) · [outputs/literature/averaging_literature_survey_2018_2026.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/literature/averaging_literature_survey_2018_2026.md)
+
+**Scripts / 脚本：** [work/literature_strategy_survey.py](../archive/2026-09-07/3-3-triple-average-research-note/work/literature_strategy_survey.py) · [work/fetch_strategy_papers.py](../archive/2026-09-07/3-3-triple-average-research-note/work/fetch_strategy_papers.py) · [work/verify_strategy_interface_obstructions.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_strategy_interface_obstructions.py)
+
+**Evidence scope / 核验范围：** The survey script queries OpenAlex in parallel and caches 44 query records with 148 unique works; four identified PDFs are downloaded and converted to text when available. The audit independently checks exact modular and block identities without averaging-word search. Literature abstracts/full texts are reported with their actual access level.
+
+**Does not establish / 不建立：** Does not prove any new reachability threshold. Bounded generation, path-complete Lyapunov and synchronizing-automata results are not silently applied to physical p-average words. The multiprime example blocks one preparation scheme only.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- OpenAlex/Crossref cached metadata
+- existing literature retrieval helper
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id strategy-reassessment-20260912
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+multiprime unit-separation obstruction: PASS 56
+uniform pair-return two-adic semigroup character: PASS 3538 16
+general r-carrier one-step compression identities: PASS 117
+strategy interface structural audits: PASS
+~~~
+
+## arbitrary-arity-linear-threshold
+
+**Claim / 命题：** For every integer arity q>=3, n>=4q-1+d_q(n), where d_q(n) counts primes dividing n but not q, implies the full rad(G)|q reachability criterion on original positions. Nonunit differences supply an exact two-value mixture using q/gcd(delta,q) copies; the sole even-arity midpoint collision is handled by ordered unit anchors or an opposite-value terminal. General EGZ, protected double-heavy closure, and integer energy give one additional q-adic digit for integral zero-sum inputs. N(6)<=24; separate n7 and n9 controllers settle those dimensions, while the global thresholds remain open. For q=4 or6, q zero coordinates trigger full consensus at every n>=q.
+
+**Status:** proved-all-integer-arities-linear-threshold · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/arbitrary_arity_linear_threshold.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/arbitrary_arity_linear_threshold.md)
+
+**Scripts / 脚本：** [work/verify_arbitrary_arity_linear_threshold.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_arbitrary_arity_linear_threshold.py)
+
+**Evidence scope / 核验范围：** Universal statements are proved in the document by a complete unit/nonunit split, midpoint classification, composite EGZ induction, coefficient packing and integer energy. The program checks987 mixture identities,172 midpoint samples,3040 capacities,4488 complete residue multisets at q4/6,2804 large-integer local states,39 initializations,70 fully replayed random-input paths and24 zero-trigger tails. All15 implemented branches are exercised. Original Fraction replay checks labels, total consensus and denominator dividing q for primitive zero-sum input, without trusting normalized solver states. Existing prime helpers are reused only with an explicit corrected protected-prime table, never via their primality-gated solver.
+
+**Does not establish / 不建立：** Does not determine exact N(q), resolve the remaining small-dimension critical cases, prove shortest-path bounds, or give a uniform variable-n bit-length polynomial word-length theorem. The energy bound is numerical-height based. The zero-trigger theorem is conditional on already having q zero coordinates. No unverified clique-gossiping abstract or arithmetic macro implementation is assumed.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Node.js for zero-trigger tails
+- Explicit all-arity proofs in report
+- Prior prime initialization and coefficient-packing helpers with arity-independent formulas
+- Composite half-block transfer for zero-trigger tails
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id arbitrary-arity-linear-threshold
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+all-arity nonunit and midpoint classification: PASS 987 172
+all-arity uniform threshold capacities: PASS 3040
+composite EGZ residue multisets: PASS 4488
+all-arity large-integer closure and initialization: PASS 2804 39
+composite zero-trigger original-position paths: PASS 24
+all-arity original-position full paths: PASS 70 94
+arbitrary-arity linear threshold: PASS
+~~~
+
+## four-average-nine-complete
+
+**Claim / 命题：** Four-averaging on nine original positions has the complete G=1 criterion. The explicit (T2 Sigma)^2=-2I period and affine inverse pairing provide U(Z[1/2]), L(9 Z[1/2]) and dyadic diagonal units. All36 loops of the complete12-coset Gamma_0(9) transversal have dyadic Gauss pivots, so every integer Gamma_0(9) transport compiles to positive original-position macros. An entry of two four-averaging operations and Bezout transport reach a terminal of three four-averaging operations.
+
+**Status:** proved-four-average-nine-position-criterion · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/examples/four_average_nine_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/examples/four_average_nine_complete.md)
+
+**Scripts / 脚本：** [work/verify_four_average_nine_complete.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_four_average_nine_complete.py)
+
+**Evidence scope / 核验范围：** The period and inverse pairing, complete Schreier decomposition, unrestricted primitive-parameter Bezout transport and physical terminal are proved in the document. Exact finite certificates check36 loops, all72 primitive mod9 rows, every generated atom on two basis inputs,144 residue/singleton entries,50 large-coordinate transports and6 complete independently replayed original-input paths. All group inverses are stored as acyclic positive expressions, no seed or averaging-word search. The general even-arity involution formula is also checked at31 even arities; full root coverage is claimed only for q4,n9.
+
+**Does not establish / 不建立：** Does not prove the four-averaging n7,11,13,15 criteria, a full controller for every even arity, exact group equality, shortest paths, a uniform polynomial expanded word bound, or a one-additional-digit precision bound for the n9 arithmetic algorithm. Algebraic coset representatives themselves are not assumed physically executable; only their compiled loops are.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing positive expression DAG and exact physical macro ledger
+- Two-chart projective line and standard Schreier generation theorem
+- Integer Euclid and Bezout
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id four-average-nine-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+four-average n9 positive seeds and complete Schreier cover: PASS 36 72 8
+four-average n9 universal-entry finite audits: PASS 144 50
+four-average n9 literal full consensus paths: PASS 6 621
+four-average nine-position complete criterion: PASS
+~~~
+
+## carrier-energy-dyadic-neighbour
+
+**Claim / 命题：** For every p=2^s-1 with s>=2, including odd composite averaging arities, all n=2p+2 inputs satisfy the primitive centered G=1 reachability criterion. This adds seven-averaging n16 independently of n15. Carrier exchange is automatically safe at all primes not dividing p; its only common monotone positive definite quadratic form on the full zero-sum family is physical energy. For any odd p a legal two-block two-singleton state reaches a legal (p,p,2) core in at most p+1 actual averages via a CRT-selected unipotent residue power. When p+1 is a power of2, explicit two-step returns provide U(+-1) and a Euclidean stage that strictly decreases primitive odd |v|.
+
+**Status:** proved-dyadic-neighbour-complete-family-and-general-pair-reduction · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/structure/prime_arity_energy_and_dyadic_neighbour.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/prime_arity_energy_and_dyadic_neighbour.md) · [outputs/prime_arity/structure/prime_arity_middle_band_relative_scale.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/prime_arity_middle_band_relative_scale.md)
+
+**Scripts / 脚本：** [work/verify_carrier_energy_and_pair_reduction.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_carrier_energy_and_pair_reduction.py)
+
+**Evidence scope / 核验范围：** Universal results are proved by explicit rank-one eigenspaces, exact energy and inverse identities, CRT, guarded block entry, original-position return formulas and strictly decreasing primitive odd direction height. The script uses integer rank elimination, closed carrier powers and exact Fraction paths. It independently expands24 core paths and48 full paths beginning at unscaled original inputs, including odd composite arities, without a previous dimension solver. Finite directions and local residue instances guard implementation; they do not replace the all-input proof. The entire bounded digit family is checked on the p5 obstruction and common-factor cancellation is explicitly included.
+
+**Does not establish / 不建立：** Does not solve n=2p+2 for all prime p, five-averaging n12, seven-averaging n15,17-20,22, the full intermediate dimension band, or general multiprime endpoint entry. No infinitude of Mersenne primes, one-extra-digit bound, optimal word length or bit-length polynomial bound is claimed. Quadratic uniqueness concerns a common global positive definite quadratic form for every carrier exchange, not all state-dependent or piecewise heights.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing dangerous-support criterion with explicit entry proof in document
+- Elementary CRT and integer Euclidean remainder estimates
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id carrier-energy-dyadic-neighbour
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+carrier common quadratic form has one dimension: PASS 18
+carrier physical and primitive-height identities: PASS 143 1009 19968
+two-singleton CRT rank reduction all test inputs: PASS 214 60
+two-singleton labelled Fraction rank reductions: PASS 160 22
+safe labelled-block entries and combined reductions: PASS 362 14
+equal-pair core norm and complete G criterion: PASS 4608
+dyadic-neighbour Euclidean direction reductions: PASS 31278
+dyadic-neighbour literal core complete paths: PASS 24 103
+dyadic-neighbour arbitrary-input full Fraction paths: PASS 48 239
+non-dyadic nearest-digit obstruction retained: PASS
+general bounded-digit common-factor formula: PASS 50086
+carrier energy and two-singleton reduction: PASS
+~~~
+
+## composite-four-six-transfer
+
+**Claim / 命题：** For even arity q with q/2 dividing n, set c=2^(v2(q)-1) times the product of ell^v_ell(n) over odd ell dividing q, and M=n/c. If M=2 or M>=4, the full rad(G)|q criterion holds by simultaneous good partition, overlapping half-block entry, and exact binary averaging on c-fold original-position copies. This includes every q-multiple dimension, all even n>=8 for four-averaging (also n=4), and, with an explicit nine-position network, every n>=6 divisible by3 for six-averaging. Four-averaging n6 and six-averaging n8 have explicit G1 counterexamples proved by valuation invariants.
+
+**Status:** proved-composite-infinite-families-and-counterexamples · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/general_arity/composite_arity_four_six_transfer.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/composite_arity_four_six_transfer.md)
+
+**Scripts / 脚本：** [work/verify_composite_arity_transfer.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_composite_arity_transfer.py)
+
+**Evidence scope / 核验范围：** Universal proofs and exact invocation conditions are in the report. Finite independent Fraction checks cover533 standard-basis fixed-network replays,35 duplicate macros,32415 complete local successor checks at sampled valuation-trap states,169 separate partition repairs, and336 complete original-input labelled paths. Binary HTML paths are independently replayed before compilation, and the final verifier trusts only original inputs and indices without normalization. General q=4,6,8,10,12 half-block instances and forced multi-prime bad partitions are included. The explicit six-on-nine four-step word gives J9/9 despite6 not dividing9, so the report flags the earlier literature abstract as inapplicable without verified hypotheses.
+
+**Does not establish / 不建立：** Does not solve odd dimensions for four-averaging, dimensions not divisible by3 for six-averaging, residual quotient M=1 or3 in general, a final all-dimensions threshold, fixed-network classification, or shortest paths. The bounded binary HTML generator is not a proof of its unrestricted running time. Finite trap checks do not replace the infinite invariant proof. No unverified Clique Gossiping abstract theorem is used.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Node.js
+- Existing binary averaging criterion
+- Existing simultaneous good-partition lemma
+- 2-average-solver.html via compare_pair_triple_solvers.BinarySolver
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id composite-four-six-transfer
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+composite fixed tensor networks and duplicate lifts: PASS 533 35
+composite G1 counterexample invariant transitions: PASS 30915 1500
+composite simultaneous repairs and literal full paths: PASS 169 336
+composite even-arity transfer and local obstructions: PASS
+~~~
+
+## prime-power-endpoint-completion
+
+**Claim / 命题：** For every odd integer p>=3 with q=2p+1 an odd prime power ell^r, all primitive integral q-position G=1 states are reachable by p-averaging. The existing positive endpoint controller compiles every Schreier loop of the two-chart projective line over Z/qZ, yielding Gamma_0(q) in projective execution; the universal two-step residue-swap entry and Bezout transport then reach the zero terminal. The critical energy is the norm form of the discriminant-q quadratic order, with a weight-one theta series; this modular-form relation is explanatory and does not supply the path.
+
+**Status:** proved-prime-power-endpoint · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/tools/prime_power_endpoint_and_critical_geometry.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/tools/prime_power_endpoint_and_critical_geometry.md) · [outputs/prime_arity/history/prime_arity_critical_frontier_handoff.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_critical_frontier_handoff.md)
+
+**Scripts / 脚本：** [work/verify_prime_power_endpoint_completion.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_prime_power_endpoint_completion.py)
+
+**Evidence scope / 核验范围：** The two-chart decomposition and all transition formulas are proved for arbitrary odd prime powers. Every loop is explicitly Gauss-factored with a leading unit bounded by p or p+1, and those units are already positive-reversible in the controller. Universal entry and Bezout transport are proved in the cited documents. The verifier checks nine levels including 27,243,343,1331,2187, 15612 transitions, 55512 primitive rows, 168 compiled loops, 32 large-coordinate entries and exact norm identities. Finite Fraction paths audit the physical ledger; DAG compilation proves finiteness but not short expanded length.
+
+**Does not establish / 不建立：** Does not solve q=2p+1 with several distinct prime factors, the full n>=2p+1 interval, seven-averaging n=15, or a general modular-form path-selection theorem. The theta series and LMFDB level-27 data explain the norm/level but do not replace original-position averages. No polynomial word-length or shortest-path bound.
+
+**Dependencies / 依赖：**
+
+- uniform-endpoint-controller
+- prime-power-endpoint-entry
+- standard Schreier and Gauss decomposition
+- standard positive-definite even-lattice theta modularity
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-power-endpoint-completion
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+prime-power complete two-chart Schreier equations: PASS 9 15612 55512
+prime-power loops compiled to positive acyclic macros: PASS 168 48
+prime-power legal entry and exact Bezout transports: PASS 32
+n27 literal global-controller terminal paths: PASS 2 2466
+critical norm lattice and frozen-scale identities: PASS 2754 4
+prime-power endpoint completion and critical structure: PASS
+~~~
+
+## prime-power-endpoint-entry
+
+**Claim / 命题：** For odd averaging arity p>=3 and q=2p+1=ell^a a prime power, every primitive integral zero-sum G=1 input enters a legal K_p core in at most two original-position p-averages. A cross-block residue swap repairs any bad partition while retaining any specified singleton. If p is itself an odd prime and a>1, necessarily ell=3 and a is an odd prime. The accompanying review distinguishes proved method obstructions from unresolved critical reachability.
+
+**Status:** proved-entry-lemma-not-endpoint-consensus · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_critical_frontier_handoff.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_critical_frontier_handoff.md)
+
+**Scripts / 脚本：** [work/verify_prime_power_endpoint_entry.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_prime_power_endpoint_entry.py)
+
+**Evidence scope / 核验范围：** The universal entry and prime-factor restriction are proved in section6 of the report. Independent Fraction replay checks all133 admissible nonconstant mod3 multiplicity patterns for n27 with every singleton, plus56 large-integer instances at prime and prime-power levels. Six prime arities check unique integer moves of the 2p obstruction and Y_p family and literal four-step positive controls. Finite checks do not prove unbounded core orbit coverage or the denominator obstruction; that obstruction is sourced to the prior proof.
+
+**Does not establish / 不建立：** Does not prove all legal K_p directions lie in one realized orbit at composite level, solve thirteen-averaging n27 or seven-averaging n15, provide general multprime entry, lower any complete threshold, prove endpoint-to-interval propagation, or show polynomial or constant atomic path length. Strategic priorities and candidate group orbit statements in the report remain proposals.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Universal residue-swap argument in report section6
+- Existing prime-arity-linear-threshold denominator obstruction and boundary controls
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-power-endpoint-entry
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+critical boundary unique integer move and four-step controls: PASS 6
+n27 mod3 multiplicities and every singleton exact entry: PASS 3591
+prime-power entry large-integer labelled replays: PASS 56
+prime-power endpoint entry and critical-boundary checks: PASS
+~~~
+
+## uniform-collision-structure
+
+**Claim / 命题：** For every odd prime p>=5, the remaining two-heavy branch at unprotected size3p+1 closes whenever a light residue class has at least p-2 positions. All-collision equations have only the stated integral templates or an explicit divisor-parametrized fractional family, with mass3p or3p-1. Two disjoint short same-side zero sums repair a collision; the Dias da Silva-Hamidoune theorem supplies such pairs above sigma(p) distinct residues. Short zero-sum factorization gives two residue-window mass criteria with explicit protection-domain conditions. Sorted consecutive safe p-blocks inherit the binary fresh-value argument.
+
+**Status:** proved-uniform-state-branches-not-full-threshold · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/structure/prime_arity_uniform_collision_structure.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/structure/prime_arity_uniform_collision_structure.md)
+
+**Scripts / 脚本：** [work/verify_uniform_collision_structure.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_uniform_collision_structure.py)
+
+**Evidence scope / 核验范围：** Universal proofs are in the document, with the standard restricted-sum theorem explicitly cited. Independent candidate generation and fraction-free elimination check all51618 high-frequency patterns for six small primes against the uniform formulas; this finite check is supplemental, not the source of the all-prime claim.779 exact integer original-position steps include419 instances with a genuine private protected witness.4824 zero-sum factorizations,105760 mass-window cases and144 restricted-sum constructions check the implementations. Runtime candidates enumerate at most three exceptional positions and determine dominant counts by modular inversion; no averaging-word search or repeated old full certificates.
+
+**Does not establish / 不建立：** Does not close all intermediate-frequency residue configurations, prove the universal collision-mass conjecture, lower the complete general4p threshold, solve all n>=3p or n>=2p+1, or extend the e=1 high-frequency theorem to e=0. A mass window without protection requires at most p light positions to obtain the stated legality contradiction. No universal shortest-path or new complete-dimension claim.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing safe-pool and minimal-private-witness proofs
+- Published Dias da Silva-Hamidoune restricted-sum theorem for the support branch
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id uniform-collision-structure
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+uniform high-frequency symbolic classification: PASS 51618 16
+uniform high-frequency literal legal steps: PASS 360 419
+zero-sum factor and mass-window checks: PASS 4824 105760
+restricted-sum original-position selection: PASS 144
+uniform collision structure: PASS
+~~~
+
+## seven-average-three-p-plus-two
+
+**Claim / 命题：** Seven-averaging on n=23,24,25,26 original positions satisfies the full G-power-of7 criterion, with one extra seven-adic digit for integer zero-sum legal inputs. Together with the previous n>=27 theorem this gives15<=N(7)<=23. Within-residue symmetrization preserves collision mass without assuming equal individual values.57026 complete residue patterns yield eleven unique compatible compressed templates, with integral mass strictly between zero and the unprotected size; partial-selection equations force each repeated class constant when needed.
+
+**Status:** proved-seven-averaging-three-p-plus-two-threshold · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/examples/seven_average_three_p_plus_two_threshold.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/examples/seven_average_three_p_plus_two_threshold.md)
+
+**Scripts / 脚本：** [work/verify_seven_three_p_threshold.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_seven_three_p_threshold.py)
+
+**Evidence scope / 核验范围：** All compressed mod7 patterns are reconstructed with bounded true type counts; fraction-free elimination and exact substitution prove the full compatible solution list. Every repeated class in a compatible template has a partial-selection relation, certifying equality of actual positions if needed. The document proves symmetrization, private-witness contradiction, no-protection exclusion and integer-energy termination.5628 large states and96 exact labelled Fraction paths guard runtime implementation and one-digit precision; they do not replace the complete symbolic classification.
+
+**Does not establish / 不建立：** Does not solve seven-averaging n=15,16,17,18,19,20,22 or prove N(7)=21. The independently solved n=21 does not fill n=22. No general-prime3p threshold or universal mass law is claimed. The result is computer-assisted by a complete fixed-prime symbolic certificate.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- inverse-egz-threshold existing closure and n>=27 results
+- five-average-three-p-threshold generalized protection/extrema helpers
+- Symmetrization and private-witness proof in the document
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id seven-average-three-p-plus-two
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+seven-average symmetrized complete collision certificate: PASS 57026 11
+seven-average n23-n26 exact large-integer closure: PASS 5628
+seven-average n23-n26 literal one-digit full paths: PASS 96 276
+seven-average uniform threshold at most twenty-three: PASS
+~~~
+
+## minimal-protection-and-exchange
+
+**Claim / 命题：** For prime p>=3, n>2p and n>=3p+d_p(n)-2, a legal integer input scaled by p enters the two-heavy invariant within two safe integer averages. Protected-point swaps give exact noncolliding actions when the replacement still hits every dangerous support. A nonzero legal p=23,n=70 state shows that an arbitrary fixed minimal protection can leave every two-anchor candidate colliding. An explicit n=3p+1 family for p>=5,p=2 mod3 has a uniform five-integer-average zero path.
+
+**Status:** proved-initialization-protected-exchange-and-five-step-family · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_protected_exchange_and_mass.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_protected_exchange_and_mass.md)
+
+**Scripts / 脚本：** [work/verify_minimal_protection_initialization.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_minimal_protection_initialization.py) · [work/verify_protected_exchange_family.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_protected_exchange_family.py)
+
+**Evidence scope / 核验范围：** The universal initialization proof uses the fresh p-divisible pool and a minimal-transversal aggregate contradiction at the exact capacity boundary, with3920 implementation checks. Two-candidate families are completely classified by type counts; explicit exchange values and safety are checked. Ten five-step paths are independently replayed with literal Fraction coordinates and remain integral. General formulas and capacities are proved in the document. The p11 mass enumeration remains exploratory and is not part of this entry.
+
+**Does not establish / 不建立：** Does not prove that all protected sets admit a suitable swap, all n=3p+1 inputs terminate, or the conjectured general collision-mass law. Initialization alone does not lower the complete threshold. The fixed-protection obstruction does not imply unreachability or refute a3p+O(log p) theorem. No shortest-path claim is made.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Existing dangerous-support and integer energy lemmas
+- Private-witness and explicit five-step proofs in the document
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id minimal-protection-and-exchange
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+minimal-protection initialization at three-p-plus-d-minus-two: PASS 3920
+~~~
+
+~~~text
+uniform all-collision two-anchor families: PASS 187 374
+protected same-residue exchanges: PASS 6
+p23 n70 protected-exchange example: PASS
+uniform three-p-plus-one five-step literal paths: PASS 10
+~~~
+
+## five-average-three-p-threshold
+
+**Claim / 命题：** Five-averaging on n=16,17,18 original positions satisfies the full G=1 criterion, with one extra five-adic digit for integer zero-sum legal inputs. Together with the existing n=15 and all n>=19 results, this proves11<=N(5)<=15. The low-total-multiplicity two-heavy collision equations have903 complete residue patterns and22 consistent unique solutions. Their aggregate mass has controlled local denominators, which contradict minimal protected-transversal private witnesses and global zero sum in every legal case.
+
+**Status:** proved-five-averaging-three-p-uniform-threshold · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/examples/five_average_three_p_threshold.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/examples/five_average_three_p_threshold.md)
+
+**Scripts / 脚本：** [work/verify_five_three_p_threshold.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_five_three_p_threshold.py)
+
+**Evidence scope / 核验范围：** The verifier independently rebuilds every applicable mod5 multiset and rational collision system with an independent variable for each light position. Exact elimination proves inconsistency or the complete unique solution, cross-checked against a fixed22-row certificate and substituted into all equations. Aggregate mass checks establish the finite classification used by the unbounded private-witness contradiction.2120 protected-set instances,5545 large-integer closures and120 fully labelled rational paths audit implementation. Finite paths are supplemental; the903 symbolic systems, general safe-closure argument and integer-energy descent carry all input heights.
+
+**Does not establish / 不建立：** Does not prove the3p threshold for arbitrary prime arity, N(5)=11, or five-averaging n=12,13,14. One extra digit is claimed for the new n=16,17,18 proofs, not newly for n=15. General collision mass certificates and their local denominators remain open. The new theorem is computer-assisted by a complete finite linear classification, not a search-free handwritten classification or a bounded-height inference.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- inverse-egz-threshold shared-reserve and prior closure lemmas
+- prime-arity-middle-band n=15 and same-residue lemma
+- Existing integer initialization and one-digit replay
+- Minimal transversal private-witness and aggregate-mass proof in the document
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id five-average-three-p-threshold
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+five-average complete collision linear certificate: PASS 903 22
+minimal protected transversals and private witnesses: PASS 2120
+five-average three-p-scale large-integer closure: PASS 5545
+five-average n16-n18 literal one-digit full paths: PASS 120 201
+five-average uniform threshold at most fifteen: PASS
+~~~
+
+## three-p-two-anchor-interface
+
+**Claim / 命题：** Using the published Savchev-Chen long zero-sum-free sequence theorem, n>=3p+d_p(n) guarantees a safe nonconstant integer averaging candidate in the low-total-multiplicity, distinct-residue two-heavy case, preserving one old p-heavy value. If the longer anchor sequence is zero-sum-free, repeated anchors force its normalizing unit to1, and one/two light positions give full double-heavy repair. The document identifies the remaining actual-sum collision fiber and connects it precisely to congruency-constrained partition-matroid bases.
+
+**Status:** proved-three-p-candidate-and-zero-free-branch-only · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_three_p_additive_interface.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_three_p_additive_interface.md)
+
+**Scripts / 脚本：** [work/verify_three_p_two_anchor.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_three_p_two_anchor.py)
+
+**Evidence scope / 核验范围：** Complete small residue multisets audit the two-anchor implication. Exact min/max integer sums for each modular fiber are compared with independent bounded subset enumeration. The zero-free branch repairs are checked with actual multiplicities.4246 sampled original-value states check safety and demonstrate why all available protected positions should be retained for collision repair; their lack of remaining failures is only diagnostic. The universal implication and physical repair proofs are in the document and explicitly depend on the published Savchev-Chen theorem, whose original full text was not obtained in this session.
+
+**Does not establish / 不建立：** Does not prove universal repair of a nonempty all-collision fiber, N(p)<=3p+O(log p), any improved unconditional threshold, or any new completely solved dimension. Congruence-zero bases do not generally form a matroid, so ordinary one-forbidden-label exchange cannot be applied after modular filtering. Matroid literature is an interface direction, not an imported existence theorem. No claim that the full Savchev-Chen theorem was reproved or exhaustively verified is made.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Savchev and Chen, Long zero-free sequences in finite cyclic groups, Discrete Mathematics307 (2007),2671-2679, DOI10.1016/j.disc.2007.01.012
+- inverse-egz-threshold prior high-multiplicity branches
+- Existing dangerous-support protection argument
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id three-p-two-anchor-interface
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+modular-fiber exchange and below-three-p boundaries: PASS 2
+three-p two-anchor complete small residue instances: PASS 231060 1
+modular fiber extrema independent small subset oracle: PASS 105
+zero-free branch exact one/two-light repair: PASS 8
+three-p two-anchor interface: PASS
+~~~
+
+## inverse-egz-threshold
+
+**Claim / 命题：** For every prime p>=5, n>=4p-2+d_p(n) implies the full p-power G criterion with at most one additional p-adic digit. Thus N(p)<=4p+ceil(log2 p), N(5)<=19, and N(7)<=27. Three-heavy closure already holds at n>=3p+2; two distinct-residue heavy values with total multiplicity at least3p-2 can share their reserve. An elementary inverse EGZ theorem at2p-2 and one/two borrowed-anchor repairs close the remaining protected pool.
+
+**Status:** proved-inverse-egz-improved-uniform-threshold · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_inverse_egz_threshold.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_inverse_egz_threshold.md)
+
+**Scripts / 脚本：** [work/verify_inverse_egz_threshold.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_inverse_egz_threshold.py) · [work/verify_three_heavy_two_spares.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_three_heavy_two_spares.py)
+
+**Evidence scope / 核验范围：** The inverse EGZ construction uses residue buckets, maximal-bin matching and circular bitsets, and is checked on all19059 unordered p=5/7 boundary residue multisets. Large-coordinate states and dedicated borrowed-anchor and shared-reserve cases audit exact safety and double-heavy closure;36 complete paths are independently replayed on original rational inputs with denominators1 or p. The separate three-heavy verifier checks the exact single/double-middle repair. Universal classification, capacities and fixed-integer-energy termination are proved in the document.
+
+**Does not establish / 不建立：** Does not prove a7p/2,3p, or2p+1 uniform threshold. The prospective7p/2 bound still requires a universal collision-recovery lemma for a pool with only one heavy block reserved. The optional bounded four-value diagnostic is not run by this entry and has no all-state force. No shortest or uniform bit-polynomial atomic path claim is made.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- prime-arity-four-p-threshold
+- prime-arity-middle-band same-residue lemma
+- Existing protected-pool initialization and coefficient-crossing proofs
+- Cauchy-Davenport and the elementary inverse EGZ proof in the document
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id inverse-egz-threshold
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+inverse EGZ complete unordered boundary residues: PASS 19059
+inverse EGZ threshold large-coordinate closure: PASS 1650
+inverse EGZ borrowed-anchor collision certificates: PASS
+combined heavy-reserve two-sided crossings: PASS
+inverse EGZ threshold literal one-digit full paths: PASS 36 111
+inverse EGZ improved threshold: PASS
+~~~
+
+~~~text
+three-heavy two-spare exact closure: PASS
+three-heavy two-spare lemma: PASS
+~~~
+
+## inverse-zero-sum-transfer
+
+**Claim / 命题：** The 2022 inverse weighted zero-sum theorem yields an O(p)-modular-operation labelled-copy witness of total size less than p. Two opposite colliding averages restore both heavy values when their light selections are disjoint and appropriate witnesses remain. For legal five-averaging fourteen-position (5,5,2,2) kernels with distinct heavy residues modulo5, all nonconstant light-residue and anchor-congruent branches admit safe integer double-heavy closure. The remaining constant-light residue branch has no such one-step closure. An explicit two-parameter family at n=2p+4 reaches p zeros in two averages and finishes in at most seven for every odd p>=5.
+
+**Status:** proved-local-inverse-transfer-and-uniform-seven-step-family · **Evidence:** symbolic-check · **Runtime class:** instant
+
+**Documents / 正文：** [outputs/general_arity/inverse_zero_sum_averaging_progress.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/inverse_zero_sum_averaging_progress.md)
+
+**Scripts / 脚本：** [work/verify_inverse_zero_sum_transfer.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_inverse_zero_sum_transfer.py)
+
+**Evidence scope / 核验范围：** Small residue multisets are exhausted only to audit the separately proved inverse lemma; the witness itself scans O(p) compact prefix nodes. Exact fourteen-position tests include every stated branch, dedicated collision and parity cases, and large integers. Opposite-collision restoration and the seven-step family use literal labelled Fraction replay. Universal formulas, safe-case exhaustion and position capacities are proved in the document; no averaging-word discovery search is run.
+
+**Does not establish / 不建立：** Does not solve arbitrary fourteen-position inputs, the entire (5,5,2,2) kernel, arbitrary n=2p+4 inputs, the full middle-dimensional interval, or an improved uniform threshold. It does not assert that disjoint opposite collisions always exist, that the seven-step family has no one-step zero for every p, or that seven is an optimal path length. The O(p) witness bound counts modular operations, not input-bit-independent running time.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Explicit zero-containing2p+1 tail via prime-arity-zero-trigger-bridge helpers
+- Adhikari, Hegde, Molla, Sarkar, Integers22 (2022), A7, Theorem1, with its prime-case constructive proof reproduced in the document
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id inverse-zero-sum-transfer
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+inverse zero-sum exact unordered residue witnesses: PASS 3102
+inverse zero-sum arbitrary-copy linear witnesses: PASS 1095
+fourteen paired-kernel exact safe closure: PASS 3192
+two colliding averages restore both heavy values: PASS 5
+two-p-plus-four two-parameter literal terminal paths: PASS 117 7
+inverse zero-sum transfer: PASS
+~~~
+
+## prime-arity-zero-trigger-bridge
+
+**Claim / 命题：** For every odd prime p and n>=2p+1, a zero-sum p-subset is a sufficient terminal trigger. Averaging it creates p zeros; support transfer uses the explicit zero-containing2p+1 tail, the3p theorem, the4p theorem and the large-dimension bound. Full endpoint solvability is not assumed. The document also proves the codimension-one consensus obstruction, the affine-lattice criterion for local calls, the primitive-weight mean quotient Z/s, and p-power dimension propagation from solved m>=5.
+
+**Status:** proved-all-dimension-zero-trigger-and-lattice-interfaces · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/tools/prime_arity_interpolation_and_lattice_structure.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/tools/prime_arity_interpolation_and_lattice_structure.md)
+
+**Scripts / 脚本：** [work/verify_prime_arity_zero_trigger_bridge.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_prime_arity_zero_trigger_bridge.py)
+
+**Evidence scope / 核验范围：** From an actual zero-sum p-average,120 lower-band paths use only the explicit opposite-block tail and108 upper-band paths map every operation of the three-p controller back to the global original labels. Literal Fraction values are used throughout. Eight families check the impossible codimension-one black-box interface,426 weighted states check the predicted arithmetic level, and398 dimension cases guard the support inequalities. Universal support transfer, quotient and affine-lattice formulas, and p-power propagation are proved in the document; finite checks do not bear their general quantifiers.
+
+**Does not establish / 不建立：** Does not prove that every legal input can first produce a zero-sum p-subset, that solved endpoint dimensions interpolate, or that arbitrary weighted kernels positively realize their full congruence container. No new fully solved middle dimension or improved uniform threshold is claimed. The p-power lift is not tested by a new general lifting implementation; its proof reuses the established good-partition and labelled simulation arguments.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- prime-arity-middle-band
+- prime-arity-four-p-threshold
+- Explicit zero-containing endpoint tail and support argument in the document
+- Existing simultaneous good-partition proof
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-arity-zero-trigger-bridge
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+zero-trigger lower band literal original-position tails: PASS 120
+zero-trigger upper band literal original-position tails: PASS 108 193
+codimension-one consensus and unavailable initial child: PASS 8
+primitive block weights and the mean-lattice quotient: PASS 426
+all-dimension zero-trigger support cover: PASS 398
+prime-arity zero-trigger bridge: PASS
+~~~
+
+## prime-arity-middle-band
+
+**Claim / 命题：** For every odd prime averaging arity p, all n=3p inputs satisfy the p-power G criterion. For p>=5, two explicit nonnegative3-by-3 transport tables realize U(1) and U(-1) on three p-copy blocks; block relabelling supplies L(3), and the same four-coset Gamma_0(3) certificate, a mod3 partition repair and a three-average terminal cover all inputs. The p=3 case is the nine-position network. Also, n>=3p+d_p(n) suffices for safe integer double-heavy closure when the two heavy values are congruent modulo p.
+
+**Status:** proved-three-p-dimension-and-same-residue-heavy-closure · **Evidence:** symbolic-check · **Runtime class:** instant
+
+**Documents / 正文：** [outputs/prime_arity/proofs/lower_band/prime_arity_middle_band_structure.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/lower_band/prime_arity_middle_band_structure.md)
+
+**Scripts / 脚本：** [work/verify_prime_arity_middle_band.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_prime_arity_middle_band.py)
+
+**Evidence scope / 核验范围：** Exact nonnegative transport tables and two-basis labelled Fraction replay check the physical shear construction at ten prime arities. All twelve edges of the four-coset Gamma_0(3) interface are checked. Seven former closure-obstruction inputs, seven G=p inputs, and fifty-six other full inputs are replayed to zero without projective normalization. Nine hundred ninety-six heavy-value instances check the prefix-sum construction and safety. Universal positivity, all-input entry, orbit coverage, and the same-residue dimension bound are proved in the document. No averaging-word search or endpoint controller is imported.
+
+**Does not establish / 不建立：** Does not prove all dimensions between2p+1 and4p-1, a uniform3p upper bound, N(p)=2p+1, an extension theorem by freezing extra positions, shortest paths, polynomial atomic output length, or one additional p-adic digit. The different-residue double-heavy branch and unequal three-heavy multiplicities remain unresolved at the smaller bound.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Explicit transportation realization, four-coset Schreier generation, Bezout, and the protected prefix-sum argument in the document
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-arity-middle-band
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+three-p nonnegative transport and literal basis replay: PASS 40
+three-p complete Gamma0(3) Schreier certificate: PASS 12
+three-p former invariant-obstruction family: PASS 7
+three-p legal G=p complete paths: PASS 7
+three-p arbitrary-input literal Fraction complete paths: PASS 56 105
+three-p-scale same-residue heavy closure: PASS 996
+prime-arity middle-band structure: PASS
+~~~
+
+## uniform-endpoint-controller
+
+**Claim / 命题：** For every odd averaging arity p>=3, q=2p+1, two explicit original-position return families, affine pairing, a terminating integer index chain and an Euler trace-zero identity positively realize U(R_q), L(q R_q) and all diagonal units, where R_q inverts primes at most p not dividing q. No averaging-word or period search is used. When q is prime, complete signed Schreier generation, Bezout transport, a legal two-block entry and a four-average terminal prove the full G=1 criterion for all inputs.
+
+**Status:** proved-uniform-positive-seeds-and-prime-dimension-endpoints · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/tools/uniform_endpoint_positive_controller.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/tools/uniform_endpoint_positive_controller.md)
+
+**Scripts / 脚本：** [work/verify_uniform_endpoint_controller.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_uniform_endpoint_controller.py)
+
+**Evidence scope / 核验范围：** Exact acyclic positive-expression DAGs with shared products and binary powers verify the formula-driven inverse construction at 25 odd arities, including composite critical dimensions. Two-basis physical replay checks 984 macro instances; 418 diagonal inverse certificates and all Schreier edges for the sampled prime dimensions are checked. Ten full labelled paths are replayed with literal Fraction values and no primitive normalization. The universal index-chain termination, all-arity root theorem and full prime-dimension input coverage are proved in the document, not inferred from samples.
+
+**Does not establish / 不建立：** Does not prove full Gamma_0(q) containment or all legal core orbit coverage for composite q, nor an arbitrary-input legal core entry for composite q. In particular it does not solve all seven-averaging fifteen-coordinate inputs, all critical dimensions, N(p)=2p+1, shortest paths, a polynomial atomic output length, or one extra p-adic digit. Unsafe indices sharing a factor with q are not used.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Explicit scalar cycles, finite injective-chain termination, Euler theorem, signed Schreier generation and Bezout arguments in the document
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id uniform-endpoint-controller
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+uniform endpoint original-position return replay: PASS 984
+uniform endpoint formula-only seed and terminating index chain: PASS 25
+uniform endpoint Euler positive diagonal inverses: PASS 418
+uniform prime-dimension complete Schreier interfaces: PASS 528 1656
+uniform endpoint literal Fraction complete terminal paths: PASS 10 2466
+uniform endpoint controller: PASS
+~~~
+
+## seven-endpoint-structure
+
+**Claim / 命题：** An alternative complete seven-point triple-averaging proof uses three explicit two-step returns, three positive scalar cycles, U(Z[1/6]), L(7 Z[1/6]), diagonal units, and all signed Schreier loops for Gamma_0(7). It does not use the earlier eighteen-word descent cover. The two-block carrier sweep has trace p-2 and discriminant p(p-4); p=3 gives a six-atom positive projective cycle, whereas p>=5 makes that specific sweep hyperbolic.
+
+**Status:** proved-alternative-seven-point-endpoint-structure · **Evidence:** theorem-certificate · **Runtime class:** instant
+
+**Documents / 正文：** [outputs/prime_arity/examples/seven_exact_threshold_structure.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/examples/seven_exact_threshold_structure.md)
+
+**Scripts / 脚本：** [work/verify_seven_endpoint_structure.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_seven_endpoint_structure.py)
+
+**Evidence scope / 核验范围：** Independent Fraction macro and cycle replay, explicit root identities and positive inverse expansion, complete24-generator-edge verification on8 signed cosets and6 nonzero Schreier loops, and10 literal rational paths. Universal group containment and all-input entry/Bezout coverage are proved in the document. No finite-depth or bounded-height search is used.
+
+**Does not establish / 不建立：** Does not prove the critical threshold2p+1 for arbitrary prime arity, positive inverses for every general-p return, composite critical-dimension entry, or the whole n>=7 result without the separately known8/9/10 and large-n results. The finite sweep relation alone is not asserted to imply full orbit coverage. Its embedded-window version contracts about the local mean rather than the global mean.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Elementary signed Schreier decomposition and Bezout arguments in the document
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id seven-endpoint-structure
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+two-block carrier sweep and spectral boundary: PASS 6
+seven endpoint real returns and positive cycles: PASS 3 3
+seven endpoint full localized-root seed identities: PASS 13
+seven endpoint complete signed Schreier certificate: PASS 8 6 24
+seven endpoint literal Fraction terminal paths: PASS 10 338
+seven exact-threshold structural proof: PASS
+~~~
+
+## prime-arity-four-p-threshold
+
+**Claim / 命题：** For odd prime averaging arity p, the complete p-power gcd criterion holds at n>=d_p(n)+4p-1, hence N(p)<=4p+ceil(log2 p)+1. Three heavy values are handled by shared residues or an untouched extreme value; only two heavy values need2p reserved copies plus a protected EGZ pool. This covers all five-averaging n>=20. For every p>=5, an explicit G1 three-block state at n=3p has no one-step zero and every nonconstant integer operation destroys the double-p-heavy invariant.
+
+**Status:** proved-four-p-upper-bound-and-three-p-invariant-boundary · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_four_p_threshold.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_four_p_threshold.md)
+
+**Scripts / 脚本：** [work/verify_prime_arity_four_p_threshold.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_prime_arity_four_p_threshold.py)
+
+**Evidence scope / 核验范围：** The proof-directed selector checks three-heavy shared-residue, low-value, extreme-spare and middle-reservoir cases without word search.840 capacities,1125 large-integer configurations,7 initializations,78 exhaustive nonconstant integer value types of eight3p boundary examples and16 full labelled Fraction paths audit the written formulas. The universal theorem uses the earlier reservoir/EGZ lemmas plus the new order argument; finite samples do not prove infinite quantifiers.
+
+**Does not establish / 不建立：** Does not prove N(p)<=3p, N(p)=2p+1, failure of reachability at3p, or a no-exception lower bound for more general invariants. The boundary family only disproves the unamended one-step double-heavy property. Five-averaging n12 through19 remain outside the current full coverage; n11 is handled by its independent arithmetic certificate. No shortest or bit-length polynomial path claim is made.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- prime-arity-boundary-progress and linear-threshold executable helpers
+- Written background and prime EGZ lemmas
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-arity-four-p-threshold
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+four-p threshold capacity checks: PASS 840
+four-p large-coordinate closure: PASS 1125
+four-p initialization: PASS 7
+three-p complete value-type closure obstruction: PASS 78
+four-p full original-position paths: PASS 16
+prime-arity four-p threshold: PASS
+~~~
+
+## five-average-eleven-complete
+
+**Claim / 命题：** For five-number averaging on exactly11 original positions, every nonconstant rational input is reachable iff its primitive centered difference gcd is1. Five explicit two-atom returns and three positive scalar cycles provide all projective inverses. Their adapted matrices yield U(Z[1/30]), L(11 Z[1/30]) and all localized diagonal units; twelve signed coset representatives and ten Schreier loops prove Gamma_0(11) containment. A two-average legal entry, Bezout transport and four-average terminal complete all inputs.
+
+**Status:** proved-full-five-average-n11-criterion · **Evidence:** theorem-certificate · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/prime_arity/examples/five_average_eleven_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/examples/five_average_eleven_complete.md)
+
+**Scripts / 脚本：** [work/verify_five_average_eleven.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_five_average_eleven.py)
+
+**Evidence scope / 核验范围：** Exact Fraction replay on two independent inputs verifies all universal return matrices and inverse cycles; fixed positive cycle identities prove inverses. Explicit root/diagonal formulas, all36 transitions between12 independently labelled cosets and ten complete Schreier decompositions are checked.322 bounded columns audit the separately proved unbounded Bezout transport. Twelve full labelled paths are replayed, two again with literal Fraction arithmetic; the verifier imports neither discovery search nor another averaging solver.
+
+**Does not establish / 不建立：** Does not solve five-averaging dimensions12 through24, prove N(5)=11, promise one extra base5 digit, establish optimal path lengths or a uniform bit-length polynomial expanded-word bound. Z[1/30] is a projective parameter ring; all physical coordinates still arise solely from five-averaging and its powers-of5 denominators. The full all-input theorem follows from the written subgroup and orbit proof, not the322 sampled transports.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Elementary Bezout and Schreier subgroup generation arguments given in the document
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id five-average-eleven-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+five-average eleven physical returns and positive inverses: PASS 5 3
+five-average eleven localized roots and diagonals: PASS 64
+five-average eleven complete signed Schreier interface: PASS 12 10 36
+five-average eleven exact transport compilation: PASS 322
+five-average eleven complete original-position paths: PASS 12 14596 2
+five-average eleven full criterion: PASS
+~~~
+
+## five-average-n11-random-experiment
+
+**Claim / 命题：** At five-averaging arity and n11,120 independent uniform integer instances accepted only by the conjectured5-power G filter have exact positive witnesses across six ranges through128 bits. Ninety-two separately labelled K5 core stress cases also have witnesses. Search uses a width128 beam over primitive sign-quotiented states and an independently proved zero-coordinate tail; no general n11 sufficiency or threshold theorem is inferred.
+
+**Status:** verified-finite-positive-witnesses-only · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/examples/five_average_n11_random_experiment.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/examples/five_average_n11_random_experiment.md)
+
+**Scripts / 脚本：** [work/explore_five_average_n11.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_five_average_n11.py) · [work/verify_five_average_n11_experiment.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_five_average_n11_experiment.py)
+
+**Evidence scope / 核验范围：** Independent Fraction successor oracle over every physical5-subset for24 states;40 labelled zero-coordinate tails; seed regeneration of1246 independently drawn candidate arrays and all120 accepted instances; independent exact raw-input replay of120 random and92 deterministic-core certificates. Samples are uniform integer draws with necessary-condition rejection, not reverse-generated. Bounds, seeds, budgets, paths, times and precision are retained in six range JSON files and the core-stress JSON. The n10 claim here checks the integral boundary only; the full negative proof remains in the cited existing prime-arity document.
+
+**Does not establish / 不建立：** Does not prove that G is sufficient for all n11 inputs, N(5)=11, a uniform bit-length path bound, a precision bound, or shortest paths except where a matching simple lower bound is recorded. Large-range beam search is not exhaustive. Core stress instances are constructed diagnostic inputs and are explicitly excluded from the independent-random statistics. Even a full n11 theorem would still require treating dimensions12 through24 before obtaining N(5)=11 from the existing n>=25 result.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Saved six five_average_n11_range JSON reports and five_average_n11_core_stress.json
+- Theoretical tail: prime-arity-boundary-progress
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id five-average-n11-random-experiment
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+five-average successor oracle and sign quotient: PASS 24
+critical zero-coordinate labelled tails: PASS 40
+critical exact control Y5-exact-four 4
+critical exact control natural-return-escape 5
+critical exact control padded-ten-point-obstruction 4
+n10 G1 obstruction integral boundary: PASS
+five-average resource limit semantics: PASS
+independent random regeneration and saved Fraction replay: PASS 6 120
+saved critical-core Fraction replay: PASS 92
+five-average n11 experiment verification: PASS
+~~~
+
+## prime-arity-boundary-progress
+
+**Claim / 命题：** Reserving p copies of each of at most three heavy values yields the complete prime-arity criterion at n>=d_p(n)+5p-1, hence N(p)<=5p+ceil(log2 p)+1<=6p. At n=2p+1, a zero coordinate gives a five-step tail and Y_p=(1^p,2^p,-3p) has exact optimum four. If2p+1 is prime, a partition swap gives a legal two-block entry in two averages; six distinct factors instead admit a K4/CRT G1 input blocking every direct(p,p,1) partition. For p>=5 the two natural K_p returns preserve an explicit interval avoiding zero coordinates, although a five-step mixed path solves K_5(5,-4).
+
+**Status:** proved-improved-bound-critical-tails-and-specified-interface-obstructions · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/history/prime_arity_boundary_progress.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/history/prime_arity_boundary_progress.md)
+
+**Scripts / 脚本：** [work/verify_prime_arity_boundary_progress.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_prime_arity_boundary_progress.py)
+
+**Evidence scope / 核验范围：** Exact residue and multiplicity checks, labelled Fraction replay, all48 special-position assignments, deterministic trial primality for p217717 and the displayed CRT G1 configuration. No average-word search. Unbounded proofs use reserved-copy EGZ, integer energy, explicit balanced tails, first-step zero exclusion, a single-prime exchange, the four-vertex complete graph and invariant real interval [1/2,2].
+
+**Does not establish / 不建立：** Does not prove N(p)=2p+1 for p>=5, all K_5 parameters terminating, a bounded-length universal critical controller, or impossibility of entering K_p after additional averaging. The K4 result only excludes direct two-disjoint-block preprocessing. The real interval only excludes the two stated natural returns and block relabelling; it is not a full reachability obstruction. The five-step K_5 example has no optimality claim.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- prime-arity-linear-threshold helpers and proof lemmas
+- Chevalley-Warning/prime EGZ as used in the previous proof
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-arity-boundary-progress
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+reserved-pool threshold instances: PASS 1200
+reserved-pool large-integer closure: PASS 1140
+reserved-pool initialization: PASS 8
+critical zero-coordinate five-step tails: PASS 56
+critical Y_p optimal four-step identities: PASS 7
+K4 obstruction all singleton-compatible layouts: PASS 48
+prime critical-dimension partition entry: PASS 480 23
+natural-return invariant interval and p5 escape: PASS 2904
+reserved-pool complete labelled paths: PASS 20
+prime-arity boundary progress: PASS
+~~~
+
+## prime-arity-linear-threshold
+
+**Claim / 命题：** For any prime averaging arity p, the full p-power gcd criterion holds when n>=d_p(n)+8p-7, hence for every n>=9p-5, with one extra p-adic digit of precision. Protected EGZ subsets, an extreme unused heavy value and a sorted negative-coefficient crossing remove the earlier quadratic and cubic losses. For odd p, the G1 state(-p,0^(p-1),1^p) at n=2p is unreachable, whereas adding one zero makes this family four-step reachable. At n=2p+1, the legal state(1^p,2^p,-3p) has only one nonconstant integer operation, which destroys the double-p-heavy invariant.
+
+**Status:** proved-linear-upper-bound-and-critical-dimension-obstructions · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_linear_threshold.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_linear_threshold.md)
+
+**Scripts / 脚本：** [work/verify_prime_arity_linear_threshold.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_prime_arity_linear_threshold.py)
+
+**Evidence scope / 核验范围：** Polynomial cardinality/residue bitset DP constructs EGZ witnesses without subset or word enumeration. Exact finite coefficient packing, large-integer local closure, labelled Fraction path replay and exhaustive value-type moves of the two boundary families audit the formulas. All nine closure and terminal branches are exercised. Universal statements use the written Chevalley-Warning proof of prime EGZ, ordered heavy values, sorted coefficient crossing, integer energy and the p-adic first-fraction obstruction.
+
+**Does not establish / 不建立：** Does not prove N(p)=2p+1 for p>=5, an optimal precision threshold, composite averaging arities or a uniform bit-length polynomial path bound. The(1^p,2^p,-3p) family only disproves unrestricted one-step double-heavy closure, not reachability. The four-step construction at2p+1 covers the specified family only.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- verify_prime_arity_large_dimension atomic helpers and initialization
+- Standard Chevalley-Warning theorem; prime EGZ derived in the document
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-arity-linear-threshold
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+linear threshold capacity checks: PASS 1240
+EGZ fixed-cardinality residue witnesses: PASS 1200
+coefficient-crossing exact checks: PASS 3144
+linear-threshold large-integer closure: PASS 1313
+linear-threshold initialization: PASS 24
+2p obstruction and 2p+1 four-step family: PASS 7
+2p+1 double-heavy one-step closure obstruction: PASS 7
+linear-threshold labelled complete paths: PASS 20
+prime-arity linear threshold and boundary: PASS
+~~~
+
+## prime-arity-large-dimension
+
+**Claim / 命题：** For every prime averaging arity p and every total dimension n>=2p^3, finite original-position p-averaging reaches consensus exactly when the primitive centered difference gcd is a power of p. Legal integer zero-sum inputs admit a path with denominators at most p. More precisely, n>=p*d+3p^2-2 and n>p*(p-1)^2 suffice, with d the number of non-p prime divisors of n. A protected-pool and double-p-repetition invariant reduces failure of a one-value modular controller to an explicit short arithmetic-progression terminal.
+
+**Status:** proved-by-uniform-invariant-and-arithmetic-progression-termination · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_averaging_large_dimension.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_averaging_large_dimension.md)
+
+**Scripts / 脚本：** [work/verify_prime_arity_large_dimension.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_prime_arity_large_dimension.py)
+
+**Evidence scope / 核验范围：** Proof-directed steps use value multiplicities, protected residues and a single modular inverse; no word or position-subset search.700 threshold instances,1654 large-integer closure cases at arities2,3,5,7,11,17,31,28 initializations and20 labelled complete paths at arities2,3,5,7. Independent Fraction replay verifies denominators1 or p, zero output and physical positions. The unbounded result follows from the written initialization, closure, progression multiplicity bound and integer energy argument, not finite extrapolation.
+
+**Does not establish / 不建立：** Does not establish an optimal dimension threshold, composite averaging arities, polynomial bit-length output paths or shortest-path optimality. The construction does not import any earlier dimension solver or require positive realization of an abstract matrix. Finite checks alone do not prove the universal theorem.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- General proof in the document; no existing averaging solver
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-arity-large-dimension
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+prime-arity threshold instances: PASS 700
+compressed large-integer closure checks: PASS 1654
+all initialization branches: PASS 28
+labelled end-to-end prime-arity paths: PASS 20
+prime-arity large-dimension theorem checks: PASS
+~~~
+
+## pair-triple-solver-optimality
+
+**Claim / 命题：** The imported binary HTML passes its built-in tests; ternary IDA* over unrestricted legal rational states has an admissible zero-sum packing lower bound and exact labelled replay. Independent rational BFS proves four binary/ternary distance pairs3/1,3/4,1/1,3/2, so neither arity uniformly dominates. Numerical3D matching with separated type tags and an isolated consecutive-value zero-sum triple reduces to the n/3-step threshold on promised G1 inputs, proving strong NP-completeness of that restricted shortest-path decision problem.
+
+**Status:** proved-individual-optima-and-strong-NP-hardness-reduction · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/algorithms/pair_triple_solver_comparison_and_optimality.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/algorithms/pair_triple_solver_comparison_and_optimality.md)
+
+**Scripts / 脚本：** [work/compare_pair_triple_solvers.py](../archive/2026-09-07/3-3-triple-average-research-note/work/compare_pair_triple_solvers.py) · [work/triple_average_optimal_search.py](../archive/2026-09-07/3-3-triple-average-research-note/work/triple_average_optimal_search.py) · [work/run_binary_html_solver.cjs](../archive/2026-09-07/3-3-triple-average-research-note/work/run_binary_html_solver.cjs)
+
+**Evidence scope / 核验范围：** Original embedded binary scripts are parsed with HTMLParser and run unmodified in Node;16 built-in checks and four shortest examples are independently replayed. Fraction BFS does not use projective normalization, reachability pruning or IDA heuristics. Exact packing transitions and100 N3DM instances test the displayed formulas; the general NP-completeness statement follows from the written reduction and the classical strong NP-completeness of N3DM. A separate24-instance paired benchmark records feasible upper bounds only.
+
+**Does not establish / 不建立：** Does not prove polynomial-time global shortest search, optimality of benchmark constructions, an average distance ratio, or NP-hardness of the binary shortest problem. The original HTML's independent verifier checks feasibility, not its optimality flag. Ternary search budgets may end with a gap between bounds; intermediate paths may use more than one trit outside the invariant constructor.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Node.js with BigInt and vm
+- Original workspace 2-average-solver.html
+- Direct double-triple constructor
+- Theoretical hardness: classical strongly NP-complete Numerical3D Matching
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id pair-triple-solver-optimality
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+imported binary HTML built-in tests: PASS 16
+independent shortest comparison ternary-faster 3 1
+independent shortest comparison binary-faster 3 4
+independent shortest comparison equal-length 1 1
+independent shortest comparison two-zero-triples 3 2
+ternary zero-sum packing lower-bound transitions: PASS 151
+ternary budget exhaustion does not claim optimality: PASS
+promised-G1 numerical matching hardness encoding: PASS 100 25 75
+pair-triple optimality audit: PASS
+~~~
+
+## double-triple-sequence-length
+
+**Claim / 命题：** The direct n>=11 constructor has both quadratic-energy and linear-value pair-distance step bounds. Every nonconstant integer triple-averaging sequence on n fixed positions has a largest-gap recursive bound (12 n^3 L)^(n-2), yielding polynomial bit-length dependence for fixed n. A legal non-three-power family requires logarithmically many steps under any policy. Single-step proportional safe energy loss fails, although an explicit two-step repair exists. A maximal-safe-drop selector is exactly verified.
+
+**Status:** proved-potential-fixed-n-upper-and-logarithmic-lower-bounds · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/algorithms/triple_average_sequence_length_analysis.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/algorithms/triple_average_sequence_length_analysis.md)
+
+**Scripts / 脚本：** [work/analyze_double_triple_sequence_length.py](../archive/2026-09-07/3-3-triple-average-research-note/work/analyze_double_triple_sequence_length.py)
+
+**Evidence scope / 核验范围：** Exact finite checks of the general displayed potential, gap-contraction, obstruction and output-row identities; an independent full move oracle checks150 maximal-drop selections. The unbounded length statements follow from the written convexity, largest-gap induction and nonnegative-row arguments. Separate JSON artifacts contain18 paired random instances and12 larger-integer maximal-drop runs with independent Fraction replay of every completed path; benchmark timings are not theorem evidence.
+
+**Does not establish / 不建立：** Does not prove a uniform polynomial construction bound when n varies, optimality of the greedy selector, or exponential bit-length lower bounds for the baseline. Three baseline benchmark runs hit100000 steps and are only partial paths, not nonreachability results. The direct algorithm analyzed here is for n>=11; no small-dimension precision improvement is claimed.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Double-triple constructor and exact labelled replay helpers
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id double-triple-sequence-length
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+integer energy and pair-distance inequalities: PASS 69926
+maximal-drop selector versus exact move oracle: PASS 150
+largest-gap phase contraction with internal interleaving: PASS 142
+single-step contraction obstruction and two-step repair: PASS 6
+positive-row logarithmic length lower bound: PASS 23466
+double-triple sequence-length identities: PASS
+~~~
+
+## all-dimensions-double-triple-invariant
+
+**Claim / 命题：** Every integral zero-sum n-state with n>=11 that is incongruent at every non-three prime dividing n reaches zero on its original positions with at most one additional trit. A double-triple invariant has a direct safe integer move or an explicit opposite-triples terminal. Multi-prime pool protection, affine witnesses at2 and coprimality exclusions remove the primality hypothesis. The n>=7 criterion follows using only independent7,8,10 base cases and the nine-point network, without general composite reduction.
+
+**Status:** proved-by-general-case-analysis · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/proofs/triple_average_all_dimensions_double_triple_invariant.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/proofs/triple_average_all_dimensions_double_triple_invariant.md)
+
+**Scripts / 脚本：** [work/verify_all_dimensions_double_triple_invariant.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_all_dimensions_double_triple_invariant.py)
+
+**Evidence scope / 核验范围：** A proof-directed selector,9990 dimension-capacity checks,17575 bounded integer states,4458 deterministic large-coordinate states,4799 initializations,64 parity-repair instances and80 complete original-position paths through dimension210. Independent Fraction replay checks exact zero output and denominators1 or3. No word search or smaller-dimension solver is used. General quantifiers follow from the documented multi-prime protection, affine witness, residue, multiplicity and integer-energy proof.
+
+**Does not establish / 不建立：** Finite checks alone do not prove universal closure. The n>=7 corollary still uses the independent7,8,10 certificates and a nine-point network. No input-bit-length polynomial bound on constructed paths, no one-trit claim at7,8,10, and no specified matrix factorization or positive congruence group theorem is asserted.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Count update, terminal recognition and labelled replay helpers from verify_prime_double_triple_invariant.py; not its solver
+- n>=7 corollary only: n7-n8-complete, n10-complete and nine-point ternary network
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id all-dimensions-double-triple-invariant
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+uniform protected-pool capacity checks: PASS 9990
+composite-inclusive bounded closure checks: PASS 17575
+multi-prime large-coordinate closure checks: PASS 4458
+multi-prime two-step initialization checks: PASS 4799
+characteristic-two obstruction and affine repair: PASS 64
+all-dimension labelled one-trit replays: PASS 80
+all-dimension double-triple invariant: PASS
+~~~
+
+## prime-double-triple-invariant
+
+**Claim / 命题：** For every prime p>=11, an integral zero-sum p-state that is not constant modulo p reaches zero on its original positions with at most one additional trit. Two safe initialization averages on3X establish two distinct triple values; a complete residue and multiplicity case split preserves this invariant or reaches the explicit opposite-triples terminal. Integer energy proves termination. Existing p=7 and composite-reduction theorems then give the criterion for all n>=7.
+
+**Status:** proved-by-general-case-analysis · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/proofs/triple_average_prime_double_triple_invariant.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/proofs/triple_average_prime_double_triple_invariant.md) · [outputs/literature/triple_average_binary_source_reassessment_2026-09-11.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/literature/triple_average_binary_source_reassessment_2026-09-11.md)
+
+**Scripts / 脚本：** [work/verify_prime_double_triple_invariant.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_prime_double_triple_invariant.py)
+
+**Evidence scope / 核验范围：** A proof-directed selector,10607 bounded integral states,3573 deterministic large-coordinate states,3600 initializations and55 complete labelled atomic paths including71. Independent Fraction replay verifies zero output and denominators only1 or3. No averaging-word search is performed. Arbitrary primes and integer magnitudes are handled by the written dangerous-support, repeated-value, residue and collision arguments, not by extrapolating these samples.
+
+**Does not establish / 不建立：** Finite checks alone do not prove universal closure. The all-n corollary additionally depends on the existing seven-point theorem and composite reduction; this script does not replay that entire dependency tree. No polynomial bit-length bound on constructed paths, no one-trit bound at7 or arbitrary composite dimensions, and no specified-return or positive-congruence-group theorem is claimed.
+
+**Dependencies / 依赖：**
+
+- Python standard library; the p>=11 construction imports no existing solver
+- all-n corollary only: n7-n8-complete and all-dimensions-prime-reduction
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-double-triple-invariant
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+bounded integer closure checks: PASS 10607
+large-coordinate closure checks: PASS 3573
+two-step initialization checks: PASS 3600
+labelled end-to-end one-trit replays: PASS 55
+prime double-triple invariant: PASS
+~~~
+
+## final-hecke-manin-audit
+
+**Claim / 命题：** The proposed direct Hecke-to-automorphic route has explicit structural limits: all standard matrices H_p are GL2(Z)-conjugate to one companion matrix; H_p and the displaced B_c have no common positive star form when c differs from1; all candidate walls preserve u=0; direct linear equivariant encoding into ordinary trivial-coefficient Manin symbols is zero. The finite Hecke relation is distinguished from spherical T_3 convolution and the punctured physical permutation from a Mobius action.
+
+**Status:** proved-obstructions-to-specified-direct-interfaces · **Evidence:** symbolic-check · **Runtime class:** instant
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_final_hecke_audit.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_final_hecke_audit.md) · [outputs/triple_average/history/triple_average_iwahori_hecke_modular_interface.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_iwahori_hecke_modular_interface.md)
+
+**Scripts / 脚本：** [work/verify_final_hecke_audit.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_final_hecke_audit.py)
+
+**Evidence scope / 核验范围：** Small exact rational checks of the displayed all-parameter formulas. General proofs in the document use a determinant-one cyclic basis, the common Hermitian-star equations, lower-triangular closure, central minus-I action on ordinary symbols, Bezout cusp transitivity and uniqueness of a Mobius map from three values. No word search is performed.
+
+**Does not establish / 不建立：** Does not disprove the triple-average conjecture or all possible modular-form approaches. The star obstruction applies to the two specified matrices as self-adjoint generators in the same unitary invariant two-dimensional subspace; the Manin obstruction applies to direct linear equivariant maps with trivial target central character. Nonlinear, nonunitary and enlarged-state constructions remain outside these exclusions.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id final-hecke-manin-audit
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+unimodular conjugacy removes intrinsic index-p claim: PASS 44
+displaced wall has no common positive Hecke star form: PASS 308
+triangular orbit and collapsed legal-cusp checks: PASS 1884
+ordinary Manin-symbol linear map central-sign obstruction: PASS
+puncturing and finite-versus-spherical Hecke distinction: PASS 22
+final Hecke-Manin route audit: PASS
+~~~
+
+## carrier-sweep-catalyst
+
+**Claim / 命题：** Sweeping every triple block once against a singleton carrier gives one third of an integral unimodular matrix in every rank. Rank two recovers the finite Artin center; rank three produces24 positive unipotents, including12 with same-length positive inverses whose tangent Lie algebra is sl3. Their direction/covector lattices have indices5/32, and adding one carrier exchange makes every primitive mod20 orbit meet a collision hyperplane.
+
+**Status:** proved-uniform-sweep-and-finite-index-local-arithmetic-controller · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_carrier_sweep_catalyst.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_carrier_sweep_catalyst.md)
+
+**Scripts / 脚本：** [work/verify_carrier_sweep_catalyst.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_carrier_sweep_catalyst.py) · [work/explore_carrier_sweep_local_images.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_carrier_sweep_local_images.py)
+
+**Evidence scope / 核验范围：** Exact all-r carrier-sweep formula and determinant, rank-two center, exhaustive1296-word rank-three length-four unipotent classification, same-length inverse identities, rational Lie closure, Smith lattice indices, four fixed conjugate roots yielding E3(4320^2 Z), explicit external-coordinate coboundary and complete primitive mod20 vector orbits. Finite index follows from the standard rank-three elementary congruence subgroup theorem, not from sampled finite images.
+
+**Does not establish / 不建立：** Does not control changing local means across overlapping windows or solve any previously unresolved prime. Rational collision lifting is supplied by the separate carrier-catalyst-local-descent theorem.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- NumPy for vectorized finite images
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id carrier-sweep-catalyst
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+all-r integral carrier sweep and finite-order rank-two boundary: PASS 11
+rank-three positive unipotents and same-length inverse pairs: PASS 24 12
+carrier-sweep tangent Lie algebra equals sl3: PASS 8
+root direction and covector lattice indices: PASS 5 32
+second-carrier obstruction is a one-dimensional boundary cocycle: PASS
+root-plus-carrier mod20 collision orbits: PASS 15
+local stabilizer tangent ranks at5,8,16: PASS 5 8 8
+explicit opposite horospheres and E3 principal level: PASS 18662400
+~~~
+
+~~~text
+modulus 2 image 1 rounds 1
+modulus 3 image 5616 rounds 7
+modulus 4 image 4 rounds 2
+modulus 5 image 3000 rounds 6
+~~~
+
+## carrier-catalyst-local-descent
+
+**Claim / 命题：** Every rational state consisting of three constant triples and one singleton can, using only those ten positions, reach a leaf/carrier or leaf/leaf collision. Six reversible root families reduce a positive integral quadratic height; the remaining root-reduced projective domain is covered by exact rational quadratic-cone certificates using at most three carrier sweeps and one nearest-integer root correction.
+
+**Status:** proved-complete-ten-position-local-collision · **Evidence:** theorem-certificate · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_carrier_sweep_catalyst.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_carrier_sweep_catalyst.md)
+
+**Scripts / 脚本：** [work/verify_carrier_catalyst_descent.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_carrier_catalyst_descent.py)
+
+**Evidence scope / 核验范围：** Exact sign decomposition of the six-root reduced domain into30 generic and50 zero-step strata;2805 rational quadratic descent candidates; recursive applicability-face and barycentric subdivision; exact maxima on rational simplices via vertices, edge stationary points and interior Lagrange points. Every nonterminal certificate uses at most three integral carrier sweeps. The positive integer height proves finite termination.
+
+**Does not establish / 不建立：** Does not make a collision reduce a global p-position state, align local means of overlapping windows, produce a zero-sum triple, or solve an unresolved prime.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- NumPy for exact small integer matrices
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id carrier-catalyst-local-descent
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+carrier catalyst generic cone descent: PASS 30 538 15
+carrier catalyst exceptional strata and terminals: PASS 50 274 44 7
+ten-position rational collision theorem: PASS
+~~~
+
+## carrier-collision-global-interface
+
+**Claim / 命题：** Every local ten-position collision can be converted in one or two further averages to a flat state with two equal carriers while preserving the complete Z[1/3] affine difference module. Directly composing local projective height reductions across overlapping windows is invalid: a positive root/inverse center contraction yields overlap differences (3^(8k)-1)/3^(8k), so real energy decreases while primitive integer height grows exponentially.
+
+**Status:** proved-global-entry-and-overlap-height-obstruction · **Evidence:** symbolic-check · **Runtime class:** instant
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_carrier_sweep_catalyst.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_carrier_sweep_catalyst.md)
+
+**Scripts / 脚本：** [work/verify_carrier_collision_global_interface.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_carrier_collision_global_interface.py)
+
+**Evidence scope / 核验范围：** Exact conservation and two-sided Z[1/3] affine-span formulas for both collision types; exact twelve-level replay of the local center contraction and overlapping-window primitive numerator3^(8k)-1. The general formulas are proved symbolically in the document.
+
+**Does not establish / 不建立：** Does not rule out synchronized overlap schedules, a quotient height insensitive to independent center contractions, frozen zero-sum-block induction, or arbitrary-prime reachability. It rules out the direct composition of the present local primitive-Q descent as a global well-order.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id carrier-collision-global-interface
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+collision to equal carriers and affine-ideal preservation: PASS 4
+overlap primitive height grows under local center contraction: PASS 12 6362685441135942358474828762538534230890216320
+~~~
+
+## equal-carrier-formal-freezing
+
+**Claim / 命题：** For r>=5, the formal equal-carrier exchange group contains the full balanced SL_(r-1)(Z) block. Every legal prime kernel D_r reaches a zero leaf by an explicit SL--one exchange--SL normal form: after the exchange, the new leaf-difference gcd divides the new base coordinate. Over every field of characteristic other than2,3, the only possible projective orbit avoiding all zero-leaf hyperplanes is the constant line when the characteristic divides3r+2.
+
+**Status:** proved-formal-zero-leaf-normal-form · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_equal_carrier_formal_freezing.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_equal_carrier_formal_freezing.md)
+
+**Scripts / 脚本：** [work/verify_equal_carrier_formal_freezing.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_equal_carrier_formal_freezing.py)
+
+**Evidence scope / 核验范围：** Exact rational verification of the conjugated root, balanced integer shears, Q-basis block, final exchange, and317844 gcd instances. The all-r matrix identities, elementary generation of SL_(r-1)(Z), prime legality implication p not dividing g, divisibility proof, and finite-field orbit corollary are proved symbolically in the document.
+
+**Does not establish / 不建立：** The two SL blocks are currently generated with formal inverses. A convex-cone argument in the document rules out realizing their mixed-sign balanced rows by fixed positive words localized to a proper leaf subset. State-dependent global boundary cancellation remains open; this entry does not solve a new prime.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id equal-carrier-formal-freezing
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+equal-carrier integral balanced shears: PASS 16
+equal-carrier Q-basis and SL block interface: PASS 8
+prime formal SL-exchange-SL gcd step: PASS 317844
+equal-carrier formal zero-leaf theorem: PASS
+~~~
+
+## iwahori-hecke-modular-interface
+
+**Claim / 命题：** Geometric-chain matrices satisfy finite type-A Hecke relations with parameter s=3^k. The finite-label digit transfer is a sum of three affine permutations. Standard B_p change-of-basis, local eigenprojector, energy and triangular root identities hold, as do the positive replica transport margins. These are matrix and finite-algebra identities, not an identification with classical T_3, global Eisenstein/Steinberg components or an Ihara interface.
+
+**Status:** proved-finite-algebra-only-global-interface-unproved · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_iwahori_hecke_modular_interface.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_iwahori_hecke_modular_interface.md)
+
+**Scripts / 脚本：** [work/verify_iwahori_hecke_modular_interface.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_iwahori_hecke_modular_interface.py) · [work/explore_bn_hecke_reflections.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_bn_hecke_reflections.py)
+
+**Evidence scope / 核验范围：** Exact finite-Hecke relations, finite-label permutation sums, standard matrix factorization, selected-lattice conjugacy, energy and local spectral projectors,184 triangular-root/positive-transport instances, and eight simple contraction-template polynomials. The2084-matrix inventory only concerns the named compiler libraries. The final audit supersedes the former global interpretations while retaining these arithmetic identities.
+
+**Does not establish / 不建立：** Does not identify the digit sum with U_3/T_3, identify local eigenlines with global automorphic components, make the selected index-p lattice intrinsic, realize second operators in original positions or solve a new prime. The final audit rules out the specified direct common-unitary-star and ordinary linear Manin interfaces.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id iwahori-hecke-modular-interface
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+geometric-chain Iwahori-Hecke relations: PASS 108
+three affine branches equal the digit transfer: PASS 50
+one-carrier q=3 Hecke quadratic relation: PASS 77
+standard B_p determinant-three matrix identity: PASS 44
+regular Hecke module and index-p stable lattice: PASS 44
+second Hecke reflection roots and positive transport: PASS 44
+affine q=3 Hecke wall family and p-roots: PASS 184
+Hecke self-adjoint energy and rank-one defect: PASS 44
+local eigenprojectors and terminal line: PASS 44
+p-minus-two simple degeneracy has no Hecke wall: PASS 8
+finite Hecke and matrix identities only: PASS
+~~~
+
+~~~text
+B_p Hecke reflection inventory (41, 169, ((-3, 0, 37, 1), (-3, 0, 70, 9)))
+existing return-library Hecke reflection scan: PASS 2084 9
+~~~
+
+## nonsplit-hecke-chart-boundary
+
+**Claim / 命题：** For every nonsplit prime11<=p<=149, all one-layer punctured-Reynolds transitions from the standard B_p chart to every translated B_p chart, all two-layer transitions to every chart, and all three-layer transitions returning to the base chart were checked. Only the trivial repeated base partition returned to a B_p chart; no nontrivial q=3 Hecke reflection occurred.
+
+**Status:** bounded-one-to-three-layer-chart-obstruction · **Evidence:** exploratory-search · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_iwahori_hecke_modular_interface.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_iwahori_hecke_modular_interface.md)
+
+**Scripts / 脚本：** [work/explore_nonsplit_hecke_charts.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_nonsplit_hecke_charts.py)
+
+**Evidence scope / 核验范围：** Exact integer block-coefficient transitions for17 primes and every translated punctured partition. Target recognition enumerates both singleton roles and every possible exceptional triple. One/two-layer targets range over all translated charts; the three-layer test fixes the final base chart to keep complexity quadratic in p.
+
+**Does not establish / 不建立：** Does not rule out three-layer returns to a non-base chart, four or more Reynolds layers, added permutations or carrier macros, singular terminal hits, or the parameterized second Hecke wall by another construction.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id nonsplit-hecke-chart-boundary
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+nonsplit Hecke chart cases 17
+nonsplit one-to-three-layer Hecke chart survey: PASS 17 17 0 17 0
+~~~
+
+## atomic-hecke-wall-boundary
+
+**Claim / 命题：** For the nine B_p coefficient states with p=11,17,23,29,41,47,53,59,71, every nonidentity raw triple-average count state through depth5 was exhaustively checked for a return to multiplicities(p-4,3,1) with projective eigenvalue ratio minus3. No nonstandard Hecke reflection occurred.
+
+**Status:** bounded-depth-five-atomic-wall-obstruction · **Evidence:** exploratory-search · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_iwahori_hecke_modular_interface.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_iwahori_hecke_modular_interface.md)
+
+**Scripts / 脚本：** [work/explore_bcore_atomic_hecke_walls.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_bcore_atomic_hecke_walls.py)
+
+**Evidence scope / 核验范围：** Exact primitive integer coefficient-pair states with multiplicities; all nonconstant triples of currently available value types are enumerated and cached by capacity signature. B_p returns are recognized from exact multiplicities and the zero-sum singleton equation before applying the scale-invariant Hecke trace test.
+
+**Does not establish / 不建立：** Does not exclude depth6 or longer words, compiled smaller-dimension calls, Reynolds/transport layers, state-dependent zero-sum terminals, or the parameterized second wall at unbounded word length.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id atomic-hecke-wall-boundary
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+atomic B_p Hecke wall cases 9
+atomic B_p nonstandard Hecke wall survey: PASS 0 9 0
+~~~
+
+## b71-symbolic-directed-terminal-cover
+
+**Claim / 命题：** For B_71(1,v), one symbolic coefficient-count traversal finds a zero-sum triple after at most6 preparatory averages for all198 legal integer parameters in[-100,100]. One further average makes that triple zero. Depth5 covers192 parameters and depth6 supplies6 more. This finite linear terminal set does not by itself identify any Hecke or Manin recursion.
+
+**Status:** bounded-symbolic-directed-terminal-cover · **Evidence:** exploratory-search · **Runtime class:** long
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_iwahori_hecke_modular_interface.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_iwahori_hecke_modular_interface.md)
+
+**Scripts / 脚本：** [work/explore_bcore_symbolic_terminal_cover.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_bcore_symbolic_terminal_cover.py)
+
+**Evidence scope / 核验范围：** Exact primitive integer coefficient-pair states a+bv, exact multiplicity checks for every selected triple, and simultaneous solution of all integer terminal equations in the declared interval. The run reaches1782857 normalized states without hitting its limit and stops after the final six slopes are found.
+
+**Does not establish / 不建立：** Does not cover rational noninteger slopes, integer parameters outside the declared interval, other unresolved primes, logarithmic depth, a global monotone height, or an Ihara/modular-symbol proof of the observed language.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b71-symbolic-directed-terminal-cover
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+symbolic terminal-cover cases 1
+symbolic directed terminal cover: PASS 198 198 0
+~~~
+
+## n59-complete
+
+**Claim / 命题：** All legal59-coordinate rational inputs terminate. An extra-atom positive seed,33-node acyclic inverse certificate, affine root extraction and21 complete Schreier decompositions realize conjugate Gamma_0(59); independent folding has60 cosets.
+
+**Status:** proved-complete-dimension · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_fifty_nine_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_fifty_nine_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_b59_complete.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_b59_complete.py)
+
+**Evidence scope / 核验范围：** Exact physical replay of two seed templates and33 acyclic inverse nodes, affine lower/upper root identities, standard-macro inverse, all21 Schreier decompositions, independent60-coset folding, Bezout samples and the physical nine-point terminal. Universal core entry and all-input transport are proved in the document.
+
+**Does not establish / 不建立：** Does not prove the uniform nonsplit-prime seed theorem or polynomial witness length. All child calls are strictly smaller than59.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local exact certificate modules
+- previously solved child dimensions below59
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n59-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B59 acyclic expanded physical inverse certificates: PASS 33
+B59 basis-consistent unit upper root and ninth-power dilation: PASS
+B59 complete positive Schreier decompositions: PASS 21
+B59 independent cosets, Bezout transports and terminal: PASS 60 2222
+~~~
+
+## mixed-singleton-conditional-controller
+
+**Claim / 命题：** For every prime p=2 mod3, p>=11, positive original-position realizations of two explicit mixed-singleton trace-zero returns imply the complete p-coordinate criterion. Their cycles produce positive inverses; affine commutators, minimal prime-support localization and an explicit Bezout identity produce U(R) and L(pR); torus absorption gives every legal terminal transport. Both targets unconditionally have a common positive triadic replica transport.
+
+**Status:** proved-conditional-uniform-controller-and-replica-target · **Evidence:** symbolic-check · **Runtime class:** instant
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_mixed_singleton_controller.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_mixed_singleton_controller.md)
+
+**Scripts / 脚本：** [work/verify_mixed_singleton_controller.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_mixed_singleton_controller.py)
+
+**Evidence scope / 核验范围：** Exact rational checks of the mixed trace-zero cycles, upper-root commutator, prime-support multiplier ring, two lower-root parameters and Bezout combination, signed Schreier factors, common positive triadic margins and the p=431 diagonal-shadow boundary. The all-prime conditional implication and reduction to root-only legal orbit transport are proved in the document.
+
+**Does not establish / 不建立：** Does not factor either prescribed transport into ternary averages on the original p positions. Replica realization is not original-position realization, and the result does not yet prove any unresolved prime or arbitrary n.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- diagonal-resource torus absorption
+- triadic replica transport theorem
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id mixed-singleton-conditional-controller
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+mixed-singleton symbolic cycles and affine commutator identity: PASS 50
+two mixed returns give full opposite localized root ideals: PASS 18
+prime-support ring contains all signed Schreier root parameters: PASS 1674
+both target returns have common legal positive triadic transport margins: PASS 36
+whole-family diagonal shadow forbids full Gamma0 containment at431: PASS 86 215
+~~~
+
+## n53-complete
+
+**Claim / 命题：** All legal B53 directions and all53-coordinate rational inputs terminate; complete54-coset Gamma_0(53) generators have positive triadic root decompositions.
+
+**Status:** proved-complete-dimension · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_fifty_three_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_fifty_three_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_b53_schreier_complete.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_b53_schreier_complete.py)
+
+**Evidence scope / 核验范围：** Physical coefficient replay and affine child domains for74 acyclic inverse nodes; fixed root and cusp words; all20 Schreier decompositions; independent54-coset folding; exact nine-point terminal. Universal core entry and Bezout coverage are proved in the document.
+
+**Does not establish / 不建立：** Does not prove all primes or bound physical witness length polynomially. All child calls are strictly smaller than53.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local exact certificate modules
+- previously solved child dimensions below53
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n53-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+fixed acyclic B53 physical inverse closure: PASS 74
+B53 all complete Schreier loops positively decomposed: PASS 20
+B53 legal Bezout transports: PASS 2222
+B53 independent complete cosets and physical terminal: PASS 54
+~~~
+
+## reynolds-hodge-structure
+
+**Claim / 命题：** Each ternary average is a C3 Reynolds projection. For every n>=5 their rational unital algebra is the full End(V_n), with explicit root recovery, while their convex mean is scalar on V_n. On B_p the energy Hodge duality converts adjoints to scaled inverses but its valuation-one discriminant forces every legal p-direction into the illegal line; locally it is a Fricke-type Iwahori edge swap.
+
+**Status:** proved-general-algebra-and-local-duality-boundaries · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_reynolds_hecke_hodge.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_reynolds_hecke_hodge.md)
+
+**Scripts / 脚本：** [work/verify_reynolds_hodge_structure.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_reynolds_hodge_structure.py)
+
+**Evidence scope / 核验范围：** Exact rational Reynolds, root recovery, rank-one span, convex mean and Hodge identities; p-integral diagonalization,1238 primitive image controls and1716 valuation-one Gram controls. General all-n algebra generation and all-p illegal-line image are proved by the explicit formulas in the document. The local normalizer formula is not asserted to define a global classical Atkin-Lehner involution without checking other places.
+
+**Does not establish / 不建立：** Does not infer positive-product reachability from full matrix algebra or convex combinations, solve53 or arbitrary n, or rule out guarded one-way moves from legal states into traps. Hodge cannot be a legal-domain-preserving reversible macro; excluding a universal all-parameter Hodge macro additionally uses an explicit reachable legal state.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- exact rational linear algebra
+- non-three common-residue obstruction
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id reynolds-hodge-structure
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+Reynolds atoms and exact convex scalar averages: PASS 209
+triangle Laplacians recover all roots and rank-one endomorphisms: PASS 110 190
+Hodge inverse, energy similarity and local Fricke form: PASS 27
+Hodge sends every sampled primitive legal direction into illegal residue: PASS 1238
+Fricke conjugation preserves the Iwahori while exchanging its boundary sides: PASS 27
+valuation-one discriminant forces primitive duality image into radical: PASS 1716
+~~~
+
+## contingency-layer-semigroup
+
+**Claim / 命题：** For fixed block masses1 or3, every nonnegative integer matrix with those row and column sums gives an exact universally executable original-position layer, and every such layer has this form. Transposition is its executable weighted adjoint. The one-triple stratum exactly encodes all nonempty atomic words; two triple strata with overlap s have restricted rank n-3-max(0,2-s). A smaller flat-carrier terminal-hyperplane conjecture has no hidden macro-domain assumptions.
+
+**Status:** proved-exact-finite-layer-model-and-rank-stratification · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_reynolds_hecke_hodge.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_reynolds_hecke_hodge.md)
+
+**Scripts / 脚本：** [work/verify_contingency_layer_semigroup.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_contingency_layer_semigroup.py)
+
+**Evidence scope / 核验范围：** Sixty complete coefficient-layer replays involving336 atomic averages,54 carrier identifications,25 complete terminal selection patterns and205 restricted matrix ranks. General realization and converse follow from integer allocation of original positions; exact word encoding, weighted adjoint closure, finite-group double-coset interpretation and overlap rank formula are proved in the document.
+
+**Does not establish / 不建立：** Does not prove terminal coverage for the compact all-triple-plus-carriers layer semigroup, assert that it encodes every arbitrary atomic word, make every nonsingular letter positively invertible, or identify the linear Hecke algebra with the positive product semigroup. The exact encoding of all atomic words uses the larger one-triple stratum.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- exact rational rank and coefficient replay
+- integer contingency tables
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id contingency-layer-semigroup
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+original-position contingency layers and weighted adjoint reversal: PASS 60 336
+all carrier macros are explicit letters of the same contingency semigroup: PASS 54
+finite terminal hyperplanes and extension to a full layer: PASS 25
+exact single-triple stratum ranks by overlap zero/one/two/three: PASS 205
+~~~
+
+## n47-complete
+
+**Claim / 命题：** All legal47-coordinate rational inputs reach zero. A fixed positive width-one cusp word, two corrected dilations and full localized roots realize18 complete Schreier generators of conjugate Gamma_0(47). The48-coset subgroup has one legal cusp; the uniform bridge and Bezout formula complete all inputs.47 enters factor closure; after later53/59 certificates the smallest unresolved dimension is71.
+
+**Status:** proved-complete-dimension · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_forty_seven_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_forty_seven_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_forty_seven_arithmetic_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_forty_seven_arithmetic_group.py)
+
+**Evidence scope / 核验范围：** Rechecks the full170-node positive inverse library, fixes a three-template signed cusp word followed by a proved localized root, verifies exact diagonal corrections and complete parameter root families by nilpotent conjugation identities. Constructs the complete48-label Schreier table and realizes every one of18 generators via exact unit-pivot elimination, cross-checks full modular folding,1434 transports, six atomic terminal operations,928 bridge cases and8 catalog entries. General input coverage uses the proved uniform standard-kernel bridge and exact Bezout argument in the document.
+
+**Does not establish / 不建立：** Does not solve arbitrary primes or arbitrary n, identify the entire rational macro group, prove a polynomial atomic witness bound, or assert that general5/6-coordinate subproblems are legal. The arithmetic containment is certified by realizing full Schreier generators, not inferred from finite images.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- b47-root-activation
+- two-carrier-modular-bridge
+- proved smaller child dimensions
+- Schreier subgroup generating theorem
+- exact PSL2 integer folding
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n47-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B47 fixed width-one cusp and opposite full root group: PASS
+B47 all Schreier generators exact positive root decompositions: PASS 18
+B47 complete conjugate Gamma0(47), independent labels and cusp widths: PASS 48 1 47
+B47 legal Bezout transports and six-step terminal: PASS 1434
+n47 safe-core bridge and factor catalog integration: PASS 928 8
+~~~
+
+## localized-iwahori-generation
+
+**Claim / 命题：** For every prime p>=5, upper roots over R_p=Z[1/(p-1)!], lower roots over pR_p and diagonal units1<=a<p generate a group containing Gamma_0(p). Explicit I,ST^j representatives prove this uniformly. A universal odd-triadic return identity produces the width-one cusp from a specified reversible return shape, the standard macro and a known root; physical realization of the required resources remains a hypothesis.
+
+**Status:** proved-uniform-algebraic-generation-with-positive-interface · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_localized_iwahori_generation.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_localized_iwahori_generation.md)
+
+**Scripts / 脚本：** [work/verify_localized_iwahori_generation.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_localized_iwahori_generation.py)
+
+**Evidence scope / 核验范围：** Exact standard Schreier matrices and factorization at2238 finite parameter choices,8 diagonal-correction and32 odd-triadic return identities, and the proper unit images at73 and nonsplit431. The unbounded theorem is proved by explicit all-prime representatives and formulas in the document; finite checks do not replace those proofs.
+
+**Does not establish / 不建立：** Does not positively realize R_p roots or all units in arbitrary prime dimensions, assert all odd-triadic return targets have legal templates, or solve the remaining nonsplit primes.73 is a counterexample only to unrestricted fixed-unit residue coverage and is already solved by the independent split-prime theorem.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- Schreier subgroup generating theorem
+- exact rational Gaussian elimination
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id localized-iwahori-generation
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+uniform Iwahori Schreier representatives and unit-pivot decomposition: PASS 2238
+all-prime diagonal correction and cusp-root dilation identities: PASS 8
+all-prime odd-triadic return to width-one cusp identity: PASS 32
+fixed localization need not cover all prime residue units: PASS 73 36 72
+nonsplit fixed-unit lifting boundary: PASS 431 86 430
+~~~
+
+## b47-root-activation
+
+**Claim / 命题：** A linear trace-root criterion converts an available localized unipotent root and a reversible flank into a positive projective inverse. A fixed acyclic certificate activates all167 old B47 templates from nine seeds in three layers of46,113,2. The real quadratic conjugate has a57-template positive word, and an integral change of basis exposes both E12(47 Z[1/6]) and E21(47 Z[1/6]) in the positive group.
+
+**Status:** proved-whole-library-positive-inverses-and-relative-root-subgroup · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_positive_root_saturation.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_positive_root_saturation.md)
+
+**Scripts / 脚本：** [work/verify_b47_root_activation.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_b47_root_activation.py) · [work/b47_root_activation_certificate.json](../archive/2026-09-07/3-3-triple-average-research-note/work/b47_root_activation_certificate.json)
+
+**Evidence scope / 核验范围：** Rechecks fixed seeds, independently multiplies rational matrices, replays all170 physical templates with exact universal child domains, checks strictly prior dependencies, localized rational roots, trace-zero cycles and both inverse identities. Expands the selected quadratic inverse into57 positive template calls and checks physical mod47 scale. Two nilpotent matrix identities imply the full parameter root families by the document's algebraic proof. The formal verification does not import or run the discovery search.
+
+**Does not establish / 不建立：** Does not identify a principal congruence subgroup inside the relative elementary group, prove finite index or all legal cusp coverage, solve47, or prove the proposed uniform nonsplit-prime generation conjecture. The57 calls are proved subproblem macros, not57 atomic averages. Does not change solved_size or the old167 alphabet's short-cycle exclusion.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- b47-extra-atom-involutions
+- universal affine-module child-call theorem
+- proved43/44/45 and smaller child dimensions
+- fixed170-node JSON certificate
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b47-root-activation
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B47 fixed acyclic root-activation certificate: PASS 170 46 113 2
+B47 universal replay, legal mod47 interfaces and all old positive inverses: PASS 167
+B47 quadratic conjugate expanded positive macro word: PASS 57
+B47 two transverse complete localized root groups: PASS 2
+~~~
+
+## b47-extra-atom-involutions
+
+**Claim / 命题：** One extra preparatory triple creates three new universal B47 involutions. One of them gives positive inverses for six old macros, including the standard A0. Fixed words and two dilations generate every U(47t), t in Z[1/6], positively up to a global scalar. A general involution pencil has a common split-torus product structure.
+
+**Status:** proved-new-positive-macros-and-localized-root-group · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_b47_extra_atom_and_adjoint.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_b47_extra_atom_and_adjoint.md)
+
+**Scripts / 脚本：** [work/verify_b47_extra_involutions.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_b47_extra_involutions.py)
+
+**Evidence scope / 核验范围：** Three fixed extra-stage coefficient ledgers independently replayed with the shared Fraction child-domain checker; six old macros; exact signed physical involution squares and inverse cycles; fixed U(+-47) words checked before/after positive inverse replacement;32 triadic and6 dyadic conjugations;18 all-n involution-pencil checks. General localized root-group coverage follows from the explicit conjugation identities in the document.
+
+**Does not establish / 不建立：** Does not prove the new macro group has finite index, classify all legal B47 orbits, solve dimension47, or establish arbitrary-n sufficiency. The new macros are outside the old167-template alphabet, so the old short-cycle exclusions remain valid only for that alphabet. Not all longer-template candidates were exhaustively collected.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- universal affine-module child-call theorem
+- proved43/44/45 and smaller child dimensions
+- optional extra-stage Fraction replay
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b47-extra-atom-involutions
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B47 one-extra-atom universal involutions and exact physical squares: PASS 3
+B47 expanded alphabet positive cycles and universal A0 inverse: PASS 9 3
+B47 exact positive parabolic roots at all triadic scales: PASS 32
+B47 second dilation and positive Z[1/6] root group: PASS 6
+general involution pencil and common split-torus product identities: PASS 18
+~~~
+
+## adjoint-return-domain-audit
+
+**Claim / 命题：** Reversing exact subset projections and projecting back to a parameter kernel yields the energy adjoint G^-1 A^T G. This is a positive macro only if every reversed child domain is legal; it yields a projective inverse only under the conformality identity A^T G A=lambda G. For the old B47 library,15 of167 reversed templates are universal and none are new.
+
+**Status:** proved-adjoint-interface-and-audited-domain-boundary · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_b47_extra_atom_and_adjoint.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_b47_extra_atom_and_adjoint.md)
+
+**Scripts / 脚本：** [work/verify_adjoint_return_interface.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_adjoint_return_interface.py)
+
+**Evidence scope / 核验范围：** Reconstructed fixed physical subsets and final permutations for all167 old templates; exact reverse-projection/Gram-adjoint matrix comparison; every intermediate reverse child and final kernel projection checked with the affine-module test;15 passing matrices compared against the original library. Four algebraic controls distinguish adjoint from scaled inverse.
+
+**Does not establish / 不建立：** Does not assert failed reverse domains are unreachable by other words, construct the Q(sqrt89) conjugate macro, produce a new B47 generator from adjoints, or solve general positive inversion. A valid formal adjoint formula alone is not a physical implementation.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- exact subset-projection ledgers
+- universal child-call criterion
+- energy Gram matrix
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id adjoint-return-domain-audit
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B47 reverse-kernel adjoint identity and exact universal-domain audit: PASS 167 15
+energy-adjoint versus scalar-inverse boundary controls: PASS 4
+~~~
+
+## projective-spectral-balance
+
+**Claim / 命题：** A rational invertible matrix has finite projective order exactly when it is semisimple, complex eigenvalue moduli agree, and normalized characteristic invariants are integral. An exact adjoint-cyclotomic algorithm decides a supplied matrix's order in polynomial bit complexity. For a common number-field multiplication library, a positive scalar relation is equivalent to a nonnegative vector in its saturated S-unit relation lattice; a strictly positive vector characterizes positive group completion.
+
+**Status:** proved-classical-spectral-criterion-integrated-with-macros · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_projective_spectral_balance.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_projective_spectral_balance.md)
+
+**Scripts / 脚本：** [work/verify_projective_spectral_balance.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_projective_spectral_balance.py)
+
+**Evidence scope / 核验范围：** Exact conjugation/scaling invariants and scalar powers in85 cases; four independent obstructions; ten executions of the rational adjoint-cyclotomic algorithm; independent replay and Q(sqrt89) basis identity for a B47 macro;125 exact commuting norm/unit relations. General spectral equivalence uses Newton polygons and Kronecker; the commuting positive-relation criterion uses the standard S-unit lattice and a rational polyhedral cone. All infinite arguments and the cyclotomic bound are in the document.
+
+**Does not establish / 不建立：** Does not solve positive-word existence for a general noncommuting macro library, solve prime47, prove arbitrary-n reachability, or give a polynomial averaging-decision algorithm. General S-unit basis computation is not implemented or asserted polynomial. This spectral certificate does not realize the B47 field conjugate; the later independent b47-root-activation certificate does. Auxiliary field units are not asserted physically realizable.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- classical Newton polygon and Kronecker theorems
+- exact rational matrix/polynomial arithmetic
+- B47 selected universal child template
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id projective-spectral-balance
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+all-rank projective coefficient invariants and exact torsion controls: PASS 85
+archimedean, finite-place, semisimplicity and higher-coefficient boundaries: PASS 4
+exact adjoint-cyclotomic projective-order algorithm: PASS 10
+B47 real quadratic norm-minus-two macro and split local obstruction: PASS
+commuting quadratic valuation-and-unit positive-relation controls: PASS 125
+~~~
+
+## b47-short-cycle-boundary
+
+**Claim / 命题：** The specified167-template B47 library has no finite-projective-order positive word of length at most4, and A0^j BC has no such order for any j>=0 and any two library matrices B,C.
+
+**Status:** proved-exclusion-for-fixed-library-and-word-forms · **Evidence:** symbolic-check · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_b47_cycle_frontier.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_b47_cycle_frontier.md)
+
+**Scripts / 脚本：** [work/verify_b47_cycle_boundary.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_b47_cycle_boundary.py)
+
+**Evidence scope / 核验范围：** All one/two/three-factor products, exact rational-root equations for A0^j times all27160 pair products, and an int64 modular sieve over737665600 pair joins with3896 arbitrary-precision survivors. Modular rejection includes determinant-zero residues and has explicit int64 bounds; no floating point supports the exclusion. The unbounded exponent statement follows from polynomial root conditions.
+
+**Does not establish / 不建立：** Does not exclude words longer than4, other B47 templates, guarded macros, higher-rank or cross-kernel paths, or B47 reachability. This is not an arbitrary-n theorem or a nonreachability witness.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- NumPy int64 arrays
+- specified current-library expanded-first compiler
+- exact2x2 finite-order classifier
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b47-short-cycle-boundary
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+exact cycle sieve finite-order and parabolic controls: PASS 39
+B47 exact cycles through length3 and all exponents A^j BC: PASS 4657463 27160
+B47 exact four-factor exclusion via integer modular sieve: PASS 737665600 3896
+~~~
+
+## paired-carrier-two-adic-reset
+
+**Claim / 命题：** For n=3r+2 with odd r>=5, legal inputs can enter equal-carrier flat kernels. A uniform original-position word of4r-3 averages realizes W=2V with V in GL_r(Z[1/3]) and det V=-3^(-(3r-2)); coordinate and difference ideals both scale exactly by2. Restricted pair exchanges alone have no nonempty scalar cycle. Trace integrality and determinant characters give additional finite-cycle obstructions.
+
+**Status:** proved-uniform-rank-preserving-two-adic-reset · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_paired_carrier_reset.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_paired_carrier_reset.md)
+
+**Scripts / 脚本：** [work/verify_paired_carrier_reset.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_paired_carrier_reset.py)
+
+**Evidence scope / 核验范围：** Exact two-pass parity broadcast, rational determinants and natural lattice Gram matrices in six ranks;132 atomic operations on full coefficient bases;120 exact coordinate/difference ideal checks; restricted parity and determinant-character obstructions;5160 post-reset leaf permutations excluded by trace or squared-trace integrality;54 virtual-mass counterexamples. Uniform reset and all-r restricted-cycle impossibility are proved in the document, not extrapolated from samples.
+
+**Does not establish / 不建立：** Does not give a positive inverse of V, a global scalar cycle, uniform terminal coverage, prime47 reachability, or arbitrary-n sufficiency. Trace exclusion for the particular reset and its permutations is limited to the stated checked ranks; the r-divisibility obstruction is general only for the specified determinant types.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- two-carrier positive modular entry
+- exact replica-layer allocation
+- natural weighted parameter lattice
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id paired-carrier-two-adic-reset
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+uniform paired reset: parity matrix and R-unimodular normalization: PASS 6
+paired lattice discriminant and reset trace finite-order obstruction: PASS 6
+all post-reset leaf permutations excluded by trace integrality: PASS 5160
+paired reset full coefficient replay on original positions: PASS 132
+exact coordinate/difference ideals and scalar-word divisibility: PASS 120
+safe equal-carrier entry and invariant nonzero leaf parity: PASS 9
+virtual-point deletion violates the conserved physical sum: PASS 54
+~~~
+
+## n41-complete
+
+**Claim / 命题：** Every legal41-position rational input is reachable. Twenty-one universal templates with solved child sizes below41 have ten positive three-factor involution cycles; ten integer words generate the full conjugate Gamma0(41), with42 cosets and one legal cusp.
+
+**Status:** proved-complete-dimension41 · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_forty_one_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_forty_one_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_forty_one_arithmetic_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_forty_one_arithmetic_group.py)
+
+**Evidence scope / 核验范围：** Independent Fraction replay of21 selected universal templates using only3/9/18/27/37/38/39 children; signed physical scalar identities for ten involutions and all inverse replacements; ten fixed integral words; full42-node folding independently labeled by P1(F41); unique legal cusp;1422 transports,928 bridge samples and7 catalog entries. General entry and all-input transport are proved in the document. No discovery search runs in the certificate.
+
+**Does not establish / 不建立：** Does not solve prime47 or all nonsplit primes, prove arbitrary-n sufficiency, or give a polynomial atomic-word bound. Child solvers may use parameter-dependent internal words; they are not single atomic averages.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- split-prime theorem for n37
+- proved n18
+- factor closure for n38 from n19
+- n13 triadic lifting for n39
+- ternary3/9/27 networks
+- universal child-call criterion
+- prime safe-core entry
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n41-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B41 universal templates and independent child-call replay: PASS 21 (3, 9, 18, 27, 37, 38, 39)
+B41 exact three-factor involutions and positive inverses: PASS 10
+B41 fixed positive integral matrix words: PASS 10
+B41 independent modular folding and projective labels: PASS 42
+B41 cusp widths1/41 and unique legal cusp, genus3: PASS
+B41 explicit legal Bezout transport and six-step terminal: PASS 1422
+n41 safe-core to legal B41 bridge: PASS 928
+n41 factor closure and frozen historical-library boundary: PASS 7
+~~~
+
+## modular-primitive-height-barrier
+
+**Claim / 命题：** A fixed local carrier exchange has positive powers that are identities modulo any specified odd non-3 modulus, preserve G=1 and strictly decrease real energy while the primitive integer height grows exactly as a positive constant times3^(2h). Finite modular activation plus real energy decrease does not by itself establish termination.
+
+**Status:** proved-uniform-height-counterexample · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_modular_height_barrier.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_modular_height_barrier.md)
+
+**Scripts / 脚本：** [work/verify_modular_height_barrier.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_modular_height_barrier.py)
+
+**Evidence scope / 核验范围：** 2304 exact physical averages across12 modular-identity endpoints; every step checks the carrier eigenvalue formula and strict real energy decrease; endpoints check primitiveness, G=1, residues and the exact projective adelic height. General unbounded growth is proved by the closed formula in the document.
+
+**Does not establish / 不建立：** Does not rule out a different decreasing schedule, contradict the positive modular bridge, or give a nonreachability example. It excludes only an inference from finite non-3 residues and raw real energy to primitive-height descent.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- carrier exchange identity
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id modular-primitive-height-barrier
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+positive modular identities: real energy decreases, primitive height grows: PASS 12 2304
+exact adelic height formula and unchanged primitive residue classes: PASS
+~~~
+
+## two-carrier-modular-bridge
+
+**Claim / 命题：** For every n>=17 with n=5 mod6, every legal zero-sum input admits a positive mixed-block/finite-modular schedule followed by a legal n-minus-two child call, reaching a legal two-exception core and then a standard B_n core. The argument works for composite n without safe-energy descent or factor induction; positive and formal-group actions have identical non-3 finite-quotient orbits.
+
+**Status:** proved-uniform-positive-two-exception-reduction · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_two_carrier_modular_bridge.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_two_carrier_modular_bridge.md)
+
+**Scripts / 脚本：** [work/verify_two_carrier_modular_bridge.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_two_carrier_modular_bridge.py)
+
+**Evidence scope / 核验范围：** Mixed-size partitions including multi-prime n455; exact two-Levi root extraction over finite rings without dividing by r; integral principal-subgroup lifts protecting modn; full small mod5 positive orbit;20 inverse exponent checks;five physical schedules with567 averages;480 child/output checks;320 core-call boundary examples plus an executable child that destroys global legality;460 norm-form and standard B-core entries. General controllability, finite-quotient positive activation and all-input bridge use the proofs in the document and the prior formal arithmetic theorem.
+
+**Does not establish / 不建立：** Does not prove two-exception core termination, exact rational realization of a formal inverse, prime41 reachability, arbitrary-n sufficiency, or polynomial bridge complexity. Five physical schedules are constructed samples, not a complete arbitrary-input solver implementation.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- flat-star formal principal-congruence containment
+- finite-ring elementary generation and CRT
+- all three-divisible dimension theorem
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id two-carrier-modular-bridge
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+mixed triple-and-singleton simultaneous partitions: PASS 165 11
+two-carrier finite-ring Levi gluing without division by r: PASS 9
+principal local words lift integrally and protect modp: PASS 34
+positive carrier orbit modulo5 on p17 parameters: PASS 15624
+uniform positive modular inverse exponent formula: PASS 20
+fixed-position positive modular schedules and n29 physical child: PASS 5 567
+legal p-minus-two child and preserved prime two-exception output: PASS 480
+two-exception full-child call boundary away from terminal: PASS 320
+two-exception norm form and globally safe standard B-core entry: PASS 460
+~~~
+
+## n29-complete
+
+**Claim / 命题：** Every legal29-position rational input is reachable. Eighteen universal templates use only3/9/25/27-position solved children; nine three-factor positive cycles provide inverses; seven integer words generate the full conjugate Gamma0(29), with30 cosets and one legal cusp.
+
+**Status:** proved-complete-dimension29 · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_twenty_nine_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_twenty_nine_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_twenty_nine_arithmetic_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_twenty_nine_arithmetic_group.py)
+
+**Evidence scope / 核验范围：** Independent Fraction position and affine-module replay of18 selected templates; exact signed physical scalar cycles and positive inverses; fixed seven-word modular folding checked against all30 independent mod29 labels; unique legal cusp;1398 Bezout transports and928 bridge examples. Universal safe-core entry and the all-input transport formula are proved in the document. The verifier does not run the floating discovery search.
+
+**Does not establish / 不建立：** Does not solve prime41 or all primes2 mod3, prove arbitrary-n sufficiency, or give a polynomial atomic-length bound. The25-position subroutine may use input-dependent internal words; it is not one atomic average.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- proved n25 theorem using n21
+- ternary3/9/27 networks
+- universal affine-module child-call theorem
+- prime safe-core reduction
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n29-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B29 universal templates and independent child-call replay: PASS 18 (3, 9, 25, 27)
+B29 exact positive scalar cycles and all generator inverses: PASS 9
+B29 fixed positive integral matrix words: PASS 7
+B29 independent modular folding and projective labels: PASS 30
+B29 cusp widths1/29 and unique legal cusp, genus2: PASS
+B29 explicit legal Bezout transport and six-step terminal: PASS 1398
+n29 safe-core to legal B29 bridge: PASS 928
+n29 factor closure with frozen historical child library: PASS 8
+~~~
+
+## nonsplit-projective-layer-boundary
+
+**Claim / 命题：** Puncturing the fixed-point-free projective order-three action gives actual p-position triple layers with two carriers, but for p=5/11/17/23/29 these layers include singular matrices and do not commute, preventing a direct all-shift Gaussian norm cycle.
+
+**Status:** verified-boundary-for-specified-projective-construction · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_twenty_nine_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_twenty_nine_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_nonsplit_projective_boundary.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_nonsplit_projective_boundary.py) · [work/explore_nonsplit_projective_layers.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_nonsplit_projective_layers.py)
+
+**Evidence scope / 核验范围：** Exact rational matrices, all shift determinants in five prime dimensions, ranks of the first two-layer commutators, and full coefficient physical replay on the original p positions. The missing projective point never participates in an operation.
+
+**Does not establish / 不建立：** Does not rule out other projective layers, other nonsplit controllers, positive scalar cycles avoiding the singular factors, or reachability. This is a finite structural diagnostic, not a universal prime theorem.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local exact matrix helpers
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id nonsplit-projective-layer-boundary
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+punctured nonsplit orbit layers and no all-shift scalar boundary: PASS 5
+~~~
+
+## split-prime-gaussian-controller
+
+**Claim / 命题：** Every prime p=1 mod3 satisfies the G=1 finite ternary-averaging criterion. Original p-position Gaussian-period layers have global positive scalar inverses; a norm-one cyclotomic unit forces primitive balanced shears, which generate the integer affine row group and yield a two-normal-form terminal algorithm. General dimensions now reduce to unresolved primes2 mod3.
+
+**Status:** proved-uniform-split-prime-family · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_split_prime_gaussian_controller.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_split_prime_gaussian_controller.md)
+
+**Scripts / 脚本：** [work/verify_gaussian_prime_controller.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_gaussian_prime_controller.py) · [work/explore_gaussian_period_layers.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_gaussian_period_layers.py)
+
+**Evidence scope / 核验范围：** Exact identities in the abstract Eisenstein lattice;496 atomic averages on fixed-position coefficient bases for six Gaussian norm cycles;ten prime root/unit/affine-interface checks;800 positive atomic averages realizing integer balanced shears;320 exact affine normal-form and gcd-removal examples;14 catalog integrations. Infinite prime coverage follows from the norm-one unit and all-prime local contradiction in the document, not finite samples. Elementary group generation supplies finite positive words without fully expanding all320 normalizers.
+
+**Does not establish / 不建立：** This family theorem does not solve primes2 mod3 or the full arbitrary-n theorem, or bound expanded atomic length polynomially. Prime29 has a separate later certificate. No extension-field orbit is treated as an operation on p positions. The compiler certificate_size library remains frozen.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- balanced and row-fixed integer group generation
+- prime safe-core entry
+- proved n7/n13 bases
+- ternary nine-position terminal network
+- factor closure for the catalog consequence
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id split-prime-gaussian-controller
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+Eisenstein lattice convolution and exceptional-prime identities: PASS 4
+Gaussian norm cycles on fixed physical positions: PASS 6 496
+Gaussian root identities, norm-one defect, primitive shear and affine bridge: PASS 10
+positive integer balanced shears with full coefficient replay: PASS 800
+affine normal forms, exact prime-gcd removal and terminal tails: PASS 320
+split-prime factor closure and frozen-library boundary: PASS 14
+~~~
+
+## flat-star-formal-arithmeticity
+
+**Claim / 命题：** For r>=4, flat triple blocks with one or two carriers have a formal macro group whose integral determinant-one part has finite index. The one-carrier group contains the principal subgroup at level(192(3r+1))^2. For every prime p>=13, the joint first-level image is the alternating block-permutation group at2 times the vector stabilizer atp, with terminal representatives in every legal first-level orbit.
+
+**Status:** proved-formal-arithmeticity-and-first-level-product · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_flat_star_arithmeticity.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_flat_star_arithmeticity.md)
+
+**Scripts / 脚本：** [work/verify_flat_star_arithmetic.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_flat_star_arithmetic.py)
+
+**Evidence scope / 核验范围：** Exact formal inverses, common-center unipotents, four-index commutators, parabolic root extraction with64N/192 steps, two-carrier gluing and first-level terminal examples. General arithmeticity uses the explicitly stated Tits and Bass-Milnor-Serre elementary congruence theorem. The local product uses field root generation, classical simplicity and Goursat's lemma; these infinite arguments are in the document.
+
+**Does not establish / 不建立：** Does not turn formal inverse words into positive averaging paths, classify all higher-level integral orbits, prove prime29 or arbitrary-n sufficiency, or identify a minimal congruence level. Terminal representatives cover first-level residue orbits only.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- integer elementary congruence theorem in rank>=3
+- existing flat-kernel entry and three-zero terminal theorems
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id flat-star-formal-arithmeticity
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+flat-star homology ratios, balanced commutators and row shears: PASS 12
+formal upper/lower parabolic extraction identities: PASS 18
+two-carrier arithmetic block gluing identities: PASS 18
+integral three-cycles, first-level Levi gluing and terminal representatives: PASS 79
+~~~
+
+## cyclotomic-level-entanglement
+
+**Claim / 命题：** Unequal ternary-power exchanges reduce to block permutations modulo the exponent-step level. Determinant normalization couples the cyclotomic levels. The n91 integer macro group is strictly smaller than the historical21504 container and lies in an index43008 fiber-product container; its modular curve is an unramified double cover of the old container curve.
+
+**Status:** proved-level-coupling-and-strict-container-refinement · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_permutation_shadow_entanglement.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_permutation_shadow_entanglement.md)
+
+**Scripts / 脚本：** [work/verify_cyclotomic_level_entanglement.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_cyclotomic_level_entanglement.py)
+
+**Evidence scope / 核验范围：** Exact variance and permutation identities, normalized-word character checks, an explicit integral counterexample to equality with the old container, finite index counts and the complete43008-state Schreier cover. General character compatibility and absence of branching over cusps or elliptic points are proved in the document.
+
+**Does not establish / 不建立：** Does not prove equality with the new43008 container, finite index of the specific cyclotomic macro group, terminal coverage of the new48 legal cusps, or arbitrary-n reachability. The Jacobian two-torsion interpretation is over C; no minimal field of definition is claimed.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- existing historical n91 container
+- cyclotomic actual-scale identities
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id cyclotomic-level-entanglement
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+weighted variance defects and exact permutation shadows: PASS 20
+shared determinant character on normalized cyclotomic words: PASS 240
+n91 old-container strict witness and coupled index: PASS 21504 43008
+n91 coupled Schreier cover and unramified genus check: PASS 43008 192 48 3473
+~~~
+
+## balanced-digit-congruence-group
+
+**Claim / 命题：** For n>=5, balanced four-index shears and coordinate permutations generate every integral matrix fixing constants and sum. For gcd(n,q)=1 and2<=q<=n-2, the digit operator and permutations generate exactly the congruence group fixing the all-ones vector modulo n up to a power of q; the cyclic extension splits and all rational-line orbits are classified.
+
+**Status:** proved-arithmetic-group-and-orbit-classification · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_digit_congruence_group.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_digit_congruence_group.md)
+
+**Scripts / 脚本：** [work/verify_balanced_congruence_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_balanced_congruence_group.py)
+
+**Evidence scope / 核验范围：** Exact stabilizer basis changes and translation generation; independent principal-congruence inputs lifted and column-reduced; digit level and full-period checks; explicit divisor/residue orbit representatives. General equality, finite index, splitting and orbit completeness are proved by integer elementary generation and the affine normal-form theorem in the document.
+
+**Does not establish / 不建立：** Positive implementation is on q copies. Does not prove original-dimension macro arithmeticity, replica cancellation, arbitrary-n sufficiency, or polynomial expanded atomic word length. Rational-line orbit classification is not a classification of all higher-rank flag boundaries.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- integer balanced normal form
+- digit interval transvection theorem
+- integer elementary matrix generation
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id balanced-digit-congruence-group
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+column stabilizer elementary blocks and unit translations: PASS 380
+balanced column reduction and full congruence lift: PASS 160
+digit root-lattice matrices and exact cyclic level extension: PASS 118
+primitive rational projective orbit representatives and invariants: PASS 492
+~~~
+
+## b29-current-cycle-boundary
+
+**Claim / 命题：** The1195 current universal B29 templates have no finite-order two-factor product; no A^j B has finite projective order for any integer j>=0 and any template B.
+
+**Status:** proved-boundary-for-specified-library · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_structural_picture_audit.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_structural_picture_audit.md)
+
+**Scripts / 脚本：** [work/audit_bn_current_cycles.py](../archive/2026-09-07/3-3-triple-average-research-note/work/audit_bn_current_cycles.py)
+
+**Evidence scope / 核验范围：** All714610 unordered products in the specified finite library, plus exact rational quadratic roots characterizing all exponents in A^j B. Positive scalar controls include exponents57 and100. The unbounded exponent exclusion follows from the trace equations, not a depth limit.
+
+**Does not establish / 不建立：** Does not exclude longer mixed cycles, guarded macros, other return libraries, cross-kernel paths, or B29 reachability. This is not a counterexample to the G criterion.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- current compiler library
+- rational2x2 finite-projective-order classification
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b29-current-cycle-boundary
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+all-exponent trace solver scalar and involution controls: PASS 7
+B29 current-library two-factor and all-exponent A-power boundary: PASS 1195 714610
+~~~
+
+## one-tripling-stabilization
+
+**Claim / 命题：** All N>=9 divisible by3 satisfy the G criterion. Every legal rational input of size>=3 becomes reachable after one tripling. Digit Hilbert90 cycles and interval identities also yield q-copy control when n>=max(5,q+2) and gcd(n,q)=1. Original-dimension flat triple blocks have local Artin-six relations, without a proved global inverse.
+
+**Status:** proved-uniform-tripling-and-three-divisible-family · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_one_tripling_stabilization.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_one_tripling_stabilization.md) · [outputs/triple_average/history/triple_average_structural_picture_audit.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_structural_picture_audit.md)
+
+**Scripts / 脚本：** [work/verify_digit_replica_transvections.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_digit_replica_transvections.py)
+
+**Evidence scope / 核验范围：** Exact identities in64 ternary dimensions;237 general-q interval cases and386 q-average coefficient replays;312 plus1624 ternary averages on full zero-sum coefficient bases, the latter for n29 replicas;1589 Euclidean root reductions;475 affine orbit/inverse checks;790 atomic averages in complete zeroing words;108 partition/controller interfaces including N87;35 local Artin pairs and18 carrier exchanges with a noncommutation boundary. General digit, elementary orbit and dimension theorems are proved in the document, not inferred from samples. The field audit uses exact counterexamples and a rational-linearity proof.
+
+**Does not establish / 不建立：** Does not cancel replicas, solve prime29, establish arbitrary-n sufficiency, patch the local Artin centers into global inverses, prove equality of the balanced subgroup with its congruence container, or bound expanded atomic word length polynomially. No number-field sufficiency is claimed.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+- general simultaneous good partition lemma
+- ternary power networks
+- proved12/18 and two-three-smooth base families
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id one-tripling-stabilization
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+digit intertwiner, scalar periods and balanced transvection identities: PASS 64
+general q-averaging interval identity and replica transvections: PASS 237 386
+three-copy balanced transvection full coefficient replay: PASS 312
+prime29 three-copy transvection coefficient replay: PASS 1624
+legal-domain level-p versus universal-operator level-p^k boundary: PASS 12
+unequal-weight braid groupoid extrapolation boundary: PASS
+flat triple-block Artin-six relations and centered carrier replay: PASS 35 18
+balanced Euclidean reduction to a root: PASS 1589 maximum gcd stages 7
+complete three-copy zeroing words independently replayed: PASS 790
+full integer affine-lattice orbit normal forms: PASS 475
+three-divisible partition and replica-controller integration: PASS 108 largest N 1827
+number-field content/class and local-ideal counterexamples: PASS
+~~~
+
+## all-dimensions-prime-reduction
+
+**Claim / 命题：** The G=3^a criterion for every n>=7 is equivalent to that criterion for every prime p>=7; all composite dimensions reduce through proved finite bases and strictly smaller subproblems.
+
+**Status:** proved-general-equivalence · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/proofs/triple_average_all_dimensions_to_primes.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/proofs/triple_average_all_dimensions_to_primes.md)
+
+**Scripts / 脚本：** [work/verify_all_composites_to_primes.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_all_composites_to_primes.py)
+
+**Evidence scope / 核验范围：** Exact small capacity and variable-depth comb certificates,33329 bounded factor plans, and699 physical weighted-state/row/quotient checks. Infinite factor-capacity bounds and the complete strong induction are proved in the document, using the separate even prime-power halving theorem.
+
+**Does not establish / 不建立：** Does not prove the remaining uniform prime criterion, hence not arbitrary-n reachability in full. Does not give polynomial expanded path length. Finite factor-plan checks are not a substitute for the written infinite induction.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+- safe-core theorem
+- odd/eight-divisible factor closure
+- even prime-power halving
+- n7/n10/n11/n12/n13/n14/n15/n18/n25 and triadic lifting
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id all-dimensions-prime-reduction
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+low-dyadic factor capacity and variable-comb certificates: PASS 14
+all-dimension prime-reduction finite plans: PASS 33329
+n70/n110/n130 exact variable-factor interfaces: PASS 699
+~~~
+
+## even-prime-power-halving
+
+**Claim / 命题：** For n=2*p^e or4*p^e with p>=5, a legal input reduces to two copies of a legal n/2-state; disjoint witnesses require at most two preparatory averages and one legal12-position call, apart from existing bases10/14.
+
+**Status:** proved-uniform-halving · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/proofs/triple_average_all_dimensions_to_primes.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/proofs/triple_average_all_dimensions_to_primes.md)
+
+**Scripts / 脚本：** [work/verify_even_prime_power_halving.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_even_prime_power_halving.py) · [work/explore_even_disjoint_pairing_bridge.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_even_disjoint_pairing_bridge.py)
+
+**Evidence scope / 核验范围：** Complete1536 dyadic patterns including n20, symbolic odd-prime witnesses delta/3 and delta/9, and8448 high-core tests. General core entry and residue formulas are proved in the document. The discovery script is supporting only.
+
+**Does not establish / 不建立：** Does not prove an unsolved odd-prime-power child reachable without its own theorem. Does not classify every even n by this lemma alone; additional factor interfaces are required.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+- n12 theorem
+- general safe-core theorem
+- existing B-kernel halving
+- base dimensions10/14
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id even-prime-power-halving
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+uniform even prime-power dyadic residue interfaces: PASS 1536
+uniform even prime-power high-core halving: PASS 8448
+~~~
+
+## n25-complete
+
+**Claim / 命题：** For n25 and its triadic tower, G being a power of3 is sufficient; a positive subgroup conjugate to Gamma_0(25) has index30 and a unique legal cusp. Together with factor closure this removes the last independent odd-composite base case.
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_twenty_five_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_twenty_five_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_twenty_five_arithmetic_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_twenty_five_arithmetic_group.py)
+
+**Evidence scope / 核验范围：** Symbolic replay and R-row-lattice checks for18 templates using only3/9/21-position calls, positive inverse scalar cycles, seven fixed integer words, complete30-coset folding and independent projective Z/25 labels, cusp data and terminal network. General transport and high-core proofs are written separately.
+
+**Does not establish / 不建立：** Does not solve all primes or arbitrary even dimensions, or bound expanded atomic path lengths polynomially. Internal21-point paths may depend on parameters and use the established seven-point lifting theorem.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+- n7 and general triadic lifting
+- general safe-core theorem
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n25-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B25 universal template inverse partners and seven positive integer words: PASS 18
+B25 complete modular folding and independent projective Z/25 labels: PASS 30
+B25 six cusps, unique legal width25 cusp, genus0: PASS
+B25 explicit legal transport and six-step terminal: PASS 858
+n25 safe-core to legal B25 bridge: PASS 446
+~~~
+
+## odd-composite-factor-closure
+
+**Claim / 命题：** Using the now-proved n25 base, prime criteria for any set of primes>=7 propagate to arbitrary odd products with arbitrary factors5 and3, and to every corresponding8-divisible product; all odd dimensions now reduce to prime dimensions>=7 alone.
+
+**Status:** proved-general-closure-and-n35 · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_odd_composite_factor_closure.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_odd_composite_factor_closure.md)
+
+**Scripts / 脚本：** [work/verify_multiexception_factor_bridge.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_multiexception_factor_bridge.py)
+
+**Evidence scope / 核验范围：** Seven small row-capacity certificates, 4404 odd and 1654 eight-divisible factor plans, exact weighted atomic replay and independent local-G checks on 943 multi-exception inputs, and 2210 n35 bridges. Infinite capacity bounds, safe-core entry and strong induction are proved in the document.
+
+**Does not establish / 不建立：** Does not solve all primes or arbitrary dimensions with2-adic valuation1 or2, nor bound full atomic path length polynomially. The all-odd theorem assumes all primes>=7; the finite-prime odd/eight-divisible families use their established base theorems and n25.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+- general safe-core theorem
+- n7/n10/n15/n25 and other stated prime base theorems
+- general triadic lifting
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id odd-composite-factor-closure
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+odd-factor row-capacity boundary certificates: PASS 5
+eight-divisible capacity boundary certificates: PASS 2
+odd-composite factor plan finite checks: PASS 4404
+eight-divisible factor plan finite checks: PASS 1654
+multi-exception exact physical/row/quotient interfaces: PASS 943
+n35 safe-core bridge and exact rank-one row tails: PASS 2210
+~~~
+
+## other-ai-local-global-synthesis
+
+**Claim / 命题：** Connected unequal-weight exchange graphs are Zariski dense on the weighted zero-sum space; exact affine-ideal transport, centered Burau synchronization, rank-two coupling, and regrouped replica-layer interfaces follow from explicit formulas.
+
+**Status:** proved-structural-interfaces · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_other_ai_local_global_review.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_other_ai_local_global_review.md)
+
+**Scripts / 脚本：** [work/verify_local_global_report_synthesis.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_local_global_report_synthesis.py)
+
+**Evidence scope / 核验范围：** Exact rank-one and double-commutator identities, finite full-span checks, physical exchange replay, affine ideals, nonzero-mean Coxeter formulas, a rank-two defect, replica coefficient layers, and boundary examples. General Zariski density uses the characteristic-zero Lie argument in the document, not finite modular images.
+
+**Does not establish / 不建立：** Does not prove arithmetic finite index, positive inverses for an arbitrary exchange graph, terminal orbit coverage, general factorization, or replica cancellation. Fixed universal replica quotient realization is explicitly obstructed by rank.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+- proved real exchange and Burau identities
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id other-ai-local-global-synthesis
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+exchange preserves full away-from-three coordinate and difference ideals: PASS 114
+rank-one exchange Lie identities and full reduced matrix spans: PASS 6 236
+nonzero-mean Burau inverse interface and rank-two cross-chain defect: PASS 28
+regrouped replica layers and nonsingular quotient obstruction: PASS 55 13
+AI report boundary corrections independently reproduced: PASS
+AI4 projective orbit tables via three generators only: PASS 3
+~~~
+
+## ai3-template-report-audit
+
+**Claim / 命题：** The AI-3 template implementation reproduces its exact finite checks, including actual Smith gcds at zero-multiplicity boundaries.
+
+**Status:** audited-supporting-implementation · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/ai3_bn_template_compiler.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/ai3_bn_template_compiler.md) · [outputs/triple_average/history/triple_average_other_ai_local_global_review.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_other_ai_local_global_review.md)
+
+**Scripts / 脚本：** [work/verify_ai3_bn_template_recursion.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_ai3_bn_template_recursion.py)
+
+**Evidence scope / 核验范围：** Finite exact template/matrix checks and actual support-dependent Smith data. The audit document corrects the report's simplified g=1 boundary statements.
+
+**Does not establish / 不建立：** Not all printed arithmetic candidates have a proved child solver. Child size reduction is not overall state-size reduction or a termination proof.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id ai3-template-report-audit
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+template real-network and 2x2 matrix checks: PASS 48
+Smith/Fitting child-lattice checks: PASS 2131
+away-from-3 determinant checks: PASS 91 nonunit cases 27
+infinite-family and determinant-boundary checks: PASS 128
+~~~
+
+## ai5-synchronized-replica-audit
+
+**Claim / 命题：** The AI-5 clean synchronized replica layers, overlapping-label obstruction, matrix quotient and zero-padded examples reproduce exactly.
+
+**Status:** audited-restricted-replica-interfaces · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_replica_elimination_research.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_replica_elimination_research.md) · [outputs/triple_average/history/triple_average_other_ai_local_global_review.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_other_ai_local_global_review.md)
+
+**Scripts / 脚本：** [work/verify_replica_elimination.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_replica_elimination.py)
+
+**Evidence scope / 核验范围：** Exact small coefficient-orbit checks and deterministic numeric layer/terminal samples. The general synchronized-layer and quotient arguments are in the cited reports.
+
+**Does not establish / 不建立：** Does not show arbitrary replica paths can be made synchronized, or descend to original-dimensional paths. A cyclic convex matrix average is not a product of averaging operators.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id ai5-synchronized-replica-audit
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+clean synchronized orbit steps: 7040 PASS
+repeated-coordinate orbit orderings: 216 PASS
+cyclic matrix quotient: orbit size 3 nonzero quotient entries 13 PASS
+zero-padded support samples: 2200 PASS
+tripled 5/6-point exact path operations: 20 PASS
+~~~
+
+## prime-factor-carry-bridge
+
+**Claim / 命题：** Every legal two-exception core in dimension ab (a>=7,b>=3) admits a legal a-by-b factorization after at most ceil(log_3(a without its 3-part)) atomic steps; this bound is sharp for (1^(ab-2),0,2-ab) when b has a non-3 prime factor.
+
+**Status:** proved-interface-and-sharp-family-bound · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_prime_first_factor_reduction.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_prime_first_factor_reduction.md)
+
+**Scripts / 脚本：** [work/verify_prime_factor_carry_bridge.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_prime_factor_carry_bridge.py)
+
+**Evidence scope / 核验范围：** Exact weighted-state replay, affine row and quotient legality checks, the explicit X49 bridge, replica-count decompositions, and bounded two-column identities. General quantifiers and optimality follow from the documented ternary subset-sum construction and stochastic-column proof.
+
+**Does not establish / 不建立：** Does not prove an arbitrary input enters a two-exception core, all prime dimensions, A(25), A(49), or general multiplicative closure. Composite closure is explicitly conditional; solved row/quotient dimensions or replica subproblems are required.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+- n10/n15 theorems for the five-point replica consequence
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-factor-carry-bridge
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+optimal ternary carry factorization interfaces: PASS 133
+general two-exception core factor interfaces: PASS 1062
+X49 two-step repair, two row interfaces and one seven-point quotient: PASS
+replication semigroup from multiplicities 2 and 3: PASS 98
+factor-bridge two-column lower-bound identities: PASS 176 3424
+~~~
+
+## n23-complete
+
+**Claim / 命题：** For n=23 and 23*3^k, finite ternary consensus is equivalent to G being a power of three, via three fixed atomic macros and a positive subgroup conjugate to Gamma_0(23).
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_twenty_three_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_twenty_three_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_twenty_three_arithmetic_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_twenty_three_arithmetic_group.py) · [work/bn_atomic_from_template.py](../archive/2026-09-07/3-3-triple-average-research-note/work/bn_atomic_from_template.py)
+
+**Evidence scope / 核验范围：** Three complete fixed atomic words, positive inverse relations with exact non-unit scalars, seven integer generator words replayed atomically, exact complete 24-coset folding with independent labels, cusp data and terminal network. The general core and lifting proofs are separate.
+
+**Does not establish / 不建立：** No arbitrary-n theorem or polynomial atomic path bound. The discovered subproblem templates are fully expanded for the three used generators; the proof does not treat arbitrary 19-point calls as single atomic operations.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+- general safe-core and triadic-lifting theorems
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n23-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B23 fixed atomic generators J15 N17 P24 and positive inverses: PASS
+B23 seven positive integral matrix words: PASS
+B23 exact modular folding and independent mod-23 labels: PASS 24
+B23 cusp widths1/23, one legal cusp, genus2: PASS
+B23 explicit legal transport and six-step terminal: PASS 1390
+n23 safe-core to legal B23 one-step bridge: PASS 928
+~~~
+
+## n19-complete
+
+**Claim / 命题：** For n=19 and 19*3^k, finite ternary consensus is equivalent to G being a power of three, via universal 15-point calls and a positive subgroup conjugate to Gamma_0(19).
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_nineteen_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_nineteen_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_nineteen_arithmetic_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_nineteen_arithmetic_group.py)
+
+**Evidence scope / 核验范围：** Independent symbolic replay of seven universal templates, explicit affine-lattice identities, positive inverse cycles, six integer generator words, exact 20-coset folding with independent labels, cusp proof, and bounded checks of the separately proved transport and high-core bridge.
+
+**Does not establish / 不建立：** Does not prove arbitrary n or polynomial atomic path length. Internal 15-point words may depend on parameters; the proof invokes the established n15 theorem. The general core and tower proofs are separate.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+- n15 theorem
+- general safe-core and triadic-lifting theorems
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n19-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B19 seven universal templates, positive inverse cycles and six integer words: PASS
+B19 exact modular folding and independent mod-19 labels: PASS 20
+B19 cusps width1 illegal and width19 legal, genus1: PASS
+B19 explicit cusp transport and six-step terminal: PASS 1374
+n19 safe-core to legal B19 one-step bridge: PASS 928
+~~~
+
+## bn-integer-template-compiler
+
+**Claim / 命题：** The optimized integer compiler reproduces all 95 old B17 matrices; 222 B19 and 60 B23 templates pass independent Fraction interface replay.
+
+**Status:** verified-compiler · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_nineteen_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_nineteen_arithmetic_complete.md) · [outputs/triple_average/arithmetic_cases/triple_average_twenty_three_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_twenty_three_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/compile_bn_integer_templates.py](../archive/2026-09-07/3-3-triple-average-research-note/work/compile_bn_integer_templates.py) · [work/verify_bn_integer_templates.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_bn_integer_templates.py)
+
+**Evidence scope / 核验范围：** Exact projective matrix-set equality with the legacy Fraction compiler, physical-scale accounting, symbolic subproblem row-lattice checks, and complete multiplicity replay in the stated finite template grammar.
+
+**Does not establish / 不建立：** No completeness claim for all possible macros. A finite template count or a successful template alone is not a general reachability proof.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+- proved subproblem criteria
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id bn-integer-template-compiler
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+integer compiler independent n17 replay and 95-matrix equality: PASS
+integer compiler independent n19 universal interfaces: PASS 222
+integer compiler independent n23 universal interfaces: PASS 60
+~~~
+
+## prime-congruence-structure
+
+**Claim / 命题：** The prime legal-direction stabilizer has integer part conjugate to Gamma_0(p); universal physical scalar cycles satisfy lambda=1 modulo the non-3 part of n.
+
+**Status:** proved-structural-lemmas · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_prime_congruence_structure.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_prime_congruence_structure.md) · [outputs/triple_average/history/triple_average_congruence_method_scope.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_congruence_method_scope.md)
+
+**Scripts / 脚本：** [work/verify_prime_congruence_structure.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_prime_congruence_structure.py)
+
+**Evidence scope / 核验范围：** General stabilizer and scalar congruence proofs are in the document. Checks cover six prime local groups, multiplicative orders, and three exact physical macro identities.
+
+**Does not establish / 不建立：** Does not assert every prime dimension has a sufficient positive congruence subgroup. The negative-scalar exclusion concerns actual negative triadic units, not arbitrary rational scalars or arbitrarily rescaled projective representatives.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id prime-congruence-structure
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+prime Iwahori labels and exact 3-unit cycle periods: PASS 6
+physical scalar congruences for n13/n17/n19 and negative-unit exclusion at23: PASS
+non-unit B23 scalar cycles and shared-row affine identities: PASS
+~~~
+
+## n17-complete
+
+**Claim / 命题：** For n=17 and 17*3^k, finite ternary consensus is equivalent to G being a power of three; the sufficient B17 group is conjugate to Gamma_0(17), of index 18 with one legal cusp.
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_seventeen_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_seventeen_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_seventeen_arithmetic_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_seventeen_arithmetic_group.py) · [work/verify_b17_positive_arithmetic.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_b17_positive_arithmetic.py) · [work/explore_b17_two_stage_universal.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_b17_two_stage_universal.py) · [work/explore_b17_integral_subgroup.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_b17_integral_subgroup.py)
+
+**Evidence scope / 核验范围：** Fixed atomic macro and inverse words, six integral generators, exact complete 18-coset folding with independent mod-17 labels, cusp classification, explicit terminal network, and bounded checks of the separately proved Bezout transport and high-core bridge.
+
+**Does not establish / 不建立：** Does not prove the arbitrary-n criterion, a polynomial bound on expanded path length, or equality with the entire S-arithmetic macro group. The general safe-core and tower-lifting arguments are supplied in the cited proof and prior theorems.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+- general safe-core theorem
+- general triadic lifting theorem
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n17-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B17 additional atomic macros P23 Q9 T13 U18: PASS
+B17 positive inverses of A and B (55 and 61 atomic steps): PASS
+B17 positive integral unipotent and opposite level-68 root groups: PASS
+B17 six integral generators with positive atomic realization: PASS
+B17 modular folding and independent local labels: PASS 18
+B17 cusps: width1 illegal, width17 legal; genus1: PASS
+B17 explicit legal-cusp transport and six-step terminal: PASS 1366
+n17 safe-core to legal B17 one-step bridge: PASS 928
+~~~
+
+## b17-old-integral-return-audit
+
+**Claim / 命题：** The old 24-word integral-return schedule has 23 indefinite net-height forms and one everywhere-increasing form; its bounded A/B alternatives do not furnish the desired real cover.
+
+**Status:** proved-old-schedule-limitation · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_seventeen_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_seventeen_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/explore_b17_integral_return_cover.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_b17_integral_return_cover.py)
+
+**Evidence scope / 核验范围：** Exact quadratic coefficients prove the old table's height limitation. Floating angular lengths are exploratory only; rational real-direction witnesses are evaluated exactly against the bounded coefficient list.
+
+**Does not establish / 不建立：** The real gap directions need not themselves match the local signature. Does not exclude longer words, net descent through other macros, or reachability. The n17 theorem uses a separate complete group certificate.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b17-old-integral-return-audit
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+original 24-word composite audit: {'indefinite': 23, 'positive-definite': 1}
+B^6 then F2 strictly increases H throughout its domain:
+bounded signatures without the tested rational gap witnesses 0 /24
+depth 10 words 2046
+~~~
+
+## b17-universal-subproblem-lattice
+
+**Claim / 命题：** Localized row-lattice inclusion proves parameter-independent subproblem legality; five fixed 17/19-step B17 macros give a norm-3 quadratic-field action and a <=35-atomic-step scheduler into a legal 15-point call.
+
+**Status:** proved-macros-and-local-scheduler · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_universal_subproblem_lattice.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_universal_subproblem_lattice.md)
+
+**Scripts / 脚本：** [work/verify_b17_universal_subblocks.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_b17_universal_subblocks.py) · [work/b17_universal_atomic_words.py](../archive/2026-09-07/3-3-triple-average-research-note/work/b17_universal_atomic_words.py) · [work/explore_b17_universal_subblocks.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_b17_universal_subblocks.py) · [work/explore_b17_nine_thirteen_bridges.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_b17_nine_thirteen_bridges.py)
+
+**Evidence scope / 核验范围：** Exact coefficient-lattice checks, fixed atomic words for five macros, all six projective classes at 5, norm/theta identities, a mod-3 semigroup obstruction, and the complete 48-state (2,7,3) scheduler with 24 explicit words. Infinite statements use the module and lattice proofs in the document.
+
+**Does not establish / 不建立：** Does not prove B17 termination, net height descent including preparatory words, positive conjugate realization in the full operation set, arithmetic index, or general n. Final guarded 14/15 calls still invoke existing theorems.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+- proved n14/n15 criteria for final guarded calls
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b17-universal-subproblem-lattice
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+localized row-lattice and fixed coefficient patterns: PASS
+B17 universal macro exact interfaces: PASS 1008
+B17 fixed atomic certificates (17,17,17,19,19 steps): PASS 630
+B17 six local directions reach a legal 15-call in <=3 returns: PASS 684
+B17 norm-3 similarity and primitive branches: PASS 1440
+discriminant -8 theta and split-prime branch identities: PASS 600
+B17 original universal semigroup has no fixed positive B inverse: PASS
+B17 mod-(2,7,3) scheduling into an integral 14-return: PASS 48 maxdepth 6
+~~~
+
+## b17-guarded-library-trap
+
+**Claim / 命题：** The original ten-template B17 library has an infinite invariant local domain with only A available and strictly increasing primitive height.
+
+**Status:** proved-library-obstruction · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_b17_guarded_subproblem_experiment.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_b17_guarded_subproblem_experiment.md)
+
+**Scripts / 脚本：** [work/verify_b17_guarded_trap.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_b17_guarded_trap.py)
+
+**Evidence scope / 核验范围：** Checks the complete guard list, exact residue dynamics and quadratic identity, plus 600 iterations. The infinite family is proved by explicit invariant congruences and the height identity.
+
+**Does not establish / 不建立：** Not a nonreachability proof for unrestricted averaging. The new universal subproblem macros bypass this old-library obstruction.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b17-guarded-library-trap
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B17 guarded library local trap: PASS
+B17 only-A trajectories and exact height growth: PASS 600
+~~~
+
+## b17-cross-stratum-escape
+
+**Claim / 命题：** An explicit 9/13/14 bridge escapes the odd-background part of the old B17 trap; one representative has a verified net descent.
+
+**Status:** proved-restricted-escape · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_b17_cross_stratum_escape.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_b17_cross_stratum_escape.md)
+
+**Scripts / 脚本：** [work/verify_b17_cross_stratum_escape.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_b17_cross_stratum_escape.py)
+
+**Evidence scope / 核验范围：** Exact local bridge proof with multiplicity accounting; 120 phase replays, 70 independent CRT lifts, and one full guarded continuation.
+
+**Does not establish / 不建立：** No uniform net descent or B17 theorem. Preserved historical bridge; the newer universal-subproblem scheduler removes its parity and local-domain restrictions.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b17-cross-stratum-escape
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B17 odd-background trap cross-stratum escape: PASS 120
+B17 independent CRT trap lifts: PASS 70
+B17 formerly trapped representative descent: PASS 55612 -> 32524
+~~~
+
+## finite-orbit-method-boundary
+
+**Claim / 命题：** A two-generator infinite-index subgroup has full SL2(Fp) images for every p other than 3; large finite images alone do not prove arithmetic index.
+
+**Status:** proved-method-boundary · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_congruence_method_scope.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_congruence_method_scope.md)
+
+**Scripts / 脚本：** [work/verify_finite_orbit_method_boundary.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_finite_orbit_method_boundary.py)
+
+**Evidence scope / 核验范围：** Finite image checks at 2,5,7,11 and exact index-12 quotient data. The all-primes and infinite-index statements follow from elementary powers and the free-group rank argument in the document.
+
+**Does not establish / 不建立：** Does not determine any unresolved true averaging macro group's index or provide positive inverses.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id finite-orbit-method-boundary
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+two-generator level-3 subgroup mod 11 full SL2 image 1320
+Gamma(3) index-12 torsion-free quotient data: PASS
+large finite images do not certify finite index: supporting checks PASS
+~~~
+
+## b17-guarded-subproblem-experiment
+
+**Claim / 命题：** Ten guarded B17 return templates from solved 13/14/15 subproblems pass their interface checks; a height-24 depth-12 descent experiment leaves 141 directions uncovered.
+
+**Status:** open-bounded-controller · **Evidence:** exploratory-search · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_b17_guarded_subproblem_experiment.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_b17_guarded_subproblem_experiment.md) · [outputs/triple_average/history/triple_average_modern_framework_review_and_contract.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_modern_framework_review_and_contract.md)
+
+**Scripts / 脚本：** [work/explore_b17_guarded_returns.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_b17_guarded_returns.py)
+
+**Evidence scope / 核验范围：** Symbolic guarded contractions and one post-average, 136 local interface checks, bounded primitive height search using verified local input and output legality tests.
+
+**Does not establish / 不建立：** Does not prove a B17 controller or that an uncovered direction is unreachable. Depth counts theorem-backed subproblem calls, not atomic steps.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b17-guarded-subproblem-experiment
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B17 guarded schema interface replay: PASS 136
+B17 guarded non-atomic schemas 10
+uncovered 141
+~~~
+
+## subproblem-prime-obstruction
+
+**Claim / 命题：** If a non-3 prime dividing n divides none of the permitted subproblem sizes, no bounded call depth covers every legal B_n rational direction.
+
+**Status:** proved-general-obstruction · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_subproblem_prime_obstruction.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_subproblem_prime_obstruction.md)
+
+**Scripts / 脚本：** [work/verify_subproblem_prime_obstruction.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_subproblem_prime_obstruction.py)
+
+**Evidence scope / 核验范围：** 720 exact symbolic steps on six (n,p) pairs and boundary examples verify formulas; p-integrality and rank arguments in the document establish the unbounded theorem.
+
+**Does not establish / 不建立：** Does not imply nonreachability, rule out polynomial bit-complexity, or preclude iterated controllers. Applies to a bound on solved-subproblem calls, not their internal path lengths.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id subproblem-prime-obstruction
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+prime-integral subproblem words preserve diagonal: PASS 720
+excluded prime and bounded-word counting boundary: PASS
+~~~
+
+## all-even-B-kernel-halving
+
+**Claim / 命题：** For every even n>=14 a legal B_n state reduces by solved 8/12-position subproblems to two copies of a legal n/2-position state.
+
+**Status:** proved-bridge · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_all_even_B_kernel_halving.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_all_even_B_kernel_halving.md) · [outputs/triple_average/history/triple_average_even_kernel_halving_bridge.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_even_kernel_halving_bridge.md)
+
+**Scripts / 脚本：** [work/verify_dyadic_kernel_halving.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_dyadic_kernel_halving.py) · [work/verify_even_kernel_halving.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_even_kernel_halving.py)
+
+**Evidence scope / 核验范围：** General proof separates n=2 mod4, 4|n>=20 and n=16 boundary. Finite interface tests cover 8212 and 5088 primitive legal pairs, checking local subproblem G, denominators, multiplicities and reduced-state G.
+
+**Does not establish / 不建立：** No all-even-dimensional decision theorem. Requires an independent bridge from arbitrary input to B_n and an already solved n/2 theorem. Invokes established 8/12 theorems, not atomic 8/12 averages.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id all-even-B-kernel-halving
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+even B_n eight-point halving interfaces: PASS 8212
+~~~
+
+~~~text
+4-divisible B_n twelve-point halving: PASS 5088
+~~~
+
+## two-three-smooth-complete
+
+**Claim / 命题：** All dimensions n=2^a*3^b>=7 satisfy the G power-of-three criterion; a uniform B_n halving interface works whenever 8 divides n>=16.
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/proofs/triple_average_two_three_smooth_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/proofs/triple_average_two_three_smooth_complete.md) · [outputs/triple_average/arithmetic_cases/triple_average_twelve_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_twelve_arithmetic_complete.md) · [outputs/triple_average/arithmetic_cases/triple_average_eighteen_via_twelve_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_eighteen_via_twelve_complete.md)
+
+**Scripts / 脚本：** [work/verify_dyadic_kernel_halving.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_dyadic_kernel_halving.py) · [work/search_sixteen_halving_bridge.py](../archive/2026-09-07/3-3-triple-average-research-note/work/search_sixteen_halving_bridge.py) · [work/sixteen_halving_depth2.json](../archive/2026-09-07/3-3-triple-average-research-note/work/sixteen_halving_depth2.json)
+
+**Evidence scope / 核验范围：** Reruns invoked 8/12 certificates and the n18 interface. Checks 5524 uniform B_n interfaces at 15 sizes through n=27648 and 14 independent weighted-G checks. Arbitrary n halving and induction on a are proved in the document.
+
+**Does not establish / 不建立：** The symbolic interface uses the proven twelve-point subproblem, not an additional primitive averaging move. It does not solve arbitrary n with other non-three primes or bound all explicit paths polynomially.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id two-three-smooth-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B8 Euclidean macro certificate: PASS
+~~~
+
+~~~text
+B12 congruence folding: 12 complete cosets PASS
+B12 expanded positive word to zero replay: PASS 30
+~~~
+
+~~~text
+B_(2*3^k) legal twelve-block interfaces k=2..6: PASS 7460
+~~~
+
+~~~text
+8-divisible B_n single-template halving: PASS 5524
+weighted G vs expanded centered G: PASS 14
+~~~
+
+## n14-complete
+
+**Claim / 命题：** For n=14 and 14*3^k, G being a power of three is sufficient via the strengthened safe core and a finite disjoint-blocker bridge.
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_fourteen_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_fourteen_complete.md) · [outputs/triple_average/history/triple_average_blocker_graph_core.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_blocker_graph_core.md) · [outputs/triple_average/history/triple_average_even_kernel_halving_bridge.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_even_kernel_halving_bridge.md)
+
+**Scripts / 脚本：** [work/verify_fourteen_blocker_bridge.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_fourteen_blocker_bridge.py) · [work/fourteen_blocker_depth2.json](../archive/2026-09-07/3-3-triple-average-research-note/work/fourteen_blocker_depth2.json) · [work/search_fourteen_blocker_bridge.py](../archive/2026-09-07/3-3-triple-average-research-note/work/search_fourteen_blocker_bridge.py) · [work/verify_even_kernel_halving.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_even_kernel_halving.py) · [work/verify_blocker_graph_core.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_blocker_graph_core.py)
+
+**Evidence scope / 核验范围：** Reruns invoked 7/8/12 finite certificates and checks every mod-8/mod-7 table row through independent physical lifts, local twelve-point criteria and B14 halving. The all-input n-d-2 reduction, overlap case and arbitrary-lift validity are proved in the documents.
+
+**Does not establish / 不建立：** No all-n reachability theorem or polynomial atom-word length. Internal 12/8/7 contractions invoke existing complete theorems.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n14-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+exact certificate: PASS
+~~~
+
+~~~text
+B8 Euclidean macro certificate: PASS
+~~~
+
+~~~text
+B12 congruence folding: 12 complete cosets PASS
+B12 expanded positive word to zero replay: PASS 30
+~~~
+
+~~~text
+B14 disjoint-blocker residue coverage: PASS 512
+B14 prelude histogram {0: 296, 1: 112, 2: 104}
+B14 twelve-subproblem and halving interfaces: PASS 514
+~~~
+
+## blocker-graph-safe-core
+
+**Claim / 命题：** A complement-safe integer terminal with d dangerous non-3 primes has a value of multiplicity at least n-d-2.
+
+**Status:** proved-general-bound · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_blocker_graph_core.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_blocker_graph_core.md)
+
+**Scripts / 脚本：** [work/verify_blocker_graph_core.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_blocker_graph_core.py)
+
+**Evidence scope / 核验范围：** 8187 finite graph cases, 63712 primitive small-coordinate states and two sharp examples support the separately written general proof.
+
+**Does not establish / 不建立：** Finite samples alone do not prove the bound, or provide a safe bridge for arbitrary many dangerous primes.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id blocker-graph-safe-core
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+blocker graph independent-triple connectivity: PASS 8187
+n-d-2 safe core finite checks: PASS 63712 terminal 27
+sharp d=1 and d=2 core examples: PASS
+~~~
+
+## n15-via-subblocks-complete
+
+**Claim / 命题：** For n=15 and 15*3^k, finite ternary consensus is equivalent to G being a power of three.
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_fifteen_via_subblocks_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_fifteen_via_subblocks_complete.md) · [outputs/triple_average/arithmetic_cases/triple_average_twelve_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_twelve_arithmetic_complete.md) · [outputs/triple_average/proofs/triple_average_ten_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/proofs/triple_average_ten_complete.md)
+
+**Scripts / 脚本：** [work/verify_fifteen_via_subblocks.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_fifteen_via_subblocks.py) · [work/verify_twelve_arithmetic_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_twelve_arithmetic_group.py) · [work/verify_ten_complete.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_ten_complete.py)
+
+**Evidence scope / 核验范围：** Reruns the two invoked theorem certificates, then checks the complete mod-8 orbit, 2578 legal B15 pairs, local subproblem criteria and atomic connecting/final steps; 1281 independent local G comparisons. The unbounded proof is in the document.
+
+**Does not establish / 不建立：** Local 10/12 contractions invoke proved theorems rather than outputting each internal path. No general n criterion or polynomial path-length claim.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n15-via-subblocks-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B12 congruence folding: 12 complete cosets PASS
+B12 expanded positive word to zero replay: PASS 30
+~~~
+
+~~~text
+ten-point complete theorem certificate: PASS
+terminal local-real cover: PASS
+~~~
+
+~~~text
+B15 mod-8 transitivity of A: PASS 8
+B15 twelve/ten subproblem interfaces: PASS 2578
+affine-lattice local G formula: PASS 1281
+~~~
+
+## even-kernel-halving
+
+**Claim / 命题：** Legal B_n kernels with n=2 mod 4 and n>=14 reduce through a legal eight-point subproblem to duplicated legal n/2-point states.
+
+**Status:** proved-bridge · **Evidence:** symbolic-check · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_even_kernel_halving_bridge.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_even_kernel_halving_bridge.md)
+
+**Scripts / 脚本：** [work/verify_even_kernel_halving.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_even_kernel_halving.py) · [work/verify_fifteen_via_subblocks.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_fifteen_via_subblocks.py)
+
+**Evidence scope / 核验范围：** Exact hypothesis, subproblem mean/G and multiplicity checks at 13 sizes over all legal pairs in [-20,20]^2; general three-case proof is in the document.
+
+**Does not establish / 不建立：** No reduction of arbitrary multi-prime n-point states to B_n; in particular this does not prove the full n=14 theorem. Internal eight-point equalization invokes the existing theorem.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id even-kernel-halving
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+even B_n eight-point halving interfaces: PASS 8212
+halving parity cases
+~~~
+
+## n18-via-twelve-complete
+
+**Claim / 命题：** For n=2*3^k with k>=2, G being a power of three is sufficient via a legal twelve-point subproblem and pairing.
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_eighteen_via_twelve_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_eighteen_via_twelve_complete.md) · [outputs/triple_average/arithmetic_cases/triple_average_twelve_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_twelve_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_eighteen_via_twelve.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_eighteen_via_twelve.py) · [work/verify_twelve_arithmetic_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_twelve_arithmetic_group.py)
+
+**Evidence scope / 核验范围：** The n12 certificate is rerun, followed by 7460 exact checks of its local hypotheses and 24 physical paired network tails. Arbitrary-k subset legality and multiplicity pairing are proved in the document.
+
+**Does not establish / 不建立：** Does not output the local n12 path for all sampled subsets, nor prove an all-n criterion or polynomial path-length bound.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n18-via-twelve-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B12 congruence folding: 12 complete cosets PASS
+B12 expanded positive word to zero replay: PASS 30
+~~~
+
+~~~text
+B_(2*3^k) legal twelve-block interfaces k=2..6: PASS 7460
+paired ternary-network physical tails: PASS 24
+~~~
+
+## n12-complete
+
+**Claim / 命题：** For n=12 and n=12*3^k, finite ternary averaging is equivalent to G being a power of three.
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_twelve_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_twelve_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_twelve_arithmetic_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_twelve_arithmetic_group.py)
+
+**Evidence scope / 核验范围：** Four symbolic real macro words and positive inverses, five integral generators, complete 12-coset folding with independent mod-8 labels, cusp classification, 30 fully expanded positive paths to zero and explicit terminal replay. General parity reduction and legal-column construction are proved in the document.
+
+**Does not establish / 不建立：** No all-n criterion or polynomial-length construction path. The sufficient subgroup is conjugate Gamma_0(8); equality with the whole real macro group is unnecessary.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n12-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B12 four real macros and positive inverses: PASS
+B12 five positive modular generators: PASS
+B12 congruence folding: 12 complete cosets PASS
+B12 independent mod-8 labels: PASS 12
+B12 exactly one legal cusp, representative (1,0): PASS
+B12 terminal (1,0): six real operations PASS
+B12 expanded positive word to zero replay: PASS 30
+~~~
+
+## b12-six-step-local-branches
+
+**Claim / 命题：** Two six-step B12 macros have explicit mod-27 descent domains; iterated R pullbacks have conductor 3^(2k).
+
+**Status:** proved-identities-with-prose · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_b12_six_step_and_conductor_tower.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_b12_six_step_and_conductor_tower.md)
+
+**Scripts / 脚本：** [work/verify_b12_local_branches.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_b12_local_branches.py)
+
+**Evidence scope / 核验范围：** Symbolic six-step words, positivity coefficients, bounded exact checks of common content and mod-81 transfers, iterated forms through k=4. General formulas and order class number follow proofs and standard order theory.
+
+**Does not establish / 不建立：** These local branches alone do not cover all B12 directions. Use n12-complete for the finished theorem.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b12-six-step-local-branches
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B12 six-step symbolic replay and local descent: PASS 23904
+B12 iterated pullback conductor growth: PASS
+~~~
+
+## b12-return-frontier-certificates
+
+**Claim / 命题：** Saved depth-5/6/7 B12 return tables have 21/87/395 replayable matrices and agree with the independent depth-5 enumeration.
+
+**Status:** finite-search-found · **Evidence:** exploratory-search · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_b12_six_step_and_conductor_tower.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_b12_six_step_and_conductor_tower.md)
+
+**Scripts / 脚本：** [work/verify_b12_return_frontier.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_b12_return_frontier.py) · [work/search_b12_return_frontier.py](../archive/2026-09-07/3-3-triple-average-research-note/work/search_b12_return_frontier.py) · [work/b12_return_depth5.json](../archive/2026-09-07/3-3-triple-average-research-note/work/b12_return_depth5.json) · [work/b12_return_depth6.json](../archive/2026-09-07/3-3-triple-average-research-note/work/b12_return_depth6.json) · [work/b12_return_depth7.json](../archive/2026-09-07/3-3-triple-average-research-note/work/b12_return_depth7.json) · [work/b15_return_depth6.json](../archive/2026-09-07/3-3-triple-average-research-note/work/b15_return_depth6.json) · [work/b18_return_depth7.json](../archive/2026-09-07/3-3-triple-average-research-note/work/b18_return_depth7.json)
+
+**Evidence scope / 核验范围：** Exact replay of all 503 stored B12 entries and 13 B15/B18 entries; independent unpruned Fraction enumeration agrees at depth 5. Old deeper tables used an overly strong support-pruning bound and are positive certificates only, not complete lists.
+
+**Does not establish / 不建立：** No whole-group generation conclusion follows from the bounded return list. The final twelve-point certificate defines its four macros independently.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b12-return-frontier-certificates
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B12 stored return certificate replay: PASS 503
+B12 independent depth-5 matrix comparison: PASS 21
+B15/B18 bounded return table replay: PASS 13
+~~~
+
+## n7-n8-complete
+
+**Claim / 命题：** For n=7 and n=8, G(X) being a power of 3 is sufficient, via exact descent and terminal certificates.
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/proofs/triple_average_seven_eight_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/proofs/triple_average_seven_eight_complete.md)
+
+**Scripts / 脚本：** [work/verify_seven_descent_cover.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_seven_descent_cover.py) · [work/verify_eight_euclidean_descent.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_eight_euclidean_descent.py)
+
+**Evidence scope / 核验范围：** Exact rational/integer checks of the finite B7 local-real cover, the B8 return macros, Euclidean descent step, and terminal path.
+
+**Does not establish / 不建立：** The scripts do not re-formalize every prose reduction from arbitrary n=7 or n=8 input into the displayed two-parameter cores.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n7-n8-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+exact certificate: PASS
+primitive projective classes: 2916
+~~~
+
+~~~text
+B8 Euclidean macro certificate: PASS
+terminal B8(0,1) witness
+~~~
+
+## n10-complete
+
+**Claim / 命题：** For n=10, G(X) being a power of 3 is sufficient.
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/proofs/triple_average_ten_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/proofs/triple_average_ten_complete.md)
+
+**Scripts / 脚本：** [work/verify_ten_complete.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_ten_complete.py) · [work/verify_ten_descent_cover.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_ten_descent_cover.py)
+
+**Evidence scope / 核验范围：** Exact mod-10 pairing enumeration, symbolic four-step bridge samples, replay of all selected return words, and exact local-real terminal cover. The main script invokes the descent-cover script.
+
+**Does not establish / 不建立：** PASS must be read together with the general descent argument in the cited proof.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n10-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+ten-point complete theorem certificate: PASS
+terminal local-real cover: PASS
+~~~
+
+## n11-complete
+
+**Claim / 命题：** For n=11, G(X) being a power of 3 is sufficient.
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_eleven_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_eleven_complete.md)
+
+**Scripts / 脚本：** [work/verify_eleven_complete.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_eleven_complete.py) · [work/verify_eleven_projective_core.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_eleven_projective_core.py)
+
+**Evidence scope / 核验范围：** Exact safety combinatorics and bridge identities, exact replay of return words, enumeration of 221,184 local residue classes, and exact real-projective descent coverage.
+
+**Does not establish / 不建立：** The finite programs support the cited proof and do not replace its reduction from all legal states to the checked cases.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n11-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+eleven-point safety and bridge certificate: PASS
+generic bridge: 5 operations
+~~~
+
+~~~text
+B11 exact projective-core certificate: PASS
+residue classes 221184
+only compatible uncovered direction: x=0
+~~~
+
+## n13-complete
+
+**Claim / 命题：** For n=13, G(X) being a power of 3 is sufficient, via the arithmetic group and cusp classification.
+
+**Status:** proved · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_thirteen_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_thirteen_arithmetic_complete.md)
+
+**Scripts / 脚本：** [work/verify_thirteen_arithmetic_group.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_thirteen_arithmetic_group.py)
+
+**Evidence scope / 核验范围：** Exact macro replay, positive inverse identities, the 56-coset modular action, independent congruence labels, cusp cycles, terminal paths, and the core G formula.
+
+**Does not establish / 不建立：** This certificate is specific to the n=13 proof and does not close arbitrary n.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n13-complete
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+finite modular folding: 56 complete cosets PASS
+both legal cusps have explicit terminal representatives: PASS
+primitive core G formula: PASS
+~~~
+
+## stabilization-theorem
+
+**Claim / 命题：** For arbitrary n, stable reachability after a common power-of-3 replication is equivalent to G(X) being a power of 3.
+
+**Status:** proved · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_stabilization_theorem.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_stabilization_theorem.md) · [outputs/triple_average/history/triple_average_research_corrections.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_research_corrections.md)
+
+**Scripts / 脚本：** [work/verify_stabilized_averaging.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_stabilized_averaging.py)
+
+**Evidence scope / 核验范围：** Deterministic exact checks of the construction on 2,288 sampled inputs, an explicit five-point transport matrix, lower-bound exclusions, and correction examples.
+
+**Does not establish / 不建立：** The arbitrary-n theorem rests on the document's general construction; finite samples alone are not its proof and do not imply copy elimination in the original dimension.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id stabilization-theorem
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+stabilized matrix checks: 2288 PASS
+tripled five- and six-point counterexamples: 10 operations each PASS
+two-value criterion and correction checks: PASS
+~~~
+
+## power-partition-compression
+
+**Claim / 命题：** Every legal input can be compressed by real averaging networks to an O(log n)-rank kernel with power-of-3 block weights while preserving legality.
+
+**Status:** proved · **Evidence:** finite-sanity · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_power_partition_reduction.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_power_partition_reduction.md)
+
+**Scripts / 脚本：** [work/verify_power_partition_compression.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_power_partition_compression.py)
+
+**Evidence scope / 核验范围：** Exact enumeration of 3,542,820 bounded dangerous-edge residue patterns plus 2,310 deterministic random end-to-end partition and network samples.
+
+**Does not establish / 不建立：** The unbounded combinatorial theorem is proved in the document. The script also does not prove reachability inside the resulting logarithmic-rank kernel.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id power-partition-compression
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+unequal-weight dangerous-edge patterns 3542820 PASS
+power-block partitions and real network samples 2310 PASS
+~~~
+
+## burau-power-chain
+
+**Claim / 命题：** Adjacent macros on a geometric power-block chain give a reduced Burau representation, with finite projective Coxeter order and positive words for projective inverses.
+
+**Status:** proved · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_burau_power_chain.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_burau_power_chain.md)
+
+**Scripts / 脚本：** [work/verify_burau_power_chain.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_burau_power_chain.py)
+
+**Evidence scope / 核验范围：** Exact rational checks for 3<=strands<=8 and s in {3,9}, including real macro replay when the largest block is manageable.
+
+**Does not establish / 不建立：** The script samples twelve parameter pairs; the arbitrary-rank identity is proved symbolically in the cited document. It does not solve coupling between different chains.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id burau-power-chain
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+strands 8 s 9 n 5380840 Burau relations, finite Coxeter center, positive inverses: PASS
+geometric power-chain Burau checks: PASS 12
+~~~
+
+## general-lifting
+
+**Claim / 命题：** The displayed block-lifting formulas, ternary networks, simultaneous safe partitions, and the ten-point exceptional witness behave as stated.
+
+**Status:** supporting · **Evidence:** finite-sanity · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_general_n_synthesis.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_general_n_synthesis.md) · [outputs/triple_average/history/triple_average_arithmetic_geometry_view.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_arithmetic_geometry_view.md)
+
+**Scripts / 脚本：** [work/verify_general_lifting.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_general_lifting.py)
+
+**Evidence scope / 核验范围：** Exact formulas on bounded dimensions, ternary networks through 3^4, 1,600 lift samples, 1,119 simultaneous partition samples, and an explicit ten-point path.
+
+**Does not establish / 不建立：** These bounded checks are not a general arbitrary-n reachability theorem.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id general-lifting
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+general-n formulas and lifting theorem: PASS
+simultaneous non-3-prime partition samples 1119
+ten-point no-integral-edge witness reaches zero in nine operations
+~~~
+
+## zero-padding
+
+**Claim / 命题：** A zero-sum support that fits in a power-of-3 block can be padded with zeros and annihilated by a ternary network.
+
+**Status:** proved · **Evidence:** finite-sanity · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_zero_padding_theorem.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_zero_padding_theorem.md)
+
+**Scripts / 脚本：** [work/verify_zero_padding_theorem.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_zero_padding_theorem.py)
+
+**Evidence scope / 核验范围：** Exact replay and operation-count checks on 9,700 deterministic random samples for 3<=n<100.
+
+**Does not establish / 不建立：** The general recursive proof is in the document; the script checks bounded samples.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id zero-padding
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+zero-padding theorem checks: PASS 9700
+~~~
+
+## isolated-prime-core
+
+**Claim / 命题：** The isolated-dangerous-prime safe-core and bridge patterns pass the stated bounded checks.
+
+**Status:** supporting · **Evidence:** finite-sanity · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_isolated_prime_reduction.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_isolated_prime_reduction.md) · [outputs/triple_average/history/triple_average_general_n_synthesis.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_general_n_synthesis.md)
+
+**Scripts / 脚本：** [work/verify_isolated_prime_reduction.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_isolated_prime_reduction.py)
+
+**Evidence scope / 核验范围：** Bounded exhaustive states, deterministic random legal states, and bridge samples.
+
+**Does not establish / 不建立：** It is not an unbounded proof of the isolated-prime reduction and cannot be extrapolated to arbitrary n.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id isolated-prime-core
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+isolated-prime safe-core checks: PASS
+exhaustive legal states 1610 terminal 12
+~~~
+
+## multi-prime-core
+
+**Claim / 命题：** The stated multiplicity lower bound for multi-prime terminal cores passes bounded enumeration.
+
+**Status:** supporting · **Evidence:** finite-sanity · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_multi_prime_core.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_multi_prime_core.md) · [outputs/triple_average/history/triple_average_witness_reset_lemma.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_witness_reset_lemma.md)
+
+**Scripts / 脚本：** [work/verify_multi_prime_core.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_multi_prime_core.py)
+
+**Evidence scope / 核验范围：** Bounded enumeration for 7<=n<=30 with coordinate values in [-3,3].
+
+**Does not establish / 不建立：** It is a finite check and does not prove arbitrary-size witness reset or general reachability.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id multi-prime-core
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+multi-prime core checks: PASS
+legal states 174164 terminal states 66
+~~~
+
+## power-block-macro
+
+**Claim / 命题：** The n-4=3^k return-macro formula agrees with real averaging for the tested powers.
+
+**Status:** supporting · **Evidence:** symbolic-check · **Runtime class:** instant
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_power_block_macro.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_power_block_macro.md)
+
+**Scripts / 脚本：** [work/verify_power_block_macro.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_power_block_macro.py)
+
+**Evidence scope / 核验范围：** Exact real-state replay for 1<=k<=5.
+
+**Does not establish / 不建立：** The arbitrary-k induction is in the document.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id power-block-macro
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+n 247 operations 120
+power-block macro checks: PASS
+~~~
+
+## cyclotomic-macros
+
+**Claim / 命题：** The (s^2,s,1) real macro formulas and the displayed cyclotomic group identities hold in the tested cases.
+
+**Status:** supporting · **Evidence:** symbolic-check · **Runtime class:** instant
+
+**Documents / 正文：** [outputs/triple_average/arithmetic_cases/triple_average_thirteen_arithmetic_complete.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/arithmetic_cases/triple_average_thirteen_arithmetic_complete.md) · [outputs/triple_average/history/triple_average_burau_power_chain.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_burau_power_chain.md)
+
+**Scripts / 脚本：** [work/verify_cyclotomic_macros.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_cyclotomic_macros.py)
+
+**Evidence scope / 核验范围：** Exact real macro replay and matrix identities for s in {3,9,27}.
+
+**Does not establish / 不建立：** It does not prove that these generators equal the full candidate arithmetic group for general s.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id cyclotomic-macros
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+s 27 n 757
+cyclotomic macro family checks: PASS 3
+~~~
+
+## arithmetic-geometry-structure
+
+**Claim / 命题：** The displayed quadratic forms, parameter-lattice heights, determinant divisibility, and n=10 macro arithmetic agree with exact bounded calculations.
+
+**Status:** supporting · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_arithmetic_geometry_view.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_arithmetic_geometry_view.md)
+
+**Scripts / 脚本：** [work/verify_arithmetic_geometry_structure.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_arithmetic_geometry_structure.py)
+
+**Evidence scope / 核验范围：** Exact bounded calculations of the structural formulas and 27,440 determinant samples.
+
+**Does not establish / 不建立：** This supports the arithmetic-geometric interpretation and is not a reachability theorem.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id arithmetic-geometry-structure
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+arithmetic-geometric structure certificate: PASS
+primitive quadratic forms n=5..11: PASS
+~~~
+
+## cascade-bound
+
+**Claim / 命题：** The corrected cascade formula and two-cascade 7/9 height bound pass bounded and random tests.
+
+**Status:** historical-support · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/ternary_averaging_deeper_results.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/ternary_averaging_deeper_results.md)
+
+**Scripts / 脚本：** [work/verify_cascade_bound.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_cascade_bound.py)
+
+**Evidence scope / 核验范围：** Bounded integer enumeration and deterministic random samples.
+
+**Does not establish / 不建立：** A sampled bound is not a proof for all inputs; this belongs to an earlier line of attack.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id cascade-bound
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+correct cascade formula and two-cascade bound passed
+~~~
+
+## n5-bounded-search
+
+**Claim / 命题：** No discrepancy with the proposed five-point criteria is found inside the script's bounded BFS domains.
+
+**Status:** historical-exploration · **Evidence:** exploratory-search · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/ternary_averaging_deeper_results.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/ternary_averaging_deeper_results.md)
+
+**Scripts / 脚本：** [work/verify_five_theorem.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_five_theorem.py)
+
+**Evidence scope / 核验范围：** Finite breadth-first searches at depths 10 and 7 on small centered states.
+
+**Does not establish / 不建立：** The word theorem in the filename is historical. Bounded BFS does not prove a complete five-point criterion.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n5-bounded-search
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+criterion failures within BFS bound: [] count 0
+bounded BFS witnesses against criterion: [] count 0
+~~~
+
+## n91-congruence-container
+
+**Claim / 命题：** For the (81,9,1) core, the historical independent-place mod-91 and mod-8 container has21,504 labels,96 cusps and24 legal cusps. A later coupled-character refinement proves this container is strictly too large for equality with the macro group.
+
+**Status:** proved-container-computation · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_research_corrections.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_research_corrections.md) · [outputs/triple_average/history/triple_average_research_handoff_2026-09-09.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_research_handoff_2026-09-09.md)
+
+**Scripts / 脚本：** [work/cyclotomic_congruence.py](../archive/2026-09-07/3-3-triple-average-research-note/work/cyclotomic_congruence.py)
+
+**Evidence scope / 核验范围：** Exact finite enumeration of the known congruence container and its cusp cycles.
+
+**Does not establish / 不建立：** Equality with the actual integer macro group is now disproved by cyclotomic-level-entanglement. This historical computation does not establish the new43008 container's terminal coverage or its equality with the macro group.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n91-congruence-container
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+global labels 21504 reached 21504
+cusps 96
+legal cusps 24
+~~~
+
+## n91-corrected-witness
+
+**Claim / 命题：** The corrected representative (u,v)=(1,-3), with singleton -54, reaches a 27-point zero-sum block after two operations.
+
+**Status:** proved-witness · **Evidence:** theorem-certificate · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_research_corrections.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_research_corrections.md) · [outputs/triple_average/history/triple_average_research_handoff_2026-09-09.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_research_handoff_2026-09-09.md)
+
+**Scripts / 脚本：** [work/search_n91_missing_class.py](../archive/2026-09-07/3-3-triple-average-research-note/work/search_n91_missing_class.py)
+
+**Evidence scope / 核验范围：** An exact constructive witness for this one corrected representative.
+
+**Does not establish / 不建立：** One representative does not cover the mod-8 cusp splitting or the general n=91 core.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n91-corrected-witness
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+FOUND depth 2 block 27
+Fraction(-54, 1)
+Fraction(-6, 1), 1
+~~~
+
+## n91-search-optimization
+
+**Claim / 命题：** The optimized integer subset-sum kernel agrees with the pre-optimization exact Fraction-keyed kernel on deterministic n=91 BFS states.
+
+**Status:** proved-regression · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/algorithms/triple_average_computation_performance_audit.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/algorithms/triple_average_computation_performance_audit.md) · [outputs/algorithms/triple_average_search_optimization_review_2026-09-09.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/algorithms/triple_average_search_optimization_review_2026-09-09.md)
+
+**Scripts / 脚本：** [work/verify_n91_search_optimization.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_n91_search_optimization.py)
+
+**Evidence scope / 核验范围：** The old and new exact dynamic programs are compared on deterministic states generated from the corrected n=91 core; every optimized witness is checked for size, zero sum, and multiplicity.
+
+**Does not establish / 不建立：** The regression check proves implementation equivalence only on its generated finite state set; it does not prove general n=91 reachability or the open cusp.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n91-search-optimization
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+n91 integer subset-DP equivalence: PASS
+~~~
+
+## n91-cusp-depth4
+
+**Claim / 命题：** A depth-4 bounded search finds terminal certificates for 23 of the 24 legal cusps in the corrected n=91 congruence container.
+
+**Status:** open-1-cusp · **Evidence:** exploratory-search · **Runtime class:** long
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_research_corrections.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_research_corrections.md) · [outputs/triple_average/history/triple_average_research_handoff_2026-09-09.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_research_handoff_2026-09-09.md)
+
+**Scripts / 脚本：** [work/analyze_n91_terminal_cusps.py](../archive/2026-09-07/3-3-triple-average-research-note/work/analyze_n91_terminal_cusps.py)
+
+**Evidence scope / 核验范围：** Complete representative enumeration for the 24 container cusps followed by a bounded depth-4 search for explicit zero-sum blocks. Every returned certificate is replayed and its witness is checked again in the parent process.
+
+**Does not establish / 不建立：** The remaining OPEN report for cusp 29 is a search failure, not a proof of nonreachability. Container equality and the bridge from arbitrary n=91 inputs also remain open.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n91-cusp-depth4
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+legal cusps 24 directly terminal 10
+OPEN cusp 29
+FOUND cusp 30
+FOUND cusp 32
+FOUND cusp 35
+covered legal cusps 23 / 24
+~~~
+
+## n91-cusp29-depth5
+
+**Claim / 命题：** A depth-5 bounded search finds a terminal certificate for the last depth-4 open representative, cusp 29 = (-13,18).
+
+**Status:** finite-search-found · **Evidence:** exploratory-search · **Runtime class:** long
+
+**Documents / 正文：** [outputs/algorithms/triple_average_computation_performance_audit.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/algorithms/triple_average_computation_performance_audit.md) · [outputs/triple_average/history/triple_average_research_handoff_2026-09-09.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_research_handoff_2026-09-09.md)
+
+**Scripts / 脚本：** [work/analyze_n91_terminal_cusps.py](../archive/2026-09-07/3-3-triple-average-research-note/work/analyze_n91_terminal_cusps.py)
+
+**Evidence scope / 核验范围：** The selected representative is searched through depth 5 after splitting the first two operations into independent processes; the parent process replays and checks the returned path and 27-point zero-sum witness.
+
+**Does not establish / 不建立：** This finite-depth certificate closes only the known congruence-container representative. It does not prove equality with the true macro group, arbitrary n=91 bridge reachability, or an unbounded algorithm.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id n91-cusp29-depth5
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+FOUND cusp 29
+covered requested cusps 1 / 1
+~~~
+
+## standard-kernel-interface
+
+**Claim / 命题：** Concrete weighted-kernel certificates replay correctly and reject malformed multiplicities.
+
+**Status:** supporting · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_audit_resolution_2026-09-09.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_audit_resolution_2026-09-09.md)
+
+**Scripts / 脚本：** [work/standard_kernel_interface.py](../archive/2026-09-07/3-3-triple-average-research-note/work/standard_kernel_interface.py) · [work/verify_standard_kernel_interface.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_standard_kernel_interface.py)
+
+**Evidence scope / 核验范围：** 229 deterministic compression/network samples, nine invalid certificate cases, and four concrete protected-carry replays; duplicate counts are accumulated.
+
+**Does not establish / 不建立：** No controller for every weighted kernel, nor a formalization of the unbounded reduction.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id standard-kernel-interface
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+interface malformed certificate rejection: PASS 9
+standard kernel interface certificates: PASS 229
+safe carry concrete interface replay: PASS 4
+~~~
+
+## search-contracts
+
+**Claim / 命题：** Terminal subset enumeration agrees with an independent oracle and the runner rejects optimized Python.
+
+**Status:** supporting · **Evidence:** finite-sanity · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_audit_resolution_2026-09-09.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_audit_resolution_2026-09-09.md)
+
+**Scripts / 脚本：** [work/verify_search_contracts.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_search_contracts.py)
+
+**Evidence scope / 核验范围：** 720 small exact subset enumerations, -O and PYTHONOPTIMIZE=1 rejection tests, 48 shortest-path comparisons and 1525 successor checks against the Fraction reference.
+
+**Does not establish / 不建立：** Bounded implementation checks, not reachability completeness.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id search-contracts
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+terminal subset oracle vs position enumeration: PASS 720
+optimized Python runner rejection: PASS 2
+integer/Fraction BFS shortest witness comparison: PASS 48
+projective integer successor equivalence: PASS 1525
+symbolic mean-collision pruning regression: PASS
+~~~
+
+## bn-arithmetic-structure
+
+**Claim / 命题：** B12 macros, the carry-repair family, form levels and index-9 theta pullback pass exact checks.
+
+**Status:** proved-identities-with-prose · **Evidence:** symbolic-check · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_carry_repair_and_arithmetic_interface.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_carry_repair_and_arithmetic_interface.md)
+
+**Scripts / 脚本：** [work/verify_bn_arithmetic_structure.py](../archive/2026-09-07/3-3-triple-average-research-note/work/verify_bn_arithmetic_structure.py)
+
+**Evidence scope / 核验范围：** Symbolic A/P/R replay, 3920 content checks, four reduced-form enumerations, k=1..6 carry replay, theta coefficients through 180, protected-carry patterns and B/C/D family replay for k=2..6. General proofs are in the documents.
+
+**Does not establish / 不建立：** Does not prove a B12 controller, general safe carry or Hecke compatibility. Theta modularity uses the standard lattice theorem.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id bn-arithmetic-structure
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B12 symbolic A/P/R and norm/content identities: PASS 3920
+binary forms, levels, reduced classes, and p3 splitting: PASS
+carry-repair family symbolic replay k=1..6: PASS 12
+B12 index-9 theta pullback and conductor-9 order: PASS
+safe equal-weight carry exceptional-set patterns: PASS
+B/C/D expansion families k=2..6: PASS 15
+~~~
+
+## b12-complete-bounded-domain
+
+**Claim / 命题：** The complete legal height-8 B12 domain has 62 sign classes, covered by depth 4.
+
+**Status:** finite-search-found · **Evidence:** exploratory-search · **Runtime class:** short
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_b12_kernel_experiment.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_b12_kernel_experiment.md)
+
+**Scripts / 脚本：** [work/explore_b12_kernel.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_b12_kernel.py)
+
+**Evidence scope / 核验范围：** All bounded primitive pairs with odd u-v, including G=3; exact witness replay.
+
+**Does not establish / 不建立：** No claim about unbounded parameter height or all n=12 inputs.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b12-complete-bounded-domain
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+B12 primitive pair classes 62
+B12 terminal coverage 62 / 62 depth 4 bound 8
+B12 missing []
+~~~
+
+## bn-comparison-depth4
+
+**Claim / 命题：** Full legal height-8 B12/B15/B18/B21 domains have depth-4 coverage 62/62,71/73,62/62,66/79.
+
+**Status:** bounded-comparison · **Evidence:** exploratory-search · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_single_prime_kernel_comparison.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_single_prime_kernel_comparison.md)
+
+**Scripts / 脚本：** [work/explore_single_prime_kernels.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_single_prime_kernels.py)
+
+**Evidence scope / 核验范围：** Depth bounds count pre-terminal operations; every terminal partitions into zero-sum ternary-power blocks and requires a fixed network tail.
+
+**Does not establish / 不建立：** Missing representatives are search bounds, not nonreachability. B21 was already solved by lifting n=7.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id bn-comparison-depth4
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+n=12 terminal coverage 62 / 62
+n=15 terminal coverage 71 / 73
+n=18 terminal coverage 62 / 62
+n=21 terminal coverage 66 / 79
+~~~
+
+## b15-two-depth5
+
+**Claim / 命题：** The two height-8 B15 depth-4 gaps have depth-5 terminal partitions.
+
+**Status:** finite-search-found · **Evidence:** exploratory-search · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_single_prime_kernel_comparison.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_single_prime_kernel_comparison.md)
+
+**Scripts / 脚本：** [work/explore_single_prime_kernels.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_single_prime_kernels.py)
+
+**Evidence scope / 核验范围：** Two explicit primitive representatives; paths and entire zero-sum partitions replayed.
+
+**Does not establish / 不建立：** Does not solve all B15 rational directions.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b15-two-depth5
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+n=15 terminal coverage 2 / 2
+n=15 depth histogram {5: 2}
+n=15 missing []
+~~~
+
+## b21-depth5
+
+**Claim / 命题：** All 79 legal height-8 B21 sign classes have depth-5 terminal partitions.
+
+**Status:** finite-search-found · **Evidence:** exploratory-search · **Runtime class:** long
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_single_prime_kernel_comparison.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_single_prime_kernel_comparison.md)
+
+**Scripts / 脚本：** [work/explore_single_prime_kernels.py](../archive/2026-09-07/3-3-triple-average-research-note/work/explore_single_prime_kernels.py)
+
+**Evidence scope / 核验范围：** Exact bounded search and full terminal partition replay on 79 representatives.
+
+**Does not establish / 不建立：** This is a controller comparison for an already solved lifted dimension, not an independent unbounded proof.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id b21-depth5
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+n=21 terminal coverage 79 / 79
+n=21 depth histogram {0: 2, 1: 4, 2: 11, 3: 20, 4: 29, 5: 13}
+n=21 missing []
+~~~
+
+## bn-symbolic-returns-depth5
+
+**Claim / 命题：** Symbolic B_n return searches yield 21 matrices for B12 and 5 each for B15/B18/B21 through depth 5.
+
+**Status:** bounded-discovery · **Evidence:** exploratory-search · **Runtime class:** medium
+
+**Documents / 正文：** [outputs/triple_average/history/triple_average_carry_repair_and_arithmetic_interface.md](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/history/triple_average_carry_repair_and_arithmetic_interface.md)
+
+**Scripts / 脚本：** [work/analyze_bn_return_macros.py](../archive/2026-09-07/3-3-triple-average-research-note/work/analyze_bn_return_macros.py)
+
+**Evidence scope / 核验范围：** Rational coefficient BFS modulo global nonzero scaling, preserving symbolic multiplicities. Singular returns are included and are not PGL elements.
+
+**Does not establish / 不建立：** No claim of finite generation, arithmeticity, or nonexistence of longer mixing returns. Output words use normalized symbolic states.
+
+**Dependencies / 依赖：**
+
+- Python standard library
+- local work modules
+
+**Run / 运行：** from the main research directory / 在主研究目录中：
+
+~~~sh
+python -B work/run_verifications.py --id bn-symbolic-returns-depth5
+~~~
+
+Expected output markers / 预期标记：
+
+~~~text
+n=12 return matrices 21
+n=15 return matrices 5
+n=18 return matrices 5
+n=21 return matrices 5
+~~~

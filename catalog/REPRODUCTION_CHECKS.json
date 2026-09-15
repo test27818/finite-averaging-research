@@ -1,0 +1,58 @@
+{
+  "suite": "review",
+  "started_utc": "2026-09-15T16:45:03.546317+00:00",
+  "status": "FAIL",
+  "tasks": [
+    {
+      "name": "prime-proof",
+      "status": "PASS",
+      "exit_code": 0,
+      "missing_markers": [],
+      "wall_seconds": 84.901
+    },
+    {
+      "name": "ternary-bases",
+      "status": "PASS",
+      "exit_code": 0,
+      "missing_markers": [],
+      "wall_seconds": 3.568
+    },
+    {
+      "name": "general-endpoint",
+      "status": "PASS",
+      "exit_code": 0,
+      "missing_markers": [],
+      "wall_seconds": 0.482
+    },
+    {
+      "name": "uniform-dyadic-column",
+      "status": "PASS",
+      "exit_code": 0,
+      "missing_markers": [],
+      "wall_seconds": 4.545
+    },
+    {
+      "name": "binary-python",
+      "status": "FAIL",
+      "exit_code": 1,
+      "missing_markers": [
+        "\nOK"
+      ],
+      "wall_seconds": 10.858
+    }
+  ],
+  "scope": "Selected exact evidence and regressions, not formal proof certification or all historical research.",
+  "archive_before": {
+    "status": "PASS",
+    "source_files": 1905,
+    "source_bytes": 139776624,
+    "navigation_links": 2535
+  },
+  "archive_after": {
+    "status": "PASS",
+    "source_files": 1905,
+    "source_bytes": 139776624,
+    "navigation_links": 2544
+  },
+  "wall_seconds": 108.339
+}

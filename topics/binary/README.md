@@ -1,4 +1,6 @@
-# 二平均
+# 二平均 · Binary and Pairwise Averaging
+
+English: **perfect mixability**, **binary averaging**, **pairwise averaging**, **mixing graphs**, and **Condition (MC)**. This topic contains the literature-based decision criterion, constructive solvers, exact path verification and the 1,636-instance benchmark. Start with the [English overview](../../README.en.md) and [bilingual proof guide](../../docs/PROOF_GUIDE.md).
 
 [返回仓库首页](../../README.md)
 
@@ -13,3 +15,4 @@
 
 求解器有时间、内存或搜索预算限制。没有找到路径不等于证明不可达；返回路径的验解和最短性认证分别记录。
 
+本次复现记录了一个零预算状态的计时边界问题，见[已知问题 / Known issue](../../docs/KNOWN_ISSUES.md)。原代码与失败证据均保留，未宣称本次Python回归全绿。

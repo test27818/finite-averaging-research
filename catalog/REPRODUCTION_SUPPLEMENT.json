@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-16",
+  "review_status": "FAIL",
+  "known_issue": "binary zero-budget timing boundary",
+  "binary_javascript": {
+    "status": "PASS",
+    "groups": 6,
+    "all_labels": 1636,
+    "constructive_witnesses": 538
+  },
+  "benchmark": {
+    "suite": "benchmark",
+    "started_utc": "2026-09-15T16:48:09.343835+00:00",
+    "status": "PASS",
+    "tasks": [
+      {
+        "name": "ternary-prime-benchmark",
+        "status": "PASS",
+        "exit_code": 0,
+        "missing_markers": [],
+        "wall_seconds": 0.446
+      }
+    ],
+    "scope": "Selected exact evidence and regressions, not formal proof certification or all historical research.",
+    "archive_before": {
+      "status": "PASS",
+      "source_files": 1905,
+      "source_bytes": 139776624,
+      "navigation_links": 2544
+    },
+    "archive_after": {
+      "status": "PASS",
+      "source_files": 1905,
+      "source_bytes": 139776624,
+      "navigation_links": 2544
+    },
+    "wall_seconds": 4.898
+  },
+  "deterministic_deadline_diagnostic": {
+    "diagnostic_status": "PASS",
+    "known_issue_reproduced": true,
+    "frozen_tick": {
+      "status": "solved",
+      "certified": false,
+      "min_steps": null,
+      "exact_path_verified": true
+    },
+    "advancing_clock": {
+      "status": "limit",
+      "certified": false,
+      "min_steps": null
+    },
+    "scope": "Reproduces the recorded zero-budget status inconsistency; does not mark the archived regression suite as passing."
+  }
+}
