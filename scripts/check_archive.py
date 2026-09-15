@@ -4,6 +4,7 @@ from urllib.parse import unquote
 import hashlib
 import json
 import re
+from check_math_markup import check as check_math_markup
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -33,6 +34,7 @@ def check():
         "status":"PASS", "source_files":len(manifest["files"]),
         "source_bytes":sum(item["bytes"] for item in manifest["files"]),
         "navigation_links":checked_links,
+        "maintained_math_formulas":check_math_markup()["total_formulas"],
     }
 
 
