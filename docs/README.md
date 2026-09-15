@@ -1,6 +1,6 @@
 # 读者指南 / Reader guides
 
-[中文首页](../README.md) · [English](../README.en.md)
+[中文首页](../README.zh-CN.md) · [English](../README.md)
 
 | 想解决的问题 / Reader question | 入口 / Guide |
 |---|---|

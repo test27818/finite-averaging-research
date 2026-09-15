@@ -1,6 +1,6 @@
 # 二平均完整分类：四元无条件成立 / Binary classification: four entries are unconditional
 
-[中文首页](../README.md) · [English](../README.en.md) · [二平均主题 / Binary topic](../topics/binary/README.md) · [证明指南 / Proof guide](PROOF_GUIDE.md)
+[中文首页](../README.zh-CN.md) · [English](../README.md) · [二平均主题 / Binary topic](../topics/binary/README.md) · [证明指南 / Proof guide](PROOF_GUIDE.md)
 
 **任意四个输入都可二平均，固定四次操作足够，不需要检查 $`G`$。**
 

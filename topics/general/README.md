@@ -1,8 +1,8 @@
 # 一般 k 平均与合数元数 · General k-ary and Composite-Arity Averaging
 
-English: **k-averaging**, **k-ary averaging**, **generalized perfect mixability**, **composite-arity averaging**, prime powers and fixed mixing networks. Some critical-point results assume GRH; the general optimal final threshold is still open. See the [English overview](../../README.en.md) and [claim scope](../../docs/PROOF_GUIDE.md).
+English: **k-averaging**, **k-ary averaging**, **generalized perfect mixability**, **composite-arity averaging**, prime powers and fixed mixing networks. Some critical-point results assume GRH; the general optimal final threshold is still open. See the [English overview](../../README.md) and [claim scope](../../docs/PROOF_GUIDE.md).
 
-[返回仓库首页](../../README.md)
+[返回中文首页](../../README.zh-CN.md)
 
 - [一般元数资料入口](../../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/README.md)。
 - [最新完成范围与剩余任务](../../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/general_k_three_tasks_progress_20260915.md)。

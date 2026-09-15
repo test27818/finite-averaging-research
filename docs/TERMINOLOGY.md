@@ -1,6 +1,6 @@
 # 可混合性、混合图与平均：中英术语和模型 / Mixability, mixing graphs and averaging
 
-[中文首页](../README.md) · [English](../README.en.md) · [指南目录 / Guides](README.md)
+[中文首页](../README.zh-CN.md) · [English](../README.md) · [指南目录 / Guides](README.md)
 
 ## 同一问题的检索表述 / Search vocabulary
 

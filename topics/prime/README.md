@@ -1,8 +1,8 @@
 # 素数 p 平均 · Prime-Arity Averaging
 
-English: **p-averaging**, **prime-arity averaging**, **congruence obstructions**, and exact finite reachability. The project proves the optimal final threshold $`2p+1`$ for odd prime arity using physical returns, root ideals and scale-sensitive congruence fibers. See the [English overview](../../README.en.md), [proof guide](../../docs/PROOF_GUIDE.md) and [verification guide](../../docs/VERIFICATION.md).
+English: **p-averaging**, **prime-arity averaging**, **congruence obstructions**, and exact finite reachability. The project proves the optimal final threshold $`2p+1`$ for odd prime arity using physical returns, root ideals and scale-sensitive congruence fibers. See the [English overview](../../README.md), [proof guide](../../docs/PROOF_GUIDE.md) and [verification guide](../../docs/VERIFICATION.md).
 
-[返回仓库首页](../../README.md)
+[返回中文首页](../../README.zh-CN.md)
 
 建议阅读顺序：
 

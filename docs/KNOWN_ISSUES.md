@@ -1,6 +1,6 @@
 # 已知核验问题 / Known verification issues
 
-[中文首页](../README.md) · [English](../README.en.md) · [核验指南](VERIFICATION.md)
+[中文首页](../README.zh-CN.md) · [English](../README.md) · [核验指南](VERIFICATION.md)
 
 ## 二平均零预算状态依赖时钟 / Binary zero-budget status depends on the clock
 

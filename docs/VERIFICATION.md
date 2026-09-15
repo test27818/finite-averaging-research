@@ -1,6 +1,6 @@
 # 复现与正确性核验 / Reproduction and verification
 
-[中文首页](../README.md) · [English](../README.en.md) · [证明路线 / Proof guide](PROOF_GUIDE.md)
+[中文首页](../README.zh-CN.md) · [English](../README.md) · [证明路线 / Proof guide](PROOF_GUIDE.md)
 
 ## 三种不同的检查 / Three different checks
 

@@ -1,8 +1,8 @@
 # 二平均 · Binary and Pairwise Averaging
 
-English: **perfect mixability**, **binary averaging**, **pairwise averaging**, **mixing graphs**, and **Condition (MC)**. This topic contains the literature-based decision criterion, constructive solvers, exact path verification and the 1,636-instance benchmark. Start with the [English overview](../../README.en.md) and [bilingual proof guide](../../docs/PROOF_GUIDE.md).
+English: **perfect mixability**, **binary averaging**, **pairwise averaging**, **mixing graphs**, and **Condition (MC)**. This topic contains the literature-based decision criterion, constructive solvers, exact path verification and the 1,636-instance benchmark. Start with the [English overview](../../README.md) and [bilingual proof guide](../../docs/PROOF_GUIDE.md).
 
-[返回仓库首页](../../README.md)
+[返回中文首页](../../README.zh-CN.md)
 
 二平均将选中的两个数都替换为其平均值，要求有限步精确全等。请区分可达性判定、构造一条路径和认证最短路径。
 

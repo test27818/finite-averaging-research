@@ -47,4 +47,4 @@ scripts/check_archive.py校验所有1905个原文件内容和新增导航的相�
 
 部分研究核验器会重写自己的JSON输出。若重跑后SHA-256改变，归档完整性检查会报告工作副本已变；可用Git查看差异，或在另一个工作副本运行。research/prime_arity_padic里的冻结文档基线也随原件保留。
 
-[返回首页](README.md)
+[中文首页](README.zh-CN.md) · [English](README.md)

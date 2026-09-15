@@ -1,8 +1,8 @@
 # 三平均 · Ternary and Triple Averaging
 
-English: **ternary averaging**, **triple averaging**, **3-averaging**, and finite exact mixing on fixed positions. The direct proof uses two distinct triply repeated values and protected residue witnesses, followed by discrete energy descent; dimensions 7–10 have separate bases. See the [English overview](../../README.en.md) and [proof guide](../../docs/PROOF_GUIDE.md).
+English: **ternary averaging**, **triple averaging**, **3-averaging**, and finite exact mixing on fixed positions. The direct proof uses two distinct triply repeated values and protected residue witnesses, followed by discrete energy descent; dimensions 7–10 have separate bases. See the [English overview](../../README.md) and [proof guide](../../docs/PROOF_GUIDE.md).
 
-[返回仓库首页](../../README.md)
+[返回中文首页](../../README.zh-CN.md)
 
 - [当前三平均证明目录](../../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/README.md)。
 - [任意维数的双三重值直接证明](../../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/proofs/triple_average_all_dimensions_double_triple_invariant.md)：主体覆盖 $`n\ge11`$，接7、8、9、10元基例达到最优最终阈值7。

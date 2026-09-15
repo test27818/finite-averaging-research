@@ -12,7 +12,7 @@ TICK=chr(96)
 
 
 def maintained_documents():
-    return [ROOT/"README.md",ROOT/"README.en.md",
+    return [ROOT/"README.md",ROOT/"README.zh-CN.md",
             *sorted((ROOT/"docs").glob("*.md")),
             *sorted((ROOT/"topics").rglob("*.md"))]
 

@@ -20,7 +20,7 @@ def render():
     entries = manifest["verifications"]
     lines = [
         "# 命题—脚本—证据索引 / Claim-to-check index", "",
-        "[中文首页](../README.md) · [English](../README.en.md) · [核验指南 / Verification](../docs/VERIFICATION.md)", "",
+        "[中文首页](../README.zh-CN.md) · [English](../README.md) · [核验指南 / Verification](../docs/VERIFICATION.md)", "",
         "由冻结的verification_manifest.json自动生成，包含"+str(len(entries))+"项注册检查。不是按名称猜测数学范围，也不是重新审定所有命题。", "",
         "Generated from the frozen registry. Each entry preserves its claim status, evidence scope, exclusions, dependencies and executable commands.", "",
         "注意：部分条目的status保留该局部结果建立时的历史措辞（如boundaries-open），不代表这些边界在整个项目中仍未解决。全局当前状态见[证明指南](../docs/PROOF_GUIDE.md)。", "",
