@@ -1,0 +1,557 @@
+{
+  "timing": "same computer,serial run; different implementation languages",
+  "cases": [
+    {
+      "id": "paired-0",
+      "baseline": {
+        "status": "solved",
+        "steps": 7,
+        "solver_ms": 0.9664999088272452,
+        "outer_ms": 1.1139000998809934,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-1",
+      "baseline": {
+        "status": "solved",
+        "steps": 7,
+        "solver_ms": 0.9301999816671014,
+        "outer_ms": 1.1421999661251903,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-2",
+      "baseline": {
+        "status": "solved",
+        "steps": 7,
+        "solver_ms": 0.7963000098243356,
+        "outer_ms": 0.9847000474110246,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-3",
+      "baseline": {
+        "status": "solved",
+        "steps": 7,
+        "solver_ms": 1.0589000303298235,
+        "outer_ms": 1.2190999696031213,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-4",
+      "baseline": {
+        "status": "solved",
+        "steps": 7,
+        "solver_ms": 1.1527000460773706,
+        "outer_ms": 1.3658000389114022,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-5",
+      "baseline": {
+        "status": "solved",
+        "steps": 7,
+        "solver_ms": 1.1055999202653766,
+        "outer_ms": 1.3113000895828009,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-6",
+      "baseline": {
+        "status": "solved",
+        "steps": 7,
+        "solver_ms": 1.3139999937266111,
+        "outer_ms": 1.5210999408736825,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-7",
+      "baseline": {
+        "status": "solved",
+        "steps": 4,
+        "solver_ms": 0.31070003751665354,
+        "outer_ms": 0.44240010902285576,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-8",
+      "baseline": {
+        "status": "solved",
+        "steps": 7,
+        "solver_ms": 1.0896000312641263,
+        "outer_ms": 1.260399934835732,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-9",
+      "baseline": {
+        "status": "solved",
+        "steps": 7,
+        "solver_ms": 0.9472999954596162,
+        "outer_ms": 1.1216000420972705,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-10",
+      "baseline": {
+        "status": "solved",
+        "steps": 7,
+        "solver_ms": 0.8587000193074346,
+        "outer_ms": 1.0221999837085605,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-11",
+      "baseline": {
+        "status": "solved",
+        "steps": 7,
+        "solver_ms": 1.1131999781355262,
+        "outer_ms": 1.2848000042140484,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-12",
+      "baseline": {
+        "status": "solved",
+        "steps": 9,
+        "solver_ms": 2.8712000930681825,
+        "outer_ms": 3.072399995289743,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-13",
+      "baseline": {
+        "status": "solved",
+        "steps": 9,
+        "solver_ms": 4.211100051179528,
+        "outer_ms": 4.630599985830486,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-14",
+      "baseline": {
+        "status": "solved",
+        "steps": 8,
+        "solver_ms": 1.7578999977558851,
+        "outer_ms": 1.9447000231593847,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-15",
+      "baseline": {
+        "status": "solved",
+        "steps": 9,
+        "solver_ms": 1.7934999195858836,
+        "outer_ms": 2.0969000179320574,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-16",
+      "baseline": {
+        "status": "solved",
+        "steps": 9,
+        "solver_ms": 3.676599939353764,
+        "outer_ms": 4.038100014440715,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-17",
+      "baseline": {
+        "status": "solved",
+        "steps": 19,
+        "solver_ms": 3.0767000280320644,
+        "outer_ms": 3.399799927137792,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-18",
+      "baseline": {
+        "status": "solved",
+        "steps": 10,
+        "solver_ms": 3.0441000126302242,
+        "outer_ms": 3.2664999598637223,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-19",
+      "baseline": {
+        "status": "solved",
+        "steps": 9,
+        "solver_ms": 3.5905000986531377,
+        "outer_ms": 3.886900027282536,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-20",
+      "baseline": {
+        "status": "solved",
+        "steps": 10,
+        "solver_ms": 2.442799974232912,
+        "outer_ms": 2.7886999305337667,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-21",
+      "baseline": {
+        "status": "solved",
+        "steps": 10,
+        "solver_ms": 2.946699969470501,
+        "outer_ms": 3.1719000544399023,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-22",
+      "baseline": {
+        "status": "solved",
+        "steps": 10,
+        "solver_ms": 2.606000052765012,
+        "outer_ms": 3.233299939893186,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "paired-23",
+      "baseline": {
+        "status": "solved",
+        "steps": 10,
+        "solver_ms": 3.034000052139163,
+        "outer_ms": 3.2649000640958548,
+        "method": "existing Python portfolio with no IDA optimization"
+      }
+    },
+    {
+      "id": "height-0",
+      "baseline": {
+        "status": "solved",
+        "steps": 22,
+        "solve_seconds": 0.0009660000214353204,
+        "energy_bound": 528201,
+        "distance_bound": 5113,
+        "solver_ms": 0.9660000214353204,
+        "outer_ms": 28.568799956701696,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-1",
+      "baseline": {
+        "status": "solved",
+        "steps": 21,
+        "solve_seconds": 0.00102680001873523,
+        "energy_bound": 748098,
+        "distance_bound": 6210,
+        "solver_ms": 1.02680001873523,
+        "outer_ms": 1.299199997447431,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-2",
+      "baseline": {
+        "status": "solved",
+        "steps": 16,
+        "solve_seconds": 0.0007372999098151922,
+        "energy_bound": 1352187,
+        "distance_bound": 8478,
+        "solver_ms": 0.7372999098151922,
+        "outer_ms": 0.9865000611171126,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-3",
+      "baseline": {
+        "status": "solved",
+        "steps": 42,
+        "solve_seconds": 0.002338999998755753,
+        "energy_bound": 109031362452,
+        "distance_bound": 2370292,
+        "solver_ms": 2.338999998755753,
+        "outer_ms": 2.831399906426668,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-4",
+      "baseline": {
+        "status": "solved",
+        "steps": 31,
+        "solve_seconds": 0.0013960000360384583,
+        "energy_bound": 59591020590,
+        "distance_bound": 1737687,
+        "solver_ms": 1.3960000360384583,
+        "outer_ms": 1.752499956637621,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-5",
+      "baseline": {
+        "status": "solved",
+        "steps": 33,
+        "solve_seconds": 0.0021224000956863165,
+        "energy_bound": 66153891627,
+        "distance_bound": 1828321,
+        "solver_ms": 2.1224000956863165,
+        "outer_ms": 2.49660003464669,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-6",
+      "baseline": {
+        "status": "solved",
+        "steps": 81,
+        "solve_seconds": 0.0038406000239774585,
+        "energy_bound": 143125026938762124438,
+        "distance_bound": 85007427813,
+        "solver_ms": 3.8406000239774585,
+        "outer_ms": 4.638899932615459,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-7",
+      "baseline": {
+        "status": "solved",
+        "steps": 76,
+        "solve_seconds": 0.004068400012329221,
+        "energy_bound": 238757513921498811483,
+        "distance_bound": 113389138192,
+        "solver_ms": 4.068400012329221,
+        "outer_ms": 4.7154000494629145,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-8",
+      "baseline": {
+        "status": "solved",
+        "steps": 73,
+        "solve_seconds": 0.0036841999972239137,
+        "energy_bound": 321470049071633852817,
+        "distance_bound": 130173345016,
+        "solver_ms": 3.6841999972239137,
+        "outer_ms": 4.5427000150084496,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-9",
+      "baseline": {
+        "status": "solved",
+        "steps": 35,
+        "solve_seconds": 0.002987499930895865,
+        "energy_bound": 2303973,
+        "distance_bound": 27294,
+        "solver_ms": 2.987499930895865,
+        "outer_ms": 3.4030000679194927,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-10",
+      "baseline": {
+        "status": "solved",
+        "steps": 37,
+        "solve_seconds": 0.0031811000080779195,
+        "energy_bound": 1693593,
+        "distance_bound": 22588,
+        "solver_ms": 3.1811000080779195,
+        "outer_ms": 3.711499972268939,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-11",
+      "baseline": {
+        "status": "solved",
+        "steps": 32,
+        "solve_seconds": 0.0033297999761998653,
+        "energy_bound": 1419858,
+        "distance_bound": 21291,
+        "solver_ms": 3.3297999761998653,
+        "outer_ms": 3.7230999441817403,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-12",
+      "baseline": {
+        "status": "solved",
+        "steps": 48,
+        "solve_seconds": 0.0045668999664485455,
+        "energy_bound": 140849585532,
+        "distance_bound": 6762357,
+        "solver_ms": 4.5668999664485455,
+        "outer_ms": 5.0759000005200505,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-13",
+      "baseline": {
+        "status": "solved",
+        "steps": 58,
+        "solve_seconds": 0.005924800061620772,
+        "energy_bound": 139565461986,
+        "distance_bound": 6341109,
+        "solver_ms": 5.924800061620772,
+        "outer_ms": 6.553299957886338,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-14",
+      "baseline": {
+        "status": "solved",
+        "steps": 46,
+        "solve_seconds": 0.004125899984501302,
+        "energy_bound": 167200936335,
+        "distance_bound": 7241149,
+        "solver_ms": 4.125899984501302,
+        "outer_ms": 4.6230999287217855,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-15",
+      "baseline": {
+        "status": "solved",
+        "steps": 98,
+        "solve_seconds": 0.011055200011469424,
+        "energy_bound": 487203049285639404795,
+        "distance_bound": 396870825411,
+        "solver_ms": 11.055200011469424,
+        "outer_ms": 12.139400001615286,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-16",
+      "baseline": {
+        "status": "solved",
+        "steps": 100,
+        "solve_seconds": 0.008585600065998733,
+        "energy_bound": 549046381700145851487,
+        "distance_bound": 423708522169,
+        "solver_ms": 8.585600065998733,
+        "outer_ms": 9.608100051991642,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "height-17",
+      "baseline": {
+        "status": "solved",
+        "steps": 126,
+        "solve_seconds": 0.010219500050880015,
+        "energy_bound": 399555429812921807343,
+        "distance_bound": 336369082737,
+        "solver_ms": 10.219500050880015,
+        "outer_ms": 11.206700000911951,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "large-0",
+      "baseline": {
+        "status": "solved",
+        "steps": 133,
+        "solve_seconds": 0.009528000024147332,
+        "energy_bound": 6461237957407990800947318029646222012511,
+        "distance_bound": 582492084208232245002,
+        "solver_ms": 9.528000024147332,
+        "outer_ms": 10.607499978505075,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "large-2",
+      "baseline": {
+        "status": "solved",
+        "steps": 306,
+        "solve_seconds": 0.016297199996188283,
+        "energy_bound": 1552062329478906797512519251796734635148669315979041813925993780037112760704651,
+        "distance_bound": 9048946204758306428547911676142271060601,
+        "solver_ms": 16.297199996188283,
+        "outer_ms": 18.503199913538992,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "large-4",
+      "baseline": {
+        "status": "solved",
+        "steps": 222,
+        "solve_seconds": 0.023486499907448888,
+        "energy_bound": 9926896180666406197916297323705890470049,
+        "distance_bound": 1755421148385280716664,
+        "solver_ms": 23.486499907448888,
+        "outer_ms": 25.14589997008443,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "large-6",
+      "baseline": {
+        "status": "solved",
+        "steps": 419,
+        "solve_seconds": 0.04276630003005266,
+        "energy_bound": 3883096308245160571151192114271853082598466814210525945107550471195665513349103,
+        "distance_bound": 35054004789955105698963159197937676189353,
+        "solver_ms": 42.76630003005266,
+        "outer_ms": 45.92059995047748,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "large-8",
+      "baseline": {
+        "status": "solved",
+        "steps": 505,
+        "solve_seconds": 0.16765349998604506,
+        "energy_bound": 28276382904710371333049133176509242613665,
+        "distance_bound": 12091618009262358476067,
+        "solver_ms": 167.65349998604506,
+        "outer_ms": 171.5529999928549,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    },
+    {
+      "id": "large-10",
+      "baseline": {
+        "status": "solved",
+        "steps": 920,
+        "solve_seconds": 0.2621602000435814,
+        "energy_bound": 7264550858149215265255289559100740075933279491164861429367834529201325093954284,
+        "distance_bound": 193074024076715764591263134712825113140248,
+        "solver_ms": 262.1602000435814,
+        "outer_ms": 269.321900093928,
+        "method": "existing Python maximal-drop constructive strategy"
+      }
+    }
+  ]
+}

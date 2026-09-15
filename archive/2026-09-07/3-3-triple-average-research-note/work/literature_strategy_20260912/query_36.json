@@ -1,0 +1,254 @@
+{
+  "index": 36,
+  "query": "mixability graphs",
+  "url": "https://api.openalex.org/works?filter=title.search%3Amixability+graphs&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 349,
+  "results": [
+    {
+      "id": "https://openalex.org/W2134711723",
+      "title": "Fastest Mixing Markov Chain on a Graph",
+      "date": "2004-01-01",
+      "doi": "https://doi.org/10.1137/s0036144503423264",
+      "citations": 769,
+      "authors": [
+        "Stephen Boyd",
+        "Persi Diaconis",
+        "Lin Xiao"
+      ],
+      "abstract": "We consider a symmetric random walk on a connected graph, where each edge is labeled with the probability of transition between the two adjacent vertices. The associated Markov chain has a uniform equilibrium distribution; the rate of convergence to this distribution, i.e., the mixing rate of the Markov chain, is determined by the second largest eigenvalue modulus (SLEM) of the transition probability matrix. In this paper we address the problem of assigning probabilities to the edges of the graph in such a way as to minimize the SLEM, i.e., the problem of finding the fastest mixing Markov chain on the graph. We show that this problem can be formulated as a convex optimization problem, which can in turn be expressed as a semidefinite program (SDP). This allows us to easily compute the (globally) fastest mixing Markov chain for any graph with a modest number of edges (say, $1000$) using standard numerical methods for SDPs. Larger problems can be solved by exploiting various types of symmetry and structure in the problem, and far larger problems (say, 100,000 edges) can be solved using a subgradient method we describe. We compare the fastest mixing Markov chain to those obtained using two commonly used heuristics: the maximum-degree method, and the Metropolis--Hastings algorithm. For many of the examples considered, the fastest mixing Markov chain is substantially faster than those obtained using these heuristic methods. We derive the Lagrange dual of the fastest mixing Markov chain problem, which gives a sophisticated method for obtaining (arbitrarily good) bounds on the optimal mixing rate, as well as the optimality conditions. Finally, we describe various extensions of the method, including a solution of the problem of finding the fastest mixing reversible Markov chain, on a fixed graph, with a given equilibrium distribution.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1137/s0036144503423264",
+          "pdf": null,
+          "source": "SIAM Review"
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.1023.3797",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.1960",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.370.3011",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.580.9444",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.90.7020",
+          "pdf": null,
+          "source": null
+        }
+      ],
+      "reference_count": 61
+    },
+    {
+      "id": "https://openalex.org/W1556377802",
+      "title": "Mixing graph colourings",
+      "date": "2007-12-01",
+      "doi": null,
+      "citations": 52,
+      "authors": [
+        "Luis Cereceda"
+      ],
+      "abstract": "This thesis investigates some problems related to graph colouring, or, more precisely, graph re-colouring. Informally, the basic question addressed can be phrased as follows. Suppose one is given a graph G whose vertices can be properly k-coloured, for some k ≥ 2. Is it possible to transform any k-colouring of G into any other by recolouring vertices of G one at a time, making sure a proper k-colouring of G is always maintained? If the answer is in the affirmative, G is said to be k-mixing. The related problem of deciding whether, given two k-colourings of G, it is possible to transform one into the other by recolouring vertices one at a time, always maintaining a proper k-colouring of G, is also considered. These questions can be considered as having a bearing on certain mathematical and ‘real-world’ problems. In particular, being able to recolour any colouring of a given graph to any other colouring is a necessary pre-requisite for the method of sampling colourings known as Glauber dynamics. The results presented in this thesis may also find application in the context of frequency reassignment: given that the problem of assigning radio frequencies in a wireless communications network is often modelled as a graph colouring problem, the task of re-assigning frequencies in such a network can be thought of as a graph recolouring problem. Throughout the thesis, the emphasis is on the algorithmic aspects and the computational complexity of the questions described above. In other words, how easily, in terms of computational resources used, can they be answered? Strong results are obtained for the k = 3 case of the first question, where a characterisation theorem for 3-mixing graphs is given. For the second question, a dichotomy theorem for the complexity of the problem is proved: the problem is solvable in polynomial time for k ≤ 3 and PSPACE-complete for k ≥ 4. In addition, the possible length of a shortest sequence of recolourings between two colourings is investigated, and an interesting connection between the tractability of the problem and its underlying structure is established. Some variants of the above problems are also explored.",
+      "locations": [
+        {
+          "url": "http://etheses.lse.ac.uk/131/1/Cereceda_Mixing_graph_colourings.pdf",
+          "pdf": "http://etheses.lse.ac.uk/131/1/Cereceda_Mixing_graph_colourings.pdf",
+          "source": "London School of Economics and Political Science Theses Online (London School of Economics and Political Science)"
+        },
+        {
+          "url": "https://researchonline.lse.ac.uk/id/eprint/131216/1/Cereceda_Mixing_graph_colourings.pdf",
+          "pdf": "https://researchonline.lse.ac.uk/id/eprint/131216/1/Cereceda_Mixing_graph_colourings.pdf",
+          "source": "London School of Economics and Political Science Research Online (London School of Economics and Political Science)"
+        },
+        {
+          "url": "http://uilis.unsyiah.ac.id/opentheses/items/show/28613",
+          "pdf": "http://uilis.unsyiah.ac.id/opentheses/items/show/28613",
+          "source": "UPT. Syiah Kuala University Library (Syiah Kuala University)"
+        },
+        {
+          "url": "http://hdl.handle.net/10068/956347",
+          "pdf": null,
+          "source": "OpenGrey (Institut de l'Information Scientifique et Technique)"
+        },
+        {
+          "url": "http://etheses.lse.ac.uk/131/1/Cereceda_Mixing_graph_colourings.pdf",
+          "pdf": null,
+          "source": null
+        }
+      ],
+      "reference_count": 46
+    },
+    {
+      "id": "https://openalex.org/W2964121303",
+      "title": "Topological structure and entropy of mixing graph maps",
+      "date": "2011-11-02",
+      "doi": "https://doi.org/10.1017/etds.2013.6",
+      "citations": 19,
+      "authors": [
+        "Harańczyk, Grzegorz",
+        "Dominik Kwietniak",
+        "Piotr Oprocha"
+      ],
+      "abstract": "Let $\\mathcal{P}_G$ be the family of all topologically mixing, but not exact self-maps of a topological graph $G$. It is proved that the infimum of topological entropies of maps from $\\mathcal{P}_G$ is bounded from below by $(\\log 3/ Λ(G))$, where $Λ(G)$ is a constant depending on the combinatorial structure of $G$. The exact value of the infimum on $\\mathcal{P}_G$ is calculated for some families of graphs. The main tool is a refined version of the structure theorem for mixing graph maps. It also yields new proofs of some known results, including Blokh's theorem (topological mixing implies specification property for maps on graphs).",
+      "locations": [
+        {
+          "url": "https://arxiv.org/abs/1111.0566",
+          "pdf": "https://arxiv.org/pdf/1111.0566",
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 37
+    },
+    {
+      "id": "https://openalex.org/W2127503167",
+      "title": "Measuring the mixing time of social graphs",
+      "date": "2010-11-01",
+      "doi": "https://doi.org/10.1145/1879141.1879191",
+      "citations": 192,
+      "authors": [
+        "Aziz Mohaisen",
+        "Aaram Yun",
+        "Yongdae Kim"
+      ],
+      "abstract": "Social networks provide interesting algorithmic properties that can be used to bootstrap the security of distributed systems. For example, it is widely believed that social networks are fast mixing, and many recently proposed designs of such systems make crucial use of this property. However, whether real-world social networks are really fast mixing is not verified before, and this could potentially affect the performance of such systems based on the fast mixing property. To address this problem, we measure the mixing time of several social graphs, the time that it takes a random walk on the graph to approach the stationary distribution of that graph, using two techniques. First, we use the second largest eigenvalue modulus which bounds the mixing time. Second, we sample initial distributions and compute the random walk length required to achieve probability distributions close to the stationary distribution. Our findings show that the mixing time of social graphs is much larger than anticipated, and being used in literature, and this implies that either the current security systems based on fast mixing have weaker utility guarantees or have to be less efficient, with less security guarantees, in order to compensate for the slower mixing.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1145/1879141.1879191",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.294.8260",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.397.1086",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "https://dl.acm.org/citation.cfm?doid=1879141.1879191",
+          "pdf": null,
+          "source": "Scholarworks@UNIST (Ulsan National Institute of Science and Technology)"
+        }
+      ],
+      "reference_count": 35
+    },
+    {
+      "id": "https://openalex.org/W2942681667",
+      "title": "MixHop: Higher-Order Graph Convolutional Architectures via Sparsified Neighborhood Mixing",
+      "date": "2019-04-30",
+      "doi": "https://doi.org/10.48550/arxiv.1905.00067",
+      "citations": 270,
+      "authors": [
+        "Sami Abu-El-Haija",
+        "Bryan Perozzi",
+        "Amol Kapoor",
+        "Nazanin Alipourfard",
+        "Kristina Lerman",
+        "Hrayr Harutyunyan",
+        "Greg Ver Steeg",
+        "Aram Galstyan"
+      ],
+      "abstract": "Existing popular methods for semi-supervised learning with Graph Neural Networks (such as the Graph Convolutional Network) provably cannot learn a general class of neighborhood mixing relationships. To address this weakness, we propose a new model, MixHop, that can learn these relationships, including difference operators, by repeatedly mixing feature representations of neighbors at various distances. Mixhop requires no additional memory or computational complexity, and outperforms on challenging baselines. In addition, we propose sparsity regularization that allows us to visualize how the network prioritizes neighborhood information across different graph datasets. Our analysis of the learned architectures reveals that neighborhood mixing varies per datasets.",
+      "locations": [
+        {
+          "url": "http://arxiv.org/abs/1905.00067",
+          "pdf": "https://arxiv.org/pdf/1905.00067",
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://arxiv.org/pdf/1905.00067",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://doi.org/10.48550/arxiv.1905.00067",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "http://proceedings.mlr.press/v97/abu-el-haija19a/abu-el-haija19a.pdf",
+          "pdf": null,
+          "source": "International Conference on Machine Learning"
+        }
+      ],
+      "reference_count": 23
+    },
+    {
+      "id": "https://openalex.org/W2125424499",
+      "title": "Mixing time of exponential random graphs",
+      "date": "2011-11-23",
+      "doi": "https://doi.org/10.1214/10-aap740",
+      "citations": 109,
+      "authors": [
+        "Shankar Bhamidi",
+        "Guy Bresler",
+        "Allan Sly"
+      ],
+      "abstract": "A variety of random graph models has been developed in recent years to study a range of problems on networks, driven by the wide availability of data from many social, telecommunication, biochemical and other networks. A key model, extensively used in sociology literature, is the exponential random graph model. This model seeks to incorporate in random graphs the notion of reciprocity, that is, the larger than expected number of triangles and other small subgraphs. Sampling from these distributions is crucial for parameter estimation hypothesis testing and more generally for understanding basic features of the network model itself. In practice, sampling is typically carried out using Markov chain Monte Carlo, in particular, either the Glauber dynamics or the Metropolis–Hastings procedure. In this paper we characterize the high and low temperature regimes of the exponential random graph model. We establish that in the high temperature regime the mixing time of the Glauber dynamics is Θ(n2 log n), where n is the number of vertices in the graph; in contrast, we show that in the low temperature regime the mixing is exponentially slow for any local Markov chain. Our results, moreover, give a rigorous basis for criticisms made of such models. In the high temperature regime, where sampling with Markov chain Monte Carlo is possible, we show that any finite collection of edges is asymptotically independent; thus, the model does not possess the desired reciprocity property and is not appreciably different from the Erdős–Rényi random graph.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1214/10-aap740",
+          "pdf": null,
+          "source": "The Annals of Applied Probability"
+        },
+        {
+          "url": "http://projecteuclid.org/euclid.aoap/1322057318",
+          "pdf": null,
+          "source": "Project Euclid (Cornell University)"
+        }
+      ],
+      "reference_count": 21
+    },
+    {
+      "id": "https://openalex.org/W2083412275",
+      "title": "The Fastest Mixing Markov Process on a Graph and a Connection to a Maximum Variance Unfolding Problem",
+      "date": "2006-01-01",
+      "doi": "https://doi.org/10.1137/s0036144504443821",
+      "citations": 178,
+      "authors": [
+        "Jun Sun",
+        "Stephen Boyd",
+        "Lin Xiao",
+        "Persi Diaconis"
+      ],
+      "abstract": "We consider a Markov process on a connected graph, with edges labeled with transition rates between the adjacent vertices. The distribution of the Markov process converges to the uniform distribution at a rate determined by the second smallest eigenvalue $\\lambda_2$ of the Laplacian of the weighted graph. In this paper we consider the problem of assigning transition rates to the edges so as to maximize $\\lambda_2$ subject to a linear constraint on the rates. This is the problem of finding the fastest mixing Markov process (FMMP) on the graph. We show that the FMMP problem is a convex optimization problem, which can in turn be expressed as a semidefinite program, and therefore effectively solved numerically. We formulate a dual of the FMMP problem and show that it has a natural geometric interpretation as a maximum variance unfolding (MVU) problem, , the problem of choosing a set of points to be as far apart as possible, measured by their variance, while respecting local distance constraints. This MVU problem is closely related to a problem recently proposed by Weinberger and Saul as a method for “unfolding” high‐dimensional data that lies on a low‐dimensional manifold. The duality between the FMMP and MVU problems sheds light on both problems, and allows us to characterize and, in some cases, find optimal solutions.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1137/s0036144504443821",
+          "pdf": null,
+          "source": "SIAM Review"
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.117.3906",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.4.3644",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "https://authors.library.caltech.edu/6632/",
+          "pdf": null,
+          "source": "CaltechAUTHORS (California Institute of Technology)"
+        }
+      ],
+      "reference_count": 30
+    }
+  ]
+}

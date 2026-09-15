@@ -1,0 +1,28 @@
+{
+  "index": 17,
+  "query": "zero sum subsequences same length",
+  "url": "https://api.openalex.org/works?filter=title.search%3Azero+sum+subsequences+same+length&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 1,
+  "results": [
+    {
+      "id": "https://openalex.org/W7167249193",
+      "title": "The structure of sequences with zero-sum subsequences of the same length on finite abelian groups of rank two",
+      "date": "2026-03-07",
+      "doi": "https://doi.org/10.4064/aa251008-9-4",
+      "citations": 0,
+      "authors": [
+        "Wanzhen Hui",
+        "Xue Li"
+      ],
+      "abstract": "Let G be an additive finite abelian group, and let disc(G) denote the smallest positive integer t with the property that every sequence S over G with length |S|≥t contains two nonempty zero-sum subsequences of distinct lengths. In recent years, Gao et al. established the exact value of disc(G) for all finite abelian groups of rank 2 and resolved the corresponding inverse problem for the group Cn⊕Cn. In this paper, we characterize the structure of sequences S over G=Cn⊕Cnm (where m≥2) when |S|=disc(G)−1 and all nonempty zero-sum subsequences of S have the same length.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.4064/aa251008-9-4",
+          "pdf": "https://www.impan.pl/shop/en/publication/transaction/download/product/116487?download.pdf",
+          "source": "Acta Arithmetica"
+        }
+      ],
+      "reference_count": 0
+    }
+  ]
+}

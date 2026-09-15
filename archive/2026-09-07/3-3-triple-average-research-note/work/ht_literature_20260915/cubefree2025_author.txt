@@ -1,0 +1,1284 @@
+     EXPLICIT BURGESS INEQUALITIES FOR CUBEFREE MODULI
+
+      ELCHIN HASANALIZADE, HUA LIN, GREG MARTIN, ANDRADIS LUNA MARTÍNEZ,
+                             AND ENRIQUE TREVIÑO
+
+       Abstract. Burgess proved that for χq a primitive Dirichlet character modulo q with q
+                                                    r+1
+                                             1− r1 4r2 +ϵ
+                  P
+       cubefree,    M <n≤M +N χq (n) ≪ N          q       for all integers r ≥ 1. More recently, explicit
+       versions with prime moduli q were computed by Booker, McGown, Treviño, and Francis,
+       with applications to finding the least k-th power residue, and bounding the size of Dirichlet
+       L-functions just to name a few. Jain-Sharma, Khale, and Liu proved an explicit estimate
+       for r = 2. We improve their explicit constant for r = 2 and compute an explicit Burgess
+       bound for cubefree q for r ≥ 3.
+
+
+
+
+                                            1. Introduction
+  Let q be a positive integer. Given a primitive Dirichlet character χ (mod q) and integers M
+and N ≥ 1, we consider the character sum
+                                                  X
+                                 Sχ (M, N ) =            χ(n).
+                                                      M <n≤M +N
+
+  Burgess, in a series of papers [2, 3, 4, 5, 6], proved
+                                                                 1    r+1
+                                      |Sχ (M, N )| ≪ N 1− r q 4r2 +ε ,
+for r = 2, 3 and for any r ≥ 4 when q is cubefree. In recent years, there has been progress in
+obtaining explicit estimates for Sχ (M, N ). In the case when q is prime, Booker [1] proved
+a result for χ quadratic, and McGown [13] and Treviño [16] made improvements for general
+χ. The current best result for q prime and 2 ≤ r ≤ 10 is due to Francis [9]. An example of
+an explicit Burgess inequality for q = p prime is the following uniform bound (from [16])
+                                                             1       r+1    1
+                                 |Sχ (M, N )| ≤ 2.74N 1− r p 4r2 (log p) r ,
+for all integers r ≥ 2 and for all primes p ≥ 107 .
+   These explicit results have been used to determine the class number of a quadratic field of
+large discriminant [1], to bound the least quadratic non-residue modulo a prime [9, 16], to
+classify Norm-Euclidean cyclic fields [13], to bound the least primitive root modulo a prime
+[7], to give an explicit bound for L(1, χ) in the case of quadratic characters [12], to compute
+the rank of an elliptic curve with large rank [8], among other applications.
+   In the case of composite moduli q, the only explicit result is the following due to Jain-
+Sharma, Khale, and Liu [11].
+                                                                                9.594                       5
+Theorem A. Let χ be a primitive character mod q with q ≥ ee . Then, for N ≤ q 8 ,
+                                                                        21
+                                 √
+                                                                
+                                       3     1
+                                                    ω(q)
+                                                            34    q
+              |Sχ (M, N )| ≤ 9.07 N q 16 log 4 (q) 2 τ (q)                  ,
+                                                                  ϕ(q)
+                                                       1
+where τ (q) is the number of divisors of q and ω(q) is the number of distinct prime factors
+of q.
+  In other words, the only explicit result for composite moduli q is for the case r = 2. We
+improve this result for r = 2 and q large enough, and we also generalize the result to all
+r ≥ 3 when q is cubefree.
+  To state our theorem, we use the following standard labels of arithmetic functions: let
+ω(q) denote the number of distinct prime factors of q, let ϕ(q) be Euler’s totient function,
+and let τk (q) denote the number of ways to write q as an ordered product of k integers, so
+that τ (n) = τ2 (n) is the ordinary number-of-divisors function. Also define
+                                                         2r−1      
+                                                     τ (q)         q
+(1)                          mr (q) = min τ2r (q),               ,     .
+                                                       2           2r
+Theorem 1.1. Let r ≥ 2 be an integer and χ be a primitive Dirichlet character modulo q.
+Let C(r) be defined as in Table 1. Let a(r) = 2 log 2 (3.0758r + 1.38402 log(4r) − 1.5379).
+                             a(r)
+Then, for q ≥ max{101145 , ee }, if r = 2 or q is cubefree, we have
+                                                                                     r1
+                                  1− r1 r+1          1
+                                                           ω(q)
+                                                                    2r1 − 12    q
+           |Sχ (M, N )| ≤ C(r)N        q 4r (log q) 2r (4r) mr (q)
+                                           2                              2r
+                                                                                          .
+                                                                                ϕ(q)
+  Furthermore, as q → ∞, we have a constant D(r) from Table 1 such that
+                                                                                      r1
+                                    1− r1 r+1          1
+                                                             ω(q)
+                                                                     2r1 − 12    q
+      |Sχ (M, N )| ≤ (D(r) + o(1))N      q 4r (log q) 2r (4r) mr (q)
+                                             2                             2r
+                                                                                           .
+                                                                                 ϕ(q)
+
+                                   r     C(r) D(r)
+                                   2 15.219 8.362
+                                   3    5.359 4.581
+                                   4    3.671 3.396
+                                   5    2.953 2.811
+                                   6    2.549 2.462
+                                   7    2.290 2.229
+                                   8    2.108 2.063
+                                   9    1.973 1.938
+                                 ≥10 1.869 1.841
+               Table 1. Constants in the Burgess inequality for values of r.
+
+
+  The theorem above requires q to be very large, so we have the following theorem which is
+weaker asymptotically but works for smaller values of q.
+Theorem 1.2. Let χ be a primitive Dirichlet character modulo q . Let C(r) be defined as
+in Table 1. Then, for q ≥ max{101145 , 24r−2 }, if r = 2 or q is cubefree, we have
+                                                                                r1
+                                  1− r1 r+1           1
+                                                            ω(q)
+                                                                    2r1    q
+             |Sχ (M, N )| ≤ C(r)N      q 4r2 (log q) 2r (4r) mr (q)                  .
+                                                                           ϕ(q)
+  To prove Theorems 1.1 and 1.2 we need the following explicit Weil-type inequality, which
+we consider of independent interest.
+                                                2
+Theorem 1.3 (Weil-type inequality). Let r ≥ 2 and q be positive integers such that r = 2
+or q is cubefree. Let χ be a primitive Dirichlet modulo q. Let B ≥ 2 be a real number. Then
+                     q                         2r
+                     X X                                                    √    r2r r
+                                    χ(x + b)        ≤ 2r(4r)ω(q) B 2r mr (q) q +    B q.
+                     x=1 1≤b≤B
+                                                                                 r!
+
+   The paper is organized as follows. We prove Theorem 1.3 in Section 2. In Section 3 we
+describe the overall plan for the proofs of our main theorems following the approach for
+the explicit Burgess inequality detailed in [10, Theorem 12.6]. We prove other technical
+lemmas in Section 4, some important bounds in Section 5, and we prove our main theorems
+in Section 6.
+
+Notation. Most of the notation in the paper is standard, for example, ϕ(n) is Euler’s totient
+function, for a finite set S, #S is the number of elements of S, ⌊x⌋ is the floor of x, for a pair
+of integers a, b, (a, b) = gcd(a, b). We also use Landau’s O notation, i.e., f (x) = O(g(x))
+if there exists a positive constant C such that |f (x)| ≤ C|g(x)| for large enough x. A
+notation we use that is less well-known is O∗ . We say that f (x) = O∗ (g(x)) if for all x ≥ x0 ,
+|f (x)| ≤ |g(x)|.
+
+                                 2. Explicit Weil-type inequality
+  This section can be read independently from the rest of the paper. Let r ≥ 2 be an integer,
+B ≥ 2 be a real number, and
+                                                      2r−1      
+                                                  τ (q)         q
+(2)                       mr (q) = min τ2r (q),               ,     .
+                                                    2           2r
+Furthermore, given integers b1 , b2 , . . . , b2r , we define
+                                                    Y
+                                        Aj =            (bi − bj ) .
+                                                       1≤i≤2r
+                                                         i̸=j
+
+  Burgess [2, Lemma 7], [5, Lemma 8] proved the following analogue of Weil’s inequality
+that holds for composite moduli:
+Lemma 2.1 (Burgess). Let b1 , b2 , . . . , b2r be integers such that at least r + 1 of them are
+distinct. Let f1 (x) = (x − b1 )(x − b2 ) · · · (x − br ) and f2 (x) = (x − br+1 )(x − br+2 ) · · · (x − b2r ).
+Let χ be a primitive Dirichlet mod q. If r = 2 or q is cubefree, then there exists 1 ≤ j ≤ 2r
+with Aj ̸= 0 such that
+                           X                        (ϕ(q)−1)                  √
+                                    χ(f1 (x) · f2              (x)) ≤ (4r)ω(q) q(Aj , q),
+                          x mod q
+
+where (Aj , q) is the greatest common divisor of Aj and q. In particular,
+                                                                       2r
+                         X                   (ϕ(q)−1)
+                                                                       X            √
+                                 χ(f1 (x) · f2        (x))         ≤        (4r)ω(q) q(Aj , q).
+                       x mod q                                          j=1
+                                                                       Aj ̸=0
+                                                               3
+Definition 2.2. Define
+                      X                 X                   X           
+          sq (r, B) =                               ···              min (Aj , q) : 1 ≤ j ≤ 2r, Aj ̸= 0 .
+                             1≤b1 ≤B 1≤b2 ≤B              1≤b2r ≤B
+
+First, observe that from the trivial bound
+                               X X             X                                  X
+                  sq (r, B) ≤              ···                                          (Aj , q) ≤ B 2r q.
+                                      1≤b1 ≤B 1≤b2 ≤B              1≤b2r ≤B 1≤j≤2r
+                                                                             Aj ̸=0
+
+  Now, the following lemmas give complementary upper bounds for this expression.
+Lemma 2.3. Let sq (r, B) be defined as in Definition 2.2. Then
+                                                                     τ (q) 2r−1 2r
+                                             sq (r, B) ≤ 2r                     B .
+                                                                       2
+Proof. Using the bound
+                                              Y                                  Y
+                            (Aj , q) =                    (bi − bj ), q       ≤            (bi − bj , q),
+                                              1≤i≤2r                              1≤i≤2r
+                                                i̸=j                                i̸=j
+
+and exchanging the order of summation, we have
+(3)
+                X             X                                X              X               Y
+ sq (r, B) ≤                                 (Aj , q) ≤                                             (bi − bj , q)
+               1≤j≤2r 1≤b1 ,b2 ,...,b2r ≤B                    1≤j≤2r 1≤b1 ,b2 ,...,b2r ≤B 1≤i≤2r
+                            Aj ̸=0                                         Aj ̸=0           i̸=j
+                                                               X          X                   X                     Y
+                                                          =                                                             (bi − bj , q)
+                                                              1≤j≤2r 1≤bj ≤B 1≤b1 ,...,bj−1 ,bj+1 ,...,b2r ≤B 1≤i≤2r
+                                                                                / 1 ,...,bj−1 ,bj+1 ,...,b2r } i̸=j
+                                                                             bj ∈{b
+
+                                                               X          X  X                             2r−1
+                                                          =                                 (b − bj , q)
+                                                              1≤j≤2r 1≤bj ≤B       1≤b≤B
+                                                                                    b̸=bj
+
+                                                                   X  X                        2r−1
+                                                          = 2r                        (b − a, q)      .
+                                                                 1≤a≤B        1≤b≤B
+                                                                               b̸=a
+                        P
+Using the identity          d|n ϕ(d) = n, we write the inner sum as
+
+  X                       X        X                          X               X             X             ⌊B⌋       X ϕ(d)
+         (b − a, q) =                         ϕ(d) =                 ϕ(d)             1≤           ϕ(d)       = ⌊B⌋        ,
+ 1≤b≤B                   1≤b≤B d|(b−a,q)                                    1≤b≤B
+                                                                                                           d           d
+                                                             d|q                             d|q                         d|q
+  b̸=a                    b̸=a                             d≤B−1              b̸=a          d≤B                         d≤B
+                                                                             d|b−a
+                                                                                  √                  √
+where since the divisors of q pair up on either side of                               q and B <           q,
+                                             X ϕ(d)                    X            ⌊B⌋
+(4)                                 ⌊B⌋                       ≤ ⌊B⌋           1≤        τ (q).
+                                                     d                               2
+                                              d|q                       d|q
+                                             d≤B                       d≤B
+                                                                   4
+Putting inequalities (3) and (4) together,
+                               X  X                 2r−1
+                sq (r, B) ≤ 2r             (b − a, q)
+                                         1≤a≤B        1≤b≤B
+                                                       b̸=a
+                                           X  ⌊B⌋              2r−1             2r−1
+                                                                             τ (q)
+                                 ≤ 2r                      τ (q)      = 2r               ⌊B⌋2r ,
+                                         1≤a≤B
+                                                         2                     2
+
+as stated in the lemma.                                                                                                                           □
+  We bound the sum sq (r, B) below without using the initial inequality on the gcd in
+Lemma 2.3.
+Lemma 2.4. Let sq (r, B) be defined as in Definition 2.2. Then
+                                                 sq (r, B) ≤ 2rB 2r τ2r (q).
+                                                          P
+Proof. Exchanging the sum as before and using the identity d|n ϕ(d) = n,
+                     X       X                  X         X       X
+         sq (r, B) ≤                 (Aj , q) =                        ϕ(d)
+                          1≤j≤2r 1≤b1 ,b2 ,...,b2r ≤B                         1≤j≤2r 1≤b1 ,b2 ,...,b2r ≤B d|(Aj ,q)
+                                       Aj ̸=0                                              Aj ̸=0
+                                                                               X          X                         X
+                                                                         ≤                        ϕ(d)                          1.
+                                                                              1≤j≤2r     d|q             1≤b1 ,b2 ,...,b2r ≤B
+                                                                                       d≤B 2r−1                Aj ̸=0
+                                                                                                                d|Aj
+
+Let d1 · · · d2r be an ordered factorization of d with dj = 1, then d | Aj if di | (bi − bj ) for
+each 1 ≤ i ≤ 2r. Every inner summand arises in this way for at least one such ordered
+factorization, therefore
+  X X                     X             X X               X      X       X             X
+                 ϕ(d)             1≤                ϕ(d)                       ···             1.
+1≤j≤2r     d|q          1≤b1 ,b2 ,...,b2r ≤B       1≤j≤2r       d|q                  1≤bj ≤B d1 ···d2r =d 1≤b1 ≤B                1≤b2r ≤B
+         d≤B 2r−1             Aj ̸=0                          d≤B 2r−1                           dj =1      b1 ̸=bj                b2r ̸=bj
+                               d|Aj                                                                      d1 |(b1 −bj )          d2r |(b2r −bj )
+
+Note that there are 2r − 1 inner summands with bj fixed. Bounding each inner summand by
+⌊B⌋
+    ,
+ di
+                    X X              X     X         X         X
+       sq (r, B) ≤              ϕ(d)                      ···         1
+                        1≤j≤2r     d|q                1≤bj ≤B d1 ···d2r =d 1≤b1 ≤B                 1≤b2r ≤B
+                                 d≤B 2r−1                         dj =1      b1 ̸=bj                 b2r ̸=bj
+                                                                          d1 |(b1 −bj )           d2r |(b2r −bj )
+                         X          X                   X            X  Y ⌊B⌋
+(5)                 ≤                          ϕ(d)
+                        1≤j≤2r                        1≤b ≤B d ···d =d 1≤i≤2r
+                                                                              di
+                                   d|q                    j      1       2r
+                                 d≤B 2r−1                            dj =1         i̸=j
+                                   X           X        ϕ(d) X                   X                              ϕ(d)
+                    = ⌊B⌋2r                                          1 = 2r⌊B⌋2r                                     τ2r−1 (d).
+                                 1≤j≤2r
+                                                         d d ···d =d                                             d
+                                            d|q                 1        2r                          d|q
+                                          d≤B 2r−1                   dj =1                         d≤B 2r−1
+                                                                     5
+Since
+                     X ϕ(d)                           Y         p−1
+                                                                                              
+                                                                     τ2r (pk ) − 1
+                                                                                  
+                                       τ2r−1 (d) =            1+                                    ≤ τ2r (q),
+                               d                                  p
+                      d|q                            pk ∥q
+
+combining with inequality (5), we obtain
+                               X        X
+                  sq (r, B) ≤                                            (Aj , q) ≤ 2r⌊B⌋2r τ2r (q),
+                                           1≤j≤2r 1≤b1 ,b2 ,...,b2r ≤B
+                                                        Aj ̸=0
+
+as stated above.                                                                                                   □
+  Using the Lemmas above, we prove the explicit Weil-type inequality.
+Proof of Theorem 1.3. As done in the proof of Theorem 1.1 in [17], letting f1 (x) and f2 (x)
+be defined as in Lemma 2.1, we have
+                  q                            2r
+                  X X                                         X              X                  (ϕ(q)−1)
+                                χ(x + b)            =                                  χ(f1 (x)f2          (x)).
+                  x=1 b∈B                               1≤b1 ,b2 ,...,b2r ≤B x mod q
+
+Let (b1 , b2 , . . . , b2r ) be a good tuple if at least r + 1 of them are distinct. Let B1 be the set
+of good tuples and B2 be the rest. By Lemma 2.1,
+                               X       X              (ϕ(q)−1)             √
+                                            χ(f1 (x)f2         ) ≤ (4r)ω(q) qsq (r, B).
+                        (b1 ,...,b2r )∈B1 x mod q
+
+Now using Lemmas 2.3 and 2.4, we obtain the upper bound
+               X        X             (ϕ(q)−1)                      √
+(6)                          χ(f1 (x)f2        ) ≤ 2r(4r)ω(q) mr (q) q⌊B⌋2r ,
+                   (b1 ,...,b2r )∈B1 x mod q
+
+where mr (q) is given in (2).
+  For the other tuples B2 , we use the trivial bound,
+                                X              (ϕ(q)−1)
+                                     χ(f1 (x)f2         (x)) ≤ q.
+                                            x mod q
+
+If (b1 , b2 , . . . , b2r ) ∈ B2 , then it has at most r distinct values. There are ⌊B⌋
+                                                                                         
+                                                                                       r
+                                                                                           ways of choosing
+the r values and each bi has r choices to make, therefore,
+                                                                                   r2r ⌊B⌋r
+                                                                              
+                                                                        2r ⌊B⌋
+                            X          X              (ϕ(q)−1)
+(7)                                          χ(f1 (x)f2        (x)) ≤ r         q≤          q.
+                                     x mod q
+                                                                            r          r!
+               (b1 ,b2 ,...,b2r )∈B2
+
+Combining the bounds in (6) and (7), we get the desired upper bound in the Weil-type
+inequality.                                                                       □
+
+                                                    3. General setup
+   Let r ≥ 2, N be positive integers, and let q be a positive integer that is cubefree when
+r ≥ 3 for the remainder of the paper. Given a primitive Dirichlet character χ (mod q) and
+integers M and N ≥ 1, we consider the character sum
+                                                X
+                               Sχ (M, N ) =           χ(n).
+                                                                   M <n≤M +N
+                                                                    6
+Given an integer r ≥ 2, we use induction to prove a bound of the form
+                                                                                r+1        1
+(8)         |Sχ (M, N )| ≤ Eq,r (N ),            where Eq,r (N ) = CN 1−1/r q 4r2 (log q) 2r T (q),
+where C ≥ 1 is a constant to be determined later, mr (q) is defined in (1), and
+              
+               (4r)ω(q) m (q)( 2r1 − 2r12 ) q 1/r under the conditions of Theorem 1.1,
+                          r                   ϕ(q)
+(9)   T (q) =                     1
+               (4r)ω(q) m (q)( 2r ) q 1/r         under the conditions of Theorem 1.2.
+                          r              ϕ(q)
+                          1       1
+   We take 1 ≤ N ≤ q 4 + 4r as the base case. In this case, the inequality (8) follows from the
+trivial bound |Sχ (M, N )| ≤ N , since
+                                                               r+1       1
+                                          N ≤ CN 1−1/r q 4r2 (log q) 2r T (q)
+                                                         r+1         1
+                                      =⇒ N 1/r ≤ Cq 4r2 (log q) 2r T (q)
+                                                r+1           1       r
+                                      =⇒ N ≤ q 4r C(log q) 2r T (q) ,
+             1   1                           1
+when N ≤ q 4 + 4r (because C(log q) 2r T (q) ≥ 1).
+Therefore, in the induction step, we assume
+                      1       1
+(10)       for N > q 4 + 4r , the bound in (8) holds for all smaller positive integers.
+  We use the following notation for the remainder of this paper.
+Definition 3.1. For some real numbers A, B ≥ 2, let
+    • A = {1 ≤ a ≤ A : a ∈ Z, (a, q) = 1},
+    • B = {1 ≤ b ≤ B : b ∈ Z},
+    • vA (x) = #{a ∈ A, n ∈ (M, M + N ] : ān ≡ x (mod q)}, where ā denotes the multi-
+       plicative inverse of a modulo q.
+  We prove the following lemma using the notations in (8), (9), and Definition 3.1.
+Lemma 3.2. For positive integers r ≥ 2 and q, where q is cubefree for r ≥ 3, we have,
+under the inductive hypothesis in (10),
+                                         !1− r1            ! 2r1  q                    2r1
+                                q                q                                  2r
+                       1       X                X
+                                                     2
+                                                                  X    X
+    |Sχ (M, N )| ≤                 vA (x)           vA (x)                χ (x + b) 
+                   #A · #B x=1                  x=1                x=1 b∈B
+
+                                2C           (⌊B⌋ + 1)2−1/r r+12         1
+                      +               A1−1/r               q 4r (log q) 2r T (q),
+                              2 − 1/r             #B
+for some constant C ≥ 1.
+Proof. Under the inductive hypothesis in (10), we have, by equation (28) in [16],
+                                q
+                         1     X           X                 1     XX
+(11)    |Sχ (M, N )| ≤             vA (x)       χ(x + b) +                 2Eq,r (ab),
+                       #A · #B x=1        1≤b≤B
+                                                           #A · #B a∈A b∈B
+
+where Eq,r (ab) is defined as in (8).
+                                                           7
+  Since Eq,r (N ) is an increasing function of N ,
+            1      XX                      1     XX                   2 X
+                           2Eq,r (ab) ≤                 2Eq,r (Ab) =        Eq,r (Ab),
+       #A · #B a∈A b∈B                  #A · #B a∈A b∈B              #B b∈B
+and by definition,
+                        2 X                2 X                r+1          1
+                              Eq,r (Ab) =        C(Ab)1−1/r q 4r2 (log q) 2r T (q)
+                       #B b∈B             #B b∈B
+                                          2C 1−1/r r+12         1
+                                                                        X
+                                        =    A    q 4r (log q) 2r T (q)      b1−1/r .
+                                          #B                            b∈B
+
+Since                             Z ⌊B⌋+1
+           X
+                      1−1/r                                (⌊B⌋ + 1)2−1/r − 1   (⌊B⌋ + 1)2−1/r
+                  b           ≤             t1−1/r dt =                       <                ,
+            b∈B                    1                            2 − 1/r            2 − 1/r
+we conclude that
+             1   XX                     2C           (⌊B⌋ + 1)2−1/r r+12         1
+(12)                     2Eq,r (ab) <         A1−1/r               q 4r (log q) 2r T (q).
+         #A · #B a∈A b∈B              2 − 1/r             #B
+  Therefore, combining (11), (12), and applying Hölder’s inequality, we get
+                                        !1− r1            ! 2r1  q                    2r1
+                               q                q                                  2r
+                      1       X                X
+                                                    2
+                                                                 X    X
+   |Sχ (M, N )| ≤                 vA (x)           vA (x)                χ (x + b) 
+                  #A · #B x=1                  x=1                x=1 b∈B
+
+                                    2C           (⌊B⌋ + 1)2−1/r r+12         1
+                              +           A1−1/r               q 4r (log q) 2r T (q),
+                                  2 − 1/r             #B
+as stated in the lemma.                                                                            □
+  In the next section, we handle the two sums involving vA .
+
+                                                     4. The vA sums
+  Recall from Definition 3.1 that for any real number A ≥ 2, A = {1 ≤ a ≤ A : a ∈
+Z, (a, q) = 1} and vA (x) = #{a ∈ A, n ∈ (M, M + N ] : ān ≡ x (mod q)}, where ā denotes
+the multiplicative inverse of a modulo q. We first prove the following lemma.
+Lemma 4.1. Let A and vA (x) be defined as in Definition 3.1. Then
+                                X
+                                      vA (x) = #A · N.
+                                               x (mod q)
+
+Proof. By definition,
+            X                            X          
+                  vA (x) =                         # a ∈ A, n ∈ (M, M + N ] : ān ≡ x (mod q) .
+          x (mod q)                    x (mod q)
+
+Summing over all x satisfying x ≡ ān (mod q), each ordered pair (a, n) with a ∈ A and
+n ∈ (M, M + N ] is counted exactly once. Therefore, we have the equality stated in the
+lemma.                                                                               □
+                                                             8
+Lemma 4.2. Let A and vA (x) be defined as in Definition 3.1. Then
+                    X                X X            N (a1 , a2 )
+                                                                  
+                                2
+                          vA (x) ≤            1+                    .
+                                    a ∈A a ∈A
+                                                   max{a1 , a2 }
+                          x (mod q)                       1    2
+
+
+Proof. This is the first displayed inequality under Equation (14) in [11].                                      □
+Lemma 4.3. For all integers d and N ≥ 2,
+                                                    36ζ ′ (2)
+                                                                               
+                                                                 ∗ log(N − 1) + 1
+ X µ(d)    6            1            X µ(d) log d
+                  ∗
+       2
+         = 2 +O                 and         2
+                                                  =      4
+                                                              +O                   .
+ d≤N
+     d    π           N − 1          d≤N
+                                          d           π                N − 1
+
+Proof. These equalities follow from evaluations of the corresponding infinite series and the
+usual bounding of the tail sum by the integral of a decreasing function.                  □
+Lemma 4.4. For all integers n and N ≥ 2, we have
+                                 X ϕ(n)                 6               2 log N + 2
+                                                    ≤       log N + δ +             ,
+                                 n≤N
+                                           n2           π 2                N −1
+
+           6    36ζ ′ (2)
+where δ =     −           ≈ 0.954422.
+           π2     π4
+                         P
+Proof. Since ϕ(n)/n = d|n µ(d)/d,
+             X ϕ(n)       X 1 X µ(d)                     X µ(d) X 1
+                      =                             =
+         n≤N
+                 n2       n≤N
+                                 n              d        d≤N
+                                                               d   n≤N
+                                                                          n
+                                     d|n
+                                                                    d|n
+                                                      X µ(d) X 1
+                                                    =
+                                                      d≤N
+                                                          d2       m
+                                                             m≤N/d
+                                                      X µ(d)    N
+                                                                         
+                                                                     ∗
+                                                    =         log + O (1)
+                                                      d≤N
+                                                          d2      d
+                                                                              X µ(d)         X µ(d) log d
+                                                    = (log N + O∗ (1))                   −                  .
+                                                                              d≤N
+                                                                                    d2       d≤N
+                                                                                                   d2
+
+By Lemma 4.3,
+                                                       36ζ ′ (2)
+                                                                               
+                                                                    ∗ log(N − 1) + 1
+  X ϕ(n)                         6          1
+                             ∗        ∗
+              = (log N + O (1)) 2 + O               −            +O
+  n≤N
+        n2                       π        N −1            π4              N −1
+                                           36ζ ′ (2) log N + 1
+                                      
+                             6      1
+              ≤ (log N + 1) 2 +          −          +
+                             π    N −1        π4       N −1
+which is the desired inequality.                                                                                □
+
+   The following proposition asymptotically improves the inequality used in [11] by a factor
+of 6/π 2 .
+                                                               9
+Proposition 4.5. Let A ≥ 2 be a real number, N ≥ 2 be an integer, and A, vA (x) be defined
+as in Definition 3.1. Then
+                                                                       
+                  X
+                             2     2          6             2 log A + 2
+                       vA (x) ≤ #A + 2AN        log A + δ +              ,
+                                             π2                A−1
+                x (mod q)
+
+where δ is defined in Lemma 4.4.
+Proof. Starting from Lemma 4.2,
+    X               X X         N (a1 , a2 )
+                                                           X X (a1 , a2 )
+                2
+          vA (x) ≤           1+                 = (#A)2 + N
+                   a ∈A a ∈A
+                                max{a1 , a2 }               a ∈A a ∈A
+                                                                      max{a1 , a2 }
+  x (mod q)          1       2                                                1        2
+
+                                                                                  X         X(a1 , a2 )
+                                                        ≤ (#A)2 + N                                       .
+                                                                              1≤a ≤A 1≤a ≤A
+                                                                                            max{a1 , a2 }
+                                                                                  1         2
+                                                             P
+In the remaining sum we use our beloved trick g =                  d|g ϕ(d) to obtain
+               X      X      (a1 , a2 )    X X          1         X
+                                         =                          ϕ(d)
+              1≤a ≤A 1≤a ≤A
+                            max{a1 , a2 } a ∈A a ∈A max{a1 , a2 }
+                1        2                 1        2                         d|(a1 ,a2 )
+                                           X                 X         X      1
+                                       =         ϕ(d)
+                                           d≤A              1≤a ≤A 1≤a ≤A
+                                                                          max{a1 , a2 }
+                                                               1         2
+                                                             d|a1      d|a2
+                                           X ϕ(d)             X              X            1
+                                       =
+                                           d≤A
+                                                    d                                 max{b1 , b2 }
+                                                            1≤b1 ≤A/d 1≤b2 ≤A/d
+                                            X ϕ(d)                 X          X  1
+                                       ≤2
+                                            d≤A
+                                                        d                 1≤b ≤b
+                                                                                 b1
+                                                              1≤b1 ≤A/d       2   1
+
+                                            X ϕ(d)                 X                  X ϕ(d)
+                                       =2                                 1 ≤ 2A                 .
+                                            d≤A
+                                                        d                                   d2
+                                                              1≤b1 ≤A/d               d≤A
+
+Now the proposition follows from Lemma 4.4.                                                                   □
+
+                                   5. Important bounds
+  As we can see in Lemma 3.2, we need to make some choices for A and B to get a Burgess
+inequality. The following lemmas guarantee that the A and B we pick later satisfy certain
+properties that are required in the proofs of Theorem 1.1 and Theorem 1.2.
+                                                                                                         a(r)
+Lemma 5.1. For r ≥ 2, let a(r) = 2 (3.0758r + 1.38402 log(4r) − 1.5379) log 2. If q ≥ ee                        ,
+then
+                                                         1
+                                                   1 − 1r r
+                                                 
+                                         2−2/r 2
+                            B1 (r, q) ≥ 2      r              ,
+                                                     r!
+where
+                                                              1/r
+                                       1
+                                    2 2r         r−1
+(13)                   B1 (r, q) = r q                              .
+                                           r!2r(4r)ω(q) mr (q)
+                                               10
+                              2r−1
+Proof. Since mr (q) ≤ τ (q)/2       by definition (1) we have
+                                                                      1/r
+                                                 22r−1 (r − 1)
+                                         
+                                       1
+                                    2 2r
+                      B1 (r, q) ≥ r q                                      .
+                                           2r(r!)(4r)ω(q) (τ (q))2r−1
+We have 2ω(q) ≤ 21.38402 log q/ log log q by [14] and τ (q) ≤ 21.5379 log q/ log log q [14, Theorem 1],
+therefore
+                                                   1.38402 log 2 log (4r)
+                                      (4r)ω(q) ≤ q       log log q        ,
+and
+                                                               r1
+                                                     1 − 1r
+                                                 
+                                                                       1       1.38402(log 2) log (4r)   1.5379(2r−1) log 2
+                 B1 (r, q) ≥ 2     2−2/r 2
+                                             r                       q 2r −          r log log q
+                                                                                                       −     r log log q      .
+                                                       r!
+                   a(r)
+     When q ≥ ee          , we have
+                          1    1.38402(log 2) log (4r) 1.5379(2r − 1) log 2
+                             −                        −                     ≥ 0,
+                          2r         r log log q            r log log q
+so
+                                                                                              r1
+                                                                                    1 − 1r
+                                                                                
+                                                                 2−2/r 2
+                                             B1 (r, q) ≥ 2                 r
+                                                                                      r!
+as desired.                                                                                                                       □
+Lemma 5.2. Let r ≥ 2. If q ≥ 24r−2 , then
+                                                                                              r1
+                                                                                   1 − 1r
+                                                                               
+                                                               2−2/r 2
+                                          B2 (r, q) ≥ 2                    r                         ,
+                                                                                     r!
+where
+                                                                                       1/r
+                                                                 2     1       r−1
+(14)                                           B2 (r, q) = r q        2r                        .
+                                                                               r!2r
+Proof. Indeed, for q ≥ 24r−2 ,
+                                                          1/r                                            r1
+                                                                                            1 − 1r
+                                                                                       
+                                         1       r−1
+                                 r2 q   2r                       ≥ 22−2/r r2                                    .
+                                                 r!2r                                         r!
+                                                                                                                                  □
+Lemma 5.3. For integers r, q ≥ 2, we have
+                                                                                    1
+                                                       Bi (r, q) ≤ erq 2r ,
+for i = 1, 2 with the Bi (r, q) defined as in (13) and (14).
+                                             r r 1
+Proof. Using 2r(4r)r−1
+                                               
+                    ω(q) m (q) ≤ 1 and r! ≥  e
+                                                 , we get
+                          r
+
+                                                                                              r1
+                                 B1 (r, q)                       r−1                                      e
+                                           1     =                                                       ≤ .
+                                   r2 q   2r              r!(2r)(4r)ω(q) mr (q)                           r
+
+     1Since en = P∞  nk             nk   nn                nn
+                              Pn
+                 k=0 k! ≥       k=n k! = n! , we have n! ≥ en .
+                                                                     11
+             r r
+               
+Using r! ≥   e
+                 , we get
+                                                                    r1
+                                      B2 (q, r)           r−1               e
+                                          1       =                        ≤ .
+                                       q r2
+                                         2r               r!(2r)            r
+                                                                                                 □
+   To prove our main theorems, we also need some lower bounds on A. In particular, we
+need A ≥ 31, and A ≥ 2ω(q) q/ϕ(q). The following lemmas cover this for two different choices
+of A.
+                            1    1
+Lemma 5.4. Let N ≥ q 4 + 4r and r ≥ 2 be positive integers. Suppose
+                                                                κN
+                                              Ai (r, q) =                ,
+                                                               Bi (r, q)
+for i = 1, 2 where B1 (r, q) is defined as in (13), B2 (r, q) as in (14), and let
+                                                                  r/(r−1)
+                                    (Bi (r, q) − 1)Bi (r, q)1−1/r
+                                 
+(15)                        κ=                                             .
+                                      2r(Bi (r, q) + 1)2−1/r
+               a(r)
+Let t1 (r) = ee , where a(r) is defined as in Lemma 5.1 and t2 (r) = 24r−2 . Then, for
+q ≥ max 101145 , (10r)18 , ti (r) , we have
+                                                        2ω(q) q
+                                                               
+                                    Ai (r, q) ≥ max 31,          .
+                                                         ϕ(q)
+Proof. Since the proof is the same for i ∈ {1, 2}, let B = Bi (r, q) and A = Ai (r, q) for brevity.
+By Lemmas 5.1 and 5.2, we have B ≥ 4 for q ≥ ti (r). Therefore, for q ≥ ti (r),
+                                               r/(r−1)
+                                          36     1
+                                    κ≥                     .
+                                          125 2r
+  Then, by Lemma 5.3,
+                                                  1   1                      1   1
+                                   κN   κq 4 + 4r    36     q 4 − 4r
+                                A=    ≥       1   ≥                   .
+                                    B    erq 2r     125e r(2r)r/(r−1)
+The right-hand side exceeds 31 once
+                                                      4r/(r−1)
+                                    125e         r/(r−1)
+                          q ≥ 31           r(2r)                   ,
+                                     36
+and one can check that this right-hand side is at most max{1032 , (25r)8 } for all real r ≥ 2.
+  Moreover, we have 2ω(q) ≤ 21.38402 log q/ log log q by [14] and
+                             q                    2.50637
+                                 < eγ log log q +           < 2 log log q
+                            ϕ(q)                  log log q
+by [15, Theorem 15]. Thus it suffices to show that
+                            1     1
+                          q 4 − 4r                                                125e
+                              r/(r−1)
+                                      ≥ 21.38402 log q/ log log q · 2 log log q ·
+                       r(2r)                                                       36
+                                                          12
+or equivalently
+                                                                                                          ( 14 − 4r1 )−1
+                          1 1 −1
+                  r/(r−1) ( 4 − 4r )   1.38402 log q/ log log q
+                                                                                ( 1 − 1 )−1        125e
+     q ≥ r(2r)                         2                          · 2 log log q· 4 4r                                        .
+                                                                                                     36
+When 2 ≤ r ≤ 9 we check computationally that this inequality holds for q ≥ 101145 . For
+r ≥ 10, we use the checkable bound
+                                           ( 1 − 1 )−1
+                               r(2r)r/(r−1) 4 4r        ≤ 741r8
+                                 1 −1
+together with the trivial ( 41 − 4r ) ≤ 40   9
+                                                 to see that it suffices for
+                                                                      40/9 125e 40/9
+                                                                               
+                             8 1.38402 log q/ log log q
+                 q ≥ 741r 2                             · 2 log log q                 .
+                                                                             36
+We can computationally show the inequality
+                                  21.38402 log q/ log log q · 2 log log q ≤ q 1/8
+for q ≥ 101008 , and so it suffices to have
+                                                                            40/9
+                                               8     1/8 40/9
+                                                                     125e
+                                   q ≥ 741r q                                        ,
+                                                                       36
+                                                        125e 10
+                                                            
+which holds when q ≥ (10r)18 ≥ (741r8 )9/4               36
+                                                                .                                                                □
+                                               1    1
+Lemma 5.5. Let r, q ≥ 2 and N ≥ q 4 + 4r be integers and let i ∈ {1, 2}. Let A = Ai (r, q),
+B = Bi (r, q), κ be defined as in (15), and ti (r) be defined as in Lemma 5.4. Let
+                                      2                                        
+                        ϕ(q)     B2ω(q)−1
+                 κ q + N
+                                                                                  
+                                                    6                 2 log (A) + 2 
+            α=                              + 2κ     2
+                                                        log (A) + δ +               ,
+                               B                    π                     A−1
+
+                     ′
+where δ = π62 − 36ζπ4(2) ≈ 0.954422. Then, for q ≥ max{101145 , (10r)18 , ti (q)},
+                                                      4
+                                                   α ≤ κ log q.
+                                                      3
+                                                                                         ω(q)
+Proof. Since q ≥ max{101145 , (10r)18 , ti (q)}, we have A ≥ 2ϕ(q)q by Lemma 5.4. Using
+AB = κN , we obtain
+                     ω(q)−1
+                             2                ω(q)−1
+                                                       2              ω(q)−1
+                                                                               2
+              κϕ∗ + B2 N          A κϕ∗ + κ2 A              κA ϕ∗ + 2 A
+                                =                         =
+                    B                       κN                       N
+                                                             3   ∗
+                                                                   2
+                                  κ(Aϕ∗ + 2ω(q)−1 )2      κ 2 Aϕ         9κA      9κ
+                                =                       ≤             ≤         ≤    .
+                                          AN                 AN           4N       4
+  We also have A ≥ 31, which implies
+                                            2 log (A) + 2  3
+                                       δ+                 ≤ log A.
+                                                A−1        8
+                                                         13
+                            2
+  We may assume N ≤ q 3 because otherwise the Pólya–Vinogradov inequality produces a
+                         2
+better bound. Thus A ≤ q 3 , and for q ≥ 1058 ,
+                                                                    
+                    9κ                 6    3     9κ 4           3   6
+                α≤     + 2κ log A         +     ≤    + κ log q     +
+                     4                 π2 8        4    3        8 π2
+                                                 
+                    4             27       3    6     4
+                  = κ log q              + + 2 < κ log q.                          □
+                    3           16 log q 8 π          3
+
+                                6. Proof of Main Theorems
+   In this section, we prove Theorems 1.1 and 1.2. Recall that we let r ≥ 2, q be positive
+integers and i ∈ {1, 2}. We let i = 1 be the case for Theorem 1.1, and i = 2 for Theorem
+1.2. Let
+                                                                  1/r
+                                      ω(q)
+                                              ( 2r1 − 12 )    q
+(16)                     T1 (q) = (4r) mr (q)         2r                ,
+                                                              ϕ(q)
+and
+                                                                                  1/r
+                                            ω(q)
+                                                             ( 2r1 )        q
+(17)                         T2 (q) = (4r)         mr (q)                                 .
+                                                                            ϕ(q)
+  Let ti (r) be defined as in Lemma 5.4. Our goal is to prove that for q ≥ max{101145 , ti (r)},
+there exists a constant C(r) depending on r (but not q) such that
+                                                         1     r+1                 1
+                           |Sχ (M, N )| ≤ C(r)N 1− r q 4r2 (log q) 2r Ti (q).
+Lemma 6.1. For i ∈ {1, 2} and Ti be defined as in (16) and (17). Let s, α, u, and w be
+defined as in (19), (22), (25), and (26), respectively. Then
+                                 
+                               B                      2         1
+                                                                        1
+                                                                                    
+            |Sχ (M, N )| ≤          N 1−1/r q (r+1)/4r (log q) 2r u(αw) 2r + sTi (q) .
+                             B−1
+Proof. Fix i ∈ {1, 2} and let q ≥ max{101145 , ti (r)}. From Lemma 3.2, once we choose A
+and B as described in Definition 3.1, replacing T (q) with Ti (q) and C(r) with C, we have
+                                         !1− r1             ! 2r1  q                    2r1
+                                q                  q                                 2r
+                       1       X                X
+                                                      2
+                                                                   X X
+    |Sχ (M, N )| ≤                vA (x)             vA (x)                χ (x + b) 
+                    #A · #B x=1                 x=1                 x=1 b∈B
+
+                            2C           (⌊B⌋ + 1)2−1/r r+12         1
+                      +           A1−1/r               q 4r (log q) 2r Ti (q).
+                          2 − 1/r             #B
+  Let ϕ∗ = ϕ(q)/q, B = Bi (r, q),
+                                                                        r
+                                                                     ! r−1
+                                                             1− r1
+                                            (B − 1)B
+                                    κ=                           1            ,
+                                            2r(B + 1)2− r
+and
+                                                      κN
+                                              A=         .
+                                                       B
+                                                    14
+  Using (12), Theorem 1.3, Lemma 4.1, and Proposition 4.5 yields 2
+(18)
+                                                                                           2r1
+                     1          1− r1     2           6                   2 log (A) + 2
+|S χ (M, N )| ≤           (#AN )       #A + 2AN           log (A) + δ +                            ×
+                 #A · ⌊B⌋                             π2                       A−1
+                                        1                            1
+                                r2r r 2r       2C 1− 1 (B + 1)2− r r+12
+      
+               ω(q) 2r     √                                                           1
+    × 2r(4r) B mr (q) q +           B q     +     1A
+                                                         r              q 4r (log q) 2r Ti (q)
+                                 r!           2− r                B
+                 1                      2                                                 ! 2r1
+            N 1− r                                2
+                                                    
+                          κN ∗                2κN      6                    2 log A  +   2
+    ≤      1                 ϕ + 2ω(q)−1 +                 log (A) + δ +                          ×
+       #A · (B − 1)
+           r               B                    B      π2                      A−1
+                                        1                              2− r1
+                                r2r r 2r
+                                                                
+               ω(q) 2r     √                   2C          1− r1   B+1            r+1          1
+    × 2r(4r) B mr (q) q +           B q     +     1 (κN )                       q 4r2 (log q) 2r Ti (q).
+                                 r!           2− r                  B
+  Let
+                                                    2−1/r
+                                   2Cκ1−1/r B + 1
+                                            
+(19)                          s=                           ,
+                                    2 − 1/r    B
+                                   2
+                                        2κN 2 6
+                                                                          
+                    κN ∗    ω(q)−1                              2 log A + 2
+              P =      ϕ +2           +           log (A) + δ +               ,
+                     B                    B    π2                  A−1
+and
+                                                   √    r2r r
+                         Q = 2r(4r)ω(q) B 2r mr (q) q +     B q.
+                                                         r!
+  We can write the upper bound for |Sχ (M, N )| in (18) as
+                                 1
+                          N 1− r            1       1                    r+1         1
+(20)                      1               P 2r × Q 2r + N 1−1/r q 4r2 Ti (q) (log q) 2r s.
+                     #A · (B − 1)
+                          r
+
+
+Factoring out N 2 /B from P , we deduce
+                                         2                                       
+                              ∗   B2ω(q)−1
+                    N 2    κϕ  +    N
+                                                   
+                                                     6
+                                                                                   
+                                                                      2 log (A) + 2 
+(21)           P =                            + 2κ      log (A) + δ +
+                     B            B                  π2                   A−1
+                                                                                   
+
+                 1
+                               α  2r1
+         =⇒ P 2r = N 1/r         ,
+                            B
+where for simplicity, we let
+                                          2                                        
+                               ∗   B2ω(q)−1
+                             κϕ  +    N
+                                                    
+                                                      6
+                                                                                     
+                                                                        2 log (A) + 2 
+(22)      α = P B/N 2 =                       + 2κ       log (A) + δ +               .
+                          
+                                   B                  π 2                   A−1
+
+  Let
+                                                             B
+                                                  β=             1   .
+                                                        r2 q 2r
+  2In the first upper bound we actually have (⌊B⌋+1)2−1/r /⌊B⌋; but the function (x+1)2−1/r /x is increasing
+for x ≥ 2, so we can replace ⌊B⌋ by B as shown.
+                                                        15
+Then
+                                                                   2r1
+                                              1           3       fi
+(23)                                     Q   2r     = q r2 β 1/2
+                                                         4r              ,
+                                                                  r!
+where f1 = r and
+                                       f2 = (4r)ω(q) mr (q)(r − 1) + 1.
+                                   1
+  Therefore, writing B = r2 q β, we obtain from Equations (20), (21), and (23) that
+                                  2r
+
+
+
+                                          r1                                                     2r1
+                    N 1−1/r
+                                                                                      
+                                  N                  3
+                                                       − 12       2− r1       1    1
+                                                                                − 2r       αfi                   1   r+1                 1
+(24) |Sχ (M, N )| ≤                             q   4r  4r    r           β   2                          + N 1− r q 4r2 Ti (q) log(q) 2r s.
+                    B−1           #A                                                        r!
+  Let
+                                                         (N/#A)1/r
+(25)                                                u=                    1        ,
+                                                                   q 2r2
+  and
+
+                                                 fi
+(26)                                            w=         .
+                                         r2 β r+1 r! log q
+  By multiplying and dividing by B and a few other manipulations we can go from (24) to
+                                                                                1
+                                                                                       !
+                              B                      2               1  u(αw)    2r
+            |Sχ (M, N )| ≤         N 1−1/r q (r+1)/4r Ti (q)(log q) 2r              +s
+                             B−1                                           Ti (q)
+(27)                            
+                              B      1−1/r (r+1)/4r2            1
+                                                                         1
+                                                                                     
+                         =         N       q           (log q) 2r   u(αw) + sTi (q) ,
+                                                                         2r
+                             B−1
+as stated in the lemma.                                                                  □
+  Using this lemma, we now prove our main theorems separately below.
+                                                                                                                                  a(r)
+Proof of Theorem 1.1. Recall that we assume q ≥ max{101145 , t1 (r)} for t1 (r) = ee                                                     with
+a(r) given in the statement of Theorem 1.1 (and Lemma 5.1), and from (16)
+                                                                 r1
+                                      ω(q)
+                                                2r1 − 12    q
+                         T1 (q) = (4r) mr (q)         2r
+                                                                      .
+                                                            ϕ(q)
+By Lemma 6.1 and comparing with (8), it suffices to show that
+                                    1             B−1
+                             u(αw) 2r + sT1 (q) ≤       CT1 (q).
+                                                    B
+  Since 101145 ≥ (10r)18 for r ≤ 1050 while t1 (r) ≥ (10r)18 for r ≥ 1050 , we apply Lemma
+5.4 and conclude that Aϕ∗ ≥ 2ω(q) , hence
+                N        N           N         2ω(q)−1 N           2N
+                   ≤   ∗
+                                  =    ∗
+                                         +   ∗    ∗
+                                                                 ≤     .
+                #A   Aϕ − 2ω(q)−1   Aϕ     Aϕ (Aϕ − 2   ω(q)−1 )   Aϕ∗
+Therefore, (25) satisfies the bound
+                                                                                             1/r
+                                        (N/#A)1/r                      21/r
+                                                                                  
+                                                                                        N
+(28)                          u=                    1             ≤           1                      .
+                                                q 2r2                  q 2r2           Aϕ∗
+                                                                  16
+  From Lemma 5.5, we have
+                                                                4
+(29)                                                         α ≤ κ log q.
+                                                                3
+Using that f1 = r and
+                                                                                                    r1
+                                                                  r−1
+(30)                                          β=                                                           ,
+                                                           (2r)r!(4r)ω(q) mr (q)
+we rewrite (26) as
+                                              21+1/r (r · r!)1/r                 1+1/r
+(31)                                w=               1+1/r
+                                                                  (4r)ω(q) mr (q)       .
+                                             (r − 1)        log q
+                                                   1
+Furthermore, using (30), B = r2 q 2r β, and AB = κN , we have
+                                                      2
+                                                                r1
+                          N                      1  r     r − 1
+                                (4r)ω(q) mr (q) r =
+                                               
+(32)                         1                                       .
+                         Aq 2r                      κ r!(2r)
+Therefore, combining (19), (28), (29), (31), and (32), we obtain
+                 1
+       u(αw) 2r + sT1 (q)
+                         r1             2r1                         1                 1     1
+                                                                                                   ! 2r1
+                                                             21+ r (r · r!) r r r
+             
+           1       N           4                                                                                          1+ 1
+       ≤ 2r         1            κ log q                                            1                      (4r)ω(q) mr (q) 2r 2r2
+               Aq 2r ϕ∗        3                             (r − 1)1+ r log q
+                  1         2− r1
+          2Cκ1− r B + 1
+       +                             T1 (q)
+           2 − 1r       B
+                                                                                                               1             2− r1 !
+                                                                                                 2Cκ1− r
+                                                                                                                   
+                  5
+                    − 12      1
+                           − 2r      − 12               1      1
+                                                            − 2r       2
+                                                                         − 12              1
+                                                                                        − 2r                           B+1
+       =     2   2r  2r    3      (r!)2r     (r − 1)   2r 2        r   r  2r        κ          +                                        T1 (q).
+                                                                                                  2 − 1r                B
+Therefore,
+                                         5     1       1               1                       1     1     2   1       1
+                                  2 2r − 2r2 3− 2r (r!)− 2r2 (r − 1) 2r2 − 2r r r − 2r2 κ− 2r
+(33)                           C≥                              1        1                    .
+                                                 B−1      2κ1− r B+1 2− r
+                                                   B
+                                                       −   2− 1    B            r
+
+  Now to obtain the constants in Table 1, first, by Lemmas 5.1 and 5.2,
+                                                         1
+                                                 1 − 1r r
+                                               
+                                       2− r2 2
+(34)                             B≥2 r                      .
+                                                   r!
+                                                                1 1
+                                                     2−2/r 2 1− r r
+Then, choosing κ as in (15), we replace B with 2          r      r!
+                                                                      in κ since the right side
+                                                            1  r1
+                                                              1−
+of (33) is decreasing as B increases for B ≥ 22−2/r r2 r! r . Computing the resulting
+expression obtains the C(r) column in Table 1. For the D(r) column in Table 1, we notice
+that q → ∞ implies B → ∞, therefore
+                                              r−1 r
+                                               1
+                                     κ→                ,
+                                             2r
+                                                                           17
+and we obtain
+                               5   1          1            1                 1       1   2   1   1
+                         2 2r − 2r2 3− 2r (r!)− 2r2 (r − 1) 2r2 − 2r r r − 2r2 (2r) 2r−2
+                  D(r) =                                  1                              .
+                                                    1 − 2r−1
+
+                                                                                                     □
+
+  We prove Theorem 1.2 following the same procedure as the proof of Theorem 1.1.
+
+Proof of Theorem 1.2. Recall that we assume q ≥ max{101145 , t2 (r)} for t2 (r) = 24r−2 , and
+from (17)
+                                                            r1
+                                       ω(q)
+                                                2r1    q
+                          T2 (q) = (4r) mr (q)                   .
+                                                       ϕ(q)
+By Lemma 6.1, it suffices to show
+                                          1                          B−1
+                               u(αw) 2r + sT2 (q) ≤                      CT2 (q).
+                                                                      B
+   Similar to the proof of Theorem 1.1, 101145 ≥ (10r)18 for r ≤ 1050 while t2 (r) ≥ (10r)18
+for r ≥ 1050 , thus from (28) and (29),
+                                                                         1/r
+                                                   21/r
+                                                               
+                                                                    N
+                                          u≤           1                         ,
+                                                   q 2r2           Aϕ∗
+
+and
+                                                     4
+                                                  α ≤ κ log q.
+                                                     3
+Furthermore,
+
+(35)                     f2 = (4r)ω(q) mr (q)(r − 1) + 1 ≤ r(4r)ω(q) mr (q),
+
+and
+                                                                      r1
+                                                           r−1
+(36)                                              β=                         ,
+                                                           (2r)r!
+
+therefore we bound w in (26) as
+
+                                        21+1/r (r · r!)1/r
+(37)                          w≤                           (4r)ω(q) mr (q).
+                                       (r − 1)1+1/r log q
+                     1
+Using (36), B = r2 q 2r β, and AB = κN , we get
+                                                                              r1
+                                                r2
+                                                               
+                                          N                         r−1
+(38)                                        1 =                                      .
+                                        Aq 2r   κ                   r!(2r)
+                                                               18
+Therefore, combining (19), (28), (29), (37), and (38), we get
+                1
+      u(αw) 2r + sT2 (q)
+                        r1             2r1                      1             1     1
+                                                                                           ! 2r1
+                                                        21+ r (r · r!) r r r
+            
+          1       N           4                                                                                   1
+      ≤2  r
+                   1            κ log q                                     1                      (4r)ω(q) mr (q) 2r
+              Aq 2r ϕ∗        3                         (r − 1)1+ r log q
+                 1         2− r1
+         2Cκ1− r B + 1
+      +                             T2 (q)
+          2 − 1r       B
+                                                                                                      1             2− r1 !
+                                                                                         2Cκ1− r
+                                                                                                          
+                 5
+                   − 12      1
+                          − 2r      − 12            1      1
+                                                        − 2r       2
+                                                                     − 12          1
+                                                                                − 2r                          B+1
+       =    2   2r  2r    3      (r!) 2r (r − 1)   2r 2        r   r  2r    κ          +                                       T2 (q).
+                                                                                          2 − 1r               B
+This produces the same conditions on C and D as in the proof of Theorem 1.1, thus we
+obtain the constants in Table 1.                                                  □
+
+                                              Acknowledgments
+   The authors thank the PIMS CRG “L-functions in Analytic Number Theory” and the
+BIRS facilities at the University of British Columbia–Okanagan, who together ran the Inclu-
+sive Paths in Explicit Number Theory Summer School where this project started. The third
+author was supported in part by a Natural Sciences and Engineering Council of Canada
+Discovery Grant. The fourth and fifth authors also thank FONDOCyT, grant number 2022-
+1D1-085, for supporting this research.
+
+                                                      References
+ 1. Andrew R. Booker, Quadratic class numbers and character sums, Math. Comp. 75 (2006), no. 255,
+    1481–1492 (electronic). MR 2219039 (2008a:11140)
+ 2. D. A. Burgess, On character sums and L-series, Proc. London Math. Soc. (3) 12 (1962), 193–206.
+    MR 132733
+ 3.         , On character sums and primitive roots, Proc. London Math. Soc. (3) 12 (1962), 179–192.
+    MR 0132732 (24 #A2569)
+ 4.         , A note on the distribution of residues and non-residues, J. London Math. Soc. 38 (1963),
+    253–256. MR 0148628 (26 #6135)
+ 5.         , On character sums and L-series. II, Proc. London Math. Soc. (3) 13 (1963), 524–536.
+    MR 0148626 (26 #6133)
+ 6.         , The character sum estimate with r = 3, J. London Math. Soc. (2) 33 (1986), no. 2, 219–226.
+    MR 838632
+ 7. Stephen D. Cohen, Tomás Oliveira e Silva, and Tim Trudgian, On Grosswald’s conjecture on primitive
+    roots, Acta Arith. 172 (2016), no. 3, 263–270. MR 3460815
+ 8. Noam D. Elkies, Rank of an elliptic curve and 3-rank of a quadratic field via the Burgess bounds, Res.
+    Number Theory 11 (2025), no. 3, Paper No. 70, 14. MR 4933368
+ 9. Forrest J. Francis, An investigation into explicit versions of Burgess’ bound, J. Number Theory 228
+    (2021), 87–107. MR 4271811
+10. Henryk Iwaniec and Emmanuel Kowalski, Analytic number theory, American Mathematical Society
+    Colloquium Publications, vol. 53, American Mathematical Society, Providence, RI, 2004. MR 2061214
+    (2005h:11005)
+11. Niraek Jain-Sharma, Tanmay Khale, and Mengzhen Liu, Explicit Burgess bound for composite moduli,
+    Int. J. Number Theory 17 (2021), no. 10, 2207–2219. MR 4322829
+12. D. R. Johnston, O. Ramaré, and T. Trudgian, An explicit upper bound for L(1, χ) when χ is quadratic,
+    Res. Number Theory 9 (2023), no. 4, Paper No. 72, 20. MR 4649452
+                                                                       19
+13. Kevin J. McGown, Norm-Euclidean cyclic fields of prime degree, Int. J. Number Theory 8 (2012), no. 1,
+    227–254. MR 2887892
+14. J.-L. Nicolas and G. Robin, Explicit upper estimates for the number of divisors of n, Can. Math. Bull.
+    26 (1983), 485–492 (French).
+15. J. Barkley Rosser and Lowell Schoenfeld, Approximate formulas for some functions of prime numbers,
+    Illinois J. Math. 6 (1962), 64–94. MR 0137689 (25 #1139)
+16. Enrique Treviño, The Burgess inequality and the least kth power non-residue, Int. J. Number Theory 11
+    (2015), no. 5, 1653–1678. MR 3376232
+17.          , The least k-th power non-residue, J. Number Theory 149 (2015), 201–224. MR 3296008
+
+   (Elchin Hasanalizade) School of Information Technologies and Engineering, ADA Univer-
+sity, Baku, Azerbaijan
+   Email address: ehasanalizade@ada.edu.az
+
+  (Hua Lin) Department of Mathematics, Northwestern University, Evanston, IL, USA
+  Email address: hua.lin@northwestern.edu
+
+ (Greg Martin) Department of Mathematics, University of British Columbia, Room 121, 1984
+Mathematics Road, Vancouver, BC, Canada V6T 1Z2
+ Email address: gerg@math.ubc.ca
+
+  (Andradis Luna Martı́nez) Escuela de Matemáticas, Universidad Autónoma de Santo Domingo,
+Santo Domingo, Dominican Republic
+  Email address: aluna71@uasd.edu.do
+
+  (Enrique Treviño) Department of Mathematics and Computer Science, Lake Forest College,
+Lake Forest, IL, USA
+  Email address: trevino@lakeforest.edu
+
+
+
+
+                                                   20
+

@@ -1,0 +1,43 @@
+{
+  "seed": 20260907,
+  "files": {
+    "dev.jsonl": {
+      "count": 304,
+      "sha256": "e0b3f5be9064643ef5806ae46fe92c17bb5da3296a08ef46d741c491c2cbbe05"
+    },
+    "hard.jsonl": {
+      "count": 404,
+      "sha256": "84673e5ad2070802560a0e2fb2a3a79badff464852e5a4abfaf28c442fe34eff"
+    },
+    "small.jsonl": {
+      "count": 224,
+      "sha256": "23cf573b38286cf0ff6ec0a720f35d1e9e58177e8168e9cd05be6e56a2343a0a"
+    },
+    "test.jsonl": {
+      "count": 704,
+      "sha256": "1939d6f3255cb4e82b202c51ad6d9bebd79cdd307ce2172fee4b9db8b6f1b052"
+    }
+  },
+  "label_distribution": {
+    "small": {
+      "YES": 98,
+      "NO": 126,
+      "total": 224
+    },
+    "dev": {
+      "YES": 119,
+      "NO": 185,
+      "total": 304
+    },
+    "test": {
+      "YES": 230,
+      "NO": 474,
+      "total": 704
+    },
+    "hard": {
+      "YES": 91,
+      "NO": 313,
+      "total": 404
+    }
+  }
+}

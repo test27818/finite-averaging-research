@@ -1,0 +1,433 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection{A polynomial bound on mixing sequences}
+%\label{sec: polynomial - arbitrary n}
+%\input{6-4_polynomial_bound.tex}
+
+We now complete the proof of Theorem~\ref{thm: miscibility characterization}(b).
+In Section~\ref{sec: sufficiency of condition mc} we have already established an existence of a perfect-mixing 
+sequence for $C$ with intermediate precision $1$.
+It still remains to show that this mixing sequence can be modified to have length that is polynomial in $s(C)$.
+
+As explained in the beginning of Section~\ref{sec: polynomial proof}, it remains to
+give such a bound for the configuration $E$ constructed from $C$ in Section~\ref{subsec: proof for n greater-equal than 7}
+and for mixing sequences with precision $0$ (that is, with only integral concentrations).
+Recall that in Section~\ref{sec: polynomial - near final} we gave a polynomial bound if $E$ is near-final.
+In Section~\ref{sec: an exponential bound} we gave a bound for arbitrary configurations $E$ that is
+exponential only in $n$, thus yielding a polynomial bound for constant $n$.
+We will be using these properties in our construction in this section. 
+If $E$ is not near-final and $n$ is arbitrary, the general idea for achieving a polynomial bound
+is similar to that from Sections~\ref{sec: polynomial - near final} and~\ref{sec: an exponential bound}:
+we try to mix a pair of concentrations that are far apart,
+to guarantee that we make a quick progress, as measured by the decrease of $\potential(E)$. 
+(This is captured by Observation~\ref{obs: far-appart mix}, that will be used frequently and without
+explicit reference.) Although this is not posible in each step, we (essentially)
+show that for any $E$ there is a polynomial-length sequence of mix operations after which such a
+far-apart pair will exist, yielding an overall polynomial bound on a perfect-mixing sequence.
+Additionally, to obtain such a perfect-mixing sequence,
+at each step we must mix pairs that are either $(\lambda)$-safe, 
+for corresponding $\lambda\in\braced{I,I'}$, or near-final.
+
+In this section, for better clarity, we chose to use a top-down presentation style, starting with the statement
+of the main theorem (Theorem~\ref{thm: perfect mixability polynomial} below) and its proof, while
+all the necessary lemmas that cover different cases from that proof are presented later.
+Also, throughout this section, $\gamma$ denotes a small integral constant; for
+concreteness we can assume that $\gamma = 2$.
+
+%%%%%%%%%%%%%%%%%
+
+\begin{theorem} \label{thm: perfect mixability polynomial}
+	$E$ can be perfectly mixed with precision $0$ 
+	in a polynomial number of mixing operations.
+\end{theorem} 
+
+\begin{proof}
+	If $n = 4$ (and, more generally, if $n$ is a power of $2$), we can simply use 
+	Theorem~\ref{them: n power of two} and we are done.
+	Thus, we can assume that $n\geq 5$.	
+	If $n<22$, we can perfectly mix $E$ using Theorem~\ref{thm: perfect mixability upper bound},
+	where the bound on the length of the mixing sequence is polynomial if $n$ is constant.
+	Thus in the rest of the argument below we assume that $n \geq 22$.
+	
+	We show that as long as $E$ satisfies Invariant~(I) (which is the invariant that applies when $n\ge 22$),
+	we can find a polynomial-length sequence of mixing operations that will
+	decrease $\potential(E)$ by a factor of $1-\Omega(1/n)$. This will be sufficient to prove the theorem.
+	
+	So assume that $E$ is not yet perfectly mixed and let $\delta=\diameter(E)$. Let $\pi$ be the parity
+	for which $\nofdroplets{E_{\pi}}\geq\nofdroplets{E_{\barpi}}$.
+	(Recall that we say that $A\subseteq E$ is (I)-mixed if there is no (I)-safe pair in $A$,
+	that is, there no pair of distinct concentrations in $A$ whose mixing preserves Invariant~(I) for $E$.
+	We will often use this terminology when mixing pairs of concentrations in $E_\pi,E_\barpi\subseteq E$.)
+	We consider several cases.
+	
+	%%%%%%%%%%
+	
+	\medskip\noindent
+	\mycase{1} $\nofconcentrations{E_{\pi}}=1$.
+	Let $a\in E_{\pi}$ (that is, $a$ is the only concentration in $E_{\pi}$). 
+	Observe that $E_{\barpi}\neq\emptyset$. We have two sub-cases:
+	
+	\begin{description}
+
+		\item\mycase{1.1} $\min(E_{\bar{\pi}}) < a < \max(E_{\bar{\pi}})$.
+		In this case, per Lemma~\ref{lem: farm mix in E odd overlapping E even},
+		there are at most two consecutive mixing operations 
+		(involving either (I)-safe or near-final pairs)
+		after which $\potential(E)$ decreases at least by a factor of $1 - 1/32n$.
+
+		\item \mycase{1.2} $a < \min(E_{\bar{\pi}})$ or $a > \max(E_{\bar{\pi}})$. In this case,
+		per Lemma~\ref{lem: far mix in E odd non-overlapping E even}, there is a sequence of
+		at most $128ns(E)+1$ (I)-safe mixing operations after which
+		$\potential(E)$ decreases at least by a factor of $1 - 1/32\gamma^2n$.
+		
+	\end{description}	
+
+	%%%%%%%%%%
+	
+	\medskip\noindent
+	\mycase{2} $\nofconcentrations{E_{\pi}}\geq 2$ and $\diameter(E_\pi)\geq\delta/\gamma$.
+	In this case, per Lemma~\ref{lem: far mix in E even},	
+	there is an (I)-safe pair in $E_{\pi}$ whose mixing decreases
+	$\potential(E)$ at least by a factor of $1 - 1/8\gamma^2n$.
+	
+	%%%%%%%%%%
+	
+	\medskip\noindent
+	\mycase{3} $\nofconcentrations{E_{\pi}}\geq 2$ and $\diameter(E_\pi)<\delta/\gamma$.
+	Using Lemma~\ref{lem: E-mix c_pi n >= 22}, there is a sequence of at most
+	$128ns(E)$ (I)-safe mixing operations in $E_\pi$, such that after this sequence
+	$E_{\pi}$ is (I)-mixed. Let $E'$ be the configuration obtained from $E$
+	after applying this sequence. We consider two sub-cases:	
+	
+	\begin{description}
+
+		\item\mycase{3.1} $\nofdroplets{E'_{\pi}}\geq\nofdroplets{E'_{\bar{\pi}}}$.
+		By Observation~\ref{obs: number of same-parity unsafe pairs} below and
+		since $E'_{\pi}$ is (I)-mixed, we have that $\nofconcentrations{E'_{\pi}}=1$.		
+		Hence, as in Case~$1$ above, there is a sequence of at most $128ns(E')+1$ mixing operations 
+		(involving either (I)-safe or near-final pairs)
+		after which $\potential(E')$ decreases at least by a factor of $1-1/32\gamma^2n$.
+		Thus, $\potential(E)$ also decreases at least by a factor of $1 - 1/32\gamma^2n$.
+
+		\item\mycase{3.2} $\nofdroplets{E'_{\pi}}<\nofdroplets{E'_{\bar{\pi}}}$.
+		As $\gamma=2$, $\diameter(E'_\pi)<\delta/\gamma$, and 
+		because	the mixing operations on $E_{\pi}$ produced at least one droplet 
+		with parity $\bar{\pi}$, we have that 
+		$\diameter(E'_{\bar{\pi}})>\delta/\gamma$.
+		Hence, as in Case~$2$ above, 
+		there is an (I)-safe pair whose mixing decreases
+		$\potential(E')$ at least by a factor of $1 - 1/8\gamma^2n$.
+		Thus, such mixing also decreases $\potential(E)$ at least by a factor of $1 - 1/8\gamma^2n$.				
+	\end{description}
+	
+	Applying a sequence of mixing operations specified by the cases above
+	results in a decrease of $\potential(E)$ at least by a factor of $1 - 1/32\gamma^2n$.
+	Thus, by a simple extension to Observation~\ref{obs: far-appart constant mix},
+	we obtain that after at most $32\gamma^2n$ such mixing sequences $\potential(E)$ decreases at least by half.
+	It follows that after at most $32\gamma^2n\log\potential(E)$ of these mixing sequences (where $\potential(E)$
+	denotes the initial potential value), $E$ becomes (I)-mixed, and,
+	as $E$ satisfies Invariant~(I), there is a near-final pair in $E$ that we then mix to make $E$ near-final.
+	Since $\log\potential(E)\le 2s(E)$, the length of this sequence is at most $64\gamma^2ns(E)$ (where $s(E)$ 
+	represents the original size of $E$).
+	Each such mixing sequence involves at most $256ns(E)+1$ mixing operations and,
+	by~Theorem~\ref{thm: E near-final}, if $E$ is near-final then it can be perfectly mixed 
+	by a sequence of at most $144n^3s^2(E)$	mixing operations. 
+	Therefore the total number of mixing operations to perfectly mix $E$ is
+	at most $2^{14}\gamma^2n^2s^2(E) + 64\gamma^2ns(E) + 144n^3s^2(E)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{observation}\label{obs: number of same-parity unsafe pairs}
+	Assume that $E$ with $\nofdroplets{E}=n\geq 22$ satisfies Invariant~(I)
+	and let $\pi$ be the parity for which $\nofdroplets{E_{\pi}}\geq\nofdroplets{E_{\bar{\pi}}}$.
+	There is at least one droplet in $E_{\pi}$ such that, when paired with any other
+	droplet in $E_{\pi}$, the resulting pair is (I)-safe.
+\end{observation}
+
+\begin{proof}
+	Lemma~$\ref{lem: at most one mod-unsafe pairs}$(a) and the number of distinct odd 
+	prime factors of $n$ being less than $\log_3{n}$ imply that $E$ has at most
+	$2\lfloor\log_3{n}\rfloor$ droplets that are $\barp$-unsafe when paired with other droplets in $E$.
+	This, and Observation~$\ref{obs: decrease number of non-singletons}$ below
+	give that the number of droplets that, when mixed with other droplets in $E$
+	violate Invariant~(I), is at most 
+	$2\lfloor\log_3{n}\rfloor+6< n/2\leq\nofdroplets{E_{\pi}}$, since $n\geq22$.
+	Thus, the lemma holds.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{observation}\label{obs: decrease number of non-singletons}
+Assume that $E$ with $\nofdroplets{E}=n\geq 7$ satisfies Invariant~(I).
+The number of droplets involved in mixing operations that decrease the number of
+non-singletons in $E$ down to one is at most $6$.
+\end{observation}
+
+\begin{proof}
+	First of all, if the number of non-singletons in $E$ is more than three, 
+	then no mixing decreases the number of non-singletons down to one;
+	similarly when mixing a non-singleton with frequency higher than two.
+	Additionally, mixing two singletons does not decrease the number of non-singletons.	
+	Now, $E$ satisfying Invariant~(I) implies that there are 
+	at least two non-singletons $a,b\in E$.	
+	We consider two types of situations where a mixing decreases the number 
+	of non-singletons in $E$ down to one:
+	
+	\medskip\noindent\mycase{1} Mixing two non-singletons, say $a$ and $b$.
+	This can happen when the frequency of both $a$ and $b$ is two each,
+	leading to a total of $4$ droplets involved.
+	(There could be another non-singleton $e=\half(a+b)$ in $E$, however no mixing 
+	involving $e$ would decrease the number of non-singletons down to one
+	because either $a$ or $b$ would remain non-singleton after the mixing.)	
+	
+	\medskip\noindent\mycase{2} Mixing a non-singleton with a singleton.
+	(This can happen when $E$ has exactly two non-singletons, $a$ and $b$ respectively.)
+	Let $a$ and $c$ be the non-singleton and singleton, respectively.	
+	If $a$ is a doubleton and $b=\half(a+c)$, then mixing $a$ and $c$ decreases
+	the number of non-singletons down to one.
+	Similarly, if $b$ is a doubleton and $a=\half(b+d)$, for some singleton $d\in E$,
+	then mixing $b$ and $d$ decreases the number of non-singletons down to one.
+	Therefore, the total number of droplets (excluding $a$ and $b$, which were already
+	counted in Case~$1$ above) is at most $2$.
+	
+	\medskip
+	Therefore, the number of droplets involved in mixing operations that decrease 
+	the number of non-singletons down to one is at most $6$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{lemma}\label{lem: farm mix in E odd overlapping E even}
+	Assume that $E$ with $\nofdroplets{E}=n\geq 7$ satisfies Invariant~(I).
+	Also, assume that $\nofdroplets{E_{\pi}}\geq\nofdroplets{E_{\bar{\pi}}}\geq 1$ and
+	that $\nofconcentrations{E_{\pi}} = 1$, with $a\in E_{\pi}$.
+	If $\min(E_{\bar{\pi}})<a<\max(E_{\bar{\pi}})$ then there exist at most
+	two consecutive mixing operations (involving either (I)-safe or near-final pairs) that
+	decrease $\potential(E)$ at least by a factor of $1-1/32n$.
+\end{lemma}   
+
+\begin{proof}
+	Let $\delta=\diameter(E)$ before any mixing operation.
+	Assume without loss of generality that $\pi=even$.
+	Since $E$ satisfies Invariant~(I), there is at least one non-singleton $b\in E_{odd}$.
+	Either $\min(E_{odd})$ or $\max(E_{odd})$ is furthest from $b$, so
+	assume without loss of generality that $\min(E_{odd})$ is furthest from $b$; 
+	$|b-\min(E_{odd})|\geq\delta/2$.	
+	If pair $(b,\min(E_{odd}))$ is (I)-safe, then we are done.
+	So, assume otherwise, namely that pair $(b,\min(E_{odd}))$ is not (I)-safe;
+	$a=\half(b+\min(E_{odd}))$ and $b$ (which is a doubleton) are non-singletons in $E$.
+	(There could be at most one more non-singleton in $E$, namely $\min(E_{odd})$ strictly doubleton;
+	otherwise $(b,\min(E_{odd}))$ would be in fact (I)-safe.)
+	Consider the following cases:
+	
+	\medskip\noindent\mycase{1} $b = \max(E_{odd})$.
+	We further consider the following two sub-cases based on the number
+	of distinct concentrations in $E$:
+	\begin{description}
+		\item\mycase{1.1} $\nofconcentrations{E}=3$.
+		Then $E=\braced{\nofdroplets{E_{odd}}-2:\min(E_{odd}),\nofdroplets{E_{even}}:a,2:b}$,
+		with $\nofdroplets{E_{odd}}\leq 4$.
+		If $\nofdroplets{E_{odd}}=3$, then $\min(E_{odd})$ is a singleton, and, 
+		after the mixing, $\nofconcentrations{E}=2$ holds,
+		which implies that $E$ is now near-final, by Lemma~\ref{lem: mixability m = 2}
+		and thus $(b,\min(E_{odd}))$ is actually a near-final pair.		
+		Otherwise, $\nofdroplets{E_{odd}}=4$ and $\min(E_{odd})$ is a doubleton.
+		This trivially implies that after (and before) the mixing $E$ is near-final,
+		so $(b,\min(E_{odd}))$ is a near-final pair.
+		(Recall that $|b-\min(E_{odd})|\geq\delta/2$, so the lemma holds
+		by Observation~\ref{obs: far-appart mix}.)
+				
+		
+		\item\mycase{1.2} $\nofconcentrations{E}\geq 4$.
+		This implies that there is $c\in E_{odd}$ such that $\min(E_{odd})<c<b$;
+		mixing $b$ and $c$ produces a non-singleton other than $a$,
+		which preserves Invariant~(I), so $(b,c)$ is (I)-safe.
+		We analyze the following sub-cases:
+		\begin{description}
+			\vspace{-0.03in}
+			\item\mycase{1.2.1} $c<a$.
+			Since $|b-c|\geq\delta/2$, mixing $b$ and $c$ decreases $\potential(E)$ 
+			at least by a factor of $1-1/8n$, so we mix them.
+			
+			\item\mycase{1.2.2} $c>a$.
+			Let $d=\half(b+c)$ be the output of the mixing between $b$ and $c$.
+			If $d$ is odd, then mixing $d$ and $\min(E_{odd})$ decreases $\potential(E)$ 
+			at least by a factor of $1-1/8n$. (Pair $(d, \min(E_{odd}))$ is (I)-safe
+			because its mixing produces a non-singleton other than $a$.)
+			Otherwise, $d$ is even and, as $|d-a|\geq\delta/4$, 
+			mixing $a$ and $d$ decreases $\potential(E)$ at least by a factor of $1-1/32n$.
+			(Note that $(a,d)$ is (I)-safe because, after its mixing, $a$ remains non-singleton.)
+		\end{description}
+		
+	\end{description}
+
+	\noindent\mycase{2} $b < \max(E_{odd})$.
+	This is similar to Case~$1.2.2$ above under the assumption that $b < \max(E_{odd})$
+	and using $c=\max(E_{odd})$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{lemma}\label{lem: far mix in E odd non-overlapping E even}
+	Assume that $E$ with $\nofdroplets{E}=n\geq 7$ satisfies Invariant~(I).
+	Also, assume that $\nofdroplets{E_{\pi}}\geq\nofdroplets{E_{\bar{\pi}}}\geq1$ and
+	that $\nofconcentrations{E_\pi} = 1$ with $a\in E_\pi$.
+	If either $a < \min(E_{\bar{\pi}})$ or $a>\max(E_{\bar{\pi}})$,	then there exists
+	a mixing sequence (of (I)-safe pairs) of length at most $128ns(E) + 1$
+	that decreases $\potential(E)$ at least by a factor of $1-1/32\gamma^2n$, 
+	for constant $\gamma\in\posintegers$.
+\end{lemma}
+
+\begin{proof}
+	Let $\delta=\diameter(E)$ before any mixing operation.
+	Assume without loss of generality that $\pi=even$ and that $a<\min(E_{odd})$.
+	We analyze two sub-cases:
+	
+	\medskip\noindent\mycase{1} $\diameter(E_{odd})\geq\delta/2\gamma$.
+	$E$ satisfying Invariant~(I) implies that there is a non-singleton $b\in E_{odd}$.
+	Either $\min(E_{odd})$ or $\max(E_{odd})$ is furthest from $b$, so
+	assume without loss of generality that $\min(E_{odd})$ is furthest from $b$.
+	As $a<\half(b+\min(E_{odd}))$, pair $(b,\min(E_{odd}))$ is (I)-safe 
+	(mixing $b$ and $\min(E_{odd})$	produces a non-singleton other than $a$)
+	that satisfies $|b-\min(E_{odd})|\geq\delta/4\gamma$.
+	Therefore, mixing $b$ and $\min(E_{odd})$ decreases $\potential(E)$ 
+	at least by a factor of $1-1/32\gamma^2n$.
+	
+	\medskip\noindent\mycase{2} $\diameter(E_{odd})<\delta/2\gamma$.
+	This implies that $|\min(E_{odd})-a|\geq\delta/2\gamma$.
+	(I)-mix $E_{odd}$ using Lemma~$\ref{lem: E-mix c_pi n >= 22}$;
+	$E$ satisfying Invariant~(I) (and our proof in 
+	Section~\ref{subsec: proof for n greater-equal than 7}) 
+	implies that an even concentration $b$ is eventually produced.
+	Since $a$'s frequency is at least $\ceil{n/2}\geq 3$, pair $(a,b)$ is (I)-safe;
+	$a$ remains non-singleton after the mixing.
+	Additionally, since $b > \min(E_{odd})$, $|b-a|>\delta/2\gamma$ and thus
+	mixing $a$ and $b$ decreases $\potential(E)$ at least by a factor of $1-1/8\gamma^2n$.
+	Finally, Lemma~$\ref{lem: E-mix c_pi n >= 22}$ takes at most 
+	$128ns(E)$ mixing operations, so the lemma holds.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{lemma}\label{lem: far mix in E even}
+	Assume that $E$ with $\nofdroplets{E}=n\geq 22$ satisfies Invariant~$(I)$.
+	Also, assume that $\nofdroplets{E_{\pi}}\geq\nofdroplets{E_{\bar{\pi}}}$
+	and that $\nofconcentrations{E_{\pi}}\geq 2$.
+	If $\diameter(E_\pi) \geq \diameter(E)/\gamma$, for constant $\gamma\in\posintegers$, 
+	then there exists an (I)-safe pair whose mixing decreases $\potential(E)$ 
+	at least by a factor of $1-1/8\gamma^2n$.
+\end{lemma}
+
+\begin{proof}
+	Assume without loss of generality that $\pi=even$ and let $a=\min(E_{even})$ and $b=\max(E_{even})$.
+	Mixing $a$ and $b$ decreases $\potential(E)$ at least by a factor of $1-1/2\gamma^2n$.
+	So, if $(a,b)$ is (I)-safe then we are done.
+	Instead, assume otherwise; namely, that $(a,b)$ is not (I)-safe.
+	
+	The above assumption, and Observation~$\ref{obs: number of same-parity unsafe pairs}$,
+	imply that there is $c\in E_{even}$ with $c\notin\braced{a,b}$ 
+	for which any pair involving $c$ is (I)-safe.
+	Now, either $a$ or $b$ is furthest from $c$, so	assume without loss of generality 
+	that $a$ is furthest from $c$.
+	Then, $|c-a|\geq\diameter(E)/2\gamma$ and thus mixing $a$ and $c$ decreases 
+	$\potential(E)$ at least by a factor of $1-1/8\gamma^2n$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{lemma}\label{lem: E-mix c_pi n >= 22}
+	Assume that $E$ with $\nofdroplets{E}=n\geq 7$ satisfies Invariant~$(I)$.
+	Then, there exists a mixing sequence (of (I)-safe pairs) 
+	of length at most $128ns(E)$ that (I)-mixes $E_\pi$.
+\end{lemma}
+
+\begin{proof}
+	Assume without loss of generality that $\pi = even$ and let $\nofdroplets{E_{even}}=n'$ and
+	$\delta=\diameter(E_{even})$ before any mixing operation.
+	If a mixing in $E_{even}$ produces droplets with an odd concentration,
+	then these droplets are excluded from $E_{even}$ and included in $E_{odd}$;
+	this can happen at most $n'/2$ times before $E_{even}$ becomes (I)-mixed.
+	
+	Assume that the number of (I)-safe pairs in $E_{even}$ is non-zero and 
+	let $a=\min(E_{even})$ and $b=\max(E_{even})$.
+	If an (I)-safe pair $x,y\in E_{even}$ satisfies $|x-y|\geq \delta/4$,
+	then mixing $x$ and $y$ decreases 
+	$\potential(E_{even})$ at least by a factor of $1-1/32n'$.
+	It follows from Observation~$\ref{obs: far-appart constant mix}$
+	that after at most $32n'$ such mixing operations, $\potential(E_{even})$
+	decreases at least by a factor of $\half$.
+	Hence, $E_{even}$ can be (I)-mixed after at most $32n'\log{\potential(E_{even})}$
+	such mixing operations.
+	
+	We next show that if $E_{even}$ has not been (I)-mixed, then
+	after at most two consecutive (I)-safe mixing operations
+	either an odd concentration is produced 
+	or $\potential(E_{even})$ decreases at least by a factor of $1-1/32n'$.
+	Consequently, after at most $128ns(E)$ (I)-safe mixing operations, $E_{even}$ becomes (I)-mixed.
+	
+	So, if $(a,b)$ is (I)-safe then we are done; $|a-b|= \delta$
+	and thus mixing $a$ and $b$ decreases $\potential(E)$ at least by a factor of $1-1/2n$.
+	Instead, assume that $(a,b)$ is not (I)-safe and consider the following cases:
+	
+	\medskip\noindent\mycase{1} $E_{even}$ has only singletons.
+	This implies that no mixing in $E_{even}$ decreases the number of non-singletons in $E$.
+	So, let $c,d\in E_{even}$ be the furthest-apart (I)-safe pair
+	and $x=\half(c+d)$ be the output of their mixing.
+	If either $|c-d|\geq \delta/2$ or $x$ odd holds, then we are done.
+	Otherwise, let $y\in\braced{a,b}$ be furthest from $x$.
+	By the choice of $y$, we have that $|x-y|\geq \delta/2$,
+	and as $x$ is a doubleton, $(x,y)$ is (I)-safe and thus we mix it.
+	
+	\medskip\noindent\mycase{2} $E_{even}$ has exactly one non-singleton $c$.
+	Either $a$ or $b$ is furthest from $c$, so assume without loss of generality 
+	that $b$ is furthest from $c$; $|b-c|\geq \delta/2$.
+	If $(b,c)$ is (I)-safe then we mix it and we are done.
+	Otherwise, $(b,c)$ is not (I)-safe, therefore there are exactly two non-singletons in $E$,
+	$c\in E_{even}$ (which is a doubleton) and $e=(b+c)/2\notin E_{even}$.
+	Since there is an (I)-safe pair in $E_{even}$, there is some $d\in E_{even}$
+	such that $d\notin\braced{b,c}$. Then, $(c,d)$ is (I)-safe because 
+	mixing $c$ and $d$ produces a non-singleton $x=\half(c+d)$ other than $e$.
+	So, mix $c$ and $d$. If $|c-d|\geq\delta/2$ then we are done; similarly if $x$ is odd.
+	Otherwise, $(b,x)$ is (I)-safe ($e\neq\half(b+x)$) and $|x-b|\geq\delta/4$, so we mix it.
+	
+	\medskip\noindent\mycase{3} $E_{even}$ has at least two non-singletons $c<d$.
+	We analyze two sub-cases:
+	\begin{description}
+		\item{\mycase{3.1}} $a=c$.
+		Since $(a,b)$ is not (I)-safe, then mixing $b$ and $c$ decreases
+		the number of non-singletons down to one. This gives us two sub-cases:
+		\begin{description}
+			\item{\mycase{3.1.1}} $d=b$.
+			$E_{even}$ having an (I)-safe pair implies that there is some $x\in E_{even}$ such that
+			$x\notin\braced{c,d}$. Either $c$ or $d$ is furthest from $x$, so			
+			assume without loss of generality that $d$ is furthest from $x$; $|d-x|\geq\delta/2$.
+			Mixing $x$ and $d$ produces a non-singleton other than $c$, so $(x,d)$ is (I)-safe
+			and we mix it.			
+
+			\item{\mycase{3.1.2}} $d<b$.
+			This implies that $d=\half(c+b)$, $b-d=\delta/2$ and $(b,d)$ is (I)-safe
+			(mixing $b$ and $d$ produces a non-singleton other than $c$), so we mix $b$ and $d$.
+		\end{description}
+
+		\item{\mycase{3.2}} $a<c$.
+		If $|a-c|\geq\delta/2$ then we mix $a$ and $c$ and we are done;
+		$\half(a+c) < d$ implies that mixing $a$ and $c$ produces a non-singleton other than $d$,
+		so $(a,c)$ is (I)-safe.
+		Instead, let $|a-c|<\delta/2$ which implies $|b-c|\geq\delta/2$.
+		Now, if pair $(b,c)$ is (I)-safe then we mix it and we are done, 
+		so also assume that $(b,c)$ is not (I)-safe.
+		(We cannot have $b=d$ because that would contradict $(a,b)$ not being (I)-safe;
+		$|a-c|<\delta/2$ implies $c < \half(a+b)$, so mixing $a$ and $b$ would produce
+		a non-singleton other than $c$.)
+		Therefore, as $(b,c)$ is not (I)-safe, we have that $d = \half(b+c)$ and mixing $b$ and $d$ 
+		produces a non-singleton other than $c$. Hence, $(b,d)$ is (I)-safe
+		satisfying $|b-d|\geq\delta/4$, and we mix it.
+	\end{description}
+
+	All the pairs mentioned above have difference at least $\delta/4$, so their mixing decreases 
+	$\potential(E_{even})$	at least by a factor of $1-1/32n'$.
+
+\end{proof}
+
+
+

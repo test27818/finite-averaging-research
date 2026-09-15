@@ -1,0 +1,461 @@
+                              LLNL-JRNL-410584
+
+
+
+
+Integer Equal Flows
+
+
+C. A. Meyers, A. S. Schulz
+
+
+February 13, 2009
+
+
+Operations Research Letters
+Disclaimer
+
+This document was prepared as an account of work sponsored by an agency of the United States
+government. Neither the United States government nor Lawrence Livermore National Security, LLC,
+nor any of their employees makes any warranty, expressed or implied, or assumes any legal liability or
+responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or
+process disclosed, or represents that its use would not infringe privately owned rights. Reference herein
+to any specific commercial product, process, or service by trade name, trademark, manufacturer, or
+otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the
+United States government or Lawrence Livermore National Security, LLC. The views and opinions of
+authors expressed herein do not necessarily state or reflect those of the United States government or
+Lawrence Livermore National Security, LLC, and shall not be used for advertising or product
+endorsement purposes.
+                                          Integer Equal Flows
+                Carol A. Meyers∗†                                          Andreas S. Schulz∗∗
+     Lawrence Livermore National Laboratory                       Massachusetts Institute of Technology
+            L-153, 7000 East Avenue                                E53-357, 77 Massachusetts Avenue
+              Livermore, CA 94550                                        Cambridge, MA 02139
+              meyers14@llnl.gov                                            schulz@mit.edu
+                                      August 2008; revised March 2009
+
+
+                                                       Abstract
+           The integer equal flow problem is an NP-hard network flow problem, in which all arcs in given
+       sets R1 , . . . , R` must carry equal flow. We show this problem is effectively inapproximable, even if the
+       cardinality of each set Rk is two. When ` is fixed, it is solvable in polynomial time.
+
+Keywords Network optimization, equal flows, computational complexity, approximability.
+
+
+1      Introduction
+The equal flow problem was first studied by Sahni [16] as a generalization of the traditional network flow
+problem. Its setup is similar to a standard maximum flow problem: we are given a directed graph G = (N, A)
+with capacities ua for all a ∈ A, and a designated source node s and sink node t. In addition, we are also
+given sets R1 , R2 , . . . , R` of mutually disjoint groups of arcs, with the requirement that all arcs in the same
+set must carry the same amount of flow. We wish to send the maximum amount of flow from s to t subject
+to these constraints. The special case where ` = 1 is known as the simple equal flow problem. One can also
+define a minimum cost flow version, by assigning costs to each of the arcs and a set demand from s to t.
+    Ahuja et al. [2] studied the minimum cost simple equal flow problem as a means of modeling a water
+resource system in Sardinia, Italy. They detailed several different methods of solving the problem, including
+a version of the network simplex algorithm and a parametric simplex method. More recently, Calvete [5]
+demonstrated a version of the network simplex algorithm for solving the general minimum cost equal flow
+problem.
+    The special case where all of the arc flows must be integral is known as the integer equal flow problem.
+Sahni [16] proved that the maximum flow version of this problem is NP-hard with a reduction from Non-
+Tautology. Later, Even, Itai, and Shamir [7] showed via a reduction from Satisfiability that the
+problem remains NP-hard even if the capacity of each arc is 1. Srinathan et al. [18] showed by a reduction
+from Exact Cover by 3-Sets that this problem also remains NP-hard if we further require that all arcs
+in a set Ri must originate from the same node.
+    Ali, Kennington, and Shetty [3] examined a special case of the integer equal flow problem where each
+arc set Rk has cardinality 2. We refer to this as the paired integer equal flow problem. They developed a
+heuristic for solving the problem using Lagrangian relaxation and decomposition techniques. Larsson and
+Liu [12] later proposed a different heuristic algorithm, also based on Lagrangean relaxation.
+    ∗ Prepared by LLNL under Contract DE-AC52-07NA27344. LLNL-JRNL-410584.
+    † Corresponding author.
+ ∗∗ Supported by ONR Grant N00014-08-1-0029.
+
+
+
+
+                                                           1
+    The integer equal flow problem finds applications in several areas, including airline parts manufacturing
+[19] and crew scheduling [6, 17]. Feldman and Karger [8] showed how the optimal decoding of certain Turbo
+codes can be accomplished using an integer equal flow problem. Srinathan et al. [18] described a special
+case of the problem from supply chain management, where the flow on all arcs exiting a node other than the
+source is required to be the same. They gave an approximation algorithm for the maximum flow version of
+this problem, which has a performance guarantee that is proportional to the degree of the source node.
+    Other problems that may be modeled as special cases of the integer equal flow problem include balanced
+network flow problems (see [9]) and certain problems in constraint programming [4]. Parmar [14] described
+three variants of the integer equal flow problem arising in packet routing and network design, developing
+valid inequalities and branch-and-cut schemes. Glockner and Nemhauser [11] considered a dynamic network
+flow problem with random arc capacities that is also a special case of this problem.
+    For α ≥ 1, an α-approximation algorithm for an optimization problem is a polynomial-time algorithm
+that for every instances outputs a solution whose value is within a factor of α of that of an optimal solution.
+    In what follows, we address the approximability of the integer equal flow problem. We begin in Section
+2 by presenting the natural LP formulation of the maximum equal flow problem, along with noting that the
+integrality gap can be very large. We then observe that the problem of determining whether a nontrivial
+feasible solution exists to the maximum integer equal flow problem is strongly NP-complete. This motivates
+our main result in Section 3, which is that no 2n(1−) -approximation algorithm exists for the maximum
+integer equal flow problem for any fixed  > 0, even if a nontrivial flow is guaranteed to exist, unless P=NP.
+    In Section 4 we extend this argument to show that this also holds for two related problems, the maximum
+paired integer equal flow problem and the uncapacitated minimum cost equal flow problem. For a special
+case where the number of sets that must have equal flow is fixed, we observe that this problem is solvable in
+polynomial time.
+
+
+2     Problem Definition
+An instance of the maximum equal flow problem is defined as follows. We are given a directed graph
+G = (N, A) with special nodes s and t, and capacities ua ∈ Z+ for all a ∈ A. In addition, we are given
+mutually disjoint sets R1 , R2 , . . . , R` ⊆ A of arcs, such that all arcs in the same set must have the same
+flow. We wish to send the maximum amount of flow from s to t under these conditions. This problem can
+be formulated as:
+
+
+         max     v X                    X
+          s.t.               xsj −               xjs = v
+                   X
+                 j:(s,j)∈A
+                                       X
+                                     j:(j,s)∈A
+                             xij −               xji = 0   for all i ∈ N \ {s, t},
+                 j:(i,j)∈A           j:(j,i)∈A
+                 xi1 j1 = xi2 j2                           for every pair (i1 , j1 ), (i2 , j2 ) ∈ Rk , k = 1, . . . , `,
+                 0 ≤ xij ≤ uij                             for all (i, j) ∈ A.
+
+     The maximum integer equal flow problem is the same as above, except we constrain xij ∈ Z for all arcs
+(i, j). This is also known as the integral flow with homologous arcs problem [10].
+     The integrality gap between optimal LP and IP solutions can be very large, even when the cardinality
+of each homologous set is 2, as in the example depicted in Figure 1. Here the homologous arc sets are
+{(s, vi+1 ), (vi , t1 )} for i = 1, . . . , r − 1, and {(s, v1 ), (vr , t1 )}. The number on each arc represents its capacity.
+Note that by the way the homologous sets are constructed, all arcs (s, vi ) are ‘forced’ to have equal flow, for
+all i = 1, . . . , r. The optimal LP solution has a value of r − 1, which is achieved by sending r−1         r units of flow
+along each of the arcs (s, vi ) and (vi , t1 ). The optimal IP solution has a value of 0, since there is no way to
+send any positive integral amount of flow along this network.
+
+
+
+                                                                   2
+                                                      v1
+                                              1                  1
+                                              1       v2         1
+                                                                               r−1
+                                  s           1                  1        t1           t
+                                                      v3
+                                                       .
+                                              1        .         1
+                                                       .
+                                                       .
+                                                      vr
+
+                        Figure 1: Example of a large gap in optimal LP and IP solutions
+
+
+
+   We can equivalently define the minimum cost integer equal flow problem, which has the same setup as a
+traditional minimum cost flow problem, but additionally contains sets R1 , R2 , . . . , R` ⊆ A of arcs that must
+have equal flow.
+   As mentioned in Section 1, Sahni [16] showed that the maximum integer equal flow problem is NP-hard.
+Later, Garey and Johnson [10] observed that the modification of a construction by Even et al. [7] shows that
+the problem is NP-hard even if the capacity of every arc is 1. Srinathan et al. [18] furthered this, showing
+that the problem remains NP-hard even if all capacities are 1 and all arcs in a homologous set originate from
+the same node. It is this construction that motivates several of our results.
+
+
+3      Hardness of Approximation
+Our hardness results are motivated by the following theorem. By ‘nontrivial’, we mean that some arc in the
+solution has positive flow (since the zero vector is always feasible). This theorem provides a strengthening
+of a reduction by Srinathan et al. [18] and shows that it is already strongly NP-hard to decide whether there
+exists a nontrivial solution.
+
+Theorem 3.1. The problem of determining whether an instance of the maximum integer equal flow problem
+has a nontrivial feasible solution is strongly NP-complete.
+
+Proof. First notice that this problem is in NP, since any nontrivial feasible solution can be taken as a
+certificate. We reduce from Exact Cover by 3-Sets, which is strongly NP-complete [10]. This problem
+is:
+       Instance: A set A = {a1 , . . . , aq }, such that q is divisible by 3, and a collection S = {S1 , . . . , Sr }
+       of 3-element subsets of A. (Without loss of generality, we can assume that q = r [15]; this makes
+       some of the following proofs cleaner although the assumption is not strictly necessary.)
+       Question: Does there exist a subcollection S 0 ⊆ S such that each element of A occurs in exactly
+       one member of S 0 ?
+
+Assume we are given an instance of the Exact Cover by 3-Sets problem, consisting of A and S. Construct
+an instance of the maximum integer equal flow problem as follows:
+
+    1. Create a source node s and a sink node t. Add q nodes S1 , S2 , . . . , Sq , corresponding to elements of S,
+       and q nodes a1 , a2 , . . . , aq , corresponding to elements of A.
+
+    2. Add arcs: (s, Si ) for all i, of capacity 3.
+                 (Si , aj ) if element aj is contained in set Si , of capacity 1.
+                 (aj , t) for all j, of capacity 1.
+
+
+                                                             3
+                                                       S1                  a1
+
+                                               3
+                                                       S2                  a2
+                                               3
+                                               3       S3                  a3
+                                   s                                                         t
+                                               3
+                                                       S4                  a4
+                                               3
+                                               3
+                                                       S5                  a5
+
+                                                       S6                  a6
+
+
+                   Figure 2: Constructed instance of the maximum integer equal flow problem
+
+
+   3. Add homologous sets {(Si , ai1 ), (Si , ai2 ), (Si , ai3 )} for all i, where Si = {ai1 , ai2 , ai3 }, and the additional
+      set {(a1 , t), (a2 , t), . . . , (aq , t)}.
+    For the instance A = {a1 , a2 , a3 , a4 , a5 , a6 }, S = {{a1 , a2 , a3 }, {a1 , a3 , a4 }, {a1 , a3 , a5 }, {a2 , a3 , a6 },
+{a3 , a4 , a5 }, {a4 , a5 , a6 }}, the constructed graph is shown in Figure 2. Homologous arcs are colored the
+same, and all unlabeled arcs have capacity 1.
+    We claim that the answer to the Exact Cover by 3-Sets problem is ‘yes’ if and only if the maximum
+integer equal flow on the constructed instance has a nontrivial feasible solution. To see this, first note that
+if there exists an exact cover {S1 0 , S2 0 , . . . , Sq/3 0 }, we can achieve a nontrivial feasible solution of value q by
+sending 3 units along each of the arcs (s, Si 0 ), and sending one unit along each arc (Si 0 , aj ) where aj ∈ Si 0 .
+Since each element aj appears in exactly one of the sets Si 0 , none of the capacities will be violated.
+    Conversely, if there exists a nontrivial feasible solution, we claim that the value of the flow must be equal
+to q. This follows because all of the arcs (aj , t) have capacity 1, and in a nontrivial solution they must all
+have exactly 1 unit of flow by the homologous conditions. Moreover, by the homologous conditions on the
+arcs (Si , aj ), this solution must send flow through exactly q/3 of the nodes Si , and from there on through
+each of the nodes a1 , . . . , aq . By construction, this means that the set of nodes {S1 0 , S2 0 , . . . , Sq/3 0 } receiving
+positive flow must correspond to an exact cover by 3-sets.
+   We can also apply this result to the case where all arc capacities are 1, by replacing each arc of capacity
+3 with three arcs of capacity 1 and adding transshipment nodes as appropriate.
+   An extension of this argument provides us with the inapproximability result. In essence, we translate the
+problem of determining whether a nontrivial feasible solution exists into a problem of determining whether
+a solution of a certain cost exists. We then use the hardness of the first problem to induce a gap in the
+approximability of the second problem.
+Theorem 3.2. There is no 2n(1−) -approximation algorithm for the maximum integer equal flow problem
+for any fixed  > 0, even if a nontrivial solution is guaranteed to exist, unless P=NP.
+Proof. Let  > 0 be given. We again reduce from Exact Cover by 3-Sets. Create the same instance of
+maximum integer equal flow as in the previous proof, and modify it as follows:
+   1. Let k = (2q+3)
+                    .
+   2. Create new nodes t1 , t2 , . . . , tk , tk+1 .
+   3. Add new arcs: (s, ti ) of capacity 2i−1 q, for i = 1, . . . , k.
+                    (s, tk+1 ) of capacity 1.
+                    (t, t1 ) of capacity q.
+                    (ti−1 , ti ) of capacity 2i−1 q, for i = 2, . . . , k + 1.
+
+
+                                                               4
+                                                                  s
+
+
+
+
+               S1    S2    S3       S4   S5   S6
+
+
+
+                                                        6       2·6     2k−1 · 6          1
+
+               a1    a2    a3       a4   a5   a6
+
+
+
+                                          6                 2·6            4·6      2k−1 · 6         2k · 6
+                                t                  t1                 t2           ....        tk             tk+1
+
+                    Figure 3: Extended construction of the maximum integer equal flow instance
+
+
+    4. Add homologous sets {(s, t1 ), (t, t1 )} and {(ti−1 , ti ), (s, ti )} for i = 2, . . . , k.
+
+    5. Redefine the problem so that instead of a maximal s − t flow, we now seek a maximal s − tk+1 flow.
+
+    For our previous instance, A = {a1 , a2 , a3 , a4 , a5 , a6 }, S = {{a1 , a2 , a3 }, {a1 , a3 , a4 }, {a1 , a3 , a5 },
+{a2 , a3 , a6 }, {a3 , a4 , a5 }, {a4 , a5 , a6 }}, the graph is as shown in Figure 3 (here, q = 6). Homologous arcs are
+colored the same, and the capacities in the original portion of the graph are unchanged.
+    By the same argument as in the previous proof, we see that if there is an exact cover by 3-sets, then the
+value of the maximum integer equal flow is greater than 2k q; if there is no exact cover, then the value of the
+maximum integer equal flow is equal to 1.
+    We also have that n = 2q + 3 + k = (2q + 3) 1+                                            1
+                                                                , which implies that k = n · 1+ > n(1 − ). Hence:
+
+            There is an exact cover by 3-sets           ⇒   value of max integer equal flow is > 2n(1−)
+            There is no exact cover by 3-sets           ⇒   value of max integer equal flow is 1.
+
+    Thus no 2n(1−) -approximation algorithm exists, unless P=NP.
+
+
+4      Problem Variants
+We now comment on several variants of the integer equal flow problem. The first variant we consider is the
+paired integer equal flow problem, in which all homologous arc sets have cardinality 2.
+
+Theorem 4.1. There is no 2n(1−) -approximation algorithm for the maximum paired integer equal flow
+problem for any fixed  > 0, even if a nontrivial solution is guaranteed to exist, unless P=NP.
+
+Proof. We first claim that any of the homologous sets of size p ≥ 3 used in the proof of Theorem 3.2 can be
+converted into collections of homologous sets of size 2, such that the equal flow conditions are still enforced
+and p new nodes are introduced. To see this, note that the only homologous sets of size greater than 2 used
+in the proof of Theorem 3.2 are those used in the original Exact Cover by 3-Sets gadget introduced in
+Theorem 3.1. These have the special structure that all arcs in a homologous set either originate from or end
+at a common node. A nearly identical construction may be used for both cases, so without loss of generality
+we consider the case where all homologous arcs end at the same node.
+
+
+                                                                  5
+    We replace homologous sets of the form {(v1 , vp+1 ), (v2 , vp+1 ), . . . , (vp , vp+1 )} with the collection of
+sets of size 2 shown in Figure 4. Here we have introduced p new nodes. The homologous pairs are
+                         0
+{(vi0 , vp+1 ), (vi+1 , vi+1 )} for all i = 1, . . . , p − 1, and {(vp0 , vp+1 ), (v1 , v10 )}. We can verify by inspection
+that the vi − vp+1 flow must be the same for all i in both cases, by the way the homologous pairs are defined,
+so the constructions are equivalent.
+
+                                           v1      v2      v3     . . . vp-1   vp
+
+                                                  v10 v20 v30 ...vp-1
+                                                                  0
+                                                                      vp0
+
+
+
+                                                           vp+1
+
+                                Figure 4: Transformed instance with p sets of size 2
+
+
+    We can now apply the same arguments as in Theorem 3.2 to establish the result. We note that the value
+of k must be (slightly) increased to compensate for a greater number of nodes in the original graph.
+
+    The next variant we consider is that of the minimum cost integer equal flow problem. By extension, the
+hardness results we have presented thus far also apply to the capacitated version of this problem, since we
+can transform a maximum flow problem to a minimum cost flow problem using standard network techniques
+[1]. Hence in what follows we consider the uncapacitated version.
+
+Theorem 4.2. The uncapacitated single-source single-sink minimum cost integer equal flow problem is NP-
+hard, and no 2n(1−) -approximation algorithm exists for any fixed  > 0, even if a nontrivial solution is
+guaranteed to exist, unless P=NP.
+
+Proof. We use the same construction as in Theorem 3.2, with the following modifications:
+
+   1. Remove the capacities on all arcs.
+
+   2. Assign the cost of arcs (s, tk+1 ) and (aq , t) to be 1. Give all other arcs zero cost.
+
+   3. Assign a supply of 2k q units to s, and a demand of 2k q units at tk+1 . Give all other nodes zero supply
+      and demand.
+
+    We claim that if there is an exact cover by 3-sets, then the cost of the minimum cost integer equal flow
+is 1; if there is no exact cover, then the cost is greater than 2k . To see this, first observe if there is an exact
+cover by 3-sets, then we can route the flow as in Theorem 3.2 and achieve a cost of 1. This is since 1 unit
+of flow will traverse arc (aq , t), and all other flow will have a cost of zero.
+    If there is no exact cover by 3-sets, then there is no way that all of the arcs (a1 , t), (a2 , t), . . . , (aq , t) can
+simultaneously contain one unit of flow, by the way the graph is constructed. Moreover, there is no way that
+these arcs can simultaneously carry more than one unit of flow either; as the amount of flow on arc (ti , ti+1 )
+must be twice that of arc (ti−1 , ti ), the total amount of required flow would then exceed the available demand
+in the network. Thus arc (t, t1 ) must have zero flow, and by extension all of the arcs (ti , ti+1 ) must also have
+zero flow. The only feasible flow is to send all 2k q units of flow along the arc (s, tk+1 ), which gives a cost of
+2k q > 2k .
+    Using a very similar analysis to that in Theorem 3.2, this implies that the problem is NP-hard and no
+2n(1−) -approximation algorithm exists for any  > 0, unless P=NP.
+
+   Using the same techniques as in Theorem 4.1, we also obtain the following result.
+
+
+
+
+                                                             6
+Theorem 4.3. The uncapacitated minimum cost paired integer equal flow problem is NP-hard, and there is
+no 2n(1−) -approximation algorithm for any fixed  > 0, even if a nontrivial solution is guaranteed to exist,
+unless P=NP.
+    We now address the problem where the number ` of homologous arc sets is fixed. Ahuja et al. [2] have
+shown that this problem is solvable in polynomial time when ` = 1, but they did not address the complexity
+for greater values of `. Our results are for the minimum cost flow version of the problem, though they also
+hold for the maximum flow version via a standard transformation [1].
+Theorem 4.4. The minimum cost integer equal flow problem is solvable in polynomial time for any fixed
+number of homologous arc sets.
+Proof. Suppose the amount of supply at node i is b(i). Let ` be fixed, and let yk be the (common) amount of
+flow on the arcs in homologous set Rk . Our primary observation is that we can obtain the optimal amount
+of flow on the arcs in each of the homologous arc sets by solving the following mixed integer program:
+                         X
+                 min           cij xij
+                             X
+                           (i,j)∈A
+                                                 X
+                    s.t.               xij −               xji = b(i)   i∈N
+                           j:(i,j)∈A           j:(j,i)∈A
+                           xij = yk                                     for all (i, j) ∈ Rk , k = 1, . . . , `
+                           0 ≤ xij ≤ uij                                for all (i, j) ∈ A
+                           yk ∈ Z                                       for all k = 1, . . . , `
+
+    Given an optimal solution (x∗ , y ∗ ) to this problem, we can obtain an integral solution with the same
+objective function value as follows. First, we ensure that exactly yk∗ units of flow are sent along the arcs in
+Rk , using the following network transformation technique: if (i, j) is an arc in set Rk , we decrease the supply
+at node i by yk∗ , decrease the demand at node j by yk∗ , and set the new capacity of arc (i, j) to 0. Once these
+transformations have been performed, the resulting problem will be a minimum cost network flow problem
+on the remaining arcs, which we can then solve to give an integral optimal solution. This solution will have
+the same cost as the original, because network flow problems with integral data are always guaranteed to
+possess at least one integral optimal solution.
+    Hence if we can solve the above mixed integer program in polynomial time, we can solve the minimum
+cost integer equal flow problem in polynomial time. Since ` is fixed, this amounts to solving a mixed integer
+program with a fixed number of integer variables. Lenstra [13] has shown that such problems are solvable
+in polynomial time.
+   Finally, we note that all of these results extend to a generalization of the equal flow problem known as
+the factor-α flow problem, first proposed by Larsson and Liu [12]. In this problem, we are given a graph
+G = (N, A) and disjoint sets R1 , . . . , R` of arcs. We want to find a flow such that for all (i1 , j1 ), (i2 , j2 ) ∈ Rk ,
+                                                      1
+                                                        xi j ≤ xi1 j1 ≤ αxi2 j2
+                                                      α 22
+for some given integer α ≥ 1. The equal flow problem corresponds to the case when α = 1.
+    The same arguments as in Theorem 3.2 establish that there is no 2n(1−) -approximation algorithm for
+this problem, unless P=NP, and the construction of Theorem 4.1 shows that this holds for the paired version
+as well. The version with a fixed number of homologous arc sets is solvable in polynomial time, via an
+extension of the arguments in Theorem 4.4, in which the flow on each arc xij ∈ Rk is bounded between a
+lower bound yklb and an upper bound αyklb .
+
+Acknowledgements
+The authors wish to thank Jim Orlin for several helpful discussions, including an observation that led to a
+strengthening of Theorem 3.2.
+
+
+                                                                    7
+References
+ [1] R. Ahuja, J. Orlin, and T. Magnanti. Network Flows: Theory, Algorithms, and Applications. Prentice
+     Hall, Upper Saddle River, NJ, 1993.
+ [2] R. Ahuja, J. Orlin, G. Sechi, and P. Zuddas. Algorithms for the simple equal flow problem. Management
+     Science, 45:1440–1455, 1999.
+ [3] A. Ali, J. Kennington, and B. Shetty. The equal flow problem. European Journal of Operational
+     Research, 36:107–115, 1988.
+ [4] A. Bockmayr, N. Pisaruk, and A. Aggoun. Network flow problems in constraint programming. In Pro-
+     ceedings of the Seventh International Conference on Principles and Practice of Constraint Programming,
+     number 2239 in Lecture Notes in Computer Science, pages 196–210, Paphos, Cyprus, 2001. Springer.
+ [5] H. Calvete. Network simplex algorithm for the general equal flow problem. European Journal of
+     Operational Research, 150:585–600, 2003.
+ [6] P. Carraresi and G. Gallo. Network models for vehicle and crew scheduling. European Journal of
+     Operational Research, 16:139–151, 1984.
+ [7] S. Even, A. Itai, and A. Shamir. On the complexity of timetable and multicommodity flow problems.
+     SIAM Journal on Computing, 5:691–703, 1976.
+ [8] J. Feldman and D. Karger. Decoding turbo-like codes via linear programming. In Proceedings of the
+     Forty-Third Symposium on Foundations of Computer Science, pages 251–260, Vancouver, Canada, 2002.
+     IEEE Computer Society.
+ [9] C. Fremuth-Paeger and D. Jungnickel. Balanced network flows 1: A unifying framework for design and
+     analysis of matching algorithms. Networks, 33:1–28, 1999.
+[10] M. Garey and D. Johnson. Computers and Intractability: A Guide to the Theory of NP-Completeness.
+     W.H. Freeman and Company, New York, NY, 1979.
+[11] G. Glocker and G. Nemhauser. A dynamic network flow problem with uncertain arc capacities: formu-
+     lation and problem structure. Operations Research, 48:233–242, 2000.
+[12] T. Larsson and Z. Liu. An efficient Lagrangean relaxation scheme for linear and integer equal flow
+     problems. Optimization, 40:247–284, 1997.
+[13] H. Lenstra. Integer programming with a fixed number of variables. Mathematics of Operations Research,
+     8:538–548, 1983.
+[14] A. Parmar. Integer Programming Approaches for Equal-Split Network Flow Problems. PhD dissertation,
+     Georgia Institute of Technology, August 2007.
+[15] K. Pillaipakkamnatt and V. Raghavan. On the limits of proper learnability of subclasses of DNF
+     formulas. Machine Learning, 25:237–263, 1996.
+[16] S. Sahni. Computationally related problems. SIAM Journal on Computing, 3:262–279, 1974.
+[17] F. Shepardson and R. Marsten. A Lagrangean relaxation algorithm for the two duty period scheduling
+     problem. Management Science, 26:274–281, 1980.
+[18] K. Srinathan, P. Goundan, M. Ashwin Kumar, R. Nandakumar, and C. Pandu Rangan. Theory of equal
+     flows in networks. In Proceedings of the Eighth International Computing and Combinatorics Conference,
+     number 2387 in Lecture Notes in Computer Science, pages 514–524, Singapore, 2002. Springer.
+[19] B. Verweij, K. Aardal, and G. Kant. On an integer multicommodity flow problem from the airplane
+     industry. Technical Report UU-CS-1997-38, Utrecht University, Department of Computer Science, 1997.
+
+
+                                                    8
+

@@ -1,0 +1,438 @@
+#A7                                INTEGERS 22 (2022)
+
+       INVERSE PROBLEMS RELATED TO SOME WEIGHTED
+          ZERO-SUM CONSTANTS FOR CYCLIC GROUPS
+
+
+                        Sukumar Das Adhikari1
+Department of Mathematics, Ramakrishna Mission Vivekananda Educational and
+                      Research Institute, Belur, India
+                       adhikarisukumar@gmail.com
+
+                             Shruti Hegde2
+Department of Mathematics, Ramakrishna Mission Vivekananda Educational and
+                      Research Institute, Belur, India
+                         shrutihg2112@gmail.com
+
+                           Md Ibrahim Molla3
+Department of Mathematics, Ramakrishna Mission Vivekananda Educational and
+                      Research Institute, Belur, India
+                           mdibimya@gmail.com
+
+                              Subha Sarkar4
+  Ramakrishna Mission Vivekananda Educational and Research Institute, Belur,
+                                  India
+                      subhasarkar2051993@gmail.com
+
+
+
+  Received: 7/7/21, Revised: 10/20/21, Accepted: 12/27/21, Published: 1/7/22
+
+
+
+
+                                   Abstract
+We here take up some inverse problems related to a weighted generalization of the
+Davenport constant for some particular weights for a finite cyclic group.
+
+
+
+
+1. Introduction
+
+Let G be a finite abelian group (written additively) of exponent m and A ⊂ [1, m−1].
+By a sequence over G, we mean a finite sequence of terms from G which is unordered
+  1 Formerly at Harish-Chandra Research Institute. Would like to acknowledge a fellowship (under
+
+MATRICS) from SERB, Department of Science & Technology, Govt. of India.
+  2 Would like to acknowledge CSIR, Govt. of India, for a research fellowship.
+  3 Would like to acknowledge CSIR, Govt. of India, for a research fellowship.
+  4 Recently moved to Birla Institute of Technology - Mesra, Ranchi, India.
+INTEGERS: 22 (2022)                                                                      2
+
+and in which repetition of terms is allowed. We view sequences over G as elements
+of the free abelian monoid F(G) and use multiplicative notation (so our notation
+is consistent with [10], [11] and [12]). The Davenport constant of G with weight
+A, denoted by DA (G), is defined to be the least positive integer k such that any
+sequence x1 · . . . · xk ∈ F(G) has a non-empty A-weighted zero-sum subsequence;
+that is, there exist a non-empty subsequence xj1 · . . . · xjl and a1 , . . . , al ∈ A such
+     Pl
+that i=1 ai xji = 0.
+   The case A = {1} corresponds to the classical Davenport constant D(G), which
+was initiated by Rogers [21] and Davenport (see [20], for instance) in connection
+with factorization in an algebraic number field K. For an expository account of
+D(G), one may look into [10] and [11], for instance.
+   The weighted version DA (G) of the Davenport constant (and similar generaliza-
+tions of some other zero-sum constants) were initiated in some papers of Adhikari,
+Chen, Friedlander, Konyagin and Pappalardi [3], Adhikari and Rath [5], Thangadu-
+rai [22], Adhikari and Chen [2] and Adhikari, Balasubramanian, Pappalardi and
+Rath [1].
+   Many people worked (see Yuan and Zeng [24], Grynkiewicz, Marchan and Ordaz
+[14], Halter-Koch [15], Marchan, Ordaz and Schmid [18], Marchan, Ordaz, Santos
+and Schmid [17], etc.) on questions, conjectures and applications related to these
+generalizations.
+  We write Zn to denote the cyclic group Z/nZ and shall use the notation Z∗n to
+denote the group of units of Zn .
+   Here we take up the inverse problems related to DA (Zn ) for a couple of weight
+sets A. For a real number x, we shall use the notation dxe to denote the least integer
+≥ x. For positive integers m, n and r, the notation mr || n will be used to indicate
+that mr | n and mr+1 - n.
+   In one of the early papers [5], it was proved that for a prime p and A =
+{1, 2, . . . , r}, where r is an integer satisfying 1 < r < p, one has
+                                                   lpm
+                                       DA (Zp ) =      .                 (1)
+                                                     r
+   For general n, with A = {1, 2, . . . , r}, where r is an integer such that 1 < r < n,
+Xia and Li [23] and Adhikari, David and Urroz [4] independently showed that by
+the argument in [5], one can establish the following:
+                                                 lnm
+                                  DA (Zn ) =          .                              (2)
+                                                  r
+   Addressing the inverse problem corresponding to (2), we prove the following.
+
+Theorem 1. Let n and r be positive integers such that 1 < r < n and A =
+{1, 2, . . . , r}. Then a sequence S : x1 · x2 · . . . · xd nr e−1 over Zn has no non-empty
+INTEGERS: 22 (2022)                                                                           3
+
+A-weighted zero-sum subsequence, if and only if it is of the form
+                                              n
+                                          u(d r e−1) ,                                      (3)
+
+where u is a unit of Zn .
+  For a prime p, if A is the set of all the squares in Z∗p , then it was proved by
+Adhikari and Rath [5] that
+                                  DA (Zp ) = 3.                                (4)
+   In what follows, we shall use the following notation
+
+                                    Rn = {a2 : a ∈ Z∗n }.
+
+That is, Rn is the set of all squares in Z∗n .
+  Adhikari, David and Urroz [4] showed that if n = pr for a prime p > 3 or n is
+square-free and coprime to 6, then
+
+                                  DRn (Zn ) = 2Ω(n) + 1,                                    (5)
+
+where for any positive integer n, Ω(n) denotes the number of prime factors of n,
+multiplicity included.
+   Later, Chintamani and Moriya [7] proved that the equality (5) holds when n is
+any integer coprime to 30 = 2 × 3 × 5. They also proved that (5) holds when n is a
+power of 3.
+   Regarding further results in this direction, Grynkiewicz and Hennecart [13] proved
+that if A is the set of squares in the group of units in the cyclic group Zn , then for
+a prime p, writing vp (n) to denote the p-valuation of n, one has
+
+                       DA (Zn ) = 2Ω(n) + min{v5 (n), v3 (n)} + 1,                          (6)
+
+for odd n with either v3 (n) = 0 or v3 (n) ≥ v5 (n).
+   To state our next results, we shall need the following definition.
+Definition 1. If the weight-set A is a subgroup of Z∗n , two sequences x1 · . . . · xk
+and y1 · . . . · yk over Zn are said to be equivalent with respect to A if there are
+a1 , . . . , ak ∈ A, c ∈ Z∗n and a permutation σ ∈ Sk such that yi = cai xσ(i) , for
+i = 1, 2, . . . , k.
+   It is clear from Definition 1 that if x1 · . . . · xk and y1 · . . . · yk are equivalent with
+respect to A, then x1 ·. . .·xk does not have any non-empty A-weighted zero-sum sub-
+sequence if and only if y1 · . . . ·yk does not have any non-empty A-weighted zero-sum
+subsequence. Thus, when the weight-set A ⊂ Z∗n is a group under multiplication,
+we want to characterize the extremal sequences up to this equivalence.
+   In the following theorems, we characterize the extremal sequences for the result
+(5) of Adhikari, David and Urroz [4] and a generalization due to Chintamani and
+Moriya [7] mentioned in the introduction.
+INTEGERS: 22 (2022)                                                                           4
+
+Theorem 2. Let p ≥ 3 be a prime and n = ps . A sequence S : x1 · . . . · x2s
+of length 2Ω(n) = 2s over Zn does not have any non-empty Rn -weighted zero-sum
+subsequence if and only if S is equivalent with respect to Rn to the following sequence
+                                        s−1
+                                        Y            s−1
+                                                     Y
+                                              θi ·         γi ,
+                                        i=0          i=0
+
+where θi = pi , γi = (−vi )pi with vi ∈ Z∗n \ Rn .
+
+Theorem 3. Let n = p1 · · · pk be a product of k distinct primes, with gcd(n, 30) = 1.
+A sequence S : x1 · . . . · x2k over Zn of length 2Ω(n) = 2k does not have any non-
+empty Rn -weighted zero-sum subsequence if and only if it is equivalent with respect
+to Rn to a sequence of the following form:
+                                        k
+                                        Y            k
+                                                     Y
+                                              αi ·         βi ,
+                                        i=1          i=1
+
+with α1 = u1 , α2 = q1 u2 , . . . , αk = q1 q2 · · · qk−1 uk , β1 = −v1 , β2 = −q1 v2 , . . . ,
+βk = −q1 q2 · · · qk−1 vk where q1 , . . . , qk is a permutation of the primes p1 , . . . , pk ,
+ui ∈ Rqi , and vi ∈ Z∗n \ Rqi for each i = 1, 2, . . . , k.
+
+
+
+2. Preliminaries
+
+We shall need the following result ([6], [9], one may also see [19], for instance).
+
+Lemma 1. (Cauchy–Davenport Inequality). For a prime p, let A and B be two
+non-empty subsets of Zp . Then
+
+                             |A + B| ≥ min{p, |A| + |B| − 1},
+
+where
+                      A + B = {x ∈ Zp | x = a + b, a ∈ A, b ∈ B}
+and for a subset K of Zp , |K| denotes the cardinality of K.
+
+   By iterating the above, for non-empty subsets A1 , A2 , . . . , Ah of Zp , one has
+                                                                  h
+                                                                  X
+                    |A1 + A2 + · · · + Ah | ≥ min{p,                    |Ai | − h + 1}.     (7)
+                                                                  i=1
+
+   If n = p ≥ 7, a prime, given y1 , y2 , y3 ∈ Z∗p , and writing Ai = yi Rn for i = 1, 2, 3,
+INTEGERS: 22 (2022)                                                                5
+
+by (7),
+                                                        3
+                                                        X
+                      |A1 + A2 + A3 |     ≥    min{p,         |Ai | − 2}
+                                                        i=1
+                                                        p−1
+                                          =    min{p, 3       − 2}
+                                                          2
+                                          =    p, since p ≥ 7.
+
+  Thus we have the following.
+
+Lemma 2. Let p ≥ 7 be any prime. Then given any y1 , y2 , y3 ∈ Z∗p , we have
+
+                              Rp y1 + Rp y2 + Rp y3 = Zp .
+
+  We observe that from the above lemma, one can easily deduce the following.
+
+Lemma 3. Let p ≥ 7 be any prime. If a sequence y1 · y2 · . . . · yl over Zp has at
+least three non-zero elements, then there exist α1 , α2 , . . . , αl ∈ Rp such that
+
+                             α1 y1 + α2 y2 + · · · + αl yl = 0.
+
+Proof. Without loss of generality, let y1 , y2 and y3 be three terms which are not
+congruent to 0 modulo p. Then by Lemma 2, we have
+
+                              Rp y1 + Rp y2 + Rp y3 = Zp .
+
+Therefore, there exist α1 , α2 , α3 ∈ Rp such that
+
+                      α1 y1 + α2 y2 + α3 y3 = −y4 − y5 − · · · − yl .
+
+Now choosing αi = 1 for i = 4, 5, . . . , l, we obtain our desired result.
+
+  We shall also need the following result of Chowla [8] (one may also see [16], [19])
+which provides a generalization of the Cauchy-Davenport inequality to composite
+numbers.
+
+Lemma 4. (Chowla). Let n be a natural number and A and B be nonempty subsets
+of Zn . If 0 ∈ B and gcd(b, n) = 1 for all b ∈ B \ {0}, then
+
+                           |A + B| ≥ min{n, |A| + |B| − 1}.
+
+
+
+3. Proofs of Our Theorems
+
+Proof of Theorem 1. Clearly, a sequence of the form (3) cannot have a non-empty
+A-weighted zero-sum subsequence.
+INTEGERS: 22 (2022)                                                                           6
+
+   Let us now assume that S : x1 · x2 · . . . · xd nr e−1 has no non-empty A-weighted
+zero-sum subsequence.
+   First, we show that the sequence S cannot have two distinct elements in it.
+   Suppose that S has two distinct elements and without loss of generality, let
+                                       Pk
+x1 6= x2 . Write k = d nr e − 1 and D = i=1 xi .
+   Now, consider the following elements:
+
+            x1 , x2 , x1 + x2 , x1 + x2 + x3 , . . . , x1 + x2 + · · · + xk = D,
+            D + x1 , D + x2 , D + x1 + x2 , D + x1 + x2 + x3 , . . . , 2D,
+            ..
+             .
+            (r − 1)D + x1 , (r − 1)D + x2 , (r − 1)D + x1 + x2 , . . . , rD.
+
+We observe that among the r(k + 1) = rd nr e ≥ n elements listed above, tD + x1 6=
+tD + x2 for t = 0, 1, 2, . . . , r − 1.
+   If none of the listed elements is zero in Zn , by the pigeonhole principle, two of
+them must be equal and by the above observation, any possible equality will give
+us a non-empty A-weighted zero-sum subsequence.
+   Therefore, all the elements of S must be equal. That is,
+
+                                  x1 = x2 = · · · = xk = u.
+
+If u is a non-unit, then gcd(u, n) = d > 1.
+    Write nd = m < n and xi = dyi for i = 1, 2, . . . , k.
+    If m ≤ r, then um being a multiple of dm = n, we are through.
+                                                                 0
+    In general, k = d nr e − 1 ≥ d m r e, and therefore by (2), S : y1 · y2 , · . . . · yd r e−1
+                                                                                           n
+                                                           Pl
+has a non-empty subsequence yj1 · . . . · yjl such that i=1 ai yji ≡ 0 (mod m), with
+                            Pl
+a1 , . . . , al ∈ A, so that i=1 ai xji ≡ 0 (mod n) - contradiction to our assumption.
+Hence, u cannot be a non-unit. Therefore, S is of the form (3).
+Proof of Theorem 2. Let S : x1 · . . . · xk be a sequence of length k = 2s over Zn such
+that S does not have any non-empty Rn -weighted zero-sum subsequence. Clearly,
+xi 6= 0 for all i, and we can write
+
+                                         xi = pji αi ,                                      (8)
+
+where 0 ≤ ji < s and αi ∈ Z∗n .
+   If for more than two i’s, the corresponding ji ’s are equal, then without loss of
+generality, we may assume that for i = 1, 2, 3, we have xi = pj αi , where αi ∈ Z∗n .
+Since by Lemma 4 we have
+
+      |Rn α1 + (Rn ∪ {0})α2 + (Rn ∪ {0})α3 | ≥ min{n, 3|Rn |} = n, as p ≥ 3,
+
+we get a non-empty Rn -weighted zero-sum subsequence of the given sequence S.
+INTEGERS: 22 (2022)                                                                         7
+
+   Therefore, for not more than two i’s with 1 ≤ i ≤ k, the corresponding ji ’s can
+be equal. But since |S| = 2s, for each j, 0 ≤ j < s, there are exactly two xi ’s such
+that pj || xi .
+   Corresponding to a fixed t, 0 ≤ t < s, let xu and xv be the elements of S such
+that with the notation as in (8), ju = jv = t and xu = pt αu , xv = pt αv .
+   If αu , −αv ∈ Rn , then Rn αu = Rn (−αv ) = Rn , so that an Rn -linear combination
+of αu and αv is zero in Zn , which will further imply that an Rn -linear combination
+of xu and xv is zero, a contradiction.
+   Similarly, it cannot happen that αu ∈ / Rn and −αv ∈  / Rn .
+   Hence S is equivalent with respect to Rn to the sequence
+                                       s−1
+                                       Y            s−1
+                                                    Y
+                                             θi ·         γi ,
+                                       i=0          i=0
+
+where θi = pi , γi = (−vi )pi with vi ∈ Z∗n \ Rn .
+  Now, suppose that we are given a sequence of the form
+                                       s−1
+                                       Y            s−1
+                                                    Y
+                                             θi ·         γi ,
+                                       i=0          i=0
+
+where θi = pi , γi = (−vi )pi with vi ∈ Z∗n \ Rn . An Rn -weighted subsequence sum
+will be of the form
+                              c1 pi1 + c2 pi2 + · · · + cl pil ,
+with i1 < i2 < · · · < il , where for any particular i, ci = ui , ci = −vi0 or ci = ui − vi0 ,
+where ui ∈ Rn and vi0 ∈ Z∗n \ Rn . If this subsequence sum is 0 ∈ Zn , then we shall
+have c1 ≡ 0 (mod p). Since ui1 ∈ Rn and vi01 ∈ Z∗n \ Rn , this is not possible.
+   Thus, the sequence S in the theorem does not have any Rn -weighted zero-sum
+subsequence.
+Proof of Theorem 3. Arguing as in Theorem 2, here we observe that a sequence
+of the form as given in the statement of the theorem cannot have any non-empty
+Rn -weighted zero-sum subsequence.
+   We proceed to prove the converse by induction on k. If k = 1 so that n = p1 ,
+a prime, then a sequence of length 2 with no Rn -weighted zero-sum subsequence is
+clearly of the form αβ where α = v1 is a quadratic residue modulo p1 and β = −v2
+where v2 is a quadratic non-residue modulo p1 .
+   Now, let k ≥ 2 and let S : x1 · . . . · x2k be a sequence over Zn such that it does
+not have any non-empty Rn -weighted zero-sum subsequence.
+   If for each prime q ∈ {p1 , p2 , . . . , pk }, there are three xi ’s, co-prime to q, then
+by Lemma 3 and the Chinese Remainder Theorem, S is an Rn -weighted zero-sum
+sequence.
+   Therefore, there exists at least one prime q1 ∈ {p1 , p2 , . . . , pk }, such that at most
+two xi ’s are co-prime to q1 .
+INTEGERS: 22 (2022)                                                                             8
+
+   First, we assume that the number of xi ’s co-prime to q1 is not more than one.
+Without loss of generality, assume that q1 divides xi for i = 2, . . . , 2k. Let xi = q1 yi
+for i = 2, . . . , 2k.
+   Writing n1 = qn1 , since the length of the sequence y2 · . . . · y2k is 2k − 1 =
+2Ω(n1 ) + 1 = DRn1 (Zn1 ), there is a non-empty Rn1 -weighted zero-sum subsequence
+modulo n1 of y2 ·. . .·y2k . Therefore, by the Chinese Remainder Theorem, y2 ·. . .·y2k
+has a non-empty Rn -weighted zero-sum subsequence modulo n1 and hence x2 ·. . .·x2k
+has a non-empty Rn -weighted zero-sum subsequence modulo n.
+   Thus there are exactly two xi ’s which are co-prime to q1 . Without loss of general-
+ity, we assume that x1 and x2 are co-prime to q1 . So, q1 divides xi for i = 3, . . . , 2k.
+Let xi = q1 yi for i = 3, . . . , 2k.
+   Then it cannot happen that both x1 and −x2 are squares or both of them are
+non-squares in Z∗q1 . Otherwise, there exist α1 , α2 ∈ Rq1 such that α1 x1 + α2 x2 ≡ 0
+(mod q1 ). Therefore, by the Chinese Remainder Theorem, there exist β1 , β2 ∈ Rn
+such that β1 x1 + β2 x2 ≡ 0 (mod q1 ); let β1 x1 + β2 x2 = q1 z. Now z · y3 · . . . · y2k is
+of length 2k − 1 = 2Ω(n1 ) + 1 and will have a non-empty Rn1 -weighted zero-sum
+subsequence modulo n1 and by the previous argument (β1 x1 + β2 x2 ) · x3 · . . . · x2k
+and hence S will have a non-empty Rn -weighted zero-sum subsequence modulo n.
+   Now, using the induction hypothesis on y3 · . . . · y2k so that it does not have a
+non-empty Rn1 -weighted zero-sum subsequence modulo n1 , we are through.
+
+
+Acknowledgement. We would like to thank the referee for several suggestions
+that helped us to improve the presentation of the paper.
+
+
+
+References
+[1] S. D. Adhikari, R. Balasubramanian, F. Pappalardi and P. Rath, Some zero-sum constants
+    with weights, Proc. Indian Acad. Sci. (Math. Sci.) 118 (2008), 183–188.
+
+[2] S. D. Adhikari and Y. G. Chen, Davenport constant with weights and some related questions
+    - II, J. Combinatorial Theory, Ser. A 115 (2008), 178–184.
+
+[3] S. D. Adhikari, Y. G. Chen, J. B. Friedlander, S. V. Konyagin and F. Pappalardi, Contributions
+    to zero-sum problems, Discrete Math. 306 (2008), 1–10.
+
+[4] S. D. Adhikari, C. David and J. J. Urroz, Generalizations of some zero-sum theorems, Integers
+    8 (2008), #A52.
+
+[5] S. D. Adhikari and P. Rath, Davenport constant with weights and some related questions,
+    Integers 6 (2006), #A30.
+
+[6] A. L. Cauchy, Recherches sur les nombres, J. Ecôle Polytech. 9 (1813), 99–123.
+
+[7] M. N. Chintamani and B. K. Moriya, Generalizations of some zero sum theorems, Proc. Indian
+    Acad. Sci. (Math. Sci.) 122, no. 1 (2012), 15–21.
+INTEGERS: 22 (2022)                                                                            9
+
+[8] I. Chowla, A theorem on the addition of residue classes: application to the number Γ(k) in
+    Waring’s problem, Proc. Indian Acad. Sci. 2 (1935), 242–243.
+
+[9] H. Davenport, On the addition of residue classes, J. London Math. Soc. 22 (1947), 100–101.
+
+[10] W. D. Gao and A. Geroldinger, Zero-sum problems in finite abelian groups; a survey, Expo.
+    Math. 24 (4) (2006), 337–369.
+
+[11] A. Geroldinger and F. Halter-Koch, Non-Unique Factorizations, Chapman & Hall, CRC,
+    2006.
+
+[12] D. J. Grynkiewicz, Structural Additive Theory, Developments in Mathematics, Springer, 2013.
+
+[13] D. J. Grynkiewicz and F. Hennecart, A weighted zero-sum problem with quadratic residues,
+    Unif. Distrib. Theory 10, no. 1 (2015), 69–105.
+
+[14] D. J. Grynkiewicz, L. E. Marchan and O. Ordaz, A weighted generalization of two theorems
+    of Gao, Ramanujan J. 28, no. 3 (2012), 323–340.
+
+[15] F. Halter-Koch, Arithmetical interpretation of weighted Davenport constants, Arch. Math.
+    (Basel), 103, no. 2 (2014), 125–131.
+
+[16] H. B. Mann, Addition Theorems in Group Theory and Number Theory, R. E. Krieger Pub-
+    lishing Company, Huntington, New York, 1976.
+
+[17] L. E. Marchan, O. Ordaz, I. Santos and W. A. Schmid, Multi-wise and constrained fully
+    weighted Davenport constants and interactions with coding theory, J. Combin. Theory Ser.
+    A 135 (2015), 237–267.
+
+[18] L. E. Marchan, O. Ordaz and W. A. Schmid, Remarks on the plus-minus weighted Davenport
+    constant, Int. J. Number Theory 10, no. 5 (2014), 1219–1239.
+
+[19] M. B. Nathanson, Additive Number Theory: Inverse Problems and the Geometry of Sumsets,
+    Springer, 1996.
+
+[20] J. E. Olson, A combinatorial problem in finite abelian groups, I, J. Number Theory 1 (1969),
+    8–10.
+
+[21] K. Rogers, A Combinatorial problem in abelian groups, Proc. Cambridge Phil. Soc. 59 (1963),
+    559–562.
+
+[22] R. Thangadurai, A variant of Davenport’s constant, Proc. Indian Acad. Sci. (Math. Sci.)
+    117, No. 2 (2007), 147–158.
+
+[23] X. Xia and Z. Li, Some Davenport constants with weights and Adhikari & Rath’s conjecture,
+    Ars Combin. 88 (2008), 83–95.
+
+[24] P. Yuan and X. Zeng, Davenport constant with weights, European J. Combin. 31 (2010),
+    677–680.
+

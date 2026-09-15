@@ -1,0 +1,74 @@
+{
+  "exact_bounded": [
+    {
+      "bound": 1,
+      "states": 4,
+      "solvable": 4,
+      "unsolvable": 0,
+      "ratio": 0.0,
+      "distance_distribution": {
+        "1": 2,
+        "2": 2
+      },
+      "examples": [],
+      "seconds": 0.00043070001993328333,
+      "memo_states": 5,
+      "sampling_model": "sorted primitive zero-sum states with coordinates initially in [-bound,bound]"
+    }
+  ],
+  "random": [
+    {
+      "bound": 20,
+      "samples": 1,
+      "accepted": 1,
+      "rejected": 3,
+      "ratio": 0.0,
+      "solvable": 1,
+      "unsolvable": 0,
+      "mean_shortest_solvable": 2.0,
+      "min_shortest": 2,
+      "max_shortest": 2,
+      "seconds": 1.7145701000699773,
+      "records": [
+        {
+          "raw": [
+            19,
+            -11,
+            -13,
+            15,
+            8,
+            -20,
+            19,
+            15,
+            19,
+            -19
+          ],
+          "state": [
+            -116,
+            -111,
+            -81,
+            -71,
+            24,
+            59,
+            59,
+            79,
+            79,
+            79
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 63640
+        }
+      ],
+      "sampling_model": "10 independent uniform integers in [-bound,bound], centered and primitive-normalized, conditioned on G=5^k"
+    }
+  ],
+  "sampling_guidance": {
+    "reference_observed_rate": 0.0,
+    "samples_for_95pct_one_detection_at_reference": 0,
+    "zero_failures_upper_95pct_after_1000": 0.0029912495450953314,
+    "zero_failures_upper_95pct_after_10000": 0.00029952835977664627,
+    "formula_for_true_rate_r": "ceil(log(0.05)/log(1-r)) samples gives 95% chance to see >=1 counterexample",
+    "warning": "Random ratios depend strongly on the sampling distribution; explicit sparse families can have positive existence but negligible independent-draw probability."
+  }
+}

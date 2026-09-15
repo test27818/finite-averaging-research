@@ -1,0 +1,30 @@
+{
+  "initial_navigation": [
+    {
+      "name": "buzzard_notes",
+      "url": "https://www.ma.imperial.ac.uk/~buzzard/maths/research/notes/",
+      "status": 200,
+      "use": "Navigation only"
+    },
+    {
+      "name": "pollack",
+      "url": "https://math.bu.edu/people/rpollack/",
+      "error": "SSL certificate verification failed; not read"
+    },
+    {
+      "name": "coleman",
+      "url": "https://math.berkeley.edu/~coleman/",
+      "status": 404,
+      "use": "Not read"
+    }
+  ],
+  "download_name_correction": {
+    "buzzard_taylor_continuation": "Local filename only: PDF actual sole author is Kevin Buzzard, Analytic continuation of overconvergent eigenforms, version October21,2004. It cites Buzzard-Taylor separately."
+  },
+  "actual_reading": {
+    "buzzard_gee_slopes": "Introduction pp1-3, including local Hecke slopes and fixed-prime variation; not full paper",
+    "buzzard_eigenvarieties": "Introduction pp1-3 and section6 opening definition of fixed-p weight space; not full paper",
+    "buzzard_taylor_continuation": "Introduction; section3 definitions and Theorem3.3; section5 trace construction and Proposition5.1, pp9-10 and15-16; not full paper"
+  },
+  "role": "Scope check and inspiration; none of these external theorems is used as a new dependency of prime averaging reachability."
+}

@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection{An exponential bound on mixing sequences}
+%\label{sec: an exponential bound}
+%\input{6-3_exponential_bound.tex}
+
+In this sub-section we give a simple upper bound on the number of mixing operations
+to perfectly mix $E$ with precision $0$ when $\nofdroplets{E}=n\geq 5$.
+This bound is exponential in $n$ --- so it's too weak for our purpose for general $n$ --- but we will
+use it only to get a polynomial bound when $n$ is at most $22$
+(see Theorem~\ref{thm: perfect mixability polynomial}). 
+
+Let $E$ satisfy Invariant~$(\lambda)$, where $\lambda = I'$ for $n=5,6$ and $\lambda = I$ for $n\geq 7$.
+Also, let $A\subseteq E$.
+We say that a pair of distinct concentrations in $A$ is \emph{$(\lambda)$-safe} 
+if it is $(\lambda)$-safe with respect to $E$, that is, if mixing this pair
+preserves Invariant~$(\lambda)$ for $E$.
+If there is no $(\lambda)$-safe pair in $A$ then we say that $A$ is \emph{$(\lambda)$-mixed}.
+Recall that, since $E$ satisfies Invariant~$(\lambda)$, 
+according to the properties established in Sections~\ref{subsec: proof for n greater-equal than 7} and~\ref{subsec: proof for n equal 5},
+it is guaranteed that in $E$ there exists a pair of concentrations that is either $(\lambda)$-safe
+or near-final;
+however, this pair may not be in the set $A$ under consideration. 
+(In other words, $A$ being $(\lambda)$-mixed does not mean that all droplets in $A$ have the same concentration
+--- it only means that we cannot mix any pairs from $A$ in our perfect-mixing sequence for $E$.)
+
+
+First, in Lemma~$\ref{lem: E-mixed}$ below we show an upper bound on the number of mixing
+operations to $(\lambda)$-mix a subset $A\subseteq E$. Then, we prove Theorem~\ref{thm: perfect mixability upper bound}
+that gives an upper bound for the number of mixing operations to perfectly mix $E$ with precision $0$.
+
+%%%%%%%%%%%%%%
+
+\begin{lemma}\label{lem: E-mixed}
+	Assume that $E$ satisfies Invariant~$(\lambda)$. 
+	If $A \subseteq E$ and $\nofdroplets{A} = k$, 
+	then $A$ can be $(\lambda)$-mixed with precision $0$ 
+	by a mixing sequence of length at most $(8k^3s(A))^k$.
+\end{lemma}
+
+\begin{proof}	
+	We prove the lemma by induction with respect to $k$.
+	Let $\phi(A)$ denote the number of furthest-apart $(\lambda)$-safe mixing operations needed to $(\lambda)$-mix $A$. We
+	use induction to prove that $\phi(A) \le (8k^3s(A))^k$. This will imply the lemma.
+
+	In the base case, when $k\le 1$, we have $\phi(A) = 0$, since $A$ is trivially $(\lambda)$-mixed.
+	So for the rest of the proof assume that $k\ge 2$ and that every $A' \subset A$
+	with $\nofdroplets{A'} = k'<k$ can be $(\lambda)$-mixed in $\phi(A')\leq(8{k'}^3s(A'))^{k'}$ mixing operations.
+	We next show that $A$ can be $(\lambda)$-mixed in at most $(8k^3s(A))^k$ mixing operations.
+	
+	If $A$ is already $(\lambda)$-mixed then we are done.
+	Otherwise, let $x,y\in A$ be the furthest-apart $(\lambda)$-safe pair. 
+	If $|x-y|\geq \diameter(A)/k$, we will call pair $x,y$ \emph{acceptable}.
+	If this pair $x,y$ is acceptable then mixing $x$ and $y$ decreases 
+	$\potential(A)$ at least by a factor of $1-1/2k^3$ (by applying 
+	Observation~$\ref{obs: far-appart mix}$ with $\gamma = k$ and $n_A = k$).	
+	Then, by Observation~$\ref{obs: far-appart constant mix}$, after at most $2k^3$ 
+	such acceptable mixing operations $\potential(A)$ decreases at least by a factor of $\half$, and
+	it follows that after at most $2k^3\log{\potential_{A,0}}$ such mixing operations, $A$ becomes $(\lambda)$-mixed.
+	However, there may be many steps where there is no acceptable pair.
+	To address this, we show below a strategy (basically a divide-and-conquer approach)
+	that will bound the number of consecutive steps
+	needed for an acceptable pair to appear.
+	
+	Let $\delta=\diameter(A)$ before any mixing operation.
+	Divide the interval $[\min(A), \max(A)]$ into $k$ equal segments 
+	such that for at least one segment, say $[l,r]$, no concentration in $A$ lies withing
+	the open interval $(l,r)$.
+	Split $A$ into $A_1$ and $A_2$ such that $\max(A_1) \leq l$ and $\min(A_2) \geq r$.
+	Let $k_i = |A_i|$, for $i=1,2$.
+	By our inductive assumption, each $A_i$ can be $(\lambda)$-mixed in
+	$\phi(A_i) \le  (8k_i^3s(A_i))^{k_i} < (8k^3s(A))^{k-1}$ mixing operations, respectively.
+	Therefore, after at most $\phi(A_1) + \phi(A_2)+1 \le 2(8k^3s(A))^{k-1}$
+	mixing operations, one of two things must happen:
+	either (i) $A$ is already $(\lambda)$-mixed, or
+	(ii) there are $x\in A_1$ and $y\in A_2$ that form an $(\lambda)$-safe pair.
+	In option~(ii), $x,y$ are in fact an acceptable pair, by the choice of the segment $[l,r]$.
+	As argued in the paragraph above, if we repeat the above strategy, 
+	option~(ii) can be repeated no more than $2k^3\log{\potential_{A,0}}$
+	times before $A$ becomes $(\lambda)$-mixed. Since $\log{\potential_{A,0}} \le 2s(A)$,
+	it follows that
+	% 
+	\begin{align*}
+			\phi(A)
+			\;&\leq\; 2k^3\log\potential_{A,0} \cdot 2(8k^3s(A))^{k-1}
+			\\
+			&\leq\; 4k^3s(A)\cdot 2(8k^3s(A))^{k-1}
+			\;\leq\; (8k^3s(A))^k,
+	\end{align*}
+	%
+	completing the inductive step and the proof of the lemma.
+\end{proof}
+
+%%%%%%%%%%%%%%
+
+\begin{theorem} \label{thm: perfect mixability upper bound}
+	If $|E|=n\geq 5$, then $E$ can be perfectly mixed with a mixing sequence of length at most
+	$(8n^3s(E))^n + 144n^3s^2(E)$.
+\end{theorem}
+
+\begin{proof}
+	Let $E$ satisfy Invariant~$(\lambda)$, where $\lambda = I$ for $n\ge 7$ and $\lambda = I'$ for $n = 5,6$.
+	We know that if $E$ satisfies Invariant~$(\lambda)$	then $E$ has a pair of concentrations
+	that is either $(\lambda)$-safe or near-final. 
+	Therefore, we first $(\lambda)$-mix $E$ using Lemma~$\ref{lem: E-mixed}$, 
+	which produces a near-final pair.
+	(Such a near-final pair becomes available because, as sown in
+	Sections~\ref{subsec: proof for n greater-equal than 7}	and~\ref{subsec: proof for n equal 5},
+	$E$ satisfying Invariant~($\lambda$) guarantees the existence of a pair that is either ($\lambda$)-safe
+	or near-final, and as $E$ is $(\lambda)$-mixed, the later must hold.)
+	We then mix this near-final pair, producing $E$ near-final 
+	that can be perfectly mixed using Theorem~$\ref{thm: E near-final}$.	
+	The total number of mixing operations in this sequence is at most $(8n^3s(E))^n + 144n^3s^2(E)$.
+\end{proof}

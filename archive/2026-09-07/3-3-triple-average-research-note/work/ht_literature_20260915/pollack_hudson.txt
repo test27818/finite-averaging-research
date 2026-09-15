@@ -1,0 +1,686 @@
+      Bounds for the first several prime character nonresidues
+
+                                        Paul Pollack
+
+          Abstract. Let ε > 0. We prove that there are constants m0 = m0 (ε) and
+          κ = κ(ε) > 0 for which the following holds: For every integer m > m0 and
+          every nontrivial Dirichlet character modulo m, there are more than mκ primes
+                 1
+                 √   +ε
+          ` ≤ m4 e                / {0, 1}. The proof uses the fundamental lemma of the
+                        with χ(`) ∈
+          sieve, Norton’s refinement of the Burgess bounds, and a result of Tenenbaum
+          on the distribution of smooth numbers satisfying a coprimality condition. For
+          quadratic characters, we demonstrate a somewhat weaker lower bound on the
+                                    1
+          number of primes ` ≤ m 4 + with χ(`) = 1.
+
+
+
+
+                                      1. Introduction
+     Let χ be a nonprincipal Dirichlet character. An integer n is called a χ-
+nonresidue if χ(n) ∈  / {0, 1}. Problems about character nonresidues go back to
+the beginnings of modern number theory. Indeed, one can   read out of Gauss’s Dis-
+quisitiones that for primes p ≡ 1 (mod 8) and χ(·) = p· , the smallest χ-nonresidue
+                   √
+does not exceed 2 p + 1 [10, Article 129]. This was an auxiliary result required for
+Gauss’s first proof of the quadratic reciprocity law.
+     In the early 20th century, I. M. Vinogradov initiated the study of how the
+quadratic residues and nonresidues modulo a prime p are distributed in the interval
+[1, p − 1]. A particularly natural problem is to estimate the size of np , the smallest
+quadratic nonresidue modulo p. Vinogradov conjectured that np ε pε , for each
+ε > 0. By means of a novel estimate for character sums (independently discovered
+by Pólya), coupled with a clever sieving argument, he showed [24] that np ε
+   1
+   √  +ε
+p 2 e . Burgess’s character sum bounds [4], in conjunction with Vinogradov’s
+methods, yield the sharper estimate
+                                                   1
+                                                   √   +ε
+(1)                                     np ε p 4 e         .
+Fifty years of subsequent research has not led to any improvement in the exponent
+ 1
+ √
+4 e
+    . But generalizing (1), Norton showed that if χ is any nontrivial character
+                                                                √
+modulo m, then the least χ-nonresidue is Oε (m1/4 e+ε ). See [18, Theorem 1.30].
+     Since χ is completely multiplicative, the smallest χ-nonresidue is necessarily
+prime. In this note, we prove that there are actually many prime χ-nonresidues
+satisfying the Burgess–Norton upper bound.
+
+      2010 Mathematics Subject Classification. Primary 11A15, Secondary 11N25.
+                                               1
+2                                       PAUL POLLACK
+
+
+    Theorem 1.1. For each ε > 0, there are numbers m0 (ε) and κ = κ(ε) > 0 for
+which the following holds: For all m > m0 and each nontrivial character χ mod m,
+                                                              1
+                                                              √ +ε
+there are more than mκ prime χ-nonresidues not exceeding m 4 e .
+     The problem of obtaining an upper bound on the first several prime character
+nonresidues was considered already by Vinogradov. In [24], he showed that for large
+                         log p
+p, there are at least 7 log log p prime quadratic nonresidues modulo p not exceeding
+                                            1       1
+                                          p 2 − log log p .
+For characters to prime moduli, a result resembling Theorem 1.1 was proved by
+Hudson in 1983 [15]. (See also Hudson’s earlier investigations [12, 13, 14].) But
+even restricted to prime m, Theorem 1.1 improves on [15] in multiple respects. In
+                                              1
+[15], the exponent on p is 14 + ε instead of 4√ e
+                                                  + ε, and the number of nonresidues
+produced is only cε logloglogp p . Moreover, it is assumed in [15] that the order of χ is
+fixed. Stronger results than those of [15] were announced by Norton already in
+1973 [17].1 Unfortunately, a full account of Norton’s work seems to have never
+appeared.
+     It becomes easier to produce small character nonresidues as the order of χ in-
+creases. This phenomenon was noticed by Vinogradov [25] and further investigated
+by Buchstab [3] and Davenport and Erdős [5]. To explain their results requires us
+to first recall the rudiments of the theory of smooth numbers. For each positive
+integer n, let P + (n) denote the largest prime factor of n, with the convention that
+P + (1) = 1. A natural number n is called y-smooth (or y-friable) if P + (n) ≤ y. For
+x ≥ y ≥ 2, we let Ψ(x, y) be the count of y-smooth numbers up to x. We let ρ be
+Dickman’s function, defined by
+           ρ(u) = 1 for 0 ≤ u ≤ 1,       and uρ0 (u) = −ρ(u − 1) for u > 1.
+The functions Ψ(x, y) and ρ(u) are intimately connected; it is known that Ψ(x, y) ∼
+xρ(u), where u := log  x
+                   log y , in a wide range of x and y. In fact, Hildebrand [11] has
+shown that this asymptotic formula holds whenever x → ∞, as long as
+                                 y ≥ exp((log log x)5/3+λ )
+for some fixed positive λ. For this estimate to be useful, one needs to understand
+the behavior of ρ(u). It is not hard to show that ρ is strictly decreasing for u > 1
+and that ρ(u) ≤ 1/Γ(u + 1). So for any k > 1, there is a unique uk > 1 with
+ρ(uk ) = k1 . Buchstab and, independently, Davenport and Erdős (developing ideas
+implicit in [25]) showed that if χ mod p has order k ≥ 2, then the least χ-nonresidue
+is Oε,k (p1/2uk +ε ). If in their argument Burgess’s method (which was not available
+at the time) is used in place of the Pólya–Vinogradov inequality, then 1/2uk may
+be replaced by 1/4uk [26]. We prove the following:
+    Theorem 1.2. Let ε > 0 and k0 ≥ 2. There are numbers m0 (ε, k0 ) and
+κ = κ(ε, k0 ) > 0 for which the following holds: For all m > m0 and each nontrivial
+character χ mod m of order k ≥ k0 , there are more than mκ prime χ-nonresidues
+                    1
+                        +ε
+not exceeding m 4uk0         .
+                                                                                        k
+     1Norton claims in [17]: Let ε > 0 and k ≥ 2. If m ≥ 3 and [(Z/mZ)× : (Z/mZ)× ] ≥ k ,
+                                              0                                                0
+then each of the smallest blog m/ log log mc primes not dividing m that are kth power nonresidues
+modulo m is ε,k0 n1/4uk0 +ε . Here uk0 has the same meaning as in our introduction.
+         BOUNDS FOR THE FIRST SEVERAL PRIME CHARACTER NONRESIDUES                                3
+
+
+    Remarks.
+      • It follows readily from the definition that ρ(u) = 1 − log u for 1 ≤ u ≤ 2,
+        and so u2 = e1/2 = 1.6487 . . . and u3 = e2/3 = 1.9477 . . .. For k > 3, it
+        does not seem that uk has a simple closed form expression.
+      • Theorem 1.1 is the special case k0 = 2 of Theorem 1.2.
+     One might compare Theorem 1.1 for the quadratic character modulo a prime p
+with a result of Banks–Garaev–Heath-Brown–Shparlinski
+                                      √
+                                                            [1]. They show that for
+each fixed ε > 0, and each N ≥ p1/4 e+ε , the proportion of quadratic nonresidues
+modulo p in [1, N ] is ε 1 for all primes p > p0 (ε).
+     Our arguments use the ideas of Vinogradov and Davenport–Erdős but take
+advantage of modern developments in sieve methods and the theory of smooth
+numbers. A variant of the Burgess bounds developed by Norton also plays an
+important role. We note that an application of the sieve that is similar in spirit to
+ours appears in work of Bourgain and Lindenstrauss [2, Theorem 5.1].2
+     It is equally natural to ask for small prime character residues, i.e., primes `
+with χ(`) = 1. The most significant unconditional result in this direction is due to
+Linnik and A. I. Vinogradov [23]. They showed that if χ is the quadratic character
+modulo a prime p, then the smallest prime ` with χ(`) = 1 satisfies ` ε p1/4+ε .
+More generally, Elliott [8] proved that when χ has order k, the least such ` is
+        k−1
+Ok,ε (p 4 + ). As Elliott notes, this bound is only interesting for small values of
+k; otherwise, it is inferior to what follows from known forms of Linnik’s theorem
+on primes in progressions. For extensions of the Linnik–Vinogradov method in a
+different direction, see [19, 20].
+     Our final result is a partial analogue of Theorem 1.1 for prime residues of
+quadratic characters. Regrettably, the number of primes produced falls short of a
+fixed power of m.
+    Theorem 1.3. Let ε > 0 and let A > 0. There is an m0 = m0 (ε, A) with
+the following property: If m > m0 , and χ is a quadratic character modulo m, then
+                                         1
+there are at least (log m)A primes ` ≤ m 4 +ε with χ(`) = 1.
+     Results of the sort proven here have direct consequences for prime splitting
+in cyclic extensions of Q. For example, Theorem 1.1 (respectively Theorem 1.3)
+implies that there are more than |∆|κ inert (respectively, more than (log |∆|)A
+                        1
+                        √ +ε                        1
+split) primes p ≤ |∆| 4 e    (respectively, p ≤ |∆| 4 +ε ) in the quadratic field of
+discriminant ∆, as soon as |∆| is large enough in terms of ε (and A).
+
+       2. Small prime nonresidues: Proofs of Theorems 1.1 and 1.2
+     2.1. Preparation. As might be expected, the Burgess bounds play the key
+role in our analysis. The following version is due to Norton (see [18, Theorem 1.6]).
+    Proposition 2.1. Let χ be a nontrivial character modulo m of order dividing
+k. Let r be a positive integer, and let  > 0. For all x > 0,
+                        X                           1   r+1
+                            χ(n) ,r Rk (m)1/r x1− r m 4r2 + .
+                             n≤x
+
+    2A special case of their result: Given ε > 0, there is an α > 0 such that P                 1
+                                                                                          1/4+ε ` >
+                                                                                  pα ≤`≤p
+                                                                                      
+                                                                                      ` =−1
+                                                                                      p
+1
+2
+  − ε, for all p > p0 (ε).
+4                                            PAUL POLLACK
+
+
+Here                                        n                  o
+                                Rk (m) = min M (m)3/4 , Q(k)9/8 ,
+where                                Y                                          Y
+                M (m) =                       pe         and    Q(k) =                  pe .
+                                 pe km, e≥3                                pe kk, e≥2
+                       1/r
+The factor of Rk (m)            can be omitted if r ≤ 3.
+   Another crucial tool is a theorem of Tenenbaum concerning the distribution of
+smooth numbers satisfying a coprimality condition. For x ≥ y ≥ 2, let
+                 Ψq (x, y) = #{n ≤ x : gcd(n, q) = 1, P + (n) ≤ y}.
+    Proposition 2.2. For positive integers q and real numbers x, y satisfying
+                       P + (q) ≤ y ≤ x             and    ω(q) ≤ y 1/ log(1+u) ,
+we have
+                                                                   
+                       ϕ(q)                 log(1 + u) log(1 + ω(q))
+           Ψq (x, y) =      Ψ(x, y) 1 + O                               .
+                        q                            log y
+As before, u denotes the ratio log x/ log y.
+    Proof. This is the main result of [21] in the case c = 1.                                  
+                   0
+     Remark. If q is the largest divisor of q supported on the primes not exceeding
+y, then Ψq (x, y) = Ψq0 (x, y). So the assumption in Proposition 2.2 that P + (q) ≤ y
+does not entail any loss of generality.
+   Theorem 1.2 will be deduced from two variant results claiming weaker upper
+bounds.
+    Theorem 2.3. Let ε > 0 and k0 ≥ 2. There are numbers m0 (ε, k0 ) and
+κ = κ(ε, k0 ) > 0 for which the following holds: For all m > m0 and each nontrivial
+character χ mod m of order k ≥ k0 , there are more than mκ prime χ-nonresidues
+                  1
+                       +ε
+not exceeding m 3uk0        .
+    Theorem 2.4. Let ε > 0 and k0 ≥ 2. There are numbers m0 (ε, k0 ) and
+κ = κ(ε, k0 ) > 0 for which the following holds: For all m > m0 and each nontrivial
+character χ mod m of order k ≥ k0 , there are more than mκ prime χ-nonresidues
+                                1
+                                    +ε
+not exceeding Rk (m)m 4uk0               . Here Rk (m) is as defined in Proposition 2.1.
+    The proof of Theorem 2.4 is given in detail in the next section. We include
+only a brief remark about the proof of Theorem 2.3, which is almost entirely anal-
+ogous (but slightly simpler). We then present the derivation of Theorem 1.2 from
+Theorems 2.3 and 2.4. We remind the reader that Theorem 1.1 is the special case
+k0 = 2 of Theorem 1.2.
+    2.2. Proof of Theorem 2.4. We let χ be a nontrivial character modulo m
+of order k ≥ k0 , where k0 ≥ 2 is fixed. With δ ∈ (0, 41 ), we set
+                                                                      1
+                                                    1                      +δ
+                                x = Rk (m) · m 4 +δ ,          y = x uk0        .
+To prove Theorem 2.4, it suffices to show that for all large m (depending only on
+k0 and δ), there are at least xκ prime χ-nonresidues in [1, y] for a certain constant
+κ = κ(k0 , δ) > 0.
+         BOUNDS FOR THE FIRST SEVERAL PRIME CHARACTER NONRESIDUES                                   5
+
+
+     Let q be the product of the prime χ-nonresidues in [1, y]. Note that gcd(q, m) =
+1, from the definition of a χ-nonresidue. Our strategy is to estimate
+                       X
+(2)                            (1 + χ(n) + χ2 (n) + · · · + χk−1 (n))
+                         n≤x
+                     gcd(n,mq)=1
+
+in two different ways.
+    We first derive a lower bound on (2), under the assumption that there are not
+so many prime χ-nonresidues in [1, y].
+
+   Lemma 2.5. There are constants η = η(δ, k0 ) > 0, κ = κ(δ, k0 ) > 0, and
+m0 = m0 (δ, k0 ) with the following property: If m > m0 and ω(q) ≤ xκ , then
+                                                               
+               X                                           2k     ϕ(mq)
+                       (1 + χ(n) + · · · + χ(n)k−1 ) ≥ 1 +    η         x.
+                                                            3      mq
+                  n≤x
+              gcd(n,mq)=1
+
+    Proof. Observe that
+        X                                                              X
+             (1 + χ(n) + · · · + χ(n)k−1 ) = k                                          1
+          n≤x                                                           n≤x
+      gcd(n,mq)=1                                               gcd(n,q)=1, χ(n)=1
+                                                                    X
+                                                           ≥k                 1 = k · Ψmq (x, y).
+                                                                     n≤x
+                                                                gcd(n,mq)=1
+                                                                  p|n⇒p≤y
+
+We estimate Ψmq (x, y) using Proposition 2.2 and the succeeding remark. We have
+u k0 1, or equivalently, log y k0 log x. So if κ is sufficiently small in terms of k0 ,
+and ω(q) ≤ xκ , Proposition 2.2 gives
+                                                               log(1 + xκ )
+                                Y                                     
+                                           1
+         Ψmq (x, y) = Ψ(x, y)          1−           1 + Ok0
+                                           p                       log x
+                                    p|mq
+                                    p≤y
+
+                                                                log(1 + xκ )
+                                                                             
+                                 ϕ(mq)
+                       ≥ Ψ(x, y)                  1 + Ok0                           .
+                                  mq                               log x
+Now the result of Hildebrand quoted in the introduction (or a much more elementary
+                                                  1
+                                                      +δ
+theorem) shows that Ψ(x, y) = Ψ(x, x uk0 ) ≥ ( k10 +η)x for a certain η = η(k0 , δ) >
+0 and all large x. So if κ is fixed sufficiently small, depending on k0 and δ, and x
+is sufficiently large,
+                                                 
+                                           1    2   ϕ(mq)
+                         Ψmq (x, y) >        + η           x.
+                                          k0    3      mq
+Hence,
+                                                                                      
+   X
+                                   k−1            k    2k           ϕ(mq)           2k     ϕ(mq)
+             (1+χ(n)+· · ·+χ(n)          )≥          +    η               x≥     1+    η         x.
+                                                  k0    3            mq              3      mq
+   n≤x
+gcd(n,q)=1
+                                                                                                    
+
+    We turn next to an upper bound.
+6                                        PAUL POLLACK
+
+
+    Lemma 2.6. Let β > 0. There are numbers η 0 = η 0 (δ) > 0, κ0 = κ0 (δ, β) > 0
+                                                                         0
+and m0 = m0 (δ, β) with the following property: If m > m0 and ω(q) ≤ xκ , then
+     X                                                    ϕ(mq)               0
+          (1 + χ(n) + χ(n)2 + · · · + χ(n)k−1 ) ≤ (1 + β)       x + Oδ (kx1−η ).
+                                                           mq
+        n≤x
+    gcd(n,mq)=1
+
+    Proof. We let A = {n ≤ x : gcd(n, m) = 1, χ(n) = 1} and observe that
+           X                                                X
+(3)               (1 + χ(n) + χ(n)2 + · · · + χ(n)k−1 ) = k      1.
+                n≤x                                                                       n∈A
+            gcd(n,mq)=1                                                                gcd(n,q)=1
+
+We apply the fundamental lemma of the sieve to estimate the right-hand sum. (The
+precise form of the fundamental lemma is not so important, but we have in mind
+[7, Theorem 4.1, p. 29].) Let d ∈ [1, x] be a squarefree integer dividing q. Then
+                X       1      X
+                    1=                   (1 + χ(n) + · · · + χ(n)k−1 ).
+                        k
+                  n∈A                  n≤x
+                   d|n           gcd(n,m)=1, d|n
+
+For each j = 0, 1, 2, . . . , k − 1,
+                              X                                    X
+                                         χj (n) = χj (d)                        χj (e).
+                             n≤x                                e≤x/d
+                       gcd(n,m)=1, d|n                        gcd(e,m)=1
+
+When j = 0, the right-hand side is xd ϕ(m)             
+                                            m + O (m ), by a straightforward inclusion-
+exclusion. For j ∈ {1, 2, . . . , k − 1}, Proposition 2.1 gives
+     X                X              X           X               X
+            χj (e) =         χj (e)      µ(f ) =    µ(f )χj (f )     χj (g)
+      e≤x/d              e≤x/d         f |e          f |m                      g≤x/df
+    gcd(e,m)=1                         f |m
+                                                                          1            1       r+1        X            1
+                                              ,r Rk (m)1/r x1− r d−1+ r m 4r2 +                               f −1+ r
+                                                                                                          f |m
+                                                                                           r+1
+                                                                  1− r1       −1+ r1            +2
+                                               Rk (m)1/r x              d            m   4r 2       ;
+here r ≥ 2 and  > 0 are parameters to be chosen. (We used in the last step
+that the sum on f has only O (m ) terms, each of which is O(1).) Assembling the
+preceding estimates,
+   X        x ϕ(m)                                            1     1  r+1
+       1=            + r(d), where r(d) ,r Rk (m)1/r x1− r d−1+ r m 4r2 +2 .
+            dk m
+     n∈A
+      d|n
+
+By the fundamental lemma, for any choices of real parameters z ≥ 2 and v ≥ 1
+with z 2v < x,
+                                                    !
+     X             X             x ϕ(m) Y          1
+                                                        1 + O(v −v )
+                                                                     
+             1≤            1=                 1−
+                                 k m               p
+       n∈A               n∈A                            p|q
+    gcd(n,q)=1     p|gcd(n,q)⇒p≥z                       p<z
+                                                                                                                     !
+                                                                 r+1
+                                                 1/r 1− r1                                           ω(d) −1+ r1
+                                                                      +2
+                                                                               X
+                                                                                           2
+                            + O,r Rk (m)           x        m   4r 2                  µ (d)3              d           .
+                                                                                  2v
+                                                                              d<z
+                                                                               d|q
+         BOUNDS FOR THE FIRST SEVERAL PRIME CHARACTER NONRESIDUES                          7
+
+                                                  1                 1
+    We now make a choice of parameters. Let r = d 2δ e (so that δ ≥ 2r ). Since
+               1/4+δ
+x = Rk (m) · m       , we have
+                    1     r+1                  1        r+1       1   1            δ
+      Rk (m)1/r x1− r m 4r2 = x · m− 4r −δ/r m 4r2 = x · m r ( 4r −δ) ≤ x · m− 4r2 .
+             δ
+We take  = 16r 2 , so that
+                                                        δ
+                                              m2 = m 8r2 .
+Since r ≥ 2 and 3ω(d)  d1/2 , each term in the sum on d is O(1). Putting it all
+together, the O-term above is
+                                                    δ       δ
+                                 δ x · m− 4r2 · m 8r2 · z 2v .
+                                                                                       δ
+Since x = Rk (m)·m1/4+δ ≤ m3/4 ·m1/4+δ < m2 , this upper bound is δ x1− 16r2 z 2v .
+               δ
+Taking z = x 64r2 v gives a final upper bound on the O-term of
+                                          0           δ
+                              δ x1−η ,            where η 0 =
+                                                          .
+                                                     32r2
+    Turning attention to the main term, we fix v large enough that the factor
+1 + O(v −v ) is smaller than 1 + 21 β. Then our main term above does not exceed
+                       Y            −1                       X 
+     x ϕ(mq)         1               1       x ϕ(mq)        1             1
+                 1+ β          1−          ≤           1 + β exp 2
+     k mq            2               p       k mq           2             p
+                           p|q                                               p|q
+                           p≥z                                               p≥z
+                                                                   
+                                                      x ϕ(mq)     1
+                                                    ≤          1 + β exp(2ω(q)z −1 ).
+                                                      k mq        2
+                                                                      0
+Take κ0 = 128r δ
+                 2 v . Under the assumption that ω(q) ≤ x
+                                                            κ
+                                                              , we have 2ω(q)z −1 ≤
+          2                                         2
+2x−δ/128r v , and exp(2ω(q)z −1 ) = 1 + O(x−δ/128r v ). So once x (or equivalently,
+m) is large enough, our main term is smaller than xk ϕ(mq)
+                                                      mq (1+β). So we have shown
+that for large m,
+                         X          x ϕ(mq)                    0
+                               1≤           (1 + β) + Oδ (x1−η ).
+                                    k mq
+                        n∈A
+                     gcd(n,q)=1
+
+Recalling (3) finishes the proof.                                                          
+     Completion of the proof of Theorem 2.4. We keep the notation from
+earlier in this section. Let η, κ be as specified in Lemma 2.5. With β = η/2, choose
+η 0 and κ0 as in Lemma 2.6. If m is large and we assume that
+                                    00
+                         ω(q) ≤ xκ ,           where κ00 = min{κ, κ0 },
+then these lemmas imply that
+                                    
+                  2k     ϕ(mq)      1    ϕ(mq)              0
+               1+    η         x≤ 1+ η         x + Oδ (kx1−η ).
+                   3      mq        2     mq
+Rearranging,
+                         ϕ(mq)    4k − 3 ϕ(mq)           0
+                    kη         x       η·     x δ kx1−η ,
+                          mq        6      mq
+and so
+                                          mq            0
+                                               k0 ,δ xη .
+                                         ϕ(mq)
+8                                    PAUL POLLACK
+
+
+Noting that m < x4 and q ≤ y ω(q) ≤ xω(q) , we see that for large x,
+            mq
+                 log log(mq + 2)  log log x + log(ω(q) + 2)  log x.
+          ϕ(mq)
+Comparing with the above lower bound, we see that x, and hence m, is bounded.
+                                                            00
+Turning it around, for m large enough, there are at least xκ prime χ-nonresidues
+in [1, y].                                                                    
+
+    Sketch of the proof of Theorem 2.3. The proof of Theorem 2.3 is quite
+similar, except that now we take x = m1/3+δ . With this choice of x, we can apply
+the Burgess bounds with r = 3, which allows us to omit the factor of Rk (m) in the
+resulting estimates.                                                            
+
+    2.3. Deduction of Theorem 1.2. Let ε > 0 and k0 ≥ 2 be fixed. Let χ be
+a nonprincipal character mod m of order k, where k ≥ k0 . We would like to show
+that as long as m is large enough there must be at least mκ prime χ-nonresidues
+not exceeding x1/4uk0 +ε , for a certain κ = κ(ε, k0 ) > 0. Let k1 be the smallest
+positive integer with 3uk1 > 4uk0 . If k ≥ k1 , apply Theorem 2.3: We find that for
+large m, there are at least mκ0 prime χ-nonresidues
+                                       1                 1
+                                            +ε               +ε
+                                 ≤ m 3uk1        ≤ m 4uk0         ,
+where κ0 = κ(ε, k1 ) in the notation of Theorem 2.3. Suppose instead that k0 ≤ k <
+k1 . Then Rk (m) is bounded in terms of k0 . Theorem 2.4 thus shows that for large
+m, there are at least mκ1 prime χ-nonresidues
+                                            1                 1
+                                                 +ε/2                 +ε
+                             ≤ Rk (m)m 4uk0             ≤ m 4uk0           ,
+where κ1 = κ(ε/2, k0 ) in the notation of Theorem 2.4. Theorem 1.2 follows with
+κ = min{κ0 , κ1 }.
+   Remark. By a minor modification of our proof, one can establish the following
+more general result. Theorem 1.2 corresponds to the case H = ker χ.
+    Theorem 2.7. Let ε > 0 and k0 ≥ 2. There are numbers m0 (ε, k0 ) and
+κ = κ(ε, k0 ) > 0 for which the following holds: For all m > m0 and every proper
+subgroup H of G = (Z/mZ)× of index k ≥ k0 , there are more than mκ primes `
+                  1
+                       +ε
+not exceeding m 4uk0        with ` - m and ` mod m ∈
+                                                   / H.
+                                                                               1
+                                                                                   +ε
+This strengthens [18, Theorem 1.20], where the bound Ok0 , (m 4uk0 ) is estab-
+lished for the first such prime `.
+     The main idea in the proof of the generalization is to replace 1 + χ(n) + · · · +
+χ(n)k−1 with χ∈G/H
+               P                    [
+                     [ χ(n), where G/H denotes the group of characters χ mod m
+with ker χ ⊃ H. We leave the remaining details to the reader.
+
+3. Small prime residues of quadratic characters: Proof of Theorem 1.3
+     The nextPproposition is a variant of [23, Theorem 2]. Given a character χ, we
+let rχ (n) = d|n χ(d). Since χ will be clear from context, we will suppress the
+subscript.
+        BOUNDS FOR THE FIRST SEVERAL PRIME CHARACTER NONRESIDUES                   9
+
+
+    Proposition 3.1. For each  > 0, there is a constant η = η() > 0 for which
+the following holds: If χ is a quadratic character modulo m and x ≥ m1/4+ , then
+                          X
+                               r(n) = L(1, χ)x + O (x1−η ).
+                         n≤x
+                                                             1    1
+    Proof. With υ = 1/4+/2              υ
+                        1/4+ , put y = x , so that y ≥ m
+                                                          4 + 2  . Put z = x/y. By
+
+Dirichlet’s hyperbola method,
+            X          X        X       X X             X           X
+(4)             r(n) =    χ(d)      1+           χ(d) −      χ(d)      1.
+           n≤x         d≤y        e≤x/d   e≤z d≤x/e        d≤y         e≤z
+                                                1/r
+By Proposition  2.1 (with k = 2, so that Rk (m) = 1), there is an η0 = η0 () > 0
+with d≤T χ(d)  T 1−η0 for all T ≥ y. Thus, the second double sum on the
+      P
+
+right of (4) is δ x1−η0 e≤z eη0 −1 δ x(z/x)η0 = xy −η0 . Similarly, the third
+                          P
+
+double sum is  zy 1−η0 = xy −η0 . Finally,
+      X         X       X        x                       X χ(d)
+         χ(d)       1=      χ(d)     + O(1) = xL(1, χ) − x         + O(y)
+                                  d                             d
+     d≤y      e≤x/d     d≤y                                      d>y
+
+                                              = xL(1, χ) + O (xy −η0 ) + O(y).
+(Here the sum on d > y has been handled by partial summation.) Collecting our
+estimates and keeping in mind that y = xυ , we obtain the theorem with η defined
+by 1 − η = max{υ, 1 − vη0 }.                                                  
+     Proof of Theorem 1.3. Let ε ∈ (0, 41 ) and let χ be a quadratic character
+modulo m. Let
+                                            1
+                                     x = m 4 +ε ,
+and let q be the product of the primes ` ≤ x with χ(`) = 1. We suppose that ω(q) ≤
+(log m)A , and we show this implies that m is bounded by a constant depending on
+ε and A. Throughout this proof, we suppress any dependence on ε and A in our
+O-notation.
+     By Proposition 3.1,
+                          X
+(5)                           r(n) = L(1, χ) · x + O(x1−η ).
+                         n≤x
+
+We can estimate the sum in a second way. Observe that
+                           Y
+(6)                 r(n) =     (1 + χ(`) + · · · + χ(`e )) ≥ 0.
+                               `e kn
+
+Hence, if the subset S of [1, x] is chosen to contain the support of r(n) on [1, x],
+then                                                   
+                             X
+                        0≤        r(n) ≤ #S · max r(n) .
+                                                n∈S
+                               n≤x
+Examining the expression in (6) for r(n), we see S can be chosen as the set of n ≤ x
+where every prime that appears to the first power in the factorization of n divides
+mq. For each n ∈ S, we can write n = n1 n2 , where n1 is a squarefree divisor of mq
+and n2 is squarefull. The number of elements of S with n2 > x1/2 is O(x3/4 ). For
+the remaining elements of S, we have n1 ≤ x/n2 and n1 is a squarefree product of
+primes dividing mq. There is a bijection
+ι : {squarefree divisors of mq} → {squarefrees composed of the first ω(mq) primes}
+10                                        PAUL POLLACK
+
+
+with ι(r) ≤ r for all r. Hence, given n2 , the number of choices for n1 is at most the
+number of integers in [1, x/n2 ] supported on the product of the first ω(mq) primes.
+By our assumption on ω(q), those primes all belong to the interval [1, (log x)A+1 ],
+once x is large. Hence, given n2 , the number of possible values of n1 is at most
+                                       Ψ(x/n2 , (log x)A+1 ).
+For fixed θ ≥ 1, a classical theorem of de Bruijn [6] asserts that Ψ(X, (log X)θ ) =
+     1
+X 1− θ +o(1) , as X → ∞. Since x/n2 ≥ x1/2 , we deduce that
+                                                                  1
+                           Ψ(x/n2 , (log x)A+1 ) ≤ (x/n2 )1− A+2
+if x is large. Summing on squarefull n2 , we see that the number of elements of S
+                               1
+arising in this way is O(x1− A+2 ). Hence,
+                                                                     
+                  3/4        1
+                         1− A+2      1−η 0          0         1   1
+           #S  x + x            x        , where η = min      ,       .
+                                                              4 A+2
+                           0
+Since r(n) ≤ τ (n)  xη /2 for n ≤ x,
+                         X                 0         0
+(7)                          r(n)  #S · xη /2  x1−η /2 .
+                               n≤x
+
+Comparing (5) and (7) gives
+                                                        0
+                                     L(1, χ)  x− min{η /2,η} .
+But for large x, this contradicts Siegel’s theorem [16, Theorem 11.14, p. 372].               
+    Remark. Any improvement on Siegel’s lower bound for L(1, χ) would boost
+the number of ` produced in Theorem 1.3. Substantial improvements of this kind
+would have other closely related implications. For example, a simple modification
+of an argument of Wolke [27] shows that for any quadratic character χ mod m,
+                  X 1                                 
+                             1      ϕ(m)
+                          ≥ log           L(1, χ) log m + O(1),
+                        `    2       m
+                      `≤m
+                     χ(`)=1
+
+       P O(1) constant is absolute. (Here is the short proof: By Proposition
+where the
+     1
+3.1, m   n≤m r(n)  L(1, χ). On the other hand, [22,  Theorem 5, p. 308] yields
+                                                     P               
+ 1
+   P              1
+                      P     r(n)     1    m                         1
+m    n≤m r(n)  log m  n≤m n           ·
+                                   log m ϕ(m) · exp  2  `≤m, χ(`)=1 ` .)
+
+
+                                      Acknowledgments
+    This work was motivated in part by observations made on mathoverflow by
+“GH from MO” [9]. The author is also grateful to “Lucia” for pointing out there
+the work of Bourgain–Lindenstrauss. He thanks Enrique Treviño and the referee
+for useful feedback. This research was supported by NSF award DMS-1402268.
+
+                                           References
+ [1] W. D. Banks, M. Z. Garaev, D. R. Heath-Brown, and I. E. Shparlinski, Density of non-residues
+     in Burgess-type intervals and applications, Bull. Lond. Math. Soc. 40 (2008), 88–96.
+ [2] J. Bourgain and E. Lindenstrauss, Entropy of quantum limits, Comm. Math. Phys. 233
+     (2003), 153–171.
+ [3] A. A. Buchstab, On those numbers in an arithmetic progression all prime factors of which
+     are small in order of magnitude, Doklady Akad. Nauk SSSR (N.S.) 67 (1949), 5–8 (Russian).
+         BOUNDS FOR THE FIRST SEVERAL PRIME CHARACTER NONRESIDUES                              11
+
+
+ [4] D. A. Burgess, The distribution of quadratic residues and non-residues, Mathematika 4
+     (1957), 106–112.
+ [5] H. Davenport and P. Erdős, The distribution of quadratic and higher residues, Publ. Math.
+     Debrecen 2 (1952), 252–265.
+ [6] N. G. de Bruijn, On the number of positive integers ≤ x and free of prime factors > y. II,
+     Indag. Math. 28 (1966), 239–247.
+ [7] H. G. Diamond and H. Halberstam, A higher-dimensional sieve method, Cambridge Tracts
+     in Mathematics, vol. 177, Cambridge University Press, Cambridge, 2008.
+ [8] P. D. T. A. Elliott, The least prime k-th-power residue, J. London Math. Soc. (2) 3 (1971),
+     205–210.
+ [9] GH from MO (http://mathoverflow.net/users/11919/gh-from-mo), Given a prime p how
+     many primes ` < p of a given quadratic character mod p?, MathOverflow, URL: http:
+     //mathoverflow.net/q/52393 (version: 2014-09-03).
+[10] C. F. Gauss, Disquisitiones arithmeticae, Springer-Verlag, New York, 1986.
+[11] A. J. Hildebrand, On the number of positive integers ≤ x and free of prime factors > y, J.
+     Number Theory 22 (1986), 289–307.
+[12] R. H. Hudson, Prime k-th power non-residues, Acta Arith. 23 (1973), 89–106.
+[13]         , A note on the second smallest prime kth power nonresidue, Proc. Amer. Math. Soc.
+     46 (1974), 343–346.
+[14]         , Power residues and nonresidues in arithmetic progressions, Trans. Amer. Math. Soc.
+     194 (1974), 277–289.
+[15]         , A note on prime kth power nonresidues, Manuscripta Math. 42 (1983), 285–288.
+[16] H. L. Montgomery and R. C. Vaughan, Multiplicative number theory. I. Classical theory, Cam-
+     bridge Studies in Advanced Mathematics, vol. 97, Cambridge University Press, Cambridge,
+     2007.
+[17] K. K. Norton, Estimates for prime kth power nonresidues, Notices Amer. Math. Soc. 21
+     (1974), January, 74T-A12.
+[18]         , A character-sum estimate and applications, Acta Arith. 85 (1998), 51–78.
+[19] P. Pollack, Prime splitting in abelian number fields and linear combinations of Dirichlet
+     characters, Int. J. Number Theory 10 (2014), 885–903.
+[20]         , The smallest prime that splits completely in an abelian number field, Proc. Amer.
+     Math. Soc. 142 (2014), 1925–1934.
+[21] G. Tenenbaum, Cribler les entiers sans grand facteur premier, Philos. Trans. Roy. Soc. Lon-
+     don Ser. A 345 (1993), 377–384.
+[22]         , Introduction to analytic and probabilistic number theory, Cambridge Studies in Ad-
+     vanced Mathematics, vol. 46, Cambridge University Press, Cambridge, 1995.
+[23] A. I. Vinogradov and U. V. Linnik, Hypoelliptic curves and the least prime quadratic residue,
+     Dokl. Akad. Nauk SSSR 168 (1966), 259–261 (Russian).
+[24] I. M. Vinogradov, On the distribution of quadratic residues and nonresidues, J. Phys.-Mat.
+     ob-va Permsk Univ. 2 (1919), 1–16 (Russian).
+[25]         , On the bound of the least non-residue of n-th powers, Trans. Amer. Math. Soc. 29
+     (1927), 218–226.
+[26] Y. Wang, Estimation and application of character sums, Shuxue Jinzhan 7 (1964), 78–83.
+[27] D. Wolke, A note on the least prime quadratic residue (mod p), Acta Arith. 16 (1969/1970),
+     85–87.
+
+   Department of Mathematics, Boyd Graduate Studies Building, University of
+Georgia, Athens, Georgia 30602, USA
+   E-mail address: pollack@uga.edu
+

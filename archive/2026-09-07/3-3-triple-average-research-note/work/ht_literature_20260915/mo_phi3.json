@@ -1,0 +1,869 @@
+{
+  "items": [
+    {
+      "tags": [
+        "co.combinatorics",
+        "at.algebraic-topology",
+        "simplicial-stuff"
+      ],
+      "owner": {
+        "account_id": 5033710,
+        "reputation": 1963,
+        "user_id": 58211,
+        "user_type": "registered",
+        "accept_rate": 78,
+        "profile_image": "https://www.gravatar.com/avatar/06714bfe1d3b059858dad2700db1d59f?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Bipolar Minds",
+        "link": "https://mathoverflow.net/users/58211/bipolar-minds"
+      },
+      "is_answered": true,
+      "view_count": 296,
+      "accepted_answer_id": 471626,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1716265350,
+      "creation_date": 1716206785,
+      "last_edit_date": 1716265350,
+      "question_id": 471614,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/471614/gluing-n-2n-1-simplices",
+      "title": "Gluing $n$ $2(n-1)$-simplices",
+      "body": "<p>It should be true that <span class=\"math-container\">$n$</span> <span class=\"math-container\">$2(n-1)$</span>-simplices can be glued together, such that <span class=\"math-container\">$k$</span> of them intersect in a common <span class=\"math-container\">$(2n -k -1)$</span>-cell and the resulting object is a &quot;convex <span class=\"math-container\">$2(n-1)$</span>-disc&quot; whose boundary <span class=\"math-container\">$(2n-3)$</span>-sphere contains <span class=\"math-container\">$n^2$</span> <span class=\"math-container\">$(2n-3)$</span>-cells. I am not sure how to make this more precise. For <span class=\"math-container\">$n=1$</span> it's just a point, for <span class=\"math-container\">$n=2$</span> we have two triangles glued together on a common side, and so on.\nDoes the resulting object have a name?</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "sequences-and-series"
+      ],
+      "owner": {
+        "account_id": 2948331,
+        "reputation": 26169,
+        "user_id": 12481,
+        "user_type": "registered",
+        "accept_rate": 65,
+        "profile_image": "https://www.gravatar.com/avatar/9dfe027c62c9a19313e774379eb91ecb?s=256&d=identicon&r=PG",
+        "display_name": "joro",
+        "link": "https://mathoverflow.net/users/12481/joro"
+      },
+      "is_answered": true,
+      "view_count": 1100,
+      "closed_date": 1380559351,
+      "answer_count": 2,
+      "score": 7,
+      "last_activity_date": 1380545612,
+      "creation_date": 1380540527,
+      "question_id": 143592,
+      "link": "https://mathoverflow.net/questions/143592/sum-n-1-infty-frac-1n2n-1-sum-n-1-infty-frac12n1",
+      "closed_reason": "Not suitable for this site",
+      "title": "$ - \\sum_{n=1}^\\infty \\frac{(-1)^n}{2^n-1} =? \\sum_{n=1}^\\infty \\frac{1}{2^n+1}$",
+      "body": "<p>Numerical evidence suggests:</p>\n\n<p>$$ - \\sum_{n=1}^\\infty \\frac{(-1)^n}{2^n-1} =? \\sum_{n=1}^\\infty \\frac{1}{2^n+1} \\approx 0.764499780348444 $$</p>\n\n<p>Couldn't find cancellation via rearrangement. </p>\n\n<p>For the second series WA found closed form.</p>\n\n<blockquote>\n  <p>Is the equality true?</p>\n</blockquote>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "inequalities",
+        "approximation-theory",
+        "diophantine-approximation"
+      ],
+      "owner": {
+        "account_id": 21394225,
+        "reputation": 213,
+        "user_id": 557463,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/MaYo2wpB.jpg?s=256",
+        "display_name": "Lhachimi",
+        "link": "https://mathoverflow.net/users/557463/lhachimi"
+      },
+      "is_answered": true,
+      "view_count": 440,
+      "accepted_answer_id": 497118,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1751503438,
+      "creation_date": 1751502486,
+      "question_id": 497117,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/497117/conjecture-left-lfloor-displaystyle-1-5n-right-rfloor-displaystyle",
+      "title": "Conjecture : $\\left \\lfloor{\\displaystyle 1.5^n} \\right \\rfloor &gt; \\displaystyle \\frac{3^n+1.5^n}{2^n}-1 $ , $\\forall n \\in \\mathbb{N} &gt; 1$",
+      "body": "<p><strong>Motivation :</strong></p>\n<p>I want to prove <a href=\"https://math.stackexchange.com/questions/5078510/conjecture-forall-n1-d-mid-3n-2n-rightarrow-v-2d1n\"> <span class=\"math-container\">$\\forall n&gt;1, d\\mid 3^n-2^n \\Rightarrow v_2(d+1)&lt;n$</span></a> , but <span class=\"math-container\">$\\forall n&gt;1$</span> , not just for a sufficiently large <span class=\"math-container\">$n$</span> or <span class=\"math-container\">$d$</span></p>\n<p><strong>My attempt :</strong></p>\n<p>We will first consider <span class=\"math-container\">$3^n=2^nm+r$</span> , with <span class=\"math-container\">$r&lt;2^n$</span> , where <span class=\"math-container\">$m,r \\in \\mathbb{N^2}$</span></p>\n<p><span class=\"math-container\">$\\Rightarrow \\displaystyle \\frac{3^n}{2^n} = m + \\frac{r}{2^n} \\Rightarrow \\begin{cases} m=\\left \\lfloor{\\displaystyle 1.5^n} \\right \\rfloor \\\\ \\\\ \\displaystyle\\frac{r}{2^n}=\\{1.5^n\\} \\end{cases}$</span></p>\n<p>Since <span class=\"math-container\">$\\left \\lfloor{\\displaystyle 1.5^n} \\right \\rfloor \\le 1.5^n \\Rightarrow m \\le 1.5^n$</span></p>\n<p>Now suppose that <span class=\"math-container\">$\\exists d \\in \\mathbb{N^*} $</span> , where <span class=\"math-container\">$d\\mid 3^n-2^n$</span> but <span class=\"math-container\">$v_2(d+1)\\ge n$</span></p>\n<p><span class=\"math-container\">$\\Rightarrow 2^nm+r-2^n \\equiv 2^n(m-1) +r \\equiv 2^n(m-1) + r(d+1) \\equiv 0 \\pmod d$</span></p>\n<p>As <span class=\"math-container\">$v_2(d+1) \\ge n \\Rightarrow d+1=2^nk$</span> (for some integer <span class=\"math-container\">$k \\ge 1$</span>)</p>\n<p><span class=\"math-container\">$\\Rightarrow d \\mid 2^n ( m-1 + kr) \\Rightarrow 2^nk-1 \\mid m-1+kr$</span> (since <span class=\"math-container\">$d$</span> is odd)</p>\n<p><span class=\"math-container\">$\\Rightarrow 2^nk-1 \\le m-1+kr \\Rightarrow k(2^n-r) \\le m \\Rightarrow 2^n-r \\le m$</span> (since <span class=\"math-container\">$k \\ge 1$</span>)</p>\n<p><span class=\"math-container\">$\\Rightarrow r \\ge 2^n -1.5^n$</span> (since <span class=\"math-container\">$m \\le 1.5^n$</span>)</p>\n<p>Now, let me state my conjecture (in a way that would contradicts the statement above) :</p>\n<blockquote>\n<p>the remainder of <span class=\"math-container\">$3^n \\pmod {2^n} &lt; 2^n -1.5^n$</span></p>\n</blockquote>\n<p>Hence, if my conjecture is true there would be no such <span class=\"math-container\">$d$</span> such that <span class=\"math-container\">$v_2(d+1) \\ge n$</span></p>\n<p>We know an alternative definition of <span class=\"math-container\">$a \\pmod b = a - b \\left \\lfloor{\\displaystyle \\displaystyle \\frac{a}{b}} \\right \\rfloor $</span></p>\n<p><span class=\"math-container\">$\\Rightarrow 3^n \\pmod {2^n} = 3^n - 2^n \\left \\lfloor{\\displaystyle 1.5^n} \\right \\rfloor  $</span></p>\n<p><span class=\"math-container\">$\\Rightarrow 3^n \\pmod {2^n} &lt; 2^n -1.5^n \\Leftrightarrow \\left \\lfloor{\\displaystyle 1.5^n} \\right \\rfloor &gt; \\displaystyle \\frac{3^n+1.5^n}{2^n}-1  $</span></p>\n<p>Thus, it's enough to prove the following :</p>\n<blockquote>\n<p><span class=\"math-container\">$\\left \\lfloor{\\displaystyle 1.5^n} \\right \\rfloor &gt; \\displaystyle \\frac{3^n+1.5^n}{2^n}-1 $</span> , <span class=\"math-container\">$\\forall n \\in \\mathbb{N} &gt; 1$</span></p>\n</blockquote>\n<p>Thanks for help !</p>\n"
+    },
+    {
+      "tags": [
+        "riemann-zeta-function",
+        "zeta-functions"
+      ],
+      "owner": {
+        "account_id": 3179201,
+        "reputation": 109,
+        "user_id": 536861,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/f6e8c03d55600f5cffb84b5d55a8a182?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "user90533",
+        "link": "https://mathoverflow.net/users/536861/user90533"
+      },
+      "is_answered": false,
+      "view_count": 211,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1729457554,
+      "creation_date": 1729328819,
+      "last_edit_date": 1729457554,
+      "question_id": 480916,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/480916/show-that-the-function-n2-zetan3-zetan2-n-1-is-positive-on-mathbb",
+      "title": "Show that the function $(n+2)\\zeta(n+3)-\\zeta(n+2)-n-1$ is positive on $\\mathbb{N}.$",
+      "body": "<p>I'm trying to prove the positivity of the function <span class=\"math-container\">$(n+2)\\zeta(n+3)-\\zeta(n+2)-n-1$</span> on <span class=\"math-container\">$\\mathbb{N}$</span> using the inequalities\n<span class=\"math-container\">\\begin{equation*}\n\\frac{s+1}{s}\\zeta(s)\\zeta(s+2)\\geq \\zeta^2(s+1),\\quad s&gt;1\n\\end{equation*}</span>\nand\n<span class=\"math-container\">\\begin{equation*}\n\\zeta(s)\\zeta(s+2)&gt; \\zeta^2(s+1),\\quad s&gt;1\n\\end{equation*}</span>\nand\n<span class=\"math-container\">$$\n\\zeta^2(s + 1)&lt; \\left(\\frac{s + 1}{s}\\right)\n\\left( \\frac{(1 - 2^{-s})(1 - 2^{-(s+2)})}{(1 - 2^{-(s+1)})^2} \\right)\n\\zeta(s)\\zeta(s + 2), \\quad s &gt; 1.\n$$</span></p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "reference-request",
+        "analytic-number-theory",
+        "diophantine-approximation",
+        "equidistribution"
+      ],
+      "owner": {
+        "account_id": 6260857,
+        "reputation": 3949,
+        "user_id": 84272,
+        "user_type": "registered",
+        "accept_rate": 84,
+        "profile_image": "https://www.gravatar.com/avatar/fb65712433bd00522e2926c0b2d9a0a2?s=256&d=identicon&r=PG",
+        "display_name": "Johnny T.",
+        "link": "https://mathoverflow.net/users/84272/johnny-t"
+      },
+      "is_answered": false,
+      "view_count": 240,
+      "answer_count": 0,
+      "score": 3,
+      "last_activity_date": 1713215200,
+      "creation_date": 1713125774,
+      "last_edit_date": 1713215200,
+      "question_id": 469082,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/469082/cardinality-of-the-set-1-leq-n-leq-n-alpha-n2-n-1-n",
+      "title": "Cardinality of the set $\\#\\{ 1 \\leq n \\leq N: \\| \\alpha n^2/N \\| &lt; 1/N \\}$",
+      "body": "<p>Let <span class=\"math-container\">$\\alpha \\in I$</span> where <span class=\"math-container\">$I$</span> is some closed interval that does not contain <span class=\"math-container\">$0$</span>.\nI am interested in upper bound for\n<span class=\"math-container\">$$\nM(\\alpha) = \\#\\{  1 \\leq n \\leq N: \\| \\alpha n^2/N  \\| &lt; 1/N  \\}\n$$</span>\nwhere <span class=\"math-container\">$N$</span> is a sufficiently large positive integer with respect to <span class=\"math-container\">$I$</span>. I was wondering is it reasonable to expect\n<span class=\"math-container\">$$\n\\sup_{\\alpha \\in I} M(\\alpha) \\ll N^{\\varepsilon}  ?\n$$</span>\nor would one expect this to be not true? (or rather the statement holds for <span class=\"math-container\">$\\sup_{\\alpha \\in I - B_N}$</span> and some subset <span class=\"math-container\">$B_N$</span> that depends on <span class=\"math-container\">$N$</span>. Is it possible to bound the measure of <span class=\"math-container\">$B_N$</span> in terms of <span class=\"math-container\">$N$</span>?).</p>\n<p>The question is related to my question from couple years ago (<a href=\"https://mathoverflow.net/questions/429586/distribution-of-alpha-n2-q-modulo-1?rq=1\">Distribution of $\\alpha n^2/q$ modulo $1$?</a>) in which a reference to Lemma 1 of <a href=\"http://www.numdam.org/item/ASNSP_1999_4_28_4_591_0.pdf\" rel=\"nofollow noreferrer\">http://www.numdam.org/item/ASNSP_1999_4_28_4_591_0.pdf</a> was given. Here an upper bound is given, but it wasn't clear to me if it was sharp or not. Any input would be appreciated. Thank you.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "linear-algebra",
+        "special-functions",
+        "determinants",
+        "combinatorial-identities"
+      ],
+      "owner": {
+        "account_id": 13606868,
+        "reputation": 19819,
+        "user_id": 124654,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/2100ea527a0edfd169dfdf34a3a492a3?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Zhi-Wei Sun",
+        "link": "https://mathoverflow.net/users/124654/zhi-wei-sun"
+      },
+      "is_answered": true,
+      "view_count": 706,
+      "accepted_answer_id": 321110,
+      "answer_count": 1,
+      "score": 6,
+      "last_activity_date": 1547735616,
+      "creation_date": 1547720507,
+      "question_id": 321098,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/321098/a-surprising-identity-det-cos-pi-fracjkn-1-le-j-k-le-n-1-lfloor-fr",
+      "title": "A surprising identity: $\\det[\\cos\\pi\\frac{jk}n]_{1\\le j,k\\le n}=(-1)^{\\lfloor\\frac{n+1}2\\rfloor}(n/2)^{(n-1)/2}$",
+      "body": "<p>On the basis of my computation, here I pose my following conjecture involving the cosine function.</p>\n\n<p><strong>Conjecture</strong>. For any positive integer <span class=\"math-container\">$n$</span>, we have the identity\n<span class=\"math-container\">$$\\frac1{2n}\\det\\left[\\cos\\pi\\frac{jk}n\\right]_{0\\le j,k\\le n}=\\det\\left[\\cos\\pi\\frac{jk}n\\right]_{1\\le j,k\\le n}=(-1)^{\\lfloor\\frac{n+1}2\\rfloor}(n/2)^{(n-1)/2}.$$</span></p>\n\n<p>This is a part of Conjecture 5.7 in my preprint <a href=\"http://arxiv.org/abs/1901.04837\" rel=\"noreferrer\">arXiv:1901.04837</a>. The paper contains more similar conjectures.</p>\n\n<p>Any ideas towards a solution of the conjecture?</p>\n"
+    },
+    {
+      "tags": [
+        "co.combinatorics",
+        "asymptotics",
+        "binomial-coefficients",
+        "sumsets"
+      ],
+      "owner": {
+        "account_id": 2782571,
+        "reputation": 365,
+        "user_id": 23197,
+        "user_type": "registered",
+        "accept_rate": 60,
+        "profile_image": "https://www.gravatar.com/avatar/36494faaaef7b4486a54209e863005ee?s=256&d=identicon&r=PG",
+        "display_name": "mermeladeK",
+        "link": "https://mathoverflow.net/users/23197/mermeladek"
+      },
+      "is_answered": true,
+      "view_count": 799,
+      "answer_count": 2,
+      "score": 7,
+      "last_activity_date": 1455210504,
+      "creation_date": 1446297294,
+      "last_edit_date": 1455210504,
+      "question_id": 222302,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/222302/can-you-simplify-or-approximate-sum-n-0n-1-binomn-1n-frac-1nn",
+      "title": "Can you simplify (or approximate) $\\sum_{n=0}^{N-1} \\binom{N-1}n \\frac{(-1)^n}{n+1} e^{-\\frac{n}{2(n+1)}\\lambda}$?",
+      "body": "<p>Let $\\binom x y$ be the binomial coefficient. I am trying to get a better understanding of the sum\n$$\nf(N,\\lambda)=\\sum_{n=0}^{N-1}\\binom{N-1}n\\frac{(-1)^n}{n+1} e^{-\\frac{n}{2(n+1)}\\lambda}\n$$\nas a function of $\\lambda$ and $N$ without having to plot it for all possible values.</p>\n\n<p>Do you know of a way to simplify it or approximate it? Although I'd rather obtain an approximation for positive $\\lambda$ and $N$, an asymptotic approximation for $\\lambda\\rightarrow\\infty$ or $N\\rightarrow\\infty$, or even an upper-bound would be helpful too.</p>\n\n<p>Here is an equivalent expression:\n$$\nf(N,\\lambda)=\\frac{1}{N}\\sum_{n=1}^{N}\\binom N n(-1)^{n-1} e^{-\\frac{n-1}{2n}\\lambda}.\n$$</p>\n\n<p>In my opinion, this sum could be easily simplified if the exponential term would have an argument that was not a rational function $\\frac{n}{n+1}$ or $\\frac{n-1}{n}$. I have not found a way in the literature to deal with it.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "diophantine-equations"
+      ],
+      "owner": {
+        "account_id": 511095,
+        "reputation": 377,
+        "user_id": 12965,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/58449496926fdc6804579234415d9e8d?s=256&d=identicon&r=PG",
+        "display_name": "idmercer",
+        "link": "https://mathoverflow.net/users/12965/idmercer"
+      },
+      "is_answered": true,
+      "view_count": 1831,
+      "accepted_answer_id": 56350,
+      "answer_count": 4,
+      "score": 14,
+      "last_activity_date": 1457493952,
+      "creation_date": 1298416751,
+      "question_id": 56338,
+      "content_license": "CC BY-SA 2.5",
+      "link": "https://mathoverflow.net/questions/56338/is-n-m-18-7-the-only-positive-solution-to-n2-n-1-m3",
+      "title": "Is (n,m)=(18,7) the only positive solution to n^2 + n + 1 = m^3 ?",
+      "body": "<p>It's hard to do a Google search on this problem.</p>\n\n<p>If I was using Maple correctly, there are no other positive solutions with n at most 10000.</p>\n\n<p>I know some of these Diophantine questions succumb to known methods, and others are extremely difficult to answer.</p>\n"
+    },
+    {
+      "tags": [
+        "co.combinatorics",
+        "symmetric-groups",
+        "partitions"
+      ],
+      "owner": {
+        "account_id": 6546841,
+        "reputation": 123,
+        "user_id": 292128,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/-j2Q996lUxa8/AAAAAAAAAAI/AAAAAAAAYwU/VI-82KOKdOM/s256-rj/photo.jpg",
+        "display_name": "Sergii Voloshyn",
+        "link": "https://mathoverflow.net/users/292128/sergii-voloshyn"
+      },
+      "is_answered": false,
+      "view_count": 230,
+      "answer_count": 0,
+      "score": 2,
+      "last_activity_date": 1635190536,
+      "creation_date": 1634839154,
+      "last_edit_date": 1635190536,
+      "question_id": 406762,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/406762/new-identity-for-sum-over-young-diagram-of-symmetric-group",
+      "title": "New identity for sum over Young diagram of symmetric group?",
+      "body": "<p>Consider the next identity\n<span class=\"math-container\">$$\n\\sum_{\\tau \\vdash r} d^2 (\\tau ) \\! \\prod_{i = -(r-1)}^{r-1} \\! \\! \\left(  N+i  \\right)^{t_i^r} =\\sum_{\\tau \\vdash r} d^2 (\\tau ) \\prod_{i = 1}^{r}  \\Gamma [N + \\tau_i - i +1]= r! \\, N^{r} \n$$</span>\nwhere <span class=\"math-container\">$d(\\tau)$</span> is dimension of representation  of a permutation group <span class=\"math-container\">$S_r$</span>  and <span class=\"math-container\">$\\tau =(\\tau_1,...,\\tau_{l(\\tau)})$</span> is a partition of <span class=\"math-container\">$\\tau \\vdash r$</span>,  some power`s coefficients <span class=\"math-container\">$t_i^r$</span> dictated by corresponding Young diagram.</p>\n<p>I don`t have  proof or combinatorial meaning of this fact.</p>\n<p>For example <span class=\"math-container\">$r=2$</span>\n<span class=\"math-container\">$$\nN(N+1)+(N-1)N= 2! N^2  \\ ,\n$$</span>\nfor <span class=\"math-container\">$r=3$</span>\n<span class=\"math-container\">$$\nN(N+1)(N+2)+2^2(N-1)N(N+1)+(N-2)(N-1)N= 3! N^3 \\ ,\n$$</span>\nfor <span class=\"math-container\">$r=4$</span> we have less trivial case\n<span class=\"math-container\">$$\nN(N+1)(N+2)(N+3)+3^2(N-1)N(N+1)(N+2)+ 2^2(N-1)N^2(N+1)+3^2(N-2)(N-1)N(N+1)+(N-3)(N-2)(N-1)N = 4!\\, N^4\n$$</span>\nand so on.</p>\n<p>The structure of the summand in brackets  is cleared by the illustration of the Young diagram for partition  <span class=\"math-container\">$(3,2,2)$</span> that belongs to <span class=\"math-container\">$r=7$</span> case.</p>\n<p><a href=\"https://i.sstatic.net/dGWpY.jpg\" rel=\"nofollow noreferrer\"><img src=\"https://i.sstatic.net/dGWpY.jpg\" alt=\"enter image description here\" /></a></p>\n<p>Even don`t clear, is this identity obvious.\nIs this a known fact at all?</p>\n<p>P.S.\nOf course, this is more sophisticated modification of known identity\n<span class=\"math-container\">$$\n\\sum_{\\tau \\vdash r} d^2 (\\tau ) =r!\n$$</span></p>\n"
+    },
+    {
+      "tags": [
+        "special-functions"
+      ],
+      "owner": {
+        "account_id": 1521341,
+        "reputation": 69,
+        "user_id": 104156,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/rcZ0Q.jpg?s=256",
+        "display_name": "jarhead",
+        "link": "https://mathoverflow.net/users/104156/jarhead"
+      },
+      "is_answered": true,
+      "view_count": 651,
+      "answer_count": 3,
+      "score": 1,
+      "last_activity_date": 1609677389,
+      "creation_date": 1562011798,
+      "last_edit_date": 1609677389,
+      "question_id": 335219,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/335219/lambert-w-function-multiplied-by-a-constant",
+      "title": "Lambert W function multiplied by a constant",
+      "body": "<p>Consider the equation</p>\n<p><span class=\"math-container\">$$y=x e^x.$$</span>\nIts real solution is given by\n<span class=\"math-container\">$$x=W(y),$$</span>\nwhere <span class=\"math-container\">$W$</span> is the <a href=\"https://en.wikipedia.org/wiki/Lambert_W_function\" rel=\"nofollow noreferrer\">Lambert W function</a> (or product log).</p>\n<p>Can the function</p>\n<p><span class=\"math-container\">$$f(x) = W\\left(-\\frac{1}{r}xe^x\\right)$$</span></p>\n<p>be written in simple terms of <span class=\"math-container\">$x$</span>?</p>\n<p>What I've tries so for is writing this as a power series expansion</p>\n<p><span class=\"math-container\">$$W(x)=\\sum_{n=1}^{\\infty}\\frac{(-1)^n n^{n-2}}{(n-1)!}x^n$$</span></p>\n<p>therefore with the constant I've introduced\n<span class=\"math-container\">$$\n\\begin{split}\nW\\left(-\\frac{1}{r}x\\right) &amp; =\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1} n^{n-2}}{(n-1)!}\\left(-\\frac{x}{r}\\right)^n\\\\\n&amp; =\\sum_{n=1}^{\\infty}-\\frac{(-1)^{n-1}(-1)^{n-1} n^{n-2}}{(n-1)!}\\left(\\frac{x}{r}\\right)^n \\\\\n&amp; =\\sum_{n=1}^{\\infty}-\\frac{n^{n-2}}{(n-1)!}\\left(\\frac{x}{r}\\right)^n\n\\end{split}\n$$</span>\nbut got stuck here.</p>\n<p>I've also tried guessing many functions in mathematica that yeilded no result.</p>\n<p>As I see it now the problem is not solvable</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "prime-numbers"
+      ],
+      "owner": {
+        "account_id": 29406364,
+        "reputation": 91,
+        "user_id": 596007,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocI5AZZ-UWTpSHa8hHF0nybIoPDI17RXi3HFcJV95UccKVY=k-s256",
+        "display_name": "Davide Rotondo",
+        "link": "https://mathoverflow.net/users/596007/davide-rotondo"
+      },
+      "is_answered": true,
+      "view_count": 471,
+      "answer_count": 1,
+      "score": 7,
+      "last_activity_date": 1788244859,
+      "creation_date": 1785032461,
+      "last_edit_date": 1785060303,
+      "question_id": 513606,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/513606/a-possible-lucas-lehmer-type-test-for-primes-of-the-form-2k3",
+      "title": "A possible Lucas-Lehmer type test for primes of the form $2^k+3$",
+      "body": "<p>I would like to share with you a computational observation and a conjecture.</p>\n<p>Starting from the Lucas-Lehmer recurrence:\n<span class=\"math-container\">$$s(0) = 4,\\ \\ s(n+1) = s(n)^2 - 2$$</span>\nI considered the numbers:\n<span class=\"math-container\">$$N = 2^{n-1} + 3$$</span>\nand the following expression:\n<span class=\"math-container\">$$T(n) = (s(n-2)/2 + (2^n - 1)) / (2^{n-1} + 3)$$</span>\nThe experiments suggest that this expression is connected with the primality of <span class=\"math-container\">$N$</span>, but with two different cases depending on the parity of <span class=\"math-container\">$n$</span>.\nFor odd <span class=\"math-container\">$n$</span>, whenever <span class=\"math-container\">$N = 2^{n-1}+3$</span> is prime, I obtain:\n<span class=\"math-container\">$$s(n-2)/2 + (2^n - 1) = 0 \\mod N$$</span>\nExamples:</p>\n<ul>\n<li><span class=\"math-container\">$n = 3$</span>, <span class=\"math-container\">$N = 7$</span>, <span class=\"math-container\">$\\rm{residue} = 0$</span></li>\n<li><span class=\"math-container\">$n = 5$</span>, <span class=\"math-container\">$N = 19$</span>, <span class=\"math-container\">$\\rm{residue} = 0$</span></li>\n<li><span class=\"math-container\">$n = 7$</span>, <span class=\"math-container\">$N = 67$</span>, <span class=\"math-container\">$\\rm{residue} = 0$</span></li>\n<li><span class=\"math-container\">$n = 13$</span>, <span class=\"math-container\">$N = 4099$</span>, <span class=\"math-container\">$\\rm{residue} = 0$</span></li>\n<li><span class=\"math-container\">$n = 17$</span>, <span class=\"math-container\">$N = 65539$</span>, <span class=\"math-container\">$\\rm{residue} = 0$</span></li>\n<li><span class=\"math-container\">$n = 19$</span>, <span class=\"math-container\">$N = 262147$</span>, <span class=\"math-container\">$\\rm{residue} = 0$</span></li>\n<li><span class=\"math-container\">$n = 29$</span>, <span class=\"math-container\">$N = 268435459$</span>, <span class=\"math-container\">$\\rm{residue} = 0$</span></li>\n<li><span class=\"math-container\">$n = 31$</span>, <span class=\"math-container\">$N = 1073741827$</span>, <span class=\"math-container\">$\\rm{residue} = 0$</span></li>\n</ul>\n<p>For even <span class=\"math-container\">$n$</span>, the same expression does not give zero. Instead, for prime values of <span class=\"math-container\">$N$</span>, I observe:\n<span class=\"math-container\">$$s(n-2)/2 + (2^n - 1) = -9 \\mod N$$</span>\nExamples:</p>\n<ul>\n<li><span class=\"math-container\">$n = 8$</span>, <span class=\"math-container\">$N = 131$</span>, <span class=\"math-container\">$\\rm{residue} = 122 = N-9$</span></li>\n<li><span class=\"math-container\">$n = 16$</span>, <span class=\"math-container\">$N = 32771$</span>, <span class=\"math-container\">$\\rm{residue} = 32762 = N-9$</span></li>\n<li><span class=\"math-container\">$n = 56$</span>, <span class=\"math-container\">$N = 36028797018963971$</span>, <span class=\"math-container\">$\\rm{residue} = N-9$</span></li>\n</ul>\n<p>Therefore I conjecture the following parity-dependent Lucas-Lehmer type behavior:</p>\n<p>For <span class=\"math-container\">$N = 2^{n-1}+3$</span> prime:</p>\n<ul>\n<li>Case 1: <span class=\"math-container\">$n$</span> odd\n<span class=\"math-container\">$$s(n-2)/2 + (2^n - 1) = 0 \\mod N$$</span></li>\n<li>Case 2: <span class=\"math-container\">$n$</span> even\n<span class=\"math-container\">$$s(n-2)/2 + (2^n - 1) = -9 \\mod N$$</span></li>\n</ul>\n<p>Equivalently:\n<span class=\"math-container\">$$ s(n-2)/2 = \\begin{cases} 7 &amp; \\text{if $n$ is odd}\\\\ -2 &amp; \\text{if $n$ is even} \\end{cases} \\mod N $$</span></p>\n<p>The numerical evidence suggests that the Lucas-Lehmer sequence detects the primality of numbers of the form <span class=\"math-container\">$2^k+3$</span> in the odd exponent case, while the even exponent case requires a correction term.</p>\n<p><strong>Question.</strong>\nAre there any theoretical interpretation or possible connections with Lucas sequences, cyclotomic identities, or known primality tests for numbers of the form <span class=\"math-container\">$2^k+3$</span>?</p>\n<p>Also I hope you can prove my conjecture and look (using this test) to the biggest prime number of the form <span class=\"math-container\">$2^n + 3$</span>.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "co.combinatorics",
+        "prime-numbers"
+      ],
+      "owner": {
+        "account_id": 6296423,
+        "reputation": 181,
+        "user_id": 110804,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocL3f6wbWTZQzYC74VGYE30i8P_HZkDuarOLGBcIm7xYBA=k-s256",
+        "display_name": "d.y",
+        "link": "https://mathoverflow.net/users/110804/d-y"
+      },
+      "is_answered": true,
+      "view_count": 598,
+      "answer_count": 3,
+      "score": 3,
+      "last_activity_date": 1768130114,
+      "creation_date": 1497531600,
+      "last_edit_date": 1497532374,
+      "question_id": 272263,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/272263/largest-power-of-p-which-divides-f-p-binompn1pn-binompnpn",
+      "title": "Largest power of $p$ which divides $F_p=\\binom{p^{n+1}}{p^n}-\\binom{p^{n}}{p^{n-1}}$",
+      "body": "<p>I would like to know your comments in order to obtain the largest power of the prime numberr $p$ which divides\n$$\nF_p= \\binom{p^{n+1}}{p^n}-\\binom{p^{n}}{p^{n-1}}.\n$$\nI proved the largest power that divided $F_2$ is $3n$.\nFor the case $p=2$, I could use Vandermonde's Identity. So\n$$\\binom{2^{n+1}}{2^n}-\\binom{2^{n}}{2^{n-1}}\\\\\n=\\sum_{j=0}^{2^{n+1}}\\binom{2^{n}}{j}\\binom{2^{n}}{2^{n}-j}-\\binom{2^{n-1}}{j}\\binom{2^{n-1}}{2^{n-1}-j} $$</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "diophantine-equations",
+        "arithmetic-functions"
+      ],
+      "owner": {
+        "account_id": 13606868,
+        "reputation": 19819,
+        "user_id": 124654,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/2100ea527a0edfd169dfdf34a3a492a3?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Zhi-Wei Sun",
+        "link": "https://mathoverflow.net/users/124654/zhi-wei-sun"
+      },
+      "is_answered": false,
+      "view_count": 309,
+      "answer_count": 0,
+      "score": 5,
+      "last_activity_date": 1605745194,
+      "creation_date": 1605710660,
+      "last_edit_date": 1605745194,
+      "question_id": 376777,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/376777/are-the-numbers-varphin2-sigman2-n-1-2-3-ldots-pairwise-distinct",
+      "title": "Are the numbers $\\varphi(n^2)\\sigma(n^2)\\ (n=1,2,3,\\ldots)$ pairwise distinct?",
+      "body": "<p>Let <span class=\"math-container\">$\\varphi$</span> be Euler's totient function, and let <span class=\"math-container\">$\\sigma(n)=\\sum_{d\\mid n}d$</span> for <span class=\"math-container\">$n=1,2,3,\\ldots$</span>. Both <span class=\"math-container\">$\\varphi$</span> and <span class=\"math-container\">$\\sigma$</span> are multiplicative functions. It is easy to see that the numbers\n<span class=\"math-container\">$$\\varphi(n^2)=n\\varphi(n)\\ \\ (n=1,2,3,\\ldots)$$</span> are pairwise distinct.</p>\n<p><strong>Question 1.</strong>\nAre the numbers <span class=\"math-container\">$\\varphi(n^2)\\sigma(n^2)\\ (n=1,2,3,\\ldots)$</span> pairwise distinct?</p>\n<p><strong>Question 2.</strong>\nAre the rationals <span class=\"math-container\">$\\sigma(n^2)/\\varphi(n^2)\\ (n=1,2,3,\\ldots)$</span> pairwise distinct?</p>\n<p>I had the questions in 2015, and conjecture that the answers to both questions are affirmative. I have verified that\n<span class=\"math-container\">$$\\varphi(n^2)\\sigma(n^2)\\ \\ (n=1,\\ldots,10^7)$$</span> are indeed pairwise distinct, and also\n<span class=\"math-container\">$$\\frac{\\sigma(n^2)}{\\varphi(n^2)}\\ \\ (n=1,\\ldots,10^7)$$</span>\nare pairwise distinct.</p>\n<p>Any ideas to solve the problem? Your comments are welcome!</p>\n"
+    },
+    {
+      "tags": [
+        "ca.classical-analysis-and-odes",
+        "integration",
+        "riemann-zeta-function",
+        "closed-form-expressions"
+      ],
+      "owner": {
+        "account_id": 1159411,
+        "reputation": 13805,
+        "user_id": 29783,
+        "user_type": "registered",
+        "accept_rate": 61,
+        "profile_image": "https://i.sstatic.net/QvJwCEnZ.png?s=256",
+        "display_name": "Wolfgang",
+        "link": "https://mathoverflow.net/users/29783/wolfgang"
+      },
+      "is_answered": true,
+      "view_count": 910,
+      "accepted_answer_id": 231974,
+      "answer_count": 2,
+      "score": 13,
+      "last_activity_date": 1650811074,
+      "creation_date": 1456258260,
+      "last_edit_date": 1650811074,
+      "question_id": 231964,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/231964/how-to-prove-that-int-0-infty-frac-textarcsinhnxxmdx-is-a-rational",
+      "title": "How to prove that $\\int _0^\\infty\\frac{\\text{arcsinh}^nx}{x^m}dx$ is a rational combination of zeta values?",
+      "body": "<p>For <span class=\"math-container\">$n\\ge m\\ge 2$</span>, define <span class=\"math-container\">$$I(n,m):= \\int _0^\\infty\\dfrac{\\text{arcsinh}^nx}{x^m}dx$$</span> Computer algebra systems say that the indefinite integral can be expressed in terms of polylog functions (of rapidly increasing complexity), but I see no way of doing the limit <span class=\"math-container\">$\\to\\infty$</span>. On the other hand, I have found numerically that <span class=\"math-container\">$I(n,m)$</span> can (conjecturally always) be written as a rational combination of zeta values, moreover <strong>this happens in a rather beautiful way</strong>.</p>\n<p>Here are the values for small <span class=\"math-container\">$m$</span>\nand then what seems to be the general formula.<br />\nDefining <span class=\"math-container\">$\\bar\\zeta(n):=(2^n-1) \\zeta(n)$</span>, it seems like</p>\n<p><span class=\"math-container\">$  I(n,2)=\\dfrac{n!}{2^{n-1}}  \\bar\\zeta(n)$</span></p>\n<p><span class=\"math-container\">$  I(n,4)=\\dfrac{n!}{2^{n-1}} \\cdot\\dfrac1 {6}[  4\\bar\\zeta(n-2)-\\bar\\zeta(n)]$</span></p>\n<p><span class=\"math-container\">$  I(n,6)=\\dfrac{n!}{2^{n-1}} \\cdot\\dfrac1{120}[ 16\\bar\\zeta(n-4)-40\\bar\\zeta(n-2)+9\\bar\\zeta(n)]$</span></p>\n<p><span class=\"math-container\">$  I(n,8)=\\dfrac{n!}{2^{n-1}} \\cdot\\dfrac1{5040}[ 64\\bar\\zeta(n-6)-560\\bar\\zeta(n-4) +1036\\bar\\zeta(n-2)-225\\bar\\zeta(n)]$</span></p>\n<p><em>(you may want to stop here for a moment before reading on and look if the coefficients tell you something already)</em></p>\n<p>and</p>\n<p><span class=\"math-container\">$  I(n,3)=\\dfrac{n!}{2^{n-1}}  \\zeta(n-1)$</span></p>\n<p><span class=\"math-container\">$  I(n,5)=\\dfrac{n!}{2^{n-1}} \\cdot\\dfrac13[ \\zeta(n-3)-\\zeta(n-1)]$</span></p>\n<p><span class=\"math-container\">$  I(n,7)=\\dfrac{n!}{2^{n-1}} \\cdot\\dfrac2{45}[\\zeta(n-5)- 5 \\zeta(n-3)+4\\zeta(n-1)]$</span></p>\n<p>Well, in <a href=\"https://en.wikipedia.org/wiki/Umbral_calculus\" rel=\"nofollow noreferrer\">umbral notation</a> introducing a formal variable <span class=\"math-container\">$\\bar Z$</span>, for even <span class=\"math-container\">$m=2k$</span> <span class=\"math-container\">$$  I(n,2k)=\\frac{n!}{2^{n-1}} \\cdot\\frac1{(2k-1)!}\\bar Z^{n}\\prod_{j=-k+1}^{k-2} \\left(\\frac2{\\bar Z}-(2j+1)\\right)$$</span> where each power <span class=\"math-container\">$\\bar Z^r$</span> is to be replaced by <span class=\"math-container\">$\\bar\\zeta (r)$</span>. E.g. for <span class=\"math-container\">$m=6$</span>, the &quot;zeta polynomial&quot; is related to <span class=\"math-container\">$16z^4-40z^2+9=(2z-3)(2z-1)(2z+1)(2z+3)$</span>.</p>\n<p>Likewise for odd <span class=\"math-container\">$m=2k+3$</span> (<em>sic</em> to make notation more elegant), <span class=\"math-container\">$$  I(n,2k+3)=\\frac{n!}{2^{n-1}} \\cdot\\frac{2^{2k}}{(2k+1)!}Z^{n}\\prod_{j=-k}^{k}\\left (\\frac1{Z}-j\\right)$$</span> where each power <span class=\"math-container\">$Z^r$</span> is to be replaced by <span class=\"math-container\">$\\zeta (r)$</span>. E.g. for <span class=\"math-container\">$m=7$</span>, the &quot;zeta polynomial&quot; is related to <span class=\"math-container\">$z^5-5z^3+4z=(z-2)(z-1)z(z+1)(z+2)$</span>.</p>\n<p>We can rewrite the expression for even <span class=\"math-container\">$m$</span> as follows to look amazingly similar to the one for odd <span class=\"math-container\">$m$</span>:</p>\n<p><span class=\"math-container\">$$  I(n,2k+2)=\\frac{n!}{2^{n-1}} \\cdot\\frac{2^{2k}}{(2k+1)!}\\bar Z^{n}\\prod_{j=-k+1/2}^{k-1/2} \\left(\\frac1{\\bar Z}-j\\right)$$</span> where in the product <span class=\"math-container\">$j$</span> runs over the half-integers.</p>\n<blockquote>\n<p>So far, this is all speculation, but once these patterns found, it seems obvious that there must be some deeper connection (which might even yield an elegant proof). Any insights? Has anybody encountered similar families of integrals?</p>\n</blockquote>\n<p><strong>EDIT for the record:</strong>\nA similar pattern occurs for the integral\n<span class=\"math-container\">$$J(n,m):=\\int _0^\\infty\\dfrac{x^n}{\\cosh^{m}x}dx,$$</span> which features for even <span class=\"math-container\">$m$</span> the <a href=\"https://en.wikipedia.org/wiki/Dirichlet_eta_function\" rel=\"nofollow noreferrer\">Dirichlet eta function</a> <span class=\"math-container\">$\\eta(s)=  \\sum\\limits_{n=1}^{\\infty}\\dfrac {(-1)^{n-1} }{ n^s}= \\left(1-2^{1-s}\\right) \\zeta(s)$</span>,\nand for odd <span class=\"math-container\">$m$</span> the <a href=\"https://en.wikipedia.org/wiki/Dirichlet_beta_function\" rel=\"nofollow noreferrer\">Dirichlet beta function</a> <span class=\"math-container\">$\\beta(s) = \\sum\\limits_{n=0}^\\infty \\dfrac{(-1)^n} {(2n+1)^s}$</span>.</p>\n<p>Using the same umbral notation as above for <span class=\"math-container\">$\\eta$</span> and <span class=\"math-container\">$\\beta$</span> respectively, we have for even <span class=\"math-container\">$m=2k$</span></p>\n<p><span class=\"math-container\">$$\\bbox[10px,#cFF]{ \\int _0^\\infty\\dfrac{x^n}{\\cosh^{2k}x}dx=\\frac{2^{2k-n}~n!}{(2k-1)!} \\eta^{n} \\prod_{j=1}^{k-1}\\left ( j^2-\\frac {  1}{ \\eta^2}\\right) } $$</span> and for odd <span class=\"math-container\">$m=2k+1$</span></p>\n<p><span class=\"math-container\">$$\\bbox[10px,#cFF]{\\int _0^\\infty\\dfrac{x^n}{\\cosh^{2k+1}x}dx=2\\frac{n!}{(2k)!}\\beta^n \\prod_{j=1}^{k} \\left ( (2j-1)^2-\\frac {  1}{ \\beta^2}\\right).}  $$</span></p>\n<p>For example, if <span class=\"math-container\">$m=8$</span>, we get from <span class=\"math-container\">$(x^2-1)(4x^2-1)(9x^2-1)=36x^6-49x^4+14x^2-1$</span> (note that these polynomials for even <span class=\"math-container\">$m$</span> are essentially the same as the ones in the case of odd <span class=\"math-container\">$m$</span> for the original integrals <span class=\"math-container\">$I(n,m)$</span> above)\n<span class=\"math-container\">$$J(n,8)=\\int _0^\\infty\\dfrac{x^n}{\\cosh^{8}x}dx=\\frac{n!}{7!~2^{n-8}}\\Bigl[36~\\eta(n)-49~\\eta(n-2)+14~\\eta(n-4)-\\eta(n-6)\\Bigr]$$</span></p>\n<p>and from <span class=\"math-container\">$(x^2-1)(9x^2-1)(25x^2-1)=225x^6-259x^4+35x^2-1$</span>, we get for <span class=\"math-container\">$m=7$</span>\n<span class=\"math-container\">$$J(n,7)=\\int _0^\\infty\\dfrac{x^n}{\\cosh^{7}x}dx=2\\frac{n!}{6!} \\Bigl[225~\\beta(n)-259~\\beta(n-2)+35~\\beta(n-4)-\\beta(n-6)\\Bigr]$$</span></p>\n"
+    },
+    {
+      "tags": [
+        "polynomials",
+        "sequences-and-series",
+        "infinite-sequences"
+      ],
+      "owner": {
+        "account_id": 27306127,
+        "reputation": 851,
+        "user_id": 505532,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/65j284JB.png?s=256",
+        "display_name": "pie",
+        "link": "https://mathoverflow.net/users/505532/pie"
+      },
+      "is_answered": false,
+      "view_count": 335,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1703625441,
+      "creation_date": 1703465236,
+      "last_edit_date": 1703625441,
+      "question_id": 460987,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/460987/is-sum-limits-k-1nkm-s-3n-cdot-dfracp-m-3nn-m-for-odd-m1-sum",
+      "title": "Is $\\sum\\limits_{k=1}^nk^m=S_3(n)\\cdot\\dfrac{P_{m-3}(n)}{N_m}$ for odd $m&gt;1,\\sum\\limits_{k=1}^nk^m=S_2(n)\\cdot\\dfrac{P_{m-2}&#39;(n)}{N_m}$ for even $m$?",
+      "body": "<p>I asked this question <a href=\"https://math.stackexchange.com/questions/4828000/conjecture-sum-limits-k-1nki-s-3n-times-fracp-i-3nn-i-for-odd\">here</a></p>\n<hr />\n<p>When I was in high school, I was fascinated by\n<span class=\"math-container\">$$\n\\sum\\limits_{k=1}^n k= \\frac{n(n+1)}{2}\n$$</span> so I tried to find the general value of the sum\n<span class=\"math-container\">$$\n\\sum\\limits_{k=1}^n k^m\\;\\text{ for all }\\; m \\in \\mathbb{N}\n$$</span>\nI was able to to find the sum up to <span class=\"math-container\">$m=6$</span>.  Here, I tried to search for a pattern to find the general solution of <span class=\"math-container\">$\\sum\\limits_{k=1}^n k^m $</span> s.t <span class=\"math-container\">$m \\in \\mathbb{N}$</span> which I failed to do, but I noticed this pattern:<br />\n<span class=\"math-container\">$$\n\\begin{align}\nS_1(n) &amp; :={\\sum\\limits_{k=1}^n k= \\frac{n(n+1)}{2}}\\\\\nS_2(n) &amp; :={\\sum\\limits_{k=1}^n k^2= \\color{blue}{\\frac{n(2n+1)(n+1)}{6}}}\\\\\nS_3(n) &amp; :={\\sum\\limits_{k=1}^n k^3= \\color{red}{\\frac{\\color{red}{n^2(n+1)^2}}{\\color{red}{4}}}}\\\\\nS_4(n) &amp; :={\\sum\\limits_{k=1}^n k^4=\\color{blue}{\\frac{n(2n+1)(n+1)}{6}} \\cdot \\frac{3n^2+3n-1}{  5}}\\\\\nS_5(n) &amp; :={\\sum\\limits_{k=1}^n k^5= \\color{red}{\\frac{\\color{red}{n^2(n+1)^2}}{\\color{red}{4}}} \\cdot\\frac{2n^2+2n-1}{ 3}}\\\\\nS_6(n) &amp; :={\\sum\\limits_{k=1}^n k^6= \\color{blue}{\\frac{n(2n+1)(n+1)}{6}} \\cdot \\frac{3n^4+6n^3-3n+1}{ 7 }}\\\\\nS_7(n) &amp; :={\\sum\\limits_{k=1}^n k^7= \\color{red}{\\frac{\\color{red}{n^2(n+1)^2}}{\\color{red}{4}} }\\cdot\\frac{3n^4+6n^3-n^2-4n+2}{ 6}}\\\\\nS_8(n) &amp;:= {\\sum\\limits_{k=1}^n k^8= \\color{blue}{\\frac{n(2n+1)(n+1)}{6}} \\cdot \\frac{5n^6+15n^5+5n^4-15n^3-n^2+9n+3}{ 15}}\\\\\nS_9(n) &amp;:= {\\sum\\limits_{k=1}^n k^9= \\color{red}{\\frac{\\color{red}{n^2(n+1)^2}}{\\color{red}{4}}} \\cdot\\frac{(n^2+n-1)(2n^4 +4n^3-n^3-3n^2+3)}{ 5}}\\\\\nS_{10}(n) &amp; := {\\sum\\limits_{k=1}^n k^{10}= \\color{blue}{\\frac{n(2n+1)(n+1)}{6}} \\cdot \\frac{ 3 n^8+ 12 n^7+ 8 n^6 - 18 n^5- 10 n^4+ 24 n^3   + 2 n^2 - 15 n +5}{ 11}}\\\\\nS_{11}(n) &amp; :={\\sum\\limits_{k=1}^n k^{11}= \\color{red}{\\frac{\\color{red}{n^2(n+1)^2}}{\\color{red}{4}}} \\cdot\\frac{2n^8 +8n^7+4n^6-16n^5-5n^4+26n^3-3n^2-20n+10}{ 6}}\n\\end{align}\n$$</span>\nI noticed that:</p>\n<ul>\n<li>For odd <span class=\"math-container\">$m&gt;1$</span>,\n<span class=\"math-container\">$$\n\\sum\\limits_{k=1}^n k^m= \\color{red}{\\frac{{n^2(n+1)^2}}{{4}}} \\cdot \\frac{P_{m-3}(n)}{N_m}\n$$</span> s.t <span class=\"math-container\">$P_{m-3}(n)$</span> is an <span class=\"math-container\">$m-3$</span> polynomial with integer coefficients <span class=\"math-container\">$ \\{a_{m-3},\\ldots a_1,a_0 \\}$</span> such that <span class=\"math-container\">$\\gcd \\{a_{m-3},\\ldots a_1,a_0 \\}=1$</span>, <span class=\"math-container\">$N_m\\in \\mathbb {N}$</span>.</li>\n<li>For even <span class=\"math-container\">$m$</span>,\n<span class=\"math-container\">$$\n\\sum\\limits_{k=1}^n k^m= \\color{blue}{\\frac{n(2n+1)(n+1)}{6}}\\cdot \\frac{P_{m-2}'(n)}{N_m}\n$$</span> s.t <span class=\"math-container\">$P_{m-2}'(n)$</span> is an <span class=\"math-container\">$m-2$</span> polynomial with integer coefficients <span class=\"math-container\">$\\{ a_{m-2},\\dots a_1,a_0 \\}$</span> such that <span class=\"math-container\">$\\gcd \\{ a_{m-2},\\dots a_1,a_0 \\}=1$</span>, <span class=\"math-container\">$N_m\\in \\mathbb {N}$</span>.</li>\n</ul>\n<p>When I was in high school I couldn't prove this pattern, and I  remembered  this observation that I had totally forgotten about. Now, after two years from my first attempt, I tried to prove this pattern again, but I couldn't.</p>\n<hr />\n<p>This question has been partly answered  <a href=\"https://mathoverflow.net/questions/444681/maybe-faulhaber-polynomial-s-kx-0-have-only-rational-roots-0-frac12\">here</a> (The answer shows that <span class=\"math-container\">$\\displaystyle\\sum\\limits_{k=1}^n k^m$</span> is divisible by <span class=\"math-container\">${n^2(n+1)^2}$</span> for odd <span class=\"math-container\">$m&gt;1$</span> and\n<span class=\"math-container\">$\\displaystyle\\sum\\limits_{k=1}^n k^m$</span> is divisible by <span class=\"math-container\">${n(2n+1)(n+1)}$</span> for even <span class=\"math-container\">$m$</span>) the only missing part is to show that the denominator is a multiple of <span class=\"math-container\">$4$</span> if <span class=\"math-container\">$m\\in 2\\mathbb{N}+1$</span>, and the denominator is a multiple of   <span class=\"math-container\">$6$</span>  if <span class=\"math-container\">$m \\in 2\\mathbb{N}$</span>.</p>\n<hr />\n<p><strong>Update</strong> With the help of the paper that @SamHopkins recommended I posted an answer <a href=\"https://math.stackexchange.com/a/4833907/1132763\">here</a></p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "co.combinatorics",
+        "gr.group-theory",
+        "soft-question"
+      ],
+      "owner": {
+        "account_id": 5649623,
+        "reputation": 44379,
+        "user_id": 66131,
+        "user_type": "registered",
+        "accept_rate": 63,
+        "profile_image": "https://www.gravatar.com/avatar/fb22f959c1b597d05fa53fc068f7024a?s=256&d=identicon&r=PG",
+        "display_name": "T. Amdeberhan",
+        "link": "https://mathoverflow.net/users/66131/t-amdeberhan"
+      },
+      "is_answered": true,
+      "view_count": 1403,
+      "accepted_answer_id": 265440,
+      "answer_count": 2,
+      "score": 14,
+      "last_activity_date": 1490454750,
+      "creation_date": 1490359443,
+      "last_edit_date": 1490454750,
+      "question_id": 265438,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/265438/n-divides-a-product-part-i",
+      "title": "$n!$ divides a product: Part I",
+      "body": "<blockquote>\n  <p><strong>Question.</strong> The following is always an integer. Is it not?\n  $$\\frac{(2^n-1)(2^n-2)(2^n-4)(2^n-8)\\cdots(2^n-2^{n-1})}{n!}.$$</p>\n</blockquote>\n\n<p>John Shareshian has supplied a cute proof. I'm encouraged to ask:</p>\n\n<blockquote>\n  <p><strong>Question.</strong> Can you give alternative proofs, even if they are not particularly as short?</p>\n</blockquote>\n"
+    },
+    {
+      "tags": [
+        "gm.general-mathematics"
+      ],
+      "owner": {
+        "account_id": 2952883,
+        "reputation": 1,
+        "user_id": 18681,
+        "user_type": "unregistered",
+        "profile_image": "https://www.gravatar.com/avatar/4bce42eaaffca9269861343263d280e8?s=256&d=identicon&r=PG",
+        "display_name": "Anonymous Coward",
+        "link": "https://mathoverflow.net/users/18681/anonymous-coward"
+      },
+      "is_answered": false,
+      "view_count": 128,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1319148142,
+      "creation_date": 1319148142,
+      "question_id": 78712,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/78712/repeated-function-resulting-in-quadratic-time",
+      "title": "Repeated function resulting in quadratic time.",
+      "body": "<p>Let $$r(f, x) = k$$ such that</p>\n\n<p>$$f^k (x) &lt; 2 \\hbox{ and } f^{k-1} (x) \\geq 2$$</p>\n\n<p>For example $$r(n \\rightarrow n-1, 2^n) = 2^n-1; r(n \\rightarrow n/2, 2^n) = n.$$</p>\n\n<p>For an arbitrary $c$, we have $$r( n \\rightarrow n/2^{1/c}, 2^n) = cn$$.</p>\n\n<p>Question, for an arbitrary $c$, is there some closed form function $f$ such that</p>\n\n<p>$$r(f, 2^n) = n^c$$ ?</p>\n\n<p>Thanks!</p>\n"
+    },
+    {
+      "tags": [
+        "co.combinatorics",
+        "linear-algebra",
+        "matrices",
+        "finite-fields"
+      ],
+      "owner": {
+        "account_id": 10038213,
+        "reputation": 2678,
+        "user_id": 110691,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/17c5621384e4543d3778b583d76e9f42?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Chain Markov",
+        "link": "https://mathoverflow.net/users/110691/chain-markov"
+      },
+      "is_answered": false,
+      "view_count": 428,
+      "answer_count": 0,
+      "score": 9,
+      "last_activity_date": 1560346196,
+      "creation_date": 1560346196,
+      "question_id": 333837,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/333837/the-number-of-non-singular-n-times-n-matrices-over-mathbbf-2-with-exactly",
+      "title": "The number of non-singular $n\\times n$ matrices over $\\mathbb{F}_2$ with exactly $k$ non-zero entries",
+      "body": "<p>Suppose <span class=\"math-container\">$M_{n}^{k}$</span> is the number of non-singular <span class=\"math-container\">$n\\times n$</span> matrices over <span class=\"math-container\">$\\mathbb{F}_2$</span>, that have exactly <span class=\"math-container\">$k$</span> non-zero entries. \nIs there some sort of formula to calculate <span class=\"math-container\">$M_n^k$</span>?</p>\n\n<p>If <span class=\"math-container\">$k &lt; n$</span> or <span class=\"math-container\">$k &gt; n^2 - n + 1$</span>, then <span class=\"math-container\">$M_n^k = 0$</span> by pigeonhole principle (in the first case we always have at least one zero row, in the second case we always have at least two identical rows). </p>\n\n<p>If <span class=\"math-container\">$k = n$</span>, then all such non-singular matrices have to be permutation matrices. Thus <span class=\"math-container\">$M_n^n = n!$</span>. </p>\n\n<p>If <span class=\"math-container\">$k = n + 1$</span>, then the matrix differs from a permutation matrix by one additional non-zero entry. Thus <span class=\"math-container\">$M_n^{n + 1} =n!n(n-1)$</span>.</p>\n\n<p>If <span class=\"math-container\">$k = n^2 - n + 1$</span>, then there are exactly <span class=\"math-container\">$n - 1$</span> zeroes which are required to be in different rows and different columns. Thus, <span class=\"math-container\">$M_n^{n^2 - n + 1} = n!n$</span>.</p>\n\n<p>However, I do not know, how to deal with the situation, where <span class=\"math-container\">$n + 1 &lt; k &lt; n(n - 1)$</span>.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory"
+      ],
+      "owner": {
+        "account_id": 2945313,
+        "reputation": 2213,
+        "user_id": 8131,
+        "user_type": "registered",
+        "accept_rate": 95,
+        "profile_image": "https://www.gravatar.com/avatar/de27fa4cfd73214b87f114e20a039694?s=256&d=identicon&r=PG",
+        "display_name": "Nikita Sidorov",
+        "link": "https://mathoverflow.net/users/8131/nikita-sidorov"
+      },
+      "is_answered": false,
+      "view_count": 468,
+      "answer_count": 0,
+      "score": 4,
+      "last_activity_date": 1352929584,
+      "creation_date": 1352929584,
+      "question_id": 112419,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/112419/an-identity-which-involves-eulers-totient-function",
+      "title": "An identity which involves Euler&#39;s totient function",
+      "body": "<p>It is well known that \n$$\n\\sum_{n=1}^\\infty \\frac{\\phi(n)x^n}{1-x^n}=\\frac x{(1-x)^2},\n$$\nwhere $\\phi$ is Euler's totient function and $|x|&lt;1$ - see [Hardy and Wright, Theorem 309]. For $x=\\frac12$ this immediately yields\n$$\n\\sum_{n=1}^\\infty \\frac{\\phi(n)}{2^n-1}=2.\n$$\nWhat I need for my research is the analytic value for\n$$\n\\sum_{n=1}^\\infty \\frac{\\phi(n)}{(2^n-1)^2}.\n$$\nNumerically it is $1.1659457\\dots$, which doesn't look like something familiar to me (or to Google, for that matter). </p>\n\n<p>Any ideas? </p>\n"
+    },
+    {
+      "tags": [
+        "mg.metric-geometry",
+        "cv.complex-variables",
+        "kahler-manifolds",
+        "differential-forms",
+        "kahler-ricci-flow"
+      ],
+      "owner": {
+        "account_id": 27500250,
+        "reputation": 43,
+        "user_id": 497676,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/a0586be052e7d5fef046430ea525c90e?s=256&d=identicon&r=PG",
+        "display_name": "Samir",
+        "link": "https://mathoverflow.net/users/497676/samir"
+      },
+      "is_answered": false,
+      "view_count": 103,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1686687291,
+      "creation_date": 1686679349,
+      "last_edit_date": 1686687291,
+      "question_id": 448790,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/448790/vanishing-components-of-k%c3%a4hler-metric",
+      "title": "Vanishing components of K&#228;hler metric",
+      "body": "<p>Let <span class=\"math-container\">$(X, \\omega) $</span> be a <span class=\"math-container\">$n$</span>-dimensional complex Kähler manifold such that <span class=\"math-container\">$\\omega^{n-1}=d\\alpha $</span>.</p>\n<p>Does <span class=\"math-container\">$\\partial\\alpha^{n-1,n-2} =0$</span> (resp. <span class=\"math-container\">$\\bar\\partial\\alpha^{n-2,n-1} =0$</span>)\nWhere <span class=\"math-container\">$\\alpha^{n-1,n-2}$</span> is the (n-1,n-2)-component of <span class=\"math-container\">$\\alpha $</span>?</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "co.combinatorics",
+        "graph-theory"
+      ],
+      "owner": {
+        "account_id": 18939297,
+        "reputation": 39,
+        "user_id": 515052,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/Xncjj.jpg?s=256",
+        "display_name": "Cardstdani",
+        "link": "https://mathoverflow.net/users/515052/cardstdani"
+      },
+      "is_answered": false,
+      "view_count": 473,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1721325165,
+      "creation_date": 1720608193,
+      "last_edit_date": 1721325165,
+      "question_id": 474782,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/474782/average-cluster-size-of-an-n-times-n-matrix",
+      "title": "Average cluster size of an $n\\times n$ matrix",
+      "body": "<p>I asked a question about the cluster size inside a vector <a href=\"https://mathoverflow.net/questions/474649/average-cluster-size-of-a-n-size-vector\">here</a>. As a result, I finally used the expression <span class=\"math-container\">$\\frac{n}{-k+n+1}$</span> as the average cluster size, although it´s not proved correct for every possible value fo <span class=\"math-container\">$n$</span> and <span class=\"math-container\">$k$</span>.</p>\n<p>Now, I´m trying to do the same procedure for a 2-dimensional matrix. So, when there is <span class=\"math-container\">$k=2$</span> elements in a <span class=\"math-container\">$n\\times n$</span> matrix, the average cluster size is:</p>\n<p><span class=\"math-container\">$$\\frac{2 \\binom{n^2}{2}}{2 \\left(\\binom{n^2}{2}-(2 (n-1) (n-1)+2 n (n-1))\\right)+2 (n-1) (n-1)+2 n (n-1)}=\\frac{n^2 (n+1)}{n^3+n^2-4 n+2}$$</span></p>\n<p>For <span class=\"math-container\">$k=3$</span>, we get the following expression:</p>\n<p><span class=\"math-container\">\\begin{align} &amp; \\frac{3 \\dbinom{n^2}{3}}{ \\left( \\begin{array}{l} 2 \\left( \\begin{array}{l} \\binom{n^2}{3}-\\frac{1}{6}(n-2) \\left(n^4+3 n^3-20 n^2-30 n+132\\right) (n-1) \\\\ {} -(2 (n-2) (n-2)+8 (n-1) (n-2) \\\\{}+4 (n-1) (n-2)+2 n (n-2)+4 (n-1) (n-1)) \\end{array} \\right) \\\\ \\\\ {}+\\frac{3}{6} (n-1) \\left(n^4+3 n^3-20 n^2-30 n+132\\right) (n-2) \\\\ \\\\ {}+2 (n-2) (n-2)+8 (n-1) (n-2) \\\\ \\\\ {}+4 (n-1) (n-2)+2 n (n-2)+4 (n-1) (n-1) \\end{array} \\right) } \\\\ \\\\ &amp; =\\frac{n^2 \\left(n^3+n^2-2 n-2\\right)}{n^5+n^4-10 n^3+2 n^2+24 n-16} \\end{align}</span></p>\n<p>Note that the number of <span class=\"math-container\">$3$</span> element arrangements in which all of them are non-adjacent is calculated in the <a href=\"https://oeis.org/A061996\" rel=\"nofollow noreferrer\">A061996</a> sequence. And, for <span class=\"math-container\">$k=1$</span> the cluster size is always <span class=\"math-container\">$1$</span>.</p>\n<p>My goal is to create a general formula <span class=\"math-container\">$cs(n,k)$</span> which returns the average cluster size for a specific value of <span class=\"math-container\">$n$</span> and <span class=\"math-container\">$k$</span>, like in the original question, but for <span class=\"math-container\">$n\\times n$</span> matrices. My current approach is to find a pattern to continue the simplification of the above expressions, like in the original question, so that I can generate formulas for the next values of <span class=\"math-container\">$k&gt;3$</span>, however, I only managed to generate the numerator with: <span class=\"math-container\">$\\frac{k (k-1)! \\binom{n^2}{k}}{n-1}$</span></p>\n"
+    },
+    {
+      "tags": [
+        "inequalities",
+        "real-analysis"
+      ],
+      "owner": {
+        "account_id": 2941753,
+        "reputation": 3705,
+        "user_id": 2389,
+        "user_type": "registered",
+        "accept_rate": 81,
+        "profile_image": "https://www.gravatar.com/avatar/554cf287e02c649e12c7a9b738ab966c?s=256&d=identicon&r=PG",
+        "display_name": "Ewan Delanoy",
+        "link": "https://mathoverflow.net/users/2389/ewan-delanoy"
+      },
+      "is_answered": true,
+      "view_count": 304,
+      "accepted_answer_id": 83235,
+      "answer_count": 1,
+      "score": 2,
+      "last_activity_date": 1323706919,
+      "creation_date": 1323677859,
+      "question_id": 83229,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/83229/quotients-of-perfect-powers-separated-by-an-integer",
+      "title": "Quotients of perfect powers separated by an integer",
+      "body": "<p>Let $a_n=\\frac{(n+1)^{n+2}}{n^n}$ and $b_n=\\frac{(n+2)^{(n+1)}}{(n+1)^{n-1}}$. Then it is easy to see that $a_n \\leq b_n$ for all integers $n\\geq 1$ (because the sequence $(1+\\frac{1}{n})^n$ is increasing).</p>\n\n<p>My question is : is there always an integer between $a_n$ and $b_n$ ? This holds for $1 \\leq n \\leq 100$.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "co.combinatorics",
+        "combinatorial-identities",
+        "permanent"
+      ],
+      "owner": {
+        "account_id": 21942988,
+        "reputation": 1994,
+        "user_id": 287674,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/rrBzM.jpg?s=256",
+        "display_name": "Deyi Chen",
+        "link": "https://mathoverflow.net/users/287674/deyi-chen"
+      },
+      "is_answered": true,
+      "view_count": 810,
+      "accepted_answer_id": 403004,
+      "answer_count": 1,
+      "score": 10,
+      "last_activity_date": 1630592751,
+      "creation_date": 1630524822,
+      "question_id": 402993,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/402993/permanent-identities",
+      "title": "Permanent identities",
+      "body": "<p>The permanent <span class=\"math-container\">$\\mathrm{per}(A)$</span> of a matrix <span class=\"math-container\">$A$</span> of size <span class=\"math-container\">$n\\times n$</span> is defined to be:</p>\n<p><span class=\"math-container\">$$\\mathrm{per}(A)=\\sum_{\\tau\\in S_n}\\prod_{j=1}^na_{j,\\tau(j)}.$$</span></p>\n<p>Let\n<span class=\"math-container\">$$A=\\left[\\tan\\pi\\frac{j+k}n\\right]_{1\\le j,k\\le n-1},$$</span>\n<span class=\"math-container\">$$B=\\left[\\sin\\pi\\frac{j+k}n\\right]_{1\\le j,k\\le n-1},$$</span>\n<span class=\"math-container\">$$C=\\left[\\cos\\pi\\frac{j+k}n\\right]_{1\\le j,k\\le n-1},$$</span>\n<span class=\"math-container\">$$D=\\left[\\sec\\pi\\frac{j+k}n\\right]_{1\\le j,k\\le n-1}.$$</span></p>\n<p>Motivated by <a href=\"https://mathoverflow.net/questions/402249\">Question 402249</a>, I found the following</p>\n<p><strong>Conjecture 1.</strong> For any odd integer <span class=\"math-container\">$n&gt;1,$</span><br />\n<span class=\"math-container\">$$(-1)^{(n-1)/2}\\mathrm{per}(A)=\\frac{2(n!!)^2}{n+1}\\sum_{k=0}^{\\frac{n-1}{2}}\\frac{(-1)^k}{2k+1}. \\tag{1}$$</span></p>\n<p>Numerical calculations show that this is correct for <span class=\"math-container\">$3 \\leq n \\leq 33$</span>. See <a href=\"https://mathoverflow.net/questions/402249\">Question 402249</a> for details.</p>\n<p>Inspired by <a href=\"https://mathoverflow.net/questions/402572\">Question 402572</a>, I also found the following identities</p>\n<p><strong>Conjecture 2.</strong> For any odd integer <span class=\"math-container\">$n&gt;1,$</span></p>\n<p><span class=\"math-container\">\\begin{align}\n(-1)^{(n-1)/2}\\mathrm{per}(B)&amp;=\\frac{n!}{2^{n-2}(n+1)}，\\tag{2}\n\\\\ \\mathrm{per}(C)&amp;={\\frac{(n-1)!}{2^{n-1}}}\\sum_{k=0}^{n-1}\\frac{1}{\\binom{n-1}{k}},\\tag{3}\n\\\\ \\mathrm{per}(D)&amp;= (n-2)!!^2\\left( (-1)^{\\frac{n+1}{2}}+2n\\sum_{k=0}^{\\frac{n-1}{2}} {\\frac {\\left( -1 \\right) ^{k}}{2k+1} }\n\\right) .\\tag{4}\n\\end{align}</span>\nNumerical calculations show that it is correct for <span class=\"math-container\">$3 \\leq n \\leq 21$</span>.</p>\n<p><strong>Question.</strong> Are these identities correct? How to prove them?</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "additive-combinatorics"
+      ],
+      "owner": {
+        "account_id": 2952971,
+        "reputation": 911,
+        "user_id": 18785,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://www.gravatar.com/avatar/28a8f633e9b9d0c4a93e65f1a7a94990?s=256&d=identicon&r=PG",
+        "display_name": "Omid Hatami",
+        "link": "https://mathoverflow.net/users/18785/omid-hatami"
+      },
+      "is_answered": true,
+      "view_count": 1700,
+      "accepted_answer_id": 150387,
+      "answer_count": 3,
+      "score": 14,
+      "last_activity_date": 1386002710,
+      "creation_date": 1385658341,
+      "last_edit_date": 1385658864,
+      "question_id": 150247,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/150247/density-of-all-n-such-that-2n-1-is-square-free",
+      "title": "Density of all n such that 2^n-1 is square free",
+      "body": "<p>Is it true that the set $$S:=\\{n\\in \\mathbb N\\ |\\ 2^n-1 \\ \\mbox{ is square free}\\}$$ has positive density? What can we say when we replace $2^n-1$ with $\\frac{a^n-1}{a-1}$?</p>\n"
+    },
+    {
+      "tags": [
+        "graph-theory",
+        "set-theory",
+        "co.combinatorics",
+        "functional-equations",
+        "generating-functions"
+      ],
+      "owner": {
+        "account_id": 243015,
+        "reputation": 1100,
+        "user_id": 1320,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://www.gravatar.com/avatar/3044880a944e4cc6311638d92ac548a3?s=256&d=identicon&r=PG",
+        "display_name": "Halfdan Faber",
+        "link": "https://mathoverflow.net/users/1320/halfdan-faber"
+      },
+      "is_answered": true,
+      "view_count": 768,
+      "accepted_answer_id": 40449,
+      "answer_count": 1,
+      "community_owned_date": 1285827429,
+      "score": 2,
+      "last_activity_date": 1286511248,
+      "creation_date": 1285745862,
+      "last_edit_date": 1286511248,
+      "question_id": 40440,
+      "content_license": "CC BY-SA 2.5",
+      "link": "https://mathoverflow.net/questions/40440/infinite-graphs-as-functional-operators",
+      "title": "Infinite graphs as functional operators",
+      "body": "<h1>Original Question</h1>\n\n<p><br>\nConsider an infinite tree of constant degree $k$. For such a tree we can consider the total number of nodes at depth $n$, $g(f)$, and the total number of paths from the root, $p(f)$, to be a function of the constant function, $f=k$. We define $G(f)$ to be the resulting infinite tree.  Now let us generalize this idea to functions $f(n)$, with the normal convention that the root has depth $n=0$.</p>\n\n<p>Some examples:</p>\n\n<p>$g(1)=1$<br>\n$p(1)=n+1$<br>\n$G(1)$ is the infinite tree (path) of constant degree 1</p>\n\n<p>$g(2) =  2^n$<br>\n$p(2) =  2^{n+1}-1$<br>\n$G(2)$ is the infinite complete binary tree</p>\n\n<p>$g(a) = a^n$<br>\n$p(a) = \\frac{a^{n+1}-1}{(a-1)}$ for a>1<br>\n$G(a)$ is the infinite complete tree of constant degree a</p>\n\n<p>$g(f=n)\t= n!$<br>\n$p(f=n)\t= !n$<br>\n$G(f=n)$ is the infinite complete tree of incremental degree</p>\n\n<p>$g(f=n+1)=(n+1)!$</p>\n\n<p>$g(f=2n)=2n!!$<br>\nwhere !! is the double-factorial            </p>\n\n<p>$g(f=3n)=3n!!!$<br>\nwhere !!! is the triple-factorial</p>\n\n<p>$g(f=n^2)\t=  n!^2$</p>\n\n<p>$g(f=n^a)\t=  n!^a$    </p>\n\n<p>$g(f=an^b)\t=  a^{n}n!^b$  ; Sequences not in Sloan for a>1</p>\n\n<p>$g(f=n^2+n+1)$ = ? ; Related to absolute values for Sloan A130031<br>\n$p(f=n^2+n+1)$ = ? ; Sequence: [1, 2, 7, 62, 1107, 31412, 1273917, ... ]</p>\n\n<p>$g(f=2^n)=2^{((n+1)^2-(n+1))/2}$ </p>\n\n<p>$p(f=2^n)= ?$ ; Sequence: [1,3,11,75,1099,33867, .... ]</p>\n\n<p>$g(f=a^n)=a^{((n+1)^2-(n+1))/2}$  </p>\n\n<p>$g (f=n!)$    =  Sloan A000178  </p>\n\n<p>$g (f=2n!)$    =  ? ;  Related to Sloan A156926. Sequence: [1,2,8,96,4608,1105920,....]<br>\n$p (f=2n!)$    =  ? ;  Sequence: [1,3,11,107,4715,....] <br>    </p>\n\n<p>$g (f=3n!)$    =  ? ;  Sequence: [1,3,18,324,23328,8398080,....]<br>\n$p (f=3n!)$     =  ? ;  Sequence: [1,4,22,346, 23674, 8421754,....]  <br>   </p>\n\n<p>$g(f=a^{a^n})= a^{a^{n+1}-a(3^n + 1)/2}$</p>\n\n<p>My questions are: is this graph construction well known? I would be interested in any references to similar functional transformations on graphs.</p>\n\n<p>Also, could anyone tell me what is the cardinality of the set of all paths in G(f=n)? Clearly it has at least Continuum cardinality. Since the factorial grows faster than $a^n$, yet slower than $2^{2^n}$, I would think it lands in the Continuum. I am not sure, though...\n<br> <br></p>\n\n<h1>Addendum</h1>\n\n<p><br>\nWe can express p and g as functional equations:</p>\n\n<p>$g(f(n))=f(n) g(f(n-1))$</p>\n\n<p>$g(f(0))=1$</p>\n\n<p>$p(f(n))=\\sum_{i=1}^{n} g(f(i))$</p>\n\n<p><br>\nIf we extend to the complex domain and consider the special case f(z)=z we have the functional equation:</p>\n\n<p>$g(z)= z g(z-1)$</p>\n\n<p>Which has the rather well known solution $g(z) = \\Gamma (z+1)$</p>\n"
+    },
+    {
+      "tags": [
+        "co.combinatorics",
+        "pr.probability",
+        "linear-algebra",
+        "matrices",
+        "enumerative-combinatorics"
+      ],
+      "owner": {
+        "account_id": 510301,
+        "reputation": 33135,
+        "user_id": 2233,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://i.sstatic.net/0YXo0.jpg?s=256",
+        "display_name": "Tony Huynh",
+        "link": "https://mathoverflow.net/users/2233/tony-huynh"
+      },
+      "is_answered": true,
+      "view_count": 8880,
+      "accepted_answer_id": 18639,
+      "answer_count": 3,
+      "score": 19,
+      "last_activity_date": 1675989904,
+      "creation_date": 1268938199,
+      "last_edit_date": 1675989904,
+      "question_id": 18636,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/18636/number-of-invertible-0-1-real-matrices",
+      "title": "Number of invertible {0,1} real matrices?",
+      "body": "<p>This question is inspired from <a href=\"https://mathoverflow.net/questions/18547/number-of-unique-determinants-for-an-nxn-0-1-matrix\">here</a>, where it was asked what possible determinants an $n \\times n$ matrix with entries in {0,1} can have over $\\mathbb{R}$.  </p>\n\n<p>My question is: how many such matrices have non-zero determinant?  </p>\n\n<p>If we instead view the matrix as over $\\mathbb{F}_2$ instead of $\\mathbb{R}$, then the answer is </p>\n\n<p>$(2^n-1)(2^n-2)(2^n-2^2) \\dots (2^n-2^{n-1}).$</p>\n\n<p>This formula generalizes to all finite fields $\\mathbb{F}_q$, which leads us to the more general question of how many $n \\times n$ matrices with entries in { $0, \\dots, q-1$ } have non-zero determinant over $\\mathbb{R}$?  </p>\n"
+    },
+    {
+      "tags": [
+        "lie-algebras",
+        "classification"
+      ],
+      "owner": {
+        "account_id": 2961157,
+        "reputation": 285,
+        "user_id": 30496,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/9e49bdb9f01507c64b87310d425bfcbd?s=256&d=identicon&r=PG",
+        "display_name": "Kensmosis",
+        "link": "https://mathoverflow.net/users/30496/kensmosis"
+      },
+      "is_answered": true,
+      "view_count": 1137,
+      "accepted_answer_id": 438733,
+      "answer_count": 2,
+      "score": 17,
+      "last_activity_date": 1674156606,
+      "creation_date": 1673976405,
+      "last_edit_date": 1673989978,
+      "question_id": 438727,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/438727/counting-degrees-of-freedom-in-lie-algebra-structure-constants-aka-why-are-ther",
+      "title": "Counting degrees of freedom in Lie algebra structure constants (aka why are there any nontrivial Lie algebras of dim &gt;5?)",
+      "body": "<p>This is a question about the true number of constraints imposed by the Jacobi identity on the structure constants of a Lie algebra.</p>\n<p>For an <span class=\"math-container\">$n$</span>-dimensional Lie algebra, there are <span class=\"math-container\">$\\frac{n^2(n-1)}{2}$</span> structure constants <span class=\"math-container\">$f_{ab}^c$</span>, where I've accounted for antisymmetry but not the Jacobi identity.  Accounting for obvious symmetries, the Jacobi identity <span class=\"math-container\">$f_{ad}^e f_{bc}^d +f_{bd}^e f_{ca}^d + f_{cd}^e f_{ab}^d= 0$</span> seems to impose <span class=\"math-container\">$\\frac{n^2(n-2)(n-1)}{6}$</span> constraints.</p>\n<p>For <span class=\"math-container\">$n&gt;5$</span>, this exceeds the total degrees of freedom of the structure constants.  The problem appears to be overspecified and there should (in all likelihood) be no nontrivial solutions.  I.e. by such a naive counting of constraints there should be no finite-dimensional Lie algebras with <span class=\"math-container\">$n&gt;5$</span>.  Obviously, this is not the case.</p>\n<p>It's certainly possible for an apparently overconstrained system of quadratic equations to have nontrivial solutions.  However, it's natural to ask whether that's more than mere coincidence and there is some other mechanism at play — either a less obvious relationship between the equations or a reason they were formed in a manner which admits solutions.</p>\n<p>I wrote a simple computer program to analyze how many of the Jacobi equations are trivial or redundant in a couple of simple cases (<span class=\"math-container\">$n=3$</span> to <span class=\"math-container\">$n=12$</span>), and none are.  In fact, they all are linearly independent (i.e. if we regard distinct quadratic terms as basis elements in some vector space, then the rank of the resulting <span class=\"math-container\">$\\big[\\frac{n^2(n-2)(n-1)}{6}\\big] \\times \\big[\\frac{1}{2}\\frac{n^2(n-1)}{2}\\big(\\frac{n^2(n-1)}{2}+1\\big)\\big]$</span> sparse matrix is the same as the number of Jacobi equations).  The equations may be related in more complicated ways than mere linear independence, of course.</p>\n<p>So am I missing something obvious?  There must be some additional reduction in the number of independent equations that I'm missing.  Somehow I must be massively overcounting the Jacobi identity equations.</p>\n<p>I tried posting this on math.stackexchange a few years ago and got no responses, and now I'm revisiting the subject and realized it still puzzles me — so I figured I'd try posting it here.</p>\n<p>Presumably, the set of solutions (modulo an overall scale factor) would provide an alternate approach to classifying Lie algebras of a given dimension over the relevant field.</p>\n<p>Most likely, a similar issue arises for the structure constants of an associative algebra, though I haven't gone through the motions there.</p>\n<p>Thanks in advance for your help!</p>\n"
+    },
+    {
+      "tags": [
+        "dg.differential-geometry",
+        "riemannian-geometry",
+        "connections",
+        "curvature"
+      ],
+      "owner": {
+        "account_id": 6155191,
+        "reputation": 193,
+        "user_id": 119252,
+        "user_type": "registered",
+        "profile_image": "https://lh5.googleusercontent.com/-XUYeJ77Selc/AAAAAAAAAAI/AAAAAAAAAIw/-fW0M9ZH0kQ/s256-rj/photo.jpg",
+        "display_name": "Aureliano Skirzewski",
+        "link": "https://mathoverflow.net/users/119252/aureliano-skirzewski"
+      },
+      "is_answered": true,
+      "view_count": 566,
+      "answer_count": 1,
+      "score": 12,
+      "last_activity_date": 1515120044,
+      "creation_date": 1515091074,
+      "last_edit_date": 1515092770,
+      "question_id": 289940,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/289940/riemannian-vs-non-riemannian-curvature",
+      "title": "Riemannian vs Non-Riemannian curvature",
+      "body": "<p>If you neither know the metric nor the holonomy group, how do you recognize a curvature tensor is Riemannian? </p>\n\n<p>I assume a curvature, by definition, satisfies Bianchi identities. I know it is Riemannian if there exists a symmetric non degenerate tensor $g_{ab}$ such that these satisfy the condition $$g_{ea}R^e{}_{bcd}+g_{eb}R^e{}_{acd}=0 \\, ,$$ but its solutions are not unique for the metric (a homogeneous equation).</p>\n\n<p>In $n$ dimensions, these $\\frac{n(n+1)}{2}\\frac{n(n-1)}{2}$ conditions bring us down from the $\\frac{n^2(n+1)(n-1)}{3}$ components of the curvature to $\\frac{n^2(n+1)(n-1)}{3\\cdot 2 \\cdot 2}$ of the Riemann Tensor. Yet it seems to me these equations don't tell me what the metric should be.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "prime-numbers",
+        "experimental-mathematics"
+      ],
+      "owner": {
+        "account_id": 2948331,
+        "reputation": 26169,
+        "user_id": 12481,
+        "user_type": "registered",
+        "accept_rate": 65,
+        "profile_image": "https://www.gravatar.com/avatar/9dfe027c62c9a19313e774379eb91ecb?s=256&d=identicon&r=PG",
+        "display_name": "joro",
+        "link": "https://mathoverflow.net/users/12481/joro"
+      },
+      "is_answered": true,
+      "view_count": 254,
+      "answer_count": 1,
+      "score": 3,
+      "last_activity_date": 1714832323,
+      "creation_date": 1714815442,
+      "question_id": 470555,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/470555/increasing-sequences-and-wieferich-primes",
+      "title": "Increasing sequences and Wieferich primes",
+      "body": "<p>We are trying to show that primes of the form <span class=\"math-container\">$a(n)$</span> can't be\nWieferich primes.</p>\n<p>For natural <span class=\"math-container\">$n$</span> define <span class=\"math-container\">$J(n)=(2^{n-1}-1) \\bmod n^2$</span>\nand if <span class=\"math-container\">$n$</span> is power of two define <span class=\"math-container\">$J(2^n)=1$</span> (this is artificial, just to\navoid triviality and by <span class=\"math-container\">$\\bmod$</span> we mean take the smallest residue modulo <span class=\"math-container\">$n^2$</span>).</p>\n<p>Prime <span class=\"math-container\">$p$</span> is Wieferich prime iff <span class=\"math-container\">$J(p)=0$</span>.</p>\n<blockquote>\n<p>Q1 Is there increasing sequence <span class=\"math-container\">$a(n)$</span> which conjecturally has\ninfinitely many primes and <span class=\"math-container\">$J(a(n))$</span> is increasing, thus non-zero?</p>\n</blockquote>\n<blockquote>\n<p>Q2 Is there intuitive explanation why  <span class=\"math-container\">$J(20 \\cdot 18^n+19)$</span> is increasing up\nto <span class=\"math-container\">$n=3985$</span> and then fail?</p>\n</blockquote>\n<p>Dropping the prime requirements, limited experiments suggest\n<span class=\"math-container\">$\\log\\log{J({2^{2^n}}+1)} \\sim n$</span></p>\n<blockquote>\n<p>Q3 Is <span class=\"math-container\">$J({B^{2^n}}+1)$</span> increasing for some <span class=\"math-container\">$B$</span>?</p>\n</blockquote>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "riemann-zeta-function",
+        "root-systems",
+        "dirichlet-series",
+        "irrational-numbers"
+      ],
+      "owner": {
+        "account_id": 9253183,
+        "reputation": 1444,
+        "user_id": 110710,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/0946cc6477e37942241936d235aaa3ff?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Steven Clark",
+        "link": "https://mathoverflow.net/users/110710/steven-clark"
+      },
+      "is_answered": false,
+      "view_count": 161,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1701449097,
+      "creation_date": 1701361206,
+      "last_edit_date": 1701449097,
+      "question_id": 459498,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/459498/question-on-recursive-formulas-for-eta2-n1-and-beta2-n-where-n-in-ma",
+      "title": "Question on recursive formulas for $\\eta(2 n+1)$ and $\\beta(2 n)$ where $n\\in\\mathbb{N}$",
+      "body": "<p>This question is a refinement of <a href=\"https://math.stackexchange.com/q/4219140\">my related MSE question</a> which was asked over 2 years ago and no answers have yet been posted.</p>\n<hr />\n<p>Consider the following formulas for the <a href=\"https://en.wikipedia.org/wiki/Dirichlet_eta_function\" rel=\"nofollow noreferrer\">Dirichlet eta function</a> <span class=\"math-container\">$\\eta(s)$</span> and the <a href=\"https://en.wikipedia.org/wiki/Dirichlet_beta_function\" rel=\"nofollow noreferrer\">Dirichlet beta function</a> <span class=\"math-container\">$\\beta(s)$</span> which I believe are globally convergent and are related to <a href=\"https://math.stackexchange.com/q/4087471\">formula (3) in this MSE question</a>.</p>\n<hr />\n<p><span class=\"math-container\">$$\\eta(s)=\\underset{K\\to\\infty}{\\text{lim}}\\left(\\frac{1}{2^{K+1}}\\sum\\limits_{n=0}^K\\frac{(-1)^n}{(n+1)^s}\\sum\\limits_{k=0}^{K-n} \\binom{K+1}{K-n-k}\\right)\\tag{1}$$</span></p>\n<p><span class=\"math-container\">$$\\beta(s)=\\underset{K\\to\\infty}{\\text{lim}}\\left(\\frac{1}{2^{K+1}}\\sum\\limits_{n=0}^K \\frac{(-1)^n}{(2 n+1)^s} \\sum\\limits_{k=0}^{K-n} \\binom{K+1}{K-n-k}\\right)\\tag{2}$$</span></p>\n<hr />\n<p>Mathematica indicates the formulas above for <span class=\"math-container\">$\\eta(s)$</span> and <span class=\"math-container\">$\\beta(s)$</span> can be represented by <a href=\"https://reference.wolfram.com/language/ref/DifferenceRoot.html\" rel=\"nofollow noreferrer\">difference roots</a> at odd and even positive integers respectfully. Mathematica explains difference root mathematical sequence (also known as holonomic sequence and P-recursive sequence) as follows:</p>\n<blockquote>\n<p>The holonomic sequence <span class=\"math-container\">$h(k)$</span> defined by a DifferenceRoot function satisfies a holonomic difference equation <span class=\"math-container\">$p_n(k)\\ h(k+n)+p_{n-1}(k)\\ h(k+n-1)+...+p_0(k)\\ h(k)=0$</span> with polynomial coefficients <span class=\"math-container\">$p_i(k)$</span> and initial values <span class=\"math-container\">$h(n-1)=h_{n-1},...,h'(1)=h_1,h(0)=h_0$</span>.</p>\n</blockquote>\n<hr />\n<p>Also see <a href=\"https://en.wikipedia.org/wiki/Holonomic_function\" rel=\"nofollow noreferrer\">Holonomic function</a> and <a href=\"https://en.wikipedia.org/wiki/P-recursive_equation\" rel=\"nofollow noreferrer\">P-recursive equation</a>.</p>\n<hr />\n<p>For example, these difference root representations lead to the following recursive formulas for <span class=\"math-container\">$\\eta(5)$</span> and Catalan's constant <span class=\"math-container\">$\\beta(2)$</span> where formula (3) below is exactly equivalent to formula (1) above for <span class=\"math-container\">$\\eta(s)$</span> evaluated at <span class=\"math-container\">$s=5$</span> and formula (4) below is exactly equivalent to formula (2) above for <span class=\"math-container\">$\\beta(s)$</span> evaluated at <span class=\"math-container\">$s=2$</span>.</p>\n<hr />\n<p><span class=\"math-container\">$$\\eta(5)=\\underset{K\\to\\infty}{\\text{lim}}\\left(2^{-K-1} y_{\\eta(5)}(K,K+1)\\right)\\tag{3a}$$</span></p>\n<p>where <span class=\"math-container\">$y_{\\eta(5)}(K,n)$</span> is defined recursively as</p>\n<p><span class=\"math-container\">$$y_{\\eta(5)}(K,n)=$$</span> <span class=\"math-container\">$$\\left\\{\\begin{array}{cc}\n 0 &amp; n=0 \\\\\n 2^{K+1}-1 &amp; n=1 \\\\\n \\frac{1}{32} \\left(K+31\\ 2^{K+1}-30\\right) &amp; n=2 \\\\\n \\frac{(n-2)^5 (K-n+3)\\, y_{\\eta(5)}(K,n-3)+(K (5 (n-3) n ((n-3) n+5)+31)+n (n ((n-6) n ((n-5) n+30)+300)-262)+94)\\, y_{\\eta(5)}(K,n-2)+(n-1) \\left(-K (n-1)^4+n (n (n ((n-2) n+8)-12)+8)-2\\right)\\, y_{\\eta(5)}(K,n-1)}{(n-1) n^5} &amp; n&gt;2 \\\\\n\\end{array}\\right.\\tag{3b}.$$</span></p>\n<hr />\n<p><span class=\"math-container\">$$C=\\beta(2)=\\underset{K\\to\\infty}{\\text{lim}}\\left((-1)^K\\, 2^{-K-1}\\, y_{\\beta(2)}(K,K+1)\\right)\\tag{4a}$$</span></p>\n<p>where <span class=\"math-container\">$y_{\\beta(2)}(K,n)$</span> is defined recursively as</p>\n<p><span class=\"math-container\">$$y_{\\beta(2)}(K,n)=$$</span> <span class=\"math-container\">$$\\left\\{\\begin{array}{cc}\n 0 &amp; n=0 \\\\\n \\frac{1}{(2 K+1)^2} &amp; n=1 \\\\\n -\\frac{K (4 K (K+2)+13)+1}{\\left(1-4 K^2\\right)^2} &amp; n=2 \\\\\n \\frac{(K-n+3) (2 K-2 n+7)^2\\, y_{\\beta(2)}(K,n-3)+\\left(93 n+4 \\left(n^3-2 (K+4) n^2+K (K+11) n-K (3 K+17)\\right)-97\\right)\\, y_{\\beta(2)}(K,n-2)-\\left(-4 n^3+12 (K+2) n^2-4 K (3 K+14) n-61 n+K (4 K (K+8)+77)+59\\right)\\, y_{\\beta(2)}(K,n-1)}{(2 K-2 n+3)^2 (n-1)} &amp; n&gt;2 \\\\\n\\end{array}\\right.\\tag{4b}.$$</span></p>\n<hr />\n<p>I've read Apéry's irrationality proof of <span class=\"math-container\">$\\zeta(3)$</span> is based on a recursive formula and I was wondering if recursive formulas for <span class=\"math-container\">$\\eta(2 n+1)$</span> and <span class=\"math-container\">$\\beta(2 n)$</span> such as the examples above are useful in any way.</p>\n<hr />\n<blockquote>\n<p><strong>Question</strong>: Do recursive formulas for <span class=\"math-container\">$\\eta(2 n+1)$</span> and <span class=\"math-container\">$\\beta(2 n)$</span> such as formulas (3) and (4) above for <span class=\"math-container\">$\\eta(5)$</span> and <span class=\"math-container\">$\\beta(2)$</span> provide any insight into the rationality of <span class=\"math-container\">$\\eta(2 n+1)$</span> (and hence <span class=\"math-container\">$\\zeta(2 n+1)$</span>) and/or <span class=\"math-container\">$\\beta(2 n)$</span> for <span class=\"math-container\">$n\\in\\mathbb{N}$</span>?</p>\n</blockquote>\n<hr />\n<p>I'll note that I believe formulas (1) and (2) above are exactly equivalent to</p>\n<hr />\n<p><span class=\"math-container\">$$\\eta(s)=\\underset{K\\to\\infty}{\\text{lim}}\\left(\\sum\\limits_{n=0}^K \\frac{1}{2^{n+1}} \\sum\\limits_{k=0}^n \\frac{(-1)^k \\binom{n}{k}}{(k+1)^s}\\right)\\tag{5}$$</span></p>\n<p><span class=\"math-container\">$$\\beta(s)=\\underset{K\\to\\infty}{\\text{lim}}\\left(\\sum\\limits_{n=0}^K \\frac{1}{2^{n+1}} \\sum\\limits_{k=0}^n \\frac{(-1)^k \\binom{n}{k}}{(2 k+1)^s}\\right)\\tag{6}$$</span></p>\n<hr />\n<p>and can also be evaluated as follows</p>\n<hr />\n<p><span class=\"math-container\">$$\\eta(s)=\\underset{K\\to\\infty}{\\text{lim}}\\left(\\frac{1}{2^{K+1}} \\sum\\limits_{n=0}^K \\frac{(-1)^n}{(n+1)^s}\\, \\binom{K+1}{K-n} \\, _2F_1(1,n-K;n+2;-1)\\right)\\tag{7}$$</span></p>\n<p><span class=\"math-container\">$$\\eta(s)=\\underset{K\\to\\infty}{\\text{lim}}\\left(\\frac{1}{2^{K+1}} \\sum\\limits_{n=0}^K \\frac{(-1)^n}{(n+1)^s}\\, P_{K-n}^{(n+1,-K-1)}(3)\\right)\\tag{8}$$</span></p>\n<hr />\n<p><span class=\"math-container\">$$\\beta(s)=\\underset{K\\to\\infty}{\\text{lim}}\\left(\\frac{1}{2^{K+1}}\\sum\\limits_{n=0}^K \\frac{(-1)^n}{(2 n+1)^s} \\binom{K+1}{K-n}\\,_2F_1(1,n-K;n+2;-1)\\right)\\tag{9}$$</span></p>\n<p><span class=\"math-container\">$$\\beta(s)=\\underset{K\\to\\infty}{\\text{lim}}\\left(\\frac{1}{2^{K+1}} \\sum\\limits_{n=0}^K \\frac{(-1)^n}{(2 n+1)^s}\\, P_{K-n}^{(n+1,-K-1)}(3)\\right)\\tag{10}$$</span></p>\n<hr />\n<p>where <span class=\"math-container\">$_2F_1(a,b;c;z)$</span> is the <a href=\"https://en.wikipedia.org/wiki/Hypergeometric_function\" rel=\"nofollow noreferrer\">Gauss hypergeometric function</a> and <span class=\"math-container\">$P_n^{(a,b)}(x)$</span> is the <a href=\"https://mathworld.wolfram.com/JacobiPolynomial.html\" rel=\"nofollow noreferrer\">Jacobi polynomial</a>.</p>\n<hr />\n<p>It may be worth noting that formulas (1), (2), and (5) to (10) above all converge exactly in a finite number of terms at the non-positive integers which I believe are the only integers where <span class=\"math-container\">$\\eta(s)$</span> and <span class=\"math-container\">$\\beta(s)$</span> are known to take on rational values. More specifically these formulas all converge exactly at <span class=\"math-container\">$s=-n$</span> when <span class=\"math-container\">$n\\in\\mathbb{Z}$</span> and <span class=\"math-container\">$0\\le n\\le K$</span>.</p>\n"
+    }
+  ],
+  "has_more": true,
+  "quota_max": 300,
+  "quota_remaining": 296
+}

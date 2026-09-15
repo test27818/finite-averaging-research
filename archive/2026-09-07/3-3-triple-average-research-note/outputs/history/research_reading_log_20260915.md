@@ -1,0 +1,59 @@
+# 合数研究阅读记录
+
+日期：2026-09-15。本记录区分上一次合数调查实际读过的内容与用户提醒后本次补读的内容；不把间接引用计作读过原文，也不把阅读计作重新验证证明或程序。
+
+## 用户指定的六篇
+
+| 文档 | 上一次调查的实际阅读范围 | 本次补读与保留的要点 |
+|---|---|---|
+| [全局状态](../general_arity/averaging_global_status_20260912.md) | 直接分段阅读定义、小元数状态和临界猜想，未完整重读后半部 | 补读后半部；M、H、N及自动G维数必须区分，旧开放状态须按最新证明更新 |
+| [合数临界尺度与猜想](../general_arity/composite_critical_scale_and_conjecture.md) | 直接阅读S(q)下界、赋值陷阱、B/C猜想、固定网络及八平均核心等主要证明段落 | 补读此前输出中未完整显示的网络及八平均段落；局部尺度的最大值仅是已证必要下界，充分性仍是猜想 |
+| [任意元数线性阈值](../general_arity/arbitrary_arity_linear_threshold.md) | 直接读到非单位差分、背景引理及三个重值分类，约第1至6节 | 补读第7至10节：一般EGZ、整数能量终止、阈值推算、四／六平均零触发及证据范围 |
+| [四平均九元](../general_arity/examples/four_average_nine_complete.md) | 当时只有结论和相关文档引用，未单独通读正文 | 本次全文阅读；除了36条完整Schreier回路，第6节还已经给出全部偶数元数的种子公式 |
+| [四平均七元](../general_arity/examples/four_average_seven_complete.md) | 已直接分段阅读入口、三个宏、周期、二进根、全部回路及终端 | 本次复核末尾范围；它是新平方元数参数恒等式的直接起点，不应将其思想说成全新发现 |
+| [六平均九元固定网络](../general_arity/examples/six_average_nine_fixed_network.md) | 已在composite_arity_four_six_transfer.md第6节读过同一四步网络及证明，未单独读这篇全文 | 本次全文阅读，尤其核对固定三步网络不可能的行系数证明；固定全输入最优四步不等于每个输入都需要四步 |
+
+以上六篇本次补读后均已直接参考正文。这只说明阅读范围，不表示本次重新运行了六份旧核验器，亦不表示旧稿中的每个历史状态句都代表当前结论。
+
+## 上一次调查另外直接使用的主要材料
+
+- [四／六平均与原位置副本转译](../general_arity/composite_arity_four_six_transfer.md)：秩障碍、正确副本子空间模拟、同时好划分、半块转译、六平均九元网络和最小赋值陷阱。
+- [十／十二平均十七元](../general_arity/ten_twelve_average_seventeen_complete.md)：自动B点、两步合法入口、两步返回模板及共同二进控制机制。
+- [端点同余闭合](../prime_arity/proofs/lower_band/prime_arity_endpoint_congruence_completion.md)：实际根生成Gamma1的精确引理；新九平均十三元证明直接引用。
+- [无条件端点与奇数中间带入口](../prime_arity/proofs/lower_band/prime_arity_unrestricted_endpoint_and_odd_band.md)：有限环正向逆、三单点交换子及真实见证转移。
+- [外部定理审核](../prime_arity/audits/prime_arity_lower_band_external_theorems_audit_20260915.md)：Morris／Serre引用的准确强度及适用局部化环。
+- [九偏移共同完成](../prime_arity/proofs/upper_band/prime_arity_nine_offsets_large_symmetric_carrier_completion.md)：大载体形状、真实标量反射和方向／单位尺度分工。
+
+## 本次补读对后续路线的具体影响
+
+四平均九元第6节早已证明，对任意偶数元数q，
+\[
+T_j=\begin{pmatrix}-(q+1)&j\\-(2q+1)&2j\end{pmatrix},
+\qquad (T_{q/2}\Sigma)^2=-(q/2)I.
+\]
+后续若研究偶数元数的2q+1端点，应从这个已有正向种子继续，不能再把“找一个可逆种子”列作未开展任务。该公式本身仍未证明全部根、单位尺度和终端覆盖。
+
+六平均九元的固定四步网络，以及更一般q=m(m-1)、n=m²网络，属于另一条已经明确的原位置构造路线。它们研究自动G维数；平方元数q=t²、n=t²+t+1的三块控制器则研究非自动临界点，二者参数关系不同。
+
+## 后续调查的记录方式
+
+三项主任务执行期间，本轮直接复核平方控制器、旧八平均十三元、统一端点控制器、四平均九元、素数最终独立审核、奇余量核心全文、无条件入口、两轮修复和短筛。新写并运行四项精确核验，分别对应2／3奇次幂、全部偶元数端点、十平均十六元网络、奇合数奇余量区间。没有继续GRH无条件化。结果与剩余见[本轮状态](../general_arity/general_k_three_tasks_progress_20260915.md)。
+
+评估去掉GRH的可能性时，本次复核Pollack作者原文第2.3节／定理2.7、H_t文献报告的无条件与有效界部分、平方核心第5至6节。只做已知定理的范围和路线评估，未开展新的外部检索或扩大数值检查。分析已补入[GRH阶段文稿第7节](../general_arity/general_k_grh_stage_and_remaining_tasks_20260915.md)。
+
+用户决定先依赖GRH后，本次直接回读H_t文献报告第6至9节、Gamma1尺度复核、原规划的素数幂／混合元数／接续部分和旧下界。已将[条件性定理与剩余任务](../general_arity/general_k_grh_stage_and_remaining_tasks_20260915.md)写出；没有开展新的文献检索或重复运行未修改的核验程序。
+
+H_t文献调查本次直接取得并阅读相关段落的外部PDF为：Pollack2017《Bounds for the first several prime character nonresidues》（第1–4、8页及参考文献）、Martin–Pollack2013《The average least character non-residue…》（印刷22–25页）、2025《Explicit Burgess inequalities for cubefree moduli》作者预印本（主定理、条件和参考文献，关键第2页图像）。Norton1998、Harman1999、Bach1990/1993等仅题录或经上述原文明确引用，访问边界另记。详见[调查报告](../general_arity/ht_literature_and_eventual_square_completion_20260915.md)及[来源索引](../../work/ht_literature_20260915/source_index.md)。新增精确计算只验证t<1000的有限阿贝尔商和假设边界；不搜索平均词。
+
+评议建议文稿时，直接阅读了general_k_plan_review_and_square_entry_20260915.md全文及其独立脚本，并对照三单点交换子第2至4节、Gamma1生成第4节和平方控制器的倍率／终端。重跑独立脚本，10条入口、404个原子及199个有限H_t诊断均通过；入口一般量词按正文核对，H_t仍未全称证明。本次未开展新的外部特征和文献检索。结论见[建议复核](../general_arity/general_k_review_response_20260915.md)。
+
+本次一般k证明规划直接复核了平方核心全文、临界尺度第2至5节、策略文稿第4至8节及任意元数上界第1节，并核对本阅读记录中的旧偶数种子。规划时补出了全t平方核心的新交换子，重跑对应精确核验；没有重跑其他旧证明。任务顺序与新推论见[一般k证明计划](../general_arity/general_k_averaging_proof_plan_20260915.md)。
+
+用户要求：调查时主动说明实际读了哪些文档。今后每次报告列出文档名及关键章节，明确标记“直接读正文”“只读摘要／索引”“间接引用”“本次补读”；另行说明是否运行核验。不能用“相关材料都看过”替代具体来源清单。
+
+
+## 素数证明整理补记（2026-09-15）
+
+本轮回到素数主线，未推进合数GRH任务。直接阅读三份最终／专项审核、九偏移与多个区间附录的相关章节，整理为独立[素数入口](../prime_arity/README.md)。具体篇名、章节和间接引用边界见[本轮阅读核验表](../prime_arity/verification.md)。实际下载并阅读 Milne v1.31 的模曲线、Hecke对应、level结构及权二微分相关段落；Stein和MIT仅导航，Serre及Kani仍保留原有访问等级。
+
+数学修改：将99组二进补充所需的倍率扩环并入九偏移§6；集中证明本原列模可用单位的精确同余轨道分类及共同终端提升定理。这是对已有纤维接口的统一整理，并非新发现此前未有的原则。没有宣布消去有限证书或新的多项式词长。两个旧README同目录归档，24篇关键附录加当前状态提示；本轮重跑范围和运行输出见上述核验表。

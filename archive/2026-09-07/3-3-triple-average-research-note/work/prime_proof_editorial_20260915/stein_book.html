@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Modular Forms, A Computational Approach &mdash; Modular Forms, A Computational Approach v0.1 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Modular Forms, A Computational Approach v0.1 documentation" href="" />
+    <link rel="next" title="Preface" href="preface.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="preface.html" title="Preface"
+             accesskey="N">next</a> |</li>
+        <li><a href="">Modular Forms, A Computational Approach v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  
+  <div class="section" id="modular-forms-a-computational-approach">
+<h1>Modular Forms, A Computational Approach<a class="headerlink" href="#modular-forms-a-computational-approach" title="Permalink to this headline">¶</a></h1>
+<p><strong>William A. Stein (with an appendix by Paul E. Gunnells)</strong></p>
+<p>This is a textbook about algorithms for computing with
+modular forms.  It is nontraditional in that the primary focus is not
+on underlying theory; instead, it answers the question <em>how do you
+explicitly compute spaces of modular forms?</em></p>
+<p>To my grandmother, Annette Maurer.</p>
+
+<p>Please buy the print version of this book <a href="http://www.ams.org/bookstore-getitem/item=gsm-79">from the American Mathematical Society</a> or <a href="http://www.amazon.com/gp/product/0821839608/ref=pd_lpo_k2_dp_sr_1?pf_rd_p=486539851&pf_rd_s=lpo-top-stripe-1&pf_rd_t=201&pf_rd_i=1848162138&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=1H4GENWMXXAJH2F1FQ6H">Amazon.com</a>.</p>
+
+<p>Contents:</p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference external" href="preface.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference external" href="preface.html#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference external" href="preface.html#notation-and-conventions">Notation and Conventions</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="modform.html">Modular Forms</a><ul>
+<li class="toctree-l2"><a class="reference external" href="modform.html#basic-definitions">Basic Definitions</a></li>
+<li class="toctree-l2"><a class="reference external" href="modform.html#modular-forms-of-level">Modular Forms of Level <img class="math" src="_images/math/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" alt="1" /></a></li>
+<li class="toctree-l2"><a class="reference external" href="modform.html#modular-forms-of-any-level">Modular Forms of Any Level</a></li>
+<li class="toctree-l2"><a class="reference external" href="modform.html#remarks-on-congruence-subgroups">Remarks on Congruence Subgroups</a></li>
+<li class="toctree-l2"><a class="reference external" href="modform.html#computing-widths-of-cusps">Computing Widths of Cusps</a></li>
+<li class="toctree-l2"><a class="reference external" href="modform.html#applications-of-modular-forms">Applications of Modular Forms</a></li>
+<li class="toctree-l2"><a class="reference external" href="modform.html#exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="level_one.html">Modular Forms of Level 1</a><ul>
+<li class="toctree-l2"><a class="reference external" href="level_one.html#examples-of-modular-forms-of-level-1">Examples of Modular Forms of Level 1</a></li>
+<li class="toctree-l2"><a class="reference external" href="level_one.html#structure-theorem-for-level-1-modular-forms">Structure Theorem for Level 1 Modular Forms</a></li>
+<li class="toctree-l2"><a class="reference external" href="level_one.html#the-miller-basis">The Miller Basis</a></li>
+<li class="toctree-l2"><a class="reference external" href="level_one.html#hecke-operators">Hecke Operators</a></li>
+<li class="toctree-l2"><a class="reference external" href="level_one.html#computing-hecke-operators">Computing Hecke Operators</a></li>
+<li class="toctree-l2"><a class="reference external" href="level_one.html#fast-computation-of-fourier-coefficients">Fast Computation of Fourier Coefficients</a></li>
+<li class="toctree-l2"><a class="reference external" href="level_one.html#fast-computation-of-bernoulli-numbers">Fast Computation of Bernoulli Numbers</a></li>
+<li class="toctree-l2"><a class="reference external" href="level_one.html#the-number-of-digits-of">The Number of Digits of <img class="math" src="_images/math/9be2b1de79fff66db67de3b18303bdd2912b7ae6.png" alt="B_n" /></a></li>
+<li class="toctree-l2"><a class="reference external" href="level_one.html#exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="weight_two.html">Modular Forms of Weight 2</a><ul>
+<li class="toctree-l2"><a class="reference external" href="weight_two.html#hecke-operators">Hecke Operators</a></li>
+<li class="toctree-l2"><a class="reference external" href="weight_two.html#modular-symbols">Modular Symbols</a></li>
+<li class="toctree-l2"><a class="reference external" href="weight_two.html#computing-with-modular-symbols">Computing with Modular Symbols</a></li>
+<li class="toctree-l2"><a class="reference external" href="weight_two.html#id1">Hecke Operators</a></li>
+<li class="toctree-l2"><a class="reference external" href="weight_two.html#computing-the-boundary-map">Computing the Boundary Map</a></li>
+<li class="toctree-l2"><a class="reference external" href="weight_two.html#computing-a-basis-for">Computing a  Basis for <img class="math" src="_images/math/252d190820aad2217f31f27efbcbea106b1d99c9.png" alt="S_2(\Gamma_0(N))" /></a></li>
+<li class="toctree-l2"><a class="reference external" href="weight_two.html#computing-using-eigenvectors">Computing <img class="math" src="_images/math/252d190820aad2217f31f27efbcbea106b1d99c9.png" alt="S_2(\Gamma_0(N))" /> Using Eigenvectors</a></li>
+<li class="toctree-l2"><a class="reference external" href="weight_two.html#exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="dirichlet_characters.html">Dirichlet Characters</a><ul>
+<li class="toctree-l2"><a class="reference external" href="dirichlet_characters.html#the-definition">The Definition</a></li>
+<li class="toctree-l2"><a class="reference external" href="dirichlet_characters.html#representing-dirichlet-characters">Representing Dirichlet Characters</a></li>
+<li class="toctree-l2"><a class="reference external" href="dirichlet_characters.html#evaluation-of-dirichlet-characters">Evaluation of Dirichlet Characters</a></li>
+<li class="toctree-l2"><a class="reference external" href="dirichlet_characters.html#conductors-of-dirichlet-characters">Conductors of Dirichlet Characters</a></li>
+<li class="toctree-l2"><a class="reference external" href="dirichlet_characters.html#the-kronecker-symbol">The Kronecker Symbol</a></li>
+<li class="toctree-l2"><a class="reference external" href="dirichlet_characters.html#restriction-extension-and-galois-orbits">Restriction, Extension, and Galois Orbits</a></li>
+<li class="toctree-l2"><a class="reference external" href="dirichlet_characters.html#alternative-representations-of-characters">Alternative Representations of Characters</a></li>
+<li class="toctree-l2"><a class="reference external" href="dirichlet_characters.html#dirichlet-characters-in-sage">Dirichlet Characters in Sage</a></li>
+<li class="toctree-l2"><a class="reference external" href="dirichlet_characters.html#exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="eisenstein.html">Eisenstein Series and Bernoulli Numbers</a><ul>
+<li class="toctree-l2"><a class="reference external" href="eisenstein.html#the-eisenstein-subspace">The Eisenstein Subspace</a></li>
+<li class="toctree-l2"><a class="reference external" href="eisenstein.html#generalized-bernoulli-numbers">Generalized Bernoulli Numbers</a></li>
+<li class="toctree-l2"><a class="reference external" href="eisenstein.html#explicit-basis-for-the-eisenstein-subspace">Explicit Basis for the Eisenstein Subspace</a></li>
+<li class="toctree-l2"><a class="reference external" href="eisenstein.html#exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="dimension_formulas.html">Dimension Formulas</a><ul>
+<li class="toctree-l2"><a class="reference external" href="dimension_formulas.html#modular-forms-for">Modular Forms for <img class="math" src="_images/math/0ce4343a7316d048508371ec15ac0cc5c641e53c.png" alt="\Gamma_0(N)" /></a></li>
+<li class="toctree-l2"><a class="reference external" href="dimension_formulas.html#id2">Modular Forms for <img class="math" src="_images/math/e1ce758e7944584095efc8e60f73a69edd624a20.png" alt="\Gamma_1(N)" /></a></li>
+<li class="toctree-l2"><a class="reference external" href="dimension_formulas.html#modular-forms-with-character">Modular Forms with Character</a></li>
+<li class="toctree-l2"><a class="reference external" href="dimension_formulas.html#exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="linear_algebra.html">Linear Algebra</a><ul>
+<li class="toctree-l2"><a class="reference external" href="linear_algebra.html#echelon-forms-of-matrices">Echelon Forms of Matrices</a></li>
+<li class="toctree-l2"><a class="reference external" href="linear_algebra.html#rational-reconstruction">Rational Reconstruction</a></li>
+<li class="toctree-l2"><a class="reference external" href="linear_algebra.html#echelon-forms-over">Echelon Forms over <img class="math" src="_images/math/fc17cbce85fcff0b74cbd0a059c43a9f170ab3b4.png" alt="\Q" /></a></li>
+<li class="toctree-l2"><a class="reference external" href="linear_algebra.html#echelon-forms-via-matrix-multiplication">Echelon Forms via Matrix Multiplication</a></li>
+<li class="toctree-l2"><a class="reference external" href="linear_algebra.html#decomposing-spaces-under-the-action-of-matrix">Decomposing Spaces under the Action of Matrix</a></li>
+<li class="toctree-l2"><a class="reference external" href="linear_algebra.html#exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="modular_symbols.html">General Modular Symbols</a><ul>
+<li class="toctree-l2"><a class="reference external" href="modular_symbols.html#modular-symbols">Modular Symbols</a></li>
+<li class="toctree-l2"><a class="reference external" href="modular_symbols.html#manin-symbols">Manin Symbols</a></li>
+<li class="toctree-l2"><a class="reference external" href="modular_symbols.html#hecke-operators">Hecke Operators</a></li>
+<li class="toctree-l2"><a class="reference external" href="modular_symbols.html#cuspidal-modular-symbols">Cuspidal Modular Symbols</a></li>
+<li class="toctree-l2"><a class="reference external" href="modular_symbols.html#pairing-modular-symbols-and-modular-forms">Pairing Modular Symbols and Modular Forms</a></li>
+<li class="toctree-l2"><a class="reference external" href="modular_symbols.html#degeneracy-maps">Degeneracy Maps</a></li>
+<li class="toctree-l2"><a class="reference external" href="modular_symbols.html#explicitly-computing">Explicitly Computing <img class="math" src="_images/math/287fc54c0af48e609dc273381fe3190801310c2c.png" alt="\sM_k(\Gamma_0(N))" /></a></li>
+<li class="toctree-l2"><a class="reference external" href="modular_symbols.html#explicit-examples">Explicit Examples</a></li>
+<li class="toctree-l2"><a class="reference external" href="modular_symbols.html#refined-algorithm-for-the-presentation">Refined Algorithm for the Presentation</a></li>
+<li class="toctree-l2"><a class="reference external" href="modular_symbols.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference external" href="modular_symbols.html#exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="newforms.html">Computing with Newforms</a><ul>
+<li class="toctree-l2"><a class="reference external" href="newforms.html#dirichlet-character-decomposition">Dirichlet Character Decomposition</a></li>
+<li class="toctree-l2"><a class="reference external" href="newforms.html#atkin-lehner-li-theory">Atkin-Lehner-Li Theory</a></li>
+<li class="toctree-l2"><a class="reference external" href="newforms.html#computing-cusp-forms">Computing Cusp Forms</a></li>
+<li class="toctree-l2"><a class="reference external" href="newforms.html#congruences-between-newforms">Congruences between Newforms</a></li>
+<li class="toctree-l2"><a class="reference external" href="newforms.html#exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="periods.html">Computing Periods</a><ul>
+<li class="toctree-l2"><a class="reference external" href="periods.html#the-period-map">The Period Map</a></li>
+<li class="toctree-l2"><a class="reference external" href="periods.html#abelian-varieties-attached-to-newforms">Abelian Varieties Attached to Newforms</a></li>
+<li class="toctree-l2"><a class="reference external" href="periods.html#extended-modular-symbols">Extended Modular Symbols</a></li>
+<li class="toctree-l2"><a class="reference external" href="periods.html#approximating-period-integrals">Approximating Period Integrals</a></li>
+<li class="toctree-l2"><a class="reference external" href="periods.html#speeding-convergence-using-atkin-lehner">Speeding Convergence Using Atkin-Lehner</a></li>
+<li class="toctree-l2"><a class="reference external" href="periods.html#computing-the-period-mapping">Computing the Period Mapping</a></li>
+<li class="toctree-l2"><a class="reference external" href="periods.html#all-elliptic-curves-of-given-conductor">All Elliptic Curves of Given Conductor</a></li>
+<li class="toctree-l2"><a class="reference external" href="periods.html#exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="solutions.html">Solutions to Selected Exercises</a><ul>
+<li class="toctree-l2"><a class="reference external" href="solutions.html#chapter-1">Chapter 1</a></li>
+<li class="toctree-l2"><a class="reference external" href="solutions.html#chapter-2">Chapter 2</a></li>
+<li class="toctree-l2"><a class="reference external" href="solutions.html#chapter-3">Chapter 3</a></li>
+<li class="toctree-l2"><a class="reference external" href="solutions.html#chapter-4">Chapter 4</a></li>
+<li class="toctree-l2"><a class="reference external" href="solutions.html#chapter-5">Chapter 5</a></li>
+<li class="toctree-l2"><a class="reference external" href="solutions.html#chapter-6">Chapter 6</a></li>
+<li class="toctree-l2"><a class="reference external" href="solutions.html#chapter-7">Chapter 7</a></li>
+<li class="toctree-l2"><a class="reference external" href="solutions.html#chapter-8">Chapter 8</a></li>
+<li class="toctree-l2"><a class="reference external" href="solutions.html#chapter-9">Chapter 9</a></li>
+<li class="toctree-l2"><a class="reference external" href="solutions.html#chapter-10">Chapter 10</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="appendix.html">Computing in Higher Rank</a><ul>
+<li class="toctree-l2"><a class="reference external" href="appendix.html#a-1-introduction">A.1 Introduction</a></li>
+<li class="toctree-l2"><a class="reference external" href="appendix.html#a-2-automorphic-forms-and-arithmetic-groups">A.2 Automorphic Forms and Arithmetic Groups</a></li>
+<li class="toctree-l2"><a class="reference external" href="appendix.html#a-3-combinatorial-models-for-group-cohomology">A.3 Combinatorial Models for Group Cohomology</a></li>
+<li class="toctree-l2"><a class="reference external" href="appendix.html#a-4-hecke-operators-and-modular-symbols">A.4 Hecke Operators and Modular Symbols</a></li>
+<li class="toctree-l2"><a class="reference external" href="appendix.html#a-5-other-cohomology-groups">A.5 Other Cohomology Groups</a></li>
+<li class="toctree-l2"><a class="reference external" href="appendix.html#a-6-complements-and-open-problems">A.6 Complements and Open Problems</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="bibliography.html">Bibliography</a></li>
+</ul>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference external" href="modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference external" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="">Modular Forms, A Computational Approach</a><ul>
+</ul>
+</li>
+<li><a class="reference external" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+            <h4>Next topic</h4>
+            <p class="topless"><a href="preface.html" title="next chapter">Preface</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/index.txt">Show Source</a></li>
+            </ul>
+    
+          <h3>Quick search</h3>
+            <form class="search" action="search.html" method="get">
+              <input type="text" name="q" size="18" /> <input type="submit" value="Go" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+    <br><br>
+    <h3>
+    <a
+href="http://www.ams.org/bookstore?co1=AND&co2=AND&co3=AND&d=BOOK&f=G&fn=105&l=100&op1=AND&op2=AND&op3=AND&p=1&pg1=&pg2=&pg3=ALLF&r=12&s1=&s2=&s3=modular%20forms&subject=genint&u=">
+Purchase a hardcopy of this book from the AMS</a></h3>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="preface.html" title="Preface"
+             accesskey="N">next</a> |</li>
+        <li><a href="">Modular Forms, A Computational Approach v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009, William Stein.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.5.1.
+    </div>
+  </body>
+</html>

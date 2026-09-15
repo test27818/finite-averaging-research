@@ -1,0 +1,396 @@
+{
+  "scope": "Selected exact tests of the current ternary search implementation; no all-input or precision theorem.",
+  "displayed_path_reconstructed": [
+    {
+      "normalized_values": [
+        0,
+        0,
+        13
+      ],
+      "original_positions_1based": [
+        1,
+        2,
+        7
+      ],
+      "physical_values": [
+        "0",
+        "0",
+        "13"
+      ],
+      "mean": "13/3",
+      "state": [
+        "13/3",
+        "13/3",
+        "0",
+        "0",
+        "0",
+        "1",
+        "13/3"
+      ]
+    },
+    {
+      "normalized_values": [
+        0,
+        0,
+        3
+      ],
+      "original_positions_1based": [
+        3,
+        4,
+        6
+      ],
+      "physical_values": [
+        "0",
+        "0",
+        "1"
+      ],
+      "mean": "1/3",
+      "state": [
+        "13/3",
+        "13/3",
+        "1/3",
+        "1/3",
+        "0",
+        "1/3",
+        "13/3"
+      ]
+    },
+    {
+      "normalized_values": [
+        1,
+        1,
+        13
+      ],
+      "original_positions_1based": [
+        3,
+        4,
+        1
+      ],
+      "physical_values": [
+        "1/3",
+        "1/3",
+        "13/3"
+      ],
+      "mean": "5/3",
+      "state": [
+        "5/3",
+        "13/3",
+        "5/3",
+        "5/3",
+        "0",
+        "1/3",
+        "13/3"
+      ]
+    },
+    {
+      "normalized_values": [
+        0,
+        5,
+        13
+      ],
+      "original_positions_1based": [
+        5,
+        1,
+        2
+      ],
+      "physical_values": [
+        "0",
+        "5/3",
+        "13/3"
+      ],
+      "mean": "2",
+      "state": [
+        "2",
+        "2",
+        "5/3",
+        "5/3",
+        "2",
+        "1/3",
+        "13/3"
+      ]
+    },
+    {
+      "normalized_values": [
+        4,
+        5,
+        12
+      ],
+      "original_positions_1based": [
+        3,
+        1,
+        7
+      ],
+      "physical_values": [
+        "5/3",
+        "2",
+        "13/3"
+      ],
+      "mean": "8/3",
+      "state": [
+        "8/3",
+        "2",
+        "8/3",
+        "5/3",
+        "2",
+        "1/3",
+        "8/3"
+      ]
+    },
+    {
+      "normalized_values": [
+        0,
+        5,
+        7
+      ],
+      "original_positions_1based": [
+        6,
+        2,
+        1
+      ],
+      "physical_values": [
+        "1/3",
+        "2",
+        "8/3"
+      ],
+      "mean": "5/3",
+      "state": [
+        "5/3",
+        "5/3",
+        "8/3",
+        "5/3",
+        "2",
+        "5/3",
+        "8/3"
+      ]
+    },
+    {
+      "normalized_values": [
+        0,
+        0,
+        3
+      ],
+      "original_positions_1based": [
+        1,
+        2,
+        3
+      ],
+      "physical_values": [
+        "5/3",
+        "5/3",
+        "8/3"
+      ],
+      "mean": "2",
+      "state": [
+        "2",
+        "2",
+        "2",
+        "5/3",
+        "2",
+        "5/3",
+        "8/3"
+      ]
+    },
+    {
+      "normalized_values": [
+        0,
+        0,
+        3
+      ],
+      "original_positions_1based": [
+        4,
+        6,
+        7
+      ],
+      "physical_values": [
+        "5/3",
+        "5/3",
+        "8/3"
+      ],
+      "mean": "2",
+      "state": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ]
+    }
+  ],
+  "maximum_path_denominator": 3,
+  "depth_failure_on_solvable_input": {
+    "input": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+    ],
+    "result": "exhausted to depth 1 (1 states)",
+    "three_step_witness": [
+      {
+        "normalized_values": [
+          0,
+          1,
+          2
+        ],
+        "original_positions_1based": [
+          1,
+          4,
+          7
+        ],
+        "physical_values": [
+          "0",
+          "1",
+          "2"
+        ],
+        "mean": "1",
+        "state": [
+          "1",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1",
+          "2",
+          "2"
+        ]
+      },
+      {
+        "normalized_values": [
+          0,
+          1,
+          2
+        ],
+        "original_positions_1based": [
+          2,
+          1,
+          8
+        ],
+        "physical_values": [
+          "0",
+          "1",
+          "2"
+        ],
+        "mean": "1",
+        "state": [
+          "1",
+          "1",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "2"
+        ]
+      },
+      {
+        "normalized_values": [
+          0,
+          1,
+          2
+        ],
+        "original_positions_1based": [
+          3,
+          1,
+          9
+        ],
+        "physical_values": [
+          "0",
+          "1",
+          "2"
+        ],
+        "mean": "1",
+        "state": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    ]
+  },
+  "old_wrapper_output": "### k=3 n=9 V=2 depth<=1 timecap=1s : solvable=2 MC-true-unsolvable=3 (affine classes=3) unknown=0 [0s]\n    class (0, 0, 0, 0, 1, 2, 2, 2, 2):  representatives [(0, 0, 0, 0, 1, 2, 2, 2, 2)]  (members=1)\n    class (0, 0, 0, 1, 1, 1, 2, 2, 2):  representatives [(0, 0, 0, 1, 1, 1, 2, 2, 2)]  (members=1)\n    class (0, 0, 1, 1, 1, 1, 1, 2, 2):  representatives [(0, 0, 1, 1, 1, 1, 1, 2, 2)]  (members=1)\n",
+  "closed_n4_component": [
+    {
+      "state": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "all_nonconstant_successors": [
+        [
+          0,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "state": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "all_nonconstant_successors": [
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "state": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "all_nonconstant_successors": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "cached_positive_path": [
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+    ]
+  ],
+  "ternary_transition_checks": 26
+}

@@ -1,0 +1,126 @@
+{
+  "engine": "projective-ida-v3",
+  "python": "3.12.3",
+  "inputs": "frozen before migration; all counts include repeated instances",
+  "frozen_small": {
+    "agree": 78,
+    "disagree": 0,
+    "legacy_bfs_seconds": 0.10539007186889648,
+    "current_seconds": 0.006543874740600586
+  },
+  "frozen_random": {
+    "total": 260,
+    "certified": 260,
+    "seconds": 2.5497660636901855,
+    "caveat": "selected because the previous solver could certify them; not an unbiased scalability estimate"
+  },
+  "construction": {
+    "small": {
+      "total": 98,
+      "verified": 98,
+      "seconds": 0.020476579666137695,
+      "max_seconds": 0.0015566349029541016
+    },
+    "dev": {
+      "total": 119,
+      "verified": 119,
+      "seconds": 0.03467965126037598,
+      "max_seconds": 0.0015316009521484375
+    },
+    "test": {
+      "total": 230,
+      "verified": 230,
+      "seconds": 2.849917411804199,
+      "max_seconds": 0.7583601474761963
+    },
+    "hard": {
+      "total": 91,
+      "verified": 91,
+      "seconds": 3.566824197769165,
+      "max_seconds": 0.8139610290527344
+    }
+  },
+  "cases": [
+    {
+      "input": [
+        38,
+        -23,
+        -14,
+        16,
+        -11,
+        4,
+        63,
+        80,
+        14,
+        38
+      ],
+      "minimum": 10,
+      "seconds": 0.04898977279663086,
+      "expanded": 282,
+      "notes": [
+        [
+          8,
+          "proved",
+          3,
+          3
+        ],
+        [
+          9,
+          "proved",
+          247,
+          147
+        ],
+        [
+          10,
+          "found",
+          32,
+          22
+        ]
+      ]
+    },
+    {
+      "input": [
+        -81,
+        -60,
+        -95,
+        -95,
+        -20,
+        -13,
+        -87,
+        -80,
+        42,
+        54
+      ],
+      "minimum": 11,
+      "seconds": 0.642982006072998,
+      "expanded": 4428,
+      "notes": [
+        [
+          8,
+          "proved",
+          1,
+          1
+        ],
+        [
+          9,
+          "proved",
+          73,
+          63
+        ],
+        [
+          10,
+          "proved",
+          2488,
+          1373
+        ],
+        [
+          11,
+          "found",
+          1866,
+          1089
+        ]
+      ]
+    }
+  ],
+  "seconds": 9.923876762390137
+}

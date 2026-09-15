@@ -1,0 +1,89 @@
+{
+  "seed": 20260907,
+  "files": {
+    "dev.jsonl": {
+      "count": 304,
+      "sha256": "16605c5e67e27680830f3219ca447151c245a4100843a64b09584a11e1470412"
+    },
+    "hard.jsonl": {
+      "count": 404,
+      "sha256": "c444b6a7d4a63d5ddef011409480cf01395a45c03af3ea286af2244cfc714d48"
+    },
+    "small.jsonl": {
+      "count": 224,
+      "sha256": "a5b9aa75661a5cfc52496437426a7479a72d112806219522aa9249a69cd0b020"
+    },
+    "test.jsonl": {
+      "count": 704,
+      "sha256": "44918b7670e9ceda024aadc3ea9f3bf99bd28784ab97d1025fa4bcc7f21b821d"
+    }
+  },
+  "label_distribution": {
+    "dev": {
+      "YES": 119,
+      "NO": 185,
+      "total": 304
+    },
+    "hard": {
+      "YES": 91,
+      "NO": 313,
+      "total": 404
+    },
+    "small": {
+      "YES": 98,
+      "NO": 126,
+      "total": 224
+    },
+    "test": {
+      "YES": 230,
+      "NO": 474,
+      "total": 704
+    }
+  },
+  "engine": "projective-ida-v3",
+  "upgrade": {
+    "budgets": {
+      "deadline_s": 2.0,
+      "node_budget": 1000000
+    },
+    "stats": {
+      "small": {
+        "total": 224,
+        "mixable": 98,
+        "min_certified": 92,
+        "seq_verified": 98,
+        "bounds_only": 6,
+        "new_minima": 14,
+        "seconds": 2.102
+      },
+      "dev": {
+        "total": 304,
+        "mixable": 119,
+        "min_certified": 109,
+        "seq_verified": 119,
+        "bounds_only": 10,
+        "new_minima": 109,
+        "seconds": 16.112
+      },
+      "test": {
+        "total": 704,
+        "mixable": 230,
+        "min_certified": 185,
+        "seq_verified": 230,
+        "bounds_only": 45,
+        "new_minima": 185,
+        "seconds": 38.8
+      },
+      "hard": {
+        "total": 404,
+        "mixable": 91,
+        "min_certified": 42,
+        "seq_verified": 91,
+        "bounds_only": 49,
+        "new_minima": 42,
+        "seconds": 24.875
+      }
+    }
+  },
+  "note": "Inputs/labels reproduce from seed. Resource-limited certification coverage may vary by hardware; checksums pin this release."
+}

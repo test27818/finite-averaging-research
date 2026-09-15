@@ -1,0 +1,1394 @@
+                         J. London Math. Soc. (2) 87 (2013) 22–42    e 2012 London Mathematical Society
+                                                                     C
+
+                                                                                 doi:10.1112/jlms/jds036
+
+
+
+
+  The average least character non-residue and further variations
+                      on a theme of Erdős
+
+                                Greg Martin and Paul Pollack
+
+                                               Abstract
+  For each non-principal Dirichlet character χ, let nχ be the least n with χ(n) ∈ {0, 1}. For each
+  prime p, let χp (·) = ( p· ) be the quadratic character modulo p. In 1961, Erdős showed that nχp
+  possesses a finite mean value as p runs over the odd primes in increasing order. We show that as
+  q → ∞, the average of nχ over all non-principal characters χ modulo q is (q) + o(1), where (q)
+  denotes the least prime not dividing q. Moreover, if one averages over all non-principal characters
+  of moduli at most x, the average approaches (as x → ∞) the limiting value
+                                             2
+                                                      ≈ 2.5350541804,
+                                          p⩽ (p + 1)
+
+  where the sum is over primes  and the product is over primes p ⩽ .
+    One can also view Erdős’s theorem as giving the average size of the least non-split prime in
+  the quadratic field of conductor p, where again p runs over odd primes. Similar results with the
+  average taken over all quadratic fields were recently proved by the second author. In this paper,
+  we prove a result of this type for cubic number fields: if one averages over all cubic fields K,
+  ordered by discriminant, then the mean value of the least rational prime that does not split
+  completely in K is
+                     r(5/6 + 1/r + 1/r2 )             1/6
+                                                                  ≈ 2.1211027269,
+                     r
+                           1 + 1/r + 1/r2      p<r
+                                                   1 + 1/p + 1/p2
+
+  where the sum is over all primes r. Similar average values are obtained for the least rational
+  prime with other specified factorizations in K, although some are conditional on the generalized
+  Riemann hypothesis.
+
+
+
+
+                                            1. Introduction
+For a non-principal Dirichlet character χ, let nχ denote the least character non-residue for
+χ, that is, the least positive integer n with χ(n) = 0 and χ(n) = 1. Under the assumption of
+the generalized Riemann hypothesis for Dirichlet L-functions, we know that nχ ⩽ 3 log2 q for
+every non-principal character χ(mod q). (As stated, this result is due to Bach [2, Theorem
+3], although the ﬁrst result of its kind was proved by Ankeny [1]. If q is prime, then χ is a
+kth power residue character for some k dividing q − 1, and the study of the maximal order of
+nχ goes back to Vinogradov and Linnik in the early part of the twentieth century.) The best
+            √ result in this direction, due to Norton (see [29, Equation (1.22)]), asserts that
+unconditional
+nχ  q 1/4 e+ for every non-principal character χ (mod q).
+   Short of a satisfactory unconditional ‘pointwise’ result, one can study nχ on average.
+Erdős [19] was the ﬁrst to adopt this viewpoint in his treatment of quadratic characters
+
+
+
+
+ Received 6 December 2011; revised 22 March 2012; published online 10 August 2012.
+ 2010 Mathematics Subject Classification 11A15 (primary), 11L40, 11R16 (secondary).
+                      THE AVERAGE LEAST CHARACTER NON-RESIDUE                                23
+
+
+χ(·) = ( p· ) modulo primes p. He showed that
+                                   ⎛                 ⎞
+                                                        ∞
+                                                          pk
+                               lim ⎝π(x)−1    n( · ) ⎠ =      ,                            (1.1)
+                              x→∞                p         2k
+                                                 2<p⩽x                k=1
+
+where pk denotes the kth prime in increasing order. In other words, the average value of the
+                                                               ∞
+least quadratic non-residue modulo a prime is the constant k=1 pk /2k ≈ 3.67464. This result
+was extended to all real primitive characters by the second author [30], who showed that
+                      ⎛       ⎞−1 ⎛               ⎞
+                                                         2     p+2
+                  lim ⎝      1⎠ ⎝          n( D ) ⎠ =                         ,         (1.2)
+                 x→∞                          ·          2( + 1)    2(p + 1)
+                        |D|⩽x           |D|⩽x                              p<
+
+where the sums on the left-hand side are over fundamental discriminants D whose absolute
+value is at most x, and the sum and product on the right-hand side are over primes  and p.
+In other words, the average least character non-residue of a general quadratic character is the
+constant on the right-hand side of equation (1.2), which is approximately 4.98085.
+   Our ﬁrst goal in this paper is to understand the average of nχ taken over all non-principal
+characters χ. Let (q) denote the least prime not dividing q. If χ is any character modulo
+q, then χ(n) = 0 whenever 1 < n < (q); hence, nχ ⩾ (q) for all non-principal characters χ.
+We prove that the average of nχ over all non-principal characters modulo q is always very close
+to (q).
+
+
+  Theorem 1.1. For q ⩾ 3, we have
+                      1                                          (log log q)3
+                                               nχ = (q) + O                      .
+                        φ(q) − 1                                     log q
+                                   χ (mod q)
+                                     χ=χ0
+
+
+
+  One consequence of Theorem 1.1 is an analog of the average value results (1.1) and (1.2),
+but with the average taken over all non-principal characters with conductor at most x.
+
+
+  Corollary 1.2.      Deﬁne
+                                              2
+                             Δ=                        ≈ 2.5350541804,                    (1.3)
+                                           p⩽ (p + 1)
+
+where the sum and product are taken over primes  and p. Then
+                         ⎛              ⎞−1 ⎛               ⎞
+                           ⎜                   ⎟   ⎜                    ⎟
+                       lim ⎜
+                           ⎝                    1⎟
+                                                 ⎠
+                                                     ⎜
+                                                     ⎝                   nχ ⎟
+                                                                            ⎠ = Δ.
+                       x→∞
+                                q⩽x χ (mod q)            q⩽x χ (mod q)
+                                      χ=χ0                    χ=χ0
+
+
+
+  We remark that our methods can also address the analogs of Theorem 1.1 and Corollary 1.2 in
+which the sums over characters χ are restricted to primitive characters only (see equation (3.4)
+and Theorem 3.6).
+  One can also view (1.1) and (1.2) as results in algebraic number theory. If χ is the quadratic
+character modulo p, then nχ is the least prime that does not split in the quadratic ﬁeld
+of conductor p (equivalently, of discriminant (−1)(p−1)/2 p). Thus, Erdős’s theorem gives the
+average least non-split prime in a quadratic extension, where the average is restricted to
+24                             GREG MARTIN AND PAUL POLLACK
+
+
+
+quadratic ﬁelds of prime conductor. Similarly, (1.2) is an estimate for the average least inert
+prime, where now the average is taken over all quadratic ﬁelds, ordered by discriminant.
+   For a prime p ≡ 1(mod 3), deﬁne n3 (p) as the least cubic non-residue modulo p. Elliott [16]
+showed that n3 (p) possesses a ﬁnite mean value. (In fact, he showed the analogous result for kth
+power non-residues, for all k.) We can interpret Elliott’s result on n3 (p) as the determination
+of the average least non-split prime, with the average restricted to cyclic cubic extensions of
+prime conductor. Our second theorem gives the average least non-split prime, with the average
+taken over all cubic extensions of Q, ordered by discriminant. In what follows, we write DK
+for the discriminant of the number ﬁeld K.
+
+
+  Theorem 1.3. For a cubic number ﬁeld K, let nK denote the least rational prime that
+does not split completely in K. Deﬁne
+                         53 + 62 + 6       p2
+                 Δnsc =                                  ≈ 2.1211027269,        (1.4)
+                             6(2 +  + 1) 6(p2 + p + 1)
+                                               p<
+
+where the sum and product are taken over primes  and p. Then
+                            ⎛         ⎞−1 ⎛            ⎞
+                                             
+                        lim ⎝        1⎠ ⎝           nK ⎠ = Δnsc ,
+                           x→∞
+                                   |DK |⩽x            |DK |⩽x
+
+where the sums on the left-hand side are taken over (all isomorphism classes of) cubic ﬁelds K
+for which |DK | ⩽ x.
+
+
+  Remark. As a reality check, we sampled cubic ﬁelds with discriminant near −1012 . Using
+Belabas’s cubics package (see [6, 7]) and PARI/GP, we found that the average of nK over
+cubic ﬁelds K with |DK + 1012 | ⩽ 250 000 is about 2.12065, a close match to the limiting
+constant Δnsc .
+
+  The subscript of Δnsc , which stands for ‘not split completely’, suggests that one can also
+calculate the average value of the least prime with other behaviors (split completely, or partially
+split, or inert) in cubic extensions of Q. We can indeed establish these additional average
+values (see Theorem 4.8), but only under the assumption of a generalized Riemann hypothesis.
+Theorem 4.9 describes two unconditional results we can obtain if we specify slightly less
+restricted behaviors (non-inert, and either partially split or ramiﬁed).
+  The proofs of our theorems, while similar in ﬂavor to the arguments of Erdős [19] and
+the second author [30], employ diﬀerent tools. For the proof of Theorem 1.1, our primary
+inspiration was a paper of Burthe [9], which uses zero-density estimates and a theorem of
+Montgomery (Proposition 2.1) to prove that
+                                   1
+                                           max nχ  (log x)97 ;
+                                  x      χ (mod q)
+                                     q⩽x     χ=χ0
+
+note that Burthe’s result shows unconditionally that a bound of the same ﬂavor as Bach’s
+nχ ⩽ 3 log2 q holds on average. The proof of Theorem 1.3 involves a few diﬀerent ingredients;
+perhaps most crucial is the recent work of Taniguchi and Thorne [33] on counting cubic ﬁelds
+with prescribed local conditions (see Proposition 4.2).
+   Notation. The letters , p, and r are reserved for prime variables. We write P (n) for the
+largest prime factor of n and (n) for the smallest prime not dividing n. We say that n is
+y-friable (or y-smooth) if P (n) ⩽ y, and we let Ψ(x, y) denote the number of y-friable integers
+not exceeding x. We write ω(n) = p|n 1 for the number of distinct prime factors of n and
+Ω(n) = pk |n 1 for the number of prime factors of n counted with multiplicity. We use c1 , c2 , . . .
+for absolute positive constants.
+                        THE AVERAGE LEAST CHARACTER NON-RESIDUE                                      25
+
+
+                       2. The average least character non-residue (mod q)
+We begin by quoting two theorems from the literature. The ﬁrst, due to Montgomery
+[27, Theorem 1, p. 164] (cf. [23]), relates the size of nχ to a zero-free region for L(s, χ)
+near s = 1. Deﬁne N (σ, T, χ) as the number of zeros s = β + iγ of L(s, χ) with σ ⩽ β ⩽ 1 and
+|γ| ⩽ T .
+
+
+  Proposition 2.1. Let χ be a non-principal Dirichlet character modulo q, and let δ be a
+real number in the range 1/ log q < δ ⩽ 12 . If N (1 − δ, δ 2 log q, χ) = 0, then nχ < (c1 δ log q)1/δ .
+Here c1 > 0 is an absolute constant.
+
+
+  The second, due to Jutila [21, Theorem 1], is a zero-density estimate for the collection of
+characters to a given modulus.
+
+
+  Proposition 2.2. Let          > 0. For 45 ⩽ α ⩽ 1 and T ⩾ 1, we have
+                                 
+                                       N (α, T, χ)  (qT )(2+)(1−α) .
+                               χ (mod q)
+
+
+
+  These propositions allow us to establish the next lemma, which will eventually be used
+to show that characters χ with nχ larger than about (log q)5 do not signiﬁcantly aﬀect the
+average of nχ .
+
+
+  Lemma 2.3. There exists an absolute constant c2 > 0 such that, for any positive integer q,
+the number of characters χ (mod q) with nχ ⩾ c2 log5 q is  q 0.43 .
+
+
+  Proof. We may assume that q ⩾ e25 , and we set c2 = (c1 /5)5 where c1 is the constant from
+Proposition 2.1. That proposition with δ = 15 implies that the number of non-principal χ with
+nχ ⩾ ((c1 /5) log q)5 = c2 log5 q is bounded above by
+                                                       
+                                      4 log q                     4 log q
+                # χ (mod q) : N        ,      ,χ ⩾ 1 ⩽         N   ,      ,χ .
+                                      5 25                        5 25
+                                                            χ (mod q)
+
+                                       1
+From Proposition 2.2 with α = 45 and = 10 , this sum is O((q log q)21/50 ), which is suﬃciently
+small.
+
+  We also need an elementary lemma concerning the structure of the character group.
+
+
+   Lemma 2.4. Let G be a ﬁnite abelian group and H ⩽ G be a subgroup. The number of
+homomorphisms χ : G → C× such that χ(h) = 1 for all h ∈ H is exactly #G/#H. In particular,
+if H is a subgroup of the multiplicative group (Z/qZ)× , then the number of Dirichlet characters
+χ (mod q) such that χ(h) = 1 for all h ∈ H is exactly φ(q)/#H.
+
+
+  The proof of Lemma 2.4 is simple; the homomorphisms χ : G → C× that are trivial on H
+are in canonical bijection with the homomorphisms χ̃ : G/H → C× , the number of which is
+#G/#H (cf. [32, Chapter VI, Section 1.1]).
+26                                    GREG MARTIN AND PAUL POLLACK
+
+
+
+   The next lemma reduces the proof of Theorem 1.1 to the task of bounding two expressions
+in its error term. We recall our notation (q) for the least prime not dividing q. We record
+the helpful estimate (q)  log q, which holds because the product of all the primes less than
+2 log q (say) is larger than q when q is suﬃciently large, by the prime number theorem. We also
+deﬁne f (q) to be the multiplicative order of (q) modulo q.
+
+   Lemma 2.5. For any real number Y satisfying (q) < Y ⩽ c2 log5 q (where c2 is the constant
+from Lemma 2.3), we have
+                                      ⎛                                         ⎞
+                                                 ⎜                                                   ⎟
+                                                ⎜ 1                                                ⎟
+                 1                               ⎜                                      Y       −1/3 ⎟
+                                   nχ = (q) + O ⎜                                nχ +       +q      ⎟.
+              φ(q) − 1                           ⎜ φ(q)                                f (q)         ⎟
+                         χ (mod q)               ⎝                χ (mod q)                          ⎠
+                          χ=χ0                                     χ=χ0
+                                                               Y <nχ ⩽c2 log5 q
+
+
+     Proof. We begin by writing
+            1                   1                    
+                        nχ =                                  nχ
+         φ(q) − 1             φ(q) − 1
+                   χ (mod q)                      χ (mod q)
+                     χ=χ0                          χ=χ0
+                                                  nχ =(q)
+                 ⎛                                                                                         ⎞
+                ⎜                                                                                         ⎟
+                ⎜ 1                                                                                    ⎟
+                ⎜                             1                                  1                        ⎟
+              +O⎜                       nχ +                               nχ +                        nχ ⎟ .   (2.1)
+                ⎜ φ(q)                       φ(q)                               φ(q)                      ⎟
+                ⎝           χ (mod q)                    χ (mod q)                      χ (mod q)         ⎠
+                              χ=χ0                        χ=χ0                          χ=χ0
+                           (q)<nχ ⩽Y                 Y <nχ ⩽c2 log5 q                 nχ >c2 log5 q
+
+By Lemma 2.4 applied to the subgroup of (Z/qZ)× generated by (q), which has order f (q),
+the number of characters χ (mod q) with χ((q)) = 1 equals φ(q)/f (q). It follows that
+                   1                 φ(q) − φ(q)/f (q)
+                                nχ =                    (q)
+                φ(q) − 1                  φ(q) − 1
+                                  χ (mod q)
+                                    χ=χ0
+                                  nχ =(q)
+                                                                   (q)                      Y
+                                                 = (q) + O                 = (q) + O                 ,
+                                                                   f (q)                    f (q)
+while the ﬁrst error term in equation (2.1) can be bounded by
+                        1                    1    φ(q)         Y
+                                      nχ ⩽              −1 Y        .
+                       φ(q)                 φ(q) f (q)         f (q)
+                                     χ (mod q)
+                                       χ=χ0
+                                    (q)<nχ ⩽Y
+
+
+                                              √ use1the fact that nχ  q
+                                                                          1/5
+As for the last error term in equation (2.1), we                              (this follows from
+Norton’s result quoted in Section 1, since 1/4 e < 5 ). Using this estimate in conjunction with
+Lemma 2.3, we have the bound
+                          1                     1 0.43 1/5
+                                         nχ        q   ·q     q −1/3
+                         φ(q)                  φ(q)
+                                       χ (mod q)
+                                         χ=χ0
+                                      nχ >c2 log5 q
+
+(here we have used φ(q)    q/ log log q               q 0.99 ). The lemma now follows from equation (2.1)
+and the subsequent estimates.
+                        THE AVERAGE LEAST CHARACTER NON-RESIDUE                                   27
+
+
+  Before we proceed, we must quote one more theorem from the literature. This result, due to
+Baker and Harman [4, 5], asserts that many shifted primes possess a large prime factor.
+
+
+   Proposition 2.6. For large x, the number of primes p ⩽ x with P (p − 1) > x0.67
+is > cx/ log x for some absolute constant c > 0.
+
+
+  Actually, Baker and Harman prove Proposition 2.6 with 0.67 replaced by the slightly larger
+exponent 0.677.
+  The following somewhat strange dichotomy will be useful to us in the proof of Theorem 1.1.
+For the rest of this section, deﬁne
+                                                    (log log q)3
+                                       X = X(q) =                 .
+                                                    log log log q
+
+  Lemma 2.7. If q is a suﬃciently large integer, then either f (q)        exp((log log q)2 ) or there
+exist at least six primes less than X that do not divide q.
+
+
+  Remark. The proof actually yields many more than six small primes: when f (q) is small,
+we could conclude that there are > cX/ log X primes less than X that do not divide q. We will
+not need this stronger conclusion, however.
+
+   Proof. We have to show that if q is divisible by almost every prime less than X, then
+f (q) is large, that is, f (q)    exp((log log q)2 ). In broad strokes, the proof goes as follows:
+We ﬁrst observe that f (q) is divisible by the order of (q) modulo p for almost all small
+primes p (since these small primes divide q). Many of these primes p satisfy P (p − 1) > X 0.67 ,
+by Proposition 2.6. For many of those, we show below (mimicking a proof of Kurlberg and
+Pomerance [22, Lemma 20]) that P (p − 1) divides the order of (q) mod p. This eventually
+forces f (q) to be divisible by many distinct primes of the form P (p − 1), with P (p − 1) > X 0.67 ,
+and this yields the stated lower bound on f (q). We now proceed to make all of this precise.
+   Deﬁne S0 to be the set of primes p ⩽ X dividing q and satisfying P (p − 1) > X 0.67 . By
+Proposition 2.6, there are > cX/ log X primes p ⩽ X with P (p − 1) > X 0.67 . Let us assume
+that there are at most ﬁve primes less than X that do not divide q (so that we want to
+derive the lower bound f (q)      exp((log log q)2 )); then almost all of these primes obtained from
+Proposition 2.6 are actually divisors of q (when q is suﬃciently large), and so #S0        X/ log X.
+   Deﬁne S to be the subset of S0 consisting of those primes in S0 having the additional
+property that the multiplicative order of (q) modulo p is divisible by P (p − 1). We claim
+that #S       X/ log X as well. To see this, note that if p does not have this property, then the
+order of (q) modulo p is a divisor of (p − 1)/P (p − 1) and so is less than X 0.33 ; hence, p
+divides an integer of the form (q)j − 1 for some positive integer j ⩽ X 0.33 . On the other hand,
+each number (q)j − 1 has at most log((q)j − 1)/ log 2  j log (q) prime factors; furthermore,
+(q)  log q. Therefore, the total number of prime factors of all the numbers (q)j − 1 is
+                                
+                                   j log (q)  X 0.66 log log q  X 0.995 ,
+                            j⩽X 0.33
+
+by the deﬁnition of X. Therefore #(S0 \ S)  X 0.995 = o(X/ log X), and hence #S
+X/ log X, as claimed.
+  If r is a prime exceeding X 0.67 , then the number of p ∈ S for which P (p − 1) = r is clearly
+bounded by the number of integers in (1, X] that are congruent to 1 (mod r), which is at
+most X/r < X 0.33 . Hence, the number of distinct values of P (p − 1), as p ranges over S, is
+28                                  GREG MARTIN AND PAUL POLLACK
+
+
+
+> cX 0.67 / log X. Since each prime p divides q, we know that f (q) is divisible by the order
+of (q)(mod p) for all p ∈ S, hence divisible by all of these        X 0.67 / log X distinct primes
+P (p − 1), each of which exceeds X 0.67
+                                        . It follows that there exist positive constants c3 and c4
+such that
+                                   0.67
+           f (q) ⩾ (X 0.67 )c3 X          / log X
+                                                    ⩾ exp(c4 X 0.67 )
+                                                             c4 (log log q)2.01
+                                                    = exp                             exp((log log q)2 )
+                                                            (log log log q)0.67
+as desired.
+
+  Proof of Theorem 1.1. We may assume that q is suﬃciently large. Suppose ﬁrst that f (q)
+exp((log log q)2 ). Taking Y = c2 log5 q in Lemma 2.5, we see that
+         1                              log5 q                             1
+                        nχ = (q) + O           + q −1/3 = (q) + O                      ,
+     φ(q) − 1                             f (q)                     exp((log log q)3/2 )
+                 χ (mod q)
+                   χ=χ0
+
+say, which is stronger than the error term in the statement of the theorem. By Lemma 2.7, the
+only case left to consider is the case where there exist at least six primes p1 , . . . , p6 less than
+X that do not divide q.
+  In particular, (q) < X in this case, so we may take Y = X in Lemma 2.7 to obtain
+                                       ⎛                                        ⎞
+                                          ⎜                                                      ⎟
+                                         ⎜ 1                                                   ⎟
+          1                               ⎜                                         X       −1/3 ⎟
+                            nχ = (q) + O ⎜                                   nχ +       +q      ⎟
+       φ(q) − 1                           ⎜ φ(q)                                   f (q)         ⎟
+                  χ (mod q)               ⎝                   χ (mod q)                          ⎠
+                    χ=χ0                                       χ=χ0
+                                                            X<nχ ⩽c2 log5 q
+
+                                                      log5 q                          X
+                              = (q) + O                     #{χ (mod q) : nχ > X} +       + q −1/3 .
+                                                       φ(q)                          f (q)
+Since q | ((q)f (q) − 1), we have the trivial lower bound f (q) ⩾ (log q)/ log (q), and so X/f (q) ⩽
+(X log (q))/ log q < X log X/ log q  (log log q)3 / log q. The theorem therefore follows if we can
+show that
+                                                               (log log q)3
+                             #{χ (mod q) : nχ > X}  φ(q)                   .                     (2.2)
+                                                                 (log q)6
+  Let H be the subgroup of (Z/qZ)× generated by (the images of) p1 , . . . , p6 . If nχ > X, then
+χ(h) = 1 for all h ∈ H; thus, by Lemma 2.4,
+                                                                                  φ(q)
+              #{χ (mod q) : nχ > X} ⩽ #{χ (mod q) : χ(h) = 1 for all h ∈ H} =          .
+                                                                                  #H
+However, the order of H is at least the number of integers less than q that factor as a product
+of the pi , which is at least as large as the number of integers of the form pα     1       α6
+                                                                                   1 . . . p6 with
+                                                       −6
+0 ⩽ α1 , . . . , α6 < log q/(6 log X). Therefore #H ⩾ 6 ((log q)/ log X) , and so
+                                                                        6
+
+                                                              φ(q)              (log log log q)6
+                 #{χ (mod q) : nχ > X}                                   φ(q)                  .
+                                                       ((log q)/ log X)6            (log q)6
+This upper bound is stronger than the required estimate (2.2), which completes the proof of
+the theorem.
+
+   Remark. It is known that f (q) > q 1/2 for almost all q, in the sense of asymptotic density.
+(This lower bound, and a bit more, follows from [22, Theorem 1].) For such q, we deduce quickly
+from Lemma 2.5 that the average of nχ is (q) + O(q −1/50 ). Thus, the estimate of Theorem 1.1
+                       THE AVERAGE LEAST CHARACTER NON-RESIDUE                               29
+
+
+is interesting only for integers q for which f (q) is abnormally small. Our proof of Theorem 1.1
+can be modiﬁed to show that the average of nχ is always (q) + O(X/f (q) + exp(−(log log q)2 ))
+in the above notation, and that the term X/f (q) can be omitted when (q) > X.
+
+
+              3. The least character non-residue averaged over the modulus q
+Having established an asymptotic formula for the average of the least character non-residue
+nχ over all Dirichlet characters χ to a single modulus, we turn now to averaging nχ over
+all characters with conductor less than x. Theorem 1.1 tells us that almost all of the φ(q)
+characters modulo q have nχ = (q); therefore, we should expect the average value of nχ over
+all characters of conductor less than x to be closely related to the sum q⩽x φ(q)(q). This is
+indeed the case, as the proof of Corollary 1.2 later in this section will show; the majority of
+the work is in showing how the constant Δ deﬁned in equation (1.3) arises in connection with
+that sum (see Proposition 3.5). At the end of this section, we outline how the same methods
+can be applied to averages over only certain characters; as a concrete example, we establish
+analogs of Theorem 1.1 and Corollary 1.2 where we average only over primitive characters.
+   Our ﬁrst two lemmas establish an asymptotic formula for the summatory function of φ(n)
+over integers relatively prime to a ﬁxed number m, with enough uniformity in m for our later
+purposes.
+
+  Lemma 3.1. Given a positive integer m, let h(d) denote the largest divisor of d that is
+coprime to m. For all x ⩾ 3,
+                             μ2 (d)     μ2 (d)
+                         x2          +x           2ω(m) x log x.
+                              dh(d)       h(d)
+                             d>x            d⩽x
+
+
+  Proof. We employ Rankin’s method. For any real number 0 < < 1, we have
+             μ2 (d)     μ2 (d)       μ2 (d) d 1−         μ2 (d)  x 
+         x2          +x          < x2                    +x
+              dh(d)         h(d)          dh(d) x              h(d) d
+              d>x            d⩽x            d>x                             d⩽x
+                                               ∞
+                                                         2
+                                           1+          μ (d)
+                                       =x                       .
+                                                        d h(d)
+                                                  d=1
+The right-hand side can be expressed as the convergent Euler product
+                              1                     1             1
+               x1+      1+         = x1+       1+          1 + 1+
+                     p
+                             p h(p)                   p            p
+                                                p|m                 pm
+                                                                     1
+                                       ⩽ x1+ 2ω(m)             1+
+                                                           p
+                                                                     p1+
+                                                         ζ(1 + )
+                                       = x1+ 2ω(m)                 2ω(m) x1+ −1 .
+                                                         ζ(2 + 2 )
+Choosing   = 1/ log x establishes the required estimate.
+
+  Lemma 3.2. Let m be a natural number. For x ⩾ 2,
+                               3x2         1
+                                               −1
+                        φ(n) = 2        1+         + O(2ω(m) x log x)
+                                 π           p
+                       n⩽x                p|m
+                    gcd(n,m)=1
+
+uniformly in m.
+30                                   GREG MARTIN AND PAUL POLLACK
+
+
+
+   Proof. Let χ0 be the principal character modulo m, and let h(d) denote the largest divisor
+of d that is coprime to m (as in Lemma 3.1). The identity φ(n)χ0 (n)/n = d|n μ(d)/h(d) is
+easy to verify (since both sides are multiplicative functions, it suﬃces to check the identity on
+prime powers); it follows that
+                                 φ(n)χ0 (n)      μ(d)
+                    φ(n) =     n·             =      n
+                                       n                   h(d)
+              n⩽x               n⩽x                       n⩽x          d|n
+           gcd(n,m)=1
+                                 μ(d)                  μ(d) 
+                            =                      n=                          de
+                                      h(d)                    h(d)
+                                d⩽x          n⩽x        d⩽x            e⩽x/d
+                                             d|n
+                                                                      ⎛           ⎞
+                                 μ(d)  x2          x2  μ(d)             μ2 (d)
+                            =              + O(x) =               + O ⎝x          ⎠
+                                  h(d) 2d            2      dh(d)            h(d)
+                              d⩽x                       d⩽x              d⩽x
+                                               ⎛                        ⎞
+                                  ∞
+                              x2  μ(d)             μ2 (d)     μ2 (d)
+                            =              + O ⎝x2          +x          ⎠.
+                               2     dh(d)           dh(d)         h(d)
+                                    d=1                        d>x                  d⩽x
+
+The error term is  2     ω(m)
+                         x log x by Lemma 3.1, while in the main term, we have
+               ∞          
+                   μ(d)              1         1
+                         =       1− 2        1−
+                   dh(d)             p          p
+                  d=1               pm             p|m
+                                              1                  1
+                                                                        −1
+                                                                                 6     1
+                                                                                            −1
+                                =         1−                  1+             =       1+
+                                    p
+                                               p2                  p             π2     p
+                                                    p|m                             p|m
+
+as claimed.
+
+  Our next goal is to evaluate the sum q⩽x φ(q)(q) that features prominently in the proof of
+Corollary 1.2. Our method hinges upon sorting these integers q by their largest divisor divisible
+only by primes not exceeding 2 log x; the next two lemmas establish some preliminary results
+concerning sums over these friable numbers.
+
+
+     Lemma 3.3. Let x ⩾ 3, and set y = 2 log x. Then the following estimates hold:
+     (a)     m>x1/2        1/m  x−1/3 ;
+           m is y -friable
+                           2/3
+     (b) there are O(x     ) integers less than x that have a y-friable divisor exceeding x1/2 .
+
+   Proof. We may assume that x is suﬃciently large. It follows from the work of de Bruijn that
+log Ψ(t, y)  (log t)/ log y uniformly for t ⩾ 2 and y ⩽ 4 log t (see, for example, [34, Theorem
+2, p. 359]). In particular, with y = 2 log x, we have Ψ(t, y) < t1/3 uniformly for t ⩾ x1/2 , once
+x is suﬃciently large. Hence,
+                                   ∞                                   ∞
+                                1         1                Ψ(x1/2 , y)         Ψ(t, y)
+                                  =         dΨ(t, y) = −               +               dt
+                                m    x1/2 t                  x1/2
+                                                                          x1/2   t2
+                  m>x1/2
+                m is y -friable
+                                         ∞ 1/3
+                                               t
+                                  <0+              2
+                                                     dt  x−1/3 ,
+                                         x 1/2   t
+when x is suﬃciently large, establishing part (a) of the lemma. Part (b) follows from part
+(a), upon noting that the number of integers less than x that are divisible by a ﬁxed y-friable
+integer m > x1/2 is at most x/m and summing up m.
+                           THE AVERAGE LEAST CHARACTER NON-RESIDUE                                      31
+
+
+  Lemma 3.4. Let x ⩾ 3 and set y = 2 log x. Then
+                       1
+                          −1                 φ(m)(m)                            1
+                    1+                                 =Δ+O                                  ,
+                        p             √          m2                             log x
+              p⩽y                m⩽ x
+                              m is y -friable
+
+where Δ is deﬁned in equation (1.3).
+
+
+  Proof. Throughout we may assume that x and hence y are suﬃciently large. We ﬁrst
+consider the terms in the sum for which the value of (m) is ﬁxed:
+                                     ⎛                       ⎛     ⎞⎞
+                                           ⎜                              ⎜                    ⎟⎟
+                                          ⎜                             ⎜                 1⎟ ⎟
+                              φ(m)(m)     ⎜                     φ(m)     ⎜                    ⎟⎟
+                                       =  ⎜                          + O ⎜                    ⎟⎟ .   (3.1)
+                    √            m2        ⎜                      m2      ⎜        √         m ⎟⎟
+               m⩽ x                        ⎝       m⩾1                    ⎝   m> x             ⎠⎠
+            m is y -friable                    m is y -friable             m is y -friable
+              (m)=                             (m)=                      (m)=
+
+The sum inside the error term of equation (3.1), even without the condition (m) = , is
+bounded by a constant times x−1/3 by Lemma 3.3(a). On the other hand, the ﬁrst sum on the
+right-hand side of (3.1) can be written as the product
+                       φ(m)    φ(p) φ(p2 )                  φ(p) φ(p2 )
+                           2
+                             =        2
+                                        +   4
+                                               + ···         1+ 2 +        + ···
+                         m          p     p                     p      p4
+            m⩾1                p<                     <p⩽y
+        m is y -friable
+          (m)=
+                               ⎛     ⎞
+                                 1             1
+                             =⎝      ⎠        1+     .
+                                   p             p
+                                  p<    <p⩽y
+
+Using this information and summing equation (3.1) over the possible values of (m), we
+conclude that
+                     1
+                         −1                φ(m)(m)
+                  1+
+                      p             √          m2
+              p⩽y              m⩽ x
+                            m is y -friable
+                                           ⎛⎛       ⎞                   ⎞
+                         1
+                              −1             1          1
+                =      1+                 ⎝⎝       ⎠   1+   + O(x−1/3 )⎠
+                          p                       p        p
+                     p⩽y                ⩽y         p<          <p⩽y
+                            2
+                  =                  + O(x−1/3 y 2 )
+                          p⩽ (p + 1)
+                    ⩽y
+                           ⎛                           ⎞
+                                              2
+                  = Δ + O ⎝x−1/4 +                    ⎠.
+                                           p⩽ (p + 1)
+                                         >y
+
+It suﬃces to show that the sum in this error term is O(1/ log x).
+   When x is suﬃciently large, each summand in the error term is less than half the previous
+summand. (Speciﬁcally, this is the case when y > 7; here we use Bertrand’s postulate to bound
+the ratio between consecutive primes by 2.) Consequently, that sum is bounded above by a
+geometric series that adds up to twice the ﬁrst term: if r is the smallest prime exceeding y (so
+that r ⩽ 2y), then
+                                                          ⎛             ⎞
+                    2               r2                       
+                             < 2             < 8y 2 exp ⎝−       log p⎠  y 2 e−c5 y
+            >y   p⩽ (p + 1)      p⩽r (p + 1)                           p⩽y
+32                                   GREG MARTIN AND PAUL POLLACK
+
+
+
+for some positive constant c5 by Chebyshev’s lower bound p⩽y log p      y. Since y 3 e−c5 y is a
+                                         2 −c5 y
+bounded function for y ⩾ 1, we see that y e       1/y  1/ log x, which completes the proof
+of the lemma.
+
+  We now collect the previous three lemmas together to assist in our evaluation of the main
+sum appearing in Corollary 1.2.
+
+
+     Proposition 3.5. Let Δ be deﬁned as in equation (1.3). Then, for x ⩾ 3,
+                                                            3Δx2          x2
+                                            φ(q)(q) =            +O              .
+                                                              π2          log x
+                                     q⩽x
+
+
+
+    Proof. As usual we may assume that x is suﬃciently large. We evaluate the sum by sorting
+the integersq according to their divisors consisting only of small primes. Set y = 2 log x, and
+deﬁne Q = p⩽y p. Let M (q) denote the largest y-friable divisor of q; note that (q) = (M (q)),
+since (q) < y for all q ⩽ x (when x is suﬃciently large).
+    For a ﬁxed y-friable number m, the statement M (q) = m is equivalent to q being of the form
+q  m with gcd(q  , Q) = 1; note that in this case gcd(q  , m) = 1 as well, and so φ(q) = φ(q  )φ(m).
+Consequently, by Lemma 3.2,
+                                                            
+                                φ(q)(q) = φ(m)(m)                φ(q  )
+                         q⩽x                                       q  ⩽x/m
+                       M (q)=m                                   gcd(q  ,Q)=1
+
+                                                            3(x/m)2 
+                                                                                             −1
+                                                                             1
+                                                = φ(m)(m)       2
+                                                                         1+
+                                                               π             p
+                                                                     p⩽y
+                                                                      x   x 
+                                                     + O φ(m)(m)2π(y) log     .
+                                                                      m    m
+
+In the error term, note that φ(m)/m ⩽ 1 and (m) log(x/m)  log2 x, and also that
+2π(y) log2 x  exp(O((log x)/ log log x))  x1/3 , say. We thus have
+
+                                              3x2 φ(m)(m)     1
+                                                                                  −1
+                              φ(q)(q) =                      1+                       + O(x4/3 ).
+                                               π2     m2         p
+                      q⩽x                                         p⩽y
+                    M (q)=m
+
+
+     Summing over y-friable integers m, we conclude that
+                                       
+                φ(q)(q) =                    φ(q)(q)
+              q⩽x                     m⩽x           q⩽x
+                                  m is y -friable M (q)=m
+                                                    ⎛                                                ⎞
+                                                        2                            −1
+                              =                     ⎝ 3x φ(m)(m)   1+
+                                                                       1
+                                                                                            + O(x4/3 )⎠
+                                                      π 2   m 2        p
+                                         √
+                                     m⩽ x                               p⩽y
+                                  m is y -friable
+                                        ⎛                             ⎞
+                                    ⎜                               ⎟
+                                  +O⎜
+                                    ⎝                        φ(m)(m)⎟
+                                                                     ⎠.
+                                            √
+                                              x<m⩽x
+                                           m is y -friable
+                          THE AVERAGE LEAST CHARACTER NON-RESIDUE                                         33
+
+
+In this last error term, each summand is at most xy  x7/6 , and the number of summands is
+O(x2/3 ) by Lemma 3.3(b). Therefore, this equation becomes
+                                3x2     1
+                                                       −1                    φ(m)(m)
+                   φ(q)(q) =      2
+                                       1+                                              + O(x11/6 ),
+                                 π        p                         √            m2
+             q⩽x                        p⩽y                    m⩽ x
+                                                            m is y -friable
+                                                            2  2     2
+which, by Lemma 3.4, becomes              q⩽x φ(q)(q) = 3Δx /π + O(x / log x), as claimed.
+
+
+  Proof of Corollary 1.2.        We prove the corollary in the quantitative form
+              ⎛                    ⎞−1 ⎛                 ⎞
+               ⎜                  ⎟     ⎜                    ⎟                 (log log x)2
+               ⎜                   1⎟     ⎜                   nχ ⎟
+               ⎝                    ⎠     ⎝                      ⎠=Δ+O                log x
+                                                                                                  .
+                   q⩽x χ (mod q)              q⩽x χ (mod q)
+                         χ=χ0                      χ=χ0
+
+Since the ﬁrst double sum is well known to equal
+                                                  3x2
+                                  1=     (φ(q) − 1) = 2 + O(x log x)
+                                                      π
+                          q⩽x χ (mod q)        q⩽x
+                                χ=χ0
+
+(the latter equality follows from Lemma 3.2 with m = 1), it suﬃces to show that
+                                       3Δx2       x2 (log log x)2
+                                    nχ =    2
+                                               +O                   .                                   (3.2)
+                                          π              log x
+                           q⩽x χ (mod q)
+                                 χ=χ0
+
+  By Theorem 1.1,
+                                                                     (log log q)2
+                          nχ =           (φ(q) − 1) (q) + O
+                                                                           log q
+          q⩽x χ (mod q)          3⩽q⩽x
+                χ=χ0
+                                                         ⎛                                        ⎞
+                                                                                   (log log q)2 ⎠
+                             =            φ(q)(q) + O ⎝                 (q) + φ(q)                .
+                                                                                        log q
+                                 3⩽q⩽x                        3⩽q⩽x
+
+We note that (q)  log x uniformly for q ⩽ x. Since the function (log log t)2 / log t is bounded
+                                   2
+for t ⩾ 3 and decreasing for t > ee , it follows that the error term (for x suﬃciently large) is
+                                                                 √
+                                                            (log log x)2
+                              log x +        q+          q        √     ,
+                                           √      √            log x
+                               q⩽x             q⩽ x           x<q⩽x
+
+and so
+                                                                      x2 (log log x)2
+                                        nχ =         φ(q)(q) + O                          .
+                                                                              log x
+                       q⩽x χ (mod q)           q⩽x
+                             χ=χ0
+
+Since q⩽x φ(q)(q) = 3Δx2 /π 2 + O(x2 / log x) by Proposition 3.5, this equation establishes
+the formula (3.2) and hence the corollary.
+
+   It is worth remarking that our methods can address the average value of nχ , not just over
+all non-principal characters χ, but also over only certain characters. Let q ⩾ 3, and let X (q)
+be a non-empty collection of non-principal Dirichlet characters modulo q. The set of χ ∈ X (q)
+with nχ > (q) is obviously a subset of the set of all non-principal χ (mod q) with nχ > (q).
+This triviality, taken together with the estimates occurring in the proof of Theorem 1.1 and
+34                               GREG MARTIN AND PAUL POLLACK
+
+
+
+earlier in Section 2, shows that
+                                                                    φ(q) (log log q)2
+                  (#X (q))−1                nχ = (q) + O                                   .   (3.3)
+                                                                    #X (q)   log q
+                                  χ∈X (q)
+
+  To take an example of special interest, let X (q) be the set of primitive characters modulo
+q, and let φ∗ (q) = #X (q). From the Möbius inversion formula applied to the relation
+       ∗
+  d|q φ (d) = φ(q), we ﬁnd that
+
+                                                         2                 1
+                                                                                  2
+                                φ∗ (q) = q           1−                 1−            .
+                                                          p                  p
+                                             p q                p2 |q
+
+Hence, φ∗ (q) > 0 precisely when q ≡ 2(mod 4), and whenever φ∗ (q) is non-vanishing, we have
+                                                 1       φ(q)
+                            φ∗ (q)   φ(q)     1−                  .
+                                                  p     log log q
+                                                   p|q
+
+So when q ≡ 2(mod 4), the estimate (3.3) shows that the average of nχ taken over primitive
+characters χ modulo q is
+                          1                          (log log q)3
+                                      n χ = (q) + O               ,                  (3.4)
+                        φ∗ (q)                           log q
+                                  χ (mod q)
+                                  χ primitive
+
+which is the analog of Theorem 1.1 for primitive characters. From this, we can deduce a
+corollary similar to Corollary 1.2. It is necessary to replace Lemma 3.2 with the estimate
+                                         ⎛                     ⎞
+                                 18x  2            p 3
+                        φ∗ (n) = 4 ⎝                           ⎠ + O(2ω(m) x log2 x)      (3.5)
+                                    π          (p + 1)(p2 − 1)
+                 n⩽x                            p|m
+              gcd(n,m)=1
+
+uniformly in m, which can be proved by an argument similar to the proof of Lemma 3.2.
+Imitating the proof of Corollary 1.2, but using equations (3.4) and (3.5) as input, we can
+establish the following theorem.
+
+
+     Theorem 3.6. Deﬁne
+                                    4          p2 − p − 1
+                Δ∗ =                                              ≈ 2.1514351057,
+                               ( + 1)2 ( − 1)  (p + 1)2 (p − 1)
+                                                  p<
+
+where the sum and product are taken over primes  and p. Then
+                       ⎛               ⎞−1 ⎛                 ⎞
+                          ⎜                    ⎟        ⎜                       ⎟
+                      lim ⎜                     1⎟        ⎜                      nχ ⎟  ∗
+                                                                                    ⎠=Δ .
+                     x→∞ ⎝                       ⎠        ⎝
+                          q⩽x χ (mod q)                       q⩽x χ (mod q)
+                             χ primitive                         χ primitive
+
+
+
+               4. The least non-split prime averaged over cubic number ﬁelds
+In this section, we consider cubic extensions K of Q and investigate the distribution of the least
+rational prime with a particular factorization into prime ideas in the ring of integers OK . This
+investigation is most successful in the case of the least prime that does not split completely,
+where we will be able to establish Theorem 1.3. In other cases (the least completely split prime,
+the least partially split prime, and the least inert prime), we will be able to establish the
+analogous Theorem 4.8, but only under the assumption of a generalized Riemann hypothesis.
+                       THE AVERAGE LEAST CHARACTER NON-RESIDUE                                 35
+
+
+  The ﬁrst ingredient of the proof of Theorem 1.3 is a now classical theorem of Davenport and
+Heilbronn [13].
+
+  Proposition 4.1. As x → ∞, the number of cubic ﬁelds K with |DK | ⩽ x is ∼ x/3ζ(3).
+
+  A reﬁned version of the Davenport–Heilbronn theorem was proposed by Roberts [31] and
+recently conﬁrmed by Taniguchi and Thorne [33] (see also the independent work of Bhargava,
+Shankar and Tsimerman [8]). One consequence of their work (see [33, Section 6.2, Theorem
+1.3]) is the following explicit estimate.
+
+
+  Proposition 4.2. Let x ⩾ 1 and let 1 ⩽ y ⩽ 40      1
+                                                       log x. For each prime p ⩽ y, we deﬁne local
+                  
+factors t(p) and t (p), depending on the desired factorization of p, as follows:
+                                  ⎧
+                                  ⎪ 1
+                                  ⎪
+                                  ⎪      if p is to split completely,
+                                  ⎪
+                                  ⎪ 6
+                                  ⎪
+                                  ⎪
+                                  ⎪
+                                  ⎪ 1
+                                  ⎪
+                                  ⎪      if p is to partially split,
+                                  ⎪
+                                  ⎪2
+                                  ⎪
+                                  ⎪
+                                  ⎨1
+                           t(p) =        if p is to be inert,
+                                  ⎪
+                                  ⎪ 3
+                                  ⎪
+                                  ⎪
+                                  ⎪
+                                  ⎪ 1
+                                  ⎪
+                                  ⎪      if p is to partially ramify,
+                                  ⎪
+                                  ⎪ p
+                                  ⎪
+                                  ⎪
+                                  ⎪
+                                  ⎪
+                                  ⎪
+                                  ⎩
+                                    1
+                                         if p is to ramify completely
+                                    p2
+and
+                                                     tp
+                                    t (p) =                  .
+                                               1 + 1/p + 1/p2
+The number of cubic number ﬁelds K (up to isomorphism) with |DK | ⩽ x in which the primes
+p ⩽ y factor in the speciﬁed ways is
+                                     x  
+                                         t (p) + O(x5/6 ),
+                                  3ζ(3)
+                                          p⩽y
+
+uniformly in the choice of splitting conditions.
+
+   If K is a non-Galois cubic ﬁeld, then the normal closure of K/Q contains a unique quadratic
+subﬁeld, called the quadratic resolvent of K. If K is cyclic, then we adopt√the convention
+that K has quadratic resolvent Q; in both cases, the quadratic resolvent is Q( DK ). The next
+lemma provides an upper bound on the number of cubic ﬁelds with a given quadratic resolvent.
+It should be noted that Cohen and Morra [11] have asymptotic results for this problem for a
+ﬁxed quadratic resolvent, but in our application we require some uniformity.
+
+  Lemma 4.3. Let L be either Q or a quadratic extension of Q. For x ⩾ 1, the number of
+cubic ﬁelds whose discriminant is at most x in absolute value, and whose quadratic resolvent
+equals L, is  x0.84 uniformly in L.
+
+  Proof. Suppose that K has quadratic resolvent L and that |DK | ⩽ x. Then DK = f 2 DL
+for some positive integer f (see, for example, [10, Section 6.4.5]). Clearly f ⩽ x1/2 , and thus
+the number of choices for DK is also at most x1/2 . Ellenberg and Venkatesh [15] have shown
+that the number of cubic ﬁelds with discriminant D is O (D1/3+ ), and so the lemma follows
+                  1
+upon taking = 150    and summing over the x1/2 possibilities for D = DK .
+36                               GREG MARTIN AND PAUL POLLACK
+
+
+
+   Remark. The proof actually gives an upper bound of O (x5/6+ /|DL |1/2 ) for the number
+of such cubic ﬁelds, although we will not need this stronger statement.
+
+  Recall now that nK denotes the least rational prime that does not split completely in K;
+we are interested in the average value of nK as K ranges over all cubic ﬁelds, ordered by the
+absolute value of their discriminant. To help us handle the contribution to the average from
+ﬁelds K for which nK is large, we quote two results from the literature. The ﬁrst, a universal
+upper bound on nK , is due to Li [25].
+
+
+  Proposition 4.4. If K is a cubic ﬁeld, then the least prime that does not split completely
+in K is  |DK |1/6.64 .
+
+
+   √ discussed by Li, it is much simpler to prove Proposition 4.4 with the larger exponent
+  As
+1/4 e + , which would also suﬃce for our purposes.
+  The next result, in slightly stronger form, appears without proof in a paper of Duke and
+Kowalski [14] (for details, see a proof by the second author [30, Lemma 5.3]). Baier [3] has
+a sharper result allowing one to replace 2/A below with 1/(A − 1), but we will not need this
+improvement.
+
+
+   Proposition 4.5. Fix A > 2 and > 0. For any x ⩾ 1, the number of primitive Dirichlet
+characters χ of conductor at most x with the property that χ(p) = 1 for all primes p ⩽ (log x)A
+is OA, (x2/A+ ).
+
+
+  This proposition quickly implies a lemma about the scarcity of quadratic ﬁelds with no small
+non-split primes.
+
+
+  Lemma 4.6. The number of quadratic ﬁelds whose discriminant is at most x in absolute
+value, in which every prime p ⩽ (log x)1000 splits, is O(x1/499 ).
+
+
+  Proof. There is a bijection between quadratic ﬁelds and primitive quadratic characters
+given by matching the quadratic ﬁeld of discriminant D with the primitive character ( D· ) of
+conductor |D| (see, for example, [28, Theorem 9.13, p. 297]). If L is a quadratic ﬁeld with
+the properties in the statement of the lemma, then χ(·) = ( D·L ) is a primitive character of
+conductor |DL | ⩽ x with χ(p) = 1 for all p ⩽ (log x)1000 . By Proposition 4.5 with = 2491500 ,
+the number of such characters is  x1/499 .
+
+  These preliminary ﬁeld-counting results enable us to bound an error term that arises in the
+proof of Theorem 1.3.
+
+
+  Lemma 4.7. Let x ⩾ 3, and let y = 40    1
+                                            log x and z = (log x)1000 . There exists an absolute
+positive constant c6 such that
+                                                              c6 log x
+                      z       1 + x1/6.64        1  x exp −              ,
+                                                               log log x
+                       |DK |⩽x           |DK |⩽x
+                        y<nK              z<nK
+
+where the sums range over cubic ﬁelds K.
+                         THE AVERAGE LEAST CHARACTER NON-RESIDUE                                         37
+
+
+  Proof. The number of cubic ﬁelds K with |DK | ⩽ x in which every prime p ⩽ y splits
+completely can be estimated by Proposition 4.2, where we take tp = 16 for every p ⩽ y. In
+particular, each such tp < 16 , and so the ﬁrst term can be bounded by
+                       x                                          x
+        z        1  z π(y) + x5/6  (log x)1000                                   + x5/6
+                          6                             exp(log 6 · (1/2)y/ log y)
+         |DK |⩽x
+          y<nK
+                                                                c6 log x
+                                                  x exp −                                             (4.1)
+                                                               log log x
+for some positive constant (c6 = 0.02 is valid); we used in the middle estimate a crude
+Chebyshev-type lower bound for π(y).
+   On the other hand, if nK > z, then either K is already a Galois extension (in which case
+its quadratic resolvent equals Q) or else every prime p ⩽ z splits completely in the normal
+closure of K, and so also splits in the quadratic resolvent L of K (see [26, Corollary, p. 106]).
+Lemma 4.6 tells us that the number of such ﬁelds L is  x1/499 ; for each such L, the number
+of cubic ﬁelds K whose quadratic resolvent equals L is O(x0.84 ) by Lemma 4.3. Therefore, the
+second term can be bounded by
+                                  
+                        x1/6.64         1  x1/6.64 x1/499+0.84  x0.995 ,
+                                    |DK |⩽x
+                                     z<nK
+
+which is small enough to establish the desired estimate.
+
+  With Proposition 4.2 still available to handle the smaller values of nK , we are now ready to
+evaluate the average value of nK over cubic ﬁelds K.
+
+  Proof of Theorem 1.3. We prove the theorem in the quantitative form
+              ⎛        ⎞−1 ⎛          ⎞
+                                                             c6 log x
+              ⎝       1⎠ ⎝         nK ⎠ = Δnsc + O exp −                                           ,
+                                                              log log x
+                   |DK |⩽x             |DK |⩽x
+
+where the sums are taken over cubic ﬁelds K. Taking y = 1 in Proposition 4.2, we deduce a
+quantitative version of the Davenport–Heilbronn Theorem (Proposition 4.1), namely that the
+ﬁrst sum is x/3ζ(3) + O(x5/6 ). Therefore, it suﬃces to show that
+                                   x                        c6 log x
+                            nK =        Δnsc + O x exp −              .              (4.2)
+                                  3ζ(3)                     log log x
+                       |DK |⩽x
+          1
+  Set y = 40 log x and z = (log x)1000 , and write
+                                                                      
+                         nK =                nK +              nK +             nK
+               |DK |⩽x           |DK |⩽x             |DK |⩽x          |DK |⩽x
+                                  nK ⩽y              y<nK ⩽z           z<nK
+                                                           ⎛                                   ⎞
+                                                      ⎜               ⎟
+                             =                      1+O⎜
+                                                        ⎝z  1 + x1/6.64   1⎟
+                                                                           ⎠;                          (4.3)
+                                 ⩽y       |DK |⩽x             |DK |⩽x               |DK |⩽x
+                                            nK =               y<nK                  z<nK
+
+in the last sum, we have used the universal upper bound for nK from Proposition 4.4. By
+Lemma 4.7, this estimate becomes
+                                                        c6 log x
+                         nK =            1 + O x exp −             .              (4.4)
+                                                          log log x
+                     |DK |⩽x               ⩽y   |DK |⩽x
+                                                  nK =
+38                                     GREG MARTIN AND PAUL POLLACK
+
+
+
+  For any prime , the cubic ﬁelds K such that nK =  are exactly those ﬁelds in which p
+splits completely for all p < , yet  does not split completely. Proposition 4.2, summed up the
+four other possibilities for the factorization of , tells us that the number of such ﬁelds with
+|DK | ⩽ x is
+
+                             x (5/6 + 1/ + 1/2 )       1/6
+                                              2
+                                                                    + O(x5/6 ),
+                            ζ(3) 1 + 1/ + 1/       1 + 1/p + 1/p2
+                                                           p<
+
+
+and therefore
+                                  x  (5/6 + 1/ + 1/2 )       1/6
+                           1=                          2
+                                                                              + O(y 2 x5/6 )
+                                  3ζ(3)    1 + 1/ + 1/       1 + 1/p + 1/p2
+        ⩽y       |DK |⩽x                  ⩽y                             p<
+                   nK =
+                                                      ⎛         ⎛              ⎞             ⎞
+                                    x                               1
+                             =          Δnsc + O ⎝x             ⎝             ⎠ + x5/6 log2 x⎠ ,
+                                  3ζ(3)                                    6
+                                                          >y        p<
+
+
+by the deﬁnition (1.4) of Δnsc . In this remaining sum, each summand is at most 13 of the previous
+one by Bertrand’s postulate, and so the sum is bounded (up to a multiplicative constant) by
+the ﬁrst term; we conclude that
+                                                 x
+                                          1=          Δnsc + O(x · 2y · 6−π(y) + x5/6 log x)
+                                                 3ζ(3)
+                       ⩽y       |DK |⩽x
+                                  nK =
+                                                   x                     c6 log x
+                                            =          Δnsc + O x exp −                        ,
+                                                 3ζ(3)                  log log x
+
+just as in the estimate (4.1). Inserting this result into equation (4.4) establishes equation (4.2)
+and hence the theorem.
+
+
+  Remark. We say a few words about the rate of convergence to the limit in Theorem 1.3.
+Computations suggest that the relative error one makes in approximating Δnsc by the average
+over those cubic ﬁelds with |DK | ⩽ x is O(x−1/6 ). Moreover, it appears that these ﬁnite
+averages can be better approximated by incorporating the secondary terms of Taniguchi and
+Thorne [33, Theorem 1.3] into our argument for Theorem 1.3. However, this reasoning is only
+heuristic; our existing error terms swamp any contribution from such lower-order terms.
+
+
+   For each natural number k and each prime p ≡ 1(mod k), let rk (p) denote the least prime
+kth power residue modulo p. Elliott has shown that, for each of k = 2, 3, and 4, the function
+rk (p) possesses a ﬁnite mean value (see [17] when k = 2, and [18] when k = 3, 4). When k = 2,
+we can view Elliott’s result as specifying the average smallest split prime in quadratic ﬁelds of
+prime conductor. The same average, but taken over all quadratic ﬁelds, was computed by the
+second author [30, Theorem 1.6]. (In both cases, the average least split prime has the same size
+as the average least inert prime.) Similarly, Elliott’s result on r3 (p) gives the average smallest
+split prime in cyclic cubic extensions of prime conductor. It is natural to ask whether we can
+compute the same average over all cubic extensions of Q (ordered by the absolute value of their
+discriminant as in Theorem 1.3). One could ask the same question for the least inert prime
+or the least partially split prime. We can establish the following conditional results, where the
+averages are taken over cubic ﬁelds K.
+                         THE AVERAGE LEAST CHARACTER NON-RESIDUE                               39
+
+
+  Theorem 4.8. Assume the generalized Riemann hypothesis for Dedekind zeta functions.
+For each prime p, deﬁne
+                                          1/6                                 1/3
+                          tcs (p) =                ,    tinert (p) =                  ,
+                                     1 + 1/p + 1/p2                      1 + 1/p + 1/p2
+                                          1/2
+                   and    tps (p) =                .
+                                     1 + 1/p + 1/p2
+The average least completely split prime in a cubic ﬁeld is
+                                    
+                           tcs ()   (1 − tcs (p)) = 19.7952216366 . . . .
+                                      p<
+
+The average least inert prime is
+                                      
+                          tinert ()   (1 − tinert (p)) = 8.5447294614 . . . .
+                                      p<
+
+Finally, if the average is restricted to non-Galois cubic ﬁelds, the average least partially split
+prime is
+                                       
+                              tps ()   (1 − tps (p)) = 5.3680248421 . . . .
+                                      p<
+
+Here all sums and products are taken over primes  and p.
+
+
+   The proofs mimic that of Theorem 1.3. However, the proofs (in particular the analogs of
+Lemma 4.7) are simpler in that the parameter z is no longer required: all values of nK
+greater than y in equation (4.3) can be treated together. The reason is that under the
+generalized Riemann hypothesis, the least unramiﬁed prime p with a prescribed splitting type
+is  log2 |DK | (see [23, 24]); this conditional universal upper bound for the analogs of nK is
+small enough to obviate the need for the second splitting at z.
+   It would be interesting to ﬁnd an unconditional proof for any of the assertions of Theorem 4.8.
+After applying Proposition 4.2 in the same manner as in the proof of Theorem 1.3, we are left
+with showing that
+                                              
+                                                   nK                                        (4.5)
+                                               |DK |⩽x
+                                                nK >z
+
+has smaller order than x. (Recall that z = (log x)1000 , although any ﬁxed power of log x would
+suﬃce.) In the proof of Theorem 1.3, this was established in two steps: ﬁrst, we replaced
+nK with a worst case upper bound of |DK |1/6.64 (Proposition 4.4). Second, we argued (using
+Lemma 4.3, Proposition 4.5, and Lemma 4.6) that the sum (4.5) was sparse, in fact that it had
+                                    1      1
+at most x5/6+ terms, with = 150       + 499  in our phrasing of the argument. Our success may
+                                   1     5
+be attributed to the inequality 6.64 + 6 < 1.
+  If we attempt to prove Theorem 4.8 by the same strategy, we quickly run into diﬃculties. In
+both the inert and totally split case, the sharpest known upper bound for nK is |DK |c7 for a
+certain unspeciﬁed (and potentially large) absolute constant c7 (see [23, Theorem 1.1]). We fare
+better in the partially split case. If nK denotes the least partially split prime, then nK = nχ ,
+where χ(·) = ( D·K ) (compare, for example, with the table of Hasse   √
+                                                                         [20, p. 568]). From the
+result of Norton quoted in Section 1, it follows that nK  |DK |  1/4 e+
+                                                                      √ . This estimate is sharp
+enough to stand in for Proposition 4.4 (note, for example, that 1/4 e < 16 ). Unfortunately, in
+none of the three cases of Theorem 4.8 have we succeeded in showing that the sum (4.5) is
+sparse. Thus, even in the initially promising partially split case, we do not obtain a suitably
+small upper bound for (4.5).
+40                                    GREG MARTIN AND PAUL POLLACK
+
+
+
+  While Theorem 4.8 appears out of reach at present, the method of proof of Theorem 1.3 is
+capable of establishing the following average-value results.
+
+
+     Theorem 4.9. For each prime p, deﬁne
+
+                              2/3 + 1/p + 1/p2                     1/2 + 1/p + 1/p2
+                 tni (p) =                      and tpsr (p) =                    .
+                               1 + 1/p + 1/p2                       1 + 1/p + 1/p2
+
+The average least non-inert prime in a cubic ﬁeld is
+                                     
+                            tni ()   (1 − tni (p)) = 2.3192802137 . . . .
+                                         p<
+
+If the average is restricted to non-Galois cubic ﬁelds, then the average of the least prime p that
+is either ramiﬁed or partially split is
+                                        
+                              tpsr ()   (1 − tpsr (p)) = 2.6719625986 . . . .
+                                         p<
+
+
+
+    Proof (sketch). We start by discussing the non-inert case, leaving the partially split or
+ramiﬁed case to the end. After an initial analysis similar to that of Theorem 1.3, we ﬁnd
+that it suﬃces to show that the sum (4.5) is o(x), where now nK denotes the smallest
+non-inert prime. Consider ﬁrst the contribution to (4.5) from non-Galois ﬁelds K. If the
+rational prime p is inert in K, then p splits in the quadratic resolvent L (say) of K. (For
+this result, see again√ [20, p. 568].)√Thus, nK is no larger than the least inert prime in L,
+which is  |DL |1/4 e+ ⩽ |DK |1/4 e+ . Also, if nK > z, then every prime in [1, z] splits in
+L. Exactly as in the proof of Theorem 1.3, this condition bounds √ the number of (non-Galois)
+K in the sum (4.5) by x0.84+1/499 . Since 0.84 + 1/499 + 1/4 e < 0.995, this part of (4.5) is
+acceptably small.
+   Now suppose that K is a cyclic cubic ﬁeld with |DK | ⩽ x. We may write DK = f 2 , where
+f is the conductor of K. Clearly, nK is bounded by the smallest prime divisor of f . So if f is
+composite, then nK ⩽ f 1/2 = |DK |1/4 ⩽ x1/4 . Since the total number of cyclic cubic ﬁelds of
+discriminant up to x is  x1/2 (see [12]), those ﬁelds with f composite contribute O(x1/2 · x1/4 )
+to the sum (4.5), which is negligible. Suppose now that the conductor f is prime. The cyclic
+ﬁeld K is a subﬁeld of Q(ζf ); this cyclotomic ﬁeld is itself cyclic, and so it has at most one
+cubic subﬁeld (which exists if and only if f ≡ 1(mod 3)). As f = |DK |1/2 ⩽ x1/2 , the number
+of K under consideration is at most π(x1/2 )  x1/2 / log x. Moreover, we trivially have nK ⩽
+f ⩽ x1/2 , and so the contribution from these K to the sum (4.5) is O(x1/2 · x1/2 / log x), which
+is again of order smaller than x. Putting this together with the result of the last paragraph,
+we have that (4.5) is o(x), as desired.
+   The partially split or ramiﬁed case is simpler, since from the outset, only non-Galois K
+are being considered. If p is neither partially split nor ramiﬁed in K, then p is inert or split
+completely there, and in either case p splits in the quadratic resolvent L. Now the same analysis
+as in the ﬁrst paragraph of the proof shows that the sum (4.5) is O(x0.995 ).
+
+
+                               might be illuminating. Each of the constants in Theorems 4.8
+  We conclude with a remark that
+and 4.9 has the form  t() p< (1 − t(p)), where t() is the ‘probability’ that the desired
+property holds for the prime . This sum is exactly the form the expectation would have if
+each prime were replaced by a random event X that took place with probability t(), as long
+as the events X were independent. The constant Δnsc in Theorem 1.3 also has this form, and
+                         THE AVERAGE LEAST CHARACTER NON-RESIDUE                                         41
+
+
+in fact so do the constants on the right-hand sides of equations (1.2) and even (1.1) (where
+t(p) = 12 reﬂects the fact that each prime is expected to be a quadratic residue exactly half
+of the time). The calculations of these average-value results demonstrate that these properties
+of small primes are indeed asymptotically independent; in the aforementioned situations it is
+quite helpful that the sums converge so rapidly that only the small primes are relevant.
+
+   Acknowledgements. The authors thank Carl Pomerance for helpful conversations and Mits
+Kobayashi for technical assistance with Karim Belabas’s cubics package. They also thank the
+referee for a careful reading of the manuscript and several helpful suggestions.
+
+
+                                               References
+ 1. N. C. Ankeny, ‘The least quadratic non residue’, Ann. of Math. (2) 55 (1952) 65–72.
+ 2. E. Bach, ‘Explicit bounds for primality testing and related problems’, Math. Comp. 55 (1990) 355–380.
+ 3. S. Baier, ‘On the least n with χ(n) = 1’, Q. J. Math. 57 (2006) 279–283.
+ 4. R. C. Baker and G. Harman, ‘The Brun–Titchmarsh theorem on average’, Analytic number theory, vol.
+    1 (Allerton Park, IL, 1995), Progress in Mathematics 138 (Birkhäuser Boston, Boston, MA, 1996) 39–103.
+ 5. R. C. Baker and G. Harman, ‘Shifted primes without large prime factors’, Acta Arith. 83 (1998) 331–361.
+ 6. K. Belabas, ‘A fast algorithm to compute cubic ﬁelds’, Math. Comp. 66 (1997) 1213–1237, software
+    package cubics available from http://www.math.u-bordeaux1.fr/∼belabas/research/.
+ 7. K. Belabas, ‘On quadratic ﬁelds with large 3-rank’, Math. Comp. 73 (2004) 2061–2074.
+ 8. M. Bhargava, A. Shankar and J. Tsimerman, ‘On the Davenport–Heilbronn theorem and second order
+    terms’, Preprint, 2010, arXiv:1005.0672 [math.NT].
+ 9. R. J. Burthe Jr, ‘The average least witness is 2’, Acta Arith. 80 (1997) 327–341.
+10. H. Cohen, A course in computational algebraic number theory, Graduate Texts in Mathematics 138
+    (Springer, Berlin, 1993).
+11. H. Cohen and A. Morra, ‘Counting cubic extensions with given quadratic resolvent’, J. Algebra 325
+    (2011) 461–478.
+12. H. Cohn, ‘The density of abelian cubic ﬁelds’, Proc. Amer. Math. Soc. 5 (1954) 476–477.
+13. H. Davenport and H. Heilbronn, ‘On the density of discriminants of cubic ﬁelds. II’, Proc. R. Soc. Lond.
+    Ser. A 322 (1971) 405–420.
+14. W. Duke and E. Kowalski, ‘A problem of Linnik for elliptic curves and mean-value estimates for
+    automorphic representations’, Invent. Math. 139 (2000) 1–39.
+15. J. S. Ellenberg and A. Venkatesh, ‘Reﬂection principles and bounds for class group torsion’, Int. Math.
+    Res. Not. 2007 (2007) 18 pp. Art. ID rnm002.
+16. P. D. T. A. Elliott, ‘A problem of Erdős concerning power residue sums’, Acta Arith. 13 (1967/68)
+    131–149.
+17. P. D. T. A. Elliott, ‘Some notes on kth power residues’, Acta Arith. 14 (1967/68) 153–162.
+18. P. D. T. A. Elliott, ‘The least prime kth-power residue’, J. London Math. Soc. (2) 3 (1971) 205–210.
+19. P. Erdős, ‘Remarks on number theory. I’, Mat. Lapok 12 (1961) 10–17 (Hungarian).
+20. H. Hasse, ‘Arithmetische Theorie der kubischen Zahlkörper auf klassenkörpertheoretischer Grundlage’,
+    Math. Z. 31 (1930) 565–582.
+21. M. Jutila, ‘On Linnik’s constant’, Math. Scand. 41 (1977) 45–62.
+22. P. Kurlberg and C. Pomerance, ‘On the periods of the linear congruential and power generators’, Acta
+    Arith. 119 (2005) 149–169.
+23. J. C. Lagarias, H. L. Montgomery and A. M. Odlyzko, ‘A bound for the least prime ideal in the
+    Chebotarev density theorem’, Invent. Math. 54 (1979) 271–296.
+24. J. C. Lagarias and A. M. Odlyzko, ‘Eﬀective versions of the Chebotarev density theorem’, Algebraic
+    number fields: L-functions and Galois properties (Proc. Sympos., Univ. Durham, Durham, 1975) (Academic
+    Press, London, 1977) 409–464.
+25. X. Li, ‘The smallest prime that does not split completely in a number ﬁeld’, Algebra Number Theory
+    (2012); Preprint, 2010, arXiv:1003.5718 [math.NT].
+26. D. A. Marcus, Number fields, Universitext (Springer, New York, 1977).
+27. H. L. Montgomery, Ten lectures on the interface between analytic number theory and harmonic
+    analysis, CBMS Regional Conference Series in Mathematics 84 (Published for the Conference Board of the
+    Mathematical Sciences, Washington, DC, 1994).
+28. H. L. Montgomery and R. C. Vaughan, ‘Multiplicative number theory. I. Classical theory’, Cambridge
+    studies in advanced mathematics, vol. 97 (Cambridge University Press, Cambridge, 2007).
+29. K. K. Norton, ‘A character-sum estimate and applications’, Acta Arith. 85 (1998) 51–78.
+30. P. Pollack, ‘The average least quadratic nonresidue modulo m and other variations on a theme of Erdős’,
+    J. Number Theory 132 (2012) 1185–1202.
+31. D. P. Roberts, ‘Density of cubic ﬁeld discriminants’, Math. Comp. 70 (2001) 1699–1705 (electronic).
+32. J.-P. Serre, A course in arithmetic (Springer, New York, 1973).
+42                       THE AVERAGE LEAST CHARACTER NON-RESIDUE
+
+
+
+33. T. Taniguchi and F. Thorne, ‘Secondary terms in counting functions for cubic ﬁelds’, Preprint, 2011,
+    arXiv:1102.2914 [math.NT].
+34. G. Tenenbaum, ‘Introduction to analytic and probabilistic number theory’, Cambridge studies in advanced
+    mathematics, vol. 46 (Cambridge University Press, Cambridge, 1995).
+
+
+     Greg Martin and Paul Pollack
+     Department of Mathematics
+     University of British Columbia
+     Room 121, 1984 Mathematics Road
+     Vancouver, BC
+     Canada V6T 1Z2
+     gerg@math·ubc·ca
+     pollack@math·ubc·ca
+

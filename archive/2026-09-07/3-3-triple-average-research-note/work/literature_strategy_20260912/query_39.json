@@ -1,0 +1,73 @@
+{
+  "index": 39,
+  "query": "Markov subbases",
+  "url": "https://api.openalex.org/works?filter=title.search%3AMarkov+subbases&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 2,
+  "results": [
+    {
+      "id": "https://openalex.org/W2018962646",
+      "title": "Markov bases and subbases for bounded contingency tables",
+      "date": "2010-03-30",
+      "doi": "https://doi.org/10.1007/s10463-010-0289-2",
+      "citations": 23,
+      "authors": [
+        "Fabio Rapallo",
+        "Ruriko Yoshida"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://doi.org/10.1007/s10463-010-0289-2",
+          "pdf": null,
+          "source": "Annals of the Institute of Statistical Mathematics"
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.250.6611",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.251.682",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://hdl.handle.net/10.1007/s10463-010-0289-2",
+          "pdf": null,
+          "source": "RePEc: Research Papers in Economics"
+        },
+        {
+          "url": "http://hdl.handle.net/11567/981889",
+          "pdf": null,
+          "source": "CINECA IRIS Institutial Research Information System (University of Genoa)"
+        }
+      ],
+      "reference_count": 24
+    },
+    {
+      "id": "https://openalex.org/W2952433843",
+      "title": "Markov bases and subbases for bounded contingency tables",
+      "date": "2009-05-29",
+      "doi": "https://doi.org/10.48550/arxiv.0905.4841",
+      "citations": 2,
+      "authors": [
+        "Fabio Rapallo",
+        "Ruriko Yoshida"
+      ],
+      "abstract": "In this paper we study the computation of Markov bases for contingency tables whose cell entries have an upper bound. In general a Markov basis for unbounded contingency table under a certain model differs from a Markov basis for bounded tables. Rapallo, (2007) applied Lawrence lifting to compute a Markov basis for contingency tables whose cell entries are bounded. However, in the process, one has to compute the universal Gröbner basis of the ideal associated with the design matrix for a model which is, in general, larger than any reduced Gröbner basis. Thus, this is also infeasible in small- and medium-sized problems. In this paper we focus on bounded two-way contingency tables under independence model and show that if these bounds on cells are positive, i.e., they are not structural zeros, the set of basic moves of all $2 \\times 2$ minors connects all tables with given margins. We end this paper with an open problem that if we know the given margins are positive, we want to find the necessary and sufficient condition on the set of structural zeros so that the set of basic moves of all $2 \\times 2$ minors connects all incomplete contingency tables with given margins.",
+      "locations": [
+        {
+          "url": "http://arxiv.org/abs/0905.4841",
+          "pdf": "https://arxiv.org/pdf/0905.4841",
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://doi.org/10.48550/arxiv.0905.4841",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 15
+    }
+  ]
+}

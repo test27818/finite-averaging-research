@@ -1,0 +1,28 @@
+{
+  "index": 16,
+  "query": "restricted sumsets sequences",
+  "url": "https://api.openalex.org/works?filter=title.search%3Arestricted+sumsets+sequences&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 1,
+  "results": [
+    {
+      "id": "https://openalex.org/W2095671317",
+      "title": "ON A PROPERTY OF MINIMAL ZERO-SUM SEQUENCES AND RESTRICTED SUMSETS",
+      "date": "2005-06-01",
+      "doi": "https://doi.org/10.1112/s0024609305004315",
+      "citations": 4,
+      "authors": [
+        "Weidong Gao",
+        "Alfred Geroldinger"
+      ],
+      "abstract": "Let G be an additively written abelian group, and let S be a sequence in G ∖ {0} with length |S| ⩾ 4. Suppose that S is a product of two subsequences, say S = BC, such that the element g + h occurs in the sequence S whenever g.h is a subsequence of B or of C. Then S contains a proper zero-sum subsequence, apart from some well-characterized exceptional cases. This result is closely connected with restricted set addition in abelian groups. Moreover, it solves a problem on the structure of minimal zero-sum sequences, which recently occurred in the theory of non-unique factorizations. 2000 Mathematics Subject Classification 11B50, 11B75, 11P99.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1112/s0024609305004315",
+          "pdf": null,
+          "source": "Bulletin of the London Mathematical Society"
+        }
+      ],
+      "reference_count": 0
+    }
+  ]
+}

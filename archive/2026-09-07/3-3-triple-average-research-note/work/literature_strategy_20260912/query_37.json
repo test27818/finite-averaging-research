@@ -1,0 +1,180 @@
+{
+  "index": 37,
+  "query": "Clique Gossiping",
+  "url": "https://api.openalex.org/works?filter=title.search%3AClique+Gossiping&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 8,
+  "results": [
+    {
+      "id": "https://openalex.org/W1617226917",
+      "title": "Queen Bees & Wannabes: Helping Your Daughter Survive Cliques, Gossip, Boyfriends & Other Realities of Adolescence",
+      "date": "2002-05-01",
+      "doi": null,
+      "citations": 106,
+      "authors": [
+        "Rosalind Wiseman"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://edrev.asu.edu/index.php/ER/article/view/336",
+          "pdf": null,
+          "source": null
+        }
+      ],
+      "reference_count": 0
+    },
+    {
+      "id": "https://openalex.org/W2999374336",
+      "title": "Clique Gossiping",
+      "date": "2019-11-19",
+      "doi": "https://doi.org/10.1109/tnet.2019.2952082",
+      "citations": 8,
+      "authors": [
+        "Yang Liu",
+        "Bo Li",
+        "Brian D. O. Anderson",
+        "Guodong Shi"
+      ],
+      "abstract": "This paper proposes and investigates a framework for clique gossip protocols. As complete subnetworks, the existence of cliques is ubiquitous in various social, computer, and engineering networks. By clique gossiping, nodes interact with each other along a sequence of cliques. Clique-gossip protocols are defined as arbitrary linear node interactions where node states are vectors evolving as linear dynamical systems. Such protocols become clique-gossip averaging algorithms when node states are scalars under averaging rules. We generalize the classical notion of line graph to capture the essential node interaction structure induced by both the underlying network and the specific clique sequence. We prove a fundamental eigenvalue invariance principle for periodic clique-gossip protocols, which implies that any permutation of the clique sequence leads to the same spectrum for the overall state transition when the generalized line graph contains no cycle. We also prove that for a network with n nodes, cliques with smaller sizes determined by factors of n can always be constructed leading to finite-time convergent clique-gossip averaging algorithms, provided n is not a prime number. Particularly, such finite-time convergence can be achieved with cliques of equal size m if and only if n is divisible by m and they have exactly the same prime factors. A proven fastest finite-time convergent clique-gossip algorithm is constructed for clique-gossiping using size-m cliques. Additionally, the acceleration effects of clique-gossiping are illustrated via numerical examples.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/tnet.2019.2952082",
+          "pdf": null,
+          "source": "IEEE/ACM Transactions on Networking"
+        },
+        {
+          "url": "http://hdl.handle.net/1885/307516",
+          "pdf": null,
+          "source": "ANU Open Research (Australian National University)"
+        }
+      ],
+      "reference_count": 42
+    },
+    {
+      "id": "https://openalex.org/W595677730",
+      "title": "Queen bees & wannabes : helping your daughter survive cliques, gossip, boyfriends, and the new realities of girl world",
+      "date": "2009-01-01",
+      "doi": null,
+      "citations": 28,
+      "authors": [
+        "Rosalind Wiseman"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://ci.nii.ac.jp/ncid/BB15253758",
+          "pdf": null,
+          "source": "Three Rivers Press eBooks"
+        }
+      ],
+      "reference_count": 0
+    },
+    {
+      "id": "https://openalex.org/W2963853773",
+      "title": "Quantum Clique Gossiping",
+      "date": "2018-02-05",
+      "doi": "https://doi.org/10.1038/s41598-018-21069-7",
+      "citations": 5,
+      "authors": [
+        "Bo Li",
+        "Shuang Li",
+        "Junfeng Wu",
+        "Hongsheng Qi"
+      ],
+      "abstract": "This paper establishes a framework of quantum clique gossiping by introducing local clique operations to networks of interconnected qubits. Cliques are local structures in complex networks being complete subgraphs, which can be used to accelerate classical gossip algorithms. Based on cyclic permutations, clique gossiping leads to collective multi-party qubit interactions. We show that at reduced states, these cliques have the same acceleration effects as their roles in accelerating classical gossip algorithms. For randomized selection of cliques, such improved rate of convergence is precisely characterized. On the other hand, the rate of convergence at the coherent states of the overall quantum network is proven to be decided by the spectrum of a mean-square error evolution matrix. Remarkably, the use of larger quantum cliques does not necessarily increase the speed of the network density aggregation, suggesting quantum network dynamics is not entirely decided by its classical topology.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1038/s41598-018-21069-7",
+          "pdf": "https://www.nature.com/articles/s41598-018-21069-7.pdf",
+          "source": "Scientific Reports"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29426926",
+          "pdf": null,
+          "source": "PubMed"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/5807467",
+          "pdf": null,
+          "source": "PubMed Central"
+        },
+        {
+          "url": "https://doaj.org/article/02f484e7500741359efae3db11f8811c",
+          "pdf": null,
+          "source": "DOAJ (DOAJ: Directory of Open Access Journals)"
+        }
+      ],
+      "reference_count": 23
+    },
+    {
+      "id": "https://openalex.org/W2087068752",
+      "title": "Cliques, rumors, and gossip by the water cooler: Female bullying in the workplace.",
+      "date": "2009-04-01",
+      "doi": "https://doi.org/10.1080/10887150902886423",
+      "citations": 81,
+      "authors": [
+        "Laura M. Crothers",
+        "John Lipinski",
+        "Marcel C. Minutolo"
+      ],
+      "abstract": "Aggression in the workplace has developed as a topic of interest to many in the past decade. Although aggression has been traditionally distinguished in the theoretical and empirical literature as sexual aggression (harassment) and nonsexual aggression, in this manuscript the authors will argue that there are also unique characteristics as well as effects upon recipients of a particular kind of nonsexual aggression: workplace bullying. In particular, a specific type of bullying primarily used by women, relational aggression, will be reviewed and recommendations for managers in addressing relational aggression and bullying in the workplace will be offered.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1080/10887150902886423",
+          "pdf": null,
+          "source": "The Psychologist-Manager Journal"
+        }
+      ],
+      "reference_count": 37
+    },
+    {
+      "id": "https://openalex.org/W3037940665",
+      "title": "Clique Gossiping",
+      "date": "2017-06-08",
+      "doi": null,
+      "citations": 0,
+      "authors": [
+        "Yang Liu",
+        "Bo Li",
+        "Brian D. O. Anderson",
+        "Guodong Shi"
+      ],
+      "abstract": "This paper proposes and investigates a framework for clique gossip protocols. As complete subnetworks, the existence of cliques is ubiquitous in various social, computer, and engineering networks. By clique gossiping, nodes interact with each other along a sequence of cliques. Clique-gossip protocols are defined as arbitrary linear node interactions where node states are vectors evolving as linear dynamical systems. Such protocols become clique-gossip averaging algorithms when node states are scalars under averaging rules. We generalize the classical notion of line graph to capture the essential node interaction structure induced by both the underlying network and the specific clique sequence. We prove a fundamental eigenvalue invariance principle for periodic clique-gossip protocols, which implies that any permutation of the clique sequence leads to the same spectrum for the overall state transition when the generalized line graph contains no cycle. We also prove that for a network with $n$ nodes, cliques with smaller sizes determined by factors of $n$ can always be constructed leading to finite-time convergent clique-gossip averaging algorithms, provided $n$ is not a prime number. Particularly, such finite-time convergence can be achieved with cliques of equal size $m$ if and only if $n$ is divisible by $m$ and they have exactly the same prime factors. A proven fastest finite-time convergent clique-gossip algorithm is constructed for clique-gossiping using size-$m$ cliques. Additionally, the acceleration effects of clique-gossiping are illustrated via numerical examples.",
+      "locations": [
+        {
+          "url": "https://arxiv.org/pdf/1706.02540",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 22
+    },
+    {
+      "id": "https://openalex.org/W4293360637",
+      "title": "Clique Gossiping",
+      "date": "2017-06-08",
+      "doi": "https://doi.org/10.48550/arxiv.1706.02540",
+      "citations": 0,
+      "authors": [
+        "Yang Liu",
+        "Bo Li",
+        "Brian Anderson",
+        "Guodong Shi"
+      ],
+      "abstract": "This paper proposes and investigates a framework for clique gossip protocols. As complete subnetworks, the existence of cliques is ubiquitous in various social, computer, and engineering networks. By clique gossiping, nodes interact with each other along a sequence of cliques. Clique-gossip protocols are defined as arbitrary linear node interactions where node states are vectors evolving as linear dynamical systems. Such protocols become clique-gossip averaging algorithms when node states are scalars under averaging rules. We generalize the classical notion of line graph to capture the essential node interaction structure induced by both the underlying network and the specific clique sequence. We prove a fundamental eigenvalue invariance principle for periodic clique-gossip protocols, which implies that any permutation of the clique sequence leads to the same spectrum for the overall state transition when the generalized line graph contains no cycle. We also prove that for a network with $n$ nodes, cliques with smaller sizes determined by factors of $n$ can always be constructed leading to finite-time convergent clique-gossip averaging algorithms, provided $n$ is not a prime number. Particularly, such finite-time convergence can be achieved with cliques of equal size $m$ if and only if $n$ is divisible by $m$ and they have exactly the same prime factors. A proven fastest finite-time convergent clique-gossip algorithm is constructed for clique-gossiping using size-$m$ cliques. Additionally, the acceleration effects of clique-gossiping are illustrated via numerical examples.",
+      "locations": [
+        {
+          "url": "https://arxiv.org/abs/1706.02540",
+          "pdf": "https://arxiv.org/pdf/1706.02540",
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://doi.org/10.48550/arxiv.1706.02540",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 0
+    }
+  ]
+}

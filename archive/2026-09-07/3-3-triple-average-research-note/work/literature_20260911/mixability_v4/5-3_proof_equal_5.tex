@@ -1,0 +1,265 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+%\subsection{Proof for $n$ either $5$ or $6$}
+%\label{subsec: proof for n either 5 or 6}
+
+In this sub-section we prove that Condition~$\MixCond$ in 
+Theorem~\ref{thm: miscibility characterization}(a) is sufficient 
+for perfect mixability when $n=5$.
+The overall argument is similar to the case $n \geq 7$ we considered in 
+Section~\ref{subsec: proof for n greater-equal than 7}
+(and depicted in Figure~\ref{fig: proof outline n >= 7}),
+although this time we need a slightly different invariant. 
+This is because in the case when $n=5$ there are configurations that
+satisfy Invariant~(I) but do not contain any pair of concentrations
+whose mixing preserves Invariant~(I).
+For example, $E = \braced{0,0,4,4,7}$ with $\average(E)=3$
+satisfies Invariant~(I). The only pair of different concentrations with
+the same parity is $(0,4)$; however, after mixing these concentrations,
+the new configuration will violate condition~(I.1).
+
+Let $A\ingroundset\integers$ be a configuration with $n = \nofdroplets{A} = 5$ and
+ $\average(A)\in\integers$.
+We say that $A$ is \emph{blocking} if $A=\braced{3:a_1,a_2,a_3}$
+where $a_1\neq\half(a_2+a_3)$ and $a_1$ has parity different than $a_2,a_3$.
+Otherwise we say that $A$ is \emph{non-blocking}.
+For example, $A = \braced{0,0,0,3,7}$, with $\average(A)= 2$, is blocking.
+The intuition is that this $A$ has only one pair of same-parity different
+concentrations, namely $(3,7)$, but this pair is not $5$-safe --
+mixing $3$ and $7$ produces configuration
+$A' = \braced{0,0,0,5,5}$ that is $5$-congruent (in fact, it also violates Condition~{\MixCond}).
+
+So, assume that we are given a configuration $C$ with $n = \nofdroplets{C} = 5$ and
+$C \cup \braced{\mu} \ingroundset \integers$, that
+satisfies Condition~{\MixCond}. 
+As in Section~\ref{subsec: proof for n greater-equal than 7},
+if $C$ is already perfectly mixed then we are done.
+Otherwise we start by converting $C$ into a configuration
+ $\intermC\ingroundset\integers$, with $\intermmu = \average(\intermC)\in\integers$,
+such that (i) all concentrations in $\intermC$ are even,
+(ii) $\intermC$ is $5$-incongruent, and
+(iii) $C$ is perfectly mixable with precision at most $1$ if and only if $\intermC$
+is perfectly mixable with precision $0$.
+
+We then simply take $E = \intermC$ (unlike in Section~\ref{subsec: proof for n greater-equal than 7}, we 
+don't need to modify $\intermC$). It thus remains to show that 
+$E$ is perfectly mixable with precision $0$. 
+In order to do so, we will have $E$ maintain the following Invariant~(I'):
+%
+\begin{description}
+	\item{(I.0)} $E\ingroundset \integers$ and $\average(E) = \intermmu$,
+	\item{(I.1')} $E$ is non-blocking, and
+	\item{(I.2)} $E$ is $5$-incongruent.
+\end{description}
+%
+By the properties of $\intermC$, the initial set $E$ satisfies conditions (I.0) and (I.2) and, since
+all concentrations in $E$ are even, it also satisfies (I.1'). Thus
+$E$ satisfies Invariant~(I') and the rest of the proof is devoted to constructing a
+sequence of mixing operations that preserve Invariant~(I') until $E$ becomes near-final,
+which can be mixed perfectly using Lemma~$\ref{lem: mixability for near-final}$.
+
+At this point, we observe that, although in the previous section we considered the case $n \ge 7$,
+the claims in Lemma~$\ref{lem: at most one mod-unsafe pairs}$(a) and~(c)
+hold also for $n=5$ (with $\barp = \braced{5}$), and we will be using them in the proof.
+(Lemma~$\ref{lem: at most one mod-unsafe pairs}$(b) does not apply to $n=5$, however.)
+We will also frequently use Observation~$\ref{obs: A mod-nouniform properties}$ (with $\barp = \braced{5}$)
+that follows directly from Lemma~\ref{lem: mixability m = 2}.
+
+%%%%%%%
+
+\myparagraph{Preserving Invariant~(I')}
+Assume that $E$ satisfies Invariant~(I'). We say that a pair of distinct concentrations in $E$ is \emph{(I')-safe}
+if the configuration obtained from $E$ by mixing these concentrations satisfies Invariant~(I').
+(This is an analogue of the notion of (I)-safe pairs, introduced in Section~\ref{subsec: proof for n greater-equal than 7}.)
+We now show that each configuration $E$ that satisfies Invariant~(I') has a pair
+of concentrations that is either (I')-safe or near-final.
+As we will always choose a pair of concentrations with the same parity for mixing,
+condition~(I.0) will be trivially preserved, so in the proofs below,
+to show that a pair is (I')-safe, we will focus on
+explaining why the other two conditions are preserved.
+
+\begin{lemma}%--------
+	\label{lem: m = 3, preserves invariant, n = 5}
+	Assume that $\nofconcentrations{E}=3$.
+	If $E$ satisfies Invariant~(I') then $E$ has a pair of concentrations
+	that is either (I')-safe or near-final.
+\end{lemma}%----------
+
+\begin{proof}
+	Let $E = \braced{f_1:e_1, f_2:e_2, f_3:e_3}$.
+	By symmetry and reordering, respectively, we can assume that $e_1$ is even
+	and that $f_1\geq f_2 \geq f_3$.
+	We analyze two cases based on $f_1$'s value:
+	
+	\smallskip\noindent
+	\mycase{1} $f_1 = 2$. Thus, $f_2 = 2$ and $f_3 = 1$. We consider two sub-cases.
+
+\vspace{-0.05in}
+	
+	\begin{description}
+	
+	\item{\mycase{1.1}} $e_2$ is even.
+	We will mix $e_1$ and $e_2$, producing $E'=\braced{e_1,e_2,e_3,2:e}$,
+	for $e=\half(e_1+e_2)$. Obviously, $e\notin\braced{e_1,e_2}$. 
+	If $e=e_3$ then $E'$ is near-final
+	(using the partition of $E'$ into $\braced{e_1,e_2},\braced{e_3},\braced{e_3},\braced{e_3}$)
+	and thus $(e_1,e_2)$ is a near-final pair.
+	So, assume that $e\neq e_3$.	
+    
+	Since $f_1 = 2$, by Lemma~$\ref{lem: at most one mod-unsafe pairs}$(c), $E'$
+	satisfies condition~(I.2). Further, as $\nofconcentrations{E'} = 4$,
+	$E'$ also satisfies condition~(I.1').
+	Therefore, $(e_1,e_2)$ is indeed (I')-safe.
+	
+	\item{\mycase{1.2}} $e_2$ is odd.
+	Without loss of generality we can assume that $e_3$ is even (by the odd-even symmetry
+	between $e_1$ and $e_2$.)
+	We mix $e_1$ and $e_3$, and let $E'$ be the resulting configuration.
+	Since $f_1 = 2$, by Lemma~$\ref{lem: at most one mod-unsafe pairs}$(c), 
+	pair $(e_1,e_3)$ is $5$-safe, so $E'$ satisfies condition~(I.2).
+	This, together with Lemma~\ref{lem: mixability m = 2} (as $n = 5$ is prime),
+	implies that $\nofconcentrations{E'} > 2$, which means that
+	$\half(e_1+e_3)\neq e_2$,
+	implying in turn that $E'$ has two non-singletons.
+	Thereby, $E'$ satisfies~(I.1') and thus we can conclude that pair $(e_1,e_3)$ is (I')-safe.
+	
+	\end{description}
+	
+	\smallskip\noindent
+	\mycase{2} $f_1 = 3$. Thus, $f_2 = f_3 = 1$.
+	Since $E$ satisfies~(I.1')
+	we have that at least one of $e_2$ and $e_3$ is even. 
+	By symmetry, we can assume that $e_2$ is even. We mix $e_1$ and $e_2$,
+	and let $E'$ be the new configuration.
+	As $f_1 = 3$, by Lemma~$\ref{lem: at most one mod-unsafe pairs}$(c), $E'$ satisfies~(I.2).
+	Further, $\half(e_1+e_2)\neq e_3$, because otherwise we would have $\nofconcentrations{E'} = 2$,
+	contradicting Lemma~\ref{lem: mixability m = 2}.
+	So $E'$ contains two non-singletons, and thus it satisfies condition~(I.1').
+	Therefore, pair $(e_1,e_2)$ is (I')-safe.	
+\end{proof}
+
+%%%%%%%%%%%%%%%%
+
+\begin{lemma}%--------
+	\label{lem: m = 4, preserves invariant, n = 5}
+	Assume that $\nofconcentrations{E}=4$.
+	If $E$ satisfies Invariant~(I') then $E$ has an (I')-safe pair.
+\end{lemma}%----------
+
+\begin{proof}
+	Let $E = \braced{f_1:e_1, f_2:e_2, f_3:e_3, f_4:e_4}$.
+	By symmetry and reordering, respectively, we can assume that $e_1$ is even
+	and that $f_1 = 2$ and $f_2 = f_3 = f_4 = 1$. We analyze three cases based
+	on the parities of $e_2,e_3,e_4$.
+	
+	\smallskip\noindent
+	\mycase{1} At least two of $e_2,e_3,e_4$ are even.
+	Assume without loss of generality that $e_2,e_3$ are even.
+	Let $e = \half (e_1+e_2)$. Further, assume that $e \neq e_4$
+	(for otherwise we can use $e_3$ instead of $e_2$).
+	Let $E'  = E - \braced{e_1,e_2} \cup \braced{e,e}$ be obtained by mixing $e_1$ and $e_2$.
+	As $f_1 = 2$, $E'$ satisfies~(I.2) by Lemma~$\ref{lem: at most one mod-unsafe pairs}$(c).
+	If $e\neq e_3$ then $\nofconcentrations{E'} = 4$, so $E'$ satisfies~(I.1').
+	If $e = e_3$ then $E' = \braced{e_1,3:e_3,e_4}$ and $e_1,e_3$ are even, so 
+	$E'$ satisfies~(I.1') as well. Thus, pair $(e_1,e_2)$ is (I')-safe.
+	
+	\smallskip\noindent
+	\mycase{2} Exactly one of $e_2,e_3,e_4$ is even.
+	Assume without loss of generality that $e_2$ is even. Let $e=\half(e_1+e_2)$, and
+	let $E' = E - \braced{e_1,e_2} \cup \braced{e,e}$ be obtained by mixing $e_1$ and $e_2$.
+	$E'$ satisfies~(I.2) by Lemma~$\ref{lem: at most one mod-unsafe pairs}$(c).
+	If $e\in E$ then $e\in\braced{e_3,e_4}$, where both $e_3,e_4$ are odd,
+	and one of $e_3,e_4$ is a non-singleton in $E'$.
+	Otherwise, $e\notin E$ and thus $\nofconcentrations{E'} = 4$.
+	Either way $E'$ satisfies~(I.1') and thus pair $(e_1,e_2)$ is (I')-safe.
+
+	\smallskip\noindent
+	\mycase{3} $e_2,e_3,e_4$ are all odd.
+	By Lemma~$\ref{lem: at most one mod-unsafe pairs}$(a)
+	there is at most one $5$-unsafe pair. Assume that $(e_2,e_3)$ is $5$-safe
+	(otherwise use $e_4$ instead of $e_3$).
+	Thus mixing $e_2$ and $e_3$ produces $E' = E - \braced{e_2,e_3} \cup \braced{e,e}$,
+	for $e = \half(e_2+e_3)$, that satisfies condition~(I.2).
+	Moreover, $e\in E$ would imply $\nofconcentrations{E'} = 2$
+	(contradicting Lemma~$\ref{lem: mixability m = 2}$),
+	so we must have $e \notin E$, and thus both $e_1$ and $e$ 
+	are non-singletons in $E'$.
+	Therefore, $E'$ preserves~(I.1') and pair $(e_2,e_3)$ is (I')-safe.
+\end{proof}
+
+%%%%%%%%%%%%%%%%
+
+\begin{lemma}%--------
+	\label{lem: m = 5, preserves invariant, n = 5}
+	Assume that $\nofconcentrations{E}=5$.
+	If $E$ satisfies Invariant~(I') then $E$ has an (I')-safe pair.
+\end{lemma}%---------- 
+
+\begin{proof}
+Let $E = \braced{e_1, e_2,e_3,e_4,e_5}$.
+By symmetry and reordering we can assume that $e_1,e_2,e_3$ have the same parity, say even.
+Additionally, by Lemma~$\ref{lem: at most one mod-unsafe pairs}$(a), there is at most one
+$5$-unsafe pair in $E$, so we can assume that it does not involve $e_1$.
+In other words, all pairs involving $e_1$ and any other even concentration are $5$-safe.  
+We now have three cases, given below. In each case we mix $e_1$ with some other even concentration,
+so conditions~(I.0) and~(I.2) will be satisfied, and we only need to ensure that
+(I.1') is satisfied as well in order to show an (I')-safe pair in $E$.
+
+\smallskip\noindent
+\mycase{1} $e_4$ and $e_5$ are even.
+Choose $i\neq 1$ for which $|e_1 - e_i|$ is minimized, and let
+$e = \half (e_1 + e_i)$. Then $e\notin E$.
+Mixing $e_1$ and $e_i$ gives us configuration $E' = E - \braced{e_1,e_i}\cup \braced{e,e}$
+with  $\nofconcentrations{E'}=4$, so $E'$ satisfies~(I.1').
+
+\smallskip\noindent
+\mycase{2} $e_4$ and $e_5$ have different parity. Say that $e_4$ is even and $e_5$ is odd.
+Let $e =\half (e_1 + e_2)$ and, without loss of generality, 
+assume that $e\neq e_5$ (otherwise, use $e_3$ instead of $e_2$).  
+Mixing $e_1$ and $e_2$ gives us configuration $E' = E - \braced{e_1,e_2}\cup \braced{e,e}$.
+If $e\notin E$, then $\nofconcentrations{E'}=4$.
+Otherwise, $e\in\braced{e_3,e_4}$ and, as $e_3,e_4$ are both even, $E'$ is non-blocking.
+Thus in both sub-cases $E'$ satisfies~(I.1').
+
+\smallskip\noindent
+\mycase{3} $e_4$ and $e_5$ are odd.
+Without loss of generality, assume that $|e_1 - e_2|\le |e_1-e_3|$.
+Then $e =\half (e_1 + e_2) \neq e_3$. Let $E'= E - \braced{e_1,e_2}\cup \braced{e,e}$ be obtained by mixing $e_1$ and $e_2$.
+If $e\notin E$, then $\nofconcentrations{E'}=4$.
+Otherwise, $e\in \braced{e_4,e_5}$ and, as $e_4,e_5$ are both odd, $E'$ is non-blocking. 
+Thus in both sub-cases $E'$ satisfies~(I.1').   
+\end{proof}
+
+%%%%%%%%%%%%%%%%%
+
+\myparagraph{Completing the proof}
+We can now prove that Condition~{\MixCond} in 
+Theorem~\ref{thm: miscibility characterization}(a) is sufficient 
+for perfect mixability when $n=5$.
+Assume that $C$ satisfies Condition~{\MixCond}. 
+If $C$ is perfectly mixed, then we are done.
+Otherwise, as described earlier in this section, 
+we convert $C$ into configuration $\intermC\ingroundset\integers$
+such that $C$ is perfectly mixable with precision at most $1$ if and only if
+$\intermC$ is perfectly mixable with precision $0$.
+This $\intermC$ is $5$-incongruent, all its concentrations are even, and
+it satisfies $\intermmu = \average(\intermC)\in\integers$.
+Thus, if we take $E  = \intermC$, this $E$ satisfies Invariant~(I').
+
+
+If $E$ is near-final, then we use Lemma~\ref{lem: mixability for near-final}
+to perfectly mix $E$.
+If this $E$ is not near-final, then, depending on the value of $\nofconcentrations{E}$, 
+we apply one of Lemmas~\ref{lem: m = 3, preserves invariant, n = 5}, 
+\ref{lem: m = 4, preserves invariant, n = 5},
+or \ref{lem: m = 5, preserves invariant, n = 5}, 
+to show that $E$ has a pair of concentrations that is either (I')-safe or near-final.
+As in Section~\ref{subsec: proof for n greater-equal than 7},
+the value of $\potential(E)$ decreases at least by $1$ after each mixing operation.
+So after a finite sequence of mixing operations involving (I')-safe pairs,
+$E$ must become near-final (as in the cases for Lemma~\ref{lem: m = 3, preserves invariant, n = 5}), 
+which we then perfectly mix using Lemma~\ref{lem: mixability for near-final}.
+
+

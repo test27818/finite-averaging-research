@@ -1,0 +1,623 @@
+{
+  "exact_bounded": [
+    {
+      "bound": 1,
+      "states": 4,
+      "solvable": 4,
+      "unsolvable": 0,
+      "ratio": 0.0,
+      "distance_distribution": {
+        "1": 2,
+        "2": 2
+      },
+      "examples": [],
+      "seconds": 0.0006360000697895885,
+      "memo_states": 5
+    }
+  ],
+  "random": [
+    {
+      "bound": 1,
+      "samples": 20,
+      "accepted": 20,
+      "rejected": 74,
+      "ratio": 0.0,
+      "solvable": 20,
+      "unsolvable": 0,
+      "mean_shortest_solvable": 1.85,
+      "min_shortest": 1,
+      "max_shortest": 2,
+      "seconds": 0.002207400044426322,
+      "records": [
+        {
+          "raw": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            -1
+          ],
+          "state": [
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 1,
+          "energy": 4
+        },
+        {
+          "raw": [
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            0,
+            1,
+            0,
+            -1
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 8
+        },
+        {
+          "raw": [
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            -1,
+            1
+          ],
+          "state": [
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 1,
+          "energy": 4
+        },
+        {
+          "raw": [
+            1,
+            -1,
+            0,
+            -1,
+            1,
+            1,
+            -1,
+            0,
+            1,
+            -1
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 8
+        },
+        {
+          "raw": [
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 6
+        },
+        {
+          "raw": [
+            1,
+            0,
+            0,
+            -1,
+            1,
+            -1,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 6
+        },
+        {
+          "raw": [
+            -1,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            1
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 6
+        },
+        {
+          "raw": [
+            -1,
+            0,
+            0,
+            -1,
+            1,
+            -1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 6
+        },
+        {
+          "raw": [
+            0,
+            0,
+            -1,
+            0,
+            1,
+            -1,
+            -1,
+            0,
+            1,
+            1
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 6
+        },
+        {
+          "raw": [
+            1,
+            0,
+            -1,
+            1,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 6
+        },
+        {
+          "raw": [
+            -1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            -1
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 6
+        },
+        {
+          "raw": [
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            1,
+            1,
+            0,
+            -1,
+            1
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 6
+        },
+        {
+          "raw": [
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            1,
+            1,
+            -1
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 6
+        },
+        {
+          "raw": [
+            1,
+            -1,
+            1,
+            -1,
+            -1,
+            0,
+            1,
+            -1,
+            0,
+            1
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 8
+        },
+        {
+          "raw": [
+            -1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 8
+        },
+        {
+          "raw": [
+            0,
+            1,
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            1,
+            0
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 8
+        },
+        {
+          "raw": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            -1
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 6
+        },
+        {
+          "raw": [
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0
+          ],
+          "state": [
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 1,
+          "energy": 4
+        },
+        {
+          "raw": [
+            1,
+            1,
+            0,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            1,
+            0
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 8
+        },
+        {
+          "raw": [
+            -1,
+            1,
+            0,
+            0,
+            1,
+            -1,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "state": [
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "reachable": true,
+          "shortest": 2,
+          "energy": 6
+        }
+      ]
+    }
+  ],
+  "sampling_guidance": {
+    "reference_observed_rate": 0.0,
+    "samples_for_95pct_one_detection_at_reference": 0,
+    "zero_failures_upper_95pct_after_1000": 0.0029912495450953314,
+    "zero_failures_upper_95pct_after_10000": 0.00029952835977664627,
+    "formula_for_true_rate_r": "ceil(log(0.05)/log(1-r)) samples gives 95% chance to see >=1 counterexample",
+    "warning": "Random ratios depend strongly on the sampling distribution; explicit sparse families can have positive existence but negligible independent-draw probability."
+  }
+}

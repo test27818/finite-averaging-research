@@ -1,0 +1,99 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+%\subsection{Perfect Mixability of Near-Final Configurations}
+%\label{subsec: near-final configurations}
+%\input{5-1_near-final_configurations.tex}
+
+Let $C\ingroundset\integers$ be a configuration with
+$\nofdroplets{C} = n = \sigma 2^\tau$, for some odd $\sigma\in\posintegers$ and $\tau\in\nonnegintegers$,
+with $\average(C) = \mu\in\integers$.
+We say that $C$ is \emph{near-final} if it can be partitioned
+into disjoint multisets $C_1,C_2,...,C_k$, such that, for each $j$,
+$\average(C_j) = \mu$ and $\nofdroplets{C_j}$ is a power of $2$.
+In this sub-section we show (Lemma~\ref{lem: mixability for near-final} below)
+that near-final configurations are perfectly mixable with precision $0$.
+We also show that configurations with
+only two different concentrations that satisfy Condition~{\MixCond} are near-final,
+and thus perfectly mixable.
+
+Define $\potential(C) = \sum_{c\in C}(c - \mu)^2$, which can be thought of as the
+un-normalized variance of $C$. Obviously $\potential(C) \in \nonnegintegers$,
+$\potential(C)=0$ if and only if $C$ is a perfect mixture,
+and, by a straightforward calculation, mixing any two different same-parity concentrations in $C$ 
+decreases the value of $\potential(C)$ by at least $1$.
+
+%%%%%%%%%%%
+
+\begin{lemma}\label{lem: mixability for near-final} 
+	If $C$ is near-final
+	then $C$ is perfectly mixable with precision $0$.
+\end{lemma}
+
+\begin{proof}
+It is sufficient to prove the lemma for the case when $n$ is a power
+of $2$. (Otherwise, we can apply it separately to each set $C_j$ in the 
+partition of $C$ from the definition of near-final configurations.)	
+
+So assume that $n$ is a power of $2$.
+It is sufficient to show that if $\nofconcentrations{C} = m \neq 1$ (that is,
+$C$ is not yet perfectly mixed) then $C$ contains
+	two different concentrations with the same parity. 
+	(Each such mixing strictly decreases $\potential(C)$, so a finite sequence
+	of such mixing operations will perfectly mix $C$.)
+	This is trivially true when $m\geq 3$,
+	so it is sufficient to prove it for $m=2$,
+	that is for $C = \braced{f_1:c_1, f_2:c_2}$. Without loss of generality, 
+	by Observation~\ref{obs: offsetting does not affect reachability},
+	we can assume that $c_2 = 0$,
+	and then we claim that $c_1$ is even.
+	We have $\average(C) = \mu = f_1 c_1/n$.
+	As $\mu\in\integers$, $f_1 < n$ and $n$ is a power of $2$,
+	we have that $c_1$ must be even, as claimed.
+\end{proof}
+
+%%%%%%%%%%
+
+\begin{lemma}\label{lem: mixability m = 2}
+	Assume that $\nofconcentrations{C}=2$, say $C=\braced{f_1:c_1,f_2:c_2}$,
+	and that $C$ satisfies Condition~{\MixCond}.
+	Then $\sigma$ divides $f_1$ and $f_2$.
+	Consequently, we have that
+	$n$ is not prime and $C$ is near-final.
+\end{lemma}
+
+\begin{proof}
+Without loss of generality, assume that $c_2 = 0$. (Otherwise consider
+$C' = C-c_2$ instead. This does not affect Condition~~{\MixCond} and the property of being near-final.)
+Let $c_1 = \alpha 2^{\gamma}$, for some odd $\alpha\in\posintegers$. 
+Then $\mu = f_1c_1/n = f_1\alpha 2^{\gamma}/(\sigma 2^\tau)$. 
+Since $\alpha$ divides $c_1$ and $c_2$, Condition~{\MixCond} implies that 
+$\alpha$ must also divide $\mu$. In other words, $\mu/\alpha = f_1 2^{\gamma}/(\sigma 2^\tau)$
+is integer. This implies, in turn, that $f_1$ is a multiple of $\sigma$, as claimed.
+Since $f_2 = n-f_1$, it also gives us that $f_2$ is a multiple of $\sigma$.    
+
+This immediately implies that $n$ cannot be prime, for $n=f_1+f_2$ is a sum of
+two non-zero multiples of $\sigma$.
+
+To prove the last claim,
+let $f_1 =\sigma f'_1$ and $f_2 = \sigma f'_2$,  for some $f'_1, f'_2 \in\posintegers$.
+Partition $C$ into $\sigma$ sub-multisets of the form $C_j = \braced{f_1':c_1,f'_2:0}$, for $j=1,2,...,\sigma$.
+The cardinality of each $C_j$ is $f'_1+f'_2 = n/\sigma = 2^\tau$ and
+its average is $\average(C_j) = f'_1c_1/(f'_1+f'_2) = (f_1/\sigma)c_1/(n/\sigma) = f_1c_1/n = \mu$.
+Therefore $C$ is near-final, as claimed.
+\end{proof}
+
+We remark that when $n$ is a power of $2$ there is an alternative way to
+perfectly mix $C$, using a divide-and-conquer approach: partition $C$ into
+two equal-size multisets $C', C''$, mix each of these recursively, obtaining
+$n/2$ droplets with concentration $\mu' = \average(C')$ and $n/2$ droplets
+with concentration $\mu'' = \average(C'')$, 
+and then mix $n/2$ disjoint pairs of droplets, one $\mu'$ and the other $\mu''$,
+producing $n$ droplets with concentration $\mu = \average(C)$.
+This approach, however, produces mixing graphs where the intermediate precision 
+could be quite large, so it is not sufficient for our purpose.
+
+
+
+

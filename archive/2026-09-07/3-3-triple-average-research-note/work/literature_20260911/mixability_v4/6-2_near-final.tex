@@ -1,0 +1,145 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection{Proof for near-final configurations}
+%\label{sec: polynomial - near final}
+%\input{6-2_near-final.tex}
+
+In this sub-section we prove that $E$ can be perfectly mixed with precision $0$
+in a polynomial number of mixing operations when $\nofdroplets{E}=n$ is a power of $2$.
+This extends easily to near-final configurations.
+
+Assume that $n$ is a power of $2$. To establish our upper bound, we
+consider a sequence of mixing operations on $E$, where at each step we mix
+farthest-apart same-parity concentrations in $E$. These concentrations
+are both in the same set $E_\pi$, but the two droplets obtained from mixing can be
+either in $E_\pi$ or in $E_{\bar{\pi}}$. Thus this mixing sequence might change
+cardinalities and structure of these sets over time. To obtain our bound, we 
+will need to analyze how these sets evolve during the segments of mixing operations
+that preserve parity (namely when mixing in each $E_\pi$
+produces a concentration in the same $E_\pi$).
+
+More specifically, the proof idea is this: By the choice of the mixing pair,
+if the mixed concentrations are far apart (say, they differ at least by $\diameter(E)/3$), 
+then the value of $\potential(E)$ will significantly decrease, per Observation~\ref{obs: far-appart mix}(b).
+Otherwise, if the mixed concentrations are close to each other, the subsets $E_{even}$ and
+$E_{odd}$ must be separated by a gap of at least $\diameter(E)/3$. For such a 
+separated configuration, the decreases of $\potential(E)$ may be very small (because
+the diameters of $E_{even}$ and $E_{odd}$ may be small compared to $\diameter(E)$).
+We show, however, that after at most a polynomial number of steps there will be a
+mixing operation in some $E_\pi$ that will produce a concentration with
+parity $\barpi$. This guarantees that at the next step the diameter of $E_{\barpi}$ is
+large, so in this step $\potential(E)$ will decrease significantly.     
+
+The above intuition is formalized in  the proof of Lemma~\ref{lem: small mixes} below.
+We first prove the following auxiliary lemma.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{lemma}\label{lem: same-parity mixability}     
+	Let $\pi\in\braced{even,odd}$. 
+	Consider a sequence of farthest-apart mixing operations on $E_\pi\subseteq E$, such
+	that each mixing in $E_\pi$ produces a concentration with the same parity $\pi$.
+	If this sequence contains $4ns(E)$ mixing operations, then after
+	this sequence we have $\nofconcentrations{E_\pi} = 1$.
+\end{lemma} 
+
+\begin{proof}
+	Recall that $\potential_{E_\pi,0}$ denotes the value of $\potential(E_\pi)$ before any mixing has been performed.
+	Let $\nofdroplets{E_\pi} = n_\pi$.
+	By Observation~\ref{obs: far-appart constant mix} (with $\gamma =1$), if we
+	repeatedly mix $\min(E_\pi)$ with $\max(E_\pi)$, then after at most $2n_\pi$ mixes
+	the value of $\potential(E_\pi)$ decreases at least by a factor of $\half$.
+	Thus, after at most $2n_\pi\log{\potential_{E_\pi,0}}$ such mixing operations we must have
+	$\potential(E_\pi) = 0$; that is $\nofconcentrations{E_\pi} = 1$.
+	(More precisely, we achieve $\potential(E_\pi) \le 1$. Since all concentrations in $E_\pi$
+	have the same parity, by simple calculation, this implies that in fact $\potential(E_\pi) = 0$.
+	It is worth to point out here that this argument is different than our earlier argument for
+	$\potential(E)$, since in this case $\average(E_\pi)$ may not be integer.)	
+	To complete the proof, note that
+	$n_\pi\leq n$ and $\potential_{E_\pi,0}\leq\potential_{E,0}$ 
+	and therefore $2n_\pi\log{\potential_{E_\pi,0}} \leq 2n\log{\potential_{E,0}} \leq 4ns(E)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+
+\begin{lemma} \label{lem: small mixes}
+	After any sequence of at most $8ns(E)$ farthest-apart same-parity 
+	mixing operations, $\potential(E)$ decreases at least by a factor of $1 - 1/18n$.
+\end{lemma}   
+
+\begin{proof} 
+	The proof follows the idea outlined at the beginning of this section. 
+	Let $\delta=\diameter(E)$, be the (initial) diameter of $E$.
+	If the farthest-apart same-parity  pair $x,y\in E$ satisfies
+	$|x-y|\geq \delta/3$, then by Observation~$\ref{obs: far-appart mix}$,
+	mixing $x$ and $y$ decreases $\potential(E)$ at least by a factor of $1-1/18n$, 
+	and we are done. 
+	
+	Otherwise, we have that any two same-parity concentrations differ by at most $\delta/3$.
+	Consider $E_{even}$ and $E_{odd}$. By the case assumption, these sets are not empty.
+	Assume without loss of generality that $\max(E_{odd}) > \max(E_{even})$.
+	We then have that $\min(E_{odd}) > \max(E_{odd}) - \delta/3$,
+	$\min(E) = \min(E_{even})$  and $\max(E_{even}) < \min(E_{even}) + \delta/3$.
+	Hence, $\min(E_{odd})  \ge \max(E_{even}) + \delta/3$.
+	
+	Now, from Lemma~$\ref{lem: same-parity mixability}$, 
+	we derive that it takes at most $4ns(E)$ farthest-apart mixing operations on $E_{even}$ 
+	for either an odd concentration to be produced or for $\nofconcentrations{E_{even}} = 1$ to hold 
+	(similarly for $E_{odd}$). 
+	Thus, if we repeatedly mix farthest-apart same-parity droplets in $E$,
+	eventually, after fewer than $8ns(E)$ such mixing operations,	
+	either a mixing in $E_{even}$ will produce an odd concentration or 
+	a mixing in $E_{odd}$ will produce an even concentration.
+	(This is true because we cannot have both $\nofconcentrations{E_{even}} = 1$ 
+	and $\nofconcentrations{E_{odd}} = 1$:
+	as mentioned in the proof for Lemma~\ref{lem: mixability for near-final},
+	$n$ being a power-of-$2$ guarantees the existence of two distinct concentrations with same-parity.)
+	
+	So, if an odd $x$ was produced from a mixing in $E_{even}$, then we can mix $x$ with $\max(E_{odd})$.
+	Otherwise, an even $y$ was produced from a mixing in $E_{odd}$ and we can mix $y$ with $\min(E_{even})$.
+	As both $|x-\max(E_{odd})|$ and $|y-\min(E_{even})|$ are at least $\delta/3$, 
+	either mixing decreases $\potential(E)$ at least by a factor of $1-1/18n$
+	(see Observation~$\ref{obs: far-appart mix}$), and thus the lemma holds.
+\end{proof}         
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Using Lemma~$\ref{lem: small mixes}$ we can now establish a bound on the length of mixing sequences
+when $n$ is a power of $2$, and, more generally, when $E$ is near-final.
+
+\begin{theorem} \label{them: n power of two}
+	If $\nofdroplets{E}=n$ is a power of $2$, then
+	$E$ can be perfectly mixed with precision $0$ 
+	by a mixing sequence of length at most $288n^2s^2(E)$.
+\end{theorem}
+
+\begin{proof}
+	By Lemma~\ref{lem: small mixes}, after a mixing sequence of at most $8ns(E)$ 
+	same-parity farthest-apart mixing operations,
+	$\potential(E)$ decreases at least by a factor of $ (1-1/18n)$.
+	It follows that  after at most $18n$ such mixing sequences, $\potential(E)$ decreases
+	at least by a factor of $\half$ (see the proof of Observation~\ref{obs: far-appart constant mix}).   
+	Consequently, after at most $18n\log{\potential_{E,0}}$ such mixing sequences,
+	$E$ becomes perfectly mixed.	
+	Finally, as $\log {\potential_{E,0}} \le 2 s(E)$ and 
+	each mixing sequence contains at most $8ns(E)$ mixing operations,
+	we obtain that the total number of mixing operations is at most 
+	$(18n\log{\potential_{E,0}})\cdot (8ns(E)) \le (36ns(E)) \cdot (8ns(E)) = 288n^2s^2(E)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
+
+\begin{theorem}\label{thm: E near-final}
+	If $E$ is near-final, then $E$ can be perfectly mixed, with precision $0$,
+	by a mixing sequence of length at most $144n^3s^2(E)$.
+\end{theorem}
+
+\begin{proof}
+	Assume that $E$ is near-final. Recall that $\average(E) = \hatmu$.
+	By definition, $E$ can be partitioned into singletons $\hatmu$ and
+	at most $n/2$ disjoint multisets $A\subseteq E$, each satisfying $\average(A) = \hatmu$
+	and having cardinality that is a (non-zero) power of $2$.
+	By Theorem~$\ref{them: n power of two}$ above,
+	each multiset $A$ in this partition can be perfectly mixed with at most $288n^2s^2(E)$ mixing operations,
+	and the theorem holds.
+\end{proof}

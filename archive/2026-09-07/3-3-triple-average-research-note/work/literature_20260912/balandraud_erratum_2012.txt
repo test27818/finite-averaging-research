@@ -1,0 +1,74 @@
+               ISRAEL JOURNAL OF MATHEMATICS 192 (2012), 1009–1010
+                               DOI: 10.1007/s11856-012-0065-5
+
+
+
+
+        ERRATUM TO: “AN ADDITION THEOREM
+      AND MAXIMAL ZERO-SUM FREE SETS IN Z/pZ”
+
+
+                                                BY
+
+
+                                    Éric Balandraud
+Institut Mathématiques de Jussieu, Équipe Combinatoire et Optimisation, Case 189
+  Université Pierre et Marie Curie 4 place Jussieu, 75152 Paris Cedex 05, France
+                         e-mail: balandraud@math.jussieu.fr
+       URL: http: // www. math. jussieu. fr/ ~ balandraud/ PageEric. html
+
+
+
+   In this note, we give a correct version of Lemma 4 from [1]. In the development
+of the polynomial, it has been incorrectly stated that some coeﬃcients of higher
+degree monomials vanish. Fortunately, the rest of the article does not need any
+other correction since the lemma is used only to estimate the coeﬃcient of a
+            d−1
+monomial i=0 Xibi , with all bi < p. I would like to thank Fang Sun, who ﬁrst
+noticed this imprecision.
+
+Lemma 4: Let F be a field and let t and d be integers satisfying t < p in the
+case that F has a non-zero characteristic p. Then the following equality holds
+in F[X]. We have:
+                        ⎛                     ⎞
+                       t⎝
+                                 2         
+   (X0 + · · · + Xd−1 )           Xj − Xi2 ⎠
+                          0⩽i<j⩽d−1
+       ⎛                                                                               ⎞
+      ⎜                                                                                 ⎟
+      ⎜                            d−1                                                 ⎟
+      ⎜                       t!                                               
+                                                                               d−1
+                                                                                        ⎟
+                                    i=0 (2i)!         b0 , b1 , . . . , bd−1
+     =⎜
+      ⎜                            d−1                                            Xibi ⎟
+                                                                                        ⎟ + Sp ,
+      ⎜ (b0 ,...,bd−1 )             i=0 bi !
+                                                     0, 2, . . . , 2(d − 1)             ⎟
+      ⎝d−1                                                                    i=0
+                                                                                        ⎠
+           i=0 bi =t+d(d−1)
+             max{bi }<p
+
+where Sp is the sum of all monomials that are each divisible by Xip for some
+i ∈ [1, d].
+
+    December 16, 2011 and in revised form December 27, 2011
+
+
+
+                                               1009
+1010                           ÉRIC BALANDRAUD                          Isr. J. Math.
+
+
+  The proof is essentially the same. The only diﬀerence is that the sum Sp is
+considered separately. A complete proof of the lemma may be found on the
+author’s homepage.
+
+
+                                   References
+[1] E. Balandraud, An addition theorem and maximal zero-sum free sets in Z/pZ, Israel
+    Journal of Mathematics 188 (2012), 405–429.
+

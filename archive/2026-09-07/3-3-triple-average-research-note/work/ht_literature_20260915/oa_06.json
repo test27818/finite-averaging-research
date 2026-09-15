@@ -1,0 +1,7080 @@
+{
+  "index": 6,
+  "query": "smallest generators finite fields",
+  "utc": "2026-09-15T07:12:50.004812+00:00",
+  "url": "https://api.openalex.org/works?search=smallest+generators+finite+fields&per-page=12",
+  "status": 200,
+  "count": 83886,
+  "results": [
+    {
+      "id": "https://openalex.org/W1517403092",
+      "title": "A statistical test suite for random and pseudorandom number generators for cryptographic applications",
+      "publication_year": 2010,
+      "doi": "https://doi.org/10.6028/nist.sp.800-22r1a",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5044433428",
+            "display_name": "Lawrence E Bassham",
+            "orcid": "https://orcid.org/0000-0003-0856-9990"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210126846",
+              "display_name": "Information Technology Laboratory",
+              "ror": "https://ror.org/0440c3437",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "L E Bassham",
+          "raw_affiliation_strings": [
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5029752487",
+            "display_name": "Andrew L. Rukhin",
+            "orcid": "https://orcid.org/0000-0002-1146-8595"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "A L Rukhin",
+          "raw_affiliation_strings": [
+            "Statistical Engineering",
+            "Statistical Engineering Division"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Statistical Engineering",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Statistical Engineering Division",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5038969042",
+            "display_name": "Juan Soto",
+            "orcid": "https://orcid.org/0000-0002-5821-4533"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210126846",
+              "display_name": "Information Technology Laboratory",
+              "ror": "https://ror.org/0440c3437",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "J Soto",
+          "raw_affiliation_strings": [
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5045422942",
+            "display_name": "James Nechvatal",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210126846",
+              "display_name": "Information Technology Laboratory",
+              "ror": "https://ror.org/0440c3437",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "J R Nechvatal",
+          "raw_affiliation_strings": [
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5066453741",
+            "display_name": "M E Smid",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210126846",
+              "display_name": "Information Technology Laboratory",
+              "ror": "https://ror.org/0440c3437",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "M E Smid",
+          "raw_affiliation_strings": [
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5108232959",
+            "display_name": "Emma Barker",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210126846",
+              "display_name": "Information Technology Laboratory",
+              "ror": "https://ror.org/0440c3437",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "E B Barker",
+          "raw_affiliation_strings": [
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5039727608",
+            "display_name": "Stefan D. Leigh",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "S D Leigh",
+          "raw_affiliation_strings": [
+            "Statistical Engineering",
+            "Statistical Engineering Division"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Statistical Engineering",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Statistical Engineering Division",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5066957107",
+            "display_name": "Mark Levenson",
+            "orcid": "https://orcid.org/0000-0001-8971-762X"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "M Levenson",
+          "raw_affiliation_strings": [
+            "Statistical Engineering",
+            "Statistical Engineering Division"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Statistical Engineering",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Statistical Engineering Division",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5039914254",
+            "display_name": "Márk Vangel",
+            "orcid": "https://orcid.org/0000-0003-2993-2365"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "M Vangel",
+          "raw_affiliation_strings": [
+            "Statistical Engineering",
+            "Statistical Engineering Division"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Statistical Engineering",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Statistical Engineering Division",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5079411499",
+            "display_name": "David Banks",
+            "orcid": "https://orcid.org/0000-0002-2376-0710"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "D L Banks",
+          "raw_affiliation_strings": [
+            "Statistical Engineering",
+            "Statistical Engineering Division"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Statistical Engineering",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Statistical Engineering Division",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5041078046",
+            "display_name": "N. Alan Heckert",
+            "orcid": "https://orcid.org/0000-0002-8430-6757"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "N A Heckert",
+          "raw_affiliation_strings": [
+            "Statistical Engineering Division"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Statistical Engineering Division",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5031163960",
+            "display_name": "James F. Dray",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210126846",
+              "display_name": "Information Technology Laboratory",
+              "ror": "https://ror.org/0440c3437",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "J F Dray",
+          "raw_affiliation_strings": [
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5057834821",
+            "display_name": "San Vo",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210126846",
+              "display_name": "Information Technology Laboratory",
+              "ror": "https://ror.org/0440c3437",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "S Vo",
+          "raw_affiliation_strings": [
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+            "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg, MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I4210126846"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Reports": [
+          0
+        ],
+        "on": [
+          1,
+          90
+        ],
+        "Computer": [
+          2
+        ],
+        "Systems": [
+          3
+        ],
+        "TechnologyThe": [
+          4
+        ],
+        "Information": [
+          5
+        ],
+        "Technology": [
+          6,
+          16,
+          115
+        ],
+        "Laboratory": [
+          7
+        ],
+        "(ITL)": [
+          8
+        ],
+        "at": [
+          9
+        ],
+        "the": [
+          10,
+          19,
+          30,
+          51,
+          61,
+          73,
+          156,
+          170,
+          177,
+          181
+        ],
+        "National": [
+          11,
+          110,
+          157
+        ],
+        "Institute": [
+          12,
+          111,
+          158
+        ],
+        "of": [
+          13,
+          43,
+          56,
+          63,
+          78,
+          112,
+          159
+        ],
+        "Standards": [
+          14,
+          113,
+          160
+        ],
+        "and": [
+          15,
+          22,
+          33,
+          46,
+          53,
+          67,
+          70,
+          76,
+          94,
+          100,
+          107,
+          114,
+          161
+        ],
+        "(NIST)": [
+          17
+        ],
+        "promotes": [
+          18
+        ],
+        "U.S.": [
+          20
+        ],
+        "economy": [
+          21
+        ],
+        "public": [
+          23
+        ],
+        "welfare": [
+          24
+        ],
+        "by": [
+          25,
+          155
+        ],
+        "providing": [
+          26
+        ],
+        "technical": [
+          27,
+          47
+        ],
+        "leadership": [
+          28
+        ],
+        "for": [
+          29,
+          72,
+          180
+        ],
+        "nation's": [
+          31
+        ],
+        "measurement": [
+          32
+        ],
+        "standards": [
+          34,
+          69
+        ],
+        "infrastructure.ITL": [
+          35
+        ],
+        "develops": [
+          36
+        ],
+        "tests,": [
+          37
+        ],
+        "test": [
+          38
+        ],
+        "methods,": [
+          39
+        ],
+        "reference": [
+          40
+        ],
+        "data,": [
+          41
+        ],
+        "proof": [
+          42
+        ],
+        "concept": [
+          44,
+          144
+        ],
+        "implementations,": [
+          45
+        ],
+        "analysis": [
+          48
+        ],
+        "to": [
+          49,
+          138,
+          150,
+          167
+        ],
+        "advance": [
+          50
+        ],
+        "development": [
+          52,
+          62
+        ],
+        "productive": [
+          54
+        ],
+        "use": [
+          55
+        ],
+        "information": [
+          57,
+          81
+        ],
+        "technology.ITL's": [
+          58
+        ],
+        "responsibilities": [
+          59
+        ],
+        "include": [
+          60
+        ],
+        "technical,": [
+          64
+        ],
+        "physical,": [
+          65
+        ],
+        "administrative,": [
+          66
+        ],
+        "management": [
+          68
+        ],
+        "guidelines": [
+          71
+        ],
+        "cost-effective": [
+          74
+        ],
+        "security": [
+          75,
+          99
+        ],
+        "privacy": [
+          77
+        ],
+        "sensitive": [
+          79
+        ],
+        "unclassified": [
+          80
+        ],
+        "in": [
+          82,
+          97,
+          133,
+          136
+        ],
+        "Federal": [
+          83
+        ],
+        "computer": [
+          84,
+          98
+        ],
+        "systems.This": [
+          85
+        ],
+        "Special": [
+          86,
+          116
+        ],
+        "Publication": [
+          87,
+          117
+        ],
+        "800-series": [
+          88
+        ],
+        "reports": [
+          89
+        ],
+        "ITL's": [
+          91
+        ],
+        "research,": [
+          92
+        ],
+        "guidance,": [
+          93
+        ],
+        "outreach": [
+          95
+        ],
+        "efforts": [
+          96
+        ],
+        "its": [
+          101
+        ],
+        "collaborative": [
+          102
+        ],
+        "activities": [
+          103
+        ],
+        "with": [
+          104
+        ],
+        "industry,": [
+          105
+        ],
+        "government,": [
+          106
+        ],
+        "academic": [
+          108
+        ],
+        "organizations.": [
+          109
+        ],
+        "800-22": [
+          118
+        ],
+        "revision": [
+          119
+        ],
+        "1aNatl.Inst.Stand.Technol.Spec.Publ.800-22rev1a,": [
+          120
+        ],
+        "131": [
+          121
+        ],
+        "pages": [
+          122
+        ],
+        "(April": [
+          123
+        ],
+        "2010)Certain": [
+          124
+        ],
+        "commercial": [
+          125
+        ],
+        "entities,": [
+          126,
+          171
+        ],
+        "equipment,": [
+          127
+        ],
+        "or": [
+          128,
+          143,
+          153,
+          173
+        ],
+        "materials": [
+          129
+        ],
+        "may": [
+          130
+        ],
+        "be": [
+          131
+        ],
+        "identified": [
+          132
+        ],
+        "this": [
+          134
+        ],
+        "document": [
+          135
+        ],
+        "order": [
+          137
+        ],
+        "describe": [
+          139
+        ],
+        "an": [
+          140
+        ],
+        "experimental": [
+          141
+        ],
+        "procedure": [
+          142
+        ],
+        "adequately.Such": [
+          145
+        ],
+        "identification": [
+          146
+        ],
+        "is": [
+          147,
+          164
+        ],
+        "not": [
+          148
+        ],
+        "intended": [
+          149,
+          166
+        ],
+        "imply": [
+          151,
+          168
+        ],
+        "recommendation": [
+          152
+        ],
+        "endorsement": [
+          154
+        ],
+        "Technology,": [
+          162
+        ],
+        "nor": [
+          163
+        ],
+        "it": [
+          165
+        ],
+        "that": [
+          169
+        ],
+        "materials,": [
+          172
+        ],
+        "equipment": [
+          174
+        ],
+        "are": [
+          175
+        ],
+        "necessarily": [
+          176
+        ],
+        "best": [
+          178
+        ],
+        "available": [
+          179
+        ],
+        "purpose.": [
+          182
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.6028/nist.sp.800-22r1a",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.6028/nist.sp.800-22r1a",
+          "pdf_url": "https://doi.org/10.6028/nist.sp.800-22r1a",
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "National Institute of Standards and Technology",
+          "raw_type": "report"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W1480277947",
+        "https://openalex.org/W1537618872",
+        "https://openalex.org/W1577120563",
+        "https://openalex.org/W1586944506",
+        "https://openalex.org/W1619204927",
+        "https://openalex.org/W1660562555",
+        "https://openalex.org/W1976634091",
+        "https://openalex.org/W1982089252",
+        "https://openalex.org/W1985411441",
+        "https://openalex.org/W2001659245",
+        "https://openalex.org/W2020579867",
+        "https://openalex.org/W2025467229",
+        "https://openalex.org/W2025482752",
+        "https://openalex.org/W2025905409",
+        "https://openalex.org/W2028490525",
+        "https://openalex.org/W2030269782",
+        "https://openalex.org/W2060365990",
+        "https://openalex.org/W2107745473",
+        "https://openalex.org/W2108797973",
+        "https://openalex.org/W2120062331",
+        "https://openalex.org/W2752885492",
+        "https://openalex.org/W2752908210",
+        "https://openalex.org/W2795527085",
+        "https://openalex.org/W2797228403",
+        "https://openalex.org/W2986057930",
+        "https://openalex.org/W3198310217",
+        "https://openalex.org/W4241031153",
+        "https://openalex.org/W4289126832",
+        "https://openalex.org/W4299987825",
+        "https://openalex.org/W4300463303",
+        "https://openalex.org/W4300614018",
+        "https://openalex.org/W4317707897",
+        "https://openalex.org/W6636975353",
+        "https://openalex.org/W6644293705"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W4243494487",
+      "title": "A statistical test suite for random and pseudorandom number generators for cryptographic applications",
+      "publication_year": 2000,
+      "doi": "https://doi.org/10.6028/nist.sp.800-22",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5029752487",
+            "display_name": "Andrew L. Rukhin",
+            "orcid": "https://orcid.org/0000-0002-1146-8595"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210143979",
+              "display_name": "Systems Technology (United States)",
+              "ror": "https://ror.org/04cv8g472",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210143979"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Andrew Rukhin",
+          "raw_affiliation_strings": [
+            "COMPUTER SECURITY",
+            "Reports on Computer Systems Technology",
+            "statistical Engineering Division ^Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "COMPUTER SECURITY",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Reports on Computer Systems Technology",
+              "institution_ids": [
+                "https://openalex.org/I4210143979"
+              ]
+            },
+            {
+              "raw_affiliation_string": "statistical Engineering Division ^Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5007614452",
+            "display_name": "Juan Sota",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Juan Sota",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5045422942",
+            "display_name": "James Nechvatal",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "James Nechvatal",
+          "raw_affiliation_strings": [
+            "COMPUTER SECURITY",
+            "National Institute of Standards and Technology (NIST)"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "COMPUTER SECURITY",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "National Institute of Standards and Technology (NIST)",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5051543465",
+            "display_name": "Miles E. Smid",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Miles Smid",
+          "raw_affiliation_strings": [
+            "COMPUTER SECURITY"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "COMPUTER SECURITY",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5054102530",
+            "display_name": "Elaine B. Barker",
+            "orcid": "https://orcid.org/0000-0003-0454-0461"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Elaine Barker",
+          "raw_affiliation_strings": [
+            "COMPUTER SECURITY"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "COMPUTER SECURITY",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5039727608",
+            "display_name": "Stefan D. Leigh",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Stefan Leigh",
+          "raw_affiliation_strings": [
+            "COMPUTER SECURITY",
+            "statistical Engineering Division ^Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "COMPUTER SECURITY",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "statistical Engineering Division ^Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5066957107",
+            "display_name": "Mark Levenson",
+            "orcid": "https://orcid.org/0000-0001-8971-762X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Mark Levenson",
+          "raw_affiliation_strings": [
+            "COMPUTER SECURITY",
+            "statistical Engineering Division ^Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "COMPUTER SECURITY",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "statistical Engineering Division ^Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5039914254",
+            "display_name": "Márk Vangel",
+            "orcid": "https://orcid.org/0000-0003-2993-2365"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Mark Vangel",
+          "raw_affiliation_strings": [
+            "COMPUTER SECURITY",
+            "statistical Engineering Division ^Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "COMPUTER SECURITY",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "statistical Engineering Division ^Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5087666408",
+            "display_name": "David Banks",
+            "orcid": "https://orcid.org/0000-0002-4575-504X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "David Banks",
+          "raw_affiliation_strings": [
+            "COMPUTER SECURITY",
+            "statistical Engineering Division ^Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "COMPUTER SECURITY",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "statistical Engineering Division ^Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5041078046",
+            "display_name": "N. Alan Heckert",
+            "orcid": "https://orcid.org/0000-0002-8430-6757"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321296531",
+              "display_name": "National Institute of Standards and Technology",
+              "ror": "https://ror.org/05xpvk416",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1321296531",
+                "https://openalex.org/I1343035065"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Alan Heckert",
+          "raw_affiliation_strings": [
+            "COMPUTER SECURITY",
+            "statistical Engineering Division ^Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "COMPUTER SECURITY",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "statistical Engineering Division ^Computer Security Division Information Technology Laboratory National Institute of Standards and Technology Gaithersburg , MD 20899-8930",
+              "institution_ids": [
+                "https://openalex.org/I1321296531"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5031163960",
+            "display_name": "James F. Dray",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "James Dray",
+          "raw_affiliation_strings": [
+            "COMPUTER SECURITY"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "COMPUTER SECURITY",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5057834821",
+            "display_name": "San Vo",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "San Vo",
+          "raw_affiliation_strings": [
+            "COMPUTER SECURITY"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "COMPUTER SECURITY",
+              "institution_ids": []
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "rhe": [
+          0
+        ],
+        "National": [
+          1
+        ],
+        "Institute": [
+          2
+        ],
+        "of": [
+          3,
+          19
+        ],
+        "Standards": [
+          4
+        ],
+        "and": [
+          5
+        ],
+        "Technology": [
+          6
+        ],
+        "was": [
+          7
+        ],
+        "established": [
+          8
+        ],
+        "in": [
+          9,
+          16
+        ],
+        "1988": [
+          10
+        ],
+        "by": [
+          11
+        ],
+        "Congress": [
+          12
+        ],
+        "to": [
+          13,
+          24,
+          28,
+          32,
+          39
+        ],
+        "\"assist": [
+          14
+        ],
+        "industry": [
+          15
+        ],
+        "the": [
+          17
+        ],
+        "development": [
+          18
+        ],
+        "technology": [
+          20
+        ],
+        ".": [
+          21,
+          22,
+          36,
+          37
+        ],
+        ".needed": [
+          23
+        ],
+        "improve": [
+          25
+        ],
+        "product": [
+          26,
+          34
+        ],
+        "quality,": [
+          27
+        ],
+        "modernize": [
+          29
+        ],
+        "manufacturing": [
+          30
+        ],
+        "processes,": [
+          31
+        ],
+        "ensure": [
+          33
+        ],
+        "reliability": [
+          35
+        ],
+        ".and": [
+          38
+        ],
+        "facilitate": [
+          40
+        ],
+        "rapid": [
+          41
+        ],
+        "commercialization": [
+          42
+        ],
+        "...": [
+          43
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.6028/nist.sp.800-22",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.6028/nist.sp.800-22",
+          "pdf_url": "https://doi.org/10.6028/nist.sp.800-22",
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "National Institute of Standards and Technology",
+          "raw_type": "report"
+        },
+        {
+          "id": "pmh:oai:CiteSeerX.psu:10.1.1.153.2597",
+          "is_oa": false,
+          "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.153.2597",
+          "pdf_url": null,
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "http://csrc.ncsl.nist.gov/publications/nistpubs/800-22-rev1/SP800-22rev1.pdf",
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:ADA393366",
+          "is_oa": false,
+          "landing_page_url": "http://oai.dtic.mil/oai/oai?&amp;verb=getRecord&amp;metadataPrefix=html&amp;identifier=ADA393366",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4406923043",
+            "display_name": "Defense Technical Information Center (DTIC)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "DTIC",
+          "raw_type": "Text"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W1480277947",
+        "https://openalex.org/W1537618872",
+        "https://openalex.org/W1577120563",
+        "https://openalex.org/W1765265555",
+        "https://openalex.org/W1976634091",
+        "https://openalex.org/W1985411441",
+        "https://openalex.org/W2001659245",
+        "https://openalex.org/W2020579867",
+        "https://openalex.org/W2025905409",
+        "https://openalex.org/W2030269782",
+        "https://openalex.org/W2052638374",
+        "https://openalex.org/W2085759780",
+        "https://openalex.org/W2107745473",
+        "https://openalex.org/W2108797973",
+        "https://openalex.org/W2129108235",
+        "https://openalex.org/W2752061190",
+        "https://openalex.org/W2752885492",
+        "https://openalex.org/W2795527085",
+        "https://openalex.org/W2797228403",
+        "https://openalex.org/W2986057930",
+        "https://openalex.org/W3198310217",
+        "https://openalex.org/W4213248042",
+        "https://openalex.org/W4241031153",
+        "https://openalex.org/W4289126832",
+        "https://openalex.org/W4299987825",
+        "https://openalex.org/W4300463303",
+        "https://openalex.org/W4317707897",
+        "https://openalex.org/W6636975353",
+        "https://openalex.org/W6644293705"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W1889142700",
+      "title": "Anti de Sitter space and holography",
+      "publication_year": 1998,
+      "doi": "https://doi.org/10.4310/atmp.1998.v2.n2.a2",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5032512426",
+            "display_name": "Edward Witten",
+            "orcid": "https://orcid.org/0000-0002-7752-6073"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I40036882",
+              "display_name": "Institute for Advanced Study",
+              "ror": "https://ror.org/00f809463",
+              "country_code": "US",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I40036882"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Edward Witten",
+          "raw_affiliation_strings": [
+            "School of Natural Sciences Institute for Advanced Study Olden Lane , Princeton , NJ 08540 , U.S.A",
+            "School of Natural Sciences Institute for Advanced Study Olden Lane, Princeton, NJ 08540, U.S.A"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Natural Sciences Institute for Advanced Study Olden Lane , Princeton , NJ 08540 , U.S.A",
+              "institution_ids": [
+                "https://openalex.org/I40036882"
+              ]
+            },
+            {
+              "raw_affiliation_string": "School of Natural Sciences Institute for Advanced Study Olden Lane, Princeton, NJ 08540, U.S.A",
+              "institution_ids": [
+                "https://openalex.org/I40036882"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Recently,": [
+          0
+        ],
+        "it": [
+          1
+        ],
+        "has": [
+          2,
+          152
+        ],
+        "been": [
+          3
+        ],
+        "proposed": [
+          4
+        ],
+        "by": [
+          5,
+          68,
+          91
+        ],
+        "Maldacena": [
+          6
+        ],
+        "that": [
+          7,
+          104,
+          146
+        ],
+        "large": [
+          8,
+          154
+        ],
+        "N": [
+          9,
+          155
+        ],
+        "limits": [
+          10
+        ],
+        "of": [
+          11,
+          24,
+          32,
+          58,
+          71,
+          83,
+          93,
+          99,
+          108,
+          122,
+          141,
+          162
+        ],
+        "certain": [
+          12
+        ],
+        "conformal": [
+          13,
+          52,
+          63,
+          86
+        ],
+        "field": [
+          14,
+          53,
+          64,
+          87
+        ],
+        "theories": [
+          15
+        ],
+        "in": [
+          16,
+          22,
+          62,
+          85,
+          95,
+          129
+        ],
+        "d": [
+          17,
+          33
+        ],
+        "dimensions": [
+          18,
+          82
+        ],
+        "can": [
+          19,
+          136
+        ],
+        "be": [
+          20
+        ],
+        "described": [
+          21
+        ],
+        "terms": [
+          23
+        ],
+        "supergravity": [
+          25,
+          73,
+          111
+        ],
+        "(and": [
+          26
+        ],
+        "string": [
+          27
+        ],
+        "theory)": [
+          28
+        ],
+        "on": [
+          29,
+          43,
+          75,
+          112
+        ],
+        "the": [
+          30,
+          69,
+          72,
+          76,
+          105,
+          119,
+          142,
+          147,
+          160
+        ],
+        "product": [
+          31
+        ],
+        "4-1dimensional": [
+          34
+        ],
+        "AdS": [
+          35,
+          163
+        ],
+        "space": [
+          36
+        ],
+        "with": [
+          37,
+          118
+        ],
+        "a": [
+          38,
+          48,
+          138,
+          153
+        ],
+        "compact": [
+          39
+        ],
+        "manifold.Here": [
+          40
+        ],
+        "we": [
+          41,
+          102
+        ],
+        "elaborate": [
+          42
+        ],
+        "this": [
+          44,
+          100
+        ],
+        "idea": [
+          45
+        ],
+        "and": [
+          46,
+          56,
+          144
+        ],
+        "propose": [
+          47
+        ],
+        "precise": [
+          49
+        ],
+        "correspondence": [
+          50,
+          143
+        ],
+        "between": [
+          51
+        ],
+        "theory": [
+          54,
+          65,
+          88,
+          128,
+          151
+        ],
+        "observables": [
+          55
+        ],
+        "those": [
+          57
+        ],
+        "supergravity:": [
+          59
+        ],
+        "correlation": [
+          60
+        ],
+        "functions": [
+          61
+        ],
+        "are": [
+          66,
+          89
+        ],
+        "given": [
+          67,
+          90
+        ],
+        "dependence": [
+          70
+        ],
+        "action": [
+          74
+        ],
+        "asymptotic": [
+          77
+        ],
+        "behavior": [
+          78
+        ],
+        "at": [
+          79
+        ],
+        "infinity.In": [
+          80
+        ],
+        "particular,": [
+          81
+        ],
+        "operators": [
+          84,
+          121
+        ],
+        "masses": [
+          92
+        ],
+        "particles": [
+          94
+        ],
+        "supergravity.As": [
+          96
+        ],
+        "quantitative": [
+          97
+        ],
+        "confirmation": [
+          98
+        ],
+        "correspondence,": [
+          101
+        ],
+        "note": [
+          103
+        ],
+        "Kaluza-Klein": [
+          106
+        ],
+        "modes": [
+          107
+        ],
+        "Type": [
+          109
+        ],
+        "IIB": [
+          110
+        ],
+        "AdS^": [
+          113
+        ],
+        "x": [
+          114
+        ],
+        "S": [
+          115
+        ],
+        "5": [
+          116
+        ],
+        "match": [
+          117
+        ],
+        "chiral": [
+          120
+        ],
+        "Af": [
+          123,
+          148
+        ],
+        "=": [
+          124,
+          149
+        ],
+        "4": [
+          125,
+          150
+        ],
+        "super": [
+          126
+        ],
+        "Yang-Mills": [
+          127
+        ],
+        "four": [
+          130
+        ],
+        "dimensions.With": [
+          131
+        ],
+        "some": [
+          132
+        ],
+        "further": [
+          133
+        ],
+        "assumptions,": [
+          134
+        ],
+        "one": [
+          135
+        ],
+        "deduce": [
+          137
+        ],
+        "H'amiltonian": [
+          139
+        ],
+        "version": [
+          140
+        ],
+        "show": [
+          145
+        ],
+        "phase": [
+          156
+        ],
+        "transition": [
+          157
+        ],
+        "related": [
+          158
+        ],
+        "to": [
+          159
+        ],
+        "thermodynamics": [
+          161
+        ],
+        "black": [
+          164
+        ],
+        "holes.": [
+          165
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.4310/atmp.1998.v2.n2.a2",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.4310/atmp.1998.v2.n2.a2",
+          "pdf_url": "http://www.intlpress.com/site/pub/files/_fulltext/journals/atmp/1998/0002/0002/ATMP-1998-0002-0002-a002.pdf",
+          "source": {
+            "id": "https://openalex.org/S207372152",
+            "display_name": "Advances in Theoretical and Mathematical Physics",
+            "issn_l": "1095-0753",
+            "issn": [
+              "1095-0753",
+              "1095-0761"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4327904645",
+            "host_organization_name": "International Press of Boston",
+            "host_organization_lineage": [
+              "https://openalex.org/P4327904645"
+            ],
+            "host_organization_lineage_names": [
+              "International Press of Boston"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Advances in Theoretical and Mathematical Physics",
+          "raw_type": "journal-article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W1501466444",
+        "https://openalex.org/W1612506229",
+        "https://openalex.org/W1642297462",
+        "https://openalex.org/W1971350117",
+        "https://openalex.org/W1972290465",
+        "https://openalex.org/W1980596762",
+        "https://openalex.org/W2003022923",
+        "https://openalex.org/W2003669165",
+        "https://openalex.org/W2007154797",
+        "https://openalex.org/W2007185418",
+        "https://openalex.org/W2008797769",
+        "https://openalex.org/W2008874893",
+        "https://openalex.org/W2011347314",
+        "https://openalex.org/W2011578505",
+        "https://openalex.org/W2013668637",
+        "https://openalex.org/W2017133042",
+        "https://openalex.org/W2020856415",
+        "https://openalex.org/W2022109344",
+        "https://openalex.org/W2029403139",
+        "https://openalex.org/W2031192616",
+        "https://openalex.org/W2033649663",
+        "https://openalex.org/W2053488214",
+        "https://openalex.org/W2060554124",
+        "https://openalex.org/W2070197840",
+        "https://openalex.org/W2071313683",
+        "https://openalex.org/W2071955904",
+        "https://openalex.org/W2081516391",
+        "https://openalex.org/W2085262630",
+        "https://openalex.org/W2086731073",
+        "https://openalex.org/W2088299329",
+        "https://openalex.org/W2095329260",
+        "https://openalex.org/W2117709364",
+        "https://openalex.org/W2124590498",
+        "https://openalex.org/W2141586044",
+        "https://openalex.org/W2144012213",
+        "https://openalex.org/W2145023644",
+        "https://openalex.org/W2150781355",
+        "https://openalex.org/W2162284105",
+        "https://openalex.org/W2216725994",
+        "https://openalex.org/W2726603570",
+        "https://openalex.org/W2952011874",
+        "https://openalex.org/W2963584573",
+        "https://openalex.org/W3000019265",
+        "https://openalex.org/W3099253649",
+        "https://openalex.org/W3099977794",
+        "https://openalex.org/W3100409240",
+        "https://openalex.org/W3101795286",
+        "https://openalex.org/W3102778279",
+        "https://openalex.org/W3103280686",
+        "https://openalex.org/W3103690389",
+        "https://openalex.org/W3103741009",
+        "https://openalex.org/W4249956767",
+        "https://openalex.org/W6642681490",
+        "https://openalex.org/W6785344721",
+        "https://openalex.org/W6785573804",
+        "https://openalex.org/W6831980656",
+        "https://openalex.org/W6910648325"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2050777560",
+      "title": "Generators and irreducible polynomials over finite fields",
+      "publication_year": 1997,
+      "doi": "https://doi.org/10.1090/s0025-5718-97-00835-1",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5108301416",
+            "display_name": "Daqing Wan",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I130769515",
+              "display_name": "Pennsylvania State University",
+              "ror": "https://ror.org/04p491231",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I130769515"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Daqing Wan",
+          "raw_affiliation_strings": [
+            "Department of Mathematics, The Pennsylvania State University, University Park, Pennsylvania 16802",
+            "Department of Mathematics, the Pennsylvania State University, University Park, Pennsylvania 16802"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics, The Pennsylvania State University, University Park, Pennsylvania 16802",
+              "institution_ids": [
+                "https://openalex.org/I130769515"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematics, the Pennsylvania State University, University Park, Pennsylvania 16802",
+              "institution_ids": [
+                "https://openalex.org/I130769515"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Weil’s": [
+          0
+        ],
+        "character": [
+          1
+        ],
+        "sum": [
+          2
+        ],
+        "estimate": [
+          3
+        ],
+        "is": [
+          4,
+          29
+        ],
+        "used": [
+          5
+        ],
+        "to": [
+          6,
+          23
+        ],
+        "study": [
+          7
+        ],
+        "the": [
+          8,
+          14,
+          24
+        ],
+        "problem": [
+          9
+        ],
+        "of": [
+          10,
+          17,
+          26,
+          36,
+          39
+        ],
+        "constructing": [
+          11
+        ],
+        "generators": [
+          12
+        ],
+        "for": [
+          13
+        ],
+        "multiplicative": [
+          15
+        ],
+        "group": [
+          16
+        ],
+        "a": [
+          18,
+          37
+        ],
+        "finite": [
+          19
+        ],
+        "field.": [
+          20
+        ],
+        "An": [
+          21
+        ],
+        "application": [
+          22
+        ],
+        "distribution": [
+          25
+        ],
+        "irreducible": [
+          27
+        ],
+        "polynomials": [
+          28
+        ],
+        "given,": [
+          30
+        ],
+        "which": [
+          31
+        ],
+        "confirms": [
+          32
+        ],
+        "an": [
+          33
+        ],
+        "asymptotic": [
+          34
+        ],
+        "version": [
+          35
+        ],
+        "conjecture": [
+          38
+        ],
+        "Hansen-Mullen.": [
+          40
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1090/s0025-5718-97-00835-1",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1090/s0025-5718-97-00835-1",
+          "pdf_url": "https://www.ams.org/mcom/1997-66-219/S0025-5718-97-00835-1/S0025-5718-97-00835-1.pdf",
+          "source": {
+            "id": "https://openalex.org/S102439543",
+            "display_name": "Mathematics of Computation",
+            "issn_l": "0025-5718",
+            "issn": [
+              "0025-5718",
+              "1088-6842"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310315719",
+            "host_organization_name": "American Mathematical Society",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310315719"
+            ],
+            "host_organization_lineage_names": [
+              "American Mathematical Society"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Mathematics of Computation",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:CiteSeerX.psu:10.1.1.108.2484",
+          "is_oa": false,
+          "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.108.2484",
+          "pdf_url": null,
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "http://www.ams.org/mcom/1997-66-219/S0025-5718-97-00835-1/S0025-5718-97-00835-1.pdf",
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:CiteSeerX.psu:10.1.1.192.4659",
+          "is_oa": false,
+          "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.192.4659",
+          "pdf_url": null,
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "http://www.ams.org/journals/mcom/1997-66-219/S0025-5718-97-00835-1/S0025-5718-97-00835-1.pdf",
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:CiteSeerX.psu:10.1.1.34.7574",
+          "is_oa": false,
+          "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.34.7574",
+          "pdf_url": null,
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "http://www.math.uci.edu/~dwan/gen.ps",
+          "raw_type": "text"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W608279542",
+        "https://openalex.org/W1553928702",
+        "https://openalex.org/W1607949665",
+        "https://openalex.org/W1964043652",
+        "https://openalex.org/W1989233798",
+        "https://openalex.org/W1994788939",
+        "https://openalex.org/W2011320860",
+        "https://openalex.org/W2046856247",
+        "https://openalex.org/W2051803699",
+        "https://openalex.org/W2079788827",
+        "https://openalex.org/W2091418330",
+        "https://openalex.org/W2151436648",
+        "https://openalex.org/W2914507133",
+        "https://openalex.org/W4212904170",
+        "https://openalex.org/W4214951289",
+        "https://openalex.org/W4231436178",
+        "https://openalex.org/W4232559552",
+        "https://openalex.org/W4236247848",
+        "https://openalex.org/W4246170125",
+        "https://openalex.org/W4247842726"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2028358228",
+      "title": "Reducing elliptic curve logarithms to logarithms in a finite field",
+      "publication_year": 1991,
+      "doi": "https://doi.org/10.1145/103418.103434",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5019674369",
+            "display_name": "Alfred Menezes",
+            "orcid": "https://orcid.org/0000-0003-3951-4298"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I151746483",
+              "display_name": "University of Waterloo",
+              "ror": "https://ror.org/01aff2v68",
+              "country_code": "CA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I151746483"
+              ]
+            }
+          ],
+          "countries": [
+            "CA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Alfred Menezes",
+          "raw_affiliation_strings": [
+            "Univ. of Waterloo, Ontario, CANADA",
+            "University of Waterloo, Ontario, Canada"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Univ. of Waterloo, Ontario, CANADA",
+              "institution_ids": [
+                "https://openalex.org/I151746483"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Waterloo, Ontario, Canada",
+              "institution_ids": [
+                "https://openalex.org/I151746483"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5108398775",
+            "display_name": "Scott A. Vanstone",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I151746483",
+              "display_name": "University of Waterloo",
+              "ror": "https://ror.org/01aff2v68",
+              "country_code": "CA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I151746483"
+              ]
+            }
+          ],
+          "countries": [
+            "CA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Scott Vanstone",
+          "raw_affiliation_strings": [
+            "Univ. of Waterloo, Ontario, CANADA",
+            "University of Waterloo, Ontario, Canada"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Univ. of Waterloo, Ontario, CANADA",
+              "institution_ids": [
+                "https://openalex.org/I151746483"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Waterloo, Ontario, Canada",
+              "institution_ids": [
+                "https://openalex.org/I151746483"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5029108964",
+            "display_name": "Tatsuaki Okamoto",
+            "orcid": "https://orcid.org/0000-0001-7803-812X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I2251713219",
+              "display_name": "NTT (Japan)",
+              "ror": "https://ror.org/00berct97",
+              "country_code": "JP",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I2251713219"
+              ]
+            }
+          ],
+          "countries": [
+            "JP"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Tatsuaki Okamoto",
+          "raw_affiliation_strings": [
+            "NTT Labs., Yokosuka-Shi, Japan"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "NTT Labs., Yokosuka-Shi, Japan",
+              "institution_ids": [
+                "https://openalex.org/I2251713219"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Previously,": [
+          0
+        ],
+        "no": [
+          1
+        ],
+        "general-purpose": [
+          2
+        ],
+        "algorithm": [
+          3,
+          66
+        ],
+        "was": [
+          4
+        ],
+        "known": [
+          5
+        ],
+        "for": [
+          6,
+          67,
+          118,
+          135,
+          152
+        ],
+        "the": [
+          7,
+          23,
+          26,
+          32,
+          36,
+          43,
+          48,
+          54,
+          68,
+          82,
+          90,
+          103,
+          112,
+          115,
+          131,
+          136,
+          150,
+          159
+        ],
+        "elliptic": [
+          8,
+          27,
+          52,
+          140,
+          156
+        ],
+        "curve": [
+          9,
+          28,
+          141
+        ],
+        "logarithm": [
+          10,
+          29,
+          33
+        ],
+        "problem": [
+          11,
+          30,
+          34
+        ],
+        "that": [
+          12,
+          128,
+          144
+        ],
+        "ran": [
+          13
+        ],
+        "in": [
+          14,
+          35,
+          97,
+          121
+        ],
+        "better": [
+          15
+        ],
+        "than": [
+          16
+        ],
+        "exponential": [
+          17
+        ],
+        "time.In": [
+          18
+        ],
+        "this": [
+          19
+        ],
+        "paper": [
+          20
+        ],
+        "we": [
+          21
+        ],
+        "demonstrate": [
+          22
+        ],
+        "reduction": [
+          24,
+          55,
+          132
+        ],
+        "of": [
+          25,
+          39,
+          42,
+          50,
+          72,
+          84,
+          92,
+          95,
+          105,
+          138,
+          155
+        ],
+        "to": [
+          31,
+          75
+        ],
+        "multiplicative": [
+          37
+        ],
+        "group": [
+          38
+        ],
+        "an": [
+          40
+        ],
+        "extension": [
+          41
+        ],
+        "underlying": [
+          44
+        ],
+        "hit": [
+          45
+        ],
+        "e": [
+          46
+        ],
+        "field.For": [
+          47
+        ],
+        "class": [
+          49
+        ],
+        "supersingular": [
+          51
+        ],
+        "curves,": [
+          53,
+          157
+        ],
+        "takes": [
+          56
+        ],
+        "probabilistic": [
+          57,
+          63
+        ],
+        "polynomial": [
+          58
+        ],
+        "time,": [
+          59
+        ],
+        "thus": [
+          60
+        ],
+        "providing": [
+          61
+        ],
+        "a": [
+          62,
+          122
+        ],
+        "subexponential": [
+          64
+        ],
+        "time": [
+          65
+        ],
+        "former": [
+          69
+        ],
+        "problem.The": [
+          70
+        ],
+        "implications": [
+          71
+        ],
+        "our": [
+          73
+        ],
+        "results": [
+          74
+        ],
+        "public": [
+          76
+        ],
+        "key": [
+          77
+        ],
+        "cryptography": [
+          78
+        ],
+        "are": [
+          79,
+          129
+        ],
+        "discussed.": [
+          80
+        ],
+        ",": [
+          81
+        ],
+        "subgroup": [
+          83,
+          91
+        ],
+        "2?": [
+          85
+        ],
+        "generated": [
+          86
+        ],
+        "by": [
+          87,
+          111
+        ],
+        "P,": [
+          88
+        ],
+        "and": [
+          89
+        ],
+        "nth": [
+          93
+        ],
+        "roots": [
+          94
+        ],
+        "unity": [
+          96
+        ],
+        "Fqk,": [
+          98
+        ],
+        "where": [
+          99
+        ],
+        "n": [
+          100
+        ],
+        "denot": [
+          101
+        ],
+        "es": [
+          102
+        ],
+        "order": [
+          104
+        ],
+        "P.": [
+          106
+        ],
+        "The": [
+          107
+        ],
+        "isomorphism": [
+          108
+        ],
+        "is": [
+          109,
+          133,
+          146,
+          148
+        ],
+        "given": [
+          110
+        ],
+        "Weil": [
+          113
+        ],
+        "pairing.Since": [
+          114
+        ],
+        "index-calculus": [
+          116
+        ],
+        "methods": [
+          117
+        ],
+        "computing": [
+          119,
+          139
+        ],
+        "logarithms": [
+          120,
+          142
+        ],
+        "finite": [
+          123
+        ],
+        "field": [
+          124
+        ],
+        "have": [
+          125
+        ],
+        "running": [
+          126
+        ],
+        "times": [
+          127
+        ],
+        "subexponential,": [
+          130
+        ],
+        "useful": [
+          134
+        ],
+        "purpose": [
+          137
+        ],
+        "provided": [
+          143
+        ],
+        "k": [
+          145
+        ],
+        "small.This": [
+          147
+        ],
+        "indeed": [
+          149
+        ],
+        "case": [
+          151
+        ],
+        "special": [
+          153
+        ],
+        "classes": [
+          154
+        ],
+        "including": [
+          158
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1145/103418.103434",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1145/103418.103434",
+          "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/103418.103434",
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Proceedings of the twenty-third annual ACM symposium on Theory of computing - STOC '91",
+          "raw_type": "proceedings-article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W70474044",
+        "https://openalex.org/W582401037",
+        "https://openalex.org/W1480319329",
+        "https://openalex.org/W1486898453",
+        "https://openalex.org/W1490994218",
+        "https://openalex.org/W1575579066",
+        "https://openalex.org/W1590338406",
+        "https://openalex.org/W1608415167",
+        "https://openalex.org/W1984377013",
+        "https://openalex.org/W2007643787",
+        "https://openalex.org/W2012050540",
+        "https://openalex.org/W2012654427",
+        "https://openalex.org/W2027028382",
+        "https://openalex.org/W2029124121",
+        "https://openalex.org/W2036378739",
+        "https://openalex.org/W2073914480",
+        "https://openalex.org/W2075252632",
+        "https://openalex.org/W2091260227",
+        "https://openalex.org/W2098377074",
+        "https://openalex.org/W2121904840",
+        "https://openalex.org/W2142778315",
+        "https://openalex.org/W2203317094",
+        "https://openalex.org/W2488019552"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2142399242",
+      "title": "Cryptographic Limitations on Learning Boolean Formulae and Finite Automata",
+      "publication_year": 1994,
+      "doi": "https://doi.org/10.1145/174644.174647",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5029730907",
+            "display_name": "Michael Kearns",
+            "orcid": "https://orcid.org/0000-0001-7569-0147"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1283103587",
+              "display_name": "AT&T (United States)",
+              "ror": "https://ror.org/02bbd5539",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1283103587"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Michael Kearns",
+          "raw_affiliation_strings": [
+            "AT&amp;T Bell Laboratories, Murray Hill, New Jersey"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "AT&amp;T Bell Laboratories, Murray Hill, New Jersey",
+              "institution_ids": [
+                "https://openalex.org/I1283103587"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5015531084",
+            "display_name": "Leslie G. Valiant",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I2801851002",
+              "display_name": "Harvard University Press",
+              "ror": "https://ror.org/006v7bf86",
+              "country_code": "US",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I136199984",
+                "https://openalex.org/I2801851002"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Leslie Valiant",
+          "raw_affiliation_strings": [
+            "Harvard University, Cambridge, Massachusetts"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Harvard University, Cambridge, Massachusetts",
+              "institution_ids": [
+                "https://openalex.org/I2801851002"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "In": [
+          0,
+          98
+        ],
+        "this": [
+          1
+        ],
+        "paper,": [
+          2
+        ],
+        "we": [
+          3
+        ],
+        "prove": [
+          4,
+          73
+        ],
+        "the": [
+          5,
+          15,
+          20,
+          43,
+          48,
+          58,
+          69,
+          108,
+          130
+        ],
+        "intractability": [
+          6,
+          165
+        ],
+        "of": [
+          7,
+          11,
+          27,
+          42,
+          60,
+          64,
+          171
+        ],
+        "learning": [
+          8,
+          28,
+          70,
+          77,
+          131,
+          154
+        ],
+        "several": [
+          9
+        ],
+        "classes": [
+          10
+        ],
+        "Boolean": [
+          12,
+          80
+        ],
+        "functions": [
+          13
+        ],
+        "in": [
+          14,
+          37,
+          46,
+          141
+        ],
+        "distribution-free": [
+          16
+        ],
+        "model": [
+          17
+        ],
+        "(also": [
+          18
+        ],
+        "called": [
+          19
+        ],
+        "Probably": [
+          21
+        ],
+        "Approximately": [
+          22
+        ],
+        "Correct": [
+          23
+        ],
+        "or": [
+          24,
+          85
+        ],
+        "PAC": [
+          25
+        ],
+        "model)": [
+          26
+        ],
+        "from": [
+          29
+        ],
+        "examples.": [
+          30
+        ],
+        "These": [
+          31
+        ],
+        "results": [
+          32,
+          126,
+          161,
+          166
+        ],
+        "are": [
+          33
+        ],
+        "representation": [
+          34
+        ],
+        "independent": [
+          35
+        ],
+        ",": [
+          36
+        ],
+        "that": [
+          38,
+          74
+        ],
+        "they": [
+          39
+        ],
+        "hold": [
+          40,
+          127
+        ],
+        "regardless": [
+          41
+        ],
+        "syntactic": [
+          44
+        ],
+        "form": [
+          45
+        ],
+        "which": [
+          47
+        ],
+        "learner": [
+          49
+        ],
+        "chooses": [
+          50
+        ],
+        "to": [
+          51,
+          68,
+          106,
+          117,
+          136,
+          162
+        ],
+        "represent": [
+          52
+        ],
+        "its": [
+          53
+        ],
+        "hypotheses.": [
+          54
+        ],
+        "Our": [
+          55
+        ],
+        "methods": [
+          56
+        ],
+        "reduce": [
+          57
+        ],
+        "problems": [
+          59
+        ],
+        "cracking": [
+          61
+        ],
+        "a": [
+          62,
+          75,
+          138,
+          169
+        ],
+        "number": [
+          63,
+          96
+        ],
+        "well-known": [
+          65
+        ],
+        "public-key": [
+          66
+        ],
+        "cryptosystems": [
+          67
+        ],
+        "problems.": [
+          71
+        ],
+        "We": [
+          72,
+          157
+        ],
+        "polynomial-time": [
+          76
+        ],
+        "algorithm": [
+          78,
+          102,
+          132
+        ],
+        "for": [
+          79,
+          93,
+          167
+        ],
+        "formulae,": [
+          81
+        ],
+        "deterministic": [
+          82
+        ],
+        "finite": [
+          83
+        ],
+        "automata": [
+          84
+        ],
+        "constant-depth": [
+          86
+        ],
+        "threshold": [
+          87
+        ],
+        "circuits": [
+          88
+        ],
+        "would": [
+          89
+        ],
+        "have": [
+          90
+        ],
+        "dramatic": [
+          91
+        ],
+        "consequences": [
+          92
+        ],
+        "cryptography": [
+          94
+        ],
+        "and": [
+          95,
+          121,
+          155
+        ],
+        "theory.": [
+          97
+        ],
+        "particular,": [
+          99
+        ],
+        "such": [
+          100
+        ],
+        "an": [
+          101,
+          150
+        ],
+        "could": [
+          103
+        ],
+        "be": [
+          104
+        ],
+        "used": [
+          105,
+          148
+        ],
+        "break": [
+          107
+        ],
+        "RSA": [
+          109
+        ],
+        "cryptosystem,": [
+          110
+        ],
+        "factor": [
+          111
+        ],
+        "Blum": [
+          112
+        ],
+        "integers": [
+          113
+        ],
+        "(composite": [
+          114
+        ],
+        "numbers": [
+          115
+        ],
+        "equivalent": [
+          116
+        ],
+        "3": [
+          118
+        ],
+        "modulo": [
+          119
+        ],
+        "4),": [
+          120
+        ],
+        "detect": [
+          122
+        ],
+        "quadratic": [
+          123
+        ],
+        "residues.": [
+          124
+        ],
+        "The": [
+          125,
+          146
+        ],
+        "even": [
+          128
+        ],
+        "if": [
+          129
+        ],
+        "is": [
+          133
+        ],
+        "only": [
+          134
+        ],
+        "required": [
+          135
+        ],
+        "obtain": [
+          137,
+          163
+        ],
+        "slight": [
+          139
+        ],
+        "advantage": [
+          140
+        ],
+        "prediction": [
+          142
+        ],
+        "over": [
+          143
+        ],
+        "random": [
+          144
+        ],
+        "guessing.": [
+          145
+        ],
+        "techniques": [
+          147
+        ],
+        "demonstrate": [
+          149
+        ],
+        "interesting": [
+          151
+        ],
+        "duality": [
+          152
+        ],
+        "between": [
+          153
+        ],
+        "cryptography.": [
+          156
+        ],
+        "also": [
+          158
+        ],
+        "apply": [
+          159
+        ],
+        "our": [
+          160
+        ],
+        "strong": [
+          164
+        ],
+        "approximating": [
+          168
+        ],
+        "generalization": [
+          170
+        ],
+        "graph": [
+          172
+        ],
+        "coloring.": [
+          173
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1145/174644.174647",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1145/174644.174647",
+          "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/174644.174647",
+          "source": {
+            "id": "https://openalex.org/S118992489",
+            "display_name": "Journal of the ACM",
+            "issn_l": "0004-5411",
+            "issn": [
+              "0004-5411",
+              "1557-735X"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319798",
+            "host_organization_name": "Association for Computing Machinery",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319798"
+            ],
+            "host_organization_lineage_names": [
+              "Association for Computing Machinery"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of the ACM",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "doi:10.1145/3749740.3749747",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1145/3749740.3749747",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306462769",
+            "display_name": "ACM eBooks",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/P4310319798",
+            "host_organization_name": "Association for Computing Machinery",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319798"
+            ],
+            "host_organization_lineage_names": [
+              "Association for Computing Machinery"
+            ],
+            "type": "ebook platform"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Foundations of Computation and Machine Learning",
+          "raw_type": "book-chapter"
+        },
+        {
+          "id": "pmh:oai:CiteSeerX.psu:10.1.1.53.5438",
+          "is_oa": false,
+          "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.53.5438",
+          "pdf_url": null,
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "http://www.research.att.com/~mkearns/papers/crypto.ps.Z",
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:CiteSeerX.psu:10.1.1.76.893",
+          "is_oa": false,
+          "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.76.893",
+          "pdf_url": null,
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "http://www.cis.upenn.edu/~mkearns/papers/crypto.pdf",
+          "raw_type": "text"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W248867876",
+        "https://openalex.org/W1525451859",
+        "https://openalex.org/W1581095529",
+        "https://openalex.org/W1655990431",
+        "https://openalex.org/W1766442844",
+        "https://openalex.org/W1896273530",
+        "https://openalex.org/W1974411071",
+        "https://openalex.org/W1980001285",
+        "https://openalex.org/W1986804393",
+        "https://openalex.org/W1989445634",
+        "https://openalex.org/W1990217074",
+        "https://openalex.org/W1994592916",
+        "https://openalex.org/W1996360405",
+        "https://openalex.org/W2003519998",
+        "https://openalex.org/W2011039300",
+        "https://openalex.org/W2011402196",
+        "https://openalex.org/W2015336262",
+        "https://openalex.org/W2017603160",
+        "https://openalex.org/W2018908820",
+        "https://openalex.org/W2019363670",
+        "https://openalex.org/W2020240363",
+        "https://openalex.org/W2020284627",
+        "https://openalex.org/W2022124343",
+        "https://openalex.org/W2029124121",
+        "https://openalex.org/W2031495811",
+        "https://openalex.org/W2037699108",
+        "https://openalex.org/W2042587503",
+        "https://openalex.org/W2043668600",
+        "https://openalex.org/W2045313701",
+        "https://openalex.org/W2046429891",
+        "https://openalex.org/W2054532493",
+        "https://openalex.org/W2061106457",
+        "https://openalex.org/W2061496873",
+        "https://openalex.org/W2061667602",
+        "https://openalex.org/W2066789935",
+        "https://openalex.org/W2070902649",
+        "https://openalex.org/W2071732851",
+        "https://openalex.org/W2091401625",
+        "https://openalex.org/W2093717447",
+        "https://openalex.org/W2107189314",
+        "https://openalex.org/W2108104892",
+        "https://openalex.org/W2117049614",
+        "https://openalex.org/W2117362057",
+        "https://openalex.org/W2123128520",
+        "https://openalex.org/W2139709458",
+        "https://openalex.org/W2154952480",
+        "https://openalex.org/W2156186849",
+        "https://openalex.org/W2164284862",
+        "https://openalex.org/W3150645827",
+        "https://openalex.org/W4232836212",
+        "https://openalex.org/W4238893454",
+        "https://openalex.org/W4285719527"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W1987668211",
+      "title": "THE THEORY OF COMMUTATIVE FORMAL GROUPS OVER FIELDS OF FINITE CHARACTERISTIC",
+      "publication_year": 1963,
+      "doi": "https://doi.org/10.1070/rm1963v018n06abeh001142",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5112460582",
+            "display_name": "Yu. I. Manin",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Yu I Manin",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "abstract_inverted_index": {
+        "CONTENTS": [
+          0
+        ],
+        "Introduction": [
+          1
+        ],
+        "Chapter": [
+          2,
+          38,
+          71,
+          136
+        ],
+        "I.": [
+          3
+        ],
+        "Formal": [
+          4
+        ],
+        "groups": [
+          5,
+          27,
+          65,
+          140,
+          169
+        ],
+        "and": [
+          6,
+          17,
+          141,
+          172
+        ],
+        "Dieudonné": [
+          7,
+          30,
+          40,
+          73
+        ],
+        "modules;": [
+          8,
+          41,
+          74,
+          100,
+          108,
+          123
+        ],
+        "basic": [
+          9
+        ],
+        "concepts": [
+          10
+        ],
+        "1.": [
+          11,
+          46,
+          79,
+          144
+        ],
+        "Groups": [
+          12
+        ],
+        "in": [
+          13
+        ],
+        "categories": [
+          14
+        ],
+        "2.": [
+          15,
+          51,
+          84,
+          147
+        ],
+        "Algebraic": [
+          16
+        ],
+        "formal": [
+          18,
+          34,
+          64,
+          139,
+          149,
+          158
+        ],
+        "groups.": [
+          19
+        ],
+        "Bialgebras": [
+          20
+        ],
+        "3.": [
+          21,
+          57,
+          87,
+          156
+        ],
+        "The": [
+          22,
+          29,
+          88,
+          96,
+          104,
+          116,
+          148,
+          157
+        ],
+        "structure": [
+          23,
+          90,
+          97,
+          105,
+          150,
+          159
+        ],
+        "of": [
+          24,
+          32,
+          48,
+          63,
+          81,
+          98,
+          106,
+          110,
+          126,
+          131,
+          151,
+          160
+        ],
+        "commutative": [
+          25
+        ],
+        "artinian": [
+          26
+        ],
+        "4.": [
+          28,
+          61,
+          95,
+          166
+        ],
+        "module": [
+          31,
+          93
+        ],
+        "a": [
+          33
+        ],
+        "group": [
+          35
+        ],
+        "5.": [
+          36,
+          69,
+          103,
+          170
+        ],
+        "Comments": [
+          37,
+          70,
+          135,
+          175
+        ],
+        "II.": [
+          39
+        ],
+        "classification": [
+          42,
+          75
+        ],
+        "up": [
+          43,
+          66,
+          76
+        ],
+        "to": [
+          44,
+          67,
+          77
+        ],
+        "isogeny": [
+          45,
+          68
+        ],
+        "Reduction": [
+          47
+        ],
+        "the": [
+          49,
+          54,
+          82,
+          92,
+          111,
+          124,
+          163
+        ],
+        "problem": [
+          50,
+          83
+        ],
+        "Modules": [
+          52
+        ],
+        "over": [
+          53
+        ],
+        "ring": [
+          55
+        ],
+        "A": [
+          56,
+          58
+        ],
+        "technical": [
+          59
+        ],
+        "result": [
+          60
+        ],
+        "Classification": [
+          62,
+          130
+        ],
+        "III.": [
+          72
+        ],
+        "isomorphism": [
+          78
+        ],
+        "Statement": [
+          80
+        ],
+        "Auxiliary": [
+          85
+        ],
+        "results": [
+          86,
+          146
+        ],
+        "algebraic": [
+          89
+        ],
+        "on": [
+          91
+        ],
+        "space": [
+          94
+        ],
+        "isosimple": [
+          99,
+          107,
+          122
+        ],
+        "subsidiary": [
+          101
+        ],
+        "reduction": [
+          102,
+          155
+        ],
+        "proof": [
+          109
+        ],
+        "first": [
+          112
+        ],
+        "finiteness": [
+          113,
+          118
+        ],
+        "theorem": [
+          114,
+          119,
+          165
+        ],
+        "6.": [
+          115,
+          174
+        ],
+        "second": [
+          117
+        ],
+        "7.": [
+          120
+        ],
+        "Cyclic": [
+          121
+        ],
+        "component": [
+          125
+        ],
+        "maximal": [
+          127
+        ],
+        "dimension": [
+          128
+        ],
+        "8.": [
+          129
+        ],
+        "two-dimensional": [
+          132
+        ],
+        "modules": [
+          133
+        ],
+        "9.": [
+          134
+        ],
+        "IV.": [
+          137
+        ],
+        "Algebroid": [
+          138
+        ],
+        "abelian": [
+          142,
+          152,
+          161
+        ],
+        "varieties": [
+          143
+        ],
+        "General": [
+          145
+        ],
+        "varieties;": [
+          153,
+          162
+        ],
+        "preliminary": [
+          154
+        ],
+        "fundamental": [
+          164
+        ],
+        "Weakly": [
+          167
+        ],
+        "algebroid": [
+          168
+        ],
+        "Remarks": [
+          171
+        ],
+        "examples": [
+          173
+        ],
+        "References": [
+          176
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1070/rm1963v018n06abeh001142",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1070/rm1963v018n06abeh001142",
+          "pdf_url": "https://iopscience.iop.org/article/10.1070/RM1963v018n06ABEH001142/pdf",
+          "source": {
+            "id": "https://openalex.org/S132681663",
+            "display_name": "Russian Mathematical Surveys",
+            "issn_l": "0036-0279",
+            "issn": [
+              "0036-0279",
+              "1468-4829",
+              "1473-2009"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320083",
+            "host_organization_name": "IOP Publishing",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320083",
+              "https://openalex.org/P4310311669"
+            ],
+            "host_organization_lineage_names": [
+              "IOP Publishing",
+              "Institute of Physics"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Russian Mathematical Surveys",
+          "raw_type": "journal-article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W136099788",
+        "https://openalex.org/W583724964",
+        "https://openalex.org/W650639125",
+        "https://openalex.org/W1845187874",
+        "https://openalex.org/W2014308048",
+        "https://openalex.org/W2017724411",
+        "https://openalex.org/W2027630368",
+        "https://openalex.org/W2043794175",
+        "https://openalex.org/W2044171215",
+        "https://openalex.org/W2047096910",
+        "https://openalex.org/W2057111012",
+        "https://openalex.org/W2072170512",
+        "https://openalex.org/W2075784557",
+        "https://openalex.org/W2081897277",
+        "https://openalex.org/W2095610557",
+        "https://openalex.org/W2100365068",
+        "https://openalex.org/W2132436747",
+        "https://openalex.org/W2164933268",
+        "https://openalex.org/W2187227342",
+        "https://openalex.org/W2203521896",
+        "https://openalex.org/W2244071376",
+        "https://openalex.org/W2274405882",
+        "https://openalex.org/W2275142569",
+        "https://openalex.org/W2314083573",
+        "https://openalex.org/W2315033275",
+        "https://openalex.org/W2322172566",
+        "https://openalex.org/W2326127483",
+        "https://openalex.org/W2329091586",
+        "https://openalex.org/W2329288102",
+        "https://openalex.org/W2330811908",
+        "https://openalex.org/W2597468567",
+        "https://openalex.org/W2601435719",
+        "https://openalex.org/W2604582847"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W3119783884",
+      "title": "Thermoelectric generator (TEG) technologies and applications",
+      "publication_year": 2021,
+      "doi": "https://doi.org/10.1016/j.ijft.2021.100063",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5062857998",
+            "display_name": "Hussam Jouhara",
+            "orcid": "https://orcid.org/0000-0002-6910-6116"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I59433898",
+              "display_name": "Brunel University of London",
+              "ror": "https://ror.org/00dn4t376",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Hussam Jouhara",
+          "raw_affiliation_strings": [
+            "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-6910-6116",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK",
+              "institution_ids": [
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5019540781",
+            "display_name": "Alina Żabnieńśka-Góra",
+            "orcid": "https://orcid.org/0000-0003-3197-1048"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I11923345",
+              "display_name": "Wrocław University of Science and Technology",
+              "ror": "https://ror.org/008fyn775",
+              "country_code": "PL",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I11923345"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I59433898",
+              "display_name": "Brunel University of London",
+              "ror": "https://ror.org/00dn4t376",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I59433898"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I686019",
+              "display_name": "AGH University of Krakow",
+              "ror": "https://ror.org/00bas1c41",
+              "country_code": "PL",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I686019"
+              ]
+            }
+          ],
+          "countries": [
+            "GB",
+            "PL"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Alina Żabnieńska-Góra",
+          "raw_affiliation_strings": [
+            "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK",
+            "Wroclaw University of Science and Technology, Faculty of Environmental Engineering, Wybrzeze Wyspianskiego 27, 50-370 Wroclaw, Poland"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK",
+              "institution_ids": [
+                "https://openalex.org/I59433898"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Wroclaw University of Science and Technology, Faculty of Environmental Engineering, Wybrzeze Wyspianskiego 27, 50-370 Wroclaw, Poland",
+              "institution_ids": [
+                "https://openalex.org/I11923345",
+                "https://openalex.org/I686019"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5013694464",
+            "display_name": "Navid Khordehgah",
+            "orcid": "https://orcid.org/0000-0002-5955-701X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I59433898",
+              "display_name": "Brunel University of London",
+              "ror": "https://ror.org/00dn4t376",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Navid Khordehgah",
+          "raw_affiliation_strings": [
+            "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK",
+              "institution_ids": [
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5042188553",
+            "display_name": "Qusay Doraghi",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I59433898",
+              "display_name": "Brunel University of London",
+              "ror": "https://ror.org/00dn4t376",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Qusay Doraghi",
+          "raw_affiliation_strings": [
+            "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK",
+              "institution_ids": [
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5110735999",
+            "display_name": "Lujean Ahmad",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I59433898",
+              "display_name": "Brunel University of London",
+              "ror": "https://ror.org/00dn4t376",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Lujean Ahmad",
+          "raw_affiliation_strings": [
+            "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK",
+              "institution_ids": [
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5021324075",
+            "display_name": "Les Norman",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I59433898",
+              "display_name": "Brunel University of London",
+              "ror": "https://ror.org/00dn4t376",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Les Norman",
+          "raw_affiliation_strings": [
+            "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK",
+              "institution_ids": [
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5006403358",
+            "display_name": "Brian Axcell",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I59433898",
+              "display_name": "Brunel University of London",
+              "ror": "https://ror.org/00dn4t376",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Brian Axcell",
+          "raw_affiliation_strings": [
+            "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK",
+              "institution_ids": [
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5061283142",
+            "display_name": "L.C. Wrobel",
+            "orcid": "https://orcid.org/0000-0001-6702-0178"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I2699952",
+              "display_name": "Pontifícia Universidade Católica do Rio de Janeiro",
+              "ror": "https://ror.org/01dg47b60",
+              "country_code": "BR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I2699952"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I59433898",
+              "display_name": "Brunel University of London",
+              "ror": "https://ror.org/00dn4t376",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ],
+          "countries": [
+            "BR",
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Luiz Wrobel",
+          "raw_affiliation_strings": [
+            "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK",
+            "Pontifical Catholic University of Rio de Janeiro (PUC-Rio), Rio de Janeiro, Brazil"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Heat Pipe and Thermal Management Research Group, College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK",
+              "institution_ids": [
+                "https://openalex.org/I59433898"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Pontifical Catholic University of Rio de Janeiro (PUC-Rio), Rio de Janeiro, Brazil",
+              "institution_ids": [
+                "https://openalex.org/I2699952"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5026398494",
+            "display_name": "Sheng Dai",
+            "orcid": "https://orcid.org/0000-0002-9152-0786"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I59433898",
+              "display_name": "Brunel University of London",
+              "ror": "https://ror.org/00dn4t376",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Sheng Dai",
+          "raw_affiliation_strings": [
+            "College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Engineering, Design and Physical Sciences, Brunel University London, London UB8 3PH, UK",
+              "institution_ids": [
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Nowadays": [
+          0
+        ],
+        "humans": [
+          1
+        ],
+        "are": [
+          2,
+          23,
+          111,
+          145,
+          153,
+          244
+        ],
+        "facing": [
+          3
+        ],
+        "difficult": [
+          4
+        ],
+        "issues,": [
+          5
+        ],
+        "such": [
+          6,
+          136,
+          197,
+          236
+        ],
+        "as": [
+          7,
+          67,
+          116,
+          137,
+          166,
+          198,
+          237
+        ],
+        "increasing": [
+          8
+        ],
+        "power": [
+          9,
+          27,
+          47,
+          76
+        ],
+        "costs,": [
+          10
+        ],
+        "environmental": [
+          11
+        ],
+        "pollution": [
+          12
+        ],
+        "and": [
+          13,
+          97,
+          107,
+          126,
+          140,
+          152,
+          157,
+          208,
+          226,
+          229,
+          240
+        ],
+        "global": [
+          14
+        ],
+        "warming.": [
+          15
+        ],
+        "In": [
+          16,
+          78,
+          142
+        ],
+        "order": [
+          17
+        ],
+        "to": [
+          18,
+          40,
+          53
+        ],
+        "reduce": [
+          19
+        ],
+        "their": [
+          20,
+          38,
+          194,
+          212
+        ],
+        "consequences,": [
+          21
+        ],
+        "scientists": [
+          22
+        ],
+        "concentrating": [
+          24
+        ],
+        "on": [
+          25,
+          30,
+          130
+        ],
+        "improving": [
+          26
+        ],
+        "generators": [
+          28,
+          34,
+          106,
+          162
+        ],
+        "focused": [
+          29
+        ],
+        "energy": [
+          31,
+          43
+        ],
+        "harvesting.": [
+          32
+        ],
+        "Thermoelectric": [
+          33,
+          161
+        ],
+        "(TEGs)": [
+          35
+        ],
+        "have": [
+          36,
+          61,
+          147,
+          163
+        ],
+        "demonstrated": [
+          37
+        ],
+        "capacity": [
+          39
+        ],
+        "transform": [
+          41
+        ],
+        "thermal": [
+          42
+        ],
+        "directly": [
+          44
+        ],
+        "into": [
+          45
+        ],
+        "electric": [
+          46
+        ],
+        "through": [
+          48
+        ],
+        "the": [
+          49,
+          54,
+          64,
+          90,
+          100,
+          199,
+          202,
+          205
+        ],
+        "Seebeck": [
+          50,
+          200
+        ],
+        "effect.": [
+          51
+        ],
+        "Due": [
+          52
+        ],
+        "unique": [
+          55
+        ],
+        "advantages": [
+          56
+        ],
+        "they": [
+          57,
+          117
+        ],
+        "present,": [
+          58
+        ],
+        "thermoelectric": [
+          59,
+          81,
+          105,
+          223
+        ],
+        "systems": [
+          60
+        ],
+        "emerged": [
+          62
+        ],
+        "during": [
+          63
+        ],
+        "last": [
+          65
+        ],
+        "decade": [
+          66
+        ],
+        "a": [
+          68,
+          131,
+          148,
+          167,
+          190
+        ],
+        "promising": [
+          69
+        ],
+        "alternative": [
+          70
+        ],
+        "among": [
+          71
+        ],
+        "other": [
+          72
+        ],
+        "technologies": [
+          73,
+          227
+        ],
+        "for": [
+          74,
+          88,
+          98,
+          155,
+          170
+        ],
+        "green": [
+          75
+        ],
+        "production.": [
+          77
+        ],
+        "this": [
+          79,
+          94
+        ],
+        "regard,": [
+          80
+        ],
+        "device": [
+          82
+        ],
+        "output": [
+          83
+        ],
+        "prediction": [
+          84
+        ],
+        "is": [
+          85
+        ],
+        "important": [
+          86
+        ],
+        "both": [
+          87
+        ],
+        "determining": [
+          89
+        ],
+        "future": [
+          91
+        ],
+        "use": [
+          92
+        ],
+        "of": [
+          93,
+          104,
+          134,
+          173,
+          186,
+          193,
+          217
+        ],
+        "new": [
+          95
+        ],
+        "technology": [
+          96
+        ],
+        "specifying": [
+          99
+        ],
+        "key": [
+          101
+        ],
+        "design": [
+          102
+        ],
+        "parameters": [
+          103
+        ],
+        "systems.": [
+          108
+        ],
+        "Moreover,": [
+          109,
+          232
+        ],
+        "TEGs": [
+          110,
+          144
+        ],
+        "environmentally": [
+          112
+        ],
+        "safe,": [
+          113
+        ],
+        "work": [
+          114
+        ],
+        "quietly": [
+          115
+        ],
+        "do": [
+          118
+        ],
+        "not": [
+          119
+        ],
+        "include": [
+          120
+        ],
+        "mechanical": [
+          121
+        ],
+        "mechanisms": [
+          122
+        ],
+        "or": [
+          123
+        ],
+        "rotating": [
+          124
+        ],
+        "elements": [
+          125
+        ],
+        "can": [
+          127
+        ],
+        "be": [
+          128
+        ],
+        "manufactured": [
+          129
+        ],
+        "broad": [
+          132
+        ],
+        "variety": [
+          133
+        ],
+        "substrates": [
+          135
+        ],
+        "silicon,": [
+          138
+        ],
+        "polymers": [
+          139
+        ],
+        "ceramics.": [
+          141
+        ],
+        "addition,": [
+          143
+        ],
+        "position-independent,": [
+          146
+        ],
+        "long": [
+          149
+        ],
+        "working": [
+          150,
+          195
+        ],
+        "life": [
+          151
+        ],
+        "ideal": [
+          154
+        ],
+        "bulk": [
+          156
+        ],
+        "compact": [
+          158
+        ],
+        "applications.": [
+          159
+        ],
+        "Furthermore,": [
+          160
+        ],
+        "been": [
+          164
+        ],
+        "found": [
+          165
+        ],
+        "viable": [
+          168
+        ],
+        "solution": [
+          169
+        ],
+        "direct": [
+          171
+        ],
+        "generation": [
+          172
+        ],
+        "electricity": [
+          174
+        ],
+        "from": [
+          175
+        ],
+        "waste": [
+          176
+        ],
+        "heat": [
+          177
+        ],
+        "in": [
+          178
+        ],
+        "industrial": [
+          179
+        ],
+        "processes.": [
+          180
+        ],
+        "This": [
+          181
+        ],
+        "paper": [
+          182
+        ],
+        "presents": [
+          183
+        ],
+        "in-depth": [
+          184
+        ],
+        "analysis": [
+          185
+        ],
+        "TEGs,": [
+          187
+        ],
+        "beginning": [
+          188
+        ],
+        "with": [
+          189,
+          211
+        ],
+        "comprehensive": [
+          191
+        ],
+        "overview": [
+          192
+        ],
+        "principles": [
+          196
+        ],
+        "effect,": [
+          201,
+          204
+        ],
+        "Peltier": [
+          203
+        ],
+        "Thomson": [
+          206
+        ],
+        "effect": [
+          207
+        ],
+        "Joule": [
+          209
+        ],
+        "heating": [
+          210
+        ],
+        "applications,": [
+          213
+        ],
+        "materials": [
+          214
+        ],
+        "used,": [
+          215
+        ],
+        "Figure": [
+          216
+        ],
+        "Merit,": [
+          218
+        ],
+        "improvement": [
+          219
+        ],
+        "techniques": [
+          220
+        ],
+        "including": [
+          221
+        ],
+        "different": [
+          222
+        ],
+        "material": [
+          224
+        ],
+        "arrangements": [
+          225
+        ],
+        "used": [
+          228
+        ],
+        "substrate": [
+          230
+        ],
+        "types.": [
+          231
+        ],
+        "performance": [
+          233
+        ],
+        "simulation": [
+          234
+        ],
+        "examples": [
+          235
+        ],
+        "COMSOL": [
+          238
+        ],
+        "Multiphysics": [
+          239
+        ],
+        "ANSYS-Computational": [
+          241
+        ],
+        "Fluid": [
+          242
+        ],
+        "Dynamics": [
+          243
+        ],
+        "investigated.": [
+          245
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1016/j.ijft.2021.100063",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1016/j.ijft.2021.100063",
+          "pdf_url": "https://www.sciencedirect.com/science/article/pii/S266620272100001X/pdf",
+          "source": {
+            "id": "https://openalex.org/S4210194017",
+            "display_name": "International Journal of Thermofluids",
+            "issn_l": "2666-2027",
+            "issn": [
+              "2666-2027"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "International Journal of Thermofluids",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:bura.brunel.ac.uk:2438/22198",
+          "is_oa": true,
+          "landing_page_url": "https://bura.brunel.ac.uk/handle/2438/22198",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306401473",
+            "display_name": "Brunel University Research Archive (BURA) (Brunel University London)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I59433898",
+            "host_organization_name": "Brunel University of London",
+            "host_organization_lineage": [
+              "https://openalex.org/I59433898"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Article"
+        },
+        {
+          "id": "pmh:oai:doaj.org/article:8b4a9a2d7a6f4d5ea9c5b311b0cc83a5",
+          "is_oa": true,
+          "landing_page_url": "https://doaj.org/article/8b4a9a2d7a6f4d5ea9c5b311b0cc83a5",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306401280",
+            "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-sa",
+          "license_id": "https://openalex.org/licenses/cc-by-sa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "International Journal of Thermofluids, Vol 9, Iss , Pp 100063- (2021)",
+          "raw_type": "article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W170728373",
+        "https://openalex.org/W247494141",
+        "https://openalex.org/W587436587",
+        "https://openalex.org/W1508034897",
+        "https://openalex.org/W1963998002",
+        "https://openalex.org/W1971918456",
+        "https://openalex.org/W1972191873",
+        "https://openalex.org/W1972693740",
+        "https://openalex.org/W1983576392",
+        "https://openalex.org/W1985033972",
+        "https://openalex.org/W1987991152",
+        "https://openalex.org/W1989170094",
+        "https://openalex.org/W1993292352",
+        "https://openalex.org/W1994312980",
+        "https://openalex.org/W1999946292",
+        "https://openalex.org/W2007478560",
+        "https://openalex.org/W2010266563",
+        "https://openalex.org/W2023541753",
+        "https://openalex.org/W2026047597",
+        "https://openalex.org/W2031019109",
+        "https://openalex.org/W2041513211",
+        "https://openalex.org/W2043196325",
+        "https://openalex.org/W2046803361",
+        "https://openalex.org/W2049906307",
+        "https://openalex.org/W2050826401",
+        "https://openalex.org/W2056338396",
+        "https://openalex.org/W2056805469",
+        "https://openalex.org/W2060564028",
+        "https://openalex.org/W2066294960",
+        "https://openalex.org/W2077872590",
+        "https://openalex.org/W2078973840",
+        "https://openalex.org/W2082220119",
+        "https://openalex.org/W2082733596",
+        "https://openalex.org/W2084309685",
+        "https://openalex.org/W2094571519",
+        "https://openalex.org/W2110830581",
+        "https://openalex.org/W2110875966",
+        "https://openalex.org/W2122565241",
+        "https://openalex.org/W2150987022",
+        "https://openalex.org/W2152457228",
+        "https://openalex.org/W2169090355",
+        "https://openalex.org/W2289750833",
+        "https://openalex.org/W2294262792",
+        "https://openalex.org/W2403020391",
+        "https://openalex.org/W2418690209",
+        "https://openalex.org/W2472866839",
+        "https://openalex.org/W2478162893",
+        "https://openalex.org/W2497555385",
+        "https://openalex.org/W2507875578",
+        "https://openalex.org/W2518646586",
+        "https://openalex.org/W2546470812",
+        "https://openalex.org/W2546781689",
+        "https://openalex.org/W2549805474",
+        "https://openalex.org/W2565166754",
+        "https://openalex.org/W2594758347",
+        "https://openalex.org/W2595932635",
+        "https://openalex.org/W2605788280",
+        "https://openalex.org/W2606939895",
+        "https://openalex.org/W2607199702",
+        "https://openalex.org/W2637815778",
+        "https://openalex.org/W2724639913",
+        "https://openalex.org/W2747219311",
+        "https://openalex.org/W2752578132",
+        "https://openalex.org/W2763142181",
+        "https://openalex.org/W2767976077",
+        "https://openalex.org/W2769272288",
+        "https://openalex.org/W2782393740",
+        "https://openalex.org/W2786019874",
+        "https://openalex.org/W2793222461",
+        "https://openalex.org/W2793864732",
+        "https://openalex.org/W2801934545",
+        "https://openalex.org/W2805124349",
+        "https://openalex.org/W2810131948",
+        "https://openalex.org/W2888408929",
+        "https://openalex.org/W2888687109",
+        "https://openalex.org/W2889866692",
+        "https://openalex.org/W2893802093",
+        "https://openalex.org/W2899303786",
+        "https://openalex.org/W2900253004",
+        "https://openalex.org/W2902395525",
+        "https://openalex.org/W2911237085",
+        "https://openalex.org/W2914342649",
+        "https://openalex.org/W2915917009",
+        "https://openalex.org/W2922524829",
+        "https://openalex.org/W2945975295",
+        "https://openalex.org/W2952952207",
+        "https://openalex.org/W2955573269",
+        "https://openalex.org/W2973440319",
+        "https://openalex.org/W2974081530",
+        "https://openalex.org/W2999259326",
+        "https://openalex.org/W3004088439",
+        "https://openalex.org/W3008373336",
+        "https://openalex.org/W3008446731",
+        "https://openalex.org/W3009439247",
+        "https://openalex.org/W3011030914",
+        "https://openalex.org/W3016622916",
+        "https://openalex.org/W3027490893",
+        "https://openalex.org/W3041908919",
+        "https://openalex.org/W3049485331",
+        "https://openalex.org/W3106489300",
+        "https://openalex.org/W3135501257",
+        "https://openalex.org/W4214605262",
+        "https://openalex.org/W4241082647",
+        "https://openalex.org/W4250911482",
+        "https://openalex.org/W4300030087",
+        "https://openalex.org/W4400979677",
+        "https://openalex.org/W6609195305",
+        "https://openalex.org/W6663013335",
+        "https://openalex.org/W6665156719",
+        "https://openalex.org/W6670009267",
+        "https://openalex.org/W6671314999",
+        "https://openalex.org/W6682301015",
+        "https://openalex.org/W6696107019",
+        "https://openalex.org/W6729752284",
+        "https://openalex.org/W6734798388",
+        "https://openalex.org/W6736351338",
+        "https://openalex.org/W6743991026",
+        "https://openalex.org/W6745485427",
+        "https://openalex.org/W6747439085",
+        "https://openalex.org/W6749427807",
+        "https://openalex.org/W6749868030",
+        "https://openalex.org/W6751146996",
+        "https://openalex.org/W6756487914",
+        "https://openalex.org/W6758165210",
+        "https://openalex.org/W6780252633",
+        "https://openalex.org/W6786533474"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2058502187",
+      "title": "Cluster algebras II: Finite type classification",
+      "publication_year": 2003,
+      "doi": "https://doi.org/10.1007/s00222-003-0302-y",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": null,
+            "display_name": "Sergey Fomin",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I27837315",
+              "display_name": "University of Michigan",
+              "ror": "https://ror.org/00jmfr291",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I27837315"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Sergey Fomin",
+          "raw_affiliation_strings": [
+            "Department of Mathematics, University of Michigan, 48109, Ann Arbor, MI, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics, University of Michigan, 48109, Ann Arbor, MI, USA",
+              "institution_ids": [
+                "https://openalex.org/I27837315"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": null,
+            "display_name": "Andrei Zelevinsky",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I12912129",
+              "display_name": "Northeastern University",
+              "ror": "https://ror.org/04t5xt781",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I12912129"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Andrei Zelevinsky",
+          "raw_affiliation_strings": [
+            "Department of Mathematics, Northeastern University, 02115, Boston, MA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics, Northeastern University, 02115, Boston, MA, USA",
+              "institution_ids": [
+                "https://openalex.org/I12912129"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "locations": [
+        {
+          "id": "doi:10.1007/s00222-003-0302-y",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1007/s00222-003-0302-y",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S98347115",
+            "display_name": "Inventiones mathematicae",
+            "issn_l": "0020-9910",
+            "issn": [
+              "0020-9910",
+              "1432-1297"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319900",
+            "host_organization_name": "Springer Science+Business Media",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319900",
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Science+Business Media",
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Inventiones mathematicae",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:math/0208229",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/math/0208229",
+          "pdf_url": "https://arxiv.org/pdf/math/0208229",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:deepblue.lib.umich.edu:2027.42/46591",
+          "is_oa": true,
+          "landing_page_url": "https://hdl.handle.net/2027.42/46591",
+          "pdf_url": "https://hdl.handle.net/2027.42/46591",
+          "source": {
+            "id": "https://openalex.org/S4306400393",
+            "display_name": "Deep Blue (University of Michigan)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I27837315",
+            "host_organization_name": "University of Michigan",
+            "host_organization_lineage": [
+              "https://openalex.org/I27837315"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W51037165",
+        "https://openalex.org/W1537957332",
+        "https://openalex.org/W1539941639",
+        "https://openalex.org/W1623071293",
+        "https://openalex.org/W1642629289",
+        "https://openalex.org/W1676795165",
+        "https://openalex.org/W1898987871",
+        "https://openalex.org/W1969096799",
+        "https://openalex.org/W1977415556",
+        "https://openalex.org/W2032816450",
+        "https://openalex.org/W2060521973",
+        "https://openalex.org/W2070552865",
+        "https://openalex.org/W2087997360",
+        "https://openalex.org/W2106848528",
+        "https://openalex.org/W2126899749",
+        "https://openalex.org/W3109244789",
+        "https://openalex.org/W4235381922",
+        "https://openalex.org/W4293207255"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2152887332",
+      "title": "Orbits of families of vector fields and integrability of distributions",
+      "publication_year": 1973,
+      "doi": "https://doi.org/10.1090/s0002-9947-1973-0321133-2",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5111879385",
+            "display_name": "Héctor J. Sussmann",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I102322142",
+              "display_name": "Rutgers, The State University of New Jersey",
+              "ror": "https://ror.org/05vt9qd57",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I102322142"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I39422238",
+              "display_name": "University of Illinois Chicago",
+              "ror": "https://ror.org/02mpq6x41",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I39422238"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I40347166",
+              "display_name": "University of Chicago",
+              "ror": "https://ror.org/024mw5h28",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I40347166"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Héctor J. Sussmann",
+          "raw_affiliation_strings": [
+            "DEPARTMENT OF MATHEMATICS , UNIVERSITY OF CHICAGO , CHICAGO , ILLINOIS 60637",
+            "Department of Mathematics , Rutgers University , New Brunswick , Ne Jersey 08903",
+            "DEPARTMENT OF MATHEMATICS, UNIVERSITY OF CHICAGO, CHICAGO, ILLINOIS",
+            "Department of Mathematics, Rutgers University, New Brunswick, Ne Jersey 08903"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "DEPARTMENT OF MATHEMATICS , UNIVERSITY OF CHICAGO , CHICAGO , ILLINOIS 60637",
+              "institution_ids": [
+                "https://openalex.org/I39422238",
+                "https://openalex.org/I40347166"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematics , Rutgers University , New Brunswick , Ne Jersey 08903",
+              "institution_ids": [
+                "https://openalex.org/I102322142"
+              ]
+            },
+            {
+              "raw_affiliation_string": "DEPARTMENT OF MATHEMATICS, UNIVERSITY OF CHICAGO, CHICAGO, ILLINOIS",
+              "institution_ids": [
+                "https://openalex.org/I40347166"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematics, Rutgers University, New Brunswick, Ne Jersey 08903",
+              "institution_ids": [
+                "https://openalex.org/I102322142"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Let": [
+          0
+        ],
+        "D": [
+          1,
+          2,
+          31,
+          32,
+          61,
+          70
+        ],
+        "be": [
+          3,
+          77,
+          102
+        ],
+        "an": [
+          4
+        ],
+        "arbitrary": [
+          5
+        ],
+        "set": [
+          6
+        ],
+        "of": [
+          7,
+          30,
+          39,
+          52,
+          68,
+          113,
+          123,
+          126,
+          136,
+          142,
+          147,
+          155,
+          190
+        ],
+        "C": [
+          8,
+          16,
+          34,
+          55
+        ],
+        "∞": [
+          9,
+          17,
+          35,
+          56
+        ],
+        "{C^\\infty": [
+          10,
+          18,
+          36,
+          57
+        ],
+        "}": [
+          11,
+          19,
+          37,
+          58
+        ],
+        "vector": [
+          12,
+          127,
+          199
+        ],
+        "fields": [
+          13
+        ],
+        "on": [
+          14,
+          171
+        ],
+        "the": [
+          15,
+          28,
+          48,
+          66,
+          78,
+          111,
+          116,
+          131,
+          139,
+          145,
+          151,
+          172,
+          186,
+          191,
+          204
+        ],
+        "manifold": [
+          20
+        ],
+        "M": [
+          21,
+          22,
+          40,
+          41,
+          84,
+          87
+        ],
+        ".": [
+          23,
+          63
+        ],
+        "It": [
+          24
+        ],
+        "is": [
+          25
+        ],
+        "shown": [
+          26
+        ],
+        "that": [
+          27,
+          197
+        ],
+        "orbits": [
+          29,
+          165
+        ],
+        "are": [
+          33,
+          47
+        ],
+        "submanifolds": [
+          38,
+          51,
+          189
+        ],
+        ",": [
+          42
+        ],
+        "and": [
+          43,
+          95,
+          129,
+          150,
+          159,
+          162
+        ],
+        "that,": [
+          44
+        ],
+        "moreover,": [
+          45
+        ],
+        "they": [
+          46
+        ],
+        "maximal": [
+          49,
+          187
+        ],
+        "integral": [
+          50,
+          121,
+          188
+        ],
+        "a": [
+          53,
+          99,
+          124
+        ],
+        "certain": [
+          54
+        ],
+        "distribution": [
+          59,
+          100,
+          193
+        ],
+        "P": [
+          60,
+          69
+        ],
+        "{P_D}": [
+          62
+        ],
+        "(In": [
+          64
+        ],
+        "general,": [
+          65
+        ],
+        "dimension": [
+          67,
+          149
+        ],
+        "(": [
+          71
+        ],
+        "m": [
+          72,
+          82,
+          85
+        ],
+        ")": [
+          73
+        ],
+        "{P_D}(m)": [
+          74
+        ],
+        "will": [
+          75
+        ],
+        "not": [
+          76
+        ],
+        "same": [
+          79
+        ],
+        "for": [
+          80,
+          98,
+          144
+        ],
+        "all": [
+          81,
+          130
+        ],
+        "∈": [
+          83
+        ],
+        "\\in": [
+          86
+        ],
+        ".)": [
+          88
+        ],
+        "The": [
+          89
+        ],
+        "second": [
+          90
+        ],
+        "main": [
+          91
+        ],
+        "result": [
+          92
+        ],
+        "gives": [
+          93
+        ],
+        "necessary": [
+          94
+        ],
+        "sufficient": [
+          96
+        ],
+        "conditions": [
+          97
+        ],
+        "to": [
+          101,
+          181,
+          185
+        ],
+        "integrable.": [
+          103
+        ],
+        "These": [
+          104
+        ],
+        "two": [
+          105
+        ],
+        "results": [
+          106,
+          133
+        ],
+        "imply": [
+          107
+        ],
+        "as": [
+          108
+        ],
+        "easy": [
+          109
+        ],
+        "corollaries": [
+          110
+        ],
+        "theorem": [
+          112,
+          141,
+          184
+        ],
+        "Chow": [
+          114
+        ],
+        "about": [
+          115,
+          134
+        ],
+        "points": [
+          117
+        ],
+        "attainable": [
+          118
+        ],
+        "by": [
+          119,
+          208
+        ],
+        "broken": [
+          120
+        ],
+        "curves": [
+          122
+        ],
+        "family": [
+          125
+        ],
+        "fields,": [
+          128
+        ],
+        "known": [
+          132
+        ],
+        "integrability": [
+          135
+        ],
+        "distributions": [
+          137
+        ],
+        "(i.e.": [
+          138
+        ],
+        "classical": [
+          140
+        ],
+        "Frobenius": [
+          143
+        ],
+        "case": [
+          146
+        ],
+        "constant": [
+          148
+        ],
+        "more": [
+          152
+        ],
+        "recent": [
+          153
+        ],
+        "work": [
+          154,
+          170
+        ],
+        "Hermann,": [
+          156
+        ],
+        "Nagano,": [
+          157
+        ],
+        "Lobry": [
+          158,
+          163
+        ],
+        "Matsuda).": [
+          160
+        ],
+        "Hermann": [
+          161
+        ],
+        "studied": [
+          164
+        ],
+        "in": [
+          166,
+          175,
+          203
+        ],
+        "connection": [
+          167
+        ],
+        "with": [
+          168
+        ],
+        "their": [
+          169
+        ],
+        "accessibility": [
+          173
+        ],
+        "problem": [
+          174
+        ],
+        "control": [
+          176
+        ],
+        "theory.": [
+          177
+        ],
+        "Their": [
+          178
+        ],
+        "method": [
+          179
+        ],
+        "was": [
+          180
+        ],
+        "apply": [
+          182
+        ],
+        "Chow’s": [
+          183
+        ],
+        "smallest": [
+          192
+        ],
+        "Δ": [
+          194
+        ],
+        "\\Delta": [
+          195
+        ],
+        "such": [
+          196
+        ],
+        "every": [
+          198
+        ],
+        "field": [
+          200
+        ],
+        "X": [
+          201,
+          202
+        ],
+        "Lie": [
+          205
+        ],
+        "algebra": [
+          206
+        ],
+        "generated": [
+          207
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1090/s0002-9947-1973-0321133-2",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1090/s0002-9947-1973-0321133-2",
+          "pdf_url": "https://www.ams.org/tran/1973-180-00/S0002-9947-1973-0321133-2/S0002-9947-1973-0321133-2.pdf",
+          "source": {
+            "id": "https://openalex.org/S60030702",
+            "display_name": "Transactions of the American Mathematical Society",
+            "issn_l": "0002-9947",
+            "issn": [
+              "0002-9947",
+              "1088-6850"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310315719",
+            "host_organization_name": "American Mathematical Society",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310315719"
+            ],
+            "host_organization_lineage_names": [
+              "American Mathematical Society"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Transactions of the American Mathematical Society",
+          "raw_type": "journal-article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W35147865",
+        "https://openalex.org/W1533846756",
+        "https://openalex.org/W1605674337",
+        "https://openalex.org/W2034280776",
+        "https://openalex.org/W2043515542",
+        "https://openalex.org/W2070267857",
+        "https://openalex.org/W2080611676",
+        "https://openalex.org/W2087640086",
+        "https://openalex.org/W2524278865",
+        "https://openalex.org/W2600604505",
+        "https://openalex.org/W6601439504"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2067563106",
+      "title": "Adaptive spatial binning of integral-field spectroscopic data using Voronoi tessellations",
+      "publication_year": 2003,
+      "doi": "https://doi.org/10.1046/j.1365-8711.2003.06541.x",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": null,
+            "display_name": "M. Cappellari",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I121797337",
+              "display_name": "Leiden University",
+              "ror": "https://ror.org/027bh9e22",
+              "country_code": "NL",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I121797337"
+              ]
+            }
+          ],
+          "countries": [
+            "NL"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "M. Cappellari",
+          "raw_affiliation_strings": [
+            "Leiden Observatory , Postbus 9513 , 2300 RA Leiden , the Netherlands"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Leiden Observatory , Postbus 9513 , 2300 RA Leiden , the Netherlands",
+              "institution_ids": [
+                "https://openalex.org/I121797337"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": null,
+            "display_name": "Y. Copin",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I121797337",
+              "display_name": "Leiden University",
+              "ror": "https://ror.org/027bh9e22",
+              "country_code": "NL",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I121797337"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210152651",
+              "display_name": "Institute of Nuclear Physics of Lyon",
+              "ror": "https://ror.org/03z4c6358",
+              "country_code": "FR",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I100532134",
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I203339264",
+                "https://openalex.org/I4210133362",
+                "https://openalex.org/I4210152651"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4387156226",
+              "display_name": "Leiden Observatory",
+              "ror": "https://ror.org/03es66g06",
+              "country_code": null,
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I121797337",
+                "https://openalex.org/I4387156226"
+              ]
+            }
+          ],
+          "countries": [
+            "FR",
+            "NL"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Y. Copin",
+          "raw_affiliation_strings": [
+            "Institut de physique nucléaire de Lyon, 69222 Villeurbanne, France",
+            "Leiden Observatory, Postbus 9513, 2300 RA Leiden, the Netherlands"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institut de physique nucléaire de Lyon, 69222 Villeurbanne, France",
+              "institution_ids": [
+                "https://openalex.org/I4210152651"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Leiden Observatory, Postbus 9513, 2300 RA Leiden, the Netherlands",
+              "institution_ids": [
+                "https://openalex.org/I121797337",
+                "https://openalex.org/I4387156226"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "We": [
+          0
+        ],
+        "present": [
+          1
+        ],
+        "new": [
+          2
+        ],
+        "techniques": [
+          3
+        ],
+        "to": [
+          4,
+          14
+        ],
+        "perform": [
+          5
+        ],
+        "adaptive": [
+          6
+        ],
+        "spatial": [
+          7
+        ],
+        "binning": [
+          8,
+          55
+        ],
+        "of": [
+          9,
+          31,
+          61
+        ],
+        "Integral-Field": [
+          10
+        ],
+        "Spectroscopic": [
+          11
+        ],
+        "(IFS)": [
+          12
+        ],
+        "data": [
+          13
+        ],
+        "reach": [
+          15
+        ],
+        "a": [
+          16
+        ],
+        "chosen": [
+          17
+        ],
+        "constant": [
+          18
+        ],
+        "signal-to-noise": [
+          19
+        ],
+        "ratio": [
+          20
+        ],
+        "per": [
+          21
+        ],
+        "bin.": [
+          22
+        ],
+        "These": [
+          23
+        ],
+        "methods": [
+          24
+        ],
+        "are": [
+          25,
+          50
+        ],
+        "required": [
+          26
+        ],
+        "for": [
+          27,
+          39
+        ],
+        "the": [
+          28,
+          58,
+          62,
+          71
+        ],
+        "proper": [
+          29
+        ],
+        "analysis": [
+          30
+        ],
+        "IFS": [
+          32,
+          73
+        ],
+        "observations,": [
+          33
+        ],
+        "but": [
+          34
+        ],
+        "can": [
+          35
+        ],
+        "also": [
+          36
+        ],
+        "be": [
+          37
+        ],
+        "used": [
+          38
+        ],
+        "standard": [
+          40
+        ],
+        "photometric": [
+          41
+        ],
+        "imagery": [
+          42
+        ],
+        "or": [
+          43
+        ],
+        "any": [
+          44
+        ],
+        "other": [
+          45
+        ],
+        "two-dimensional": [
+          46
+        ],
+        "data.": [
+          47
+        ],
+        "Various": [
+          48
+        ],
+        "schemes": [
+          49
+        ],
+        "tested": [
+          51
+        ],
+        "and": [
+          52,
+          56
+        ],
+        "compared": [
+          53
+        ],
+        "by": [
+          54
+        ],
+        "extracting": [
+          57
+        ],
+        "stellar": [
+          59
+        ],
+        "kinematics": [
+          60
+        ],
+        "Sa": [
+          63
+        ],
+        "galaxy": [
+          64
+        ],
+        "NGC": [
+          65
+        ],
+        "2273": [
+          66
+        ],
+        "from": [
+          67
+        ],
+        "spectra": [
+          68
+        ],
+        "obtained": [
+          69
+        ],
+        "with": [
+          70
+        ],
+        "panoramic": [
+          72
+        ],
+        "SAURON.": [
+          74
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1046/j.1365-8711.2003.06541.x",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1046/j.1365-8711.2003.06541.x",
+          "pdf_url": "https://academic.oup.com/mnras/article-pdf/342/2/345/3407404/342-2-345.pdf",
+          "source": {
+            "id": "https://openalex.org/S195663288",
+            "display_name": "Monthly Notices of the Royal Astronomical Society",
+            "issn_l": "0035-8711",
+            "issn": [
+              "0035-8711",
+              "1365-2966",
+              "1365-8711"
+            ],
+            "is_oa": false,
+            "is_in_doaj": true,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310311648",
+            "host_organization_name": "Oxford University Press",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311648",
+              "https://openalex.org/P4310311647"
+            ],
+            "host_organization_lineage_names": [
+              "Oxford University Press",
+              "University of Oxford"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Monthly Notices of the Royal Astronomical Society",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:astro-ph/0302262",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/astro-ph/0302262",
+          "pdf_url": "https://arxiv.org/pdf/astro-ph/0302262",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:HAL:in2p3-00019946v1",
+          "is_oa": false,
+          "landing_page_url": "https://in2p3.hal.science/in2p3-00019946",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306402512",
+            "display_name": "HAL (Le Centre pour la Communication Scientifique Directe)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I1294671590",
+            "host_organization_name": "Centre National de la Recherche Scientifique",
+            "host_organization_lineage": [
+              "https://openalex.org/I1294671590"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Monthly Notices of the Royal Astronomical Society, 2003, 342, pp.345-354. &#x27E8;10.1046/j.1365-8711.2003.06541.x&#x27E9;",
+          "raw_type": "info:eu-repo/semantics/article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W2039221335",
+        "https://openalex.org/W2050576295",
+        "https://openalex.org/W2051752778",
+        "https://openalex.org/W2059588423",
+        "https://openalex.org/W2064247729",
+        "https://openalex.org/W2075737816",
+        "https://openalex.org/W2091739399",
+        "https://openalex.org/W2108969378",
+        "https://openalex.org/W2119597562",
+        "https://openalex.org/W2142228262",
+        "https://openalex.org/W2150593711",
+        "https://openalex.org/W4254197176"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2077810240",
+      "title": "Logarithmic Sobolev inequalities for finite Markov chains",
+      "publication_year": 1996,
+      "doi": "https://doi.org/10.1214/aoap/1034968224",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5050449040",
+            "display_name": "Persi Diaconis",
+            "orcid": "https://orcid.org/0000-0003-0837-6662"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I134560555",
+              "display_name": "Université Toulouse III - Paul Sabatier",
+              "ror": "https://ror.org/02v6kpv12",
+              "country_code": "FR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I134560555"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I136199984",
+              "display_name": "Harvard University",
+              "ror": "https://ror.org/03vek6s52",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I136199984"
+              ]
+            }
+          ],
+          "countries": [
+            "FR",
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "P. Diaconis",
+          "raw_affiliation_strings": [
+            "Harvard University and CNRS , Universite Paul Sabatier ´",
+            "Harvard University and CNRS, Universite Paul Sabatier"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Harvard University and CNRS , Universite Paul Sabatier ´",
+              "institution_ids": [
+                "https://openalex.org/I134560555"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Harvard University and CNRS, Universite Paul Sabatier",
+              "institution_ids": [
+                "https://openalex.org/I134560555",
+                "https://openalex.org/I136199984"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5067207257",
+            "display_name": "Laurent Saloff‐Coste",
+            "orcid": "https://orcid.org/0000-0001-6285-1845"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I134560555",
+              "display_name": "Université Toulouse III - Paul Sabatier",
+              "ror": "https://ror.org/02v6kpv12",
+              "country_code": "FR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I134560555"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I136199984",
+              "display_name": "Harvard University",
+              "ror": "https://ror.org/03vek6s52",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I136199984"
+              ]
+            }
+          ],
+          "countries": [
+            "FR",
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "L. Saloff-Coste",
+          "raw_affiliation_strings": [
+            "Harvard University and CNRS , Universite Paul Sabatier ´",
+            "Harvard University and CNRS, Universite Paul Sabatier"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Harvard University and CNRS , Universite Paul Sabatier ´",
+              "institution_ids": [
+                "https://openalex.org/I134560555"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Harvard University and CNRS, Universite Paul Sabatier",
+              "institution_ids": [
+                "https://openalex.org/I134560555",
+                "https://openalex.org/I136199984"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "This": [
+          0
+        ],
+        "is": [
+          1,
+          107,
+          123
+        ],
+        "an": [
+          2
+        ],
+        "expository": [
+          3
+        ],
+        "paper": [
+          4
+        ],
+        "on": [
+          5,
+          20,
+          81,
+          136
+        ],
+        "the": [
+          6,
+          45,
+          66,
+          73,
+          82,
+          104,
+          112,
+          119,
+          129,
+          133
+        ],
+        "use": [
+          7
+        ],
+        "of": [
+          8,
+          15,
+          17,
+          44,
+          63,
+          68,
+          84,
+          108,
+          118,
+          132
+        ],
+        "logarithmic": [
+          9
+        ],
+        "Sobolev": [
+          10,
+          29
+        ],
+        "inequalities": [
+          11,
+          30
+        ],
+        "for": [
+          12,
+          36,
+          72,
+          78,
+          93,
+          100
+        ],
+        "bounding": [
+          13
+        ],
+        "rates": [
+          14,
+          92
+        ],
+        "convergence": [
+          16
+        ],
+        "Markov": [
+          18
+        ],
+        "chains": [
+          19,
+          38,
+          80
+        ],
+        "finite": [
+          21,
+          50
+        ],
+        "state": [
+          22,
+          51
+        ],
+        "spaces": [
+          23,
+          52
+        ],
+        "to": [
+          24,
+          57
+        ],
+        "their": [
+          25
+        ],
+        "stationary": [
+          26
+        ],
+        "distributions.": [
+          27
+        ],
+        "Logarithmic": [
+          28
+        ],
+        "complement": [
+          31
+        ],
+        "eigenvalue": [
+          32
+        ],
+        "techniques": [
+          33
+        ],
+        "and": [
+          34,
+          53,
+          90
+        ],
+        "work": [
+          35
+        ],
+        "nonreversible": [
+          37
+        ],
+        "in": [
+          39,
+          87
+        ],
+        "continuous": [
+          40
+        ],
+        "time.": [
+          41
+        ],
+        "Some": [
+          42
+        ],
+        "aspects": [
+          43
+        ],
+        "theory": [
+          46
+        ],
+        "simplify": [
+          47
+        ],
+        "considerably": [
+          48
+        ],
+        "with": [
+          49
+        ],
+        "we": [
+          54
+        ],
+        "are": [
+          55
+        ],
+        "able": [
+          56
+        ],
+        "give": [
+          58
+        ],
+        "a": [
+          59,
+          69
+        ],
+        "self-contained": [
+          60
+        ],
+        "development.": [
+          61
+        ],
+        "Examples": [
+          62
+        ],
+        "applications": [
+          64
+        ],
+        "include": [
+          65
+        ],
+        "study": [
+          67
+        ],
+        "Metropolis": [
+          70
+        ],
+        "chain": [
+          71
+        ],
+        "binomial": [
+          74
+        ],
+        "distribution,": [
+          75
+        ],
+        "sharp": [
+          76
+        ],
+        "results": [
+          77
+        ],
+        "natural": [
+          79
+        ],
+        "box": [
+          83
+        ],
+        "side": [
+          85
+        ],
+        "n": [
+          86,
+          137
+        ],
+        "d": [
+          88
+        ],
+        "dimensions": [
+          89
+        ],
+        "improved": [
+          91
+        ],
+        "exclusion": [
+          94
+        ],
+        "processes.": [
+          95
+        ],
+        "We": [
+          96
+        ],
+        "also": [
+          97
+        ],
+        "show": [
+          98
+        ],
+        "that": [
+          99
+        ],
+        "most": [
+          101
+        ],
+        "r-regular": [
+          102
+        ],
+        "graphs": [
+          103
+        ],
+        "log-Sobolev": [
+          105,
+          116,
+          130
+        ],
+        "constant": [
+          106,
+          117,
+          131
+        ],
+        "smaller": [
+          109
+        ],
+        "order": [
+          110
+        ],
+        "than": [
+          111
+        ],
+        "spectral": [
+          113
+        ],
+        "gap.": [
+          114
+        ],
+        "The": [
+          115
+        ],
+        "asymmetric": [
+          120
+        ],
+        "two-point": [
+          121
+        ],
+        "space": [
+          122
+        ],
+        "computed": [
+          124
+        ],
+        "exactly": [
+          125
+        ],
+        "as": [
+          126,
+          128
+        ],
+        "well": [
+          127
+        ],
+        "complete": [
+          134
+        ],
+        "graph": [
+          135
+        ],
+        "points.": [
+          138
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1214/aoap/1034968224",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1214/aoap/1034968224",
+          "pdf_url": "https://projecteuclid.org/journals/annals-of-applied-probability/volume-6/issue-3/Logarithmic-Sobolev-inequalities-for-finite-Markov-chains/10.1214/aoap/1034968224.pdf",
+          "source": {
+            "id": "https://openalex.org/S9093621",
+            "display_name": "The Annals of Applied Probability",
+            "issn_l": "1050-5164",
+            "issn": [
+              "1050-5164",
+              "2168-8737"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319881",
+            "host_organization_name": "Institute of Mathematical Statistics",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319881"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Mathematical Statistics"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "The Annals of Applied Probability",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:CULeuclid:euclid.aoap/1034968224",
+          "is_oa": false,
+          "landing_page_url": "http://projecteuclid.org/euclid.aoap/1034968224",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400787",
+            "display_name": "Project Euclid (Cornell University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "Text"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W31298062",
+        "https://openalex.org/W83924355",
+        "https://openalex.org/W135410071",
+        "https://openalex.org/W193561859",
+        "https://openalex.org/W391578156",
+        "https://openalex.org/W1488435683",
+        "https://openalex.org/W1521233381",
+        "https://openalex.org/W1534739489",
+        "https://openalex.org/W1559907478",
+        "https://openalex.org/W1568495775",
+        "https://openalex.org/W1596709027",
+        "https://openalex.org/W1631603072",
+        "https://openalex.org/W1964672686",
+        "https://openalex.org/W1974932891",
+        "https://openalex.org/W1976418263",
+        "https://openalex.org/W1980719140",
+        "https://openalex.org/W1992254617",
+        "https://openalex.org/W1993111701",
+        "https://openalex.org/W1999994593",
+        "https://openalex.org/W2001147140",
+        "https://openalex.org/W2003187390",
+        "https://openalex.org/W2019473674",
+        "https://openalex.org/W2022475841",
+        "https://openalex.org/W2033281046",
+        "https://openalex.org/W2043694962",
+        "https://openalex.org/W2047702649",
+        "https://openalex.org/W2056300611",
+        "https://openalex.org/W2056389572",
+        "https://openalex.org/W2064975723",
+        "https://openalex.org/W2065163799",
+        "https://openalex.org/W2069092471",
+        "https://openalex.org/W2082763921",
+        "https://openalex.org/W2086490380",
+        "https://openalex.org/W2088794759",
+        "https://openalex.org/W2091476183",
+        "https://openalex.org/W2119636813",
+        "https://openalex.org/W2138412601",
+        "https://openalex.org/W2164094632",
+        "https://openalex.org/W2166435158",
+        "https://openalex.org/W2327680971",
+        "https://openalex.org/W2550524953",
+        "https://openalex.org/W2610857016",
+        "https://openalex.org/W2751862591",
+        "https://openalex.org/W3011221497",
+        "https://openalex.org/W3038470872",
+        "https://openalex.org/W3109334054",
+        "https://openalex.org/W4236312485",
+        "https://openalex.org/W4252643423",
+        "https://openalex.org/W4292049208"
+      ]
+    }
+  ]
+}

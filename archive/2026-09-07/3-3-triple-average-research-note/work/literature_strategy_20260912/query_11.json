@@ -1,0 +1,112 @@
+{
+  "index": 11,
+  "query": "matrix mortality nonnegative",
+  "url": "https://api.openalex.org/works?filter=title.search%3Amatrix+mortality+nonnegative&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 4,
+  "results": [
+    {
+      "id": "https://openalex.org/W2963267245",
+      "title": "Supervised Nonnegative Matrix Factorization to Predict ICU Mortality Risk",
+      "date": "2018-12-01",
+      "doi": "https://doi.org/10.1109/bibm.2018.8621403",
+      "citations": 19,
+      "authors": [
+        "Guoqing Chao",
+        "Chengsheng Mao",
+        "Fei Wang",
+        "Yuan Zhao",
+        "Yuan Luo"
+      ],
+      "abstract": "ICU mortality risk prediction is a tough yet important task. On one hand, due to the complex temporal data collected, it is difficult to identify the effective features and interpret them easily; on the other hand, good prediction can help clinicians take timely actions to prevent the mortality. These correspond to the interpretability and accuracy problems. Most existing methods lack of the interpretability, but recently Subgraph Augmented Nonnegative Matrix Factorization (SANMF) has been successfully applied to time series data to provide a path to interpret the features well. Therefore, we adopted this approach as the backbone to analyze the patient data. One limitation of the original SANMF method is its poor prediction ability due to its unsupervised nature. To deal with this problem, we proposed a supervised SANMF algorithm by integrating the logistic regression loss function into the NMF framework and solved it with an alternating optimization procedure. We used the simulation data to verify the effectiveness of this method, and then we applied it to ICU mortality risk prediction and demonstrated its superiority over other conventional supervised NMF methods.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/bibm.2018.8621403",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31360595",
+          "pdf": null,
+          "source": "PubMed"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/6662568",
+          "pdf": null,
+          "source": "PubMed Central"
+        }
+      ],
+      "reference_count": 62
+    },
+    {
+      "id": "https://openalex.org/W4402652795",
+      "title": "On Shortest Products for Nonnegative Matrix Mortality",
+      "date": "2024-01-01",
+      "doi": "https://doi.org/10.1007/978-3-031-72621-7_8",
+      "citations": 1,
+      "authors": [
+        "Andrew Ryzhikov"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://doi.org/10.1007/978-3-031-72621-7_8",
+          "pdf": null,
+          "source": "Lecture notes in computer science"
+        }
+      ],
+      "reference_count": 24
+    },
+    {
+      "id": "https://openalex.org/W4399252183",
+      "title": "On shortest products for nonnegative matrix mortality",
+      "date": "2024-05-30",
+      "doi": "https://doi.org/10.48550/arxiv.2405.19622",
+      "citations": 0,
+      "authors": [
+        "Andrew Ryzhikov"
+      ],
+      "abstract": "Given a finite set of matrices with integer entries, the matrix mortality problem asks if there exists a product of these matrices equal to the zero matrix. We consider a special case of this problem where all entries of the matrices are nonnegative. This case is equivalent to the NFA mortality problem, which, given an NFA, asks for a word $w$ such that the image of every state under $w$ is the empty set. The size of the alphabet of the NFA is then equal to the number of matrices in the set. We study the length of shortest such words depending on the size of the alphabet. We show that for an NFA with $n$ states this length can be at least $2^n - 1$ for an alphabet of size $n$, $2^{(n - 4)/2}$ for an alphabet of size $3$ and $2^{(n - 2)/3}$ for an alphabet of size $2$. We also discuss further open problems related to mortality of NFAs and DFAs.",
+      "locations": [
+        {
+          "url": "http://arxiv.org/abs/2405.19622",
+          "pdf": "https://arxiv.org/pdf/2405.19622",
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://doi.org/10.48550/arxiv.2405.19622",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 0
+    },
+    {
+      "id": "https://openalex.org/W2894486392",
+      "title": "Supervised Nonnegative Matrix Factorization to Predict ICU Mortality Risk",
+      "date": "2018-09-27",
+      "doi": "https://doi.org/10.48550/arxiv.1809.10680",
+      "citations": 0,
+      "authors": [
+        "Guoqing Chao",
+        "Chengsheng Mao",
+        "Fei Wang",
+        "Yuan Zhao",
+        "Yuan Luo"
+      ],
+      "abstract": "ICU mortality risk prediction is a tough yet important task. On one hand, due to the complex temporal data collected, it is difficult to identify the effective features and interpret them easily; on the other hand, good prediction can help clinicians take timely actions to prevent the mortality. These correspond to the interpretability and accuracy problems. Most existing methods lack of the interpretability, but recently Subgraph Augmented Nonnegative Matrix Factorization (SANMF) has been successfully applied to time series data to provide a path to interpret the features well. Therefore, we adopted this approach as the backbone to analyze the patient data. One limitation of the raw SANMF method is its poor prediction ability due to its unsupervised nature. To deal with this problem, we proposed a supervised SANMF algorithm by integrating the logistic regression loss function into the NMF framework and solved it with an alternating optimization procedure. We used the simulation data to verify the effectiveness of this method, and then we applied it to ICU mortality risk prediction and demonstrated its superiority over other conventional supervised NMF methods.",
+      "locations": [
+        {
+          "url": "http://arxiv.org/abs/1809.10680",
+          "pdf": "https://arxiv.org/pdf/1809.10680",
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://doi.org/10.48550/arxiv.1809.10680",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 25
+    }
+  ]
+}

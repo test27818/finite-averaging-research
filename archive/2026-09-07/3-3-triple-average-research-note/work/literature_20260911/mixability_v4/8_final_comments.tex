@@ -1,0 +1,29 @@
+
+
+In this paper we gave a complete characterization of perfectly mixable sets,
+as well as a polynomial-time algorithm that tests perfect mixability and,
+for perfectly mixable sets, computes a polynomial-size perfect-mixing graph.   
+
+The computational complexity of {\MixReachability} remains wide open, even for
+the special case of {\MixProducibility}, where
+the inputs consist of pure reactant and buffer droplets.
+The only hardness result related to {\MixReachability} that we can prove is
+that its modified variant, where we ask whether $T$ is reachable from $I$ via
+a graph with a fixed (constant) depth is $\NP$-hard (see Appendix~\ref{sec: NP-hardness}).
+
+There are a number of other open questions about computing mixing graphs. For the
+case when the target consists of just 
+one droplet~\cite{thies2008abstraction,roy2010optimization,huang2012reactant,chiang2013graph},
+it is not known whether minimizing waste can be done efficiently, nor even whether
+the minimum-waste value is computable.
+Unsurprisingly, no complexity results are known for other objective functions, like
+minimizing reactant usage or minimizing the number of micro-mixers.
+
+As another example, one can consider the problem of computing a mixing graph
+that realizes a given linear mapping. More specifically,
+with each mixing graph $G$ we can associate a linear mapping $L_G$ that
+maps the vector of concentration values on its inputs to the vector of
+concentration values on its outputs. In this problem,
+given a linear mapping $L$, we ask whether there exists a mixing graph $G$ with $L_G = L$. 
+An algorithm for this problem would allow us to construct mixing graphs that 
+can produce a collection of target sets, by changing the buffer/reactant combinations on input.

@@ -1,0 +1,262 @@
+{
+  "index": 21,
+  "query": "path complete Lyapunov",
+  "url": "https://api.openalex.org/works?filter=title.search%3Apath+complete+Lyapunov&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 18,
+  "results": [
+    {
+      "id": "https://openalex.org/W3209581072",
+      "title": "Comparison of path-complete Lyapunov functions via template-dependent lifts",
+      "date": "2022-06-24",
+      "doi": "https://doi.org/10.1016/j.nahs.2022.101237",
+      "citations": 8,
+      "authors": [
+        "Virginie Debauche",
+        "Matteo Della Rossa",
+        "Raphaël M. Jungers"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://doi.org/10.1016/j.nahs.2022.101237",
+          "pdf": "https://linkinghub.elsevier.com/science/article/pii/S1751570X2200053X",
+          "source": "Nonlinear Analysis Hybrid Systems"
+        },
+        {
+          "url": "https://zenodo.org/record/7228526",
+          "pdf": "https://zenodo.org/record/7228526",
+          "source": "Zenodo (CERN European Organization for Nuclear Research)"
+        },
+        {
+          "url": "http://hdl.handle.net/2078.1/260444",
+          "pdf": null,
+          "source": "Digital Access to Libraries"
+        }
+      ],
+      "reference_count": 33
+    },
+    {
+      "id": "https://openalex.org/W3010823318",
+      "title": "Polyhedral Path-Complete Lyapunov Functions",
+      "date": "2019-12-01",
+      "doi": "https://doi.org/10.1109/cdc40024.2019.9029905",
+      "citations": 4,
+      "authors": [
+        "Νικόλαος Αθανασόπουλος",
+        "Raphaël M. Jungers"
+      ],
+      "abstract": "Path-complete methods utilize a set of positive definite functions and a specially constructed graph in order to evaluate, among others, stability of switching systems. This tool is shown to be general, e.g., path-complete criteria are universal for linear switching systems and quadratic templates. In this work, we extend the approach to polyhedral Lyapunov functions, and introduce a simple parameterization that can be sufficient for stability analysis. Moreover, we indicate ways of obtaining less conservative stability criteria by partial graph extensions, all evaluated by solving Linear Programs (LPs).",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/cdc40024.2019.9029905",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "https://pure.qub.ac.uk/en/publications/4830a3a0-967d-4784-93b8-37c3608a7849",
+          "pdf": "https://pureadmin.qub.ac.uk/ws/files/184256484/CDC19_1494_FI.pdf",
+          "source": "Research Portal (Queen's University Belfast)"
+        },
+        {
+          "url": "https://pure.qub.ac.uk/en/publications/4830a3a0-967d-4784-93b8-37c3608a7849",
+          "pdf": "https://pureadmin.qub.ac.uk/ws/files/184256484/CDC19_1494_FI.pdf",
+          "source": "Research Portal (Queen's University Belfast)"
+        },
+        {
+          "url": "http://hdl.handle.net/2078.1/229377",
+          "pdf": null,
+          "source": "Digital Access to Libraries (Université catholique de Louvain (UCL), l'Université de Namur (UNamur) and the Université Saint-Louis (USL-B))"
+        }
+      ],
+      "reference_count": 28
+    },
+    {
+      "id": "https://openalex.org/W2782912066",
+      "title": "A linear program to compare path-complete Lyapunov functions",
+      "date": "2017-12-01",
+      "doi": "https://doi.org/10.1109/cdc.2017.8264550",
+      "citations": 4,
+      "authors": [
+        "David Angeli",
+        "Νικόλαος Αθανασόπουλος",
+        "Raphaël M. Jungers",
+        "Matthew Philippe"
+      ],
+      "abstract": "We provide an algorithmic procedure allowing to compare stability certificates for discrete-time switching systems and in specific Path-Complete Lyapunov functions (PCLFs). These mathematical objects consist of a set of positive definite functions and a set of Lyapunov inequalities, encoded in a directed, labeled graph. Given two such graphs, we formulate necessary and sufficient conditions to decide if the existence of a PCLF for the first graph implies existence of a PCLF for the second graph, where the corresponding set of functions is constructed by conic combinations of the set of functions related to the first PCLF. The conditions depend only on the topologies of the two graphs and can be verified by solving a linear program. It is the first systematic approach to compare the conservativeness of PCLFs.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/cdc.2017.8264550",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "https://pure.qub.ac.uk/en/publications/7d9bb91f-29f9-4365-b7b8-b1d136411a6c",
+          "pdf": "https://pureadmin.qub.ac.uk/ws/files/140631111/_CDC2017_AngeAthanJungPhil_A_LP_To_Compare_PCLFs.pdf",
+          "source": "Research Portal (Queen's University Belfast)"
+        },
+        {
+          "url": "http://hdl.handle.net/2078.1/194095",
+          "pdf": null,
+          "source": "Digital Access to Libraries (Université catholique de Louvain (UCL), l'Université de Namur (UNamur) and the Université Saint-Louis (USL-B))"
+        },
+        {
+          "url": "http://hdl.handle.net/2158/1153387",
+          "pdf": null,
+          "source": "Florence Research (University of Florence)"
+        },
+        {
+          "url": "http://hdl.handle.net/10044/1/62144",
+          "pdf": null,
+          "source": "Spiral (Imperial College London)"
+        }
+      ],
+      "reference_count": 33
+    },
+    {
+      "id": "https://openalex.org/W2773395428",
+      "title": "On Path-Complete Lyapunov Functions: Geometry and Comparison",
+      "date": "2018-08-06",
+      "doi": "https://doi.org/10.1109/tac.2018.2863380",
+      "citations": 2,
+      "authors": [
+        "Matthew Philippe",
+        "Νικόλαος Αθανασόπουλος",
+        "David Angeli",
+        "Raphaël M. Jungers"
+      ],
+      "abstract": "We study optimization-based criteria for the stability of switching systems, known as path-complete Lyapunov functions, and ask the question “can we decide algorithmically when a criterion is less conservative than another?”. Our contribution is twofold. First, we show that a path-complete Lyapunov function, which is a multiple Lyapunov function by nature, can always be expressed as a common Lyapunov function taking the form of a combination of minima and maxima of the elementary functions that compose it. Geometrically, our results provide for each path-complete criterion an implied invariant set. Second, we provide a linear programming criterion allowing to compare the conservativeness of two arbitrary given path-complete Lyapunov functions.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/tac.2018.2863380",
+          "pdf": null,
+          "source": "IEEE Transactions on Automatic Control"
+        },
+        {
+          "url": "http://arxiv.org/abs/1712.00381",
+          "pdf": "https://arxiv.org/pdf/1712.00381",
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://pure.qub.ac.uk/en/publications/781512df-0a5a-4f36-93bb-fac9c778a4c2",
+          "pdf": "https://pureadmin.qub.ac.uk/ws/files/156139428/IEEETAC2017.pdf",
+          "source": "Research Portal (Queen's University Belfast)"
+        },
+        {
+          "url": "https://arxiv.org/pdf/1712.00381.pdf",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "http://hdl.handle.net/2078.1/203197",
+          "pdf": null,
+          "source": "Digital Access to Libraries"
+        },
+        {
+          "url": "http://hdl.handle.net/2158/1138974",
+          "pdf": null,
+          "source": "Florence Research (University of Florence)"
+        },
+        {
+          "url": "http://hdl.handle.net/10044/1/63266",
+          "pdf": null,
+          "source": "Spiral (Imperial College London)"
+        },
+        {
+          "url": "https://doi.org/10.48550/arxiv.1712.00381",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 40
+    },
+    {
+      "id": "https://openalex.org/W4225399887",
+      "title": "Necessary and Sufficient Conditions for Template-Dependent Ordering of Path-Complete Lyapunov Methods",
+      "date": "2022-04-28",
+      "doi": "https://doi.org/10.1145/3501710.3519539",
+      "citations": 3,
+      "authors": [
+        "Virginie Debauche",
+        "Matteo Della Rossa",
+        "Raphaël M. Jungers"
+      ],
+      "abstract": "In the context of discrete-time switched systems, we study the comparison of stability certificates based on path-complete Lyapunov methods. A characterization of this general ordering has been provided recently, but we show here that this characterization is too strong when a particular template is considered, as it is the case in practice. In the present work we provide a characterization for templates that are closed under pointwise minimum/maximum, which covers several templates that are often used in practice. We use an approach based on abstract operations on graphs, called lifts, to highlight the dependence of the ordering with respect to the analytical properties of the template. We finally provide more preliminary results on another family of templates: those that are closed under addition, as for instance the set of quadratic functions.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1145/3501710.3519539",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "https://zenodo.org/record/7228432",
+          "pdf": "https://zenodo.org/record/7228432",
+          "source": "Zenodo (CERN European Organization for Nuclear Research)"
+        },
+        {
+          "url": "http://hdl.handle.net/2078.1/260437",
+          "pdf": null,
+          "source": "Digital Access to Libraries"
+        }
+      ],
+      "reference_count": 18
+    },
+    {
+      "id": "https://openalex.org/W2133860287",
+      "title": "Analysis of the joint spectral radius via lyapunov functions on path-complete graphs",
+      "date": "2011-04-12",
+      "doi": "https://doi.org/10.1145/1967701.1967706",
+      "citations": 37,
+      "authors": [
+        "Amir Ali Ahmadi",
+        "Raphaël M. Jungers",
+        "Pablo A. Parrilo",
+        "Mardavij Roozbehani"
+      ],
+      "abstract": "We study the problem of approximating the joint spectral radius (JSR) of a finite set of matrices. Our approach is based on the analysis of the underlying switched linear system via inequalities imposed between multiple Lyapunov functions associated to a labeled directed graph. Inspired by concepts in automata theory and symbolic dynamics, we define a class of graphs called path-complete graphs, and show that any such graph gives rise to a method for proving stability of the switched system. This enables us to derive several asymptotically tight hierarchies of semidefinite programming relaxations that unify and generalize many existing techniques such as common quadratic, common sum of squares, maximum/minimum-of-quadratics Lyapunov functions. We characterize all path-complete graphs consisting of two nodes on an alphabet of two matrices and compare their performance. For the general case of any set of n x n matrices we propose semidefinite programs of modest size that approximate the JSR within a multiplicative factor of 1/4√n of the true value. We establish a notion of duality among path-complete graphs and a constructive converse Lyapunov theorem for maximum/minimum-of-quadratics Lyapunov functions.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1145/1967701.1967706",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://hdl.handle.net/1721.1/72962",
+          "pdf": "https://dspace.mit.edu/bitstream/1721.1/72962/1/Parrilo_Analysis%20of%20the%20joint.pdf",
+          "source": "DSpace@MIT (Massachusetts Institute of Technology)"
+        },
+        {
+          "url": "http://hdl.handle.net/2078.1/107402",
+          "pdf": null,
+          "source": "Digital Access to Libraries (Université catholique de Louvain (UCL), l'Université de Namur (UNamur) and the Université Saint-Louis (USL-B))"
+        }
+      ],
+      "reference_count": 29
+    },
+    {
+      "id": "https://openalex.org/W3094553796",
+      "title": "Path-Complete Lyapunov Functions for Continuous-Time Switching Systems",
+      "date": "2020-12-14",
+      "doi": "https://doi.org/10.1109/cdc42340.2020.9304192",
+      "citations": 1,
+      "authors": [
+        "Matteo Della Rossa",
+        "Mirko Pasquini",
+        "David Angeli"
+      ],
+      "abstract": "We use a graph-theory-based argument to propose a novel Lyapunov construction for continuous-time switching systems. Starting with a finite family of continuously differentiable functions, the inequalities involving these functions and the vector fields of the switching system are encoded in a direct and labeled graph. Relaying on the (path-)completeness of this graph, we introduce a signal-dependent Lyapunov function, providing sufficient conditions for stability under fixed-time or dwell-time switching hypothesis. For the case of linear systems, our conditions turn into linear matrix inequalities (LMI), and thus they are compared with previous results, via numerical examples.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/cdc42340.2020.9304192",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "https://hal.science/hal-02971179v1/document",
+          "pdf": null,
+          "source": "HAL (Le Centre pour la Communication Scientifique Directe)"
+        }
+      ],
+      "reference_count": 19
+    }
+  ]
+}

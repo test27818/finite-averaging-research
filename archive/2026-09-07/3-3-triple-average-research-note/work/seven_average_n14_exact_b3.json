@@ -1,0 +1,122 @@
+{
+  "exact_bounded": [
+    {
+      "p": 7,
+      "n": 14,
+      "bound": 3,
+      "states": 647,
+      "solvable": 642,
+      "unsolvable": 5,
+      "ratio": 0.0077279752704791345,
+      "distance_distribution": {
+        "1": 50,
+        "2": 584,
+        "3": 8
+      },
+      "examples": [
+        [
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          -3,
+          -3,
+          -3,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          -2,
+          -2,
+          -2,
+          -2,
+          -2,
+          -2,
+          -1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          -2,
+          -2,
+          -2,
+          -2,
+          -2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        [
+          -2,
+          -2,
+          -2,
+          -2,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "seconds": 0.4367690000217408,
+      "memo_states": 654,
+      "sampling_model": "sorted primitive zero-sum states in [-bound,bound], conditioned on G=7^k"
+    }
+  ],
+  "random": [
+    {
+      "p": 7,
+      "n": 14,
+      "bound": 2,
+      "samples": 1,
+      "accepted": 1,
+      "rejected": 0,
+      "solvable": 1,
+      "unsolvable": 0,
+      "ratio": 0.0,
+      "distance_distribution": {
+        "2": 1
+      },
+      "seconds": 0.0019305000314489007,
+      "examples": [],
+      "sampling_model": "14 independent uniform integers in [-bound,bound], final coordinate closes zero sum, primitive-normalized, conditioned on G=7^k"
+    }
+  ]
+}

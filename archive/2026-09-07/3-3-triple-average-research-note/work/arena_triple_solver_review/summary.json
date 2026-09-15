@@ -1,0 +1,72 @@
+{
+  "scope": "finite same-input comparison; mixed JS/Python implementations; timings are saved observations",
+  "groups": [
+    {
+      "group": "small",
+      "cases": 24,
+      "web_success": 24,
+      "baseline_success": 24,
+      "web_mean_ms": 2.249141666666682,
+      "baseline_mean_ms": 1.9456166725528117,
+      "web_steps_success_mean": 8.25,
+      "baseline_steps_all_mean": 8.458333333333334,
+      "baseline_steps_on_web_success_mean": 8.458333333333334
+    },
+    {
+      "group": "8bit",
+      "cases": 6,
+      "web_success": 6,
+      "baseline_success": 6,
+      "web_mean_ms": 192.67634999999837,
+      "baseline_mean_ms": 2.0380833108598986,
+      "web_steps_success_mean": 11.5,
+      "baseline_steps_all_mean": 27.166666666666668,
+      "baseline_steps_on_web_success_mean": 27.166666666666668
+    },
+    {
+      "group": "16bit",
+      "cases": 6,
+      "web_success": 3,
+      "baseline_success": 6,
+      "web_mean_ms": 4747.478349999999,
+      "baseline_mean_ms": 3.412500023841858,
+      "web_steps_success_mean": 14,
+      "baseline_steps_all_mean": 43,
+      "baseline_steps_on_web_success_mean": 35.333333333333336
+    },
+    {
+      "group": "32bit",
+      "cases": 6,
+      "web_success": 0,
+      "baseline_success": 6,
+      "web_mean_ms": 9301.951250000004,
+      "baseline_mean_ms": 6.908916693646461,
+      "web_steps_success_mean": null,
+      "baseline_steps_all_mean": 92.33333333333333,
+      "baseline_steps_on_web_success_mean": null
+    },
+    {
+      "group": "64_128bit",
+      "cases": 6,
+      "web_success": 0,
+      "baseline_success": 6,
+      "web_mean_ms": 10475.541783333334,
+      "baseline_mean_ms": 86.9819499979106,
+      "web_steps_success_mean": null,
+      "baseline_steps_all_mean": 417.5,
+      "baseline_steps_on_web_success_mean": null
+    }
+  ],
+  "small_warm_web_mean_ms": 0.854670833333337,
+  "small_step_comparison": {
+    "same": 22,
+    "shorter": 1,
+    "longer": 1
+  },
+  "compared_cases": 48,
+  "web_solved_compared": 33,
+  "baseline_solved_compared": 48,
+  "extra_scaled_demo_cases": 4,
+  "exact_macros_basis_count": 33,
+  "numeric_scale_bug_confirmed": true
+}

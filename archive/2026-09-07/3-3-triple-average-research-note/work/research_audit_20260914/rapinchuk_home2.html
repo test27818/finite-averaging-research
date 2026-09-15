@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Andrei Rapinchuk | Mathematics at the University of Virginia</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Official website of Department of Mathematics at the University of Virginia">
+<!-- Open Graph -->
+<meta property="og:image" content="/img/kerchofhall450_180.png">
+<meta property="og:description" content="Official website of Department of Mathematics at the University of Virginia" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://math.virginia.edu" />
+<meta property="og:title" content="Mathematics at the University of Virginia" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://math.virginia.edu/css/main.css" rel="stylesheet">
+<link href="https://math.virginia.edu/css/syntax.css" rel="stylesheet">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta name="google-site-verification" content="QVK07MMriH3-qlpDjpX1tkiFCwHMFAIXjedElNJQgYk" />
+<script>
+  var isDetailsSupported = (function(doc) {
+  	var el = doc.createElement('details');
+  	var fake;
+  	var root;
+  	var diff;
+  	if (!('open' in el)) {
+  		return false;
+  	}
+  	root = doc.body || (function() {
+  		var de = doc.documentElement;
+  		fake = true;
+  		return de.insertBefore(doc.createElement('body'), de.firstElementChild || de.firstChild);
+  	}());
+  	el.innerHTML = '<summary>a</summary>b';
+  	el.style.display = 'block';
+  	root.appendChild(el);
+  	diff = el.offsetHeight;
+  	el.open = true;
+  	diff = diff != el.offsetHeight;
+  	root.removeChild(el);
+  	if (fake) {
+  		root.parentNode.removeChild(root);
+  	}
+  	return diff;
+  }(document));
+  if (!isDetailsSupported) {
+		document.documentElement.className += ' no-details';
+	}
+</script>
+<style>
+  details, summary { display: block; }
+  /* Apply a pointer cursor and style the background upon hover to indicate <summary> is a clickable element. */
+  /* These styles can be applied regardless of whether the fallback is needed */
+  summary { cursor: pointer; }
+  summary:hover, summary:focus { background: #DADADA; }
+  [data-theme="dark"] details > summary { color: #232d4b; }
+  [data-theme="dark"] summary:hover, [data-theme="dark"] summary:focus { background: #243448; }
+  /* The following styles are not really needed, since the jQuery script takes care of hiding/displaying the elements. */
+  /* However, we’re still gonna use CSS as well to prevent FOUC in browsers that understand these selectors. */
+  /* Remember: by default (and probably most of the time), the contents of the <details> element are hidden. */
+  .no-details details > * { display: none; }
+  /* This doesn’t work very well in Firefox 3.6.x */
+  /* .no-details details[open] > * { display: block; } */
+  /* The following doesn’t toggle correctly in WebKit:
+  .no-details details > summary:before { content: '► '; }
+  .no-details details[open] > summary:before { content: '▼ '; }
+  */
+  /* And yes, it should really be ::before, but that doesn’t work in IE8 */
+  .no-details details > summary:before { float: left; width: 20px; content: '► '; }
+  .no-details details.open > summary:before { content: '▼ '; }
+  /* For IE6 and IE7, who don’t support generated content, you could use padding-left + a background image instead */
+  /* I really couldn’t be bothered though. */
+  /*
+  .no-details details > summary { padding-left: 20px; background: url(img/arrow-sprite.png) no-repeat 0 0; }
+  .no-details details.open > summary { background-position: 0 -20px; }
+  */
+  /* Make sure summary remains visible */
+  .no-details details summary { display: block; }
+</style>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-57366601-23"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+  gtag('config', 'UA-57366601-23');
+</script>
+<!-- Level Access Analytics -->
+<script src="https://cdn.levelaccess.net/accessjs/YW1wX3V2YTExMDA/access.js" type="text/javascript"></script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="University brand and search">
+     <!-- <button class="navbar-toggler navbar-toggler-right" style="padding:8px" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button> -->
+     <div class="container">
+     <div class="navbar-brand" style="padding-top: 0 ;padding-bottom: 0;">
+       <a href="https://math.virginia.edu" class="dept-logo-large me-1 d-none d-lg-inline" style="vertical-align: middle;">Mathematics</a>
+       <a href="https://math.virginia.edu" class="dept-logo-large d-none d-md-inline d-lg-none" style="vertical-align: middle;">Math</a>
+       <a href="https://math.virginia.edu" class="dept-logo-large d-md-none" style="vertical-align: -6%; font-size:28px">Math</a>
+      <a href="https://www.virginia.edu" class="d-none d-md-inline" style="vertical-align: baseline;">
+        <img src="https://math.virginia.edu/img/brand/uva-horiz.png" style="margin-top:20px; margin-bottom:23px;width:324px" alt="UVA Logo"></a>
+      <a href="https://www.virginia.edu" class="d-md-none"  style="vertical-align: baseline;">
+        <img src="https://math.virginia.edu/img/brand/uva-horiz.png" style="margin-top:12px; margin-bottom:15px;width:200px" alt="UVA Logo"></a>
+      <a href="https://www.virginia.edu/search/site/" class="d-none d-sm-inline d-md-none navbar-toggler-right">
+        <img src="https://math.virginia.edu/img/brand/search.png" style="width:20px;margin: 14px 0px 12px 0px" alt="Search">
+      </a>
+     </div>
+     <div class="collapse navbar-collapse" id="navbarCollapse">
+       <div class="navbar-nav me-auto">
+       </div>
+       <form class="form-inline mt-2 mt-md-0 d-none d-md-block d-flex align-items-center" id="search_form" name="q" role="search" aria-label="Site search">
+         <div class="input-group">
+           <input class="form-control" type="text" id="q" placeholder="UVA Search" aria-label="Search the UVA website">
+           <button class="btn bg-inverse" style="border:none;" type="submit" value="">
+             <img src="https://math.virginia.edu/img/brand/search.png" style="width:24px" alt="UVA Search" title="UVA Search">
+           </button>
+         </div>
+       </form>
+     </div>
+     </div>
+   </nav>
+<!-- simple search script calling the UVA search -->
+   <script>
+     document.getElementById("search_form").onsubmit = searchFunction;
+     function searchFunction() {
+        var link_s = document.getElementById('q').value;
+        window.open("https://www.virginia.edu/search/site/" + link_s);
+        return false;
+     }
+   </script>
+<nav class="navbar navbar-expand-md mb-4 navbar-light" style="background-color:#D9D9D9;" aria-label="Main navigation">
+  <div class="container">
+    <!-- Main navigation toggle - left side -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle main navigation">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+    <!-- Page title - center (mobile only) -->
+    <div class="mx-auto d-md-none">
+    </div>
+    <!-- Dark mode toggle for mobile -->
+    <button class="theme-toggle-dual d-md-none me-2" id="theme-toggle-mobile" title="Toggle dark mode" aria-label="Toggle dark mode" aria-pressed="false">
+      <span class="toggle-track">
+        <i class="fas fa-cloud-sun" aria-hidden="true"></i>
+        <i class="fas fa-moon" aria-hidden="true"></i>
+        <span class="toggle-thumb"></span>
+      </span>
+    </button>
+    <!-- Secondary menu toggle - right side (only for special pages) -->
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item ">
+        <a class="nav-link"  href="https://math.virginia.edu/about/" >About</a>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" id="navdropdown-386"  href="https://math.virginia.edu/news/" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          News
+        </a>
+        <div class="dropdown-menu" role="menu" aria-labelledby="navdropdown-386">
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/defenses/" role="menuitem" >Defenses</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/newsletter/" role="menuitem" >Virginia Math Bulletin</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/awards/" role="menuitem" >Awards</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/conferences/" role="menuitem" >Conferences</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/job-opportunities/" role="menuitem" >Job opportunities</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" id="navdropdown-406"  href="https://math.virginia.edu/seminars/" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Seminars
+        </a>
+        <div class="dropdown-menu" role="menu" aria-labelledby="navdropdown-406">
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/calendar/" role="menuitem" >All seminars</a>
+            <a class="dropdown-item my-navbar-dropdown-item " href="https://math.virginia.edu/seminars/colloq"  role="menuitem" >Colloquium</a>
+            <a class="dropdown-item my-navbar-dropdown-item " href="https://math.virginia.edu/seminars/gradsem"  role="menuitem" >Graduate Students Seminar</a>
+            <a class="dropdown-item my-navbar-dropdown-item " href="https://math.virginia.edu/seminars/mathclub"  role="menuitem" >Undergraduate Math Club</a>
+            <div class="dropdown-divider" role="separator"></div>
+            <a class="dropdown-item my-navbar-dropdown-item " href="https://math.virginia.edu/seminars/algebra"  role="menuitem" >Algebra Seminar</a>
+            <a class="dropdown-item my-navbar-dropdown-item " href="https://math.virginia.edu/seminars/galois"  role="menuitem" >Galois-Grothendieck seminar</a>
+            <a class="dropdown-item my-navbar-dropdown-item " href="https://math.virginia.edu/seminars/geometry"  role="menuitem" >Geometry Seminar</a>
+            <a class="dropdown-item my-navbar-dropdown-item " href="https://math.virginia.edu/seminars/diffeq" style="white-space: normal" role="menuitem" >Harmonic Analysis and PDE Seminar</a>
+            <a class="dropdown-item my-navbar-dropdown-item " href="https://math.virginia.edu/seminars/mathphys" style="white-space: normal" role="menuitem" >Mathematical Physics Seminar</a>
+            <a class="dropdown-item my-navbar-dropdown-item " href="https://math.virginia.edu/seminars/ntsem"  role="menuitem" >Ramanujan-Serre Seminar (Number Theory)</a>
+            <a class="dropdown-item my-navbar-dropdown-item " href="https://math.virginia.edu/seminars/sotoa"  role="menuitem" >Operator theory seminar</a>
+            <a class="dropdown-item my-navbar-dropdown-item " href="https://math.virginia.edu/seminars/probability"  role="menuitem" >Probability Seminar</a>
+            <a class="dropdown-item my-navbar-dropdown-item " href="https://math.virginia.edu/seminars/topology"  role="menuitem" >Topology Seminar</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" id="navdropdown-423"  href="https://math.virginia.edu/directory/" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          People
+        </a>
+        <div class="dropdown-menu" role="menu" aria-labelledby="navdropdown-423">
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/facultyresearch/" role="menuitem" >Research Areas</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/people/all/" role="menuitem" >All People</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/faculty/" role="menuitem" >Faculty</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/postdocs/" role="menuitem" >Postdocs</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/lecturers/" role="menuitem" >Lecturers</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/emeritus-faculty/" role="menuitem" >Emeritus Faculty</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/gradstudents/" role="menuitem" >Graduate Students</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/staff/" role="menuitem" >Staff</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" id="navdropdown-439"  href="https://math.virginia.edu/undergraduate_info/" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Undergraduate
+        </a>
+        <div class="dropdown-menu" role="menu" aria-labelledby="navdropdown-439">
+          <a class="dropdown-item my-navbar-dropdown-item " style="white-space: normal" href="https://math.virginia.edu/undergraduate/" role="menuitem" >For current and prospective undergraduate students</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/content/math-placement/" role="menuitem" >Math Placement</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/undergraduate/diagnostic/" role="menuitem" >Diagnostic</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/undergrad/contacts/" role="menuitem" >Contacts</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/undergraduate/MCLC/" role="menuitem" >Math Collaborative Learning Center</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/content/distinguished-major-program-dmp/" role="menuitem" >Distinguished Major Program</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/content/41-ba-ma-program/" role="menuitem" >4+1 BA/MA Program</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/undergraduate/research/" role="menuitem" >Research opportunities and support</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/undergraduate/policies/" role="menuitem" >Policies</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/drp/" role="menuitem" >Directed Reading Program</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/awm/" role="menuitem" >AWM&commat;UVa</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/mathexlab/" role="menuitem" >Math Experimental Lab</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/undergraduate/mathclub_redirect/" role="menuitem" >Undergraduate Math Club</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" id="navdropdown-440"  href="https://math.virginia.edu/graduate_info/" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Graduate
+        </a>
+        <div class="dropdown-menu" role="menu" aria-labelledby="navdropdown-440">
+          <a class="dropdown-item my-navbar-dropdown-item " style="white-space: normal" href="https://math.virginia.edu/graduate/" role="menuitem" >For current and prospective graduate students</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/graduate/contacts/" role="menuitem" >Contacts</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/graduate/admission/" role="menuitem" >Graduate Admissions</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/graduate/policies/" role="menuitem" >Policies</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/ams_chapter/" role="menuitem" >AMS Grad Student Chapter</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/graduate/gradsem_redirect/" role="menuitem" >Graduate Students Seminar</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" id="navdropdown-441"  href="https://math.virginia.edu/generalresources/" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Info
+        </a>
+        <div class="dropdown-menu" role="menu" aria-labelledby="navdropdown-441">
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/new_to_department/" role="menuitem" >New to the department?</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/info-booking-rooms/" role="menuitem" >Kerchof Rooms Booking</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" id="navdropdown-449"  href="https://math.virginia.edu/ims/" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          IMS
+        </a>
+        <div class="dropdown-menu" role="menu" aria-labelledby="navdropdown-449">
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/ims/about/" role="menuitem" >About Institute of Mathematical Science </a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/ims/lectures/" role="menuitem" >Virginia Mathematics Lectures</a>
+          <a class="dropdown-item my-navbar-dropdown-item " style="" href="https://math.virginia.edu/ims/special-events/" role="menuitem" >IMS special events</a>
+        </div>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link"  href="https://math.virginia.edu/mathcircle/" >Math Circle</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ms-auto align-items-center">
+      <li class="nav-item d-none d-md-flex align-items-center">
+        <button class="theme-toggle-dual me-2" id="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="toggle-track">
+            <i class="fas fa-cloud-sun" aria-hidden="true"></i>
+            <i class="fas fa-moon" aria-hidden="true"></i>
+            <span class="toggle-thumb"></span>
+          </span>
+        </button>
+      </li>
+      <li class="nav-item">
+        <a href="https://math.virginia.edu/support/" class="nav-link orange-item">Support us</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+<main id="main-content">
+<div class="container">
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Andrei Rapinchuk</h1>
+      <h2 style="font-size:1.5em" class="mb-1">McConnell-Bernard Professor of Mathematics</h2>
+      <div class="row">
+        <div class="col-md-6">
+            P. O. Box 400137<br />Department of Mathematics<br />
+          307 Kerchof Hall
+        </div>
+        <div class="col-md-6">
+            <span class="fa-solid fa-phone" aria-hidden="true"></span>
+            <a href="tel:434-924-4950">434-924-4950</a><br />
+            <span class="fa-solid fa-envelope" aria-hidden="true"></span>
+            <a href="mailto:asr3x@virginia.edu">asr3x@virginia.edu</a>
+            <br />
+            <span class="fa-solid fa-up-right-from-square" aria-hidden="true"></span>
+            <a href="https://uva.theopenscholar.com/andrei-rapinchuk/" target="_blank" rel="noopener noreferrer">Personal webpage<span class="visually-hidden"> (opens in new tab)</span></a>
+        </div>
+      </div>
+       <div class="mt-4" style="font-weight: 500;">Algebraic Groups</div>
+      <div class="mt-4">
+        <a class="btn btn-secondary" href="https://math.virginia.edu/research/AL/">Algebra</a>&nbsp;
+      </div>
+      <!--  -->
+      <br />
+    </div>
+    <div class="col-md-4">
+        <img src="https://math.virginia.edu/img/people/Rapinchuk.jpg" style="max-width:100%;max-height:400px;height:auto;width:auto;" alt="Andrei Rapinchuk" title="Andrei Rapinchuk">
+    </div><!--/span-->
+  </div>
+</div>
+</div>
+</main>
+<footer class="mt-3">
+<div class="footer-bar">
+  <div class="container" style="padding:10px">
+              <div class="row" style="font-size:14px;font-weight:600">
+                <div class="col-md-3">
+                  Maintained by: <a href='mailto:math-help@virginia.edu'>Department of Mathematics</a>
+                  <br>
+                   <a href="https://www.virginia.edu/copyright.html" target="_blank" rel="noopener noreferrer" aria-label="Copyright information (opens in new tab)">
+                     <i class="fa-regular fa-copyright" aria-hidden="true"></i></a> Copyright
+                    by the Rector and Visitors of the University of Virginia
+                </div>
+                <div class="col-md-4 d-none d-md-block" style="text-align:right">
+                  <span class="fa-solid fa-phone" aria-hidden="true"></span>
+                  <a href="tel:+1-434-924-4919">(434) 924-4919</a><br>
+                  <span class="fa-solid fa-fax" aria-hidden="true"></span>
+                  (434) 982-3084<br>
+                  <span class="fa-solid fa-envelope" aria-hidden="true"></span>
+                  <a href="mailto:math-help@virginia.edu">math-help@virginia.edu</a>
+                </div>
+                <div class="col-md-4 d-md-none">
+                  <hr />
+                  <span class="fa-solid fa-phone" aria-hidden="true"></span>
+                  <a href="tel:+1-434-924-4919">(434) 924-4919</a><br>
+                  <span class="fa-solid fa-fax" aria-hidden="true"></span>
+                  (434) 982-3084<br>
+                  <span class="fa-solid fa-envelope" aria-hidden="true"></span>
+                  <a href="mailto:math-help@virginia.edu">math-help@virginia.edu</a>
+                  <hr />
+                </div>
+                <div class="col-md-4">
+                  <address style="margin-bottom:0;font-style:normal">
+                  141 Cabell Drive, Kerchof Hall<br>
+                  P.O. Box 400137<br>
+                  Charlottesville, VA 22904<br>
+                  <span class="fa-regular fa-map" aria-hidden="true"></span>
+                  <a href="https://www.google.com/maps/place/Kerchof+Hall,+Charlottesville,+VA+22903/@38.0321891,-78.5088882,18z" target="_blank" rel="noopener noreferrer">Directions<span class="visually-hidden"> (opens in new tab)</span></a>
+                  </address>
+                </div>
+                <div class="col-md-1 d-md-none">
+                  <hr>
+                  <nav aria-label="Social media links">
+                  <a href="https://x.com/math_uva" aria-label="UVA Math on Twitter (opens in new tab)" target="_blank" rel="noopener noreferrer">
+                    <span class="fa-brands fa-square-twitter fa-2x" aria-hidden="true"></span></a>
+                    <a href="https://www.facebook.com/UVAMath" aria-label="UVA Math on Facebook (opens in new tab)" target="_blank" rel="noopener noreferrer">
+                      <span class="fa-brands fa-facebook-square fa-2x mt-1" aria-hidden="true"></span></a>
+                    <a href="https://www.instagram.com/uva_math/" aria-label="UVA Math on Instagram (opens in new tab)" target="_blank" rel="noopener noreferrer">
+                      <span class="fa-brands fa-instagram fa-2x mt-1" aria-hidden="true"></span></a>
+                    <a href="https://github.com/uva-math/uva-math-code/blob/master/_departmentpeople/faculty/asr3x.md" aria-label="Contribute on GitHub (opens in new tab)" target="_blank" rel="noopener noreferrer">
+                    <span class="fa-brands fa-square-github fa-2x mt-1" aria-hidden="true"></span></a>
+                  </nav>
+                </div>
+                <div class="col-md-1 d-none d-md-block">
+                  <nav aria-label="Social media">
+                  <a href="https://www.facebook.com/UVAMath" aria-label="UVA Math on Facebook (opens in new tab)" target="_blank" rel="noopener noreferrer">
+                    <span class="fa-brands fa-facebook-square fa-2x mt-1 me-2" aria-hidden="true"></span></a>
+                  <a href="https://www.instagram.com/uva_math/" aria-label="UVA Math on Instagram (opens in new tab)" target="_blank" rel="noopener noreferrer">
+                    <span class="fa-brands fa-instagram fa-2x mt-1" aria-hidden="true"></span></a>
+                  <a href="https://github.com/uva-math/uva-math-code/blob/master/_departmentpeople/faculty/asr3x.md" aria-label="Contribute on GitHub (opens in new tab)" target="_blank" rel="noopener noreferrer">
+                    <span class="fa-brands fa-square-github fa-2x me-2 mt-1" aria-hidden="true"></span></a>
+                  <a href="https://x.com/math_uva" aria-label="UVA Math on Twitter (opens in new tab)" target="_blank" rel="noopener noreferrer">
+                    <span class="fa-brands fa-square-twitter fa-2x mt-1" aria-hidden="true"></span></a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+</div>
+</footer>
+<!-- Dark mode functionality -->
+<script>
+(function() {
+  // Get the current theme from localStorage or OS preference
+  function getThemePreference() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme;
+    }
+    // Check OS preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  // Apply theme to document
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    // Update aria-pressed on toggle buttons to reflect dark mode state
+    var isDark = theme === 'dark';
+    var toggleBtns = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
+    toggleBtns.forEach(function(btn) {
+      btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    });
+  }
+  // Toggle theme
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  }
+  // Initialize theme on page load (immediately)
+  const currentTheme = getThemePreference();
+  applyTheme(currentTheme);
+  // Theme toggle button handlers
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtns = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
+    toggleBtns.forEach(btn => {
+      if (btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleTheme();
+        });
+      }
+    });
+  });
+  // Listen for OS theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    // Only apply OS preference if user hasn't manually set a preference
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+})();
+</script>
+<!-- Dropdown enhancements for mobile -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Remove the mobile click override that was breaking functionality
+  // Bootstrap 5 handles mobile dropdowns well by default
+  // Fix dropdown positioning on desktop to prevent overflow and ensure consistency
+  const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
+  dropdowns.forEach((dropdown, index) => {
+    dropdown.addEventListener('shown.bs.dropdown', function() {
+      if (window.innerWidth > 767) {
+        const menu = this.querySelector('.dropdown-menu');
+        const toggle = this.querySelector('.dropdown-toggle');
+        const menuRect = menu.getBoundingClientRect();
+        const toggleRect = toggle.getBoundingClientRect();
+        const windowWidth = window.innerWidth;
+        // Remove any existing positioning classes
+        menu.classList.remove('dropdown-menu-end');
+        // Check if dropdown is in the right half of the navbar
+        const navbarCenter = windowWidth / 2;
+        const toggleCenter = toggleRect.left + (toggleRect.width / 2);
+        // If toggle is in right half OR menu would overflow, align to right
+        if (toggleCenter > navbarCenter || menuRect.right > windowWidth - 10) {
+          menu.classList.add('dropdown-menu-end');
+        }
+      }
+    });
+  });
+});
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script>
+  // The katex libraries above load with `defer`, so they only execute after
+  // the document is parsed. Wait for DOMContentLoaded (which fires after all
+  // deferred scripts have run) before calling renderMathInElement, otherwise
+  // the function is undefined and no math renders. See KaTeX auto-render docs.
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body,
+    {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    });
+  });
+</script>
+<!-- Bootstrap 5 Bundle with Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- jQuery kept for legacy compatibility - to be removed in future -->
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104225693-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-104225693-1');
+</script><!-- UVA fonts -->
+<script src="//use.typekit.net/tgy5tlj.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+</body>
+</html>

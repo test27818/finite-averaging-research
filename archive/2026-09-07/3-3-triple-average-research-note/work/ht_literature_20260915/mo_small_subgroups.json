@@ -1,0 +1,695 @@
+{
+  "items": [
+    {
+      "tags": [
+        "nt.number-theory",
+        "prime-numbers",
+        "quadratic-residues"
+      ],
+      "owner": {
+        "account_id": 6949071,
+        "reputation": 387,
+        "user_id": 80245,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/c1bb9b3a53a047118810500e41415b4e?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Ken",
+        "link": "https://mathoverflow.net/users/80245/ken"
+      },
+      "is_answered": true,
+      "view_count": 567,
+      "accepted_answer_id": 314231,
+      "answer_count": 1,
+      "score": 4,
+      "last_activity_date": 1540954021,
+      "creation_date": 1540951983,
+      "last_edit_date": 1540954021,
+      "question_id": 314230,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/314230/quadratic-nonresidue",
+      "title": "Quadratic Nonresidue",
+      "body": "<p>Suppose <span class=\"math-container\">$r$</span> integers <span class=\"math-container\">$n_1, \\ldots, n_r$</span> are given such that <span class=\"math-container\">$0&lt;|n_i|&lt;N$</span> for <span class=\"math-container\">$1 \\leq i \\leq r$</span> and for a natural number <span class=\"math-container\">$N.$</span> Is it possible to find a prime number <span class=\"math-container\">$p$</span> such that all numbers <span class=\"math-container\">$n_1, \\ldots, n_r$</span> are quadratic nonresidue mode <span class=\"math-container\">$p$</span>? Can we say <span class=\"math-container\">$p &lt; N^6?$</span> </p>\n\n<p>I think the answer to my first question is yes, but I don't know how to give an upper bound for <span class=\"math-container\">$p$</span>? </p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory"
+      ],
+      "owner": {
+        "account_id": 2946109,
+        "reputation": 671,
+        "user_id": 9304,
+        "user_type": "registered",
+        "accept_rate": 92,
+        "profile_image": "https://www.gravatar.com/avatar/3d4163519309a0609f3739fd2e3830f3?s=256&d=identicon&r=PG",
+        "display_name": "Alex",
+        "link": "https://mathoverflow.net/users/9304/alex"
+      },
+      "is_answered": true,
+      "view_count": 2351,
+      "accepted_answer_id": 137723,
+      "answer_count": 2,
+      "score": 6,
+      "last_activity_date": 1374764406,
+      "creation_date": 1374747960,
+      "last_edit_date": 1374761431,
+      "question_id": 137714,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/137714/least-quadratic-residue-and-nonresidue",
+      "title": "Least quadratic residue and nonresidue",
+      "body": "<p>For a prime $p$ denote by $r(p)$ (resp. $n(p)$) the smallest prime $q$ which is a quadratic residue (resp. nonresidue) modulo $p$.\nIt was shown by Linnik that for any fixed $\\epsilon&gt;0$ the number of $p&lt;x$ s.t.\n$n(p)&gt;p^\\epsilon$ is bounded by $c(\\epsilon)\\log\\log x$.</p>\n\n<p>My question is what is the best known bound today and what is the best known corresponding bound for $r(p)$.</p>\n\n<p>Edit: I mean a bound on the number of exceptions to Vinogradov's conjectures, i.e. $n(p),r(p)&gt;p^\\epsilon$.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "prime-numbers",
+        "integer-sequences",
+        "quadratic-residues"
+      ],
+      "owner": {
+        "account_id": 13606868,
+        "reputation": 19819,
+        "user_id": 124654,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/2100ea527a0edfd169dfdf34a3a492a3?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Zhi-Wei Sun",
+        "link": "https://mathoverflow.net/users/124654/zhi-wei-sun"
+      },
+      "is_answered": false,
+      "view_count": 292,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1527756167,
+      "creation_date": 1527754902,
+      "last_edit_date": 1527756059,
+      "question_id": 301624,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/301624/does-each-prime-p3-have-a-quadratic-nonresidue-which-is-a-mersenne-number",
+      "title": "Does each prime $p&gt;3$ have a quadratic nonresidue which is a Mersenne number?",
+      "body": "<p>Recall that the Mersenne numbers are those integers $M_p=2^p-1$ with $p$ prime.</p>\n\n<p>QUESTION: Is it true that for each prime $p&gt;3$ there is a Mersenne number which is a quadratic nonresidue modulo $p$?</p>\n\n<p>In 2014 I conjectured further that for any prime $p&gt;3$ there is a prime $q&lt;p/2$ such that $M_q=2^q-1$ is a primitive root modulo $p$ (cf. <a href=\"http://arxiv.org/abs/1405.0290\" rel=\"nofollow noreferrer\">http://arxiv.org/abs/1405.0290</a> or <a href=\"http://oeis.org/A236966\" rel=\"nofollow noreferrer\">http://oeis.org/A236966</a>). For example, $M_{17}=131071$ is a primitive root modulo the prime $37$. Of course, the question is easier than this difficult conjecture.</p>\n\n<p>I'm even unable to prove that each prime $p&gt;3$ has a quadratic nonresidue of the form $2^n-1$ with $n$ a positive integer. Any ideas towards the proof?</p>\n\n<p>By the way, in 2014 I also conjectured that for each prime $p&gt;3$ there is a Fibonacci number smaller than $p/2$ which is a quadratic nonresidue modulo $p$ (cf. <a href=\"http://oeis.org/A241568\" rel=\"nofollow noreferrer\">http://oeis.org/A241568</a>). This should be quite challenging.</p>\n\n<p>Any comments are welcome!</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "analytic-number-theory",
+        "prime-numbers",
+        "quadratic-residues"
+      ],
+      "owner": {
+        "account_id": 13606868,
+        "reputation": 19819,
+        "user_id": 124654,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/2100ea527a0edfd169dfdf34a3a492a3?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Zhi-Wei Sun",
+        "link": "https://mathoverflow.net/users/124654/zhi-wei-sun"
+      },
+      "is_answered": false,
+      "view_count": 156,
+      "answer_count": 0,
+      "score": 3,
+      "last_activity_date": 1581135597,
+      "creation_date": 1581135597,
+      "question_id": 352195,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/352195/on-the-set-n0-n-textis-a-quadratic-nonresidue-modulo-the-n-textth-pr",
+      "title": "On the set $\\{n&gt;0:\\ n\\ \\text{is a quadratic nonresidue modulo the}\\ n\\text{th prime}\\}$",
+      "body": "<p>Let <span class=\"math-container\">$S$</span> denote the set of positive integers <span class=\"math-container\">$n$</span> with <span class=\"math-container\">$n$</span> a quadratic nonresidue modulo the <span class=\"math-container\">$n$</span>th prime <span class=\"math-container\">$p_n$</span>. The first 20 elements of <span class=\"math-container\">$S$</span> are\n<span class=\"math-container\">$$2,\\, 3,\\, 6,\\, 7,\\, 8,\\, 10,\\, 11,\\, 13,\\, 15,\\, 18,\\, 21,\\, 24,\\, 26, \\,27,\\, 28,\\, 32,\\, 33,\\, 39, \\,41,\\, 44.$$</span>\nFor more elements of <span class=\"math-container\">$S$</span> see <a href=\"http://oeis.org/A332021\" rel=\"nofollow noreferrer\">http://oeis.org/A332021</a>.  I have the following natural conjecture.</p>\n\n<p><strong>Conjecture.</strong> The asymptotic density <span class=\"math-container\">$d(S)$</span> of the set <span class=\"math-container\">$S$</span> is <span class=\"math-container\">$1/2$</span>, that is,\n<span class=\"math-container\">$$\\lim_{N\\to+\\infty}\\frac{|\\{n\\in S:\\ n\\le N\\}|}{N}=\\frac12.\\tag{1}$$</span></p>\n\n<p><strong>QUESTION</strong>. How to prove the conjecture? Is it practical to show that the set <span class=\"math-container\">$S$</span> is infinite?</p>\n\n<p>It seems that <span class=\"math-container\">$(1)$</span> can be strengthened as follows: \n<span class=\"math-container\">$$|\\{n\\in S:\\ n\\le x\\}|=\\frac x2+O(\\sqrt x). \\tag{2}$$</span></p>\n\n<p>Your comments are welcome!</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "analytic-number-theory",
+        "prime-numbers",
+        "quadratic-forms",
+        "quadratic-residues"
+      ],
+      "owner": {
+        "account_id": 4809398,
+        "reputation": 861,
+        "user_id": 56947,
+        "user_type": "registered",
+        "accept_rate": 17,
+        "profile_image": "https://www.gravatar.com/avatar/546303cf4e7bcf804eee6373bc2006fb?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "asad",
+        "link": "https://mathoverflow.net/users/56947/asad"
+      },
+      "is_answered": true,
+      "view_count": 272,
+      "answer_count": 1,
+      "score": 5,
+      "last_activity_date": 1567587328,
+      "creation_date": 1567509662,
+      "last_edit_date": 1567512220,
+      "question_id": 339754,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/339754/applications-of-finding-least-quadratic-nonresidue-mod-p",
+      "title": "applications of finding least quadratic nonresidue mod $p$?",
+      "body": "<p>I saw some papers from famous mathematicians (assuming GRH or without it) which are devoted to finding bound for least quadratic nonresidues modulo prime number <span class=\"math-container\">$p$</span>. </p>\n\n<p>My question is that why it is so important and what are the applications of it?</p>\n\n<p>Thanks.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory"
+      ],
+      "owner": {
+        "account_id": 2948331,
+        "reputation": 26169,
+        "user_id": 12481,
+        "user_type": "registered",
+        "accept_rate": 65,
+        "profile_image": "https://www.gravatar.com/avatar/9dfe027c62c9a19313e774379eb91ecb?s=256&d=identicon&r=PG",
+        "display_name": "joro",
+        "link": "https://mathoverflow.net/users/12481/joro"
+      },
+      "is_answered": false,
+      "view_count": 85,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1502190526,
+      "creation_date": 1502190526,
+      "question_id": 278254,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/278254/large-smallest-i-with-kroneckeri-n-ne-1",
+      "title": "Large smallest $i$ with $kronecker(i,n) \\ne 1$",
+      "body": "<p>Let $kronecker(i,n)$ denote the <a href=\"https://en.wikipedia.org/wiki/Kronecker_symbol\" rel=\"nofollow noreferrer\">kronecker symbol</a>. Let $n &gt; 1$ be squarefree integer.</p>\n\n<p>Define $f(n)$ to be the smallest integer $i&gt;0$ satisfying $kronecker(i,n) \\ne 1$.</p>\n\n<blockquote>\n  <p>How large $f(n)$ can be infinitely often?</p>\n</blockquote>\n\n<p>If $n$ is prime, $f(n)$ is the smallest quadratic nonresidue.</p>\n\n<p>Is there $n$ not rather small with $f(n) &gt; \\log^2(n)$?</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "prime-numbers",
+        "integer-sequences",
+        "quadratic-residues",
+        "primitive-roots"
+      ],
+      "owner": {
+        "account_id": 13606868,
+        "reputation": 19819,
+        "user_id": 124654,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/2100ea527a0edfd169dfdf34a3a492a3?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Zhi-Wei Sun",
+        "link": "https://mathoverflow.net/users/124654/zhi-wei-sun"
+      },
+      "is_answered": false,
+      "view_count": 229,
+      "answer_count": 0,
+      "score": 4,
+      "last_activity_date": 1579447211,
+      "creation_date": 1579433002,
+      "last_edit_date": 1579447211,
+      "question_id": 350730,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/350730/primitive-roots-modulo-primes-related-to-fibonacci-numbers-or-lucas-numbers",
+      "title": "Primitive roots modulo primes related to Fibonacci numbers or Lucas numbers",
+      "body": "<p>The Fibonacci numbers <span class=\"math-container\">$F_0,F_1,F_2,\\ldots$</span> and the Lucas numbers <span class=\"math-container\">$L_0,L_1,L_2,\\ldots$</span> are given by \n<span class=\"math-container\">$$F_0=0,\\ F_1=1,\\ \\text{and}\\ F_{n+1}=F_n+F_{n-1}\\ (n=1,2,3,\\ldots)$$</span>\nand\n<span class=\"math-container\">$$L_0=2,\\ L_1=1,\\ \\text{and}\\ L_{n+1}=L_n+L_{n-1}\\ (n=1,2,3,\\ldots).$$</span></p>\n\n<p>Here I report my following conjecture on primitive roots modulo primes related to Fibonacci or Lucas numbers.</p>\n\n<p><strong>Conjecture.</strong> \n(i) For any prime <span class=\"math-container\">$p$</span>, there are two Fibonacci numbers <span class=\"math-container\">$F_k$</span> and <span class=\"math-container\">$F_m$</span>  with <span class=\"math-container\">$F_kF_m&lt;p$</span> such that <span class=\"math-container\">$F_kF_m$</span> is a primitive root modulo <span class=\"math-container\">$p$</span>. </p>\n\n<p>(ii) For any prime <span class=\"math-container\">$p$</span>, there are two Lucas numbers <span class=\"math-container\">$L_k$</span> and <span class=\"math-container\">$L_m$</span>  with <span class=\"math-container\">$L_kL_m&lt;p$</span> such that <span class=\"math-container\">$L_kL_m$</span> is a primitive root modulo <span class=\"math-container\">$p$</span>.</p>\n\n<p>Clearly, part (i) of the conjecture implies that for each odd prime <span class=\"math-container\">$p$</span> there exists a Fibonacci number <span class=\"math-container\">$F_k&lt;p$</span> which is a quadratic nonresidue modulo <span class=\"math-container\">$p$</span>. Similarly, part (ii) of the conjecture implies that for each odd prime <span class=\"math-container\">$p$</span> there exists a Lucas number <span class=\"math-container\">$L_k&lt;p$</span> which is a quadratic nonresidue modulo <span class=\"math-container\">$p$</span>.</p>\n\n<p>It seems that the first part of the above conjecture can be strengthened as follows: For any prime <span class=\"math-container\">$p$</span>, there is a primitive root <span class=\"math-container\">$g &lt; p$</span> modulo <span class=\"math-container\">$p$</span> such that one of \n<span class=\"math-container\">$$\\frac g{F_2} = g,\\ \\ \\frac g{F_3}=\\frac g2,\\ \\ \\frac g{F_4}=\\frac g3$$</span>\nis a Fibonacci number. I have verified this strong version for all primes <span class=\"math-container\">$p &lt; 10^9$</span>. For example, \n<span class=\"math-container\">$F_4F_5=3\\times5=15$</span> is a primitive root modulo the prime <span class=\"math-container\">$439$</span>. I have also verified the second part of the conjecture for all primes <span class=\"math-container\">$p&lt;10^9$</span>.</p>\n\n<p><strong>QUESTION.</strong> How to prove the conjecture? Can one find a concrete counterexample to the strong version of the first part?</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory"
+      ],
+      "owner": {
+        "account_id": 1410051,
+        "reputation": 1571,
+        "user_id": 22954,
+        "user_type": "registered",
+        "accept_rate": 88,
+        "profile_image": "https://www.gravatar.com/avatar/07aebda148c00202ddcc4c034751d976?s=256&d=identicon&r=PG",
+        "display_name": "Lwins",
+        "link": "https://mathoverflow.net/users/22954/lwins"
+      },
+      "is_answered": false,
+      "view_count": 172,
+      "answer_count": 0,
+      "score": 3,
+      "last_activity_date": 1351998441,
+      "creation_date": 1351998441,
+      "question_id": 111422,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/111422/is-2-always-a-p-rm-th-power-nonresidue-modulo-2p-1",
+      "title": "Is $2$ always a $p^{\\rm th}$-power nonresidue modulo $2^p-1$?",
+      "body": "<p>That is, is following inequality holds while $p \\in \\mathbb{P}$?\n$$ x^p \\neq 2 \\ (\\mathrm{mod} \\ 2^p-1) $$\nCertainly $x \\in \\mathbb{Z}$.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory"
+      ],
+      "owner": {
+        "account_id": 6948359,
+        "reputation": 163,
+        "user_id": 90403,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/zDrMI.jpg?s=256",
+        "display_name": "Oiler",
+        "link": "https://mathoverflow.net/users/90403/oiler"
+      },
+      "is_answered": true,
+      "view_count": 1019,
+      "accepted_answer_id": 263380,
+      "answer_count": 2,
+      "score": 5,
+      "last_activity_date": 1488388299,
+      "creation_date": 1488310357,
+      "last_edit_date": 1492088281,
+      "question_id": 263360,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/263360/smallest-prime-that-is-a-quadratic-residue-modulo-a-fixed-prime",
+      "title": "Smallest prime that is a quadratic residue modulo a fixed prime",
+      "body": "<p>Let $P$ denote the set of positive primes and let $p$ be a fixed prime. Then define $q_{p}:=\\min{q\\in P:p&lt;q,(q/p)=1}$ where $(⋅/p)$ is the Legendre symbol. So for instance $q_{3}=7$, $q_{3}=7$, and $q_{5} = 11$. Is there anything known about $q_{p}$ and specifically are there known bounds on $q_{p}$ as a function of $p$? I am ultimately interested in investigating $\\inf\\{q_{p}/p:p\\in P \\}$. </p>\n\n<p>I understand there are some things known about the smallest prime that is a quadratic residue modulo a prime, i.e. <a href=\"https://mathoverflow.net/questions/137714/least-quadratic-residue-and-nonresidue\">least quadratic residue and nonresidue</a>, but this seems to be a different, albeit related, question. </p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "prime-numbers",
+        "algebraic-number-theory"
+      ],
+      "owner": {
+        "account_id": 2961034,
+        "reputation": 43,
+        "user_id": 54486,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/c75ff4105cd9c93926d3977e41ad575b?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Geoffrey Smith",
+        "link": "https://mathoverflow.net/users/54486/geoffrey-smith"
+      },
+      "is_answered": true,
+      "view_count": 774,
+      "accepted_answer_id": 176358,
+      "answer_count": 1,
+      "score": 4,
+      "last_activity_date": 1405607759,
+      "creation_date": 1405560864,
+      "last_edit_date": 1655885654,
+      "question_id": 176349,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/176349/how-frequently-is-3-a-cubic-residue-mod-primes-in-an-arithmetic-progression",
+      "title": "How frequently is 3 a cubic residue mod primes in an arithmetic progression?",
+      "body": "<p>Suppose <span class=\"math-container\">$(a,3q)=1$</span> and <span class=\"math-container\">$a\\equiv 1\\pmod 3$</span>. Are there infinitely many primes <span class=\"math-container\">$p\\equiv a\\pmod {3q}$</span> such that <span class=\"math-container\">$3$</span> is a cubic nonresidue modulo <span class=\"math-container\">$p$</span>?</p>\n<p>Or, an equivalent formulation using quadratic forms: by cubic reciprocity the problem is equivalent to asking whether there are infinitely many primes <span class=\"math-container\">$p\\equiv a\\pmod {3q}$</span> that <strong>cannot</strong> be expressed in the form <span class=\"math-container\">$4p=a^2+243 b^2$</span> for integers <span class=\"math-container\">$a$</span> and <span class=\"math-container\">$b$</span>. Since 243 is not <a href=\"http://alpha.math.uga.edu/%7Epete/Hagedorn11.pdf\" rel=\"nofollow noreferrer\">convenient</a>, we know that there are no integers <span class=\"math-container\">$a_1,\\ldots,a_k, N$</span> such that <span class=\"math-container\">$4p=a^2+243b^2$</span> is solvable if and only if <span class=\"math-container\">$p\\equiv a_i \\pmod N$</span> for some <span class=\"math-container\">$i$</span>. Can we conclude a stronger result, that there is no residue class <span class=\"math-container\">$a \\pmod {3q}$</span> with <span class=\"math-container\">$a\\equiv 1\\pmod 3$</span> containing only primes expressible in the form <span class=\"math-container\">$4p=a^2+243b^2$</span>?</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "elliptic-curves"
+      ],
+      "owner": {
+        "account_id": 899926,
+        "reputation": 115,
+        "user_id": 91106,
+        "user_type": "registered",
+        "profile_image": "https://lh4.googleusercontent.com/-NZb6uZzo4Gg/AAAAAAAAAAI/AAAAAAAAAo0/xTr6RvgMTRw/s256-rj/photo.jpg",
+        "display_name": "kelalaka",
+        "link": "https://mathoverflow.net/users/91106/kelalaka"
+      },
+      "is_answered": false,
+      "view_count": 739,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1603734858,
+      "creation_date": 1603719263,
+      "last_edit_date": 1603734858,
+      "question_id": 374928,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/374928/efficient-deterministic-algorithm-for-quadratic-residues",
+      "title": "Efficient deterministic algorithm for quadratic residues",
+      "body": "<p>In Elliptic Cryptography, one may need the calculation of the quadratic residue over a finite field to <a href=\"https://crypto.stackexchange.com/a/68603/18298\">generate a random point on the curve</a>.</p>\n<p>In simple terms, given the equation of the curve as short Weierstrass form <span class=\"math-container\">$y^2 = x^3 + x + 1$</span> over a finite field <span class=\"math-container\">$F$</span>, select a random element <span class=\"math-container\">$x \\overset{r}{\\leftarrow} F$</span> and check that <span class=\"math-container\">$y$</span> is a quadratic residue. After that one can use square root algorithms to determine the <span class=\"math-container\">$y$</span> and <span class=\"math-container\">$-y$</span> values and randomly select one of them.</p>\n<p>SageMath has a function for this <a href=\"https://doc.sagemath.org/html/en/reference/curves/sage/schemes/elliptic_curves/ell_finite_field.html\" rel=\"nofollow noreferrer\">random_element()</a> not detailed the algorithm behind in the docs.</p>\n<p>When I've searched for algorithms for calculating the quadratic residue and the Wikipedia states;</p>\n<blockquote>\n<p>Tonelli (in 1891) and Cipolla found efficient algorithms that work for all prime moduli. Both algorithms require finding a quadratic nonresidue modulo n, and there is no efficient deterministic algorithm known for doing that.</p>\n</blockquote>\n<p>These works are from 1996. Is there any advancement in this area?</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "arithmetic-geometry",
+        "finite-fields",
+        "rational-points"
+      ],
+      "owner": {
+        "account_id": 1316152,
+        "reputation": 3410,
+        "user_id": 2042,
+        "user_type": "registered",
+        "accept_rate": 76,
+        "profile_image": "https://www.gravatar.com/avatar/71b26d0324424858e679767680b6da1a?s=256&d=identicon&r=PG",
+        "display_name": "Lior Bary-Soroker",
+        "link": "https://mathoverflow.net/users/2042/lior-bary-soroker"
+      },
+      "is_answered": false,
+      "view_count": 139,
+      "answer_count": 0,
+      "score": 2,
+      "last_activity_date": 1458460747,
+      "creation_date": 1458460747,
+      "question_id": 234100,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/234100/the-least-point-on-a-variety-over-a-finite-field",
+      "title": "the least point on a variety over a finite field",
+      "body": "<p>Let $p$ be a large prime parameter and $V\\subseteq \\mathbb{P}^n_{\\mathbb{F}_p}$ a variety defined over the finite field $\\mathbb{F}_p$ with bounded degree  and dimension (w.r.t. $p$). Assume that $V$ is absolutely irreducible, and so the Lang-Weil estimate implies  $$\\#V(\\mathbb{F}_p) = p^{\\dim V} (1+O(p^{-1/2})).$$ \nIn particular, there are $\\mathbb{F}_p$-rational points on $V$ if $p$ is sufficiently large.</p>\n\n<p>I want to find points with small coordinates. A more precise formulation: \n<i>How small can $1\\leq B(p)\\leq p$ be such that there exists a rational point $(a_1,\\ldots, a_n)\\in V(\\mathbb{F}_q)$ with all $1\\leq a_i\n\\leq B(p)$?</i></p>\n\n<p>I am aware that in the special case of hyper-ellicptic curves it relates to the least quadratic nonresidue, to short exponential sums, and to the Burgess bound; this question asks what happens in the general case (for me it suffices to consider singular complete intersections with singular locus of co-dimension 2, but I think it shouldn't be easier than the general case). </p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "lattices",
+        "quadratic-forms"
+      ],
+      "owner": {
+        "account_id": 475036,
+        "reputation": 2499,
+        "user_id": 6084,
+        "user_type": "registered",
+        "accept_rate": 64,
+        "profile_image": "https://www.gravatar.com/avatar/d2448cb88a2f57130566eaa633ee7f5c?s=256&d=identicon&r=PG",
+        "display_name": "Watson Ladd",
+        "link": "https://mathoverflow.net/users/6084/watson-ladd"
+      },
+      "is_answered": false,
+      "view_count": 267,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1474563916,
+      "creation_date": 1474350038,
+      "last_edit_date": 1474563916,
+      "question_id": 250295,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/250295/is-the-genus-symbol-implemented",
+      "title": "Is the genus symbol implemented?",
+      "body": "<p>Conway and Sloane, as well as Cassels, and also O'Meara, all have their own idiosyncratic way of expressing the following result (for good primes): Every quadratic form with coefficients  in $\\mathbb{Z}_p$ is equivalent by a change of variables with coefficients $\\mathbb{Z}_p$ to one expressible as $\\oplus_{i} p^{e_i}h(\\epsilon_i, m_i)$, where $h(\\epsilon_i, m_i)$ is $y_1^2+y_2^2+\\ldots+y_{m_i}^2$ if $\\epsilon_i=0$, and $y_1^2+y_2^2+\\ldots+ry_{m_i}^2$ with $r$ a quadratic nonresidue if $\\epsilon_i=1$. </p>\n\n<p>Furthermore there is a quadratic form $f$ over the integers with given local components $f_i$ if and only if the compatibility conditions for rational equivalence are satisfied.</p>\n\n<p>In the case of rational equivalence this has been given an effective treatment by Kirschmer and a coauthor whose name escapes me right now: given a discriminant and a list of primes where the form should have negative Hasse-Witt invariant, they compute a quadratic form. What I would like is a function that given a discriminant (as an integer), and a list of local components, computes a quadratic form in the given genus, i.e. computes the form $f$ described above.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "algebraic-number-theory",
+        "effective-results"
+      ],
+      "owner": {
+        "account_id": 2948064,
+        "reputation": 1842,
+        "user_id": 12087,
+        "user_type": "registered",
+        "accept_rate": 21,
+        "profile_image": "https://www.gravatar.com/avatar/c9cd8aa7debeaa81217f2bcd7706c2ad?s=256&d=identicon&r=PG",
+        "display_name": "Eric Larson",
+        "link": "https://mathoverflow.net/users/12087/eric-larson"
+      },
+      "is_answered": true,
+      "view_count": 2995,
+      "answer_count": 2,
+      "score": 14,
+      "last_activity_date": 1528518940,
+      "creation_date": 1295155699,
+      "last_edit_date": 1528518940,
+      "question_id": 52211,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/52211/effective-chebotarev-density",
+      "title": "Effective Chebotarev Density",
+      "body": "<p>Let $K$ be a number field, and $p$ be a rational prime. Then the Chebotarev Density Theorem implies we can find primes $v$ and $w$ of $K$ of degree 1 which are split and nonsplit respectively in $K[\\sqrt{p}]$. What is the best known effective (upper) bound for the norms of the least such primes (not assuming GRH)? In particular, is there a bound which is asymptotically strictly less than $\\sqrt{p}$ (times a constant coming from the field $K$)?</p>\n\n<p>EDIT: I'd like to clarify, in response to the comments below. The situation I'm wondering about is when we fix K, and let p vary. So when K is a cyclotomic field (adjoin, say, the qth root of unity for a prime q), I'm asking about the least prime which is a quadratic nonresidue (resp. residue) mod p, which is 1 mod some fixed prime q, and I'm hoping that there is a bound of the form $\\sqrt{p}$ times (something in terms of q). Under GRH this is true --- in fact under GRH, we can get a bound of the shape $(\\log p)^2$ times constants coming from K.</p>\n"
+    },
+    {
+      "tags": [
+        "ag.algebraic-geometry",
+        "nt.number-theory",
+        "abelian-varieties",
+        "diophantine-equations",
+        "computational-number-theory"
+      ],
+      "owner": {
+        "account_id": 14699896,
+        "reputation": 379,
+        "user_id": 134689,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/403d373d06e3af534302330b2d02c686?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Consider Non-Trivial Cases",
+        "link": "https://mathoverflow.net/users/134689/consider-non-trivial-cases"
+      },
+      "is_answered": false,
+      "view_count": 257,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1603997547,
+      "creation_date": 1603971836,
+      "last_edit_date": 1603997547,
+      "question_id": 375170,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/375170/integer-solutions-of-diophantine-equation-y2-14n-underline-k",
+      "title": "Integer solutions of Diophantine equation $y^2= 1+4n^{\\underline k} $",
+      "body": "<p>I am looking for the integer solutions for the diophantine equation <span class=\"math-container\">$y^2 =4n(n-1)(n-2)\\cdots (n-k+1)+1$</span> for a given <span class=\"math-container\">$k$</span> where <span class=\"math-container\">$n&gt;k+1&gt;5$</span>.</p>\n<p>In other words,\n<span class=\"math-container\">$$y^2=1+4n^{\\underline k},\\tag{I}$$</span>\nwhere <span class=\"math-container\">$n^{\\underline k} =n(n-1)(n-2)\\cdots(n-k+1)$</span> is the Pochhammer symbol.</p>\n<p><strong>Source of the problem:</strong></p>\n<p>The main problem is: Solve the equation <span class=\"math-container\">$$\\frac{m!}{(m-2)!}=\\frac{n!}{(n-k)!}$$</span></p>\n<p><span class=\"math-container\">$m(m-1)$</span> must be equal to <span class=\"math-container\">$n^{\\underline k}=\\frac{n!}{(n-k)!}$</span></p>\n<p>So we must solve the equation</p>\n<p><span class=\"math-container\">$$m^2-m -n^{\\underline k}=0$$</span> which has integer solution only if <span class=\"math-container\">$1+4n^{\\underline k}$</span> is a perfect square, where <span class=\"math-container\">$n^{\\underline k} =n(n-1)(n-2)\\cdot\\ldots\\cdot (n-k+1)$</span> is the Pochhammer symbol.</p>\n<p><strong>Known facts:</strong></p>\n<ol>\n<li><p><span class=\"math-container\">$n^{\\underline k}$</span> is not a power (see <a href=\"https://projecteuclid.org/download/pdf_1/euclid.ijm/1256050816\" rel=\"nofollow noreferrer\">The Product of consecutive integers is never a power by P. Erdos s and J. L. Selfridge</a>), so <span class=\"math-container\">$4n^{\\underline k}$</span> is not a square.</p>\n</li>\n<li><p>We know,  quadratic-residue <span class=\"math-container\">$\\times$</span> quadratic-nonresidue = quadratic-nonresidue.</p>\n</li>\n<li><p>Steven Stadnicki suggested that there is a link between the problem and <a href=\"https://en.wikipedia.org/wiki/Singmaster%27s_conjecture\" rel=\"nofollow noreferrer\">Singmaster's conjecture</a>, though I don't understand it.</p>\n</li>\n<li><p>For <span class=\"math-container\">$k=3$</span>, <span class=\"math-container\">$E_k (F)$</span> is an elliptic curve and thus the equation <span class=\"math-container\">$(I)$</span> has finite solutions, to be specific <span class=\"math-container\">$1$</span>. In an elementary way, it can be shown, equation <span class=\"math-container\">$(I)$</span> has no solution, since <span class=\"math-container\">$4P(n,k)+1=(2n^2-6n+2)^2-3$</span> is a square for finite cases..</p>\n</li>\n<li><p>See the article of <a href=\"https://arxiv.org/pdf/0801.4459.pdf\" rel=\"nofollow noreferrer\">Bugeaud, Y.; Mignotte, M.; Siksek, S.; Stoll, M.; Tengely, Sz.: Integral points\non hyperelliptic curves</a>. They succesfully treat the equation\n<span class=\"math-container\">$$\nn(n+1)=\\frac{m!}{60(m-5)!}\n$$</span>\nIn fact, it follows that <span class=\"math-container\">$m\\in \\lbrace{0, 1, 2, 3, 4, 5, 6, 7, 15, 19\\rbrace}$</span>, there is\nhope for equations of type <span class=\"math-container\">$\\binom{n}{\\ell}=\\binom{m}{k}$</span>.</p>\n</li>\n<li><p>For any <span class=\"math-container\">$k$</span> there are finitely many solutions by Siegel's theorem (and for <span class=\"math-container\">$k&gt;4$</span> there are finitely many rational solutions by Faltings).</p>\n</li>\n</ol>\n<p><strong>Algebraic geometry:</strong></p>\n<p>Let us define a curve <span class=\"math-container\">$E_k (F):=y^2 =4n(n-1)(n-2)\\cdots (n-k+1)+1$</span> for a given <span class=\"math-container\">$k$</span> when <span class=\"math-container\">$F=\\mathbb Z$</span> or <span class=\"math-container\">$\\mathbb Q$</span>.  In other words, <span class=\"math-container\">$E_k (F):=y^2=  1+4n^{\\underline k}$</span>.</p>\n<p><strong>Question</strong>:</p>\n<ol>\n<li>Is there infinite integer solutions to the equation <span class=\"math-container\">$(I)$</span>?</li>\n<li>Provided the answer to the question is yes, then, what are the integer solutions of the equation <span class=\"math-container\">$(I)$</span>?</li>\n</ol>\n<p>Please consider non-trivial cases.</p>\n<p><strong>If above questions are too difficult to answer please, advise how to approach to this problem and <em>what else are known</em>. Also let me know the computational approach in this problem.</strong></p>\n<p><strong>EDIT:</strong></p>\n<p>One may find relation to Brocard's problem or <span class=\"math-container\">$abc$</span> conjecture, but please note that you are refereeing to the problems which are more general in nature, on the other hand, my problem is more specific.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "analytic-number-theory",
+        "algebraic-number-theory",
+        "prime-numbers"
+      ],
+      "owner": {
+        "account_id": 14005724,
+        "reputation": 111,
+        "user_id": 358015,
+        "user_type": "registered",
+        "profile_image": "https://lh5.googleusercontent.com/-GBpe-B6vdq4/AAAAAAAAAAI/AAAAAAAAAAA/AAnnY7rYpBzDLFSgZRCNZW3R27NOf7zFAQ/mo/s256-rj/photo.jpg",
+        "display_name": "Tejas Rao",
+        "link": "https://mathoverflow.net/users/358015/tejas-rao"
+      },
+      "is_answered": false,
+      "view_count": 416,
+      "answer_count": 0,
+      "score": 5,
+      "last_activity_date": 1637209834,
+      "creation_date": 1630704577,
+      "last_edit_date": 1637209834,
+      "question_id": 403147,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/403147/smallest-prime-p-such-that-2-mid-operatornameord-pq-the-multiplicative",
+      "title": "Smallest prime $p$ such that $2\\mid\\operatorname{ord}_p(q)$, the multiplicative order of $q$ modulo $p$",
+      "body": "<p><span class=\"math-container\">$\\DeclareMathOperator\\ord{ord}$</span>Let <span class=\"math-container\">$q$</span> be prime. I want to upper bound the smallest odd prime <span class=\"math-container\">$p$</span> such that <span class=\"math-container\">$2\\mid\\ord_p(q)$</span> (where <span class=\"math-container\">$\\ord_p(q)$</span> is the multiplicative order of <span class=\"math-container\">$q$</span> modulo <span class=\"math-container\">$p$</span>).</p>\n<p>Using the fact that the smallest quadratic nonresidue in <span class=\"math-container\">$\\mathbb{Z}/q\\mathbb{Z}$</span> is less than <span class=\"math-container\">$q^{1/4+\\varepsilon}$</span>, we can get that such a <span class=\"math-container\">$p$</span> is less than <span class=\"math-container\">$q^{1/4+\\varepsilon}$</span> via quadratic reciprocity. However, this <span class=\"math-container\">$p$</span> satisfies the <em>a priori</em> much stronger condition that</p>\n<p><span class=\"math-container\">$$q^{\\frac{p-1}{2}}\\equiv -1\\bmod p.$$</span></p>\n<p>Whereas this problem simply asks for the first <span class=\"math-container\">$p$</span> such that</p>\n<p><span class=\"math-container\">$$q^{\\frac{p-1}{2^{y}}}\\equiv -1\\bmod p,$$</span></p>\n<p>where <span class=\"math-container\">$y$</span> is <em>some</em> multiplicity of factors of <span class=\"math-container\">$2$</span> dividing <span class=\"math-container\">$p-1$</span>.</p>\n<p>So the question naturally becomes, <strong>can we find an upper bound less than <span class=\"math-container\">$q^{1/4+\\varepsilon}$</span></strong> (edit: <span class=\"math-container\">$q^{1/(4\\sqrt{e})+\\varepsilon}$</span>, see edit below)? This isn't as elementary as one expects.</p>\n<p><em>Attempts/Heuristics:</em></p>\n<hr />\n<p>Consider the (Eisenstein) polynomial <span class=\"math-container\">$x^{2^n}-q$</span> for some (large) <span class=\"math-container\">$n$</span> and the corresponding Galois extension <span class=\"math-container\">$\\mathbb{Q}[\\zeta_{2^n},q^{1/{2^n}}]/\\mathbb{Q}$</span>. Then we may try to upper bound the smallest norm of primes in certain conjugacy classes. For example, unramified split primes <span class=\"math-container\">$\\mathfrak{p}$</span> correspond to <span class=\"math-container\">$2^n\\mid N_{\\mathbb{Q}}(\\mathfrak{p})-1$</span> and</p>\n<p><span class=\"math-container\">$$q^{\\frac{N_\\mathbb{Q}(\\mathfrak{p})-1}{2^n}}\\equiv 1\\bmod{N_\\mathbb{Q}(\\mathfrak{p})}.$$</span></p>\n<p>However, the unconditional upper bounds we arrive at here are even worse, depending on a power of the discriminant of the field extension (which is larger than <span class=\"math-container\">$q$</span>).</p>\n<hr />\n<p>Besides noting that under the GRH, we can easily find a bound logarithmic in <span class=\"math-container\">$q$</span> (using Chebotarev or simply reciprocity), we can also consider <a href=\"https://en.wikipedia.org/wiki/Linnik%27s_theorem\" rel=\"nofollow noreferrer\">Linnik's Theorem</a>. Namely, considering for example primes <span class=\"math-container\">$s\\equiv 1\\bmod{2^n}$</span>, where <span class=\"math-container\">$2^n\\approx \\log(q)$</span>, it proves the existence of such a prime <span class=\"math-container\">$s&lt;\\log^5(q)$</span> (approximately). Noting that there are precisely</p>\n<p><span class=\"math-container\">$$N=\\dfrac{\\lvert\\mathbb{Z}/s\\mathbb{Z}\\rvert}{\\gcd{(2^n,\\lvert\\mathbb{Z}/s\\mathbb{Z}\\rvert})}=\\dfrac{s-1}{2^n}&lt;\\dfrac{\\log^5(q)}{\\log(q)}$$</span></p>\n<p>distinct <span class=\"math-container\">$2^n$</span>-th powers modulo <span class=\"math-container\">$s$</span>, there is <em>a priori</em> a <span class=\"math-container\">$\\frac{\\log(q)-1}{log(q)}$</span> chance that <span class=\"math-container\">$2\\mid\\ord_s(q)$</span>. Considering other powers <span class=\"math-container\">$2^k$</span>, and being guided by GRH, it seems that a logarithmic bound in <span class=\"math-container\">$q$</span> should be possible.</p>\n<hr />\n<p>Edit: As GH from MO <a href=\"https://mathoverflow.net/questions/403147/smallest-prime-p-such-that-2-mid-operatornameord-pq-the-multiplicative#comment1032256_403147\">comments</a> below, we can find a quadratic nonresidue less than <span class=\"math-container\">$q^{1/(4\\sqrt{e})+\\varepsilon}$</span>, which provides a slightly better bound for the a priori stronger case.</p>\n<p>Minor Edit: Another cute way of thinking about this is with this equivalent question:</p>\n<p><em>What is the smallest odd prime factor in the sequence <span class=\"math-container\">$q^1+1,q^2+1,q^3+1,q^4+1,...$</span>?</em></p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "prime-numbers",
+        "characters",
+        "quadratic-residues"
+      ],
+      "owner": {
+        "account_id": 13606868,
+        "reputation": 19819,
+        "user_id": 124654,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/2100ea527a0edfd169dfdf34a3a492a3?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Zhi-Wei Sun",
+        "link": "https://mathoverflow.net/users/124654/zhi-wei-sun"
+      },
+      "is_answered": false,
+      "view_count": 236,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1545451144,
+      "creation_date": 1545451144,
+      "question_id": 319254,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/319254/a-series-of-conjectures-on-sum-x-0p-1-2-fracx5cx3dxp-i",
+      "title": "A series of conjectures on $\\sum_{x=0}^{(p-1)/2}(\\frac{x^5+cx^3+dx}p)$ (I)",
+      "body": "<p>Let <span class=\"math-container\">$p$</span> be an odd prime. Here I introduce the sum\n<span class=\"math-container\">$$S_p(c,d):=\\sum_{x=0}^{(p-1)/2}\\left(\\frac{x^5+cx^3+dx}p\\right)$$</span>\nwith <span class=\"math-container\">$c,d\\in\\mathbb Z$</span>, where <span class=\"math-container\">$(\\frac{\\cdot}p)$</span> is the Legendre symbol.</p>\n\n<p>I have a series of conjectures on such sums. Here I state two general ones.</p>\n\n<p><strong>Conjecture 1.</strong> Let <span class=\"math-container\">$p&gt;7$</span> be a prime with <span class=\"math-container\">$p\\equiv 3\\pmod4$</span>, and let <span class=\"math-container\">$c,d\\in\\mathbb Z$</span>. If <span class=\"math-container\">$S_p(c,d)=0$</span>, then \n<span class=\"math-container\">$$\\left(\\frac{c^2-4d}p\\right)=1\\not=\\left(\\frac dp\\right).$$</span></p>\n\n<p><em>Remark</em> 1. I have verified this for all primes <span class=\"math-container\">$7&lt;p&lt;1000$</span> with <span class=\"math-container\">$p\\equiv3\\pmod4$</span>. Note that <span class=\"math-container\">$S_3(1,1)=0$</span> but <span class=\"math-container\">$(\\frac{1^2-4\\cdot1}3)=0$</span> and <span class=\"math-container\">$(\\frac 1p)=1$</span>, and that <span class=\"math-container\">$S_7(5,1)=S_7(6,2)=0$</span> but <span class=\"math-container\">$(\\frac{5^2-4\\cdot1}7)=(\\frac{6^2-4\\cdot2}7)=0$</span> and <span class=\"math-container\">$(\\frac 17)=(\\frac 27)=1$</span>.</p>\n\n<p><strong>Conjecture 2.</strong> Let <span class=\"math-container\">$p\\equiv 1\\pmod4$</span> be a prime, and let <span class=\"math-container\">$c,d\\in\\mathbb Z$</span>.</p>\n\n<p>(i)  If <span class=\"math-container\">$d^{(p-1)/4}\\equiv-1\\pmod p$</span> (i.e., <span class=\"math-container\">$d$</span> is a quadratic residue and a quartic nonresidue mod <span class=\"math-container\">$p$</span>), then <span class=\"math-container\">$S_p(c,d)=0$</span>.</p>\n\n<p>(ii) If <span class=\"math-container\">$S_p(c,d)=0$</span> but <span class=\"math-container\">$d^{(p-1)/4}\\not\\equiv-1\\pmod p$</span>, then \n<span class=\"math-container\">$$\\left(\\frac{c^2-4d}p\\right)=\\left(\\frac dp\\right).$$</span></p>\n\n<p><em>Remark</em> 2. I have verified Conjecture 2 for all primes <span class=\"math-container\">$p&lt;500$</span> with <span class=\"math-container\">$p\\equiv1\\pmod4$</span>.</p>\n\n<p>I'll pose more conjectures later.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "diophantine-equations",
+        "digits"
+      ],
+      "owner": {
+        "account_id": 2949581,
+        "reputation": 12368,
+        "user_id": 14233,
+        "user_type": "registered",
+        "accept_rate": 89,
+        "profile_image": "https://www.gravatar.com/avatar/41513b567302b9e0ca5a1026156d1ff6?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Jens Reinhold",
+        "link": "https://mathoverflow.net/users/14233/jens-reinhold"
+      },
+      "is_answered": true,
+      "view_count": 550,
+      "accepted_answer_id": 467502,
+      "answer_count": 2,
+      "score": 6,
+      "last_activity_date": 1758740590,
+      "creation_date": 1710962195,
+      "last_edit_date": 1711041669,
+      "question_id": 467405,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/467405/triangular-repdigits",
+      "title": "Triangular repdigits",
+      "body": "<p>I would like to know whether <span class=\"math-container\">$55$</span>, <span class=\"math-container\">$66$</span> and <span class=\"math-container\">$666$</span> are the only triangular numbers that are repdigits, i.e., numbers at least <span class=\"math-container\">$10$</span> whose digits w.r.t. base 10 all agree.</p>\n<p>In more sophisticated terms, I am asking about solutions of the equation\n<span class=\"math-container\">$$\\frac{n(n+1)}{2} = \\frac{d}{9}(10^k-1)$$</span>\nwhere <span class=\"math-container\">$k \\geq 2$</span> and <span class=\"math-container\">$n$</span> are positive integers and <span class=\"math-container\">$d \\in \\{1,2, \\dots, 9\\}$</span>.</p>\n<p>Here are some quick ideas:</p>\n<p>Considering the remainder of triangular numbers modulo 100 yields that this can only work for <span class=\"math-container\">$d \\in \\{1,5,6\\}$</span>. I only looked into the case <span class=\"math-container\">$d = 5$</span> in greater detail. Then, the equation above can be rephrased as\n<span class=\"math-container\">$$(6n+3)^2 = 4\\cdot10^{k+1}-31.$$</span>\nIf <span class=\"math-container\">$k$</span> is odd, there are no solutions as <span class=\"math-container\">$31$</span> is no difference of two squares. (Alternatively, use that the RHS is <span class=\"math-container\">$\\equiv 6 \\ (\\text{mod. } 11)$</span>, but <span class=\"math-container\">$6$</span> is a quadratic nonresidue of <span class=\"math-container\">$11$</span>.)</p>\n<p>For <span class=\"math-container\">$k$</span> even, we would like to find all solutions to the Pell-like equation\n<span class=\"math-container\">$$x^2 - 10y^2 = -31$$</span>\nwhere <span class=\"math-container\">$y$</span> is twice a power of <span class=\"math-container\">$10$</span>. Two such solutions are given by <span class=\"math-container\">$(x_0,y_0) = (3,2)$</span> and <span class=\"math-container\">$(x_0', y_0') = (63,20)$</span>. The theory of Pell's equation yields that all solutions of this equation are given by\n<span class=\"math-container\">$$\\begin{pmatrix}19 &amp; 60 \\\\\n6 &amp; 19\\end{pmatrix}^m \\ \\textbf{v}$$</span>\nwhere <span class=\"math-container\">$m \\geq 0$</span> and <span class=\"math-container\">$\\textbf{v} = (x_0, y_0)^{T}$</span> or <span class=\"math-container\">$\\textbf{v} = (x_0', y_0')^{T}$</span>. But does this really help to prove that none of these has the property that the second component is twice a power of ten unless <span class=\"math-container\">$m=0$</span>?</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "analytic-number-theory",
+        "prime-numbers"
+      ],
+      "owner": {
+        "account_id": 28918349,
+        "reputation": 1105,
+        "user_id": 507773,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/6d5218eabef1d707c6c21377419e0c87?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Denis Shatrov",
+        "link": "https://mathoverflow.net/users/507773/denis-shatrov"
+      },
+      "is_answered": true,
+      "view_count": 453,
+      "answer_count": 2,
+      "score": 9,
+      "last_activity_date": 1690532137,
+      "creation_date": 1690270666,
+      "last_edit_date": 1690532137,
+      "question_id": 451422,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/451422/representation-of-a-residue-modulo-prime-as-a-specific-product",
+      "title": "Representation of a residue modulo prime as a specific product",
+      "body": "<blockquote>\n<p>Let <span class=\"math-container\">$p$</span> be a prime number. For every integer  <span class=\"math-container\">$m$</span>, there are integers <span class=\"math-container\">$u_1$</span>, <span class=\"math-container\">$u_2$</span>, such that <span class=\"math-container\">$\\lvert u_1\\rvert, \\lvert u_2\\rvert &lt; \\sqrt{p}$</span> and\n<span class=\"math-container\">$$m \\equiv u_1u_2^{-1} \\pmod{p}.$$</span></p>\n</blockquote>\n<p>Proof of this statement is at the end. I'm interested in generalizing this statement. For example,</p>\n<blockquote>\n<p>Let <span class=\"math-container\">$p$</span> be a prime number, <span class=\"math-container\">$f = \\sqrt[3]{p}$</span>. For every integer   <span class=\"math-container\">$m$</span>, there are integers <span class=\"math-container\">$u_1$</span>, <span class=\"math-container\">$u_2$</span>, <span class=\"math-container\">$u_3$</span>, such that <span class=\"math-container\">$\\lvert u_1\\rvert, \\lvert u_2\\rvert, \\lvert u_3\\rvert &lt; f$</span> and\n<span class=\"math-container\">$$m \\equiv u_1^{\\pm 1}u_2^{\\pm 1}u_3^{\\pm 1} \\pmod{p}.$$</span></p>\n</blockquote>\n<p>But this is false. The question is, how large should <span class=\"math-container\">$f$</span> be to make the statement true? Can we choose <span class=\"math-container\">$f = c\\sqrt[3]{p}$</span> for some constant <span class=\"math-container\">$c$</span>? Probably, no. I think, something like <span class=\"math-container\">$f = \\log(p)\\sqrt[3]{p}$</span> should work. The same question for the products of the form <span class=\"math-container\">$u_1^{\\pm 1}u_2^{\\pm 1}\\dotsm u_n^{\\pm 1}$</span>.</p>\n<p><strong>Proof.</strong></p>\n<p>Consider the pairs <span class=\"math-container\">$(a, b)$</span> such that <span class=\"math-container\">$0 \\le a, b &lt; \\sqrt{p}$</span>. There are <span class=\"math-container\">$(\\lfloor\\sqrt{p}\\rfloor + 1)^2 &gt; p$</span> such pairs. Hence, we can choose two distinct pairs <span class=\"math-container\">$(a_1, b_1)$</span>, <span class=\"math-container\">$(a_2, b_2)$</span> such that\n<span class=\"math-container\">$$a_1m + b_1 \\equiv a_2m + b_2 \\pmod{p}.$$</span> Let <span class=\"math-container\">$u_2 = a_1 - a_2$</span>, <span class=\"math-container\">$u_1 = b_2 - b_1$</span>.  Then\n<span class=\"math-container\">$$m \\equiv u_1u_2^{-1} \\pmod{p}.$$</span>\nI tried to generalize this proof, but did not succeed.</p>\n<p><strong>Update</strong></p>\n<p><a href=\"https://arxiv.org/abs/1408.4515\" rel=\"nofollow noreferrer\">This</a> article deals with a similar problem. Theorem 1 implies that <span class=\"math-container\">$f = p^{\\beta + o(1)}$</span> works if <span class=\"math-container\">$n \\ge 14$</span>, where <span class=\"math-container\">$\\beta = \\frac{1}{4}e^{-1/2} \\approx 0.1516$</span>. This result is the best possible (in term of <span class=\"math-container\">$\\beta$</span>) until at least the Burgess bound on the\nsmallest quadratic nonresidue is improved.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "co.combinatorics",
+        "finite-fields"
+      ],
+      "owner": {
+        "account_id": 986607,
+        "reputation": 1277,
+        "user_id": 34180,
+        "user_type": "registered",
+        "accept_rate": 20,
+        "profile_image": "https://www.gravatar.com/avatar/8e373e9f67476aa095fc58285fda5d5a?s=256&d=identicon&r=PG",
+        "display_name": "Anurag",
+        "link": "https://mathoverflow.net/users/34180/anurag"
+      },
+      "is_answered": false,
+      "view_count": 117,
+      "answer_count": 0,
+      "score": 3,
+      "last_activity_date": 1787839427,
+      "creation_date": 1781273925,
+      "last_edit_date": 1787839427,
+      "question_id": 512244,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/512244/are-there-infinitely-many-primes-for-which-there-exists-a-quadratic-orthomorphis",
+      "title": "Are there infinitely many primes for which there exists a quadratic orthomorphism of the following kind?",
+      "body": "<p>For a prime <span class=\"math-container\">$p$</span>, define <span class=\"math-container\">$[a, b](x) = \\frac{a - b}{2}x^{(p + 1)/2} + \\frac{a + b}{2} x$</span>. That is, <span class=\"math-container\">$[a, b](x) = ax$</span> if <span class=\"math-container\">$x$</span> is a quadratic residue and <span class=\"math-container\">$[a, b](x) = bx$</span> is <span class=\"math-container\">$x$</span> is a quadratic nonresidue. These quadratic maps are non-affine if <span class=\"math-container\">$a \\neq b$</span>.</p>\n<p>I want to show that there are infinitely many primes <span class=\"math-container\">$p$</span> for which there exists a <strong>permutation</strong> of <span class=\"math-container\">$\\mathbb{F}_p$</span> given by non-affine quadratic map <span class=\"math-container\">$[a, b](x)$</span> with the following three properties:</p>\n<ol>\n<li>The cycle type of <span class=\"math-container\">$[a, b](x)$</span> is <span class=\"math-container\">$(1, p - 1)$</span>,</li>\n<li>The cycle type of <span class=\"math-container\">$[a, b](x) + 1$</span> is <span class=\"math-container\">$(1, p - 1)$</span>, and</li>\n<li>The cycle type of <span class=\"math-container\">$[b, a](x) + 1$</span> is <span class=\"math-container\">$(1, p - 1)$</span>.</li>\n</ol>\n<p>I can show that there are infinitely many such primes if we ignore 2 and 3. For that we just need quadratic non-residues <span class=\"math-container\">$a, b$</span> such that the multiplicative order of <span class=\"math-container\">$ab$</span> is <span class=\"math-container\">$(p - 1)/2$</span>. The cyclic shifts seem much harder to handle.</p>\n<p>The motivation comes from the following work on circular sorting: <a href=\"https://arxiv.org/abs/2510.18529\" rel=\"nofollow noreferrer\">https://arxiv.org/abs/2510.18529</a>, where we have computationally shown the existence of such maps for <span class=\"math-container\">$p = 23, 31, 41, 59, 71, 83, 89, 97, 103, 113, 131, 137, 139, 149, 151, 157, 163, 173, 179, 181, 197, 199, 211, 223, 227, 239, 251, 257, 271, 283, 293, 307, 311, 331, 347, 349, 367, 379, 383, 389, 401, 409, 419, 431, 433, 461, 467, 487, 491, 499 \\ldots$</span>. I can reduce Problem 32 there to checking these three conditions. Note that such maps have to be <strong>orthomorphisms</strong>, i.e., permutations <span class=\"math-container\">$\\pi$</span> of <span class=\"math-container\">$\\mathbb{Z}/p\\mathbb{Z}$</span> for which <span class=\"math-container\">$\\pi - \\mathrm{Id}$</span> is also a permutation.</p>\n<p>The computations suggest that there should be an infinite sequence, but I have no idea how to show that. Perhaps some deep number theoretic technique is needed here. Or one could try the combinatorial techniques given here: <a href=\"https://arxiv.org/abs/2303.16157\" rel=\"nofollow noreferrer\">https://arxiv.org/abs/2303.16157</a>. I am not an expert on either area.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "prime-numbers",
+        "quadratic-residues"
+      ],
+      "owner": {
+        "account_id": 13606868,
+        "reputation": 19819,
+        "user_id": 124654,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/2100ea527a0edfd169dfdf34a3a492a3?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Zhi-Wei Sun",
+        "link": "https://mathoverflow.net/users/124654/zhi-wei-sun"
+      },
+      "is_answered": true,
+      "view_count": 551,
+      "answer_count": 1,
+      "score": 3,
+      "last_activity_date": 1623377165,
+      "creation_date": 1620725190,
+      "last_edit_date": 1620775879,
+      "question_id": 392472,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/392472/does-each-prime-p541-have-a-quadratic-residue-x4y4p",
+      "title": "Does each prime $p&gt;541$ have a quadratic residue $x^4+y^4&lt;p$?",
+      "body": "<p>For any prime <span class=\"math-container\">$p&gt;5$</span>, one of the numbers\n<span class=\"math-container\">$$1^2+1=2,\\ \\ 2^2+1=5,\\ \\ 3^2+1=10=2\\times5$$</span>\nis a quadratic residue modulo <span class=\"math-container\">$p$</span>. In 2014 I conjectured that each prime <span class=\"math-container\">$p$</span> has a primitive root <span class=\"math-container\">$g&lt;p$</span> of the form <span class=\"math-container\">$k^2+1\\ (k\\in\\mathbb Z)$</span> (cf. <a href=\"http://oeis.org/A239957\" rel=\"nofollow noreferrer\">http://oeis.org/A239957</a>); this is still open.</p>\n<p>By a result of Fermat, the equation <span class=\"math-container\">$x^4+y^4=z^2$</span> has no positive integer solution.</p>\n<p>In view of the above, here I ask the following question.</p>\n<p><strong>Question 1.</strong> Whether for each prime <span class=\"math-container\">$p&gt;541$</span> there is a number of the form <span class=\"math-container\">$x^4+y^4$</span> (with <span class=\"math-container\">$x,y\\in\\mathbb Z)$</span> which is not only smaller than <span class=\"math-container\">$p$</span> but also a quadratic residue modulo <span class=\"math-container\">$p$</span>?</p>\n<p>Actually, I even conjecture that for any prime <span class=\"math-container\">$p&gt;541$</span> with <span class=\"math-container\">$p\\not=941$</span> there is a prime <span class=\"math-container\">$q&lt;p$</span> of the form <span class=\"math-container\">$x^4+y^4\\ (x,y\\in\\mathbb Z)$</span> with <span class=\"math-container\">$\\left(\\frac q p\\right)=1$</span>, where <span class=\"math-container\">$(-)$</span> is the Legendre symbol. Of course, it is not yet proven that there are infinitely many primes of the form <span class=\"math-container\">$x^4+y^4$</span>.</p>\n<p>The following question is similar to Question 1.</p>\n<p><strong>Question 2.</strong> Whether for each odd prime <span class=\"math-container\">$p\\not\\in\\{7,17,47,103\\}$</span> there is a number <span class=\"math-container\">$q&lt;p$</span> of the form <span class=\"math-container\">$x^4+y^4\\ (x,y\\in\\mathbb Z)$</span> with <span class=\"math-container\">$\\left(\\frac qp\\right)=-1$</span>?</p>\n<p>In 2001 Heath-Brown [Acta Math. 186 (2001), 1-84] proved that there are infinitely many primes of the form <span class=\"math-container\">$x^3+2y^3$</span> with <span class=\"math-container\">$x,y\\in\\mathbb N=\\{0,1,2,\\ldots\\})$</span>. Motivated by this, here I pose the following question.</p>\n<p><strong>Question 3.</strong> Whether for each odd prime <span class=\"math-container\">$p$</span> there is a prime <span class=\"math-container\">$q&lt;p$</span> with <span class=\"math-container\">$\\left(\\frac qp\\right)=-1$</span> such that <span class=\"math-container\">$q=x^3+2y^3$</span> for some <span class=\"math-container\">$x,y\\in\\mathbb N$</span> with <span class=\"math-container\">$y+1$</span> prime?</p>\n<p>I have checked Question 3 for all odd primes <span class=\"math-container\">$p&lt;2\\times10^9$</span>; see <a href=\"http://oeis.org/A344173\" rel=\"nofollow noreferrer\">http://oeis.org/A344173</a> for related data. For example, the prime <span class=\"math-container\">$q=3^3+2(3-1)^3=43$</span> is a quadratic nonresidue modulo the prime <span class=\"math-container\">$p=457$</span>.</p>\n<p>Your comments are welcome!</p>\n"
+    },
+    {
+      "tags": [
+        "co.combinatorics",
+        "nt.number-theory",
+        "ramsey-theory",
+        "additive-combinatorics"
+      ],
+      "owner": {
+        "account_id": 2941274,
+        "reputation": 703,
+        "user_id": 1579,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/6a4cd063845f469a6c73225b7fc4f62d?s=256&d=identicon&r=PG",
+        "display_name": "Mike",
+        "link": "https://mathoverflow.net/users/1579/mike"
+      },
+      "is_answered": true,
+      "view_count": 4715,
+      "accepted_answer_id": 77963,
+      "answer_count": 5,
+      "score": 35,
+      "last_activity_date": 1566929773,
+      "creation_date": 1291760118,
+      "question_id": 48591,
+      "content_license": "CC BY-SA 2.5",
+      "link": "https://mathoverflow.net/questions/48591/cliques-paley-graphs-and-quadratic-residues",
+      "title": "Cliques, Paley graphs and quadratic residues",
+      "body": "<p>A question I've thought about, on and off for a long time, is how to improve the best bounds that (seem to be) known for the clique numbers of Paley graphs.</p>\n\n<p>If p=1 mod 4 is a prime, we can define the Paley graph, call it $P(p)$, of order p as follows. This graph has vertex set {0, 1, 2, ...., p-1} with two vertices i and j joined by an edge if and only if i - j is a quadratic residue modulo p. If p=1 mod 4 then -1 is a quadratic residue modulo p so this is a bona fide undirected graph. Say $c(p)$ is the clique number, or size of the largest complete subgraph of $P(p)$.</p>\n\n<p>We can ignore graphs, etc. and just phrase it in terms of finding a maximum set, A, of quadratic residues modulo p (p still is 1 modulo 4) such that the difference of any two distinct elements of A is still a quadratic residue.</p>\n\n<p>I'll make several comments here at this point:</p>\n\n<ol>\n<li><p>There are the \"standard bounds\" which are of the form $c(p) &gt; (1/2-o(1)) lg(p)$ and</p>\n\n<p>$c(p) &lt; sqrt(p)$ where $lg(p)$ is the base 2 logarithm.</p></li>\n<li><p>One or both of these bounds have been rediscovered every 5-10 years or so, going all the way back to Erdos and Newman(?) back in the 1950's. Sometime soon, I'll collect a comprehensive list and make it available online. :::::grin::::::  Another interesting observation is that both bounds can be proved either using combinatorial tools (Ramsey's theorem, Lovasz's theta function, SDP and vertex transitive graphs, etc.) OR using number theoretic tools (Gaussian sums, Weil's theorem, etc.)</p></li>\n<li><p>We can look at generalizations involving quadratic nonresidues, nonprime finite fields/rings, etc. which I won't get into, though I can at least refer to Ernie Croot's problem list in arithmetic combinatorics and work of Gasarch and Ruzsa. I'm not interested ( in this post at least:::grin::::) in this.</p></li>\n</ol>\n\n<p>Finally my question:\n Has anyone been able to <strong>materially</strong> improve either of these bounds?</p>\n\n<p>What I do know about related work is:</p>\n\n<ol>\n<li><p>Maistrelli and Penman give a discussion of these bounds along with some computational work, in Discrete Mathematics in 2006.</p></li>\n<li><p>Fan Chung, Friedlander, Iwaniec and others have studied related problems in character sums and applications in combinatorics but haven't seemed to show (yet?) any improvement in the bounds for $c(p)$. Or, have I missed something obvious here?</p></li>\n<li><p>Andrew Thomason, Chung-Graham-Wilson, etc. have related work on \"pseudo-random graphs\"\nwhich I will assume is known, or at least accessible to all the readers here. Thomason, in one article, makes some interesting assertions which are plausible but which I need to check. </p></li>\n<li><p>There's the work of a number of people from Alon to Wigderson, exploring related questions and their applications to problems in theoretical computer science.</p></li>\n<li><p>Finally, we have estimates for $n(p)$, the least quadratic nonresidue modulo p, following Chowla, Salie, Graham-Ringrose and others. The connection with $c(p)$ is obvious.</p>\n\n<p>What else, of a substantial nature, is there?</p>\n\n<p>I think, in particular, that using work of Granville and Soundarajan, the 1/2 in the first bound can be improved and using a combination of number theoretic methods (Burgess, etc.) and combinatorial methods (Ruzsa, Chang, Green, etc.) the second (square root) bound can be improved. I'm going to stop here and not go into any more specifics, either attempts, propositions, conjectures or computational evidence. </p></li>\n</ol>\n"
+    },
+    {
+      "tags": [
+        "quadratic-forms",
+        "nt.number-theory"
+      ],
+      "owner": {
+        "account_id": 511689,
+        "reputation": 27144,
+        "user_id": 3324,
+        "user_type": "registered",
+        "accept_rate": 75,
+        "profile_image": "https://www.gravatar.com/avatar/827c267ce68997b158a0947da3560403?s=256&d=identicon&r=PG",
+        "display_name": "Will Jagy",
+        "link": "https://mathoverflow.net/users/3324/will-jagy"
+      },
+      "is_answered": true,
+      "view_count": 5270,
+      "accepted_answer_id": 33961,
+      "answer_count": 3,
+      "score": 63,
+      "last_activity_date": 1383988199,
+      "creation_date": 1273340931,
+      "last_edit_date": 1492088286,
+      "question_id": 23943,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/23943/can-a-positive-binary-quadratic-form-represent-14-consecutive-numbers",
+      "title": "Can a positive binary quadratic form represent 14 consecutive numbers?",
+      "body": "<p>NEW CONJECTURE: There is no general upper bound.</p>\n\n<p>Wadim Zudilin suggested that I make this a separate question. This follows\n<a href=\"https://mathoverflow.net/questions/23690/\">representability of consecutive integers by a binary quadratic form</a>\nwhere most of the people who gave answers are worn out after arguing over indefinite forms and inhomogeneous polynomials. Some real effort went into this, perhaps it will not be seen as a duplicate question.</p>\n\n<p>So the question is, can a positive definite integral binary quadratic form\n$$ f(x,y) = a x^2 + b x y + c y^2 $$\nrepresent 13 consecutive numbers?</p>\n\n<p>My record so far is 8: the form $$6x^2+5xy+14y^2 $$\n represents the 8 consecutive numbers from 716,234 to 716,241. Here we have discriminant $ \\Delta = -311,$ and 2,3,5,7 are all residues $\\pmod {311}.$ I do not think it remotely coincidental that $$6x^2+xy+13 y^2 $$ represents the 7 consecutive numbers from 716,235 to 716,241. </p>\n\n<p>I have a number of observations. There is a congruence obstacle $\\pmod 8$ unless, with \n$ f(x,y) = a x^2 + b x y + c y^2 $  and $\\Delta = b^2 - 4 a c,$ we have $\\Delta \\equiv 1 \\pmod 8,$ or \n$ | \\Delta | \\equiv 7 \\pmod 8.$ If a prime $p | \\Delta,$ then the form is restricted to either all quadratic residues or all nonresidues $ \\pmod p$ among numbers not divisible by $p.$ </p>\n\n<p>In what could be a red herring, I have been emphasizing $\\Delta = -p$ where $p \\equiv 7 \\pmod 8$ is prime, and where there is a very long string of consecutive quadratic residues $\\pmod p.$ Note that this means only a single genus with the same $\\Delta = -p,$ and any form is restricted to residues. I did not anticipate that long strings of represented numbers would not start at 1 or any predictable place and would be fairly large. As target numbers grow, the probability of not being represented by any form of the discriminant grows ( if prime $q \\parallel n$ with $(-p| q) = -1$), but as the number of prime factors $r$ with $(-p| r) = 1$ grows so does the probability that many forms represent the number if any do.  Finally, on the influence of taking another $\\Delta$ with even more consecutive residues, the trouble seems to be that the class number grows as well. So everywhere there are trade-offs.</p>\n\n<p>EDIT, Monday 10 May. I had an idea that the large values represented by any individual form ought to be isolated. That was naive. Legendre showed that for a prime $q \\equiv 7 \\pmod 8$ there exists a solution to $u^2 - q v^2 = 2,$ and therefore infinitely many solutions. This means that the form $x^2 + q y^2$ represents the  triple of consecutive\nnumbers $q v^2, 1 + q v^2, u^2$ and then represents $4 + q v^2$ after perhaps skipping $3 + q v^2$.\nTaking $q = 8 k - 1,$ the form $ x^2 + x y + 2 k y^2$ has no restrictions $\\pmod 8,$ while an explicit formula shows that it represents every number represented by   $x^2 + q y^2.$ Put together, if $8k-1 = q$ is prime, then $ x^2 + x y + 2 k y^2$ represents infinitely many  triples. If, in addition, $ ( 3 | q) = 1,$ it seems plausible to expect infinitely many  quintuples. It should be admitted that the recipe given seems not to be a particularly good way to jump from length 3 to length 5, although strings of length 5 beginning with some $q t^2$ appear plentiful.</p>\n\n<p>EDIT, Tuesday 11 May. I have found a string of 9, the form is $6 x^2 + x y + 13 y^2$ and the numbers start at $1786879113 = 3 \\cdot 173 \\cdot 193 \\cdot 17839$ and end with \n$1786879121$ which is prime. As to checking, I have a separate program that shows me the particular $x,y$ for representing a target number by a positive binary form. Then I checked those pairs using my programmable calculator, which has exact arithmetic up to $10^{10}.$ </p>\n\n<p>EDIT, Saturday 15 May. I have found a string of 10, the form is $9 x^2 + 5 x y + 14 y^2$ and the numbers start at $866988565 = 5 \\cdot 23 \\cdot 7539031$ and end with \n$866988574 = 2   \\cdot  433494287.$</p>\n\n<p>EDIT, Thursday 17 June. Wadim Zudilin has been running one of my programs on a fast computer. We finally have a string of 11, the form being $ 3 x^2 + x y + 26 y^2$ of discriminant $-311.$ The integrally represented numbers start at  897105813710 and end at   897105813720. Note that the maximum possible for this discriminant is 11. So we now have this conjecture: For discriminants $\\Delta$ with absolute values in this sequence\n<a href=\"http://www.oeis.org/A000229\" rel=\"noreferrer\">http://www.oeis.org/A000229</a>\nsome form represents a set of $N$ consecutive integers, where $N$ is the first quadratic nonresidue. As a result, we conjecture that there is no upper bound on the number of consecutive integers that can be represented by a positive quadratic form. </p>\n"
+    },
+    {
+      "tags": [
+        "arithmetic-geometry",
+        "elliptic-curves",
+        "finite-fields",
+        "galois-cohomology",
+        "rational-points"
+      ],
+      "owner": {
+        "account_id": 6687864,
+        "reputation": 797,
+        "user_id": 76440,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/b6003aa2006bbab69f3d3ef26580fdfa?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Ashvin Swaminathan",
+        "link": "https://mathoverflow.net/users/76440/ashvin-swaminathan"
+      },
+      "is_answered": true,
+      "view_count": 425,
+      "accepted_answer_id": 488250,
+      "answer_count": 1,
+      "score": 8,
+      "last_activity_date": 1740145344,
+      "creation_date": 1731506107,
+      "last_edit_date": 1731506626,
+      "question_id": 482397,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/482397/average-number-of-mathbbf-p-points-over-twists-of-a-variety",
+      "title": "Average number of $\\mathbb{F}_p$-points over twists of a variety",
+      "body": "<p>Let <span class=\"math-container\">$p \\gg 1$</span> be a sufficiently large prime. I recently stumbled across a fascinating fact about the number of <span class=\"math-container\">$\\mathbb{F}_p$</span>-points on  elliptic curves over finite fields. Specifically, we have:</p>\n<p><strong>Fact 1.</strong> Let <span class=\"math-container\">$E$</span> be an elliptic curve over <span class=\"math-container\">$\\mathbb{F}_p$</span>, and denote its quadratic twist by <span class=\"math-container\">$E'$</span>. Then the average number of <span class=\"math-container\">$\\mathbb{F}_p$</span>-points on <span class=\"math-container\">$E$</span> and <span class=\"math-container\">$E'$</span> is equal to <span class=\"math-container\">$p+1$</span>; i.e., we have\n<span class=\"math-container\">$$\\frac{1}{2}\\big(\\#E(\\mathbb{F}_p) + \\#E'(\\mathbb{F}_p)\\big) = p+1.$$</span>\nIn particular, this average is independent of the choice of <span class=\"math-container\">$E$</span>.</p>\n<p><strong>Proof of Fact 1.</strong> Take a model of the form <span class=\"math-container\">$y^2 = x^3 + Ax + B$</span> for <span class=\"math-container\">$E$</span>, and denote by <span class=\"math-container\">$(\\frac{\\cdot}{\\cdot})_2$</span> the quadratic residue symbol. Then we have\n<span class=\"math-container\">$$\\#E(\\mathbb{F}_p) + \\#E'(\\mathbb{F}_p) = 1 + \\sum_{x \\in \\mathbb{F}_p} \\left[1 + \\left(\\frac{x^3 + Ax + B}{p}\\right)_2\\right] + 1 + \\sum_{x \\in \\mathbb{F}_p} \\left[1 - \\left(\\frac{x^3 + Ax + B}{p}\\right)_2\\right] = 2p + 2. \\square$$</span></p>\n<p>I believe the same sort of thing holds for families of cubic twists of elliptic curves:</p>\n<p><strong>Fact 1'.</strong> Let <span class=\"math-container\">$E$</span> be a Mordell curve over <span class=\"math-container\">$\\mathbb{F}_p$</span>, i.e., a curve with equation <span class=\"math-container\">$y^2 = x^3 + k$</span>, where <span class=\"math-container\">$k \\in \\mathbb{F}_p^\\times$</span>. Then the average number of <span class=\"math-container\">$\\mathbb{F}_p$</span>-points on cubic twists of <span class=\"math-container\">$E$</span> of the form <span class=\"math-container\">$E^D \\colon y^2 = x^3 + kD^2$</span> is equal to <span class=\"math-container\">$p+1$</span>; i.e., we have\n<span class=\"math-container\">$$\\frac{1}{\\#\\mathbb{F}_p^{\\times}/\\mathbb{F}_p^{\\times^3}}\\sum_{D \\in \\mathbb{F}_p^{\\times}/\\mathbb{F}_p^{\\times 3}} \\#E^D(\\mathbb{F}_p) = p+1.$$</span>\nIn particular, this average is independent of the choice of <span class=\"math-container\">$k \\in \\mathbb{F}_p^\\times$</span>.</p>\n<p>What I find so interesting about Facts 1 and 1' is that they admits analogues in many other settings of arithmetic and geometric interest. For example, let <span class=\"math-container\">$V \\simeq \\mathbb{A}^4$</span> be the space of binary cubic forms (i.e., homogeneous degree-<span class=\"math-container\">$3$</span> polynomials in two variables). Given <span class=\"math-container\">$f,g \\in V(\\mathbb{F}_p)$</span>, we say that <span class=\"math-container\">$f$</span> and <span class=\"math-container\">$g$</span> are <em>twists</em> of each other if <span class=\"math-container\">$f,g$</span> are <span class=\"math-container\">$\\operatorname{GL}_2(\\overline{\\mathbb{F}}_p)$</span>-equivalent. It is known that the action of <span class=\"math-container\">$\\operatorname{GL}_2(\\overline{\\mathbb{F}}_p)$</span> is transitive on the set of forms in <span class=\"math-container\">$V(\\overline{\\mathbb{F}}_p)$</span> having a given nonzero discriminant. Thus, if <span class=\"math-container\">$f,g \\in V(\\mathbb{F}_p)$</span> have the same nonzero discriminant, then <span class=\"math-container\">$f$</span> and <span class=\"math-container\">$g$</span> are twists of each other.</p>\n<p><strong>Fact 2.</strong> Let <span class=\"math-container\">$\\Delta \\in \\mathbb{F}_p^\\times$</span>, and let <span class=\"math-container\">$V_\\Delta$</span> denote the fiber of the discriminant map <span class=\"math-container\">$\\operatorname{disc}\\colon V \\to \\mathbb{A}^1$</span> above <span class=\"math-container\">$\\Delta$</span>. Then the average number of zeros of binary cubic forms in <span class=\"math-container\">$V_\\Delta(\\mathbb{F}_p)$</span> is equal to <span class=\"math-container\">$1$</span>; i.e., we have\n<span class=\"math-container\">$$\\frac{1}{\\#V_\\Delta(\\mathbb{F}_p)}\\sum_{f \\in V_\\Delta(\\mathbb{F}_p)} \\#\\{(x : y) \\in \\mathbb{P}^1(\\mathbb{F}_p) : f(x,y) = 0\\} = 1.$$</span>\nIn particular, this average is independent of the choice of <span class=\"math-container\">$\\Delta \\in \\mathbb{F}_p^\\times$</span>.</p>\n<p><strong>Proof of Fact 2.</strong> If <span class=\"math-container\">$\\Delta$</span> is a quadratic residue, then a binary cubic form of discriminant <span class=\"math-container\">$\\Delta$</span> is either totally split over <span class=\"math-container\">$\\mathbb{F}_p$</span> or irreducible. These factorization types occur with frequencies in a ratio of <span class=\"math-container\">$1 : 2$</span>. On the other hand, if <span class=\"math-container\">$\\Delta$</span> is a quadratic nonresidue, then a binary cubic form of discriminant <span class=\"math-container\">$\\Delta$</span> has one quadratic factor. <span class=\"math-container\">$\\square$</span></p>\n<p>Here is another <span class=\"math-container\">$0$</span>-dimensional example.</p>\n<p><strong>Fact 3.</strong> Let <span class=\"math-container\">$E$</span> be an elliptic curve over <span class=\"math-container\">$\\mathbb{F}_p$</span>. The average number of <span class=\"math-container\">$\\mathbb{F}_p$</span>-points on twists of the <span class=\"math-container\">$2$</span>-torsion subscheme <span class=\"math-container\">$E[2]$</span> is equal to <span class=\"math-container\">$1$</span>; i.e., we have\n<span class=\"math-container\">$$\\frac{1}{\\#H^1\\big(\\operatorname{Gal}(\\overline{\\mathbb{F}}_p/\\mathbb{F}_p),E[2]\\big)}\\sum_{\\sigma \\in H^1\\big(\\operatorname{Gal}(\\overline{\\mathbb{F}}_p/\\mathbb{F}_p),E[2]\\big)} \\#\\big(E[2]^\\sigma(\\mathbb{F}_p)\\big) = 1.$$</span></p>\n<p><strong>Proof of Fact 3.</strong> The twist by <span class=\"math-container\">$\\sigma$</span> of <span class=\"math-container\">$E[2]$</span> is trivial if and only if <span class=\"math-container\">$E[2]^\\sigma(\\mathbb{F}_p) \\neq \\varnothing$</span>. It is easy to see that <span class=\"math-container\">$\\#H^1\\big(\\operatorname{Gal}(\\overline{\\mathbb{F}}_p/\\mathbb{F}_p),E[2]\\big) = \\#E[2](\\mathbb{F}_p)$</span>. <span class=\"math-container\">$\\square$</span></p>\n<p><strong>My question</strong>: Is there some general underlying principle that explains all of these examples? Or is there a general framework in which all of these examples live? E.g., let <span class=\"math-container\">$X \\to S$</span> be a morphism of varieties over <span class=\"math-container\">$\\mathbb{F}_p$</span>, where for every <span class=\"math-container\">$s \\in S(\\mathbb{F}_p)$</span>, the fiber <span class=\"math-container\">$X_s(\\mathbb{F}_p)$</span> is a &quot;twist family.&quot; Then under some reasonable conditions, perhaps it is the case that the average over <span class=\"math-container\">$Y \\in X_s(\\mathbb{F}_p)$</span> of <span class=\"math-container\">$\\#Y(\\mathbb{F}_p)$</span> is independent of the choice of <span class=\"math-container\">$s$</span>?</p>\n"
+    }
+  ],
+  "has_more": false,
+  "quota_max": 300,
+  "quota_remaining": 293
+}

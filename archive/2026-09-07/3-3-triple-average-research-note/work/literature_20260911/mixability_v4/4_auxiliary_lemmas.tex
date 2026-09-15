@@ -1,0 +1,101 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Some Auxiliary Lemmas}
+%\label{sec: some auxiliary lemmas}
+%\input{4_auxiliary_lemmas.tex}
+
+%%%%%%%%
+
+
+
+In this section we show that, for Condition~{\MixCond},
+we only need to consider $b$'s that are odd-prime factors of $n$
+and satisfy $b\leq c_{max}$,
+where $c_{max}$ denotes the maximum absolute value of concentrations in $C$.
+These properties play an important role in the sufficiency proof of Condition~{\MixCond} in 
+Theorem~\ref{thm: miscibility characterization}(a).
+Additionally, they lead to an efficient algorithm for testing perfect mixability
+(see Section~\ref{sec: polynomial running time}), 
+thus showing the first part of Theorem~\ref{thm: miscibility characterization}(c). 
+
+%%%%%%%%
+
+\begin{lemma}\label{lem: uniform wrt coprime numbers}
+Let $b,c\in\posintegers$ and $A\ingroundset \integers$.
+(a) If $A$ is $bc$-congruent then $A$ is also $b$-congruent.
+(b) If $\mygcd(b,c) = 1$ and $A$ is both $b$-congruent and $c$-congruent
+	then $A$ is $bc$-congruent.
+\end{lemma}
+
+\begin{proof}
+Part~(a) is trivial, because $x\equiv y\pmod{bc}$ implies that
+$x\equiv y\pmod{b}$.
+Part~(b) is also simple: Suppose that $x\equiv y\pmod{b}$
+and $x\equiv y\pmod{c}$. This means that $b|(x-y)$ and $c|(x-y)$.
+This, since $b,c$ are co-prime, implies that $(bc)|(x-y)$, 
+which is equivalent to $x\equiv y\pmod{bc}$.
+\end{proof}
+
+%%%%%%%%%
+
+\begin{lemma}\label{lem: mc powers of primes}
+If Condition~{\MixCond} holds for all $b\in\posintegers$ that are a power of an odd prime
+then it holds for all odd $b\in\posintegers$.
+\end{lemma}
+
+\begin{proof}
+Assume that condition~{\MixCond} holds for all $b$ that are odd prime powers. 
+Let $b'\in\posintegers$ be odd, with factorization
+$b' = p_1^{\gamma_1} ... p_k^{\gamma_k}$,
+for different odd primes $p_1 , ...,p_k$, and suppose that $C$ is $b'$-congruent.
+Then, by Lemma~\ref{lem: uniform wrt coprime numbers}(a),
+$C$ is also  $p_i^{\gamma_i}$-congruent for all $i$.
+Since condition~{\MixCond} holds for $p_i^{\gamma_i}$,
+this implies that $C\cup\braced{\mu}$ is $p_i^{\gamma_i}$-congruent for all $i$.
+By repeated application of Lemma~\ref{lem: uniform wrt coprime numbers}(b), we then obtain that
+$C\cup\braced{\mu}$ is $b'$-congruent as well. So Condition~{\MixCond} holds for $b'$.
+\end{proof}
+
+%%%%%%%%%
+
+\begin{lemma}\label{lem: b's co-prime to n}
+Let $b\in\posintegers$ be odd. If $\gcd(b,n) = 1$ then
+Condition~{\MixCond} holds for $b$.
+\end{lemma}
+
+\begin{proof}
+Assume that $C$ is $b$-congruent. 
+By Observation~\ref{obs: offsetting does not affect reachability}, without loss of generality
+we can assume that all numbers in $C$ are multiples of $b$. 
+(Otherwise we can consider $C' = C-c$, for an arbitrary $c\in C$, 
+because Condition~{\MixCond} is not affected by offsetting $C$.)
+Thus $\mysum(C) = b\beta$, for some $\beta\in\integers$,
+which gives us that $\mu = \mysum(C)/n = b\beta/n$.
+As $\mu$ is integer and $\gcd(b,n) = 1$, $\beta$ must be a multiple of $n$.
+We can thus conclude that $\mu$ is a multiple of $b$.
+This means that $C\cup \braced{\mu}$ is $b$-congruent, proving that
+Condition~{\MixCond} holds for $b$.
+\end{proof}
+
+%%%%%%%%%
+
+\begin{corollary}\label{cor: mc prime power factors}
+	Let $c_{max}$ be the maximum absolute value of concentrations in $C$. 
+	If Condition~{\MixCond} holds for all $b\in\posintegers$ with $b\leq c_{max}$
+	that are powers of odd prime factors of $n$,
+	then Condition~{\MixCond} holds for all odd $b$.
+\end{corollary}
+
+%%%%%%%%%
+
+
+To substantiate Corollary~\ref{cor: mc prime power factors},
+note that $C$ satisfies Condition~$\MixCond$ 
+for all odd $b\in\posintegers$ larger than $c_{max}$.
+This holds because for each such $b$, $c\mod b=c$ for all $c\in C$, 
+so the remainders of the (different) concentrations in $C$ modulo $b$ are all different. 
+(In the trivial case where 
+all concentrations in $C$ are equal, $\mu$ is also equal and thus
+$C$ satisfies Condition~{\MixCond}; such $C$ is actually perfectly mixed already.)
+

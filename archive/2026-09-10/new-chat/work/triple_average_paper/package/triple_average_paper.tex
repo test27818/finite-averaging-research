@@ -1,0 +1,953 @@
+% !TeX program = xelatex
+\documentclass[UTF8,fontset=fandol,zihao=-4,a4paper]{ctexart}
+\usepackage[top=25mm,bottom=26mm,left=26mm,right=26mm,headheight=15pt]{geometry}
+\usepackage{mathtools,amssymb,amsthm,bm}
+\usepackage{booktabs,longtable,array,enumitem,microtype}
+\usepackage{fancyhdr,xcolor,hyperref}
+\setmainfont{TeX Gyre Termes}
+\hypersetup{unicode=true,colorlinks=true,linkcolor=black,citecolor=black,
+  urlcolor=blue!45!black,pdftitle={三元平均的有限步可达性：算术判据与重复值不变量},
+  pdfauthor={研究整理稿},pdfsubject={有理配置的有限次三元等权平均}}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.25em,topsep=0.4em,leftmargin=2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{proposition}[theorem]{命题}
+\newtheorem{corollary}[theorem]{推论}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{remark}[theorem]{注}
+\newtheorem{example}[theorem]{例}
+\renewcommand{\proofname}{证明}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\F}{\mathbb F}
+\newcommand{\PP}{\mathcal P}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\II}{\mathcal I}
+\newcommand{\B}{\mathcal B}
+\newcommand{\one}{\boldsymbol 1}
+\DeclareMathOperator{\prim}{prim}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\sgn}{sgn}
+\newcommand{\mat}[4]{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 三元平均的有限步可达性}
+\fancyhead[R]{\small 研究稿}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\title{\heiti 三元平均的有限步可达性\\[0.3em]
+  \large 算术判据与重复值不变量}
+\author{}
+\date{2026 年 9 月 11 日\quad 研究整理稿}
+
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+\begin{abstract}
+给定有限个有理数，一次三元平均选取三个不同位置，并将其数值同时替换为三者的算术平均。
+本文研究在位置总数固定、不增加副本的条件下，何时可以有限步达到全体相等。
+对非恒定输入，减去总体均值、清除分母并取本原整数代表
+$X=(x_1,\ldots,x_n)$，定义 $G(X)=\gcd_{i,j}(x_i-x_j)$。
+我们证明：当 $n\ge7$ 时，可达性等价于 $G(X)$ 是 $3$ 的非负整数次幂。
+证明的主体直接处理所有 $n\ge11$，不区分素数与合数，也不调用较小维数的结论。
+其方法是预留一位三进精度，建立两个不同三重值的不变量，并利用危险支持集、仿射同余见证和整数平方能量证明有限终止。
+对整数零和合法输入，$n\ge11$ 时全部中间值可限制在 $\frac13\Z$。
+七、八、十元分别由独立的低维构造处理，九元使用三进张量网络；其中七、十元所需的精确有限代数证书在附录中列出。
+判定算法关于有理输入的总位长为多项式，但本文不证明输出操作序列具有统一的位长多项式长度。
+最后给出五、六元的反例以及小维数的有限整数判定方法，说明维数条件不可删除。
+\end{abstract}
+\noindent\textbf{关键词：}有限步平均；混合图；有理数可达性；同余不变量；重复值；计算机辅助证明。
+
+\tableofcontents
+\newpage
+
+\section{问题、主要结论与证明结构}
+
+设 $n\ge3$。对 $x=(x_1,\ldots,x_n)\in\Q^n$ 及三个不同的下标
+$i,j,k$，允许的操作为
+\begin{equation}\label{eq:atom}
+ (x_i,x_j,x_k)\longmapsto(m,m,m),\qquad
+ m=\frac{x_i+x_j+x_k}{3},
+\end{equation}
+其他位置不变。操作次数必须有限；三个位置可在每一步根据当前状态重新选择。
+各步保持总和，故终态若为常值，只能等于初始均值
+$\mu=n^{-1}\sum_i x_i$。
+我们始终使用原来的 $n$ 个位置；相等数值的多份出现仍代表不同位置。
+
+对非恒定有理输入，先作中心化，再选正有理数 $c$ 使
+\begin{equation}\label{eq:normalization}
+ X=c(x-\mu\one)\in\Z^n,\qquad
+ \sum_i X_i=0,\qquad \gcd_i X_i=1.
+\end{equation}
+这样的 $X$ 在整体符号之外唯一。定义
+\begin{equation}\label{eq:G}
+ G(X)=\gcd_{1\le i<j\le n}|X_i-X_j|>0.
+\end{equation}
+
+\begin{theorem}[完整算术判据]\label{thm:main}
+设 $n\ge7$，输入为 $n$ 个有理数。若输入已全相等，则无需操作。
+否则取 \eqref{eq:normalization} 的本原中心化代表 $X$。
+输入可由有限次 \eqref{eq:atom} 变为常值，当且仅当
+\[
+ G(X)=3^a\qquad\text{对某个整数 }a\ge0.
+\]
+\end{theorem}
+
+下面的统一结论是本文主体。
+\begin{theorem}[全维数的直接构造与精度界]\label{thm:uniform}
+设 $n\ge11$，$X\in\Z^n$ 的坐标和为零。若对每个非三素因子
+$q\mid n$，坐标模 $q$ 不全同余，则 $X$ 可在原 $n$ 个位置上有限步归零，
+且全部中间值属于 $\frac13\Z$。
+
+更一般地，只要非零 $X$ 的本原代表满足 $G=3^a$，同一精度结论成立。
+\end{theorem}
+
+第 \ref{sec:arithmetic} 节给出必要条件及统一的算术语言。
+第 \ref{sec:safety}--\ref{sec:termination} 节直接证明定理 \ref{thm:uniform}。
+这些章节不依赖小维数定理、素数归约、合数乘法闭包或抽象矩阵的实现定理。
+第 \ref{sec:small} 节处理 $7\le n\le10$，从而完成定理 \ref{thm:main}。
+附录 \ref{app:seven}、\ref{app:ten} 记录其中两个精确有限证书及其验证规则。
+
+二元平均的对应问题由 Coviello Gonzalez 与 Chrobak \cite{mixability} 研究。
+其充分性证明在预留一位二进精度后维持两个不同的重复值。
+本文借鉴这一证明结构；三元情形需要同时处理三个模 $3$ 余类、
+每次生成三份新值的重数变化，以及模 $2$ 下不能随意除以 $2$ 的问题。
+定理 \ref{thm:uniform} 是这里给出的三元论证，不是对 \cite{mixability} 中定理的直接引用。
+
+\section{算术不变量与归一化}\label{sec:arithmetic}
+
+\begin{lemma}[仿射相容性]\label{lem:affine-equivariance}
+固定任意一个位置操作序列 $W$。对 $c\ne0$、$b\in\Q$，有
+\[
+ W(cx+b\one)=cW(x)+b\one.
+\]
+因此中心化、整体非零缩放、坐标重新编号均不改变归零可达性。
+\end{lemma}
+\begin{proof}
+单次平均满足该恒等式，依操作次数归纳即可。坐标重新编号只改变之后选择的位置编号，
+不构成额外的数值操作。
+\end{proof}
+
+\begin{lemma}\label{lem:G-divides-n}
+若 $X\in\Z^n$ 非零、本原且零和，则 $G(X)\mid n$。
+此外，$G(X)=3^a$ 等价于：对每个素数 $q\mid n$、$q\ne3$，
+$X$ 模 $q$ 不全同余。
+\end{lemma}
+\begin{proof}
+记 $G=G(X)$。由 $G\mid X_i-X_1$ 得 $G\mid nX_1$。
+又 $\gcd(G,X_1)=1$，否则某素数同时整除所有坐标，与本原性矛盾。
+故 $G\mid n$。最后，对任意素数 $q$，坐标模 $q$ 全同余恰当且仅当 $q\mid G$。
+\end{proof}
+
+\begin{proposition}[必要性]\label{prop:necessary}
+任意维数中，非零本原零和整数状态若能归零，则 $G(X)$ 为三幂。
+\end{proposition}
+\begin{proof}
+若 $q\ne3$ 为 $G(X)$ 的素因子，则所有坐标模 $q$ 同余于某个 $r\ne0$；
+这里 $r\ne0$ 来自本原性。记 $R=\Z[1/3]$。
+所有中间值都在 $R$ 中，且因 $3$ 在 $\F_q$ 中可逆，约化映射
+$R\to\F_q$ 与三平均相容。故每一步的所有坐标仍等于 $r$，不可能达到零。
+\end{proof}
+
+\begin{definition}\label{def:admissible}
+固定 $n$，令
+\[
+ \PP_n=\{q:q\mid n,\ q\text{ 为素数},\ q\ne3\},\qquad d_n=|\PP_n|.
+\]
+称整数零和配置 $E$ 为\emph{算术合法}，如果对每个 $q\in\PP_n$，
+其坐标模 $q$ 不全同余。
+当 $\PP_n=\varnothing$ 时，该条件为空条件。
+\end{definition}
+
+算术合法性在下面的构造中直接施加于当前整数值，不在每一步重新取本原代表。
+这使整个路径留在同一个离散格中。
+对非零本原状态，它由引理 \ref{lem:G-divides-n} 与题目的 $G$ 条件完全等价。
+
+\section{危险支持集与安全操作}\label{sec:safety}
+
+本节除另有说明外均设 $n\ge11$。
+以多重集记号 $a^r$ 表示 $r$ 个值等于 $a$ 的位置；它不表示数值乘方。
+记 $f_E(a)$ 为实际值 $a$ 的重数，定义
+\[
+ \HH(E)=\{a:f_E(a)\ge3\}.
+\]
+我们称 $\HH(E)$ 的元素为\emph{三重值}。
+一次整数三平均若输出仍算术合法，就称为\emph{安全操作}。
+仅平均三个已经相等的值称为恒等操作。
+
+\begin{lemma}[危险集]\label{lem:danger}
+设 $E$ 算术合法，$q\in\PP_n$。若某个模 $q$ 余类含至少 $n-3$ 个位置，
+则该余类唯一；记其补集为 $F_q$，有 $2\le|F_q|\le3$。
+若不存在这样的余类，则删除任意三个位置后，余下位置模 $q$ 仍不全同余。
+若存在，则任何不包含整个 $F_q$ 的三元组也具有这一性质。
+\end{lemma}
+\begin{proof}
+由 $n-3>n/2$ 得唯一性。补集非空，否则违反合法性。
+若补集只有一个位置，记主类余数为 $c$，例外余数为 $c+t$。
+总和模 $q$ 等于 $nc+t=t$，故 $t=0$，矛盾。
+其余结论来自补集的定义；删除三个位置后主类仍至少有 $n-6>0$ 个位置。
+\end{proof}
+
+\begin{lemma}[同时保护池]\label{lem:pool}
+设一个位置池 $S$ 的所有值同余模 $3$，其中每个实际值最多出现两次。
+则有以下结论。
+\begin{enumerate}
+\item 若 $|S|\ge d_n+3$，可在 $S$ 中选取安全、非恒等的整数三平均。
+\item 若 $|S|\ge d_n+4$，对预先指定的数值 $a$，还可要求新均值不等于 $a$。
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+逐个处理存在 $F_q$ 的素数 $q$。若当前可用池仍包含整个 $F_q$，留出其中一个位置；
+否则无需动作。至多留出 $d_n$ 个位置，余下任意三元组都不包含任何完整 $F_q$，
+因而由引理 \ref{lem:danger} 安全。其平均为整数；重数上界保证它非恒等。
+
+第二种情形在保护后任取四个位置。若其每个三元组的均值均为 $a$，
+比较只替换一个位置的两个三元组，便得四个值全相等，与重数至多二矛盾。
+\end{proof}
+
+\begin{lemma}[统一容量]\label{lem:capacity}
+对所有 $n\ge11$，有 $n\ge d_n+10$。
+\end{lemma}
+\begin{proof}
+$d_n=0,1$ 时显然。若 $d_n=2$，则 $n\ge14$：$11,12,13$ 都只有至多一个非三素因子。
+若 $d_n\ge3$，除可能出现的 $2$ 外，其余非三素因子至少为 $5$，故
+$n\ge2\cdot5^{d_n-1}\ge d_n+10$；最后一个不等式从 $d_n=3$ 起直接归纳。
+\end{proof}
+
+\begin{lemma}[重复值与仿射见证]\label{lem:repeated-safety}
+以下操作只要平均为整数，均安全。
+\begin{enumerate}
+\item $(a,a,x)$，其中 $f_E(a)\ge3$。
+\item $(a,b,x)$，其中 $a\ne b$ 且 $f_E(a),f_E(b)\ge2$。
+\item 未选位置保留 $a,b$，而被选的至少两个值都是 $a,b$ 的整数仿射组合。
+\end{enumerate}
+第三项中的整数仿射组合是指 $ra+sb$，其中 $r,s\in\Z$、$r+s=1$。
+\end{lemma}
+\begin{proof}
+固定 $q\in\PP_n$，反设输出全同余于 $c$。
+第一项留下 $a$，故 $a\equiv c$，再由新均值同余于 $c$ 得 $x\equiv c$。
+第二项留下 $a,b$，故二者都同余于 $c$，新均值再迫使 $x\equiv c$。
+第三项中保留的 $a,b$ 同余于 $c$，因此至少两个被选值也同余于 $c$；
+剩下一个由三元组之和被迫同余于 $c$。
+每种情形都推出原配置全同余，矛盾。
+\end{proof}
+
+\begin{remark}[模 $2$ 的边界]\label{rem:two}
+不能无条件将第二类操作改成 $(a,x,x)$。
+例如 $(3^3,0^2,1^6,-15)$ 是合法的十二元零和状态，
+但平均 $(3,0,0)$ 后全部变为奇数。
+下文只在 $x=3b-2a$ 且操作后仍保留 $a,b$ 时使用 $(a,x,x)$，
+其安全性来自引理 \ref{lem:repeated-safety} 的第三项，不需要在模 $2$ 下除以 $2$。
+\end{remark}
+
+\begin{lemma}[两值排除]\label{lem:two-values}
+算术合法的整数零和配置不可能只有两个实际值 $a,b$，且 $a\not\equiv b\pmod3$。
+\end{lemma}
+\begin{proof}
+设 $a$ 出现 $r$ 次，$0<r<n$。零和给出 $r(a-b)=-nb$。
+对每个 $q\in\PP_n$，合法性保证 $q\nmid a-b$；对 $q=3$ 也由假设成立。
+因此 $\gcd(a-b,n)=1$，进而 $n\mid r$，矛盾。
+\end{proof}
+
+\section{双三重值不变量的初始化}\label{sec:initialization}
+
+定义增强不变量
+\begin{equation}\label{eq:invariant}
+ \II_n(E):\quad E\in\Z^n,\quad\sum E=0,\quad
+ E\text{ 算术合法},\quad |\HH(E)|\ge2.
+\end{equation}
+
+\begin{proposition}[初始化]\label{prop:initialization}
+设 $X\ne0$ 满足定理 \ref{thm:uniform} 的假设。
+从 $3X$ 出发，至多两次安全、非恒等的整数三平均即可建立 $\II_n$。
+\end{proposition}
+\begin{proof}
+初始所有值均被 $3$ 整除。乘以 $3$ 不改变有关素数下的不全同余性。
+若已有两个三重值，则不需操作。
+
+若恰有一个三重值 $a$，分两种情形。
+当 $f_E(a)\ge5$ 时，取任意不同值 $b$ 并平均 $(a,a,b)$。
+操作安全，留下至少三份 $a$，并产生三个不同于 $a$ 的新均值。
+当 $f_E(a)=3$ 或 $4$ 时，$a$ 之外至少有 $n-4\ge d_n+6$ 个位置，
+每个实际值至多出现两次。由引理 \ref{lem:pool}，可在这个池中安全地产生不同于 $a$ 的均值。
+
+若没有三重值，先用引理 \ref{lem:pool} 选一个安全三元组。
+新均值 $a$ 是唯一可能的三重值，其重数在 $3$ 与 $5$ 之间。
+$a$ 之外至少有 $n-5\ge d_n+5$ 个位置，均为尚未改变的初值，仍被 $3$ 整除，
+且每个实际值最多出现两次。再次应用引理 \ref{lem:pool}，
+在这些位置中产生不同于 $a$ 的均值，即得两个三重值。
+第二步不使用新生的 $a$，因此无需增加整数格的精度。
+\end{proof}
+
+\section{不变量的保持}\label{sec:closure}
+
+记显式终端族为
+\begin{equation}\label{eq:terminal}
+ T_n(a)=(a^3,(-a)^3,0^{n-6}),\qquad a\ne0.
+\end{equation}
+它可连续三次平均 $(a,-a,0)$ 归零。
+
+\begin{proposition}[保持或终止]\label{prop:closure}
+设 $n\ge11$，$E$ 满足 $\II_n$。
+则 $E$ 要么已经属于 \eqref{eq:terminal}，要么存在一次安全、非恒等的整数三平均，
+其输出仍满足 $\II_n$。
+\end{proposition}
+
+下面按三重值的数目及其模 $3$ 余类分布，证明命题 \ref{prop:closure}。
+
+\subsection{至少三个三重值}
+
+若 $|\HH(E)|\ge4$，模 $3$ 的抽屉原理给出两个不同的同余三重值 $a,b$。
+平均 $(a,a,b)$ 为安全整数操作；至少两个未参与的三重值完整保留。
+
+若 $|\HH(E)|=3$，且有两个三重值 $a,b$ 同余模 $3$，记第三个为 $c$。
+两种安全操作 $(a,a,b)$、$(b,b,a)$ 的均值分别为
+\[
+ d_1=(2a+b)/3,\qquad d_2=(a+2b)/3.
+\]
+由于 $d_1\ne d_2$，至少一个均值不同于未参与的 $c$；该新值与 $c$ 保持不变量。
+
+剩下三个三重值分占三个模 $3$ 余类。
+若另有非三重值 $x$，取与它同余模 $3$ 的三重值 $a$，平均 $(a,a,x)$；
+其他两个三重值不动。
+若没有其他实际值，记三个值为 $a,b,c$，平均 $(a,b,c)$。
+若至少两个重数不小于 $4$，它们各用去一份后仍是三重值。
+否则重数只能是 $3,3,n-6$。设 $c$ 的重数为 $n-6$，新均值为 $d$。
+若 $d\ne c$，操作后 $c$ 至少还有四份，$d$ 有三份。
+若 $d=c$，则 $a+b=2c$；结合零和得 $nc=0$，故 $c=0,b=-a$，
+原状态即为 $T_n(a)$。
+
+\subsection{恰有两个同余模 \texorpdfstring{$3$}{3} 的三重值}
+
+记两个三重值为 $a,b$。
+若 $f_E(a)\ge4$，平均 $(b,b,a)$，留下至少三份 $a$，并产生不同于 $a$ 的三重值；
+$f_E(b)\ge4$ 时对称处理。
+故只需考虑 $f_E(a)=f_E(b)=3$。
+其余池 $S$ 有 $n-6\ge d_n+4$ 个位置，每个实际值最多出现两次。
+
+若 $S$ 中存在与 $a,b$ 同余模 $3$ 的 $x$，考虑 $(a,a,x)$ 与 $(b,b,x)$。
+二者都安全。如果它们都不能保持双三重值，必须分别有
+\[
+ 2a+x=3b,\qquad 2b+x=3a.
+\]
+相减得 $5(a-b)=0$，矛盾。
+
+否则，$S$ 只使用另外两个模 $3$ 余类。
+若只使用其中一类，直接在 $S$ 内应用引理 \ref{lem:pool}。
+若两类 $S_1,S_2$ 都非空，对跨类位置对 $(c,e)$ 考虑
+$(a,c,e)$ 与 $(b,c,e)$。
+这两种操作若被引理 \ref{lem:danger} 阻塞，只可能某个 $F_q$ 恰为所选的两个位置
+$\{c,e\}$：若 $a$ 或 $b$ 属于 $F_q$，它的全部三份副本都属于 $F_q$，
+而三元组只选了一份，故不可能包含整个 $F_q$。
+因此至多 $d_n$ 个跨类位置对被阻塞，而
+\[
+ |S_1||S_2|\ge |S|-1=n-7>d_n.
+\]
+选择一个未被阻塞的对，两种操作均安全。
+它们若都不能保持双三重值，就有
+$a+c+e=3b$ 与 $b+c+e=3a$，推出 $4(a-b)=0$，仍为矛盾。
+
+\subsection{恰有两个不同余模 \texorpdfstring{$3$}{3} 的三重值}
+
+仍记三重值为 $a,b$。
+若存在不同于 $a$、但与 $a$ 同余模 $3$ 的值 $x$，先尝试 $(a,a,x)$。
+该操作安全；它不能保持双三重值，仅可能因为
+\begin{equation}\label{eq:affine-neighbor}
+ f_E(a)\le4,\qquad x=3b-2a.
+\end{equation}
+若这样的 $x$ 至少有两份，则改用 $(a,x,x)$，新均值为 $2b-a$，与 $a,b$ 都不同。
+操作后仍有 $a,b$ 的副本，故由仿射见证引理，即使在模 $2$ 下也安全。
+因此，在尚未找到保持操作的前提下，$a$ 的余类中至多有一个额外单点
+$x=3b-2a$；对称地，$b$ 的余类中至多有一个额外单点 $y=3a-2b$。
+若某个单点存在，相应三重值的重数不超过 $4$。
+其余位置都在第三个模 $3$ 余类，记为池 $Z$。
+
+\paragraph{两个额外单点均存在。}
+由 $f_E(a)+f_E(b)+2\le10<n$，池 $Z$ 非空。
+任取 $z\in Z$，平均 $(x,y,z)$。三重值 $a,b$ 不动；仿射见证保证安全。
+又 $x-y=5(b-a)\ne0$，故操作非恒等。
+
+\paragraph{恰有一个额外单点。}
+不妨只有 $x$ 存在。若 $Z$ 为空，安全操作 $(a,a,x)$ 将输出只有 $a,b$ 的两值状态，
+且 $a\not\equiv b\pmod3$，与引理 \ref{lem:two-values} 矛盾。
+因此 $Z$ 非空。对 $z\in Z$，操作 $(x,b,z)$ 为安全非恒等整数操作。
+若 $f_E(b)\ge4$，它保留 $a,b$ 两个三重值。
+若 $f_E(b)=3$，则 $|Z|\ge n-8\ge3$。
+每个实际值在 $Z$ 中最多两份，故至少有两个不同值；可选
+$z\ne5a-4b$，使 $(x+b+z)/3\ne a$，从而保留 $a$ 和新三重值。
+
+\paragraph{没有额外单点。}
+若 $Z$ 为空，引理 \ref{lem:two-values} 已给出矛盾。
+若 $f_E(a)=f_E(b)=3$，则 $|Z|=n-6\ge d_n+4$，在 $Z$ 内使用保护池引理。
+若两个重数都不小于 $4$，任意 $(a,b,z)$ 均安全，并保留二者的三重性。
+
+最后，不妨 $f_E(a)=3$、$f_E(b)\ge4$。
+只要有 $z\ne2b-a$，平均 $(a,b,z)$ 即保持 $b$ 和不同于它的新三重值。
+若不存在这样的 $z$，则池 $Z$ 全部等于 $2b-a$，其大小 $r$ 只能为 $1$ 或 $2$。
+零和关系为
+\begin{equation}\label{eq:last-collision}
+ (3-r)(a-b)+nb=0.
+\end{equation}
+所有实际值都是 $a,b,2b-a$。
+合法性说明每个 $q\in\PP_n$ 都不整除 $a-b$；又 $3\nmid a-b$，
+故 $\gcd(a-b,n)=1$。
+式 \eqref{eq:last-collision} 因而推出 $n\mid3-r$，与 $3-r\in\{1,2\}$ 矛盾。
+命题 \ref{prop:closure} 的所有情况至此完成。\hfill$\square$
+
+\section{整数能量、终止性与一般维数定理}\label{sec:termination}
+
+\begin{lemma}[能量下降]\label{lem:energy}
+设整数三元组 $(a,b,c)$ 的均值 $m$ 也是整数。
+若三者不全相等，则平均使平方能量严格下降，且下降量至少为 $2$：
+\begin{equation}\label{eq:energy}
+ a^2+b^2+c^2-3m^2
+ =\frac{(a-b)^2+(b-c)^2+(c-a)^2}{3}
+ =(a-m)^2+(b-m)^2+(c-m)^2\ge2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+展开得恒等式。三个整数偏差之和为零且不全为零，所以至少有两个非零偏差。
+\end{proof}
+
+\begin{proof}[定理 \ref{thm:uniform} 的证明]
+零输入显然可达，故设 $X\ne0$。
+从 $3X$ 出发，用命题 \ref{prop:initialization} 建立 $\II_n$。
+只要不在终端族 $T_n$ 中，就用命题 \ref{prop:closure} 继续一次安全整数平均。
+整个过程的
+$\Phi(E)=\sum_i e_i^2$ 是非负整数，并由引理 \ref{lem:energy} 严格下降。
+因此不可能无限继续，必在有限步到达 $T_n$；随后三次整数平均归零。
+
+该序列全部在原来的 $n$ 个位置上执行。由仿射相容性，在 $X$ 上执行同样的位置序列，
+每个中间值恰为上述整数值的三分之一，故均在 $\frac13\Z$ 中。
+所有操作都是非恒等整数平均，故从 $3X$ 出发的总操作数满足粗界
+\begin{equation}\label{eq:length}
+ L\le\frac92\sum_i x_i^2.
+\end{equation}
+最后，若原整数输入有公因子，先在证明中取本原代表，应用上述构造，
+再把同一操作序列整体乘回该整数因子。此举不增加分母。
+\end{proof}
+
+\begin{remark}
+式 \eqref{eq:length} 是关于数值高度的界。
+若 $H=\max_i|x_i|$，它给出 $L=O(nH^2)$，而不是关于 $\log H$ 的多项式界。
+安全性、不变量保持和终止性分别由前面的全称引理承担；有限数值测试不用于替代它们。
+\end{remark}
+
+\section{七至十元的独立证明}\label{sec:small}
+
+本节只用于定理 \ref{thm:main} 中尚未被定理 \ref{thm:uniform} 覆盖的四个维数。
+首先给出一个适用于小维数入口的高重数引理。
+
+\subsection{安全下降至高重数核心}
+
+本小节允许 $n\ge7$，并取非零本原零和状态 $X$，满足 $G(X)=3^a$。
+对每个存在模 $q$ 主类的非三素因子，仍用 $F_q$ 表示其例外集；
+记这样的危险素数数量为 $D$。
+称三元组为\emph{补集安全}，若未选位置对每个非三素因子仍不全同余。
+
+\begin{lemma}[高重数核心]\label{lem:core}
+若没有补集安全的非恒等整数三平均，则某个实际值至少出现 $n-D-2$ 次。
+\end{lemma}
+\begin{proof}
+危险集仍唯一且大小为 $2$ 或 $3$；此时 $n-3>n/2$ 对 $n\ge7$ 仍成立。
+令 $U=\bigcup_qF_q$、$W=\{1,\ldots,n\}\setminus U$。
+有 $|W|\ge n-3D\ge4$：$D=0,1$ 时由 $n\ge7$ 得到，
+$D\ge2$ 时使用 $n\ge2\cdot5^{D-1}\ge3D+4$。
+任意包含两个 $W$ 位置的三元组都不能包含完整危险集，因而只要整平均非恒等，就补集安全。
+
+$W$ 不能同时出现三个模 $3$ 余类。若其中两个余类各有至少两个位置，
+则全局第三余类必须为空；否则从这两个 $W$ 余类各取一个位置，再加第三余类的位置，便得安全操作。
+若两个全局余类也各至少有三个位置，用其中两个 $W$ 位置与本类任意第三位置组队，
+可知每个全局余类均为实际常值。这产生两个不同余模 $3$ 的实际值，
+由引理 \ref{lem:two-values} 的同一算术证明不可能。
+因此其中一个全局余类至多两个位置，另一类为至少 $n-2$ 重的常值，结论成立。
+
+剩下 $W$ 的一个模 $3$ 余类至少占 $|W|-1\ge3$ 个位置。
+它们必须等于同一实际值 $u$；任意与 $u$ 同余模 $3$ 的全局位置配上这两个 $W$ 位置，
+同样必须等于 $u$。所有非 $u$ 位置因此只在另外两个余类中，且所有 $F_q$ 都在这些例外位置内。
+
+若两个例外余类的大小分别为 $r_1,r_2>0$，任取一对跨类例外，配一个 $W$ 中的 $u$，
+即为非恒等整数三元组。它被阻塞只能因为该例外对恰为某个 $F_q$。
+故 $r_1r_2\le D$，从而 $r_1+r_2\le D+1$。
+
+若例外只有一个余类，记其大小为 $r$。
+对每个 $F_q$ 任取两个位置连一条边，得到 $r$ 个顶点、至多 $D$ 条边的图。
+若 $r\ge D+3$，该图至少有三个连通分量。
+从三个不同分量各取一个顶点，所得三元组不包含任何完整 $F_q$，且平均为整数，
+所以其三个实际值必须相等。
+固定不同分量中的代表，再逐个替换同一分量的代表，可推出全部例外实际值相等。
+于是又得到两个不同余模 $3$ 的实际值，矛盾。
+故 $r\le D+2$，即得所求重数界。
+\end{proof}
+
+不断执行补集安全的非恒等整数平均，并在每一步后取本原整数代表。
+补集保留的余数差保证约去的公因子不含有关素数，故 $G$ 条件保留；
+平方能量在平均及随后约分时严格下降。因此有限步后到达零或引理 \ref{lem:core} 的高重数核心。
+
+定义标准族
+\begin{equation}\label{eq:B}
+ \B_n(u,v)=\bigl(u^{n-4},v^3,-(n-4)u-3v\bigr).
+\end{equation}
+对 $\gcd(u,v)=1$ 的整数参数，直接计算得
+\begin{equation}\label{eq:B-G}
+ G(\B_n(u,v))=\gcd(u-v,n).
+\end{equation}
+在 $n=7,8$ 时，非三素因子只有一个，故核心至少有 $n-3$ 个相等值 $u$。
+从三个例外中保留一个模该素数不同于 $u$ 的值 $t$，平均另外两个例外和一个 $u$，
+就得到合法的 $\B_n$。合法性由
+$u-v\equiv(t-u)/3\pmod q$ 得到。
+十元核心至少有六重值，其入口在第 \ref{subsec:ten-bridge} 小节处理。
+
+\subsection{七元：精确有限下降证书}\label{subsec:seven}
+
+在 $\B_7(u,v)$ 中令 $x=u,y=u+v$。
+对本原整数参数有
+\[
+ Q_7(x,y)=x^2-xy+2y^2,\qquad
+ \Phi(\B_7)=6Q_7,\qquad
+ Q_7\equiv2(2x-y)^2\pmod7.
+\]
+因此合法性恰为 $7\nmid Q_7$。
+平均单点 $-3y$ 与两个 $v$，或与两个 $u$，分别给出射影矩阵
+\begin{equation}\label{eq:seven-generators}
+ A=\mat{3}{0}{1}{-1},\qquad B=\mat{-3}{3}{-1}{0}.
+\end{equation}
+其真实作用均为所列矩阵的 $1/3$ 倍，返回时按新的三重值重新记 $u,v$。
+两者行列式只含素因子 $3$，且模 $7$ 分别将 $2x-y$ 乘以 $6$ 和 $1$，故保持合法性。
+
+\begin{lemma}[七元有限证书]\label{lem:seven-certificate}
+设 $(x,y)$ 为本原整数对，$7\nmid Q_7(x,y)$ 且 $y\ne0$。
+附录 \ref{app:seven} 所列十八个 $A,B$ 词中，至少一个严格降低输出本原代表的 $Q_7$。
+\end{lemma}
+
+引理的证明是附录所给的完整有限代数验证：模 $3^7$ 的 $2916$ 个本原射影类
+压缩为五种赋值签名，每种签名对应一组显式整系数二次多项式。
+精确实根隔离证明其正区间覆盖所有合法非终端有理方向。
+这里检验的是有限代数证书，不是对整数高度的截断搜索。
+
+由该引理，正整数 $Q_7$ 有限次下降后到达 $y=0$。
+此时状态为 $(u^3,(-u)^3,0)$，三次 $(u,-u,0)$ 即归零。
+结合高重数入口，七元充分性成立。
+
+\subsection{八元：三进欧几里得下降}\label{subsec:eight}
+
+仍令 $x=u,y=u+v$。有
+\[
+ Q_8(x,y)=2x^2+3y^2,\qquad \Phi(\B_8)=4Q_8,
+\]
+而合法本原参数恰为 $y$ 是奇数。
+附录 \ref{app:eight} 列出三个真实平均词，其射影作用为
+\begin{equation}\label{eq:eight-macros}
+ R:(x,y)\mapsto(x+y,-y),\quad
+ S:(x,y)\mapsto(y-x,y),\quad
+ F:(x,y)\mapsto(3x+3y,2x-4y).
+\end{equation}
+前两者的合成提供 $x\mapsto x\pm2y$，所以任意整数倍的这种平移均可执行。
+
+若 $|y|>1$，先在必要时使用 $S$，使 $x$ 也为奇数。
+利用平移选择 $x_0\equiv x\pmod{2y}$ 满足
+\[
+ |x_0-2y|<|y|.
+\]
+最近剩余总能达到不严格的不等式；若等号成立，则 $y\mid x$，
+与本原性和 $|y|>1$ 矛盾。
+施行 $F$ 得到 $(3(x_0+y),2(x_0-2y))$。
+两坐标均为偶数，而除以 $2$ 后第二坐标为奇数。
+取本原代表后仍有奇数 $y'$，并且 $|y'|\le|x_0-2y|<|y|$。
+因此正整数 $|y|$ 严格下降。
+
+到 $|y|=1$ 时，整体改符号使 $y=1$，平移将 $x$ 化为 $0$ 或 $1$；
+后一种再用 $S$ 即化为 $0$。
+代表 $\B_8(0,1)=(0^4,1^3,-3)$ 的四步收尾为：
+先平均 $(-3,0,0)$，再三次平均 $(-1,0,1)$。
+八元充分性得证。
+
+\subsection{九元：固定三进网络}\label{subsec:nine}
+
+把九个位置排成 $3\times3$ 方阵，先平均每一行，再平均每一列。
+六次操作后全部等于总体均值。
+更一般地，将 $3^k$ 个位置标为长度为 $k$ 的三进制串，逐坐标平均其余坐标固定的三个位置，
+即可在 $k3^{k-1}$ 步后平均整个块。
+
+\subsection{十元：六重核心的入口}\label{subsec:ten-bridge}
+
+由引理 \ref{lem:core}，只需处理
+$E=(u^6,a,b,c,d)$。令四个例外差为 $e_t=t-u$，则
+\[
+ e_a+e_b+e_c+e_d=-10u.
+\]
+合法性保证至少一个 $e_t$ 为奇数，且至少一个不被 $5$ 整除。
+若某个差与 $10$ 互素，保留对应例外 $t$，平均其他三个例外，即一步进入合法 $\B_{10}$。
+
+否则，每个奇差都被 $5$ 整除，每个非五倍数差都为偶数。
+零和模 $2,5$ 迫使四差模 $10$ 为两个 $5$ 与两个互为相反数的非零偶数。
+因此可重新编号，使 $e_a+e_b$ 与 $10$ 互素。
+置
+\[
+ q=\frac{-5u-a-b}{3},\qquad
+ r=\frac{-5u+2a+2b}{9},\qquad
+ s=\frac{-11u-a-b}{27}.
+\]
+依次平均 $(u,c,d)$、$(q,a,b)$、$(u,q,r)$、$(u,q,r)$。
+完整重数账本为
+\[
+ u^6abcd\longrightarrow u^5abq^3\longrightarrow u^5q^2r^3
+ \longrightarrow u^4qr^2s^3\longrightarrow u^3rs^6.
+\]
+输出是 $\B_{10}(s,u)$，且
+\[
+ r=-6s-3u,\qquad s-u=-\frac{40u+e_a+e_b}{27}.
+\]
+故参数差在模 $2,5$ 下均非零，所得标准核合法。
+
+\subsection{十元：局部与实数联合下降}\label{subsec:ten-descent}
+
+在 $\B_{10}(u,v)$ 中，将 $(u,3u+2v)$ 取本原整数代表，记为 $(X,Y)$。
+合法参数分成两种类型：
+\begin{equation}\label{eq:ten-type}
+ h(X,Y)=
+ \begin{cases}
+ 1,&X,Y\text{ 都为奇数且 }X+Y\equiv0\pmod4,\\
+ 2,&X,Y\text{ 奇偶相反},
+ \end{cases}
+ \qquad 5\nmid Y.
+\end{equation}
+相应的本原 $(u,v)$ 分别是
+$(X,(Y-3X)/2)$ 与 $(2X,Y-3X)$。
+取正整数高度
+\begin{equation}\label{eq:ten-height}
+ W(X,Y)=h(X,Y)^2(5X^2+Y^2)=\frac13\Phi(\B_{10}(u,v)).
+\end{equation}
+附录 \ref{app:ten} 列出七个真实返回词，其射影矩阵依次为
+\begin{equation}\label{eq:ten-matrices}
+\begin{gathered}
+ M_1=\mat{1}{1}{-5}{-1},\quad M_2=\mat{1}{0}{-5}{2},\quad
+ M_3=\mat{1}{-2}{0}{3},\quad M_4=\mat{1}{1}{5}{-3},\\
+ M_5=\mat{4}{1}{0}{-3},\quad M_6=\mat{1}{-2}{5}{2},\quad
+ M_7=\mat{1}{0}{-10}{-1}.
+\end{gathered}
+\end{equation}
+
+\begin{lemma}[十元有限证书]\label{lem:ten-certificate}
+每个满足 \eqref{eq:ten-type} 的本原整数方向，若 $X\ne0$，则有一个上述真实返回词，
+其输出仍合法并严格降低本原高度 $W$。
+\end{lemma}
+
+附录给出该引理所需的全部矩阵、位置词、模 $96$ 签名及精确实数判定过程。
+行列式只含素因子 $2,3$，因此共同约分因子及输出模 $4$ 类型由有限模数决定。
+$5120$ 个本原局部类仅产生十二种签名。
+对应二次不等式的精确验证说明：唯一相容的未覆盖射影方向是 $X=0$。
+
+因 $W$ 为正整数，反复应用引理必有限步到达 $X=0$，即 $u=0$。
+此时保留一个零位置，对其余九个零和位置使用第 \ref{subsec:nine} 小节的网络即可。
+十元充分性得证。
+
+\begin{proof}[定理 \ref{thm:main} 的证明]
+必要性是命题 \ref{prop:necessary}。
+对 $n\ge11$，引理 \ref{lem:G-divides-n} 将条件转为算术合法性，
+定理 \ref{thm:uniform} 给出充分性。
+$n=7,8,10$ 分别由本节的独立构造证明，$n=9$ 由固定网络证明。
+最后用引理 \ref{lem:affine-equivariance} 恢复原有理输入和原均值。
+\end{proof}
+
+\section{小于七元时的边界与有限判定}\label{sec:boundary}
+
+\begin{proposition}[小维数不产生新分母]\label{prop:small-integral}
+设 $3\le n\le6$。从整数零和状态出发，任何最终归零的三平均路径都始终为整数。
+\end{proposition}
+\begin{proof}
+假设第一次非整数操作产生三个相等值 $c=t/3$，其中 $3\nmid t$；其他位置仍为整数。
+此后追踪如下性质：最低三进赋值为 $-r<0$，恰有三个位置 $T$ 达到该赋值，且它们实际相等；
+其他位置的赋值至少为 $-r+1$。
+若下次选取的三元组与 $T$ 相交于一个或两个位置，乘以 $3^r$ 后其和模 $3$ 为
+$t$ 或 $2t$，非零。平均后最低赋值下降一，并恰在新的三个相等位置取得，性质继续保持。
+若恰选 $T$，操作恒等。
+若与 $T$ 不交，只有 $n=6$ 才可能发生；由零和，输出为
+$(c^3,(-c)^3)$。整体除以 $c$ 后是 $(1^3,(-1)^3)$，其所有值模 $2$ 为 $1$，
+故由同余障碍不能归零。
+因此第一次产生非整数后不可能成功，矛盾。
+\end{proof}
+
+\begin{example}[判据在五、六元失效]
+五元状态 $(-3,0,1,1,1)$ 满足 $G=1$，但没有非恒等整数三平均，因而由命题
+\ref{prop:small-integral} 不可达。
+六元状态 $(-3,0,0,1,1,1)$ 也满足 $G=1$；其唯一非恒等整数操作产生
+$(-1^3,1^3)$ 的模 $2$ 障碍，因此不可达。
+这说明定理 \ref{thm:main} 的统一维数阈值 $7$ 不能降低。
+\end{example}
+
+三个位置一步即可平均。四个零和位置可达当且仅当初始已有零坐标：
+若留下的坐标为 $a$，所选三个的均值为 $-a/3$；因此全非零状态操作后仍全非零，
+不可能归零，反向充分性显然。
+
+对于五、六元，命题 \ref{prop:small-integral} 还给出完全的有限判定算法。
+设整数中心化输入的最大绝对值为 $H$。
+所有中间值都在 $[-H,H]$ 内；第一次操作后，至少有三个相等位置，
+其余 $n-3$ 个值确定这三个位置的值。
+将配置视为多重集，候选状态不超过 $(2H+1)^{n-3}$ 个。
+只保留整数三平均边，删除恒等边后，平方能量严格下降。
+在该有限图中检查零是否可达，即为完整判定；这是一种伪多项式算法，
+不声称是关于 $\log H$ 的多项式算法。
+
+\section{算法含义与证据范围}\label{sec:algorithm}
+
+对 $n\ge7$，判定只需中心化、清除分母、计算坐标 gcd 和差分 gcd，再不断除去因子 $3$。
+有理数分母最小公倍数的位长不超过各输入分母位长之和；整数加减乘除及 gcd 都具有多项式位复杂度。
+故定理 \ref{thm:main} 给出关于输入总位长的多项式时间判定算法。
+
+$n\ge11$ 的构造每步只需检查实际值、重数和有限个余数。
+保护池至多留出每个危险素数的一份见证，之后只查看三或四个位置。
+主体证明既不寻找矩阵群生成元，也不要求解一个预先给定的运输矩阵分解。
+允许依赖当前状态选择三元组，是构造的组成部分。
+
+本文证据分为两类：第 \ref{sec:safety}--\ref{sec:termination} 节是对任意维数与任意整数大小的直接证明；
+七、十元的有限覆盖则是计算机辅助的精确代数证书。
+后者的有限模空间、矩阵、真实位置词及多项式定义全部列在附录，补充材料提供仅用整数和有理数的验证程序。
+全文没有使用浮点抽样来证明无限区间覆盖。
+
+全维数执行器另做有界状态、较大整数坐标和带标签完整路径重放。
+这些重放用于防止账本和实现错误，并不承担全称量词。
+其中模 $2$ 的反例与仿射修复单独检查，以避免把只适用于奇素数的除法规则用于偶维数。
+
+当前尚未由本文证明的是：七、八、十元的一位额外三进精度界，以及所有维数统一的位长多项式构造长度。
+这些问题与已经得到的多项式时间判定应予区别。
+
+\appendix
+\section{七元证书的完整有限数据}\label{app:seven}
+
+用字母 $0,1$ 分别表示 \eqref{eq:seven-generators} 的 $A,B$。
+字串按时间从左向右执行，故 $01$ 的矩阵为 $BA$。
+依次使用十八个词
+\begin{equation}\label{eq:seven-words}
+\begin{gathered}
+0,\ 1,\ 01,\ 11,\ 001,\ 010,\ 101,\ 110,\\
+0100,\ 0111,\ 1100,\ 1111,\ 00111,\ 01110,\ 10111,\ 11110,\\
+0111101,\ 1111101.
+\end{gathered}
+\end{equation}
+记词矩阵为 $M_w$，取
+\[
+ e_w(z)=\min\{v_3((M_wz)_1),v_3((M_wz)_2)\}.
+\]
+由于 $\det M_w=\pm3^{|w|}$ 且输入本原，共同因子只有 $3$；
+实际本原输出恰为 $3^{-e_w}M_wz$，整体符号无关。
+
+模 $3^7$ 的本原射影类有完整代表集
+\[
+ \{(1,t):0\le t<3^7\}\ \cup\
+ \{(3t,1):0\le t<3^6\}.
+\]
+它们分成表 \ref{tab:seven-types} 的五类。各类的十八项 $e_w$ 签名为
+\begin{align*}
+\sigma_1={}&(0,0,1,1,1,1,1,1,1,2,1,2,2,3,2,3,3,3),\\
+\sigma_2={}&(1,0,1,1,2,1,1,1,1,2,1,2,3,2,2,2,4,3),\\
+\sigma_3={}&(0,0,1,1,1,2,1,2,3,2,3,2,2,2,2,2,3,3),\\
+\sigma_4={}&(0,0,1,1,1,2,1,2,2,2,2,2,2,2,2,2,3,3),\\
+\sigma_5={}&(0,1,1,1,1,1,2,1,1,2,1,2,2,2,3,2,3,4).
+\end{align*}
+所有赋值均小于 $7$，故模 $3^7$ 足以精确确定它们。
+
+\begin{table}[htbp]
+\centering\small
+\caption{七元的五种局部签名与实射影未覆盖点}\label{tab:seven-types}
+\begin{tabular}{clrrl}
+\toprule
+类 & 局部条件 & 类数 & 未覆盖有限斜率 & 相容未覆盖斜率\\
+\midrule
+1 & $3\nmid x,\ y/x\equiv0\pmod3$ &729& $0,2$ & $0$\\
+2 & $3\nmid x,\ y/x\equiv1\pmod3$ &729& 无 & 无\\
+3 & $3\nmid x,\ y/x\equiv2\pmod9$ &243& $0,2$ & $2$\\
+4 & $3\nmid x,\ y/x\equiv5,8\pmod9$ &486& $0,2$ & 无\\
+5 & $3\mid x,\ 3\nmid y$ &729& 无 & 无\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+令 $K=\mat{2}{-1}{-1}{4}$，则 $z^TKz=2Q_7(z)$。
+对每个签名和每个词，生成齐次二次型
+\begin{equation}\label{eq:seven-D}
+ D_w(z)=z^T\bigl(3^{2e_w}K-M_w^TKM_w\bigr)z.
+\end{equation}
+$D_w(z)>0$ 正是该词的严格下降条件。
+按附录 \ref{app:exact-roots} 的有限算法检验 $D_w(1,t)$，得到表中的未覆盖点；
+无穷方向在五类中都被覆盖。
+斜率 $0$ 是终端，斜率 $2$ 满足 $Q_7(x,2x)=7x^2$，不合法。
+这证明引理 \ref{lem:seven-certificate}。
+
+\section{八元宏的真实位置账本}\label{app:eight}
+
+令 $U=u,V=v,W=-4u-3v$。下表的每一项表示一次对三个当前实际值的平均；
+出现相同数值两次时取两个不同位置。
+\begin{table}[htbp]
+\centering
+\caption{实现 \eqref{eq:eight-macros} 的原子词}\label{tab:eight-words}
+\begin{tabular}{c>{\raggedright\arraybackslash}p{0.79\textwidth}}
+\toprule 宏 & 按时间排列的三元组\\\midrule
+$R$ & $(V,V,U)$；$(V,U,U)$；
+$\bigl(W,(U+2V)/3,(2U+V)/3\bigr)$；
+$\bigl((U+2V)/3,(2U+V)/3,U\bigr)$。\\[0.6em]
+$S$ & $(W,V,U)$；$(-U-2V/3,-U-2V/3,U)$；
+$(-U-2V/3,U,U)$；
+$(-U/3-4V/9,V,U/3-2V/9)$ 连做两次；
+$(V/9,V/9,U/3-2V/9)$。\\[0.6em]
+$F$ & $(V,U,U)$；$\bigl(W,(2U+V)/3,(2U+V)/3\bigr)$；$(V,U,U)$。\\
+\bottomrule
+\end{tabular}
+\end{table}
+逐次替换可得真实的 $(u,v)$ 输出矩阵分别为
+\[
+ R_{uv}=\mat{2/3}{1/3}{-1}{-2/3},\qquad
+ S_{uv}=\mat{0}{1/9}{1/9}{0},\qquad
+ F_{uv}=\mat{2/3}{1/3}{-8/9}{-7/9}.
+\]
+在 $(x,y)=(u,u+v)$ 下，分别为 \eqref{eq:eight-macros} 所列整数矩阵的
+$1/3,1/9,1/9$ 倍。形式独立的 $u,v$ 下位置重数充足；
+数值特化造成重合时，重数相加，不会破坏任一次选取的可执行性。
+
+\section{十元证书的完整有限数据}\label{app:ten}
+
+\subsection{七个真实词与实际尺度}
+
+置
+\begin{gather*}
+ U=u,\qquad V=v,\qquad W=-6u-3v,\\
+ q=\frac{-5u-2v}{3},\quad r=\frac{u+2v}{3},\quad
+ s=\frac{2u+v}{3},\quad t=-2u-\frac v3.
+\end{gather*}
+七个矩阵 $M_i$ 由表 \ref{tab:ten-words} 的真实平均词实现。
+表中的 $\lambda_i$ 满足：在未取本原代表的坐标 $(u,3u+2v)$ 中，真实输出为
+$\lambda_iM_i(u,3u+2v)^T$。
+
+\begin{table}[htbp]
+\centering\small
+\caption{十元矩阵的原子词、行列式与实际尺度}\label{tab:ten-words}
+\begin{tabular}{crrp{0.60\textwidth}}
+\toprule
+$i$ & $\det M_i$ & $\lambda_i$ & 依次平均的当前值\\
+\midrule
+1&4&$1/6$&$(W,V,U),(V,U,U),(V,U,U)$\\
+2&2&$-1/9$&$(W,V,U),(q,U,U),(V,V,U),(q,r,U),(q,r,U)$\\
+3&3&$-1/9$&$(W,U,U),(V,U,U),(V,s,U),(V,s,U)$\\
+4&$-8$&$1/6$&$(W,U,U),(V,U,U),(V,U,U)$\\
+5&$-12$&$1/9$&$(W,V,U),(V,V,U),(r,U,U),(r,U,U)$\\
+6&12&$-1/9$&$(V,U,U),(W,s,U),(V,s,U),(V,s,U)$\\
+7&$-1$&$-1/9$&$(W,V,V),(V,U,U),(t,s,U),(t,s,U),(s,U,U)$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{局部签名}
+
+对本原方向 $z=(X,Y)$，定义
+\[
+ g_i(z)=\gcd\bigl((M_iz)_1,(M_iz)_2\bigr)>0.
+\]
+由伴随矩阵恒等式，$g_i\mid|\det M_i|$，故它只含素因子 $2,3$。
+记约分后的输出类型为 $h_i'$；若不满足 \eqref{eq:ten-type} 的奇偶条件，则记为 ``--''。
+模数 $96=2^5\cdot3$ 足以决定 $g_i$ 及输出模 $4$ 的类型：最大二赋值为 $3$，
+除后还需模 $4$，故模 $2^5$ 足够；最大三赋值为 $1$。
+约去 $3$ 因子时，它在模 $4$ 下可逆。
+
+在所有模 $96$ 对中，只保留模 $2$、模 $3$ 各自本原且输入 $h$ 有定义的对，
+得到 $5120$ 个局部类。它们的完整签名如表 \ref{tab:ten-signatures}，
+每格表示 $(g_i,h_i')$。
+条件 $5\nmid Y$ 单独检查；每个 $M_i$ 的第二行第一项为五倍数、第二项模 $5$ 非零，
+共同约分又不含 $5$，因此它自动保持该条件。
+
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4.5pt}
+\caption{十元的十二种完整局部签名}\label{tab:ten-signatures}
+\begin{tabular}{ccrccccccc}
+\toprule
+类&$h$&类数&$M_1$&$M_2$&$M_3$&$M_4$&$M_5$&$M_6$&$M_7$\\
+\midrule
+1&1&384&$(4,2)$&--&$(1,1)$&$(4,1)$&--&--&$(1,1)$\\
+2&1&384&$(4,2)$&--&$(1,1)$&$(8,2)$&--&--&$(1,1)$\\
+3&1&128&$(4,2)$&--&$(3,1)$&$(4,1)$&--&--&$(1,1)$\\
+4&1&128&$(4,2)$&--&$(3,1)$&$(8,2)$&--&--&$(1,1)$\\
+5&2&768&$(1,1)$&$(1,1)$&$(1,2)$&--&$(2,1)$&--&$(1,2)$\\
+6&2&768&$(1,1)$&$(1,1)$&$(1,2)$&--&$(4,2)$&--&$(1,2)$\\
+7&2&256&$(1,1)$&$(1,1)$&$(3,2)$&--&$(6,1)$&--&$(1,2)$\\
+8&2&256&$(1,1)$&$(1,1)$&$(3,2)$&--&$(12,2)$&--&$(1,2)$\\
+9&2&768&$(1,1)$&$(2,2)$&$(1,2)$&--&--&$(2,1)$&$(1,2)$\\
+10&2&768&$(1,1)$&$(2,2)$&$(1,2)$&--&--&$(4,2)$&$(1,2)$\\
+11&2&256&$(1,1)$&$(2,2)$&$(3,2)$&--&--&$(6,1)$&$(1,2)$\\
+12&2&256&$(1,1)$&$(2,2)$&$(3,2)$&--&--&$(12,2)$&$(1,2)$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{实射影覆盖}
+
+固定一个签名。对可用矩阵 $M_i=\mat{a}{b}{c}{d}$，生成
+\begin{equation}\label{eq:ten-D}
+ D_i(X,Y)=h^2g_i^2(5X^2+Y^2)
+ -(h_i')^2\bigl(5(aX+bY)^2+(cX+dY)^2\bigr).
+\end{equation}
+$D_i>0$ 等价于严格降低本原高度 $W$。
+对十二组 $D_i(1,t)$ 分别执行附录 \ref{app:exact-roots} 的算法：
+没有未覆盖的开区间；有限的未覆盖有理点与相应局部签名均不相容；
+唯一相容的未覆盖方向为 $X=0$。
+这给出引理 \ref{lem:ten-certificate} 所需的完整有限结论。
+该结论可以从本附录的整数数据独立重建，无需任何发现阶段的宏搜索结果。
+
+\section{精确验证规则与补充材料}\label{app:exact-roots}
+
+\subsection{二次多项式正区间的有限验证}
+
+输入是一组显式有理系数二次多项式 $p_j(t)$；本论文的输入实际为整数系数。
+欲检查每个实方向是否被某个 $p_j>0$ 覆盖，使用以下精确步骤。
+\begin{enumerate}
+\item 删除零多项式，将每个非零多项式约成最高非零系数为正的本原形式，以识别重复根。
+  符号检验仍使用原多项式，不能丢弃其原来的正负号。
+\item 线性根和平方判别式的二次根用有理数表示；非平方正判别式的根，用本原不可约二次多项式及左右根标记表示。
+\item 使用 Cauchy 根界及顶点分隔两个根，再以有理二分隔离不同实根。
+  不同代数根距离非零，所以此过程有限终止。
+\item 排序全部实根。在每个相邻根间的开区间及两端无界区间各选一个有理点。
+  每个 $p_j$ 在该区间内符号不变，故一个精确符号值就决定整个区间。
+\item 在每个根处，先识别哪些 $p_j$ 以它为根；其他多项式在相邻区间中的符号即为该点的符号。
+  最后单独检查无穷方向，其齐次值由二次项系数给出。
+\end{enumerate}
+剩下的孤立有理点再代回局部签名；孤立无理方向不含非零有理向量。
+七元只留下终端斜率 $0$ 和非法斜率 $2$；十元只留下终端无穷方向。
+
+\subsection{可复现文件与数学职责}
+
+随文源文件包包含本 \LaTeX{} 源码、编译所得 PDF，以及 \texttt{supplement/} 下的验证程序。
+程序仅依赖 Python 标准库；运行时必须启用断言。
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.46\textwidth}>{\raggedright\arraybackslash}p{0.46\textwidth}}
+\caption{补充材料的验证职责}\label{tab:supplement}\\
+\toprule 文件 & 职责\\\midrule\endfirsthead
+\toprule 文件 & 职责\\\midrule\endhead
+\nolinkurl{verify_seven_descent_cover.py} & 重建十八个矩阵词、全部 $2916$ 个局部类、五种签名及精确实覆盖。\\
+\nolinkurl{verify_eight_euclidean_descent.py} & 符号重放三个八元宏、核对坐标变换、欧几里得下降及固定终端。\\
+\nolinkurl{verify_ten_descent_cover.py} & 符号重放七个十元宏、枚举全部 $5120$ 个局部类、核对十二种签名与精确实覆盖。\\
+\nolinkurl{verify_ten_complete.py} & 核对四例外配对及四步入口，并调用十元完整覆盖证书。\\
+\nolinkurl{verify_all_dimensions_double_triple_invariant.py} & 依正文分类选择一步；检查多素数保护、模 $2$ 仿射修复、初始化及带标签完整重放。有限测试不替代正文全称证明。\\
+\nolinkurl{verify_general_invariant.py} & 独立实现的辅助闭包与路径检查；不属于七、十元有限覆盖证书的可信计算核心。\\
+\nolinkurl{verify_paper_data.py} & 从本文源码读取矩阵、真实尺度及签名表，与精确生成的数据逐项比较。\\
+\nolinkurl{run_checks.py} & 从本地补充材料统一运行上述检查；拒绝关闭断言的运行方式。\\
+\bottomrule
+\end{longtable}
+
+其余几个同目录文件是精确分数、形式线性值账本或矩阵转换的共享辅助代码。
+\texttt{explore\_ten\_descent.py} 在这里仅被导入三个纯算术函数；统一验证入口不运行其中的发现搜索。
+七元与十元的有限覆盖检查是证明的一部分；全维数的有限数值样本仅是实现审计。
+两者的证据性质不同，不应混为一谈。
+
+\begin{thebibliography}{9}
+\bibitem{mixability}
+Miguel Coviello Gonzalez and Marek Chrobak.
+\newblock Towards a Theory of Mixing Graphs: A Characterization of Perfect Mixability.
+\newblock \emph{Theoretical Computer Science}, 845:98--121, 2020.
+\newblock DOI: \href{https://doi.org/10.1016/j.tcs.2020.09.007}{10.1016/j.tcs.2020.09.007}.
+\newblock 本文阅读版本：\href{https://arxiv.org/abs/1806.08875v4}{arXiv:1806.08875v4}。
+\end{thebibliography}
+\end{document}

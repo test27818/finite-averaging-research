@@ -1,0 +1,170 @@
+{
+  "index": 9,
+  "query": "stochastic matrices factorization",
+  "url": "https://api.openalex.org/works?filter=title.search%3Astochastic+matrices+factorization&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 11,
+  "results": [
+    {
+      "id": "https://openalex.org/W2015207543",
+      "title": "Real essentially stochastic matrices: factorizations into special elementary matrices",
+      "date": "1981-11-01",
+      "doi": "https://doi.org/10.1080/03081088108817422",
+      "citations": 4,
+      "authors": [
+        "Erica Johnson"
+      ],
+      "abstract": "In this paper we show that every real essentially stochastic (r.e.s.) matrix A of order n ≥ 2 is a product of at most q(n) elementary r.e.s. matrices with positive determinants (i.e., positive main diagonal entries), plus a transposition matrix if det A < 0, where q( n) is a quadratic polynomial in n. If the rank of A is r, 1 ≤ r ≤ n − 1, the number of singular factors in this factorization is n − r and this number is minimal. Specializing to the stochastic case, this means that every stochastic matrix A of order n ≥ 2 is a product of at most q(n) elementary stochastic and inverse elementary stochastic matrices, plus a transposition matrix if det A < 0, etc. This factorization can be refined so that for any given ε > 0 no elementary factor has a negative (off-diagonal) entry exceeding ε in absolute value.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1080/03081088108817422",
+          "pdf": null,
+          "source": "Linear and Multilinear Algebra"
+        }
+      ],
+      "reference_count": 1
+    },
+    {
+      "id": "https://openalex.org/W1982626558",
+      "title": "Essentially stochastic matrices—factorizations into elementary and quasi-elementary matrices",
+      "date": "1977-01-01",
+      "doi": "https://doi.org/10.1016/0024-3795(77)90043-x",
+      "citations": 4,
+      "authors": [
+        "Eugene C. Johnsen"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://doi.org/10.1016/0024-3795(77)90043-x",
+          "pdf": "https://www.sciencedirect.com/science/article/pii/002437957790043X/pdf",
+          "source": "Linear Algebra and its Applications"
+        }
+      ],
+      "reference_count": 1
+    },
+    {
+      "id": "https://openalex.org/W2012436468",
+      "title": "Parallel Factorization of Structured Matrices Arising in Stochastic Programming",
+      "date": "1994-11-01",
+      "doi": "https://doi.org/10.1137/0804048",
+      "citations": 60,
+      "authors": [
+        "Elizabeth R. Jessup",
+        "Dafeng Yang",
+        "Stavros A. Zenios"
+      ],
+      "abstract": "Solving the deterministic equivalent formulation of two-stage stochastic programs using interior point algorithms requires the solution of linear systems of the form\\[ \\left( AD^2 A^\\top \\right) dy = b . \\] The constraint matrix A has a dual, block-angular structure. We develop a parallel matrix factorization procedure using the Sherman–Morrison–Woodbury formula, based on the work of Birge and Qi [Management Sci., 34 (1988), pp. 1472–1479]. This procedure requires the solution of smaller, independent systems of equations. With the use of optimal communication algorithms and careful attention to data layout a parallel implementation is obtained that achieves near perfect speedup. Scalable performance is observed on an Intel iPSC/860 hypercube and a Connection Machine CM–5. Results are reported with the solution of the linear systems arising when solving stochastic programs with up to 98,304 scenarios, which correspond to deterministic equivalent linear programs with up to 1,966,090 constraints and 13,762,630 variables.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1137/0804048",
+          "pdf": null,
+          "source": "SIAM Journal on Optimization"
+        }
+      ],
+      "reference_count": 13
+    },
+    {
+      "id": "https://openalex.org/W2580009724",
+      "title": "Stochastic Subsampling for Factorizing Huge Matrices",
+      "date": "2017-09-14",
+      "doi": "https://doi.org/10.1109/tsp.2017.2752697",
+      "citations": 28,
+      "authors": [
+        "Arthur Mensch",
+        "Julien Mairal",
+        "Bertrand Thirion",
+        "Gaël Varoquaux"
+      ],
+      "abstract": "We present a matrix-factorization algorithm that scales to input matrices with both huge number of rows and columns. Learned factors may be sparse or dense and/or nonnegative, which makes our algorithm suitable for dictionary learning, sparse component analysis, and nonnegative matrix factorization. Our algorithm streams matrix columns while subsampling them to iteratively learn the matrix factors. At each iteration, the row dimension of a new sample is reduced by subsampling, resulting in lower time complexity compared to a simple streaming algorithm. Our method comes with convergence guarantees to reach a stationary point of the matrix-factorization problem. We demonstrate its efficiency on massive functional magnetic resonance imaging data (2 TB), and on patches extracted from hyperspectral images (103 GB). For both problems, which involve different penalties on rows and columns, we obtain significant speed-ups compared to state-of-the-art algorithms.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/tsp.2017.2752697",
+          "pdf": null,
+          "source": "IEEE Transactions on Signal Processing"
+        },
+        {
+          "url": "http://arxiv.org/abs/1701.05363",
+          "pdf": "https://arxiv.org/pdf/1701.05363",
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://hal.science/hal-01431618",
+          "pdf": null,
+          "source": "HAL (Le Centre pour la Communication Scientifique Directe)"
+        }
+      ],
+      "reference_count": 74
+    },
+    {
+      "id": "https://openalex.org/W2603223509",
+      "title": "Parallel Factorization on the iPSC/860 of Structured Matrices Arising in Stochastic Programming ; CU-CS-701-94",
+      "date": "1994-01-01",
+      "doi": null,
+      "citations": 1,
+      "authors": [
+        "Elizabeth R. Jessup",
+        "Dafeng Yang",
+        "Stavros A. Zenios"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://scholar.colorado.edu/concern/reports/xk81jm376",
+          "pdf": null,
+          "source": "CU Scholar (University of Colorado Boulder)"
+        },
+        {
+          "url": "https://scholar.colorado.edu/csci_techreports/669",
+          "pdf": null,
+          "source": "CU Scholar (University of Colorado Boulder)"
+        },
+        {
+          "url": "https://scholar.colorado.edu/csci_techreports/669/",
+          "pdf": null,
+          "source": null
+        }
+      ],
+      "reference_count": 0
+    },
+    {
+      "id": "https://openalex.org/W4399990073",
+      "title": "Stochastic Programming: Parallel Factorization of Structured Matrices",
+      "date": "2024-01-01",
+      "doi": "https://doi.org/10.1007/978-3-030-54621-2_659-1",
+      "citations": 0,
+      "authors": [
+        "Hercules Vladimirou",
+        "Stavros A. Zenios"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://doi.org/10.1007/978-3-030-54621-2_659-1",
+          "pdf": null,
+          "source": "Encyclopedia of Optimization"
+        }
+      ],
+      "reference_count": 11
+    },
+    {
+      "id": "https://openalex.org/W2769422749",
+      "title": "Stochastic Programming: Parallel Factorization of Structured Matrices",
+      "date": "2001-01-01",
+      "doi": "https://doi.org/10.1007/0-306-48332-7_501",
+      "citations": 0,
+      "authors": [
+        "Hercules Vladimirou",
+        "Stavros A. Zenios"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://doi.org/10.1007/0-306-48332-7_501",
+          "pdf": null,
+          "source": "Encyclopedia of Optimization"
+        }
+      ],
+      "reference_count": 11
+    }
+  ]
+}

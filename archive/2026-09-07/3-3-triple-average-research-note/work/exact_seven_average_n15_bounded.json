@@ -1,0 +1,83 @@
+{
+  "experiment": "exact bounded seven-average n=15 zero-trigger coverage",
+  "reports": [
+    {
+      "p": 7,
+      "n": 15,
+      "bound": 1,
+      "states": 7,
+      "direct_zero_subset": 7,
+      "certified": 7,
+      "unknown": 0,
+      "certified_ratio": 1.0,
+      "depth_distribution": {
+        "0": 7
+      },
+      "certificate_mode_distribution": {
+        "initial_zero_coordinate": 7
+      },
+      "seconds": 0.0031115999445319176,
+      "sampling_model": "sorted primitive zero-sum integer states in [-bound,bound], conditioned on G=1"
+    },
+    {
+      "p": 7,
+      "n": 15,
+      "bound": 2,
+      "states": 84,
+      "direct_zero_subset": 84,
+      "certified": 84,
+      "unknown": 0,
+      "certified_ratio": 1.0,
+      "depth_distribution": {
+        "0": 84
+      },
+      "certificate_mode_distribution": {
+        "initial_zero_coordinate": 73,
+        "initial_zero_sum_7_subset": 11
+      },
+      "seconds": 0.08472010004334152,
+      "sampling_model": "sorted primitive zero-sum integer states in [-bound,bound], conditioned on G=1"
+    },
+    {
+      "p": 7,
+      "n": 15,
+      "bound": 3,
+      "states": 861,
+      "direct_zero_subset": 860,
+      "certified": 861,
+      "unknown": 0,
+      "certified_ratio": 1.0,
+      "depth_distribution": {
+        "0": 861
+      },
+      "certificate_mode_distribution": {
+        "initial_zero_coordinate": 666,
+        "initial_zero_sum_7_subset": 195
+      },
+      "seconds": 1.169914900092408,
+      "sampling_model": "sorted primitive zero-sum integer states in [-bound,bound], conditioned on G=1"
+    },
+    {
+      "p": 7,
+      "n": 15,
+      "bound": 4,
+      "states": 6231,
+      "direct_zero_subset": 6225,
+      "certified": 6231,
+      "unknown": 0,
+      "certified_ratio": 1.0,
+      "depth_distribution": {
+        "0": 6229,
+        "1": 2
+      },
+      "certificate_mode_distribution": {
+        "initial_zero_coordinate": 4333,
+        "initial_zero_sum_7_subset": 1896,
+        "integer_preprocessing": 2
+      },
+      "seconds": 10.69040620001033,
+      "sampling_model": "sorted primitive zero-sum integer states in [-bound,bound], conditioned on G=1"
+    }
+  ],
+  "warning": "This certifies the displayed finite sets, not all unbounded rational states."
+}

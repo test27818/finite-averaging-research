@@ -1,0 +1,462 @@
+{
+  "scope": "Counterexamples to proof lemmas, not to ternary reachability.",
+  "source_directory": "C:\\Users\\19226\\Documents\\deepseek\\test\\mean3",
+  "source_sha256": {
+    "3平均混合图的完美混合性.md": "a104dce33ec05d599d3780590c83cc609ff9be43983b6bdc80083df4d09bc5a2",
+    "README.md": "07d1ff349c3a85087f8ecef9b066ca1ea39a737036e0371b77f1314718b1584f",
+    "kmean.py": "50f0784c357156a62a2fcc0bbae701aae4159d1f6d00fa211ef83fcb65efadfd",
+    "kmean_fast.py": "de8fd33728a73aceef857a333fec5958b0ccfb6490b237cd0f2e5ddb1a85d6e3",
+    "n0_final7.py": "5298f9f1ecb058f963acb3596b9c3b1e8ee5311716cf810d2e0750cc7493d07b",
+    "n0_general.py": "fdc6d26325ebeb84137744a4250f9d7a956d13ff2e24670ca83a955ef5899933",
+    "exp4.py": "ec656636b4b83ba9b147f31c31ef3b2a2d48111fd51f56baf461ece078a9502f"
+  },
+  "counterexamples": [
+    {
+      "input": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        13
+      ],
+      "n": 7,
+      "mean": 2,
+      "MC3": true,
+      "old_I1": false,
+      "weak_Iprime": true,
+      "near_final": false,
+      "position_triples_checked": 35,
+      "integral_triples": 10,
+      "constant_triples": 10,
+      "safe_nonconstant_integral_triples": 0,
+      "nonconstant": []
+    },
+    {
+      "input": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        7
+      ],
+      "n": 8,
+      "mean": 1,
+      "MC3": true,
+      "old_I1": false,
+      "weak_Iprime": true,
+      "near_final": false,
+      "position_triples_checked": 56,
+      "integral_triples": 20,
+      "constant_triples": 20,
+      "safe_nonconstant_integral_triples": 0,
+      "nonconstant": []
+    },
+    {
+      "input": [
+        0,
+        0,
+        0,
+        0,
+        5,
+        8,
+        8
+      ],
+      "n": 7,
+      "mean": 3,
+      "MC3": true,
+      "old_I1": true,
+      "weak_Iprime": true,
+      "near_final": false,
+      "position_triples_checked": 35,
+      "integral_triples": 5,
+      "constant_triples": 4,
+      "safe_nonconstant_integral_triples": 0,
+      "nonconstant": [
+        {
+          "indices_1based": [
+            5,
+            6,
+            7
+          ],
+          "values": [
+            5,
+            8,
+            8
+          ],
+          "mean": 7,
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            7,
+            7,
+            7
+          ],
+          "unsafe_primes": [
+            7
+          ],
+          "output_MC3": false
+        }
+      ]
+    },
+    {
+      "input": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        5,
+        5
+      ],
+      "n": 12,
+      "mean": 1,
+      "MC3": true,
+      "old_I1": true,
+      "weak_Iprime": true,
+      "near_final": false,
+      "position_triples_checked": 220,
+      "integral_triples": 85,
+      "constant_triples": 84,
+      "safe_nonconstant_integral_triples": 0,
+      "nonconstant": [
+        {
+          "indices_1based": [
+            10,
+            11,
+            12
+          ],
+          "values": [
+            2,
+            5,
+            5
+          ],
+          "mean": 4,
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            4
+          ],
+          "unsafe_primes": [
+            2
+          ],
+          "output_MC3": false
+        }
+      ]
+    },
+    {
+      "input": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        16
+      ],
+      "n": 18,
+      "mean": 1,
+      "MC3": true,
+      "old_I1": true,
+      "weak_Iprime": true,
+      "near_final": false,
+      "position_triples_checked": 816,
+      "integral_triples": 456,
+      "constant_triples": 455,
+      "safe_nonconstant_integral_triples": 0,
+      "nonconstant": [
+        {
+          "indices_1based": [
+            16,
+            17,
+            18
+          ],
+          "values": [
+            1,
+            1,
+            16
+          ],
+          "mean": 6,
+          "output": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            6,
+            6
+          ],
+          "unsafe_primes": [
+            2
+          ],
+          "output_MC3": false
+        }
+      ]
+    }
+  ],
+  "frozen_family_dimensions": [
+    8,
+    11,
+    20,
+    101,
+    1001
+  ],
+  "unsafe_family_dimensions": [
+    18,
+    54,
+    162,
+    486,
+    1458,
+    4374
+  ],
+  "useful_two_phase": [
+    {
+      "u": 2,
+      "first_drop": 6,
+      "second_drop_fraction": "1/3"
+    },
+    {
+      "u": 8,
+      "first_drop": 6,
+      "second_drop_fraction": "1/3"
+    },
+    {
+      "u": 20,
+      "first_drop": 6,
+      "second_drop_fraction": "1/3"
+    },
+    {
+      "u": 200,
+      "first_drop": 6,
+      "second_drop_fraction": "1/3"
+    },
+    {
+      "u": 2000,
+      "first_drop": 6,
+      "second_drop_fraction": "1/3"
+    }
+  ],
+  "repaired_distinct_value_paths": [
+    {
+      "arity": 2,
+      "n": 16,
+      "input": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        1,
+        -183
+      ],
+      "protected_values": [],
+      "operation_1based": [
+        1,
+        2
+      ],
+      "mean": 1
+    },
+    {
+      "arity": 3,
+      "n": 18,
+      "input": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        1,
+        -241
+      ],
+      "protected_values": [
+        1
+      ],
+      "operation_1based": [
+        1,
+        2,
+        3
+      ],
+      "mean": 2
+    },
+    {
+      "arity": 4,
+      "n": 20,
+      "input": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        1,
+        -307
+      ],
+      "protected_values": [],
+      "operation_1based": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "mean": 3
+    },
+    {
+      "arity": 5,
+      "n": 22,
+      "input": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        1,
+        -381
+      ],
+      "protected_values": [
+        1
+      ],
+      "operation_1based": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mean": 4
+    },
+    {
+      "arity": 7,
+      "n": 26,
+      "input": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        1,
+        -553
+      ],
+      "protected_values": [
+        1
+      ],
+      "operation_1based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "mean": 6
+    }
+  ]
+}

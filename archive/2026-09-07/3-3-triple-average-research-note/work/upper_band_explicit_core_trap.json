@@ -1,0 +1,132 @@
+{
+  "p": 7,
+  "n": 22,
+  "input": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -21
+  ],
+  "energy": 504,
+  "scope": "All nonidentity returns made from three disjoint seven-groups; excludes overlapping returns and longer words.",
+  "successors": [
+    {
+      "carrier": "C",
+      "j": 1,
+      "primitive_yz": [
+        158,
+        21
+      ],
+      "legal": false,
+      "energy": 23310
+    },
+    {
+      "carrier": "C",
+      "j": 2,
+      "primitive_yz": [
+        155,
+        21
+      ],
+      "legal": true,
+      "energy": 22680
+    },
+    {
+      "carrier": "C",
+      "j": 3,
+      "primitive_yz": [
+        152,
+        21
+      ],
+      "legal": false,
+      "energy": 22806
+    },
+    {
+      "carrier": "A",
+      "j": 1,
+      "primitive_yz": [
+        3,
+        2
+      ],
+      "legal": true,
+      "energy": 5922
+    },
+    {
+      "carrier": "A",
+      "j": 2,
+      "primitive_yz": [
+        3,
+        1
+      ],
+      "legal": true,
+      "energy": 840
+    },
+    {
+      "carrier": "A",
+      "j": 3,
+      "primitive_yz": [
+        9,
+        2
+      ],
+      "legal": true,
+      "energy": 1554
+    },
+    {
+      "carrier": "B",
+      "j": 0,
+      "primitive_yz": [
+        21,
+        1
+      ],
+      "legal": true,
+      "energy": 7896
+    },
+    {
+      "carrier": "B",
+      "j": 1,
+      "primitive_yz": [
+        18,
+        1
+      ],
+      "legal": false,
+      "energy": 4830
+    },
+    {
+      "carrier": "B",
+      "j": 2,
+      "primitive_yz": [
+        15,
+        1
+      ],
+      "legal": true,
+      "energy": 2520
+    },
+    {
+      "carrier": "B",
+      "j": 3,
+      "primitive_yz": [
+        12,
+        1
+      ],
+      "legal": false,
+      "energy": 966
+    }
+  ]
+}

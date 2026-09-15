@@ -1,0 +1,82 @@
+{
+  "index": 35,
+  "query": "S arithmetic groups generation",
+  "url": "https://api.openalex.org/works?filter=title.search%3AS+arithmetic+groups+generation&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 3,
+  "results": [
+    {
+      "id": "https://openalex.org/W1974847200",
+      "title": "Bounded generation of S-arithmetic subgroups of isotropic orthogonal groups over number fields",
+      "date": "2006-01-11",
+      "doi": "https://doi.org/10.1016/j.jnt.2005.10.006",
+      "citations": 23,
+      "authors": [
+        "Igor V. Erovenko",
+        "Andrei S. Rapinchuk"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://doi.org/10.1016/j.jnt.2005.10.006",
+          "pdf": "https://www.sciencedirect.com/science/article/pii/S0022314X05002106/pdf",
+          "source": "Journal of Number Theory"
+        },
+        {
+          "url": "http://libres.uncg.edu/ir/uncg/f/bgorth.pdf",
+          "pdf": "http://libres.uncg.edu/ir/uncg/f/bgorth.pdf",
+          "source": "NC Digital Online Collection of Knowledge and Scholarship (The University of North Carolina at Greensboro)"
+        }
+      ],
+      "reference_count": 36
+    },
+    {
+      "id": "https://openalex.org/W2567661997",
+      "title": "Bounded Generation of Two Families of S-Arithmetic Groups",
+      "date": "2013-06-07",
+      "doi": "https://doi.org/10.18130/v3zk17",
+      "citations": 3,
+      "authors": [
+        "Andrea Heald"
+      ],
+      "abstract": "The objective of this work is to establish bounded generation for two families of Sarithmetic groups.We first establish bounded generation for the special linear group over certain S-orders of a quaternion algebra.We also establish bounded generation for certain special unitary groups.This thesis consists of three chapters.The first chapter provides much of the background necessary as well as providing some applications of bounded generation.The second chapter contains the proof of bounded generation for some special linear groups, and the third chapter contains the proof of bounded generation for some special unitary groups.defines a Clifford algebra and the spin group.Finally, Section 1.6 introduces the concept of strong approximation.Chapter 2 contains the proof of Main Theorem 1, and Chapter 3 contains the proof of Main Theorem 2. NotationsWe introduce some standard notations and provide some basic facts about the corresponding structures; see for example [17].Let K be an algebraic number field.Two valuations on K are called equivalent if they induce the same topology on K.We let V K denote the set of equivalence classes of valuations.There are two subsets of V K that we will frequently refer to: V K ∞ , the set of all archimedean valuations, andThe completion of K with respect to the metric induced by v will be denoted by∞ we define the ring of S integers,We now define the ring of adeles, A K , which will be needed in Section 1.6.We definewith addition and multiplication defined componentwise.Let S be a finite subset of V K containing V K ∞ , and for each v ∈ S let W v be an",
+      "locations": [
+        {
+          "url": "https://doi.org/10.18130/v3zk17",
+          "pdf": "https://libraetd.lib.virginia.edu/downloads/gm80hv72j?filename=thesis.pdf",
+          "source": null
+        },
+        {
+          "url": "https://doi.org/10.18130/v3zk17",
+          "pdf": null,
+          "source": "Libra"
+        }
+      ],
+      "reference_count": 18
+    },
+    {
+      "id": "https://openalex.org/W2949325331",
+      "title": "Bounded generation of S-arithmetic subgroups of isotropic orthogonal groups over number fields",
+      "date": "2005-08-24",
+      "doi": "https://doi.org/10.48550/arxiv.math/0508480",
+      "citations": 0,
+      "authors": [
+        "Igor V. Erovenko",
+        "Andrei S. Rapinchuk"
+      ],
+      "abstract": "Let f be a nondegenerate quadratic form in at least 5 variables over a number field K and let S be a finite set of valuations of K containing all Archimedean ones. We prove that if the Witt index of f is at least 2 or it is 1 and S contains a non-Archimedean valuation, then the S-arithmetic subgroups of the special orthogonal group of f have bounded generation. These groups provide a series of examples of boundedly generated S-arithmetic groups in isotropic, but not quasi-split, algebraic groups.",
+      "locations": [
+        {
+          "url": "http://arxiv.org/abs/math/0508480",
+          "pdf": "https://arxiv.org/pdf/math/0508480",
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://doi.org/10.48550/arxiv.math/0508480",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 15
+    }
+  ]
+}

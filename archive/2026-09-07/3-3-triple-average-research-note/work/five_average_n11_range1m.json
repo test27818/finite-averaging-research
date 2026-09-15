@@ -1,0 +1,2668 @@
+{
+  "settings": {
+    "n": 11,
+    "count": 20,
+    "bound": 1000000,
+    "seed": 5122028,
+    "seconds": 5.0,
+    "nodes": 30000,
+    "width": 128,
+    "depth": 30,
+    "mode": "beam",
+    "jobs": 4,
+    "output": "work/five_average_n11_range1m.json"
+  },
+  "sampling": "independent uniform raw integers, then G=5^a rejection only",
+  "scope": "finite search, no claim that passing G is sufficient at n11",
+  "summary": {
+    "samples": 20,
+    "solved": 20,
+    "attempts": 154,
+    "initial_zero": 0,
+    "initial_zero_subset": 0,
+    "solved_neither_initial_zero_nor_subset": 20,
+    "mean_steps": 11.4,
+    "min_steps": 9,
+    "max_steps": 14,
+    "wall_seconds": 2.2702408999903128,
+    "total_solve_seconds": 7.476364999893121
+  },
+  "cases": [
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        -322490,
+        975665,
+        274972,
+        458420,
+        250046,
+        -786516,
+        -904698,
+        870667,
+        -694735,
+        -126978,
+        40847
+      ],
+      "primitive_centered": [
+        -972465,
+        -867467,
+        -455220,
+        -271772,
+        -246846,
+        -37647,
+        130178,
+        325690,
+        697935,
+        789716,
+        907898
+      ],
+      "G": 1,
+      "steps": 11,
+      "solve_seconds": 0.4849759000353515,
+      "expanded": 898,
+      "generated": 20261,
+      "visited": 1025,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 9,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          8,
+          3,
+          9,
+          6,
+          7
+        ],
+        [
+          2,
+          5,
+          11,
+          10,
+          1
+        ],
+        [
+          1,
+          2,
+          5,
+          3,
+          6
+        ],
+        [
+          4,
+          10,
+          11,
+          1,
+          7
+        ],
+        [
+          8,
+          2,
+          3,
+          5,
+          1
+        ],
+        [
+          1,
+          2,
+          4,
+          7,
+          10
+        ],
+        [
+          9,
+          6,
+          1,
+          2,
+          4
+        ],
+        [
+          11,
+          7,
+          10,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          4,
+          6,
+          9
+        ],
+        [
+          7,
+          1,
+          2,
+          4,
+          3
+        ],
+        [
+          10,
+          11,
+          1,
+          5,
+          8
+        ]
+      ],
+      "verified": true,
+      "target": "3200",
+      "max_denominator_exponent": 0,
+      "max_mean_numerator_bits": 18
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        737277,
+        487698,
+        -764638,
+        -239461,
+        337200,
+        -542800,
+        -239595,
+        425210,
+        403713,
+        597112,
+        629102
+      ],
+      "primitive_centered": [
+        -931076,
+        -709238,
+        -406033,
+        -405899,
+        170762,
+        237275,
+        258772,
+        321260,
+        430674,
+        462664,
+        570839
+      ],
+      "G": 1,
+      "steps": 9,
+      "solve_seconds": 0.33895869995467365,
+      "expanded": 642,
+      "generated": 15939,
+      "visited": 769,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 7,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          6,
+          7,
+          8,
+          2,
+          1
+        ],
+        [
+          3,
+          4,
+          1,
+          2,
+          9
+        ],
+        [
+          10,
+          5,
+          1,
+          2,
+          3
+        ],
+        [
+          11,
+          6,
+          7,
+          4,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          8,
+          4
+        ],
+        [
+          5,
+          10,
+          1,
+          2,
+          3
+        ],
+        [
+          6,
+          7,
+          1,
+          2,
+          3
+        ],
+        [
+          9,
+          1,
+          2,
+          4,
+          5
+        ],
+        [
+          11,
+          1,
+          2,
+          8,
+          10
+        ]
+      ],
+      "verified": true,
+      "target": "166438",
+      "max_denominator_exponent": 0,
+      "max_mean_numerator_bits": 18
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        550497,
+        -917400,
+        -969474,
+        -403991,
+        696418,
+        -583826,
+        -809525,
+        310131,
+        -951577,
+        478895,
+        31825
+      ],
+      "primitive_centered": [
+        -929875,
+        -783954,
+        -712352,
+        -543588,
+        -265282,
+        170534,
+        350369,
+        576068,
+        683943,
+        718120,
+        736017
+      ],
+      "G": 1,
+      "steps": 14,
+      "solve_seconds": 0.4388481999048963,
+      "expanded": 903,
+      "generated": 20134,
+      "visited": 1025,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 9,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          5,
+          10,
+          6,
+          2,
+          9
+        ],
+        [
+          1,
+          8,
+          2,
+          4,
+          3
+        ],
+        [
+          7,
+          5,
+          6,
+          1,
+          2
+        ],
+        [
+          11,
+          3,
+          1,
+          2,
+          5
+        ],
+        [
+          6,
+          9,
+          10,
+          1,
+          4
+        ],
+        [
+          7,
+          1,
+          4,
+          6,
+          8
+        ],
+        [
+          2,
+          3,
+          5,
+          1,
+          4
+        ],
+        [
+          11,
+          1,
+          6,
+          7,
+          9
+        ],
+        [
+          10,
+          1,
+          6,
+          2,
+          3
+        ],
+        [
+          8,
+          7,
+          9,
+          11,
+          1
+        ],
+        [
+          2,
+          3,
+          6,
+          4,
+          5
+        ],
+        [
+          2,
+          3,
+          1,
+          7,
+          10
+        ],
+        [
+          4,
+          5,
+          8,
+          9,
+          1
+        ],
+        [
+          6,
+          11,
+          1,
+          2,
+          3
+        ]
+      ],
+      "verified": true,
+      "target": "-233457",
+      "max_denominator_exponent": 1,
+      "max_mean_numerator_bits": 21
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        867977,
+        852929,
+        -310283,
+        265571,
+        629993,
+        -98916,
+        223592,
+        -660136,
+        -785074,
+        899260,
+        544844
+      ],
+      "primitive_centered": [
+        -1005961,
+        -881023,
+        -531170,
+        -319803,
+        2705,
+        44684,
+        323957,
+        409106,
+        632042,
+        647090,
+        678373
+      ],
+      "G": 1,
+      "steps": 12,
+      "solve_seconds": 0.47274040000047535,
+      "expanded": 1026,
+      "generated": 21922,
+      "visited": 1153,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 10,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          9,
+          6,
+          4,
+          2,
+          10
+        ],
+        [
+          8,
+          3,
+          11,
+          5,
+          1
+        ],
+        [
+          1,
+          3,
+          5,
+          2,
+          4
+        ],
+        [
+          8,
+          1,
+          6,
+          9,
+          10
+        ],
+        [
+          11,
+          2,
+          3,
+          1,
+          7
+        ],
+        [
+          6,
+          8,
+          1,
+          4,
+          5
+        ],
+        [
+          9,
+          10,
+          1,
+          2,
+          3
+        ],
+        [
+          7,
+          4,
+          1,
+          2,
+          3
+        ],
+        [
+          11,
+          5,
+          1,
+          9,
+          10
+        ],
+        [
+          2,
+          3,
+          1,
+          5,
+          9
+        ],
+        [
+          4,
+          1,
+          2,
+          6,
+          10
+        ],
+        [
+          7,
+          1,
+          2,
+          8,
+          11
+        ]
+      ],
+      "verified": true,
+      "target": "220887",
+      "max_denominator_exponent": 0,
+      "max_mean_numerator_bits": 18
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        -628574,
+        -473891,
+        982693,
+        -596357,
+        960839,
+        -320465,
+        -852337,
+        -268203,
+        560155,
+        73156,
+        6120
+      ],
+      "primitive_centered": [
+        -1033317,
+        -1011463,
+        -610779,
+        -123780,
+        -56744,
+        217579,
+        269841,
+        423267,
+        545733,
+        577950,
+        801713
+      ],
+      "G": 1,
+      "steps": 10,
+      "solve_seconds": 0.397554500028491,
+      "expanded": 770,
+      "generated": 18558,
+      "visited": 897,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 8,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          5,
+          11,
+          8,
+          1,
+          7
+        ],
+        [
+          3,
+          10,
+          1,
+          5,
+          4
+        ],
+        [
+          9,
+          1,
+          3,
+          7,
+          8
+        ],
+        [
+          2,
+          1,
+          3,
+          7,
+          8
+        ],
+        [
+          6,
+          11,
+          4,
+          5,
+          9
+        ],
+        [
+          10,
+          1,
+          2,
+          4,
+          5
+        ],
+        [
+          6,
+          9,
+          11,
+          3,
+          1
+        ],
+        [
+          1,
+          3,
+          7,
+          8,
+          2
+        ],
+        [
+          6,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          9,
+          11,
+          1,
+          5,
+          10
+        ]
+      ],
+      "verified": true,
+      "target": "-50624",
+      "max_denominator_exponent": 0,
+      "max_mean_numerator_bits": 18
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        -205788,
+        732847,
+        -904780,
+        -376845,
+        370231,
+        -891384,
+        -473655,
+        883002,
+        888010,
+        587886,
+        959406
+      ],
+      "primitive_centered": [
+        -1047410,
+        -1034014,
+        -616285,
+        -519475,
+        -348418,
+        227601,
+        445256,
+        590217,
+        740372,
+        745380,
+        816776
+      ],
+      "G": 1,
+      "steps": 11,
+      "solve_seconds": 0.36922469991259277,
+      "expanded": 898,
+      "generated": 19939,
+      "visited": 1025,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 9,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          7,
+          4,
+          1,
+          5,
+          2
+        ],
+        [
+          3,
+          6,
+          10,
+          8,
+          11
+        ],
+        [
+          9,
+          3,
+          1,
+          2,
+          4
+        ],
+        [
+          5,
+          6,
+          1,
+          2,
+          3
+        ],
+        [
+          8,
+          10,
+          1,
+          2,
+          3
+        ],
+        [
+          7,
+          1,
+          5,
+          4,
+          9
+        ],
+        [
+          2,
+          1,
+          4,
+          5,
+          6
+        ],
+        [
+          11,
+          7,
+          9,
+          1,
+          2
+        ],
+        [
+          4,
+          3,
+          8,
+          10,
+          1
+        ],
+        [
+          5,
+          1,
+          3,
+          2,
+          7
+        ],
+        [
+          6,
+          1,
+          2,
+          9,
+          11
+        ]
+      ],
+      "verified": true,
+      "target": "142630",
+      "max_denominator_exponent": 0,
+      "max_mean_numerator_bits": 18
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        269196,
+        592853,
+        -576868,
+        644654,
+        -286332,
+        175729,
+        -278211,
+        516466,
+        59819,
+        -685558,
+        -659668
+      ],
+      "primitive_centered": [
+        -665374,
+        -613573,
+        -537186,
+        -289916,
+        -196449,
+        -80539,
+        257491,
+        265612,
+        556148,
+        638948,
+        664838
+      ],
+      "G": 1,
+      "steps": 13,
+      "solve_seconds": 0.35740089998580515,
+      "expanded": 770,
+      "generated": 17827,
+      "visited": 897,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 8,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          4,
+          1,
+          9,
+          7,
+          3
+        ],
+        [
+          10,
+          5,
+          1,
+          6,
+          2
+        ],
+        [
+          11,
+          1,
+          2,
+          3,
+          8
+        ],
+        [
+          4,
+          7,
+          5,
+          1,
+          2
+        ],
+        [
+          9,
+          1,
+          6,
+          3,
+          8
+        ],
+        [
+          11,
+          1,
+          3,
+          2,
+          4
+        ],
+        [
+          10,
+          1,
+          6,
+          5,
+          7
+        ],
+        [
+          1,
+          5,
+          6,
+          7,
+          2
+        ],
+        [
+          8,
+          9,
+          10,
+          1,
+          2
+        ],
+        [
+          5,
+          6,
+          3,
+          4,
+          11
+        ],
+        [
+          3,
+          4,
+          1,
+          2,
+          7
+        ],
+        [
+          5,
+          6,
+          8,
+          9,
+          1
+        ],
+        [
+          11,
+          10,
+          1,
+          2,
+          3
+        ]
+      ],
+      "verified": true,
+      "target": "-20720",
+      "max_denominator_exponent": 1,
+      "max_mean_numerator_bits": 17
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        -643423,
+        -279131,
+        -459853,
+        148178,
+        -702111,
+        621910,
+        -427088,
+        367018,
+        754396,
+        861236,
+        -519432
+      ],
+      "primitive_centered": [
+        -886536,
+        -779696,
+        -647210,
+        -392318,
+        -173478,
+        253831,
+        401788,
+        434553,
+        494132,
+        618123,
+        676811
+      ],
+      "G": 1,
+      "steps": 11,
+      "solve_seconds": 0.39200799993705004,
+      "expanded": 899,
+      "generated": 19881,
+      "visited": 1025,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 9,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          9,
+          6,
+          8,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          4,
+          1,
+          5
+        ],
+        [
+          10,
+          6,
+          1,
+          7,
+          11
+        ],
+        [
+          8,
+          9,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          1,
+          2,
+          3,
+          8
+        ],
+        [
+          5,
+          1,
+          2,
+          6,
+          7
+        ],
+        [
+          10,
+          3,
+          4,
+          8,
+          1
+        ],
+        [
+          9,
+          11,
+          1,
+          3,
+          2
+        ],
+        [
+          5,
+          4,
+          8,
+          10,
+          1
+        ],
+        [
+          6,
+          1,
+          4,
+          2,
+          3
+        ],
+        [
+          7,
+          1,
+          2,
+          9,
+          11
+        ]
+      ],
+      "verified": true,
+      "target": "-25300",
+      "max_denominator_exponent": 0,
+      "max_mean_numerator_bits": 18
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        194304,
+        -114204,
+        -451386,
+        -870762,
+        936934,
+        548638,
+        -894455,
+        -519477,
+        -709484,
+        132631,
+        790569
+      ],
+      "primitive_centered": [
+        -1023906,
+        -877541,
+        -635610,
+        -281276,
+        -219603,
+        27232,
+        364414,
+        432505,
+        622512,
+        783790,
+        807483
+      ],
+      "G": 1,
+      "steps": 10,
+      "solve_seconds": 0.3061655000783503,
+      "expanded": 777,
+      "generated": 17136,
+      "visited": 897,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 8,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          11,
+          6,
+          1,
+          9,
+          4
+        ],
+        [
+          5,
+          1,
+          2,
+          3,
+          8
+        ],
+        [
+          7,
+          4,
+          6,
+          9,
+          10
+        ],
+        [
+          11,
+          1,
+          2,
+          4,
+          6
+        ],
+        [
+          7,
+          9,
+          1,
+          3,
+          5
+        ],
+        [
+          10,
+          1,
+          3,
+          2,
+          4
+        ],
+        [
+          8,
+          5,
+          1,
+          2,
+          3
+        ],
+        [
+          7,
+          9,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          1,
+          2,
+          5,
+          6
+        ],
+        [
+          10,
+          1,
+          2,
+          8,
+          11
+        ]
+      ],
+      "verified": true,
+      "target": "-86972",
+      "max_denominator_exponent": 0,
+      "max_mean_numerator_bits": 18
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        -790468,
+        27699,
+        -634522,
+        633882,
+        543229,
+        -24231,
+        215542,
+        -231124,
+        805067,
+        257328,
+        -985794
+      ],
+      "primitive_centered": [
+        -969122,
+        -773796,
+        -617850,
+        -214452,
+        -7559,
+        44371,
+        232214,
+        274000,
+        559901,
+        650554,
+        821739
+      ],
+      "G": 1,
+      "steps": 11,
+      "solve_seconds": 0.37815290002617985,
+      "expanded": 898,
+      "generated": 19796,
+      "visited": 1025,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 9,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          6,
+          2,
+          7,
+          10,
+          4
+        ],
+        [
+          11,
+          2,
+          4,
+          5,
+          9
+        ],
+        [
+          1,
+          3,
+          8,
+          2,
+          4
+        ],
+        [
+          5,
+          9,
+          11,
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        [
+          3,
+          4,
+          1,
+          9,
+          10
+        ],
+        [
+          8,
+          1,
+          2,
+          5,
+          11
+        ],
+        [
+          6,
+          7,
+          1,
+          3,
+          4
+        ],
+        [
+          9,
+          10,
+          1,
+          3,
+          4
+        ],
+        [
+          6,
+          1,
+          3,
+          2,
+          5
+        ],
+        [
+          7,
+          1,
+          2,
+          8,
+          11
+        ]
+      ],
+      "verified": true,
+      "target": "-16672",
+      "max_denominator_exponent": 1,
+      "max_mean_numerator_bits": 21
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        620271,
+        -811998,
+        -693208,
+        444720,
+        670411,
+        767244,
+        -762663,
+        192322,
+        859438,
+        -332241,
+        -99904
+      ],
+      "primitive_centered": [
+        -889670,
+        -840335,
+        -770880,
+        -409913,
+        -177576,
+        114650,
+        367048,
+        542599,
+        592739,
+        689572,
+        781766
+      ],
+      "G": 1,
+      "steps": 13,
+      "solve_seconds": 0.3391025000018999,
+      "expanded": 809,
+      "generated": 18175,
+      "visited": 897,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 8,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          2,
+          7,
+          4,
+          1,
+          9
+        ],
+        [
+          10,
+          11,
+          8,
+          5,
+          6
+        ],
+        [
+          3,
+          1,
+          2,
+          5,
+          6
+        ],
+        [
+          8,
+          10,
+          11,
+          1,
+          2
+        ],
+        [
+          3,
+          5,
+          1,
+          2,
+          8
+        ],
+        [
+          6,
+          1,
+          2,
+          3,
+          10
+        ],
+        [
+          11,
+          5,
+          1,
+          2,
+          4
+        ],
+        [
+          3,
+          6,
+          8,
+          1,
+          2
+        ],
+        [
+          7,
+          9,
+          10,
+          1,
+          2
+        ],
+        [
+          3,
+          6,
+          4,
+          5,
+          11
+        ],
+        [
+          3,
+          4,
+          1,
+          2,
+          8
+        ],
+        [
+          5,
+          6,
+          7,
+          9,
+          1
+        ],
+        [
+          11,
+          10,
+          1,
+          2,
+          3
+        ]
+      ],
+      "verified": true,
+      "target": "77672",
+      "max_denominator_exponent": 1,
+      "max_mean_numerator_bits": 21
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        -567012,
+        228223,
+        -304274,
+        -57214,
+        -449962,
+        -741868,
+        691019,
+        220781,
+        205974,
+        -384806,
+        -768732
+      ],
+      "primitive_centered": [
+        -866280,
+        -403484,
+        -396042,
+        -381235,
+        -118047,
+        129013,
+        209545,
+        274701,
+        391751,
+        566607,
+        593471
+      ],
+      "G": 1,
+      "steps": 11,
+      "solve_seconds": 0.37379819992929697,
+      "expanded": 898,
+      "generated": 19944,
+      "visited": 1025,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 9,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          7,
+          2,
+          4,
+          6,
+          11
+        ],
+        [
+          8,
+          9,
+          3,
+          10,
+          1
+        ],
+        [
+          1,
+          2,
+          4,
+          6,
+          7
+        ],
+        [
+          5,
+          1,
+          2,
+          4,
+          6
+        ],
+        [
+          11,
+          3,
+          1,
+          2,
+          4
+        ],
+        [
+          8,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          7,
+          1,
+          11,
+          5,
+          6
+        ],
+        [
+          9,
+          10,
+          1,
+          5,
+          6
+        ],
+        [
+          7,
+          11,
+          1,
+          5,
+          6
+        ],
+        [
+          9,
+          1,
+          5,
+          2,
+          3
+        ],
+        [
+          10,
+          1,
+          2,
+          4,
+          8
+        ]
+      ],
+      "verified": true,
+      "target": "-175261",
+      "max_denominator_exponent": 1,
+      "max_mean_numerator_bits": 20
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        903640,
+        -127527,
+        -709306,
+        -62456,
+        -864908,
+        -225263,
+        -766508,
+        -470863,
+        372386,
+        294705,
+        144876
+      ],
+      "primitive_centered": [
+        -1041024,
+        -509770,
+        -432089,
+        -282260,
+        -74928,
+        -9857,
+        87879,
+        333479,
+        571922,
+        629124,
+        727524
+      ],
+      "G": 1,
+      "steps": 11,
+      "solve_seconds": 0.3552991000469774,
+      "expanded": 898,
+      "generated": 19912,
+      "visited": 1025,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 9,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          10,
+          6,
+          3,
+          7,
+          5
+        ],
+        [
+          9,
+          11,
+          2,
+          3,
+          8
+        ],
+        [
+          1,
+          5,
+          6,
+          7,
+          10
+        ],
+        [
+          2,
+          3,
+          1,
+          5,
+          6
+        ],
+        [
+          8,
+          9,
+          1,
+          2,
+          7
+        ],
+        [
+          11,
+          1,
+          3,
+          5,
+          10
+        ],
+        [
+          4,
+          2,
+          7,
+          1,
+          6
+        ],
+        [
+          3,
+          5,
+          10,
+          11,
+          1
+        ],
+        [
+          2,
+          4,
+          1,
+          3,
+          5
+        ],
+        [
+          6,
+          1,
+          2,
+          8,
+          10
+        ],
+        [
+          7,
+          1,
+          2,
+          9,
+          11
+        ]
+      ],
+      "verified": true,
+      "target": "-137384",
+      "max_denominator_exponent": 1,
+      "max_mean_numerator_bits": 20
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        -527232,
+        -634406,
+        805710,
+        439654,
+        -173055,
+        -601041,
+        131579,
+        -461442,
+        -514749,
+        265524,
+        -417634
+      ],
+      "primitive_centered": [
+        -959082,
+        -593026,
+        -418896,
+        -284951,
+        19683,
+        264262,
+        308070,
+        361377,
+        373860,
+        447669,
+        481034
+      ],
+      "G": 1,
+      "steps": 10,
+      "solve_seconds": 0.32794520002789795,
+      "expanded": 770,
+      "generated": 17665,
+      "visited": 897,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 8,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          3,
+          4,
+          11,
+          9,
+          6
+        ],
+        [
+          2,
+          1,
+          5,
+          7,
+          10
+        ],
+        [
+          8,
+          3,
+          4,
+          6,
+          9
+        ],
+        [
+          3,
+          4,
+          6,
+          8,
+          1
+        ],
+        [
+          11,
+          1,
+          3,
+          2,
+          5
+        ],
+        [
+          7,
+          10,
+          4,
+          6,
+          1
+        ],
+        [
+          9,
+          2,
+          3,
+          8,
+          1
+        ],
+        [
+          4,
+          6,
+          1,
+          5,
+          11
+        ],
+        [
+          7,
+          1,
+          4,
+          2,
+          3
+        ],
+        [
+          10,
+          1,
+          2,
+          8,
+          9
+        ]
+      ],
+      "verified": true,
+      "target": "-153372",
+      "max_denominator_exponent": 0,
+      "max_mean_numerator_bits": 18
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        -311486,
+        -124518,
+        40462,
+        563538,
+        393625,
+        795361,
+        -524650,
+        -235965,
+        -285851,
+        -287744,
+        485087
+      ],
+      "primitive_centered": [
+        -749192,
+        -517369,
+        -438918,
+        -347456,
+        5707,
+        170687,
+        282134,
+        332020,
+        333913,
+        357655,
+        570819
+      ],
+      "G": 1,
+      "steps": 11,
+      "solve_seconds": 0.37956420006230474,
+      "expanded": 898,
+      "generated": 20349,
+      "visited": 1025,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 9,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          6,
+          5,
+          8,
+          1,
+          7
+        ],
+        [
+          4,
+          3,
+          1,
+          2,
+          10
+        ],
+        [
+          11,
+          1,
+          2,
+          3,
+          9
+        ],
+        [
+          5,
+          6,
+          7,
+          4,
+          1
+        ],
+        [
+          8,
+          1,
+          4,
+          2,
+          3
+        ],
+        [
+          9,
+          1,
+          10,
+          5,
+          6
+        ],
+        [
+          11,
+          2,
+          3,
+          1,
+          7
+        ],
+        [
+          1,
+          5,
+          6,
+          9,
+          10
+        ],
+        [
+          2,
+          3,
+          1,
+          4,
+          8
+        ],
+        [
+          7,
+          1,
+          2,
+          5,
+          6
+        ],
+        [
+          11,
+          1,
+          2,
+          9,
+          10
+        ]
+      ],
+      "verified": true,
+      "target": "46169",
+      "max_denominator_exponent": 0,
+      "max_mean_numerator_bits": 17
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        29396,
+        477315,
+        -282222,
+        131997,
+        -557130,
+        -865894,
+        -631612,
+        -879993,
+        905512,
+        736766,
+        -20618
+      ],
+      "primitive_centered": [
+        -992465,
+        -823719,
+        -564268,
+        -218950,
+        -116349,
+        -66335,
+        195269,
+        470177,
+        544659,
+        778941,
+        793040
+      ],
+      "G": 1,
+      "steps": 13,
+      "solve_seconds": 0.36762040003668517,
+      "expanded": 780,
+      "generated": 17841,
+      "visited": 897,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 8,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          10,
+          4,
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          1,
+          4,
+          3,
+          7
+        ],
+        [
+          9,
+          5,
+          1,
+          2,
+          8
+        ],
+        [
+          11,
+          1,
+          6,
+          10,
+          3
+        ],
+        [
+          4,
+          1,
+          3,
+          6,
+          10
+        ],
+        [
+          1,
+          3,
+          11,
+          2,
+          5
+        ],
+        [
+          7,
+          4,
+          1,
+          2,
+          8
+        ],
+        [
+          9,
+          1,
+          2,
+          4,
+          6
+        ],
+        [
+          10,
+          7,
+          8,
+          1,
+          2
+        ],
+        [
+          4,
+          6,
+          3,
+          5,
+          11
+        ],
+        [
+          3,
+          4,
+          1,
+          2,
+          9
+        ],
+        [
+          5,
+          6,
+          7,
+          8,
+          1
+        ],
+        [
+          11,
+          10,
+          1,
+          2,
+          3
+        ]
+      ],
+      "verified": true,
+      "target": "-86953",
+      "max_denominator_exponent": 0,
+      "max_mean_numerator_bits": 17
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        -64484,
+        985625,
+        315063,
+        -534570,
+        691118,
+        -475912,
+        413901,
+        -458419,
+        22282,
+        -823025,
+        -428331
+      ],
+      "primitive_centered": [
+        -1018057,
+        -723550,
+        -446333,
+        -347495,
+        -54714,
+        32052,
+        395899,
+        425987,
+        443480,
+        502138,
+        790593
+      ],
+      "G": 1,
+      "steps": 14,
+      "solve_seconds": 0.40708009991794825,
+      "expanded": 902,
+      "generated": 20202,
+      "visited": 1025,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 9,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          2,
+          5,
+          3,
+          1,
+          6
+        ],
+        [
+          10,
+          8,
+          11,
+          9,
+          7
+        ],
+        [
+          4,
+          1,
+          2,
+          3,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          7,
+          8
+        ],
+        [
+          4,
+          1,
+          2,
+          9,
+          10
+        ],
+        [
+          6,
+          1,
+          2,
+          4,
+          11
+        ],
+        [
+          5,
+          3,
+          7,
+          8,
+          1
+        ],
+        [
+          9,
+          2,
+          4,
+          1,
+          3
+        ],
+        [
+          6,
+          11,
+          1,
+          2,
+          5
+        ],
+        [
+          10,
+          3,
+          4,
+          9,
+          1
+        ],
+        [
+          2,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          2,
+          5,
+          1,
+          3,
+          11
+        ],
+        [
+          6,
+          7,
+          4,
+          9,
+          1
+        ],
+        [
+          8,
+          10,
+          1,
+          2,
+          3
+        ]
+      ],
+      "verified": true,
+      "target": "-32432",
+      "max_denominator_exponent": 1,
+      "max_mean_numerator_bits": 21
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        36147,
+        -136507,
+        -210568,
+        756423,
+        -577313,
+        804397,
+        13374,
+        736522,
+        183663,
+        588249,
+        -415577
+      ],
+      "primitive_centered": [
+        -739023,
+        -577287,
+        -372278,
+        -298217,
+        -148336,
+        -125563,
+        21953,
+        426539,
+        574812,
+        594713,
+        642687
+      ],
+      "G": 1,
+      "steps": 10,
+      "solve_seconds": 0.3316922999219969,
+      "expanded": 770,
+      "generated": 17635,
+      "visited": 897,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 8,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          2,
+          7,
+          1,
+          9,
+          4
+        ],
+        [
+          5,
+          3,
+          1,
+          10,
+          6
+        ],
+        [
+          11,
+          1,
+          2,
+          4,
+          8
+        ],
+        [
+          7,
+          9,
+          3,
+          5,
+          6
+        ],
+        [
+          10,
+          3,
+          5,
+          6,
+          1
+        ],
+        [
+          2,
+          4,
+          8,
+          1,
+          3
+        ],
+        [
+          11,
+          1,
+          5,
+          6,
+          10
+        ],
+        [
+          2,
+          3,
+          1,
+          7,
+          9
+        ],
+        [
+          4,
+          1,
+          2,
+          5,
+          6
+        ],
+        [
+          8,
+          1,
+          2,
+          10,
+          11
+        ]
+      ],
+      "verified": true,
+      "target": "161710",
+      "max_denominator_exponent": 1,
+      "max_mean_numerator_bits": 20
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        -142779,
+        232660,
+        540856,
+        -367824,
+        -978911,
+        -767660,
+        155416,
+        -795352,
+        55788,
+        767659,
+        -776609
+      ],
+      "primitive_centered": [
+        -956455,
+        -729652,
+        -421456,
+        -344212,
+        -244584,
+        -46017,
+        179028,
+        578864,
+        587813,
+        606556,
+        790115
+      ],
+      "G": 1,
+      "steps": 10,
+      "solve_seconds": 0.33317670004907995,
+      "expanded": 770,
+      "generated": 17900,
+      "visited": 897,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 8,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          10,
+          9,
+          1,
+          8,
+          5
+        ],
+        [
+          2,
+          7,
+          1,
+          4,
+          11
+        ],
+        [
+          3,
+          5,
+          8,
+          9,
+          10
+        ],
+        [
+          6,
+          3,
+          5,
+          8,
+          9
+        ],
+        [
+          1,
+          3,
+          5,
+          6,
+          8
+        ],
+        [
+          2,
+          4,
+          1,
+          3,
+          9
+        ],
+        [
+          10,
+          1,
+          5,
+          6,
+          8
+        ],
+        [
+          1,
+          5,
+          7,
+          11,
+          2
+        ],
+        [
+          6,
+          1,
+          2,
+          5,
+          3
+        ],
+        [
+          8,
+          10,
+          1,
+          4,
+          9
+        ]
+      ],
+      "verified": true,
+      "target": "-188796",
+      "max_denominator_exponent": 1,
+      "max_mean_numerator_bits": 20
+    },
+    {
+      "status": "solved",
+      "reason": "searched-zero-certified-tail",
+      "q": 5,
+      "n": 11,
+      "input": [
+        -688167,
+        -871525,
+        -21960,
+        -292842,
+        685009,
+        107726,
+        -154946,
+        -899003,
+        782051,
+        597491,
+        -11799
+      ],
+      "primitive_centered": [
+        -851866,
+        -754824,
+        -667306,
+        -177541,
+        -58016,
+        -47855,
+        85131,
+        223027,
+        618352,
+        801710,
+        829188
+      ],
+      "G": 1,
+      "steps": 13,
+      "solve_seconds": 0.32505660003516823,
+      "expanded": 778,
+      "generated": 17745,
+      "visited": 897,
+      "mode": "beam",
+      "width": 128,
+      "lower_bound": 4,
+      "optimal": false,
+      "initial_zero": false,
+      "initial_zero_subset": false,
+      "first_zero_depth": 8,
+      "complete_search_depth": -1,
+      "operations": [
+        [
+          9,
+          10,
+          6,
+          7,
+          4
+        ],
+        [
+          8,
+          3,
+          4,
+          6,
+          7
+        ],
+        [
+          2,
+          1,
+          9,
+          10,
+          5
+        ],
+        [
+          11,
+          3,
+          1,
+          2,
+          5
+        ],
+        [
+          9,
+          10,
+          4,
+          6,
+          7
+        ],
+        [
+          8,
+          1,
+          2,
+          4,
+          6
+        ],
+        [
+          7,
+          9,
+          3,
+          5,
+          1
+        ],
+        [
+          1,
+          3,
+          5,
+          11,
+          2
+        ],
+        [
+          10,
+          7,
+          9,
+          1,
+          2
+        ],
+        [
+          3,
+          5,
+          4,
+          6,
+          8
+        ],
+        [
+          3,
+          4,
+          1,
+          2,
+          11
+        ],
+        [
+          5,
+          6,
+          7,
+          9,
+          1
+        ],
+        [
+          8,
+          10,
+          1,
+          2,
+          3
+        ]
+      ],
+      "verified": true,
+      "target": "-69815",
+      "max_denominator_exponent": 2,
+      "max_mean_numerator_bits": 21
+    }
+  ]
+}

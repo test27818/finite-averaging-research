@@ -1,0 +1,5099 @@
+{
+  "index": 4,
+  "query": "explicit Burgess bounds",
+  "utc": "2026-09-15T07:12:47.935714+00:00",
+  "url": "https://api.openalex.org/works?search=explicit+Burgess+bounds&per-page=12",
+  "status": 200,
+  "count": 9208,
+  "results": [
+    {
+      "id": "https://openalex.org/W2148922881",
+      "title": "Non-unitarity of the leptonic mixing matrix: present bounds and future sensitivities",
+      "publication_year": 2014,
+      "doi": "https://doi.org/10.1007/jhep10(2014)094",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5069051454",
+            "display_name": "Stefan Antusch",
+            "orcid": "https://orcid.org/0000-0001-6120-9279"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1850255",
+              "display_name": "University of Basel",
+              "ror": "https://ror.org/02s6k3f65",
+              "country_code": "CH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I1850255"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210089019",
+              "display_name": "Max Planck Institute for Physics",
+              "ror": "https://ror.org/0079jjr10",
+              "country_code": "DE",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I149899117",
+                "https://openalex.org/I4210089019"
+              ]
+            }
+          ],
+          "countries": [
+            "CH",
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Stefan Antusch",
+          "raw_affiliation_strings": [
+            "Department of Physics, University of Basel, Klingelbergstr. 82, CH-4056, Basel, Switzerland",
+            "Max-Planck-Institut für Physik (Werner-Heisenberg-Institut), Föhringer Ring 6, D-80805, München, Germany"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Physics, University of Basel, Klingelbergstr. 82, CH-4056, Basel, Switzerland",
+              "institution_ids": [
+                "https://openalex.org/I1850255"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Max-Planck-Institut für Physik (Werner-Heisenberg-Institut), Föhringer Ring 6, D-80805, München, Germany",
+              "institution_ids": [
+                "https://openalex.org/I4210089019"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5101550452",
+            "display_name": "Oliver Fischer",
+            "orcid": "https://orcid.org/0000-0003-2440-6411"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1850255",
+              "display_name": "University of Basel",
+              "ror": "https://ror.org/02s6k3f65",
+              "country_code": "CH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I1850255"
+              ]
+            }
+          ],
+          "countries": [
+            "CH"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Oliver Fischer",
+          "raw_affiliation_strings": [
+            "Department of Physics, University of Basel, Klingelbergstr. 82, CH-4056, Basel, Switzerland"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Physics, University of Basel, Klingelbergstr. 82, CH-4056, Basel, Switzerland",
+              "institution_ids": [
+                "https://openalex.org/I1850255"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "The": [
+          0,
+          39
+        ],
+        "non-unitarity": [
+          1,
+          112
+        ],
+        "of": [
+          2,
+          15,
+          17,
+          43,
+          65,
+          73,
+          99,
+          110
+        ],
+        "the": [
+          3,
+          18,
+          35,
+          54,
+          66,
+          74,
+          79,
+          85,
+          94
+        ],
+        "effective": [
+          4,
+          61
+        ],
+        "leptonic": [
+          5,
+          89
+        ],
+        "mixing": [
+          6
+        ],
+        "matrix": [
+          7
+        ],
+        "at": [
+          8
+        ],
+        "low": [
+          9,
+          40
+        ],
+        "energies": [
+          10
+        ],
+        "is": [
+          11
+        ],
+        "a": [
+          12,
+          50,
+          70,
+          107
+        ],
+        "generic": [
+          13
+        ],
+        "signal": [
+          14
+        ],
+        "extensions": [
+          16,
+          45,
+          133
+        ],
+        "Standard": [
+          19
+        ],
+        "Model": [
+          20
+        ],
+        "(SM)": [
+          21
+        ],
+        "with": [
+          22,
+          134
+        ],
+        "extra": [
+          23
+        ],
+        "fermionic": [
+          24
+        ],
+        "singlet": [
+          25,
+          114,
+          135
+        ],
+        "particles,": [
+          26
+        ],
+        "i.e.": [
+          27
+        ],
+        "“sterile”": [
+          28
+        ],
+        "or": [
+          29
+        ],
+        "“right-handed”": [
+          30
+        ],
+        "neutrinos,": [
+          31
+        ],
+        "to": [
+          32,
+          78,
+          117,
+          138
+        ],
+        "account": [
+          33
+        ],
+        "for": [
+          34,
+          113
+        ],
+        "observed": [
+          36
+        ],
+        "neutrino": [
+          37
+        ],
+        "masses.": [
+          38
+        ],
+        "energy": [
+          41
+        ],
+        "effects": [
+          42
+        ],
+        "such": [
+          44
+        ],
+        "can": [
+          46
+        ],
+        "be": [
+          47,
+          106
+        ],
+        "described": [
+          48
+        ],
+        "in": [
+          49,
+          128
+        ],
+        "model-independent": [
+          51
+        ],
+        "way": [
+          52
+        ],
+        "by": [
+          53
+        ],
+        "Minimal": [
+          55
+        ],
+        "Unitarity": [
+          56
+        ],
+        "Violation": [
+          57
+        ],
+        "(MUV)": [
+          58
+        ],
+        "scheme,": [
+          59
+        ],
+        "an": [
+          60
+        ],
+        "field": [
+          62
+        ],
+        "theory": [
+          63
+        ],
+        "extension": [
+          64
+        ],
+        "SM.": [
+          67
+        ],
+        "We": [
+          68
+        ],
+        "perform": [
+          69
+        ],
+        "global": [
+          71
+        ],
+        "fit": [
+          72
+        ],
+        "MUV": [
+          75
+        ],
+        "scheme": [
+          76
+        ],
+        "parameters": [
+          77
+        ],
+        "present": [
+          80
+        ],
+        "experimental": [
+          81
+        ],
+        "data,": [
+          82
+        ],
+        "which": [
+          83
+        ],
+        "yields": [
+          84
+        ],
+        "up-to-date": [
+          86
+        ],
+        "constraints": [
+          87
+        ],
+        "on": [
+          88,
+          125
+        ],
+        "non-unitarity.": [
+          90
+        ],
+        "Furthermore,": [
+          91
+        ],
+        "we": [
+          92
+        ],
+        "investigate": [
+          93
+        ],
+        "sensitivities": [
+          95
+        ],
+        "and": [
+          96
+        ],
+        "discovery": [
+          97
+        ],
+        "prospects": [
+          98
+        ],
+        "future": [
+          100,
+          123
+        ],
+        "experiments.": [
+          101
+        ],
+        "In": [
+          102
+        ],
+        "particular,": [
+          103
+        ],
+        "FCC-ee/TLEP": [
+          104
+        ],
+        "would": [
+          105
+        ],
+        "powerful": [
+          108
+        ],
+        "probe": [
+          109,
+          132
+        ],
+        "flavour-conserving": [
+          111
+        ],
+        "masses": [
+          115,
+          136
+        ],
+        "up": [
+          116,
+          137
+        ],
+        "∼60": [
+          118
+        ],
+        "TeV.": [
+          119
+        ],
+        "Regarding": [
+          120
+        ],
+        "flavour-violating": [
+          121
+        ],
+        "non-unitarity,": [
+          122
+        ],
+        "experiments": [
+          124
+        ],
+        "muon-to-electron": [
+          126
+        ],
+        "conversion": [
+          127
+        ],
+        "nuclei": [
+          129
+        ],
+        "could": [
+          130
+        ],
+        "even": [
+          131
+        ],
+        "∼0.3": [
+          139
+        ],
+        "PeV.": [
+          140
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1007/jhep10(2014)094",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1007/jhep10(2014)094",
+          "pdf_url": "https://link.springer.com/content/pdf/10.1007/JHEP10(2014)094.pdf",
+          "source": {
+            "id": "https://openalex.org/S187585107",
+            "display_name": "Journal of High Energy Physics",
+            "issn_l": "1029-8479",
+            "issn": [
+              "1029-8479",
+              "1126-6708",
+              "1127-2236"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319965",
+            "host_organization_name": "Springer Nature",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of High Energy Physics",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:edoc.unibas.ch:39799",
+          "is_oa": false,
+          "landing_page_url": "https://edoc.unibas.ch/39799/1/art%253A10.1007%252FJHEP10%25282014%2529094.pdf",
+          "pdf_url": "https://edoc.unibas.ch/39799/1/art%253A10.1007%252FJHEP10%25282014%2529094.pdf",
+          "source": {
+            "id": "https://openalex.org/S4306401836",
+            "display_name": "edoc (University of Basel)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I1850255",
+            "host_organization_name": "University of Basel",
+            "host_organization_lineage": [
+              "https://openalex.org/I1850255"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "acceptedVersion",
+          "is_accepted": true,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "Article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:1407.6607",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/1407.6607",
+          "pdf_url": "https://arxiv.org/pdf/1407.6607",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W338838028",
+        "https://openalex.org/W567472785",
+        "https://openalex.org/W1495208736",
+        "https://openalex.org/W1581228648",
+        "https://openalex.org/W1598066046",
+        "https://openalex.org/W1615407490",
+        "https://openalex.org/W1729218393",
+        "https://openalex.org/W1861022667",
+        "https://openalex.org/W1862595221",
+        "https://openalex.org/W1976183837",
+        "https://openalex.org/W1979621399",
+        "https://openalex.org/W1980676659",
+        "https://openalex.org/W1981560321",
+        "https://openalex.org/W1982671017",
+        "https://openalex.org/W1987218701",
+        "https://openalex.org/W1989356696",
+        "https://openalex.org/W2003932412",
+        "https://openalex.org/W2004023272",
+        "https://openalex.org/W2011585881",
+        "https://openalex.org/W2019404315",
+        "https://openalex.org/W2019752582",
+        "https://openalex.org/W2025860599",
+        "https://openalex.org/W2030186423",
+        "https://openalex.org/W2034653020",
+        "https://openalex.org/W2042060057",
+        "https://openalex.org/W2045878225",
+        "https://openalex.org/W2046360722",
+        "https://openalex.org/W2048126479",
+        "https://openalex.org/W2056875624",
+        "https://openalex.org/W2061888278",
+        "https://openalex.org/W2071222116",
+        "https://openalex.org/W2081439609",
+        "https://openalex.org/W2083829381",
+        "https://openalex.org/W2096486435",
+        "https://openalex.org/W2114816908",
+        "https://openalex.org/W2116346010",
+        "https://openalex.org/W2118050609",
+        "https://openalex.org/W2122328420",
+        "https://openalex.org/W2124922503",
+        "https://openalex.org/W2126001604",
+        "https://openalex.org/W2130030623",
+        "https://openalex.org/W2131906047",
+        "https://openalex.org/W2139368551",
+        "https://openalex.org/W2143390443",
+        "https://openalex.org/W2150258253",
+        "https://openalex.org/W2151720972",
+        "https://openalex.org/W2152587499",
+        "https://openalex.org/W2152951508",
+        "https://openalex.org/W2162020865",
+        "https://openalex.org/W2163389141",
+        "https://openalex.org/W2239557724",
+        "https://openalex.org/W2279130505",
+        "https://openalex.org/W2515190615",
+        "https://openalex.org/W2730514005",
+        "https://openalex.org/W2893846062",
+        "https://openalex.org/W2951480127",
+        "https://openalex.org/W3098988373",
+        "https://openalex.org/W3099376474",
+        "https://openalex.org/W3100164211",
+        "https://openalex.org/W3101298544",
+        "https://openalex.org/W3102292145",
+        "https://openalex.org/W3102717110",
+        "https://openalex.org/W3103025231",
+        "https://openalex.org/W3103505448",
+        "https://openalex.org/W3103545747",
+        "https://openalex.org/W3105619872",
+        "https://openalex.org/W3105812530",
+        "https://openalex.org/W3106156227",
+        "https://openalex.org/W3106377885",
+        "https://openalex.org/W3125623840",
+        "https://openalex.org/W3141304785",
+        "https://openalex.org/W4285719527"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W3045220322",
+      "title": "Explicit Burgess-like subconvex bounds for GL 2 × GL 1",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.1515/forum-2019-0074",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5101774387",
+            "display_name": "Han Wu",
+            "orcid": "https://orcid.org/0000-0001-5140-3174"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I166337079",
+              "display_name": "Queen Mary University of London",
+              "ror": "https://ror.org/026zzn846",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I166337079"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Han Wu",
+          "raw_affiliation_strings": [
+            "School of Mathematical Sciences , Queen Mary University of London , Mile End Road, Stepney , London E1 4NS , United Kingdom"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-5140-3174",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Mathematical Sciences , Queen Mary University of London , Mile End Road, Stepney , London E1 4NS , United Kingdom",
+              "institution_ids": [
+                "https://openalex.org/I166337079"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Abstract": [
+          0
+        ],
+        "We": [
+          1
+        ],
+        "make": [
+          2
+        ],
+        "the": [
+          3,
+          7,
+          40,
+          56,
+          65,
+          69,
+          74
+        ],
+        "polynomial": [
+          4
+        ],
+        "dependence": [
+          5
+        ],
+        "on": [
+          6
+        ],
+        "fixed": [
+          8
+        ],
+        "representation": [
+          9
+        ],
+        "π": [
+          10,
+          23,
+          46
+        ],
+        "in": [
+          11,
+          37,
+          88
+        ],
+        "our": [
+          12
+        ],
+        "previous": [
+          13
+        ],
+        "subconvex": [
+          14
+        ],
+        "bound": [
+          15
+        ],
+        "of": [
+          16,
+          39,
+          64,
+          84
+        ],
+        "L": [
+          17
+        ],
+        "⁢": [
+          18,
+          44
+        ],
+        "(": [
+          19,
+          45
+        ],
+        "1": [
+          20,
+          33
+        ],
+        "2": [
+          21,
+          30
+        ],
+        ",": [
+          22
+        ],
+        "⊗": [
+          24
+        ],
+        "χ": [
+          25
+        ],
+        ")": [
+          26,
+          48
+        ],
+        "{L(\\frac{1}{2},\\pi\\otimes\\chi)}": [
+          27
+        ],
+        "for": [
+          28
+        ],
+        "GL": [
+          29,
+          32
+        ],
+        "×": [
+          31
+        ],
+        "{\\mathrm{GL}_{2}\\times\\mathrm{GL}_{1}}": [
+          34
+        ],
+        "explicit,": [
+          35
+        ],
+        "especially": [
+          36
+        ],
+        "terms": [
+          38
+        ],
+        "usual": [
+          41
+        ],
+        "conductor": [
+          42
+        ],
+        "𝐂": [
+          43
+        ],
+        "fin": [
+          47
+        ],
+        "{\\mathbf{C}(\\pi_{\\mathrm{fin}})}": [
+          49
+        ],
+        ".": [
+          50
+        ],
+        "There": [
+          51
+        ],
+        "is": [
+          52
+        ],
+        "no": [
+          53
+        ],
+        "clue": [
+          54
+        ],
+        "that": [
+          55
+        ],
+        "original": [
+          57
+        ],
+        "choice,": [
+          58
+        ],
+        "due": [
+          59
+        ],
+        "to": [
+          60
+        ],
+        "Michel": [
+          61
+        ],
+        "and": [
+          62
+        ],
+        "Venkatesh,": [
+          63
+        ],
+        "test": [
+          66
+        ],
+        "function": [
+          67
+        ],
+        "at": [
+          68
+        ],
+        "infinite": [
+          70
+        ],
+        "places": [
+          71
+        ],
+        "should": [
+          72
+        ],
+        "be": [
+          73
+        ],
+        "optimal": [
+          75
+        ],
+        "one.": [
+          76
+        ],
+        "Hence": [
+          77
+        ],
+        "we": [
+          78
+        ],
+        "also": [
+          79
+        ],
+        "investigate": [
+          80
+        ],
+        "a": [
+          81
+        ],
+        "possible": [
+          82
+        ],
+        "variant": [
+          83
+        ],
+        "such": [
+          85
+        ],
+        "local": [
+          86
+        ],
+        "choices": [
+          87
+        ],
+        "some": [
+          89
+        ],
+        "special": [
+          90
+        ],
+        "situations.": [
+          91
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1515/forum-2019-0074",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1515/forum-2019-0074",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S64527569",
+            "display_name": "Forum Mathematicum",
+            "issn_l": "0933-7741",
+            "issn": [
+              "0933-7741",
+              "1435-5337"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310313990",
+            "host_organization_name": "De Gruyter",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310313990"
+            ],
+            "host_organization_lineage_names": [
+              "De Gruyter"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Forum Mathematicum",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:qmro.qmul.ac.uk:123456789/66966",
+          "is_oa": false,
+          "landing_page_url": "https://qmro.qmul.ac.uk/xmlui/handle/123456789/66966",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400530",
+            "display_name": "Queen Mary Research Online (Queen Mary University of London)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I166337079",
+            "host_organization_name": "Queen Mary University of London",
+            "host_organization_lineage": [
+              "https://openalex.org/I166337079"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "Article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W81199782",
+        "https://openalex.org/W86209192",
+        "https://openalex.org/W128423884",
+        "https://openalex.org/W225190052",
+        "https://openalex.org/W592816654",
+        "https://openalex.org/W1479878187",
+        "https://openalex.org/W1569861340",
+        "https://openalex.org/W1991174092",
+        "https://openalex.org/W1994957333",
+        "https://openalex.org/W2001729983",
+        "https://openalex.org/W2011877581",
+        "https://openalex.org/W2016713393",
+        "https://openalex.org/W2017195856",
+        "https://openalex.org/W2017769182",
+        "https://openalex.org/W2021884559",
+        "https://openalex.org/W2049006851",
+        "https://openalex.org/W2055972795",
+        "https://openalex.org/W2063670237",
+        "https://openalex.org/W2068502271",
+        "https://openalex.org/W2073088058",
+        "https://openalex.org/W2077334462",
+        "https://openalex.org/W2084558068",
+        "https://openalex.org/W2093995672",
+        "https://openalex.org/W2122210842",
+        "https://openalex.org/W2144493057",
+        "https://openalex.org/W2149702339",
+        "https://openalex.org/W2156948039",
+        "https://openalex.org/W2238544751",
+        "https://openalex.org/W2322923234",
+        "https://openalex.org/W2334582556",
+        "https://openalex.org/W2494624149",
+        "https://openalex.org/W2596323328",
+        "https://openalex.org/W2916031987",
+        "https://openalex.org/W2953178677",
+        "https://openalex.org/W2988221775",
+        "https://openalex.org/W2996654136",
+        "https://openalex.org/W3044858414",
+        "https://openalex.org/W3098157218",
+        "https://openalex.org/W3098227671",
+        "https://openalex.org/W3099454876",
+        "https://openalex.org/W3104659843",
+        "https://openalex.org/W4213035716",
+        "https://openalex.org/W4234295474",
+        "https://openalex.org/W4241267739",
+        "https://openalex.org/W4241271931",
+        "https://openalex.org/W4242310598",
+        "https://openalex.org/W4250932311",
+        "https://openalex.org/W4292310788",
+        "https://openalex.org/W4297814273",
+        "https://openalex.org/W6603860191"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2011877581",
+      "title": "Burgess-like Subconvex Bounds for GL2 × GL1",
+      "publication_year": 2014,
+      "doi": "https://doi.org/10.1007/s00039-014-0277-4",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5101774387",
+            "display_name": "Han Wu",
+            "orcid": "https://orcid.org/0000-0001-5140-3174"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I35440088",
+              "display_name": "ETH Zurich",
+              "ror": "https://ror.org/05a28rw58",
+              "country_code": "CH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I2799323385",
+                "https://openalex.org/I35440088"
+              ]
+            }
+          ],
+          "countries": [
+            "CH"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Han Wu",
+          "raw_affiliation_strings": [
+            "HG J 16.2, ETHZ D-Math, Rämistrasse 101, 8009, Zurich, Switzerland",
+            "ETHZ D-Math"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "HG J 16.2, ETHZ D-Math, Rämistrasse 101, 8009, Zurich, Switzerland",
+              "institution_ids": [
+                "https://openalex.org/I35440088"
+              ]
+            },
+            {
+              "raw_affiliation_string": "ETHZ D-Math",
+              "institution_ids": [
+                "https://openalex.org/I35440088"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "locations": [
+        {
+          "id": "doi:10.1007/s00039-014-0277-4",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1007/s00039-014-0277-4",
+          "pdf_url": "https://link.springer.com/content/pdf/10.1007/s00039-014-0277-4.pdf",
+          "source": {
+            "id": "https://openalex.org/S84214272",
+            "display_name": "Geometric and Functional Analysis",
+            "issn_l": "1016-443X",
+            "issn": [
+              "1016-443X",
+              "1420-8970"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320186",
+            "host_organization_name": "Birkhäuser",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320186",
+              "https://openalex.org/P4310319900"
+            ],
+            "host_organization_lineage_names": [
+              "Birkhäuser",
+              "Springer Science+Business Media"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Geometric and Functional Analysis",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:doc.rero.ch:325616",
+          "is_oa": false,
+          "landing_page_url": "http://doc.rero.ch/record/325616/files/39_2014_Article_277.pdf",
+          "pdf_url": "http://doc.rero.ch/record/325616/files/39_2014_Article_277.pdf",
+          "source": {
+            "id": "https://openalex.org/S4306400148",
+            "display_name": "reroDoc Digital Library",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I67311998",
+            "host_organization_name": "European Organization for Nuclear Research",
+            "host_organization_lineage": [
+              "https://openalex.org/I67311998"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": null
+        },
+        {
+          "id": "pmh:oai:CiteSeerX.psu:10.1.1.761.2290",
+          "is_oa": false,
+          "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.761.2290",
+          "pdf_url": null,
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "http://arxiv.org/pdf/1209.5950.pdf",
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:www.research-collection.ethz.ch:20.500.11850/383377",
+          "is_oa": true,
+          "landing_page_url": "http://hdl.handle.net/20.500.11850/383377",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306402302",
+            "display_name": "Repository for Publications and Research Data (ETH Zurich)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I35440088",
+            "host_organization_name": "ETH Zurich",
+            "host_organization_lineage": [
+              "https://openalex.org/I35440088"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "other-oa",
+          "license_id": "https://openalex.org/licenses/other-oa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Geometric and Functional Analysis, 24 (3)",
+          "raw_type": "info:eu-repo/semantics/article"
+        },
+        {
+          "id": "doi:10.3929/ethz-b-000383377",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.3929/ethz-b-000383377",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S7407051236",
+            "display_name": "ETH Zürich Research Collection",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W86209192",
+        "https://openalex.org/W128423884",
+        "https://openalex.org/W585486578",
+        "https://openalex.org/W608251548",
+        "https://openalex.org/W619969954",
+        "https://openalex.org/W633745213",
+        "https://openalex.org/W1479878187",
+        "https://openalex.org/W1493995528",
+        "https://openalex.org/W1501162952",
+        "https://openalex.org/W1569861340",
+        "https://openalex.org/W1590252182",
+        "https://openalex.org/W1598666130",
+        "https://openalex.org/W1994957333",
+        "https://openalex.org/W2001729983",
+        "https://openalex.org/W2005376004",
+        "https://openalex.org/W2015503675",
+        "https://openalex.org/W2023357522",
+        "https://openalex.org/W2055584616",
+        "https://openalex.org/W2055972795",
+        "https://openalex.org/W2063670237",
+        "https://openalex.org/W2094438648",
+        "https://openalex.org/W2109378982",
+        "https://openalex.org/W2122210842",
+        "https://openalex.org/W2127409294",
+        "https://openalex.org/W2137851278",
+        "https://openalex.org/W2149702339",
+        "https://openalex.org/W2150741020",
+        "https://openalex.org/W2156948039",
+        "https://openalex.org/W2159481865",
+        "https://openalex.org/W2166070389",
+        "https://openalex.org/W2168983032",
+        "https://openalex.org/W2329045778",
+        "https://openalex.org/W2494624149",
+        "https://openalex.org/W2496643158",
+        "https://openalex.org/W2801179766",
+        "https://openalex.org/W2802618454",
+        "https://openalex.org/W2907601391",
+        "https://openalex.org/W2964097489"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2001729983",
+      "title": "Sparse equidistribution problems, period bounds and subconvexity",
+      "publication_year": 2010,
+      "doi": "https://doi.org/10.4007/annals.2010.172.989",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5066089199",
+            "display_name": "Akshay Venkatesh",
+            "orcid": "https://orcid.org/0000-0003-1648-484X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I97018004",
+              "display_name": "Stanford University",
+              "ror": "https://ror.org/00f54p054",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Akshay Venkatesh",
+          "raw_affiliation_strings": [
+            "Department of Mathematics<br/>Building 380<br/>Stanford University<br/>Palo Alto, CA 94305<br/>United States",
+            "Department of MathematicsBuilding 380Stanford UniversityPalo Alto, CA 94305United States"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics<br/>Building 380<br/>Stanford University<br/>Palo Alto, CA 94305<br/>United States",
+              "institution_ids": [
+                "https://openalex.org/I97018004"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of MathematicsBuilding 380Stanford UniversityPalo Alto, CA 94305United States",
+              "institution_ids": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "We": [
+          0
+        ],
+        "introduce": [
+          1
+        ],
+        "a": [
+          2
+        ],
+        "\"geometric\"": [
+          3
+        ],
+        "method": [
+          4,
+          15
+        ],
+        "to": [
+          5,
+          40,
+          48,
+          53,
+          77
+        ],
+        "bound": [
+          6
+        ],
+        "periods": [
+          7
+        ],
+        "of": [
+          8,
+          13,
+          19,
+          24,
+          32,
+          42,
+          45,
+          50,
+          55,
+          81
+        ],
+        "automorphic": [
+          9,
+          82
+        ],
+        "forms.The": [
+          10
+        ],
+        "key": [
+          11
+        ],
+        "features": [
+          12
+        ],
+        "this": [
+          14
+        ],
+        "are": [
+          16,
+          38
+        ],
+        "the": [
+          17,
+          29,
+          35,
+          56,
+          61
+        ],
+        "use": [
+          18,
+          31
+        ],
+        "equidistribution": [
+          20,
+          41,
+          49
+        ],
+        "results": [
+          21
+        ],
+        "in": [
+          22,
+          60
+        ],
+        "place": [
+          23
+        ],
+        "mean": [
+          25
+        ],
+        "value": [
+          26
+        ],
+        "theorems,": [
+          27
+        ],
+        "and": [
+          28,
+          34,
+          47,
+          73,
+          76
+        ],
+        "systematic": [
+          30
+        ],
+        "mixing": [
+          33
+        ],
+        "spectral": [
+          36
+        ],
+        "gap.Applications": [
+          37
+        ],
+        "given": [
+          39
+        ],
+        "sparse": [
+          43
+        ],
+        "subsets": [
+          44
+        ],
+        "horocycles": [
+          46
+        ],
+        "CM": [
+          51
+        ],
+        "points;": [
+          52
+        ],
+        "subconvexity": [
+          54,
+          69
+        ],
+        "triple": [
+          57
+        ],
+        "product": [
+          58
+        ],
+        "period": [
+          59
+        ],
+        "level": [
+          62
+        ],
+        "aspect": [
+          63
+        ],
+        "over": [
+          64
+        ],
+        "number": [
+          65
+        ],
+        "fields,": [
+          66
+        ],
+        "which": [
+          67
+        ],
+        "implies": [
+          68
+        ],
+        "for": [
+          70
+        ],
+        "certain": [
+          71
+        ],
+        "standard": [
+          72
+        ],
+        "Rankin-Selberg": [
+          74
+        ],
+        "L-functions;": [
+          75
+        ],
+        "bounding": [
+          78
+        ],
+        "Fourier": [
+          79
+        ],
+        "coefficients": [
+          80
+        ],
+        "forms.": [
+          83
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.4007/annals.2010.172.989",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.4007/annals.2010.172.989",
+          "pdf_url": "http://annals.math.princeton.edu/wp-content/uploads/annals-v172-n2-p05-p.pdf",
+          "source": {
+            "id": "https://openalex.org/S45918994",
+            "display_name": "Annals of Mathematics",
+            "issn_l": "0003-486X",
+            "issn": [
+              "0003-486X",
+              "1939-8980"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310316273",
+            "host_organization_name": "Princeton University",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310316273"
+            ],
+            "host_organization_lineage_names": [
+              "Princeton University"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Annals of Mathematics",
+          "raw_type": "journal-article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W39931892",
+        "https://openalex.org/W61367715",
+        "https://openalex.org/W86209192",
+        "https://openalex.org/W115307847",
+        "https://openalex.org/W599328202",
+        "https://openalex.org/W1493995528",
+        "https://openalex.org/W1511486396",
+        "https://openalex.org/W1522152670",
+        "https://openalex.org/W1559433202",
+        "https://openalex.org/W1765362021",
+        "https://openalex.org/W1831906308",
+        "https://openalex.org/W1985159660",
+        "https://openalex.org/W1985754469",
+        "https://openalex.org/W1989372125",
+        "https://openalex.org/W1994752010",
+        "https://openalex.org/W2004466230",
+        "https://openalex.org/W2005376004",
+        "https://openalex.org/W2011423676",
+        "https://openalex.org/W2017455427",
+        "https://openalex.org/W2025687730",
+        "https://openalex.org/W2029874196",
+        "https://openalex.org/W2030914290",
+        "https://openalex.org/W2039971622",
+        "https://openalex.org/W2047437527",
+        "https://openalex.org/W2052874360",
+        "https://openalex.org/W2053652533",
+        "https://openalex.org/W2058429745",
+        "https://openalex.org/W2063670237",
+        "https://openalex.org/W2083946017",
+        "https://openalex.org/W2087392124",
+        "https://openalex.org/W2093679150",
+        "https://openalex.org/W2093995672",
+        "https://openalex.org/W2099333723",
+        "https://openalex.org/W2125825082",
+        "https://openalex.org/W2127409294",
+        "https://openalex.org/W2138706159",
+        "https://openalex.org/W2146198222",
+        "https://openalex.org/W2159481865",
+        "https://openalex.org/W2166070389",
+        "https://openalex.org/W2277535877",
+        "https://openalex.org/W2322923234",
+        "https://openalex.org/W2490333269",
+        "https://openalex.org/W2949077654",
+        "https://openalex.org/W2988221775",
+        "https://openalex.org/W3023694340",
+        "https://openalex.org/W3099855963",
+        "https://openalex.org/W4244758685",
+        "https://openalex.org/W4252668872",
+        "https://openalex.org/W4298724296"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2041707243",
+      "title": "Loop-generated bounds on changes to the graviton dispersion relation",
+      "publication_year": 2002,
+      "doi": "https://doi.org/10.1088/1126-6708/2002/03/043",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": null,
+            "display_name": "Cliff P Burgess",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I5023651",
+              "display_name": "McGill University",
+              "ror": "https://ror.org/01pxwe438",
+              "country_code": "CA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I5023651"
+              ]
+            }
+          ],
+          "countries": [
+            "CA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Cliff P Burgess",
+          "raw_affiliation_strings": [
+            "Physics Department, McGill University, 3600 University Street, Montréal, Québec, Canada H3A 2T8"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Physics Department, McGill University, 3600 University Street, Montréal, Québec, Canada H3A 2T8",
+              "institution_ids": [
+                "https://openalex.org/I5023651"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "James M Cline",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I5023651",
+              "display_name": "McGill University",
+              "ror": "https://ror.org/01pxwe438",
+              "country_code": "CA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I5023651"
+              ]
+            }
+          ],
+          "countries": [
+            "CA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "James M Cline",
+          "raw_affiliation_strings": [
+            "Physics Department, McGill University, 3600 University Street, Montréal, Québec, Canada H3A 2T8"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Physics Department, McGill University, 3600 University Street, Montréal, Québec, Canada H3A 2T8",
+              "institution_ids": [
+                "https://openalex.org/I5023651"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "E Filotas",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I5023651",
+              "display_name": "McGill University",
+              "ror": "https://ror.org/01pxwe438",
+              "country_code": "CA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I5023651"
+              ]
+            }
+          ],
+          "countries": [
+            "CA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "E Filotas",
+          "raw_affiliation_strings": [
+            "Physics Department, McGill University, 3600 University Street, Montréal, Québec, Canada H3A 2T8"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Physics Department, McGill University, 3600 University Street, Montréal, Québec, Canada H3A 2T8",
+              "institution_ids": [
+                "https://openalex.org/I5023651"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Joaquim Matias",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I123044942",
+              "display_name": "Universitat Autònoma de Barcelona",
+              "ror": "https://ror.org/052g8jq94",
+              "country_code": "ES",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I123044942"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I187453708",
+              "display_name": "Institute for High Energy Physics",
+              "ror": "https://ror.org/01sdrjx85",
+              "country_code": "ES",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I187453708",
+                "https://openalex.org/I4210132884",
+                "https://openalex.org/I4387153040"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Joaquim Matias",
+          "raw_affiliation_strings": [
+            "IFAE, Universitat Autònoma de Barcelona, Spain"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "IFAE, Universitat Autònoma de Barcelona, Spain",
+              "institution_ids": [
+                "https://openalex.org/I123044942",
+                "https://openalex.org/I187453708"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": null,
+            "display_name": "Guy D Moore",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I201448701",
+              "display_name": "University of Washington",
+              "ror": "https://ror.org/00cvxb145",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I201448701"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Guy D Moore",
+          "raw_affiliation_strings": [
+            "Department of Physics, University of Washington, Seattle, WA 98195, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Physics, University of Washington, Seattle, WA 98195, USA",
+              "institution_ids": [
+                "https://openalex.org/I201448701"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "locations": [
+        {
+          "id": "doi:10.1088/1126-6708/2002/03/043",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1088/1126-6708/2002/03/043",
+          "pdf_url": "https://iopscience.iop.org/article/10.1088/1126-6708/2002/03/043/pdf",
+          "source": {
+            "id": "https://openalex.org/S187585107",
+            "display_name": "Journal of High Energy Physics",
+            "issn_l": "1029-8479",
+            "issn": [
+              "1029-8479",
+              "1126-6708",
+              "1127-2236"
+            ],
+            "is_oa": false,
+            "is_in_doaj": true,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319965",
+            "host_organization_name": "Springer Nature",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of High Energy Physics",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:hep-ph/0201082",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/hep-ph/0201082",
+          "pdf_url": "https://arxiv.org/pdf/hep-ph/0201082",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W1483324778",
+        "https://openalex.org/W1520275548",
+        "https://openalex.org/W1584759710",
+        "https://openalex.org/W1787345726",
+        "https://openalex.org/W1871062899",
+        "https://openalex.org/W1963955123",
+        "https://openalex.org/W1967659247",
+        "https://openalex.org/W1976355716",
+        "https://openalex.org/W1977230275",
+        "https://openalex.org/W1980197196",
+        "https://openalex.org/W1989042934",
+        "https://openalex.org/W1993478589",
+        "https://openalex.org/W1994794528",
+        "https://openalex.org/W1996241171",
+        "https://openalex.org/W1997009066",
+        "https://openalex.org/W1999305768",
+        "https://openalex.org/W2011725809",
+        "https://openalex.org/W2015658332",
+        "https://openalex.org/W2017978462",
+        "https://openalex.org/W2017995128",
+        "https://openalex.org/W2023046246",
+        "https://openalex.org/W2027413505",
+        "https://openalex.org/W2039911906",
+        "https://openalex.org/W2043840649",
+        "https://openalex.org/W2044644075",
+        "https://openalex.org/W2046214284",
+        "https://openalex.org/W2048436363",
+        "https://openalex.org/W2058721345",
+        "https://openalex.org/W2064777467",
+        "https://openalex.org/W2070132262",
+        "https://openalex.org/W2070481679",
+        "https://openalex.org/W2070546408",
+        "https://openalex.org/W2081603144",
+        "https://openalex.org/W2082201729",
+        "https://openalex.org/W2085099209",
+        "https://openalex.org/W2085401057",
+        "https://openalex.org/W2086924538",
+        "https://openalex.org/W2087260008",
+        "https://openalex.org/W2088189934",
+        "https://openalex.org/W2095721433",
+        "https://openalex.org/W2097455345",
+        "https://openalex.org/W2104121390",
+        "https://openalex.org/W2108973526",
+        "https://openalex.org/W2109710855",
+        "https://openalex.org/W2116429900",
+        "https://openalex.org/W2122806095",
+        "https://openalex.org/W2129654651",
+        "https://openalex.org/W2132214225",
+        "https://openalex.org/W2139721284",
+        "https://openalex.org/W2140123438",
+        "https://openalex.org/W2148545031",
+        "https://openalex.org/W2149558418",
+        "https://openalex.org/W2149939727",
+        "https://openalex.org/W2153515171",
+        "https://openalex.org/W2154569475",
+        "https://openalex.org/W2154749491",
+        "https://openalex.org/W2156809759",
+        "https://openalex.org/W2165191843",
+        "https://openalex.org/W2175680116",
+        "https://openalex.org/W2263521229",
+        "https://openalex.org/W2952466800",
+        "https://openalex.org/W3094118413"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2046515453",
+      "title": "Towards an explicit model of D-brane inflation",
+      "publication_year": 2008,
+      "doi": "https://doi.org/10.1088/1475-7516/2008/01/024",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": null,
+            "display_name": "Daniel Baumann",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I20089843",
+              "display_name": "Princeton University",
+              "ror": "https://ror.org/00hx57361",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I20089843"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Daniel Baumann",
+          "raw_affiliation_strings": [
+            "Department of Physics, Princeton University, Princeton, NJ 08544, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Physics, Princeton University, Princeton, NJ 08544, USA",
+              "institution_ids": [
+                "https://openalex.org/I20089843"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Anatoly Dymarsky",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I20089843",
+              "display_name": "Princeton University",
+              "ror": "https://ror.org/00hx57361",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I20089843"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Anatoly Dymarsky",
+          "raw_affiliation_strings": [
+            "Department of Physics, Princeton University, Princeton, NJ 08544, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Physics, Princeton University, Princeton, NJ 08544, USA",
+              "institution_ids": [
+                "https://openalex.org/I20089843"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Igor R Klebanov",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I20089843",
+              "display_name": "Princeton University",
+              "ror": "https://ror.org/00hx57361",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I20089843"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Igor R Klebanov",
+          "raw_affiliation_strings": [
+            "Department of Physics, Princeton University, Princeton, NJ 08544, USA",
+            "Princeton Center for Theoretical Physics, Princeton University, Princeton, NJ 08544, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Physics, Princeton University, Princeton, NJ 08544, USA",
+              "institution_ids": [
+                "https://openalex.org/I20089843"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Princeton Center for Theoretical Physics, Princeton University, Princeton, NJ 08544, USA",
+              "institution_ids": [
+                "https://openalex.org/I20089843"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": null,
+            "display_name": "Liam McAllister",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I20089843",
+              "display_name": "Princeton University",
+              "ror": "https://ror.org/00hx57361",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I20089843"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Liam McAllister",
+          "raw_affiliation_strings": [
+            "Department of Physics, Princeton University, Princeton, NJ 08544, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Physics, Princeton University, Princeton, NJ 08544, USA",
+              "institution_ids": [
+                "https://openalex.org/I20089843"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "We": [
+          0,
+          19,
+          125,
+          154
+        ],
+        "present": [
+          1,
+          76
+        ],
+        "a": [
+          2,
+          27,
+          65,
+          77
+        ],
+        "detailed": [
+          3
+        ],
+        "analysis": [
+          4
+        ],
+        "of": [
+          5,
+          9,
+          16,
+          85,
+          151,
+          159,
+          189
+        ],
+        "an": [
+          6,
+          180
+        ],
+        "explicit": [
+          7
+        ],
+        "model": [
+          8
+        ],
+        "warped": [
+          10,
+          28
+        ],
+        "D-brane": [
+          11
+        ],
+        "inflation,": [
+          12
+        ],
+        "incorporating": [
+          13
+        ],
+        "the": [
+          14,
+          21,
+          43,
+          47,
+          54,
+          58,
+          69,
+          82,
+          93,
+          113,
+          116,
+          122,
+          128,
+          135,
+          138,
+          149,
+          157,
+          160,
+          187,
+          199
+        ],
+        "effects": [
+          15
+        ],
+        "moduli": [
+          17,
+          40
+        ],
+        "stabilization.": [
+          18,
+          41
+        ],
+        "consider": [
+          20
+        ],
+        "potential": [
+          22,
+          94,
+          163
+        ],
+        "for": [
+          23,
+          102
+        ],
+        "D3-brane": [
+          24,
+          123
+        ],
+        "motion": [
+          25
+        ],
+        "in": [
+          26,
+          39,
+          57,
+          68,
+          91,
+          137,
+          168,
+          171,
+          194
+        ],
+        "conifold": [
+          29
+        ],
+        "background": [
+          30
+        ],
+        "that": [
+          31,
+          115,
+          127,
+          156
+        ],
+        "includes": [
+          32
+        ],
+        "fluxes": [
+          33
+        ],
+        "and": [
+          34,
+          60,
+          141
+        ],
+        "holomorphically": [
+          35
+        ],
+        "embedded": [
+          36
+        ],
+        "D7-branes": [
+          37,
+          44
+        ],
+        "involved": [
+          38
+        ],
+        "Although": [
+          42
+        ],
+        "significantly": [
+          45
+        ],
+        "modify": [
+          46
+        ],
+        "inflaton": [
+          48,
+          139,
+          162
+        ],
+        "potential,": [
+          49,
+          59
+        ],
+        "they": [
+          50
+        ],
+        "do": [
+          51,
+          62
+        ],
+        "not": [
+          52,
+          63
+        ],
+        "correct": [
+          53
+        ],
+        "quadratic": [
+          55
+        ],
+        "term": [
+          56
+        ],
+        "hence": [
+          61
+        ],
+        "cause": [
+          64
+        ],
+        "uniform": [
+          66
+        ],
+        "change": [
+          67
+        ],
+        "slow": [
+          70
+        ],
+        "roll": [
+          71
+        ],
+        "parameter": [
+          72
+        ],
+        "eta.": [
+          73
+        ],
+        "Nevertheless,": [
+          74
+        ],
+        "we": [
+          75,
+          184
+        ],
+        "simple": [
+          78
+        ],
+        "example": [
+          79
+        ],
+        "based": [
+          80
+        ],
+        "on": [
+          81,
+          148,
+          186
+        ],
+        "Kuperstein": [
+          83
+        ],
+        "embedding": [
+          84
+        ],
+        "D7-branes,": [
+          86
+        ],
+        "z": [
+          87
+        ],
+        "1": [
+          88
+        ],
+        "=": [
+          89
+        ],
+        "constant,": [
+          90
+        ],
+        "which": [
+          92
+        ],
+        "can": [
+          95
+        ],
+        "be": [
+          96,
+          99
+        ],
+        "fine-tuned": [
+          97
+        ],
+        "to": [
+          98,
+          111,
+          202
+        ],
+        "sufficiently": [
+          100
+        ],
+        "flat": [
+          101
+        ],
+        "inflation.": [
+          103
+        ],
+        "To": [
+          104
+        ],
+        "derive": [
+          105
+        ],
+        "this": [
+          106,
+          195
+        ],
+        "result,": [
+          107
+        ],
+        "it": [
+          108,
+          176
+        ],
+        "is": [
+          109,
+          198
+        ],
+        "essential": [
+          110
+        ],
+        "incorporate": [
+          112
+        ],
+        "fact": [
+          114
+        ],
+        "compactification": [
+          117,
+          129
+        ],
+        "volume": [
+          118
+        ],
+        "changes": [
+          119
+        ],
+        "slightly": [
+          120
+        ],
+        "as": [
+          121
+        ],
+        "moves.": [
+          124
+        ],
+        "stress": [
+          126
+        ],
+        "geometry": [
+          130
+        ],
+        "dictates": [
+          131
+        ],
+        "certain": [
+          132
+        ],
+        "relationships": [
+          133
+        ],
+        "among": [
+          134
+        ],
+        "parameters": [
+          136
+        ],
+        "Lagrangian,": [
+          140
+        ],
+        "these": [
+          142
+        ],
+        "microscopic": [
+          143
+        ],
+        "constraints": [
+          144
+        ],
+        "impose": [
+          145
+        ],
+        "severe": [
+          146
+        ],
+        "restrictions": [
+          147
+        ],
+        "space": [
+          150
+        ],
+        "possible": [
+          152
+        ],
+        "models.": [
+          153
+        ],
+        "note": [
+          155
+        ],
+        "shape": [
+          158
+        ],
+        "final": [
+          161
+        ],
+        "differs": [
+          164
+        ],
+        "from": [
+          165
+        ],
+        "projections": [
+          166
+        ],
+        "given": [
+          167
+        ],
+        "earlier": [
+          169
+        ],
+        "studies:": [
+          170
+        ],
+        "configurations": [
+          172
+        ],
+        "where": [
+          173
+        ],
+        "inflation": [
+          174
+        ],
+        "occurs,": [
+          175
+        ],
+        "does": [
+          177
+        ],
+        "so": [
+          178
+        ],
+        "near": [
+          179
+        ],
+        "inflection": [
+          181
+        ],
+        "point.": [
+          182
+        ],
+        "Finally,": [
+          183
+        ],
+        "comment": [
+          185
+        ],
+        "difficulty": [
+          188
+        ],
+        "making": [
+          190
+        ],
+        "precise": [
+          191
+        ],
+        "cosmological": [
+          192
+        ],
+        "predictions": [
+          193
+        ],
+        "scenario.": [
+          196
+        ],
+        "This": [
+          197
+        ],
+        "companion": [
+          200
+        ],
+        "paper": [
+          201
+        ],
+        "Baumann": [
+          203
+        ],
+        "et": [
+          204
+        ],
+        "al": [
+          205
+        ],
+        "(2007": [
+          206
+        ],
+        "Phys.": [
+          207
+        ],
+        "Rev.": [
+          208
+        ],
+        "Lett.": [
+          209
+        ],
+        "99": [
+          210
+        ],
+        "141601).": [
+          211
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1088/1475-7516/2008/01/024",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1088/1475-7516/2008/01/024",
+          "pdf_url": "https://iopscience.iop.org/article/10.1088/1475-7516/2008/01/024/pdf",
+          "source": {
+            "id": "https://openalex.org/S120662888",
+            "display_name": "Journal of Cosmology and Astroparticle Physics",
+            "issn_l": "1475-7508",
+            "issn": [
+              "1475-7508",
+              "1475-7516"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310311669",
+            "host_organization_name": "Institute of Physics",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311669"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Physics"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of Cosmology and Astroparticle Physics",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:0706.0360",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/0706.0360",
+          "pdf_url": "https://arxiv.org/pdf/0706.0360",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W1530009924",
+        "https://openalex.org/W1973687992",
+        "https://openalex.org/W1973861971",
+        "https://openalex.org/W1976745948",
+        "https://openalex.org/W1980314653",
+        "https://openalex.org/W1981237181",
+        "https://openalex.org/W1987963326",
+        "https://openalex.org/W1994544882",
+        "https://openalex.org/W1998218865",
+        "https://openalex.org/W2001117132",
+        "https://openalex.org/W2006187459",
+        "https://openalex.org/W2011805257",
+        "https://openalex.org/W2012869970",
+        "https://openalex.org/W2019811379",
+        "https://openalex.org/W2020332468",
+        "https://openalex.org/W2020898950",
+        "https://openalex.org/W2025622883",
+        "https://openalex.org/W2029309125",
+        "https://openalex.org/W2038142459",
+        "https://openalex.org/W2038949017",
+        "https://openalex.org/W2045210744",
+        "https://openalex.org/W2048151239",
+        "https://openalex.org/W2050181380",
+        "https://openalex.org/W2053126470",
+        "https://openalex.org/W2053782529",
+        "https://openalex.org/W2058074741",
+        "https://openalex.org/W2062975387",
+        "https://openalex.org/W2064460896",
+        "https://openalex.org/W2070443561",
+        "https://openalex.org/W2075844629",
+        "https://openalex.org/W2084282513",
+        "https://openalex.org/W2086623448",
+        "https://openalex.org/W2086683048",
+        "https://openalex.org/W2088256333",
+        "https://openalex.org/W2096730833",
+        "https://openalex.org/W2101701105",
+        "https://openalex.org/W2118265220",
+        "https://openalex.org/W2124120236",
+        "https://openalex.org/W2125835296",
+        "https://openalex.org/W2131527276",
+        "https://openalex.org/W2134251287",
+        "https://openalex.org/W2137347284",
+        "https://openalex.org/W2145530412",
+        "https://openalex.org/W2160429198",
+        "https://openalex.org/W2173328249",
+        "https://openalex.org/W2942383886",
+        "https://openalex.org/W3020939834",
+        "https://openalex.org/W3038127721"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2765219784",
+      "title": "Improved positivity bounds and massive gravity",
+      "publication_year": 2018,
+      "doi": "https://doi.org/10.1007/jhep04(2018)083",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5032507670",
+            "display_name": "Claudia de Rham",
+            "orcid": "https://orcid.org/0000-0002-6183-1030"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I47508984",
+              "display_name": "Imperial College London",
+              "ror": "https://ror.org/041kmwe10",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I47508984"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I58956616",
+              "display_name": "Case Western Reserve University",
+              "ror": "https://ror.org/051fd9666",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I58956616"
+              ]
+            }
+          ],
+          "countries": [
+            "GB",
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Claudia de Rham",
+          "raw_affiliation_strings": [
+            "CERCA, Department of Physics, Case Western Reserve University, 10900 Euclid Ave, Cleveland, OH, 44106, U.S.A",
+            "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "CERCA, Department of Physics, Case Western Reserve University, 10900 Euclid Ave, Cleveland, OH, 44106, U.S.A",
+              "institution_ids": [
+                "https://openalex.org/I58956616"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K",
+              "institution_ids": [
+                "https://openalex.org/I47508984"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5039468080",
+            "display_name": "Scott Melville",
+            "orcid": "https://orcid.org/0000-0003-3516-856X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I47508984",
+              "display_name": "Imperial College London",
+              "ror": "https://ror.org/041kmwe10",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I47508984"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Scott Melville",
+          "raw_affiliation_strings": [
+            "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K",
+              "institution_ids": [
+                "https://openalex.org/I47508984"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5041717673",
+            "display_name": "Andrew J. Tolley",
+            "orcid": "https://orcid.org/0000-0002-3608-7414"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I47508984",
+              "display_name": "Imperial College London",
+              "ror": "https://ror.org/041kmwe10",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I47508984"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I58956616",
+              "display_name": "Case Western Reserve University",
+              "ror": "https://ror.org/051fd9666",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I58956616"
+              ]
+            }
+          ],
+          "countries": [
+            "GB",
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Andrew J. Tolley",
+          "raw_affiliation_strings": [
+            "CERCA, Department of Physics, Case Western Reserve University, 10900 Euclid Ave, Cleveland, OH, 44106, U.S.A",
+            "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "CERCA, Department of Physics, Case Western Reserve University, 10900 Euclid Ave, Cleveland, OH, 44106, U.S.A",
+              "institution_ids": [
+                "https://openalex.org/I58956616"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K",
+              "institution_ids": [
+                "https://openalex.org/I47508984"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Abstract": [
+          0
+        ],
+        "Theories": [
+          1
+        ],
+        "such": [
+          2
+        ],
+        "as": [
+          3
+        ],
+        "massive": [
+          4,
+          7,
+          37,
+          43,
+          71
+        ],
+        "Galileons": [
+          5
+        ],
+        "and": [
+          6,
+          45,
+          56,
+          106
+        ],
+        "gravity": [
+          8,
+          38,
+          72
+        ],
+        "can": [
+          9
+        ],
+        "satisfy": [
+          10
+        ],
+        "the": [
+          11,
+          24,
+          27,
+          42,
+          47,
+          53,
+          57,
+          67,
+          88,
+          92,
+          98,
+          108,
+          121,
+          128
+        ],
+        "presently": [
+          12
+        ],
+        "known": [
+          13
+        ],
+        "improved": [
+          14,
+          93
+        ],
+        "positivity": [
+          15,
+          58,
+          94
+        ],
+        "bounds": [
+          16,
+          114
+        ],
+        "provided": [
+          17
+        ],
+        "they": [
+          18
+        ],
+        "are": [
+          19,
+          115
+        ],
+        "weakly": [
+          20,
+          32
+        ],
+        "coupled.": [
+          21
+        ],
+        "We": [
+          22,
+          85
+        ],
+        "discuss": [
+          23,
+          107
+        ],
+        "form": [
+          25
+        ],
+        "of": [
+          26,
+          36,
+          50,
+          70,
+          91,
+          118
+        ],
+        "EFT": [
+          28,
+          99
+        ],
+        "Lagrangian": [
+          29
+        ],
+        "for": [
+          30
+        ],
+        "a": [
+          31
+        ],
+        "coupled": [
+          33
+        ],
+        "UV": [
+          34
+        ],
+        "completion": [
+          35
+        ],
+        "which": [
+          39,
+          63
+        ],
+        "closely": [
+          40
+        ],
+        "parallels": [
+          41
+        ],
+        "Galileon,": [
+          44
+        ],
+        "perform": [
+          46
+        ],
+        "power": [
+          48
+        ],
+        "counting": [
+          49
+        ],
+        "corrections": [
+          51
+        ],
+        "to": [
+          52,
+          66,
+          124
+        ],
+        "scattering": [
+          54
+        ],
+        "amplitude": [
+          55
+        ],
+        "bounds.": [
+          59
+        ],
+        "The": [
+          60
+        ],
+        "Vainshtein": [
+          61
+        ],
+        "mechanism": [
+          62
+        ],
+        "is": [
+          64,
+          73,
+          81,
+          96,
+          101
+        ],
+        "central": [
+          65
+        ],
+        "phenomenological": [
+          68
+        ],
+        "viability": [
+          69
+        ],
+        "entirely": [
+          74
+        ],
+        "consistent": [
+          75
+        ],
+        "with": [
+          76
+        ],
+        "weak": [
+          77
+        ],
+        "coupling": [
+          78
+        ],
+        "since": [
+          79
+        ],
+        "it": [
+          80
+        ],
+        "classical": [
+          82
+        ],
+        "in": [
+          83,
+          127
+        ],
+        "nature.": [
+          84
+        ],
+        "highlight": [
+          86
+        ],
+        "that": [
+          87,
+          97,
+          112
+        ],
+        "only": [
+          89
+        ],
+        "implication": [
+          90
+        ],
+        "constraints": [
+          95
+        ],
+        "cutoff": [
+          100
+        ],
+        "lower": [
+          102
+        ],
+        "than": [
+          103
+        ],
+        "previous": [
+          104,
+          125
+        ],
+        "assumed,": [
+          105
+        ],
+        "observable": [
+          109
+        ],
+        "implications,": [
+          110
+        ],
+        "emphasizing": [
+          111
+        ],
+        "these": [
+          113
+        ],
+        "not": [
+          116
+        ],
+        "capable": [
+          117
+        ],
+        "ruling": [
+          119
+        ],
+        "out": [
+          120
+        ],
+        "model": [
+          122
+        ],
+        "contrary": [
+          123
+        ],
+        "statements": [
+          126
+        ],
+        "literature.": [
+          129
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1007/jhep04(2018)083",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1007/jhep04(2018)083",
+          "pdf_url": "https://link.springer.com/content/pdf/10.1007/JHEP04(2018)083.pdf",
+          "source": {
+            "id": "https://openalex.org/S187585107",
+            "display_name": "Journal of High Energy Physics",
+            "issn_l": "1029-8479",
+            "issn": [
+              "1029-8479",
+              "1126-6708",
+              "1127-2236"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319965",
+            "host_organization_name": "Springer Nature",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of High Energy Physics",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:1710.09611",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/1710.09611",
+          "pdf_url": "https://arxiv.org/pdf/1710.09611",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:doaj.org/article:372400c20900473c985f9383a0e4bc36",
+          "is_oa": true,
+          "landing_page_url": "https://doaj.org/article/372400c20900473c985f9383a0e4bc36",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306401280",
+            "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-sa",
+          "license_id": "https://openalex.org/licenses/cc-by-sa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Journal of High Energy Physics, Vol 2018, Iss 4, Pp 1-30 (2018)",
+          "raw_type": "article"
+        },
+        {
+          "id": "pmh:oai:spiral.imperial.ac.uk:10044/1/58871",
+          "is_oa": true,
+          "landing_page_url": "http://hdl.handle.net/10044/1/58871",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306401396",
+            "display_name": "Spiral (Imperial College London)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I47508984",
+            "host_organization_name": "Imperial College London",
+            "host_organization_lineage": [
+              "https://openalex.org/I47508984"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "Journal Article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W1494757178",
+        "https://openalex.org/W1514029180",
+        "https://openalex.org/W1975408345",
+        "https://openalex.org/W1977300244",
+        "https://openalex.org/W1980065152",
+        "https://openalex.org/W1991371905",
+        "https://openalex.org/W1996930794",
+        "https://openalex.org/W2012187906",
+        "https://openalex.org/W2034466567",
+        "https://openalex.org/W2040024728",
+        "https://openalex.org/W2042170057",
+        "https://openalex.org/W2043908961",
+        "https://openalex.org/W2061277511",
+        "https://openalex.org/W2063255542",
+        "https://openalex.org/W2073339892",
+        "https://openalex.org/W2080992744",
+        "https://openalex.org/W2087222418",
+        "https://openalex.org/W2097968935",
+        "https://openalex.org/W2107637722",
+        "https://openalex.org/W2114832931",
+        "https://openalex.org/W2136302188",
+        "https://openalex.org/W2143258291",
+        "https://openalex.org/W2143802934",
+        "https://openalex.org/W2144658339",
+        "https://openalex.org/W2154569475",
+        "https://openalex.org/W2155604335",
+        "https://openalex.org/W2156110394",
+        "https://openalex.org/W2160168896",
+        "https://openalex.org/W2263196971",
+        "https://openalex.org/W2274160807",
+        "https://openalex.org/W2295457369",
+        "https://openalex.org/W2399798139",
+        "https://openalex.org/W2483046335",
+        "https://openalex.org/W2592983677",
+        "https://openalex.org/W2625279767",
+        "https://openalex.org/W2748577182",
+        "https://openalex.org/W2760967259",
+        "https://openalex.org/W2766594332",
+        "https://openalex.org/W3037610651",
+        "https://openalex.org/W3038096834",
+        "https://openalex.org/W3100605218",
+        "https://openalex.org/W3101475444",
+        "https://openalex.org/W3101479751",
+        "https://openalex.org/W3101643617",
+        "https://openalex.org/W3101691631",
+        "https://openalex.org/W3101706705",
+        "https://openalex.org/W3103363112",
+        "https://openalex.org/W3104714126",
+        "https://openalex.org/W3106062039",
+        "https://openalex.org/W3106111120",
+        "https://openalex.org/W3106339629"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2072687852",
+      "title": "Supernova bounds on Majoron-emitting decays of light neutrinos",
+      "publication_year": 2000,
+      "doi": "https://doi.org/10.1103/physrevd.62.023004",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5006155001",
+            "display_name": "M. Kachelrieß",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I16097986",
+              "display_name": "Universitat de València",
+              "ror": "https://ror.org/043nxc105",
+              "country_code": "ES",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I16097986"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210101901",
+              "display_name": "Instituto de Física Corpuscular",
+              "ror": "https://ror.org/017xch102",
+              "country_code": "ES",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I134820265",
+                "https://openalex.org/I16097986",
+                "https://openalex.org/I4210101901"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I67311998",
+              "display_name": "European Organization for Nuclear Research",
+              "ror": "https://ror.org/01ggx4157",
+              "country_code": "CH",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I67311998"
+              ]
+            }
+          ],
+          "countries": [
+            "CH",
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "M. Kachelriess",
+          "raw_affiliation_strings": [
+            "Institut de Física Corpuscular, C.S.I.C.-Departament de Física Teòrica, Universitat de València, Edifici Instituts de Paterna, Apartat de Correus 2085, 46071, València, Spain",
+            "TH Division, CERN, CH-1211 Geneva 23, Switzerland,"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institut de Física Corpuscular, C.S.I.C.-Departament de Física Teòrica, Universitat de València, Edifici Instituts de Paterna, Apartat de Correus 2085, 46071, València, Spain",
+              "institution_ids": [
+                "https://openalex.org/I16097986",
+                "https://openalex.org/I4210101901"
+              ]
+            },
+            {
+              "raw_affiliation_string": "TH Division, CERN, CH-1211 Geneva 23, Switzerland,",
+              "institution_ids": [
+                "https://openalex.org/I67311998"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5055352931",
+            "display_name": "Roberto Tomás",
+            "orcid": "https://orcid.org/0000-0003-2947-9441"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I16097986",
+              "display_name": "Universitat de València",
+              "ror": "https://ror.org/043nxc105",
+              "country_code": "ES",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I16097986"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210101901",
+              "display_name": "Instituto de Física Corpuscular",
+              "ror": "https://ror.org/017xch102",
+              "country_code": "ES",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I134820265",
+                "https://openalex.org/I16097986",
+                "https://openalex.org/I4210101901"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "R. Tomàs",
+          "raw_affiliation_strings": [
+            "Institut de Física Corpuscular, C.S.I.C.-Departament de Física Teòrica, Universitat de València, Edifici Instituts de Paterna, Apartat de Correus 2085, 46071, València, Spain"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institut de Física Corpuscular, C.S.I.C.-Departament de Física Teòrica, Universitat de València, Edifici Instituts de Paterna, Apartat de Correus 2085, 46071, València, Spain",
+              "institution_ids": [
+                "https://openalex.org/I16097986",
+                "https://openalex.org/I4210101901"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5007738016",
+            "display_name": "J. W. F. Valle",
+            "orcid": "https://orcid.org/0000-0002-1881-5094"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I16097986",
+              "display_name": "Universitat de València",
+              "ror": "https://ror.org/043nxc105",
+              "country_code": "ES",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I16097986"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210101901",
+              "display_name": "Instituto de Física Corpuscular",
+              "ror": "https://ror.org/017xch102",
+              "country_code": "ES",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I134820265",
+                "https://openalex.org/I16097986",
+                "https://openalex.org/I4210101901"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "J. W. F. Valle",
+          "raw_affiliation_strings": [
+            "Institut de Física Corpuscular, C.S.I.C.-Departament de Física Teòrica, Universitat de València, Edifici Instituts de Paterna, Apartat de Correus 2085, 46071, València, Spain"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institut de Física Corpuscular, C.S.I.C.-Departament de Física Teòrica, Universitat de València, Edifici Instituts de Paterna, Apartat de Correus 2085, 46071, València, Spain",
+              "institution_ids": [
+                "https://openalex.org/I16097986",
+                "https://openalex.org/I4210101901"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Neutrino": [
+          0,
+          104
+        ],
+        "masses": [
+          1,
+          44
+        ],
+        "arising": [
+          2
+        ],
+        "from": [
+          3
+        ],
+        "the": [
+          4,
+          22,
+          26,
+          51,
+          57,
+          63,
+          81,
+          89,
+          97,
+          102,
+          111
+        ],
+        "spontaneous": [
+          5
+        ],
+        "violation": [
+          6
+        ],
+        "of": [
+          7,
+          28,
+          53,
+          60,
+          65,
+          91,
+          99,
+          113
+        ],
+        "ungauged": [
+          8
+        ],
+        "lepton-number": [
+          9
+        ],
+        "are": [
+          10,
+          32,
+          37,
+          86
+        ],
+        "accompanied": [
+          11
+        ],
+        "by": [
+          12,
+          41,
+          88
+        ],
+        "a": [
+          13,
+          19,
+          114
+        ],
+        "physical": [
+          14
+        ],
+        "Goldstone": [
+          15
+        ],
+        "boson,": [
+          16
+        ],
+        "generically": [
+          17
+        ],
+        "called": [
+          18
+        ],
+        "Majoron.": [
+          20
+        ],
+        "In": [
+          21
+        ],
+        "high-density": [
+          23
+        ],
+        "supernova": [
+          24
+        ],
+        "medium": [
+          25
+        ],
+        "effects": [
+          27
+        ],
+        "Majoron-emitting": [
+          29
+        ],
+        "neutrino": [
+          30,
+          43,
+          58
+        ],
+        "decays": [
+          31,
+          55
+        ],
+        "important": [
+          33
+        ],
+        "even": [
+          34
+        ],
+        "if": [
+          35
+        ],
+        "they": [
+          36
+        ],
+        "suppressed": [
+          38
+        ],
+        "in": [
+          39,
+          62,
+          80,
+          110
+        ],
+        "vacuo": [
+          40
+        ],
+        "small": [
+          42,
+          46
+        ],
+        "and/or": [
+          45
+        ],
+        "off-diagonal": [
+          47
+        ],
+        "couplings.": [
+          48
+        ],
+        "We": [
+          49,
+          74,
+          118
+        ],
+        "reconsider": [
+          50
+        ],
+        "influence": [
+          52
+        ],
+        "these": [
+          54,
+          121
+        ],
+        "on": [
+          56,
+          69
+        ],
+        "signal": [
+          59
+        ],
+        "supernovae": [
+          61
+        ],
+        "light": [
+          64
+        ],
+        "recent": [
+          66
+        ],
+        "Super-Kamiokande": [
+          67,
+          100
+        ],
+        "data": [
+          68
+        ],
+        "solar": [
+          70
+        ],
+        "and": [
+          71,
+          101
+        ],
+        "atmospheric": [
+          72
+        ],
+        "neutrinos.": [
+          73
+        ],
+        "find": [
+          75,
+          119
+        ],
+        "that": [
+          76,
+          120
+        ],
+        "Majoron-neutrino": [
+          77,
+          108,
+          125
+        ],
+        "coupling": [
+          78
+        ],
+        "constants": [
+          79
+        ],
+        "range": [
+          82
+        ],
+        "$3\\ifmmode\\times\\else\\texttimes\\fi{}{10}^{\\ensuremath{-}7}\\ensuremath{\\lesssim}g\\ensuremath{\\lesssim}2\\ifmmode\\times\\else\\texttimes\\fi{}{10}^{\\ensuremath{-}5}$": [
+          83
+        ],
+        "or": [
+          84
+        ],
+        "$g\\ensuremath{\\gtrsim}3\\ifmmode\\times\\else\\texttimes\\fi{}{10}^{\\ensuremath{-}4}$": [
+          85
+        ],
+        "excluded": [
+          87
+        ],
+        "observation": [
+          90
+        ],
+        "SN": [
+          92
+        ],
+        "1987A.": [
+          93
+        ],
+        "Then": [
+          94
+        ],
+        "we": [
+          95
+        ],
+        "discuss": [
+          96
+        ],
+        "potential": [
+          98
+        ],
+        "Sudbury": [
+          103
+        ],
+        "Observatory": [
+          105
+        ],
+        "to": [
+          106
+        ],
+        "detect": [
+          107
+        ],
+        "interactions": [
+          109,
+          126
+        ],
+        "case": [
+          112
+        ],
+        "future": [
+          115
+        ],
+        "galactic": [
+          116
+        ],
+        "supernova.": [
+          117
+        ],
+        "experiments": [
+          122
+        ],
+        "could": [
+          123
+        ],
+        "probe": [
+          124
+        ],
+        "with": [
+          127
+        ],
+        "improved": [
+          128
+        ],
+        "sensitivity.": [
+          129
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1103/physrevd.62.023004",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1103/physrevd.62.023004",
+          "pdf_url": "http://link.aps.org/pdf/10.1103/PhysRevD.62.023004",
+          "source": {
+            "id": "https://openalex.org/S4210190737",
+            "display_name": "Physical review. D. Particles, fields, gravitation, and cosmology/Physical review. D. Particles and fields",
+            "issn_l": "0556-2821",
+            "issn": [
+              "0556-2821",
+              "1089-4918",
+              "1538-4500",
+              "1550-2368",
+              "1550-7998"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320261",
+            "host_organization_name": "American Physical Society",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320261"
+            ],
+            "host_organization_lineage_names": [
+              "American Physical Society"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Physical Review D",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:hep-ph/0001039",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/hep-ph/0001039",
+          "pdf_url": "https://arxiv.org/pdf/hep-ph/0001039",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:CiteSeerX.psu:10.1.1.343.5751",
+          "is_oa": false,
+          "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.343.5751",
+          "pdf_url": null,
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "http://arxiv.org/pdf/hep-ph/0001039v1.pdf",
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:cds.cern.ch:419774",
+          "is_oa": false,
+          "landing_page_url": "http://cds.cern.ch/record/419774",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306402195",
+            "display_name": "CERN Document Server (European Organization for Nuclear Research)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I67311998",
+            "host_organization_name": "European Organization for Nuclear Research",
+            "host_organization_lineage": [
+              "https://openalex.org/I67311998"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": null
+        },
+        {
+          "id": "pmh:oai:dnet:roderic_____::985057d779f182c904d2a09553a3ecc6",
+          "is_oa": true,
+          "landing_page_url": "http://hdl.handle.net/10550/47867",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306402641",
+            "display_name": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I4383465926",
+            "host_organization_name": "LA Referencia",
+            "host_organization_lineage": [
+              "https://openalex.org/I4383465926"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "other-oa",
+          "license_id": "https://openalex.org/licenses/other-oa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Kachelriess, Michael Tomàs, Ricard Furtado Valle, José Wagner 2000 Supernova bounds on Majoron-emitting decays of light neutrinos Physical Review D 62 2 023004",
+          "raw_type": "info:eu-repo/semantics/article"
+        },
+        {
+          "id": "pmh:oai:roderic.uv.es:10550/47867",
+          "is_oa": true,
+          "landing_page_url": "http://hdl.handle.net/10550/47867",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400245",
+            "display_name": "Repository of Digital Objects for Teaching Research and Culture (University of Valencia)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I16097986",
+            "host_organization_name": "Universitat de València",
+            "host_organization_lineage": [
+              "https://openalex.org/I16097986"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-nc",
+          "license_id": "https://openalex.org/licenses/cc-by-nc",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "journal article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W219490699",
+        "https://openalex.org/W1967085484",
+        "https://openalex.org/W1969077323",
+        "https://openalex.org/W1973098205",
+        "https://openalex.org/W1974698365",
+        "https://openalex.org/W1977279691",
+        "https://openalex.org/W1978535157",
+        "https://openalex.org/W1980102333",
+        "https://openalex.org/W1982857261",
+        "https://openalex.org/W1984474150",
+        "https://openalex.org/W1985298026",
+        "https://openalex.org/W1991190500",
+        "https://openalex.org/W1992329724",
+        "https://openalex.org/W1995507357",
+        "https://openalex.org/W1999432631",
+        "https://openalex.org/W1999782177",
+        "https://openalex.org/W2002041864",
+        "https://openalex.org/W2003170066",
+        "https://openalex.org/W2005239359",
+        "https://openalex.org/W2005836860",
+        "https://openalex.org/W2006889281",
+        "https://openalex.org/W2009726761",
+        "https://openalex.org/W2011160154",
+        "https://openalex.org/W2014058212",
+        "https://openalex.org/W2014087495",
+        "https://openalex.org/W2016709720",
+        "https://openalex.org/W2020837255",
+        "https://openalex.org/W2026316323",
+        "https://openalex.org/W2027586553",
+        "https://openalex.org/W2027602904",
+        "https://openalex.org/W2027790703",
+        "https://openalex.org/W2028810278",
+        "https://openalex.org/W2029429258",
+        "https://openalex.org/W2029852316",
+        "https://openalex.org/W2036140930",
+        "https://openalex.org/W2038780364",
+        "https://openalex.org/W2038823026",
+        "https://openalex.org/W2042851359",
+        "https://openalex.org/W2043540002",
+        "https://openalex.org/W2049104808",
+        "https://openalex.org/W2054591418",
+        "https://openalex.org/W2054853933",
+        "https://openalex.org/W2055936776",
+        "https://openalex.org/W2058224774",
+        "https://openalex.org/W2058914498",
+        "https://openalex.org/W2061524921",
+        "https://openalex.org/W2064649109",
+        "https://openalex.org/W2064716926",
+        "https://openalex.org/W2065005337",
+        "https://openalex.org/W2072021253",
+        "https://openalex.org/W2081791645",
+        "https://openalex.org/W2088903772",
+        "https://openalex.org/W2090010129",
+        "https://openalex.org/W2101451821",
+        "https://openalex.org/W2106101231",
+        "https://openalex.org/W2109224082",
+        "https://openalex.org/W2117566351",
+        "https://openalex.org/W2118488783",
+        "https://openalex.org/W2133801975",
+        "https://openalex.org/W2141267124",
+        "https://openalex.org/W2147714042",
+        "https://openalex.org/W2157758224",
+        "https://openalex.org/W2166229468",
+        "https://openalex.org/W2317021544",
+        "https://openalex.org/W3101400647"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2798764126",
+      "title": "Positivity bounds for massive spin-1 and spin-2 fields",
+      "publication_year": 2019,
+      "doi": "https://doi.org/10.1007/jhep03(2019)182",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": null,
+            "display_name": "Claudia de Rham",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I47508984",
+              "display_name": "Imperial College London",
+              "ror": "https://ror.org/041kmwe10",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I47508984"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I58956616",
+              "display_name": "Case Western Reserve University",
+              "ror": "https://ror.org/051fd9666",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I58956616"
+              ]
+            }
+          ],
+          "countries": [
+            "GB",
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Claudia de Rham",
+          "raw_affiliation_strings": [
+            "CERCAL, Department of Physics, Case Western Reserve University, 10900 Euclid Ave, Cleveland, OH, 44106, U.S.A",
+            "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "CERCAL, Department of Physics, Case Western Reserve University, 10900 Euclid Ave, Cleveland, OH, 44106, U.S.A",
+              "institution_ids": [
+                "https://openalex.org/I58956616"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K",
+              "institution_ids": [
+                "https://openalex.org/I47508984"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Scott Melville",
+            "orcid": "https://orcid.org/0000-0003-3516-856X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I47508984",
+              "display_name": "Imperial College London",
+              "ror": "https://ror.org/041kmwe10",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I47508984"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Scott Melville",
+          "raw_affiliation_strings": [
+            "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-3516-856X",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K",
+              "institution_ids": [
+                "https://openalex.org/I47508984"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Andrew J. Tolley",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I47508984",
+              "display_name": "Imperial College London",
+              "ror": "https://ror.org/041kmwe10",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I47508984"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I58956616",
+              "display_name": "Case Western Reserve University",
+              "ror": "https://ror.org/051fd9666",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I58956616"
+              ]
+            }
+          ],
+          "countries": [
+            "GB",
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Andrew J. Tolley",
+          "raw_affiliation_strings": [
+            "CERCAL, Department of Physics, Case Western Reserve University, 10900 Euclid Ave, Cleveland, OH, 44106, U.S.A",
+            "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "CERCAL, Department of Physics, Case Western Reserve University, 10900 Euclid Ave, Cleveland, OH, 44106, U.S.A",
+              "institution_ids": [
+                "https://openalex.org/I58956616"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K",
+              "institution_ids": [
+                "https://openalex.org/I47508984"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": null,
+            "display_name": "Shuang-Yong Zhou",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I3019243323",
+              "display_name": "Center for Theoretical Physics",
+              "ror": "https://ror.org/04kfyt897",
+              "country_code": "PL",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I3019243323",
+                "https://openalex.org/I99542240"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I47508984",
+              "display_name": "Imperial College London",
+              "ror": "https://ror.org/041kmwe10",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I47508984"
+              ]
+            }
+          ],
+          "countries": [
+            "GB",
+            "PL"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Shuang-Yong Zhou",
+          "raw_affiliation_strings": [
+            "Interdisciplinary Center for Theoretical Study, University of Science and Technology of China, Hefted, Ansi, 230026, China",
+            "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Interdisciplinary Center for Theoretical Study, University of Science and Technology of China, Hefted, Ansi, 230026, China",
+              "institution_ids": [
+                "https://openalex.org/I3019243323"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Theoretical Physics, Blackett Laboratory, Imperial College, London, SW7 2AZ, U.K",
+              "institution_ids": [
+                "https://openalex.org/I47508984"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Abstract": [
+          0
+        ],
+        "We": [
+          1
+        ],
+        "apply": [
+          2
+        ],
+        "the": [
+          3,
+          15,
+          19,
+          35,
+          50,
+          59,
+          64,
+          77,
+          87,
+          92,
+          102,
+          107,
+          115,
+          121
+        ],
+        "recently": [
+          4
+        ],
+        "developed": [
+          5
+        ],
+        "positivity": [
+          6,
+          93,
+          118
+        ],
+        "bounds": [
+          7,
+          94
+        ],
+        "for": [
+          8,
+          57
+        ],
+        "particles": [
+          9
+        ],
+        "with": [
+          10
+        ],
+        "spin,": [
+          11
+        ],
+        "applied": [
+          12,
+          95
+        ],
+        "away": [
+          13
+        ],
+        "from": [
+          14,
+          44
+        ],
+        "forward": [
+          16,
+          122
+        ],
+        "limit,": [
+          17
+        ],
+        "to": [
+          18,
+          96
+        ],
+        "low": [
+          20,
+          42
+        ],
+        "energy": [
+          21
+        ],
+        "effective": [
+          22
+        ],
+        "theories": [
+          23,
+          75
+        ],
+        "of": [
+          24,
+          53,
+          89,
+          117
+        ],
+        "massive": [
+          25,
+          73,
+          98,
+          112
+        ],
+        "spin-1": [
+          26,
+          31
+        ],
+        "and": [
+          27,
+          49,
+          76
+        ],
+        "spin-2": [
+          28
+        ],
+        "theories.": [
+          29,
+          81
+        ],
+        "For": [
+          30,
+          67,
+          110
+        ],
+        "theories,": [
+          32,
+          100,
+          114
+        ],
+        "we": [
+          33,
+          69,
+          83
+        ],
+        "consider": [
+          34,
+          70
+        ],
+        "generic": [
+          36,
+          71
+        ],
+        "Proca": [
+          37
+        ],
+        "EFT": [
+          38,
+          60
+        ],
+        "which": [
+          39,
+          58,
+          105
+        ],
+        "arises": [
+          40
+        ],
+        "at": [
+          41,
+          86
+        ],
+        "energies": [
+          43
+        ],
+        "a": [
+          45,
+          54
+        ],
+        "heavy": [
+          46
+        ],
+        "Higgs": [
+          47
+        ],
+        "mechanism,": [
+          48
+        ],
+        "special": [
+          51,
+          78,
+          103
+        ],
+        "case": [
+          52
+        ],
+        "charged": [
+          55
+        ],
+        "Galileon": [
+          56,
+          65
+        ],
+        "is": [
+          61
+        ],
+        "reorganized": [
+          62
+        ],
+        "by": [
+          63
+        ],
+        "symmetry.": [
+          66
+        ],
+        "spin-2,": [
+          68
+        ],
+        "Λ5": [
+          72,
+          97
+        ],
+        "gravity": [
+          74,
+          99,
+          113
+        ],
+        "‘ghost-free’": [
+          79
+        ],
+        "Λ3": [
+          80,
+          108,
+          111
+        ],
+        "Remarkably": [
+          82
+        ],
+        "find": [
+          84
+        ],
+        "that": [
+          85
+        ],
+        "level": [
+          88
+        ],
+        "2-2": [
+          90
+        ],
+        "scattering,": [
+          91
+        ],
+        "impose": [
+          101
+        ],
+        "tunings": [
+          104
+        ],
+        "generate": [
+          106
+        ],
+        "structure.": [
+          109
+        ],
+        "island": [
+          116
+        ],
+        "derived": [
+          119
+        ],
+        "in": [
+          120
+        ],
+        "limit": [
+          123
+        ],
+        "appears": [
+          124
+        ],
+        "relatively": [
+          125
+        ],
+        "stable": [
+          126
+        ],
+        "against": [
+          127
+        ],
+        "further": [
+          128
+        ],
+        "bounds.": [
+          129
+        ]
+      },
+      "locations": [
+        {
+          "id": "doi:10.1007/jhep03(2019)182",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1007/jhep03(2019)182",
+          "pdf_url": "https://link.springer.com/content/pdf/10.1007/JHEP03(2019)182.pdf",
+          "source": {
+            "id": "https://openalex.org/S187585107",
+            "display_name": "Journal of High Energy Physics",
+            "issn_l": "1029-8479",
+            "issn": [
+              "1029-8479",
+              "1126-6708",
+              "1127-2236"
+            ],
+            "is_oa": true,
+            "is_in_doaj": true,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319965",
+            "host_organization_name": "Springer Nature",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319965"
+            ],
+            "host_organization_lineage_names": [
+              "Springer Nature"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of High Energy Physics",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:1804.10624",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/1804.10624",
+          "pdf_url": "https://arxiv.org/pdf/1804.10624",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:doaj.org/article:03a961dd7b0e42699ae91c8a9f2f366c",
+          "is_oa": true,
+          "landing_page_url": "https://doaj.org/article/03a961dd7b0e42699ae91c8a9f2f366c",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306401280",
+            "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-sa",
+          "license_id": "https://openalex.org/licenses/cc-by-sa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Journal of High Energy Physics, Vol 2019, Iss 3, Pp 1-37 (2019)",
+          "raw_type": "article"
+        },
+        {
+          "id": "pmh:oai:spiral.imperial.ac.uk:10044/1/74436",
+          "is_oa": true,
+          "landing_page_url": "http://hdl.handle.net/10044/1/74436",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306401396",
+            "display_name": "Spiral (Imperial College London)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I47508984",
+            "host_organization_name": "Imperial College London",
+            "host_organization_lineage": [
+              "https://openalex.org/I47508984"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "Journal Article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W1975408345",
+        "https://openalex.org/W1980065152",
+        "https://openalex.org/W2040024728",
+        "https://openalex.org/W2061277511",
+        "https://openalex.org/W2061373362",
+        "https://openalex.org/W2063255542",
+        "https://openalex.org/W2072935487",
+        "https://openalex.org/W2075933968",
+        "https://openalex.org/W2087222418",
+        "https://openalex.org/W2092254751",
+        "https://openalex.org/W2097968935",
+        "https://openalex.org/W2126881586",
+        "https://openalex.org/W2139470207",
+        "https://openalex.org/W2142261062",
+        "https://openalex.org/W2144658339",
+        "https://openalex.org/W2148766317",
+        "https://openalex.org/W2152953214",
+        "https://openalex.org/W2154569475",
+        "https://openalex.org/W2155604335",
+        "https://openalex.org/W2156110394",
+        "https://openalex.org/W2289288450",
+        "https://openalex.org/W2399798139",
+        "https://openalex.org/W2465524581",
+        "https://openalex.org/W2592983677",
+        "https://openalex.org/W2625279767",
+        "https://openalex.org/W2625386886",
+        "https://openalex.org/W2757061686",
+        "https://openalex.org/W2763837342",
+        "https://openalex.org/W2765219784",
+        "https://openalex.org/W2953096604",
+        "https://openalex.org/W3038096834"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W1976923416",
+      "title": "Explicit Bounds for Residues of Dedekind Zeta Functions, Values of L-Functions at s=1, and Relative Class Numbers",
+      "publication_year": 2000,
+      "doi": "https://doi.org/10.1006/jnth.2000.2545",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5085298587",
+            "display_name": "Stéphane Louboutin",
+            "orcid": "https://orcid.org/0000-0001-9236-049X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210138206",
+              "display_name": "Institut de Mathématiques de Marseille",
+              "ror": "https://ror.org/042h2y225",
+              "country_code": "FR",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I21491767",
+                "https://openalex.org/I4210138206",
+                "https://openalex.org/I4210141950",
+                "https://openalex.org/I4210142724"
+              ]
+            }
+          ],
+          "countries": [
+            "FR"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Stéphane Louboutin",
+          "raw_affiliation_strings": [
+            "Institut de Mathe matiques de Luminy , UPR 9016 , 163, avenue de Luminy , Case 907 , 13288 Marseille Cedex 9 , France",
+            "Institut de Mathématiques de Luminy, UPR 9016, 163, avenue de Luminy, Case 907, 13288, Marseille Cedex 9, Francef1E-mail: loubouti@iml.univ-mrs.frf1"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institut de Mathe matiques de Luminy , UPR 9016 , 163, avenue de Luminy , Case 907 , 13288 Marseille Cedex 9 , France",
+              "institution_ids": [
+                "https://openalex.org/I4210138206"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Institut de Mathématiques de Luminy, UPR 9016, 163, avenue de Luminy, Case 907, 13288, Marseille Cedex 9, Francef1E-mail: loubouti@iml.univ-mrs.frf1",
+              "institution_ids": [
+                "https://openalex.org/I4210138206"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "locations": [
+        {
+          "id": "doi:10.1006/jnth.2000.2545",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1006/jnth.2000.2545",
+          "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0022314X00925459/pdf",
+          "source": {
+            "id": "https://openalex.org/S40813394",
+            "display_name": "Journal of Number Theory",
+            "issn_l": "0022-314X",
+            "issn": [
+              "0022-314X",
+              "1096-1658"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of Number Theory",
+          "raw_type": "journal-article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W201252986",
+        "https://openalex.org/W860535460",
+        "https://openalex.org/W1964309753",
+        "https://openalex.org/W1967895290",
+        "https://openalex.org/W1992416585",
+        "https://openalex.org/W1996266453",
+        "https://openalex.org/W2003637073",
+        "https://openalex.org/W2009701802",
+        "https://openalex.org/W2010532049",
+        "https://openalex.org/W2020869483",
+        "https://openalex.org/W2029840231",
+        "https://openalex.org/W2044277617",
+        "https://openalex.org/W2057631230",
+        "https://openalex.org/W2057665372",
+        "https://openalex.org/W2322815855",
+        "https://openalex.org/W2332727753",
+        "https://openalex.org/W2333102661",
+        "https://openalex.org/W2487862702",
+        "https://openalex.org/W2577105026",
+        "https://openalex.org/W2791520396",
+        "https://openalex.org/W3043060850",
+        "https://openalex.org/W4205308477",
+        "https://openalex.org/W4213267083",
+        "https://openalex.org/W4235903219",
+        "https://openalex.org/W4285719527",
+        "https://openalex.org/W4292101538",
+        "https://openalex.org/W4293193836",
+        "https://openalex.org/W6602927865",
+        "https://openalex.org/W6723021473",
+        "https://openalex.org/W6723586238",
+        "https://openalex.org/W6967121315"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W3155467851",
+      "title": "An investigation into explicit versions of Burgess' bound",
+      "publication_year": 2021,
+      "doi": "https://doi.org/10.1016/j.jnt.2021.03.018",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5027018108",
+            "display_name": "Forrest J. Francis",
+            "orcid": "https://orcid.org/0000-0001-7906-6798"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I40053085",
+              "display_name": "Australian Defence Force Academy",
+              "ror": "https://ror.org/02j5s7g39",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I31746571",
+                "https://openalex.org/I40053085",
+                "https://openalex.org/I4394709116"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4394709116",
+              "display_name": "UNSW Canberra",
+              "ror": "https://ror.org/0125wpx05",
+              "country_code": null,
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I31746571",
+                "https://openalex.org/I4394709116"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Forrest J. Francis",
+          "raw_affiliation_strings": [
+            "School of Science, UNSW Canberra at ADFA, Northcott Drive, Campbell, ACT 2600, Australia"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-7906-6798",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Science, UNSW Canberra at ADFA, Northcott Drive, Campbell, ACT 2600, Australia",
+              "institution_ids": [
+                "https://openalex.org/I40053085",
+                "https://openalex.org/I4394709116"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "locations": [
+        {
+          "id": "doi:10.1016/j.jnt.2021.03.018",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1016/j.jnt.2021.03.018",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S40813394",
+            "display_name": "Journal of Number Theory",
+            "issn_l": "0022-314X",
+            "issn": [
+              "0022-314X",
+              "1096-1658"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320990",
+            "host_organization_name": "Elsevier BV",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320990"
+            ],
+            "host_organization_lineage_names": [
+              "Elsevier BV"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of Number Theory",
+          "raw_type": "journal-article"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W1546463306",
+        "https://openalex.org/W1996930928",
+        "https://openalex.org/W2002604336",
+        "https://openalex.org/W2005376004",
+        "https://openalex.org/W2022811255",
+        "https://openalex.org/W2048759950",
+        "https://openalex.org/W2081163625",
+        "https://openalex.org/W2137830338",
+        "https://openalex.org/W2492284202",
+        "https://openalex.org/W2792825579",
+        "https://openalex.org/W2963491297",
+        "https://openalex.org/W4252668872",
+        "https://openalex.org/W6632685870",
+        "https://openalex.org/W6723433217"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W2083687865",
+      "title": "Lower bounds for higher eigenvalues by finite difference methods",
+      "publication_year": 1958,
+      "doi": "https://doi.org/10.2140/pjm.1958.8.339",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5008429797",
+            "display_name": "Hans F. Weinberger",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I135310074",
+              "display_name": "University of Wisconsin–Madison",
+              "ror": "https://ror.org/01y2jtd41",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I135310074"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Hans Weinberger",
+          "raw_affiliation_strings": [
+            "University of Wisconsin –,"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Wisconsin –,",
+              "institution_ids": [
+                "https://openalex.org/I135310074"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "locations": [
+        {
+          "id": "doi:10.2140/pjm.1958.8.339",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.2140/pjm.1958.8.339",
+          "pdf_url": "http://msp.org/pjm/1958/8-2/pjm-v8-n2-p13-s.pdf",
+          "source": {
+            "id": "https://openalex.org/S130774151",
+            "display_name": "Pacific Journal of Mathematics",
+            "issn_l": "0030-8730",
+            "issn": [
+              "0030-8730",
+              "1945-5844"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320446",
+            "host_organization_name": "Mathematical Sciences Publishers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320446"
+            ],
+            "host_organization_lineage_names": [
+              "Mathematical Sciences Publishers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Pacific Journal of Mathematics",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:CULeuclid:euclid.pjm/1103040107",
+          "is_oa": false,
+          "landing_page_url": "http://projecteuclid.org/euclid.pjm/1103040107",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400787",
+            "display_name": "Project Euclid (Cornell University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "Text"
+        }
+      ],
+      "referenced_works": [
+        "https://openalex.org/W651136159",
+        "https://openalex.org/W1970958776",
+        "https://openalex.org/W1975322089",
+        "https://openalex.org/W1985276114",
+        "https://openalex.org/W1986211018",
+        "https://openalex.org/W1987375128",
+        "https://openalex.org/W1990547995",
+        "https://openalex.org/W2004993994",
+        "https://openalex.org/W2012211260",
+        "https://openalex.org/W2013177163",
+        "https://openalex.org/W2013205404",
+        "https://openalex.org/W2016859302",
+        "https://openalex.org/W2030341925",
+        "https://openalex.org/W2030787729",
+        "https://openalex.org/W2039308247",
+        "https://openalex.org/W2061329608",
+        "https://openalex.org/W2063216833",
+        "https://openalex.org/W2064958249",
+        "https://openalex.org/W2066370290",
+        "https://openalex.org/W2067195515",
+        "https://openalex.org/W2083504736",
+        "https://openalex.org/W2083687865",
+        "https://openalex.org/W2319537222",
+        "https://openalex.org/W2320917044",
+        "https://openalex.org/W2321764282",
+        "https://openalex.org/W2323174428",
+        "https://openalex.org/W2326586272",
+        "https://openalex.org/W3038653635",
+        "https://openalex.org/W4239075245",
+        "https://openalex.org/W6816968688"
+      ]
+    }
+  ]
+}

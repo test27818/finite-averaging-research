@@ -1,0 +1,541 @@
+Polyhedral Path-Complete Lyapunov Functions
+
+Athanasopoulos, N., & Jungers, R. M. (2020). Polyhedral Path-Complete Lyapunov Functions. In 2019 IEEE
+58th Conference on Decision and Control (CDC) Institute of Electrical and Electronics Engineers Inc..
+https://doi.org/10.1109/CDC40024.2019.9029905
+
+
+Published in:
+2019 IEEE 58th Conference on Decision and Control (CDC)
+
+
+
+Document Version:
+Peer reviewed version
+
+
+
+Queen's University Belfast - Research Portal:
+Link to publication record in Queen's University Belfast Research Portal
+
+
+Publisher rights
+Copyright 2019 IEEE. This work is made available online in accordance with the publisher’s policies. Please refer to any applicable terms of
+use of the publisher.
+
+
+
+General rights
+Copyright for the publications made accessible via the Queen's University Belfast Research Portal is retained by the author(s) and / or other
+copyright owners and it is a condition of accessing these publications that users recognise and abide by the legal requirements associated
+with these rights.
+
+
+Take down policy
+The Research Portal is Queen's institutional repository that provides access to Queen's research output. Every effort has been made to
+ensure that content in the Research Portal does not infringe any person's rights, or applicable UK laws. If you discover content in the
+Research Portal that you believe breaches copyright or violates any law, please contact openaccess@qub.ac.uk.
+
+
+Open Access
+This research has been made openly available by Queen's academics and its Open Research team. We would love to hear how access to
+this research benefits you. – Share your feedback with us: http://go.qub.ac.uk/oa-feedback
+
+
+
+
+Download date:12. Sept. 2026
+                          Polyhedral Path-Complete Lyapunov Functions
+                                            N. Athanasopoulos and R. M. Jungers
+
+
+   Abstract— Path-complete methods utilize a set of positive          that are nonconservative [21]–[23]. When the involved sets
+definite functions and a specially constructed graph in order         are polyhedral, the set computations are linear, and break
+to evaluate, among others, stability of switching systems. This       down to redundancy removal of set representations, which
+tool is shown to be general, e.g., path-complete criteria are
+universal for linear switching systems and quadratic templates.       at the worst case is equivalent to solving a sequence of LPs.
+In this work, we extend the approach to polyhedral Lyapunov           The downside of these approaches is the non-boundedness of
+functions, and introduce a simple parameterization that can be        the complexity of the members of the induced set sequence.
+sufficient for stability analysis. Moreover, we indicate ways of      Recent important papers address this issue by introducing
+obtaining less conservative stability criteria by partial graph       special polyhedral templates, such as zonotopes [24], that
+extensions, all evaluated by solving Linear Programs (LPs).
+                                                                      provide approximate reachability analysis results, however
+                      I. I NTRODUCTION                                particularly computationally efficient.
+                                                                         In this work we explore the use of polyhedral PCLFs,
+   Switching systems provide an accurate modeling frame-              aiming to leverage the versatility of polytopic templates
+work for many processes, they are good approximations                 and at the same time bound the complexity of the re-
+of complex, cyber-physical dynamics [1]–[3], but also pose            sulting function. General polyhedral Lyapunov functions
+major theoretical challenges [4]. In many applications, e.g. in       always exist for asymptotically stable switching systems
+dwell time and fault-detection settings [5]–[7], the switching        [11], however, the underlying stability criteria correspond
+pattern can be described by labeled directed graphs [8]–[10].         to nonlinear, nonconvex algebraic relations that cannot be
+   To put in perspective the developments of this work,               solved efficiently. Taking this into account, we work with
+we can categorize the existing stability methods in two               a simple zonotopic parameterization of polytopic sets for
+groups, namely Lyapunov methods and reachability analysis.            PCLFs that allows verification of the corresponding algebraic
+Common Lyapunov functions (CLFs) were first introduced                Lyapunov decrease conditions with an LP. Specifically, we
+for arbitrary switching systems, e.g., [11], [12]. Starting from      consider polytopes with n pairs of parallel faces or polytopes
+quadratic Lyapunov functions, less conservative, however              that can be described as the (weighted) convex hull of n pairs
+more complicated, parameterizations have been proposed,               of opposite vectors.
+such as polynomials sum-of-squares [13], max-of-quadratics               Although the suggested parameterization is simple and
+[14] etc. The emergence of Multiple Lyapunov functions                thus restricts the class of polyhedral functions we can use,
+[15], [16] provided a new relaxation for stability analysis,          the corresponding Common Lyapunov function can be quite
+using, instead of one, a set of functions whose combination           complex, depending on the structure of the path-complete
+satisfies a Lyapunov decrease condition. Path-Complete Lya-           graph. This is shown by our main example, in which the
+punov functions (PCLFs) [17] formalize the above concept,             stability of a family of arbitrary switching systems in n
+by introducing labelled graphs whose edges express the                dimensions can be verified using as Lyapunov function the
+Lyapunov inequalities between the pieces of the PCLF. These           convex union of weighted infinity norms. Motivated by the
+pieces are located in the nodes of the graph. Using properties        above, we explore whether we can use in an opportunistic
+of the graph, different hierarchies of stability criteria can be      manner the path complete graph to implicitly add complexity
+established [10], [18], [19]. Moreover, it was recently shown         in the description of the induced CLF. Starting from well
+[20] that any PCLF can always be reinterpreted as a CLF               known graph extensions, namely T-Lifts, P-Lifts and H-
+expressed as a combination of minima and maxima of its                Lifts, see e.g., [10], [18]–[20], [25], we introduce partial
+pieces. In terms of computational complexity, evaluation of           extensions based on four elementary graph operations that
+these stability criteria requires the solution of one or a series     preserve the path-completeness property of the graph. We
+of semidefinite programs.                                             report encouraging results by means of numerical examples.
+   An appealing alternative is reachability analysis; in the             In Section II, notation and preliminary notions are intro-
+context of stability analysis, the propagation of forward or          duced. In Section III we develop the parameterizations for
+backward reachability maps also provides stability criteria           polyhedral Lyapunov PCLFs and formulate the Lyapunov
+                                                                      decrease conditions. In Section IV we present an example
+  N.A. is with the School of Electronics, Electrical Engineering
+and Computer Science, Queen’s University Belfast, Northern Ireland,   that showcases the complexity of the resulting CLF induced
+UK. R.J. is with the ICTEAM Institute, UCLouvain, Louvain-la-         by the chosen parameterization and chosen path-complete
+Neuve, Belgium. R.J. is a honorary FNRS Research Associate,           graph for a class of switching systems. In Section V we
+and he is supported by the Walloon Region and the Innoviris
+foundation.   E-mails:   n.athanasopoulos@qub.ac.uk,                  introduce graph extensions that preserve path-completeness,
+raphael.jungers@uclouvain.be                                          and propose, via an example, an algorithmic procedure for
+producing less conservative stability criteria using polyhedral        there exist two nodes s ∈ V ′ , d ∈ V ′ , a sequence σ ⋆ =
+PCLFs. Conclusions are drawn in Section VI.                            σ1 σσ2 1 , such that σ ⋆ ∈ σ(s, d).
+
+                      II. P RELIMINARIES                               Definition 3 (Path-Complete Lyapunov Function)
+Notation: A C-set S ⊂ Rn is a convex compact set which                 Consider the switching system (4) with the corresponding
+contains the origin in its interior. Let G(V, E), or G, be a           switching constraints graph G(V, E). Let G ′ (V ′ , E ′ ) be a
+labeled directed graph. We consider the sets of nodes and              path-complete graph. The set of positive definite functions
+edges V := {1, 2, ..., M } and E = {(s, d, σ) : s ∈ V, d ∈ V},         Vi (·) : Rn → R+ , i = 1, ..., |V ′ |, is called a Path-Complete
+where σ is a finite sequence of N modes, i.e., σ = σ1 ...σk ,          Lyapunov Function (PCLF) if for all (s, d, σ) ∈ E ′ , the
+where σi ∈ {1, ..., N }. The set of outgoing nodes of a node           following relations hold
+s ∈ V is Out(s, G) := {d ∈ V : (∃σ : (s, d, σ) ∈ E)}, and
+                                                                                             Vd (Aσ x) ≤ ε|σ| Vs (x), .                        (5)
+the set of incoming nodes of a node d ∈ V is In(d, G) :=
+{s ∈ V : (∃σ : (s, d, σ) ∈ E)}. The set of sequences of                for some ε ∈ [0, 1).
+labels appearing in a path from a node s ∈ V to a node
+d ∈ V is denoted by σ(s, d). We denote the norm and the                  A PCLF can always be expressed as a Common Lyapunov
+absolute value of a vector (or matrix) x with kxk and |x|              Function. Its exact form depends on the path-complete graph,
+respectively. The vector with elements equal to one and zero           and it has been established in [20, Theorem III.8].
+is 1 and 0 respectively, and the identity matrix is denoted by              III. PARAMETERIZATIONS FOR P OLYHEDRAL PCLF S
+I. The cardinality of a set V and the length of a sequence σ                We consider polytopes that are C-sets, of the form
+is denoted by |V| and |σ| respectively.
+                                                                                           S = {x ∈ Rn : Gx ≤ w},                              (6)
+Definition 1 (System) Given a set of matrices A =                      with G ∈ R    m×n
+                                                                                          . Since S is compact and contains the origin
+{A1 , ..., AN } and a labeled directed graph G(V, E), the              in its interior, we have m ≥ n+1, rank(G) = n, and w > 0.
+constrained switching system is described by the dynamics              A dual equivalent representation of S is
+                      x(t + 1) = Aσ(t) x(t),                    (1)                       S = {V y : c⊤ y ≤ 1, y ≥ 0}.                         (7)
+                      z(t + 1) ∈ Out(z(t), G(V, E)),            (2)
+                                                                       Similarly as (6), V ∈ Rn×q , q ≥ n + 1, rank(V ) = n and
+         (z(t), z(t + 1), σ(t)) ∈ E,                            (3)    c > 0. We note that (6) and (7) are equivalent [26, Chap.
+where (x(0), z(0)) ∈ Rn × V, t ≥ 0.                                    1]. Specifically, (6) relates to the Halfspace representation
+                                                                       of polytopes, while (7) is the Vertex representation2. The
+   In the the above definition, the graph G(V, E) is called the        polytopic sets can be written as the sublevel sets of their
+switching constraints graph. Stability of (1)–(3) is character-        Minkowski functionals, namely,
+ized by the constrained joint spectral radius [8] ρ̌(A, G) =
+                                                                                           S = {x ∈ Rn : V (x) ≤ 1},
+ lim ρ̌t (A, G), where
+t→∞
+                                                                       with                                                
+ρ̌t (A, G) := max{kAσ(t−1) · · · Aσ(0) k1/t : z(0) ∈ V,                                                             (Gx)i
+                                                                                           V (x) = max                          ,              (8)
+                                                                                                     i=1,..,m        wi
+         z(t) satisfies (2), σ(t) satisfies (3), t = 0, ..., t − 1}.
+                                                                       or
+It is well known that system (1)–(3) is stable if and only                               V (x) = min{c⊤ y : x = V y}.                          (9)
+                                                                                                    y≥0
+if ρ̌(A, G) < 1 [8, Corollary 2.8]. For arbitrary switching
+systems we have V = {1} and E = {(1, 1, 1), ..., (1, 1, N )},             The following result allows to evaluate (5) using a set of
+and the constrained joint spectral radius coincides with               algebraic relations. It is presented without a proof as it can be
+the notion of the joint spectral radius (JSR). For ease of             derived by a straightforward adaptation of classical results,
+exposition, in most cases we will focus on the arbitrary               see, e.g., [27, Chap. 4].
+switching case, i.e,
+                                                                       Proposition 1 Consider two C-polytopic sets Sd ⊂ Rn ,
+                     x(t + 1) = Aσ(t) x(t),                     (4)    Ss ⊂ Rn described in (6), (7) with matrices Gs ∈ Rms ×n ,
+                                                                       Gd ∈ Rmd ×n , Vs ∈ Rn×qs , Vd ∈ Rn×qd and vec-
+where σ(t) ∈ {1, ..., N }, t ≥ 0. Roughly, a graph G ′ (V ′ , E ′ )
+                                                                       tors ws , wd , cs , cd . Consider ε > 0, a matrix set A =
+is path-complete with respect to a graph G(V, E) if any
+                                                                       {A1 , ..., AN }, the sequence σ = σ1 ...σk , σi ∈ {1, ..., N}
+sequence σ in G(V, E) can be realized as part of a path
+                                                                       and the matrix Aσ ∈ Rn×n . The following are equivalent.
+in the graph G ′ (V ′ , E ′ ). The formal definition follows.
+                                                                         (i) Vd (Aσ x) ≤ ε|σ| Vs (x).
+                                                                        (ii) There exists a nonnegative matrix H ∈ Rmd ×ms such
+Definition 2 (Path-complete graph) Given system (1)–(3)
+                                                                             that Gd Aσ = HGs and Hws ≤ ε|σ| wd .
+and the switching constraints graph G(V, E), a graph
+G ′ (V ′ , E ′ ) is path-complete if for any admissible sequence         1 σ , σ can be chosen to be the empty word.
+                                                                            1   2
+σ = σ1 σ2 ...σk that appears in a path in G(V, E), k ≥ 1,                2 When c = 1, relation (7) is the convex hull of the columns of V .
+(iii) There exists a nonnegative matrix P ∈ Rqd ×qs such that       for k = 1, ..., |E| and k corresponds to the edge (i, j, σ) ∈ E.
+      Aσ Vs = Vd P and c⊤         |σ| ⊤
+                          d P ≤ ε cs .
+                                                                    Proposition 3 Consider the system (4), a path-complete
+   The algebraic relations in Proposition 1 are difficult to
+                                                                    graph G(V, E), a set of polyhedral sets {Si }i∈{1,...,|V|}
+solve due to the bilinear matrix equation appearing in both                                       h             i⊤
+cases (ii) and (iii). To overcome this, we restrict ourselves       of the form (11), and let c = c⊤1  ... c⊤
+                                                                                                            |V|    . The set
+to symmetric polytopes with n pairs of parallel faces or n          {Si }i∈{1,...,|V|} is a PCLF if and only if c⊤ (L1 − L2 ) ≤ 0.
+pairs of opposite vertices, that can be written in the form
+                                                                                              IV. M AIN E XAMPLE
+                  S = {x ∈ Rn : |Gx| ≤ w},                  (10)
+                                                                       Propositions 2 and 3 offer an appealing algebraic equiva-
+                  S = {V y : c⊤ |y| ≤ 1},                   (11)
+                                                                    lent of evaluating whether a set of polyhedral functions is a
+where G ∈ Rn×n , V ∈ Rn×n . In this case, the following             PCLF. Nevertheless, since parameterizations (10), (11) can
+Corollary of Proposition 1 can be stated.                           describe only a subset of polytopes, we wish to explore how
+                                                                    conservative they are for given choices of the matrices G,
+Corollary 1 Consider two C-polytopic sets Sd ⊂ Rn , Ss ⊂            V in (10), (11). To do so, we consider an n-dimensional
+Rn described in (10), (11) with matrices Gs , Gd ∈ Rn×n ,           switching system consisting of n modes. The important
+Vs , Vd ∈ Rn×qd and vectors ws , wd , cs , cd . Consider ε > 0,     element in this example is the appropriate choice of the path-
+a matrix set A = {A1 , ..., AN }, the sequence σ = σ1 ...σk ,       completegraph. Let
+                                                                                        us consider the set of n n × n matrices
+                                                                                 1 1 ... 1             0 0 ... 0
+                                                                                                    
+σi ∈ {1, ..., N} and the matrix Aσ ∈ Rn×n . The following           A1 = ε       0 0 ... 0    , ...,   0 0 ... 0   , with ε < 1.
+                                                                                 . . ... .             . . ... .
+are equivalent.                                                                  0 0 ... 0             1 1 ... 1
+                                                                       Our goal is to analyze stability for the arbitrary switch-
+            (i)              Vd (Aσ x) ≤ ε|σ| Vs (x).       (12)    ing system (4) with matrices taking values from A1 .
+           (ii)        |Gd Aσ G−1       |σ|
+                               s |ws ≤ ε wd .               (13)    We choose the simplest parameterization (10) with G =
+                              −1                                    I. The corresponding        Minkowski functional is V (x) =
+          (iii)         c⊤                |σ| ⊤
+                         d |Vd Aσ Vs | ≤ ε cs .             (14)                 n o
+                                                                    maxl=1,...,n |x|wl
+                                                                                      l
+                                                                                          . Moreover,   we consider the fully con-
+Compared to the conditions (ii), (iii) of Proposition 1 which       nected graph G1 , consisting of n nodes (Figure 2, left). In
+are very difficult to solve, relations (13), (14) can be verified   detail, each node i is connected to a node j by an edge
+by solving a linear program for a given choice of the matrices      labeled by j, i.e., (i, j, j) ∈ E for all i = 1, .., n, j = 1, ..., n.
+G, V . In addition, we can use conditions (13), (14) to have a      We consider n sets Si = {x : |x| ≤n wi },o wi ∈ Rn , and
+unified description of the PCLF decrease conditions of (5).         correspondingly Vi (x) = maxl=1,...,n w      |x|l
+                                                                                                                        , i = 1, ..., l.
+To do so, given a path-complete graph G(V, E) and a set                                                            i,l
+                                                                       We proceed to show that the set {Vi (x)}i=1,...,n is a PCLF
+of polytopes of the form (10), we first define the matrices
+                                                                    for the system, by setting
+T1 , T2 ∈ Rn|E|×n|V|, that are described block-wise as follows
+                                                                                                  (
+                                                                                                    1, k = i
+                       (
+                         |Gj Aσ G−1i |, l = i                                           wi,k =
+             T1,k,l =                                       (15)                                    a, otherwise,
+                         0,              otherwise,
+                       (
+                         εI, l = j                                  for some positive constant a. To do so, we choose an
+             T2,k,l =                                       (16)    arbitrary edge (i, j, j) of G1 and show that Vj (Aj x) ≤ Vi (x),
+                         0, otherwise,
+                                                                    or, equivalently, Aj Si ⊆ Sj . The set Si consists of 2n
+                                                                                                                                 ⊤
+for k = 1, ..., |E|, and k corresponds to the edge (i, j, σ) ∈
+                                                                                            
+                                                                    vertices of the form ±a ... ±a ±1 ±a ... ±a .
+E. The following two Propositions group the relations of            To
+                                                                     verify the set inclusion,
+                                                                                           Pn−1      it must hold that the points
+Corollary 1 for all decrease conditions induced by the path-         0 ... 0 (±1 + i=1 (±a)) 0 ... 0                   ∈ Sj , or,
+complete graph.                                                             Pn−1
+                                                                    (±1 + i=1 (±a)) ≤ 1. The latter relation holds for any
+                                                                                         1−ε
+                                                                    a satisfying a < ε(n−1)   . Consequently, a PCLF function has
+Proposition 2 Consider the system (4), a path-complete              been found, and, e.g., from [20, Corollary III.3], the function
+graph G(V, E), a set of polyhedral sets {Si }i∈{1,...,|V|} of       V (x) = min{V1 (x), ..., Vn (x)} is a CLF for the system. The
+                                  h              i⊤
+the form (10), and let w = w1⊤ ... w|V|        ⊤
+                                                    . The set       geometric insight of this choice is shown in Figure 1 for
+{Si }i∈{1,...,|V|} is a PCLF if and only if (T1 − T2 )w ≤ 0.        n = 3. The sublevel set of the CLF is the union of the three
+                                                                    sets S = S1 ∪ S2 ∪ S3 shown on the left for a = 0.1, which
+Taking the vertex representation (11), we can define analo-         is invariant. On the right, the convex hull of S is shown,
+gously the matrices L1 , L2 ∈ Rn|V |×n|E| with                      which is also invariant due to the linearity of the dynamics
+                    (                                               of the system.
+                      |Vj−1 Aσ Vi |, l = j
+           L1,k,l =                                    (17)            The alternative vertex representation parameterization (11)
+                      0,             otherwise,                     can also be used efficiently to verify stability. Let us
+                    (
+                      εI, l = i                                     consider   the following      of n × n matrices A2 =
+                                                                                                 set
+           L2,k,l =
+                                                                       1 0 ... 0
+                                                                                             0 0 ... 1
+                                                       (18)              1 0 ... 0            0 0 ... 1
+                      0, otherwise,                                 ε    . . ... .   , ...,   . . ... .     , where ε < 1. We notice
+                                                                         1 0 ... 0            0 0 ... 1
+                                                                                                                                    0.2
+                                                                                                   1
+
+
+                                                                                                 0.5                                0.1
+    1
+                                                                                                   0                                  0
+  0.5
+
+    0                                                                                            -0.5                               -0.1
+  -0.5                                              1
+                                                                                                  -1
+                                                                                                                                    -0.2
+   -1                                                                                                                                 0.2
+                                                                                                        1
+         1                                                                                                                   1                                      0.2
+
+
+                          -0.5                                                                                         0.5
+                                 -1   -1                                                                     -1   -1                            -0.2-0.2
+
+
+
+
+Fig. 1: Main Example, left: The sublevel sets of the PCLF                                      Fig. 3: Main Example, Left: the sublevel sets of the PCLF
+using the parameterization (10) and the path-complete graph                                    using the parameterization (11) and the path-complete graph
+G1 for n = 3. Right, the convex union of the three sets Si ,                                   G2 . Right: their intersection, which is the resulting CLF
+i = 1, 2, 3, which is the sublevel set of the resulting CLF.                                   (notice the different scales in the axes).
+
+                             2                                           1
+         1   V1                            V2       2   1   V1                    V2       2
+                                                                                               extending a path-complete graph while preserving its prop-
+                             1                                           2                     erties. The motivation is to use such extensions to guide a
+                      3          2                                   1       3                 recursive procedure that can be used for stability analysis.
+                  1                             3                3                     2       For the following four procedures we consider G(V, E) to
+                                 V3                                          V3
+                                                                                               be the switching constraints graph and G ′ (V ′ , E ′ ) be a path-
+                                                                                               complete graph related to G(V, E). Moreover, we consider
+                                 3                                           3
+                                                                                               an arbitrary edge (s, d, σ) ∈ E ′ .
+Fig. 2: Main Example, left: the path-complete graph G1 for
+n = 3. The corresponding common Lyapunov function is                                           Definition 4 (Partial T-Lift) The partial T-lift with respect
+V (x) = min{V1 (x), V2 (x), V3 (x)}. Right: the path-complete                                  to the edge (s, d, σ) is denoted by GT (ET , VT ). The proce-
+graph G2 . The corresponding common Lyapunov function is                                       dure is outlined below.
+V (x) = max{V1 (x), V2 (x), V3 (x)}.                                                             1. Set ET = E ′ , VT = V ′ .
+                                                                                                 2. Let Ed ⊂ E ′ be the set of edges in G ′ with source node
+                                                                                                    the node d, i.e., Ed = {(d, di , σi ) ∈ E ′ }.
+A2 = A⊤  1 . We choose the simplest parameterization (11)
+                                                                                                 3. Set ET = ET \ {s, d, σ}.
+with V = I. The Minkowski functional for this set would                                          4. For each edge (d, di , σi ) in Ed , set ET = ET ∪
+be V (x) = min{c⊤ |x|}. In addition, we consider the fully                                          {(s, di , σσi )}.
+connected graph G2 (Figure 2, right). In detail, the set of
+edges is E = {(i, j, i) : i = 1, ..., n, j = 1, ..., n}. By                                    Definition 5 (Partial T⋆ -Lift) The partial T⋆ -lift with re-
+considering n sets Si = {x : c⊤                       n
+                                 i |x| ≤ 1}, ci ∈ R , and                                      spect to the edge (s, d, σ) is denoted by GT ⋆ (ET ⋆ , VT ⋆ ). The
+                ⊤
+Vi (x) = min{ci |x|}, one can show the set {Vi (x)}i=1,...,n                                   procedure is outlined below.
+is a PCLF, setting                                                                               1. Set ET ⋆ = E ′ , VT ⋆ = V ′ .
+                          (                                                                      2. Let Es ⊂ E ′ be the set of edges in G ′ with destination
+                            1, k = i
+                   ci,k =                                                                           node the node s, i.e., Es = {(si , s, σi ) ∈ E ′ }.
+                            a, otherwise,                                                        3. Set ET ⋆ = ET ⋆ \ {s, d, σ}.
+                                                                                                 4. For each edge (si , s, σi ) ∈ Es , set ET ⋆ = ET ⋆ ∪
+for any a satisfying a > ε(n−1)1−ε . Consequently, a PCLF                                           {(s, di , σi σ)}.
+function has been found. Moreover the function V (x) =
+max{V1 (x), ..., Vn (x)} [20, Corollary III.3] is a CLF for the
+                                                                                               Definition 6 (Partial P-Lift) We assume In(d, G ′ ) ≥ 2. The
+system. The three sets Si , i = 1, 2, 3 are shown in Figure 3
+                                                                                               partial P-lift with respect to the edge (s, d, σ) is denoted by
+for n = 3, while their intersection, which is invariant as it
+                                                                                               GP (EP , VP ). The procedure is outlined below.
+corresponds to the sublevel set of the CLF for this system,
+is shown in for a = 0.1.                                                                        1. Introduce a new node d′ . Set VP = V ′ ∪ {d′ }.
+                                                                                                2. Set EP = E ′ ∪ {(s, d′ , σ)} \ {(s, d, σ)}.
+  V. PARTIAL L IFTS PRESERVING PATH - COMPLETENESS                                              3. Let Ed ⊂ E ′ be the set of edges in G ′ with source node
+  In the previous Section it was illustrated that stability                                         the node d, i.e., Ed = {(d, di , σi ) ∈ E ′ }.
+can be deduced for simple PCLF parameterizations, as long                                       4. For each edge (d, di , σi ) ∈ Ed , set EP = EP ∪
+as the path-complete graph is suitable. In this section we                                          {(d′ , di , σi )}.
+are exploring how to induce complexity in the PCLF by
+Definition 7 (Partial P⋆ -Lift) We assume Out(s, G ′ ) ≥ 2.                                                          1.16
+
+                                                                                                                     1.14
+
+The partial P⋆ -lift with respect to the edge (s, d, σ) is                                                           1.12
+
+
+
+denoted by GP ⋆ (EP ⋆ , VP ⋆ ). The procedure is outlined below.
+                                                                                                                      1.1
+
+                                                                                                                     1.08
+
+
+ 1. Introduce a new node s′ . Set VP ⋆ = V ′ ∪ {s′ }.                                                                1.06
+
+                                                                                                                     1.04
+
+ 2. Set EP ⋆ = E ′ ∪ {(s′ , d, σ)} \ {(s, d, σ)}.                                                                    1.02
+
+
+
+ 3. Let Es ⊂ E ′ be the set of edges in G ′ with destination                                                           1
+
+                                                                                                                     0.98
+
+
+     node the node s, i.e., Es = {(si , s, σi ) ∈ E ′ }.
+                                                                                                                            2       4        6            8               10        12        14
+                                                                                                                                                      iterations
+
+
+
+ 4. For each edge (si , s, σi ) ∈ Es , set EP ⋆ = EP ⋆ ∪                                    Fig. 7: Example 2, The optimal value of ε with respect to
+     {(si , s′ , σi )}.                                                                     the iterations of the algorithm. Stability is proven after 15
+                                                                                            steps. The partial liftings corresponding to T/T* partial lifts
+Example 1 We consider the graph G3 shown in Figure 4                                        are shown in blue, whereas the partial P/P* lifts are shown
+which we assume is a path-complete graph related to a                                       in red.
+switching constraints graph G with labels {1, 2, 3, 4, 5}. We
+illustrate all four partial lifts for the edge (1, 2, 23) in                                                         100
+
+
+Figures 5 and 6.                                                                                                      90
+
+                                                                                                                      80
+
+                                                                                                                      70
+
+
+
+
+                                                                                                   Number of edges
+                                                                                                                      60
+                                            23                                                                        50
+
+                                                                                                                      40
+
+                            1       1                2       4                                                        30
+
+                                                                                                                      20
+
+                                            5                                                                         10
+
+
+                                                                                                                                5       10   15          20          25        30        35        40
+                                                                                                                                             length of sequence of an edge
+
+
+Fig. 4: Example 1, graph G3 . The edge to be lifted is depicted                             Fig. 8: Example 2, the distribution of the length of the
+with orange.                                                                                switching sequences labeling the edges of the resulting path-
+                                                                                            complete graph that proves stability.
+
+                                                                          523
+             235
+                   234                                       123
+                                                                                            G ′ (V ′ , E ′ ). Then, if there exists a PCLF for the system with
+                                                 1       1                 2        4       path-complete graph G ′ (V ′ , E ′ ), there exists a PCLF for the
+     1        1
+                        5       2       4
+                                                                 5                          system with path-complete graph Ḡ(V̄, Ē).
+
+Fig. 5: Example 1, above: The partial T-lift, with the added                                Proof Given any set of functions {Vi′ (x)}i=1,...,|V ′ | which
+edges depicted in red. The edge removed is (1, 2, 23). Below,                               constitute a PCLF with the graph G ′ (V ′ , E ′ ), we can always
+the T⋆ -lift of G3 for the edge (1, 2, 23), with the new                                    construct a set of functions {V̄i (x)}i=1,...,|V̄| which are a
+introduced edges depicted in blue.                                                          PCLF for the system with Ḡ(V̄, Ē), by assigning to each
+                                                                                            node in Ḡ(V̄, Ē) the function of their corresponding node in
+                                                                                            G ′ (V ′ , E ′ ).
+                   2′                                                1′                         Theorem 1 allows the development of algorithmic proce-
+         23                     4                        1                     23
+                                                                                            dures for stability analysis, by searching iteratively for less
+                                                                                            conservative stability certificates. Such a possible approach
+ 1       1         5            2       4        1       1            5         2       4   is illustrated in the following example.
+                   5                                             5
+                                                                                            Example 2 We consider an arbitrary switching system (1)–
+Fig. 6: Example 1, above: the partial P-lift with respect to the                            (3), consisting  of two matrices,     i.e., hA = {A1 , A2 }, where
+edge (1, 2, 23). The added node (2′ ) and edges are depicted
+                                                                                                    h 0.095 −0.2375  0.2375
+                                                                                                                            i             0.4753    0       0
+                                                                                                                                                               i
+                                                                                            A1 = −1.9          0        0    , A2 =          0      0    0.4753 ,
+in red. Below, the P⋆ -lift of G3 for the edge (1, 2, 23). The                                          0      0      0.475                  0   −1.9012    0
+                                                                                            and the switching constraints graph G(V, E), with V =
+added node (1′ ) and edges are depicted in blue.
+                                                                                            {1}, E = {(1, 1, 1), (1, 1, 2)}. We consider the initial
+                                                                                            path-complete graph G ′ (V ′ , E ′ ) = G(V, E). In order to
+  By construction, the path-completeness property of any                                    show that the system is asymptotically stable, we iteratively
+partial Lift defined above of any edge of G ′ (V ′ , E ′ ) is                               lift the path-complete graph, solving at each iteration the
+preserved. Consequently, less conservative stability criteria                               corresponding algebraic conditions. In particular, at each
+can be formulated, as stated formally below.                                                iteration, for a path-complete graph G ′ (V ′ , E ′ ), by setting
+                                                                                            Gi = I, i = 1, ..., |V ′ |, we first solve the program3
+Theorem 1 Consider a switching system (1)–(3), and a path
+                                                                                                                                                   min              ε
+complete graph G ′ (V ′ , E ′ ) related to switching constraints                                                                             ε,w1 ,...,wV ′
+graph G(V, E). Consider a graph Ḡ(V̄, Ē) that is generated
+by applying a partial T-Lift (resp. partial T*, P, P* Lift) of                                3 This problem can be reduced to a sequence of LPs using bisection.
+                          103                                                   [4] V. Blondel and N. Tsitsiklis. J., “The boundedness of all products of a
+                                                                                    pair of matrices is undecidable,” Systems and Control Letters, vol. 41,
+                                                                                    pp. 135–140, 2000.
+        Number of edges
+                          102
+                                                                                [5] M. Dehghan and C.-J. Ong, “Discrete-time switching linear systems
+                                                                                    with constraints: Characterization and computation of invariant sets
+                          101
+                                                                                    under dwell-time consideration,” Automatica, vol. 48, pp. 964–969,
+                                                                                    2012.
+                                                                                [6] R. M. Jungers and W. P. M. H. Heemels, “Controllability of linear
+                                0   5                10          15
+                                        Iterations                                  systems subject to packet losses,” in 5th IFAC Conference on Analysis
+                                                                                    and Design of Hybrid Systems, Atlanta, USA, 2015, pp. 86–92.
+Fig. 9: Example 2, the number of edges of the path-complete                     [7] S. Olaru, J. A. De Dona, M. M. Seron, and F. Stoican, “Positive invari-
+graph of each iteration.                                                            ant sets for fault tolerant multisensor control schemes,” International
+                                                                                    Journal of Control, vol. 83, pp. 2622–2640, 2010.
+                                                                                [8] X. Dai, “A Gel’fand-type spectral radius formula and stability of linear
+                                                                                    constrained switching systems,” Linear Algebra and its Applications,
+subject to (13), for all (s, d, σ) ∈ E ′ . Next, we identify the                    vol. 436, pp. 1099–1113, 2012.
+edges (s, d, σ) ∈ E ′ that correspond to active constraints                     [9] N. Athanasopoulos and M. Lazar, “Stability analysis of switched
+                                                                                    systems defined by graphs,” in 53rd IEEE CDC, Los Angeles, CA,
+(13) of the problem, in the sense that at least one element                         USA, 2014, pp. 5451–5456.
+of the vector inequality (13) holds with equality. For each                    [10] M. Philippe, R. Essick, R. Dullerud, and R. M. Jungers, “Stability
+such edge and each partial T/T*/P/P* lift, we solve the                             of discrete-time switching systems with constrained switching se-
+                                                                                    quences,” Automatica, vol. 72, pp. 242–250, 2015.
+optimization problem again, finally choosing the lift with the                 [11] A. P. Molchanov and Y. S. Pyatnitsky, “Criteria of asymptotic stability
+smallest corresponding optimal value ε∗. For the specific                           of differential and difference inclusions encountered in control theory,”
+example, stability is verified at the 15th iteration. In Figure                     Systems and Control Letters, vol. 13, pp. 59–64, 1989.
+                                                                               [12] H. Lin and P. J. Antsaklis, “Stability and stabilizability of switched
+7, the optimal values of ε∗ for each step of the algorithm                          linear systems: A survey of recent results,” IEEE Transactions on
+are shown. In Figure 8, the different lengths of the labels of                      Automatic Control, vol. 54, pp. 308–322, 2009.
+the final path-complete graph are shown. Finally, in Figure                    [13] P. A. Parillo and A. Jadbabaie, “Approximation of the joint spectral
+                                                                                    radius using sum of squares,” Linear Algebra and Its Applications,
+9, the number of edges for each path-complete graph of                              vol. 428, pp. 2385–2402, 2008.
+the algorithm is shown, with the final path-complete graph                     [14] R. Goebel, T. Hu, and A. R. Teel, “Dual matrix inequalities in stability
+consisting of 1533 edges.                                                           and performance analysis of linear differential/difference inclusions,”
+                                                                                    Current Trends in Nonlinear Systems and Control, Springer, pp. 103–
+                     VI. C ONCLUSIONS                                               122, 2006.
+                                                                               [15] M. S. Branicky, “Multiple Lyapunov functions and other analysis tools
+   In this work we proposed an opportunistic way to build                           for switched and hybrid systems,” IEEE Transactions on Automatic
+multiple Lyapunov functions by relying on the notion of the                         Control, vol. 43, pp. 475–482, 1998.
+                                                                               [16] M. Johansson and A. Rantzer, “Computation of piecewise quadratic
+path-complete Lyapunov function. This concept provides us                           Lyapunov functions for hybrid systems,” IEEE Transactions on Auto-
+with a clear combinatorial tool (the path-complete graph),                          matic Control, vol. 43, no. 4, pp. 555–559, 1998.
+allowing to ’lift’ the stability criterion in a smart way. As                  [17] A. A. Ahmadi, R. M. Jungers, P. A. Parrilo, and M. Roozbehani, “Joint
+                                                                                    spectral radius and path-complete graph Lyapunov functions,” SIAM
+shown, our approach allows for a versatile construction of                          Journal on Control and Optimization, vol. 52, pp. 687–717, 2014.
+the Lyapunov criterion, which can leverage insight from a                      [18] P.-A. Bliman and G. Ferrari-Trecate, “Stability analysis of discrete-
+previously solved Optimization Program and build a new, ad-                         time switched systems through Lyapunov functions with nonminimal
+                                                                                    state,” in IFAC ADHS, St. Malo, France, 2003, pp. 325–330.
+hoc, optimization program tailored for the specific problem                    [19] R. Essick, J.-W. Lee, and G. E. Dullerud, “Control of linear swithed
+studied. We have exemplified this strategy with polyhedral                          systems with receding horizon modal information,” IEEE Transactions
+Lyapunov functions and in particular a simple parameteriza-                         on Automatic Control, vol. 59, pp. 2340–2352, 2014.
+                                                                               [20] M. Philippe, N. Athanasopoulos, A. Angeli, and R. M. Jungers,
+tion that allows for efficient solution of the corresponding                        “On Path-Complete Lyapunov Functions: Geometry and Comparison,”
+algebraic Lyapunov decrease conditions. Nevertheless, sim-                          IEEE Transactions on Automatic Control, pp. 1947–1957, 2018.
+ilar ideas can be applied to any path-complete Lyapunov                        [21] F. Blanchini, “Ultimate boundedness control for uncertain discrete-
+                                                                                    time systems via set-induced Lyapunov functions,” IEEE Transactions
+function, for instance the often-used quadratic Lyapunov                            on Automatic Control, vol. 39, no. 2, pp. 428–433, 1994.
+functions. In the future, we plan to convert this opportunistic                [22] F. Blanchini and S. Miani, “On the transient estimate for linear
+strategy into a well-defined procedure allowing to build                            systems with time-varying uncertain parameters,” IEEE Transactions
+                                                                                    on Circuits and Systems I: Fundamental Theory and Applications,
+Lyapunov criteria in a smart way, with possible extensions                          vol. 43, pp. 592–596, 1996.
+to nonlinear hybrid systems and systems with control inputs.                   [23] N. Athanasopoulos and M. Lazar, “Alternative stability conditions for
+                                                                                    switched discrete time linear systems,” in IFAC World Congress, Cape
+                                    R EFERENCES                                     Town, South Africa, 2014, pp. 6007–6012.
+ [1] R. M. Jungers, The joint spectral radius: theory and applications, ser.   [24] A. Girard, “Reachability of uncertain linear systems using zonotopes,”
+     Lecture Notes in Control and Information Sciences. Springer, 2009,             in International Workshop on Hybrid Systems: Computation and
+     vol. 385.                                                                      Control, 2005, pp. 291–305.
+ [2] M. C. F. Donkers, W. P. M. Heemels, N. van den Wouw, and L. Hetel,        [25] J.-W. Lee and G. E. Dullerud, “Uniform stabilization of discrete-time
+     “Stability Analysis of Networked Systems Using a Switched Linear               switched and Markovian jump linear systems,” Automatica, vol. 42,
+     Systems Approach,” IEEE Transactions on Automatic Control, vol. 56,            pp. 205–218, 2006.
+     pp. 2101–2115, 2011.                                                      [26] G. M. Ziegler, Lectures on Polytopes. Springer, 1994.
+ [3] A. Girard and G. J. Pappas, “Approximate Bisimulation: A Bridge           [27] F. Blanchini and S. Miani, Set–Theoretic Methods in Control, ser.
+     Between Computer Science and Control Theory,” European Journal                 Systems & Control: Foundations & Applications. Boston, Basel,
+     of Control, vol. 17, pp. 568–578, 2011.                                        Berlin: Birkhauser, 2008.
+

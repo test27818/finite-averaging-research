@@ -1,0 +1,240 @@
+
+%Notes and comments
+\newcommand{\marekscomment}[1]{\color{red}MCh: #1\color{black}}
+\newcommand{\mareksmargincomment}[1]%
+    {{%
+      \marginpar{{\tiny\begin{minipage}{0.5in}
+                       \begin{flushleft}
+                          {\color{red}MCh} {#1}
+                       \end{flushleft}
+                       \end{minipage}
+                }}
+    }}
+\newcommand{\miguelscomment}[1]{\color{blue}Miguel: #1\color{black}}
+
+%Citation
+\newcommand{\etal}{{\emph{et~al.}}}
+
+% various delimiters and operators
+
+\newcommand{\braced}[1]{{ \left\{ #1 \right\} }}
+\newcommand{\angled}[1]{{ \left\langle #1 \right\rangle }}
+\newcommand{\brackd}[1]{{ \left[ #1 \right] }}
+\newcommand{\bigbrackd}[1]{{ \Big[ #1 \Big] }}
+\newcommand{\parend}[1]{{ \left( #1 \right) }}
+\newcommand{\barred}[1]{{ \left| #1 \right| }}
+\newcommand\floor[1]{\lfloor#1\rfloor}
+\newcommand\ceil[1]{\lceil#1\rceil}
+\newcommand{\suchthat}{{\;:\;}}
+\newcommand{\assign}{\,{\leftarrow}\,}
+\newcommand{\unaryminus}{\scalebox{1}[1.0]{-}}
+
+% accented letters
+
+\newcommand{\barc}{{\bar{c}}}
+\newcommand{\bard}{{\bar{d}}}
+\newcommand{\bare}{{\bar{e}}}
+\newcommand{\barg}{\bar{g}}
+\newcommand{\barj}{{\bar{\jmath}}}
+\newcommand{\barn}{\bar{n}}
+\newcommand{\barx}{{\bar x}}
+\newcommand{\bary}{{\bar y}}
+\newcommand{\barz}{{\bar z}}
+\newcommand{\barr}{{\bar r}}
+\newcommand{\bars}{\bar{s}}
+\newcommand{\barC}{{\bar C}}
+\newcommand{\barS}{{\bar S}}
+\newcommand{\barX}{{\bar X}}
+\newcommand{\barY}{{\bar Y}}
+\newcommand{\barV}{{\bar{V}}}
+\newcommand{\barZ}{{\bar{Z}}}
+\newcommand{\bara}{{\bar a}}
+\newcommand{\barp}{{\bar{p}}}
+\newcommand{\barm}{{\bar m}}
+\newcommand{\barA}{{\bar A}}
+\newcommand{\barD}{{\bar{D}}}
+\newcommand{\barmu}{{\bar{\mu}}}
+\newcommand{\barpi}{{\bar{\pi}}}
+
+\newcommand{\bfv}{{\bf v}}
+\newcommand{\bfx}{{\bf x}}
+\newcommand{\bfy}{{\bf y}}
+\newcommand{\bfz}{{\bf z}}
+\newcommand{\bfE}{{\bf{E}}}
+\newcommand{\bfP}{{\bf{P}}}
+\newcommand{\bfQ}{{\bf Q}}
+\newcommand{\bfR}{{\bf R}}
+\newcommand{\bfS}{{\bf S}}
+\newcommand{\bfT}{{\bf T}}
+\newcommand{\bfV}{{\bf V}}
+
+\newcommand{\calA}{{\cal A}}
+\newcommand{\calB}{{\cal B}}
+\newcommand{\calD}{{\cal D}}
+\newcommand{\calG}{{\cal G}}
+\newcommand{\calH}{{\cal H}}
+\newcommand{\calI}{{\cal I}}
+\newcommand{\calJ}{{\cal J}}
+\newcommand{\calK}{{\cal K}}
+\newcommand{\calL}{{\cal L}}
+\newcommand{\calM}{{\cal M}}
+\newcommand{\calN}{{\cal N}}
+\newcommand{\calO}{{\cal O}}
+\newcommand{\calP}{{\cal P}}
+\newcommand{\calR}{{\cal R}}
+\newcommand{\calU}{{\cal U}}
+\newcommand{\calX}{{\cal X}}
+\newcommand{\calY}{{\cal Y}}
+\newcommand{\calZ}{{\cal Z}}
+\newcommand{\calT}{{\cal T}}
+
+\newcommand{\hatc}{{\widehat{c}}}
+\newcommand{\hatC}{{\widehat{C}}}
+\newcommand{\hatmu}{{\hat{\mu}}}
+\newcommand{\hatd}{{\widehat{d}}}
+\newcommand{\hatr}{{\widehat{r}}}
+\newcommand{\hatt}{{\hat{t}}}
+\newcommand{\hatz}{{\hat{z}}}
+\newcommand{\hatp}{{\hat{p}}}
+
+\newcommand{\tte}{{\texttt{e}}}
+\newcommand{\tts}{{\texttt{s}}}
+\newcommand{\ttS}{{\texttt{S}}}
+\newcommand{\ttx}{{\texttt{x}}}
+\newcommand{\ttA}{{\texttt{A}}}
+\newcommand{\ttB}{{\texttt{B}}}
+\newcommand{\ttC}{{\texttt{C}}}
+\newcommand{\ttD}{{\texttt{D}}}
+\newcommand{\ttE}{{\texttt{E}}}
+\newcommand{\ttX}{{\texttt{X}}}
+
+\newcommand{\vecS}{{\bar S}}
+\newcommand{\vecT}{{\bar T}}
+\newcommand{\tildee}{{\tilde{e}}}
+\newcommand{\tildeE}{{\tilde{E}}}
+\newcommand{\tildeV}{{\tilde{V}}}
+\newcommand{\tildeZ}{{\tilde{Z}}}
+
+\newcommand{\uC}{\check{C}}
+\newcommand{\umu}{\check{\mu}}
+
+% formatting
+
+\newcommand{\myparagraph}[1]{{\bigskip\noindent\textbf{#1}.}}
+\newcommand{\mycase}[1]{{\underline{Case~#1}:}}
+\newcommand{\mytype}[1]{\mbox{{\underline{Type #1}}:\/}}
+
+%Math
+\newcommand{\PP}{{\mathbb{P}}}
+\newcommand{\NP}{{\mathbb{NP}}}
+\newcommand{\PeqNP}{{\mathbb{P}=\mathbb{NP}}}
+\newcommand{\ZPos}{{\mathbb{Z^{*}}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\cmark}{{\ding{51}}}
+\newcommand{\xmark}{{\ding{55}}}
+\newcommand{\mix}{\otimes}
+
+\newcommand{\ingroundset}{{\,\sqsubset\,}}
+\newcommand{\ingroundseteq}{{\,\sqsubseteq\,}}
+\newcommand{\naturals}{{\mathbb{N}}}
+\newcommand{\posnaturals}{{\mathbb{N}^+}}
+\newcommand{\reals}{{\mathbb R}}
+\newcommand{\integers}{{\mathbb Z}}
+\newcommand{\posintegers}{{\mathbb{Z}_{> 0}}}
+\newcommand{\nonnegintegers}{{\mathbb{Z}_{\ge 0}}}
+\newcommand{\rationals}{{\mathbb Q}}
+\newcommand{\binrationals}{{\mathbb Q}_0}
+\newcommand{\posreals}{{\mathbb R}^+}
+\newcommand{\malymin}{{\mbox{\tiny\rm min}}}
+\newcommand{\malymax}{{\mbox{\tiny\rm max}}}
+\newcommand{\LHS}{{\mbox{\rm LHS}}}
+\newcommand{\RHS}{{\mbox{\rm RHS}}}
+
+% Added by Dr. Marek
+\newcommand{\cost}{{\textit{cost}}}
+\newcommand{\dist}{{\textit{dist}}}
+\newcommand{\gain}{{\textit{gain}}}
+\newcommand{\ERU}{{\textit{ERU}}}
+\newcommand{\uniq}{{\textit{uniq}}}
+\newcommand{\ac}{{\textit{ac}}}
+\newcommand{\volof}{\circ}
+
+\newcommand{\intermC}{{\uC}}
+\newcommand{\intermmu}{{\umu}}
+
+\newcommand{\nofdroplets}[1]{{|#1|}}
+\newcommand{\nofconcentrations}[1]{{\|#1\|}}
+
+\newcommand{\mysum}{{\textsf{sum}}}
+\newcommand{\average}{{\textsf{ave}}}
+\newcommand{\precision}{{\textsf{prec}}}
+\newcommand{\gcod}{{\textsf{gcod}}}
+\newcommand{\mygcd}{{\textsf{gcd}}}
+\newcommand{\mult}{{\textsf{mult}}}
+\newcommand{\mymod}{{\textrm{mod}}}
+\newcommand{\divides}{{|}}
+\newcommand{\diameter}{{\textsf{diam}}}
+
+\newcommand{\potential}{{\Psi}}
+
+% Conditions
+\newcommand{\MixCond}{{\textrm{(MC)}}}
+\newcommand{\ModNonUni}{{\textrm{(MNU)}}}
+\newcommand{\TwoNonSin}{{\textrm{(2NS)}}}
+\newcommand{\NonBlock}{{\textrm{(NB)}}}
+
+% Decision/Optimization problems
+\newcommand{\MixProducibility}{{\textsc{MixProducibility}}}
+\newcommand{\MixReachability}{{\textsc{MixReachability}}}
+\newcommand{\PerfectMixability}{{\textsc{PerfectMixability}}}
+\newcommand{\Partition}{{\textsc{Partition}}}
+
+% Enumerations
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+
+% Other
+\newcommand{\LoC}{\text{LoC}}
+\newcommand{\FMFB}{\text{FMFB}}
+\newcommand{\CMT}{\text{CMT}}
+\newcommand{\MinMix}{\texttt{Min-Mix}}
+\newcommand{\DMRW}{\texttt{DMRW}}
+\newcommand{\REMIA}{\texttt{REMIA}}
+\newcommand{\GORMA}{\texttt{GORMA}}
+\newcommand{\WARA}{\texttt{WARA}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Fractions
+
+\newcommand{\half}{{\textstyle\frac{1}{2}}}
+\newcommand{\onehalf}{{\textstyle\frac{1}{2}}}
+\newcommand{\threehalfs}{{\textstyle\frac{3}{2}}}
+\newcommand{\threehalves}{{\textstyle\frac{3}{2}}}
+
+\newcommand{\onefourth}{{\textstyle\frac{1}{4}}}
+\newcommand{\threefourths}{{\textstyle\frac{3}{4}}}
+
+\newcommand{\oneeighth}{{\textstyle\frac{1}{8}}}
+\newcommand{\threeighths}{{\textstyle\frac{3}{8}}}
+\newcommand{\fiveeighths}{{\textstyle\frac{5}{8}}}
+\newcommand{\seveneighths}{{\textstyle\frac{7}{8}}}
+
+\newcommand{\onesixteenth}{{\textstyle\frac{1}{16}}}
+\newcommand{\threesixteenths}{{\textstyle\frac{3}{16}}}
+\newcommand{\fivesixteenths}{{\textstyle\frac{5}{16}}}
+\newcommand{\sevensixteenths}{{\textstyle\frac{7}{16}}}
+\newcommand{\ninesixteenths}{{\textstyle\frac{9}{16}}}
+\newcommand{\elevensixteenths}{{\textstyle\frac{11}{16}}}
+\newcommand{\thirteensixteenths}{{\textstyle\frac{13}{16}}}
+\newcommand{\fifteensixteenths}{{\textstyle\frac{15}{16}}}
+
+\newcommand{\seventhirtytwos}{{\textstyle\frac{7}{32}}}
+\newcommand{\eleventhirtytwos}{{\textstyle\frac{11}{32}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  theorems etc
+
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{problem}{Problem}
+\newtheorem{observation}{Observation}

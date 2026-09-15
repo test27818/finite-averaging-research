@@ -1,0 +1,95 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{$\NP$-hardness proof of \MixReachability~for depth-1 mixing graphs}
+%\label{sec: NP-hardness}
+%\input{B_np-hardness.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In this section we show that the variant of {\MixReachability}
+where a mixing graph of constant depth is sought is $\NP$-hard.
+First we prove that \MixReachability~is $\NP$-hard for mixing graphs
+of depth at most $1$, and later we explain how to extend it to
+graphs of arbitrary constant depth.
+	
+Formally, let the \textsc{Depth-1-\MixReachability} problem be the following: 
+Given two configurations $I$ and $T$, determine whether $T$ is reachable from $I$ 
+via a mixing graph of depth at most one. (The depth is defined as the maximum
+number of nodes on a path from an input to an output. So a mixing graph of depth $1$
+does not have any edges between mixers --- each mixer is connected to two input
+nodes and two output nodes.)
+
+Recall that \textsc{Numerical-3D-Matching} is defined as follows: 
+Given three multisets $X, Y, Z$ of non-negative integers such that $|X| = |Y| = |Z| = m$, 
+and a non-negative integer $S$, determine whether $(X,Y,Z)$ 
+has a 3D-matching consisting of triples each adding up to $S$.
+(A 3D-matching of $(X,Y,Z)$ is defined as a partition $M$ of $X\cup Y\cup Z$
+into $m$ triplets of the form $(x,y,z)\in X\times Y \times Z$.)
+\textsc{Numerical-3D-Matching} is well-known to be $\NP$-complete.
+
+%%%%%%%%%%%%%%%%%
+
+\begin{theorem}
+	\label{thm: np-hardness depth 1}
+	The \textsc{Depth-1-\MixReachability} problem is $\NP$-hard.
+\end{theorem}
+
+\begin{proof}
+We prove the theorem by giving a polynomial-time reduction from \textsc{Numerical-3D-Matching}.
+Let
+$X = \braced{x_i}_i$, $Y = \braced{y_i}_i$, and $Z = \braced{z_i}_i$ be the sets from an
+instance of \textsc{Numerical-3D-Matching}, as defined above.
+We construct two configurations $I$ and $T$ as follows.
+For each $i = 1, 2, \dots, m$:
+	\begin{itemize}
+		\item $I$ contains one droplet $a_i = 2 x_i + \frac{1}{2}$ and one droplet $b_i = 2  y_i + 1$.
+		\item $T$ contains two droplets with concentration $c_i = S - z_i + \frac{3}{4}$.
+	\end{itemize}
+	
+We claim that there exists a 3D-Matching $M$ of $(X,Y,Z)$ consisting of triples that
+add up to $S$ if and only if $T$ is reachable from $I$ via a mixing graph of depth at most one.
+
+%%%%%%
+
+\smallskip
+\noindent
+ ($\Longrightarrow$)	
+	Assume $M$ is a 3D-Matching of $(X, Y, Z)$ where each triplet $(x_i, y_j, z_k)\in M$ adds up to $S$.
+	For each $(x_i,y_j,z_k)\in M$, we have 
+	%
+	\begin{equation*}
+		\textstyle
+			\half (a_i + b_j) \; = \; \half [\, (2x_i+\frac{1}{2}) + (2y_j + 1)\, ]
+			\; = \; x_i + y_j + \frac{3}{4}
+			\; = \; S - z_k + \frac{3}{4}
+			\; = \; c_k.
+	\end{equation*}
+	%
+	Create a mixing graph $G$ where
+	for each $(x_i, y_j, z_k)\in M$ we create a mixer node with inputs $a_i$ and $b_j$
+	and two outputs $c_k$. Then $G$ converts $I$ into $T$.
+
+\smallskip
+\noindent
+($\Longleftarrow$)	
+	Assume that there is a mixing graph $G$ of depth at most $1$ that converts $I$ into $T$.
+	All numbers in $I$ are either half-integral $a_i$'s or integral $b_j$'s,
+	and all numbers $c_k$ in $T$ have fractional part $\frac{3}{4}$. So $G$ must consist of
+	$m$ mixer nodes, where each node has incoming edges from some $a_i \in I$ and some $b_j\in I$ and outgoing
+	edges to two $c_k$'s in $T$, where $c_k = \half (a_i + b_j)$.	
+	Create a 3D-Matching $M$ as follows: for each such node include 
+	the corresponding triple $(x_i, y_j, z_k)$ in $M$.
+	By simple calculation (reversing the calculation in implication ($\Longrightarrow$)), 
+	we get that $x_i + y_j + z_k = S$.
+Thus $M$ is indeed a correct solution to the instance of \textsc{Numerical-3D-Matching}.
+\end{proof}
+
+
+The proof in Theorem~\ref{thm: np-hardness depth 1} 
+can be extended to mixing graphs with any constant depth $\sigma\ge 2$.
+The idea is to modify the reduction from the theorem above, by
+including in $I$ droplets $a_i = 2^\sigma x_i + 2^{-\sigma}$ and $b_i = 2^\sigma y_i + 1$,
+for $i=1,...,m$, plus $m(2^\sigma-2)$ droplets with concentration $0$.
+In $T$ we include $2^\sigma$ droplets of concentration 
+$c_i = S - z_i + 2^{-\delta} + 2^{-2\delta}$, for $i=1,...,m$. 
+The correctness proof of this reduction is left to the reader.

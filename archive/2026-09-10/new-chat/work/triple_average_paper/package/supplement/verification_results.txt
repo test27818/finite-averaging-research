@@ -1,0 +1,87 @@
+[verify_seven_descent_cover.py]
+exact certificate: PASS
+words: 18 maximum length: 7
+primitive projective classes: 2916
+x unit, y/x = 0 (mod 3)
+  classes: 729
+  exponents: 0,0,1,1,1,1,1,1,1,2,1,2,2,3,2,3,3,3
+  uncovered finite directions: (Fraction(0, 1), Fraction(2, 1))
+  compatible exceptional directions: (Fraction(0, 1),)
+x unit, y/x = 1 (mod 3)
+  classes: 729
+  exponents: 1,0,1,1,2,1,1,1,1,2,1,2,3,2,2,2,4,3
+  uncovered finite directions: none
+  compatible exceptional directions: none
+x unit, y/x = 2 (mod 9)
+  classes: 243
+  exponents: 0,0,1,1,1,2,1,2,3,2,3,2,2,2,2,2,3,3
+  uncovered finite directions: (Fraction(0, 1), Fraction(2, 1))
+  compatible exceptional directions: (Fraction(2, 1),)
+x unit, y/x = 5 or 8 (mod 9)
+  classes: 486
+  exponents: 0,0,1,1,1,2,1,2,2,2,2,2,2,2,2,2,3,3
+  uncovered finite directions: (Fraction(0, 1), Fraction(2, 1))
+  compatible exceptional directions: none
+3 divides x, y unit
+  classes: 729
+  exponents: 0,1,1,1,1,1,2,1,1,2,1,2,2,2,3,2,3,4
+  uncovered finite directions: none
+  compatible exceptional directions: none
+The only possible uncovered directions are y/x=0 and y/x=2;
+the first is the terminal family and the second has Q=7*x^2.
+
+[verify_eight_euclidean_descent.py]
+B8 Euclidean macro certificate: PASS
+reflection macro length 4 target ((Fraction(2, 3), Fraction(1, 3)), (Fraction(-1, 1), Fraction(-2, 3)))
+swap macro length 6 target ((Fraction(0, 1), Fraction(1, 9)), (Fraction(1, 9), Fraction(0, 1)))
+reduction macro length 3 target ((Fraction(2, 3), Fraction(1, 3)), (Fraction(-8, 9), Fraction(-7, 9)))
+terminal B8(0,1) witness
+  (Fraction(-3, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 1), Fraction(1, 1), Fraction(1, 1))
+  average (Fraction(-3, 1), Fraction(0, 1), Fraction(0, 1)) -> (Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 1), Fraction(1, 1), Fraction(1, 1))
+  average (Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1)) -> (Fraction(-1, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 1), Fraction(1, 1))
+  average (Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1)) -> (Fraction(-1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 1))
+  average (Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1)) -> (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+
+[verify_ten_descent_cover.py]
+B10 exact local-real descent certificate: PASS
+selected macros 7 maximum length 5
+modulus 96 local signatures 12 residue classes 5120
+ matrix (1, 1, -5, -1) det 4 length 3
+ matrix (1, 0, -5, 2) det 2 length 5
+ matrix (1, -2, 0, 3) det 3 length 4
+ matrix (1, 1, 5, -3) det -8 length 3
+ matrix (4, 1, 0, -3) det -12 length 4
+ matrix (1, -2, 5, 2) det 12 length 4
+ matrix (1, 0, -10, -1) det -1 length 5
+compatible uncovered terminal directions {('infinity', 'X=0'): 1}
+
+[verify_ten_complete.py]
+ten-point complete theorem certificate: PASS
+mod-10 four-difference cases 868 split-witness cases 24
+exact four-step bridge samples 14641
+terminal local-real cover: PASS
+
+[verify_all_dimensions_double_triple_invariant.py]
+uniform protected-pool capacity checks: PASS 9990
+composite-inclusive bounded closure checks: PASS 17575
+multi-prime large-coordinate closure checks: PASS 4458
+multi-prime two-step initialization checks: PASS 4799
+characteristic-two obstruction and affine repair: PASS 64
+all-dimension labelled one-trit replays: PASS 80 longest (768, 210)
+proof branches exercised: {'different-heavy-affine-double': 266, 'different-heavy-neighbor': 6679, 'different-heavy-spare': 390, 'different-heavy-third-residue-choice': 84, 'many-heavy-same-residue': 16806, 'one-affine-singleton-choice': 8, 'one-affine-singleton-spare': 78, 'same-heavy-cross-pools': 137, 'same-heavy-neighbor': 327, 'same-heavy-protected-pool': 18, 'same-heavy-spare': 2111, 'terminal': 20, 'three-heavy-light': 3961, 'three-heavy-rainbow': 996, 'two-affine-singletons': 9, 'two-minimal-heavy-protected-pool': 19}
+all-dimension double-triple invariant: PASS
+
+[verify_general_invariant.py]
+general bounded closure: PASS 21816
+general large-coordinate closure: PASS 2369
+general initialization: PASS 3000
+general labelled one-trit paths: PASS 46 maximum (546, 210)
+branches: {'different-heavy-double-neighbor': 185, 'different-heavy-neighbor': 5355, 'large-pool': 67, 'many-heavy-same-residue': 15749, 'one-singleton-spare': 42, 'same-heavy-neighbor': 142, 'same-heavy-one-pool': 3, 'same-heavy-spare': 1908, 'same-heavy-two-pools': 42, 'small-pool-choice': 32, 'small-pool-spare': 162, 'terminal': 31, 'three-heavy-light': 4056, 'three-heavy-rainbow': 768}
+direct all-n invariant: PASS
+
+[verify_paper_data.py]
+paper seven-point matrices, words and signatures: PASS
+paper ten-point matrices, scales and twelve signatures: PASS
+paper finite data and internal references: PASS
+
+ALL PAPER CHECKS PASS: 7

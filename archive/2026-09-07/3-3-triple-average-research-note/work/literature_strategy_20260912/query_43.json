@@ -1,0 +1,65 @@
+{
+  "index": 43,
+  "query": "bounded generation SL2",
+  "url": "https://api.openalex.org/works?filter=title.search%3Abounded+generation+SL2&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 2,
+  "results": [
+    {
+      "id": "https://openalex.org/W2753517288",
+      "title": "Bounded generation of SL2 over rings of S-integers with infinitely many units",
+      "date": "2018-12-04",
+      "doi": "https://doi.org/10.2140/ant.2018.12.1949",
+      "citations": 19,
+      "authors": [
+        "Aleksander Morgan",
+        "Andrei Rapinchuk",
+        "Balasubramanian Sury"
+      ],
+      "abstract": "Let O be the ring of S-integers in a number field k. We prove that if the group of units O^* is infinite then every matrix in $\\Gamma$ = SL_2(O) is a product of at most 9 elementary matrices. This completes a long line of research in this direction. As a consequence, we obtain that $\\Gamma$ is boundedly generated as an abstract group.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.2140/ant.2018.12.1949",
+          "pdf": null,
+          "source": "Algebra & Number Theory"
+        },
+        {
+          "url": "http://arxiv.org/abs/1708.09262",
+          "pdf": "https://arxiv.org/pdf/1708.09262",
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://projecteuclid.org/euclid.ant/1545361466",
+          "pdf": null,
+          "source": "Project Euclid (Cornell University)"
+        }
+      ],
+      "reference_count": 18
+    },
+    {
+      "id": "https://openalex.org/W4376129270",
+      "title": "Idempotent chains and bounded generation of SL2",
+      "date": "2023-05-11",
+      "doi": "https://doi.org/10.1016/j.jpaa.2023.107427",
+      "citations": 2,
+      "authors": [
+        "Dinesh Khurana",
+        "Xavier Mary",
+        "Pace P. Nielsen"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://doi.org/10.1016/j.jpaa.2023.107427",
+          "pdf": null,
+          "source": "Journal of Pure and Applied Algebra"
+        },
+        {
+          "url": "https://hal.science/hal-04223803",
+          "pdf": null,
+          "source": "HAL (Le Centre pour la Communication Scientifique Directe)"
+        }
+      ],
+      "reference_count": 29
+    }
+  ]
+}

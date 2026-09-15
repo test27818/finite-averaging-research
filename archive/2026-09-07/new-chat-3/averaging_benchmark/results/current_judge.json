@@ -1,0 +1,82 @@
+{
+  "judge": {
+    "accuracy": 1.0,
+    "n": 704,
+    "per_tier": {
+      "easy": {
+        "acc": 1.0,
+        "n": 200
+      },
+      "hard": {
+        "acc": 1.0,
+        "n": 200
+      },
+      "medium": {
+        "acc": 1.0,
+        "n": 200
+      },
+      "trap": {
+        "acc": 1.0,
+        "n": 104
+      }
+    },
+    "per_trait": {
+      "all_equal": {
+        "acc": 1.0,
+        "n": 1
+      },
+      "all_even": {
+        "acc": 1.0,
+        "n": 1
+      },
+      "all_odd": {
+        "acc": 1.0,
+        "n": 1
+      },
+      "gcd_cancel": {
+        "acc": 1.0,
+        "n": 9
+      },
+      "mean_type": {
+        "acc": 1.0,
+        "n": 5
+      },
+      "n3_ap": {
+        "acc": 1.0,
+        "n": 5
+      },
+      "n3_nonap": {
+        "acc": 1.0,
+        "n": 5
+      },
+      "negative": {
+        "acc": 1.0,
+        "n": 3
+      },
+      "pow2_size": {
+        "acc": 1.0,
+        "n": 18
+      },
+      "random": {
+        "acc": 1.0,
+        "n": 600
+      },
+      "single_spike": {
+        "acc": 1.0,
+        "n": 56
+      }
+    },
+    "precision_YES": 1.0,
+    "recall_YES": 1.0,
+    "f1_YES": 1.0,
+    "balanced_acc": 1.0,
+    "confusion": {
+      "TP": 230,
+      "TN": 474,
+      "FP": 0,
+      "FN": 0
+    }
+  },
+  "min_steps": {},
+  "construct": {}
+}
