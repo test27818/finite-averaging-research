@@ -5,6 +5,7 @@
 | 想解决的问题 / Reader question | 入口 / Guide |
 |---|---|
 | “可混合”“平均”“共识”是否是同一问题？ / Are mixing, averaging and consensus the same model? | [中英术语和严格定义 / Terminology and definitions](TERMINOLOGY.md) |
+| 二平均四元是否需要判据？ / Does binary averaging of four entries need a criterion? | [无需条件：固定四步证明及完整分类 / Unconditional four-operation proof](BINARY_CLASSIFICATION.md) |
 | 证明到底如何工作？ / How do the proofs work? | [证明路线 / Proof guide](PROOF_GUIDE.md) |
 | 怎样亲自核验？PASS 说明什么？ / How do I reproduce checks, and what does PASS mean? | [核验指南 / Verification guide](VERIFICATION.md) |
 | 哪项测试已知会失败？ / Which test has a known failure? | [二平均零预算计时问题 / Known timing issue](KNOWN_ISSUES.md) |

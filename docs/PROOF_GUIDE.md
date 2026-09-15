@@ -18,20 +18,26 @@ Here $k$ is the operation arity and $n$ is the number of fixed positions. For no
 
 | 结论 / Claim | 范围与状态 / Scope and status | 主要正文 / Primary source |
 |---|---|---|
-| 二平均 / Binary | $n\ge4$, iff $G=2^e$；$n=3$另分类 / separate classification | [原文复核 / Source review](../archive/2026-09-07/3-3-triple-average-research-note/outputs/literature/triple_average_binary_source_reassessment_2026-09-11.md) |
+| 二平均四元 / Binary, four entries | **$n=4$：任意输入，无条件可平均；固定四次操作足够 / Every input is mixable; four fixed operations suffice** | [四步直接证明 / Four-operation proof](BINARY_CLASSIFICATION.md) |
+| 二平均更多二幂维数 / Binary, larger powers of two | $n=8,16,32,\ldots$：任意输入，无条件可平均 / Every input, via a fixed butterfly network | [完整分类 / Classification](BINARY_CLASSIFICATION.md) |
+| 二平均其余维数 / Binary, other dimensions | 非二幂$n\ge5$：iff $G$是2的幂 / a power of 2；$n=1,2$恒可，$n=3$恰为等差 / arithmetic progression | [完整分类及来源 / Classification and source](BINARY_CLASSIFICATION.md) |
 | 三平均 / Ternary | $n\ge7$, iff $G=3^e$；主体$n\ge11$接小基例 / direct proof plus small bases | [双三重值证明 / Repeated-value proof](../archive/2026-09-07/3-3-triple-average-research-note/outputs/triple_average/proofs/triple_average_all_dimensions_double_triple_invariant.md) |
 | 奇素数 / Odd prime | $n\ge2p+1$, iff $G=p^e$；最终阈值最优 / optimal final threshold | [总证明 / Consolidated proof](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proof.md) |
 | 任意元数端点 / General endpoint | 全部$k\ge2$的$n=2k+1$；不等于全部后续$n$ / endpoint only | [最新一般元数交接 / General status](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/general_k_three_tasks_progress_20260915.md) |
 | 任意元数宽尾部 / General tail | $k\ge3,\ n\ge4k-1+d_k(n)$，iff $\operatorname{rad}(G)\mid k$ | [线性阈值 / Linear threshold](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/arbitrary_arity_linear_threshold.md) |
 | 平方与部分素数幂 / Squares and selected prime powers | 指定早期临界维数，部分结果依赖GRH / specified critical dimensions, GRH where stated | [条件性结果 / Conditional results](../archive/2026-09-07/3-3-triple-average-research-note/outputs/general_arity/general_k_grh_stage_and_remaining_tasks_20260915.md) |
 
-其中 $d_k(n)$ 是整除$n$但不整除$k$的不同素数个数。只有$p\nmid n$时，素数判据可简写为$G=1$。当前总状态优先于历史稿的日期性“未解”叙述。
+其中 $d_k(n)$ 是整除$n$但不整除$k$的不同素数个数，指数$e$均为非负整数。只有$p\nmid n$时，素数判据可简写为$G=1$。本原零和向量满足$G\mid n$，所以二平均四元时$G\in\{1,2,4\}$自动成立，不能把它表述为对四元输入另加限制。当前总状态优先于历史稿的日期性“未解”叙述。
 
-Here $d_k(n)$ counts distinct primes dividing $n$ but not $k$. The shorthand $G=1$ is valid for prime arity only when $p\nmid n$. Current status takes precedence over dated statements in historical notes.
+Here $d_k(n)$ counts distinct primes dividing $n$ but not $k$, and every exponent $e$ is a nonnegative integer. The shorthand $G=1$ is valid for prime arity only when $p\nmid n$. Primitive zero-sum vectors satisfy $G\mid n$, so at four entries $G\in\{1,2,4\}$ is automatic, not an additional condition on the input. Current status takes precedence over dated statements in historical notes.
 
 ## 两条成功证明机制 / Two successful mechanisms
 
 ### 二平均与三平均直接证明 / Direct binary and ternary proofs
+
+二平均$n=4$及其他二幂维数首先用固定网络完成。下面的重复值—能量结构用于二平均的一般充分性和三平均直接证明；四元不需要一般不变量论证。
+
+Binary inputs of size four, and other powers of two, have a fixed-network proof. The repeated-value and energy mechanism below concerns general binary sufficiency and the direct ternary proof; it is unnecessary for four entries.
 
 共同思路是保存“继续操作所需的资源”：两个不同的重复值、每个危险模数下的非恒定见证，以及整数格。二平均每个值重复至少两次；三平均直接证明要求两个不同值各至少重复三次。
 

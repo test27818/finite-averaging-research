@@ -18,7 +18,9 @@ For a nonconstant input, center it, clear denominators, and divide by the gcd of
 
 $$G(X)=\gcd_{i<j}|X_i-X_j|.$$
 
-The project's prime-arity theorem gives, for every odd prime $p$ and $n\ge2p+1$, finite reachability exactly when $G(X)=p^e$ for some $e\ge0$. The final threshold $2p+1$ is optimal; binary averaging has final threshold $N(2)=4$. Only when $p\nmid n$ may the criterion be shortened to $G=1$.
+**Binary averaging: every four-entry input is mixable, unconditionally, using four fixed operations.** The same unconditional conclusion holds for $n=8,16,32,\ldots$ via butterfly networks. For other $n\ge5$, a nonconstant rational input is mixable exactly when its primitive centered difference gcd $G$ is a nonnegative integer power of 2. Sizes one and two are always mixable; size three is mixable exactly for an arithmetic progression. See the [complete classification and four-operation proof](docs/BINARY_CLASSIFICATION.md). The final threshold $N(2)=4$ does not say that every input of every size $n\ge4$ is mixable. At $n=4$, $G$ automatically belongs to $\{1,2,4\}$, so no gcd test is needed.
+
+The project's prime-arity theorem gives, for every odd prime $p$ and $n\ge2p+1$, finite reachability exactly when $G(X)=p^e$ for some nonnegative integer $e$. The final threshold $2p+1$ is optimal. Only when $p\nmid n$ may the criterion be shortened to $G=1$.
 
 The binary literature uses **Condition (MC)** and waste-free **mixing graphs**. The project develops ternary and higher-arity extensions. A state-dependent path for each eligible rational input is different from a single fixed averaging network that works for all real inputs; results about finite-time consensus or clique gossiping must respect that distinction.
 

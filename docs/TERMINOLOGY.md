@@ -49,7 +49,11 @@ In the binary paper's integer/dyadic-precision setting, Condition (MC) requires 
 
 本项目将非全等有理输入中心化、清分母、本原化成整数零和向量 $X$，再定义 $G=\gcd_{i<j}|X_i-X_j|$。素数 $p$ 平均的完整阈值范围内，判据是 $G=p^e$；一般 $k$ 的必要条件是每个整除 $G$ 的素数均整除 $k$，即 $\operatorname{rad}(G)\mid k$，充分性要看具体已证范围。
 
-The project uses primitive centered integer deviations. Above the proved prime-arity thresholds, the criterion is $G=p^e$. For general $k$, the necessary condition is $\operatorname{rad}(G)\mid k$; its sufficiency must be read with the stated dimension range. Constant input is a separate zero-step case.
+The project uses primitive centered integer deviations. Above the proved prime-arity thresholds, the criterion is $G=p^e$, with $e$ a nonnegative integer. For general $k$, the necessary condition is $\operatorname{rad}(G)\mid k$; its sufficiency must be read with the stated dimension range. Constant input is a separate zero-step case.
+
+**二平均的四元情形无条件成立。** 任意$(a,b,c,d)$按$(1,2),(3,4),(1,3),(2,4)$四次配对即到总均值，无须检查$G$。本原零和向量有$G\mid n$，所以$n=4$时$G$自动为1、2或4。二平均的其他二幂维数同样无条件可平均；其余$n\ge5$才需要用$G$判据筛选。见[完整分类](BINARY_CLASSIFICATION.md)。
+
+**Four-entry binary averaging is unconditional.** The fixed schedule $(1,2),(3,4),(1,3),(2,4)$ works for every input. Since primitive zero-sum vectors satisfy $G\mid n$, their $G$ at $n=4$ is automatically 1, 2 or 4. Other powers-of-two sizes are also unconditional; the gcd test selects eligible inputs at the remaining sizes $n\ge5$. See the [complete classification](BINARY_CLASSIFICATION.md).
 
 ## 原始 mixing graph 与顺序平均 / Mixing graphs and sequential averaging
 
