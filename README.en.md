@@ -10,6 +10,8 @@ This repository studies **perfect mixability**, **mixing graphs**, **finite-step
 
 ## Mathematical problem
 
+**Research provenance and ongoing direction.** The project's new research results were developed primarily through sustained collaboration between the user and **GPT-6 Astra (gpt6-astra)**. The completed proofs have undergone multiple rounds of internal review, cross-checking and targeted exact verification, with audit records, corrections and known issues retained. Work continues toward **more natural, readable and structurally unified proofs**, reducing isolated constructions and reliance on computational certificates. Internal review is not external peer review or formal certification; cited prior results remain attributed to their original authors. See [research provenance and review scope](PROVENANCE.md).
+
 For $x\in\mathbb Q^n$, choose $S\subseteq\{1,\dots,n\}$ with $|S|=k$. Replace $x_i$ by $\sum_{j\in S}x_j/k$ for each $i\in S$, leaving the other entries unchanged. The target is the original mean $\bar x$ in every position.
 
 For a nonconstant input, center it, clear denominators, and divide by the gcd of all coordinates to obtain a primitive integer zero-sum vector $X$. Define

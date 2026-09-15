@@ -2,6 +2,10 @@
 
 [中文首页](../README.md) · [English](../README.en.md) · [核验 / Verification](VERIFICATION.md)
 
+**研究背景与目标。** 本项目的新成果主要由用户与 **GPT-6 Astra（gpt6-astra）** 协作推进，已完成证明经历多轮内部审核、交叉复核与针对性精确核验。当前仍在寻找更自然、易读且结构统一的证明，特别是用一般机制替代零散参数构造和有限证书。审核和已知问题的范围见[来源说明](../PROVENANCE.md)与[核验指南](VERIFICATION.md)。
+
+**Research context and goal.** The project's new results were developed primarily through collaboration with **GPT-6 Astra (gpt6-astra)**. Completed proofs have undergone repeated internal review, cross-checking and targeted exact verification. The ongoing goal is a more natural, readable and structurally unified proof, replacing isolated parameter constructions and finite certificates with general mechanisms. See [provenance](../PROVENANCE.md) and the [verification guide](VERIFICATION.md) for the scope of reviews and known issues.
+
 本文是证明的导航与结构说明，不替代所链接的一般论证。项目是研究证明与证据档案，不是Lean、Coq或Isabelle形式化，也不能把归档内“独立审核”理解成外部同行评审。
 
 This guide explains the architecture and routes reviewers to the actual arguments. It is not a formalization or a replacement for the proofs; internal audit notes are not external peer review.
