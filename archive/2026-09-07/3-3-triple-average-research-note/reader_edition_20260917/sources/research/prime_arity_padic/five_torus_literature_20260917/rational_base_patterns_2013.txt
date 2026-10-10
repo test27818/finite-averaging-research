@@ -1,0 +1,1095 @@
+                                                     PATTERNS IN RATIONAL BASE NUMBER SYSTEMS
+
+                                             JOHANNES F. MORGENBESSER, WOLFGANG STEINER, AND JÖRG M. THUSWALDNER
+arXiv:1203.4919v1 [math.NT] 22 Mar 2012
+
+
+
+
+                                                 Abstract. Number systems with a rational number a/b > 1 as base have gained interest
+                                                 in recent years. In particular, relations to Mahler’s 32 -problem as well as the Josephus
+                                                 problem have been established. In the present paper we show that the patterns of digits in
+                                                 the representations of positive integers in such a number system are uniformly distributed.
+                                                 We study the sum-of-digits function of number systems with rational base a/b and use
+                                                 representations w.r.t. this base to construct normal numbers in base a in the spirit of
+                                                 Champernowne.
+                                                    The main challenge in our proofs comes from the fact that the language of the rep-
+                                                 resentations of integers in these number systems is not context-free. The intricacy of
+                                                 this language makes it impossible to prove our results along classical lines. In particu-
+                                                 lar, we use self-affine tiles that are defined in certain subrings of the adèle ring AQ and
+                                                 Fourier analysis in AQ . With help of these tools we are able to reformulate our results as
+                                                 estimation problems for character sums.
+
+
+
+
+                                                                                   1. Introduction
+                                             Starting with the well-known papers by Gelfond [Gel68] and Delange [Del75], distribution
+                                          properties of sets defined in terms of digital restrictions and sum-of-digits functions have
+                                          been studied systematically by many authors. Recently, Mauduit and Rivat [MR10] solved
+                                          a problem on the distribution of the q-ary sum-of-digits function of primes in residue classes
+                                          (this problem was already stated in Gelfond’s paper [Gel68]). In their proofs, they used
+                                          sophisticated exponential sum methods. Due to their paper, the area gained new impact
+                                          and many new results have been proved in the past few years; see e.g. [DMR09, DMR11,
+                                          MR09, Mor10].
+                                             The present paper is devoted to digit patterns and the sum-of-digits function for number
+                                          systems with a rational number as base. We begin with the definition of the representation
+                                          of positive integers that was given by Akiyama, Frougny, and Sakarovitch [AFS08]. For
+                                          given coprime integers a, b with a > b ≥ 1, let a/b be the base and D = {0, 1, . . . , a − 1}
+                                          the set of digits. Then every positive integer n has a unique finite representation of the
+
+
+                                            2010 Mathematics Subject Classification. 11A63 (primary), 28A80, 52C22 (secondary).
+                                            Key words and phrases. Rational number system, normal numbers, p-adic numbers, Fourier analysis,
+                                          sum-of-digits function.
+                                            This research was supported by the Austrian Science Fund (FWF), projects P21209, S9610, and W1230.
+                                          Part of this research was conducted while the second author was visiting academic at the Department of
+                                          Computing of the Macquarie University, Sydney.
+                                                                                              1
+2                   J. F. MORGENBESSER, W. STEINER, AND J. M. THUSWALDNER
+
+form
+
+                                1 X
+                                     ℓ(n)−1   a k
+(1)                          n=       εk (n)        ,          εk (n) ∈ D,
+                                b k=0          b
+
+with εℓ(n)−1 (n) 6= 0. We call the pair (a/b, {0, 1, . . . , a − 1}) a rational base number sys-
+tem. The representation in (1) is the representation of n in base a/b. For example, the
+representations of 1, 2, . . . , 10 in base 3/2 are
+         (2) = 1,        (21) = 2,            (210) = 3,           (212) = 4,    (2101) = 5,
+      (2120) = 6,      (2122) = 7,        (21011) = 8,           (21200) = 9,   (21202) = 10.
+Note that — when b > 1 holds — these representations are different from the β-expansions
+with β = a/b that were defined by Rényi [Rén57].
+   One of the motivations to study these number systems is their relation to Mahler’s 32 -
+problem that was pointed out in [AFS08, Section 6]. Mahler asked whether there exists
+z ∈ R \ {0} such that the fractional part of z(3/2)n falls into [0, 1/2) for all n ≥ 0; see
+[Mah68]. Among other things, Akiyama, Frougny, and Sakarovitch could prove with the
+help of the base 3/2 number system that there exist infinitely many z ∈ R \ {0} such that
+kz(3/2)n k < 1/3 holds for all n ≥ 0, where kxk denotes the distance of x to its nearest
+integer; see [AFS08, Corollary 4]. These number systems also have connections to the
+Josephus problem; see [AFS08, Section 4.4] and [ST, Example 2.1].
+   In [AFS08], the authors put some emphasis on the investigation of the language L of
+words on the alphabet D defined by the representations of the positive integers in base a/b.
+It turns out that L is not regular and even not context-free (in the case b > 1); see [AFS08,
+Corollaries 7 and 9]. This makes it hard to get distribution results for the patterns of their
+digit strings as well as their sum-of-digits function. The present paper contains first results
+in this direction. Using Fourier analysis in the adèle ring AQ of Q as well as character
+sum estimates, we are able to prove that each digit string of a given length ℓ occurs in the
+representations of the integers 1, 2, . . . , N in base a/b with equal frequency a−ℓ . We also
+provide an error term. As a corollary, we state a result in the spirit of Delange [Del75] on the
+summatory function of the sum-of-digits function. Moreover, we give a new construction
+of normal numbers defined in terms of representations in base a/b.
+   To be able to state our main result, we define the function Sw (N), which counts the
+number of occurrences of the pattern w in the base a/b representations of the first N
+positive integers. In particular, let w = (wℓ−1 , . . . , w1 , w0), with wi ∈ D, be a finite
+sequence of digits. The length of w is denoted by |w| = ℓ. We set
+                                                ℓ(N )−|w|
+                                                  X
+                                     Sw (N) =               Sk,w (N)
+                                                  k=0
+
+with
+       Sk,w (N) = #{1 ≤ n ≤ N : ℓ(n) ≥ k + |w|, (εk+|w|−1(n), . . . , εk+1(n), εk (n)) = w}.
+                            PATTERNS IN RATIONAL BASE NUMBER SYSTEMS                                                     3
+
+Main theorem. Let a, b ∈ N with (a, b) = 1 and a > b ≥ 1. Then
+                                     N                            
+                          Sw (N) = |w| loga/b N + O N log log N .
+                                    a
+                                      P
+   The arithmetic function sa/b (n) = 0≤k<ℓ(n) εk (n) is well-defined and is called the sum-
+of-digits function in base a/b. From our main theorem we obtain the following corollary
+on the summatory function of sa/b .
+Corollary 1. Let a, b ∈ N with (a, b) = 1 and a > b ≥ 1. Then
+                           N
+                           X                  a−1                           
+                                 sa/b (n) =       N loga/b N + O N log log N .
+                           n=1
+                                               2
+  The next definition generalizes the famous Champernowne constant c, the decimal ex-
+pansion of which is given by c = 0 . 1 2 3 4 5 6 7 8 9 10 11 12 · · · . Let za/b be the unique
+real number in (0, 1) that has a (standard) representation in base a which is obtained by
+concatenating the digits of 1, 2, 3, . . . in their representation in base a/b, that is
+  za/b = 0 . ε0 (1) εℓ(2)−1 (2) · · · ε1 (2)ε0 (2) εℓ(3)−1 (3) · · · ε1 (3)ε0 (3) εℓ(4)−1 (4) · · · ε1 (4)ε0 (4) · · ·
+or, more precisely,
+                                                     ℓ(n)
+                                                   ∞ X
+                                                   X      εℓ(n)−k (n)
+                                          za/b =                 Pn−1        .
+                                               k+ j=1 ℓ(j)
+                                      n=1 k=1 a
+For example, the real number z3/2 is given in base 3 by
+                            z3/2 = 0 . 2 21 210 212 2101 2120 2122 21011 · · · .
+In the case that a = 10 and b = 1, za/b is exactly the constant c. Champernowne [Cha33]
+proved that c is normal in base 10, i.e., every digit string w of length |w| occurs with equal
+frequency 10−|w| in the base 10 representation of c. We have the following result.
+Corollary 2. Let a, b ∈ N with (a, b) = 1 and a > b ≥ 1. Then za/b is normal in base a.
+Remark 1.1. We mention here that all our results and proofs remain valid (with obvious
+changes) if the basis a/b is negative and the set of digits is D = {0, 1, . . . , |a| − 1}. In order
+to keep the exposition as simple as possible we confine ourselves to positive integers a and
+b throughout this paper.
+
+                                          2. Plan of the proof
+  To analyze Sw (N), it is important to understand the structure of the digits of n ≤ N
+with respect to the given base. In the case of the standard q-ary representation
+                                                                        P              in N (i.e.,
+a = q, b = 1), this is relatively simple. Indeed, we have n/q k+1 = 0≤j<ℓ(n) εj (n) q j−k−1,
+and this sum can be split into
+         X                                       X                                        
+                       j−k−1                                   j−k−1     εk (n) εk (n) + 1
+(2)           εj (n) q       ∈ Z[q] = Z and           εj (n) q       ∈         ,            .
+                                                0≤j≤k
+                                                                            q        q
+        k<j<ℓ(n)
+4                 J. F. MORGENBESSER, W. STEINER, AND J. M. THUSWALDNER
+
+Therefore, the digit εk (n) in base q is equal to d ∈ {0, . . . , q −1} if and only if the fractional
+part of n/q k+1 lies in the half-open interval [d/q, (d + 1)/q). This makes it easy to employ
+analytic methods in order to study the frequency of certain digit patterns. The first
+problem consists in finding related formulas for rational base number systems. However,
+the most crucial difference to the standard base q representations is the already discussed
+fact that the language L of words on the alphabet D defined by the representations of the
+positive integers in base a/b cannot be described in a simple way. Thus, there seem to be
+no elementary combinatorial considerations proving our results.
+   To overcome the difficulties occurring in the case of rational base number systems we
+have to embed the rational numbers into a subring Ka/b of the adèle ring AQ , where the
+(embedding of the) set Z[a/b] = Z[1/b] forms a lattice; see Section 3 for a precise definition.
+This makes it possible to find a compact, self-affine fundamental domain F of Z[1/b] in Ka/b
+which is related to the underlying rational number system. Using its self-affine structure,
+the set F can be written as a union of subsets Fd (d ∈ D), which play a similar role as the
+intervals [d/q, (d + 1)/q) do for q-ary representations in (2); see Figure 1 for a picture of
+these sets. With help of these sets we are able to establish formulas similar to the one in
+(2) in the context of rational base number systems. This enables us to use Fourier analysis
+in Ka/b in order to reformulate the problem of counting the digit patterns as a problem on
+estimating character sums. Since Ka/b is a subring of the adèle ring AQ , the characters of
+this adèle ring are used to define the appropriate Fourier transformation and its inverse;
+see e.g. Tate’s thesis [Tat67] or Weil [Wei73]. Finally, using ideas reminiscent of Drmota
+et al. [DMR09], we estimate the character sums emerging from this Fourier transformation
+process.
+   The paper is organized as follows. In Section 3, we give some definitions and set up
+the environment for the required Fourier analysis. This includes analyzing the Pontryagin
+dual of the fundamental domain F as well as the calculation of Fourier coefficients for
+Urysohn functions related to F . In Section 4, we perform the estimates of the character
+sums emerging from the Fourier transformation process in order to prove the main results.
+Finally, in Section 5 we briefly discuss some open questions and possible directions of future
+research related to the topic of the present paper.
+
+                    3. Fourier analysis on fundamental domains
+    Throughout this paper, we set
+                                             α = a/b.
+In this section, we study self-affine tiles associated with representations in rational bases.
+These tiles are special cases of the rational self-affine tiles defined in [ST]. We need several
+notations and definitions.
+   For each (finite) rational prime p denote the p-adic completion of Q by Qp , that is,
+the field Qp is the completion of Q w.r.t. the topology induced by the p-adic exponent
+vp . As usual, we write Zp for the ring of integers of Qp . The fractional part of x ∈ Qp
+                                     P                  P−1
+will be denoted by λp (x), i.e., λp ( ∞ j=k d j p j
+                                                    ) =          j
+                                                         j=k dj p for all sequences (dj )j≥k with
+                          PATTERNS IN RATIONAL BASE NUMBER SYSTEMS                            5
+
+dj ∈ {0, . . . , p − 1}, k < 0. For the (unique) infinite prime p = ∞ set Qp = R, which is the
+completion of Q with respect to the Archimedean absolute value | · | in Q.
+   Consider the set of primes
+                                   Sα = {p : p | b, p prime} ∪ {∞}.
+With help of Sα we define the subring
+                                                      Y
+                                              Kα =           Qp
+                                                      p∈Sα
+
+of the adèle ring AQ of Q. We equip Kα with the measure µα that is defined by the
+product measure of the Lebesgue measure µ∞ on R and the Haar measures1 µp on Qp for
+p ∈ Sα \ {∞}. Let
+                            Φ : Q → Kα , z 7→ (z, . . . , z),
+be the diagonal embedding of Q in Kα . The set Q acts multiplicatively on Kα by
+                                        ξ · (zp )p∈Sα = (ξzp )p∈Sα .
+Following [ST], we define F = F (α, D) as the unique non-empty compact subset of Kα
+satisfying
+                                   [                 
+                              F=      α−1 · F + Φ(d) .
+                                             d∈D
+
+This set can be written explicitly as
+                                   X ∞                  
+                                              −k
+                             F=         Φ(εk α ) : εk ∈ D .
+                                            k=1
+
+In order to keep track of the occurrences of a given digit d ∈ D in a representation in base
+a/b, we will have to deal with the subsets
+                                                  
+                            Fd = α−1 · F + Φ(d)         (d ∈ D)
+of F . See Figure 1 for a representation of these sets for the case α = 3/2.
+
+
+                                                     F1
+
+
+                                            F0                F2
+
+
+              1. The sets Fd constituting F ∈ R × Q2 for α = 3/2.
+       Figure P                                                         P∞ Here,−jan
+       element ∞   d
+                j=k j α −j
+                           of Q2 , with d j ∈ {0, 1}, is represented by  j=k dj 2 .
+
+  1We choose µ                                                                  ℓ
+                 p in a way that µp (Zp ) = 1. In particular, this implies µp (p Zp ) = p .
+                                                                                         −ℓ
+6                 J. F. MORGENBESSER, W. STEINER, AND J. M. THUSWALDNER
+
+    We also need to consider approximations of Fd . To this matter, define the “boxes”
+                                            Y 
+                                 −r
+                          Dr = α · [0, 1] ×     Zp        (r ≥ 0).
+                                                         p|b
+
+With help of these boxes, we define the approximations
+                        [                Xr                
+                                     −1             −k
+              Fd,r =           Φ(dα ) +       Φ(εk α ) + Dr                (r ≥ 1)
+                        ε2 ,...,εr ∈D               k=2
+
+of Fd . (Note that the sum over k is empty for r = 1.)
+   Recall that a collection C of compact subsets of Kα is a tiling of Kα if each element of C
+is the closure of its interior and if µα -almost every point of Kα is contained in exactly one
+element of C. It will be of importance later that F , Fd , and their approximations induce
+periodic tilings of Kα . This is made precise in the following lemma.
+Lemma 3.1. The following collections are tilings of Kα .
+      • {Φ(x) + Dr : x ∈ α−r Z[α]}            (r ≥ 0),
+      • {Φ(x) + Fd,r : x ∈ Z[α], d ∈ D} (r ≥ 1),
+      • {Φ(x) + F : x ∈ Z[α]},
+      • {Φ(x) + Fd : x ∈ Z[α], d ∈ D}.
+Proof. To show that {Φ(x)+D0 : x ∈ Z[α]} is a tiling of Kα , consider a point (zp )p∈Sα ∈ Kα ,
+and let                                    $                         %
+                          X                          X
+                     y=          λp (zp ) + z∞ −             λp (zp ) .
+                               p∈Sα \{∞}                       p∈Sα \{∞}
+
+Since λp (zp ) ∈ Z[α] holds for each p ∈ Sα \ {∞}, we have y ∈ Z[α]. By the definition of y,
+we conclude that (zP   p )p∈Sα ∈ Φ(y) + D0 , and (zpP    )p∈Sα 6∈ Φ(x) + D0 for all x ∈ Z[α] \ {y}
+except when z∞ − p∈Sα \{∞} λp (zp ) ∈ Z. As                p∈Sα \{∞} λp (zp ) ∈ Q, the set of points
+                              P
+(zp )p∈Sα ∈ Kα with z∞ − p∈Sα\{∞} λp (zp ) ∈ Z has µα -measure zero (note that z∞ can be
+an arbitrary real number). Hence, {Φ(x) + D0 : x ∈ Z[α]} is a tiling of Kα . Multiplying
+by α−r yields that {Φ(x) + Dr : x ∈ α−r Z[α]} is a tiling of Kα for each r ≥ 0. Since the set
+{ε1 α−1 + · · · + εr α−r : ε1 , . . . , εr ∈ D} forms a complete residue system of Z[α]/α−r Z[α],
+it follows that {Φ(x) + Fd,r : x ∈ Z[α], d ∈ D} is a tiling of Kα for each r ≥ 1.
+   By [ST, Theorem 2], the collection {Φ(x) + F : x ∈ Z[α]} forms a tiling of Kα . Now,
+multiplying by α−1 yields that {Φ(x) + Fd : x ∈ Z[α], d ∈ D} is a tiling of Kα .                  
+    A patch of the tiling {Φ(x) + F : x ∈ Z[α]} for α = 3/2 is depicted in Figure 2.
+    For a set M ⊂ Kα , we denote the characteristic function of M by 1M . Since
+            Z                  Y                          Y
+                1Dr dµα = α−r     µp (pvp (b)r Zp ) = α−r   p−vp (b)r = α−r b−r = a−r ,
+             Kα                         p|b                     p|b
+                       PATTERNS IN RATIONAL BASE NUMBER SYSTEMS                                            7
+
+
+                                −3/2                    1/2                  5/2                 9/2
+
+
+                    −5/2                    −1/2                   3/2                 7/2
+
+
+                                       −1                      1                   3                   5
+
+
+                           −2                      0                     2                   4
+
+
+
+       Figure 2. The tiles Φ(x) + F ∈ R × Q2 for α = 3/2, x ∈ { −5
+                                                                2
+                                                                   , −4
+                                                                      2
+                                                                        , . . . , 10
+                                                                                   2
+                                                                                     }.
+
+the function                                       Z
+                                               r
+                            fd,r (z) = a                    1Φ(Z[α])+Fd,r (z + y) dµα(y)
+                                                       Dr
+is an Urysohn function which approximates the characteristic function of Fd mod Φ(Z[α]).
+It can be split up into a sum of the ar−1 functions
+                                      Z
+                                    r
+                        gx,r (z) = a    1Φ(x+Z[α])+Dr (z + y) dµα (y)
+                                                   Dr
+               −1      −2                          −r
+with x ∈ {dα + ε2 α + · · · + εr α : ε2 , . . . , εr ∈ D}.
+   We want to expand fd,r into a Fourier series. Since {Φ(x) + D0 : x ∈ Z[α]} forms a tiling
+of Kα by Lemma 3.1, and since fd,r and gx,r are periodic functions mod Φ(Z[α]), we will do
+Fourier analysis on the compact fundamental domain D0 of Kα /Φ(Z[α]). To this matter,
+we set e(y) = exp(2πiy) and define the character
+                                                                   !
+                                             X
+                         χ (zp )p∈Sα = e              λp (zp ) − z∞ .
+                                                              p∈Sα \{∞}
+
+(For the definition of characters of the adèle ring AQ , we refer to Weil [Wei73, Section IV.2,
+p. 66].) We will also use the notation χ̃(ξ) = χ(Φ(ξ)). We have the following property.
+Lemma 3.2. Let ξ ∈ Q. Then χ̃(ξ) = 1 if and only if ξ ∈ Z[α].
+Proof. The definition of the character χ implies that χ̃(ξ) = 1 if and only if
+                                    X
+(3)                                     λp (ξ) − ξ ∈ Z.
+                                                   p|b
+
+Assume now that ξ 6∈ Z[α]. Then there exists a prime q ∤ b such that ξ 6∈ Zq (to be precise,
+the canonicalPembedding of ξ in Qq is not an element of Zq ). Since λp (ξ) ∈ Zq for all p | b,
+we see that p|b λp (ξ) − ξ 6∈ Zq . Hence, (3) cannot hold true. It remains to show that
+      P implies (3). Let q be prime. If q ∤ b then λp (ξ) ∈ Zq for all p | b and ξ ∈ Zq .
+ξ ∈ Z[α]
+Thus, p|b λp (ξ) − ξ ∈ Zq . If q | b, then λp (ξ) ∈ Zq for p 6= q and λq (ξ) − ξ ∈ Zq . Hence,
+8                  J. F. MORGENBESSER, W. STEINER, AND J. M. THUSWALDNER
+P                                                     P                  T
+    p|b λp (ξ) − ξ ∈ Zq in this case too.    Thus     p|b λp (ξ) − ξ ∈       q Zq = Z, which proves the
+lemma.                                                                                               
+  Using [HR63, Theorem 23.25], we see that the Pontryagin dual D c0 of D0 is isomorphic to
+the annihilator of Φ(Z[α]) in the Pontryagin dual Kcα . Therefore, using [ST, Lemma 4.7],
+we conclude that D c0 = {χ(ξ ·) : ξ ∈ Z[α] } holds with
+                                          ∗
+
+                         Z[α]∗ = {ξ ∈ Q : χ̃(ξx) = 1 for all x ∈ Z[α]}.
+Lemma 3.2 implies that Z[α]∗ = Z[α]; compare with [Tat67, proof of Lemma 4.1.5] and
+[ST, Lemma 4.6]. Summing up, we proved the following lemma.
+Lemma 3.3. The Pontryagin dual of D0 is given by
+                           c0 = {χ(ξ ·) : ξ ∈ Z[α]}.
+                           D
+  By Lemma 3.3, the Fourier expansions of the functions gx,r and fd,r are of the form
+                      X                                  X
+(4)        gx,r (z) ∼     cx,r,ξ χ(ξ · z) and fd,r (z) ∼      c′d,r,ξ χ(ξ · z).
+                          ξ∈Z[α]                                   ξ∈Z[α]
+
+We will show that these Fourier expansions converge pointwise to the respective function.
+To this matter we need the following estimates of the Fourier coefficients of gx,r .
+Lemma 3.4. For r ≥ 0 and x ∈ {dα−1 + ε2 α−2 + · · · + εr α−r : d, ε2 , . . . , εr ∈ D} we have
+                        
+                          −r
+                        a                           if ξ = 0,
+                                      |1−e(α−r ξ)|2
+                           r  −r
+                cx,r,ξ = α b χ̃(−xξ) 4 ξ2 π2         if ξ ∈ bZr \ {0},
+                        
+                        
+                         0                           otherwise.
+Proof. As Φ(x) + D0 is a fundamental domain of Kα /Φ(Z[α]), Lemma 3.3 implies that the
+Fourier coefficient cx,r,ξ of gx,r (z) is given by
+                  Z
+                r
+      cx,r,ξ = a            gx,r (z) χ(−ξ · z) dµα (z)
+                   Φ(x)+D0
+                  Z            
+                r
+                                                          
+             =a             µα Φ(x + Z[α]) + Dr ∩ z + Dr χ(−ξ · z) dµα (z)
+                   Φ(x)+D0
+                                    Z      
+                r
+                                                              
+             = a χ − ξ · Φ(x)           µα Φ(Z[α]) + Dr ∩ z + Dr χ(−ξ · z) dµα (z).
+                                    D0
+
+Since Dr ⊆ D0 and D0 + Dr ⊆ D0 ∪ (Φ(1) + D0 ), we have
+                                                          
+ µα Φ(Z[α]) + Dr ∩ z + Dr = µα Dr ∩ z + Dr + µα Φ(1) + Dr ∩ z + Dr
+
+         0 . Using the identities χ(−ξ · (z − Φ(1))) = χ(−ξ · z) and D0 ∪ (−Φ(1) + D0 ) =
+for z ∈ DQ
+[−1, 1] × p|b Zp , we obtain that
+                               Z
+                      r
+                                                             
+            cx,r,ξ = a χ̃(−xξ)       Q
+                                            µα Dr ∩ (z + Dr ) χ(−ξ · z) dµα (z).
+                                   [−1,1]×   p|b Zp
+                                PATTERNS IN RATIONAL BASE NUMBER SYSTEMS                                                     9
+
+Setting
+            Z 1
+                                                 
+    I∞ =          µ∞ [0, α−r ] ∩ [z∞ , z∞ + α−r ] e(ξz∞ ) dz∞                          and
+             −1
+            Z
+                                                                   
+     Ip =         µp prvp (b) Zp ∩ (zp + prvp (b) Zp ) e − λp (ξzp ) dµp (zp )                             (p ∈ Sα \ {∞}),
+             Zp
+                                                 Q
+Fubini’s theorem implies that cx,r,ξ = ar χ̃(−xξ) p∈Sα Ip . We have
+              Z α−r                             (
+                                                 α−2r                                                        if ξ = 0,
+        I∞ =        (α−r − |z∞ |) e(ξz∞ ) dz∞ = (1−e(α−r ξ)) (1−e(−α−r ξ))
+                   −α−r                                                               4 ξ2 π2
+                                                                                                             otherwise.
+It remains to calculate the integrals Ip for p | b. Note that
+                                             Z
+                                rvp (b)
+                                                               
+                     Ip = µ p p         Zp         e − λp (ξzp ) dµp (zp ).
+                                                         prvp (b) Zp
+
+If vp (ξ) ≥ −rvp (b), then we get
+                   Z                                  Z
+                                         
+                            e − λp (ξzp ) dµp (zp ) =                                     dµp = p−rvp (b) .
+                        prvp (b) Zp                                         prvp (b) Zp
+
+If vp (ξ) < −rvp (b), then ℓ = −vp (ξ) − rvp (b) is a positive integer and we obtain
+              Z                                            Z
+                                                   vp (ξ)
+                                                                          
+                        e − λp (ξzp ) dµp (zp ) = p           e − λp (zp ) dµp (zp )
+                  prvp (b) Zp                                                p−ℓ Zp
+                                                                             ℓ −1
+                                                                            pX          
+                                                                   vp (ξ)              k
+                                                              =p                    e − ℓ = 0.
+                                                                                       p
+                                                                            k=0
+
+Thus we have for p | b that
+                                             (
+                                                 p−2rvp (b)    if vp (ξ) ≥ −rvp (b),
+                                      Ip =
+                                                 0             otherwise.
+Putting everything together proves the desired result.                                                                       
+  We now state the convergence result for the Fourier series in (4).
+Lemma 3.5. For each z ∈ Kα we have
+                     X                                                                    X
+          gx,r (z) =    cx,r,ξ χ(ξ · z) and                            fd,r (z) =                  c′d,r,ξ χ(ξ · z),
+                                 ξ∈Z[α]                                                   ξ∈Z[α]
+
+i.e., the Fourier series of gx,r and fd,r converge pointwise.
+Proof. We just show the assertion for gx,r , the one for fd,r then follows immediately as
+                                              X
+                    fd,r (z) =                                   gx,r (z).
+                                          x∈{dα−1 +ε2 α−2 +···+εr α−r : ε2 ,...,εr ∈D}
+10                 J. F. MORGENBESSER, W. STEINER, AND J. M. THUSWALDNER
+
+   Since gx,r is periodic, we can regard it as a function on D0 . In particular, gx,r ∈ L2 (D0 ).
+Thus Plancherel’s theorem (see e.g. [HR70, Theorem 31.18]) implies that gx,r is equal to
+its Fourier series µα -almost everywhere. Since gx,r is continuous, the lemma is established
+if we show that its Fourier series converges to a continuous function. Lemma 3.4 implies
+that
+                             X                     X
+(5)                              cx,r,ξ χ(ξ · z) =      cx,r,ξ χ(ξ · z).
+                             ξ∈Z[α]                  ξ∈b−r Z
+
+Moreover, by the same lemma, for each ε > 0 there exists N ∈ N such that
+                                    X
+(6)                                      |cx,r,ξ | < ε.
+                                           ξ∈b−r Z
+                                            |ξ|>N
+                        P
+Since the partial sums ξ∈b−r Z, |ξ|≤N cx,r,ξ χ(ξ · z) are obviously continuous functions, the
+convergence of the series in (5) to a continuous function follows because (6) implies that
+it converges uniformly in z.                                                               
+
+     Later we will need the following estimate for the Fourier coefficients of fd,r .
+
+Lemma 3.6. For r ≥ 0 and d ∈ D we have
+                                      
+                                          −1
+                                      a                             if ξ = 0,
+                            cd,r,ξ = O(min(1, α ξ )) if ξ ∈ Z\aZ
+                             ′                          2r −2
+                                                                             br
+                                                                                 ,
+                                      
+                                      0                             otherwise.
+                     P
+Proof. As c′d,r,ξ = ε2 ,...,εr ∈D cdα−1 +ε2 α−2 +···+εr α−r ,r,ξ , Lemma 3.4 yields the stated formulas
+for ξ = 0 and ξ 6∈ bZr . Since |1 − e(x)| ≤ min(2, 2π|x|) for all x ∈ R, the stated formula
+also holds in the case ξ ∈ Z\aZ   br
+                                      . It remains to show that c′d,r,ξ = 0 for ξ ∈ aZ     br
+                                                                                              \ {0}. By
+Lemma 3.4 we have
+                                   −r    2
+                                                      X                                 
+         ′         r −r |1 − e(α ξ)|               dξ                          ε2       εr
+(7)     cd,r,ξ = α b                       χ̃ −                       χ̃ −         +···+ r ξ .
+                             4 ξ 2π 2               α ε ,...,ε ∈D              α2       α
+                                                       2     r
+
+
+Let j ≥ 1 be maximal such that aj | br ξ. If j ≥ r, then c′d,r,ξ = 0 because e(α−r ξ) = 1.
+Thus we may assume that j < r. Since −aξ/αj+1 ∈ Z[α] and −ξ/αj+1 6∈ Z[α], Lemma 3.2
+implies that χ̃(−aξ/αj+1) = 1 and χ̃(−ξ/αj+1) 6= 1. This means that χ̃(−ξ/αj+1) is a
+non-trivial a-th root of unity, thus
+                          X                            a−1
+                                                       X
+                                   χ̃(−εj+1ξ/αj+1) =         χ̃(−ξ/αj+1)ℓ = 0.
+                         εj+1 ∈D                       ℓ=0
+
+Factoring the sum in (7) accordingly, we obtain that c′d,r,ξ = 0 in case j < r as well.             
+                     PATTERNS IN RATIONAL BASE NUMBER SYSTEMS                             11
+
+                            4. Proof of the main results
+   Using the Fourier expansions of gx,r and fd,r we will now reformulate our main theorem
+as an estimation problem for character sums. We start with an easy result on the length
+of the representation in base α.
+Lemma 4.1. Let n > 0 be an integer whose representation in base α is of the form
+                                       ℓ(n)−1
+                                1 X
+                             n=       εk (n)αk ,          εk (n) ∈ D,
+                                b k=0
+
+with εℓ(n)−1 (n) 6= 0. Then we have
+                                     ℓ(n) = logα (n) + O(1).
+Proof. We have
+                                         ℓ(n)−1
+                   1 ℓ(n)−1     1 X                a − 1 ℓ(n)
+                     α      ≤n≤       (a − 1) αk =      (α    − 1).
+                   b            b k=0              a−b
+
+Taking the logarithm (with respect to base α) implies the desired result.                 
+  Set εk (n) = 0 for k ≥ ℓ(n), and
+                  ′
+                                                                    
+                 Sk,w (N) = # 1 ≤ n ≤ N : εk+|w|−1(n), . . . , εk (n) = w .
+By Lemma 4.1 we have #{n ∈ N : ℓ(n) < k + |w|} ≪ αk . Hence, we get
+                                               ′
+                                   Sk,w (N) = Sk,w (N) + O(αk ).
+We trivially have Sk,w (N) ≤ N for all k ≥ 0. Set L = ℓ(N) ≈ logα N, and let M ≤ L/2 be
+a positive integer that we choose at the end of the proof. Then we have
+                            X                  X
+                  Sw (N) =       Sk,w (N) =           Sk,w (N) + O(NM)
+                           0≤k<L                    M ≤k≤L−M
+                                                      X
+                                                                ′
+(8)                                             =              Sk,w (N) + O(NM).
+                                                    M ≤k≤L−M
+
+  Since
+                bn        X                                       X
+                    =              εj (n)αj−k−1 + εk (n)α−1 +             εj (n)αj−k−1,
+               αk+1                                               0≤j<k
+                        k<j<ℓ(n)
+
+we have
+                             bn 
+                          Φ k+1 ∈ {Φ(x) + Fεk (n) : x ∈ Z[α]},
+                             α
+which is the appropriate analog of (2) in our setting. By Lemma 3.1, {Φ(x) + Fd : x ∈
+Z[α], d ∈ D} forms a tiling of Kα . Therefore, a point z ∈ Kα can be in Fd mod Φ(Z[α]) and
+Fd′ mod Φ(Z[α]) for distinct d, d′ ∈ D only if it is on the boundary of Fd mod Φ(Z[α]). If
+12              J. F. MORGENBESSER, W. STEINER, AND J. M. THUSWALDNER
+
+Φ(bn/αk+1 ) lies in the interior of Fd mod Φ(Z[α]), then we can infer that εk (n) = d. Thus,
+using the approximations Fd,r instead of Fd , we obtain
+                                                    
+    ′
+               X Y                               bn 
+  Sk,w (N) =                1Φ(Z[α])+Fwj ,r Φ k+j+1
+             1≤n≤N 0≤j<|w|
+                                               α
+                          bn                                                       
+ + O # 1 ≤ n ≤ N : Φ k+j+1 ∈ (Fwj △ Fwj ,r ) ∪ ∂Fwj mod Φ(Z[α]) for some j               ,
+                             α
+where A△B denotes the symmetric difference of the sets A and B. Note that
+                                                                      
+           1Φ(Z[α])+Fd,r (z) = fd,r (z) if (z + Dr ) ∩ Φ(Z[α]) + ∂Fd,r = ∅,
+and (z + Dr ) ∩ (Φ(Z[α]) + ∂Fd,r ) 6= ∅ implies that z ∈ Φ(x) + Dr for some x ∈ α−r Z[α]
+with (Φ(x) + Dr ) ∩ (Φ(Z[α]) + ∂Fd,r ) 6= ∅. Therefore, we set
+                                                                       
+        Bd,r = x ∈ α−r Z[α] : Φ(x) + Dr ∩ (Fd △ Fd,r ) ∪ ∂Fd ∪ ∂Fd,r 6= ∅ ,
+i.e., Φ(Bd,r ) + Dr forms a tube containing the boundaries of Fd and Fd,r . Define
+                                  bn  [ [                                     
+                                                                 
+         Fk,r = # 1 ≤ n ≤ N : Φ k+1 ∈                 Φ(x) + Dr mod Φ(Z[α]) .
+                                    α            x∈B
+                                                d∈D        d,r
+
+Then we have
+                                                                                     !
+                          X      Y                    bn               X
+             ′
+(9)         Sk,w (N) =                   fwj ,r Φ                  +O             Fk+j,r .
+                         1≤n≤N 0≤j<|w|
+                                                     αk+j+1
+                                                                        0≤j<|w|
+
+  Since Bd,r contributes to our error term, we will need the following estimate on the
+number of its elements.
+Lemma 4.2. There exists a positive constant ̺ < a such that
+                             #Bd,r = O(̺r )           (d ∈ D, r ≥ 1).
+                      S
+Proof. First set Fr′ = d∈D Fd,r and
+                                                           
+      Br′ = x ∈ α−r Z[α] : Φ(x) + Dr ∩ (F △ Fr′ ) ∪ ∂F ∪ ∂Fr′ 6= ∅                      (r ≥ 0).
+                                          ′
+Since F = αFd − d, we have Bd,r = αBr−1     − d for all d ∈ D, r ≥ 1, and, hence, #Bd,r =
+    ′
+#Br−1 . Therefore, it suffices to consider #Br′ .
+  By Lemma 3.1, {Φ(x) + F : x ∈ Z[α]} forms a tiling of Kα , in particular F has non-
+empty interior. As Fr′ approximates F and the diameter of Dr decreases as r → ∞, there
+exists some k and some x ∈ α−k Z[α] such that Φ(x) + Dk lies in the interior of F ∩ Fk′ .
+This implies that
+                                                                
+(10)                 Φ(x + Z[α]) + Dk ∩ (F △ Fk′ ) ∪ ∂F ∪ ∂Fk′ = ∅,
+                                                                                   ′
+hence Bk′ mod Z[α] contains at most ak −1 elements. Mod Φ(Z[α]), we have αk ·(F △ F2k )⊆
+      ′   k                   k     ′       ′
+F △ Fk , α · ∂F ⊆ ∂F , and α · ∂F2k ⊆ ∂Fk , thus (10) implies that
+                                                   ′
+                 (Φ(x + Z[α]) + Dk ) ∩ αk · ((F △ F2k            ′
+                                                      ) ∪ ∂F ∪ ∂F2k ) = ∅.
+                        PATTERNS IN RATIONAL BASE NUMBER SYSTEMS                                    13
+
+Therefore we have, for each y ∈ α−k Z[α],
+                                                                    
+                  Φ(y + α−k x + Z[α]) + D2k ∩ (F △ F2k
+                                                    ′             ′
+                                                       ) ∪ ∂F ∪ ∂F2k   = ∅,
+        ′
+hence B2k  mod Z[α] contains at most (ak − 1)2 elements. Inductively, we obtain that
+  ′
+Bnk mod Z[α] contains at most (ak − 1)n elements, thus #(Br′ mod Z[α]) = O(̺r ) with
+ρ = (ak − 1)1/k . As F is compact, this yields that #Br′ = O(̺r ).                
+ Note that the optimal value for ̺ in Lemma 4.2 is the spectral radius of the contact
+matrix; see [ST, Section 4].
+ We proceed with an estimate of the cardinalities Fk,r occurring in the error term in (9).
+Lemma 4.3. For N ≥ br , we have
+                                Fk,r ≪ N̺r a−r + N(a̺)r α−k + αk (b̺)r ,
+where ̺ < a is the same constant as in Lemma 4.2.
+Proof. Setting
+                                       bn                       
+                 Fx,k,r = 1 ≤ n ≤ N : Φ k+1 ∈ Φ(x) + Dr mod Φ(Z[α]) ,
+                                        α
+we can write
+                                                   X X
+(11)                                      Fk,r ≤                Fx,k,r .
+                                                   d∈D x∈Bd,r
+
+By Lemma 4.2, the number of summands in (11) is O(̺r ). In what follows we show that
+(12)                                Fx,k,r ≪ Na−r + Nar α−k + αk br ,
+which then implies the desired result.
+  W.l.o.g., we can assume that br−1 | N (if this does not hold, consider ⌈N/br−1 ⌉ br−1 ≤ 2N
+instead). Since z ∈ Φ(x) + Dr implies
+                          z + Dr ⊆ (Φ(x) + Dr ) ∪ (Φ(x + α−r ) + Dr ),
+we have
+                                Z
+                            r
+       1Φ(x+Z[α])+Dr (z) ≤ a          (1Φ(x+Z[α])+Dr (z + y) + 1Φ(x+α−r +Z[α])+Dr (z + y)) dµα(y)
+                                 Dr
+                        = gx,r (z) + gx+α−r ,r (z).
+Thus we get
+                                                        
+                                    X                bn 
+                    Fx,k,r =       1Φ(x+Z[α])+Dr Φ k+1
+                             1≤n≤N
+                                                    α
+                                                                   
+                              X              bn                    bn 
+                           ≤       gx,r Φ k+1       + gx+α−r ,r Φ k+1 .
+                             1≤n≤N
+                                            α                      α
+14                      J. F. MORGENBESSER, W. STEINER, AND J. M. THUSWALDNER
+                                                                         P
+Setting c∗x,r,ξ = cx,r,ξ + cx+α−r ,r,ξ we have gx,r (z) + gx+α−r ,r (z) = ξ∈Z[α] c∗x,r,ξ χ(ξ · z). Using
+|1 − e(x)| ≤ min(2, 2π|x|), Lemma 3.4 yields
+                                    (                          
+                            ∗          O min(a−r , αr b−r ξ −2) if ξ ∈ bZr ,
+(13)                       cx,r,ξ =
+                                       0                            otherwise.
+We can write
+                              X X                   bn 
+               Fx,k,r ≤                      c∗x,r,ξ χ
+                                               ξ · Φ k+1
+                        1≤n≤N ξ∈ Zr
+                                                       α
+                                b
+                           X          X X                                        
+                                                     ∗            ξ (nbr−1 + m)
+                      =                             cx,r,ξ/br χ̃
+                                                                     br−1 αk+1
+                        0≤n<N/br−1  1≤m≤b  r−1  ξ∈Z
+                          X X                                        X               
+                                       ∗                ξm                            ξ
+                      =               cx,r,ξ/br χ̃ r−1 k+1                     e − k+1 n ,
+                             r−1 ξ∈Z
+                                                    b α                    r−1
+                                                                                    α
+                             1≤m≤b                                              0≤n<N/b
+
+                                             nξ
+                                                
+where we have used that λp αk+1 = 0 for each p ∈ Sα \ {∞}. Thus we get
+                           X X                          X                 
+                                          ∗                              ξ
+               Fx,k,r ≪                  cx,r,ξ/br              e − k+1 n
+                                                                       α
+                         1≤m≤br−1 ξ∈Z                0≤n<N/br−1
+(14)                                                               
+                           X                        N       ξ
+                                                                 −1
+                      ≪ br     c∗x,r,ξ/br min r−1 , k+1              .
+                           ξ∈Z
+                                                   b      α
+
+If ξ = 0, then
+                                                                       −1 
+                         r                        N      ξ                                N
+(15)                    b     c∗x,r,ξ/br     min r−1 , k+1                     ≪ br a−r    r
+                                                                                             = Na−r .
+                                                 b     α                                  b
+If 0 < |ξ| ≤ αk , then
+                                              −1                       −1         −1 
+                                      ξ                             1          1
+                                                   ≤ max                     ,            ≪ αk .
+                                    αk+1                        αk+1           α
+The estimates in (13) yield that
+           X                            X               X          b2r
+                  c∗x,r,ξ/br = O(1) and    c∗x,r,ξ/br ≪      αr b−r 2 = O(1),
+                r                        r              ξ>ar
+                                                                   ξ
+              0≤|ξ|≤a                                        |ξ|>a
+
+                                     2
+                                       P        1
+                                                          R∞ 1      1
+where we have used that                    ξ>u ξ 2 ≤          dξ = ⌊u⌋
+                                                          ⌊u⌋ ξ 2
+                                                                       . Thus we get
+                                    X                                      −1 
+                                                                N       ξ
+(16)                         br              c∗x,r,ξ/br   min r−1 , k+1          ≪ αk br .
+                                                               b      α
+                                  0<|ξ|≤αk
+
+     2We will use this inequality several times in this work without explicitly saying so.
+                        PATTERNS IN RATIONAL BASE NUMBER SYSTEMS                                                       15
+
+Moreover, if |ξ| > αk we have (using 13)
+            X                            −1     X
+         r         ∗              N     ξ                  b2r
+(17)    b         cx,r,ξ/br min r−1 , k+1      ≪N    αr b−r 2 ≪ Nar α−k .
+                k
+                                 b    α            k
+                                                           ξ
+            |ξ|>α                                                                   |ξ|>α
+
+Equations (15), (16), and (17) together with (14) finally yield (12).                                                  
+  We are now in a position to prove our main theorem.
+Proof of the main theorem. By (8) we have
+                                    X
+                                           ′
+(18)                    Sw (N) =          Sk,w (N) + O(NM).
+                                                 M ≤k≤L−M
+
+Setting
+                                                        Y                                 
+                                                                                      bn
+                                tw,k,r (n) =                    fwj ,r Φ              k+j+1
+                                                                                              ,
+                                                                                  α
+                                                   0≤j<|w|
+
+and inserting (9) in (18), we derive
+                                                                                                               
+                       X             X                                                       X    X
+(19)      Sw (N) =                              tw,k,r (n) + O NM +                                      Fk+j,r  ,
+                     M ≤k≤L−M 1≤n≤N                                                    M ≤k≤L−M 0≤j<|w|
+
+where the constants M and r will be chosen at the end of the proof. Using Lemma 4.3 (̺
+is defined in Lemma 4.2), we get
+              X      X                X
+                          Fk+j,r ≪          (N̺r a−r + N(a̺)r α−k + αk (b̺)r )
+            M ≤k≤L−M 0≤j<|w|                       M ≤k≤L−M
+
+                                               ≪ LN̺r a−r + N(a̺)r α−M + αL−M (b̺)r .
+Since L ≪ logα N and a > b, we have αL−M (b̺)r ≪ N(a̺)r α−M . Thus we may write (19)
+as
+                     X       X                                             
+(20)     Sw (N) =                 tw,k,r (n) + N O L ̺r a−r + (a̺)r α−M + M .
+                       M ≤k≤L−M 1≤n≤N
+
+Using the Fourier expansion of fd,r , we have
+                                                                                                   !
+                                    X                                               X ξj     bn 
+             tw,k,r (n) =                              T(ξ0 ,...,ξ|w|−1 ) χ              · Φ k+j+1   ,
+                                                                                      br     α
+                            (ξ0 ,...,ξ|w|−1   )∈Z|w|                             0≤j<|w|
+
+where                                                              Y
+                                       T(ξ0 ,...,ξ|w|−1 ) =                   c′wj ,r,ξj /br .
+                                                                 0≤j<|w|
+
+Lemma 3.6 now implies
+                                                       T(0,...,0) = a−|w|
+16                      J. F. MORGENBESSER, W. STEINER, AND J. M. THUSWALDNER
+
+and
+           X                            X                                      X                                   X             b2r
+(21)              c′wj ,r,ξj /br =                   c′wj ,r,ξj /br +                 c′wj ,r,ξj /br ≪ ar +                α2r       ≪ ar
+                                                                                                                                 ξ2
+          ξj ∈Z                      0≤|ξj |≤ar                           |ξj |>ar                                |ξ|>ar
+
+for each 0 ≤ j < |w|. Thus we obtain
+                     X                            Y X
+(22)                         T(ξ0 ,...,ξ|w|−1 ) =     c′wj ,r,ξj /br ≪ a|w|r .
+                      (ξ0 ,...,ξ|w|−1 )∈Z|w|                              0≤j<|w| ξj ∈Z
+
+Let E(k, r, N) be defined by
+                                                                                                                            !
+                                              X                                        X                X           ξj n
+            E(k, r, N) =                                         T(ξ0 ,...,ξ|w|−1 )            χ̃                            .
+                                                                                      1≤n≤N
+                                                                                                                br−1 αk+j+1
+                                (ξ0 ,...,ξ|w|−1 )∈Z|w| \{0}                                           0≤j<|w|
+
+Then we have
+                                              X                            N
+                                                      tw,k,r (n) =             + E(k, r, N).
+                                             1≤n≤N
+                                                                          a|w|
+Next we bound the error term E(k, r, N). For the considerations that follow we replace N
+by a number that is divisible by br−1 . Let N ′ and N ′′ be integers such that N = N ′ + N ′′ ,
+br−1 | N ′ and 0 ≤ N ′′ < br−1 . Equation (22) implies
+                                        E(k, r, N) = E(k, r, N ′ ) + O(a|w|r br ),
+and we get
+                                 X                               N
+(23)                                        tw,k,r (n) =             + E(k, r, N ′ ) + O(a|w|r br ).
+                               1≤n≤N
+                                                                a|w|
+The expression E(k, r, N ′ ) satisfies
+                                                                                                                           !
+                                     X                                          X                   X         ξj n
+       E(k, r, N ′ ) =                                    T(ξ0 ,...,ξ|w|−1 )             χ̃                r−1
+                                                                                                          b αk+j+1
+                          (ξ0 ,...,ξ|w|−1   )∈Z|w| \{0}                        1≤n≤N ′         0≤j<|w|
+                                                                                                                                   !
+                  X              X                        X                                          X ξj (br−1 n + m)
+            =                                                          T(ξ0 ,...,ξ|w|−1 ) χ̃
+                                                                                                         br−1 αk+j+1
+            0≤n<N ′ /br−1 1≤m≤br−1           (ξ0 ,...,ξ|w|−1   )∈Z|w| \{0}                          0≤j<|w|
+                                                 !                                                                                      !
+       X            X           ξj m                             X                             X                 X           ξj
+ =          χ̃                                                          T(ξ0 ,...,ξ|w|−1 )               e −                           n ,
+                             br−1 αk+j+1                                                                                   αk+j+1
+ 1≤m≤br−1         0≤j<|w|                          (ξ0 ,...,ξ|w|−1 )∈Z|w| \{0}           0≤n<N ′ /br−1          0≤j<|w|
+
+and we obtain
+                                                                                                                            −1 !
+                                             X                                      N′                 X          ξj
+(24)         E(k, r, N ′ ) ≪ br                           T(ξ0 ,...,ξ|w|−1 )   min r−1 ,                                           .
+                                                                                   b                            αk+j+1
+                               (ξ0 ,...,ξ|w|−1   )∈Z|w| \{0}                                         0≤j<|w|
+
+If ξj ∈ aZ \ {0} for some 0 ≤ j < |w|, then Lemma 3.6 yields that
+                                                            T(ξ0 ,...,ξ|w|−1 ) = 0.
+                         PATTERNS IN RATIONAL BASE NUMBER SYSTEMS                                                       17
+
+Thus we only have to consider vectors (ξ0 , . . . , ξ|w|−1) 6= 0 such that ξj 6∈ aZ \ {0} for all
+0 ≤ j < |w|. Depending on the maximal entry of the vector (ξ0 , . . . , ξ|w|−1), we use different
+estimations in order to bound E(k, r, N ′ ). We have two different cases:
+                                                                               P           ξj
+     • Assume first that |ξj | ≤ αk /|w| for all 0 ≤ j < |w|. Then we have       0≤j<|w| αk+j+1 ≤
+        1
+       α
+          . Since ξj 6∈ aZ for the maximal j < |w| with ξj 6= 0, we also have
+                   X            ξj               1          X ξj bj    1     1
+                                         =                          ≥             ≫ α−k .
+                            αk+j+1            αk+1             aj     αk+1 a|w|−1
+                  0≤j<|w|                                0≤j<|w|
+
+       This implies
+                                                                          −1
+                                                X            ξj
+                                                                               ≪ αk .
+                                                          αk+j+1
+                                              0≤j<|w|
+
+     • Assume now that |ξj | > αk /|w| for some 0 ≤ j < |w|. Then
+                    X                         X       b2r
+                             c′wj ,r,ξj /br ≪      α2r 2 ≪ a2r α−k .
+                      k                        k
+                                                      ξ
+                        |ξi |>α /|w|                          |ξ|>α /|w|
+
+       Together with (21), this implies
+                    X
+                            T(ξ0 ,...,ξ|w|−1 ) ≪ a(|w|−1)r a2r α−k = a(|w|+1)r α−k .
+               (ξ0 ,...,ξ|w|−1 )∈Z|w| \{0}:
+               |ξj |>αk /|w| for some j
+
+We get, using (22) and the fact that N ′ ≤ N,
+                                                                                                              −1 !
+                                 X                                      N′               X          ξj
+       E(k, r, N ′ ) ≪ br                     T(ξ0 ,...,ξ|w|−1 )   min r−1 ,
+                                                                       b                          αk+j+1
+                      (ξ0 ,...,ξ|w|−1)∈Z|w| \{0}:                                       0≤j<|w|
+                        |ξj |≤αk /|w| for all j
+                                                                                                                 −1 !
+                                       X                                        N′           X           ξj
+                            + br                     T(ξ0 ,...,ξ|w|−1 )    min r−1 ,
+                                                                               b                      αk+j+1
+                            (ξ0 ,...,ξ|w|−1 )∈Z|w| \{0}:                                    0≤j<|w|
+                            |ξj |>αk /|w| for some j
+
+                     ≪ αk a|w|r br + N a(|w|+1)r α−k .
+Inserting this in (23) and summing over k implies
+          X        X                                                            
+                                    NL             a(|w|+1)r a|w|r br L a|w|r br
+                        tw,k,r (n) = |w| + N O M +          +        +            .
+       M ≤k≤L−M 1≤n≤N
+                                    a                 αM      αM         N
+
+Now (20) yields
+                                                                             
+             N                   L̺r (a̺)r + (a|w|+1)r + (a|w| b)r L a|w|r br
+    Sw (N) = |w| logα N + N O M + r +                             +            .
+            a                     a              αM                   N
+18                     J. F. MORGENBESSER, W. STEINER, AND J. M. THUSWALDNER
+           log log N 
+Let r =     log(a/̺)
+                          and M = ⌊C log log N⌋, with C large enough such that
+                          (a̺)r + (a|w|+1)r + (a|w| b)r
+                                                        = O(1).
+                                      αM
+Then we have Sw (N) = aN
+                       |w| logα N + O(N log log N), which proves the main theorem. 
+     Our two corollaries follow quite immediately from the main theorem.
+Proof of Corollary 1. Let the representation of n in base a/b be given as in (1). The
+summatory function of sa/b satisfies
+                               N
+                               X                  N ℓ(n)−1
+                                                  X  X                      X
+                                     sa/b (n) =              εk (n) =             dSd (N).
+                               n=1                n=1 k=0                   d∈D
+
+Thus, the main theorem implies that
+                          N                                  a−1
+                                                                       !
+                          X              N                   X                            
+                              sa/b (n) =   loga/b N                d       + O N log log N ,
+                          n=1
+                                         a                   d=0
+
+which proves the desired result.                                                               
+Proof of Corollary 2. Let (zn )n≥1 be the sequence of digits of za/b in base a, that is,
+                                              X zn
+                                       za/b =        .
+                                              n≥1
+                                                  an
+If w = (wr−1 , . . . , w0 ), with wi ∈ D, is a sequence of digits (of length |w| = r), set
+                             γw (x) = # {1 ≤ n ≤ x : (zn+r−1 , . . . , zn ) = w}.
+We have to show that for each finite sequence of digits w one has
+                                          γw (x)   1
+                                      lim        = |w| .
+                                     x→∞    x     a
+Let Nx be the largest integer satisfying
+                                                  Nx
+                                                  X
+                                                        ℓ(n) ≤ x + r.
+                                                  n=1
+
+Then we have γw (x) ≥ Sw (Nx ) and γw (x) ≤ Sw (Nx ) + (|w| − 1)(Nx − 1) + ℓ(Nx + 1). Hence,
+we obtain γw (x) = Sw (Nx ) + O(Nx ), and the main theorem implies
+                                 Nx                               
+                        γw (x) = |w| loga/b Nx + O Nx log log Nx .
+                                a
+Since x = Nx loga/b Nx +O(Nx ), we have proved that za/b is a normal number in base a. 
+
+                                              5. Perspectives
+   In this section, we want to discuss briefly some open questions and possible directions
+of future research related to the topic of the present paper.
+                        PATTERNS IN RATIONAL BASE NUMBER SYSTEMS                                   19
+
+Distribution of sa/b in residue classes. A well-known theorem of Gelfond [Gel68] states
+that the sum-of-digits function sq in base q is equidistributed in residue classes. To be
+more precise, Gelfond showed that if q, m, and r are positive integers with q ≥ 2 and
+(m, q − 1) = 1, then
+                                                                     N
+               # {1 ≤ n ≤ N : n ≡ ℓ1 mod r, sq (n) ≡ ℓ2 mod m } =        + O(N λ )
+                                                                     mr
+for all ℓ1 , ℓ2 ∈ Z, where λ < 1 is a positive constant only depending on q and m. It would
+be interesting to obtain similar results for sa/b . An easier version of this problem consists
+in studying the analogous problem for subsets of Z[a/b] rather than N.
+Rational number systems, primes and polynomials. Mauduit and Rivat [MR09, MR10]
+recently showed that the sum-of-digits function of primes as well as squares is equidis-
+tributed in residue classes. It seems to be difficult to obtain nontrivial bounds for {p ≤
+N : p prime, sa/b (p) ≡ ℓ mod m} and {n ≤ N : sa/b (n2 ) ≡ ℓ mod m}. As in the previous
+problem, attacking the same questions in Z[a/b] rather than in N could be more doable.
+Asymptotic distribution results for sa/b . Bassily and Kátai [BK95] showed that the stan-
+dard base-q sum-of-digits function on polynomial sequences is asymptotic normally dis-
+tributed. Can one get results on the asymptotic behavior of sa/b on different subsequences
+using our Fourier analytic approach? Compare also with [Mad10], where asymptotic nor-
+mality was proven for the sum-of-digits function in the Gaussian integers and in more
+general number systems.
+Number systems in finite fields and canonical number systems. Beck et al. [BBST09] intro-
+duced a rather general notion of number systems defined for polynomial rings over finite
+fields. Here non-monic polynomials form the analogs of rational bases. Since Mahler’s prob-
+lem is better understood for non-monic polynomials over finite fields (see e.g. Allouche et
+al. [ADKK01]), one can probably gain more complete results and better error terms in this
+setting. Moreover, the relations between these number systems and the associated Mahler
+problem are not yet explored here. Exploring this relation could well lead to new insights.
+It is also not known how difficult the underlying language of representations is.
+   Another possible generalization would be canonical number systems; see Pethő [Pet91]
+for a definition. Here one could combine the results of Dumont et al. [DGT99] on represen-
+tations of integers in canonical number systems with our results and explore generalizations
+of Mahler’s problem for algebraic numbers.
+                                           References
+[ADKK01] J.-P. Allouche, J.-M. Deshouillers, T. Kamae, and T. Koyanagi, Automata, algebraicity and
+         distribution of sequences of powers, Ann. Inst. Fourier (Grenoble) 51 (2001), no. 3, 687–705.
+[AFS08]  S. Akiyama, C. Frougny, and J. Sakarovitch, Powers of rationals modulo 1 and rational base
+         number systems, Israel J. Math. 168 (2008), 53–91.
+[BBST09] T. Beck, H. Brunotte, K. Scheicher, and J. M. Thuswaldner, Number systems and tilings over
+         Laurent series, Math. Proc. Cambridge Philos. Soc. 147 (2009), no. 1, 9–29.
+[BK95]   N. L. Bassily and I. Kátai, Distribution of the values of q-additive functions on polynomial
+         sequences, Acta Math. Hungar. 68 (1995), no. 4, 353–361.
+20                 J. F. MORGENBESSER, W. STEINER, AND J. M. THUSWALDNER
+
+[Cha33]     D. G. Champernowne, The construction of decimals normal in the scale of ten, J. Lond. Math.
+            Soc. 8 (1933), 254–260.
+[Del75]     H. Delange, Sur la fonction sommatoire de la fonction “somme des chiffres”, Enseignement
+            Math. (2) 21 (1975), no. 1, 31–47.
+[DGT99]     J. M. Dumont, P. J. Grabner, and A. Thomas, Distribution of the digits in the expansions of
+            rational integers in algebraic bases, Acta Sci. Math. (Szeged) 65 (1999), no. 3-4, 469–492.
+[DMR09]     M. Drmota, C. Mauduit, and J. Rivat, Primes with an average sum of digits, Compos. Math.
+            145 (2009), no. 2, 271–292.
+[DMR11]             , The sum-of-digits function of polynomial sequences, J. Lond. Math. Soc. (2) 84 (2011),
+            no. 1, 81–102.
+[Gel68]     A. O. Gelfond, Sur les nombres qui ont des propriétés additives et multiplicatives données,
+            Acta Arith. 13 (1967/1968).
+[HR63]      E. Hewitt and K. A. Ross, Abstract harmonic analysis. Vol. I: Structure of topological
+            groups. Integration theory, group representations, Die Grundlehren der mathematischen Wis-
+            senschaften, Bd. 115, Academic Press Inc., Publishers, New York, 1963.
+[HR70]              , Abstract harmonic analysis. Vol. II: Structure and analysis for compact groups. Anal-
+            ysis on locally compact Abelian groups, Die Grundlehren der mathematischen Wissenschaften,
+            Band 152, Springer-Verlag, New York, 1970.
+[Mad10]     M. G. Madritsch, Asymptotic normality of b-additive functions on polynomial sequences in
+            number systems, Ramanujan J. 21 (2010), no. 2, 181–210.
+[Mah68]     K. Mahler, An unsolved problem on the powers of 3/2, J. Austral. Math. Soc. 8 (1968), 313–321.
+[Mor10]     J. F. Morgenbesser, The sum of digits of squares in Z[i], J. Number Theory 130 (2010), no. 7,
+            1433–1469.
+[MR09]      C. Mauduit and J. Rivat, La somme des chiffres des carrés, Acta Math. 203 (2009), no. 1,
+            107–148.
+[MR10]              , Sur un problème de Gelfond: la somme des chiffres des nombres premiers, Ann. of
+            Math. (2) 171 (2010), no. 3, 1591–1646.
+[Pet91]     A. Pethő, On a polynomial transformation and its application to the construction of a public
+            key cryptosystem, Computational number theory (Debrecen, 1989), de Gruyter, Berlin, 1991,
+            pp. 31–43.
+[Rén57]    A. Rényi, Representations for real numbers and their ergodic properties, Acta Math. Acad. Sci.
+            Hungar. 8 (1957), 477–493.
+[ST]        W. Steiner and J. M. Thuswaldner, Rational self-affine tiles, Preprint, arXiv:1203.0758v1.
+[Tat67]     J. T. Tate, Fourier analysis in number fields and Hecke’s zeta-functions, Cassels, J. W. S. and
+            Fröhlich, A. (eds.), Algebraic Number Theory, Academic Press, London, 1967, pp. 305–347.
+[Wei73]     A. Weil, Basic number theory, 2nd ed., Die Grundlehren der mathematischen Wissenschaften,
+            vol. 144, Springer-Verlag, 1973.
+
+     Universität Wien, Fakultät für Mathematik, Nordbergstrasse 15, 1090 Wien, AUSTRIA
+     E-mail address: johannes.morgenbesser@univie.ac.at
+
+  LIAFA, CNRS UMR 7089, Université Paris Diderot – Paris 7, Case 7014, 75205 Paris
+Cedex 13, FRANCE
+  E-mail address: steiner@liafa.jussieu.fr
+
+  Department of Mathematics, 275 TMCB, Brigham Young University, Provo, UT 84602,
+USA
+  E-mail address: joerg.thuswaldner@unileoben.ac.at
+

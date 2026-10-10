@@ -1,0 +1,36 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Sufficiency of Condition~{\MixCond}}
+%\label{sec: sufficiency of condition mc}
+%\input{5_sufficiency_mc.tex}
+
+In this section we prove that Condition~{\MixCond} in Theorem~\ref{thm: miscibility characterization}(a) 
+is sufficient for perfect mixability. A perfect-mixing graph constructed in our argument has
+precision at most $1$, showing also the first part of Theorem~\ref{thm: miscibility characterization}(b).
+
+Assume that $n\ge 4$. Let $C$ with $\mu = \average(C)$ and 
+$C\cup\braced{\mu}\ingroundset\integers$ be the input configuration,
+and assume that $C$ satisfies Condition~{\MixCond}. 
+The outline of our proof is as follows:
+%
+\begin{itemize}
+	\item First we prove that $C$ is perfectly mixable with precision $0$ when $n$ is a power of $2$.
+		This easily extends to configurations $C$ called \emph{near-final}, 
+		which are disjoint unions of multisets with the same average and cardinalities being powers of $2$. 
+		In particular, this proves Theorem~\ref{thm: miscibility characterization}(a) for $n=4$.
+		
+	\item Next, we give a proof for $n\ge 7$. The basic idea of the proof is
+		to define an invariant~(I) and show that any configuration that
+		satisfies~(I) has a pair of droplets whose mixing either preserves
+		invariant~(I) or produces a near-final configuration. 
+		Condition~(I) is stronger than~{\MixCond} (it implies~{\MixCond}, but not
+		vice versa), but we show that
+		that any configuration that satisfies Condition~{\MixCond} can be
+		modified to satisfy~(I).
+		
+	\item We then give separate proofs for $n=5,6$.
+		The proof for $n=5$ is similar to the case $n\ge 7$, but
+		it requires a more subtle invariant.
+		The proof for $n=6$ is derived by minor modifications to the proof for $n=5$.
+\end{itemize}

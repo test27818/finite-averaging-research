@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "precision_cylinders": {
+    "branches": 1896,
+    "valuation_instances": 24648,
+    "entrance_counts": 11,
+    "sample": {
+      "p": 7,
+      "counts": [
+        3,
+        5,
+        1,
+        4,
+        2
+      ],
+      "coefficients": [
+        36,
+        -38
+      ],
+      "slope_mod_p4": 1391
+    }
+  },
+  "frozen_five_step_finite_crosscheck": {
+    "prime_bound": 499,
+    "primes": 94,
+    "first_partitions": 53130,
+    "integral_third_steps": 85,
+    "integral_fourth_steps": 215,
+    "five_step_returns": 0,
+    "first_nonempty_third_layers": [
+      [
+        19,
+        1,
+        0,
+        0
+      ],
+      [
+        29,
+        1,
+        0,
+        0
+      ],
+      [
+        31,
+        1,
+        1,
+        0
+      ],
+      [
+        37,
+        1,
+        1,
+        0
+      ],
+      [
+        47,
+        1,
+        0,
+        0
+      ],
+      [
+        59,
+        1,
+        0,
+        0
+      ]
+    ],
+    "status": "Finite diagnostic cross-check; the follow-up note independently proves exclusion for every odd prime."
+  },
+  "six_step_formula": {
+    "prime_examples": 48,
+    "additional_integer_parameters": [
+      2,
+      4,
+      6,
+      10,
+      100000000000000000000,
+      100000000000000000000000000000000000000000000000000
+    ],
+    "scope": "Formula proof holds for all arities p=6a-1; prime assumption is used for the matching lower bound."
+  },
+  "independent_positive_replays": {
+    "certificates": 9,
+    "p_and_lengths": [
+      [
+        11,
+        6
+      ],
+      [
+        13,
+        6
+      ],
+      [
+        17,
+        6
+      ],
+      [
+        19,
+        6
+      ],
+      [
+        37,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        61,
+        6
+      ],
+      [
+        7,
+        6
+      ]
+    ],
+    "scope": "Only stored positive paths are replayed; search exhaustion is not promoted to a theorem."
+  },
+  "scope": "General valuation formula, all-prime five-step obstruction and sharp six-step family are proved in the note. No all-input bounded-precision or full-band theorem."
+}

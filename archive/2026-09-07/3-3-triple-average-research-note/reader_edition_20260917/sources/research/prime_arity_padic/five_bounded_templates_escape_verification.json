@@ -1,0 +1,57 @@
+{
+  "spectral_energy": {
+    "mixed_words_checked": 1976,
+    "pure_words_checked": 64,
+    "primes": [
+      3,
+      5,
+      7,
+      11
+    ],
+    "scope": "Checks exact positivity, determinant, and mod-p identities."
+  },
+  "templates": {
+    "template_parameter_instances": 300,
+    "affine_rays_diagnosed": 68,
+    "scope": "Ray nonconstancy in finite samples is a formula check, not the theorem proof."
+  },
+  "norm_symmetry": {
+    "C": "B^{-1}A=(-8,-1;1,-1)/3",
+    "C_square": "(7,1;-1,0)",
+    "meaning": "The norm-preserving unit motion is an inverse-containing group word, not a positive return."
+  },
+  "periodic_growth": {
+    "spectral_types": {
+      "real_distinct": 388,
+      "complex_pair": 106
+    },
+    "quadratic_recurrence_checks": 4446,
+    "scope": "Baker lower bound is an external general theorem; numerical samples do not certify its constants."
+  },
+  "status": "Bounded-template escape proved; arbitrary changing positive words remain open.",
+  "finite_norm_return_diagnostic": {
+    "depth": 18,
+    "all_nonempty_words_checked": 524286,
+    "successful_rational_return_roots": [
+      {
+        "word": "BA",
+        "sign": 1,
+        "seed": [
+          1,
+          -1
+        ],
+        "D": 1
+      },
+      {
+        "word": "AB",
+        "sign": 1,
+        "seed": [
+          1,
+          -1
+        ],
+        "D": 1
+      }
+    ],
+    "scope": "Finite macro-length diagnostic only; does not exclude longer returns or unrelated branches."
+  }
+}

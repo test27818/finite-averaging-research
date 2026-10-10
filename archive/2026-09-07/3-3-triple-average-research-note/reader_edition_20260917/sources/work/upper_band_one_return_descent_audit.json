@@ -1,0 +1,5479 @@
+{
+  "height": 40,
+  "scope": "No one-return energy decrease or terminal hit in the explicit disjoint-row family; not a reachability obstruction.",
+  "cases": [
+    {
+      "p": 5,
+      "r": 1,
+      "n": 16,
+      "menu_size": 7,
+      "checked": 1287,
+      "traps": 168,
+      "examples": [
+        {
+          "y": -39,
+          "z": 4,
+          "norm": 21926,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -7,
+                10
+              ],
+              "legal": true,
+              "norm": 22374,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                167,
+                20
+              ],
+              "legal": true,
+              "norm": 23974,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                181,
+                59
+              ],
+              "legal": true,
+              "norm": 125766,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                362,
+                59
+              ],
+              "legal": false,
+              "norm": 32008,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                905,
+                122
+              ],
+              "legal": true,
+              "norm": 467494,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                362,
+                61
+              ],
+              "legal": false,
+              "norm": 27912,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                543,
+                122
+              ],
+              "legal": true,
+              "norm": 148934,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": -31,
+          "z": 4,
+          "norm": 16518,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                1,
+                10
+              ],
+              "legal": true,
+              "norm": 16966,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                159,
+                20
+              ],
+              "legal": true,
+              "norm": 18566,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                157,
+                51
+              ],
+              "legal": true,
+              "norm": 93222,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                314,
+                51
+              ],
+              "legal": false,
+              "norm": 24456,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                785,
+                106
+              ],
+              "legal": true,
+              "norm": 349446,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                314,
+                53
+              ],
+              "legal": false,
+              "norm": 20872,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                471,
+                106
+              ],
+              "legal": true,
+              "norm": 113318,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": -25,
+          "z": 4,
+          "norm": 12966,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                7,
+                10
+              ],
+              "legal": true,
+              "norm": 13414,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                153,
+                20
+              ],
+              "legal": true,
+              "norm": 15014,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                139,
+                45
+              ],
+              "legal": true,
+              "norm": 72006,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                278,
+                45
+              ],
+              "legal": false,
+              "norm": 19464,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                695,
+                94
+              ],
+              "legal": true,
+              "norm": 272166,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                278,
+                47
+              ],
+              "legal": false,
+              "norm": 16264,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                417,
+                94
+              ],
+              "legal": true,
+              "norm": 89798,
+              "terminal": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "p": 7,
+      "r": 1,
+      "n": 22,
+      "menu_size": 10,
+      "checked": 1163,
+      "traps": 88,
+      "examples": [
+        {
+          "y": 23,
+          "z": 3,
+          "norm": 72,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                158,
+                21
+              ],
+              "legal": false,
+              "norm": 3330,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                155,
+                21
+              ],
+              "legal": true,
+              "norm": 3240,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                152,
+                21
+              ],
+              "legal": false,
+              "norm": 3258,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                3,
+                2
+              ],
+              "legal": true,
+              "norm": 846,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                3,
+                1
+              ],
+              "legal": true,
+              "norm": 120,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                9,
+                2
+              ],
+              "legal": true,
+              "norm": 222,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                21,
+                1
+              ],
+              "legal": true,
+              "norm": 1128,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                18,
+                1
+              ],
+              "legal": false,
+              "norm": 690,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                15,
+                1
+              ],
+              "legal": true,
+              "norm": 360,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                12,
+                1
+              ],
+              "legal": false,
+              "norm": 138,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": 31,
+          "z": 3,
+          "norm": 552,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                190,
+                21
+              ],
+              "legal": false,
+              "norm": 11010,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                163,
+                21
+              ],
+              "legal": true,
+              "norm": 3720,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                136,
+                21
+              ],
+              "legal": false,
+              "norm": 5178,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                27,
+                10
+              ],
+              "legal": true,
+              "norm": 13614,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                27,
+                5
+              ],
+              "legal": true,
+              "norm": 744,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                81,
+                10
+              ],
+              "legal": true,
+              "norm": 1086,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                189,
+                17
+              ],
+              "legal": true,
+              "norm": 26952,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                162,
+                17
+              ],
+              "legal": false,
+              "norm": 10482,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                135,
+                17
+              ],
+              "legal": true,
+              "norm": 2760,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                108,
+                17
+              ],
+              "legal": false,
+              "norm": 3786,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": 37,
+          "z": 3,
+          "norm": 1416,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                214,
+                21
+              ],
+              "legal": false,
+              "norm": 24834,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                169,
+                21
+              ],
+              "legal": true,
+              "norm": 4584,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                124,
+                21
+              ],
+              "legal": false,
+              "norm": 8634,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                45,
+                16
+              ],
+              "legal": true,
+              "norm": 33270,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                45,
+                8
+              ],
+              "legal": true,
+              "norm": 1590,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                135,
+                16
+              ],
+              "legal": true,
+              "norm": 3750,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                315,
+                29
+              ],
+              "legal": true,
+              "norm": 69000,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                270,
+                29
+              ],
+              "legal": false,
+              "norm": 25890,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                225,
+                29
+              ],
+              "legal": true,
+              "norm": 7080,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                180,
+                29
+              ],
+              "legal": false,
+              "norm": 12570,
+              "terminal": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "p": 11,
+      "r": 1,
+      "n": 34,
+      "menu_size": 16,
+      "checked": 1216,
+      "traps": 243,
+      "examples": [
+        {
+          "y": -35,
+          "z": 1,
+          "norm": 12892,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -246,
+                11
+              ],
+              "legal": false,
+              "norm": 825734,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                -107,
+                11
+              ],
+              "legal": true,
+              "norm": 323388,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                32,
+                11
+              ],
+              "legal": false,
+              "norm": 52894,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                171,
+                11
+              ],
+              "legal": true,
+              "norm": 14252,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                310,
+                11
+              ],
+              "legal": false,
+              "norm": 207462,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                139,
+                46
+              ],
+              "legal": true,
+              "norm": 901054,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                139,
+                23
+              ],
+              "legal": true,
+              "norm": 94812,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                417,
+                46
+              ],
+              "legal": true,
+              "norm": 89294,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                278,
+                23
+              ],
+              "legal": false,
+              "norm": 7798,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                695,
+                46
+              ],
+              "legal": true,
+              "norm": 204942,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                1529,
+                93
+              ],
+              "legal": true,
+              "norm": 1451772,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                1390,
+                93
+              ],
+              "legal": false,
+              "norm": 775398,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                417,
+                31
+              ],
+              "legal": true,
+              "norm": 36764,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                1112,
+                93
+              ],
+              "legal": false,
+              "norm": 118206,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                973,
+                93
+              ],
+              "legal": true,
+              "norm": 137388,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                278,
+                31
+              ],
+              "legal": false,
+              "norm": 43158,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": -23,
+          "z": 1,
+          "norm": 7084,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -150,
+                11
+              ],
+              "legal": false,
+              "norm": 454022,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                -47,
+                11
+              ],
+              "legal": true,
+              "norm": 178188,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                56,
+                11
+              ],
+              "legal": false,
+              "norm": 29662,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                159,
+                11
+              ],
+              "legal": true,
+              "norm": 8444,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                262,
+                11
+              ],
+              "legal": false,
+              "norm": 114534,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                103,
+                34
+              ],
+              "legal": true,
+              "norm": 491374,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                103,
+                17
+              ],
+              "legal": true,
+              "norm": 51516,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                309,
+                34
+              ],
+              "legal": true,
+              "norm": 48062,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                206,
+                17
+              ],
+              "legal": false,
+              "norm": 4342,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                515,
+                34
+              ],
+              "legal": true,
+              "norm": 113982,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                1133,
+                69
+              ],
+              "legal": true,
+              "norm": 793164,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                1030,
+                69
+              ],
+              "legal": false,
+              "norm": 422982,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                309,
+                23
+              ],
+              "legal": true,
+              "norm": 20012,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                824,
+                69
+              ],
+              "legal": false,
+              "norm": 64542,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                721,
+                69
+              ],
+              "legal": true,
+              "norm": 76284,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                206,
+                23
+              ],
+              "legal": false,
+              "norm": 23926,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": -15,
+          "z": 1,
+          "norm": 4172,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -86,
+                11
+              ],
+              "legal": false,
+              "norm": 267654,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                -7,
+                11
+              ],
+              "legal": true,
+              "norm": 105388,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                72,
+                11
+              ],
+              "legal": false,
+              "norm": 18014,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                151,
+                11
+              ],
+              "legal": true,
+              "norm": 5532,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                230,
+                11
+              ],
+              "legal": false,
+              "norm": 67942,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                79,
+                26
+              ],
+              "legal": true,
+              "norm": 286734,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                79,
+                13
+              ],
+              "legal": true,
+              "norm": 29932,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                237,
+                26
+              ],
+              "legal": true,
+              "norm": 27614,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                158,
+                13
+              ],
+              "legal": false,
+              "norm": 2598,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                395,
+                26
+              ],
+              "legal": true,
+              "norm": 68062,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                869,
+                53
+              ],
+              "legal": true,
+              "norm": 463852,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                790,
+                53
+              ],
+              "legal": false,
+              "norm": 246918,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                711,
+                53
+              ],
+              "legal": true,
+              "norm": 104876,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                632,
+                53
+              ],
+              "legal": false,
+              "norm": 37726,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                553,
+                53
+              ],
+              "legal": true,
+              "norm": 45468,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                474,
+                53
+              ],
+              "legal": false,
+              "norm": 128102,
+              "terminal": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "p": 13,
+      "r": 1,
+      "n": 40,
+      "menu_size": 19,
+      "checked": 1064,
+      "traps": 241,
+      "examples": [
+        {
+          "y": -33,
+          "z": 1,
+          "norm": 12894,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -290,
+                13
+              ],
+              "legal": false,
+              "norm": 1290320,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                -151,
+                13
+              ],
+              "legal": true,
+              "norm": 633406,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                -12,
+                13
+              ],
+              "legal": false,
+              "norm": 208344,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                127,
+                13
+              ],
+              "legal": true,
+              "norm": 15134,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                266,
+                13
+              ],
+              "legal": false,
+              "norm": 53776,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                405,
+                13
+              ],
+              "legal": false,
+              "norm": 324270,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                139,
+                46
+              ],
+              "legal": true,
+              "norm": 1378166,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                139,
+                23
+              ],
+              "legal": true,
+              "norm": 175726,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                417,
+                46
+              ],
+              "legal": true,
+              "norm": 259494,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                278,
+                23
+              ],
+              "legal": false,
+              "norm": 11984,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                695,
+                46
+              ],
+              "legal": false,
+              "norm": 68230,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                417,
+                23
+              ],
+              "legal": true,
+              "norm": 80094,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                1807,
+                93
+              ],
+              "legal": true,
+              "norm": 2044254,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                556,
+                31
+              ],
+              "legal": false,
+              "norm": 134936,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                1529,
+                93
+              ],
+              "legal": true,
+              "norm": 616446,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                1390,
+                93
+              ],
+              "legal": false,
+              "norm": 250320,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                417,
+                31
+              ],
+              "legal": true,
+              "norm": 12894,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                1112,
+                93
+              ],
+              "legal": false,
+              "norm": 213624,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                973,
+                93
+              ],
+              "legal": true,
+              "norm": 543054,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": -21,
+          "z": 1,
+          "norm": 7086,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -170,
+                13
+              ],
+              "legal": false,
+              "norm": 709520,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                -67,
+                13
+              ],
+              "legal": true,
+              "norm": 348814,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                36,
+                13
+              ],
+              "legal": false,
+              "norm": 115416,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                139,
+                13
+              ],
+              "legal": true,
+              "norm": 9326,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                242,
+                13
+              ],
+              "legal": false,
+              "norm": 30544,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                345,
+                13
+              ],
+              "legal": false,
+              "norm": 179070,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                103,
+                34
+              ],
+              "legal": true,
+              "norm": 751814,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                103,
+                17
+              ],
+              "legal": true,
+              "norm": 95614,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                309,
+                34
+              ],
+              "legal": true,
+              "norm": 140406,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                206,
+                17
+              ],
+              "legal": false,
+              "norm": 6416,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                515,
+                34
+              ],
+              "legal": false,
+              "norm": 38230,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                309,
+                17
+              ],
+              "legal": true,
+              "norm": 44526,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                1339,
+                69
+              ],
+              "legal": true,
+              "norm": 1116846,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                412,
+                23
+              ],
+              "legal": false,
+              "norm": 73624,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                1133,
+                69
+              ],
+              "legal": true,
+              "norm": 335694,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                1030,
+                69
+              ],
+              "legal": false,
+              "norm": 136080,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                309,
+                23
+              ],
+              "legal": true,
+              "norm": 7086,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                824,
+                69
+              ],
+              "legal": false,
+              "norm": 118776,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                721,
+                69
+              ],
+              "legal": true,
+              "norm": 301086,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": -13,
+          "z": 1,
+          "norm": 4174,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -90,
+                13
+              ],
+              "legal": false,
+              "norm": 418320,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                -11,
+                13
+              ],
+              "legal": true,
+              "norm": 206126,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                68,
+                13
+              ],
+              "legal": false,
+              "norm": 68824,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                147,
+                13
+              ],
+              "legal": true,
+              "norm": 6414,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                226,
+                13
+              ],
+              "legal": false,
+              "norm": 18896,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                305,
+                13
+              ],
+              "legal": false,
+              "norm": 106270,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                79,
+                26
+              ],
+              "legal": true,
+              "norm": 438886,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                79,
+                13
+              ],
+              "legal": true,
+              "norm": 55646,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                237,
+                26
+              ],
+              "legal": true,
+              "norm": 81174,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                158,
+                13
+              ],
+              "legal": false,
+              "norm": 3664,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                395,
+                26
+              ],
+              "legal": false,
+              "norm": 23030,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                237,
+                13
+              ],
+              "legal": true,
+              "norm": 26574,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                1027,
+                53
+              ],
+              "legal": true,
+              "norm": 653134,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                948,
+                53
+              ],
+              "legal": false,
+              "norm": 386904,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                869,
+                53
+              ],
+              "legal": true,
+              "norm": 195566,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                790,
+                53
+              ],
+              "legal": false,
+              "norm": 79120,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                711,
+                53
+              ],
+              "legal": true,
+              "norm": 37566,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                632,
+                53
+              ],
+              "legal": false,
+              "norm": 70904,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                553,
+                53
+              ],
+              "legal": true,
+              "norm": 179134,
+              "terminal": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "p": 7,
+      "r": 4,
+      "n": 25,
+      "menu_size": 18,
+      "checked": 1598,
+      "traps": 248,
+      "examples": [
+        {
+          "y": -34,
+          "z": 1,
+          "norm": 10786,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -111,
+                7
+              ],
+              "legal": true,
+              "norm": 173676,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                16,
+                7
+              ],
+              "legal": true,
+              "norm": 12386,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                143,
+                7
+              ],
+              "legal": true,
+              "norm": 44644,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                254,
+                41
+              ],
+              "legal": true,
+              "norm": 102146,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                381,
+                41
+              ],
+              "legal": true,
+              "norm": 65316,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                161,
+                41
+              ],
+              "legal": true,
+              "norm": 251876,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                288,
+                41
+              ],
+              "legal": true,
+              "norm": 73314,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                415,
+                41
+              ],
+              "legal": false,
+              "norm": 88300,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                68,
+                41
+              ],
+              "legal": true,
+              "norm": 505394,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                195,
+                41
+              ],
+              "legal": false,
+              "norm": 185100,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                322,
+                41
+              ],
+              "legal": true,
+              "norm": 58354,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                449,
+                41
+              ],
+              "legal": true,
+              "norm": 125156,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                889,
+                86
+              ],
+              "legal": true,
+              "norm": 424726,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                381,
+                43
+              ],
+              "legal": true,
+              "norm": 64716,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 1,
+              "parameters": [
+                855,
+                86
+              ],
+              "legal": false,
+              "norm": 361350,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                364,
+                43
+              ],
+              "legal": true,
+              "norm": 61826,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                821,
+                86
+              ],
+              "legal": true,
+              "norm": 311846,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                347,
+                43
+              ],
+              "legal": true,
+              "norm": 62404,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": -31,
+          "z": 1,
+          "norm": 9316,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -99,
+                7
+              ],
+              "legal": true,
+              "norm": 150156,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                19,
+                7
+              ],
+              "legal": true,
+              "norm": 10916,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                137,
+                7
+              ],
+              "legal": true,
+              "norm": 38764,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                118,
+                19
+              ],
+              "legal": true,
+              "norm": 21794,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                177,
+                19
+              ],
+              "legal": true,
+              "norm": 14124,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                149,
+                38
+              ],
+              "legal": true,
+              "norm": 216806,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                267,
+                38
+              ],
+              "legal": true,
+              "norm": 62934,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                385,
+                38
+              ],
+              "legal": false,
+              "norm": 76150,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                31,
+                19
+              ],
+              "legal": true,
+              "norm": 109316,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                90,
+                19
+              ],
+              "legal": false,
+              "norm": 40050,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                149,
+                19
+              ],
+              "legal": true,
+              "norm": 12556,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                208,
+                19
+              ],
+              "legal": true,
+              "norm": 26834,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                413,
+                40
+              ],
+              "legal": true,
+              "norm": 91414,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                177,
+                20
+              ],
+              "legal": true,
+              "norm": 13974,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 1,
+              "parameters": [
+                159,
+                16
+              ],
+              "legal": true,
+              "norm": 12486,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                677,
+                80
+              ],
+              "legal": true,
+              "norm": 213974,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                191,
+                20
+              ],
+              "legal": true,
+              "norm": 16886,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                323,
+                40
+              ],
+              "legal": true,
+              "norm": 53974,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": -16,
+          "z": 1,
+          "norm": 3586,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -39,
+                7
+              ],
+              "legal": true,
+              "norm": 58476,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                34,
+                7
+              ],
+              "legal": true,
+              "norm": 5186,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                107,
+                7
+              ],
+              "legal": true,
+              "norm": 15844,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                146,
+                23
+              ],
+              "legal": true,
+              "norm": 30146,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                219,
+                23
+              ],
+              "legal": true,
+              "norm": 22116,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                89,
+                23
+              ],
+              "legal": true,
+              "norm": 80876,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                162,
+                23
+              ],
+              "legal": true,
+              "norm": 22914,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                235,
+                23
+              ],
+              "legal": false,
+              "norm": 28900,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                32,
+                23
+              ],
+              "legal": true,
+              "norm": 170594,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                105,
+                23
+              ],
+              "legal": false,
+              "norm": 62700,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                178,
+                23
+              ],
+              "legal": true,
+              "norm": 18754,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                251,
+                23
+              ],
+              "legal": true,
+              "norm": 38756,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                511,
+                50
+              ],
+              "legal": true,
+              "norm": 136726,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                219,
+                25
+              ],
+              "legal": true,
+              "norm": 21516,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 1,
+              "parameters": [
+                99,
+                10
+              ],
+              "legal": true,
+              "norm": 4806,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                211,
+                25
+              ],
+              "legal": true,
+              "norm": 20876,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                479,
+                50
+              ],
+              "legal": true,
+              "norm": 106646,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                203,
+                25
+              ],
+              "legal": true,
+              "norm": 21004,
+              "terminal": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "p": 11,
+      "r": 4,
+      "n": 37,
+      "menu_size": 32,
+      "checked": 1859,
+      "traps": 344,
+      "examples": [
+        {
+          "y": -40,
+          "z": 1,
+          "norm": 16482,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -283,
+                11
+              ],
+              "legal": true,
+              "norm": 1057660,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                -126,
+                11
+              ],
+              "legal": true,
+              "norm": 416786,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                31,
+                11
+              ],
+              "legal": true,
+              "norm": 71700,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                188,
+                11
+              ],
+              "legal": true,
+              "norm": 22402,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                345,
+                11
+              ],
+              "legal": true,
+              "norm": 268892,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                314,
+                51
+              ],
+              "legal": true,
+              "norm": 723666,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                157,
+                17
+              ],
+              "legal": true,
+              "norm": 30900,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                628,
+                51
+              ],
+              "legal": true,
+              "norm": 128322,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                785,
+                51
+              ],
+              "legal": true,
+              "norm": 274332,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                197,
+                51
+              ],
+              "legal": true,
+              "norm": 1248060,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                118,
+                17
+              ],
+              "legal": true,
+              "norm": 64674,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                511,
+                51
+              ],
+              "legal": true,
+              "norm": 211860,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 1,
+              "parameters": [
+                668,
+                51
+              ],
+              "legal": true,
+              "norm": 137442,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 1,
+              "parameters": [
+                275,
+                17
+              ],
+              "legal": true,
+              "norm": 39868,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                80,
+                51
+              ],
+              "legal": true,
+              "norm": 1936722,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                79,
+                17
+              ],
+              "legal": true,
+              "norm": 116700,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                394,
+                51
+              ],
+              "legal": true,
+              "norm": 459666,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                551,
+                51
+              ],
+              "legal": true,
+              "norm": 164820,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 2,
+              "parameters": [
+                236,
+                17
+              ],
+              "legal": true,
+              "norm": 18418,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 2,
+              "parameters": [
+                865,
+                51
+              ],
+              "legal": true,
+              "norm": 462492,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                1727,
+                106
+              ],
+              "legal": true,
+              "norm": 1611030,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                785,
+                53
+              ],
+              "legal": true,
+              "norm": 242068,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                1413,
+                106
+              ],
+              "legal": true,
+              "norm": 621302,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                628,
+                53
+              ],
+              "legal": true,
+              "norm": 142530,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 1,
+              "parameters": [
+                1687,
+                106
+              ],
+              "legal": true,
+              "norm": 1419190,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                765,
+                53
+              ],
+              "legal": true,
+              "norm": 212948,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                1373,
+                106
+              ],
+              "legal": true,
+              "norm": 580182,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                608,
+                53
+              ],
+              "legal": true,
+              "norm": 151090,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                1647,
+                106
+              ],
+              "legal": true,
+              "norm": 1246550,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                745,
+                53
+              ],
+              "legal": true,
+              "norm": 188628,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                1333,
+                106
+              ],
+              "legal": true,
+              "norm": 558262,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                588,
+                53
+              ],
+              "legal": true,
+              "norm": 164450,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": -30,
+          "z": 1,
+          "norm": 10802,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -203,
+                11
+              ],
+              "legal": true,
+              "norm": 694140,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                -76,
+                11
+              ],
+              "legal": true,
+              "norm": 274786,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                51,
+                11
+              ],
+              "legal": true,
+              "norm": 48980,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                178,
+                11
+              ],
+              "legal": true,
+              "norm": 16722,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                305,
+                11
+              ],
+              "legal": true,
+              "norm": 178012,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                254,
+                41
+              ],
+              "legal": true,
+              "norm": 462946,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                381,
+                41
+              ],
+              "legal": true,
+              "norm": 176180,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                508,
+                41
+              ],
+              "legal": true,
+              "norm": 82962,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                635,
+                41
+              ],
+              "legal": true,
+              "norm": 183292,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                157,
+                41
+              ],
+              "legal": true,
+              "norm": 812340,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                284,
+                41
+              ],
+              "legal": true,
+              "norm": 377746,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                411,
+                41
+              ],
+              "legal": true,
+              "norm": 136700,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 1,
+              "parameters": [
+                538,
+                41
+              ],
+              "legal": true,
+              "norm": 89202,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 1,
+              "parameters": [
+                665,
+                41
+              ],
+              "legal": true,
+              "norm": 235252,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                60,
+                41
+              ],
+              "legal": true,
+              "norm": 1274642,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                187,
+                41
+              ],
+              "legal": true,
+              "norm": 692220,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                314,
+                41
+              ],
+              "legal": true,
+              "norm": 303346,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                441,
+                41
+              ],
+              "legal": true,
+              "norm": 108020,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 2,
+              "parameters": [
+                568,
+                41
+              ],
+              "legal": true,
+              "norm": 106242,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 2,
+              "parameters": [
+                695,
+                41
+              ],
+              "legal": true,
+              "norm": 298012,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                1397,
+                86
+              ],
+              "legal": true,
+              "norm": 1043590,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                635,
+                43
+              ],
+              "legal": true,
+              "norm": 156948,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                1143,
+                86
+              ],
+              "legal": true,
+              "norm": 405542,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                508,
+                43
+              ],
+              "legal": true,
+              "norm": 94210,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 1,
+              "parameters": [
+                1367,
+                86
+              ],
+              "legal": true,
+              "norm": 927910,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                620,
+                43
+              ],
+              "legal": true,
+              "norm": 139458,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                1113,
+                86
+              ],
+              "legal": true,
+              "norm": 381302,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                493,
+                43
+              ],
+              "legal": true,
+              "norm": 99580,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                1337,
+                86
+              ],
+              "legal": true,
+              "norm": 823030,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                605,
+                43
+              ],
+              "legal": true,
+              "norm": 124668,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                1083,
+                86
+              ],
+              "legal": true,
+              "norm": 367862,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                478,
+                43
+              ],
+              "legal": true,
+              "norm": 107650,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": -26,
+          "z": 1,
+          "norm": 8866,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -171,
+                11
+              ],
+              "legal": true,
+              "norm": 570236,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                -56,
+                11
+              ],
+              "legal": true,
+              "norm": 226386,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                59,
+                11
+              ],
+              "legal": true,
+              "norm": 41236,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                174,
+                11
+              ],
+              "legal": true,
+              "norm": 14786,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                289,
+                11
+              ],
+              "legal": true,
+              "norm": 147036,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                230,
+                37
+              ],
+              "legal": true,
+              "norm": 374898,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                345,
+                37
+              ],
+              "legal": true,
+              "norm": 141908,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                460,
+                37
+              ],
+              "legal": true,
+              "norm": 67618,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                575,
+                37
+              ],
+              "legal": true,
+              "norm": 152028,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                141,
+                37
+              ],
+              "legal": true,
+              "norm": 664148,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                256,
+                37
+              ],
+              "legal": true,
+              "norm": 308338,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                371,
+                37
+              ],
+              "legal": true,
+              "norm": 111228,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 1,
+              "parameters": [
+                486,
+                37
+              ],
+              "legal": true,
+              "norm": 72818,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 1,
+              "parameters": [
+                601,
+                37
+              ],
+              "legal": true,
+              "norm": 193108,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                52,
+                37
+              ],
+              "legal": true,
+              "norm": 1048450,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                167,
+                37
+              ],
+              "legal": true,
+              "norm": 569820,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                282,
+                37
+              ],
+              "legal": true,
+              "norm": 249890,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                397,
+                37
+              ],
+              "legal": true,
+              "norm": 88660,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 2,
+              "parameters": [
+                512,
+                37
+              ],
+              "legal": true,
+              "norm": 86130,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 2,
+              "parameters": [
+                627,
+                37
+              ],
+              "legal": true,
+              "norm": 242300,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                1265,
+                78
+              ],
+              "legal": true,
+              "norm": 850998,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                575,
+                39
+              ],
+              "legal": true,
+              "norm": 128052,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                345,
+                26
+              ],
+              "legal": true,
+              "norm": 36902,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                460,
+                39
+              ],
+              "legal": true,
+              "norm": 77682,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 1,
+              "parameters": [
+                413,
+                26
+              ],
+              "legal": true,
+              "norm": 84502,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                562,
+                39
+              ],
+              "legal": true,
+              "norm": 114402,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                1009,
+                78
+              ],
+              "legal": true,
+              "norm": 313398,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                149,
+                13
+              ],
+              "legal": true,
+              "norm": 9108,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                1213,
+                78
+              ],
+              "legal": true,
+              "norm": 678150,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                183,
+                13
+              ],
+              "legal": true,
+              "norm": 11420,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                983,
+                78
+              ],
+              "legal": true,
+              "norm": 302790,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                434,
+                39
+              ],
+              "legal": true,
+              "norm": 88290,
+              "terminal": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "p": 13,
+      "r": 6,
+      "n": 45,
+      "menu_size": 44,
+      "checked": 1157,
+      "traps": 371,
+      "examples": [
+        {
+          "y": -28,
+          "z": 1,
+          "norm": 11184,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -235,
+                13
+              ],
+              "legal": false,
+              "norm": 1124610,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                -106,
+                13
+              ],
+              "legal": true,
+              "norm": 558816,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                23,
+                13
+              ],
+              "legal": true,
+              "norm": 192714,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                152,
+                13
+              ],
+              "legal": true,
+              "norm": 26304,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                281,
+                13
+              ],
+              "legal": true,
+              "norm": 59586,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                410,
+                13
+              ],
+              "legal": false,
+              "norm": 292560,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                387,
+                41
+              ],
+              "legal": false,
+              "norm": 463194,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                516,
+                41
+              ],
+              "legal": false,
+              "norm": 210096,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                645,
+                41
+              ],
+              "legal": false,
+              "norm": 156690,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                774,
+                41
+              ],
+              "legal": false,
+              "norm": 302976,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                286,
+                41
+              ],
+              "legal": true,
+              "norm": 800736,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                415,
+                41
+              ],
+              "legal": false,
+              "norm": 391290,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 1,
+              "parameters": [
+                544,
+                41
+              ],
+              "legal": true,
+              "norm": 181536,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 1,
+              "parameters": [
+                673,
+                41
+              ],
+              "legal": true,
+              "norm": 171474,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 1,
+              "parameters": [
+                802,
+                41
+              ],
+              "legal": true,
+              "norm": 361104,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                185,
+                41
+              ],
+              "legal": false,
+              "norm": 1260690,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                314,
+                41
+              ],
+              "legal": true,
+              "norm": 694896,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                443,
+                41
+              ],
+              "legal": true,
+              "norm": 328794,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 2,
+              "parameters": [
+                572,
+                41
+              ],
+              "legal": true,
+              "norm": 162384,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 2,
+              "parameters": [
+                701,
+                41
+              ],
+              "legal": true,
+              "norm": 195666,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 2,
+              "parameters": [
+                830,
+                41
+              ],
+              "legal": false,
+              "norm": 428640,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 0,
+              "s": 3,
+              "parameters": [
+                84,
+                41
+              ],
+              "legal": false,
+              "norm": 1843056,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 3,
+              "parameters": [
+                213,
+                41
+              ],
+              "legal": false,
+              "norm": 1120914,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 3,
+              "parameters": [
+                342,
+                41
+              ],
+              "legal": false,
+              "norm": 598464,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 3,
+              "parameters": [
+                471,
+                41
+              ],
+              "legal": false,
+              "norm": 275706,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 3,
+              "parameters": [
+                600,
+                41
+              ],
+              "legal": false,
+              "norm": 152640,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 3,
+              "parameters": [
+                729,
+                41
+              ],
+              "legal": false,
+              "norm": 229266,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 3,
+              "parameters": [
+                858,
+                41
+              ],
+              "legal": false,
+              "norm": 505584,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                1677,
+                88
+              ],
+              "legal": false,
+              "norm": 1461654,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                387,
+                22
+              ],
+              "legal": false,
+              "norm": 63054,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                129,
+                8
+              ],
+              "legal": false,
+              "norm": 6246,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                645,
+                44
+              ],
+              "legal": false,
+              "norm": 175590,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 1,
+              "parameters": [
+                1649,
+                88
+              ],
+              "legal": true,
+              "norm": 1346406,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                190,
+                11
+              ],
+              "legal": false,
+              "norm": 14640,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                1391,
+                88
+              ],
+              "legal": true,
+              "norm": 727206,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                631,
+                44
+              ],
+              "legal": true,
+              "norm": 179286,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                1621,
+                88
+              ],
+              "legal": true,
+              "norm": 1240566,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                373,
+                22
+              ],
+              "legal": true,
+              "norm": 54654,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                1363,
+                88
+              ],
+              "legal": true,
+              "norm": 708054,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                617,
+                44
+              ],
+              "legal": true,
+              "norm": 185334,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 3,
+              "parameters": [
+                1593,
+                88
+              ],
+              "legal": false,
+              "norm": 1144134,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 3,
+              "parameters": [
+                183,
+                11
+              ],
+              "legal": false,
+              "norm": 12834,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 3,
+              "parameters": [
+                1335,
+                88
+              ],
+              "legal": false,
+              "norm": 698310,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 3,
+              "parameters": [
+                603,
+                44
+              ],
+              "legal": false,
+              "norm": 193734,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": -22,
+          "z": 1,
+          "norm": 8304,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -175,
+                13
+              ],
+              "legal": false,
+              "norm": 836610,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                -64,
+                13
+              ],
+              "legal": true,
+              "norm": 417696,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                47,
+                13
+              ],
+              "legal": true,
+              "norm": 146634,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                158,
+                13
+              ],
+              "legal": true,
+              "norm": 23424,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                269,
+                13
+              ],
+              "legal": true,
+              "norm": 48066,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                380,
+                13
+              ],
+              "legal": false,
+              "norm": 220560,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                333,
+                35
+              ],
+              "legal": false,
+              "norm": 331434,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                444,
+                35
+              ],
+              "legal": false,
+              "norm": 149616,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                111,
+                7
+              ],
+              "legal": false,
+              "norm": 4626,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                666,
+                35
+              ],
+              "legal": false,
+              "norm": 229536,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                244,
+                35
+              ],
+              "legal": true,
+              "norm": 584016,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                71,
+                7
+              ],
+              "legal": true,
+              "norm": 11346,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 1,
+              "parameters": [
+                466,
+                35
+              ],
+              "legal": true,
+              "norm": 131136,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 1,
+              "parameters": [
+                577,
+                35
+              ],
+              "legal": true,
+              "norm": 126474,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 1,
+              "parameters": [
+                688,
+                35
+              ],
+              "legal": true,
+              "norm": 269664,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                31,
+                7
+              ],
+              "legal": true,
+              "norm": 37266,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                38,
+                5
+              ],
+              "legal": true,
+              "norm": 10464,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                377,
+                35
+              ],
+              "legal": true,
+              "norm": 241674,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 2,
+              "parameters": [
+                488,
+                35
+              ],
+              "legal": true,
+              "norm": 118464,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 2,
+              "parameters": [
+                599,
+                35
+              ],
+              "legal": true,
+              "norm": 143106,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 2,
+              "parameters": [
+                142,
+                7
+              ],
+              "legal": true,
+              "norm": 12624,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 0,
+              "s": 3,
+              "parameters": [
+                66,
+                35
+              ],
+              "legal": false,
+              "norm": 1374336,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 3,
+              "parameters": [
+                177,
+                35
+              ],
+              "legal": false,
+              "norm": 836874,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 3,
+              "parameters": [
+                288,
+                35
+              ],
+              "legal": false,
+              "norm": 447264,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 3,
+              "parameters": [
+                57,
+                5
+              ],
+              "legal": false,
+              "norm": 4194,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 3,
+              "parameters": [
+                102,
+                7
+              ],
+              "legal": false,
+              "norm": 4464,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 3,
+              "parameters": [
+                621,
+                35
+              ],
+              "legal": false,
+              "norm": 165546,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 3,
+              "parameters": [
+                732,
+                35
+              ],
+              "legal": false,
+              "norm": 367344,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                1443,
+                76
+              ],
+              "legal": false,
+              "norm": 1070694,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                333,
+                19
+              ],
+              "legal": false,
+              "norm": 46314,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                1221,
+                76
+              ],
+              "legal": false,
+              "norm": 559206,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                555,
+                38
+              ],
+              "legal": false,
+              "norm": 131310,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 1,
+              "parameters": [
+                1421,
+                76
+              ],
+              "legal": true,
+              "norm": 993606,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                655,
+                38
+              ],
+              "legal": false,
+              "norm": 173310,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                1199,
+                76
+              ],
+              "legal": true,
+              "norm": 540726,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                272,
+                19
+              ],
+              "legal": true,
+              "norm": 33504,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                1399,
+                76
+              ],
+              "legal": true,
+              "norm": 922326,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                322,
+                19
+              ],
+              "legal": true,
+              "norm": 40704,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                1177,
+                76
+              ],
+              "legal": true,
+              "norm": 528054,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                533,
+                38
+              ],
+              "legal": true,
+              "norm": 138174,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 3,
+              "parameters": [
+                1377,
+                76
+              ],
+              "legal": false,
+              "norm": 856854,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 3,
+              "parameters": [
+                633,
+                38
+              ],
+              "legal": false,
+              "norm": 153774,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 3,
+              "parameters": [
+                1155,
+                76
+              ],
+              "legal": false,
+              "norm": 521190,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 3,
+              "parameters": [
+                261,
+                19
+              ],
+              "legal": false,
+              "norm": 35946,
+              "terminal": false
+            }
+          ]
+        },
+        {
+          "y": -16,
+          "z": 1,
+          "norm": 5856,
+          "successors": [
+            {
+              "carrier": "C",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                -115,
+                13
+              ],
+              "legal": false,
+              "norm": 591810,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                -22,
+                13
+              ],
+              "legal": true,
+              "norm": 297744,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                71,
+                13
+              ],
+              "legal": true,
+              "norm": 107466,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                164,
+                13
+              ],
+              "legal": true,
+              "norm": 20976,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                257,
+                13
+              ],
+              "legal": true,
+              "norm": 38274,
+              "terminal": false
+            },
+            {
+              "carrier": "C",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                350,
+                13
+              ],
+              "legal": false,
+              "norm": 159360,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                279,
+                29
+              ],
+              "legal": false,
+              "norm": 221706,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 0,
+              "parameters": [
+                372,
+                29
+              ],
+              "legal": false,
+              "norm": 99504,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 0,
+              "parameters": [
+                465,
+                29
+              ],
+              "legal": false,
+              "norm": 81090,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 0,
+              "parameters": [
+                558,
+                29
+              ],
+              "legal": false,
+              "norm": 166464,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                202,
+                29
+              ],
+              "legal": true,
+              "norm": 401424,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                295,
+                29
+              ],
+              "legal": false,
+              "norm": 193290,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 1,
+              "parameters": [
+                388,
+                29
+              ],
+              "legal": true,
+              "norm": 88944,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 1,
+              "parameters": [
+                481,
+                29
+              ],
+              "legal": true,
+              "norm": 88386,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 1,
+              "parameters": [
+                574,
+                29
+              ],
+              "legal": true,
+              "norm": 191616,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                125,
+                29
+              ],
+              "legal": false,
+              "norm": 652290,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                218,
+                29
+              ],
+              "legal": true,
+              "norm": 358224,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                311,
+                29
+              ],
+              "legal": true,
+              "norm": 167946,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 2,
+              "parameters": [
+                404,
+                29
+              ],
+              "legal": true,
+              "norm": 81456,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 2,
+              "parameters": [
+                497,
+                29
+              ],
+              "legal": true,
+              "norm": 98754,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 2,
+              "parameters": [
+                590,
+                29
+              ],
+              "legal": false,
+              "norm": 219840,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 0,
+              "s": 3,
+              "parameters": [
+                48,
+                29
+              ],
+              "legal": false,
+              "norm": 974304,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 1,
+              "s": 3,
+              "parameters": [
+                141,
+                29
+              ],
+              "legal": false,
+              "norm": 594306,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 2,
+              "s": 3,
+              "parameters": [
+                234,
+                29
+              ],
+              "legal": false,
+              "norm": 318096,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 3,
+              "s": 3,
+              "parameters": [
+                327,
+                29
+              ],
+              "legal": false,
+              "norm": 145674,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 4,
+              "s": 3,
+              "parameters": [
+                420,
+                29
+              ],
+              "legal": false,
+              "norm": 77040,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 5,
+              "s": 3,
+              "parameters": [
+                513,
+                29
+              ],
+              "legal": false,
+              "norm": 112194,
+              "terminal": false
+            },
+            {
+              "carrier": "A",
+              "j": 6,
+              "s": 3,
+              "parameters": [
+                606,
+                29
+              ],
+              "legal": false,
+              "norm": 251136,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 0,
+              "parameters": [
+                1209,
+                64
+              ],
+              "legal": false,
+              "norm": 740646,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 0,
+              "parameters": [
+                279,
+                16
+              ],
+              "legal": false,
+              "norm": 32166,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 0,
+              "parameters": [
+                1023,
+                64
+              ],
+              "legal": false,
+              "norm": 392454,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 0,
+              "parameters": [
+                465,
+                32
+              ],
+              "legal": false,
+              "norm": 93510,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 1,
+              "parameters": [
+                1193,
+                64
+              ],
+              "legal": true,
+              "norm": 694374,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 1,
+              "parameters": [
+                275,
+                16
+              ],
+              "legal": false,
+              "norm": 30390,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 1,
+              "parameters": [
+                1007,
+                64
+              ],
+              "legal": true,
+              "norm": 381894,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 1,
+              "parameters": [
+                457,
+                32
+              ],
+              "legal": true,
+              "norm": 95334,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 2,
+              "parameters": [
+                1177,
+                64
+              ],
+              "legal": true,
+              "norm": 651174,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 2,
+              "parameters": [
+                271,
+                16
+              ],
+              "legal": true,
+              "norm": 28806,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 2,
+              "parameters": [
+                991,
+                64
+              ],
+              "legal": true,
+              "norm": 374406,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 2,
+              "parameters": [
+                449,
+                32
+              ],
+              "legal": true,
+              "norm": 97926,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 0,
+              "s": 3,
+              "parameters": [
+                1161,
+                64
+              ],
+              "legal": false,
+              "norm": 611046,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 1,
+              "s": 3,
+              "parameters": [
+                267,
+                16
+              ],
+              "legal": false,
+              "norm": 27414,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 2,
+              "s": 3,
+              "parameters": [
+                975,
+                64
+              ],
+              "legal": false,
+              "norm": 369990,
+              "terminal": false
+            },
+            {
+              "carrier": "B",
+              "j": 3,
+              "s": 3,
+              "parameters": [
+                441,
+                32
+              ],
+              "legal": false,
+              "norm": 101286,
+              "terminal": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

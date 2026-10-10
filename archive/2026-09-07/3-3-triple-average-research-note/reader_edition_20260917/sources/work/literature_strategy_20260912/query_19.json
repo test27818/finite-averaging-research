@@ -1,0 +1,79 @@
+{
+  "index": 19,
+  "query": "zero sum hypergraph",
+  "url": "https://api.openalex.org/works?filter=title.search%3Azero+sum+hypergraph&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 3,
+  "results": [
+    {
+      "id": "https://openalex.org/W2144789179",
+      "title": "On zero‐sum delta‐systems and multiple copies of hypergraphs",
+      "date": "1991-11-01",
+      "doi": "https://doi.org/10.1002/jgt.3190150505",
+      "citations": 13,
+      "authors": [
+        "Yair Caro"
+      ],
+      "abstract": "Abstract We prove the following generalization of earlier results of Bialostocki and Dierker [3] and Caro [7]. Theorem. Let t ⩾ k ⩾ 2 be positive integers such that k | t, and let c :E(K ) → ℤk be a mapping of all the r‐subsets of an rt + k −1 element set into the cyclic group of order k; then there are t pairwise disjoint r‐subsets e1, e2, …, et such that Σ c(ei) = 0. This theorem is further generalized to Δ‐systems. An application of this theorem and extension of the proof technique are combined to establish the currently best estimates of the zero‐sum Ramsey numbers R(tG, ℤt).",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1002/jgt.3190150505",
+          "pdf": null,
+          "source": "Journal of Graph Theory"
+        }
+      ],
+      "reference_count": 11
+    },
+    {
+      "id": "https://openalex.org/W2106191484",
+      "title": "Hypergraph conditions for the solvability of the ergodic equation for zero-sum games",
+      "date": "2015-12-01",
+      "doi": "https://doi.org/10.1109/cdc.2015.7403138",
+      "citations": 3,
+      "authors": [
+        "Marianne Akian",
+        "Stéphane Gaubert",
+        "Antoine Hochart"
+      ],
+      "abstract": "The ergodic equation is a basic tool in the study of mean-payoff stochastic games. Its solvability entails that the mean payoff is independent of the initial state. Moreover, optimal stationary strategies are readily obtained from its solution. In this paper, we give a general sufficient condition for the solvability of the ergodic equation, for a game with finite state space but arbitrary action spaces. This condition involves a pair of directed hypergraphs depending only on the “growth at infinity” of the Shapley operator of the game. This refines a recent result of the authors which only applied to games with bounded payments, as well as earlier nonlinear fixed point results for order preserving maps, involving graph conditions.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/cdc.2015.7403138",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://arxiv.org/abs/1510.05396",
+          "pdf": "https://arxiv.org/pdf/1510.05396",
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 38
+    },
+    {
+      "id": "https://openalex.org/W4300510704",
+      "title": "Hypergraph conditions for the solvability of the ergodic equation for zero-sum games",
+      "date": "2015-10-19",
+      "doi": "https://doi.org/10.48550/arxiv.1510.05396",
+      "citations": 1,
+      "authors": [
+        "Marianne Akian",
+        "Stéphane Gaubert",
+        "Antoine Hochart"
+      ],
+      "abstract": "The ergodic equation is a basic tool in the study of mean-payoff stochastic games. Its solvability entails that the mean payoff is independent of the initial state. Moreover, optimal stationary strategies are readily obtained from its solution. In this paper, we give a general sufficient condition for the solvability of the ergodic equation, for a game with finite state space but arbitrary action spaces. This condition involves a pair of directed hypergraphs depending only on the ``growth at infinity'' of the Shapley operator of the game. This refines a recent result of the authors which only applied to games with bounded payments, as well as earlier nonlinear fixed point results for order preserving maps, involving graph conditions.",
+      "locations": [
+        {
+          "url": "https://inria.hal.science/hal-01249321",
+          "pdf": null,
+          "source": "HAL (Le Centre pour la Communication Scientifique Directe)"
+        },
+        {
+          "url": "https://doi.org/10.48550/arxiv.1510.05396",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 0
+    }
+  ]
+}

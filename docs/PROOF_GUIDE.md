@@ -1,5 +1,7 @@
 # 证明思路与审核路径 / Proof strategy and reviewer map
 
+**当前研究状态 / Current research:** [统一入口](../archive/2026-09-07/3-3-triple-average-research-note/knowledge/START_HERE.md) · [结论状态](../archive/2026-09-07/3-3-triple-average-research-note/knowledge/STATUS.md) · [证明链与后续接口](../archive/2026-09-07/3-3-triple-average-research-note/knowledge/PROOF_ROUTES.md)。2026-10-11同步包含后续研究；本页保留原证明的读者指南。
+
 [中文首页](../README.zh-CN.md) · [English](../README.md) · [核验 / Verification](VERIFICATION.md)
 
 **研究背景与目标。** 本项目的新成果主要由用户与 **GPT-6 Astra（gpt6-astra）** 协作推进，已完成证明经历多轮内部审核、交叉复核与针对性精确核验。当前仍在寻找更自然、易读且结构统一的证明，特别是用一般机制替代零散参数构造和有限证书。审核和已知问题的范围见[来源说明](../PROVENANCE.md)与[核验指南](VERIFICATION.md)。

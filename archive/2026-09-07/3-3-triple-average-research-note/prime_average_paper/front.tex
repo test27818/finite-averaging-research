@@ -1,0 +1,306 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[xetex,margin=27mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+\setCJKsansfont{Microsoft YaHei}
+\setCJKmonofont{SimSun}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{longtable,booktabs,array,multirow}
+\usepackage{fancyvrb}
+\usepackage[unicode,bookmarks=false,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{graphicx}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\passthrough}[1]{#1}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\Um}{\operatorname{Um}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\cont}{\operatorname{cont}}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{proposition}[theorem]{命题}
+\newtheorem{corollary}[theorem]{推论}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{remark}[theorem]{注}
+\renewcommand{\proofname}{证明}
+\renewcommand{\contentsname}{目录}
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\refname}{参考文献}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{3}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt}
+\emergencystretch=3em
+\title{有限有理配置的素数元平均：\protect\\算术判据与最优最终阈值}
+\author{}
+\date{2026年9月18日\quad 详细证明稿}
+\begin{document}
+\maketitle
+\begin{abstract}
+对一个具有 $n$ 个标记位置的有理配置，一次 $p$ 平均把任意 $p$ 个位置同时替换为其算术平均。本文研究有限次操作达到全等的条件。将非恒定输入减去均值、清除分母并取本原整数代表 $X$，记 $G(X)=\gcd_{i<j}(X_i-X_j)$。素数元平均的判据为：对奇素数 $p$ 和 $n\ge 2p+1$，可达全等当且仅当 $G(X)$ 是 $p$ 的幂；在 $n=2p$ 存在 $G=1$ 的不可达配置，因而最终阈值恰为 $2p+1$。二平均的最终阈值为 $4$。证明由安全整数下降、原位置块构造及二维同余输送组成。对临界带，正向平均词首先实现完整根子群；有限指数定理和有理 $S$ 整数上的同余子群性质给出真实的主同余子群，随后以本原列的有限标记修正到精确终端。全文明确区分有理矩阵、原位置实现和共同尺度；所用有限资源证书与一般量词分开陈述。
+\end{abstract}
+\tableofcontents
+\newpage
+
+\section{问题、判据及证明的组织}\label{sec:intro}
+配置是有序列 $x=(x_1,\ldots,x_n)\in\QQ^n$，重复数值允许占据不同位置。对 $S\subseteq\{1,\ldots,n\}$、$|S|=p$，定义
+\[
+ (T_Sx)_i=\begin{cases}p^{-1}\sum_{j\in S}x_j,&i\in S,\\x_i,&i\notin S.\end{cases}
+\]
+所有操作均为这种 $T_S$；不允许删除位置、增加副本、任意缩放某个子系统或倒向执行平均。位置的重新命名仅用于记录其所属的等值块，不改变配置。
+
+令 $A=n^{-1}\sum_i x_i$。若 $x$ 非恒定，取 $c\in\QQ^\times$，使
+\[
+ X=c(x-A\mathbf1)\in\ZZ^n,\qquad \sum_iX_i=0,\qquad \gcd_iX_i=1.
+\]
+这样的 $X$ 唯一至整体符号；定义 $G(x)=G(X)=\gcd_{i<j}|X_i-X_j|$。恒定输入无需定义 $G$，它已经达到目标。
+
+\begin{theorem}[素数平均的最优最终阈值]\label{thm:main}
+设 $p$ 为奇素数，$n\ge2p+1$。有理配置 $x$ 可经有限次 $p$ 平均达到 $A\mathbf1$，当且仅当它恒定，或者 $G(x)=p^e$、$e\ge0$。此外，对每个奇素数 $p$，在 $n=2p$ 存在非恒定、$G=1$ 而不可平均的配置。故使判据对所有后续维数成立的最小阈值为 $N(p)=2p+1$。
+对 $p=2$，相应判据在全部 $n\ge4$ 成立，且 $N(2)=4$。
+\end{theorem}
+
+这里的阈值是\emph{最终阈值}：它要求此后每个位置数都成立，不是第一个可解位置数，也不意味着阈值以下每个配置不可解。本文证明可达性，不声称最短平均词，亦不由群的有限生成推出关于 $(p,n)$ 和输入位长的统一多项式长度界。
+
+二平均部分引用 Coviello Gonzalez--Chrobak 的完整判据\cite{mixing}。对奇素数，我们先证明必要性与锐下界，再将充分性分为 $n\ge4p$、$n=3p$ 和 $2p<n<4p$ 中其余配置。宽维数的整数下降和 $3p$ 的独立运输证明\emph{先于}临界带终端完成，因此使用含零子系统时不存在循环调用主定理的问题。
+
+\section{算术障碍与锐下界}\label{sec:obstruction}
+\begin{lemma}[仿射归一化]\label{lem:normalize}
+对 $a,b\in\QQ$，$b\ne0$，任一固定平均词 $W$ 满足
+\[W(a\mathbf1+bx)=a\mathbf1+bWx.\]
+因此 $x$ 达到其均值，等价于上述 $X$ 达到零。
+\end{lemma}
+\begin{proof}
+每个 $T_S$ 线性且固定 $\mathbf1$，对词长归纳即得。归一化只是选择同一操作序列的分析坐标，不是增加可执行操作。
+\end{proof}
+
+\begin{lemma}[共同余数障碍]\label{lem:G}
+对非零本原整数零和配置 $X$，有 $G(X)\mid n$。若某个素数 $\ell\ne p$ 整除 $G(X)$，则 $X$ 不可归零。
+\end{lemma}
+\begin{proof}
+模 $G$ 的全部坐标同余于某个 $c$。本原性说明 $\gcd(c,G)=1$；零和说明 $nc\equiv0\pmod G$，故 $G\mid n$。
+若 $\ell\mid G$，共同余数 $c\bmod\ell$ 非零。从整数输入出发，每一步的坐标属于 $\ZZ[1/p]$。因 $\ell\ne p$，该环可约化至 $\FF_\ell$，且 $p$ 可逆。对 $p$ 个相同余数取平均仍为原余数，所以每一步全部坐标仍同余于 $c\ne0$，不可能到零。
+\end{proof}
+
+\begin{remark}
+$G$ 本身不是沿任意平均词保持的动态不变量：操作可以产生新的共同余数障碍。以下所谓安全，是指不产生被所需判据禁止的新障碍。
+\end{remark}
+
+\begin{lemma}[小维数中分数不能提供成功绕路]\label{lem:no-fraction}
+设 $p$ 为奇素数，$p\le n\le2p$。若整数零和配置存在成功的 $p$ 平均词，则该词在成功以前不能首次产生非整数。
+\end{lemma}
+\begin{proof}
+假设首次非整数平均后，所选 $p$ 个位置共同取值 $a$，且 $v_p(a)=h<0$；其余值的赋值严格大于 $h$。更一般地，设某一步最低赋值 $h$ 恰由一个相等的 $p$ 块承担，其他位置的赋值均大于 $h$。若下一选择与该块相交于 $k$ 个位置，$1\le k\le p-1$，则所选和的赋值为 $h$，因为 $p\nmid k$，其余项赋值更高。新平均的赋值为 $h-1$，又形成唯一的最低 $p$ 块。若选中整个最低块，则操作恒等。若与其不交，必须 $n=2p$ 且选中完整补集；零和迫使结果为 $(a^p,(-a)^p)$。
+前两种情况不能消去最低负赋值。后一种情况下，按引理\ref{lem:normalize} 归一化得到 $(1^p,(-1)^p)$，全部坐标模 $2$ 为 $1$，而 $p$ 奇；引理\ref{lem:G} 的共同余数论证禁止归零。故成功词不能首次产生非整数。
+\end{proof}
+
+\begin{proposition}[锐下界]\label{prop:lower}
+对每个奇素数 $p$，配置
+\[X_p=(-p,0^{p-1},1^p)\in\ZZ^{2p}\]
+本原、零和、$G(X_p)=1$，但不可归零。
+\end{proposition}
+\begin{proof}
+坐标 $0,1$ 给出本原性与 $G=1$。由引理\ref{lem:no-fraction}，成功词的全部步骤必须为整数平均。设选择中包含 $j$ 份 $1$、$e$ 份 $-p$，其中 $e\in\{0,1\}$。整性要求 $j-ep\equiv0\pmod p$，故 $j=0$ 或 $p$。$j=p$ 时恒等；唯一非恒等选择是 $(-p,0^{p-1})$，结果为 $((-1)^p,1^p)$，被模 $2$ 障碍禁止。因此不存在成功词。
+\end{proof}
+
+二平均的 $n=3$ 反例为 $(-3,1,2)$，其 $G=1$。任意首次操作产生 $(a,a,-2a)$、$a\ne0$；之后非恒等操作仍为此形，参数变成 $-a/2$，所以永不全零。这与\cite{mixing} 在 $n\ge4$ 的充分性合起来给出 $N(2)=4$。
+
+为明确该引用的代入，\cite{mixing} 引言的完全混合刻画定理 (a) 陈述：对 $n\ge4$，整数配置及整数目标均值满足完全混合，当且仅当对每个正奇数 $b$，配置若模 $b$ 全同余，其均值也属于同一剩余类（条件 MC）。对本文的本原零和 $X$，目标均值为 $0$；若 $b\mid G(X)$，本原性使共同余数与 $b$ 互素，故 MC 仅在 $b=1$ 时可能成立。因此 MC 恰好等价于 $G(X)$ 无奇素因子。任意有理输入由引理\ref{lem:normalize} 化到这一整数情形。混合图按拓扑序执行时每个二入二出节点消耗两滴并产生两滴，故始终可用相同的 $n$ 个位置实现，反向也可逐步构造混合图；两个模型的量词一致。
+
+\section{原位置返回与算术工具}\label{sec:arithmetic}
+本节中 $R=\ZZ[1/D]$，$D>1$；$D$ 的因子只有在已证明的真实返回中取得可逆倍率以后才允许引入。记
+\[
+ U(t)=\begin{pmatrix}1&t\\0&1\end{pmatrix},\quad
+ L(t)=\begin{pmatrix}1&0\\t&1\end{pmatrix},\quad
+ \Gamma(q,R)=\ker\bigl(\SL_2(R)\longrightarrow\SL_2(R/qR)\bigr).
+\]
+从 $q$ 中删除 $R$ 中的单位因子不改变该子群。
+
+\begin{definition}[真实射影返回]
+用带标签的分组 $\pi$ 将参数 $v\in\QQ^2$ 展开为覆盖全部 $n$ 个原位置的配置 $E_\pi v$。若一个真实平均词 $W$ 满足
+\[W E_\pi=\lambda E_{\pi'}M,\qquad\lambda\in\QQ^\times,\]
+其中 $\pi'$ 具有相同的块重数，且规则可以在每个同形状分组上重放，则称 $M$ 有真实射影返回。分组的标签包含每个原位置的所属块。
+\end{definition}
+
+\begin{lemma}[正向逆与根参数扩环]\label{lem:inverse-localize}
+若真实返回 $J$ 满足 $J^k=cI$、$c\ne0$，则 $J^{-1}$ 有真实射影返回。若全部 $U(hR)$ 已实现，且
+\[T=\begin{pmatrix}1&b\\0&\kappa\end{pmatrix},\qquad\kappa\ne0,\]
+及其逆已实现，则全部 $U(hR[\kappa,\kappa^{-1}])$ 已实现。
+\end{lemma}
+\begin{proof}
+第一项由正向执行 $J^{k-1}=cJ^{-1}$ 得出。第二项用
+\[TU(t)T^{-1}=U(t/\kappa),\quad T^{-1}U(t)T=U(\kappa t),\quad U(s)U(t)=U(s+t).\]
+新环每个元素是有限个 $r_i\kappa^i$ 的和，故有限个共轭和相乘即可。如果 $\kappa=A/B$ 已约分，裴蜀等式说明 $\ZZ[\kappa,\kappa^{-1}]=\ZZ[1/(AB)]$。这些等式只在完整核心上使用；不能把它们嵌入有外部非零位置的子系统。
+\end{proof}
+
+\begin{theorem}[所引用的两个算术群定理]\label{thm:external}
+设 $D>1$、$R=\ZZ[1/D]$。
+\begin{enumerate}
+\item 对 $\SL_2(R)$ 的任一有限指数子群 $H$，属于 $H$ 的上下初等矩阵生成 $H$ 中的有限指数子群。
+\item $\SL_2(R)$ 的每个有限指数子群包含某个 $\Gamma(q,R)$、$q\ne0$。
+\end{enumerate}
+\end{theorem}
+第一项是 Morris\cite[Theorem 6.1(2)]{morris} 的二维无限单位特例。第二项是 Serre\cite{serre} 的有理 $S$ 整数特例；准确的强版本可参见 Prasad--Rapinchuk\cite[pp.308--309, Proposition 1 and Section 2.3]{prasad}. 此处 $S$ 包含实处和至少一个有限处，故 $|S|>1$，且含非复数处；结论是同余核\emph{平凡}，不仅是有限。$D=1$ 不能使用该结论。本文引用这两个已发表定理，不重证其一般形式。
+
+\begin{lemma}[确定的深同余层]\label{lem:deep}
+对非零整数 $h$，
+\[\Gamma(h^2,R)\subseteq\langle U(hR),L(hR)\rangle.\]
+\end{lemma}
+\begin{proof}
+记右侧为 $E_h$。在定理\ref{thm:external} 第一项中取 $H=\Gamma(h,R)$，可知 $E_h$ 在 $\SL_2(R)$ 中有限指数。第二项给出 $\Gamma(q_0,R)\subseteq E_h$。令 $q=h^2q_0$、$B=R/qR$。
+对 $g=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)\in\Gamma(h^2,R)$，在 $B$ 中选择 $k$ 使 $u=a+hkc$ 为单位。对剩余特征整除 $h$ 的局部分量，$a=1$；对其余分量，若 $c=0$ 则 $a$ 已为单位，否则只排除一个 $k$ 的剩余类。中国剩余定理同时完成选择。置 $v=b+hkd$，有
+\[
+ g=U(-hk)L(c/u)\diag(u,u^{-1})U(v/u)\quad\text{在 }\SL_2(B)\text{ 中}.
+\]
+因 $u-1\in h^2B$，取 $t\in hB$ 满足 $ht=u-1$，则
+\[\diag(u,u^{-1})=U(h)L(t)U(-h/u)L(-tu).\]
+所有根参数属于 $hB$，可提升为 $hR$ 中的参数，从而存在 $e\in E_h$ 与 $g$ 模 $q$ 相同。于是 $e^{-1}g\in\Gamma(q,R)\subseteq E_h$，结论成立。有限环中的 $u^{-1}$ 仅用于参数的剩余类选择，不被当作 $R$ 的单位。
+\end{proof}
+
+\begin{lemma}[横向根与换基损失]\label{lem:transverse}
+假设全部 $U(hR)$ 及 $J,J^{-1}$ 已实现，其中 $J=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)\in M_2(R)$、$c\det J\ne0$。写 $c=g\varepsilon$，$g\in\ZZ\setminus\{0\}$、$\varepsilon\in R^\times$。则 $\Gamma(g^3h^2,R)$ 已实现。
+\end{lemma}
+\begin{proof}
+置 $P=(e_1,Je_1)=\left(\begin{smallmatrix}1&a\\0&c\end{smallmatrix}\right)$，直接相乘给出
+\[
+ P^{-1}U(t)P=U(ct),\quad P^{-1}JU(t)J^{-1}P=L(-ct/\det J).
+\]
+后一式取 $t=\det J\,hs$，前一式取 $t=hs$，得到 $P$ 坐标中的两条完整 $ghR$ 根。引理\ref{lem:deep} 给出 $P\Gamma(g^2h^2,R)P^{-1}$。因为 $P$ 和 $gP^{-1}$ 均整于 $R$，$P^{-1}(I+g^3h^2X)P-I$ 的每项被 $g^2h^2$ 整除，故该共轭群包含所需子群。换基 $P$ 只用于分析，并未作为物理操作执行。
+\end{proof}
+
+\begin{lemma}[精确本原列纤维]\label{lem:fiber}
+设 $v,w\in R^2$ 本原，即坐标生成单位理想；若 $v\equiv w\pmod{qR}$，则存在 $\gamma\in\Gamma(q,R)$ 使 $\gamma v=w$。
+\end{lemma}
+\begin{proof}
+选择列 $x$ 使 $\det(v,x)=1$。写 $\det(w,x)=1+qk$。由于 $w$ 本原，线性映射 $z\mapsto\det(w,z)$ 满射到 $R$；取 $z$ 使其值为 $-k$。令 $y=x+qz$，则 $\det(w,y)=1$ 且 $(w,y)\equiv(v,x)\pmod q$。因此 $\gamma=(w,y)(v,x)^{-1}$ 满足要求。
+\end{proof}
+
+\begin{lemma}[已有深核后激活安全返回的逆]\label{lem:smith}
+设整数满秩返回 $A$ 已实现，$\Gamma(q,\ZZ)$ 已实现，且 $\gcd(\det A,q)=1$。则 $A^{-1}$ 有真实射影实现。
+\end{lemma}
+\begin{proof}
+取偶数 $m$ 使 $P=A^m\equiv I\pmod q$，置 $\Delta=\det P>0$。取行列式为 $1$ 的 Smith 左右变换使 $LPR'=\diag(a,b)$、$ab=\Delta$。令 $J_0=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)$、$g_*=R'J_0L$，则 $Pg_*P$ 各项被 $\Delta$ 整除。
+由 $\gcd(\Delta,q)=1$、CRT 和 $\SL_2(\ZZ)$ 对有限模数约化的满射，取 $g\in\SL_2(\ZZ)$ 满足 $g\equiv g_*\pmod\Delta$、$g\equiv I\pmod q$。于是 $h=\Delta^{-1}PgP$ 为整数行列式 $1$ 矩阵，且 $h\equiv I\pmod q$。两者及其逆由已知深核实现，而 $gPh^{-1}=\Delta P^{-1}$。接上 $A^{m-1}$ 即得 $A^{-1}$ 的射影实现。
+这里有限模数的满射可由各素数幂环上的初等消元及 CRT 证明，提升所有初等矩阵参数为整数即可。
+\end{proof}
+
+\section{整数返回的内容与有限终端}\label{sec:finite}
+本节给出临界带共用的终端步骤。它仅在已独立取得深核以后使用；不以有限模像推出真实群包含。
+
+\begin{lemma}[内容分支]\label{lem:content}
+设 $A\in M_2(\ZZ)$ 满秩、四项的最大公因子为 $1$，$d=|\det A|$，且 $\gcd(d,q)=1$。对任一整数本原列 $v$，$\cont(Av)\mid d$。固定本原列类 $x\bmod q$，其全部本原输出剩余类恰为
+\[\{g^{-1}Ax\pmod q:g\mid d,\ g>0\}.\]
+若 $\Gamma(q,\ZZ)$ 已真实实现，每个分支都可从任意当前本原提升经真实准备后实现。
+\end{lemma}
+\begin{proof}
+伴随恒等式 $\operatorname{adj}(A)Av=(\det A)v$ 和本原性说明内容整除 $d$。取整数幺模矩阵 $U,V$ 使 $A=U\diag(1,d)V$，符号吸收到矩阵中。对 $Vv=(s,t)^T$，有 $\gcd(s,dt)=\gcd(s,d)$。
+给定 $g\mid d$，在每个 $\ell^e\Vert d$ 处，指定 $s\equiv\ell^{v_\ell(g)}\pmod{\ell^e}$（指数为 $e$ 时取 $0$），$t\equiv1\pmod{\ell^e}$。这些条件与 $Vv\equiv Vx\pmod q$ 由 CRT 相容。所得模 $qd$ 列本原，故存在本原整数提升：先取非零的第二坐标，再在第一坐标的等差类中避开第二坐标所含而不除 $qd$ 的有限素因子。该提升的内容恰为 $g$。由引理\ref{lem:fiber}，当前列可先用 $\Gamma(q,\ZZ)$ 送到这个提升，再执行 $A$。
+\end{proof}
+
+\begin{lemma}[有限正向对应的群化]\label{lem:finite-group}
+给定有限个满足引理\ref{lem:content} 的真实返回 $A_i$。设合法有限本原列集 $\mathcal X$ 在所有单位标量和 $A_i\bmod q$ 下不变。则其正向内容对应轨道等于
+\[
+ \left\langle A_i\bmod q,\ \ell I\bmod q:\ell\text{ 素且 }\ell\mid\prod_i\det A_i\right\rangle
+\]
+的群轨道。
+\end{lemma}
+\begin{proof}
+每条内容分支 $g^{-1}A_i$ 是 $\mathcal X$ 的置换，并属于显示的群。反之，内容 $1$ 分支实现 $A_i$；有限置换的逆是其非负幂。若 $A_i$ 的阶为 $m$，先选内容 $g$ 的一次分支，再选 $m-1$ 次内容 $1$ 分支，便得到标量 $g^{-1}I$。取 $g=\ell$，再用有限阶即可得到 $\ell I$。每次分支均由前一引理重新准备当前实际列，因此所得有限词可以逐步提升，结论成立。
+\end{proof}
+
+\begin{lemma}[临界带的小单位]\label{lem:small-units}
+若 $p\ge5$ 为奇素数，$2p<n<4p$ 且 $\gcd(p,n)=1$，则 $-1$ 及所有 $1\le a\le p$、$\gcd(a,n)=1$ 的类生成 $(\ZZ/n\ZZ)^\times$。
+\end{lemma}
+\begin{proof}
+记生成子群为 $H$。若 $n$ 奇且存在缺失单位，取最小正缺失代表 $a$，利用符号可设 $p<a<n/2$，且 $p>n/4$。当 $a<n/3$ 时，$4a-n$ 是严格小于 $a$ 的正单位；当 $a>n/3$ 时，$n-2a$ 亦然。因为 $2\in H$，两者都仍为缺失单位，矛盾。$a=n/3$ 与本原性不相容。
+若 $n=2m$、$m$ 奇，单位约化到模 $m$ 是同构。选 $\varepsilon=\pm1$ 使 $b=(m+\varepsilon)/2$ 奇，则 $b\le p$ 且与 $n$ 互素；故 $H$ 模 $m$ 包含 $2$ 的逆至符号。每个单位有绝对值不超过 $m/2<p$ 的代表，除去其 $2$ 因子后成为已知的奇单位，乘回即可。
+若 $4\mid n$，映射 $a\mapsto n/2-a$ 在 $(0,n/2)$ 的单位中是无不动点的对合，故 $(0,n/4)$ 含 $\varphi(n)/4$ 个单位。它们及其负数属于 $H$，而 $p$ 和 $-p$ 另给两个类。因此 $|H|>\varphi(n)/2$，必为全群。
+\end{proof}
+
+\begin{definition}[共同核心]
+对 $n=2p+r$、$1\le r<2p$、$r\ne p$，置
+\[
+ K_{p,r}(a,z)=(a^p,(rz-a)^p,(-pz)^r),\qquad y=a+pz.
+\]
+因 $\gcd(p,r)=1$，整数块值的本原参数可以取 $\gcd(a,z)=1$。块值的差分公因子为 $\gcd(y,n)$：差分包含 $y$ 和 $rz-a+pz=(p+r)z-a$，其与 $y$ 的和为 $nz$；由 $\gcd(y,z)=1$ 得出公式。故合法性恰为 $\gcd(y,n)=1$。
+\end{definition}
+
+\begin{proposition}[共同有限终端接口]\label{prop:terminal}
+令 $\delta=\gcd(n,2)$、$h=\delta n$、$q=h^2$。假设在共同核心的 $(z,y)$ 坐标中，已独立实现全部 $L(hk)$、$k\in\ZZ$ 及 $\Gamma(q,\ZZ)$。再假设有若干条目本原、行列式与 $q$ 互素的真实整数返回，其有限内容群保持合法域，并包含
+\[V\equiv U(-p^{-2})\pmod n.\]
+当 $n$ 奇时，另假设该群包含标量 $2I$。则全部合法核心可到达一个具有零和 $p$ 元组的核心。
+\end{proposition}
+\begin{proof}
+保留 $r$ 块，将两个 $p$ 块以互补配比平均，对每个奇数 $1\le b\le p$ 实现 $(a,z)$ 坐标中的
+\[p^{-1}P_b,\qquad P_b=\begin{pmatrix}b&r(p-b)/2\\0&p\end{pmatrix}.
+\]
+若 $\gcd(b,n)=1$，其行列式 $pb$ 与 $q$ 互素，且 $y'\equiv by\pmod n$。对 $b<p$，条目本原；特别 $P_1$ 提供标量 $p$ 的内容分支。引理\ref{lem:finite-group} 因而提供全部安全奇数字的素因子标量；$n$ 奇时加上 $2$，由引理\ref{lem:small-units} 得到模 $n$ 的全部单位标量。$p=3$ 的应用只须直接检查模 $7$ 的单位由 $-1,2$ 生成，以及模 $8,10$ 的奇单位。
+对当前合法列 $(z,y)$，取 $k\equiv p^2zy^{-1}-1\pmod n$，执行 $V^k$ 后 $z\equiv y/p^2$；再用有限标量使
+\[(z,y)\equiv(1,p^2)\pmod n.\]
+当 $n$ 偶，写 $n=2^am$、$m$ 奇，令 $B=2^{2a+2}$。通过 $P_bP_1^{-1}$ 及标量 $b^{-1}$，有限群还给出
+\[D_b=\begin{pmatrix}b^{-1}&0\\\frac n2(b^{-1}-1)&1\end{pmatrix}.
+\]
+存在安全奇数 $b\le p$ 满足 $b\equiv3$ 或 $5\pmod8$；完整的小数字证明在下文构造计算中给出。$-1,b$ 生成任意有限二进单位群，故这些 $D_b$ 和换块的负矩阵可令 $z\equiv1\pmod B$，同时保留 $y\equiv p^2\pmod n$。因为 $V\bmod2$ 为上幺幂，$V^B\equiv I\pmod B$；再使用 $V$ 的 $B$ 倍次数修正模 $m$ 的首坐标，不破坏二进结果。
+选择
+\[
+ t_j=(1,p^2-nj),\qquad
+ \max(0,\lceil(p-1-r)/2\rceil)\le j\le(p-1)/2.
+\]
+$n$ 偶时该区间含两个相邻整数，故可按当前第二坐标选 $j\bmod2$；$n$ 奇取任一允许值。于是当前列与 $t_j$ 模 $h$ 相同。记 $E=E_{21}$、$X=VEV^{-1}$。模 $n$ 有
+\[Et_j=(0,1)^T,\qquad Xt_j=(-2/p^2,2)^T.\]
+两列行列式为 $2/p^2$，在 $m$ 上可逆。故用 $L(hk)$ 及其 $V$ 共轭，解一次二维线性同余，可修正两坐标至模 $m^2$；根参数同时取为 $B$ 的倍数，保留二进部分。$n$ 偶时，再用一次 $L(hk)$ 将第二坐标修正至模 $B$，并令 $k\equiv0\pmod m$。最终列与 $t_j$ 模 $q$ 相同。
+引理\ref{lem:fiber} 用最初的整数深核将当前本原列\emph{精确}送到 $t_j$。在该终端，取 $j+1$ 份 $a$、$j$ 份 $rz-a$ 和 $p-1-2j$ 份 $-pz$，总数为 $p$，其和为零；显示的 $j$ 区间正好保证各重数不超过库存。全过程由引理\ref{lem:content} 逐步重新准备本原代表，不要求任意整数返回都有一个固定的有理正向逆。
+\end{proof}
+
+\section{充分性证明的依赖顺序}\label{sec:assembly}
+下文的构造部分逐项给出本文需要的资源，按以下顺序使用。
+\begin{enumerate}
+\item 安全整数下降先证明 $n\ge4p-2+d_p(n)$，其中 $d_p(n)$ 是 $n$ 的非 $p$ 素因子个数；并证明所有 $n\ge4p$ 中该不等式遗漏的情形。遗漏强迫素因子密度很高，故可另以有限核心完成。
+\item $n=3p$ 由独立的三块整数运输表完成，不调用临界带主定理。于是，在 $2p<n<4p$，一旦产生一个零和 $p$ 元组，就能以含零子系统收尾。
+\item 安全入口将 $2p<n<3p$ 的全部合法输入送入 $K_{p,r}$；上半带先进入 $(2p,p,s)$，再以两次平均转换为 $(p,p,p+s)$。
+\item 奇数 $1\le r<p$ 用统一边界反射；$r=2$ 用两次按输入选择的 CRT 返回；偶数内部及 $r=p-1$ 用相邻返回。内部两张二进轨道表以一般列提升证明替代。
+\item 对 $p\ge83$ 的整个上半带，以共同来源计数、相邻反射和命题\ref{prop:terminal} 完成。小 $p$ 的九偏移资源尽可能由五返回公式替代，余下明确列入有限资源证书；其余小 $p$ 上端用明确的容量表与局部提升。
+\end{enumerate}
+所有区间的证明都必须同时提供入口、真实逆或状态相关内容准备、根、深核及终端，不能仅凭其中一个矩阵恒等式宣布可达性。
+
+为使详细计算可查，后面的构造段落保留各参数族的独立变量名，在进入该段时重新定义；$p$ 始终表示平均元数，$n$ 表示总位置数。重复使用的原始公式标签加构造段前缀，避免将不同段中的同号公式混用。外部深定理只取定理\ref{thm:external} 的两个明确特例；其余一般算术步骤在文中证明。
+
+\begin{lemma}[八元安全入口]\label{lem:eight-entry}
+三平均的任一本原零和八元配置，若 $G=1$，则有限步可归零或进入合法的 $(u^4,v^3,-4u-3v)$ 核心。
+\end{lemma}
+\begin{proof}
+先证明无五重值时有安全非恒等整数三平均。零和使奇数位置数为偶数；$G=1$ 排除全部同奇偶，故奇偶数分布为 $2+6$、$4+4$ 或 $6+2$。在 $4+4$ 时任意三元组的补集仍含两种奇偶，因而任何非恒等整三元组安全。
+若不存在非恒等整三元组，则至多使用两个模 $3$ 类，而且含至少三个位置的类必须是同一个实际值。无五重值时，八个位置只能为 $(a^4,b^4)$，零和给 $b=-a$；本原代表全奇，矛盾。因此 $4+4$ 时存在所需三元组。
+对 $2+6$，记多数奇偶集合为 $M$。若 $M$ 内有非恒等整三元组，选择它即可。否则 $M$ 至多用两个模 $3$ 类。因无五重值，两类都至少有两个位置，故两元素之和的余数 $2r,r+s,2s$ 覆盖全部模 $3$ 类。取任一少数奇偶位置 $z$，可选两个 $M$ 元素与之组成整三元组；奇偶不同保证非恒等，且补集仍留一个少数位置及多数位置，因此安全。$6+2$ 对称。
+每次操作严格降低整数平方能量；取本原代表只会继续降低。故有限步后归零或出现五重值 $u$。写其余值为 $a,b,c$；至少有一个（记为 $c$）与 $u$ 奇偶不同。平均 $(u,a,b)$，留下四份 $u$，得到三份 $v=(u+a+b)/3$ 和单点 $c=-4u-3v$。清分母后，两块值之差模 $2$ 为 $2u-a-b\equiv7u+c\equiv u+c\ne0$。因此新核心合法，接八元欧几里得下降即可。
+\end{proof}
+
+\begin{lemma}[有限域零点计数]
+在 $\FF_p$ 的 $m$ 个变量中，若多项式 $F_1,\ldots,F_s$ 的次数之和小于 $m$，则共同零点数被 $p$ 整除。
+\end{lemma}
+\begin{proof}
+零点数模 $p$ 等于 $\sum_{x\in\FF_p^m}\prod_i(1-F_i(x)^{p-1})$。展开后，每个单项式的总次数小于 $m(p-1)$。若某变量指数不是正的 $p-1$ 倍数，对该变量求和即为零；指数为零时亦因 $\sum_{t\in\FF_p}1=p=0$。非零贡献因而要求每个指数至少 $p-1$，与总次数矛盾。故总和为零。这给下文素数 EGZ 引理一个不依赖额外深定理的计数证明。
+\end{proof}
+
+\begin{lemma}[两剩余位置中的整数上平移]
+在 $((u+v)^p,(u-v)^p,(-pu)^2)$ 核心上，$U(1):(u,v)\mapsto(u+v,v)$ 及其逆有真实射影实现。
+\end{lemma}
+\begin{proof}
+保留两份 $A=u+v$。分别平均
+\[
+(A^{(p-3)/2},B^{(p+1)/2},C),\qquad
+(A^{(p-1)/2},B^{(p-1)/2},C).
+\]
+两组的新值为 $(-u-2v)/p$ 和 $-u/p$，而新载体是旧 $A$。于是新参数为 $u'=-(u+v)/p$、$v'=-v/p$，共同尺度 $-1/p$ 后恰为 $U(1)$。交换两等大块使 $v$ 变号，共轭得到 $U(-1)$；整数幂给全部 $U(k)$。
+\end{proof}
+
+% CONSTRUCTIONS

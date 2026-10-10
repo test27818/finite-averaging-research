@@ -1,0 +1,1556 @@
+                                          ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO
+                                                              CANTOR SETS
+
+                                                                               JOHANNES SCHLEISCHITZ
+
+
+                                                  Abstract. We establish various new results on a problem proposed by K. Mahler in
+arXiv:1812.10689v4 [math.NT] 9 Sep 2019
+
+
+
+
+                                                  1984 concerning rational approximation to fractal sets by rational numbers inside and
+                                                  outside the set in question, respectively. Some of them provide a natural continuation
+                                                  and improvement of recent results of Broderick, Fishman and Reich and Fishman and
+                                                  Simmons. A key feature is that many of our new results apply to more general, multi-
+                                                  dimensional fractal sets and require only mild assumptions on the iterated function
+                                                  system. Moreover we provide a non-trivial lower bound for the distance of a rational
+                                                  number p/q outside the Cantor middle third set C to the set C, in terms of the denom-
+                                                  inator q. We further discuss patterns of rational numbers in fractal sets. We want to
+                                                  highlight two of them: Firstly, an upper bound for the number of rational (algebraic)
+                                                  numbers in a fractal set up to a given height (and degree) for a wide class of fractal sets.
+                                                  Secondly we find properties of the denominator structure of rational points in ”missing
+                                                  digit” Cantor sets, generalizing claims of Nagy and Bloshchitsyn.
+
+
+
+                                            Keywords: Cantor sets, intrinsic/extrinsic Diophantine approximation, continued fractions
+                                          Math Subject Classification 2010: 28A80, 11H06, 11J13
+
+
+                                                              1. A question of Mahler and generalizations
+
+                                          1.1. Introduction and notation. In 1883, G. Cantor introduced what is today referred
+                                          to as Cantor middle-third set. It consists of the real numbers in [0, 1] whose infinite base
+                                          3 representation avoids the digit 1, i.e. numbers of the form
+                                                                           X wj
+                                                                      ξ=           ,         wj ∈ {0, 2}.
+                                                                           j≥1
+                                                                                3j
+
+                                          In 1984, K. Mahler [22] proposed the problem to study how well elements in this set can
+                                          be approximated by rational numbers within the set, and rational numbers outside of
+                                          it. Problems of this type are usually referred to as intrinsic and extrinsic approximation,
+                                          respectively. He noticed that convergents of the continued fraction expansion to numbers
+                                          in the Cantor middle third set may lie in the Cantor middle third set or not. His problem
+                                          can be naturally generalized to wider families of fractal sets. The easiest twist is to take
+                                          b ≥ 3 an integer and a digit set W ⊆ {0, 1, . . . , b − 1} of cardinality at least two and at
+                                          most b − 1, and to consider all numbers in [0, 1] whose base b digits belong to W . We call
+                                          such sets missing digit Cantor sets and write C = Cb,W . We will consider wider classes
+                                          of d-dimensional fractal sets, comprised in the following Definition 1. For convenience we
+                                             Middle East Technical University, Northern Cyprus Campus, Kalkanli, Güzelyurt
+                                          johannes.schleischitz@univie.ac.at.
+
+
+                                                                                               1
+2                                   JOHANNES SCHLEISCHITZ
+
+
+
+always consider Rd equipped with the supremum norm kzk = max1≤j≤d |zj |, however all
+proofs below can be easily modified if we work with the usual Euclidean norm instead.
+Definition 1 (IFS, Cantor set). We call a function f : Rd → Rd a contraction if for some
+fixed 0 < τ < 1 we have if
+                        kf (x) − f (y)k ≤ τ kx − yk,             x, y ∈ Rd .
+In this paper, an iterated function system (IFS) F = (f1 , . . . , fJ ) is a finite set of con-
+tractions. We call the IFS a similarity IFS if the contractions are similarities, that is for
+1 ≤ j ≤ J there exist 0 < τj < 1 with the property
+                       kfj (x) − fj (y)k = τj kx − yk,            x, y ∈ Rd .
+We call the IFS affine if the contractions are affine functions on Rd , i.e. functions
+(1)                          fj (y) = Aj y + bj ,          1 ≤ j ≤ J,
+where Aj ∈ Rd×d and bj ∈ Rd . We call an IFS rational-preserving if fj (Qd ) ⊆ Qd for
+1 ≤ j ≤ J. Any IFS induces a compact set C ⊆ Rd , called attractor of the IFS, given as
+the unique solution of ∪1≤j≤J fj (C) = C. We call any such C a Cantor set and carry over
+the definitions above in the obvious way to Cantor sets (for example C is called affine and
+rational-preserving Cantor set if the corresponding IFS is affine and rational-preserving).
+
+   We discuss relations between the notions of the above definition. Any similarity IFS is
+an affine IFS with matrices Aj = Sj · Oj for orthogonal matrices Oj and Sj = τj Id scalar
+multiples of the identity matrix, see Hutchinson [16]. Hence any similarity Cantor set is an
+affine Cantor set and for d = 1 the concepts coincide. An affine IFS is rational-preserving
+if and only if Aj ∈ Qd×d and bj ∈ Qd for 1 ≤ j ≤ J. By the above characterization of Aj ,
+to obtain a rational-preserving similarity Cantor set we require orthogonal matrices with
+rational entries (then we can choose τj ∈ Q). A comprehensive description of all such
+matrices was given in [21]. Clearly, a special choice is τj ∈ Q ∩ (−1, 1) and Oj = Id for
+1 ≤ j ≤ J. There are also various examples of non-affine, rational-preserving IFS. For
+d = 1, one may consider f (y) = fj (y) any collection of rational functions cP (y)/Q(y)+y/2
+with P, Q ∈ Q[Y ], with Q not having real roots, degree of P not exceeding the degree of Q,
+and rational c > 0 sufficiently small to guarantee |f ′ (y)| ∈ [ǫ, 1 − ǫ] uniformly, for example
+f (y) = y/(3 + 3y 2 ) + y/2. It is further possible to construct real analytic, transcendental
+functions with this property (here transcendental means f does not satisfy a polynomial
+identity P (z, f (z)) = 0 with P ∈ C[X, Y ]), it suffices to multiply the functions obtained
+by Marques and Moreira in [23, Theorem 1.2] by any non-zero rational factor of absolute
+value less than 2/3.
+   The existence of the unique fixed point C in Definition 1 follows from Banach’s Fixed
+Point Theorem [16] applied with respect to the Hausdorff metric on compact subsets of
+Rd . Any ξ ∈ C has an address (ω1 , ω2 , . . .) ∈ {1, 2, . . . , J}N , i.e. it can be written in the
+form
+                      ξ = lim π1 ◦ · · · πi (0),            πj = fωj ∈ F.
+                             i→∞
+       ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                       3
+
+
+
+Addresses may not be unique, to guarantee uniqueness one typically has to assume the so
+called strong separation condition (SSC), see Definition 2 below. We do not dig deeper
+into this topic here. We will further need the open set condition for some of our results.
+Definition 2 (OSC, SSC). An iterated function system satisfies the open set condition
+(OSC) if there exists a bounded open set O ⊆ Rd so that fj (O) ⊆ O for 1 ≤ j ≤ J and
+for i 6= j we have fi (O) ∩ fj (O) = ∅. For simplicity we will say a Cantor set C as in
+Definition 1 satisfies OSC if its associated IFS does. A Cantor set C satisfies the strong
+separation condition (SSC) if the sets fj (C) are disjoint.
+
+   We briefly discuss measures and dimension of fractals. Any Cantor set C in Definition 1
+supports a natural probability measure by Frostmann’s Lemma (see [11]). For similar-
+ity Cantor sets that satisfy OSC, it is just a multiple of some ∆-dimensional Hausdorff
+measure, and there is a well-known general formula to determine ∆ in terms of the con-
+traction factors [16]. See also [24] for a generalization. Clearly this value ∆ ∈ [0, d] equals
+the Hausdorff dimension of C. For Cb,W it just becomes ∆ = log |W |/ log b. We refer to
+Falconer [11] for an introduction to metric theory on fractals. Rational approximation to
+Cantor type sets has been intensely studied, especially metrical questions with respect to
+the mentioned measure. However, until recently, approximation to fractals in the sense of
+Mahler’s question with restrictions of the rationals had not been studied in detail. Only
+in 2007 a first attempt was made by Levesley, Salp and Velani [20]. In 2011 a paper of
+Broderick, Fishman and Reich [5] dealt with intrinsic approximation. Two recent papers
+of Fishman and Simmons [13, 14] shed more light on the topic as well. We rephrase
+important results from [5, 13, 14] in Section 1.2 below. The purpose of this paper is to
+establish further results on Mahler’s question, where possible in the very general settings
+of Definition 1. In Section 2 we generalize results on intrinsic approximation from [5, 13].
+The focus of the paper lies on extrinsic approximation in Section 3. As a byproduct
+we obtain related results, especially on the cardinality of rational/algebraic vectors of
+bounded degree and height and their period lengths. Moreover we gain some new insight
+on the structure of rational numbers in missing digit Cantor sets Cb,W . We gather all
+these findings in Section 4.
+
+1.2. Recent results on Mahler’s problem. The main result of [5] shows a Dirichlet
+type result for intrinsic rational approximation to missing digit Cantor sets Cb,W . We
+present a slightly simplified version to avoid dealing with technical details.
+Theorem 1.1 (Broderick, Fishman, Reich (2011)). Let C = Cb,W be a missing digit
+Cantor set and ξ ∈ C. If ∆ = log |W |/ log b denotes the Hausdorff dimension of C, the
+inequalities
+                                       ∆          p      b
+(2)                         1 ≤ q ≤ bQ ,      |ξ − | ≤
+                                                  q     Qq
+                p
+have a solution q ∈ Q ∩ C for every parameter Q ≥ 1. In particular, if ξ ∈
+                                                                         / Q, there exist
+                p
+infinitely many q ∈ Q ∩ C with the property
+                                       p         1
+(3)                                |ξ − | ≤              .
+                                       q    q(logb q)1/∆
+4                                JOHANNES SCHLEISCHITZ
+
+
+
+   As observed in [5], the bounds (2) and (3) become weaker when for fixed b we extend the
+digit set and thereby increase the Hausdorff dimension ∆. This seems counter-intuitive
+as there are more rational numbers in C, however in larger Cantor sets there exist more
+irrational ξ ∈ C to be approximated as well. A generalization of Theorem 1.1 was given
+by Fishman and Simmons [13].
+Theorem 1.2 (Fishman, Simmons (2014)). Let C ⊆ R be a one-dimensional, affine,
+rational-preserving Cantor set, i.e. derived from an IFS as in (4), that satisfies OSC. Let
+∆ be its Hausdorff dimension and let γ be as in (5). Let ξ ∈ C. Then there is a constant
+K such that for any Q ≥ max1≤j≤J qj the estimate
+                                     p
+                               |ξ − | ≤ Kq γ−1 (log Q)−1/∆
+                                     q
+admits a solution p/q ∈ Q ∩ C with 1 ≤ q ≤ Q.
+
+  For one-dimensional, affine, rational-preserving Cantor sets as in the theorem, C is the
+attractor of an iterated function system
+                                   pj    rj
+(4)                        fj (y) = y + ,            1 ≤ j ≤ J,
+                                   qj    qj
+for pj /qj of absolute value at most 1 and rj /qj a rational number. We can assume qj > 0.
+Then let
+                                                 log |pj |
+(5)                                   γ = max              .
+                                          1≤j≤J log qj
+
+Definition 3. If d = 1, we call an affine, rational-preserving IFS monic if pj ∈ {1, −1}
+in (4) for all 1 ≤ j ≤ J, or equivalently if γ = 0. We call the derived Cantor set a
+one-dimensional, affine, monic, rational-preserving Cantor set.
+
+  Note that the missing Cantor sets Cb,W defined above are monic. Indeed the similarities
+can be written fj (y) = y/b + wj /b for wj ∈ W , with every contraction factor equal to
+1/b. For monic Cantor sets as in the theorem where γ = 0, the estimate becomes
+                                   p
+                              |ξ − | ≤ Kq −1 (log Q)−1/∆ .
+                                   q
+We thus identify Theorem 1.1 (up to the value of the constant) as a special case. We
+turn to extrinsic approximation. A result of Fishman and Simmons reads as follows [14,
+Corollary 1.2].
+Theorem 1.3 (Fishman, Simmons (2015)). Let C ⊆ Rd be a Cantor set that satisfies
+OSC and does not contain a line segment. Assume the additional property that for any
+compact set K ⊆ Rd there is a constant κ > 0 with
+(6)            kfj (x) − fj (y)k ≥ κkx − yk,            x, y ∈ K, 1 ≤ j ≤ J.
+Let ξ ∈ C \ Qd . Then for some constant c = c(C) > 0, there exist infinitely many
+p/q ∈ Qd \ C such that
+                                                         1
+                                  kξ − p/qk ≤ c · q −1− d .
+       ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                    5
+
+
+
+   Originally this result is only formulated for the narrower class of similarity Cantor
+sets in [14], however the given proof extends to our more general situation, upon small
+modifiactions of the proof of [14, Lemma 2.12]. Indeed, our local hypothesis (6) on the
+contractions suffices to derive γ as in its proof, and the equality in the last displayed
+formula must be altered to greater or equal, not affecting the implication of the lemma.
+Up to the constant c, the bound is of best possible order we can expect for generic ξ ∈ C.
+As observed in [14], if d = 1, by Dirichlet’s Theorem the claim follows directly with
+c = 1 whenever infinitely many convergents to ξ lie outside C. However, it was recently
+shown [26] that any missing Cantor set C = Cb,W contains irrational numbers ξ with
+almost all convergents in Cb,W . The actual proof of Theorem 1.3 employed a variant of
+Lemma 5.3 below.
+
+
+
+                             2. Intrinsic approximation
+
+  In this section we provide a variant of Theorem 1.2 for Cantor sets in higher dimension.
+
+Theorem 2.1. Let C ⊆ Rd be a rational-preserving affine Cantor set, i.e. the attractor
+of an IFS F consisting of contraction maps
+                                     Aj y bj
+                          fj (y) =       + ,                 1 ≤ j ≤ J,
+                                      qj  sj
+
+where Aj ∈ Zd×d , bj ∈ Zd and qj , sj ∈ Q
+                                        N. Let τj ∈ (0, 1) be the contraction factor of fj
+and τ = max1≤j≤J τj . Further let S := 1≤j≤J sj and
+
+                                log τj
+                         µj =          ,            µ = max µj < 0.
+                                log qj                    1≤j≤J
+
+
+Then for any ξ ∈ C and any parameter Q ≥ S ·2d (max1≤j≤J qj )d , there exists p/q ∈ C ∩Qd
+with the properties
+
+                  1 ≤ q ≤ Q,               kξ − p/qk ≤ q µ/d (log Q)log τ / log J .
+
+   If d = 1 and we identify γ − 1 = µ with γ in (5), we almost obtain Theorem 1.2. One
+difference is a slightly altered exponent for log Q. We believe the optimal exponent for
+log Q is again −1/∆ for ∆ the Hausdorff dimension of C. For similarities fj , our exponent
+is slightly worse, unless in the special case that all contraction factors τj coincide where
+the identity log τ / log J = −1/∆ can be readily verified [16]. In particular we identify
+Theorem 1.1 as a special case of Theorem 2.1. On the other hand, even for d = 1 our
+Theorem 2.1 is slightly more general than Theorem 1.2 in the sense that we do not require
+sj = qj as in (4), so µ/d = µ is in general better than the inferred constant γ − 1 obtained
+from transitioning to representation (4). Observe that µ/d ∈ [−1/d, 0), with µ/d = −1/d
+for instance if all Aj are permutation matrices (with optional sign conversions 1 to −1).
+Note also that in contrast to [13] we do not require OSC for the conclusion of Theorem 2.1.
+6                                 JOHANNES SCHLEISCHITZ
+
+
+
+                             3. Extrinsic approximation
+
+3.1. Uniform extrinsic approximation. A topic that seems to be untouched so far
+is uniform extrinsic approximation to Cantor sets. Theorem 3.3 below shows that under
+mild assumptions on the underlying IFS, any element of the derived Cantor set is uni-
+formly approximable by rationals outside C with denominator at most Q of order Q−1 ,
+and this bound is essentially optimal. Thereby, we see that an improvement as for in-
+trinsic approximation in Theorem 1.1 and Theorem 1.2 cannot be achieved for extrinsic
+approximation. Another interpretation is that the exponent −1−1/d from Theorem 1.3 is
+not valid when it comes to uniform approximation. The result follows from a combination
+of Theorem 3.1 and Theorem 3.2, which are formulated in very general settings.
+Theorem 3.1. Let C ⊆ Rd be any Cantor set arising from an IFS with contraction ratios
+τj , 1 ≤ j ≤ J and let τ = max1≤j≤J τj and D := − log τ / log J > 0. Assume that either
+
+      • C satisfies the OSC and (6), and there is a vector v ∈ Zd such that C contains
+        no line segment parallel to v, or
+      • we have D < 1/2
+  Then there exists a constant K = K(C) so that for every ξ ∈ C and every Q ≥ 1, the
+inequality
+                                                    K
+(7)                                   kξ − p/qk ≤
+                                                    Q
+has a solution p/q ∈ Qd \ C with 1 ≤ q ≤ Q.
+
+   We believe that the weak assumption on line segments just means that C has empty
+interior, however for d > 1 a proof of this would be desirable. The implication from
+this first assumption is in fact a straight-forward consequence of results in [14]. The
+alternative latter assumption essentially says that C has small Hausdorff dimension, and
+the implication is a consequence of a new counting result in this case. Now we turn
+towards the more challenging reverse estimates.
+Definition 4. We call a vector v ∈ Rd irrational if it has at least one irrational coordinate,
+       / Qd .
+i.e. v ∈
+Theorem 3.2. Let C ⊆ Rd be a rational-preserving Cantor set. Assume that there is
+fj ∈ F whose unique fixed point αj lies in Qd . Assume further that either
+      • all contraction maps fj ∈ F are one-to-one, or
+      • any element in C has at most countably many addresses (which is true if C satisfies
+        the SSC).
+Let Φ : N → R>0 be any function that tends to 0 (arbitrarily slowly). Then the set of
+irrational ξ ∈ C for which
+                                                   Φ(Q)
+(8)                                  kξ − p/qk >
+                                                    Q
+       ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                    7
+
+
+
+holds for infinitely many Q ∈ N>0 and every p/q ∈ Qd \ C with 1 ≤ q ≤ Q, is uncountable
+and dense in C.
+Remark 1. Clearly the claim holds if ξ ∈ C ∩ Qd , and such vectors are dense in rational-
+preserving Cantor sets C (see also the last claim of Theorem 3.3 and its proof below).
+Hence the irrationality in the claim is an important issue. Ideally we would like to sharpen
+the claim by asking the coordinates of ξ ∈ C to be Q-linearly independent together with
+{1}. We may infer this strengthened version if any hyperplane in Rd intersects C in at
+most countably many points, however this assumption seems unnatural.
+Remark 2. It is possible to relax the assumption that the contraction maps fi are one-
+to-one in various ways. However, we are unable to provide a very natural assumption
+and do not further elaborate on it here. The condition appears to be unrelated to OSC,
+and we believe OSC is not sufficient to imply the alternative assumption either, however
+we are not aware of any concrete example. See Sidorov [30] for similarity Cantor sets in
+which all but finitely many elements have uncountably many addresses, which however
+do not satisfy the OSC.
+
+  While not satisfied in general, the condition of the rational fixed point in Theorem 3.2
+holds if C is a rational-preserving affine Cantor set, i.e. derived from an IFS as in (1),
+as then clearly αj = −(Aj − Id )−1 bj ∈ Qd (note that 1 is no eigenvalue of Aj since it
+induces a contraction). We may choose Aj rational scalar multiples of the identity matrix
+to obtain an IFS that consists of similarity contractions
+(9)             fj (y) = τj y + bj ,        τj ∈ Q ∩ (−1, 1) \ {0}, bj ∈ Qd .
+Recall a Liouville number is an irrational real number with the property that |ξ − p/q| <
+q −N has a rational solution p/q for arbitrarily large N. We call ξ ∈ Rd Liouville vector if
+accordingly |ξ − p/q| < q −N has infinitely many solutions for every N. Theorem 3.2 is es-
+sentially equivalent to asking that C contains points that are arbitrarily well-approximable
+by rational vectors inside C (in particular C must contain ”intrinsic Liouville vectors”).
+Indeed, the proof of Theorem 3.2 relies on the construction of such intrinsic Liouville
+vectors. Combining these observations, from Theorem 3.1 and Theorem 3.2 we deduce
+at once
+Theorem 3.3. Let C ⊆ Rd be a rational-preserving similarity Cantor set, for instance
+derived from an IFS of contractions as in (9). Assume either OSC is satisfied and there
+is a vector v ∈ Zd such that C contains no line segment parallel to v, or D < 1/2 with D
+as in Theorem 3.1. Then there exists K > 0 such that for any ξ ∈ C and any Q > 1 the
+inequality
+                                                  K
+                                     kξ − p/qk ≤
+                                                  Q
+                         d
+has a solution p/q ∈ Q \ C with 1 ≤ q ≤ Q. On the other hand, for any function
+Φ : N → (0, ∞) that tends to 0, there exists ξ ∈ C \ Q for which
+                                                     Φ(Q)
+                                       kξ − p/qk >
+                                                      Q
+8                                JOHANNES SCHLEISCHITZ
+
+
+
+holds for certain arbitrarily large Q and any p/q ∈ Qd \ C with 1 ≤ q ≤ Q. Finally, for
+Ψ : N → (0, ∞) any function, there are intrinsically Ψ-approximable vectors in C, defined
+as the vectors ξ ∈ C for which the inequality
+                                    kξ − p/qk < Ψ(q)
+admits infinitely many solutions p/q ∈ Qd ∩C. In particular, C contains Liouville vectors.
+
+   As observed in Section 1.1 a wider class of suitable IFS can be readily found with the
+aid of [21]. Any reasonable one-dimensonal rational-preserving Cantor set with OSC,
+in particular any missing digit Cantor set Cb,W (with W ( {0, 1, . . . , b − 1}), satisfies
+the assumptions of Theorem 3.3. This first claim does not require the rationality of the
+IFS, however for the other claims it is probably needed. Intuitively, (similarity) Cantor
+sets containing no Liouville vector should exist when we drop the rationality condition.
+For d = 1 and the class of topological Cantor sets, the existence was shown in [1]. See
+also [4] for fat Cantor sets without rational elements. We remark further that for rational-
+preserving similarity Cantor sets induced by diagonal-matrices Aj that satisfy OSC, the
+existence of very well-approximable vectors that are no Liouville-vectors was shown by
+S. Baker [2, Theorem 5.6]. Notice also that the claim concerning Liouville vectors cannot
+be derived from standard metric results as in [13] even for Cb,W , as the set of Liouville
+numbers has Hausdorff dimension 0 due to Jarnı́k [17].
+
+3.2. Ordinary extrinsic approximation. We use Theorem 1.1 and Theorem 1.2 to
+obtain a lower bound on the distance of certain one-dimensional Cantor sets to a rational
+number not contained in it. This can be viewed as a reverse of Theorem 1.3. For
+A, B ⊆ R we write d(A, B) = inf{|a − b| : a ∈ A, b ∈ B} and denote by e = 2.7182 . . .
+Euler’s number.
+Theorem 3.4. Let C be a one-dimensional, affine, rational-preserving monic Cantor
+set, i.e. derived from an IFS as in (4) with pj ∈ {−1, 1}, that satisfies OSC. Denote its
+Hausdorff dimension by ∆. Then for sufficiently large ρ = ρ(C), we have the estimate
+                                         p         ∆
+(10)                                 d(C, ) > e−ρq
+                                          q
+for every p/q ∈ Q \ C.
+  In the special case of missing digit Cantor sets C = Cb,W , we have ∆ = log |W |/ log b
+and the inequality
+                                                    ∆ ∆
+                                       p    b−(2b) q
+(11)                               d(C, ) >
+                                       q       2q
+holds for every pq ∈ Q \ C. In particular, for every ξ ∈ Cb,W and any δ > (2b)∆ , the
+inequality
+                                        p         ∆
+(12)                               |ξ − | ≤ b−δq
+                                        q
+has only finitely many solutions pq ∈ Q \ C.
+       ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                    9
+
+
+
+   We remark that in view of Theorem 2.1, it is possible to provide a variant of Theo-
+rem 3.4 that does not require OSC for the cost of (possibly) increasing ∆ slightly. We
+do not believe that the bounds are optimal. It might be true that there is an absolute
+upper bound for the order of extrinsic approximation, equivalently λext (ξ) ≪C 1 with the
+notation of Section 4.3 below. However, a metric result of Fishman and Simmons [14,
+Theorem 3.9] demonstrates that we cannot hope an improvement of Theorem 1.1 and
+Theorem 1.2 underlying our proof. Hence the bounds in Theorem 3.4 are the limit of our
+method. Our proof does not extend to non-monic Cantor sets, as we require that the
+right hand side in Theorem 1.2 decays faster than q −1 . This can only be guaranteed if γ
+in (5) vanishes. Also for d > 1 we see that Cantor sets as in Theorem 2.1 do not fufill the
+requirement. In these cases, no bound seems to be known. We formulate resulting open
+problems.
+Problem 1. Improve the bounds in Theorem 3.4. Do there exist extrinsic Liouville
+numbers, i.e. numbers with λext (ξ) = ∞ in the notation of Section 4.3 below?
+Problem 2. Let C be a one-dimensional, affine, rational-preserving Cantor set which is
+                               / C, find a lower bound for d(C, pq ) in dependence of q.
+not necessarily monic. For p/q ∈
+What about Cantor sets in higher dimensional Euclidean space?
+
+   We believe the latter problem is related to Problem 3 in Section 4.2 below. For C =
+Cb,W , an elementary approach, using that the base b expansion of a rational number p/q
+in lowest terms has period length ≪ q, indicates the bound
+                           p                           p
+(13)                  d(C, ) > b−cq ,          for any    ∈ Q \ C,
+                           q                            q
+with a suitable constant c = c(b, W ) > 0. See Section 4.4 below, in particular Propo-
+sition 4.10, for more details. However, the conclusion (11) is stronger than (13) since
+∆ < 1.
+  We remark that similar patterns as in Theorem 3.4 are known concerning extrinsic
+rational approximation to algebraic sets in Rn . See [6, Lemma 1], [9, Lemma 1], [10,
+Lemma 4.1.1], [28, Theorem 2.1]. However, the lower bounds typically decay like a
+negative power of q in that case. In [28] it is shown that for an algebraic variety S
+defined by an implicit integral polynomial equation of total degree k, there are no rational
+numbers outside S that approximate S of order greater than k. We refer to [12] for
+approximation to manifolds by rationals within the manifold.
+
+
+                                   4. Related topics
+
+4.1. Rational/Algebraic vectors in Cantor sets. As a byproduct of the proof of
+Theorem 2.1, we show the following upper bound for the number of rational elements
+with denominator at most N in a Cantor set.
+Theorem 4.1. Let C ⊆ Rd be any Cantor set as in Definition 1. Let τ = max1≤j≤J τj ∈
+(0, 1) be the maximum contraction rate of the IFS and denote by diam the diameter
+10                                JOHANNES SCHLEISCHITZ
+
+
+
+max{kx − yk : x, y ∈ C} of the compact Cantor set. Let D = − log J/ log τ > 0. Then
+the set of rational vectors in C up to height N
+                  S(C, N) = {r/s ∈ C : (r1 , . . . , rd , s) = 1, 1 ≤ s ≤ N},
+has cardinality at most J 2 diamD N 2D .
+
+   We require D < 1 or equivalently Jτ < 1 for the result to be non-trivial. When C =
+C3,{0,2} is the Cantor middle third set, the bound becomes 4N 2 log 2/ log 3 . The exponent
+has twice the expected magnitude, indeed in view of numeric evidence it was conjectured
+in [5] that S(C, N) ≪ǫ N log 2/ log 3+ǫ for any ǫ > 0. We can extend our claim to algebraic
+vectors.
+Theorem 4.2. With the assumptions and notation of Theorem 4.1, let S(C, N, n) be the
+set of vectors in C whose entries are real algebraic numbers of degree at most n and height
+at most N. Then
+                                 |S(C, N, n)| ≪C,n N 2nD .
+
+   Clearly the trivial bound on S(C, N, n) is of order N d(n+1) , so if D ≤ d/2 or Jτ d/2 < 1
+we obtain an improvement simultaneously for every n ≥ 1. For the Cantor middle
+third set we get an improvement for n ∈ {1, 2, 3}. In case of affine, rational-preserving
+Cantor sets one might expect S(C, N, n) = S(C, N) for any n ≥ 1, i.e. there are no
+irrational algebraic vectors in C. For the Cantor middle-third set C3,{0,2} this is a famous
+open conjecture of Mahler [22]. It seems that even in this case no non-trivial bound on
+S(C, N, n) had been established previously.
+
+4.2. Adresses of rational vectors in certain Cantor sets. We want to discuss ad-
+dresses of rational vectors in C, as the above sections indicate that they are directly
+linked to the order of rational approximation to Cantor sets. This topic has already been
+addressed in [13] and Theorem 4.3 below generalizes [13, Lemma 4.2] to certain multi-
+dimensional settings. We also provide a quantitative version for period lengths. While
+our proof strategy resembles the one in [13] to some extent, we proceed slightly different.
+Definition 5. We call an affine, rational-preserving IFS unimodular if the contraction
+maps are of the form fj (y) = Aj y/qj + bj /sj where Aj ∈ Zd×d with det(Aj ) ∈ {1, −1},
+and bj ∈ Zd and qj , sj ∈ N. We call a Cantor set C unimodular if it is induced by an
+unimodular IFS.
+
+   Unimodularity generalizes the concept of a monic, affine IFS for d = 1 from Section 1.2.
+Note that our setup is more general than assuming fj (y) = (Aj y+bj )/qj , i.e. sj = qj , with
+all parameters as in the definition, as the determinant condition is relaxed. Therefore our
+next theorem in fact even generalizes [13, Lemma 4.2] when d = 1.
+Theorem 4.3. Let C ⊆ Rd be an affine, rational-preserving Cantor set. Then any vector
+in C that admits an ultimately periodic address is in Qd . If C is unimodular, the rational
+vectors in C are precisely those vectors in C that have an ultimately periodic address.
+Moreover, in this case the period length (including preperiod) of p/q ∈ Q ∩ C can be
+chosen ≪C min{q D , q d } with D = − log J/ log τ as in Theorem 4.1.
+        ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                        11
+
+
+
+   We remark that the bound supposedly can be reasonably improved, potentially up to
+≪ log q. See the remark after the proof and also [13, Theorem 5.3, Conjecture 5.6]. For
+d = 1, the problem if the assumption of C being unimodular (=monic) is necessary for
+the conclusion was already raised in [13, Section 5]. We have no new contribution to this
+interesting question, but want to formulate the corresponding generalization.
+Problem 3. In a Cantor set C derived from an affine rational-preserving IFS, does every
+rational vector in C have an ultimately periodic address? If yes, can it be arranged that
+the period length of p/q ∈ Q ∩ C is of order ≪C min{q D , q d }?
+
+  From Theorem 4.3 we get some information on the structure of rational numbers in
+missing digit Cantor sets. We only highlight special consequences, from its proof below
+more information can be extracted.
+Corollary 4.4. Let b ≥ 3 and W ( {0, 1, . . . , b − 1}. If S = {q1 , . . . , qv } is any finite set
+of prime numbers not dividing b, then there are only finitely many rational numbers r/s
+in Cb,W with s consisiting only of prime factors in S. In particular only finitely many
+integer powers of a rational number p/q with (b, q) = 1 can lie in Cb,W . Moreover, Cb,W
+contains at most finitely many rational numbers p/q where q is a safe prime, i.e. q and
+(q − 1)/2 are both prime numbers.
+
+   It was recently pointed out to me by Michael Coons and Igor Shparlinki that it can be
+                                      √ prime divisor of a denominator s of r/s ∈ Cb,W
+inferred from Korobov [19] that the largest
+written in lowest terms is at least ≫ log s log log s, implying the first two claims of the
+corollary. However, I was unable to find this deduction explicitly in the literature. The
+method in [19] is based on exponential sum estimates, unrelated to our proof below.
+   Results of this type (restrictions on rationals in Cb,W ) appear to be rare. Apart
+from [19], the author is only aware of a succession of papers by Wall [31], Nagy [25]
+and Bloshchitsyn [3], treating rationals with very smooth denominators. The first claim
+of Corollary 4.4 extends [3, Theorem 2] (and thus also [25]) where the finiteness implica-
+tion was proved for S = {q} a single prime greater than b2 . For the second claim about
+powers of a rational in fact we only require that the denominator q has a prime divisor
+that does not divide b, or equivalently the radical of q does not divide b. This condition
+is easily seen to be necessary in general, as for example any positive integer power of 1/3
+belongs to C3,{0,1} . For irrational numbers we state the analogous question as an open
+problem.
+Problem 4. Does there exist a real number ξ which is not a root of a rational number
+and with infinitely many integral powers belonging to a missing digit Cantor set Cb,W ?
+
+4.3. Exponents. We define several exponents to measure the quality of intrinsic and
+extrinsic rational approximation in a Cantor set. We restrict to the one-dimensional
+setting in this paper. In the sequel for convenience we agree on sup(∅) = 0 and 1/0 = +∞.
+Definition 6. Let S ⊆ R and ξ ∈ R \ Q. Define the ordinary exponent of rational
+approximation λ(ξ) as the supremum of λ such that
+                                     p
+(14)                             |ξ − | ≤ q −1 Q−λ
+                                     q
+12                                JOHANNES SCHLEISCHITZ
+
+
+
+has a solution p/q ∈ Q with 1 ≤ q ≤ Q for arbitrarily large values of Q. Define the uniform
+            b
+exponent λ(ξ)     as the supremum of λ for which (14) for every large Q. Define similarly
+the ordinary and uniform exponents of intrinsic and extrinsic approximation denoted by
+                      bint (ξ), b
+λint (ξ), λext(ξ) and λ         λext(ξ) respectively, via replacing p/q ∈ Q by p/q ∈ Q ∩ S and
+p/q ∈ Q \ S in the definitions accordingly.
+
+  The exponents λ(ξ), bλ(ξ) are classical exponents of Diophantine approximation and are
+usually denoted by λ1 (ξ) and b
+                              λ1 (ξ), respectively. The following properties can be readily
+checked. We leave the verification to the reader.
+Proposition 4.5. Let S ⊆ R. For any irrational ξ ∈ S we have
+(15)             b
+          λ(ξ) ≥ λ(ξ)                                          bext (ξ) ≥ 0.
+                                      bint (ξ) ≥ 0, λext (ξ) ≥ λ
+                      = 1, λint (ξ) ≥ λ
+Further we have
+                               λ(ξ) = max{λint (ξ), λext(ξ)},
+and
+(16)                             bint (ξ), b
+                             max{λ                    b
+                                           λext(ξ)} ≤ λ(ξ) = 1.
+Remark 3. The ordinary exponent of approximation λ(ξ) can equivalently be defined as
+the supremum of λ such that
+                                           p
+                                      |ξ − | ≤ q −1−λ
+                                           q
+has infinitely many solutions p/q ∈ Q. However, for the intrinsic and extrinsic exponents,
+for certain sets S the according definition leads to different exponents than those defined
+above. Several inequalities in (15) may turn out false with this altered definition.
+
+                 b
+   The identity λ(ξ) = 1 is due to Khintchine [18]. In general there is no equality in the
+last inequality. From [14, 13] quoted above some inequalities concerning special types of
+Cantor sets can be inferred. For example, by Theorem 1.3 in any one-dimensional Cantor
+set C that satisfies OSC we have λext (ξ) ≥ 1 for any ξ ∈ C \ Q. Our main result is
+inspired by Theorem 3.2 and admits a similar proof.
+Theorem 4.6. Let S ⊆ R be any set and ξ ∈ S. We have
+                    bext (ξ) ≤    1       bint (ξ) ≤    1
+(17)                λ                   , λ                   ,
+                               λint (ξ)              λext (ξ)
+If S = C ⊆ R is any one-dimensional Cantor set that satisfies OSC and ξ ∈ C \ Q, then
+                                                       
+                            b                   1
+(18)                        λext (ξ) = min            ,1 .
+                                             λint (ξ)
+
+   Define the spectrum of an exponent as the set of values taken when inserting any
+irrational real ξ. For missing digit Cantor sets Cb,W , Bugeaud [8] provided a construction
+of ξ with λ(ξ) = λint (ξ) = τ for any given τ ≥ 1 in missing digit Cantor sets Cb,W . See
+also [20],[27]. Therefore the spectrum of λ in Cb,W equals [1, ∞], and the spectrum of
+λint contains this interval. Further in the case that b is prime and W contains 0 and
+b − 1 but does not contain two successive digits, the metrical result [13, Theorem 3.10]
+        ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                        13
+
+
+
+implies that for r ≥ 0 the set of ξ ∈ Cb,W with λint (ξ) = r (or λint (ξ) ≥ r) has Hausdorff
+dimension ∆/(r + 1), where ∆ = log |W |/ log b is the Hausdorff dimension of Cb,W . Thus
+from Theorem 4.6 we deduce at once the following results.
+Corollary 4.7. Consider the missing digit Cantor set Cb,W of Hausdorff dimension ∆ =
+log |W |/ log b. The spectrum of λ   bext with respect to Cb,W equals [0, 1]. Assume b is prime
+and W contains {0, b − 1} but does not contain two successive digits. Then for τ ∈ [0, 1)
+the sets {ξ ∈ Cb,W : b λext (ξ) = τ } and {ξ ∈ Cb,W : b λext (ξ) ≤ τ } have Hausdorff dimension
+      τ
+∆ · τ +1 , whereas for τ = 1 the Hausdorff dimension equals ∆. In particular the set
+{ξ ∈ Cb,W : bλext (ξ) < 1} has Hausdorff dimension ∆/2.
+
+   We pose the problem to decide whether the claims of Corollary 4.7 generalize to one-
+dimensional Cantor sets that satisfy OSC. Finally we point out that numbers with the
+property bλint (ξ) = 1 do exist in any missing digit Cantor set Cb,W . Indeed, it is easy to
+verify this identity for the numbers constructed in [26] which have almost allP convergents
+in Cb,W . The identity can further be checked for Liouville type numbers ξ = n≥0 wb−n! ,
+0 6= w ∈ W , compare with [27, Lemma 3.10]. Thus, in view of the metric result rephrased
+above, we believe that the spectrum of λ bint equals [0, 1] as well. However, we are unable
+to show this at present.
+
+4.4. Base expansions. For missing digit Cantor sets C = Cb,W , Theorem 4.3 and The-
+orem 3.4 have implications on the base b digit patterns of rational numbers that can
+be stated without the framework of Cantor sets. Related considerations concerning the
+period lengths of base b representations of rational numbers in Cb,W have been addressed
+in [13, Section 5]. However, the results there are almost all of conditional nature. We
+start with a consequence of Theorem 4.3.
+Theorem 4.8. Let W ⊆ {0, 1, . . . , b − 1} and ∆ = log |W |/ log b. Let c0 , . . . , cN −1 ∈ W
+and assume that the infinite word (c0 c1 . . . cN −1 )∞ has period length N. Then we have
+                                                                                 bN
+                    gcd(c0 bN−1 + c1 bN−2 + · · · + cN−1 , bN − 1) ≪                 .
+                                                                                N1/∆
+
+Proof. Write p/q for the fraction (c0 bN −1 + c1 bN −2 + · · · + cN −1 )/(bN − 1) in lowest terms.
+Then the rational number p/q has base b expansion (0.c0 c1 . . . cN −1 )b , and by assumption
+it has period length N, which by Theorem 4.3 is ≪ q ∆ . Thus q ≫ N 1/∆ , which implies
+that the common factor is of size ≪ bN /N 1/∆ .                                                 
+
+   The natural assumption that the period length is not shorter than expected is necessary,
+since if we let c0 = c1 = · · · = cN −1 ∈ W then the gcd in question is a multiple of
+(bN − 1)/(b − 1) and thus ≫ bN . Now we turn to implications of Theorem 3.4.
+Theorem 4.9. Let b ≥ 3 and W ⊆ {0, 1, . . . , b − 1}. Further let ∆ = log |W |/ log b. Let
+(19)                         ξ = (0.c0 c1 · · · ck ck+1 ck+2 · · · cN −1 )b ,
+14                                       JOHANNES SCHLEISCHITZ
+
+
+
+with N > k ≥ 0 and ci ∈ {0, 1, . . . , b − 1} be a rational number in (0, 1) expanded in base
+b. Then ξ = p/q with
+                           N
+                           X −1                   k−1
+                                                  X
+                                     N −1−i
+(20)                  p=          ci b        −         cj bk−1−j ,   q = bN − bk .
+                            i=0                   j=0
+
+Assume there exists an index i with ci ∈   / W and let φ(ξ) ∈ {0, 1, 2, . . . , N − 1} be the
+smallest index with this property. Further let p0 /q0 be the fraction p/q in lowest terms.
+Then φ(ξ) ≪ q0∆ . Equivalently, if for ξ in (19) the first s base b digits c0 , c1 , . . . , cs lie in
+W , but not all ci belong to W , then its reduced denominator q0 is ≫ s1/∆ .
+
+   The relation to Theorem 3.4 arises from the fact that the rational numbers in Cb,W
+are precisely those where ci ∈ W in (19). For a generic rational ξ in (19) we expect
+that q0 is of exponential order, that is log q0 ≫ N ≥ s, reasonably stronger than in our
+claim. However, elementary methods only yield a bound of order q0 ≫ s that is valid
+for all ξ in (19), as we will see from Proposition 4.10 below. The bound s1/∆ of our
+Theorem 4.9 is stronger since ∆ < 1. The special case of rationals where b is primitive
+root of the denominator illustrates the improvement well. We denote by ϕ the Euler
+totient function. For A, B coprime integers, as usual ordA mod B denotes the smallest
+positive integer m with Am ≡ 1 mod B. The next proposition comprises results on the
+ϕ-function and period lenghts of rational numbers in a base.
+Proposition 4.10. We have ϕ(q) ≫ q/ log log q. Let A, B, C be integers with (A, C) = 1.
+Write C = C1 C2 with (C2 , B) = 1 and C1 consisting only of factors of B. Then ξ = A/C
+written in base B has preperiod of length P (ξ) equal to the smallest integer v with C1 |B v ,
+followed by a period of length L(ξ) = ordB mod C2 . In particular if (A, B) = 1, then
+A/C has purely periodic base B expansion of period length ordB mod C. Anyway, the
+total period length P (ξ) + L(ξ) of ξ is of order ≪ C.
+
+   We omit a proof as the claims are well-known. The first claim can be found in the
+book of Hardy and Wright [15, Theorem 328]. The identities for periods can be checked
+in an elementary way. The bounds on period lengths follow from L(ξ) ≤ ordB mod C2 ≤
+ϕ(C2 ) ≤ C2 − 1 ≤ C − 1 and P (ξ) ≤ v ≪ log C1 ≤ log C, or alternatively directly from
+Theorem 4.3. Recall A is called primitive root modulo B if ordA mod B = ϕ(B).
+Corollary 4.11. Let b, W, ∆ as in Theorem 4.9. Let p0 , q0 be coprime integers and assume
+b is a primitive root modulo q0 . Let (19) be the base b expansion of ξ = p0 /q0 . Assume
+not all cj belong to W and let i be the smallest index for which the digit ci lies outside W .
+Then i ≪ N ∆ (log log N)∆ , i.e. ci ∈ / W for some i ≪ N ∆ (log log N)∆ with an absolute
+implied constant. In particular, any digit v ∈ {0, 1, 2, . . . , b − 1} that occurs among the ci
+in (19) already occurs within the first ≪ N log(b−1)/ log b places.
+
+Proof. If b is a primitive root modulo q0 then by Proposition 4.10 the number ξ = p0 /q0
+has no preperiod (i.e. k = 0) and the period length N satisfies N = ordb mod q0 =
+ϕ(q0 ) ≫ q0 / log log q0 . Thus, using the notation of Theorem 4.9, from its claim we
+infer i = φ(ξ) ≪ q0∆ ≪ (N log log N)∆ , as desired. For the particular case, apply the
+       ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                       15
+
+
+
+above observation to W = {0, 1, . . . , b − 1} \ {v} of cardinality b − 1, which induces
+∆ = log(b − 1)/ log b.                                                                
+
+  An equivalent way to state the claim of Theorem 4.9 is that numbers p, q as in (20)
+have greatest common divisor at most ≪ bN /φ(ξ)1/∆ . If we let k = 0, another variant on
+the base b expansion of large divisors of numbers of the form bN − 1 is obtained.
+Corollary 4.12. Let b, W and ∆ < 1 as in Theorem 4.9. Let ψ and φ be positive integers
+with the property φ ≥ c1 ψ ∆ for sufficiently large c1 = c1 (b) > 0. Assume for some integer
+N ≥ 1 we have d′ ≥ bN /ψ divides bN − 1 and is written in base b as
+(21)         d′ = (u0 u1 · · · uN −1)b = u0 bN −1 + u1 bN −2 + · · · + uN −2 b + uN −1 ,
+with possibly c0 = c1 = · · · = cs = 0 for some s ≥ 0, and assume all ci ∈ W . Then for
+                 W1 = {uj : 0 ≤ j ≤ φ},            W2 = {uj : 0 ≤ j ≤ N − 1},
+the letters occurring in the first φ and all digits of d′ , respectively, we have W1 = W2 .
+   In particular, if φ = φ(N) = ⌊rN ∆ ⌋ for some r ∈ (0, 1], and ψ = ψ(N) = RN for
+sufficiently small R = R(b, r) > 0, the following holds. Assume bN − 1 has a small divisor
+dN ≤ RN, and write the complementary divisor d′N = (bN − 1)/dN as in (21). The sets
+of digits that occur within {u0, u1 , . . . , u⌊N ∆ r⌋ } and {u0, u1 , . . . , uN −1 } coincide.
+
+  In particular if we take W of cardinality b − 1, we see that for any large divisor of
+ N
+b − 1, all occurring digits in its base b expansion already can be found in a relatively
+short initial sequence. Generically, for large N we expect W1 = W2 = {0, 1, . . . , b − 1}.
+However, d′N = (bN − 1)/(b − 1) in base b reads (1N )b , so W1 = W2 = {1}. In this case
+we easily verify the claim. We end this section with an example.
+Example 1. Let b = 3, W = {0, 1} with ∆ = log 2/ log 3. Then
+                         N−1         N−2                 1       N   3N
+                gcd(ǫ0 3     + ǫ1 3   + · · · + ǫN−2 3 + 2, 3 − 1) ≪ 1/∆ ,
+                                                                    N
+                                                                     / W ). Thus, 3N − 1
+for any choice of ǫj ∈ {0, 1}, 0 ≤ j ≤ N − 2 (observe that ǫN −1 = 2 ∈
+cannot have a very large divisor given by the sum expression. Consider special cases.
+First, assume ǫj = 0 for 0 ≤ j ≤ N − m and ǫj = 1 for N − m + 1 ≤ j ≤ N − 2, for some
+integer 2 ≤ m ≤ N + 1. Then the sum expression results in (3m + 1)/2, thus
+                      3m + 1 N             3N
+                  gcd(       , 3 − 1) ≪ 1/∆ ,           0 ≤ m ≤ N − 2.
+                         2                N
+In particular the assumption (3m +1)|(2·(3N −1)) implies 3m ≪ 3N /N 1/∆ , or equivalently
+m < N − log N/ log 2 + c for c ∈ R. In this particular example, in fact the divisibility
+condition implies the stronger (sharp) estimate m ≤ N/2, since (3m + 1)|(2 · (3N − 1))
+is equivalent to (3m + 1)|(2 · (3N −m + 1)). As a second special case let ǫj = 1 precisely
+for j a power of 2 and ǫj = 0 otherwise. We are unable to find an elementary proof that
+confirms our implication
+                   2k     2k−1             20      N       3N                    log N
+             gcd(3 + 3           + · · · + 3 + 2, 3 − 1) ≪ 1/∆ ,           k<          .
+                                                          N                      log 2
+16                                      JOHANNES SCHLEISCHITZ
+
+
+
+                                               5. Proofs
+
+5.1. Proof of Theorem 2.1. The crucial step for the proof of Theorem 2.1 is to ex-
+tend [13, Lemma 2.2]. Fortunately, this can be derived rather easily. Compared to [13],
+it does not involve the measure supported on C, which might not be nice in our general
+setting, but stems from the following elementary counting argument.
+Proposition 5.1. Let C be any Cantor set as in Definition 1 and let τ = max1≤j≤J τj
+be the maximum contraction ratio of the IFS. If l ≥ 1 is an integer and E a subset
+of C of cardinality greater than J l , then there are two elements x, y in E with distance
+kx − yk ≤ diam · τ l , where diam is the diameter of the compact set C.
+
+Proof. For any α ∈ E let (ω1,α , ω2,α , . . .) be any address of α and let πj,α = fωj,α .
+Then by pigeon hole principle since |E| > J l there are two elements x, y whose prefices
+(ω1,x , . . . , ωl,x ) and (ω1,y , . . . , ωl,y ) coincide, so πj := πj,x = πj,y for 1 ≤ j ≤ l. Let
+       a = lim πl+1,x ◦ πl+2,x · · · ◦ πl+n,x (0),      b = lim πl+1,y ◦ πl+2,y · · · ◦ πl+n,y (0).
+            n→∞                                              n→∞
+
+Clearly a, b ∈ C. Then we have
+             kx − yk = kπ1 ◦ π2 ◦ · · · ◦ πl (a) − π1 ◦ π2 ◦ · · · ◦ πl (b)k ≤ τ l ka − bk.
+Since a, b ∈ C their distance is bounded above by diam and the claim follows.                         
+
+     From the proposition we immediately obtain the required variant of [13, Lemma 2.2].
+Lemma 5.2. Let C, τ be as in Proposition 5.1. Then, if N ≥ 1 is an integer and
+ξ 1 , . . . , ξ N belong to C, there is constant K1 > 0 and two indices 1 ≤ i < j ≤ N with
+                                kξ i − ξ j k ≤ rN := (N/K1 )log τ / log J .
+We may choose K1 = (diam/τ )− log J/ log τ .
+
+Proof. For given N choose the integer l ≥ 0 so that J l < N ≤ J l+1 . By Propo-
+sition 5.1 there are two elements in the sequence with distance at most diam · τ l ≤
+diam · τ log N/ log J−1 = (diam/τ ) · N log τ / log J , which leads to K1 in the theorem. 
+
+  In the sequel we denote by kAk∞ := maxx6=0 {kAj xk/kxk} the norm of a matrix A ∈
+Rd×d .
+
+Proof of Theorem 2.1. We proceed essentially as in the proof of [13, Theorem 2.1]. Let
+ξ ∈ C arbitrary. Fix an address ω = (ω1 , . . .) ∈ {1, 2, . . . , J}N of it, so that with πj = fωj
+we have ξ = limk→∞ π1 ◦ π2 ◦ · · · πk (0). If σ is the left shift on the space of infinite formal
+words, for every large N we consider {σ n (ω)(0) : 0 ≤ n ≤ N}, a finite sequence in C. By
+Lemma 5.2 there are two integers 0 ≤ n < m + n ≤ N so that if
+                       y := σ n (ω)(0) = lim πn+1 ◦ · · · ◦ πn+k (0),
+                                            k→∞
+                                m+n
+                       z := σ         (ω)(0) = lim πm+n+1 ◦ · · · ◦ πm+n+k (0),
+                                               k→∞
+       ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                        17
+
+
+
+then ky − zk ≤ rN . Define endomorphisms on Rd by u(1) = π1 ◦ · · · ◦ πn and u(2) =
+πn+1 ◦ · · · ◦ πm+n , so that ξ = u(1) (y) and y = u(2) (z). Consider Aωj ∈ Zd×d and qωj ∈ Z
+as in the theorem. Then let
+                        P(1) = Aω1 · · · Aωn ,           P(2) = Aωn+1 · · · Aωn+m
+                        q(1) = qω1 · · · qωn ,            q(2) = qωn+1 · · · qωn+m .
+                    Q
+Further with S :=     1≤j≤J sj define the integer vectors
+                                       n
+                                       X
+                             r (1) =         Aω1 · · · Aωi−1 r ωi qωi+1 · · · qωn ,
+                                       i=1
+and
+                             m
+                             X                                     S
+                    r(2) =         Aωn+1 · · · Aωn+i−1 r ωn+i            qωn+i · · · qωn+m .
+                             i=1
+                                                                 sωn+i
+In r(2) the additional factor S/(qωn+1 sωn+i ) compared to [13] has entered according to the
+notational difference sj 6= qj for the shift vector. By the recursive process, the maps u(i)
+are accordingly given as
+                                     P(i) t   r(i)
+                          u(i) (t) =        +       ,      i = 1, 2.
+                                     q(i)     Sq(i)
+The unique fixed point of u(2) denoted by F 2 is given by the solution of
+                                       P(2)        r (2)
+                                  F2 =      F2 +         ,
+                                       q(2)       Sq(2)
+which yields
+                                      1
+                                        (q(2) Id − P(2) )−1 r(2) .
+                                     F2 =
+                                     S
+We carry out why the inverse matrix is well-defined. All Aj have norm kAj k∞ < qj since
+Aj /qj are contractions for 1 ≤ j ≤ J, thus their product which is P(2) has norm less than
+q(2) , i.e.
+(22)                                          kP(2) k∞ < q(2) .
+Consequently all eigenvalues of P(2) are of absolute value smaller than q(2) , proving the
+regularity of q(2) Id − P(2) . We also observe that F 2 ∈ Qd by Cramer’s rule, hence this
+applies to u(1) (F2 ) as well so we may write
+                                                P(1) (q(2) Id − P(2) )−1 r(2) + r (1)
+                      p/q = u(1) (F2 ) =                                              ,
+                                                               Sq(1)
+with p ∈ Zd and q ∈ N. Concretely by Cramer’s rule the inverse matrix contributes
+a factor det(q(2) Id − P(2) ) > 0 in the denominator, so the total denominator will be
+q = Sq(1) det(q(2) Id − P(2) ) if we do not simplify the vector p/q to lowest terms. For
+any matrix A ∈ Rd×d we have | det A| ≤ kAkd∞ (determinant is at most product of
+column norms, and columns are images of canonical base vectors), and from (22) we infer
+kq(2) Id − P(2) k∞ ≤ kq(2) Id k∞ + kP(2) k∞ ≤ 2q(2) . Applied to A = q(2) Id − P(2) we derive
+(23)                         0 < q ≤ Sq(1) · (2q(2) )d ≤ S(2q(1) q(2) )d .
+18                                 JOHANNES SCHLEISCHITZ
+
+
+
+Taking logarithms yields
+                                                m+n
+                                                X
+(24)                               log q ≤ d           log qωi + c,
+                                                 i=1
+
+with the constant c = d log 2 + log S. Let τ(i) be the contraction rates on u(i) , i = 1, 2.
+Then, on the other hand
+                  ky − F 2 k ≤ τ(2) kz − F 2 k ≤ τ(2) ky − F 2 k + τ(2) kz − yk,
+hence
+                                                   µ(2)
+                                 ky − F 2 k ≤             kz − yk.
+                                                 1 − µ(2)
+Applying u(1) gives
+                                        τ(1) τ(2)           τ(1) τ(2)
+                         kξ − p/qk ≤              kz − yk ≤           rN .
+                                        1 − τ(2)            1 − τ(2)
+Now τ(2) ≤ max1≤j≤J τj = τ , thus with K2 = (1 − τ )−1 we infer
+                                                                   m+n
+                                                                   X
+                     log kξ − p/qk ≤ log K2 + log rN + µ                 log τωi + c.
+                                                                   i=1
+
+By assumption log τωi = µωi log qi ≤ µ log qi for every 1 ≤ i ≤ m. Thus from (24) and
+since µ ≤ 0 further
+                                                        µ       c
+                     log kξ − p/qk ≤ log K2 + log rN + log q + ,
+                                                        d       d
+and after exponentiating again we get
+(25)                                kξ − p/qk ≤ K3 rN q µ/d ,
+with some constant K3 . On the other hand, again from (23) we derive
+                                        m+n
+                                        X
+                            log q ≤ d         log qωi + d log 2 + log S.
+                                        i=1
+                                                          d(m+n)
+Let qmax = max1≤j≤J qj . Finally since q ≤ S · 2d qmax ≤ S · 2dN qmax  dN
+                                                                            = S · (2qmax )dN , for
+N := ⌊log Q/(d(log(2qmax )) + log S)⌋ and Q ≥ S2d qmaxd
+                                                            we conclude q ≤ Q and
+              log τ / log J                       log τ / log J
+               N                          log Q
+        rN ≤                  ≤ K4                                  = K5 log Qlog τ / log J .
+               K1                     2dK1 log qmax
+Putting K1 = K3 K5 we derive the claim from (25).                                              
+
+5.2. Proofs from Section 3. For the proof of Theorem 3.1 we utilize an auxiliary
+result established within the proof of [14, Theorem 1.1]. It deals with almost-arithmetic
+sequences in Cantor sets. While originally formulated only for similarity Cantor sets, as
+pointed out in Section 1.2 we may extend its claim to Cantor sets as in Definition 1. We
+do not rephrase the notion of almost-arithmetic from [14] and restrict to the arithmetic
+sequence setting that suffices for our proof.
+       ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                      19
+
+
+
+Lemma 5.3 (Fishman, Simmons). Let C ⊆ Rd be a Cantor set which satisfies OSC.
+There exists a positive integer N = N(C) with the property that if set C contains an
+arithmetic progression of length N, then the entire line segment joining these points is
+contained in C. In particular, if C contains no line segment, then no non-constant
+arithmetic progression of length N is contained in C.
+
+  The lemma will apply to the first condition of Theorem 3.1. For the implication from
+the latter condition, we will employ our counting result Theorem 4.1
+
+Proof of Theorem 3.1. As pointed out the claim is almost an immediate consequence of
+Lemma 5.3. In our situation, given ξ ∈ C and Q > 1, we consider p/⌊Q⌋ for p =
+(p1 , . . . , pd ) chosen such that pi /⌊Q⌋ is the rational number with denominator ⌊Q⌋ that is
+closest to the i-th coordinate ξi of ξ ∈ C. Clearly kξ − p/⌊Q⌋k ≪ Q−1 . Assume the first
+condition of the theorem. Let N = N(C) be large enough that C contains no arithmetic
+sequence of length N as in Lemma 5.3. Then with v ∈ Zd as in the theorem, the rational
+vectors
+                                         1                2                      N
+                     p/⌊Q⌋, p/⌊Q⌋ +         v, p/⌊Q⌋ +       v, . . . , p/⌊Q⌋ +     v
+                                        ⌊Q⌋             ⌊Q⌋                     ⌊Q⌋
+have common denominator at most ⌊Q⌋ ≤ Q and form an arithmetic progression. Thus
+not all can belong to C as otherwise by Lemma 5.3 the line segment joining p/q and
+p/⌊Q⌋ + N/⌊Q⌋ · v would be contained in C, contradicting our hypothesis. On the other
+hand we easily see that any element of the progression has distance ≪N,v Q−1 ≪C,v Q−1
+from ξ.
+  Finally, assume the second condition D < 1/2. Then for every prime number N with
+Q/2 ≤ N < Q again let pN /N be the rational vector with numerator coordinates pN,i
+chosen so that pN,i /N is closest to ξi . We see that kpN /N − ξk ≪ Q−1 . Moreover, for
+Q > diam these vectors are clearly pairwise distinct and by Prime Number Theorem
+there are ≫ Q/ log Q such vectors. On the other hand, by Theorem 4.1 there are only
+≪ Q2D rational vectors in C with denominator at most Q. Thus if D < 1/2, for large Q
+some must lie outside C and satisfy the desired property.                            
+
+  The proof of Theorem 3.2 requires more preparation. The next lemma comprises some
+estimates on continued fractions and is partly well-known.
+Lemma 5.4. Let ξ be a real number with sequence of convergents (ut /vt )t≥1 . Then
+                          1            ut        1
+(26)                            ≤ |ξ − | ≤            ,       t ≥ 1.
+                       2vt vt+1        vt     vt vt+1
+Moreover, if t ≥ 2 is given and r/s 6= ut /vt is any rational number with 0 < s < vt+1 /2,
+then
+                                                    1
+(27)                                  |sξ − r| ≥        .
+                                                   2vt
+
+   For the proof recall that for an origin-symmetric convex set K ⊆ Rh and a lattice
+Λ ⊆ Rh , the i-th successive minimum λi (K, Λ) of Λ with respect to K is defined as the
+infimum of real numbers λ such that Λ ∩ K contains i linearly independent vectors (for
+20                                JOHANNES SCHLEISCHITZ
+
+
+
+1 ≤ i ≤ h). Minkowski’s Second Convex Body Theorem then bounds the product of all
+successive minima in terms of the volume of K, the fundamental area of the lattice Λ and
+h. In particular the case h = 2 we will require reads as
+                          2 det Λ                        4 det Λ
+(28)                              ≤ λ1 (K, Λ)λ2 (K, Λ) ≤         .
+                          V (K)                          V (K)
+
+Proof of Lemma 5.4. The inequalities of (26) are in fact well-known. Recall that two
+consecutive covergents have distance ut+1 /vt+1 − ut /vt = (−1)t /(vt vt+1 ). In particular
+convergents lie alternatingly on the left and the right of the limit, and the right inequality
+follows. The left estimate follows similarly incorporating also that ut+1 /vt+1 lies closer to
+ξ than ut /vt , also a well-known fact. We have to show the second claim involving (27).
+Define the convex body
+                                                        −1     −1
+                                 K = [−vt , vt ] × [−vt+1   , vt+1 ],
+and the lattice
+                             Λξ = {(m, mξ − n) ∈ R2 : m, n ∈ Z}.
+The lattice has determinant det(Λξ ) = 1 and the rectangular convex body has volume
+vol(K) = 4vt /vt+1 . We may assume ξ ∈ (0, 1) and thus 0 < ul < vl for all large l. Since
+we know from the theory of continued fractions and (26) that
+                                                                    1
+                              |ut+1 ξ − vt+1 | < |ut ξ − vt | ≤       ,
+                                                                 vt+1
+we see that the point (ut , utξ − vt ) lies in Λξ ∩ K. Hence the first successive minimum
+λ1 (K, Λξ ) of Λ with respect to K satisfies λ1 (K, Λξ ) ≤ 1. By Minkoswki’s second Convex
+Body Theorem (28) we conclude that the second successive minimum satisfies
+                                               2 det(Λξ )      vt+1
+                            λ2 (K, Λξ ) ≥                    ≥      .
+                                            V (K)λ1 (Λξ , K)   2vt
+Thus there is no lattice point linear independent from (ut , ut ξ − vt ) in the region
+                          vt+1           vt+1 vt+1        1 1
+                               · K = [−      ,     ] × [− ,       ].
+                           2vt             2   2         2vt 2vt
+In other words, for any (r, s) linearly independent from (ut , vt ) and with |s| ≤ vt+1 /2 we
+have |sξ − r| ≥ 1/(2vt ). The proof of the second claim is finished.                       
+
+     For the density result in Theorem 3.2 we utilize the following lemma.
+Lemma 5.5. Let C ⊆ Rd be a Cantor set. Assume for every function Ψ : N → R>0 there
+exists ξ ∈ C so that
+                                   kξ − p/qk ≤ Ψ(q)
+has infinitely many solutions p/q ∈ Q ∩ C. Then the set of ξ with the same property is
+dense in C.
+
+Proof of Lemma 5.5. Let ξ ∈ C arbitrary with address (ω1 , ω2 , . . .) and write πi = fωi so
+that ξ = limk→∞ π1 ◦ . . . ◦ πk (0). For given Ψ and ǫ > 0, we construct a Ψ-approximable
+point ξ ǫ with kξ ǫ −ξk < ǫ. For again τ ∈ (0, 1) the largest absolute value of the contraction
+factors and diam the diameter of C, take an integer u large enough so that τ u diam < ǫ.
+        ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                               21
+
+
+
+Then consider the function Φ(t) := Ψ(Nt)·N −1 for a large integer N dependent only on u
+(and thus ǫ) to be chosen later. By assumption there exists ζ ∈ C that is Φ-approximable.
+Define ξǫ = π1 ◦ π2 ◦ · · · πu (ζ). Then we have
+                                       kξ ǫ − ξk ≤ τ u diam < ǫ,
+as the addresses of ξ and ξ ǫ coincide up to the u-th place. On the other hand, we claim
+that ξ ǫ is Ψ-approximable if N was chosen large enough. To see this first notice that as
+πj are linear maps with rational coefficients, also T := π1 ◦ π2 ◦ · · · πu induces a linear,
+rational transformation T (y) = (Ay + b)/s, with A ∈ Zd×d , b ∈ Zd and s ∈ N. It is
+not hard to see that if some y ∈ R is h-approximable for some function h(t), then T (y)
+(with T as above) is Nh(t/N)-approximable, for sufficiently large N depending only on
+s. This is readily derived from the facts that kT (y) − T (p/q)k ≤ ky − p/qk (since T is
+a contraction) and den(T (p/q)) ≤ sq, where den denotes the common denomintor of a
+rational vector. Application to h(t) = Φ(t) and y = ζ starting with some corresponding
+suitable value N = N(ǫ) yields that ξ ǫ = T (ζ) is NΦ(t/N) = Ψ(t)-approximable.            
+
+  Now we can prove Theorem 3.2.
+
+Proof of Theorem 3.2. We recursively define a fast growing lacunary sequence (an )n≥1 of
+positive integers that will induce ξ ∈ C satisfying (8), as carried out below. Assume for
+the moment this sequence is fixed. Write b1 = a1 − 1 and bl = al − al−1 − 1 for integers
+l ≥ 2. Let f = f1 , g = f2 be two different contractions in our IFS and without loss of
+generality assume f is the map whose fixed point α = αj is rational. Let τi for i = 1, 2 be
+the contraction factors of f and g respectively and let τ = maxi=1,2 |τi | < 1. We define ξ
+by
+(29)                          ξ := lim f b1 ◦ g ◦ f b2 ◦ g ◦ · · · ◦ f bi (0).
+                                    i→∞
+
+This means that the contraction is g at the ai -th positions and f otherwise. Assume we
+have chosen a1 < a2 < . . . < ak and want to construct the remaining sequence with the
+property stated in the theorem. Take
+(30)                      θk := f b1 ◦ g ◦ f b2 ◦ g ◦ · · · ◦ f bk ◦ g ◦ f ∞ (0).
+This vector clearly lies in C. Then clearly the suffix vector f ∞ (0) of θk is the fixed point
+of f , so that f ∞ (0) = f (α) = α and recall α is assumed to be rational. Since both f, g are
+rational-preserving, we see that θk = f b1 ◦g ◦f b2 ◦g ◦· · ·◦f bk ◦g(α) is also a rational vector
+(if the IFS is affine then with denominator ≪ N dak if N is the largest denominator among
+the contraction factors, but we will not need this). Write θk = pk /qk = (pk,1, . . . , pk,d)/qk
+in lowest terms, with qk ≪ N dak . Next, we claim that
+(31)                                 kpk /qk − ξk ≤ diam · τ ak+1
+where diam denotes the diameter of our compact Cantor set C. Observe
+ kpk /qk − ξk = kf b1 ◦ g ◦ · · · ◦ g ◦ f bk+1 (α) − f b1 ◦ g ◦ · · · ◦ g ◦ f bk+1 (β)k ≤ τ ak+1 kα − βk
+for
+                                  β = lim f bk+1 ◦ g ◦ · · · ◦ f bL (0)
+                                        L→∞
+22                                    JOHANNES SCHLEISCHITZ
+
+
+
+some well-defined limit in C, since f, g are contractions with factor at most τ and there
+are a total of ak+1 contractions applied. It then suffices to notice that kξ − βk ≤ diam as
+they both belong to C, to derive (31). From (31) we see that kξ − pk /qk k can be made
+arbitrarily small when taking ak+1 large enough, which is all we need for the sequel.
+  Since τ < 1 by definition, we may assume ak+1 is large enough that pk,i /qk is a con-
+vergent (not necessarily in lowest terms!) to ξi for any 1 ≤ i ≤ d. Let sk,i /tk,i be the
+preceding convergent and yk,i /zk,i be the convergent following pk,i /qk , for 1 ≤ i ≤ d. We
+have to justify that this is well-defined, in the sense that sk,i /tk,i and yk,i /zk,i do only de-
+pend on ak+1 but not on the exact choices of ak+2 , ak+3 , . . ., for any given sufficiently large
+ak+1 and much larger ak+2 . It is clear for the preceding convergent sk,i /tk,i . For yk,i/zk,i ,
+notice that when we choose ak+2 much larger than ak+1 as well then we can guarantee
+that pk+1,i /qk+1 is a convergent to ξi as well, by the same argument as above. Thereby
+we can reconstruct the convergents of ξi up to θk+1,i = pk+1,i /qk+1 . Now zk,i ≤ qk+1
+by definition of yk,i /zk,i as the subsequent convergent of pk,i /qk . Hence indeed once we
+have chosen large ak+1 and assume ak+2 exceeds ak+1 by a large amount, everything is
+well-defined. Since by Lemma 5.4
+                                                          1
+                                         zk,i ≥              p      ,
+                                                   2qk |ξi − qk,i
+                                                               k
+                                                                  |
+and qk is fixed, we infer from (31) that we can make zk,i arbitrarily large by choosing ak+1
+accordingly large (note that for this argument we do not require pk,i /qk to be in lowest
+terms, the same applies to any argument below).
+     By Lemma 5.4 we know that
+                                sk,i       1                      pk,i      1
+                        |ξi −        |≥          ,        |ξi −        |≥          ,
+                                tk,i    2tk,i qk                   qk     2zk,i qk
+and for any ratinal number ri /s 6= pk,i /qk with 0 < s < zk,i /2 we have
+                                                              1
+                                           |sξi − ri | ≥         .
+                                                             2qk
+So let Qk = zk,i /3. Thus for any ri /s as above
+                                           ri     1      1   1
+(32)                               |ξi −      |≥      ≥    ·     .
+                                           s     2sqk   2qk zk,i
+Recall qk is fixed so 1/(2qk ) is a constant as well. On the other hand
+                                        Φ(Qk )     Φ(zk /3)
+(33)                                           =3·          .
+                                         Qk          zk,i
+Now by assumption Φ tends to 0, and we have observed above that we may choose ak+1
+and consequently Qk arbitrarily large. Thus we may choose ak+1 large enough so that
+Φ(Qk ) < 1/(6qk ), and (32) and (33) imply
+                                                   ri    Φ(Qk )
+                                           |ξi −      |>
+                                                   s      Qk
+        ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                       23
+
+
+
+for any ri /s 6= pk,i /qk = θk,i with s < Qk . Since this holds for any 1 ≤ i ≤ d and θ k ∈ C,
+this means that any r/s ∈    / C with s < Qk satisfies
+                                                             Φ(Qk )
+                              kξ − r/sk ≥ |ξi − ri /s| >            .
+                                                              Qk
+The desired property holds for Q = Qk . Repeating this process, we get a sequence of
+values (Qn )n≥1 → ∞ with property (8) for ξ defined in (29).
+   To finish the proof, we show that all vectors ξ = (ξ1 , . . . , ξd ) derived from our construc-
+tion are irrational, and that we can construct uncountably many distinct ones among
+them. The density is then also implied by Lemma 5.5. Clearly the the method is flexible
+enough to provide uncountably many formal elements f b1 ◦ g ◦ f b2 ◦ g ◦ · · · with the given
+property. If we assume any element has at most countably many addresses, we are done.
+If not, by hypothesis we may assume f, g are one-to-one. This case requires more work.
+We first show that any ξ constructed above is irrational. Observe that by the fast growth
+of the ai , we may assume that the approximating rational vectors θk = pk /qk to ξ satisfy
+                                                         1
+(34)                                  kξ − pk /qk k <        .
+                                                        2qk3
+In particular any θk,i = pk,i /qk is a convergent to ξi (not necessarily in lowest terms).
+Note that the denominators qk tend to infinity, since we divide by some integer in each
+contraction step. If some coordinate ξi = ri /si were rational, then clearly any rational
+number pk,i /qk has distance ≥ (si qk )−1 ≫ qk−1 unless ξi = pk,i /qk . Hence, in view of (34),
+if ξi was rational, then we must have ξi = pk,i /qk for all large k. In particular θk,i = θk+1,i
+for large k. Hence, if all coordinates ξi are rational, by increasing k if necessary we have
+the identity for all coordinates i = 1, 2, . . . , d, that is θk = θk+1 = ξ for any large k. Since
+the addresses of θk , θk+1 share the same prefix up to f bk ◦ g and f, g are one-to-one by
+assumption, applying inverse functions repeatedly we infer an identity
+(35)                        f bk+1 ◦ g(α) = α,             α = f ∞ (0).
+Recall f fixes α. In fact, y = α is the only solution to f (y) = α since f is one-to-one. Now
+note that if all contractions of the IFS fix the same element α ∈ Qd , it is easy to check
+that the Cantor set collapses to a single point C = {α}, but then α has uncountably
+many addresses, which we have dealt with before. Thus we may assume g does not fix
+α, i.e. g(α) 6= α. Then by the above observation that the preimage α under f is only α,
+we see that (35) cannot hold for any choice of bk+1 . Thus we have confirmed that any
+ξ in our construction is irrational. Lemma 5.5 and its proof show that by taking finite
+forward orbit π1 ◦ · · · ◦ πm (ξ) of some ξ under the IFS essentially preserves the property,
+so we obtain a countably infinite set of suitable ξ that is dense in C. We only sketch
+the proof of why the set is actually uncountable and omit rigorous calculations. Assume
+ξ 1 , ξ 2 are two ξ as in (29) arising from sequences (a1n )n≥1 and (a2n )n≥1 , respectively. We
+claim that if they are ordered a11 < a21 < a12 < a22 < a13 < · · · with very large gaps between
+two consecutive elements, then ξ 1 6= ξ 2 . If true this clearly implies we get an uncountable
+family of suitable ξ. The claim is obvious if there is some coordinate i for which ξi1 is
+rational and ξi2 is irrational, or vice versa. Thus, as we have shown above that both
+24                                      JOHANNES SCHLEISCHITZ
+
+
+
+vectors ξ 1 , ξ 2 are irrational, we may assume there is an index i with both ξi1 , ξi2 irrational.
+                                                                                             j
+To show the claim, observe that the respective rational approximations θk,i                                j
+                                                                                                 = pjk,i /qk,i
+as in (30) are again very good approximating convergents to ξij . If we choose the gaps
+between two consecutive elements of a11 , a21 , a12 , a22 , . . . sufficiently large in each step, then
+we will have qk,i  1′       2′
+                       < qk,i      1′
+                               < qk+1,i for any k ≥ 1, where pj′              j′            j     j
+                                                                        k,i /qk denotes pk,i /qk written
+in lowest terms. Here we use that the denominators of convergents grow fast when the
+approximation is good, a well-known fact from the theory of continued fractions, see (26).
+In fact, with a proper choice the convergent yk,i    2       2
+                                                         /zk,i    of ξ 2 following p2k−1,i /qk−1
+                                                                                               2
+                                                                                                    will still
+                                      1         1     1                            1
+have larger denominator than qk,i . Hence pk,i /qk,i is a convergent to ξi but no convergent
+to ξi2 , thus the continued fraction expansion of ξi1 and ξi2 are not the same, consequently
+ξi1 6= ξi2 and ξ 1 6= ξ 2 .                                                                                
+
+   We turn towards the proof of Theorem 3.4. For convenience, we will use the framework
+of parametric geometry of numbers introduced in [29], essentially a parametric logarithmic
+version of Minkowski’s Second Lattice Point Theorem. We only need the special case of
+approximation to a single number, which corresponds to n = 2 in the notation of [29].
+This means essentially we use a parametric, logarithmic version of formula (28) above.
+Concretely, for given ξ ∈ R, similar as for the proof of Lemma 5.4 consider the lattice Λξ
+and the family of convex bodies K(T ) parametrized by T ≥ 1 of the form
+(36)        Λξ = {(m, mξ − n) ∈ R2 : m, n ∈ Z},                 K(T ) = [−T, T ] × [−T −1 , T −1 ].
+Observe that a point in Λξ ∩ K(T ) corresponds to the system of inequalities
+                                    |m| ≤ T,         |mξ − n| ≤ T −1 .
+Denote by λ1,ξ (T ), λ2,ξ (T ) the successive minima of K(T ) with respect to the lattice Λξ ,
+that is λi,ξ is the minimum value for which λi,ξ (T )K(T ) contains i linearly independent
+points of Λξ , for i ∈ {1, 2}. According to Minkowski’s Second Convex Body Theorem
+(28), in view of vol(K(T)) = 4 and det Λξ = 1, we infer
+                     1         det Λξ                            det Λξ
+                       =2              ≤ λ1,ξ (T )λ2,ξ (T ) ≤ 4          = 1.
+                     2       vol K(T)                           vol K(T)
+If we let t = log T and Li,ξ (t) = log λi,ξ (T ) for i ∈ {1, 2}, then we obtain
+(37)                      − log 2 ≤ L1,ξ (t) + L2,ξ (t) ≤ 0,                  t ≥ 0.
+The functions Li,ξ (t) are piecewise linear with slopes among {−1, 1}. More precisely, if
+(mi , ni ) ∈ Z2 with mi > 0 are the vectors realizing the i-th minimum at given position
+t = log T for i ∈ {1, 2}, then
+                                 Li,ξ (t) = L(mi ,ni) (t),      i ∈ {1, 2},
+where for (m, n) ∈ Z2 we denoted
+(38)                      L(m,n) (t) := max{log m − t, log |mξ − n| + t}.
+In particular L(m,n) (t) has its minimum at the point position (t0 , L(m,n) (t0 )) with t = t0 =
+(log m − log |mξ − n|)/2 where the expressions in the maximum coincide. This setup will
+suffice for our purpose to prove Theorem 3.4, we refer to [29] for parametric geometry of
+numbers with respect to simultaneous rational approximation to ξ1 , . . . , ξd .
+        ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                         25
+
+
+
+Proof of Theorem 3.4. First consider the special case C = Cb,W . Fix any p/q ∈ Q \ C.
+Let Q = 2bq. Let further ξ ∈ C \ Q be given. Note we are in the situation of Theorem 1.1.
+Application of Theorem 1.1 to Q ≥ 2b ≥ 1 yields that the system
+                                      ∆                     b
+                           1 ≤ m ≤ bQ ,        |mξ − n| ≤
+                                                            Q
+                                                    n
+has a solution in positive integers m, n such that m  ∈ Q ∩ C. Write |mξ − n| = σ/Q with
+σ ∈ [0, b]. Since ξ is irrational in fact σ > 0. Transition to logarithmic scale yields that
+the minimum of the function L(m,n) (t) is attained for
+                                            log m + log Q − log σ
+                                t = t0 :=                         ,
+                                                      2
+and at this position we have
+                                                  log m − log Q + log σ
+                       L(m,n) (t0 ) = log m − t0 =                      .
+                                                            2
+Clearly (p, q) ∈ Z2 we started with is linearly independent to (m, n) ∈ Z2 , since this just
+rephrases as m n
+                 6= pq , which is true since m
+                                             n
+                                               ∈ C but pq ∈
+                                                          / C. Hence by (37) we have
+                                       log Q − log m − log σ
+                          L(p,q) (t0 ) ≥                      − log 2,
+                                                   2
+as the reverse estimate would imply L1,ξ (t0 ) + L2,ξ (t0 ) ≤ L(p,q) (t0 ) + L(m,n) (t0 ) < − log 2,
+contradicting (37). In view of the definition of L(p,q) in (38), equivalently at least one of
+the inequalities
+                                        log Q − log m − log σ
+                          log q − t0 ≥                        − log 2
+                                                   2
+and
+                                            log Q − log m − log σ
+                      log |qξ − p| + t0 ≥                         − log 2
+                                                        2
+holds. Thus, if the first estimate is violated, which just becomes
+                                                  Q
+(39)                                         q≤      ,
+                                                  2σ
+then the second one is correct which yields
+                                                       1
+                                         |qξ − p| ≥       .
+                                                     2m
+                                     Q    Q
+However, (39) is satisfied since q = 2b ≤ 2σ , therefore we conclude
+                                                      ∆          ∆ ∆
+                                       1     b−Q      b−(2b) q
+(40)                       |qξ − p| ≥     ≥        =           .
+                                      2m       2          2
+Notice that the bound is independent from the choice of ξ ∈ C \ Q. Assume the distance
+d(C, p/q) for some p/q ∈ Q \ C was smaller than the right hand side of (40) divided by q.
+Then by compactness of C there is ξ0 ∈ C realizing this distance d(C, p/q) = d(ξ0 , p/q).
+           / C \ Q, since for these numbers we have (40). However, since C \ Q is dense
+Clearly ξ0 ∈
+in C, we get a contradiction to (40) anyway by choosing ξ ∈ C \ Q sufficiently close to
+ξ0 . Hence the right hand side in (40) divided by q is a lower bound for d(C, p/q), which
+26                                   JOHANNES SCHLEISCHITZ
+
+
+
+means (11) is true. Since p/q ∈ Q \ C and ξ ∈ C \ Q were chosen arbitrary, we readily
+infer (12) from (40) as well. This finishes the proof of the special case C = Cb,W .
+  For the general case of any monic, rationally generated Cantor set C with open set
+condition, by Theorem 1.2 for any ξ ∈ C \ Q the estimates
+                                       ∆          m     K
+                           1 ≤ m ≤ eQ ,      |ξ − | ≤
+                                                   n    Q
+admit a solution m/n ∈ C for any large Q and some constant K. For given p/q ∈ Q \ C,
+we proceed as above for Q = 2Kq to obtain
+                                                      ∆            ∆ ∆
+                                      1    e−Q    e−(2K) q
+                          |qξ − p| ≥    ≥       =            ,
+                                     2m      2         2
+and the claim follows again by choosing ρ > (2K)∆ sufficiently large to guarantee
+                                                          ∆ ∆
+                                         −ρq ∆     e−(2K) q
+                                        e        <
+                                                       q
+simultaneously for any q ≥ 1.                                                                      
+
+   A similar strategy is applied for the proof of Theorem 4.6 below, indeed the right claim
+of (17) rewritten as λext (ξ) ≤ 1/λbint (ξ) resembles the assertion of Theorem 3.4.
+
+5.3. Proofs from Section 4. We start this section with the proof of the counting results.
+For this employ Proposition 5.1 above.
+
+Proof of Theorem 4.1. Let l ≥ 0 be an integer. Assume there are more than J l distinct
+rational vectors in C each with common denominator at most N. Then by Proposition 5.1
+there are two vectors α, α′ among them that differ by at most kα − α′ k ≤ diam · τ l . On
+the other hand, if we write α′ = p/q, α′ = r/s, then
+                                                              1
+(41)                         kα − α′ k = kp/q − r/sk ≥           ≥ N −2 .
+                                                              qs
+We conclude N ≥ diam−1/2 τ −l/2 . In other words, if N < diam−1/2 τ −l/2 then there are
+at most J l = τ −Dl rational vectors with common denominator at most N. Now for given
+N, let l be the unique integer with diam−1/2 τ −l/2+1 ≤ N < diam−1/2 τ −l/2 . Then by the
+above argument there are at most J l = τ −Dl < diamD (N/τ )2D = J 2 diamD · N 2D rational
+vectors with common denominator at most N.                                             
+
+  The estimate extends to bound the cardinality of vectors (r1 /s1 , . . . , rd /sd ) with each
+denominator max1≤j≤d sj ≤ N. The proof of Theorem 4.2 employs Liouville’s inequality.
+
+Proof of Theorem 4.2. Let α = (α1 , . . . , αd ), α′ = (α1′ , . . . , αd′ ) be distinct algebraic vec-
+tors with entries of degree at most n and heights H(α) = max H(αj ), H(α′ ) = max H(αj′ )
+at most N, respectively. Since the vectors are distinct there is an index j with αj 6= αj′ .
+Then Liouville’s inequality [7, Theorem A.1, Corollary A.2] yields
+                     kα − α′ k ≥ |αj − αj′ | ≫n H(αj )−n H(αj′ )−n ≥ N −2n .
+        ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                              27
+
+
+
+Using this estimate in place of (41), the claim follows very similarly as Theorem 4.1. 
+
+  Next we show Theorem 4.3.
+
+Proof of Theorem 4.3. Let (ω1 , ω2 , . . .) be an address of ξ ∈ C and πi = fωi , so that
+ξ = limn→∞ π1 ◦ π2 · · · ◦ πn (0). Assume (ω1 , . . . , ωl ) is the (possibly empty) preperiod and
+(ωl+1 , . . . , ωu )∞ is the successive period. Let ζ := (πl+1 ◦ · · ·◦ πu )∞ (0) so that ξ = π1 ◦ · · ·◦
+πl (ζ). By construction ζ = πl+1 ◦ · · · ◦ πu (ζ). For simplicity write Cj = Aωj /qωj ∈ Qd×d
+and cj = bωj /sωj ∈ Qd , with Aj , bj as in Definition 5, so that πj (y) = Cj y + cj . Therefore
+from the concatenation we obtain an identity Cl+1 Cl+2 · · · Cu ζ + c′ = ζ, for some c′ ∈ Qd .
+Since Cj induce contractions so does any product, so 1 is not an eigenvalue and we see ζ
+is given as ζ = −(Cu Cu−1 · · · Cl − Id )−1 c′ . Hence ζ ∈ Qd as Cj ∈ Qd×d and c′ ∈ Qd . Thus
+also ξ = π1 ◦ · · · ◦ πl (ζ) is rational since πj ∈ F are rational-preserving.
+   Conversely, assume the IFS is unimodular and take arbitrary ξ = p/q ∈ Qd ∩ C. Again
+assume π1 ◦π2 · · · (0) is any formal representation of ξ. Consider the sequence a0 = ξ, a1 =
+π1−1 (ξ), a2 = π2−1 ◦ π1−1 (ξ), . . ., which is well-defined as clearly πj are bijective if the IFS
+is unimodular. Then obviously an ∈ Qd ∩ C for any n ≥ 0. Moreover, when building
+the inverses to derive an+1 from an , it follows from the rationalQIFS being unimodular
+that the denominators that occur are divisors of qS with S := 1≤j≤J sj . Here we use
+that when building the inverses πj−1 with Cramer’s rule we do not get additional factors
+in the denominator by unimodularity of the matrices, and the shift vectors bj /sj can
+possible only cause a factor that divides S. Since C is compact with some finite diameter
+diam > 0, there are at most (qS·diam+1)d ≪C q d rational vectors in C with this property.
+Moreover, since an ∈ Qd ∩ C with denominator ≪C q we infer from Theorem 4.1 and
+its proof that there are at most ≪C q D such vectors (we may remove the factor 2 in
+the exponent since all denominators divide q, see the proof of Theorem 4.1). Hence the
+number is ≪C min{q D , q d }. By this finiteness, some rational vector must occur twice, that
+is ai = aj for some i < j ≪C min{q D , q d }. This means aj = πi+1 ◦ πi+2 ◦ . . . ◦ πj (ai ) = ai .
+Hence
+                       ξ = π1 ◦ · · · ◦ πi (ai ) = π1 ◦ · · · ◦ πi ◦ (id)∞ (ai )
+                           = π1 ◦ · · · ◦ πi ◦ (πi+1 ◦ πi+2 ◦ . . . ◦ πj )∞ (ai )
+                           = π1 ◦ · · · ◦ πi ◦ (πi+1 ◦ πi+2 ◦ . . . ◦ πj )∞ (0).
+In the last identity we used that πi ∈ F are contractions. Thus (ω1 , . . . , ωi ) composed
+with (ωi+1 , ωi+2 , . . . , ωj )∞ is a periodic address of ξ.                            
+
+  The estimate on rationals in C whose denominator divides q we used is potentially very
+crude, we believe in fact log q should be the correct order of period lengths.
+
+Proof of Corollary 4.4. For the first claim let qi be as in the theorem and Q = q1 q2 · · · qv
+their product. We notice that for a given prime q ∤ b it follows directly from [3, Lemma 3]
+that ordb mod q n = mq n−O(1) ≫ q n for some m diving q − 1 and all n. Thus, since
+for s = q1α1 q2α2 · · · qvαv we have that ordb mod s is the lowest common multiple of the
+orders ordb mod qiαi over 1 ≤ i ≤ v and qi are distinct primes not dividing b, we see
+28                                JOHANNES SCHLEISCHITZ
+
+
+
+that ordb mod s is divisible by s/QO(1) and thus ordb mod s ≫ s. On the other hand,
+according to Proposition 4.10 the period length of r/s ∈ Cb,W equals ordb mod s, which
+is ≪C sD = s∆ by Theorem 4.3. For large s we get a contradiction as ∆ < 1. For the
+second claim, again since the period length of p/q is ordb mod q, it divides ϕ(q) = q − 1.
+Since (q − 1)/2 is prime the only possible divisors are {1, 2, (q − 1)/2, q − 1}. On the
+other hand, by Theorem 4.3 the period length is ≪ q D = q ∆ . Since ∆ < 1 for large q the
+divisors (q − 1)/2, q − 1 can be ruled out, so q|b2 − 1 which only gives finitely many values
+of q as well. In both claims, since Cb,W ⊆ [0, 1] this yields only finitely many potential
+rational numbers of the stated form.                                                       
+
+     As indicated above, the proof of Theorem 4.6 is similar to the one of Theorem 3.4.
+
+Proof of Theorem 4.6. As in Lemma 5.4 let ut /vt be the convergents of ξ ∈ S. We
+only show the left inequality of (17), the right is proved analogously. We may assume
+λint (ξ) > 1 as otherwise the claim is trivial. For simplicity write a = λint (ξ). Let ǫ > 0.
+Recall from the theory of continued fractions that any fraction p/q that is no convergent
+to ξ satisfies |ξ − p/q| > (2q)−1 . Thus, our assumption implies that there exist arbitrarily
+large indices l so that the convergent ul /vl lies in S and has the property
+(42)                             vl−a−ǫ ≤ |vl ξ − ul | ≤ vl−a+ǫ .
+By Lemma 5.4 we have vl+1 ≍ |vl ξ − ul |−1 so for large l we infer
+(43)                                vla−ǫ ≪ vl+1 ≪ vla+ǫ .
+Moreover again Lemma 5.4 shows that for any r/s 6= ul /vl with s < vl+1 /2 we have
+|sξ − r| ≥ vl−1 /2. In particular this estimate holds for any r/s ∈
+                                                                  / S with s < vl+1 /2. Thus
+for Ql := vl+1 /3 and any such r/s ∈  / S with s < Q we have
+                                                 1
+                                       |sξ − r| ≥ vl−1 .
+                                                 2
+                                                    1/(a+ǫ)     1/(a+ǫ)
+On the other hand from (43) we know vl ≫ vl+1        ≫ Ql       . Thus the left hand side
+        −1/(a+ǫ)
+is ≫ Ql          for any r/s ∈
+                             / S with s < Q. The left inequality in (17) follows since
+clearly Ql → ∞ as l → ∞ and ǫ can be taken arbitrarily small. As indicated above, an
+analogous argument starting with a = λext (ξ) yields the right estimate in (17).
+   In the case that S = C is a Cantor set as in the last claim, we now provide the reverse
+of the left estimate of (17) in order to show (18). First assume λint (ξ) =: a ≥ 1. We
+may again assume strict inequality a > 1 as if otherwise a = 1, the claimed estimate is
+a consequence of (17) and (16). This again implies certain convergents satisfy ul /vl ∈ C
+as above. Let Q be an arbitrary, large real number. Let l be the index such that
+vl ≤ Q < vl+1 . Then by Lemma 5.4 we have
+                                         −1
+(44)                              Q−1 > vl+1 ≥ |vl ξ − ul |.
+If ul /vl ∈
+          / C, then since 1 > 1/a we may simply choose r/s = ul /vl . Now assume
+ul /vl ∈ C. Then by (43), for large l additionally to (44) we have
+                                      −1/(a+ǫ)
+                        Q−1/(a+ǫ) ≥ vl+1         ≫ vl−1 ≥ |vl−1 ξ − ul−1 |.
+         ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                                 29
+
+
+
+Combining, for any given natural number N and any 1 ≤ n ≤ N, we have
+              |(vl + nvl−1 )ξ − ul − nul−1 | ≤ |vl ξ − ul | + n|vl−1 ξ − ul−1|
+                                                ≪N max{Q−1 , Q−1/(a+ǫ) } = Q−1/(a+ǫ) .
+Now, from Lemma 5.3 we see that for large N = N(C) and some 1 ≤ n ≤ N the
+expression (ul + nul−1 )/(vl + nvl−1 ) does not belong to C. By the above estimate, as ǫ can
+be chosen arbitrarily small and Q was chosen arbitrary, we verify the reverse inequality
+                                    bext (ξ) ≥ 1 =
+                                    λ
+                                                       1
+                                                             ,
+                                               a    λint (ξ)
+so by (17) we must have equality. Hence (18) holds in this case.
+  Finally assume λint (ξ) < 1. Then we have |qξ − p| ≫ q −1+δ for some δ > 0 and
+any p/q ∈ Q ∩ C. On the other hand, by Dirichlet’s Theorem we know that for any
+parameter Q there is a rational number p/q with q ≤ Q and |qξ − p| ≤ Q−1 ≤ q −1 .
+Combining these observations, for large Q these rationals p/q must lie outside C. Hence
+           b
+bext (ξ) = λ(ξ)
+λ               = 1, where the last identity is Khintchine’s result already mentioned in
+(16). Again we conclude (18).                                                         
+
+   The question arises if we can reverse the argument of the proof to infer ”good” intrinsic
+rational approximations to ξ from ”bad” uniform extrinsic approximation of ξ ∈ C,
+corresponding to a hypothetical inequality like λint (ξ) ≥ 1/λ      bext(ξ) if b
+                                                                               λext (ξ) is small
+                                                           b
+enough (it is in general false by a metrical argument if λext (ξ) = 1). The problem is that
+in the lattice point problem studied above, both successive minima may be throughout
+realized by vectors (mi , ni ) ∈ Z2 that lead to rational numbers mi /ni in C, for i = 1, 2, in
+which case can only infer λint (ξ) ≥ 1. Nevertheless, as this seems to be rather exceptional
+situation that may not occur, the estimate λint (ξ) ≥ 1/λ  bext (ξ) may be true if bλext (ξ) < 1.
+                                                                 bext (ξ)?
+                  bext (ξ) < 1. Does it follow that λint (ξ) ≥ 1/λ
+Problem 5. Assume λ
+
+  We turn towards the verification of Theorem 4.9.
+Proposition 5.6. Let b ≥ 3 an integer and W ( {0, 1, . . . , b − 1}. Assume ξ =
+(0.c1 c2 · · · ck ck+1 · · · cN −1 )b is the base b representation of a rational number. If c1 , . . . , ck+1
+belong to W and cm ∈          / W for some m > k + 1, then ξ ∈      / Cb,W .
+
+Proof. If ξ has a unique base b expansion then the claim follows from cj ∈ / W . If the
+representation is not unique then there are two base b representations of ξ, one ending
+in 0 and the other ending in b − 1. However, since ck+1 ∈ W and cj ∈     / W for some
+j > k + 1 and both letters appear in the period above, clearly ξ is not of this form,
+contradiction.                                                                       
+
+Proof of Theorem 4.9. Clearly any ξ ∈ Q has ultimately periodic base b expansion, and
+the representation of ξ in (19) via ξ = p/q with p, q in (20) is carried out straightforwardly
+as in [5, Lemma 2.3]. Let m = φ(ξ). If m ≤ k+1 so that the first digit ouside W belongs to
+the preperiod or equals the first period digit, then the estimate follows from the elementary
+estimate m ≤ k +1 ≪ log q0 ≪ q0∆ , as discussed in Section 4.4. Thus we may assume m >
+30                                   JOHANNES SCHLEISCHITZ
+
+
+
+k +1. Obviously ξ has distance at most b·b−m from r := c0 b−1 +c1 b−2 +· · ·+cm−1 b−m ∈ Q.
+By definition of m clearly r ∈ Cb,W . On the other hand, by our assumption cm ∈   / W and
+by Proposition 5.6 we have ξ ∈  / Cb,W . Hence, by Theorem 3.4 the rational number ξ has
+                        ∆
+distance at least b−δ0 q0 from any element of C = Cb,W for some uniform δ0 , in particular
+from r. Comparison yields φ(ξ) = m ≪ q0∆ .                                              
+
+Proof of Corollary 4.12. Obviously W1 ⊆ W2 , and if W1 = {0, 1 . . . , b − 1} the claim is
+obvious. Otherwise there is some w ∈/ W1 . If w ∈ W2 , by taking W = {0, 1, . . . , b − 1} \
+{w}, from Theorem 4.9 we get d′ ≥ c(b)·φ1/∆ . We get a contradiction by our assumptions
+on φ, ψ as soon as c1 ≥ c(b)∆ . Hence w ∈
+                                        / W2 , and since w ∈/ W1 was arbitrary the sets
+are equal.                                                                                
+
+
+
+  The author thanks the referee for the careful reading and suggestions for improvement.
+The author further thanks Simon Kristensen, Diego Marques, Nikita Sidorov, Michael
+Coons and Igor Shparlinski for help with references!
+
+                                           References
+ [1] B. Álvarez-Samaniego, W.P. Álvarez-Samaniego, J. Ortiz-Castro. Some existence results on Cantor
+     sets. J. Egyptian Math. Soc. 25 (2017), no. 3, 326–330.
+ [2] S. Baker. An analogue of Khintchine’s theorem for self-conformal sets. to appear in Math. Proc.
+     Cambridge Philos. Soc., arXiv: 1609.04588.
+ [3] V. Ya. Bloshchitsyn. Rational points in m-adic Cantor sets. J. Math. Sci. (N.Y.) 211 (2015), no. 6,
+     747–751.
+ [4] D. Boes, R. Duane, P. Erdös. Fat, symmetric, irrational Cantor sets. Amer. Math. Monthly 88
+     (1981), no. 5, 340–341.
+ [5] R. Broderick, L. Fishman, A. Reich. Intrinsic approximation on Cantor-like sets, a problem of
+     Mahler. Mosc. J. Comb. Number Theory 1 (2011), no. 4, 3–12.
+ [6] N. Budarina, D. Dickinson, J. Levesley. Simultaneous Diophantine approximation on polynomial
+     curves. Mathematika 56 (2010), no. 1, 77–85.
+ [7] Y. Bugeaud. Approximation by algebraic numbers. Cambridge Tracts in Mathematics, 160. Cam-
+     bridge University Press, Cambridge, 2004.
+ [8] Y. Bugeaud. Diophantine approximation and Cantor sets. Math. Ann. 314 (2008), 677–684.
+ [9] D. Dickinson, M. M. Dodson. Simultaneous Diophantine approximation on the circle and Hausdorff
+     dimension. Math. Proc. Cambridge Philos. Soc. 130 (2001), no. 3, 515–522.
+[10] C. Druţu. Diophantine approximation on rational quadrics. Math. Ann. 333 (2005), no. 2, 405–469.
+[11] K. Falconer. Fractal geometry, Mathematical foundations and applications. Third edition. John
+     Wiley & Sons, Ltd., Chichester, 2014.
+[12] L. Fishman, D. Kleinbock, K. Merrill, D. Simmons. Intrinsic Diophantine approximation on mani-
+     folds: General Theory. Trans. Amer. Math. Soc. 370 (2018), no. 1, 577–599.
+[13] L. Fishman, D. Simmons. Intrinsic approximation for fractals defined by rational iterated function
+     systems: Mahler’s research suggestion. Proc. Lond. Math. Soc. (3) 109 (2014), no. 1, 189–212.
+[14] L. Fishman, D. Simmons. Extrinsic Diophantine approximation on manifolds and fractals. J. Math.
+     Pures Appl. 104 (2015), no. 1, 83–101.
+[15] G.H. Hardy, E.M. Wright. An introduction to the theory of numbers. Fifth edition. The Clarendon
+     Press, Oxford University Press, New York, 1979.
+[16] J. E. Hutchinson. Fractals and self-similarity. Indiana Univ. Math. J. 30 (1981), no. 5, 713–747.
+        ON INTRINSIC AND EXTRINSIC RATIONAL APPROXIMATION TO CANTOR SETS                              31
+
+
+
+[17] V. Jarnı́k. Über die simultanen Diophantischen Approximationen. Math. Z. 33 (1931), 505–543.
+[18] A. Y. Khintchine. Über eine Klasse linearer Diophantischer Approximationen. Rendiconti Palermo
+     50 (1926), 170–195.
+[19] N.M. Korobov. Trigonometric sums with exponential functions, and the distribution of the digits in
+     periodic fractions. (Russian) Mat. Zametki 8 (1970), 641–652.
+[20] J. Levesley, C. Salp, S.L. Velani. On a problem of K. Mahler: Diophantine approximation and
+     Cantor sets. Math. Ann. 338 (2007), no. 1, 97–118.
+[21] H. Liebeck, A. Osborne. The Generation of All Rational Orthogonal Matrices. Amer. Math. Monthly
+     98 (1991), no. 2, 131–133.
+[22] K. Mahler. Some suggestions for further research. Bull. Aust. Math. Soc. 29 (1984), 101–108.
+[23] D. Marques, C.G. Moreira. On a variant of a question proposed by K. Mahler concerning Liouville
+     numbers. Bull. Aust. Math. Soc. 91 (2015), no. 1, 29–33.
+[24] R.D. Mauldin, M. Urbański. Dimensions and measures in infinite iterated function systems. Proc.
+     London Math. Soc. (3) 73 (1996), no. 1, 105–154.
+[25] J. Nagy. Rational points in Cantor sets. Fibonacci Quart. 39 (2001), no. 3, 238–241.
+[26] D. Roy, J. Schleischitz. Numbers with almost all convergents in a Cantor set. to appear in Bull.
+     Canad. Math. Soc., arXiv: 1806.02928.
+[27] J. Schleischitz. Generalizations of a result of Jarnı́k on simultaneous approximation. Mosc. J. Com-
+     bin. Number Theory 6 (2016), no. 2-3, 253–287.
+[28] J. Schleischitz. Rational approximation to algebraic varieties and a new exponent of simultaneous
+     approximation. Monatsh. Math. 182 (2017), no. 4, 941–956.
+[29] W. Schmidt, L. Summerer. Parametric geometry of numbers and applications. Acta Arith. 140
+     (2009), no. 1, 67–91.
+[30] N. Sidorov. Combinatorics of linear iterated function systems with overlaps. Nonlinearity 20 (2007),
+     no. 5, 1299–1312.
+[31] C.R. Wall. Terminating decimals in the Cantor ternary set. Fibonacci Quart. 28 (1990), no. 2,
+     98–101.
+

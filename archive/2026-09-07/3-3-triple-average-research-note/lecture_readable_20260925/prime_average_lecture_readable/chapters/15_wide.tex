@@ -1,0 +1,157 @@
+\chapter{位置很多时，为什么还要补一小段}\label{sec:wide}
+\section{看上去接近4p，实际还差一个条件}
+整数下降证明的是
+\[n\ge4p-2+d_p(n).
+\]
+它不是无条件的 $n\ge4p$。例如 $p=761,n=3045=4p+1$，而 $n=3\cdot5\cdot7\cdot29$ 有四个危险素因子。右边要求 $n\ge3046$，差一个位置。
+
+所以即使临界带 $2p<n<4p$ 已全部完成，也不能忘了这个窄缝。我们需要证明宽维数中被旧不等式漏掉的部分也成立。
+
+\section{一个失败的不等式，反而告诉我们有更多资源}
+旧结论已经覆盖所有 $n\ge4p+\lceil\log_2p\rceil$。因此漏掉的只能写成 $n=4p+s$，其中 $s$ 很小。原不等式不成立，又意味着
+\[\omega(n)\ge s+3.
+\]
+也就是说，位置数含很多\emph{不同}素因子。不同素数的乘积长得很快，于是 $n$、进而 $p$ 必须相当大。这给出 $p\ge16s+21$ 等强估计。
+
+这一步改变了我们看剩余参数的方式。不是处理任意 $p,s$，而是处理“$s$ 小，$p$ 被素因子条件逼得很大”的参数。它们有足够的实际副本做一组五步反射；同时欧拉函数足够大，使安全数字有足够密度。
+
+\section{这一讲的七步路线}
+先用同样的见证集中和三行折叠，得到加权核心
+\[(a^{2p},(-2a+rz)^p,(-pz)^r),\qquad r=p+s.
+\]
+这次第一块是 $2p$ 份，不能把它当作两个可随意交换的 $p$ 块去套前一讲的对称公式。我们重新写两套真实返回：一套五步反射和一套保留旧载体的三步反射。比较它们，取得双向剪切和明确同余层。
+
+接下来，来源计数允许一整段安全整数 $q$。其对应的行列式成为环中单位。只要这段及其负数包含超过一半的模 $n$ 单位，每个单位就是两者之比：集合 $S$ 与 $uS$ 都超过半数，必相交，交点给 $u=a/b$。
+
+最后一个返回提供局部平移。模五处的步长可能消失，所以先用另一返回处理五进分量，再用指数CRT处理其余素数而不动刚做好的部分。完整列匹配后，精确送到 $(\epsilon^{2p},(-2\epsilon)^p,0^{p+s})$，在其中的 $4p$ 元零和子系统收尾。
+
+下面保留七步的全部计数。第一次阅读可以先对照这条路线确认每组公式承担哪项任务，再第二遍检查上下界。
+\begin{proposition}[所有n至少4p的配置]\label{prop:wide}
+对 $p\ge5$ 的每个素数，所有 $n\ge4p$ 满足定理\ref{thm:prime}的判据。
+\end{proposition}
+\begin{proof}
+
+\par\noindent\textbf{第一步：剩余范围自动带来足够的容量。}
+由引理\ref{lem:integer-range}，只须考虑
+\begin{equation}\label{eq:tail-range}
+n=4p+s,\quad1\le s<\lceil\log_2p\rceil,\quad d=\omega(n)\ge s+3.
+\end{equation}
+$n$ 奇时至少含四个不同奇素数，$n\ge1155,\varphi(n)\ge480$；$n$ 偶时 $s$ 为正偶数，至少含五个素数，$n\ge2310,\varphi(n)\ge480$。每增加一个不同素因子，最小乘积至少乘 $13$，最小欧拉函数至少乘 $12$。归纳给
+\begin{equation}\label{eq:tail-estimates}
+p\ge16s+21,\qquad \varphi(n)>8\cdot2^d+7s+36.
+\end{equation}
+
+具体地，先以这两个基点归纳得到
+\[
+n\ge65d-111,\qquad \varphi(n)>8\cdot2^d+7d+15.
+\]
+后续最小乘积每增加一项至少乘 $13$，大于第一式右侧的线性增量；
+最小欧拉函数至少乘 $12$，也大于第二式右侧的增量。
+代入 $d\ge s+3$，得到 $n\ge65s+84$，于是
+\[
+p=(n-s)/4\ge16s+21.
+\]
+第二个估计同样由 $7d+15\ge7s+36$ 得到。容斥从而给
+\[(p-1)\varphi(n)/n\ge[\varphi(n)-s-4]/4>2^d-1.
+\]
+故引理\ref{lem:short-choice}的配比选择在这些宽维数仍有效。
+
+
+\par\noindent\textbf{第二步：建立加权三块核心。}
+保护单点 $w$ 及见证，建立两个块，用引理\ref{lem:concentrate}集中 $a-w$ 的支持，再避开 $w$ 建立第三、第四个块。按命题\ref{prop:entry}的见证修复，使前三块不全同余。写 $p=3m+\epsilon$。先混合 $b,c$，再混合 $a,b$，使 $m(a+b+c)+\epsilon a-pd_0$ 在全部危险处非零；各条件至多禁止一个配比。三行折叠后得到 $(A^{2p},B^p,d_0^p,x_1,\ldots,x_s)$ 且 $A-d_0$ 全支持。平均 $p-s$ 份 $A$ 与全部单点，留下 $p+s$ 份 $A$ 作载体；将其余三个 $p$ 块再折叠一次，进入
+\begin{equation}\label{eq:wide-core}
+(a^{2p},(-2a+rz)^p,(-pz)^r),\qquad r=p+s.
+\end{equation}
+本原参数的合法性仍为 $\gcd(a+pz,n)=1$。
+
+
+\par\noindent\textbf{第三步：五次平均组成反射。}
+取 $\epsilon=\pm1$、$p\equiv\epsilon\pmod4$，$t_0=(p-\epsilon)/4,t_1=t_0+s$。对 $t=t_0,t_1$，令 $b=p-s-3t$、$\beta=nt-p^2+ps$。先平均两组 $(A^{p-b-t},B^t,C^b)$，产生 $2p$ 份 $D=(sa+\beta z)/p$，保留 $r$ 份。再平均两组
+\[
+(A^{2h+t-b},B^h,C^{p-2t+b-3h},D^t)
+\]
+及全部余下 $p$ 份。五次操作给 $J_{t,h}/p^2$，其中
+\begin{equation}\label{eq:tail-J}
+J_{t,h}=\begin{pmatrix}\beta&prh-p^2(p-2t+b-3h)+t\beta\\-s&-\beta\end{pmatrix},
+\quad J_{t,h}^2=pf_{t,h}I,
+\end{equation}
+\[
+f_{t,h}=p^3+n[4t^2+(s-2p)t-sh].
+\]
+
+为看清五步构造的库存，第一阶段后旧 $A,B,C$ 分别剩
+$2(b+t),p-2t,r-2b$ 份。留出最终载体后，新值 $D$ 还剩 $p-s$ 份。
+第二阶段要做两组组成相同的平均，所以条件分别是
+\[
+0\le2h\le p-2t,\qquad
+0\le2(p-2t+b-3h)\le r-2b,
+\]
+\[
+0\le2h+t-b\le b+t,\qquad 2t\le p-s.
+\]
+这四项分别限制旧 $B$、旧 $C$、旧 $A$、新 $D$ 的用量。
+将它们合并，容量允许
+\[
+\max(0,\lceil(5p-5s-16t)/6\rceil)\le h\le b.
+\]
+写 $t=t_0+\delta$、$\delta=0,s$，未截断端点差为 $(p+\epsilon-2s-4\delta)/12>2$，且 $b\ge4$；故有相邻 $h,h+1$。代入还得 $b-t\le0$、$b\le(p-2t)/2$，这些不等式正好保证两阶段所有库存约束。
+
+
+\par\noindent\textbf{第四步：第二组反射与共同根理想。}
+保留旧 $A$ 的三步反射为
+\[
+A_j=\begin{pmatrix}0&-d_j\\-1&0\end{pmatrix},\quad d_j=p^2-nj,\qquad
+\lceil(p-s)/6\rceil\le j\le\lfloor(p-s)/4\rfloor.
+\]
+其两重复组各取 $(A^{2j},B^j,C^{p-3j})$，余组取补集，保留 $r$ 份 $A$。因 $p-s\ge36$，可取三个相邻 $j$，记标量 $d_0,d_1,d_2$。对固定 $t$，相邻 $h$ 的标量为 $f,g_t=f-sn$，且互素：$f\equiv p(p-4t)^2\pmod s$，而 $p-4t\equiv\epsilon\pmod s$。
+相邻反射商与 $A_j^{-1}A_{j+1}$ 的交换子给
+\[
+U\left(\frac{\beta_t n^2}{d_1g_t}\right),\qquad
+\gcd(\beta_{t_0},\beta_{t_1})=\gcd(n,5)=g.
+\]
+后式用差为 $ns$、$\gcd(\beta_{t_0},s)=1$ 以及 $\beta_t\equiv p(s-p)\pmod n$。相邻倍率及引理\ref{lem:localize}给 $R_0$，其反演素数来自这些互素标量且不除 $n$。于是有双向 $gn^2R_0$ 根和
+\begin{equation}\label{eq:tail-level}
+\Gamma(M,R_0),\qquad M=g^2n^4.
+\end{equation}
+$R_0$ 含绝对值不同于 $1$ 的相邻标量，所以满足定理\ref{thm:arithmetic-external}的单位条件。保载体返回以 $p-3j=\pm1$ 激活 $p$，第三个 $A$ 的倍率激活 $d_2$。
+
+
+\par\noindent\textbf{第五步：可用数字覆盖足够多的单位。}
+此时已经有深同余群，可以安全地激活与控制层互素的返回的逆。
+我们从位置计数读出一个连续数字区间，证明其安全数字足以生成模 $n$ 单位群。
+一般保留 $A$ 的三步返回为
+\[
+M_{q,j}=\begin{pmatrix}p-q&nj-pq\\-1&0\end{pmatrix},\qquad q=3j+k,
+\]
+其中 $0\le j\le\lfloor p/2\rfloor$、$0\le k\le\lfloor r/2\rfloor$、$\lceil r/2\rceil\le j+k\le p$。这些计数覆盖全部整数区间
+\[
+I=[L,2p-1],\qquad L=r/2+2\ (r\text{偶}),\quad L=(r+9)/2\ (r\text{奇}).
+\]
+固定 $j$ 所给区间为 $[2j+\lceil r/2\rceil,\min(3j+\lfloor r/2\rfloor,2j+p)]$，相邻区间相接即证覆盖。安全 $q$ 的行列式与 $M$ 互素，引理\ref{lem:inverse}和\ref{lem:localize}允许将其加入最终环 $R$，并重建\eqref{eq:tail-level}。由\eqref{eq:tail-estimates}及 $|I|\ge(3n-7s-36)/8$，$I$ 中单位数超过 $\varphi(n)/4$。
+由于 $I\subset(0,n/2)$，区间中的单位及其负数互不重复。
+令它们组成 $S$，则 $|S|>\varphi(n)/2$。
+给定任意单位 $u$，两个集合 $S,uS$ 在大小为 $\varphi(n)$ 的单位群中必相交；
+若 $a=ub$，$a,b\in S$，则 $u=a/b$。
+因此每个模 $n$ 单位是其中两者之比，$R^\times$ 模 $n$ 满射。
+
+
+\par\noindent\textbf{第六步：逐素数调整方向。}
+在 $(z,y)=(z,a+pz)$ 中，$V=J_{t,h}A_j/p^3$ 满足
+\[
+V\equiv U(-5/p)\pmod n,\quad
+\operatorname{tr}V=2-\frac n{p^3}(pt+t^2+ph+sj).
+\]
+若 $n\equiv2\pmod4$，选偶 $h$，则迹为 $2\pmod4$；$4\mid n$ 时自动成立。若 $v_3(n)=1$，规范化平方参数满足
+\[
+\frac c3\equiv\frac{n/3}{p^3}[(p-s)(j+t-h)-5t^2]\pmod3.
+\]
+相邻 $j$ 避开引理\ref{lem:local-cycle}的唯一坏类。若 $5\mid n$，先在 $I$ 选安全 $q\equiv-p\pmod5$；固定该类的容斥主项为 $|I|\rho/4$，误差小于 $2^{d-1}$，而\eqref{eq:tail-estimates}使主项更大。其 $M_{q,j}$ 模 $5$ 给非平凡平移，先完成五进方向；$V\bmod5=I$，随后使其指数为完整五进阶的倍数，再用 CRT 完成其余局部方向。得到 $z/y=0\pmod M$。
+
+\par\noindent\textbf{第七步：匹配尺度并送到含零子系统。}
+单位 $d_1/d_0=1-n/d_0$ 和 $d_2/d_0=1-2n/d_0$ 生成模 $M$ 到模 $n$ 的单位核。奇素数处由二项式展开逐层升位；$n\equiv2\pmod4$ 时第二个单位生成 $1\pmod4$ 的部分，第一个补另一个类。于是 $R^\times$ 模 $M$ 满射。引理\ref{lem:fiber}将列精确送到 $(0,\epsilon)$。最终配置为 $(\epsilon^{2p},(-2\epsilon)^p,0^{p+s})$；选全部非零位置和 $p$ 个零，使用引理\ref{lem:integer-range}已独立证明的 $4p$ 维结论。
+\end{proof}
+
+\section{为什么这个收尾没有绕圈}
+最终调用的是 $4p$ 元判据。它早在整数下降中独立完成，因为 $d_p(4p)=1$，故 $4p\ge4p-2+1$。我们不是用“所有大于等于 $4p$ 已解决”来证明“所有大于等于 $4p$ 已解决”，而是用其中那个先已证明的固定维数 $4p$ 消去所有非零位置。
+
+这种先后关系值得在整份证明里一直保持：先证明一个含零或等块的小工具，后面的矩阵构造只需把状态送进它能处理的范围。

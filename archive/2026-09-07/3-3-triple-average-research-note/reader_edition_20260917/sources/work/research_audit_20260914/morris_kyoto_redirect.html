@@ -1,0 +1,356 @@
+<!doctype html>
+
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Former European Mathematical Information Service (EMIS) Website - zbMATH Open</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=0.1, maximum-scale=5.0">
+        <meta name="robots" content="noarchive">
+        <meta name="referrer" content="origin-when-cross-origin">
+
+        <meta name="google-site-verification" content="rajU_q2g778OOZzPUMiMWtijEk8ZSwGFog8Mei12zek" />
+
+        <link href="https://static.zbmath.org/contrib/bootstrap/v3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen,print">
+        <link href="https://static.zbmath.org/contrib/bootstrap/v3.3.7/css/bootstrap-theme.min.css" rel="stylesheet" media="screen,print">
+        <link href="https://static.zbmath.org/contrib/bootstrap-lightbox/v0.7.0/bootstrap-lightbox.min.css" rel="stylesheet" media="screen,print">
+        <link rel="stylesheet" href="https://static.zbmath.org/contrib/bootstrap-select/v1.13.14/css/bootstrap-select.min.css">
+
+        <link href="/static/css/smoothness/jquery-ui-1.10.1.custom.min.css" rel="stylesheet" media="screen">
+        <link href="/static/styles.css?v=20260608" rel="stylesheet" media="screen,print">
+        <link href="https://static.zbmath.org/zbMathJax/v0.1.45/zbmathjax.css" rel="stylesheet" media="screen,print">
+        <link rel="shortcut icon" href="/static/zbmath.ico">
+        <script type="application/ld+json">
+            {
+              "@context": "http://schema.org",
+              "@type": "Organization",
+              "url": "https://zbmath.org/",
+              "logo": "https://zbmath.org/static/zbMATH.png"
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="line"></div>
+
+        <span id="clear" style="cursor: pointer;">&times;</span>
+
+        <div id="page">
+            <div id="head">
+                <nav id="menu" class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#zbnav" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">
+                                <img class="logo" src="/static/zbmath.gif" alt="zbMATH Open logo">
+                            </a>
+                        </div>
+                        <div id="zbnav" class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav pages">
+                                <li class="about">
+                                    <a href="/about/">About</a>
+                                </li>
+                                <li class="frequently-asked-questions">
+                                    <a href="/faq/">FAQ</a>
+                                </li>
+
+                                    <li class="general-help">
+                                        <a href="/general-help/">General Help</a>
+                                    </li>
+
+                                <li class="reviewer-service">
+                                    <a href="https://zbmath.org/reviewer-service/" target="_self" >Reviewer Service</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/tools-and-resources/">Tools &amp; Resources</a>
+                                </li>
+                                <li class="contact">
+                                    <a href="/contact/">Contact</a>
+                                </li>
+                                
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right prefs">
+                                <li class="preferences dropdown">
+                                    <a data-toggle="dropdown" href="#">Preferences <i class="caret"></i></a>
+                                    <ul class="dropdown-menu preferences">
+                                        <li>
+                                            <form
+                                                id="preferences"
+                                                class="navbar-form"
+                                                method="post"
+                                                action="/preferences/"
+                                                
+                                                    onsubmit="return confirm('This website uses cookies for the purposes of storing preference information on your device. Do you agree to this?\n\nPlease refer to our Privacy Policy to learn more about our use of cookies.')"
+                                                
+                                            >
+                                                <input type="hidden" name="path" value="/emis/?">
+                                                <span class="">
+                                                    <label class="title">Search Form</label>
+                                                    <div class="form-group">
+                                                        <input id="search-multi-line" type="radio" name="search" value="multi-line" checked>
+                                                        <label for="search-multi-line" class="radio">Multi-Line Search (default)</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="search-one-line" type="radio" name="search" value="one-line">
+                                                        <label for="search-one-line" class="radio">One-Line Search</label>
+                                                    </div>
+                                                </span>
+                                                <span class="count">
+                                                    <label class="title">Hits per Page</label>
+                                                    <div class="form-group">
+                                                        <input id="count-10" type="radio" name="count" value="10">
+                                                        <label for="count-10" class="radio">10</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="count-20" type="radio" name="count" value="20">
+                                                        <label for="count-20" class="radio">20</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="count-50" type="radio" name="count" value="50">
+                                                        <label for="count-50" class="radio">50</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="count-100" type="radio" name="count" value="100" checked>
+                                                        <label for="count-100" class="radio">100 (default)</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="count-200" type="radio" name="count" value="200">
+                                                        <label for="count-200" class="radio">200</label>
+                                                    </div>
+                                                </span>
+                                                <span class="format">
+                                                    <label class="title">Display Format</label>
+                                                    <div class="form-group">
+                                                        <input id="format-mathjax" type="radio" name="format" value="mathjax" checked>
+                                                        <label for="format-mathjax" class="radio">MathJax (default)</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="format-amstex" type="radio" name="format" value="latex">
+                                                        <label for="format-amstex" class="radio">LaTeX</label>
+                                                    </div>
+                                                </span>
+                                                <span class="ranking">
+                                                    <label class="title">Documents Sorting</label>
+                                                    <div class="form-group">
+                                                        <input id="documents-ranking-default" type="radio" name="documents_ranking" value="date" checked>
+                                                        <label for="documents-ranking-default" class="radio">Newest first (default)</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="documents-ranking-references" type="radio" name="documents_ranking" value="references">
+                                                        <label for="documents-ranking-references" class="radio">Citations</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="documents-ranking-relevance" type="radio" name="documents_ranking" value="relevance">
+                                                        <label for="documents-ranking-relevance" class="radio">Relevance</label>
+                                                    </div>
+                                                </span>
+                                                <span class="ranking">
+                                                    <label class="title">Authors Sorting</label>
+                                                    <div class="form-group">
+                                                        <input id="authors-ranking-default" type="radio" name="authors_ranking" value="alpha" checked>
+                                                        <label for="authors-ranking-default" class="radio">Alphabetically (default)</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="authors-ranking-references" type="radio" name="authors_ranking" value="references">
+                                                        <label for="authors-ranking-references" class="radio">Citations</label>
+                                                    </div>
+                                                </span>
+                                                <span class="ranking">
+                                                    <label class="title">Serials Sorting</label>
+                                                    <div class="form-group">
+                                                        <input id="serials-ranking-default" type="radio" name="serials_ranking" value="alpha" checked>
+                                                        <label for="serials-ranking-default" class="radio">Alphabetically (default)</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="serials-ranking-references" type="radio" name="serials_ranking" value="references">
+                                                        <label for="serials-ranking-references" class="radio">Citations</label>
+                                                    </div>
+                                                </span>
+                                                <span class="ranking">
+                                                    <label class="title">Software Sorting</label>
+                                                    <div class="form-group">
+                                                        <input id="software-ranking-default" type="radio" name="software_ranking" value="references" checked>
+                                                        <label for="software-ranking-default" class="radio">Citations (default)</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input id="software-ranking-alpha" type="radio" name="software_ranking" value="alpha">
+                                                        <label for="software-ranking-alpha" class="radio">Alphabetically</label>
+                                                    </div>
+                                                </span>
+                                                <button type="submit" class="btn btn-default">OK</button>
+                                                <div class="clearfix">
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="tabs">
+                    <h1 class="logo">
+                        <a class="logo" href="/">
+                            <img
+                            class="logo"
+                                
+                                    src="/static/zbmath.gif"
+                                    alt="zbMATH Open &mdash; the first resource for mathematics"
+                                
+                            >
+                        </a>
+                    </h1>
+                    <nav>
+                        <ul class="nav nav-tabs">
+                            <li class="tab-documents">
+                                <a href="/">Documents</a>
+                            </li>
+                            <li class="tab-authors">
+                                <a href="/authors/">Authors</a>
+                            </li>
+                            <li class="tab-serials">
+                                <a href="/serials/">Serials</a>
+                            </li>
+                            <li class="tab-software">
+                                <a href="/software/">Software</a>
+                            </li>
+                            <li class="tab-classification">
+                                <a href="/classification/">Classification</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="clearfix"></div>
+                </div>
+                
+    <div class="content-shadow"></div>
+
+            </div>
+
+            <div id="body">
+                <div id="main">
+                    <div class="messages">
+                        
+                    </div>
+                    
+    <div class="content-text static">
+        
+    <h2>Notice: Former European Mathematical Information Service (EMIS) Website</h2>
+
+    <p>
+        You have attempted to access a page from the former European
+        Mathematical Information Service (EMIS) website. EMIS was a pioneering
+        online platform that served as a central hub for electronic math
+        resources in Europe and the homepage of the European Mathematical
+        Society (EMS) from 1995 until its eventual integration into other
+        services.
+    </p>
+
+    <p>
+        Over the years, the services provided by EMIS have been gradually
+        integrated into other platforms, resulting in the eventual
+        discontinuation of this website. If you are looking for information on
+        mathematics or the European Mathematical Society, we recommend visiting
+        the following resources:
+
+        <ul>
+            <li>
+                The Homepage of the European Mathematical Society is available
+                at <a href="https://euromathsoc.org/">https://euromathsoc.org/</a>.
+            </li>
+            <li>
+                The Electronic Library of Mathematics (eLibM) has been fully
+                integrated into zbMATH&nbsp;Open. You can access former eLibM
+                serials through their zbMATH&nbsp;Open profile pages:
+                <ul>
+                    <li><a href="/serials/338">Archivum Mathematicum</a></li>
+                    <li><a href="/serials/2204">Documenta Mathematica</a></li>
+                    <li><a href="/serials/2229">ELA. The Electronic Journal of Linear Algebra</a></li>
+                    <li><a href="/serials/2063">ETNA. Electronic Transactions on Numerical Analysis</a></li>
+                    <li><a href="/serials/1957">Electronic Journal of Differential Equations (EJDE)</a></li>
+                    <li><a href="/serials/1828">Journal of Algebraic Combinatorics</a></li>
+                    <li><a href="/serials/2402">Journal of Graph Algorithms and Applications</a></li>
+                    <li><a href="/serials/2512">Journal of Integer Sequences</a></li>
+                    <li><a href="/serials/3352">SIGMA. Symmetry, Integrability and Geometry: Methods and Applications</a></li>
+                    <li><a href="/serials/2248">Séminaire Lotharingien de Combinatoire</a></li>
+                    <li><a href="/serials/2117">Theory and Applications of Categories</a></li>
+                </ul>
+            </li>
+        </ul>
+    </p>
+
+    <p>
+        We appreciate your interest in EMIS and hope that you find our
+        recommendations helpful. For further questions please use our
+        <a href="/contact/">contact&nbsp;form</a>.
+    </p>
+
+    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+            <div id="foot"><div class="copyright">
+                    &copy; 2026
+                    <a target="fiz" href="https://www.fiz-karlsruhe.de/en">FIZ Karlsruhe GmbH</a>
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                    <a href="/legal-notices/">Legal Notices</a>
+                    <a href="/terms-conditions/">Terms &amp; Conditions</a>
+
+                    <div class="info">
+                        <ul class="nav">
+                            <li class="mastodon">
+                                <a href="https://mathstodon.xyz/@zbMATH" target="_blank" class="no-new-tab-icon">
+                                    <img src="/static/mastodon.png" title="zbMATH at Mathstodon (opens in new tab)" alt="Mastodon logo">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix" style="height: 0px;"></div>
+            </div>
+        </div>
+
+        <script src="https://static.zbmath.org/contrib/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://static.zbmath.org/contrib/jquery-caret/1.5.2/jquery.caret.min.js"></script>
+        <script src="/static/js/jquery-ui-1.10.1.custom.min.js"></script>
+        <script src="https://static.zbmath.org/contrib/bootstrap/v3.3.7zb1/js/bootstrap.min.js"></script>
+        <script src="https://static.zbmath.org/contrib/bootstrap-lightbox/v0.7.0/bootstrap-lightbox.min.js"></script>
+        <script src="https://static.zbmath.org/contrib/retina/unknown/retina.js"></script>
+        <script src="https://static.zbmath.org/contrib/bootstrap-select/v1.13.14/js/bootstrap-select.min.js"></script>
+        
+        <script>
+            var SCRIPT_ROOT = "";
+        </script>
+        <script src="/static/scripts.js?v=20260302"></script>
+
+        <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#MathInput").stop(true, true).keyup(function() {
+                        $.ajax({
+                            url: "/mwsq/",
+                            type: "POST",
+                            data: { query : $("#MathInput").val() },
+                            dataType: "text"
+                        })
+                        .done(function(xml) {
+                            $("#MathPreview").html(xml);
+                            $(window).resize();
+                        });
+                    });
+                    var press = jQuery.Event("keyup");
+                    press.ctrlKey = false;
+                    press.which = 40;
+                    $("#MathInput").trigger(press);
+                });
+            </script>
+        <div id="new_tab_icon" style="display: none">&nbsp;<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span><span class="sr-only">(opens in new tab)</span></div>
+    <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3ac9e9999caf7b7',t:'MTc4OTM1OTg0MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,0 +1,139 @@
+\chapter{从剪切到精确同余输送}\label{ch:congruence}
+
+\section{把无限问题集中到一个同余类内}
+本讲的目标不是列出所有可实现矩阵，而是得到一个足够大的、结构明确的子群：
+\[
+\Gamma(q,R)=\{g\in\SL_2(R):g\equiv I\pmod{qR}\}.
+\]
+它称为层 $q$ 的主同余子群。层越深，要求越强；例如当 $q\mid q'$ 时，
+$\Gamma(q',R)\subseteq\Gamma(q,R)$。
+一个矩阵属于这个群，意味着它在模 $q$ 的有限数据上没有变化，却仍可能大幅改变实际有理参数。
+
+为什么这恰好有用？本讲将证明：两个本原参数列只要模 $q$ 相同，
+就能由这个群中的一个矩阵\emph{精确}连接。
+于是，找到一个真实可实现的主同余子群以后，无穷多有理数值只留下有限的剩余类问题。
+
+\section{本讲引用的两个算术群定理}
+有限指数是指一个子群只有有限多个陪集。
+这与“模某个数的像很大”是两个不同层次的陈述。
+以下第一个外部定理保证完整剪切群足够大，第二个保证有限指数群包含主同余子群。
+这里 $D>1$ 非常关键：它使 $\Z[1/D]$ 有无限多个单位。
+
+\begin{theorem}[Morris；Serre]\label{thm:arithmetic-external}
+设 $D>1$、$R=R_D$。对于 $\SL_2(R)$ 的任一有限指数子群 $H$：
+\begin{enumerate}
+\item $H$ 中的上下初等矩阵生成 $H$ 的一个有限指数子群；
+\item $H$ 包含某个非零层的主同余子群 $\Gamma(q,R)$。
+\end{enumerate}
+\end{theorem}
+第一项为\cite[Theorem 6.1(2)]{morris}的二维无限单位特例。第二项用\cite{serre}在 $S=\{\infty\}\cup\{\ell:\ell\mid D\}$ 上的结论：$|S|>1$ 且包含实处，同余核平凡。此版本的陈述见\cite[pp.308--309, Proposition 1 and Section 2.3]{prasad}。
+
+
+\section{为什么可以指定层为平方}
+两个外部定理起初只给出“存在某个层”。后面的构造需要知道控制模数的素因子，
+所以还要做一次有限环消元，把未知层换成由根参数决定的 $h^2$。
+以下证明中的模 $q$ 逆元只用来选择剪切参数的剩余类；最后会把参数提升回 $R$。
+因此不会把有限环中的单位误当成 $R$ 中的单位。
+
+\begin{lemma}[两条根生成一个确定的同余层]\label{lem:deep}
+若 $D>1$、$h\ne0$，则
+\[
+\Gamma(h^2,R_D)\subseteq\langle U(hR_D),L(hR_D)\rangle.
+\]
+\end{lemma}
+\begin{proof}
+
+\par\noindent\textbf{先得到一个未知深层。}
+记右侧为 $H$。将第一个外部定理用于有限指数子群 $\Gamma(h,R)$：
+它包含的上下初等矩阵恰是参数在 $hR$ 中的剪切，故 $H$ 有限指数。
+定理\ref{thm:arithmetic-external}先给出 $H$ 有限指数，再给出 $\Gamma(q_0,R_D)\subseteq H$。令 $q=h^2q_0$、$B=R_D/qR_D$。
+
+\par\noindent\textbf{在有限环中找单位主元。}
+对 $g=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)\in\Gamma(h^2,R_D)$ 的模 $q$ 像，用 CRT 选 $k\in B$，使 $u=a+hkc$ 为单位：剩余特征整除 $h$ 时 $a=1$；其余分量若 $c\ne0$ 只排除一个 $k$ 类，若 $c=0$ 则 $a$ 已为单位。置 $v=b+hkd$，有
+\[
+g=U(-hk)L(c/u)\diag(u,u^{-1})U(v/u).
+\]
+
+从 $g\equiv I\pmod{h^2}$ 可知 $c\in h^2B$、$b\in h^2B$，
+而 $v=b+hkd\in hB$。于是上式两侧的非对角消元都已经使用 $hB$ 中的参数。
+还需拆开对角矩阵。由于 $u-1\in h^2B$，取 $t\in hB$ 使 $ht=u-1$。恒等式
+\[
+\diag(u,u^{-1})=U(h)L(t)U(-h/u)L(-tu)
+\]
+把中间项也分解为参数属于 $hB$ 的根。
+\par\noindent\textbf{回到真实参数。}
+约化 $hR_D\to hB$ 满射，因而可把有限个剪切参数逐个提升。
+提升各参数至 $hR_D$，得到 $e\in H$ 与 $g$ 模 $q$ 相同。于是 $e^{-1}g\in\Gamma(q,R_D)\subseteq H$。
+\end{proof}
+
+
+\section{只有一条根时，如何制造另一条}
+若 $J$ 把第一坐标轴送到另一条直线，则共轭 $JU(t)J^{-1}$ 的固定方向也随之改变。
+这叫作横向返回。把两条不同直线选作新基，两个剪切就成为标准上、下剪切。
+但新基未必是 $R$ 上的幺模基；其逆矩阵可能增加分母。
+因此下面的层不是直接写成 $h^2$，而要乘一个明确的 $g^3$。
+
+\begin{lemma}[横向返回与换基的分母损失]\label{lem:transverse}
+假设 $U(hR)$ 以及 $J,J^{-1}$ 可实现，其中 $J=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)\in M_2(R)$、$c\det J\ne0$。写 $c=g\epsilon$、$\epsilon\in R^\times$、$g\in\Z\setminus\{0\}$。则 $\Gamma(g^3h^2,R)$ 可实现。若有多个这样的 $g_i$，可将其层合并为 $\gcd(g_i)^3h^2$。
+\end{lemma}
+\begin{proof}
+令 $P=(e_1,Je_1)=\left(\begin{smallmatrix}1&a\\0&c\end{smallmatrix}\right)$。相乘得
+\[
+P^{-1}U(t)P=U(ct),\qquad
+P^{-1}JU(t)J^{-1}P=L(-ct/\det J).
+\]
+取 $t=hs$ 和 $t=\det J\,hs$，在 $P$ 基下得到两条完整 $ghR$ 根。引理\ref{lem:deep}给 $P\Gamma(g^2h^2,R)P^{-1}$。
+因 $P,gP^{-1}$ 整于 $R$，若 $\gamma=I+g^3h^2X$，$X\in M_2(R)$，则
+\[
+P^{-1}\gamma P-I
+=g^2h^2\,(gP^{-1})XP
+\]
+各项都属于 $g^2h^2R$，并且行列式仍为 $1$。
+故 $P^{-1}\gamma P\in\Gamma(g^2h^2,R)$，证明该共轭群包含 $\Gamma(g^3h^2,R)$。
+这个换基只用于论证群的包含关系，不需要把 $P$ 本身实现为平均词。
+合并时先约化到各层的公倍数。在每个素数幂分量上，主同余条件嵌套，两个像生成较浅的条件；CRT 及初等矩阵提升给出各分量的乘积。接上已知公倍数层的核，即得最大公因子层。
+\end{proof}
+
+
+\section{本原列的精确纤维}
+列 $v=(v_1,v_2)^T\in R^2$ 称为本原的，是指存在 $a,b\in R$ 使 $av_1+bv_2=1$。
+在整数环上，这就是两坐标最大公因子为 $1$。
+本原列可以补成行列式为 $1$ 的二阶矩阵，例如用裴蜀系数构造第二列。
+下面的证明对两列采用相容的补法，因此所得运输矩阵还模 $q$ 为单位矩阵。
+
+\begin{example}[同余相同，实际数值可以相差很大]
+取 $v=(1,0)^T$、$w=(1,q)^T$，两者模 $q$ 相同。
+下剪切 $L(q)$ 已经把 $v$ 精确送到 $w$。
+一般本原列可能没有这么直接的一个剪切，但下一个引理保证某个 $\Gamma(q,R)$ 元素总能完成。
+\end{example}
+
+\begin{lemma}[相同剩余类中的精确输送]\label{lem:fiber}
+若 $v,w\in R^2$ 本原且 $v\equiv w\pmod q$，则存在 $\gamma\in\Gamma(q,R)$ 使 $\gamma v=w$。
+\end{lemma}
+\begin{proof}
+取 $x$ 使 $\det(v,x)=1$，写 $\det(w,x)=1+qk$。
+写 $w=(w_1,w_2)^T$，则 $\det(w,z)=w_1z_2-w_2z_1$。
+因为 $w_1,w_2$ 生成整个 $R$，这个线性式能够取到任意环元素。
+也就是说，本原性使 $z\mapsto\det(w,z)$ 满射，故取 $z$ 使其值为 $-k$。令 $y=x+qz$，则 $(w,y)\equiv(v,x)\pmod q$，两矩阵行列式皆为 $1$。取 $\gamma=(w,y)(v,x)^{-1}$。
+\end{proof}
+
+
+\section{深同余群建立以后，更多逆会自动出现}
+此前每个可逆返回都要专门寻找标量周期。
+现在如果某个行列式一返回在有限商中的阶为 $m$，那么它的 $m$ 次幂已落入可实现的主同余群，
+可以用该群中的逆来补偿。这就给出原返回的逆。
+整数行列式不为 $1$ 时，下面用 Smith 标准形和中国剩余定理作同样的补偿。
+
+Smith 标准形说：通过整数可逆的行、列变换，满秩二阶整数矩阵可以对角化。
+本证明只借它找到一个乘积被行列式整除的矩阵；
+这些行列变换本身无须成为平均操作。
+
+\begin{lemma}[获得深同余群以后的正向逆]\label{lem:inverse}
+若 $\Gamma(q,R)$ 可实现，则每个可实现 $Z\in\SL_2(R)$ 的逆可实现。若整数满秩返回 $A$ 满足 $\gcd(\det A,q)=1$，则 $A^{-1}$ 亦有射影实现。
+\end{lemma}
+\begin{proof}
+第一项取 $m$ 使 $Z^m\equiv I\pmod q$，用 $Z^{-1}=Z^{m-1}(Z^m)^{-1}$。
+第二项取偶数 $m$ 使 $P=A^m\equiv I\pmod q$，令 $\Delta=\det P>0$。选 $L,R'\in\SL_2(\Z)$ 使 $LPR'=\diag(a,b)$、$ab=\Delta$。置 $J_0=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)$、$g_*=R'J_0L$，则 $Pg_*P$ 各项被 $\Delta$ 整除。
+利用 CRT 及 $\SL_2(\Z)$ 对有限模数的满射，取 $g\equiv g_*\pmod\Delta$、$g\equiv I\pmod q$。则 $H=\Delta^{-1}PgP\in\Gamma(q,\Z)$，而 $gPH^{-1}=\Delta P^{-1}$。接上 $A^{m-1}$ 得结论。所用约化满射由有限局部环上的初等消元、CRT 和整数参数提升得到。
+\end{proof}
+

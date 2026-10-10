@@ -1,0 +1,186 @@
+{
+  "index": 20,
+  "query": "control Lyapunov discrete switching",
+  "url": "https://api.openalex.org/works?filter=title.search%3Acontrol+Lyapunov+discrete+switching&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 30,
+  "results": [
+    {
+      "id": "https://openalex.org/W2120092576",
+      "title": "Relaxed Stabilization Criteria for Discrete-Time T–S Fuzzy Control Systems Based on a Switching Fuzzy Model and Piecewise Lyapunov Function",
+      "date": "2007-05-25",
+      "doi": "https://doi.org/10.1109/tsmcb.2006.887434",
+      "citations": 139,
+      "authors": [
+        "Wen-June Wang",
+        "Ying-Jen Chen",
+        "Chung-Hsun Sun"
+      ],
+      "abstract": "In this paper, two new relaxed stabilization criteria for discrete-time T-S fuzzy systems are proposed. In the beginning, the operation state space is divided into several subregions, and then, the T-S fuzzy system is transformed to an equivalent switching fuzzy system corresponding to each subregion. Consequently, based on the piecewise Lyapunov function, the stabilization criteria of the switching fuzzy system are derived. The criteria have two features: 1) the behavior of the two successive states of the system is considered in the inequalities and 2) the interactions among the fuzzy subsystems in each subregion Sj are presented by one matrix Xj. Due to the above two features, the feasible solutions of the inequalities in the criteria are much easier to be found. In other words, the criteria are much more relaxed than the existing criteria proposed in other literature. The proposed conditions in the criteria and the fuzzy control design can be solved and achieved by means of linear matrix inequality tools. Two examples are given to present the superiority of the proposed criteria and the effectiveness of the fuzzy controller's design, respectively.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/tsmcb.2006.887434",
+          "pdf": null,
+          "source": "IEEE Transactions on Systems Man and Cybernetics Part B (Cybernetics)"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17550111",
+          "pdf": null,
+          "source": "PubMed"
+        }
+      ],
+      "reference_count": 10
+    },
+    {
+      "id": "https://openalex.org/W2091390230",
+      "title": "Design of stabilizing switching control laws for discrete- and continuous-time linear systems using piecewise-linear Lyapunov functions",
+      "date": "2002-01-01",
+      "doi": "https://doi.org/10.1080/00207170210151076",
+      "citations": 67,
+      "authors": [
+        "Xenofon Koutsoukos",
+        "Panos J. Antsaklis"
+      ],
+      "abstract": "In this paper, the stability of switched linear systems is investigated using piecewise linear Lyapunov functions. In particular, we identify classes of switching sequences that result in stable trajectories. Given a switched linear system, we present a systematic methodology for computing switching laws that guarantee stability based on the matrices of the system. In the proposed approach, we assume that each individual subsystem is stable and admits a piecewise linear Lyapunov function. Based on these Lyapunov functions, we compose 'global' Lyapunov functions that guarantee stability of the switched linear system. A large class of stabilizing switching sequences for switched linear systems is characterized by computing conic partitions of the state space. The approach is applied to both discrete-time and continuous-time switched linear systems.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1080/00207170210151076",
+          "pdf": "https://www.tandfonline.com/doi/abs/10.1080/00207170210151076",
+          "source": "International Journal of Control"
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.27.1750",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.5.2236",
+          "pdf": null,
+          "source": null
+        }
+      ],
+      "reference_count": 36
+    },
+    {
+      "id": "https://openalex.org/W2784022429",
+      "title": "Stabilization and control Lyapunov functions for language constrained discrete-time switched linear systems",
+      "date": "2018-03-28",
+      "doi": "https://doi.org/10.1016/j.automatica.2018.03.039",
+      "citations": 37,
+      "authors": [
+        "Mirko Fiacchini",
+        "Marc Jungers",
+        "Antoine Girard"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://doi.org/10.1016/j.automatica.2018.03.039",
+          "pdf": null,
+          "source": "Automatica"
+        },
+        {
+          "url": "https://hal.science/hal-01677493",
+          "pdf": null,
+          "source": "HAL (Le Centre pour la Communication Scientifique Directe)"
+        }
+      ],
+      "reference_count": 31
+    },
+    {
+      "id": "https://openalex.org/W2791637241",
+      "title": "Stability and control of discrete‐time switched systems via one‐step ahead Lyapunov function approach",
+      "date": "2018-02-07",
+      "doi": "https://doi.org/10.1049/iet-cta.2017.1026",
+      "citations": 18,
+      "authors": [
+        "Jiwei Wen",
+        "Sing Kiong Nguang",
+        "Peng Shi",
+        "Xudong Zhao"
+      ],
+      "abstract": "This study concerns the problems of stability and control for a class of discrete‐time switched systems by introducing a one‐step ahead Lyapunov function (LF) approach. The one‐step ahead LF is a function of future states. The design objectives are to reduce the conservatism of the stability criterion developed for arbitrarily switched systems and further get a better disturbance attenuation capability. The distinguishing feature is that the one‐step ahead LF has no structural constraint, such as, diagonal structure, and the resulting analysis and synthesis criteria can cover the non‐monotonic method considering two samples variation, i.e. or as a special case. The obtained results can be easily extended to the multi‐step ahead case. Numerical examples are included to demonstrate the effectiveness of the developed method.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1049/iet-cta.2017.1026",
+          "pdf": null,
+          "source": "IET Control Theory and Applications"
+        },
+        {
+          "url": "https://vuir.vu.edu.au/37664/",
+          "pdf": null,
+          "source": "Victoria University Research Repository (Victoria University)"
+        },
+        {
+          "url": "http://hdl.handle.net/2440/118341",
+          "pdf": null,
+          "source": "Adelaide Research & Scholarship (AR&S) (University of Adelaide)"
+        }
+      ],
+      "reference_count": 31
+    },
+    {
+      "id": "https://openalex.org/W2851684937",
+      "title": "Switching between Limit Cycles in a Model of Running Using Exponentially Stabilizing Discrete Control Lyapunov Function",
+      "date": "2018-06-01",
+      "doi": "https://doi.org/10.23919/acc.2018.8431123",
+      "citations": 16,
+      "authors": [
+        "Pranav A. Bhounsule",
+        "Ali Zamani",
+        "Jason Pusey"
+      ],
+      "abstract": "This paper considers the problem of switching between two periodic motions, also known as limit cycles, to create agile running motions. For each limit cycle, we use a control Lyapunov function to estimate the region of attraction at the apex of the flight phase. We switch controllers at the apex, only if the current state of the robot is within the region of attraction of the subsequent limit cycle. If the intersection between two limit cycles is the null set, then we construct additional limit cycles till we are able to achieve sufficient overlap of the region of attraction between sequential limit cycles. Additionally, we impose an exponential convergence condition on the control Lyapunov function that allows us to rapidly transition between limit cycles. Using the approach we demonstrate switching between 5 limit cycles in about 5 steps with the speed changing from 2 m/s to 5 m/s.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.23919/acc.2018.8431123",
+          "pdf": null,
+          "source": null
+        }
+      ],
+      "reference_count": 19
+    },
+    {
+      "id": "https://openalex.org/W2221190963",
+      "title": "Dynamic output feedback H∞ control for switched T–S fuzzy systems via discretized Lyapunov function technique",
+      "date": "2015-12-18",
+      "doi": "https://doi.org/10.1016/j.neucom.2015.12.016",
+      "citations": 18,
+      "authors": [
+        "Ding Zhai",
+        "An‐Yang Lu",
+        "Jiuxiang Dong",
+        "Qingling Zhang"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://doi.org/10.1016/j.neucom.2015.12.016",
+          "pdf": null,
+          "source": "Neurocomputing"
+        }
+      ],
+      "reference_count": 55
+    },
+    {
+      "id": "https://openalex.org/W3183308574",
+      "title": "A multiple convex Lyapunov function for asynchronous control of discrete-time switched systems",
+      "date": "2021-07-19",
+      "doi": "https://doi.org/10.1177/01423312211026547",
+      "citations": 9,
+      "authors": [
+        "Jiahao Cui",
+        "Ruihua Wang",
+        "Shumin Fei"
+      ],
+      "abstract": "In this paper, the problem of asynchronous control for a class of discrete-time switched systems is investigated under mode-dependent integrated dwell time (MDIDT) switching. By constructing a time-dependent convex function, a multiple convex Lyapunov function (MCLF) is firstly proposed for the asynchronous control of the switched systems. Under the MDIDT switching strategy, the matching interval is divided reasonably, and the convex function combination is constructed on the partitioned interval. Under asynchronous switching, the Lyapunov function is continuous when the subsystem mode is switched, but discrete when the controller mode is changed. Then, the increase of the Lyapunov function in the mismatched interval will be offset by the attenuation in the matched interval. In light of these merits, the stability results of the system are deduced, and the asynchronous controller is devised to guarantee the globally uniformly exponentially stability of the closed-loop system. Comparing with the traditional asynchronous control methods, the proposed method has less conservative results and larger stability regions. Finally, a numerical example and an application example are demonstrated to verify the validity and superiority of the asynchronous control scheme.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1177/01423312211026547",
+          "pdf": null,
+          "source": "Transactions of the Institute of Measurement and Control"
+        }
+      ],
+      "reference_count": 31
+    }
+  ]
+}

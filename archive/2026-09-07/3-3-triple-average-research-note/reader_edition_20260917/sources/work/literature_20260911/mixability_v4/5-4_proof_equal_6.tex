@@ -1,0 +1,63 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+%\subsection{Proof for $n$ equal 6}
+%\label{subsec: proof for n equal 6}
+
+We now sketch the proof that Condition~$\MixCond$ in 
+Theorem~\ref{thm: miscibility characterization}(a) is sufficient 
+for perfect mixability when $n=6$. This proof can be obtained by
+modifying the proof for $n=5$ in Section~$\ref{subsec: proof for n equal 5}$.
+This modification takes advantage of the fact that the proof for $n=5$
+relies on $n=5$ having only one odd prime factor, which is also true for $n=6$.
+As for $n=5$, Lemma~$\ref{lem: at most one mod-unsafe pairs}$(a) and~(c)
+hold also for $n=6$ (with $\barp = \braced{3}$).
+
+The overall structure of the argument is identical.
+Let $C\cup \braced{\mu} \ingroundset \integers$ be the given configuration
+satisfying Condition~{\MixCond}.
+If $C$ is perfectly mixed, we are done.
+Otherwise, construct $\intermC$ as in Section~\ref{subsec: proof for n greater-equal than 7}
+and take $E = \intermC$. We then repeatedly mix (I')-safe pairs in $E$ until it becomes near-final,
+which can be perfectly mixed using Lemma~\ref{lem: mixability for near-final}.
+
+The definition of Invariant~(I') (and thus the corresponding concept of (I')-safe pairs) 
+is adjusted in a natural way:
+Condition~(I.2) now requires $E$ to be 3-incongruent.
+Further, a configuration $A$ is now called \emph{blocking} if $A=\braced{4:a_1,a_2,a_3}$
+where $a_1\neq\half(a_2+a_3)$ and $a_1$ has parity different than $a_2,a_3$.
+
+Given a configuration $E$ that satisfies Invariant~(I'), we 
+identify an (I')-safe pair in $E$ using appropriate analogues of 
+Lemmas~\ref{lem: m = 3, preserves invariant, n = 5}, 
+\ref{lem: m = 4, preserves invariant, n = 5},
+and \ref{lem: m = 5, preserves invariant, n = 5} (with the last lemma extended to cover the
+case when $\nofconcentrations{E} = 6$). Intuitively, these proofs are now in fact easier,
+because there are more choices for (I')-safe pairs.
+
+Here is one possible way to adapt these proofs, essentially by reducing the argument to the case
+for $n=5$. Instead of $E$, consider the configuration $\tildeE = E -\braced{\tildee}$ 
+where $\tildee\in E$ is a concentration with maximum multiplicity. Then
+$\nofdroplets{\tildeE}=5$, and $E$ is non-blocking (for $n=6$) if and only if $\tildeE$ is
+non-blocking (for $n=5$).
+We now apply the analysis from Lemmas~\ref{lem: m = 3, preserves invariant, n = 5}, 
+\ref{lem: m = 4, preserves invariant, n = 5},
+and \ref{lem: m = 5, preserves invariant, n = 5} to identify an (I')-safe mixing pair for $\tildeE$ 
+(except that we maintain $3$-incongruence instead of $5$-incongruence,
+since the only odd prime factor of $6$ is $3$). We then use this pair for $E$.
+
+There is one case where this suggested adaptation of the proof needs a modification,
+namely Case~1.1 in Lemma~\ref{lem: m = 3, preserves invariant, n = 5}.
+In this case we have $E=\braced{3:e_1, 2:e_2, e_3}$, so $\tildee = e_1$ and 
+$\tildeE = \braced{2:e_1, 2:e_2, e_3}$.
+We also have that $e_1$ and $e_2$ are even, and
+the proof uses the fact that $\half(e_1+e_2) = e_3$ implies that $\tildeE$ is near-final,
+and thus $(e_1,e_2)$ is a near-final pair.
+However, this implication is not true for $E$.
+Nevertheless, pair $(e_1,e_2)$ is (I')-safe for $n=6$ even if $\half(e_1+e_2)= e_3$,
+by applying Lemma~\ref{lem: at most one mod-unsafe pairs}(c) to show that after mixing
+condition~(I.2) holds, and using the fact that the new configuration has two non-singletons $e_1$ and $e_3$
+to show that condition~(I.1') holds.
+
+

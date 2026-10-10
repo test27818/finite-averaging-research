@@ -1,0 +1,45 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[xetex,margin=27mm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+\setCJKsansfont{Microsoft YaHei}
+\setCJKmonofont{SimSun}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,fancyvrb}
+\usepackage[unicode,bookmarks=false,colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\F}{\mathbb F}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\cont}{\operatorname{cont}}
+\newcommand{\Um}{\operatorname{Um}}
+\newcommand{\ord}{\operatorname{ord}}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{proposition}[theorem]{命题}
+\newtheorem{corollary}[theorem]{推论}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{remark}[theorem]{注}
+\renewcommand{\proofname}{证明}
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\contentsname}{目录}
+\renewcommand{\refname}{参考文献}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{1}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt}
+\emergencystretch=2em
+\title{素数元平均的算术判据与最优最终阈值}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+一次 $p$ 平均把有理配置中任意 $p$ 个位置同时替换为其算术平均。对非恒定输入，减去全局均值并取本原整数代表 $X$，记 $G(X)=\gcd_{i<j}|X_i-X_j|$。本文证明：若 $p$ 为奇素数且位置数 $n\ge2p+1$，有限步达到全等的充要条件是 $G(X)$ 为 $p$ 的幂；在 $n=2p$ 存在满足 $G=1$ 的不可达配置，因此最终阈值恰为 $2p+1$。证明结合整数能量下降、等值块上的矩阵作用及 $\SL_2$ 的同余子群性质。部分小参数构造使用精确有限证书，包括五平均和七平均的碰撞分类、七平均二十二元的有限轨道及三平均十元的二次覆盖。二平均的相应阈值为 $4$。
+\end{abstract}
+\tableofcontents

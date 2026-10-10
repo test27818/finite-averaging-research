@@ -1,0 +1,3020 @@
+{
+  "schema_version": 1,
+  "updated": "2026-09-17",
+  "scope": "Curated navigation and state ledger, not a formal proof database or independent mathematical audit.",
+  "legacy_manifest": "work/verification_manifest.json",
+  "source_policy": "Original proof sources retained; local research author proofs are not promoted to independently audited results.",
+  "topic_notes": {
+    "triple": "先读TRIPLE-ALL完整直接链，再读SEVEN-GEOMETRY与GEOMETRY-ALL-N。统一解释不是另一份已经完成的纯模曲线证明。",
+    "prime": "原可达性定理已经完成。先看参数覆盖表，区分共同形状、共同收尾、统一启动和已独立审核；表内大参数替代行可与基线行重叠，不是新的互斥证明划分。全参数资源供应可走纤维比较、改变来源或状态相关准备，退化出口不是唯一关卡。",
+    "subcritical": "先读SUBCRITICAL-COMPLETE最新一般p稿：p至2p都有统一整数补集判定，p+2为强制递归且最短可求；p+3以后一般位长多项式界未得。五元静态算术分类与固定D逃逸另列，不要把已解可判定性重开。",
+    "composite": "保留GRH条件，分清单个维数、首个非自动G点和最终阈值。此前会话的暂停安排不自动约束新用户任务。",
+    "algorithms": "存在性、构造、最短性、计时和搜索失败必须分别报告；一条固定输入路径可以精确重放，但不承载无穷量词。",
+    "interfaces": "跨主题先读这些共同工具和反例边界。历史文中方法的限制可以仍有效，原可达性目标却可能已经由其他路线完成。"
+  },
+  "overview": [
+    {
+      "claim": "TRIPLE-ALL"
+    },
+    {
+      "claim": "PRIME-TOTAL"
+    },
+    {
+      "claim": "PRIME-NATURAL-UNIFICATION"
+    },
+    {
+      "claim": "FIVE-SUMMARY"
+    },
+    {
+      "claim": "FIVE-ESCAPE-OPEN"
+    },
+    {
+      "claim": "SIX-EXPLICIT"
+    },
+    {
+      "claim": "SEVEN-GEOMETRY"
+    },
+    {
+      "claim": "COMPOSITE-FRONTIER"
+    },
+    {
+      "claim": "ALG-LENGTH"
+    }
+  ],
+  "claims": [
+    {
+      "id": "TRIPLE-ALL",
+      "title": "三平均 n≥7 的完整G判据",
+      "topic": "triple",
+      "status": "proved-source",
+      "scope": "非全等输入中心化、本原化后，可达全等 ⇔ G为3幂。n≥11同一双三重直接证明，接7—10基例。",
+      "boundary": "判定已解决；不等于最短路径或可变n统一多项式构造长度已解决。",
+      "documents": [
+        "outputs/triple_average/proofs/triple_average_all_dimensions_double_triple_invariant.md"
+      ],
+      "depends_on": [
+        "TRIPLE-BASES",
+        "G-OBSTRUCTION"
+      ],
+      "related": [
+        "GEOMETRY-ALL-N",
+        "ALG-LENGTH"
+      ],
+      "updates": [],
+      "verification_ids": [
+        "all-dimensions-double-triple-invariant"
+      ],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "三平均 任意n 已证明",
+        "一位额外三进精度 双三重",
+        "direct double triple"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/triple_average/proofs/triple_average_all_dimensions_double_triple_invariant.md": "d5a34e5fba499ead6ac2609b84eea95907081aab395c2a53b9576d5ed2ff026f"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "TRIPLE-BASES",
+      "title": "三平均7、8、9、10基例与适用范围",
+      "topic": "triple",
+      "status": "proved-source",
+      "scope": "7元已有无十八词覆盖的结构证明；8元Euclid下降；9元三幂网络；10元精确局部—实宏覆盖。",
+      "boundary": "不能将10元有限证书说成全凭几何；七元新版不依赖旧十八词搜索。",
+      "documents": [
+        "outputs/triple_average/proofs/triple_average_seven_eight_complete.md",
+        "outputs/triple_average/proofs/triple_average_ten_complete.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "SEVEN-STRUCTURE"
+      ],
+      "updates": [],
+      "verification_ids": [
+        "n7-n8-complete",
+        "n10-complete"
+      ],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "七元 八元 九元 十元 基例"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/triple_average/proofs/triple_average_seven_eight_complete.md": "4ec62f19f9508ca56dd78bd7e157ff3524d0c917f914c740c041ff7f4e835ac7",
+        "outputs/triple_average/proofs/triple_average_ten_complete.md": "08818f4f5b56e9e2c60d5630fe5d9d6189c819a5c6c2772286fe27597933fdf2"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "SEVEN-STRUCTURE",
+      "title": "七元：真实正向逆与完整 Γ₀(7) 控制",
+      "topic": "triple",
+      "status": "proved-source",
+      "scope": "两步安全入口、三种实际返回的标量周期、根群与八陪集改写、合法单尖点轨道和四步尾部。",
+      "boundary": "七元作为全系统才共享目标均值；嵌入较大系统不可免费当作全局射影逆。",
+      "documents": [
+        "outputs/prime_arity/examples/seven_exact_threshold_structure.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "SEVEN-GEOMETRY",
+        "WINDOW-MEAN"
+      ],
+      "updates": [],
+      "verification_ids": [
+        "seven-endpoint-structure"
+      ],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "3平均7元 Gamma0(7) 正向周期 18词"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/prime_arity/examples/seven_exact_threshold_structure.md": "c4b58f93763da8ce13c616712fa8d6fdcf1d06a195e97b83d8304163020288ee"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "G-OBSTRUCTION",
+      "title": "G的障碍模、Smith余核与目标饱和",
+      "topic": "interfaces",
+      "status": "proved-local",
+      "scope": "O_p(X)=坐标R理想/差分R理想；其阶为G非p部分，沿操作有逆向满射。复制稳定条件对所有n成立。",
+      "boundary": "G不是保持不变的动态量；新障碍可以产生。目标可达性不能扩大成任意运输矩阵分解。",
+      "documents": [
+        "research/prime_arity_padic/G_as_obstruction_group_and_stable_threshold_20260916.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "STABILIZATION",
+        "GEOMETRY-ALL-N"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_G_obstruction_group.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/G_obstruction_group_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "G条件 仿射格 obstruction Smith 判别群"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/G_as_obstruction_group_and_stable_threshold_20260916.md": "0586abaf5383d9eddaf18b0dbe224aa1ce49a1b47cac1e6e04cc36004808925e"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_G_obstruction_group.py": "930a2a0ebaa5a142a4e98d577d948dedc2b120a75daa2601eb0cd17af5bd3059",
+        "research/prime_arity_padic/G_obstruction_group_verification.json": "4a05e9c7c2c08581fbaa3ffcc6af8576fb6acd51e1ee5566a4c90f6aaf700db5"
+      }
+    },
+    {
+      "id": "STABILIZATION",
+      "title": "正双随机运输与3幂复制稳定化",
+      "topic": "interfaces",
+      "status": "proved-source",
+      "scope": "任意n：G为3幂 ⇔ 存在严格正三进双随机P消去X ⇔ 某个3幂复制后真实可达。",
+      "boundary": "原位置分解不随运输存在自动成立；五、六元有复制后成功而原态失败。n≥7复制消去可由已证总定理推出，不是独立新证明。",
+      "documents": [
+        "outputs/triple_average/history/triple_average_stabilization_theorem.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [],
+      "verification_ids": [
+        "stabilization-theorem"
+      ],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "3-copy cancellation 复制消去 正运输 doubly stochastic"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/triple_average/history/triple_average_stabilization_theorem.md": "f9cb85847a208f0f080af46fad73d9fb81b7005cc23e7aeb6210b64bc24f0134"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "GEOMETRY-ALL-N",
+      "title": "全部n的根格、局部根基与零目标饱和",
+      "topic": "triple",
+      "status": "synthesis",
+      "scope": "G是A_(n−1)中本原向量的配对理想；危险素位为对角根基；A₂投影及实际见证下降统一解释已有定理。",
+      "boundary": "不是新纯同余群证明。一般G合法不等于范数为单位；n=11有能量22、G=1的可解例子。",
+      "documents": [
+        "research/prime_arity_padic/triple_all_n_root_lattice_and_target_saturation_20260917.md"
+      ],
+      "depends_on": [
+        "TRIPLE-ALL",
+        "SEVEN-GEOMETRY"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_triple_all_n_geometric_synthesis.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "860个根格配对、258个模素数秩、200个A₂投影、边界反例与9个维数的旧构造独立重放。全维数充分性引用既有直接证明，不是本轮样本新证。",
+          "records": [
+            "research/prime_arity_padic/triple_all_n_geometric_synthesis_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "全维数 算术几何 root lattice radical 2p+1 统一"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/triple_all_n_root_lattice_and_target_saturation_20260917.md": "d9df5d056d16f0738f4ae0ada6ba86ae7af197cf446e7bf6225fd6736e145ba4"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_triple_all_n_geometric_synthesis.py": "de0496e175cce4f74fc9aef06633ca5fb91aa7cfbe2f43ad3d4c129d25ae22db",
+        "research/prime_arity_padic/triple_all_n_geometric_synthesis_verification.json": "06ca6e8e022baba49362df98d77385efc0c4284b679df5872c0f97b1aa29da16"
+      }
+    },
+    {
+      "id": "SEVEN-GEOMETRY",
+      "title": "七元G、分歧范数、尖点与Eisenstein的完整对接",
+      "topic": "triple",
+      "status": "proved-local",
+      "scope": "指定宏群恰为PGL₂(Z[1/6])模7上三角子群；G=1等价合法尖点及Q(√−7)分歧单位，theta与本原能量层有显式计数。",
+      "boundary": "七元可达性是已有结果；theta计数和类数一不能替代真实正向宏。非全局窗口不能直接推广。",
+      "documents": [
+        "research/prime_arity_padic/seven_averaging_cusps_norm_and_eisenstein_20260917.md"
+      ],
+      "depends_on": [
+        "SEVEN-STRUCTURE",
+        "G-OBSTRUCTION"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_seven_arithmetic_geometry.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "3072个本原核心G/范数/尖点检查、1200层theta及本原计数、17条一般矩阵编译路径、75个局部化列归约及三进覆盖实例；一般宏群等式与theta模性仍需正文和外部来源。",
+          "records": [
+            "research/prime_arity_padic/seven_arithmetic_geometry_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "theta模性引用已读Stein Theorem5.8；轨道与范数恒等式在正文证明"
+      ],
+      "next_step": "",
+      "aliases": [
+        "七元 模曲线 cusp Iwahori 虚二次 Eisenstein theta"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/seven_geometry_literature_20260917/README.md"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/seven_averaging_cusps_norm_and_eisenstein_20260917.md": "4586cab170aa0e18ac5ad388983d03879aae300fa94aea2248028ce0d973ca72"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/seven_geometry_literature_20260917/README.md": "358d4959ab6ea9cea77c9f2a74bfc4d7b15e32f35d31b7e295806579ba6bd4c7",
+        "research/prime_arity_padic/verify_seven_arithmetic_geometry.py": "6829b84f6b7a425b9c9aa8a0fdb454f0f28ad177ac9a87d6601e4a43c9d9635f",
+        "research/prime_arity_padic/seven_arithmetic_geometry_verification.json": "1728b84216467be1668d0f1df6165d1e7c83c87decbcacd9ac0435cc81aa89eb"
+      }
+    },
+    {
+      "id": "PRIME-ENDPOINT-GEOMETRY",
+      "title": "2p+1端点：G判别式交环与全部可逆射影轨道",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "端点核心G=div_L(v)，且O_(−n)/(sqrt(−n),eta)=Z/G；能量范数局部单位恰G=1。已实现宏群等于PGL₂(R)的模n上三角逆像，全部方向轨道恰按d|n分类；经典尖点可被真实单位倍率合并，各G层在平均p处均稠密。",
+      "boundary": "核心方向按共同尺度分类，不是实际数值上的可逆循环；复用既有Morris／Serre与原位置宏。不能把导子素数都称分歧素数，不能用一般原输入能量判定。不是新阈值、最短路径或全参数高效词提取证明；未独立重审。",
+      "documents": [
+        "research/prime_arity_padic/endpoint_discriminant_orders_and_G_orbits_20260917.md"
+      ],
+      "depends_on": [
+        "PRIME-TOTAL",
+        "G-OBSTRUCTION",
+        "EXTERNAL-ARITH"
+      ],
+      "related": [
+        "SEVEN-GEOMETRY",
+        "GEOMETRY-ALL-N",
+        "PRIME-NATURAL-UNIFICATION"
+      ],
+      "updates": [
+        {
+          "id": "SEVEN-GEOMETRY",
+          "scope": "将七元的精确宏群与G轨道扩到全部奇2p+1端点；保留七元专属theta/Eisenstein计数，不外推其类数一结论"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_endpoint_discriminant_G_orbits.py"
+          ],
+          "level": "exact-identities / complete-finite-orbits / physical-replay",
+          "scope": "19360个核心及理想商恒等式、3295个坏素位检查、8个完整有限轨道比较、1924次CRT及754条原位置宏。无限群包含由原端点证明及新书面论证承担，不从模样本外推。",
+          "records": [
+            "research/prime_arity_padic/endpoint_discriminant_G_orbits_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "继承端点统一正向控制器及整数Gamma0包含；一般level使用已核对Morris／Serre，不新增GRH或ESS"
+      ],
+      "next_step": "研究G轨道内真实词的有效提取与尺度／长度界，或把判别式交环接到更多核心的资源供应；不能仅以theta或理想类替代实际宏。",
+      "aliases": [
+        "p平均 2p+1 端点 算术几何 动力系统 G轨道 尖点 完整宏群",
+        "判别式交环 虚二次阶 导子 能量格 配对可除性 非极大阶 Iwahori",
+        "27 六尖点 四轨道 63 导子3 75 十二尖点 六轨道"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/endpoint_discriminant_orders_and_G_orbits_20260917.md": "31d2841975ee289a648b90b8986ef482354e0ae2404ce2f589344bfe75a317de"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_endpoint_discriminant_G_orbits.py": "2925c71d2715881a5b722390a7b9a949453f08e48023a3600707ffd237191aa5",
+        "research/prime_arity_padic/endpoint_discriminant_G_orbits_verification.json": "28504b312df569af2fb5ba5e2040f817ca8850e35ca5467d0c70cc08d8ffc1b3"
+      }
+    },
+    {
+      "id": "PRIME-TOTAL",
+      "title": "所有奇素数平均的最优最终阈值",
+      "topic": "prime",
+      "status": "proved-source",
+      "scope": "所有奇素数p：N(p)=2p+1，阈值以上G为p幂充要；N(2)=4。原主证明覆盖表完整。",
+      "boundary": "已完成存在性不等于新统一无证书证明或通用高效群词提取。162组是冻结基线，后续独立简化不自动重写它。",
+      "documents": [
+        "outputs/prime_arity/proof.md",
+        "outputs/prime_arity/arithmetic_toolkit.md",
+        "outputs/prime_arity/verification.md"
+      ],
+      "depends_on": [
+        "EXTERNAL-ARITH"
+      ],
+      "related": [
+        "PRIME-NATURAL-UNIFICATION",
+        "PRIME-ODD-PENCIL",
+        "PRIME-FINITE-TERMINAL",
+        "PRIME-ENDPOINT-GEOMETRY"
+      ],
+      "updates": [],
+      "verification_ids": [
+        "prime-final-independent-audit",
+        "transverse-root-shallow-lifting"
+      ],
+      "local_checks": [],
+      "assumptions": [
+        "Morris有限指数与有理S整数SL₂强同余子群性质",
+        "原小参数有限资源证书"
+      ],
+      "next_step": "",
+      "aliases": [
+        "p平均 完全证明 2p+1 3p+10 4p 162 522 180"
+      ],
+      "source_records": [
+        "outputs/prime_arity/proof_map.json"
+      ],
+      "source_hashes": {
+        "outputs/prime_arity/proof.md": "bb0f063c986c33754c71b466fe0a5e19c593eca59ef6f4aad6e61558bc6d1cef",
+        "outputs/prime_arity/arithmetic_toolkit.md": "419202c58c292625ece12f00715e1246c7ae8981cac55a7a208c3136391683d8",
+        "outputs/prime_arity/verification.md": "f17db6baefca45b77a1bb08372f6a9b133d22751f9842becad94039e4d5df97e"
+      },
+      "evidence_hashes": {
+        "outputs/prime_arity/proof_map.json": "490faa1a2ca5c66bbb2036ff7c9c9288197b7c9d55febc7da6993303fe746ed6"
+      },
+      "coverage": {
+        "other-small": {
+          "parameters": "5≤p<83其他上半带；p=3单独",
+          "startup": "原完整区间证明；p=5、7用锐界；p=3用三平均直接链",
+          "terminal": "按原覆盖表的各已证终端",
+          "residual": "可达性全证；新共同p≥83公式未全参数替代这些分支",
+          "source": "outputs/prime_arity/proof.md#4"
+        }
+      }
+    },
+    {
+      "id": "PRIME-NATURAL-UNIFICATION",
+      "title": "自然统一的主目标：全参数原位置资源供应",
+      "topic": "prime",
+      "status": "open",
+      "scope": "原阈值已证。目标是统一2p<n<4p的初始物理资源供应；纤维比较、改变来源、状态相关准备是并列候选策略。奇数下半带已有共同反射。",
+      "boundary": "退化出口不是唯一必经关卡；先有独立真实资源才可使用深核。共同收尾、共同形状与同一选参公式是不同强度。",
+      "documents": [
+        "research/prime_arity_padic/unified_stable_range_saturation_candidate_20260916.md",
+        "research/prime_arity_padic/small_parameters_lattice_defects_and_closure_target.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "PRIME-ODD-PENCIL",
+        "PRIME-FINITE-TERMINAL",
+        "PRIME-FIBER",
+        "PRIME-GEOMETRY",
+        "PRIME-2P2",
+        "PRIME-EVEN-INTERIOR",
+        "PRIME-3PM1",
+        "PRIME-3P",
+        "PRIME-CRITICAL-CONTROLLER"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_small_parameter_resource_scope.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/small_parameter_resource_scope.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "证明全参数库存内足够的真实作用：可比较计数纤维、改变来源或按状态准备；须接可控终端，不要求所有出口序列终止。",
+      "aliases": [
+        "整体关联 自然统一 四色定理 83 小p 小参数 退化出口",
+        "偶数部分统一了吗 上半带统一到哪里 下半带 资源供应 分段 启动 收尾 小素数 83"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/unified_stable_range_saturation_candidate_20260916.md": "ab929507a259e2c8226785f188ee4a849a57f544aa966f8607ae4ecbd0de0583",
+        "research/prime_arity_padic/small_parameters_lattice_defects_and_closure_target.md": "ab079a85742e02e6935bb41550e33abfc09187dfea9da6151e4a06bdf1d0d30a"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_small_parameter_resource_scope.py": "5e4dc293ddd3d487a943583aaae156356edb2d0bb9dc8bbe36e4a0226ab42469",
+        "research/prime_arity_padic/small_parameter_resource_scope.json": "e79e6ca8a48d0daf98fc483c41b99b38aae64a50a8ae78e8038e3cf3cb599b2a"
+      }
+    },
+    {
+      "id": "EXTERNAL-ARITH",
+      "title": "Morris／Serre外部定理的审核与边界",
+      "topic": "interfaces",
+      "status": "proved-source",
+      "scope": "原素数证明所需有限指数、强同余性质及无限单位前提的明确引用接口。",
+      "boundary": "已读来源与未取得原文须按审查文稿保留；有限模像满不推出全群包含。",
+      "documents": [
+        "outputs/prime_arity/audits/prime_arity_lower_band_external_theorems_audit_20260915.md",
+        "outputs/prime_arity/proofs/lower_band/prime_arity_endpoint_congruence_completion.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [],
+      "verification_ids": [
+        "endpoint-congruence-completion"
+      ],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "Morris Serre CSP 外部定理 同余子群 有限指数"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/prime_arity/audits/prime_arity_lower_band_external_theorems_audit_20260915.md": "f7689a8c2f35fad575953488a0f75d7e0f95a03e83e331dbe3fc0b1d0790b192",
+        "outputs/prime_arity/proofs/lower_band/prime_arity_endpoint_congruence_completion.md": "ab6a328498ec5460c8a3bfd673e20da7b2a4b7efd8c3ba80d3d4e22fa9b11d9a"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "OLD-HECKE-AUDIT",
+      "title": "旧Ihara–Hecke／Manin接入的修正",
+      "topic": "interfaces",
+      "status": "corrected",
+      "scope": "保存原Hecke关系、星结构、中心符号及物理分支提升的审计；旧直接闭合推断不可作为定理使用。",
+      "boundary": "不否定全部自守方法；七元实群、五元Aka–Shapira接口必须按各自已证前提使用。",
+      "documents": [
+        "outputs/triple_average/history/triple_average_final_hecke_audit.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "SEVEN-GEOMETRY",
+        "FIVE-HECKE"
+      ],
+      "updates": [],
+      "verification_ids": [
+        "final-hecke-manin-audit"
+      ],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "Ihara Hecke 饱和 Manin 分支之和 星结构 modular form"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/triple_average/history/triple_average_final_hecke_audit.md": "deb71ac3f8daa07f8875d8b4cf069405028b6ec0bc44a5d1f04522afebf75b96"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "WINDOW-MEAN",
+      "title": "局部窗口的均值与相对尺度障碍",
+      "topic": "interfaces",
+      "status": "proved-source",
+      "scope": "子块差分缩放只围绕子块自身均值，外部位置不跟随；不能当作整系统射影逆。",
+      "boundary": "重写仿射矩阵或换称标记格不会自动提供窗口拼接定理。",
+      "documents": [
+        "outputs/prime_arity/structure/prime_arity_middle_band_relative_scale.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "GEOMETRY-ALL-N"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "窗口 嵌入 局部均值 相对尺度 外部总和"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/prime_arity/structure/prime_arity_middle_band_relative_scale.md": "2fa28f01d9d6e4d66e5f3713155e4e2ece022155d39ecc5b50426e0bf0f3c247"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "OLD-TRACE-RETURN",
+      "title": "统一／双／混合迹零返回的历史接口",
+      "topic": "interfaces",
+      "status": "partial",
+      "scope": "参数化周期和部分根公式成立；指定返回的原位置分解是更强目标，旧单返回充分性曾过强。",
+      "boundary": "原可达性已由别的路线完成；运输／复制证书不是这些指定矩阵的原位置分解。",
+      "documents": [
+        "outputs/triple_average/history/triple_average_universal_trace_zero_target.md",
+        "outputs/triple_average/history/triple_average_two_trace_zero_returns.md",
+        "outputs/triple_average/history/triple_average_mixed_singleton_controller.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "STABILIZATION",
+        "OLD-HECKE-AUDIT",
+        "AFFINE-IDEAL",
+        "PARAMETRIC-RIGIDITY"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "迹零 返回 种子 非分裂 原位置分解"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/triple_average/history/triple_average_universal_trace_zero_target.md": "169f9436335bf7c661e8edc4023ac3efb9e5d4b098b704f8abcf4717407ff18a",
+        "outputs/triple_average/history/triple_average_two_trace_zero_returns.md": "4642c10f75b92f13989698c847a29d5ee0a7a3d0490daadb0f78d548d5475110",
+        "outputs/triple_average/history/triple_average_mixed_singleton_controller.md": "7eddc515ac136be36f556a922a71ae530991f6cd9efa541e9b03f9e77b27e682"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "ALG-LENGTH",
+      "title": "构造长度与最短路径的不同状态",
+      "topic": "algorithms",
+      "status": "partial",
+      "scope": "三平均直接算法有数值界和固定n位长多项式界；原求解器、精确IDA*和最短路径困难分别登记。",
+      "boundary": "可变n统一多项式构造长度未证；最短性NP困难不否定非最优多项式路径可能性。",
+      "documents": [
+        "outputs/algorithms/triple_average_sequence_length_analysis.md",
+        "outputs/algorithms/pair_triple_solver_comparison_and_optimality.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [],
+      "verification_ids": [
+        "double-triple-sequence-length",
+        "pair-triple-solver-optimality"
+      ],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "操作数 最短 长度 polynomial NP complete IDA* 复杂度"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/algorithms/triple_average_sequence_length_analysis.md": "304a97f1b65db481ed8a1544f84badca192275f3235a5e4659de8d170f49ff3c",
+        "outputs/algorithms/pair_triple_solver_comparison_and_optimality.md": "8a60ec5c74d84fa5bd64b930ce929a7eaa52ff688ad3f672cca90c1b8922b311"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "ALG-WEB",
+      "title": "网页求解器与效率比较的证据范围",
+      "topic": "algorithms",
+      "status": "partial",
+      "scope": "保存Arena源码审阅、同题精确重放、批量计时及二平均HTML比较。",
+      "boundary": "有限随机速度优势不证明最坏复杂度；预算搜索失败不是数学反例。",
+      "documents": [
+        "outputs/algorithms/arena_triple_solver_review.md",
+        "outputs/algorithms/averaging_algorithm_benchmark.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [],
+      "verification_ids": [
+        "arena-triple-solver-review"
+      ],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "网页 求解器 Arena 性能 2-average-solver"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/algorithms/arena_triple_solver_review.md": "87c374efc68852ba39962a254706d8edf6e811a39588e1d34df4b3ce9ae5a7ac",
+        "outputs/algorithms/averaging_algorithm_benchmark.md": "520bd989bf0d30c62681dc4197838553dbda50f677fe91874dcc183a743c3229"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "COMPOSITE-FRONTIER",
+      "title": "一般元数三项主任务与GRH范围",
+      "topic": "composite",
+      "status": "partial",
+      "scope": "无条件全部k的2k+1端点；奇素数幂奇数中间维数；GRH下平方族与2、3幂临界点。",
+      "boundary": "不等于一般N(k)=B(k)。p≥5高奇次幂临界、混合素因子临界及整段接续仍未全闭合。",
+      "documents": [
+        "outputs/general_arity/general_k_three_tasks_progress_20260915.md",
+        "outputs/general_arity/general_k_grh_stage_and_remaining_tasks_20260915.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "COMPOSITE-DEFINITIONS"
+      ],
+      "updates": [],
+      "verification_ids": [
+        "two-three-odd-power-critical",
+        "even-arity-all-endpoints",
+        "odd-composite-coprime-middle-band",
+        "ht-literature-interfaces"
+      ],
+      "local_checks": [],
+      "assumptions": [
+        "部分临界结果依赖Dirichlet L函数GRH，不能删条件"
+      ],
+      "next_step": "",
+      "aliases": [
+        "合数 k平均 GRH 平方 高奇次幂 临界"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/general_arity/general_k_three_tasks_progress_20260915.md": "12f20899201c84ed27ef724854c831c64f1cc65f49ec556dfba9f65ef54ea6a9",
+        "outputs/general_arity/general_k_grh_stage_and_remaining_tasks_20260915.md": "1a4ad6b4bc7e5ce09da882f7738ec006d6f2b82b5e5b2a22c450aed8061e4399"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "COMPOSITE-DEFINITIONS",
+      "title": "M、H、N与自动G维数不能混用",
+      "topic": "composite",
+      "status": "synthesis",
+      "scope": "M最早成功、H首个非自动G成功、N此后全部成立，是不同量词；六平均九元自动成功，十元是非自动G点。",
+      "boundary": "历史全局表中的开放范围以COMPOSITE-FRONTIER更新；未将候选临界线推广成已证最终阈值。",
+      "documents": [
+        "outputs/general_arity/averaging_global_status_20260912.md",
+        "outputs/general_arity/composite_critical_scale_and_conjecture.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [],
+      "verification_ids": [
+        "composite-critical-scale"
+      ],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "q+S(q) Bq M H N 自动G 6平均9 6平均10"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/general_arity/averaging_global_status_20260912.md": "636c7563b1cdd5245e62023024c02c2d6d5fe93b1d7691b0840740827670b020",
+        "outputs/general_arity/composite_critical_scale_and_conjecture.md": "1f24227d98512128e2e1a6ee2a4aa45065842671e845bf73080c9457a908797c"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "PRIME-MOVE-MERGE",
+      "title": "任意元数的移动见证—双块入口",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "k≥2、n≥2k+1，完整危险素数见证可保留到两个k重块加剩余单点。",
+      "boundary": "入口完整不等于核心内终止；单载体格障碍仍需不同资源。",
+      "documents": [
+        "research/prime_arity_padic/move_witnesses_then_merge.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "PRIME-CARRIER-OBSTRUCTION"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_carrier_balance.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/carrier_balance_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "入口 move witnesses merge 两个p块"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/move_witnesses_then_merge.md": "8eb0fecacbed226cbf4fdce8cea585aafa27cdfb8c565276ecf77a4d5018ce9c"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_carrier_balance.py": "2ab625901c05ab73d76d90e45cdfb136bb434cf3d814a00ad86b0093d73518e1",
+        "research/prime_arity_padic/carrier_balance_verification.json": "e2080fa164ecc4634a1e4ae96e78657ef94ab874746fea55c13ed33613cad9de"
+      }
+    },
+    {
+      "id": "PRIME-CARRIER-OBSTRUCTION",
+      "title": "单载体正词的p进Smith形障碍",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "m≥2差分空间中任意k步单载体词的Smith形为diag(p^−k,1,…,1)，排除全空间非空标量周期。",
+      "boundary": "不排除更小输入像的返回或多载体宏；有限模逆不等于真实有理逆。",
+      "documents": [
+        "research/prime_arity_padic/carrier_balance_and_uniform_mechanism.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_carrier_balance.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/carrier_balance_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "单载体 Smith 不能取逆"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/carrier_balance_and_uniform_mechanism.md": "a960cc863e644b14b30ae9ce113f89fb84192f4ea2ea351871e340cbfeb89ac7"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_carrier_balance.py": "2ab625901c05ab73d76d90e45cdfb136bb434cf3d814a00ad86b0093d73518e1",
+        "research/prime_arity_padic/carrier_balance_verification.json": "e2080fa164ecc4634a1e4ae96e78657ef94ab874746fea55c13ed33613cad9de"
+      }
+    },
+    {
+      "id": "PRIME-BALANCE",
+      "title": "对称尺度配平与载体更新正常形",
+      "topic": "prime",
+      "status": "partial",
+      "scope": "已有成功分支可提取全系统配平及四步返回正常形；单独对称对角资源不足以给横向控制。",
+      "boundary": "早期4|t缺口已由全偶载体定理补齐；不将本卡旧范围作为当前缺口。",
+      "documents": [
+        "research/prime_arity_padic/local_proofs_to_global_balance.md",
+        "research/prime_arity_padic/carrier_refresh_normal_form.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "PRIME-EVEN-INVERSE"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_symmetric_rebuild.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/symmetric_rebuild_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "配平 载体更新 refresh symmetric"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/local_proofs_to_global_balance.md": "a7d973e3c9ae67110819032473679a574786e531ac132e53ad536a90dcdfdaaa",
+        "research/prime_arity_padic/carrier_refresh_normal_form.md": "7d87e5408cffdefc9b60c5930112c071a690a6d830ee0f6677d3ce05ac83a65e"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_symmetric_rebuild.py": "f0498b0b6f9e006907c433f09b9199d8427de0a073fcaea3f9b29428da953974",
+        "research/prime_arity_padic/symmetric_rebuild_verification.json": "673f659adfec4c24d8b771adf8b9f303db5a7fd1d92e27876ef7f913eefebf57"
+      }
+    },
+    {
+      "id": "PRIME-EVEN-INVERSE",
+      "title": "全部偶载体的一致正向逆",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "所有奇素数p、1≤t<p的(p,p,2t)核心都有同一十二步非零标量闭路。",
+      "boundary": "可逆资源不等于完整根群、入口和终端统一。",
+      "documents": [
+        "research/prime_arity_padic/uniform_even_carrier_inverse.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [
+        {
+          "id": "PRIME-BALANCE",
+          "scope": "补齐原4整除t分支，替代仅部分偶载体的取逆范围"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_uniform_even_carrier_inverse.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/uniform_even_carrier_inverse_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "偶载体 十二步 统一取逆"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/uniform_even_carrier_inverse.md": "d75901d96ff1e29f245d55ba47057f7d082969615cb75599a55d8c63369789a2"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_uniform_even_carrier_inverse.py": "0c4d06e00cdad973b1100c21cd146a7eb0f99f49a0a9881048f8fc11ef5fc222",
+        "research/prime_arity_padic/uniform_even_carrier_inverse_verification.json": "b075266497f8a6fb53599feb6fa6b197216ebe9b303f72ab012becf5a2bebff9"
+      }
+    },
+    {
+      "id": "PRIME-OUTPUT-ROOT",
+      "title": "固定来源交换输出产生真实剪切",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "从已有可逆返回的输出差获得明确非零根，记录模板容量边界。",
+      "boundary": "两矩阵不交换不自动有根；一个根不自动有本原根理想或完整轨道。",
+      "documents": [
+        "research/prime_arity_padic/output_exchange_produces_roots.md"
+      ],
+      "depends_on": [
+        "PRIME-EVEN-INVERSE"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_output_exchange_roots.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/output_exchange_roots_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "输出交换 根 剪切 非交换"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/output_exchange_produces_roots.md": "03195de7fe170204b729c1f5b1cdb0408b56bd7f5fd7570301f582660d7d7e7f"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_output_exchange_roots.py": "d519547c53d15fe0de5613659666a3fd5ec89476d6dd0b480bea9b190ae81f19",
+        "research/prime_arity_padic/output_exchange_roots_verification.json": "254be0273bd59a49ac5e2ca438197a1c81231ab511534f72464222ccbf382734"
+      }
+    },
+    {
+      "id": "PRIME-SQUARE-ZERO",
+      "title": "已有深核后的平方零一次同余编译",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "在整族根与精确深核已真实存在前提下，把模h²修正压成模h的一项标量同余。",
+      "boundary": "不制造初始根族，不证明资源存在；不得循环依赖深核。",
+      "documents": [
+        "research/prime_arity_padic/square_zero_hensel_compiler.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_square_zero_compiler.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/verification_results.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "平方零 Hensel 编译 深核"
+      ],
+      "source_records": [
+        "knowledge/frozen_compat.py",
+        "knowledge/navigation_migrations.json"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/square_zero_hensel_compiler.md": "1e02216902bb4d243bc0fb97d1ca971a60749afc17219535b45cffa430af901e"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_square_zero_compiler.py": "11baf46142c0f8203ae5f1b678adf9ef87e7a21a866c08abb8238ef5152576d8",
+        "research/prime_arity_padic/verification_results.json": "c7e8cbe33de169102fbef1e6ffaccc812020dc816a93def17e3710bb498cf596",
+        "knowledge/frozen_compat.py": "846d330c402ccea1f2632f6fba6e02bd8c199bc656afe92df29acad34aa4cc6c",
+        "knowledge/navigation_migrations.json": "d97ff2b176893b845ce693465c1d300074e5cc97ece4f80246afabbe31d5c7ff"
+      }
+    },
+    {
+      "id": "PRIME-CERTIFICATE-ANATOMY",
+      "title": "旧九偏移证书与p≥83公式的解剖",
+      "topic": "prime",
+      "status": "historical",
+      "scope": "解释原162=18×9参数记录的物理计数、根理想、方向与单位字段，以及旧p≥83范围。",
+      "boundary": "最新研究已经删除多项字段；本卡解释冻结基线，不能当最新剩余清单。",
+      "documents": [
+        "research/prime_arity_padic/certificate_anatomy_and_odd_offsets.md",
+        "research/prime_arity_padic/uniform_reflection_formula.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "PRIME-FIVE-RETURNS",
+        "PRIME-SPLIT-COLUMNS"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "162 83 九偏移 证书 anatomy 统一公式"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/certificate_anatomy_and_odd_offsets.md": "dd95059b8137a8b90b6add9502e45dc5ccf273b31b2980bd6f046af6906b1e86",
+        "research/prime_arity_padic/uniform_reflection_formula.md": "64c930da7d499c40c59d03acfcb5b3f33332e2c8281ab59fea34e2cc721255aa"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "PRIME-DYADIC",
+      "title": "以统一列提升替代旧二进轨道表",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "旧内部偶余量64、256类表由同一个手写二进列提升引理替代；区分终端控制与物理资源。",
+      "boundary": "当时162组根／方向记录的未替代范围须按后续卡更新。",
+      "documents": [
+        "research/prime_arity_padic/structural_reassessment_and_uniform_dyadic_orbits.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "PRIME-TWO-ROOTS",
+        "PRIME-SPLIT-COLUMNS"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_uniform_dyadic_column_lifting.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/uniform_dyadic_column_lifting_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "二进 64 256 轨道表 dyadic"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/structural_reassessment_and_uniform_dyadic_orbits.md": "8f7bc9d8dd2592733f8feef835a13fcdb463aa4aa63d6eef379f47baf27312e6"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_uniform_dyadic_column_lifting.py": "c4d8ac5b72e93e72c55e163109ee4b354850d43faac8dc9c1f69806272360cf4",
+        "research/prime_arity_padic/uniform_dyadic_column_lifting_verification.json": "873dcc2219de1ecdd5c6adaaa4725d1a05ae7d984c1dff901fb74ea972d5cb96"
+      }
+    },
+    {
+      "id": "PRIME-TERMINAL-FAN",
+      "title": "移动终端替代额外单位补充",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "两个／四个终端代替单一目标，删除45组binary_unit及(13,3)的97/13补充用途。",
+      "boundary": "本阶段仍保留root_pairs、direction和(11,3)辅助13，后两者有后续替代。",
+      "documents": [
+        "research/prime_arity_padic/terminal_fan_replaces_dyadic_units.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [
+        {
+          "id": "PRIME-CERTIFICATE-ANATOMY",
+          "scope": "取消binary_unit字段及97/13特例的终端用途"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_terminal_fan.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/terminal_fan_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "终端扇 binary_unit 97/13"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/terminal_fan_replaces_dyadic_units.md": "650a1fbb8e8f6b077258bb39701e54646cfcbe48384ad3f19ffc6b561b9a70cb"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_terminal_fan.py": "ed441d7c53a41704527f47a0fcd64eebb9b8298d9c6a6270e90c90e4691a85c6",
+        "research/prime_arity_padic/terminal_fan_verification.json": "b37073121c4177af80e82fa775b6fd9c80abc6ad3bffa37d5fc23a7de17b7ce9"
+      }
+    },
+    {
+      "id": "PRIME-TWO-ROOTS",
+      "title": "两根直接修正列，避免提升整个群",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "把sl₂三方向目标降为当前列二维作用；116组direction可由旧根生成，46组当时保留二进条件。",
+      "boundary": "不移除初始根资源与深核；46组后由分裂乘法完成。",
+      "documents": [
+        "research/prime_arity_padic/two_root_column_completion.md"
+      ],
+      "depends_on": [
+        "PRIME-TERMINAL-FAN"
+      ],
+      "related": [],
+      "updates": [
+        {
+          "id": "PRIME-DYADIC",
+          "scope": "终端改为只修当前列，无需原三共轭浅核"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_two_root_column_completion.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/two_root_column_completion_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "两根 列修正 116 46 三共轭 column"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/two_root_column_completion.md": "613c3505595c941e86969c77f833b02cb60d223f121f2282f7673ca2ed68a94e"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_two_root_column_completion.py": "10bc0718793b67b7740f1b4767719965240b9bbae4c2ca9860133c5de829799e",
+        "research/prime_arity_padic/two_root_column_completion_verification.json": "5b039ab969bd6ff16d3bca42064069c5031c9a8cf5b1608a062cf8e294f62144"
+      }
+    },
+    {
+      "id": "PRIME-SPLIT-COLUMNS",
+      "title": "分裂乘法完成全部方向与二进修补",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "旧等块互补混合的对角乘法完成162组列输送，不再需要direction、binary_unit或二进迹条件。",
+      "boundary": "根反射、深核和物理供应仍须独立存在；(11,3)辅助13由下一卡处理。",
+      "documents": [
+        "research/prime_arity_padic/split_torus_completes_all_directions.md"
+      ],
+      "depends_on": [
+        "PRIME-TWO-ROOTS"
+      ],
+      "related": [],
+      "updates": [
+        {
+          "id": "PRIME-TWO-ROOTS",
+          "scope": "补齐剩余46组方向；取消其迹条件与Smith本原准备"
+        },
+        {
+          "id": "PRIME-CERTIFICATE-ANATOMY",
+          "scope": "全部独立direction字段不再需要"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_split_torus_column.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "在旧162组资源上核对不读取direction/binary_unit的列输送、实际混合与终端；通用列算法由正文证明。不会验证全参数初始root_pairs的存在。",
+          "records": [
+            "research/prime_arity_padic/split_torus_column_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "分裂环面 split torus 方向 162 46"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/split_torus_completes_all_directions.md": "4c45889a8419ca1a19256923778bbd2bf1e04d745984be39a55f226687a8fe6c"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_split_torus_column.py": "29cd9b48075ad5cb2ac6eb86171fe23e257048c4784fb1c4f8e4e36a0dc62809",
+        "research/prime_arity_padic/split_torus_column_verification.json": "8f2e23f7bec8bf9b9d8f0168dae36225f42d03603ae8c9153b59f8f5db1aea60"
+      }
+    },
+    {
+      "id": "PRIME-CONSERVATION13",
+      "title": "守恒交换替代(11,3)辅助13",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "同来源输出守恒关系直接给U(−36)，接横向反射与终端，删除辅助13特殊群计算。",
+      "boundary": "局部修复不等于全部根表移除。",
+      "documents": [
+        "research/prime_arity_padic/conservation_exchange_removes_auxiliary13.md"
+      ],
+      "depends_on": [
+        "PRIME-SPLIT-COLUMNS"
+      ],
+      "related": [],
+      "updates": [
+        {
+          "id": "PRIME-SPLIT-COLUMNS",
+          "scope": "补去仍保留的(11,3)辅助13"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_equal_determinant_root_repair.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/equal_determinant_root_repair_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "辅助13 11,3 守恒 n根"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/conservation_exchange_removes_auxiliary13.md": "713944e27b690ddfc1e8c3cec32742e6c3a4f50609ba775ebbfedaa890cac8d3"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_equal_determinant_root_repair.py": "560e8aceac7157dd337171bce957c74a2871078ffb3031ce6d9167d6ea5bf7d4",
+        "research/prime_arity_padic/equal_determinant_root_repair_verification.json": "f856887f0e3a8724ff7f4e757804ca881223aa3e1c761f6cbdd3f44b254632c3"
+      }
+    },
+    {
+      "id": "PRIME-FIVE-RETURNS",
+      "title": "五返回公式替代48组根资源，保留114组",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "一般容量公式与守恒n根供应两组横向系数；对原九偏移资源表替代48组，列出114组剩余。",
+      "boundary": "114是本独立改进对物理根资源的剩余，不是重写冻结主证明后的完整独立审计计数；s>p/2该模板有障碍。",
+      "documents": [
+        "research/prime_arity_padic/conservation_capacity_and_five_return_supply.md"
+      ],
+      "depends_on": [
+        "PRIME-CONSERVATION13"
+      ],
+      "related": [],
+      "updates": [
+        {
+          "id": "PRIME-CERTIFICATE-ANATOMY",
+          "scope": "以通式替代48组root资源；162→114仅就此资源清单"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_conservation_capacity.py"
+          ],
+          "level": "theorem-certificate + symbolic-check",
+          "scope": "核对一般五返回计数、原位置重放、48组替代及剩余114组根资源清单；通式的无限参数容量界由正文证明。不等于重新审核整篇素数主定理。",
+          "records": [
+            "research/prime_arity_padic/conservation_capacity_verification.json",
+            "research/prime_arity_padic/conservation_remaining_root_cases.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "五返回 48 114 容量",
+        "小素数 九偏移 p<83 剩余证据"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/conservation_capacity_and_five_return_supply.md": "445c7fa7cb7bd2a8b890c26fd23e66da5ef6dc4f607b515f3908f90feb6a7b36"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_conservation_capacity.py": "395c7915e4d0bb637c18290ab01222b8e8d54aaca38e06b3eac99eb0cde373cb",
+        "research/prime_arity_padic/conservation_capacity_verification.json": "d1acd19b02fb5fbe6c2d0244df86854ee4b4582315b4f1458ed96cd75dc79dc4",
+        "research/prime_arity_padic/conservation_remaining_root_cases.json": "b498d7c0cb39392c1764be104683cbd7ddabc8f2469470babd3489d5afffab74"
+      },
+      "coverage": {
+        "small-offsets": {
+          "parameters": "11≤p<83；n=3p+s，1≤s≤9",
+          "startup": "冻结基线162组；独立五返回通式替代其中48组",
+          "terminal": "direction/binary_unit及特殊辅助已由后续接口替代",
+          "residual": "独立路线仍列114组根资源；不等于已改写并重审基线",
+          "source": "research/prime_arity_padic/conservation_capacity_and_five_return_supply.md"
+        }
+      }
+    },
+    {
+      "id": "PRIME-COMMON-SHAPE",
+      "title": "临界带共同(p,p,r)形状与整数关系格",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "整个2p<n<4p可进入共同形状；固定来源的迹零输出关系格及有效方向可显式算出。",
+      "boundary": "无界关系格的像不保证容量内可用移动；共同形状不等于全参数终止。",
+      "documents": [
+        "research/prime_arity_padic/common_shape_integer_relations_and_mainstream_structure.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_common_shape_and_relation_lattice.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/common_shape_relation_lattice_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "共同形状 p,p,r 整数关系 格像"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/common_shape_integer_relations_and_mainstream_structure.md": "bb9c4ca24ce0214f05f3acedb6b4b1dcade7b2f24961a9fef048707561f962d8"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_common_shape_and_relation_lattice.py": "b5b67678c409c4a2b445ce0f1817a75a65f2164d38fad28b2ae8604a5d5a5954",
+        "research/prime_arity_padic/common_shape_relation_lattice_verification.json": "a26c69c7488cee7a0e5e7bb16488da37599474d55154b7331c86b84df3a11d4c"
+      }
+    },
+    {
+      "id": "PRIME-CRITICAL-CONTROLLER",
+      "title": "跨3p的共同控制器",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "p≥83、新载体r≥r₀(p)的上下半带接同一根、单位及移动终端接口。",
+      "boundary": "本页r₀是新载体自身范围；小r已由旧载体桥接，不可再列整条立方根缺口。",
+      "documents": [
+        "research/prime_arity_padic/critical_band_common_controller.md"
+      ],
+      "depends_on": [
+        "PRIME-COMMON-SHAPE",
+        "PRIME-SPLIT-COLUMNS"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_critical_band_common_controller.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/critical_band_common_controller_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "跨3p r0 立方根 条带",
+        "上半带 九偏移 三段选参 3p<n<4p 共同收尾 p≥83"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/critical_band_common_controller.md": "70ef3cd735b4cb62fa7d9f2b8f0dc433145256b88bb9dc3d110fe7945b2b5bca"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_critical_band_common_controller.py": "d1eeda523873629d91ccfb78a0f69dbf0a13a3c02592664bca9722f171f5c522",
+        "research/prime_arity_padic/critical_band_common_controller_verification.json": "413c3fb8b0207b9d32e357f44ef1e27b75aaba4554b69e6d364a54df7844392a"
+      },
+      "coverage": {
+        "upper-near": {
+          "parameters": "p≥83；r=p+s，1≤s≤9",
+          "startup": "§3.3旧三连参数计数，使用前两个输出",
+          "terminal": "统一反射、根与终端接口",
+          "residual": "此范围不用小参数表；三段选参尚未合成单一公式",
+          "source": "research/prime_arity_padic/critical_band_common_controller.md#3.3"
+        },
+        "upper-middle": {
+          "parameters": "p≥83；r=p+s，10≤s≤⌊p/2⌋",
+          "startup": "§3.2平衡来源＋相邻输出",
+          "terminal": "与紧邻3p及上端相同",
+          "residual": "已合并控制与收尾，来源计数仍不同",
+          "source": "research/prime_arity_padic/critical_band_common_controller.md#3.2"
+        },
+        "upper-far": {
+          "parameters": "p≥83；3p/2<r<2p",
+          "startup": "§3.1按剩余载体选择q=2来源",
+          "terminal": "与另外两段相同",
+          "residual": "上半带全覆盖；并非三段启动选参已完全合并",
+          "source": "research/prime_arity_padic/critical_band_common_controller.md#3.1"
+        }
+      }
+    },
+    {
+      "id": "PRIME-RETAINED-BRIDGE",
+      "title": "旧载体桥接补齐小余量",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "p≥83、3≤r<2p、r≠p均可接同一收尾；r=1接旧端点，r=2保留CRT，r=p接等块。",
+      "boundary": "未消除小p全部物理供应；r=1的统一启动又有后续奇数铅笔。",
+      "documents": [
+        "research/prime_arity_padic/retained_carrier_bridge_and_endpoint_lessons.md"
+      ],
+      "depends_on": [
+        "PRIME-CRITICAL-CONTROLLER"
+      ],
+      "related": [],
+      "updates": [
+        {
+          "id": "PRIME-CRITICAL-CONTROLLER",
+          "scope": "补齐其r<r₀条带，不再把立方根宽度看作当前缺口"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_retained_carrier_bridge.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/retained_carrier_bridge_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "保留旧载体 小余量 83",
+        "偶数下半带 p≥83 启动构造 内部 r=p-1"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/retained_carrier_bridge_and_endpoint_lessons.md": "457fadb03c452f358e873afc394a8c587f0b89a16ed2e6ea9b4f489d5e99bfd4"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_retained_carrier_bridge.py": "3b86db726119e7708f9f9537602cf6e35ff3b6a74dd97a7cf9e766cffa7b3371",
+        "research/prime_arity_padic/retained_carrier_bridge_verification.json": "132761eab2583a67f2ea42563951b083de6224340219a3d7be3461cb03a6f73e"
+      },
+      "coverage": {
+        "large-lower": {
+          "parameters": "p≥83；3≤r<p（覆盖上述偶数内部及r=p−1）",
+          "startup": "r<r₀用旧载体桥；r≥r₀用共同新载体公式",
+          "terminal": "同一根／单位／移动终端；已有深核后可用有限对应",
+          "residual": "共同收尾已合并，启动仍分旧／新载体；r=2不包含",
+          "source": "research/prime_arity_padic/retained_carrier_bridge_and_endpoint_lessons.md"
+        }
+      }
+    },
+    {
+      "id": "PRIME-ADELIC",
+      "title": "本原直线的内容余循环与共同CRT",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "把本原化的局部内容、均值标记及两端点CRT准备接到共同格描述。",
+      "boundary": "阿代尔语言不会供应尚缺的物理返回；旧r=1启动差异按奇数铅笔更新。",
+      "documents": [
+        "research/prime_arity_padic/adelic_primitive_lines_and_common_endpoint_preparation.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_adelic_primitive_line_and_two_crt.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/adelic_primitive_line_two_crt_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "adelic 阿代尔 内容 CRT 格对应"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/adelic_primitive_lines_and_common_endpoint_preparation.md": "c8883171a8c0c4b7ddc6c4018beef09ce411576a54747f386a3c9338b696c548"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_adelic_primitive_line_and_two_crt.py": "3afebcb0c7661f48212d099c0562c0a05021a60fde48b50e45ba01be16d35c7b",
+        "research/prime_arity_padic/adelic_primitive_line_two_crt_verification.json": "1ae1f31baa4b6da27ade1c5fa810f57c084367609bb42f1c0da85969d9899e3a"
+      }
+    },
+    {
+      "id": "PRIME-FIBER",
+      "title": "同行列式纤维与有限精度对应",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "有效作用格(n/g)Z；偶4≤r≤2p/5、奇5≤r≤p/5有直接根；Q|det A|精度记录本原输出。",
+      "boundary": "深核必须先真实实现；有限对应图存在不等于其终端全覆盖。",
+      "documents": [
+        "research/prime_arity_padic/determinant_fibers_and_finite_lattice_correspondences.md"
+      ],
+      "depends_on": [
+        "PRIME-COMMON-SHAPE"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_equal_determinant_and_finite_correspondence.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对同行列式输出移动、给定范围直接根与有限精度本原内容；不证明任意小p/全部r有足够初始资源或终端覆盖。",
+          "records": [
+            "research/prime_arity_padic/equal_determinant_finite_correspondence_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "同行列式 计数纤维 finite lattice Qdet 原位置库存"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/determinant_fibers_and_finite_lattice_correspondences.md": "df555b19cdd7e759493a96a616023f7858a07c067175fe529750fb872102138e"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_equal_determinant_and_finite_correspondence.py": "d9d91861e09c86c6489d4496d782e10e2e99b16f907d1dff2a1a421501c524f4",
+        "research/prime_arity_padic/equal_determinant_finite_correspondence_verification.json": "25d24094c10d4461065f134b7f2ee6130285ad2194a9e4512c70b81e96b02152"
+      }
+    },
+    {
+      "id": "PRIME-GEOMETRY",
+      "title": "有界纤维整数凸包、根本原性与内容对偶",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "固定非零行列式纤维的整数凸包维数控制可生成根格；二维得到本原步长；内容与伴随对偶。",
+      "boundary": "实多边形大不等于任意小库存有资源；未完成全参数无证书存在性。",
+      "documents": [
+        "research/prime_arity_padic/global_structure_and_bounded_fiber_geometry_20260916.md"
+      ],
+      "depends_on": [
+        "PRIME-FIBER"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/global_structure_investigation_20260916/verify_geometry_and_content.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对有限二维计数纤维、内容/伴随公式和有限对应分支；整数凸包根格的一般结论由正文证明，不宣布所有退化纤维有安全出口。",
+          "records": [
+            "research/prime_arity_padic/global_structure_investigation_20260916/verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "整数凸包 flatness 内容对偶 Graver Kneser"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/global_structure_investigation_20260916/source_index.md"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/global_structure_and_bounded_fiber_geometry_20260916.md": "9c27a4f771afa727066ae5c2b718b72a0ce8f402a8177c15db3ac93eb4a434fb"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/global_structure_investigation_20260916/source_index.md": "9a64a2613d41ac20264d4dc9a7341cf4e214f469d6c43478e0072a088ceda263",
+        "research/prime_arity_padic/global_structure_investigation_20260916/verify_geometry_and_content.py": "d7fa82636110b8dad625e89970fcad6fc3f819731467aba879b82ca65201ae44",
+        "research/prime_arity_padic/global_structure_investigation_20260916/verification.json": "187f07e541618830589240b14e2029a1ad7335248fd7767e1953d4fa0c7a2d4b"
+      }
+    },
+    {
+      "id": "PRIME-FINITE-TERMINAL",
+      "title": "深核只建一次：有限对应群化与共同终端",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "已有真实深核，行列式与控制模数互素时，有限正向对应轨道等于明确有限群轨道；终端无需反复扩环。",
+      "boundary": "不供应初始根与深核；共享坏因子的行列式不自动覆盖。",
+      "documents": [
+        "research/prime_arity_padic/finite_orbit_completion_without_ring_extension.md"
+      ],
+      "depends_on": [
+        "PRIME-GEOMETRY",
+        "PRIME-SPLIT-COLUMNS"
+      ],
+      "related": [],
+      "updates": [
+        {
+          "id": "PRIME-RETAINED-BRIDGE",
+          "scope": "统一已有深核后的终端接口，取消逐数字取逆／扩环要求"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_finite_orbit_completion_without_ring_extension.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对有限对应内容分支、群化和终端输送实例；一般轨道等式见正文。必须预先有真实深核，且行列式与模数互素。",
+          "records": [
+            "research/prime_arity_padic/finite_orbit_completion_without_ring_extension_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "深核一次 不扩环 finite correspondence terminal"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/finite_orbit_completion_without_ring_extension.md": "d64f2d08ce8064ecd7ea7a035f31431435d64802341bb1ff7aa6b8f78215fa1e"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_finite_orbit_completion_without_ring_extension.py": "901895c63f29bae12c6759749c13dd7ba1677d3d208b73afd01cca349a1692ce",
+        "research/prime_arity_padic/finite_orbit_completion_without_ring_extension_verification.json": "b807f99ef18a289e821ca6c918e71e33532c949d7ef9cf2636cdfc8c9413047e"
+      }
+    },
+    {
+      "id": "PRIME-ODD-PENCIL",
+      "title": "奇数下半区共同边界反射铅笔",
+      "topic": "prime",
+      "status": "proved-local",
+      "scope": "所有奇素数p≥3、全部奇数1≤r<p，用同一两组三步反射及两步反射取得根、深核与终端。包含r=1，无83界。",
+      "boundary": "偶数余量、3p及上半带没有因此统一；Morris/Serre等原依赖仍保留。",
+      "documents": [
+        "research/prime_arity_padic/odd_lower_band_boundary_reflection_pencil_20260916.md"
+      ],
+      "depends_on": [
+        "PRIME-FINITE-TERMINAL",
+        "EXTERNAL-ARITH"
+      ],
+      "related": [],
+      "updates": [
+        {
+          "id": "PRIME-RETAINED-BRIDGE",
+          "scope": "奇数下半带包括端点改为统一启动，不再依赖83"
+        },
+        {
+          "id": "PRIME-ADELIC",
+          "scope": "端点与奇数内部的资源启动差异已由共同反射替代"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_boundary_reflection_pencil.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "检查共同反射的容量、矩阵、平方标量、根公式和实际位置返回；所有奇p、奇r的量词由正文公式证明。Morris/Serre依赖及已有终端前提保留。",
+          "records": [
+            "research/prime_arity_padic/boundary_reflection_pencil_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "奇数 r=1 下半带 反射铅笔 odd pencil"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/odd_lower_band_boundary_reflection_pencil_20260916.md": "ad4228eb0a8b40896dae04f136a7d0179af9d266a60b28897d27ecfb604de982"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_boundary_reflection_pencil.py": "c13209017245e0c6538bcafe75fe54974a5e99ba825901bed9ecbfb916bfd38d",
+        "research/prime_arity_padic/boundary_reflection_pencil_verification.json": "68902a41b309a01e01b0732e6f1470796ba931d95c12d0e622525a70bab31f1e"
+      },
+      "coverage": {
+        "odd-lower": {
+          "parameters": "奇p≥3；奇数1≤r<p；n=2p+r",
+          "startup": "同一边界反射铅笔，包含r=1；启动无83界",
+          "terminal": "已证根／深核＋有限对应共同终端",
+          "residual": "此整族不再逐小p启动；原Morris/Serre依赖保留",
+          "source": "research/prime_arity_padic/odd_lower_band_boundary_reflection_pencil_20260916.md"
+        }
+      }
+    },
+    {
+      "id": "PRIME-TAIL-BACKUP",
+      "title": "4p尾部整数化：备用改进及固定池障碍",
+      "topic": "prime",
+      "status": "partial",
+      "scope": "原n≥4p已全证；本稿分析见证预算、双重值恢复与固定双块池策略的不可能范围。",
+      "boundary": "不构成2p附近统一突破；没有发现必须重做原尾部正确性的理由。",
+      "documents": [
+        "research/prime_arity_padic/four_p_tail_optimization.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "PRIME-NATURAL-UNIFICATION"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "4p 尾部 见证预算 双重值恢复"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/four_p_tail_optimization.md": "a22b23bbb9c0a81f505142f37e6214bc79fc04dba593340e8a9473f2f32766c2"
+      },
+      "evidence_hashes": {},
+      "coverage": {
+        "tail": {
+          "parameters": "n≥4p",
+          "startup": "已有整数见证下降；容量不足时接既有算术核心",
+          "terminal": "原尾部全参数完成",
+          "residual": "备用改进，不再视为当前可达性缺口",
+          "source": "research/prime_arity_padic/four_p_tail_optimization.md"
+        }
+      }
+    },
+    {
+      "id": "BURAU-REASSESS",
+      "title": "Burau路线的现有资源与临界带容量边界",
+      "topic": "interfaces",
+      "status": "synthesis",
+      "scope": "正向中心、几何链及非零均值修正有效；三幂链最短容量与2p—4p临界带不匹配。",
+      "boundary": "Zariski稠密不等于算术指数／终端覆盖；不能因三平均就假设B₃。",
+      "documents": [
+        "research/prime_arity_padic/burau_route_reassessment.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_burau_reassessment.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/burau_reassessment_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "Burau 辫子 braid 高秩"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/burau_route_reassessment.md": "606904ba9a94e0646b2fd26c0494ed2218c103e15e8298f95364334fdcd8b94a"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_burau_reassessment.py": "54a2e66b8c319041893f7ec386fe4229c97a662df2c5efdb3118051f56b21b5d",
+        "research/prime_arity_padic/burau_reassessment_verification.json": "97adfca76621bc2819dd7bdd2de62efe67e6b2395ccc23968f17383135ad6e5d"
+      }
+    },
+    {
+      "id": "SUBCRITICAL-COMPLETE",
+      "title": "p至2p统一补集判定；p+2强制递归与p进二叉结构",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "奇p的p+2强制判定与最短词完整，环面为Q(√(p²−4))范数一曲线，固定S一步对应四穿孔P¹。p+3完整像为P²，含自同构、到直线的投影及终端直线；单例外两端坐标单位条件为两个三穿孔P¹的乘积。一般p+r有整数能量图与G公式。",
+      "boundary": "固定S一步整点不等于全轨道静态分类；p+3五直线补集只描述一种分支，未得覆盖所有降秩分支的共同环面。一般p+r仅伪多项式算法；实际整数尺度不能随意丢掉。p=2四穿孔模型退化。",
+      "documents": [
+        "research/prime_arity_padic/subcritical_complement_dynamics_20260916.md",
+        "research/prime_arity_padic/subcritical_prime_uniform_arithmetic_20260917.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "SUBCRITICAL-LIMITS",
+        "FIVE-FRACTAL",
+        "SIX-EXPLICIT",
+        "FIVE-TORUS"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_subcritical_complement_dynamics.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "把强制递归与独立整数能量DAG对照，检查补集公式、实际操作和长词族；完整停机／最短性及位长界来自书面证明。",
+          "records": [
+            "research/prime_arity_padic/subcritical_complement_dynamics_verification.json"
+          ]
+        },
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_subcritical_prime_uniform_structure.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "补集G、模类计数与反例；1792个环面点及3584条分支；p+3的5130次原位置重放、1710个投影核和1058个开曲面图坐标。一般量词及ESS有限性不由样本承担。",
+          "records": [
+            "research/prime_arity_padic/subcritical_prime_uniform_structure_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "仅固定S相邻边及开曲面整点有限性使用ESS定理1.1；算法、p进分类及一般p坐标公式不依赖ESS"
+      ],
+      "next_step": "区分曲面上的真实降秩路径与人为固定S整点条件；p+2继续静态算术压缩，p+3及一般p+r需同时控制自同构与真子集投影，不由维数猜测现成高秩群判据。",
+      "aliases": [
+        "五元 5元 p+2 补集 最短 BFS forced",
+        "p平均p+2元 p到2p p+r r维 K_p log2/logp 全区间 补集G",
+        "p+2 Pell conic 环面 四穿孔 曲线 S整点 S单位 ESS p²-4 p-1",
+        "p+3 射影平面 P² 曲面 五直线补集 三穿孔直线乘积 hyperplane arrangement 秩 投影"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/five_torus_literature_20260917/source.json"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/subcritical_complement_dynamics_20260916.md": "b58553b3deae814c946ac393469c2caa2b4482e0d7e0c6b01e253033c79cf14e",
+        "research/prime_arity_padic/subcritical_prime_uniform_arithmetic_20260917.md": "5855252ae758e5bf72d1937c9b9ffeb01c4fbe8d013393ad126aeba43b4212c3"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/five_torus_literature_20260917/source.json": "4b1335cc9f7cdd70f5a75ba1976b3fe64dc7b78efade936ceb997621eb7d9730",
+        "research/prime_arity_padic/verify_subcritical_complement_dynamics.py": "46cafd7a87cb20b5bb5c39143355e457d9c2e0ae2b79af31034ef4ef9bbdda99",
+        "research/prime_arity_padic/subcritical_complement_dynamics_verification.json": "2f1bd0417521554076490ab4baabb222a6104ef6c074d41b020453cd9f395d99",
+        "research/prime_arity_padic/verify_subcritical_prime_uniform_structure.py": "fd1e36182036872375dfc8bc16a9d8803514ea8271b6896233e717959da0b09b",
+        "research/prime_arity_padic/subcritical_prime_uniform_structure_verification.json": "60983ca7ee6634a31b356e936c216d83e75f829b9b1954a75e4bd83212dc2412"
+      }
+    },
+    {
+      "id": "SUBCRITICAL-LIMITS",
+      "title": "低维G加固定同余、实半代数判据的限制",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "对每个奇素数p、每个p+2≤n≤2p和任意固定M，都有逐项modM相同、G均为1的一可解一不可解输入；一个全r公式统一旧端点例子。有限实半代数判据也不足以刻画p+2方向。",
+      "boundary": "只排除G加预定有限同余，以及指定实半代数表达；不排除自适应gcd或其他算术编码。没有证明简洁判据不可能。",
+      "documents": [
+        "research/prime_arity_padic/five_six_intuitive_criteria_and_modular_limits_20260916.md",
+        "research/prime_arity_padic/subcritical_prime_uniform_arithmetic_20260917.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_six_modular_limits.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/five_six_modular_limits_verification.json"
+          ]
+        },
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_subcritical_prime_uniform_structure.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "一般p的补集G公式、两分支有限模类计数、原位置更新及全r固定同余反例的有限精确检查。全参数有理边界分类、维数和反例不可达性由正文证明，未推出一般r≥3位长多项式界。",
+          "records": [
+            "research/prime_arity_padic/subcritical_prime_uniform_structure_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "固定同余 简单条件 不可能 半代数",
+        "全区间 固定模数 p+3 2p G不充分"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/five_six_intuitive_criteria_and_modular_limits_20260916.md": "dd3f76d6e4b9387187d529c0b428d19a40fa12666397fe097e5483ec27bdd4fc",
+        "research/prime_arity_padic/subcritical_prime_uniform_arithmetic_20260917.md": "5855252ae758e5bf72d1937c9b9ffeb01c4fbe8d013393ad126aeba43b4212c3"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_five_six_modular_limits.py": "e8a263d512820357084c2b434e6198750713ec512b024ba7d2c618cd7ad9160b",
+        "research/prime_arity_padic/five_six_modular_limits_verification.json": "3007cb52fa9bcf42036912f47e28d6c21e4efa097db93c1c0c3a269e1b7717cc",
+        "research/prime_arity_padic/verify_subcritical_prime_uniform_structure.py": "fd1e36182036872375dfc8bc16a9d8803514ea8271b6896233e717959da0b09b",
+        "research/prime_arity_padic/subcritical_prime_uniform_structure_verification.json": "60983ca7ee6634a31b356e936c216d83e75f829b9b1954a75e4bd83212dc2412"
+      }
+    },
+    {
+      "id": "SIX-EXPLICIT",
+      "title": "六元三重核心G=3与唯一后继",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "三重核心G=3且无四重值可解；四重值有模9条件；一般G=1失败出口后剩唯一后继。",
+      "boundary": "一般G=1尚未压成一次性公式；不是所有六元G合法都可解。",
+      "documents": [
+        "research/prime_arity_padic/six_triple_block_explicit_G3_20260916.md"
+      ],
+      "depends_on": [],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_six_triple_block_explicit.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/six_triple_block_explicit_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "六元 6元 G3 四重 模9"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/six_triple_block_explicit_G3_20260916.md": "bf89d403887a3185dcb2a80513c48f1493f941f6992c02d4730c039d90dba080"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_six_triple_block_explicit.py": "612e79b163d59e2a03b15c550a5e4ae3ed151e33132ec8b086799d94b1dfe6ec",
+        "research/prime_arity_padic/six_triple_block_explicit_verification.json": "eb7c4d0c90bb4e923ef7fa43558aea566620aec6ceaed1ca222f9320ee86223e"
+      }
+    },
+    {
+      "id": "FIVE-SUMMARY",
+      "title": "五元：算法已解、静态分类仍未解",
+      "topic": "subcritical",
+      "status": "synthesis",
+      "scope": "逐输入判定与最短路径完成；椭圆型真实宏的范数剥离已统一，新增−59／−971子族及跨素数根标签耦合。全五元静态判据及固定D全词逃逸仍未解。",
+      "boundary": "本总结不是所有新证明的独立审核。有限实验、零密度、分形维数和超越性均不能证明静态简单判据不可能。",
+      "documents": [
+        "research/prime_arity_padic/five_averaging_progress_summary_20260917.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "SUBCRITICAL-COMPLETE",
+        "FIVE-ESCAPE-OPEN",
+        "FIVE-TEMPLATE-ESCAPE",
+        "FIVE-DIGITS",
+        "FIVE-NORM-SLICE"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "五元 总结 三个缺口 静态判据"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/five_averaging_progress_summary_20260917.md": "4e4e9affa358acfdc21399fa7627f3aceadf61dae38c43354e9929fa2a2dcc9e"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "FIVE-NORM-SLICE",
+      "title": "统一椭圆宏范数剥离、根标签耦合与−59／−971判据",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "任意椭圆型真实宏T=WS^ε均由范数赋值保证原位置整块剥离；−11、−59、−971有完整静态子族。Q₁₁非三核m必为5或25 mod30，成功根标签存在跨素数耦合。保留原固定m塔及一般p+2范数子族。",
+      "boundary": "单周期剥离已统一，任意m成功标签及不同周期选择／转换仍未统一；有限组周期范数塔不足全覆盖。m可沿成功步骤增大，不能默认下降。m不是环面D，全词逃逸未解，新证明未独立重审。",
+      "documents": [
+        "research/prime_arity_padic/five_quadratic_norm_explicit_slice_20260916.md",
+        "research/prime_arity_padic/five_quadratic_norm_towers_and_minus59_20260917.md"
+      ],
+      "depends_on": [
+        "SUBCRITICAL-COMPLETE"
+      ],
+      "related": [
+        "FIVE-NORMAL-FORM",
+        "FIVE-DENOMINATORS"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_norm_slice.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/five_norm_slice_verification.json"
+          ]
+        },
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_quadratic_norm_towers.py"
+          ],
+          "level": "complete-finite-shells / written-general-proof",
+          "scope": "70176本原对、−11／−59／−971完整壳及两组完整CRT根表；104个椭圆宏的144744个模射影类；312次通用宏与236次三步原位置重放。任意宏／指数的量词由书面证明承担。",
+          "records": [
+            "research/prime_arity_padic/five_quadratic_norm_towers_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "单周期的整数实现已统一；继续须控制任意m的整体根标签、多个周期之间的转换与选择。排除独立素数筛选和单陪集模型，不排除更一般算术关系。",
+      "aliases": [
+        "-11 范数 5*3^k 静态子族",
+        "五元 二次范数 推广 -59 35*3^k 范数核 根标签 235 模47 二次整数gcd Euclidean ideal class 3",
+        "五平均 七元 p+2 Q_p 7*5^k -19",
+        "椭圆宏 统一范数 周期剥离 非主理想 -971 85*3^k 根标签耦合 CRT 9145 21235 模30"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/five_quadratic_norm_explicit_slice_20260916.md": "5f27a0858e3f04c9d49636c555f6aebd565cf45cd10ab9b74e775a79b304b4e9",
+        "research/prime_arity_padic/five_quadratic_norm_towers_and_minus59_20260917.md": "996eefde34682ea8f36ac70a08953ef83556955fd5b9027332a716abfc73ab65"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_five_norm_slice.py": "7041f6dd461202e3bc052f3024cf119d6f4cf68d4d777914196798a404b7e395",
+        "research/prime_arity_padic/five_norm_slice_verification.json": "5d1f5e9c7c0fcea8e1b4f025e8e685c5f6c5f8fea3b603cdab7219ad8e08259f",
+        "research/prime_arity_padic/verify_five_quadratic_norm_towers.py": "47608048e46ca5f6a66c1a437cfa7f3667c87d0e598b2b678bf89582991696e1",
+        "research/prime_arity_padic/five_quadratic_norm_towers_verification.json": "7ebd994267cbf0f9e0819ed1fcb6f7c5a23a878c0b64f3a7dcf3a9079ab7aad4"
+      }
+    },
+    {
+      "id": "FIVE-NORMAL-FORM",
+      "title": "五元完整受限连分数与level15矩阵序",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "任意五元通过十对线性表达式进入唯一受限连分数；整数代数为level15序，生成模为u+v≡0 mod5。",
+      "boundary": "群轨道严格大于正词；不存在两分支共同乘法型齐次范数，不排除一般算术条件。",
+      "documents": [
+        "research/prime_arity_padic/five_complete_arithmetic_normal_form_20260916.md"
+      ],
+      "depends_on": [
+        "SUBCRITICAL-COMPLETE"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_complete_arithmetic_normal_form.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/five_complete_arithmetic_normal_form_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "五元 continued fraction Eichler level15 群假阳性"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/five_complete_arithmetic_normal_form_20260916.md": "2d47b17d1c4a5eb4f4c485bbf5e41b914f440755cecbd133432ee3383c28e2ce"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_five_complete_arithmetic_normal_form.py": "7ac7cf1f6def6df3f2f15db1f7220cf589ae7e80469b11a4304a90d38c858611",
+        "research/prime_arity_padic/five_complete_arithmetic_normal_form_verification.json": "cfa23d48f1af25c013355dab4b97951c9884d6e877501ed11142563a7a86a4dd"
+      }
+    },
+    {
+      "id": "FIVE-FRACTAL",
+      "title": "三进紧集的全部有理点与密度",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "有限标记=可解；无限边界有理点恰两轴有限轨道，被模5排除；维数log₂/log₃、每层2^(m+1)−1类。",
+      "boundary": "实稠密、三进零测不等于判定不可能；五元整数盒子密度零不等于固定D有限。",
+      "documents": [
+        "research/prime_arity_padic/five_padic_fractal_rational_points_20260916.md"
+      ],
+      "depends_on": [
+        "FIVE-NORMAL-FORM"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_padic_fractal.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对模3各层类数、实际递归及有理点分型的有限实例；全部有理边界分类和Hausdorff维数由正文的一般论证承担。",
+          "records": [
+            "research/prime_arity_padic/five_padic_fractal_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "五元 p-adic fractal Cantor 有理点 rational boundary"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/five_padic_fractal_rational_points_20260916.md": "6e1ee8cbad118eca322f757cab263fe51072d8c0e5b49a62597276f6132c3b98"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_five_padic_fractal.py": "124ca510930a90a0693efdb8344c81eeeb22f45b6b142c2501c8047c0fa679a6",
+        "research/prime_arity_padic/five_padic_fractal_verification.json": "57680464c72a1da88c2d9ecd89155042113e46cccd44373e77c59b6d29ef85a0"
+      }
+    },
+    {
+      "id": "FIVE-DIGITS",
+      "title": "原整数同步三进非正则、精确进位与有理代数对应",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "普通斜率及未本原化原五整数的同步三进语言均无固定有限状态判据；h剥位公因子恰gcd(q,4)，二因子总量望远镜消去。保留交换商有理对应。",
+      "boundary": "不排除先算gcd后本原承诺域读位、无界整数寄存器或输入相关算术式；未得G式总判据。换支不是实际平均，新证明未独立重审。",
+      "documents": [
+        "research/prime_arity_padic/five_digit_obstruction_and_rational_correspondence_20260916.md",
+        "research/prime_arity_padic/five_integer_digits_and_carry_20260917.md"
+      ],
+      "depends_on": [
+        "FIVE-FRACTAL"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_digits_and_correspondence.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/five_digits_and_correspondence_verification.json"
+          ]
+        },
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_integer_digits_and_carry.py"
+          ],
+          "level": "exact-finite / written-general-proof",
+          "scope": "新坐标与旧递归比较130321对；56个原输入以完整整数能量图独立核对；检查约分及repunit桥。非正则全称结论由书面证明承担。",
+          "records": [
+            "research/prime_arity_padic/five_integer_digits_and_carry_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "当前优先：本原化后的数字规律或输入相关gcd／赋值式；先与完整递归核验。二进约分总量已消去，不能再把它作为独立无界障碍。",
+      "aliases": [
+        "finite automaton 非正则 对应 椭圆 曲线",
+        "五元 三进 数字 数位 进位 同步 原整数 carry numeration repunit 有理基数 平衡三进"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/five_torus_literature_20260917/rational_base_padic_2011_source.json",
+        "research/prime_arity_padic/five_torus_literature_20260917/rational_base_regular_2021_source.json"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/five_digit_obstruction_and_rational_correspondence_20260916.md": "683a930cae2d0b2e3d03bd885a0de316aedc38edfb3954f8f2de4359dab8ea2f",
+        "research/prime_arity_padic/five_integer_digits_and_carry_20260917.md": "e9403f2c19706098f4a7c8a399e42a9b54d967e628485f4e94c36e40d30dd368"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/five_torus_literature_20260917/rational_base_padic_2011_source.json": "3d2ed848c622e0e5ef5ab3c31fcd4e51f4e60d6ec3adfe5fa9f87d329345c357",
+        "research/prime_arity_padic/five_torus_literature_20260917/rational_base_regular_2021_source.json": "08a20104d0357fe5e64843cdf8768bec4bc76fb1a86aa284e46fc189f8f2ade4",
+        "research/prime_arity_padic/verify_five_digits_and_correspondence.py": "f0d8520d4cf9e8c3b8a594ab5532ff3471bfc2334e1d599e63792db106e4b9e8",
+        "research/prime_arity_padic/five_digits_and_correspondence_verification.json": "981d8ef8c97735b9ecd17efa813f5bb40f2aa7a6af7522b64c07aabd0aa84b15",
+        "research/prime_arity_padic/verify_five_integer_digits_and_carry.py": "e57856214a5cbccb55cf6a1440a7d4932af4e32b8fbc68fc64592ebcd6882cd3",
+        "research/prime_arity_padic/five_integer_digits_and_carry_verification.json": "3cab137d19198432b44a9272ee63041c714fef6fe4aa10649e6c4958bb686a4b"
+      }
+    },
+    {
+      "id": "FIVE-TORUS",
+      "title": "统一Q(√5)范数一环面与扭曲平移",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "两分支为J(ε^±1α)，3惰性、5分歧；四穿孔曲线及固定S内相邻单位边有限。",
+      "boundary": "J不是群同态；相邻边有限不能阻止离开后返回；辅助分母不是物理分母。",
+      "documents": [
+        "research/prime_arity_padic/five_norm_one_torus_and_twisted_translation_20260917.md"
+      ],
+      "depends_on": [
+        "FIVE-DIGITS"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_torus_twist.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/five_torus_twist_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "ESS定理1.1用于固定S单位方程"
+      ],
+      "next_step": "",
+      "aliases": [
+        "Qsqrt5 torus J 扭曲 平移 S-unit"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/five_torus_literature_20260917/README.md"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/five_norm_one_torus_and_twisted_translation_20260917.md": "fb35a31f07c638fe1a8cb081a70296bb9c93be61221a35579f6e17858a6b8db8"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/five_torus_literature_20260917/README.md": "9daca471af9a75ed29c93630315c04185ca5c21680ec7d58ae393dc955f20cd5",
+        "research/prime_arity_padic/verify_five_torus_twist.py": "1ce00244608c6bb0d63fa8026e13d7826f1a0debcffa76636cb3eb0a06c7d27c",
+        "research/prime_arity_padic/five_torus_twist_verification.json": "ec93f4b62f1bfca9d2e55bb0c6eaaad9e33323cdde2b8f747d4d04a8b60724e5"
+      }
+    },
+    {
+      "id": "FIVE-DENOMINATORS",
+      "title": "精确D、相邻互素、同理想任意近的失败点",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "D=|u²+7uv+v²|/5是环面最小分母；相邻D互素，兄弟gcd只可能11；同理想固定局部精度不足。",
+      "boundary": "D不单调，不独立决定可解；辅助素数可变化。",
+      "documents": [
+        "research/prime_arity_padic/five_torus_denominators_and_local_separation_20260917.md"
+      ],
+      "depends_on": [
+        "FIVE-TORUS"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_torus_denominators.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/five_torus_denominators_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "分母 D 相邻互素 11 Pell 同理想"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/five_torus_denominators_and_local_separation_20260917.md": "7ea8607a54da7cc8c5313bff4e2f479cfb0b9cb71105c9d2526104c18525051e"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_five_torus_denominators.py": "ecf9020851c29db7588c8be6efb5657b74dd30c3fa095bc4e41229e747666494",
+        "research/prime_arity_padic/five_torus_denominators_verification.json": "cfdfeed0335e568477ab71438753f6b4f79e84415d2baa56535453215d56f2af"
+      }
+    },
+    {
+      "id": "FIVE-UNITS-GROUP",
+      "title": "固定理想单位指数与三进大群闭包",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "固定理想候选为α₀ε^(4k)，Z₃指数与h等距；群闭包含PSL₂(Q₃)，对数偏移D=1整数、D>1超越。",
+      "boundary": "大群不替代正半群；指数零密度不推出有限。",
+      "documents": [
+        "research/prime_arity_padic/five_fixed_ideal_unit_exponents_and_padic_group_20260917.md"
+      ],
+      "depends_on": [
+        "FIVE-DENOMINATORS",
+        "FIVE-FRACTAL"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_unit_exponents_and_group.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "检查单位指数、局部群生成恒等式和有限D=1指数诊断；Baker–Brumer仅按已读来源引用，k范围实验不证明D=1全分类。",
+          "records": [
+            "research/prime_arity_padic/five_unit_exponents_and_group_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "Baker–Brumer，已读正式转述，原1967证明未取得"
+      ],
+      "next_step": "",
+      "aliases": [
+        "单位指数 group closure Baker Brumer 超越"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/five_fixed_ideal_unit_exponents_and_padic_group_20260917.md": "f83e191b1735dc16bb00bfd8973bb47f58aedebe17aace1c74f84ce0092b9be7"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_five_unit_exponents_and_group.py": "98a7b0535226137fc6550081461d6238c6a5a4b1a2f5ac5b235efce33823f231",
+        "research/prime_arity_padic/five_unit_exponents_and_group_verification.json": "316e9aab1449e71ef864eea8ebbe139eaafe947ac2d0c662fb1294446a84bd77"
+      }
+    },
+    {
+      "id": "FIVE-SPARSITY",
+      "title": "固定D有效稀疏与固定周期有限返回",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "长度L指数区间成功数<4L^log₃2；固定D高度计数为对数高度分数幂；固定正词幂只有有限命中。",
+      "boundary": "不涵盖变词全树；有限返回不自动给有效最后命中界，后续Baker只补固定混合周期。",
+      "documents": [
+        "research/prime_arity_padic/five_fixed_D_effective_sparsity_and_periodic_return_20260917.md"
+      ],
+      "depends_on": [
+        "FIVE-UNITS-GROUP"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_fixed_D_returns.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "检查正词谱模3恒等式、二次递推、Pell/Fibonacci表达、纯分支范数及整数区间界的精确前提。ESS/SML一般有限性不由有限词数据承担。",
+          "records": [
+            "research/prime_arity_padic/five_fixed_D_returns_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "ESS；SML为替代有限性论证"
+      ],
+      "next_step": "",
+      "aliases": [
+        "sparsity 周期 返回 Fibonacci Pell"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/five_fixed_D_effective_sparsity_and_periodic_return_20260917.md": "1db35233e5a43e97bb2cbbdd1aa0733b0cc519cffe04fe3599496e8a89db85c3"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_five_fixed_D_returns.py": "125eeabffd83b8baef302aaa8b34bf5ed840e3377df75bde9a9c1cf003414b2e",
+        "research/prime_arity_padic/five_fixed_D_returns_verification.json": "11a3c065c9cdf03bde82fdab336add9b3651f033a1e5bc606aaaae05ac74ad02"
+      }
+    },
+    {
+      "id": "FIVE-BOUNDED-RUNS",
+      "title": "有界字母切换的有效有限性",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "固定D且同方向段数有界时有限并有效；D=1至多两次切换的全长度分类只留三个方向。",
+      "boundary": "小段数应用有精确尾误差证书；任意切换仍未解决，后续有无网格界与模板推广。",
+      "documents": [
+        "research/prime_arity_padic/five_bounded_switches_and_correspondence_degree_20260917.md"
+      ],
+      "depends_on": [
+        "FIVE-DENOMINATORS"
+      ],
+      "related": [],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_bounded_runs.py"
+          ],
+          "level": "theorem-certificate + symbolic-check",
+          "scope": "有理网格加严格尾误差认证D=1至多三段的全部字长；一般固定段数有限性来自正文紧致化。另重放六平均九元固定网络，不能升级为任意段数分类。",
+          "records": [
+            "research/prime_arity_padic/five_bounded_runs_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "切换 runs bounded 紧致化 CIP"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/five_bounded_switches_and_correspondence_degree_20260917.md": "a942c2d05f4e7ef78992facef23bf4f98fdfa7c127574240e6b63d375458c8a2"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_five_bounded_runs.py": "e1cd0f9e172db7a91c004387bc1d3045bf858f03aa3314b16ceef423dc38b2f9",
+        "research/prime_arity_padic/five_bounded_runs_verification.json": "f72227a282041d776ef39a8aaa65654ae9aabbc8098440528a3cea3f14507d33"
+      }
+    },
+    {
+      "id": "FIVE-HECKE",
+      "title": "显式间隙界与同层共同Hecke二次型",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "有界段数给闭式字长界；所有同长度词拉回型整数等价；D=1第一段为v₃(2k+1)+v₃(2k−1)。",
+      "boundary": "Aka–Shapira只给整周期分布，不控制终端标记Ce；类信息统一不是全词逃逸。",
+      "documents": [
+        "research/prime_arity_padic/five_explicit_gap_common_hecke_form_20260917.md"
+      ],
+      "depends_on": [
+        "FIVE-BOUNDED-RUNS",
+        "FIVE-UNITS-GROUP"
+      ],
+      "related": [],
+      "updates": [
+        {
+          "id": "FIVE-BOUNDED-RUNS",
+          "scope": "将一般有效界升级为无网格显式界"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_explicit_gap_and_hecke.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "检查258个间隙截断、长度至6的127个格变基、有限层单位射影周期和1000个Pell赋值实例。一般显式界与同层等价由正文证明，Aka–Shapira不是由有限计数验证。",
+          "records": [
+            "research/prime_arity_padic/five_explicit_gap_and_hecke_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "Aka–Shapira用于共同周期；Lucas赋值亦有自足证明"
+      ],
+      "next_step": "",
+      "aliases": [
+        "Hecke Aka Shapira Ce 标记 Lucas 显式界"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/five_torus_literature_20260917/switch_hecke_review_20260917.md"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/five_explicit_gap_common_hecke_form_20260917.md": "e34cd6f79de6f3244ac6d8c47796165259604aa8047fb817615f69a0c203153f"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/five_torus_literature_20260917/switch_hecke_review_20260917.md": "5961900b10b1db176f9f207ad7672980407e13f09dee77c27953a7ed9c948ec9",
+        "research/prime_arity_padic/verify_five_explicit_gap_and_hecke.py": "eb5da7d3febb6af3bcb77c27cb31afe96103fe0382c6f3537606c8b9c68a8e7b",
+        "research/prime_arity_padic/five_explicit_gap_and_hecke_verification.json": "f08c1468d9347e7ac919e30e03176f002ff6a1ff8116742de006a5a062b9bec1"
+      }
+    },
+    {
+      "id": "FIVE-TEMPLATE-ESCAPE",
+      "title": "固定多块模板统一逃离小分母",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "任意固定U₀V₁^a₁⋯V_r^a_rU_r内，指数独立变化仍统一逃离小D；允许混合块及无界切换。",
+      "boundary": "模板本身变化的全部词仍未覆盖；多模板有限性未给有效截止；固定混合周期另有Baker指数下界。",
+      "documents": [
+        "research/prime_arity_padic/five_bounded_templates_uniform_escape_20260917.md"
+      ],
+      "depends_on": [
+        "FIVE-SPARSITY",
+        "FIVE-DENOMINATORS"
+      ],
+      "related": [],
+      "updates": [
+        {
+          "id": "FIVE-SPARSITY",
+          "scope": "由单周期扩为多参数固定模板，另补固定周期有效增长"
+        },
+        {
+          "id": "FIVE-BOUNDED-RUNS",
+          "scope": "重复块可混合两字母，覆盖无界切换子族"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_bounded_templates_escape.py",
+            "--return-depth",
+            "18"
+          ],
+          "level": "symbolic-check + exploratory-search",
+          "scope": "精确检查混合块能量矩阵、模p特征多项式、模板展开及周期递推；可选深度18只解524286个有限词的范数返回根。固定模板一般逃逸由ESS格陪集归约与正文射线排除承担；不证明任意变模板全词逃逸。",
+          "records": [
+            "research/prime_arity_padic/five_bounded_templates_escape_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "ESS经极小零子和化格陪集",
+        "Baker–Wüstholz正式转述只用于固定周期有效增长"
+      ],
+      "next_step": "",
+      "aliases": [
+        "全词 逃逸 模板 ESS bounded language 小分母",
+        "五元 小分母"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/five_torus_literature_20260917/uniform_escape_review_20260917.md"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/five_bounded_templates_uniform_escape_20260917.md": "375319e5fe8ef0060283bfa48435f305f39a601005935206cad8895e85b98a78"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/five_torus_literature_20260917/uniform_escape_review_20260917.md": "140ca276df4a9aa9e35f28d87451feb479825ce181169867532b1ddcea2cfab1",
+        "research/prime_arity_padic/verify_five_bounded_templates_escape.py": "1791f07ee0c9b7cf0c46ed4ff5987d6a3109ad7a3c9e13430e49b67874cc4d7f",
+        "research/prime_arity_padic/five_bounded_templates_escape_verification.json": "70a82647472884dd7debf3c12c03b4c86cf70ca86390c2d2d4d03e688612be6f"
+      }
+    },
+    {
+      "id": "FIVE-ESCAPE-OPEN",
+      "title": "固定D全词逃逸与D=1完整分类",
+      "topic": "subcritical",
+      "status": "open",
+      "scope": "猜想min_|W|=L D(We)→∞；更小猜想D=1只允许单位指数k=0,±1。",
+      "boundary": "模板定理、零密度、群闭包、有限指数范围实验都不能替代任意词证明。没有证明简单判据不可能。",
+      "documents": [
+        "research/prime_arity_padic/five_averaging_progress_summary_20260917.md",
+        "research/prime_arity_padic/five_bounded_templates_uniform_escape_20260917.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "FIVE-TEMPLATE-ESCAPE",
+        "FIVE-HECKE"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "对不断变化的词模板给一致小范数控制，或构造无限反例族；不得把固定模板的无限并当有限覆盖。",
+      "aliases": [
+        "D=1 三个缺口 完整判定 全词逃离 统一逃逸",
+        "五元 小分母 全词"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/five_averaging_progress_summary_20260917.md": "4e4e9affa358acfdc21399fa7627f3aceadf61dae38c43354e9929fa2a2dcc9e",
+        "research/prime_arity_padic/five_bounded_templates_uniform_escape_20260917.md": "375319e5fe8ef0060283bfa48435f305f39a601005935206cad8895e85b98a78"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "AFFINE-IDEAL",
+      "title": "仿射交换子理想：可逆宏已有后根参数可完整计算",
+      "topic": "interfaces",
+      "status": "proved-source",
+      "scope": "可执行仿射生成元的导群参数理想由交换子与倍率局部化精确生成；无需逐参数搜根。",
+      "boundary": "必须先有真实正向逆；非零理想不等于本原理想，导群也不必是全部平移核。",
+      "documents": [
+        "outputs/triple_average/history/triple_average_affine_commutator_ideal.md"
+      ],
+      "source_hashes": {
+        "outputs/triple_average/history/triple_average_affine_commutator_ideal.md": "1afa7a43b5c4f03c2e1c399dbbf8b2c5f241d925f85f2dab6dcfb37814204b8b"
+      },
+      "depends_on": [],
+      "related": [
+        "OLD-TRACE-RETURN"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "仿射 交换子 根理想 affine commutator"
+      ],
+      "source_records": [],
+      "evidence_hashes": {}
+    },
+    {
+      "id": "PARAMETRIC-RIGIDITY",
+      "title": "固定参数词的有限射影周期刚性",
+      "topic": "interfaces",
+      "status": "proved-source",
+      "scope": "固定有理函数矩阵词若非恒等满足分圆迹关系，仅有限参数有有限射影阶；无限族须有恒等关系或变化词形。",
+      "boundary": "不排除随参数无界增长的词，也不否定后来的统一正向种子。",
+      "documents": [
+        "outputs/triple_average/history/triple_average_parametric_cycle_rigidity.md"
+      ],
+      "source_hashes": {
+        "outputs/triple_average/history/triple_average_parametric_cycle_rigidity.md": "30493528dde4dd00df351d560c79fb5ac6323a3f6b42ab3fe3616a09195e641f"
+      },
+      "depends_on": [],
+      "related": [
+        "OLD-TRACE-RETURN"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "参数周期 刚性 trace cyclotomic finite order"
+      ],
+      "source_records": [],
+      "evidence_hashes": {}
+    },
+    {
+      "id": "N91-CONTAINER-CORRECTION",
+      "title": "九十一元21504容器等式已经被反驳",
+      "topic": "interfaces",
+      "status": "corrected",
+      "scope": "模8和模91的尺度字符耦合，证明特定宏群不等于旧21504容器；必要容器修正为43008。",
+      "boundary": "43008仍只是必要容器，未证明等于实际宏群；九十一元可达性已有独立归约，不能混为未解。",
+      "documents": [
+        "outputs/triple_average/history/triple_average_permutation_shadow_entanglement.md"
+      ],
+      "source_hashes": {
+        "outputs/triple_average/history/triple_average_permutation_shadow_entanglement.md": "4680a31803b3414e71343baaae8e10031f440614e351b955214c20ea84e966e3"
+      },
+      "depends_on": [],
+      "related": [
+        "OLD-HECKE-AUDIT"
+      ],
+      "updates": [],
+      "verification_ids": [
+        "cyclotomic-level-entanglement"
+      ],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "91 九十一 21504 43008 容器 陪集 cusp"
+      ],
+      "source_records": [],
+      "evidence_hashes": {}
+    },
+    {
+      "id": "PRIME-2P2",
+      "title": "偶数下边界 n=2p+2：状态相关的两次CRT返回",
+      "topic": "prime",
+      "status": "proved-source",
+      "scope": "全部素数p≥5、n=2p+2的完整G=1判据；无需omega(p+1)限制。",
+      "boundary": "原文的“上方九偏移仍未解”是历史状态；本边界已完整，但不等于内部偶数启动已经同构。",
+      "documents": [
+        "outputs/prime_arity/proofs/lower_band/prime_arity_two_p_plus_two_uniform.md"
+      ],
+      "source_hashes": {
+        "outputs/prime_arity/proofs/lower_band/prime_arity_two_p_plus_two_uniform.md": "8e5d2af6bcab2084dd0d15a6f97c0534b72bd07b61598950ae75db1b25fe0d97"
+      },
+      "depends_on": [
+        "EXTERNAL-ARITH"
+      ],
+      "related": [
+        "PRIME-NATURAL-UNIFICATION",
+        "PRIME-RETAINED-BRIDGE"
+      ],
+      "updates": [],
+      "verification_ids": [
+        "two-p-plus-two-uniform"
+      ],
+      "local_checks": [],
+      "assumptions": [
+        "原文保留的入口、Morris／Serre及零触发前提；有限检查不代替一般量词"
+      ],
+      "next_step": "",
+      "aliases": [
+        "2p+2 r=2 双载体 偶数下半带 边界 CRT"
+      ],
+      "source_records": [],
+      "evidence_hashes": {},
+      "coverage": {
+        "r2": {
+          "parameters": "p≥5；r=2；n=2p+2",
+          "startup": "可逆缩放＋三步重叠反射；对当前列选两次CRT数字返回",
+          "terminal": "指定载体坐标后接精确同余纤维",
+          "residual": "全小素数有效，无omega(p+1)限制；仍与内部不同启动",
+          "source": "outputs/prime_arity/proofs/lower_band/prime_arity_two_p_plus_two_uniform.md"
+        }
+      }
+    },
+    {
+      "id": "PRIME-EVEN-INTERIOR",
+      "title": "偶数下半带内部 4≤r≤p−3 的完整证明",
+      "topic": "prime",
+      "status": "proved-source",
+      "scope": "全部p≥7、偶数4≤r≤p−3，n=2p+r全输入G=1充要。",
+      "boundary": "不承担r=2及r=p−1；这两条边界有独立完整卡。旧二进表可由PRIME-DYADIC替代，不等于启动全部统一。",
+      "documents": [
+        "outputs/prime_arity/proofs/lower_band/prime_arity_even_interior_completion.md"
+      ],
+      "source_hashes": {
+        "outputs/prime_arity/proofs/lower_band/prime_arity_even_interior_completion.md": "2a3f88fc5e73270d66c7309a6b064ee9713569032144e00ad9ef6fbd978d5a63"
+      },
+      "depends_on": [
+        "EXTERNAL-ARITH"
+      ],
+      "related": [
+        "PRIME-NATURAL-UNIFICATION",
+        "PRIME-RETAINED-BRIDGE"
+      ],
+      "updates": [],
+      "verification_ids": [
+        "even-interior-completion"
+      ],
+      "local_checks": [],
+      "assumptions": [
+        "原文保留的入口、Morris／Serre及零触发前提；有限检查不代替一般量词"
+      ],
+      "next_step": "",
+      "aliases": [
+        "偶数 内部 下半带 4≤r≤p-3 相邻对合"
+      ],
+      "source_records": [],
+      "evidence_hashes": {},
+      "coverage": {
+        "even-interior": {
+          "parameters": "p≥7；偶数4≤r≤p−3",
+          "startup": "原相邻载体对合与实际逆／根资源",
+          "terminal": "原深核与终端；二进表可用PRIME-DYADIC统一替代",
+          "residual": "全参数已证；尚非与r=2、p−1共用一个资源公式",
+          "source": "outputs/prime_arity/proofs/lower_band/prime_arity_even_interior_completion.md"
+        }
+      }
+    },
+    {
+      "id": "PRIME-3PM1",
+      "title": "偶数上边界 n=3p−1：重叠反射完整证明",
+      "topic": "prime",
+      "status": "proved-source",
+      "scope": "全部素数p≥5、n=3p−1的完整G=1判据；p≥7通式，p=5有显式夹乘。",
+      "boundary": "两条偶数边界均已完成；本卡并未宣称与r=2及内部是同一资源公式。",
+      "documents": [
+        "outputs/prime_arity/proofs/lower_band/prime_arity_three_p_minus_one_completion.md"
+      ],
+      "source_hashes": {
+        "outputs/prime_arity/proofs/lower_band/prime_arity_three_p_minus_one_completion.md": "f94a66c0d27c5e69534640aa87f8c7b5fc7f02040eb2cf366b92648eab131aff"
+      },
+      "depends_on": [
+        "EXTERNAL-ARITH"
+      ],
+      "related": [
+        "PRIME-NATURAL-UNIFICATION",
+        "PRIME-RETAINED-BRIDGE"
+      ],
+      "updates": [],
+      "verification_ids": [
+        "three-p-minus-one-completion"
+      ],
+      "local_checks": [],
+      "assumptions": [
+        "原文保留的入口、Morris／Serre及零触发前提；有限检查不代替一般量词"
+      ],
+      "next_step": "",
+      "aliases": [
+        "3p-1 r=p-1 偶数下半带 上边界 重叠反射"
+      ],
+      "source_records": [],
+      "evidence_hashes": {},
+      "coverage": {
+        "rpm1": {
+          "parameters": "p≥5；r=p−1；n=3p−1",
+          "startup": "重叠反射族；p=5接明确夹乘，p≥7通式",
+          "terminal": "方向、单位与主同余纤维",
+          "residual": "完整解析证明；没有因此消除边界与内部启动差别",
+          "source": "outputs/prime_arity/proofs/lower_band/prime_arity_three_p_minus_one_completion.md"
+        }
+      }
+    },
+    {
+      "id": "PRIME-3P",
+      "title": "n=3p：三个等大块运输",
+      "topic": "prime",
+      "status": "proved-source",
+      "scope": "n=3p的完整判据允许G为p幂；等大三块具有独立的真实运输／终端机制。",
+      "boundary": "此处不可简写G=1；本原重数改变，未由r≠p的共同控制器替代。",
+      "documents": [
+        "outputs/prime_arity/proofs/lower_band/prime_arity_middle_band_structure.md"
+      ],
+      "source_hashes": {
+        "outputs/prime_arity/proofs/lower_band/prime_arity_middle_band_structure.md": "b24133f50faa03a48c8fe5158bff8c8dc89219dd6fa973083e082f3f34a7d44e"
+      },
+      "depends_on": [
+        "EXTERNAL-ARITH"
+      ],
+      "related": [
+        "PRIME-NATURAL-UNIFICATION",
+        "PRIME-RETAINED-BRIDGE"
+      ],
+      "updates": [],
+      "verification_ids": [
+        "prime-arity-middle-band"
+      ],
+      "local_checks": [],
+      "assumptions": [
+        "原文保留的入口、Morris／Serre及零触发前提；有限检查不代替一般量词"
+      ],
+      "next_step": "",
+      "aliases": [
+        "3p r=p 等块 三块 运输"
+      ],
+      "source_records": [],
+      "evidence_hashes": {},
+      "coverage": {
+        "rp": {
+          "parameters": "n=3p",
+          "startup": "三个等大块，控制level为3",
+          "terminal": "真实正运输与零触发",
+          "residual": "独立机制；判据为G的p幂，不能写G=1",
+          "source": "outputs/prime_arity/proofs/lower_band/prime_arity_middle_band_structure.md"
+        }
+      }
+    }
+  ],
+  "coverage_views": {
+    "prime": [
+      {
+        "claim": "PRIME-ODD-PENCIL",
+        "row": "odd-lower"
+      },
+      {
+        "claim": "PRIME-2P2",
+        "row": "r2"
+      },
+      {
+        "claim": "PRIME-EVEN-INTERIOR",
+        "row": "even-interior"
+      },
+      {
+        "claim": "PRIME-3PM1",
+        "row": "rpm1"
+      },
+      {
+        "claim": "PRIME-RETAINED-BRIDGE",
+        "row": "large-lower"
+      },
+      {
+        "claim": "PRIME-3P",
+        "row": "rp"
+      },
+      {
+        "claim": "PRIME-CRITICAL-CONTROLLER",
+        "row": "upper-near"
+      },
+      {
+        "claim": "PRIME-CRITICAL-CONTROLLER",
+        "row": "upper-middle"
+      },
+      {
+        "claim": "PRIME-CRITICAL-CONTROLLER",
+        "row": "upper-far"
+      },
+      {
+        "claim": "PRIME-FIVE-RETURNS",
+        "row": "small-offsets"
+      },
+      {
+        "claim": "PRIME-TOTAL",
+        "row": "other-small"
+      },
+      {
+        "claim": "PRIME-TAIL-BACKUP",
+        "row": "tail"
+      }
+    ]
+  },
+  "status_highlights": [
+    "PRIME-FIVE-RETURNS",
+    "PRIME-FINITE-TERMINAL",
+    "PRIME-ODD-PENCIL"
+  ],
+  "query_vocabulary": [
+    "上半带",
+    "下半带",
+    "上半区",
+    "下半区",
+    "九偏移",
+    "共同控制器",
+    "偶数",
+    "奇数",
+    "统一",
+    "启动",
+    "资源",
+    "收尾",
+    "全参数",
+    "选参",
+    "小素数",
+    "小参数",
+    "边界",
+    "分段",
+    "五元",
+    "小分母",
+    "两根",
+    "列修正",
+    "尖点"
+  ],
+  "query_synonyms": {
+    "上半区": "上半带",
+    "下半区": "下半带",
+    "偶余量": "偶数",
+    "奇余量": "奇数",
+    "小p": "小素数"
+  },
+  "query_routes": [
+    {
+      "all": [
+        "上半带",
+        "九偏移"
+      ],
+      "cards": [
+        "PRIME-CRITICAL-CONTROLLER",
+        "PRIME-FIVE-RETURNS",
+        "PRIME-NATURAL-UNIFICATION"
+      ]
+    },
+    {
+      "all": [
+        "上半带",
+        "选参"
+      ],
+      "cards": [
+        "PRIME-CRITICAL-CONTROLLER",
+        "PRIME-NATURAL-UNIFICATION"
+      ]
+    },
+    {
+      "all": [
+        "偶数",
+        "统一"
+      ],
+      "cards": [
+        "PRIME-NATURAL-UNIFICATION",
+        "PRIME-2P2",
+        "PRIME-EVEN-INTERIOR",
+        "PRIME-3PM1",
+        "PRIME-RETAINED-BRIDGE"
+      ]
+    },
+    {
+      "all": [
+        "2p+2"
+      ],
+      "cards": [
+        "PRIME-2P2"
+      ]
+    },
+    {
+      "all": [
+        "3p-1"
+      ],
+      "cards": [
+        "PRIME-3PM1"
+      ]
+    },
+    {
+      "all": [
+        "小素数",
+        "资源"
+      ],
+      "cards": [
+        "PRIME-NATURAL-UNIFICATION",
+        "PRIME-FIVE-RETURNS",
+        "PRIME-ODD-PENCIL"
+      ]
+    },
+    {
+      "all": [
+        "共同收尾"
+      ],
+      "cards": [
+        "PRIME-FINITE-TERMINAL",
+        "PRIME-CRITICAL-CONTROLLER",
+        "PRIME-RETAINED-BRIDGE"
+      ]
+    }
+  ]
+}

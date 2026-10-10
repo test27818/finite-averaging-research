@@ -1,0 +1,39 @@
+{
+  "complete_oracle_comparison": [
+    {
+      "p": 3,
+      "initial_multisets": 32,
+      "core_samples": 80,
+      "oracle_states": 99,
+      "maximum_core_distance_in_samples": 5
+    },
+    {
+      "p": 5,
+      "initial_multisets": 94,
+      "core_samples": 80,
+      "oracle_states": 150,
+      "maximum_core_distance_in_samples": 3
+    },
+    {
+      "p": 7,
+      "initial_multisets": 227,
+      "core_samples": 80,
+      "oracle_states": 288,
+      "maximum_core_distance_in_samples": 3
+    },
+    {
+      "p": 11,
+      "initial_multisets": 920,
+      "core_samples": 80,
+      "oracle_states": 980,
+      "maximum_core_distance_in_samples": 2
+    }
+  ],
+  "complement_formula_literal_checks": 990,
+  "paths": {
+    "literal_atoms": 30,
+    "unbounded_length_formula_checks": 1500
+  },
+  "distinct_inverse_tree_directions": 5115,
+  "scope": "Finite exact checks supplement the written all-prime proof; no bit-polynomial claim for r >= 3."
+}

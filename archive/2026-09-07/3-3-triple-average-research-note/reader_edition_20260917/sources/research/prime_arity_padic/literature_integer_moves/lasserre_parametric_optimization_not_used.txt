@@ -1,0 +1,1809 @@
+        A ”JOINT+MARGINAL” APPROACH TO PARAMETRIC
+                  POLYNOMIAL OPTIMIZATION
+                                       JEAN B. LASSERRE∗
+
+    Abstract. Given a compact parameter set Y ⊂ Rp , we consider polynomial optimization
+problems (Py ) on Rn whose description depends on the parameter y ∈ Y. We assume that one can
+compute all moments of some probability measure ϕ on Y, absolutely continuous with respect to the
+Lebesgue measure (e.g. Y is a box or a simplex and ϕ is uniformly distributed). We then provide
+a hierarchy of semidefinite relaxations whose associated sequence of optimal solutions converges to
+the moment vector of a probability measure that encodes all information about all global optimal
+solutions x∗ (y) of Py , as y ∈ Y. In particular, one may approximate as closely as desired any
+polynomial functional of the optimal solutions, like e.g. their ϕ-mean. In addition, using this
+knowledge on moments, the measurable function y #→ x∗k (y) of the k-th coordinate of optimal
+solutions, can be estimated, e.g. by maximum entropy methods. Also, for a boolean variable xk , one
+may approximate as closely as desired its persistency ϕ({y : x∗k (y) = 1}, i.e. the probability that in
+an optimal solution x∗ (y), the coordinate x∗k (y) takes the value 1. At last but not least, from an
+optimal solution of the dual semidefinite relaxations, one provides a sequence of polynomial (resp.
+piecewise polynomial) lower approximations with L1 (ϕ) (resp. ϕ-almost uniform) convergence to the
+optimal value function.
+
+    Key words. Parametric and polynomial optimization; semidefinite relaxations
+
+    AMS subject classifications. 65 D15, 65 K05, 46 N10, 90 C22
+
+
+     1. Introduction.
+     Roughly speaking, given a set of parameters Y and an optimization problem
+whose description depends on y ∈ Y (call it Py ), parametric optimization is concerned
+with the behavior and properties of the optimal value as well as primal (and possibly
+dual) optimal solutions of Py , when y varies in Y. This is quite a challenging problem
+and in general one may only obtain information locally around some nominal value
+y0 of the parameter. There is a vast and rich literature on the topic and for a detailed
+treatment, the interested reader is referred to e.g. Bonnans and Shapiro [5] and the
+many references therein.
+     Sometimes, in the context of optimization with data uncertainty, some probability
+distribution ϕ on the parameter set Y is available and in this context one is also
+interested in e.g. the distribution of the optimal value, optimal solutions, all viewed
+as random variables. In fact, very often only some moments of ϕ are known (typically
+first- and second-order moments) and the goal of this more realistic moment-based
+approach is to obtain optimal bounds over all distributions that share this moment
+information. In particular, for discrete optimization problems where coefficients of
+the cost vector (of the objective function to optimize) are random variables with joint
+distribution ϕ, some bounds on the expected optimal value have been obtained. More
+recently Natarajan et al. [20] extended the earlier work in [4] to even provide a convex
+optimization problem for computing the so-called persistency values1 of (discrete)
+variables, for a particular distribution ϕ∗ in a certain set Φ of distributions that
+share some common moment information. However, the resulting second-order cone
+program requires knowledge of the convex hull of some discrete set of points, which
+   ∗ LAAS-CNRS and Institute of Mathematics, University of Toulouse, 7 Avenue du Colonel
+
+Roche, 31077 Toulouse Cédex 4, France. Tel: 33 +5 61336415; Fax: 33 +5 61336936; email:
+lasserre@laas.fr
+    1 Given a 0 − 1 optimization problem max{c" x : x ∈ X ∩ {0, 1}n } and a distribution ϕ on c, the
+
+persistency value of the variable xi is Probϕ (x∗i = 1) at an optimal solution x∗ (c) = (x∗i ).
+                                                  1
+2                                 Jean B. LASSERRE
+
+
+is possible when the number of vertices is small. The approach is nicely illustrated
+on a discrete choice problem and a stochastic knapsack problem. For more details
+on persistency in discrete optimization, the interested reader is referred to [20] and
+the references therein. Recently Natarajan et al. [21] have considered mixed zero-one
+linear programs with uncertainty in the objective function and first- and second-order
+moment information. They show that computing the supremum of the expected
+optimal value (where the supremum is over all distributions sharing this moment
+information) reduces to solving a completely positive program.
+     Moment-based approaches also appear in robust optimization and stochastic pro-
+gramming under data uncertainty, where the goal is different since in this context,
+decisions of interest must be taken before the uncertain data is known. For these min-
+max type problems, a popular approach initiated in Arrow et al. [2] is to optimize
+decisions against the worst possible distribution θ (on uncertain data) taken in some
+set Φ of candidate distributions that share some common moment information (in
+general first- and second-order moments). Recently Delage and Ye [9]) have even con-
+sidered the case where only a confidence interval is known for first- and second-order
+moments. For a nice discussion the interested reader is referred to [9] and the many
+references therein.
+     In the context of solving systems of polynomial equations whose coefficients are
+themselves polynomials of some parameter y ∈ Y, specific ”parametric” methods
+exist. For instance, one may compute symbolically once and for all, what is called a
+comprehensive Gröbner basis, i.e., a fixed basis that, for all instances of y ∈ Y, is a
+Gröbner basis of the ideal associated with the polynomials in the system of equations;
+see Weispfenning [29] and more recently Rostalski [23] for more details. Then when
+needed, and for any specific value of the parameter y, one may compute all complex
+solutions of the system of equations, e.g. by the eigenvalue method of Möller and
+Stetter [19]. However, one still needs to apply the latter method for each value of the
+prameter y. A similar two-step approach is also proposed for homotopy (instead of
+Gröbner bases) methods in [23].
+
+    The purpose of this paper devoted to parametric optimization is to show that
+in the case of polynomial optimization, all information about the optimal value and
+optimal solutions can be obtained, or at least, approximated as closely as desired.
+     Contribution. We here restrict our attention to parametric polynomial opti-
+mization, that is, when Py is described by polynomial equality and inequality con-
+straints on both the parameter vector y and the optimization variables x. Moreover,
+the set Y is restricted to be a compact basic semi-algebraic set of Rp , and preferably
+a set sufficiently simple so that one may obtain the moments of some probability
+measure on Y, absolutely continuous with respect to the Lebesgue measure (or with
+respect to the counting measure if Y is discrete). For instance if Y is a simple set
+(like a simplex, a box) one may choose ϕ to be the probability measure uniformly
+distributed on Y; typical Y candidates are polyhedra. Or sometimes, in the context
+of optimization with data uncertainty, ϕ is already specified. In this specific context
+we are going to show that one may get insightful information on the set of all global
+minimizers of Py and on the global optimum, via what we call a ”joint+marginal”
+approach. Our contribution is as follows:
+
+    (a) Call J(y) (resp. X∗y ∈ Rn ) the optimal value (resp. the set of optimal
+solutions) of Py for the value y ∈ Y of the parameter. We first define an infinite-
+                             Parametric polynomial optimization                             3
+                                                                        !
+dimensional optimization problem P whose optimal value is exactly ρ = Y J(y)dϕ(y),
+i.e. the ϕ-mean of the global optimum. Any optimal solution of P is a probability mea-
+sure µ∗ on Rn ×Rp with marginal ϕ on Rp . It turns out that µ∗ encodes all information
+on the set of global minimizers X∗y , y ∈ Y. Whence the name ”joint+marginal” as
+µ∗ is a joint distribution of x and y, and ϕ is the marginal of µ∗ on Y ⊂ Rp .
+    (b) Next, we provide a hierarchy of semidefinite relaxations of P with associated
+sequence of optimal values (ρi )i , in the spirit of the hierarchy defined in [15]. An
+optimal solution of the i-th semidefinite relaxation is a sequence zi = (zαβ
+                                                                           i
+                                                                             ) indexed
+in the monomial basis (x y ) of the subspace R[x, y]2i of polynomials of degree at
+                            α β
+
+most 2i. If for ϕ-almost all y ∈ Y, Py has a unique global minimizer x∗ (y) ∈ Rn ,
+then as i → ∞, zi converges pointwise to the sequence of moments of µ∗ defined in
+(a). In particular, one obtains the distribution of the optimal solution x∗ (y), and
+therefore, one may approximate as closely as desired any polynomial functional of the
+solution x∗ (y), like e.g. the ϕ-mean or variance of x∗ (y).
+      In addition, if the optimization variable xk is boolean then one may approximate
+as closely as desired its persistency ϕ({y : x∗k (y) = 1} (i.e., the probability that
+x∗k (y) = 1 in an optimal solution x∗ (y)), as well as a a necessary and sufficient
+condition for this persistency to be 1.
+     (c) Let e(k) ∈ Nn be the vector with ej (k) = δj=k , j = 1, . . .!, n. Then as i → ∞,
+and for every β ∈ Np , the sequence (ze(k)β
+                                          i
+                                               ) converges to zkβ ∗
+                                                                     := Y yβ gk (y)dϕ(y) for
+the measurable function y &→ gk (y) := x∗k (y). In other words, the sequence (zkβ      ∗
+                                                                                         )β∈Np
+is the moment sequence of the measure dψ(y) := xk (y)dϕ(y) on Y. And so, the
+                                                          ∗
+
+k-th coordinate function y &→ x∗k (y) of the global minimizer of Py , y ∈ Y, can be
+estimated, e.g. by maximum entropy methods. Of course, the latter estimation is not
+pointwise but it still provides useful information on optimal solutions, e.g. the shape
+of the function y &→ x∗k (y), especially if the function x∗k (·) is continuous, as illustrated
+on some simple examples. For instance, for parametric polynomial equations, one
+may use this estimation of x∗ (y) as an initial point for Newton’s method for any
+given value of the parameter y.
+     (d) At last but not least, from an optimal solution of the dual of the i-th semidef-
+inite relaxation, one obtains a piecewise polynomial approximation of the optimal
+value function y &→ J(y), that converges ϕ-almost surely to J.
+     Finally, the computational complexity of the above methodology is roughly the
+same as the moment approach described in [15] for an optimization problem with
+n + p variables since we consider the joint distribution of the n variables x and the
+p parameters y. Hence, the approach is particularly interesting when the number
+of parameters is small, say 1 or 2. In addition, in the latter case the max-entropy
+estimation has been shown to be very efficient in several examples in the literature;
+see e.g. [6, 26, 27]. However, in view of the present status of SDP solvers, if no
+sparsity or symmetry is taken into account as proposed in e.g. [17], the approach is
+limited to small to medium size polynomial optimization problems. Alternatively one
+may also use LP-relaxations which can handle larger size problems but with probably
+less precise results because of their poor convergence properties in general.
+    But this computational price may not seem that high in view of the ambitious goal
+of the approach. After all, keep in mind that by applying the moment approach to a
+single (n + p)-variables problem, one obtains information on global optimal solutions
+of an n-variables problem that depends on p parameters, that is, one approximates n
+functions of p variables!
+4                                      Jean B. LASSERRE
+
+
+     2. A related linear program. For a Borel space X let B(X) denote the Borel
+σ-field associated with X. Let R[x, y] denote the ring of polynomials in the variables
+x = (x1 , . . . , xn ), and the variables y = (y1 , . . . , yp ), whereas R[x, y]k denotes its
+subspace of polynomials of degree at most k. Let Σ[x, y] ⊂ R[x, y] denote the subset
+of polynomials that are sums of squares (in short s.o.s.). For a real symmetric matrix
+A the notation A ' 0 stands for A is positive semidefinite.
+    The parametric optimization problem. Let Y ⊂ Rp be a compact set, called
+the parameter set, and let f, hj : Rn × Rp → R, j = 1, . . . , m, be continuous. For
+each y ∈ Y, fixed, consider the following optimization problem:
+
+                   J(y) := inf { fy (x) : hjy (x) ≥ 0, j = 1, . . . , m }               (2.1)
+                              x
+
+where the functions fy , hjy : Rn → R are defined via:
+                                                      "
+          x &→ fy (x) := f (x, y)
+                                                        ∀ x ∈ Rn , ∀ y ∈ Rp .
+          x &→ hjy (x) := hj (x, y), j = 1, . . . , m
+
+Next, let K ⊂ Rn × Rp be the set:
+
+               K := { (x, y) : y ∈ Y ;        hj (x, y) ≥ 0,      j = 1, . . . , m },   (2.2)
+
+and for each y ∈ Y, let
+
+                    Ky := { x ∈ Rn : hjy (x) ≥ 0,            j = 1, . . . , m }.        (2.3)
+
+    The interpretation is as follows: Y is a set of parameters and for each instance
+y ∈ Y of the parameter, one wishes to compute an optimal decision vector x∗ (y)
+that solves problem (2.1). Let ϕ be a Borel probability measure on Y, with a positive
+density with respect to the Lebesgue measure on the smallest affine variety that
+contains Y. For instance choose for ϕ the probability measure
+                                  #$        %−1 $
+                     ϕ(B) :=           dy              dy,    ∀B ∈ B(Y),
+                                   Y               B
+
+uniformly distributed on Y (assuming of course that Y has nonempty interior). Of
+course, one may also treat the case of a discrete set of parameters Y (finite or count-
+able) by taking for ϕ a discrete probability measure on Y with strictly positive weight
+at each point of the support. Sometimes, e.g. in the context of optimization with
+data uncertainty, ϕ is already specified.
+    We will use ϕ (or more precisely, its moments) to get information on the distri-
+bution of optimal solutions x∗ (y) of Py , viewed as random vectors.
+
+   In the rest of the paper we assume that for every y ∈ Y, the set Ky in (2.3) is
+nonempty.
+     2.1. A related infinite-dimensional linear program. Let M(K) be the set
+of finite Borel measures on K, and consider the following infinite-dimensional linear
+program P:
+                                      $
+                         ρ := inf {       f dµ : πµ = ϕ }                       (2.4)
+                                  µ∈M(K)       K
+                                 Parametric polynomial optimization                5
+
+where πµ denotes the marginal of µ on Rp , that is, πµ is a probability measure on Rp
+defined by
+                         πµ(B) := µ(Rn × B),             ∀ B ∈ B(Rp ).
+Notice that µ(K) = 1 for any feasible solution µ of P. Indeed, as ϕ is a probability
+measure and πµ = ϕ one has 1 = ϕ(Y) = µ(Rn × Rp ) = µ(K).
+    Recall that for two Borel spaces X, Y , the graph Gr ψ ⊂ X × Y of a set-valued
+mapping ψ : X → Y is the set
+                         Gr ψ := {(x, y) : x ∈ X ; y ∈ ψ(x) }.
+If ψ is measurable then any measurable function h : X → Y with h(x) ∈ ψ(x) for
+every x ∈ X, is called a measurable selector. (See §4.1 for more details.)
+     Lemma 2.1. Let both Y ⊂ Rn and K in (2.2) be compact. Then the set-valued
+mapping y &→ Ky is Borel-measurable. In addition:
+     (a) The mapping y &→ J(y) is measurable.
+     (b) There exists a measurable selector g : Y → Ky such that J(y) = f (g(y), y)
+for every y ∈ Y.
+     Proof. As K and Y are both compact, the set valued mapping y &→ Ky ⊂ Rn
+is compact-valued. Moreover, the graph of Ky is by definition the set K, which is a
+Borel subset of Rn × Rp . Next, since x &→ fy (x) is continuous for every y ∈ Y, (a)
+and (b) follow from Proposition 4.3 and 4.4.
+     Theorem 2.2. Let both Y ⊂ Rp and K in (2.2) be compact and assume that
+for every y ∈ Y, the set Ky ⊂ Rn in (2.3) is nonempty. Let P be the optimization
+problem (2.4)$ and let X∗y := {x ∈ Rn : f (x, y) = J(y)}, y ∈ Y. Then:
+    (a) ρ =       J(y) dϕ(y) and P has an optimal solution.
+              Y
+    (b) For every optimal solution µ∗ of P, and for ϕ-almost all y ∈ Y, there is a
+probability measure ψ ∗ (dx | y) on Rn , concentrated on X∗y , such that:
+                           $
+            µ∗ (C × B) =       ψ ∗ (C | y) dϕ(y),   ∀B ∈ B(Y), C ∈ B(Rn ).   (2.5)
+                                 B
+
+    (c) Assume that for ϕ-almost all y ∈ Y, the set of minimizers of X∗y is the
+singleton {x∗ (y)} for some x∗ (y) ∈ Ky . Then there is a measurable mapping g :
+Y → Ky such that
+                                                  $
+            g(y) = x (y) for every y ∈ Y ; ρ =
+                      ∗
+                                                     f (g(y), y) dϕ(y),    (2.6)
+                                                               Y
+
+and for every α ∈ N , and β ∈ N :
+                     n                 p
+                     $                  $
+                        x y dµ (x, y) =
+                         α β   ∗
+                                          yβ g(y)α dϕ(y).                       (2.7)
+                         K                           Y
+
+
+    Proof. (a) As K is compact then so is Ky for every y ∈ Y. Next, as Ky *= ∅
+for every y ∈ Y and f is continuous, the set X∗y := {x ∈ Rn : f (x, y) = J(y)} is
+nonempty for every y ∈ Y. Let µ be any feasible solution of P and so by definition,
+its marginal on Rp is just ϕ. Since X∗y *= ∅, ∀y ∈ Y, one has fy (x) ≥ J(y) for all
+x ∈ Ky and all y ∈ Y. So, f (x, y) ≥ J(y) for all (x, y) ∈ K and therefore
+                       $          $               $
+                           f dµ ≥    J(y) dµ =       J(y) dϕ,
+                             K             K               Y
+6                                           Jean B. LASSERRE
+                         $
+which proves that ρ ≥           J(y) dϕ.
+                            Y
+    On the other hand, recall that Ky *= ∅, ∀y ∈ Y. Consider the set-valued mapping
+y &→ X∗y ⊂ Ky . As f is continuous and K is compact, then X∗y is compact-valued.
+In addition, as fy is continuous, by Proposition 4.4 there exists a measurable selector
+g : Y → X∗y (and so f (g(y), y) = J(y)). Therefore, for every y ∈ Y, let ψy∗ := δg(y)
+be the Dirac probability measure with support on the singleton g(y) ∈ X∗y , and let µ
+be the probability measure on K defined by:
+                          $
+           µ(C × B) :=       1C (g(y)) ϕ(dy),     ∀B ∈ B(Rp ), C ∈ B(Rn ).
+                                B
+
+(The measure µ is well-defined because g is measurable.) Then µ is feasible for P and
+                   $           $ &$                   '
+                 ρ≤         f dµ =                   f (x, y) dδg(y)         dϕ(y)
+                        K               Y       Ky
+                                        $                                $
+                                    =       f (g(y), y) dϕ(y) =               J(y) dϕ(y),
+                                        Y                                 Y
+                                                        !
+which shows that µ is an optimal solution of P and ρ = Y J(y)dϕ(y).
+    (b) Let µ∗ be an arbitrary optimal solution of P, hence on Y × Rn and concen-
+trated on Gr Ky = Y × Ky . Therefore by Proposition 4.6 the probability measure µ∗
+can be disintegrated as
+                         $
+          µ (C × B) :=
+            ∗
+                            ψ ∗ (C | y) dϕ(y),   ∀B ∈ B(Y), C ∈ B(Rn ),
+                                B
+
+where for all y ∈ Y, ψ ∗ (· | y) is a probability measure on Ky . (The object ψ ∗ (·|·) is
+called a stochastic kernel; see Proposition 4.6.) Hence from (a),
+                   $                   $
+              ρ=      J(y) dϕ(y) =        f (x, y) dµ∗ (x, y)
+                    Y                   K
+                                       $ ($                      )
+                                            =                 f (x, y) ψ ∗ (dx | y)   dϕ(y).
+                                                Y        Ky
+
+
+Therefore, using f (x, y) ≥ J(y) on K,
+                                                            
+                        $   $
+                                                            
+                  0=            J(y) − f (x, y) ψ ∗ (dx | y) dϕ(y),
+                         Y    Ky -     ./      0
+                                                    ≤0
+
+which implies ψ ∗ (X∗ (y) | y) = 1 for ϕ-almost all y ∈ Y.
+     (c) Let g : Y → Ky be the measurable mapping of Lemma 2.1(b). As J(y) =
+f (g(y), y) and (g(y), y) ∈ K then necessarily g(y) ∈ X∗y for every y ∈ Y. Next, let
+µ∗ be an optimal solution of P, and let α ∈ Nn , β ∈ Np . Then
+                $                      $    ($                )
+                     xα yβ dµ∗ (x, y) =              yβ             xα ψ ∗ (dx| y)    dϕ(y)
+                 K                              Y              X∗
+                                                                y
+                                                $
+                                            =        yβ g(y)α dϕ(y),
+                                                Y
+                                    Parametric polynomial optimization                                     7
+
+the desired result.
+    An optimal solution µ∗ of P encodes all information on the optimal solutions
+x (y) of Py . For instance, let B be a given Borel set of Rn . Then from Theorem 2.2,
+ ∗
+
+                                                    $
+               Prob (x∗ (y) ∈ B) = µ∗ (B × Rp ) =       ψ ∗ (B | y) dϕ(y),
+                                                                        Y
+
+with ψ as in Theorem 2.2(b).
+        ∗
+
+    Consequently, if one knows an optimal solution µ∗ of P then one may evaluate
+functionals on the solutions of Py , y ∈ Y. That is, assuming that for ϕ-almost all
+y ∈ Y, problem Py has a unique optimal solution x∗ (y), and given a measurable
+mapping h : Rn → Rq , one may evaluate the functional
+                                 $
+                                     h(x∗ (y)) dϕ(y).
+                                              Y
+
+For
+!    instance, with x &→ h(x) := x one obtains the mean vector Eϕ (x∗ (y)) :=
+  Y
+    x (y)dϕ(y) of optimal solutions x∗ (y), y ∈ Y.
+     ∗
+
+     Corollary 2.3. Let both Y ⊂ Rp and K in (2.2) be compact. Assume that for
+every y ∈ Y, the set Ky ⊂ Rn in (2.3) is nonempty, and for ϕ-almost all y ∈ Y,
+the set X∗y := {x ∈ Ky : J(y) = f (x, y)} is the singleton {x∗ (y)}. Then for every
+measurable mapping h : Rn → Rq ,
+                      $                      $
+                         h(x (y)) dϕ(y) =
+                             ∗
+                                                h(x) dµ∗ (x, y).              (2.8)
+                                Y                              K
+
+where µ is an optimal solution of P.
+            ∗
+
+   Proof. By Theorem 2.2(c)
+    $                   $ &$                                       '            $
+            h(x) dµ (x, y) =
+                     ∗
+                                                  h(x)ψ (dx | y) dϕ(y) =
+                                                          ∗
+                                                                                        h(x∗ (y)) dϕ(y).
+        K                           Y        X∗
+                                              y                                     Y
+
+
+
+    Remark 2.4. If the set X∗ (y) is not a singleton on some set with positive
+ϕ-measure then Theorem 2.2(c) now becomes: For each α ∈ Nn , there exists a mea-
+surable mapping gα : Y → R such that:
+          $             $     ($              )      $
+                    xα yβ dµ∗ =         yβ              xα ψ ∗ (dx|y)   dy =        yβ gα (y) dy,
+                K                   Y              X∗
+                                                    y                           Y
+
+
+where
+                                         $
+                         y &→ gα (y) =            xα ψ ∗ (dx|y) = E [xα | y],   y ∈ Y,
+                                         X∗
+                                          y
+
+
+and E [· | y] denotes the conditional expectation operator associated with µ∗ .
+    2.2. Duality. Consider the following infinite-dimensional linear program P∗ :
+                              $
+                 ρ∗ := sup         p dϕ
+                       p∈R[y]   Y                                             (2.9)
+                              f (x, y) − p(y) ≥ 0 ∀(x, y) ∈ K.
+8                                     Jean B. LASSERRE
+
+
+Then P∗ is a dual of P.
+    Lemma 2.5. Let both Y ⊂ Rp and K in (2.2) be compact and let P and P∗ be
+as in (2.4) and (2.9) respectively. Then there is no duality gap, i.e., ρ = ρ∗ .
+    Proof. For a topological space X denote by C(X ) the space of bounded continuous
+functions on X . Let M(K) be the vector space of finite signed Borel measures on K
+(and so M(K) is its positive cone). Let π : M(K) → M(Y) be defined by (πµ)(B) =
+µ((Rn × B) ∩ K) for all B ∈ B(Y), with adjoint mapping π ∗ : C(Y) → C(K) defined
+as
+
+                   (x, y) &→ (π ∗ h)(x, y) := h(y),        ∀h ∈ C(Y).
+
+Put (2.4) in the framework of infinite-dimensional linear programs on vector spaces,
+as described in e.g. [1]. That is:
+
+                        ρ=      inf    {/f, µ0 : πµ = ϕ, µ ≥ 0},
+                              µ∈M(K)
+
+with dual:
+
+                     ρ̃ =    sup {/h, ϕ0 : f − π ∗ h ≥ 0    on K}.
+                            h∈C(Y)
+
+Endow M(K) (respectively M(Y)) with the weak * topology σ(M(K), C(K)) (re-
+spectively σ(M(Y), C(Y)). One first proves that ρ = ρ̃ and then ρ̃ = ρ∗ .
+    By [1, Theor. 3.10], to get ρ = ρ̃, it suffices to prove that the set D :=
+{(πµ, /f, µ0) : µ ∈ M(K)} is closed for the respective weak * topologies σ(M(Y) ×
+R, C(Y) × R) of M(Y) × R and σ(M(K), C(K)) of M(K). Therefore consider a
+converging sequence πµn → a with µn ∈ M(K). The sequence (µn ) is uniformly
+bounded because
+
+                 µn (K) = (πµn )(Y) = /1, πµn 0 → /1, a0 = a(Y).
+
+But by the Banach-Alaoglu Theorem (see e.g. [3, Theor. 3.5.16]), the bounded
+closed sets of M(K) are compact in the weak * topology. And so µnk → µ for some
+µ ∈ M(K) and some subsequence (nk ). Next, observe that for h ∈ C(Y) arbitrary,
+
+                   /h, πµnk 0 = /π ∗ h, µnk 0 → /π ∗ h, µ0 = /h, πµ0,
+
+where we have used that π ∗ h ∈ C(K). Hence combining the above with πµnk → a,
+we obtain πµ = a. Similarly, /f, µnk 0 → /f, µ0 because f ∈ C(K). Hence D is closed
+and the desired result ρ = ρ̃ follows.
+    We next prove that ρ̃ = ρ∗ . Given !+ > 0 fixed arbitrary, there is a function
+h$ ∈ C(Y) such that f − h$ ≥ 0 on K and Y h$ dϕ ≥ ρ̃ − +. By compactness of Y and
+the Stone-Weierstrass theorem, there is p$ ∈ R[y] such that!supy∈Y |h$ (y)−p$ (y)| ≤ +.
+Hence the polynomial p̃$ := p$ − + is feasible with value Y p̃$ dϕ ≥ ρ̃ − 3+, and as +
+was arbitrary, the result ρ̃ = ρ∗ follows.
+    As next shown, optimal or nearly optimal solutions of P∗ provide us with poly-
+nomial lower approximations of the optimal value function y &→ J(y) that converges
+to J(·) in the L1 (ϕ) norm. Moreover, one may also obtain a piecewise polynomial
+approximation that converges to J(·) ϕ-almost uniformly. (Recall that a sequence of
+measurable functions (gn ) on a measure space (Y, B(Y), ϕ) converges to g ϕ-almost
+uniformly if and only if for every + > 0, there is a set A ∈ B(Y) such that ϕ(A) < +
+and gn → g uniformly on Y \ A.)
+                               Parametric polynomial optimization                              9
+
+    Corollary 2.6. Let both Y ⊂ Rp and K in (2.2) be compact and assume that
+for every y ∈ Y, the set Ky is nonempty. Let P∗ be as in (2.9). If (pi )i∈N ⊂ R[y] is
+a maximizing sequence of (2.9) then
+                      $
+                          | J(y) − pi (y) | dϕ → 0 as i → ∞.                   (2.10)
+                           Y
+
+Moreover, define the functions (p̃i ) as follows:
+             p̃0 := p0 ,   y &→ p̃i (y) := max [ p̃i−1 (y), pi (y) ],   i = 1, 2, . . .
+Then p̃i → J(·) ϕ-almost uniformly.
+   Proof. By Lemma 2.5, we already know that ρ∗ = ρ and so
+                     $                           $
+                         pi (y) dϕ(y) ↑ ρ∗ = ρ =   J(y) dϕ.
+                           Y                                Y
+
+Next by feasibility of pi in (2.9)
+     f (x, y) ≥ pi (y)     ∀(x, y) ∈ K ⇒ inf f (x, y) = J(y) ≥ pi (y)               ∀ y ∈ Y.
+                                             x∈Ky
+
+Hence (2.10) follows from pi (y) ≤ J(y) on Y.
+        With y ∈ Y fixed, the sequence (p̃i (y))i is obviously monotone nondecreasing
+ and bounded above by J(y), hence with a limit p∗ (y) ≤ J(y). Therefore p̃i has
+!the pointwise limit! y &→ p∗ (y) ≤ J(y). Also, by the Montone convergence theorem,
+   Y i
+      p̃ (y)dϕ(y) → Y p (y)dϕ(y). This latter fact combined with (2.10) and pi (y) ≤
+                         ∗
+
+ p̃i (y) ≤ J(y) yields
+                                   $
+                              0 =    (J(y) − p∗ (y)) dϕ(y),
+                                       Y
+
+which in turn implies that p (y) = J(y) for ϕ-almost all y ∈ Y. Therefore p̃i (y) →
+                                ∗
+
+J(y) for ϕ-almost all y ∈ Y. And so by Egoroff’s Theorem [3, Theor. 2.5.5], p̃i →
+J(·), ϕ-almost uniformly.
+     3. A hierarchy of semidefinite relaxations. In general, solving the infinite-
+dimensional problem P and getting an optimal solution µ∗ is impossible. One pos-
+sibility is to use numerical discretization schemes on a box containing K; see for
+instance [14]. But in the present context of parametric optimization, if one selects
+finitely many grid points (x, y) ∈ K, one is implicitly considering solving (or rather
+approximating) Py for finitely many points y in a grid of Y, which we want to avoid.
+To avoid this numerical discretization scheme we will use specific features of P when
+its data f (resp. K) is a polynomial (resp. a compact basic semi-algebraic set).
+     Therefore in this section we are now considering a polynomial parametric opti-
+mization problem, a special case of (2.1) as we assume the following:
+       • f ∈ R[x, y] and hj ∈ R[x, y], for every j = 1, . . . , m.
+       • K is compact and Y ⊂ Rp is a compact basic semi-algebraic set.
+Hence the set K ⊂ Rn × Rp in (2.2) is a compact basic semi-algebraic set. We also
+assume that there is a probability measure ϕ on Y, absolutely continuous with respect
+to the Lebesgue measure, whose moments γ = (γβ ), β ∈ Np , are available. As already
+mentioned, if Y is a simple set (like e.g. a simplex or a box) then one may choose ϕ
+to be the probability measure uniformly distributed on Y, for which all moments can
+be computed easily. Sometimes, in the context of optimization with data uncertainty,
+the probability measure ϕ is already specified and in this case we assume that its
+moments γ = (γβ ), β ∈ Np , are available.
+10                                     Jean B. LASSERRE
+
+
+4 3.1. Notation and preliminaries. Let          Nni := {α ∈ Nn : |α| ≤ i} with |α| =
+  i αi . With a sequence z = (zαβ ), α ∈ N , β ∈ N , indexed in the canonical basis
+                                            n        p
+
+(x y ) of R[x, y], let Lz : R[x, y] → R be the linear mapping:
+  α β
+
+                   5                                5
+            f (=        fαβ (x, y)) &→ Lz (f ) :=        fαβ zαβ ,        f ∈ R[x, y].
+                   αβ                               αβ
+
+
+    Moment matrix. The moment matrix Mi (z) associated with a sequence z =
+(zαβ ), has its rows and columns indexed in the canonical basis (xα yβ ), and with
+entries.
+
+                Mi (z)(α, β), (δ, γ)) = Lz (xα yβ xδ yγ ) = z(α+δ)(β+γ) ,
+
+for every α, δ ∈ Nni and every β, γ ∈ Npi .
+                                                                      4
+    Localizing matrix. Let q be the polynomial (x, y) &→ q(x, y) := u,v quv xu yv .
+The localizing matrix Mi (q z) associated with q ∈ R[x, y] and a sequence z = (zαβ ),
+has its rows and columns indexed in the canonical basis (xα yβ ), and with entries.
+
+                 Mi (q z)(α, β), (δ, γ)) = Lz (q(x, y)xα yβ xδ yγ )
+                                               5
+                                         =            quv z(α+δ+u)(β+γ+v) ,
+                                            u∈Nn ,v∈Np
+
+
+for every α, δ ∈ Nni and every β, γ ∈ Npi .
+     A sequence z = (zαβ ) ⊂ R has a representing finite Borel measure supported on
+K if there exists a finite Borel measure µ such that
+                              $
+                       zαβ =     xα yβ dµ,     ∀ α ∈ Nn , β ∈ Np .
+                                 K
+
+The next important result states a necssary and sufficient condition when K is com-
+pact and its defining polynomials (hk ) ⊂ R[x, y] satisfy some condition.
+     Assumption 3.1. Let (hj )tj=1 ⊂ R[x, y] be a given family of polynomials. There
+is some N such that the quadratic polynomial (x, y) &→ N − 3(x, y)32 can be written
+                                                         t
+                                                         5
+                              N − 3(x, y)3 = σ0 +
+                                            2
+                                                               σj hj ,
+                                                         j=1
+
+
+for some s.o.s. polynomials (σj )tj=0 ⊂ Σ[x, y].
+     Theorem 3.2. Let K := {(x, y) : hk (x, y) ≥ 0, k = 1, . . . t} and let (hk )tk=1
+satisfy Assumption 3.1. A sequence z = (zαβ ) has a representing measure on K if
+and only if, for all i = 0, 1, . . .
+
+                        Mi (z) ' 0 ;    Mi (hk z) ' 0,       k = 1, . . . , t.
+
+ Theorem 3.2 is a direct consequence of Putinar’s Positivstellensatz [22] and [25]. Of
+course, when Assumption 3.1 holds then K is compact. On the other hand, if K is
+compact and one knows a bound N for 3(x, y)3 on K then its suffices to add the
+redundant quadratic constraint ht+1 (x, y)(:= N 2 − 3(x, y)32 ) ≥ 0 to the definition of
+K, and Assumption 3.1 holds.
+                                Parametric polynomial optimization                        11
+
+    3.2. Semidefinite relaxations. To compute (or at least, approximate) the op-
+timal value ρ of problem P in (2.4), we now provide a hierarchy of semidefinite relax-
+ations in the spirit of those defined in [15].
+    Let K ⊂ Rn × Rp be as in (2.2), and let Y ⊂ Rp be the compact semi-algebraic
+set defined by:
+
+                    Y := { y ∈ Rp : hk (y) ≥ 0,             k = m + 1, . . . , t}      (3.1)
+
+for some polynomials (hk )tk=m+1 ∈ R[y]; let vk := 4(deg hk )/25] for every k = 1, . . . , t.
+Next, let γ = (γβ ) with
+                                       $
+                               γβ =         yβ dϕ(y),        ∀ β ∈ Np ,
+                                        Y
+
+be the moments of a probability measure ϕ on Y, absolutely continuous with respect
+to the Lebesgue measure, and let i0 := max[4(deg f )/25, maxk vk ]. For i ≥ i0 , consider
+the following semidefinite relaxations:
+
+
+                        ρi =    inf     Lz (f )
+                                 z
+                                s.t. Mi (z) ' 0                                        (3.2)
+                                     Mi−vj (hj z) ' 0, j = 1, . . . , t
+                                     Lz (yβ ) = γβ , ∀ β ∈ Npi .
+
+     Theorem 3.3. Let K, Y be as (2.2) and (3.1) respectively, and let (hk )tk=1 satisfy
+Assumption 3.1. Assume that for every y ∈ Y the set Ky is nonempty and consider
+the semidefinite relaxations (3.2). Then:
+     (a) ρi ↑ ρ as i → ∞.
+     (b) Let zi be a nearly optimal solution of (3.2), e.g. such that Lzi (f ) ≤ ρi + 1/i,
+and let g : Y → Ky be the measurable mapping in Theorem 2.2(c). If for ϕ-almost
+all y ∈ Y, J(y) is attained at a unique optimal solution x∗ (y), then:
+
+                                $
+                  lim zαβ
+                       i
+                            =         yβ g(y)α dϕ(y),         ∀ α ∈ Nn , β ∈ Np .      (3.3)
+                 i→∞             Y
+
+In particular, for every k = 1, . . . , n,
+                                        $
+                      lim ze(k)β
+                           i
+                                 =             yβ gk (y) dϕ(y),     ∀ β ∈ Np ,         (3.4)
+                     i→∞                   Y
+
+
+where e(k)j = δj=k , j = 1, . . . , n (with δ· being the Kronecker symbol).
+    The proof is postponed to §4.2.
+    Remark 3.4. Observe that if ρi = +∞ for some index i in the hierarchy (and
+hence for all i' ≥ i), then the set Ky is empty for all y in some Borel set B of Y
+with ϕ(B) > 0. Conversely, one may prove that if Ky is empty for all y ∈ B with
+ϕ(B) > 0, then necessarily ρi = +∞ for all i sufficiently large. In other words, the
+hierarchy of semidefinite relaxations (3.2) may also provide a certificate of emptyness
+of Ky for some Borel set of Y with positive ϕ-measure.
+12                                         Jean B. LASSERRE
+
+
+    3.3. The dual semidefinite relaxations. The dual of the semidefinite relax-
+tion (3.2) reads:
+                           $            5
+                  ρi = sup
+                   ∗
+                              p dϕ (=      pβ γβ )
+                                p,(σi )    Y
+                                                         β∈Np
+                                                    4t      i
+
+                           s.t. f − p = σ0 +           j=1 σj hj                                     (3.5)
+
+                                p ∈ R[y]; σj ⊂ Σ[x, y], j = 1, . . . , t
+                                deg p ≤ 2i, deg σj hj ≤ 2i, j = 1, . . . , t
+Observe that (3.5) is a strenghtening of (2.9) as one restricts to polynomials p ∈ R[y]
+of degree at most 2i and the nonnegativity of f − p in (2.9) is replaced with the
+stronger weighted s.o.s. representation in (3.5). Therefore ρ∗i ≤ ρ∗ for every i.
+    Theorem 3.5. Let K, Y be as (2.2) and (3.1) respectively, and let (hk )tk=1 satisfy
+Assumption 3.1. Assume that for every y ∈ Y the set Ky is nonempty, and consider
+the semidefinite relaxations (3.5). Then:
+    (a) ρ∗i ↑ ρ as i → ∞.                                                    $
+     (b) Let (pi , (σji )) be a nearly optimal solution of (3.5), e.g. such that                   pi dϕ ≥
+                                                                                               Y
+ρ∗i − 1/i. Then pi ≤ J(·) and
+                                       $
+                                 lim           |J(y) − pi (y)| dϕ(y) = 0                             (3.6)
+                                i→∞       Y
+
+Moreover if one defines
+             p̃0 := p0 ,     y &→ p̃i (y) := max [ p̃i−1 (y), pi (y) ],    i = 1, 2, . . . ,
+then p̃i → J(·) ϕ-almost uniformly on Y.
+     Proof. Recall that by Lemma 2.5, ρ = ρ∗ . Moreover let (p!k ) ⊂ R[y] be a
+maximizing sequence of (2.9) as in Corollary 2.6 with value sk := Y pk dϕ, and let
+p'k := pk − 1/k for every k so that f − p'k > 1/k on K. By Theorem
+                                                                 4        3.2, there exist
+s.o.s. polynomials (σjk ) ⊂ Σ[x, y] such that f − p'k = σ0k + j σjk hj . Letting dk be
+the maximum degree of σ0 and σj hj , j = 1, . . . , t, it follows that (sk − 1/k, (σjk )) is
+a feasible solution of (3.5) with i := dk . Hence ρ∗ ≥ ρ∗dk ≥ sk − 1/k and the result
+(a) follows because sk → ρ∗ , and the sequence ρ∗i is monotone. Then (b) follows from
+Corollary 2.6.
+     Hence in Theorem 3.5, pi ∈ R[y] provides a polynomial lower approximation of
+the optimal value function J(·), with degree at most 2i (the order of the moments
+(γβ ) of ϕ taken into account in the semidefinite relaxation (3.5)). Moreover one may
+even define a piecewise polynomial lower approximation p̃i that converges ϕ-almost
+uniformly to J(·) on Y.
+     Functionals of the optimal solutions. Theorem 3.3 provides a mean of ap-
+proximating any polynomial functional on the global minimizers of Py , y ∈ Y. In-
+deed,
+     Corollary 3.6. Let K, Y be as (2.2) and (3.1) respectively, and let (hk )tk=1
+satisfy Assumption 3.1. Assume that for every y ∈ Y the set Ky is nonempty, and
+for ϕ-almost all y ∈ Y, J(y) is attained at a unique optimal solution x∗ (y) ∈ X∗y .
+Let
+                                           5
+                            x &→ h(x) :=       hα xα ,
+                                                         α∈Nn
+                             Parametric polynomial optimization                            13
+
+and let zi be a nearly optimal solution of the semidefinite relaxations (3.2).
+    Then, for i sufficiently large,
+                          $                      5
+                              h(x∗ (y)) dϕ(y) ≈           i
+                                                     hα zα0  .
+                             Y                              α∈Nn
+
+
+    Proof. The proof is an immediate consequence of Theorem 3.3 and Corollary 2.3.
+
+
+     3.4. Persistence for Boolean variables. One interesting and potentially use-
+ful application is in Boolean optimization. Indeed suppose that for some subset
+I ⊆ {1, . . . , n}, the variables (xi ), i ∈ I, are boolean, that is, the definition of K
+in (2.2) includes the quadratic constraints x2i − xi = 0, for every i ∈ I.
+     Then for instance, one might be interested to determine whether in any optimal
+solution x∗ (y) of Py , and for some index i ∈ I, one has x∗i (y) = 1 (or x∗i (y) = 0) for
+ϕ-almost all values of the parameter y ∈ Y. In [4, 20] the probability that x∗k (y) is 1
+is called the persistency of the boolean variable x∗k (y)
+     Corollary 3.7. Let K, Y be as in (2.2) and (3.1) respectively. Let (hk )tk=1
+satisfy (3.1). Assume that for every y ∈ Y the set Ky is nonempty. Let zi be a
+nearly optimal solution of the semidefinite relaxations (3.2). Then for k ∈ I fixed:
+     (a) x∗k (y) = 1 in any optimal solution and for ϕ-almost all y ∈ Y, only if
+ lim ze(k)0
+       i
+              = 1.
+i→∞
+   (b) x∗k (y) = 0 in any optimal solution and for ϕ-almost all y ∈ Y, only if
+lim ze(k)0
+     i
+           = 0.
+i→∞
+     Assume that for ϕ-almost all y ∈ Y, J(y) is attained at a unique optimal solution
+x∗ (y) ∈ X∗y . Then Prob (x∗k (y) = 1) = lim ze(k)0
+                                              i
+                                                    , and so:
+                                                 i→∞
+    (c) x∗k (y) = 1 for ϕ-almost all y ∈ Y, if and only if lim ze(k)0
+                                                                i
+                                                                      = 1.
+                                                                       i→∞
+    (d) x∗k (y) = 0 for ϕ-almost all y ∈ Y, if and only if lim ze(k)0
+                                                                i
+                                                                      = 0.
+                                                                       i→∞
+     Proof. (a) The only if part. Let α := e(k) ∈ Nn . From the proof of Theorem 3.3,
+for an arbitrary converging subsequence (i( )( ⊂ (i)i as in (4.5),
+                                             $
+                                      i!
+                                lim ze(k)0 =     xk dµ∗ ,
+                                     l→∞                K
+
+where µ∗ is some optimal solution of P. Hence, by Theorem 2.2(b), µ∗ can be disinte-
+grated into ψ ∗ (dx|y)dϕ(y) where ψ ∗ (dx|y) is a probability measure on X∗y for every
+y ∈ Y. Therefore,
+                           $ ($                   )
+              lim z i! =                     xk ψ ∗ (dx | y)     dϕ(y),
+             (→∞ e(k)0           Y      X∗
+                                         y
+                             $
+                         =           ψ ∗ (X∗y | y) dϕ(y)       [because x∗k = 1 in X∗y ]
+                                 Y
+                             $
+                         =           dϕ(y) = 1,
+                                 Y
+
+and as the converging subsequence (i( )( in (4.5) was arbitrary, the whole sequence
+(ze(k)0
+  i
+        ) converges to 1, the desired result. The proof of (b) being exactly the same is
+14                                       Jean B. LASSERRE
+
+
+omitted. Next, if for every y ∈ Y, J(y) is attained at a singleton, then by Theorem
+3.3(b),
+                              $
+                 lim ze(k)0
+                       i
+                            =    x∗k (y) dϕ(y) = ϕ({y : x∗k (y) = 1})
+                    i→∞              Y
+                                  = Prob (x∗k (y) = 1),
+
+from which (c) and (d) follow.
+    3.5. Estimating the density g(y). By Corollary 3.6, one may approximate any
+polynomial functional of the optimal solutions, like for instance the mean, variance,
+etc. (with respect to the probability measure ϕ). However, one may also wish to
+approximate (in some sense) the function y &→ gk (y), that is, the ”curve” described
+by the k-th coordinate x∗k (y) of the optimal solution x∗ (y) when y varies in Y.
+    So let g : Y → Rn be the measurable mapping in Theorem 3.3 and suppose that
+one knows some lower bound vector a = (ak ) ∈ Rn , where:
+
+                      ak ≤ inf { xk : (x, y) ∈ K },              k = 1, . . . , n.
+
+Then for every k = 1, . . . , n, the measurable function ĝk : Y → Rn defined by
+
+                           y &→     ĝk (y) := gk (y) − ak ,        y ∈ Y,                        (3.7)
+
+is nonnegative and ϕ-integrable.
+    Hence for every k = 1, . . . , n, one may consider dλ := ĝk dϕ as a Borel measure on
+Y with unknown density ĝk with respect to ϕ, but with known moments u = (uβ ).
+Indeed, using (3.4),
+                    $                      $              $
+            uβ :=     yβ dλ(y) = −ak          yβ dϕ(y) +      yβ gk (y) dϕ(y)
+                         Y                       Y                  Y
+                                       = −ak γβ + ze(k)β ,          ∀β ∈ Np ,                     (3.8)
+
+where for every k = 1, . . . , n,
+
+                              ze(k)β = lim ze(k)β
+                                            i
+                                                  ,          ∀β ∈ Nn ,
+                                          i→∞
+
+with zi being an optimal (or nearly optimal) solution of the semidefinite relaxation
+(3.2).
+    Hence we are now faced with
+                             !    a density estimation problem, that is: Given the
+sequence of moments uβ = Y yβ gk (y)dϕ, β ∈ Np , of the unknown nonnegative
+measurable function ĝk on Y, ”estimate” ĝk . One possibility is to use the so-called
+maximum entropy approach, briefly described in the next section.
+     Maximum-entropy estimation. We briefly describe the maximum entropy es-
+timation technique in the univariate case. The multivariate case generalizes easily.
+Let g ∈ L1 ([0, 1]) be a nonnegative function2 only known via the first 2d + 1 moments
+         j=0 of its associated measure dϕ = gdx on [0, 1]. (In the context of previous
+u = (uj )2d
+section, the function g to estimate is y &→ ĝk (y) in (3.7) from the sequence u in (3.8)
+of its (multivariate) moments.)
+   2 L ([0, 1]) denote the Banach space of integrable functions on the interval [0, 1] of the real line,
+      1
+                                R
+equipped with the norm 'g'1 = 01 |b(x)| dx.
+                            Parametric polynomial optimization                                 15
+
+     From that partial knowledge one wishes (a) to provide an estimate hd of g such
+that the first 2d + 1 moments of the measure hd dx match those of gdx, and (b)
+analyze the asymptotic behavior of hd when d → ∞. This problem has important
+applications in various areas of physics, engineering, and signal processing in partic-
+ular. An elegant methodology is to search for hd in a (finitely) parametrized family
+{hd (λ, x)} of functions, and optimize over the unknown parameters λ via a suitable
+criterion. For instance, one may wish to select an estimate hd that maximizes some
+appropriate entropy. Several choices of entropy functional are possible as long as one
+obtains a convex optimization problem in the finitely many coefficients λi ’s. For more
+details the interested reader is referred to e.g. Borwein and Lewis [7, 8] and the many
+references therein.
+     We here choose the Boltzmann-Shannon entropy H : L1 ([0, 1]) → R ∪ {−∞}:
+                                            $ 1
+                          h &→ H[h] := −        h(x) ln h(x) dx,                   (3.9)
+                                               0
+
+a strictly concave functional. Therefore, the problem reduces to:
+                     6         $ 1                                    "
+                sup H[h] :         xj h(x) dx = uj , j = 0, . . . , 2d .                    (3.10)
+                  h                0
+
+The structure of this infinite-dimensional convex optimization problem permits to
+search for an optimal solution h∗d of the form:
+                                                      2d
+                                                      5
+                             x &→ h∗d (x) = exp             λ∗j xj ,                        (3.11)
+                                                      j=0
+
+and so λ∗ is an optimal solution of the finite-dimensional unconstrained convex prob-
+lem
+                                                             
+                                          $ 1        2d
+                                                     5
+                    θ(u) := sup /u, λ0 −       exp     λj xj  dx.
+                              λ                0            j=0
+
+
+              ! 1above4function
+Notice that the                  θ is just the Legendre-Fenchel transform of the convex
+                        2d
+function λ &→ 0 exp j=0 λj xj dx.
+    An optimal solution can be calculated by applying first-order methods, in which
+case the gradient ∇vd of the function
+                                                               
+                                             $ 1       2d
+                                                       5
+                    λ &→ vd (λ) := /u, λ0 −      exp     λj xj  dx,
+                                                0            j=0
+
+is provided by:
+                                                       
+                             $ 1              2d
+                                              5
+            ∂vd (λ)
+                    = uk −         xk exp          λj xj  dx,        k = 0, . . . , 2d.
+             ∂λk              0               j=0
+
+If one applies second-order methods, e.g. Newton’s method, then computing the
+Hessian ∇2 vd at current iterate λ, reduces to computing
+                                                  
+                         $ 1             52d
+          ∂ 2 vd (λ)
+                     = −     xk+j exp       λj xj  dx, k, j = 0, . . . , 2d.
+          ∂λk ∂λj         0              j=0
+16                                  Jean B. LASSERRE
+
+
+In such simple cases like a box [a, b] (or [a, b]n in the multivariate case) such quantities
+can be approximated quite accurately via cubature formula as described in e.g. [11]. In
+particular, several cubature formula behave very well for exponentials of polynomials
+as shown in e.g. Bender et al. [6]. An alternative with no cubature formula is also
+proposed in [18]. One has the following convergence result which follows directly from
+[7, Theor. 1.7 and p. 259].
+     Proposition 3.8. Let 0 ≤ g ∈ L1 ([0, 1]) and for every d ∈ N, let h∗d in (3.11) be
+an optimal solution of (3.10). Then, as d → ∞,
+                            $ 1
+                                ψ(x) (h∗d (x) − g(x)) dx → 0,
+                             0
+
+for every bounded measurable function ψ : [0, 1] → R which is continuous ϕ-almost
+everywhere
+     Hence, the max-entropy estimate we obtain is not a pointwise estimate of g, and
+so, at some points of [0, 1] the max-entropy density h∗d and the density g to estimate
+may differ significantly. However, for sufficiently large d, both curves of h∗d and g
+are close to each other. For instance, in our context and with a one-dimensional
+parameter y in say Y = [0, 1], recall that g is the mappping y &→ x∗k (y), and so in
+general, for fixed y, h∗d (y) is close to x∗k (y) and might be chosen for the k-coordinate
+of an initial point x, input of a local minimization algorithm to find a local minimizer
+x∗ (y) (with reasonable hope that it is a global minimizer).
+     3.6. LP-relaxations. Of course, in view of the present status of semidefinite
+programming solvers, the proposed approach is limited to small to medium size prob-
+lems because the size of the semidefinite relaxations (3.2) grows like O(n+ p)i . On the
+other hand, if there is some structured sparsity pattern in the original problem, then
+one may use alternative sparse semidefinite relaxations as defined in e.g. [28], which
+increases significantly the size of problems that can be addressed by this technique.
+Alternatively, instead of the hierarchy of semidefinite relaxations (3.2), one may also
+use an analogous hierarchy of LP-relaxations as defined in [16], whose convergence is
+also guaranteed. In view of the status of LP solvers, and although the former relax-
+ations have much better convergence properties, sometimes it may be better to use
+LP-relaxations, e.g., if one wishes to obtain only crude approximations but for larger
+size problems.
+    3.7. Illustrative examples. In this section we provide some simple illustrative
+examples. To show the potential of the approach we have voluntarily chosen very
+simple examples for which one knows the solutions exactly so as to compare the
+results we obtain with the exact optimal value and optimal solutions. The semidefinite
+relaxations (3.2) were implemented by using the software package Gloptipoly [12]. The
+max-entropy estimate h∗d of gk was computed by using Newton’s method, where at
+each iterate (λ(k) , hd (λ(k) )):
+                       λ(k+1) = λ(k) − (∇2 vd (λ(k) ))−1 ∇vd (λ(k) ).
+     Example 3.9. For illustration purpose, consider the toy example where Y :=
+[0, 1],
+     K := {(x, y) : 1 − x2 − y 2 ≥ 0; x, y ∈ Y} ⊂ R2 ,     (x, y) &→ f (x, y) := −x2 y.
+                                                 unique optimal solution is x∗ (y) :=
+Hence for each value of the parameter y ∈ Y, the 7
+7
+  1 − y 2 . And so in Theorem 3.3(b), y &→ g(y) = 1 − y 2 .
+                                   Parametric polynomial optimization                                          17
+
+    Let ϕ be the probability measure uniformly distributed on [0, 1]. Therefore,
+                     $ 1                 $ 1
+                 ρ=      J(y) dϕ(y) = −      y(1 − y 2 ) dy = −1/4.
+                           0                              0
+
+Solving (3.2) with i := 3, that is, with moments up to order 6, one obtains the optimal
+value −0.250146. Solving (3.2) with i := 4, one obtains the optimal value −0.25001786
+and the moment sequence
+
+z = (1, 0.7812, 0.5, 0.6604, 0.3334, 0.3333, 0.5813, 0.25, 0.1964, 0.25, 0.5244, 0.2, 0.1333,
+
+
+                0.1334, 0.2, 0.4810, 0.1667, 0.0981, 0.0833, 0.0983, 0.1667)
+
+Observe that
+                           $ 1          7
+                  z1k −            yk    1 − y 2 dy ≈ O(10−6 ),           k = 0, . . . 4,
+                            0
+
+
+                           $ 1          7
+                   z1k −           yk    1 − y 2 dy ≈ O(10−5 ),            k = 5, 6, 7.
+                               0
+
+Using a max-entropy approach to approximate the density y &→ g(y) on [0, 1], with
+the first 5 moments z1k , k = 0, . . . , 4, we find that the optimal function h∗4 in (3.11)
+is obtained with
+
+                  λ∗ = (−0.1564, 2.5316, −12.2194, 20.3835, −12.1867).
+
+Both curves of g and h∗4 are displayed in Figure 3.1. Observe that with only 5 mo-
+ments, the max-entropy solution h∗4 approximates g relatively well, even if it differs
+significantly at some points. Indeed, the shape of h∗4 resembles very much that of g.
+    Finally, from an optimal solution of (3.5) one obtains for p ∈ R[y], the degree-8
+univariate polynomial
+
+          y &→ p(y) = −0.0004 − 0.9909y − 0.0876y 2 + 1.4364y 3 − 1.2481y 4
+                +2.1261y 5 − 2.1309y 6 + 1.1593y 7 − 0.2641y 8
+
+and Figure 3.2 displays the curve y &→ J(y) − p(y) on [0, 1]. One observes that J ≥ p
+and the maximum difference is about 3.10−4 close to 0 and much less for y ≥ 0.1, a
+good precision with only 8 moments.
+    Example 3.10. Again with Y := [0, 1], let
+
+    K := {(x, y) : 1 − x21 − x22 ≥ 0} ⊂ R2 ,                  (x, y) &→ f (x, y) := yx1 + (1 − y)x2 .
+
+For each value of the parameter y ∈ Y, the unique optimal solution x∗ ∈ K satisfies
+
+                                                             y2                                 (1 − y)2
+  (x∗1 (y))2 + (x∗2 (y))2 = 1;          (x∗1 (y))2 =                  ,    (x∗2 (y))2 =                    ,
+                                                       y 2 + (1 − y)2                       y 2 + (1 − y)2
+with optimal value
+
+                       y2           (1 − y)2       7
+          J(y) = − 7             −7             = − y 2 + (1 − y)2 .
+                    y + (1 − y)
+                     2         2   y + (1 − y)
+                                    2         2
+18                                             Jean B. LASSERRE
+
+
+
+              1.4
+
+
+
+              1.2
+
+
+
+               1
+
+
+
+              0.8
+
+
+
+              0.6
+
+
+
+              0.4
+
+
+
+              0.2
+
+
+
+               0
+                    0        0.1      0.2    0.3   0.4   0.5   0.6       0.7    0.8    0.9   1
+
+
+
+
+                                                               p
+                           Fig. 3.1. Example 3.9: g(y) =           1 − y 2 versus h∗4 (y)
+
+
+
+                        −4
+                    x 10
+
+
+
+
+               3
+
+
+
+
+               2
+
+
+
+
+               1
+
+
+
+
+               0
+                    0        0.1      0.2    0.3   0.4   0.5   0.6       0.7    0.8    0.9   1
+
+
+
+
+                                   Fig. 3.2. Example 3.9: J(y) − p(y) on [0, 1]
+
+
+
+
+So in Theorem 3.3(b),
+
+
+                             −y                                             y−1
+           y &→ g1 (y) = 7             ,                  y &→ g2 (y) = 7             ,
+                          y + (1 − y)2
+                           2                                             y + (1 − y)2
+                                                                          2
+                                         Parametric polynomial optimization                            19
+
+and with ϕ being the probability measure uniformly distributed on [0, 1],
+                      $ 1                            $ 17
+             ρ=               J(y) dϕ(y) = −             y 2 + (1 − y)2 dy ≈ −0.81162
+                          0                            0
+
+Solving (3.2) with i := 3, that is, with moments up to order 6, one obtains ρ3 ≈
+−0.8117 with ρ3 − ρ ≈ O(10−5 ). Solving (3.2) with i := 4, one obtains ρ4 ≈ −0.81162
+with ρ4 − ρ ≈ O(10−6 ), and the moment sequence (zk10 ), k = 0, 1, 2, 3, 4:
+
+              zk10 = (−0.6232, −0.4058, −0.2971, −0.2328, −0.1907),
+
+and
+                                    $ 1
+                          zk10 −           y k g1 (y) dy ≈ O(10−5 ),       k = 0, . . . , 4.
+                                     0
+
+    Using a max-entropy approach to approximate the density y &→ −g1 (y) on [0, 1],
+with the first 5 moments z1k , k = 0, . . . , 4, we find that the optimal function h∗4 in
+(3.11) is obtained with
+
+          λ∗ = (−3.61284, 15.66153266 − 29.43090127.326347 − 9.9884452).
+
+and we find that
+                                    $ 1
+                      zk10 +               y k h∗4 (y) dy ≈ O(10−11 ),         k = 0, . . . , 4.
+                                     0
+
+In Figure 3.3 are displayed the two functions −g1 and h∗4 , and one observes a very
+good concordance.
+
+
+               1.4
+
+
+
+               1.2
+
+
+
+                  1
+
+
+
+               0.8
+
+
+
+               0.6
+
+
+
+               0.4
+
+
+
+               0.2
+
+
+
+                  0
+                      0       0.1        0.2   0.3   0.4   0.5   0.6     0.7       0.8    0.9      1
+
+
+
+
+                                                                 p
+              Fig. 3.3. Example 3.10: h∗4 (y) versus −g1 (y) = y/ y 2 + (1 − y)2
+20                                             Jean B. LASSERRE
+
+
+    Finally, from an optimal solution of (3.5) one obtains for p ∈ R[y], the following
+degree-8 univariate polynomial
+
+     y &→ p(y) := −1.0000 + 0.9983y − 0.4537y 2 − 0.9941y 3 + 2.2488y 4 − 7.6739y 5
+          +11.8448y 6 − 7.9606y 7 + 1.9903y 8
+
+and Figure 3.4 displays the curve y &→ J(y) − p(y) on [0, 1]. One observes that J ≥ p
+and the maximum difference is about 10−4 , a good precision with only 8 moments.
+
+                            −4
+                       x 10
+                 1.2
+
+
+
+
+                  1
+
+
+
+
+                 0.8
+
+
+
+
+                 0.6
+
+
+
+
+                 0.4
+
+
+
+
+                 0.2
+
+
+
+
+                  0
+                       0         0.1   0.2   0.3   0.4   0.5    0.6   0.7   0.8    0.9   1
+
+
+
+
+                                   Fig. 3.4. Example 3.10: J(y) − p(y) on [0, 1]
+
+    Example 3.11. In this example one has Y = [0, 1], (x, y) &→ f (x, y) := yx1 +
+(1 − y)x2 , and
+
+                K := {(x, y) : yx21 + x22 − y <= 0; x21 + yx2 − y <= 0}.
+
+That is, for each y ∈ Y the set Ky is the intersection of two ellipsoids. It is easy
+to chack that 1 + x∗i (y) ≥ 0 for all y ∈ Y, i := 1, 2. With i = 4, the max-entropy
+estimate y &→ h∗4 (y) for 1 + x∗1 (y) is obtained with
+
+                  λ∗ = (−0.2894, 1.7192, −19.8381, 36.8285, −18.4828),
+
+whereas the max-entropy estimate y &→ h∗4 (y) for 1 + x∗2 (y) is obtained with
+
+                           λ∗ = (−0.1018, −3.0928, 4.4068, 1.7096, −7.5782).
+
+Figure 3.5 displays the curves of x∗1 (y) and x∗2 (y), as well as the constraint h1 (x∗ (y), y).
+Observe that h1 (x∗ (y), y) ≈ 0 on [0, 1] which means that for ϕ-almost all y ∈ [0, 1],
+at an optimal solution x∗ (y), the constraint h1 ≤ 0 is saturated. Figure 3.6 displays
+the curves of h1 (x∗ (y), y) and h2 (x∗ (y), y).
+    Example 3.12. This time Y = [0, 1], (x, y) &→ f (x, y) := (1 − 2y)(x1 + x2 ), and
+
+                   K := {(x, y) : yx21 + x22 − y = 0; x21 + yx2 − y = 0}.
+                                Parametric polynomial optimization                          21
+
+
+                0.4
+
+
+
+                0.2
+
+
+
+                 0
+
+
+
+               −0.2
+
+
+
+               −0.4
+
+
+
+               −0.6
+
+
+
+               −0.8
+
+
+
+                −1
+                      0   0.1   0.2   0.3   0.4   0.5    0.6    0.7    0.8   0.9        1
+
+
+
+
+                Fig. 3.5. Example 3.11: x∗1 (y), x∗2 (y) and h1 (x∗ (y), y) on [0, 1]
+
+
+                0.1
+
+
+
+
+               0.05
+
+
+
+
+                 0
+
+
+
+
+              −0.05
+
+
+
+
+               −0.1
+
+
+
+
+              −0.15
+                      0   0.1   0.2   0.3   0.4   0.5    0.6    0.7    0.8   0.9        1
+
+
+
+
+                Fig. 3.6. Example 3.11: h1 (x∗ (y), y) and h2 (x∗ (y), y) on [0, 1]
+
+
+That is, for each y ∈ Y the set Ky is the intersection of two ellipses, and
+                  # 8           8       %                        8
+                         y          y                                 y
+              x= ±           ,±           ; J(y) = −2|1 − 2y|             .
+                       1+y        1+y                               1+y
+With i = 4 the max-entropy estimate y &→ h∗4 (y) for 1 + x∗1 (y) is obtained with
+           λ∗ = (0.3071151, −12.51867, 43.215907, −46.985733, 16.395944).
+22                                        Jean B. LASSERRE
+
+
+In Figure 3.7 are displayed the curves y &→ −p(y) and y &→ −J(y), whereas in Figure
+3.8 is displayed the curve y &→ p(y) − J(y). One may see that p is a good lower
+approximation of J even with only 8 moments.
+
+
+               1.5
+
+
+
+
+                1
+
+
+
+
+               0.5
+
+
+
+
+                0
+                     0      0.1   0.2   0.3   0.4   0.5    0.6       0.7   0.8       0.9   1
+
+
+
+
+                          Fig. 3.7. Example 3.12: −p(y) and −J(y) on [0, 1]
+
+
+
+
+                0
+
+
+
+             −0.02
+
+
+
+             −0.04
+
+
+
+             −0.06
+
+
+
+             −0.08
+
+
+
+              −0.1
+
+
+
+             −0.12
+
+
+
+             −0.14
+                     0      0.1   0.2   0.3   0.4   0.5    0.6       0.7   0.8       0.9   1
+
+
+
+
+                         Fig. 3.8. Example 3.12: the curve p(y) − J(y) on [0, 1]
+
+
+                           7 3.9 is displayed h4 (y) versus x1 (y) where the latter is
+ 7On the other hand, in Figure
+                                                                 ∗               ∗
+
+− y/(1 + y) on [0, 1/2] and y/(1 + y) on [1/2, 1]. Here we see that the discontinuity
+                                           Parametric polynomial optimization                               23
+
+          y=0.1                   y=0.5      y=1
+ J(y)     0.0400                  1.0000    2.0000
+ p6 (y)   0.0384                  0.9264    1.9887
+ p8 (y)   0.0390                  0.9395    2.0000
+
+                                                        Table 3.1
+                                            J(y) versus pk (y) in Example 3.13
+
+
+
+
+of x∗1 (y) is difficult to approximate ”pointwise” with few moments, and despite a very
+good precision on the five first moments. Indeed:
+          $ 1                                    $ 1
+                y   k
+                        (h∗4 (y) − 1) dx −             y k x∗1 (y) dx = O(10−14 ),      k = 0, . . . , 4.
+           0                                       0
+
+
+
+
+                         1
+
+
+
+                        0.8
+
+
+
+                        0.6
+
+
+
+                        0.4
+
+
+
+                        0.2
+
+
+
+                         0
+
+
+
+                    −0.2
+
+
+
+                    −0.4
+
+
+
+                    −0.6
+                              0      0.1   0.2   0.3    0.4   0.5    0.6   0.7    0.8   0.9     1
+
+
+
+
+                                  Fig. 3.9. Example 3.12: h∗4 (y) − 1 and x∗1 (y) on [0, 1]
+
+    Example 3.13. Consider the following system of 4 quadratic equations in 4
+variables and one parameter y ∈ Y = [0, 1]:
+
+                                    x1 x2 − x1 x3 − x4 = yx2 x3 − x2 x4 − x1 = y
+                                   −x1 x3 + x3 x4 − x2 = yx1 x4 − x2 x4 − x3 = y,
+
+for which one wishes to compute the minimum norm J(y) of real solutions as a function
+of y ∈ Y. We have computed the polynomial y &→ pk (y) from (3.5) with degree k = 6
+and k = 8, with ϕ being the probability with uniform distribution on [0, 1]. The
+results displayed in Table 1 show that a pretty good approximation is obtained with
+few moments of ϕ.
+24                                                 Jean B. LASSERRE
+
+
+    We end up this section with the case where the density gk to estimate is a step
+function which would be the case in an optimization problem Py with boolean vari-
+ables (e.g. the variable xk takes values in {0, 1}).
+    Example 3.14. Assume that with a single parameter y ∈ [0, 1], the density gk
+to estimate is the step function.
+                                    6
+                                      1 if y ∈ [0, 1/3] ∪ [2/3, 1]
+                     y &→ gk (y) :=
+                                      0 otherwise.
+
+The max-entropy estimate h∗4 in (3.11) with 5 moments is obtained with
+
+     λ∗ = [−0.6547367219.170724 − 115.39354192.4493171655 − 96.226948865],
+
+and we have
+              $ 1                            $ 1
+                          y k h∗4 (y) dy −         y k dgk (y) ≈ O(10−8 ),    k = 0, . . . , 4.
+                      0                       0
+                              !1
+In particular, the persistency 0 gk (y)dy! = 2/3 of the variable x∗k (y), is very well
+approximated (up to 10−8 precision) by h∗4 (y)dy, with only 5 moments.
+
+
+            1.4
+
+
+
+            1.2
+
+
+
+              1
+
+
+
+            0.8
+
+
+
+            0.6
+
+
+
+            0.4
+
+
+
+            0.2
+
+
+
+              0
+                  0         0.1    0.2       0.3     0.4   0.5    0.6   0.7     0.8     0.9       1
+
+
+
+
+            Fig. 3.10. Example 3.14: Max-entropy estimate h∗4 (y) of 1[0,1/3]∪[2/3,1]
+
+
+    Of course, in this case and with only 5 moments, the density h∗4 is not a good point-
+wise approximation of the step function gk (y) = 1[0,1/3]∪[2/3,1] ; however its ”shape” in
+Figure 3.10 reveals the two steps of value 1 separated by a step of value 0. A better
+pointwise approximation would require more moments.
+     4. Appendix.
+                           Parametric polynomial optimization                      25
+
+    4.1. Set-valued functions and measurable selectors. The material of this
+subsection is taken from [13, D]. Let X ⊂ Rp and Y ⊂ Rn be Borel spaces. A set-
+valued mapping ψ : X → Y is a function such that ψ(x) is a nonempty subset of Y
+for all x ∈ X. The graph Gr ψ of the set-valued function ψ is the subset of X × Y
+defined by:
+                       Gr ψ := { (x, y) : x ∈ X, y ∈ ψ(x) }.
+    Definition 4.1. A set-valued function ψ : X → Y is said to be:
+    (a) Borel-measurable if ψ −1 (B) is a Borel subset of X for every open set B ⊂ Y .
+    (b) compact-valued if ψ(x) is compact for every x ∈ X.
+    (c) closed if its graph Gr ψ is closed.
+    Definition 4.2. Let ψ : X → Y be a Borel-measurable set-valued function, and
+let F be the set of all measurable functions f : X → Y with f (x) ∈ ψ(x) for all
+x ∈ X. A function f ∈ F is called a measurable selector. Let v : Gr ψ :→ R be a
+measurable function and let v ∗ : X → R be defined by:
+                   v ∗ (x) := inf { v(x, y) : y ∈ ψ(x) },       x ∈ X.
+                               y
+
+     Proposition 4.3. ([13, D.4]) Let ψ : X → Y be compact-valued. Then the
+following are equivalent:
+     (a) ψ is Borel-measurable.
+     (b) ψ −1 (F ) is a Borel subset of X for every closed set F ⊂ Y .
+     (c) Gr ψ is a Borel subset of X × Y .
+     (d) ψ is a measurable function from X to the space of nonempty compact subsets
+of Y , topologized by the Hausdorff metric.
+     Proposition 4.4. ([13, D.5]) Suppose that ψ : X → Y is compact-valued and
+the function y → v(x, y) is lower-semicontinuous on ψ(x) for every x ∈ X. Then
+there exists a measurable selector f ∈ F such that:
+           v(x, f (x)) = v ∗ (x) = min {v(x, y) : y ∈ ψ(x) },        ∀x ∈ X.
+                                    y
+
+
+     Definition 4.5. For two Borel spaces X, Y , a stochastic kernel on Y given X
+is a function P (· | ·) such that:
+     (a) P (· | x) is a probability measure on Y for each fixed x ∈ X.
+     (b) P (B | ·) is a measurable function on X for each fixed Borel subset B of Y .
+Let ψ : X → Y be a Borel-measurable set-valued function such that F is nonempty
+(equivalently, there is a measurable function f : X → Y whose graph is contained in
+Gr ψ). Let Φ be the class of stochastic kernels ϕ on Y given Y such that ϕ(ψ(x) | x) =
+1 for every x ∈ X. Finally, for a probability measure µ on X × Y , denote by µ1 the
+marginal (or projection) of µ on X, i.e.,
+                        µ1 (B) := µ(B × Y ),       ∀B ∈ B(X),
+where B(X) is the Borel σ-field associated with X.
+    Proposition 4.6. ([13, D.8]) If µ is a probability measure on X×Y , concentrated
+on the graph Gr ψ of ψ, then there exists a stochastic kernel ϕ ∈ Φ such that
+                         $
+            µ(B × C) =      ϕ(C | x) µ1 (dx),     ∀B ∈ B(X), C ∈ B(Y ).
+                           B
+
+See also [10, p. 88–89].
+26                                     Jean B. LASSERRE
+
+
+    4.2. Proof of Theorem 3.3.. We already know that ρi ≤ ρ for all i ≥ i0 . We
+also need to prove that ρi > −∞ for sufficiently large i. Let Q ⊂ R[x, y] be the
+quadratic module generated by the polynomials {hj } ⊂ R[x, y] that define K, i.e.,
+                                                t
+                                                5
+        Q := { σ ∈ R[x, y] :         σ = σ0 +         σj hj    with {σj }tj=0 ⊂ Σ[x, y]}.
+                                                j=1
+
+In addition,
+      4        let Q(l) ⊂ Q be the set of elements σ ∈ Q which have a representation
+σ0 + tj=0 σj hj for some s.o.s. family {σj } ⊂ Σ2 with deg σ0 ≤ 2l and deg σj hj ≤ 2l
+for all j = 1, . . . , t.
+     Let i ∈ N be fixed. As K is compact, there exists N such that N ± xα yβ > 0
+on K, for all α ∈ Nn and β ∈ Np , with |α + β| ≤ 2i. Therefore, under Assumption
+3.1(ii), the polynomial N ± xα yβ belongs to Q; see Putinar [22]. But there is even
+some l(i) such that N ± xα yβ ∈ Q(l(i)) for every |α + β| ≤ 2i. Of course we also have
+N ± xα yβ ∈ Q(l) for every |α + β| ≤ 2i, whenever l ≥ l(i). Therefore, let us take
+l(i) ≥ i0 . For every feasible solution z of Ql(i) one has
+
+                      |zαβ | = | Lz (xα yβ ) | ≤ N,           ∀ |α + β| ≤ 2i.
+
+This follows from z0 = 1, Ml(i) (z) ' 0 and Ml(i)−vj (hj z) ' 0, which implies
+                                                                  t
+                                                                  5
+              N z0 ± zαβ = Lz (N ± xα yβ ) = Lz (σ0 ) +                 Lz (σj hj ) ≥ 0
+                                                                  j=1
+                                                                                          4
+for some {σj } ⊂ Σ[x, y] with deg σj hj ≤ 2l(i). In particular, Lz (f ) ≥ −N                  α,β |fαβ |,
+which proves that ρl(i) > −∞, and so ρi > −∞ for all sufficiently large i.
+
+     From what precedes, and with k ∈ N arbitrary, let l(k) ≥ k and Nk be such that
+
+            Nk ± xα yβ ∈ Q(l(k))           ∀ α ∈ Nn , β ∈ Np with |α + β| ≤ 2k.                   (4.1)
+
+Let i ≥ l(i0 ), and let zi be a nearly optimal solution of (3.2) with value
+                                                   #           %
+                                               1            1
+                          ρi ≤ Lzi (f ) ≤ ρi +       ≤ρ+         .                                (4.2)
+                                               i             i
+
+Fix k ∈ N. Notice that from (4.1), for every i ≥ l(k), one has
+
+         | Lzi (xα yβ ) | ≤ Nk z0 = Nk ,     ∀ α ∈ Nn , β ∈ Np with |α + β| ≤ 2k.
+
+Therefore, for all i ≥ l(i0 ),
+        i
+      |zαβ | = | Lzi (xα yβ ) | ≤ Nk' ,    ∀ α ∈ Nn , β ∈ Np with |α + β| ≤ 2k,                   (4.3)
+
+where Nk' = max[Nk , Vk ], with
+
+                Vk := max { |zαβ
+                              i
+                                 | :       |α + β| ≤ 2k ;       l(i0 ) ≤ i ≤ l(k) }.
+                       α,β,i
+
+     Complete each vector zi with zeros to make it an infinite bounded sequence in
+l∞ , indexed in the canonical basis (xα yβ ) of R[x, y]. In view of (4.3),
+              i
+            |zαβ | ≤ Nk'         ∀ α ∈ Nn , β ∈ Np with 2k − 1 ≤ |α + β| ≤ 2k,                    (4.4)
+                              Parametric polynomial optimization                                          27
+
+and for all k = 1, 2, . . ..
+    Hence, let 9
+               zi ∈ l∞ be the new sequence defined by
+             i
+            zαβ
+    i
+  z9αβ :=       ,   ∀ α ∈ Nn , β ∈ Np with 2k − 1 ≤ |α + β| ≤ 2k,                   ∀ k = 1, 2, . . . ,
+            Nk'
+
+and in l∞ , consider the sequence {9 zi }i , as i → ∞.
+    Obviously, the sequence {9  z }i is in the unit ball B1 of /∞ which by the Banach-
+                                 i
+
+Alaoglu theorem (see e.g. Ash [3, Theor. 3.5.16]), is compact (and even sequentially
+compact) for the weak * topology σ(/∞ , /1 ). Hence, there exists some 9  z ∈ B1 and a
+subsequence i( , such that 9zi! → 9 z as l → ∞, for the weak * topology σ(/∞ , /1 ) of
+/∞ . So consider an arbitrary such converging subsequence. In particular, pointwise
+convergence holds, that is,
+                                 i!
+                           lim z9αβ → z9αβ       ∀ α ∈ Nn , β ∈ Np .
+                           (→∞
+
+Next, define
+
+ zαβ := z9αβ × Nk'    ∀ α ∈ Nn , β ∈ Np with       2k − 1 ≤ |α + β| ≤ 2k,              ∀ k = 1, 2, . . .
+
+The pointwise convergence 9     z implies the pointwise convergence zi! → z, i.e.,
+                          zi! → 9
+                                i!
+                           lim zαβ → zαβ         ∀ α ∈ Nn , β ∈ Np .                                (4.5)
+                           (→∞
+
+Next, let s ∈ N be fixed. From the pointwise convergence (4.5) we deduce that
+
+                                 lim Ms (zi! ) = Ms (z) ' 0.
+                                 (→∞
+
+Similarly
+
+                     lim Ms (hj zi! ) = Ms (hj z) ' 0,          j = 1, . . . , t.
+                     (→∞
+
+As s was arbitrary, we obtain
+
+               Ms (y) ' 0;   Ms (hj z) ' 0,     j = 1, . . . , t;   s = 0, 1, 2, . . . ,            (4.6)
+
+which by Theorem 3.2 implies that z is the sequence of moments of some finite measure
+µ∗ with support contained in K. Moreover, the pointwise convergence (4.5) also
+implies that
+           $                                         $
+                                        i!
+             yβ dϕ(y) = γβ = lim z0β       = z0β =      yβ dµ∗ , ∀β ∈ Np .      (4.7)
+             Y                         (→∞                    K
+
+As measures on compacts sets are determinate, (4.7) implies that the marginal of µ∗
+on Rp is the probability measure ϕ, and so µ∗ is feasible for P. Finally, combining
+the pointwise convergence (4.5) with (4.2) yields
+                                                          $
+                ρ ≥ lim ρi! = lim Lzi! (f ) = Lz (f ) =       f dµ∗ ,
+                       l→∞             i→∞                             K
+
+which in turn yields that µ∗ is an optimal solution of P. And so ρi! → ρ as l → ∞.
+As the sequence (ρi ) is monotone this yields the desired result (a).
+28                                      Jean B. LASSERRE
+
+
+     (b) Next, let α ∈ Nn and β ∈ Np be fixed, arbitrary. From (4.5), we have:
+                                             $
+                                i!
+                           lim zαβ = zαβ =       xα yβ dµ∗ ,
+                             (→∞                     K
+
+and by Theorem 2.2(c)
+                                    $                  $
+                     lim z i!   =       x y dµ =
+                                         α   β   ∗
+                                                             yβ g(y)α dϕ(y),
+                    (→∞ αβ          K                    Y
+
+and as the converging subsequence was arbitrary, the above convergence holds for the
+whole sequence (zαβ
+                  i
+                    ). !
+
+                                         REFERENCES
+
+ [1] E.J Anderson and P. Nash, Linear Programming in Infinite-Dimensional Spaces, John Wiley
+          & Sons, Chichester, 1987.
+ [2] K. Arrow, S. Karlin, and H. Scarf, Studies in the Mathematical Theory of Inventory and
+          Production, Stanford University Press, Stanford, CA, 1958.
+ [3] R. Ash, Real Analysis and Probability, Academic Press, San Diego, CA, 1972.
+ [4] D. Bertsimas, K. Natarajan and Chung-Piaw Teo, Persistence in discrete optimization
+          under data uncertainty, Math. Prog. Ser. B, 108 (2005), pp. 251–274.
+ [5] J. F. Bonnans and A. Shapiro. Perturbation Analysis of Optimization Problems, Springer, New
+          York, 2000.
+ [6] C.M. Bender, L. R. Mead and N. Papanicolaou, Maximum entropy summation of divergent
+          perturbation series, J. Math. Phys. 28, (1987), pp. 1016-1018.
+ [7] J. Borwein and A.S. Lewis, On the convergence of moment problems, Trans. Am. Math. Soc.
+          325, (1991), pp. 249–271.
+ [8] J. Borwein and A.S. Lewis, Convergence of best entropy estimates, SIAM J. Optim. 1, (1991),
+          pp. 191–205.
+ [9] E. Delage and Yinyu Ye, Distributionally robust optimization under moment uncertainty
+          with application to data-driven problems, Oper. Res., to appear.
+[10] E.G Dynkin and A.A. Yushkevich, Controlled Markov Processes, Springer-Verlag, New York,
+          1979.
+[11] W. Gautschi, Numerical Analysis: An Introduction, Birkhäuser, Boston, 1997.
+[12] D. Henrion, J. B. Lasserre and J. Löfberg, GloptiPoly 3: moments, optimization and
+          semidefinite programming, Optim. Methods and Softw. 24, (2009), pp. 761–779.
+[13] O. Hernández-Lerma and J. B. Lasserre, Discrete-Time Markov Control Processes: Basic
+          Optimality Criteria, Springer-Verlag, New York, 1996.
+[14] O. Hernández-Lerma and J.B. Lasserre, Approximation schemes for infinite linear pro-
+          grams, SIAM J. Optim. 8, (1998), pp. 973–988.
+[15] J.B. Lasserre, Global optimization with polynomials and the problem of moments, SIAM J.
+          Optim. 11, (2001), pp. 796–817.
+[16] J.B. Lasserre, Polynomial programming: LP-relaxations also converge, SIAM J. Optim. 15,
+          (2004), pp. 383–393.
+[17] J.B. Lasserre, Convergent SDP-relaxations in polynomial optimization with sparsity, SIAM
+          J. Optim. 17, (2006), pp. 822–843.
+[18] J.B. Lasserre, Semidefinite programming for gradient and Hessian computation in maximum
+          entropy estimation, Proc. 48th IEEE CDC Conference, New-Orleans (2007), pp. 3060–
+          3064.
+[19] H.M. Möller and H.J. Stetter, Multivariate polynomial equations with multiple zeros solved
+          by matrix eigenproblems, Num. Math. 70, (1995), pp. 311–329.
+[20] K. Natarajan, Miao Song and Chung-Piaw Teo, Persistency and its applications in choice
+          modelling, Manag. Sci. 55, (2009), pp. 453–469.
+[21] K. Natarajan, Chung-Piaw Teo and Z. Zheng, Mixed zero-one linear programs under ob-
+          jective uncertainty: a completely positive representation, Technical report, NUS Business
+          School, National University of Singapore, August 2009.
+[22] M. Putinar, Positive polynomials on compact semi-algebraic sets, Indiana Univ. Math. J. 42,
+          (1993), pp. 969–984.
+[23] P. Rostalski, Algebraic Moments: Real root finding and related topics, PhD Thesis, Auto-
+          matic Control Laboratory, ETH Zurich, Switzerland, May 2009.
+                               Parametric polynomial optimization                                  29
+
+[24] M. Schäl, Conditions for optimality and for the limit of n-stage optimal policies to be optimal,
+         Z. Wahrs. verw. Gerb. 32, (1975), pp. 179–196.
+[25] M. Schweighofer, Optimization of polynomials on compact semialgebraic sets, SIAM J. Op-
+         tim. 15, (2005), pp. 805–825.
+[26] A. Tagliani, Entropy estimate of probability densities having assigned moments: Hausdorff
+         case, Appl. Math. Lett. 15, (2002), pp. 309–314.
+[27] A. Tagliani, Entropy estimate of probability densities having assigned moments: Stieltjes
+         case, Appl. Math. Comput. 130, (2002), pp. 201–211.
+[28] H. Waki, S. Kim, M. Kojima and M. Muramatsu, Sums of squares and semidefinite program
+         relaxations for polynomial optimization problems with structured sparsity, SIAM J. Optim.
+         17, (2006), pp. 218–242.
+[29] V. Weispfenning, Comprehensive Gröbner bases, J. Symb. Comp. 14, (1992), pp. 1–29.
+

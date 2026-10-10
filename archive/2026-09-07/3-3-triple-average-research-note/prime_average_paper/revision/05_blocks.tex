@@ -1,0 +1,55 @@
+\section{等大三块与含零收尾}\label{sec:blocks}
+\begin{proposition}\label{prop:threep}
+若 $p\ge5$ 为素数，则 $3p$ 个位置满足定理\ref{thm:prime}的判据。
+\end{proposition}
+\begin{proof}
+先将位置分为三个 $p$ 组。若其和模 $3$ 全相等，交换不同组中一对不同余值，组和变为 $s+\delta,s-\delta,s$，其中 $\delta\ne0$。这样的跨组数对必存在，否则原配置模 $3$ 全相等。分别平均后得到 $(a^p,b^p,c^p)$，$a+b+c=0$，且模 $3$ 不全相等。
+
+写 $p=3m+\epsilon$，$\epsilon=\pm1$、$m\ge2$。令 $J$ 为三阶全一矩阵，
+\[
+D=\begin{pmatrix}1&-1&0\\1&-1&0\\-2&2&0\end{pmatrix},\qquad
+K_\pm=mJ+\epsilon(I\pm D).
+\]
+两表非负且行列和为 $p$。每个输出组按一行从三个旧块取数，三次平均实现 $K_\pm/p$。在零和空间上，它们等于 $\epsilon(I\pm D)/p$。由于 $D^2=0$，两作用互为射影逆。
+改用 $(x,y)=(a,a-b)$，它们分别为 $U(1),U(-1)$。块角色交换给
+\[
+\Sigma=\begin{pmatrix}1&-1\\0&-1\end{pmatrix},\qquad
+P=\begin{pmatrix}-2&1\\-3&2\end{pmatrix},\qquad
+L(-3)=U(-1)P\Sigma.
+\]
+因此 $U(\Z),L(3\Z)$ 可实现。
+
+这些矩阵射影生成 $\Gamma_0(3,\Z)$。为验证，取 $S=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)$、$T=U(1)$，右陪集代表为 $I,ST^{-1},S,ST$，由模 $3$ 底行的四个射影类区分。对生成元 $S,T,T^{-1}$，Schreier 回路 $rg(r')^{-1}$ 如下：
+\[
+\begin{array}{c|ccc}
+r&S&T&T^{-1}\\\hline
+I&I&T&T^{-1}\\
+ST^{-1}&-T&I&L(3)\\
+S&-I&I&I\\
+ST&T^{-1}&L(-3)&I
+\end{array}
+\]
+欧几里得消元证明 $S,T$ 生成 $\SL_2(\Z)$，上述表便给所需子群；中央符号不影响式\eqref{eq:return}。
+
+本原三块的 $G=\gcd(y,3)$。合法性给 $3\nmid y$，可在 $\alpha x+\beta y=1$ 的裴蜀解中令 $3\mid\alpha$。矩阵
+\[
+\begin{pmatrix}y&-x\\\alpha&\beta\end{pmatrix}\in\Gamma_0(3,\Z)
+\]
+将 $(x,y)$ 送到 $(0,1)$，故得到 $(0^p,s^p,(-s)^p)$。取 $h=(p-1)/2$，连续两次平均 $(s^h,(-s)^h,0)$，最后平均 $(s,-s,0^{p-2})$。
+\end{proof}
+
+\begin{lemma}\label{lem:zero-base}
+对奇数 $p$，$2p+1$ 元零和配置若含一个零，则至多五次 $p$ 平均归零。
+\end{lemma}
+\begin{proof}
+保留零，将其余位置分成两个 $p$ 组并平均，得到 $(a^p,(-a)^p,0)$。用命题\ref{prop:threep}末尾所列的三次相反值操作完成。
+\end{proof}
+
+\begin{lemma}\label{lem:zero-tail}
+若 $p\ge5$，$n\ge2p+1$ 的零和配置含一个零和 $p$ 元组，则可归零。对任意奇数 $p$，此结论在 $2p+1\le n\le3p$ 同样成立。
+\end{lemma}
+\begin{proof}
+先平均该组，产生 $p$ 个零。若某个已解决的维数 $m\le n$ 满足非零支持数小于 $m$，就选一个 $m$ 元子系统包含全部非零位置及一个零。它自身零和，本原化后的差分公因子为 $1$，可在该子系统归零。
+对 $n\le3p$，使用引理\ref{lem:zero-base}中的 $m=2p+1$。对 $3p<n<4p$，使用命题\ref{prop:threep}。对 $4p\le n<5p$，使用引理\ref{lem:integer-range}在 $m=4p$ 的结论，因为 $d_p(4p)=1$。对 $n\ge5p$，同一引理的最终上界已适用。
+\end{proof}
+

@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "core_box": [
+    -180,
+    180
+  ],
+  "core_comparisons_with_prior_exact_recursion": 130321,
+  "content_identity_checks": 7262,
+  "all_reverse_words_through_depth": 12,
+  "reverse_nodes": 8191,
+  "independent_integer_DAG_input_checks": 56,
+  "independent_DAG_states": 31,
+  "isolated_repunit_bridges": [
+    {
+      "k": 2,
+      "slope": "39/46",
+      "denominator": 46,
+      "bridge_digit_length": 11,
+      "shortest_core_steps": 7
+    },
+    {
+      "k": 3,
+      "slope": "42/143",
+      "denominator": 143,
+      "bridge_digit_length": 15,
+      "shortest_core_steps": 8
+    },
+    {
+      "k": 4,
+      "slope": "201/424",
+      "denominator": 424,
+      "bridge_digit_length": 52,
+      "shortest_core_steps": 9
+    },
+    {
+      "k": 5,
+      "slope": "528/1277",
+      "denominator": 1277,
+      "bridge_digit_length": 1276,
+      "shortest_core_steps": 10
+    },
+    {
+      "k": 6,
+      "slope": "1659/3826",
+      "denominator": 3826,
+      "bridge_digit_length": 1912,
+      "shortest_core_steps": 11
+    }
+  ],
+  "digit_examples": [
+    {
+      "h": "1/7",
+      "balanced_digits_low_first": [
+        1,
+        1,
+        0,
+        -1,
+        -1,
+        0,
+        1,
+        1
+      ],
+      "instance": [
+        0,
+        0,
+        0,
+        12,
+        -2
+      ],
+      "minimum_steps": 3
+    },
+    {
+      "h": "-2",
+      "balanced_digits_low_first": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "instance": [
+        0,
+        0,
+        0,
+        -9,
+        -11
+      ],
+      "minimum_steps": 5
+    },
+    {
+      "h": "-1/2",
+      "balanced_digits_low_first": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "instance": [
+        0,
+        0,
+        0,
+        -3,
+        -7
+      ],
+      "minimum_steps": 4
+    },
+    {
+      "h": "3",
+      "balanced_digits_low_first": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "instance": [
+        0,
+        0,
+        0,
+        16,
+        14
+      ],
+      "minimum_steps": null
+    }
+  ],
+  "scope": "Exact finite diagnostics only. The written nonregularity proof uses unbounded isolated denominators and regular-language closure, not these samples. No all-input static gcd criterion or primitive-promise nonregularity is claimed."
+}

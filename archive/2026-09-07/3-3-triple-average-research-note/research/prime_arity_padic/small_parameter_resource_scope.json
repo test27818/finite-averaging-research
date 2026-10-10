@@ -1,0 +1,639 @@
+{
+  "status": "PASS",
+  "finite_parameter_cases": 1532,
+  "sufficient_resource_passes": 1462,
+  "sufficient_resource_failures": 70,
+  "upper_band_failures": [
+    {
+      "p": 5,
+      "r": 6,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 5,
+      "r": 8,
+      "pairs": 1,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 14,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 5,
+      "r": 9,
+      "pairs": 1,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 12,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 7,
+      "r": 8,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 7,
+      "r": 9,
+      "pairs": 1,
+      "alpha_gcd": 1,
+      "root_coefficient_gcd": 17,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 7,
+      "r": 10,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 7,
+      "r": 11,
+      "pairs": 1,
+      "alpha_gcd": 3,
+      "root_coefficient_gcd": 23,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 11,
+      "r": 14,
+      "pairs": 1,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 26,
+      "sufficient_resource_test_passes": false
+    }
+  ],
+  "all_failures": [
+    {
+      "p": 5,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 5,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 5,
+      "r": 3,
+      "pairs": 1,
+      "alpha_gcd": 1,
+      "root_coefficient_gcd": 15,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 5,
+      "r": 4,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 5,
+      "r": 6,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 5,
+      "r": 8,
+      "pairs": 1,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 14,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 5,
+      "r": 9,
+      "pairs": 1,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 12,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 7,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 7,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 7,
+      "r": 3,
+      "pairs": 1,
+      "alpha_gcd": 1,
+      "root_coefficient_gcd": 21,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 7,
+      "r": 4,
+      "pairs": 1,
+      "alpha_gcd": 4,
+      "root_coefficient_gcd": 10,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 7,
+      "r": 8,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 7,
+      "r": 9,
+      "pairs": 1,
+      "alpha_gcd": 1,
+      "root_coefficient_gcd": 17,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 7,
+      "r": 10,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 7,
+      "r": 11,
+      "pairs": 1,
+      "alpha_gcd": 3,
+      "root_coefficient_gcd": 23,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 11,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 11,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 11,
+      "r": 4,
+      "pairs": 1,
+      "alpha_gcd": 4,
+      "root_coefficient_gcd": 18,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 11,
+      "r": 14,
+      "pairs": 1,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 26,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 13,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 13,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 13,
+      "r": 4,
+      "pairs": 1,
+      "alpha_gcd": 4,
+      "root_coefficient_gcd": 22,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 17,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 17,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 17,
+      "r": 4,
+      "pairs": 1,
+      "alpha_gcd": 4,
+      "root_coefficient_gcd": 30,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 19,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 19,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 19,
+      "r": 4,
+      "pairs": 3,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 34,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 23,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 23,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 23,
+      "r": 4,
+      "pairs": 3,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 42,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 29,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 29,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 29,
+      "r": 4,
+      "pairs": 3,
+      "alpha_gcd": 4,
+      "root_coefficient_gcd": 54,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 31,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 31,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 31,
+      "r": 4,
+      "pairs": 6,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 58,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 37,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 37,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 37,
+      "r": 4,
+      "pairs": 5,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 70,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 41,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 41,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 41,
+      "r": 4,
+      "pairs": 4,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 78,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 43,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 43,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 43,
+      "r": 4,
+      "pairs": 9,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 82,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 47,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 47,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 47,
+      "r": 4,
+      "pairs": 5,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 90,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 53,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 53,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 53,
+      "r": 4,
+      "pairs": 8,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 102,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 59,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 59,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 59,
+      "r": 4,
+      "pairs": 6,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 114,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 61,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 61,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 61,
+      "r": 4,
+      "pairs": 10,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 118,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 67,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 67,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 67,
+      "r": 4,
+      "pairs": 12,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 130,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 71,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 71,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 71,
+      "r": 4,
+      "pairs": 8,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 138,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 73,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 73,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 73,
+      "r": 4,
+      "pairs": 15,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 142,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 79,
+      "r": 1,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 79,
+      "r": 2,
+      "pairs": 0,
+      "alpha_gcd": 0,
+      "root_coefficient_gcd": 0,
+      "sufficient_resource_test_passes": false
+    },
+    {
+      "p": 79,
+      "r": 4,
+      "pairs": 10,
+      "alpha_gcd": 2,
+      "root_coefficient_gcd": 154,
+      "sufficient_resource_test_passes": false
+    }
+  ],
+  "lattice_shear_checks": 3830,
+  "frozen_files": 256,
+  "local_links": 150,
+  "seconds": 1.67,
+  "scope": "Complete finite diagnostic for 5<=p<83 and nonzero-alpha one/two-source adjacent trace-zero rows with coprime scalar pair. Does not certify a new uniform all-parameter theorem or replace original finite certificates."
+}

@@ -1,0 +1,292 @@
+{
+  "status": "PASS",
+  "general_compiler": {
+    "compiled_budget_domains": 54,
+    "direct_input_checks": 3618,
+    "samples": [
+      {
+        "p": 2,
+        "length": 1,
+        "L0": [
+          0,
+          1
+        ]
+      },
+      {
+        "p": 2,
+        "length": 2,
+        "L0": [
+          1,
+          1
+        ]
+      },
+      {
+        "p": 2,
+        "length": 3,
+        "L0": [
+          1,
+          2
+        ]
+      },
+      {
+        "p": 2,
+        "length": 4,
+        "L0": [
+          0,
+          3
+        ]
+      },
+      {
+        "p": 2,
+        "length": 5,
+        "L0": [
+          0,
+          3
+        ]
+      },
+      {
+        "p": 2,
+        "length": 6,
+        "L0": [
+          1,
+          5
+        ]
+      },
+      {
+        "p": 3,
+        "length": 1,
+        "L0": [
+          0,
+          1
+        ]
+      },
+      {
+        "p": 3,
+        "length": 2,
+        "L0": [
+          0,
+          2
+        ]
+      },
+      {
+        "p": 3,
+        "length": 3,
+        "L0": [
+          1,
+          2
+        ]
+      },
+      {
+        "p": 3,
+        "length": 4,
+        "L0": [
+          1,
+          3
+        ]
+      },
+      {
+        "p": 3,
+        "length": 5,
+        "L0": [
+          1,
+          4
+        ]
+      },
+      {
+        "p": 3,
+        "length": 6,
+        "L0": [
+          0,
+          6
+        ]
+      },
+      {
+        "p": 5,
+        "length": 1,
+        "L0": [
+          0,
+          1
+        ]
+      },
+      {
+        "p": 5,
+        "length": 2,
+        "L0": [
+          0,
+          2
+        ]
+      },
+      {
+        "p": 5,
+        "length": 3,
+        "L0": [
+          0,
+          3
+        ]
+      },
+      {
+        "p": 5,
+        "length": 4,
+        "L0": [
+          0,
+          4
+        ]
+      },
+      {
+        "p": 5,
+        "length": 5,
+        "L0": [
+          0,
+          4
+        ]
+      },
+      {
+        "p": 5,
+        "length": 6,
+        "L0": [
+          0,
+          6
+        ]
+      }
+    ]
+  },
+  "same_operator_different_history": [
+    {
+      "p": 2,
+      "lattice_index_exponent": 1,
+      "same_final_operator": true,
+      "incomparable_domains": true
+    },
+    {
+      "p": 3,
+      "lattice_index_exponent": 2,
+      "same_final_operator": true,
+      "incomparable_domains": true
+    },
+    {
+      "p": 5,
+      "lattice_index_exponent": 4,
+      "same_final_operator": true,
+      "incomparable_domains": true
+    }
+  ],
+  "six_step_rank_and_perturbations": [
+    {
+      "p": 5,
+      "cleanup_history_exponents": [
+        0,
+        3
+      ],
+      "same_word_bad_perturbations": [
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "p": 11,
+      "cleanup_history_exponents": [
+        0,
+        3
+      ],
+      "same_word_bad_perturbations": [
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "p": 17,
+      "cleanup_history_exponents": [
+        0,
+        3
+      ],
+      "same_word_bad_perturbations": [
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "p": 23,
+      "cleanup_history_exponents": [
+        0,
+        3
+      ],
+      "same_word_bad_perturbations": [
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "p": 29,
+      "cleanup_history_exponents": [
+        0,
+        3
+      ],
+      "same_word_bad_perturbations": [
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "p": 41,
+      "cleanup_history_exponents": [
+        0,
+        3
+      ],
+      "same_word_bad_perturbations": [
+        4,
+        5,
+        8
+      ]
+    }
+  ],
+  "five_step_history_lattices": [
+    {
+      "p": 7,
+      "cleanup_history_exponents": [
+        0,
+        3
+      ]
+    },
+    {
+      "p": 11,
+      "cleanup_history_exponents": [
+        0,
+        3
+      ]
+    },
+    {
+      "p": 13,
+      "cleanup_history_exponents": [
+        0,
+        3
+      ]
+    },
+    {
+      "p": 17,
+      "cleanup_history_exponents": [
+        0,
+        3
+      ]
+    },
+    {
+      "p": 19,
+      "cleanup_history_exponents": [
+        0,
+        3
+      ]
+    },
+    {
+      "p": 23,
+      "cleanup_history_exponents": [
+        0,
+        3
+      ]
+    }
+  ],
+  "scope": "Exact prefix-lattice computation and independent physical replay; no global coverage, new threshold or arbitrary-input precision theorem."
+}

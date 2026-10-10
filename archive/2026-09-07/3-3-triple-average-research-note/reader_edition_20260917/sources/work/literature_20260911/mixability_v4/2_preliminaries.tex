@@ -1,0 +1,161 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Preliminaries}
+%\label{sec: preliminaries}
+%\input{2_preliminaries.tex}
+
+Let $\binrationals$ be the set of  binary numbers.
+For $c\in\binrationals$, we denote by $\precision(c)$ the precision of $c$, that is the
+number of fractional bits in the binary representation of $c$, assuming there are no trailing $0$'s.
+In other words, $\precision(c)$ is the smallest $d\in\nonnegintegers$ such that $c = a/2^d$ for some $a\in\integers$. 
+If $c = a/2^d$ represents actual fluid concentration, then we have $0\le a \le 2^d$. However,  
+it is convenient to relax this restriction and allow ``concentration values'' that are
+arbitrary binary numbers, even negative. In fact, as we show shortly, 
+it will be convenient to work with integral values.
+
+By a \emph{configuration} we mean a multiset of $n$ binary numbers, called droplets or concentrations.
+In the literature, multisets are often represented by their characteristic functions (that specify
+the multiplicity of each element of the ground set). In this paper we will generally use set-theoretic
+terminology, with its natural interpretation. For example, for a configuration $C$ and a concentration $a$, 
+$a\in C$ means that the multiplicity of $a$ in $C$ is strictly positive, while $a\notin C$ means that it's zero.
+Or, $C - \braced{a} = C'$ means that the multiplicity of $a$ in $C'$ is one less than in $C$, while
+other multiplicities are the same.
+The number of droplets in $C$ is denoted $\nofdroplets{C}=n$, 
+while the number of different concentrations is denoted $\nofconcentrations{C}=m$.
+We will typically denote a configuration by
+$C = \braced{f_1:c_1,f_2: c_2,...,f_m:c_m} \ingroundset \binrationals$, where each $c_i$ represents
+a (different) concentration value and $f_i$ denotes the
+multiplicity of $c_i$ in $C$, so that $\sum_{i=1}^m f_i = n$. 
+Occasionally, if it does not lead to confusion, we may say
+``droplet $c_i$'' or ``concentration $c_i$'', referring to some droplet with concentration $c_i$.
+If $f_i=1$, we shorten ``$f_i:c_i$'' to just ``$c_i$''.
+If $f_i = 1$ we say that droplet $c_i$ is a \emph{singleton}, 
+if $f_i = 2$ we say that droplet $c_i$ is a \emph{doubleton}
+and if $f_i\geq 2$ we say that droplet $c_i$ is a \emph{non-singleton}.
+By $\mysum(C)$ we denote the sum of $C$, that is $\mysum(C) = \sum_{c\in C} c$.
+$\average(C) = \mysum(C)/n$ is the average value of the concentrations in $C$ and will
+be typically denoted by $\mu$.
+(Later, we will typically deal with configurations $C$ such that
+$C\cup\braced{\mu}\ingroundset\integers$.)
+
+Mixing graphs were defined in the introduction. As we are not concerned in this paper with the
+topological properties of mixing graphs, we will often identify a mixing graph $G$ with a
+corresponding \emph{mixing sequence}, which is a sequence (not necessarily unique) of mixing operations
+that convert $C$ into its perfect mixture. In other words, a mixing sequence is a sequence
+of mixing operations in a topological ordering of a mixing graph.
+
+Of course in a perfect-mixing graph (or sequence) $G$ for $C$, all concentrations in $G$,
+including those in $C\cup\braced{\mu}$,
+must have finite precision (that is, belong to $\binrationals$);
+in fact, the maximum concentration in $G$ is at least $\max\braced{\precision(C),\precision(\mu)}$.
+In addition to the basic question about finding a perfect-mixing graph for $C$, 
+we are also interested in bounding the precision required to do so.
+
+For $x\in\binrationals$, define multisets $C+x = \braced{c+x \mid c\in C}$,
+$C-x = C+(-x)$, and $C\cdot x = \braced{c\cdot x \mid c\in C}$.
+The next observation says that offsetting all values in $C$
+does not affect perfect mixability, as long as the offset value's precision
+does not exceed that of $C$ or $\mu$.
+
+\begin{observation}%--------
+\label{obs: offsetting does not affect reachability}
+Let $\mu = \average(C)$ and $x\in\binrationals$. 
+Also, let $d\in\posintegers$ be such that $d\ge \max\braced{\precision(C),\precision(\mu),\precision(x)}$.
+Then $C$ is perfectly mixable with precision $d$ if and only if
+$C' = C+x$ is perfectly mixable with precision $d$.
+\end{observation}%----------
+
+\begin{proof}
+$(\Rightarrow)$
+Suppose that $G$ is a perfect-mixing sequence for $C$ with precision $d$.
+Run the same sequence $G$ on input $C'$. If some mixing step in $G$ produces a value $z$ when
+the input is $C$ then on $C'$ its value is $z+x$,
+and $\precision(z+x)\le \max\braced{\precision(z),\precision(x)} \le d$.
+Thus the maximum precision in $G$ for input $C'$ is at most $d$. 
+
+$(\Leftarrow)$
+The proof for this implication follows from noting that
+$\mu' = \average(C') = \mu+x$,
+$\max\braced{\precision(C'),\precision(\mu')}\le d$, and by applying the
+above argument to $-x$ instead of $x$.
+\end{proof}
+
+\begin{observation}%--------
+\label{obs: power of 2 rescaling}
+Let $\mu = \average(C)$, $\delta = \max\braced{\precision(C),\precision(\mu)}$, 
+$C' = C\cdot 2^\delta$ with $\mu'=\average(C')= 2^\delta\mu$. 
+	(Thus $C'\cup\braced{\mu'}\ingroundset\integers$.)
+	Then $C$ is perfectly mixable with precision $d\ge\delta$
+	if and only if $C'$ is perfectly mixable with precision $d' = d-\delta$. 
+\end{observation}%----------
+
+
+\begin{proof}
+$(\Rightarrow)$
+Let $G$ be a perfect-mixing sequence for $C$, with precision $d$.
+Run the same sequence $G$ on input $C'$.
+If some node in $G$ produces a value $z$ on input $C$, then its value on input $C'$ will be
+$z 2^\delta$, and $\precision(z 2^\delta) = \max\braced{\precision(z)-\delta,0} \le d-\delta = d'$.
+
+$(\Leftarrow)$
+Let $G'$ be a perfect-mixing sequence for $C'$ with precision $d'$.
+Run $G'$ on input $C$. If some node in $G'$ produces a value $y$ on input $C'$, then
+its value on input $C$ will be $y/2^\delta$, and
+$\precision(y/2^\delta) \leq \precision(y)+\delta \le d'+\delta = d$.
+\end{proof}
+
+
+%%%%%%%
+
+\myparagraph{Integral configurations}
+Per Observation~\ref{obs: power of 2 rescaling}, we can restrict our attention to configurations with integer
+values and average, that is, we will be assuming that $C\cup\braced{\mu}\ingroundset \integers$.
+
+For $x\in\posintegers$, if each $c\in C$ is a multiple of $x$,
+let $C/x = \braced{c/x \mid c\in C}$.
+For integral configurations, we can extend Observation~\ref{obs: power of 2 rescaling}
+to also multiplying $C$ by an odd integer or dividing it by a common odd factor of
+all concentrations in $C$. 
+
+\begin{observation}%--------
+\label{obs: odd integer rescaling}
+Assume that $C\cup\braced{\mu}\ingroundset \integers$ and let $x\in\posintegers$ be odd.
+%
+\begin{description}
+%
+\item{\emph{(a)}} Let $C' = C\cdot x$. Then
+	$C$ is perfectly mixable with precision $0$ if and only if
+	$C'$ is perfectly mixable with precision $0$.	
+%
+\item{\emph{(b)}} Suppose that $x$ 
+is a divisor of all concentrations in $C\cup\braced{\mu}$.
+Then $C$ is perfectly mixable with precision $0$ if and only if
+$C/x$ is perfectly mixable with precision $0$.
+\end{description}	
+\end{observation}%----------
+
+\begin{proof}
+Part~(b) follows from~(a), so we only prove part~(a).
+Any sequence $G$ of mixing operations for $C$ can be applied to $C\cdot x$. 
+By simple induction,
+if some intermediate value in $G$ was an integer $z$, now its value will be $z x$,
+also an integer. This shows the $(\Rightarrow)$ implication.
+
+To justify the $(\Leftarrow)$ implication, 
+suppose that $G'$ is a sequence of mixing operations for $C'$ and that all
+concentrations in $G'$ are integer. 
+Since $x$ is odd and all concentrations in $C'$ are multiples of $x$, 
+every concentration in $G'$ will be also a multiple of $x$, including  $\average(C')$.  
+Thus, if  we run $G'$ on $C$ instead of $C'$, if some node's concentration
+was $c x$, now it will be $c$.
+Thus, the $(\Leftarrow)$ implication holds.
+\end{proof}
+
+%%%%%%%
+
+
+
+
+
+

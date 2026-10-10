@@ -1,0 +1,55 @@
+{
+  "index": 14,
+  "query": "finite time consensus rational",
+  "url": "https://api.openalex.org/works?filter=title.search%3Afinite+time+consensus+rational&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 2,
+  "results": [
+    {
+      "id": "https://openalex.org/W3098242055",
+      "title": "Distributed finite‐time output consensus tracking for a class of high‐order nonlinear multiagent systems with the powers of positive odd rational numbers and output constraints",
+      "date": "2020-11-09",
+      "doi": "https://doi.org/10.1002/rnc.5279",
+      "citations": 15,
+      "authors": [
+        "Jiehan Liu",
+        "Chaoli Wang",
+        "Zhengtao Ding"
+      ],
+      "abstract": "Summary This article considers the distributed finite‐time output consensus tracking problem for a class of high‐order nonlinear multiagent systems with the powers of positive odd rational numbers and output constraints. First, since the finite‐time tracking design method for a single system with the powers of positive odd rational numbers cannot be extended to the finite‐time consensus tracking for multiagent systems, an especial configuration method of the powers is constructed. Second, a new exponential brake function (EBF) that purely depends on the outputs is proposed to address the asymmetric output constraints directly. By adjusting a related parameter, the large converted value can be avoided when the output approaches the constrained boundaries, which may reduce the control input over a large output scale. Third, given some reasonable assumptions, a distributed finite‐time output consensus tracking controller is proposed to guarantee that the tracking error converges to an adjustable small region around the origin in a finite time and that the output constraints of all subsystems are not violated. The result with output constraints can also be extended to the case without output constraints. Finally, simulation verifications also confirm the benefits and effectiveness of the proposed control methods.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1002/rnc.5279",
+          "pdf": null,
+          "source": "International Journal of Robust and Nonlinear Control"
+        },
+        {
+          "url": "https://research.manchester.ac.uk/en/publications/ca0dcb62-60ab-4b70-af15-fc65ea1823c0",
+          "pdf": null,
+          "source": "Research Explorer (The University of Manchester)"
+        }
+      ],
+      "reference_count": 54
+    },
+    {
+      "id": "https://openalex.org/W2945226763",
+      "title": "Global finite-time event-triggered consensus for a class of second-order multi-agent systems with the power of positive odd rational number and quantized control inputs",
+      "date": "2019-05-25",
+      "doi": "https://doi.org/10.1016/j.neucom.2019.05.065",
+      "citations": 13,
+      "authors": [
+        "Jiehan Liu",
+        "Chaoli Wang",
+        "Xuan Cai"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://doi.org/10.1016/j.neucom.2019.05.065",
+          "pdf": null,
+          "source": "Neurocomputing"
+        }
+      ],
+      "reference_count": 47
+    }
+  ]
+}

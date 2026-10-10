@@ -1,0 +1,115 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Polynomial running time}
+%\label{sec: polynomial running time}
+%\input{7_polynomial_running_time.tex}
+
+%%%%%%%%
+	
+	In this section we address Theorem~\ref{thm: miscibility characterization}(c), namely
+	the claim that in polynomial time we can test 
+	whether a given configuration $C$ is perfectly mixable and, if so, we can
+	compute a polynomial-size perfect-mixing graph for $C$ --- also in polynomial time.
+	
+	Let $C$ be the input configuration. To test whether $C$ is perfectly mixable we just
+	need to test whether it satisfies Condition~{\MixCond}.
+	That this can be done in polynomial
+	time follows directly from Corollary~\ref{cor: mc prime power factors} 
+	in Section~\ref{sec: some auxiliary lemmas}.
+	To justify this, recall that
+	the input size is $s(C) = \sum_{c\in C} \log(|c|+2)\ge n$.
+	Thus the factoring of $n$ can be computed in time polynomial in the input size.
+	As $n$ has at most $\log n$ distinct odd prime factors and
+	each such prime factor has at most $\log{c_{max}}$ powers that are no bigger than $c_{max}$,
+	the total number of $b$'s that need to be considered 
+	is at most $\log{n}\log{c_{max}}$, which is polynomial in $s(C)$.
+	Putting it all together (see the pseudo-code in Algorithm~\ref{alg:perfect mixability}), 
+	we obtain that testing perfect-mixability can be indeed accomplished in polynomial time, 
+	thus proving the first part of Theorem~\ref{thm: miscibility characterization}(c).
+	
+	
+	\begin{algorithm}[H]
+		\caption{PerfectMixabilityTesting($C$)}
+		\label{alg:perfect mixability}
+		\begin{algorithmic}[1]
+			\State{$n\assign\nofdroplets{C}$}
+			\State{$\mu\assign \average(C)$}
+			\State{$c_{max}\assign$ maximum absolute concentration in $C$}
+			\State{$P\assign$ powers of odd prime factors of $n$ that are at most $c_{max}$}
+			\ForAll{$p\in P$}
+			\If{$C$ is $p$-congruent but $C\cup\braced{\mu}$ is not}
+			\State{return false}
+			\EndIf
+			\EndFor
+			\State{return true}
+		\end{algorithmic}
+	\end{algorithm}
+
+
+	Now, assume that $C$ is perfectly mixable.
+	To prove the second part of Theorem~\ref{thm: miscibility characterization}(c),
+	namely that a polynomial-size perfect-mixing graph for $C$ can be constructed in polynomial time,
+	the idea is to follow the construction from the proof in Section~\ref{sec: polynomial proof} 
+	for Theorem~\ref{thm: miscibility characterization}(b).
+	In this proof, at each step we choose a mixing pair in $E_\pi\subseteq E$, for $\pi\in\braced{even,odd}$,
+	that is $(\lambda)$-safe (for the appropriate invariant $\lambda\in\braced{I,I'}$), 
+	and sufficiently far apart (with respect to either 
+	the entire configuration or a subset of the same), until $E$ becomes near-final.
+	The former conditions can be checked in polynomial time 
+	and there are only quadratically many pairs to try. 
+	
+	The only remaining obstacle is that, the way the argument is presented above, we would
+	have verify at each step whether $E$ is near-final and, if it is, to
+	find its near-final partition.  This is not possible in polynomial time (see the remarks below).
+	We now explain how to circumvent this problem.
+	For $n<22$, then this is simple, since $n$ is a constant, so we focus on the case when $n\ge 22$.
+    For our construction in Section~\ref{sec: polynomial - arbitrary n},
+	we can just continuously mix $(\lambda)$-safe pairs until $E$ becomes $(\lambda)$-mixed.
+	When this happens, as $E$ satisfies Invariant~($\lambda$),
+	it holds that there is a near-final pair in $E$.
+	Furthermore, as explained in Case~1.1 of the proof of Lemma~\ref{lem: farm mix in E odd overlapping E even},
+	this $E$ has the form $E=\braced{f_1:c_1,f_2:c_2,f_3:c_3}$ 
+	with $f_1\leq 2$, $f_2=2$ and $\half(c_1+c_2)=c_3$,
+	so $(c_1,c_2)$ is a near-final pair.
+	In this case, computing the corresponding ``near-final''
+	partition of $E$ in polynomial-time is easy:
+	if $f_1=1$, then mixing $(c_1,c_2)$ produces $E$ satisfying $\nofconcentrations{E}=2$
+	and the near-final partition is given in Lemma~\ref{lem: mixability m = 2}.
+	Else $f_1=2$ and the near-final partition involves sets of the form 
+	$\braced{c_1,c_2}$ and $\braced{c_3}$, where $c_3=\average(E)$.
+
+%%%%%%%%%
+
+\emph{Remarks.}
+The last two paragraphs bring up a question of whether checking the near-final property can be
+done in polynomial time. While this is not essential to our algorithm, we address it here
+for the sake of interested readers.
+
+Let $\nofdroplets{E} = n$. Observe first that if $E$ is near-final then it has a
+near-final partition where all sets in the partition have different cardinalities.
+The reason is simple: if two sets have the same cardinality, we can merge them into
+one set, retaining the average value and the property that all cardinalities are powers of $2$.
+As a consequence of this, the cardinalities of the sets in $E$'s partition are
+uniquely determined by $n$, namely these are the powers of $2$ that appear in the binary
+representation of $n$. Let $\omega = \mysum(E) = n\cdot\hatmu$
+be the sum of all concentrations in $E$, and let
+$k$ be some cardinality (a power of $2$) in this partition of $E$. 
+A subset $F\subseteq E$ of cardinality $k$ has $\average(F) = \hatmu$ if and only if
+$\mysum(F) = \omega k/n$. 
+
+The above properties lead to an $\NP$-completeness proof.
+The idea is this. Consider a restricted variant of the problem where
+$n = 3\cdot 2^l$, for some $l$. Using the notation from the paragraph above, we need to
+determine whether $E$ has a subset $F$ of cardinality $k = n/3$ and
+total sum $\mysum(F) = \omega/3$. This is a variant of the $\Partition$
+problem that can easily be shown to be $\NP$-complete. (Details are left to the reader.)
+
+
+
+
+
+
+
+
+

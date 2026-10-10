@@ -1,0 +1,85 @@
+{
+  "snapshot_date": "2026-10-11",
+  "previous_snapshot_date": "2026-09-16",
+  "previous_commit": "a6b6f70a725d20457c406eb6d090d242197b3204",
+  "source_files": 5115,
+  "source_bytes": 368872179,
+  "changes": {
+    "unchanged": 1895,
+    "added": 3210,
+    "modified": 10
+  },
+  "deleted": 0,
+  "excluded_generated_files": 710,
+  "secret_scan_findings": 0,
+  "extensions": {
+    ".bbl": 2,
+    ".cjs": 4,
+    ".cls": 2,
+    ".html": 136,
+    ".js": 27,
+    ".json": 1710,
+    ".jsonl": 23,
+    ".md": 1428,
+    ".pdf": 149,
+    ".pickle": 10,
+    ".pl": 2,
+    ".png": 94,
+    ".prof": 2,
+    ".py": 1114,
+    ".tex": 191,
+    ".toml": 2,
+    ".txt": 210,
+    ".xml": 4,
+    ".zip": 5
+  },
+  "sources": {
+    "2026-09-07/3-3-triple-average-research-note": 4803,
+    "2026-09-07/new-chat-3": 107,
+    "2026-09-09/cha": 1,
+    "2026-09-10/new-chat": 128,
+    "2026-09-24/c-users-19226-documents-codex-2026": 76
+  },
+  "modified_sources": [
+    "2026-09-07/3-3-triple-average-research-note/outputs/general_arity/README.md",
+    "2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/README.md",
+    "2026-09-07/3-3-triple-average-research-note/outputs/README.md",
+    "2026-09-07/3-3-triple-average-research-note/outputs/triple_average/README.md",
+    "2026-09-07/3-3-triple-average-research-note/README.md",
+    "2026-09-07/3-3-triple-average-research-note/research/prime_arity_padic/README.md",
+    "2026-09-07/3-3-triple-average-research-note/research/prime_arity_padic/structural_reassessment_and_uniform_dyadic_orbits.md",
+    "2026-09-07/3-3-triple-average-research-note/research/prime_arity_padic/verification_results.json",
+    "2026-09-07/3-3-triple-average-research-note/research/prime_arity_padic/verify_square_zero_compiler.py",
+    "2026-09-07/3-3-triple-average-research-note/work/README.md"
+  ],
+  "validation_scope": "Source bytes, archive completeness and navigation; mathematical results are preserved, not independently re-proved.",
+  "checks": {
+    "source_and_git_index": {
+      "status": "PASS",
+      "source_files_identical": 5115,
+      "git_index_files_identical": 5115,
+      "source_bytes": 368872179
+    },
+    "archive": {
+      "status": "PASS",
+      "source_files": 5115,
+      "navigation_links": 5850,
+      "maintained_math_formulas": 385
+    },
+    "check_index": {
+      "status": "PASS",
+      "registered_checks": 185
+    },
+    "knowledge_catalog": {
+      "status": "PASS",
+      "claims": 65,
+      "research_documents_registered": 53,
+      "legacy_verifications": 185,
+      "frozen_materials": 256,
+      "strictly_unchanged": 250,
+      "reviewed_navigation_migrations": 6,
+      "errors": []
+    },
+    "full_mathematical_review_rerun": false
+  }
+}

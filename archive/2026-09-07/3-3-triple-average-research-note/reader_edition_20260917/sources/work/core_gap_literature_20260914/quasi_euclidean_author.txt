@@ -1,0 +1,802 @@
+        EUCLIDEAN PAIRS AND QUASI-EUCLIDEAN RINGS
+
+
+          ADEL ALAHMADI(1) , S. K. JAIN(1,2) , T. Y. LAM(3) , AND A. LEROY(4)
+
+
+         Abstract. We study the interplay between the classes of right quasi-Euclidean
+         rings and right K-Hermite rings, and relate them to projective-free rings and
+         Cohn’s GE2 -rings using the method of noncommutative Euclidean divisions
+         and matrix factorizations into idempotents. Right quasi-Euclidean rings are
+         closed under matrix extensions, and a left quasi-Euclidean ring is right quasi-
+         Euclidean if and only if it is right Bézout. Singular matrices over left and right
+         quasi-Euclidean domains are shown to be products of idempotent matrices,
+         generalizing an earlier result of Laﬀey for singular matrices over commutative
+         Euclidean domains.
+
+
+
+
+                          1. Introduction and Definitions
+   Inspired by Howie’s work [11] on idempotents in transformation semigroups of
+sets, J. A. Erdos [6] proved that singular matrices over a ﬁeld can be decomposed
+as products of idempotent matrices. This was extended in diﬀerent directions by
+several authors (e.g. [1], [3], [13], [7], [21]). The decomposition of 2 × 2 matrices
+with a zero row over a commutative Euclidean domain was one of the main steps
+in Laﬀey’s work [13]. In connection with this decomposition, we exploit the gen-
+eral notions of right Euclidean pairs and right quasi-Euclidean rings in this
+paper. This leads,( in )§2, to an easy and elementary proof for the idempotent de-
+                    a b
+composition of            over a possibly noncommutative right quasi-Euclidean ring.
+                    0 0
+After proving this result, we show in §§2–3 that right Bézout rings of stable range
+one are right quasi-Euclidean, and that a general ring is right quasi-Euclidean if and
+only if it is a right K-Hermite ring (right Hermite ring in the sense of I. Kaplansky
+[12]) and a GE2 -ring (in the sense of P. M. Cohn [4]). In §3, it is also proved that
+                       ) quasi-Euclidean
+matrix rings over (right          (      ) rings remain right quasi-Euclidean. (Thus,
+for instance, Mn Z and Mn Q [x] provide new noncommutative examples of
+right and left quasi-Euclidean rings.) However, an example of Bergman in §4 shows
+that left and right quasi-Euclidean regular rings need not be Dedekind-ﬁnite. In
+§5, we revisit the theme of idempotent factorization of matrices, and prove our last
+main result (Theorem 25) that, over any left and right quasi-Euclidean domain,
+singular matrices are products of idempotent matrices.
+   A (not necessarily commutative) integral domain R is called a right Euclidean
+domain if there is a map φ : R \ {0} → {0, 1, 2, . . . } such that, for any a, b ∈ R
+with b ̸= 0, there exists an equation a = b q + r in R where either r = 0, or
+φ (r) < φ(b). A right chain ring is a ring whose right ideals form a chain under
+inclusion; or equivalently, for any a, b ∈ R, we have either aR ⊆ bR or bR ⊆ aR.
+A ring R is called a right Bézout ring if each ﬁnitely generated right ideal is
+    Key words and phrases. (Quasi) Euclidean rings, Euclidean algorithm, K-Hermite rings,
+Bézout rings, regular rings, GE-rings, stable range, singular matrices, products of idempotents.
+                                                 1
+2          ADEL ALAHMADI(1) , S. K. JAIN(1,2) , T. Y. LAM(3) , AND A. LEROY(4)
+
+
+principal. (For instance, any right chain ring and any principal right ideal ring
+is right Bézout.) A ring R is called right K-Hermite (after Kaplansky [12], but
+following the terminological convention of [16, I.4.23]) if for every pair (a, b) ∈ R2
+there exist an element r ∈ R and a matrix Q ∈ GL2 (R) such that (a, b) = (r, 0) Q.
+Kaplansky has shown in [12] that any right K-Hermite ring is right Bézout, and
+Amitsur has shown in [2] that the converse holds if the ring in question is an integral
+domain. Needless to say, similar deﬁnitions and remarks can be made when the
+adjective “right” is replaced by “left”.
+   An ordered pair (a, b) over any ring R is said to be a right Euclidean pair if
+there exist elements (q1 , r1 ), ... , (qn+1 , rn+1 ) ∈ R2 (for some n ≥ 0) such that
+a = bq1 + r1 , b = r1 q2 + r2 , and
+(∗)             ri−1 = ri qi+1 + ri+1 for 1 < i ≤ n, with rn+1 = 0.
+The notion of a left Euclidean pair is deﬁned similarly. In the following, when we
+talk about “Euclidean pairs”, we shall always mean right Euclidean pairs. If all
+pairs (a, b) ∈ R2 are right Euclidean, we say that R is a right quasi-Euclidean
+ring. Clearly, factor rings and ﬁnite direct products of right quasi-Euclidean rings
+remain right quasi-Euclidean. For instance, right chain rings and factor rings of
+right Euclidean domains are right quasi-Euclidean rings. The notion of (right)
+quasi-Euclidean rings was introduced without a name by O’Meara [20], and with
+a name (and a somewhat diﬀerent but equivalent deﬁnition) by Leutbecher [17].
+More recently, Glivický and Šaroch [8] studied certain special classes of commuta-
+tive quasi-Euclidean domains. In both [17] and [8], the authors gave examples of
+commutative domains that are quasi-Euclidean but not Euclidean. In §4, we show,
+however, that a left quasi-Euclidean domain need not be right quasi-Euclidean, but
+it will be right quasi-Euclidean if and only if it is a right Ore domain.
+   A regular ring is a ring R in which every element a is regular in the sense of
+von Neumann; that is, a = ara for some r ∈ R. If r can be chosen to be a unit
+for every a ∈ R (or equivalently, every a ∈ R is the product of an idempotent and
+a unit), R is said to be a unit-regular ring. Another highly relevant notion needed
+for this paper is that of a GEn -ring. Following P. M. Cohn, we let En (R) denote
+the group generated by the n × n elementary matrices over R, and let GEn (R)
+denote the subgroup of GLn (R) generated by En (R) and the group of invertible
+diagonal matrices. If GLn (R) = GEn (R), we say that R is a GEn -ring. For more
+detailed discussions on such rings, see [4] and [5].
+    For any matrix A in an n × n matrix ring Mn (R), we denote by l.ann (A)
+( r.ann (A) ) the left (right) annihilator of A in Mn (R). If both annihilators are
+nonzero, we say that A is singular. We shall sometimes use (without mention) the
+convenient fact that r.ann (A) ̸= 0 if and only A v = 0 for some nonzero column
+vector v ∈ Rn . (Of course, a similar fact holds for l.ann (A).) For other notations
+and ring-theoretic terminology not deﬁned here, see [14], [15].
+
+
+          2. Euclidean Pairs and Right Quasi-Euclidean Rings
+   The point in introducing the notion of right Euclidean pairs (rather than just
+the notion of right quasi-Euclidean ring) is that we can broadly study such pairs
+in any given noncommutative ring R, and try to relate their behavior to the ideal
+                   EUCLIDEAN PAIRS AND QUASI-EUCLIDEAN RINGS                            3
+
+
+theory of R. For illustration, we begin with some simple examples of Euclidean
+pairs.
+
+Example 1. (1) For a, b, q in any ring R, both (bq, b) and (a, 0) are Euclidean
+pairs as bq = b · q + 0, and a = 0 · 1 + a along with 0 = a · 0 + 0. If b has a right
+inverse c, then (a, b) is a Euclidean pair for all a ∈ R since a = b (ca) + 0.
+
+(2) If (a, b) is a Euclidean pair and q ∈ R, we see easily that (b, a), (a + bq, b), and
+(b + aq, a) are also Euclidean pairs. From (1) and (2), it follows that, over a right
+chain ring R, all pairs in R2 are Euclidean, so R is a right quasi-Euclidean ring.
+
+(3) Let s ∈ R. If (a, b) is a Euclidean pair, then clearly (sa, sb) is a Euclidean
+pair. The converse holds if s is not a left zero-divisor in R. To see this, note
+that for any right Euclidean algorithm for (sa, sb) (as in (∗) in the Introduction),
+the “remainder terms” ri are, by induction, all left divisible by s. Thus, left
+cancellation of the factor s from all equations in (∗) will give a right Euclidean
+algorithm for the original pair (a, b).
+
+(4) Let (a, b) be a Euclidean pair. Then (u−1 au, u−1 bu) is a Euclidean pair for
+every unit u ∈ R. More generally, if v, w are any right-invertible elements, then
+(av, bw) is a Euclidean pair. (The easy proofs are left to the reader.)
+
+(5) If a, b ∈ R are such that a + bq is right-invertible for some q, then (a, b) is a
+Euclidean pair. In particular, if R is any ring of stable range one (in the sense of
+[14, Def. (20.10)]), then every pair (a, b) with aR + bR = R is Euclidean.
+
+   This section is devoted to the study of 2 × 2 matrices, with an eye to the
+connections between the factorization of such matrices (into idempotents) and the
+notions of right quasi-Euclidean rings. In (the balance
+                                                    )     of this paper, we shall use
+                                                q 1
+P. M. Cohn’s convenient notation P (q) :=             ∈ GL2 (R), which he introduced
+                                                1 0
+in [5, p. 147]. Our ﬁrst result is the following somewhat tricky lemma on expressing
+2 × 2 matrices (over any ring) as products of idempotents.
+
+Lemma 2. Let r, q1 , ..., qn be elements(in a )
+                                              ring R, and let E be a product of k
+                                         1 r
+idempotents (in M2 (R)). Then X =               E · P (qn ) · · · P (q1 ) is a product of
+                                         0 0
+k + n + 1 idempotents.
+
+Proof. Let E ′ := P (qn )−1E P (qn ), which is a product of k idempotents. In terms
+of E ′ , we have
+                          (      )
+                            1 r
+                 X =                P (qn ) E ′ P (qn−1 ) · · · P (q1 )
+                            0 0
+                          (      )(                )
+                            1 1          0       0
+                      =                              E ′ P (qn−1 ) · · · P (q1 ).
+                            0 0       qn + r 1
+              (           )
+                   0    0
+Since E ′′ :=               E ′ is a product of k + 1 idempotents, the proof proceeds
+                qn + r 1
+by induction on n.                                                                 
+4           ADEL ALAHMADI(1) , S. K. JAIN(1,2) , T. Y. LAM(3) , AND A. LEROY(4)
+
+                                                             (      )
+                                                               a b
+Corollary 3. Let R be a ring and let a, b ∈ R be such that            is a product
+                                                               0 0
+                                                     (           )
+                                                       aq + b a
+of k idempotents (in M2 (R)). Then for any q ∈ R,                  is a product of
+                                  (     )                 0    0
+                                    b a
+k + 2 idempotents. In particular,         is a product of k + 2 idempotents.
+                                   0 0
+Proof. In view of the factorization
+                      (            ) (    )(     )
+                        aq + b a      1 0   a b
+                                    =              P (q),
+                          0      0    0 0    0 0
+the desired conclusion follows by applying Lemma 2 (with n = 1).                                  
+
+    Next, we recall the following useful deﬁnition of P. M. Cohn [5, p. 148].
+Definition 4. Let X = {x1 , x2 , . . .} be a countable set of noncommuting variables,
+and let Z ⟨X⟩ be the free Z-algebra generated by X. We deﬁne the n -th right
+continuant polynomials
+                           pn (x1 , . . . , xn ) ∈ Z ⟨x1 , . . . , xn ⟩ ⊆ Z ⟨X⟩
+by p0 ≡ 1, p1 (x1 ) = x1 , and inductively for i ≥ 2 by
+              pi (x1 , . . . , xi ) = pi−1 (x1 , . . . , xi−1 ) xi + pi−2 (x1 , . . . , xi−2 ).
+Thus, p2 (x1 , x2 ) = x1 x2 + 1, p3 (x1 , x2 , x3 ) = x1 x2 x3 + x3 + x1 , etc.
+
+    We oﬀer now the following characterization result for (right) Euclidean pairs.
+Proposition 5. Let a, b be elements in a ring R. The following are equivalent :
+     (1) (a, b) is a Euclidean pair.
+     (2) For some n ≥ 0 there exist q1 , . . . , qn+1 ∈ R and rn ∈ R such that
+                               (a, b) = (rn , 0) P (qn+1 ) · · · P (q1 ).
+     (3) For some n ≥ 0 there exist q1 , . . . , qn+1 ∈ R and rn ∈ R such that
+         a = rn pn+1 (qn+1 , . . . , q1 ) and b = rn pn (qn+1 , . . . , q2 ).
+Statement (2) above shows, in particular, that every right quasi-Euclidean ring is
+right K-Hermite.
+Proof. (1) ⇒ (2). As in the deﬁnition of a Euclidean pair, we have a = bq1 + r1 ,
+b = r1 q2 + r2 , . . . , ri−1 = ri qi+1 + ri+1 , . . . and rn−1 = rn qn+1 (for some n ≥ 0).
+For technical convenience, we shall adopt (from here on) the convention that r0 :=
+b. If n = 0, the desired equation in (2) clearly holds. In general, we have
+                  (a, b)     = (b, r1 ) P (q1 ) = (r1 , r2 ) P (q2 )P (q1 ) = · · ·
+                             = (rn , 0) P (qn+1 )P (qn ) · · · P (q1 ).
+Reversing the above steps (and introducing the elements rn−1 , . . . , r1 along the
+way, ending with a = bq1 + r1 ) shows that (2) ⇒ (1).
+(1) ⇒ (3). For this, we use the elements qi , ri (with rn+1 = 0) in the “division
+process” associated with the Euclidean pair (a, b), and prove by “backward induc-
+tion” on i that ri = rn pn−i (qn+1 , . . . , qi+2 ). (For i = 0 and i = −1, this will give
+                    EUCLIDEAN PAIRS AND QUASI-EUCLIDEAN RINGS                              5
+
+
+the conclusions in (3), with the convention that r0 = b and r−1 = a.) Indeed, if
+the formula is known for the subscripts i and i + 1, then
+          ri−1   = ri qi+1 + ri+1
+                 = rn [ pn−i (qn+1 , . . . qi+2 ) qi+1 + pn−i−1 (qn+1 , . . . qi+3 ) ]
+                 = rn pn−i+1 (qn+1 , . . . , qi+1 ),
+which gives the desired formula for the subscript i − 1. The converse (3) ⇒ (1) is
+proved in the same spirit, by taking the qi ’s and rn as given in (3), and deﬁning
+the ri ’s (for i < n) by the formula ri = rn pn−i (qn+1 , . . . , qi+2 ). The details are
+left to the reader.                                                                    
+
+Theorem 6. Let (a, b) ∈ R2 be a Euclidean pair. Then
+    (a) aR + bR = rn R where rn is the element of R obtained in the proof of
+        (1) ⇒ (2) in Proposition 5.
+    (b) If rn is either central or not a left zero-divisor in R, then aR ∩ bR is also
+        principal.
+        (     )
+          a b
+    (c)          is a product of n+2 idempotents in M2 (R), where n is the integer
+          0 0
+        that appears in the deﬁnition of a Euclidean pair (cf. the introduction ) .
+
+Proof. (a) is a well known conclusion in college algebra that is routinely proved by
+“working backwards” with the division formulas in the deﬁnition of a Euclidean
+pair given in the Introduction. From a more fancy matrix viewpoint, we can prove
+(a) as follows. Recall that in the proof of Proposition 5, (a, b) = (rn , 0) Q where
+                                                                               −1
+( := P)(qn+1 ) · · · P (q1 ) ∈ GL2 (R), so certainly aR + bR ⊆ rn R. Writing Q =
+Q
+  x z
+         , we have also rn = ax + by, so aR + bR = rn R. Finally, using (either one
+  y w
+of) the assumptions on rn in (b), a matrix argument in the proof of Kaplansky’s
+[12, Lemma 3.3] shows that aR ∩ bR = azR, where z is the (1, 2)-entry of Q−1 .
+(Note that, under the assumptions in (b), Kaplansky’s proof works as long as we
+have (a, b) = (d, 0) Q where d ∈ R and Q ∈ GL2 (R). In other words, (a, b) need
+not be a Euclidean pair.)
+(c) We can rewrite the matrix equation for (a, b) above in the alternative form:
+   (     ) (         )                           (     )(          )
+    a b       rn 0                                1 rn      0    0
+            =          P (qn+1 ) · · · P (q1 ) =                     P (qn ) · · · P (q1 ).
+     0 0       0 0                                0 0     qn+1 1
+      (         )                                             (      )
+          0   0                                                 a b
+Since             is an idempotent, Lemma 2 shows that                  is a product of
+        qn+1 1                                                  0 0
+n + 2 idempotents in M2 (R).                                                                
+
+Remark 7. (1) Statement (c) of the above(Proposition
+                                                  )        was proved by Laﬀey in
+                                              a b
+[13, Lemma 2] for matrices of the form A =           over a commutative Euclidean
+                                              0 0
+domain R using longer computational arguments (and without the bound n + 2).
+For a concrete example, take (a, b) = (14, 8) over R = Z, for which n = 2, q1 =
+q2 = 1, q3 = 3, and r2 = gcd (14, 8) = 2. Applying (c) above and thereafter the
+inductive proof of Lemma 2, we get the following factorization of A into n + 2 = 4
+6           ADEL ALAHMADI(1) , S. K. JAIN(1,2) , T. Y. LAM(3) , AND A. LEROY(4)
+
+
+idempotents:
+         (      ) (                )(         )(         )(       )
+           14 8    1           1        0 0        4   3    −7 −4
+                 =                                                  ∈ M2 (Z).
+           0 0     0           0        2 1        −4 −3    14  8
+But of course, this factorization of A into idempotents is far from being unique.
+For instance, here is a shorter factorization (curiously with the same “last factor”):
+                (        ) (         )(      )(           )
+                  14 8          1 0      0 1     −7 −4
+                           =                                ∈ M2 (Z),
+                   0 0          0 0      0 1     14     8
+and it can be shown that this is in fact “a shortest” factorization for A.
+(2) In the proof of Theorem 6, the element z (is the (1,       ) 2)-entry of the matrix
+  −1          −1           −1                   −1      0   1
+Q = P (q1 ) · · · P (qn+1 ) . Since P (qi ) =                    , it is easy to see (e.g. by
+                                                        1 −qi
+induction on n) that z = (−1)n pn (q2 , . . . , qn+1 ), where pn (x1 , . . . , xn ) is the n -th
+right continuant polynomial introduced in Deﬁnition 4. This expression of z is of
+interest, since aR ∩ bR = azR if rn is either central or not a left zero-divisor.
+
+                                                          √ not a suﬃcient condition
+(3) In Theorem 6, the statement (c) is only a necessary but
+for (a, b) to be a Euclidean pair. To see this, let θ = −5 and R = Z [θ] be the
+full ring of algebraic integers in the number ﬁeld Q [θ]. The Dedekind domain R
+has class number 2, and its class group is generated
+                                                 (     by the ideal
+                                                               )     −2R + (θ + 1) R
+                                                    −2 θ + 1
+(see [15, Example 2.19D]). The matrix E =                        over R has trace 1
+                                               ( θ − 1 )3
+                                                 −2 θ + 1
+and determinant 0, so E 2 = E. Thus, A :=                    has a simple idempotent
+                                                  0    0
+factorization diag (1, 0) E. However, the ideal −2R + (θ + 1) R is (by choice) not a
+principal ideal. In particular, (−2, θ + 1) is not a Euclidean pair over R, according
+to Theorem 6 (a).
+                                         instead,
+(4) If the pair (a, b) is left Euclidean (     ) a similar decomposition into products
+                                           a 0
+of idempotents holds for the matrix              . We leave the details to the reader.
+                                           b 0
+   Using an idea of Zabavsky in [23, Theorem 2] and [24, Proposition 6], we obtain
+the following very simple criterion for Euclidean pairs over rings of stable range 1.
+(For the notion of “stable range 1”, see [14, Def. (20.10)].)
+Theorem 8. Let R be a ring of stable range 1. Then (a, b) ∈ R2 is a Euclidean
+pair if and only if the right ideal aR + bR is principal.
+Proof. The “only if” part is Theorem 6 (a). For the “if” part, assume that aR +
+bR = dR for some d ∈ R, and write a = da0 , b = db0 , and d = ax + by. Letting
+c = 1 − a0 x − b0 y, we have dc = d − ax − by = 0, and a0 x + (b0 y + c) = 1. Since
+R has stable range 1, there exists t ∈ R such that u := a0 + (b0 y + c) t is a unit.
+Left-multiplication by d then yields du = a + byt + dct = a + byt. We have now
+a = b (−yt) + du and b = (du) (u−1 b0 ), so (a, b) is a Euclidean pair.           
+
+Corollary 9. (1) (Cf. [23, Theorem 2].) If R is a right Bézout ring with stable
+range 1 (e.g. R can be any semilocal right Bézout ring ), then R is right quasi-
+Euclidean. (2) If R is a unit-regular ring, then all matrix rings Mn (R) are right
+(and left) quasi-Euclidean.
+                    EUCLIDEAN PAIRS AND QUASI-EUCLIDEAN RINGS                                7
+
+
+Proof. (1) follows directly from Theorem 8. For (2), it suﬃces to handle the case
+n = 1, since matrix rings over unit-regular rings remain unit-regular by [9, (4.7)].
+For n = 1, the desired conclusion follows from part (1) since von Neumann regular
+rings are right (and left) Bézout by [9, (1.1)], and unit-regular rings have stable
+range 1 by [9, (7.42)].                                                           
+   Of course, if R is a commutative semilocal PID, then R is in fact a Euclidean
+domain; see, e.g. [24, Corollary 3]. Indeed, a Euclidean norm φ : R \ {0} →
+{0, 1, 2, . . . } is given by deﬁning φ (a) to be the length of a prime factorization of
+a ∈ R \ {0}. However, Corollary 9 applies more generally to some classes of rings
+which may be noncommutative non-domains.
+
+                       3. Relations with Cohn’s GE-Rings
+   In this section, we work out the connections between the class of right quasi-
+Euclidean rings and the class of GE-rings introduced by P. M. Cohn [4] in 1966. To
+do this, we ﬁrst recall some of the notations and terminology in Cohn’s book [5].
+For any n ≥ 1, we denote by GEn (R) the subgroup of GLn (R) generated by the
+n × n elementary matrices and the invertible diagonal matrices. We say that R is
+a GEn -ring if GLn (R) = GEn (R). (Note that GL1 (R) and GE1 (R) are both the
+group of units of R, so R is always a GE1 -ring.) If R is a GEn -ring for all n ≥ 2,
+we say that R is a GE-ring. For instance, if R is a ring with stable range one,
+an easy induction argument on n ≥ 1 shows that R is a GEn -ring, so R gives a
+quick example of a GE-ring. This class of examples includes all semilocal rings and
+all unit-regular rings, according to [14, (20.9)] and [9, (7.42)] respectively.
+
+( For )the next proposition, we’ll be using again the important matrices P (q) =
+  q 1
+         introduced in Section 2. It is easy to see that P (q) ∈ GE2 (R) for all
+  1 0
+q ∈ R. Using a general factorization result of Cohn [5] for matrices in GE2 (R), we
+have the following important addition to Proposition 5 on the characterizations of
+(right) Euclidean pairs.
+Proposition 10. A pair (a, b) ∈ R2 is a Euclidean pair if and only if (a, b) =
+(r, 0) Q for some r ∈ R and Q ∈ GE2 (R). In this case, Q can always be chosen
+to be in the group E2 (R) generated by the 2 × 2 elementary matrices over R.
+Proof. First assume that (a, b) = (r, 0) Q, where r ∈ R and Q ∈ GE2 (R). By
+Cohn’s factorization theorem in [5, p. 147], we can write the matrix Q ∈ GE2 (R)
+in the form diag (u, v) P (qn+1 ) · · · P (q1 ) for suitable q1 , . . . , qn+1 ∈ R and suitable
+units u, v ∈ R. Thus,
+                     (a, b)   = (r, 0) diag (u, v) P (qn+1 ) · · · P (q1 )
+                              =   (ru, 0) P (qn+1 ) · · · P (q1 ),
+so (2) ⇒ (1) in Proposition 5 shows that (a, b) is a Euclidean pair. Conversely, if
+(a, b) is a Euclidean pair, we can use a sequence of E2 (R)-actions on the right of
+(a, b) to bring it to either (∗, 0) or (0, ∗). If (∗, 0) is reached, we are done. If we
+reach some (0, r) instead, we may further perform the elementary transformations:
+(0, r) 7→ (r, r) 7→ (r, 0) to reach the desired form (r, 0).                          
+
+   By applying the above Proposition to all pairs (a, b) ∈ R2 , we retrieve the fol-
+lowing characterization theorem of Leutbecher [17] for right quasi-Euclidean rings.
+8           ADEL ALAHMADI(1) , S. K. JAIN(1,2) , T. Y. LAM(3) , AND A. LEROY(4)
+
+
+For the sake of completeness, we include a simple proof using a classical result of
+Kaplansky.
+Theorem 11. For any ring R, the following statements are equivalent :
+    (A) R is right quasi-Euclidean.
+    (B) R is a GE-ring that is right K-Hermite.
+    (C) R is a GE2 -ring that is right K-Hermite.
+    (D) For any a, b ∈ R, (a, b) = (r, 0) Q for some r ∈ R and Q ∈ GE2 (R).
+    (E) For any a, b ∈ R, (a, b) = (r, 0) Q for some r ∈ R and Q ∈ E2 (R).
+Proof. (B) ⇒ (C) ⇒ (D) are tautologies, and (D) ⇒ (B) follows from Kaplansky’s
+result [12, Theorem 7.1]. Finally, the equivalence of (A), (D) and (E) is clear from
+Proposition 10.                                                                    
+   While Theorem 11 was a relatively easy result, there is yet another characteriza-
+tion for the right quasi-Euclidean property in the case of domains, which we’ll now
+present. Following [5], we say that a ring R is projective-free if every ﬁnitely gener-
+ated right (equivalently left) projective module is free of a unique rank. In the case
+where such a ring( R is )a commutative domain, Bhaskara Rao showed in [3, Lemma
+                   a b
+1] that, if A =            ∈ M2 (R) is a product of idempotent matrices, then the
+                    0 0                                        (      )
+                                                                 x y
+ideal aR + bR is principal. [Thus, for instance, the matrix              ∈ M2 (k [x, y])
+                                                                 0 0
+(for any commutative ring k ̸= 0) cannot be a (    product) of idempotent matrices.
+                                                                                       1
+
+                                                     2 y          (     )
+The same remark can be made about the matrix                 ∈ M2 Z [y] .] The follow-
+                                                     0 0
+ing lemma is a broad generalization of Bhaskara Rao’s result to the noncommutative
+non-domain case, with a signiﬁcantly simpliﬁed proof.
+                                                                   (      )
+                                                                     a b
+Lemma 12. Let R be a projective-free ring and let A =                       ∈ M2 (R).
+                                                                     c d
+If A = T E for some T, E ∈ M2 (R) where E 2 = E ̸= I2 , then there exists
+Q ∈ GL2 (R) such that (a, b) =((r, 0) )Q for some r ∈ R (and hence aR+bR = rR ).
+                                  a b
+In particular, if all matrices           are products of idempotents in M2 (R), R
+                                  0 0
+must be a right K-Hermite ring.
+Proof. We may assume that E ̸= 0, in which case the projective-free assumption
+on R implies that E( = Q)−1 diag (1, 0)(Q)for some Q ∈ GL2 (R). Then A =
+                         r 0               r
+T Q−1 diag (1, 0) Q =           Q, where      is the ﬁrst column of T Q−1 . Thus,
+                         s 0               s
+(a, b) = (r, 0) Q. The rest of the Lemma is now clear.                         
+   Of course, in the Lemma above, the “projective-free” assumption√on the ring
+R was essential, as we have seen from the example R = Z [θ] (θ = −5 ) given
+in Remark 7 (3). Over this non projective-free Dedekind domain, we have the
+idempotent factorization
+                    (          ) (       )(              )
+                      −2 θ + 1       1 0     −2 θ + 1
+                                 =                         .
+                       0    0        0 0    θ−1       3
+   1After factoring out a maximal ideal, we may assume that k is a ﬁeld and apply the Quillen-
+Suslin Theorem [16, V.2.9] that k [x, y] is projective-free.
+                  EUCLIDEAN PAIRS AND QUASI-EUCLIDEAN RINGS                           9
+
+
+Here, the second idempotent factor on the RHS is not diagonalizable (over R), and
+the ideal −2R + (θ + 1) R is non-principal.
+Theorem 13. A domain R is right quasi-Euclidean
+                                      (     )         if and only if R is a projective-
+                                        a b
+free GE2 -ring such that every matrix         is a product of idempotents in M2 (R).
+                                        0 0
+Proof. The “if” part follows from Lemma 12 and (A) ⇔ (C) in Theorem 11 (even
+without the domain assumption on R). For the “only if” part, consider any right
+quasi-Euclidean domain R. By Theorem(      ) R is a right K-Hermite GE2 -ring,
+                                           11,
+                                      a b
+and by Theorem 6 (c), every matrix            is a product of idempotents. It only
+                                      0 0
+remains to show that R is projective-free. Since R is right Bézout, it is a right
+semihereditary domain, so Albrecht’s theorem [15, (2.29)] implies that every ﬁnitely
+generated projective right R-module P is isomorphic to J1 ⊕ · · · ⊕ Jk where each
+Ji is a ﬁnitely generated (and hence principal) right ideal of R. Each Ji is free,
+so P is also free.                                                                
+
+  Next, we’ll give another application of Theorem 11 by proving that the “right
+quasi-Euclidean” property is preserved by matrix ring extensions. This result was
+absent from the papers [17] and [8] as Leutbecher, Glivický and Šaroch were pri-
+marily interested only in the commutative case of quasi-Euclidean rings.
+Theorem 14. (1) If R is a GEkn -ring, then S = Mk (R) is a GEn -ring.
+(2) If R is a GE-ring, so is S = Mk (R) for every k ≥ 1.
+(3) If R is a right quasi-Euclidean ring, so is S = Mk (R) for every k ≥ 1.
+Proof. For (1), consider any matrix A ∈ GLn (S). We may view A as an (invertible)
+kn × kn matrix over R. Assuming that GLkn (R) = GEkn (R), A is a product
+of kn × kn elementary matrices and invertible diagonal matrices over R. Thus,
+we are done if we can show that any elementary matrix B = (Bij ) ∈ Mkn (R)
+(where i, j ∈ [1, n] and each Bij ∈ S = Mk (R)) is in the group GEn (S). Say
+B = Ikn + x epq where x ∈ R, p ̸= q, and epq is one of the matrix units in
+Mkn (R). If the non-diagonal entry x does not occur in any one of the Bii ’s, then
+B is an elementary matrix in Mn (S). Now assume that the entry x occurs in
+some Bii . Then the diagonal block Eii is invertible, and the blocks Ejj must be
+Ik for j ̸= i. In this case, B is a “diagonal invertible matrix” in Mn (S), so it is
+in GEn (S). We have thus proved that S is a GEn -ring.
+   Clearly, (1) implies (2). For (3), assume R is right quasi-Euclidean. Then R
+is right K-Hermite (by Proposition 5), and hence so is S = Mk (R), according to
+another result of Kaplansky [12, Theorem 3.6]. Also, R is a GE-ring by Theorem
+11, so by part (2) above, S is a GE-ring as well. Applying Theorem 11 again, we
+see that S is right quasi-Euclidean, as desired.                              
+
+   To conclude this section, we’ll prove one more result about the preservation of
+the quasi-Euclidean property. This result gives another natural criterion for a ring
+R to be right quasi-Euclidean — in terms of the right quasi-Euclideanness of R
+modulo its Jacobson radical rad (R) (or any ideal inside this radical).
+Theorem 15. For any ideal I ⊆ rad (R), R is right quasi-Euclidean if and only
+if R is right Bézout and R/I is right quasi-Euclidean.
+10         ADEL ALAHMADI(1) , S. K. JAIN(1,2) , T. Y. LAM(3) , AND A. LEROY(4)
+
+
+Proof. We need only prove the “if” part, so assume R is right Bézout with R :=
+R/I right quasi-Euclidean. Theorem 11 implies that R is a GE2 -ring that is right
+K-Hermite. Also, if both of these properties can be lifted to R, Theorem 11 would,
+in turn, imply that R is right quasi-Euclidean. Now the GE2 -property certainly
+lifts to R since any U ∈ GL2 (R) can be “matched” modulo I with a product
+of matrices Ui ∈ GL2 (R) each with a unit entry (and any such Ui is easily seen
+to be in GE2 (R)). Thus, it only remains to lift the K-Hermite property. Given
+any (a, b) ∈ R2 , we may ﬁrst write aR + bR = dR for some d ∈ R. Thus,
+there exist a0 , b0 , x, y ∈ R such that a = da0 , b = db0 , and d = ax + by. For
+c := 1 − a0 x − b0 y, we have dc = 0 and a0 R + b0 R + cR = R. Since R is right
+K-Hermite, it has stable range ≤ 2 by [19, Proposition 8], so R also has stable
+range ≤ 2 (in view of I ⊆ rad (R)). Therefore, there exist p, q ∈ R such that
+(a0 + cp) R + (b0 + cq) R = R. As R is right K-Hermite, the right unimodular row
+( a0 + cp, b0 + cq ) can be completed to an invertible matrix over R according to
+[19, p. 32]. Therefore,
+              (                    ) b0 + cq) can also be completed to an invertible
+                            (a0 + cp,
+               a0 + cp b0 + cq
+matrix U =                            over R. Since dc = 0, it follows that
+                    ∗          ∗
+                     (d, 0) U = (d (a0 + cp), d (b0 + cq) = (a, b),
+so (a, b) U −1 = (d, 0). This checks that R is right K-Hermite, as desired.            
+
+
+       4. Issues of Left-Right Symmetry and Dedekind-Finiteness
+    In the study of right Euclidean pairs and right quasi-Euclidean rings, the question
+of left-right symmetry comes up naturally. To begin our considerations on this issue,
+we ﬁrst point out that, in general, a left Euclidean pair (a, b) ∈ R2 need not be
+right Euclidean. For instance, let R be the ring of 2 × 2 lower triangular matrices
+over a ﬁeld k. If we consider the matrix units e = E11 and r = E21 , then the
+relation re = E21 E11 = E21 = r shows that( (e, r)) is a left Euclidean pair. But it is
+                                               k   0
+easy to see that the right ideal eR + rR =     k   0
+                                                       is non-principal, so (e, r) is not
+a right Euclidean pair by Theorem 6 (a). While this example was on the element
+level, we will show by another example below that, in general, left quasi-Euclidean
+rings also need not be right quasi-Euclidean — even in the case of domains.
+Example 16. Let σ be a non-surjective endomorphism of a ﬁeld k, and let R
+be the domain k [x, σ] of twisted polynomials in x over k (deﬁned by taking
+xa = σ(a) x for all a ∈ k). It is well known that R is a left Euclidean domain
+with respect to the usual degree function; in particular, R is a left quasi-Euclidean
+domain. Now, take any element a ∈ k \ σ (k). It is easy to see that axR ∩ xR = 0,
+and that the right ideal direct sum axR + xR is non-principal. Thus, R is not
+right Bézout, and hence not a right quasi-Euclidean domain. Indeed, while (ax, x)
+is (obviously) a left Euclidean pair, it is not a right Euclidean pair by Theorem 6.
+Also, note that R being a left PID implies that it is a projective-free ring; see, for
+instance, [15, Theorem 2.24]. Thus, by Lemma           ) fact that axR + xR is non-
+                                               ( 12, the
+                                                 ax x
+principal implies also that the matrix A =               is not right-divisible by any
+                                                  0 0
+idempotent matrix (other than I2 ). In particular, A is not a product of idempotent
+matrices over R. We note, however, that for any two elements a, x in any ring, the
+                  EUCLIDEAN PAIRS AND QUASI-EUCLIDEAN RINGS                           11
+
+
+“other” pair (xa, x) is always a right Euclidean pair (with the “division(process”
+                                                                                )
+                                                                          xa x
+stopping in one step). According to Theorem 6 (c), the matrix B =
+                                                              (     )(     0) 0
+                                                                1 x    0 0
+should be a product of two idempotents, and indeed, B =                      . As
+                        (       )                               0 0    a 1
+                          x xa
+for the matrix C =                 (obtained by permuting the two columns of B),
+                          0 0
+Corollary 3 guarantees that C is a product of four idempotents. For such an
+explicit factorization, see [1, Lemma 1 (b)]. But curiously enough, C turns out to
+be a product of two idempotents too! We leave this as an exercise for the reader.
+   In the standard theory of right rings of quotients (see, e.g. [15, §10B]), an inte-
+gral domain R is said to be right Ore if rR ∩ sR ̸= 0 for any nonzero r, s ∈ R.
+Intuitively speaking, what “went wrong” in Example 16 above was that the left
+Euclidean domain in question failed to be a right Ore domain. With such a “re-
+alization”, we can then try to exploit Theorem 11 to prove a result on “partial”
+left-right symmetry of the quasi-Euclidean property of rings. Part (A) of the fol-
+lowing result is basically the same as Zabavsky’s [24, Proposition 9]. However, the
+proof given below for this part is shorter and more conceptual.
+Theorem 17. (A) A left quasi-Euclidean ring R is right quasi-Euclidean if and
+only if it is right Bézout. In particlar, a regular ring is left quasi-Euclidean if and
+only if it is right quasi-Euclidean.
+(B) A left quasi-Euclidean domain R is right quasi-Euclidean if and only if it is a
+right Ore domain.
+Proof. (A) For the ﬁrst statement, the “only if” part is true (without any “left” as-
+sumption on R ) by Proposition 5 (2), since right K-Hermite rings are right Bézout.
+Conversely, if R is left K-Hermite and right Bézout, then R is right K-Hermite
+by a result of Menal and Moncasi [19, Proposition 8(ii)]. Adding a GE2 -ring as-
+sumption on R and applying Theorem 11, we arrive at the “if” part of the ﬁrst
+statement in (A). The second part of (A) follows trivially from the ﬁrst part since
+any regular ring is left and right Bézout (by [9, Theorem 1.1]).
+(B) According to [5, Prop. 2.3.17], the statement (B) is true for domains if “quasi-
+Euclidean” is replaced throughout by “Bézout”. Thus, by Amitsur’s result in [2]
+(see also [1, Theorem 16]), (B) is true (for domains) if “quasi-Euclidean” is replaced
+throughout by ”K-Hermite”. Therefore, again by adding the GE2 -ring assumption
+on R and applying Theorem 11, we arrive at the desired conclusion in (B).           
+    We complete this section by addressing the question of Dedekind-ﬁniteness for
+quasi-Euclidean rings. Recall that a ring R is called Dedekind-ﬁnite if, for any
+a, b ∈ R, ab = 1 ⇒ ba = 1. This property was mentioned several times in Kaplan-
+sky’s paper [12]. However, Kaplansky left open the question whether left or right
+K-Hermite rings would satisfy this ﬁniteness property. The answer to this ques-
+tion turns out to be ”no” — even for left and right quasi-Euclidean regular rings,
+according to the following example kindly communicated to us by G. Bergman.
+Example 18. Let A be the power series ring k [[x]] over a ﬁeld k, and let K =
+k ((x)) be the Laurent series ﬁeld, which is the quotient ﬁeld of A. Instead of
+working with Endk (A) (the full ring of k-vector space endomorphisms of A),
+Bergman has introduced in [10, Example 1] the following celebrated subring:
+12          ADEL ALAHMADI(1) , S. K. JAIN(1,2) , T. Y. LAM(3) , AND A. LEROY(4)
+
+
+(A)   R = { f ∈ Endk (A) : ∃ f0 ∈ K such that (f −f0 )(xn A) = 0 for some n ≥ 1}.
+
+This deﬁnition makes sense since, by multiplication, any f0 ∈ K maps A linearly
+into K. Similarly, all elements of A map A into A, so we may view A as a subring
+of R. In [10] (where Bergman’s example ﬁrst appeared; see also [9, Example 4.26]),
+it has been shown that R is a regular ring that is not Dedekind-ﬁnite. It turns
+out that R is a left and right quasi-Euclidean ring. In view of Theorem 17, it
+suﬃces to show that R is left quasi-Euclidean. Since elements of R are vector
+space endomorphisms of A, we can speak of their kernels and images. We ﬁrst
+prove the following crucial fact about right divisibility in the ring R :
+
+(B) For any f, g ∈ R, f ∈ R g if and only if ker (g) ⊆ ker (f ).
+
+It suﬃces to prove the “if” part, so assume ker (g) ⊆ ker (f ). Since R is a regular
+ring, we may assume that g is an idempotent. (If g = ghg ∈ R, simply replace g by
+the idempotent hg without changing R g or ker (g).) Then A = im (g) ⊕ ker (g).
+As the equation f (a) = f g (a) holds trivially for both a ∈ im (g) and a ∈ ker (g) ⊆
+ker (f ), it holds for all a ∈ A. Thus, f = f g ∈ R g.
+   We’ll now prove that every (f, g) ∈ R2 is a left Euclidean pair. let φ : R → K
+be the ring homomorphism which sends any f ∈ R to the (uniquely determined)
+Laurent series f0 ∈ K in the deﬁning equation (A) above. Since φ is a homomor-
+phism onto a ﬁeld, a single elementary transformation will bring the pair (f, g)
+into one where one of the components is in ker (φ). Thus, we may assume, say,
+φ (g) = 0; in particular, dimk im (g) < ∞. Now we’ll add to g the endomorphism
+xn f where n is chosen large enough so that xn A ∩ im (g) = 0. Then we claim that
+
+(C) ker (g + xn f ) = ker (f ) ∩ ker (g).
+
+It suﬃces to prove the inclusion “⊆”. For any a ∈ ker (g + xn f ), we have g(a) +
+xn (f (a)) = 0. Since xn A ∩ im (g) = 0, this implies that g(a) = f (a) = 0, so
+a ∈ ker (f ) ∩ ker (g). Having proved (C), we deduce from (B) that f ∈ R (g + xn f ),
+so another elementary transformation brings (f, g + xn f ) to (0, g + xn f ), which
+proves our claim that every pair (f, g) ∈ R2 is left Euclidean.
+
+Remark 19. Since Bergman’s ring R above is left (and right) quasi-Euclidean, it
+is also left (and right) K-Hermite, so it has stable range ≤ 2 (and hence equal to 2)
+by a result of Menal and Moncasi [19, Proposition 8(i)]. Thus, R gives an example
+of a ring with stable range two that is not Dedekind-ﬁnite. The existence of such
+examples was noted earlier by Menal-Moncasi [19, Example 1] and Stepanov [22],
+but it is worth noting again that Bergman’s example is a regular GE-ring with both
+left and right division algorithms for arbitrary pairs of elements.
+
+           5. Singular Matrices over Quasi-Euclidean Domains
+   In this ﬁnal section, we return to the theme of the factorization of singular
+matrices over right quasi-Euclidean rings. Before we treat the case of n×n matrices,
+we ﬁrst prove the following result on 2 × 2 matrices which generalizes Laﬀey’s
+Lemma 2 in [13] as well as Theorem 10 of Alahmadi-Jain-Leroy in [1], upon noting
+that it applies to both right Euclidean domains and right chain domains (which
+were the cases treated in [13] and [1]).
+                    EUCLIDEAN PAIRS AND QUASI-EUCLIDEAN RINGS                              13
+
+
+Theorem 20. Let R be a right quasi-Euclidean domain and let A ∈ M2 (R) be
+such that l.ann (A) ̸= 0. Then A is a product of idempotent matrices.
+Proof. Say (x, y) A = 0 where (x, y) ̸= (0, 0). By Theorem 6 (a), xR + yR ̸= 0 is
+a principal right ideal. Since R is a domain, we can ﬁnd α, x′ , y ′ ∈ R such that
+(x, y) = α (x′ , y ′ ) and (x′ , y ′ ) A = (0, 0) with x′ R+y ′ R = R. Applying Proposition
+5 to the Euclidean pair (x′ , y ′ ) (and noting that the “rn ” in the proof of Theorem
+6 is now a unit), we see that (x′ , y ′ ) is the ﬁrst row of an invertible matrix,2 and
+therefore also the second row of an invertible      ( matrix,
+                                                           )      say P . Then (x′ , y ′ ) A =
+                                                      a b
+(0, 0) implies that P AP −1 has the form                    . By Theorem 6, P AP −1 and
+                                                      0 0
+hence A are products of idempotent matrices in M2 (R), as desired.                           
+   Note that the “domain” assumption in this theorem cannot be removed. Indeed,
+if R = R1 × R2 is left and right quasi-Euclidean where each Ri is a nonzero
+ring, then any matrix A ∈ M2 (R1 ) ⊆ M2 (R) is left (and right) annihilated by
+the identity matrix in M2 (R2 ) ⊆ M2 (R). But of course A may not be a product
+of idempotent matrices over R1 (let alone over R ). The same remark on the
+essentialness of the domain assumption applies also to most of our results in the
+rest of this section.
+   The generalization of Theorem 20 to matrices of arbitrary size (Theorem 25
+below) can be obtained along the same lines as in Laﬀey’s Theorem 2 in [13] and
+Theorem 22 of Alahmadi, Jain and Leroy in [1]. Note that in both of these references
+the matrix in question is assumed to be singular, in the sense that its left and right
+annihilators are both nonzero. In Proposition 22 below, we’ll show that, over
+a right quasi-Euclidean domain R, a matrix A ∈ Mn (R) is already singular if
+l.ann (A) ̸= 0. To see this, we ﬁrst prove the following lemma which holds without
+a domain assumption on R.
+Lemma 21. Let R be a right quasi-Euclidean ring. Then
+   (a) For any A ∈ Mn (R), there exists an invertible matrix P ∈ Mn (R) such
+       that AP is lower triangular.
+  (b) Let T = (tij ) ∈ Mn (R) be a lower triangular matrix with at least one zero
+       entry on the diagonal. Then r.ann (T ) ̸= 0.
+Proof. (a) follows from Proposition 5 (2) and Kaplansky’s result [12, Theorem 3.5].
+The proof of (b) proceeds by total induction on n. The case n = 1 being trivial,
+we may assume that the conclusion is true for matrices of smaller size than n × n.
+If t11 ̸= 0, then ti+1,i+1 = 0 for some i ≥ 1. In this case, the conclusion is
+at hand by applying the inductive hypothesis to the southeast (n − i) × (n − i)
+corner of A.(Thus, we    ) may assume that t11 = 0, in which case A has northwest
+                  0   0
+2 × 2 corner               . Since (t21 , t22 ) is a right Euclidean pair, Proposition 5 (2)
+                 t21 t22
+shows that there exist an invertible 2(× 2 matrix       ) P and ( an)element r ∈ R such
+                                                 0    0           0 0
+that (t21 , t22 ) P = (r, 0), and hence                   P =           . For the invertible
+                                                t21 t22           r 0
+block matrix Q := diag (P, In−2 ), the product T Q remains lower triangular, with
+diagonal entries 0, 0, t33 , . . . , tnn . By the case we have already dealt with, (T Q) v =
+   2As a cautionary note to the reader, we point out that, over a noncommutative ring R in
+general, not every right unimodular pair can be realized as a row of a matrix in GL2 (R).
+14           ADEL ALAHMADI(1) , S. K. JAIN(1,2) , T. Y. LAM(3) , AND A. LEROY(4)
+
+
+0 for some column v ̸= 0. Since v ̸= 0 ⇒ Q v ̸= 0, we have r.ann (T ) ̸= 0, as
+desired.                                                                    
+Proposition 22. Let R be a right quasi-Euclidean domain and A ∈ Mn (R). Then
+l.ann (A) ̸= 0 implies that r.ann (A) ̸= 0.
+Proof. Let P ∈ Mn (R) be an invertible matrix such that AP = T is lower tri-
+angular. Let wA = 0 where w is a nonzero row vector in Rn . This implies that
+wT = 0. Since R is a domain, some element on the diagonal of T must be zero.
+Lemma 21 (b) then shows that r.ann (T ) ̸= 0, and hence also r.ann (A) ̸= 0. 
+Remark 23. (A) Classically, the conclusion of Proposition 22 is well known to be
+true for matrices A over a commutative ring; see, e.g. McCoy’s book [18, p. 161].
+However, we’ll see in (B) below that this conclusion is not true in the noncommu-
+tative case, even for 2 × 2 matrices over domains.
+(B) We note that the converse of Proposition 22 is not true either. To give an
+example for this, it is convenient to “switch sides”. The opposite ring version
+of Proposition 22 says that, over a left quasi-Euclidean ring R, r.ann (A) ̸= 0 ⇒
+l.ann (A) ̸= 0 (for any A ∈ Mn (R)). However, (         ) (quasi) Euclidean domain
+                                               for the left
+                                                 ax x
+R = k [x, σ] in Example 16, the matrix A =                  (for any a ∈ k \ σ(k) ) is
+                                                  0 0
+left-annihilated by diag (0, 1), but r.ann (A) = 0 since (as we have pointed out
+earlier) axR ∩ xR = 0.
+     We have nevertheless the following obvious consequence of Proposition 22.
+Corollary 24. Let R be a right and left quasi-Euclidean domain.                      For any
+A ∈ Mn (R), we have r.ann (A) = 0 if and only if l.ann (A) = 0.
+     We can now state the ﬁnal result in this paper.
+Theorem 25. Let R be a right and left quasi-Euclidean domain. Then every
+matrix A ∈ Mn (R) with l.ann (A) ̸= 0 (equivalently, r.ann (A) ̸= 0) is a product
+of idempotent matrices.
+   With the 2 × 2 case already settled in Theorem 20, the proof follows along the
+same lines as in Laﬀey’s Theorem 2 in [13] and Theorem 22 of Alahmadi, Jain
+and Leroy in [1]. We remark, however, that Bhaskara Rao has shown in [3] that
+the conclusion of Theorem 25 is not true even over commutative principal ideal
+domains.
+
+Acknowledgement. We thank Professor Bergman for showing us the details
+needed for the veriﬁcation of Example 18. This work was done while Jain, Lam,
+and Leroy were visiting King Abdulaziz University, Saudi Arabia, in March 2013.
+They would like to thank King Abdulaziz University for its hospitality and kind
+support.
+
+                                       References
+[1] A. Alahmadi, S. K. Jain, and A. Leroy: Decomposition of singular matrices into idempotents.
+    To appear in Linear and Multilinear Algebra.
+[2] S. A. Amitsur: Remarks on principal ideal rings. Osaka Math. J. 15 (1963), 59–69.
+[3] K. P. S. Bhaskara Rao: Products of idempotent matrices. Lin. Alg. Appl. 430 (2009), 2690–
+    2695.
+                     EUCLIDEAN PAIRS AND QUASI-EUCLIDEAN RINGS                                    15
+
+
+[4] P. M. Cohn: On the structure of the GL2 of a ring. IHES Publ. Math. 30 (1966), 5–53.
+[5] P. M. Cohn: Free Ideal Rings and Localization in General Rings. New Mathematical Mono-
+    graphs, No. 3, Cambridge University Press, Cambridge, 2006.
+[6] J. A. Erdos: On products of idempotent matrices. Glasgow Math. J. 8 (1967), 118–122.
+[7] J. Fountain: Products of idempotent integer matrices. Math. Proc. Cambridge Phil. Soc. 110
+    (1991), 431–441
+[8] P. Glivický and J. Šaroch: Quasi-Euclidean subrings of Q [x]. To appear in Comm. Algebra.
+[9] K. R. Goodearl: Von Neumann Regular Rings. Krieger Publishing Company, Malabar, Florida,
+    1991.
+[10] D. Handelman: Perspectivity and cancellation in regular rings. J. Algebra 48 (1977), 1–16.
+[11] J. M. Howie: The subsemigroup generated by the idempotents of a full transformation semi-
+    group. J. London Math. Soc. 41 (1966), 707–716.
+[12] I. Kaplansky, Elementary divisors and modules. Trans. Amer. Math. Soc. 66 (1949), 464-491.
+[13] T. J. Laﬀey: Products of idempotent matrices. Linear and Multilinear Algebra 14 (1983),
+    309–314.
+[14] T. Y. Lam: A First Course in Noncommutative Rings. Second Edition, Graduate Texts in
+    Math., Vol. 131, Springer-Verlag, Berlin-Heidelberg-New York, 2001.
+[15] T. Y. Lam: Lectures on Modules and Rings. Graduate Texts in Math., Vol. 189, Springer-
+    Verlag, Berlin-Heidelberg-New York, 1999.
+[16] T. Y. Lam: Serre’s Problem on Projective Modules. Monographs in Mathematics, Springer-
+    Verlag, Berlin-Heidelberg-New York, 2006.
+[17] A. Leutbecher: Euklidischer Algorithmus und die Gruppe GL2 . Math. Ann. 231 (1978),
+    269–285.
+[18] N. McCoy: Rings and Ideals. Carus Mathematical Monographs, Math. Assoc. America, 1948.
+[19] P. Menal and J. Moncasi: On regular rings with stable range 2. J. Pure Applied Alg. 24
+    (1982), 25–40.
+[20] O. T. O’Meara: On the finite generation of linear groups over Hasse domains. J. reine angew.
+    Math. 217 (1964), 79–128.
+[21] W. Ruitenburg: Products of idempotent matrices over Hermite domains. Semigroup Forum
+    46 (1993), 371–378.
+[22] A. V. Stepanov: A ring of finite stable rank is not necessarily finite in the sense of Dedekind.
+    Soviet Math. Dokl. 36 (1988), 301–304.
+[23] B. V. Zabavsky: Reduction of matrices over Bezout rings with stable rank not higher than 2.
+    Ukrainian Math. J. 55 (2003), 550–554.
+[24] B. V. Zabavsky: Diagonalizability theorems for matrices over rings with finite stable range.
+    Algebra and Discrete Math., no. 1 (2005), 151–165.
+
+  1. Department of Mathematics, King Abdulaziz University, Jeddah, SA. 2. Depart-
+ment of Mathematics, Ohio University, Athens, OH, USA. 3. Department of Mathe-
+matics, University of California, Berkeley, CA, USA. 4. Department of Mathematics,
+Université d’Artois, Lens, France.
+

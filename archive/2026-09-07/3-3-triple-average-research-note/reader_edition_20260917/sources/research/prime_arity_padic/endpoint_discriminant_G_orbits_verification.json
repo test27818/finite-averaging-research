@@ -1,0 +1,258 @@
+{
+  "status": "PASS",
+  "arithmetic": {
+    "primitive_core_and_order_ideal_checks": 19360,
+    "dual_number_norm_checks_at_bad_primes": 3295,
+    "conductor_example": {
+      "n": 63,
+      "field_discriminant": -7,
+      "conductor": 3,
+      "same_norm_gcd_different_G": [
+        [
+          1,
+          3,
+          3,
+          9
+        ],
+        [
+          1,
+          9,
+          9,
+          9
+        ]
+      ]
+    }
+  },
+  "finite_orbits": [
+    {
+      "n": 7,
+      "p": 3,
+      "classical_cusp_count": 2,
+      "classical_cusps_by_G": {
+        "1": 1,
+        "7": 1
+      },
+      "localized_G_orbits": [
+        {
+          "G": 1,
+          "primitive_residue_columns": 42
+        },
+        {
+          "G": 7,
+          "primitive_residue_columns": 6
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "p": 5,
+      "classical_cusp_count": 2,
+      "classical_cusps_by_G": {
+        "1": 1,
+        "11": 1
+      },
+      "localized_G_orbits": [
+        {
+          "G": 1,
+          "primitive_residue_columns": 110
+        },
+        {
+          "G": 11,
+          "primitive_residue_columns": 10
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "p": 7,
+      "classical_cusp_count": 4,
+      "classical_cusps_by_G": {
+        "1": 1,
+        "3": 1,
+        "5": 1,
+        "15": 1
+      },
+      "localized_G_orbits": [
+        {
+          "G": 1,
+          "primitive_residue_columns": 120
+        },
+        {
+          "G": 3,
+          "primitive_residue_columns": 40
+        },
+        {
+          "G": 5,
+          "primitive_residue_columns": 24
+        },
+        {
+          "G": 15,
+          "primitive_residue_columns": 8
+        }
+      ]
+    },
+    {
+      "n": 23,
+      "p": 11,
+      "classical_cusp_count": 2,
+      "classical_cusps_by_G": {
+        "1": 1,
+        "23": 1
+      },
+      "localized_G_orbits": [
+        {
+          "G": 1,
+          "primitive_residue_columns": 506
+        },
+        {
+          "G": 23,
+          "primitive_residue_columns": 22
+        }
+      ]
+    },
+    {
+      "n": 27,
+      "p": 13,
+      "classical_cusp_count": 6,
+      "classical_cusps_by_G": {
+        "1": 1,
+        "3": 2,
+        "9": 2,
+        "27": 1
+      },
+      "localized_G_orbits": [
+        {
+          "G": 1,
+          "primitive_residue_columns": 486
+        },
+        {
+          "G": 3,
+          "primitive_residue_columns": 108
+        },
+        {
+          "G": 9,
+          "primitive_residue_columns": 36
+        },
+        {
+          "G": 27,
+          "primitive_residue_columns": 18
+        }
+      ]
+    },
+    {
+      "n": 35,
+      "p": 17,
+      "classical_cusp_count": 4,
+      "classical_cusps_by_G": {
+        "1": 1,
+        "5": 1,
+        "7": 1,
+        "35": 1
+      },
+      "localized_G_orbits": [
+        {
+          "G": 1,
+          "primitive_residue_columns": 840
+        },
+        {
+          "G": 5,
+          "primitive_residue_columns": 168
+        },
+        {
+          "G": 7,
+          "primitive_residue_columns": 120
+        },
+        {
+          "G": 35,
+          "primitive_residue_columns": 24
+        }
+      ]
+    },
+    {
+      "n": 63,
+      "p": 31,
+      "classical_cusp_count": 8,
+      "classical_cusps_by_G": {
+        "1": 1,
+        "3": 2,
+        "7": 1,
+        "9": 1,
+        "21": 2,
+        "63": 1
+      },
+      "localized_G_orbits": [
+        {
+          "G": 1,
+          "primitive_residue_columns": 2268
+        },
+        {
+          "G": 3,
+          "primitive_residue_columns": 504
+        },
+        {
+          "G": 7,
+          "primitive_residue_columns": 324
+        },
+        {
+          "G": 9,
+          "primitive_residue_columns": 252
+        },
+        {
+          "G": 21,
+          "primitive_residue_columns": 72
+        },
+        {
+          "G": 63,
+          "primitive_residue_columns": 36
+        }
+      ]
+    },
+    {
+      "n": 75,
+      "p": 37,
+      "classical_cusp_count": 12,
+      "classical_cusps_by_G": {
+        "1": 1,
+        "3": 1,
+        "5": 4,
+        "15": 4,
+        "25": 1,
+        "75": 1
+      },
+      "localized_G_orbits": [
+        {
+          "G": 1,
+          "primitive_residue_columns": 3000
+        },
+        {
+          "G": 3,
+          "primitive_residue_columns": 1000
+        },
+        {
+          "G": 5,
+          "primitive_residue_columns": 480
+        },
+        {
+          "G": 15,
+          "primitive_residue_columns": 160
+        },
+        {
+          "G": 25,
+          "primitive_residue_columns": 120
+        },
+        {
+          "G": 75,
+          "primitive_residue_columns": 40
+        }
+      ]
+    }
+  ],
+  "balanced_unit_lifts": 5908,
+  "all_G_padic_density_crt_checks": 1924,
+  "physical_returns": {
+    "literal_returns_across_all_G_layers": 754,
+    "atomic_averages": 1508,
+    "scope": "Two-atom return formulas are replayed on legal and illegal cores. No claim that arbitrary infinite-group words have been expanded."
+  },
+  "evidence_boundary": "Finite exact audits of written identities and orbit classification. General Gamma0 containment reuses the established endpoint Morris/Serre proof; not inferred from finite group images. No new all-n threshold, shortest-path, or polynomial construction theorem."
+}

@@ -1,0 +1,71 @@
+{
+  "exact_contraction_checks": 10818,
+  "finite_precision_counts": [
+    {
+      "k": 1,
+      "K_classes": 3,
+      "boundary_classes": 2,
+      "full_projective_classes": 4
+    },
+    {
+      "k": 2,
+      "K_classes": 7,
+      "boundary_classes": 4,
+      "full_projective_classes": 12
+    },
+    {
+      "k": 3,
+      "K_classes": 15,
+      "boundary_classes": 8,
+      "full_projective_classes": 36
+    },
+    {
+      "k": 4,
+      "K_classes": 31,
+      "boundary_classes": 16,
+      "full_projective_classes": 108
+    },
+    {
+      "k": 5,
+      "K_classes": 63,
+      "boundary_classes": 32,
+      "full_projective_classes": 324
+    },
+    {
+      "k": 6,
+      "K_classes": 127,
+      "boundary_classes": 64,
+      "full_projective_classes": 972
+    },
+    {
+      "k": 7,
+      "K_classes": 255,
+      "boundary_classes": 128,
+      "full_projective_classes": 2916
+    },
+    {
+      "k": 8,
+      "K_classes": 511,
+      "boundary_classes": 256,
+      "full_projective_classes": 8748
+    },
+    {
+      "k": 9,
+      "K_classes": 1023,
+      "boundary_classes": 512,
+      "full_projective_classes": 26244
+    }
+  ],
+  "local_global_comparison": {
+    "finite_local_membership_checks": 19472,
+    "certified_outside_directions": 15134
+  },
+  "rational_directions": {
+    "marked": 722,
+    "boundary": 752,
+    "outside": 96382
+  },
+  "original_input_multisets": 1287,
+  "mixed_periodic_words": 2026,
+  "scope": "Finite checks support written rational-point, dimension and density proofs; not a fixed-modulus test."
+}

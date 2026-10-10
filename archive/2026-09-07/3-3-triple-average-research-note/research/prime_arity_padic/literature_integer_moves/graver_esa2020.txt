@@ -1,0 +1,1208 @@
+New Bounds on Augmenting Steps
+of Block-Structured Integer Programs
+Lin Chen
+Department of Computer Science, Texas Tech University, Lubbock, TX, US
+chenlin198662@gmail.com
+
+Martin Koutecký
+Computer Science Institute, Charles University, Prague, Czech Republic
+koutecky@iuuk.mff.cuni.cz
+
+Lei Xu
+Department of Computer Science, University of Texas Rio Grande Valley, TX, US
+xuleimath@gmail.com
+
+Weidong Shi
+Department of Computer Science, University of Houston, TX, US
+larryshi@ymail.com
+
+      Abstract
+Iterative augmentation has recently emerged as an overarching method for solving Integer Programs
+(IP) in variable dimension, in stark contrast with the volume and flatness techniques of IP in fixed
+dimension. Here we consider 4-block n-fold integer programs, which are the most general class
+considered so far. A 4-block n-fold IP has a constraint matrix which consists of n copies of small
+matrices A, B, and D, and one copy of C, in a specific block structure. Iterative augmentation
+methods rely on the so-called Graver basis of the constraint matrix, which constitutes a set of
+fundamental augmenting steps. All existing algorithms rely on bounding the `1 - or `∞ -norm of
+elements of the Graver basis. Hemmecke et al. [Math. Prog. 2014] showed that 4-block n-fold
+                                                         s
+IP has Graver elements of `∞ -norm at most OFPT (n2 ), leading to an algorithm with a similar
+                                                             D
+
+
+
+runtime; here, sD is the number of rows of matrix D and OFPT hides a multiplicative factor that is
+only dependent on the small matrices A, B, C, D, However, it remained open whether their bounds
+are tight, in particular, whether they could be improved to OFPT (1), perhaps at least in some
+restricted cases.
+    We prove that the `∞ -norm of the Graver elements of 4-block n-fold IP is upper bounded by
+                                                                      s
+OFPT (ns ), improving significantly over the previous bound OFPT (n2 ). We also provide a matching
+                                                                           D
+         D
+
+
+                    s
+lower bound of Ω(n ) which even holds for arbitrary non-zero lattice elements, ruling out augmenting
+                     D
+
+
+
+algorithm relying on even more restricted notions of augmentation than the Graver basis. We then
+consider a special case of 4-block n-fold in which C is a zero matrix, called 3-block n-fold IP. We
+show that while the `∞ -norm of its Graver elements is Ω(ns ), there exists a different decomposition
+                                                                 D
+
+
+
+into lattice elements whose `∞ -norm is bounded by OFPT (1), which allows us to provide improved
+upper bounds on the `∞ -norm of Graver elements for 3-block n-fold IP. The key difference between
+the respective decompositions is that a Graver basis guarantees a sign-compatible decomposition;
+this property is critical in applications because it guarantees each step of the decomposition to be
+feasible. Consequently, our improved upper bounds let us establish faster algorithms for 3-block
+n-fold IP and 4-block IP, and our lower bounds strongly hint at parameterized hardness of 4-block
+and even 3-block n-fold IP. Furthermore, we show that 3-block n-fold IP is without loss of generality
+in the sense that 4-block n-fold IP can be solved in FPT oracle time by taking an algorithm for
+3-block n-fold IP as an oracle.
+
+2012 ACM Subject Classification Theory of computation → Parameterized complexity and exact
+algorithms; Mathematics of computing → Combinatorial algorithms
+
+Keywords and phrases Integer Programming, Graver basis, Fixed parameter tractable
+
+Digital Object Identifier 10.4230/LIPIcs.ESA.2020.33
+            © Lin Chen, Martin Koutecký, Lei Xu, and Weidong Shi;
+            licensed under Creative Commons License CC-BY
+28th Annual European Symposium on Algorithms (ESA 2020).
+Editors: Fabrizio Grandoni, Grzegorz Herman, and Peter Sanders; Article No. 33; pp. 33:1–33:19
+                   Leibniz International Proceedings in Informatics
+                   Schloss Dagstuhl – Leibniz-Zentrum für Informatik, Dagstuhl Publishing, Germany
+33:2   New Bounds on Augmenting Steps of Block-Structured IP
+
+
+       Related Version A full version of this paper is available at https://arxiv.org/abs/1805.03741.
+
+       Funding Lin Chen: Research was supported in part by NSF 1756014.
+       Martin Koutecký: Partially supported by Israel Science Foundation grant 308/18, Charles University
+       project UNCE/SCI/004 and by the project 19-27871X of GA ČR.
+
+
+        1      Introduction
+       A powerful mathematical tool for modeling of various optimization problems is Integer
+       Programming:
+
+            min{w · x : Ax = b, l ≤ x ≤ u, x ∈ ZN },                                                (IP)
+
+       where w, b, l, u are integer vectors of the objective function, right hand side, and lower and
+       upper bounds, respectively, A is an integer constraint matrix, and x is a vector of variables. It
+       plays a key role in theory as a component in the design of approximation and parameterized
+       algorithms, as well as in practice, with current solvers being routinely utilized in industry
+       and capable of handling models with thousands of variables.
+           In general, Integer Programming is NP-hard, as was shown already by Karp [23],
+       which motivates the search for tractable special cases. Famous polynomially solvable cases
+       are IPs with few rows and small coefficients as shown by Papadimitriou in 1981 [30], and IPs
+       with few variables as shown by Lenstra in 1983. Arguably the most significant development
+       in the last 20 years has been the introduction of iterative augmentation methods which led
+       to the development of fast algorithms for wide classes of IPs whose constraint matrix has a
+       special block structure, and to subsequent breakthrough applications in parameterized and
+       approximation algorithms [5, 21, 27]. In fact, essentially all known tractable classes of IP in
+       variable dimension are of this kind, except total unimodular IPs from the ’60s.
+           An iterative augmentation algorithm starts with an initial feasible solution x and iterat-
+       ively finds augmenting steps g ∈ ZN , i.e., x + g is feasible and w(x + g) < wx. A major
+       question is where to obtain “good” augmenting steps. The Graver basis of A, G(A), has
+       emerged as an excellent choice, with good guarantees on convergence to optimal solutions
+       while still being algorithmically “tame”. Specifically, at the heart of iterative augmentation
+       techniques are bounds on the `1 - and `∞ -norm of elements of the Graver basis, which enable
+       dynamic programming to be used to find Graver elements.
+           We stress the role of bounds on the elements of G(A). Historically, all tractable classes
+       of IP were discovered by proving new norm bounds and subsequently designing a dynamic
+       program around them, with the former typically being much harder than the latter. Moreover,
+       recent runtime improvements have followed from improving existing bounds [8, 28], and the
+       most challenging questions in the field are tightly connected to norm bounds. Our focus here
+       is the currently least understood class of IPs, 4-block n-fold IP:
+
+            (IP)n,b,l,u,w :   min{w · x : Hx = b, l ≤ x ≤ u, x ∈ ZtB +ntA },                         (1)
+
+       where H (called a 4-block n-fold matrix) is build from smaller blocks A, B, C and D:
+
+                                     C     D   D   ···      D
+                                                             
+
+                                   B      A   0            0
+                          (n)    
+                     C   D
+                                                              
+            H=                  := B      0   A            0 .
+                                   
+                     B   A         .              ..
+                                    ..
+                                                              
+                                                        .     
+                                       B   0   0            A
+L. Chen, M. Koutecký, L. Xu, and W. Shi                                                                    33:3
+
+
+Here, A, B, C, D are si × ti matrices, i = A, B, C, D, respectively, and H consists of n copies
+of A, B, D and one copy of C. Notice that by plugging A, B, C, D into the above block
+structure we require that sC = sD , sA = sB , tB = tC and tA = tD . Let ∆ be the largest
+absolute value among all the entries of A, B, C, D. Let H0 be a matrix obtained from H by
+setting C = 0. We also study 3-block n-fold IP, obtained by replacing H with H0 .
+    For ease of presentation, we introduce the submatrices E and F such that
+           D D ··· D
+                           
+                                                                       
+         A 0                                       B A 0             0
+                          0
+                                                 B 0 A
+         
+         0 A                                                         0
+    E :=                 0               F :=  .
+                                                 
+                                                                        ,
+                                                                        
+                                                                                            (2)
+         .
+                            
+                                                    .           . .
+          ..       ..                            .               .   
+                       .    
+                                                    B 0 0             A
+            0 0          A
+    4-block n-fold IP remains the simplest case of block-structured IPs for which an algorithm
+of runtime f (sA , tA , . . . , sD , tD , ∆)nO(1) (i.e., an FPT algorithm; see below) remains unknown.
+From another perspective, Koutecký et al. [28] has recently resolved the complexity of IP with
+respect to the structural parameters primal and dual treedepth tdP and tdD , respectively, by
+showing that IPs with small tdP and tdD are efficiently solvable. IPs with small incidence
+treedepth tdI subsume both of the aforementioned classes as well as 4-block n-fold IP, and
+4-block n-fold IP remains the simplest open case with respect to tdI .
+
+Our Contribution. Because we are interested in efficient algorithms, we wish to confine the
+exponential dependence on the input into the small numbers si , ti , i = A, B, C, D, and ∆.
+Thus we take the perspective of parameterized complexity: for a problem instance I with
+a parameter k, we call an algorithm with runtime f (k)|I|O(1) a fixed-parameter tractable
+(FPT) algorithm, and an algorithm with runtime |I|f (k) an XP algorithm (for slice-wise
+polynomial). If such algorithms exist, we say that the problem is FPT or XP parameterized
+by k, respectively.
+    In this paper, we provide new and improved upper bounds and resulting algorithms
+for 4-block and 3-block n-fold IP, as well as the very first lower bounds for these classes
+which we believe to hint at the parameterized hardness of these problems. We denote by
+kerZ (H) = {x ∈ ZtB +ntA | Hx = 0} the integer kernel of H, also called the lattice of H, and
+by g∞ (H) = maxg∈G(H) kgk∞ the largest `∞ -norm of an element of the Graver basis G(H)
+(a precise definition is given below in Section 2); analogously for H0 . First, we show an upper
+bound on g∞ (H).
+I Theorem 1. For any 4-block n-fold matrix H, g∞ (H) ≤ OFPT (nsD ).
+                                                             sD
+   This improves on the previous bound of OFPT (n2 ) [16]. We also establish the first
+explicit lower bound matching our upper bound, making it tight up to an FPT factor.
+Importantly, our lower bound even applies to the first tB coordinates (denoted x0 for a vector
+x ∈ ZtB +ntA ) which play a special role in algorithms for 4-block n-fold IP. What is more,
+our lower bound even applies to any non-zero element of kerZ (H):
+I Theorem 2. For arbitrary integer t ∈ N, there exists a 4-block n-fold matrix H such that
+si , ti ∈ O(t) for i = A, B, C, D, and for any g ∈ kerZ (H) we have kg0 k∞ = Ω(nt ).
+    Therefore, even augmenting via a different set of steps may have to deal with steps that
+are unbounded by OFPT (1). Combining Theorem 1 with the original idea of Hemmecke et
+al. [16] and a strongly polynomial framework of Koutecký et al. [28], we obtain the currently
+fastest algorithm for 4-block n-fold IP:
+
+
+
+                                                                                                         ESA 2020
+33:4   New Bounds on Augmenting Steps of Block-Structured IP
+
+
+       I Theorem 3. 4-block n-fold IP can be solved in time OFPT (nO(sD tB ) ).
+
+           Second, we restrict our attention to 3-block n-fold IP. The motivation is that 3-block
+       n-fold IP is essentially no less general than 4-block n-fold IP. Indeed, for any 4-block n-fold IP,
+       there exists an equivalent 3-block n-fold IP where the largest coefficient, number of rows and
+       columns of the submatrices only increase by O(1) times (see Theorem 19 and Definition 17
+       in Appendix 5 for a formal statement).
+           Interestingly, the lattice elements (i.e., augmenting step candidates) of 3-block n-fold IP
+       admit a decomposition with `∞ -norm bounded by OFPT (1):
+                                                               PN
+       I Theorem 4. Any g ∈ kerZ (H0 ) decomposes to              i=1 ei for some N ∈ Z≥0 with ei ∈
+       kerZ (H0 ) and kei k∞ ≤ OFPT (1) for each i.
+
+          However, this decomposition is not “sign-compatible”, meaning possibly none of its
+       elements is a feasible step on its own, which makes its immediate algorithmic use complicated.
+       Nevertheless, we are able to use it to establish an upper bound of
+                                   2
+       min{OFPT (nsD ), OFPT (ntA +1 )} (below, and Theorem 1):
+                                                                                  2
+       I Theorem 5. For any 3-block n-fold matrix H0 , g∞ (H0 ) ≤ OFPT (ntA +1 ).
+                                            2
+           This upper bound of OFPT (ntA +1 ), which is singly exponential in tA , is much more
+       involved compared with the upper bound of Theorem 1. This coincides with the existing
+       results for 4-block n-fold IP [16], where an upper bound depending on A, B (instead of
+       C, D) is much more complicated. Our proof relies on a completely new approach, which
+       first establishes the decomposition of Theorem 4 and then modifies it into a sign-compatible
+       decomposition through merging summands. This may be of separate interest for deriving
+       upper bounds on g∞ (A) for other classes of matrices A, particularly for deriving an upper
+       bound on g∞ (H) which has an explicit dependency on sA , sB , tA , tB in the exponent of
+       n. Moreover, we show that any 4-block n-fold IP can be embedded in a 3-block n-fold IP
+       (Theorem 19) in a particular way, which allows us to transfer the 4-block n-fold lower bound
+       (now restricted to feasible lattice elements):
+
+       I Theorem 6. For arbitrary integer t ∈ N, there exists a 3-block n-fold IP with a matrix H
+       such that si , ti ∈ O(t) for i = A, B, C, D, and for any feasible nonzero g ∈ kerZ (H0 ) we have
+       kg0 k∞ = Ω(nt ).
+
+          Finally, using our new upper bound of Theorem 5, we get that:
+                                                                                                  2
+       I Theorem 7. 3-block n-fold IP can be solved in time min{OFPT (nO(sD tB ) , OFPT (nO(tA tB ) )}.
+
+
+       Related Work
+       4-block n-fold IP originated as a generalization of two previously studied classes of IP, the
+       n-fold and 2-stage stochastic IP, which are obtained by substituting the constraint matrix
+       H with E and F we defined before. We also call E the n-fold matrix and F the 2-stage
+       stochastic matrix, respectively. The origins of iterative augmentation methods for 2-stage
+       stochastic IP reach the work of Hemmecke and Schultz in 2001 [19]. De Loera et al. [7] first
+       studied n-fold IP in 2008. Later, Hemmecke et al. [17] showed an FPT algorithm for n-fold
+       IP based on dynamic programming, which led to a breakthrough in computational social
+       choice [26] and was also applied in the context of scheduling by Knop and Koutecký [25].
+       Later, this FPT algorithm inspired a better algorithm for a special case of combinatorial
+L. Chen, M. Koutecký, L. Xu, and W. Shi                                                                     33:5
+
+
+n-fold IP developed by Knop et al. [27], who also apply it to problems in stringology and
+graph algorithms. Finally, this algorithm was lifted to the general n-fold IP by Koutecký et
+al. [28] and Eisenbrand et al. [8].
+    An extension of n-fold IP to tree-structured matrices called tree-fold IP was developed by
+Chen and Marx [5] and applied to scheduling problems. Jansen et al. [21] have used n-fold
+IP to obtain efficient PTASes for scheduling problems. An extension of 2-stage stochastic IP
+analogous to tree-folds is called multi-stage stochastic and was studied by Aschenbrenner
+and Hemmecke [4]. Ganian and Ordyniak [12] studied the structural parameters primal
+treedepth and treewidth, and later Ganian et al. [13] studied dual and incidence treedepth
+and treewidth. Koutecký et al. [28] discovered that tree-fold and multi-stage stochastic
+IPs are essentially equivalent to IPs with small dual and primal treedepth, settling the
+parameterized complexity with respect to these parameters. The work of Koutecký et al. [28]
+subsumes essentially all current knowledge about the solvability of IP in variable dimension
+with the exception of totally unimodular constraint matrices and two related classes [2, 3],
+with the main remaining open problem being the complexity of 4-block n-fold IP and, more
+generally, IP with respect to incidence treedepth.
+    Bounds on g∞ (A) and g1 (A) = maxg∈G(A) kgk1 play a central role in the recent devel-
+opments. For example, Chen and Marx [5] showed that tree-fold IP is FPT, but a naïve
+analysis yields a tower-of-exponentials dependence on the parameters. Eisenbrand et al. [8]
+lower this to double-exponential by improving the bounds on g1 (A), and, at least with the
+current approach, the only way to obtain a single-exponential algorithm is by obtaining
+single-exponential bounds on g1 (A). It has been known for a long time that 2-stage stochastic
+IP is FPT [19], however, there are no known bounds at all for this algorithm except for the
+computability of the parameter dependence f due to no bounds being available for g∞ (F ).
+Very recently, Klein [24] is able to obtain such a bound for g∞ (F ), which yields an FPT
+algorithm with a concrete running time. Lower bounds on g∞ (A) have been rare so far.
+Finhold and Hemmecke [11] study them in the context of n-fold IP. Koutecký et al. [28] show
+lower bounds (only using elementary techniques) for IPs in terms of their primal and dual
+treewidth.
+    We use the Steinitz Lemma, which has recently gained renewed attention [10, 8, 22].
+
+
+ 2     Preliminaries
+Notations
+We write vectors in boldface, e.g. x, y, and their entries in normal font, e.g. xi , yi . Any
+(tB +ntA )-dimensional vector x can be divided into n+1 bricks, such that x = (x0 , x1 , · · · , xn )
+where x0 ∈ ZtB and each xi ∈ ZtA , 1 ≤ i ≤ n. We call xi the i-th brick for 0 ≤ i ≤ n. We
+write 0s×t for an s × t matrix consisting of 0, and It for an t × t identity matrix. For a vector
+or a matrix, we write k · k∞ to denote the maximal absolute value of its elements. For two
+vectors x, y of the same dimension, x · y denotes their inner product.
+    Throughout this paper, we write OFPT (1) to represent a parameter that is only dependent
+on ∆, sA , sB , sC , sD , tA , tB , tC , tD where ∆ is the maximal absolute value among all the entries
+of A, B, C, D, that is, OFPT (1) is only dependent on the small matrices A, B, C, D and is
+independent of n. For any computable function f (x), we write OFPT (f ) to represent a
+computable function f 0 (x) such that |f 0 (x)| ≤ OFPT (1) · |f (x)|, and ΩF P T (f ) to represent a
+function f 00 such that |f 00 (x)| ≥ Ω(1) · |f (x)|. If no FPT-term is hidden, we will use O in its
+standard meaning (e.g., in Theorem 6).
+
+
+
+
+                                                                                                          ESA 2020
+33:6   New Bounds on Augmenting Steps of Block-Structured IP
+
+
+          Two vectors x and y are called sign-compatible if xi · yi ≥ 0 holds for every pair
+                                                                   P
+       of coordinates (xi , yi ). Furthermore, we call a summation  i xi sign-compatible if the
+       summands are pair-wise sign-compatible.
+
+
+       Graver basis
+       Consider the general integer linear programming in the standard form (IP). Let v be the
+       conformal order in Rm defined such that x v y if x and y lie in the same orthant, i.e.,
+       xi · yi ≥ 0 for each i = 1, . . . , m, and |xi | ≤ |yi | for each i = 1, . . . , m. Given any subset
+       X ⊆ Rn , we say x is an v-minimal element of X if x ∈ X and there does not exist y ∈ X,
+       y=6 x such that y v x. It is known that every subset of Zm has finitely many v-minimal
+       elements. We study the Graver basis:
+
+       I Definition 8 (Graver basis [14]). The Graver basis of an integer matrix E is the finite set
+       G(E) ⊆ kerZ (E) of all v-minimal elements of kerZ (E) \ {0}.
+
+       For clarity, we sometimes emphasize that g comes from G(H) by writing it as g(H), and
+                                                                             6 0 can be written as
+       similarly for other vectors. We use the fact that any x ∈ kerZ (H), x =
+             P
+       x = i αi gi (H), where αi ∈ Z+ , gi (H) ∈ G(H) and gi (H) v x [29, Lemma 3.4].
+            The Graver basis G(H) is only dependent on H. Let kBk∞ be the largest absolute value
+       over all entries. For any g ∈ G(A), we have the following rough estimation for some constant
+       c1 , c2 [29]:
+
+          |G(H)| ≤ (c1 kHk∞ )mn        and kgk∞ ≤ (c2 kAk∞ )mn .
+
+
+       Augmentation algorithms for IP and Graver-best oracle
+       There is a general framework for solving (IP) by utilizing G(A), which was developed in
+       a series of papers [5, 17, 21, 27]. A recent paper by Koutecký et al. [28] formalizes this
+       framework and extends it to also obtaining strongly polynomial algorithms (algorithms whose
+       number of arithmetic operations does not depend on the length of the numbers on input).
+           We say that x is feasible for (IP) if Ax = b and l ≤ x ≤ u. Let x be a feasible solution
+       for (IP). We call g a feasible step if x + g is feasible for (IP). Further, call a feasible step
+       g augmenting if w(x + g) < w(x). An augmenting step g and a step length ρ ∈ Z form an
+       x-feasible step pair with respect to a feasible solution x if l ≤ x + ρg ≤ u. An augmenting
+       step h is a Graver-best step for x if w(x + h) ≤ w(x + ρg) for all x-feasible step pairs
+       (g, ρ) ∈ G(A) × Z. The next definition and theorem show that it is sufficient to focus all our
+       attention on finding Graver-best steps. This takes care of matters such as finding an initial
+       feasible solution, using a proximity theorem to shrink w, b, l, u and so on.
+
+       I Definition 9 (Graver-best oracle). A Graver-best oracle for an integer matrix A is one
+       that, queried on w, b, l, u and x feasible to (IP), returns a Graver-best step h for x.
+
+
+       I Theorem 10 ([28]). Given a Graver-best oracle for E, (IP) can be solved in strongly
+       polynomial oracle time.
+
+       We remark that the polynomial dependence on the dimension N and in particular the
+       number of bricks n when it comes to 4-block n-fold IP, can be reduced using an approximate
+       Graver-best oracle introduced by Altmanová et al. [1] and implicitly by Eisenbrand et al. [8].
+L. Chen, M. Koutecký, L. Xu, and W. Shi                                                                                    33:7
+
+
+Finiteness theorems for n-fold and 2-stage stochastic matrices
+Consider an n-fold matrix E that consists of A and D (i.e., B = C = 0 in a 4-block n-fold
+matrix). It is shown that g∞ (E) is OFPT (1). More precisely, we have the following lemma.
+I Lemma 11 ([9, Lemma 28]). Let E be an n-fold matrix. Then g1 (E) ≤ (kEk∞ sD sA )O(sD sA ) .
+I Lemma 12 ([9, Lemma 26]). Let F be a two-stage stochastic matrix. Then g∞ (F ) ≤
+f (tB , tA , kA, Bk∞ ) for a double-exponential function f .
+Both lemmas hold for more general classes of tree-fold and multi-stage stochastic matrices.
+
+The Steinitz lemma
+The Steinitz lemma has been utilized in several recent papers [8, 10, 22] to establish better
+algorithms for IP. We use it as well.
+I Lemma 13 ([15]). Let an arbitrary norm be given in Rκ and assume that kxi k ≤ ζ for
+                Pm
+1 ≤ i ≤ m and i=1 xi = x. Then there exists a permutation π such that for all positive
+                 P`
+integers ` ≤ m, k i=1 xπ(i) − `−κ
+                               m xk ≤ κζ.
+
+
+ 3         4-block n-fold IP
+In this section we consider IP (1) for arbitrary H and derive matching upper and lower
+bounds on the `∞ -norm of its Graver basis depending on the parameter sC = sD .
+   We first establish the following upper bound that improves significantly the current result.
+I Theorem 1. For any 4-block n-fold matrix H, g∞ (H) ≤ OFPT (nsD ).
+Proof. Let g ∈ G(H). Recall the definition of F in Eq (2). As F · g = 0, there exist
+                                                             Pm
+αj ∈ Z+ , gj (F ) ∈ G(F ) and gj (F ) v g such that g =        j=1 αjP
+                                                                     gj (F ). Furthermore,
+                                                                       n
+kgj (F )k∞ = OFPT (1) according to Lemma 12. Let hj = C · g0j (F ) + i=1 Dgij (F ), which
+is an sD -dimensional vector such that khj k∞ = OFPT (n). As Hg = 0, it follows that
+     m
+     X
+           αj hj = h1 + h1 + · · · + h1 + h2 + h2 + · · · + h2 + · · · + hm + hm + · · · + hm = 0,
+                   |       {z         } |         {z         }           |      {z          }
+     j=1                      α1                         α2                                 αm
+
+i.e., the sequence of hi ’s sum up to 0. According to Lemma 13, there exists a permutation of
+                                   P`
+the sequence such that k i=1 zi k∞ ≤ sD · OFPT (n) = OFPT (n) for all ` ≤ m0 , where m0 =
+Pm
+     i=1 αi and z1 , z2 , · · · , zm is a permutation of the sequence h      , h , · · · , h1 , h2 , h2 , · · · , h2 ,
+                                     0
+                                                                          | 1 1{z           } |         {z         }
+                                                                                 α1                    α2
+                                                                               P`
+· · · , hm , hm , · · · , hm . Let τ = OFPT (n) be the upper bound on k i=1 zi k∞ , then we know
+        |      {z           }
+               αm
+         P`
+that i=1 zi ∈ {−τ, −τ + 1, · · · , τ }sD . Consequently, if m0 > (2τ + 1)sD + 1, there exists
+                           P`1         P`2             P`2 −`1
+`1 < `2 such that i=1             z =       zi , i.e., i=1     zi = 0. Recall that every zi corresponds
+                               P`i 2 −`1 i=1 P   m
+to some hi0 . Suppose i=1 zi = j=1 αj0 hj for αj0 ≤ αj , then by the definition of hj it
+follows that
+                                                      
+           Xm                     Xn      Xm
+       C      αj0 g0j (F ) +         D    αj0 gij (F ) = 0.
+           j=1                 i=1        j=1
+              Pm                              Pm
+Hence, H j=1 αj0 gj (F ) = 0. That is, if m0 = j=1 αj > (2τ + 1)sD + 1, then there exists
+some g0 = αj0 gj (F ) such that Hg0 = 0, g0 @ g and g0 =
+                                                       6 g, contradicting the fact that
+                  Pm
+g ∈ G(H). Thus, j=1 αj ≤ (2τ + 1)sD + 1, implying that kgk∞ = OFPT (nsD ).             J
+
+
+
+                                                                                                                         ESA 2020
+33:8   New Bounds on Augmenting Steps of Block-Structured IP
+
+
+           We complement our upper bound by establishing a matching lower bound. We remark
+       that lower bound from Theorem 2 not only holds for the `∞ -norm of Graver basis elements,
+       but even holds for any non-zero lattice element. This gives a sharp contrast to 3-block
+       n-fold IP. As we will show later in Theorem 6 and Theorem 4, a similar lower bound also
+       exists for the `∞ -norm of Graver basis elements of kerZ (H0 ), however, kerZ (H0 ) does admit
+       a decomposition into lattice elements whose `∞ -norm is bounded by OFPT (1).
+
+       I Theorem 2. For arbitrary integer t ∈ N, there exists a 4-block n-fold matrix H such that
+       si , ti ∈ O(t) for i = A, B, C, D, and for any g ∈ kerZ (H) we have kg0 k∞ = Ω(nt ).
+
+       Proof. We let A = It×t , B = −It×t . We define (t − 1) × t matrices D and C such that
+
+                          −1            ···                         −1          0 ···
+                                                                                            
+                  1              0               0    0                     0            0    0
+                0         1    −1      ···      0    0           0      −1   0 ···    0    0
+            D = .                                               C= .
+                                                                                            
+                 ..                    ..              
+                                                                    ..           ..           
+                                           .                                        .         
+                      0   0     0       ···      1   −1                0   0    0 ···    −1   0
+
+           Consider any nonzero y ∈ kerZ (H). According to Ay0 − Byi = 0, we know that y0 = yi
+                                               Pn
+       for every 1 ≤ i ≤ n. According to Cy0 + i=1 Dyi = 0, we have (C + nD)y0 = 0, i.e.,
+
+             n−1           −n             ···
+                                                             
+                                  0                   0     0
+             0           n−1    −n       ···         0     0 
+                                                              ·y=0
+                                                             
+             .                           ..
+             ..                             .                
+                0          0        0     ···        n−1    −n
+
+            Let y0 = (y1 , y2 , · · · , yt ), the following is true:
+
+            (n − 1)yi = nyi+1 ,         1≤i≤t−1                                                     (3)
+
+       It is easy to see that as long as y 6= 0, we have y0 6= 0 and consequently yi 6= 0 for every
+       1 ≤ i ≤ t. According to (n − 1)yt−1 = nyt , yt−1 is dividable by n. Let yt−1 = nzt−1
+       for some zt−1 ∈ Z6=0 . According to (n − 1)yt−2 = nyt−1 = n2 zt−1 , we know that yt−2 is
+       dividable by n2 . Let yt−2 = n2 zt−2 and we plug it into (n − 1)yt−3 = nyt−2 . In general,
+       suppose we have shown that yt−k = nk zt−k for all k ≤ k0 . Now for k = k0 + 1, we have
+       (n − 1)yt−k0 −1 = nyt−k0 = nk0 +1 zn−k0 , then yt−k0 −1 is dividable by nk0 +1 . Hence, we
+       conclude that y1 is dividable by nt−1 , i.e., kyk∞ = Ω(nt−1 ) and Theorem 2 is proved.    J
+
+
+        4       3-block n-fold IP
+
+       In this section we focus on 3-block n-fold IP where H = H0 , i.e., C = 0. As we will show in
+       this section, 3-block n-fold IP admits several properties that make it a particularly interesting
+       and important special case. First, 3-block n-fold IP is without loss of generality – any
+       4-block n-fold IP reduces to 3-block n-fold IP with a constant increase in the parameters.
+       Second, any element of kerZ (H0 ) admits a decomposition into lattice elements with bounded
+       `∞ -norm, which is in certain contrast to Theorem 2. Unfortunately, a strong lower bound of
+       Ω(nt ) for feasible lattice elements still exists for si = ti = O(t). Nevertheless, we establish
+                                                   2
+       an alternative upper bound of OFPT (ntA +1 ) on the `∞ -norm of the Graver basis elements
+       for 3-block n-fold IP which only depends on parameters of A.
+L. Chen, M. Koutecký, L. Xu, and W. Shi                                                                                           33:9
+
+
+4.1     Decomposition into lattice elements with bounded `∞ -norm
+The goal of this subsection is to prove the following theorem.
+                                                                        PN
+I Theorem 4. Any g ∈ kerZ (H0 ) decomposes to                               i=1 ei   for some N ∈ Z≥0 with ei ∈
+kerZ (H0 ) and kei k∞ ≤ OFPT (1) for each i.
+
+Proof. Since H0 g = 0, we know that F ·g = 0. Therefore, there exist αj ∈ Z+ and gj (F ) v g
+                P
+such that g = j αj gj (F ), where gj (F ) ∈ G(F ). Consider each gj (F ). As F is a two-stage
+stochastic matrix (recall its definition in Eq (2)), by Lemma 12 it holds for every j that
+kgj (F )k∞ = OFPT (1). Note that each gj (F ) can be written into n + 1 bricks such that
+gj (F ) = g0j (F ), g1j (F ), · · · , gnj (F ) where g0j (F ) is a tB -dimensional vector, and gij (F ) is a
+tA -dimensional vector for every 1 ≤ i ≤ n. It is obvious that kgij (F )k∞ = OFPT (1) for every
+0 ≤ i ≤ n, and it holds that
+
+    Bg0j (F ) + Agij (F ) = 0,            ∀1 ≤ i ≤ n.
+
+The claim below follows from picking a suitable v∗j such that gij (F ) − v∗j has “balanced”
+coefficients.
+
+B Claim 14. For every gj (F ) and 1 ≤ ` ≤ |G(A)|, there exist some v∗j and αj,`  i
+                                                                                    ∈ Z≥0 with
+    i         ∗
+                    P |G(A)| i
+   gj (F ) − vj = `=1 αj,` g` (A), ∀1 ≤ i ≤ n.
+                                           i                        i
+   For every 1 ≤ ` ≤ |G(A)|, either |{i : αj,` > 0}| = 0, or |{i : αj,` > 0}| ≥ n/2.
+              i
+   maxi,j,` |αj,` | ≤ αmax , where αmax = 2g∞ (F ) = OFPT (1)
+   kv∗j k∞ = OFPT (1).
+                                                             0                                        0           
+                                                              gj (F )                                      gj (F )
+Proof. Consider an arbitrary vj such that                       vj           ∈ kerZ ([B, A]) and k           vj          k∞ ≤
+g∞ (F ) = αmax /2. Such vj exists since gj (F ) satisfies that Bg0j (F ) + Agij (F ) = 0 for any
+1 ≤ i ≤ n. We have A(gij (F ) − vj ) = 0 for every 1 ≤ i ≤ n, hence there exist ᾱj,`  i
+                                                                                           ∈ Z+ ,
+                            i
+g` (A) ∈ G(A) and g` (A) v gj (F ) − vj such that for some integer m,
+
+                         m
+                         X
+    gij (F ) − vj =               i
+                                ᾱj,` g` (A),   ∀1 ≤ i ≤ n.
+                          `=1
+           0        
+           gj (F )
+Since k      vj
+                                                                                     i
+                         k∞ ≤ αmax /2, consequently kgij (F ) − vj k∞ ≤ αmax , and ᾱj,` ≤ αmax .
+                                           i                        i
+Consider the cardinality of the set {i : ᾱj,` > 0}. If 1 ≤ |{i : ᾱj,` > 0}| ≤ bn/2c, we say `
+                                  i                  i
+is unbalanced for gj (F ). Let ᾱj,max = max1≤`≤m ᾱj,` and U Bj be the set of all unbalanced
+indices `, we define
+                 X
+    v∗j := vj +         i
+                      ᾱj,max g` (A),
+                     `∈U Bj
+
+                                      X                            X
+then, gij (F )−v∗j =                                i
+                                                  ᾱj,` g` (A)+               i
+                                                                           (ᾱj,max     i
+                                                                                    − ᾱj,` )·(−g` (A)),     ∀1 ≤ i ≤ n.
+                            `∈{1,2,··· ,m}\U Bj                   `∈U Bj
+
+Note that −g` (A) ∈ G(A). For all the g` (A)’s in G(A) that do not appear in the above
+                                                                   i                   i
+equation, we take their coefficients as 0. Furthermore, we have |ᾱj,` | ≤ αmax and |ᾱj,max −
+  i
+ᾱj,` | ≤ αmax for all i, `. As kvj k∞ = OFPT (1), kg` (A)k∞ = OFPT (1), we know that
+kv∗j k∞ = OFPT (1). Thus, the claim is proved.                                               C
+
+
+
+                                                                                                                                ESA 2020
+33:10   New Bounds on Augmenting Steps of Block-Structured IP
+
+
+            We call (g0j (F ), v∗j , v∗j , · · · , v∗j ) as a canonical vector (of gj (F )). It is easy to see that
+        F (g0j (F ), v∗j , v∗j , · · · , v∗j ) = 0. Since kv∗j k∞ = OFPT (1) and kg0j (F )k∞ = OFPT (1), there are
+        at most τ = OFPT (1) different kinds of canonical vectors. This means, there may be different
+        gk (F )’s with the same canonical vector. We list all the τ possible canonical vectors and let
+        rj := (p∗j , v∗j , v∗j , · · · , v∗j ) be the j-th one. Let CAj be the set of indices of all gk (F )’s whose
+        canonical vector is rj , then we have
+                  τ
+                  X   X          τ
+                                 X X
+            g=      (   αk )rj +     αk (gk (F ) − rj ) .                                                                                 (4)
+                  j=1 k∈CAj                   j=1 k∈CAj
+
+          We say an n-dimensional vector α = (α1 , α2 , · · · , αn ) ∈ Zn≥0 is balanced, if α = 0, or
+        kαk∞ ≤ αmax = OFPT (1) and |{i : αi > 0}| ≥ n/2. Then the following observation is true.
+        I Observation 15. For any nonzero balanced vector α it holds that kαk1 ≥ n/2 · αi /αmax
+        for every 1 ≤ i ≤ n.
+            Using the concept of a balanced vector, Claim 14 indicates that if rj is a canonical vector
+                                         P|G(A)| i
+        of gk (F ), then gik (F ) − v∗j = `=1 αk,`                                1
+                                                   g` (A) such that the vector (αk,`    2
+                                                                                     , αk,`            n
+                                                                                            , · · · , αk,` ) is
+        a balanced vector. The nice thing about balanced vectors is that we can have the following
+        claim, which will be used several times later.
+
+        B Claim 16.      Let y1 , y2 , · · · , yk be a sequence of balanced vectors in Zn≥0 such that
+         Pk                                                 Pk
+        k h=1 yh k1 ≤ nΛ where Λ = OFPT (1), then k h=1 yh k∞ ≤ 2αmax Λ = OFPT (1).
+                                                                                         Pk
+        Proof of Claim 16. We prove by contradiction. Suppose on the contrary that k h=1 yh k∞ >
+                                                           Pk
+        2αmax Λ, then there exists some i∗ such that h=1 yi∗      h > 2αmax Λ. Since yh ’s are balanced
+        vectors, according to Observation 15, we have
+                k               k                     Pk      i∗
+                                                         h=1 yh
+                X               X
+            k         yh k1 =         kyh k1 ≥ n ·                     > nΛ,
+                                                        2αmax
+                h=1             h=1
+
+                                                       Pk
+        which contradicts the fact that k                 h=1 yh k1 ≤ nΛ. Hence, the claim is true.                                         C
+
+           Since rj is a canonical vector of gk (F ), by Claim 14, there exist balanced vectors β k,`
+        such that Eq (4) can be rewritten as (ignoring g0 ):
+                                                                     
+                 τ                   τ              |G(A)|
+                X     X              X   X           X
+           gi =     (      αk )v∗j +          αk           i
+                                                           βk,` g` (A) , ∀1 ≤ i ≤ n,
+                      j=1 k∈CAj                j=1 k∈CAj                 `=1
+
+
+                                              τ                 |G(A)|
+                                              X                  X
+            or equivalently,           gi =         αj0 v∗j +            β`i g` (A),    ∀1 ≤ i ≤ n,                                       (5)
+                                              j=1                `=1
+
+        where αj0 =                                 1            n
+                         P
+                           k∈CAj αk and each β` = (β` , · · · , β` ) is the summation of balanced vectors.
+
+                                                                τ                      |G(A)|
+                                                                                            n
+                                                                X                       X X
+            As [0, D, D, · · · , D]g = 0, we have                     nαj0 Dv∗j +         (   β`i )Dg` (A) = 0.                           (6)
+                                                                j=1                     `=1     i=1
+
+        Note that |G(A)| = OFPT (1), the equation above can be rewritten as
+                                                                                                n
+                                                                                                X                     n
+                                                                                                                      X
+        [Dv∗1 , · · · , Dv∗τ , Dg1 (A), · · · , Dg|G(A)| (A)] · (nα10 , · · · , nατ0 ,                β1i , · · · ,          i
+                                                                                                                            β|G(A)| ) = 0. (7)
+                                                                                                i=1                   i=1
+L. Chen, M. Koutecký, L. Xu, and W. Shi                                                                                                          33:11
+
+
+   Let V = [Dv∗1 , Dv∗2 , · · · , Dv∗τ , Dg1 (A), Dg2 (A), · · · , Dg|G(A)| (A)], which is an OFPT (1)×
+OFPT (1)-matrix with kV k∞ = OFPT (1), then there exist λk ∈ Z+ and gk (V ) ∈ G(V ),
+                                       Pn                Pn
+such that (nα10 , nα20 , · · · , nατ0 , i=1 β1i , · · · , i=1 β|G(A)|
+                                                               i
+                                                                         P
+                                                                      ) = k λk gk (V ). Note that since
+                                                                             τ +|G(A)|
+αj0 , β`i ≥ 0, we can restrict that every gk (V ) ∈ Z≥0                  .
+      For ease of description, from now on we take the viewpoint of a packing problem. We
+view each canonical vector r∗j and g` (A) as an item, whereas there are τ + |G(A)| different
+kinds of items. There are n + 1 different bins. Bin 0 can only be used to pack items r∗j ,
+1 ≤ j ≤ τ , and bin i (1 ≤ i ≤ n) can only be used to pack items g` (A), 1 ≤ ` ≤ |G(A)|.
+Currently there are αj0 copies of item r∗j in bin 0, and β`i copies of item g` (A) in bin i. This is
+called a packing profile. Now we want to split this packing profile into several “sub-profiles”,
+i.e., we want to determine integers µhj , σ`i,h ∈ Z≥0 such that the followings are true:
+   (i) µhj , σ`i,h = OFPT (1) and µhj + σ`i,h > 0.
+         P h              0
+                            P i,h          i
+  (ii)      h µj = αj ,          h σ ` = β` ;
+ (iii) [Dv∗1 , · · · , Dv∗τ , Dg1 (A), · · · , Dg|G(A)| (A)]
+                                  Pn                 Pn    i,h
+         · (nµh1 , · · · , nµhτ , i=1 σ`i,h , · · · , i=1 σ|G(A)| ) = 0 for every h.
+A packing with µhj copies of r∗j in bin 0 and σ`i,h copies of g` (A) in bin i is called a sub-profile.
+Any sub-profile corresponds to a (tA + ntB )-dimensional vector eh = (e0h , e1h , · · · , enh ) where
+           τ
+           X
+   e0h =         µhj p∗j
+           j=1
+           τ                  |G(A)|
+           X                   X
+   eih =         µhj v∗j +              σ`i,h g` (A),              ∀1 ≤ i ≤ n
+           j=1                  `=1
+
+If all the three conditions on sub-profiles hold, then we know that keh k∞ = OFPT (1),
+g = h eh and H0 eh = 0 (to see why H0 eh = 0 holds, simply recall that F r∗j = 0 and
+       P
+
+condition (iii) implies that [0, D, D, · · · , D]eh = 0), and furthermore, there are at most
+P 0 P                   i
+                                                                    P
+    j αj +        i,` β` sub-profiles, which is finite. Hence, g =   h eh and the theorem is proved.
+     We will construct eh ’s iteratively. Once eh is constructed, we continue our decomposition
+                             Ph
+procedure on g − k=1 ek .
+     Suppose we have constructed e1 to eh0 −1 where conditions (i) and (iii) are satisfied
+                             Ph0 −1 h                    Ph0 −1 i,h
+for each eh , αj0 − h=1             µj ≥ 0, β̄`i := β`i − h=1  σ` ≥ 0 and furthermore, each vector
+β̄ ` = (β̄`1 , · · · , β̄`n ) can be expressed as a summation of all but one balanced vectors, more
+precisely, there exist balanced vectors φ`,k ∈ Zn≥0 , 1 ≤ k ≤ kmax such that
+
+            X−1
+           kmax
+   β̄` =              φ`,k + φ̄`,kmax ,             where φ̄`,kmax v φ`,kmax .
+             k=1
+
+                                                                                 Ph0 −1
+   We show how to construct eh0 . Let ᾱj0 = αj0 −                                   h=1   µhj . According to condition (iii) of
+each eh , we know that
+                                                                                                    n
+                                                                                                    X                      n
+                                                                                                                           X
+   [Dv∗1 , · · · , Dv∗τ , Dg1 (A), · · · , Dg|G(A)| (A)] · (nᾱ10 , · · · , nᾱτ0 ,                       β̄1i , · · · ,           i
+                                                                                                                                 β̄|G(A)| )=0
+                                                                                                    i=1                    i=1
+
+                                                                            τ +|G(A)|
+Consequently, there exist λ0k ∈ Z≥0 and gk ∈ Z≥0                                        ∩ G(V ) such that
+                                      n
+                                      X                      n
+                                                             X                   X
+   (nᾱ10 , nᾱ20 , · · · , nᾱτ0 ,         β̄1i , · · · ,           i
+                                                                   β̄|G(A)| )=       λ0k gk (V ).
+                                      i=1                    i=1                 k
+
+
+
+
+                                                                                                                                                ESA 2020
+33:12   New Bounds on Augmenting Steps of Block-Structured IP
+
+
+        There are two possibilities.
+        Case 1. If there exists some λ0k ≥ n, we consider the vector-summand ngk (V ) out of λ0k gk (V ).
+        Let ngk (V ) = (nζ1 , nζ2 , · · · , nζτ +|G(A)| ). We set µhj 0 = ζj = OFPT (1) for 1 ≤ j ≤ τ . We set
+                                           Pn
+        the values of σ`i,h0 such that i=1 σ`i,h0 = nζτ +` . Consequently, condition (iii) is satisfied for
+        eh0 . Now it suffices to set the values of each σ`i,h0 such that they are bounded by OFPT (1).
+        Equivalently, this means out of the β̄`i copies of g` (A), our goal is to take σ`i,h0 copies such
+        that in total we take nζτ +` copies and σ`i,h0 = OFPT (1). We achieve this in a simple greedy
+        way. Let k ∗ be the index such that
+             X−1
+            kmax                                                 X−1
+                                                                kmax
+                      kφ`,k k1 + kφ̄`,kmax k1 < nζτ +` ≤                kφ`,k k1 + kφ̄`,kmax k1
+            k=k∗ +1                                              k=k∗
+
+        Let φ̄`,k∗ v φ`,k∗ be an arbitrary vector such that
+                             X−1
+                            kmax
+            kφ̄`,k∗ k1 +              kφ`,k k1 + kφ̄`,kmax k1 = nζτ +` .
+                            k=k∗ +1
+                                      Pkmax −1
+        We set σ`i,h0 = φ̄i`,k∗ +          i       i
+                                  k=k∗ +1 φ`,k + φ̄`,kmax . It is obvious that in total we have taken nζτ +`
+                                                                               Pkmax −1
+        copies of g` (A). Now it remains to show that kσ`h0 k∞ = kφ̄`,k∗ + k=k       ∗ +1 φ`,k + φ̄`,kmax k∞ =
+
+        OFPT (1). To see this, notice that each φ`,k is a balanced vector, hence
+                             X−1
+                            kmax
+            kφ`,k∗ k1 +               kφ`,k k1 + kφ`,kmax k1 ≤ nζτ +` + 2nαmax = OFPT (n).
+                            k=k∗ +1
+                                               Pkmax −1
+        According to Claim 16, kφ`,k∗ + k=k          ∗ +1 φ`,k + φ`,kmax k∞ = OFPT (1).      Consequently,
+        kσ`h0 k∞ = OFPT (1).
+                                                                                Pk∗ −1
+            Also notice that after we take σ`i,h0 copies of g` (A), β̄ ` −σ`h0 = k=1 φ`,k +(φ`,k∗ − φ̄`,k∗ ),
+        which is still the summation of all but one balanced vector. Hence we can continue to
+                          Ph0
+        decompose g − h=1        eh .
+                                                                Ph0 −1
+        Case 2. λ0k < n for every k. We claim that kg − h=1               eh k∞ = OFPT (1). If this claim is
+                          Ph0 −1          Ph0 −1
+        true, then g = h=1 eh + (g − h=1 eh ), and Theorem 4 is proved. To show the claim, we
+        use a similar argument as that of case 1. First, nᾱj0 ≤ ( k λk ) · maxk kgk (V )k∞ = OFPT (n),
+                                                                     P
+                                                                                        P|G(A)|
+        hence ᾱj0 = OFPT (1). Second, we consider the n-dimensional vector β = `=1 β ` . Recall
+                          Ph0 −1 i,h
+        that β̄`i := β`i − h=1    σ` ≥ 0 and each vector β̄ ` satisfy that
+                     X−1
+                    kmax
+            β̄` =            φ`,k + φ̄`,kmax
+                      k=1
+                                             Pkmax                     P|G(A)|
+        where φ̄`,kmax v φ`,kmax . Let β̄`0 = k=1   φ`,k and β 0 = `=1 β 0` . Given that φ̄`,kmax v
+        φ`,kmax and φ`,kmax is a balanced vector, kβ̄`0 k1 ≤ kβ̄` k1 + nαmax . Consequently
+                       |G(A)|                  |G(A)|
+                        X                       X
+               0
+            kβ k1 ≤             kβ̄`0 k1   ≤            kβ̄` k1 + nαmax · |G(A)|
+                        `=1                     `=1
+                                               X
+                                           ≤        λ0k · max kgk (V )k1 + nαmax · |G(A)| = OFPT (n).
+                                                            k
+                                                k
+
+        Note that β 0 is the summation of balanced vectors. According to Claim 16, kβ 0 k∞ = OFPT (1),
+        consequently kβk∞ ≤ kβ 0 k∞ = OFPT (1). Combining the fact that kp∗j k∞ = OFPT (1),
+                                                                      Ph0 −1
+        kv∗j k∞ = OFPT (1) and kg` (A)k∞ = OFPT (1), we have kg − i=1         eh k∞ = OFPT (1).    J
+L. Chen, M. Koutecký, L. Xu, and W. Shi                                                              33:13
+
+
+    Theorem 4 indicates that, there exists some “basis” for 3-block n-fold IP with FPT-
+bounded `∞ -norms. Unfortunately, this basis need not be Graver basis; indeed, we will show
+later that the Graver basis of 3-block n-fold IP does not have an FPT-bounded `∞ -norm.
+However, Theorem 4 provides a new perspective on the structure of the kernel space, which
+can be utilized to bound the `∞ -norm of the Graver basis through a “merging” technique for
+the proof of Theorem 5 as we illustrate in the following subsection.
+
+4.2    A sign-compatible decomposition
+We have shown in the previous subsection that any element of kerZ (H0 ) admits a de-
+composition into lattice elements whose `∞ -norm is bounded by OFPT (1). However, this
+decomposition is not necessarily “sign-compatible”, meaning that possibly none of its elements
+is a feasible step on its own, which makes its immediate algorithmic use complicated. Towards
+the algorithm for 3-block n-fold IP, we resort to Graver basis. The goal of this subsection is
+to prove the following theorem.
+                                                                          2
+I Theorem 5. For any 3-block n-fold matrix H0 , g∞ (H0 ) ≤ OFPT (ntA +1 ).
+
+    Following the line of arguments in previous papers [4, 16, 18, 20], it seems very difficult
+to derive an upper bound singly exponential in tA . To prove Theorem 5, we use a completely
+different approach. We give a brief overview of the proof idea. The reader is referred to the
+full version of this paper [6] for details.
+
+Proof idea. The basic idea is to show that if kg(H0 )k∞ is too large for some g(H0 ) ∈ G(H0 ),
+then we are able to find some z @ g(H0 ) and H0 z = 0, contradicting the fact that g(H0 ) is
+a Graver basis element. Suppose y = g(H0 ) and kyk∞ is very large. The crucial idea is that
+we do not search directly for z @ y, but rather search for z @ ỹ where ỹ is an “equalization”,
+of y, and then prove that such a z also satisfies that z @ y.
+    Roughly speaking, we will divide the n bricks of y, i.e., yi for i = 1, 2, · · · , n, into
+σ = OFPT (1) groups N1 , N2 , · · · , Nσ such that for any k ∈ Nj , ỹk ≈ |N1j | i∈Nj yi . Why do
+                                                                                P
+
+we need to take such a detour in the proof? The problem is that by directly arguing on y we
+run into a bound that is similar as [16]. Therefore, we use a completely different approach –
+we adopt the decomposition of Theorem 4, and then modify such a decomposition into a
+sign-compatible one by “merging” summands. Towards this, we first prove a merging lemma
+(see Lemma 5 of the full version) which states that given a summation of a sequence of vectors,
+we can always divide them into disjoint subsets such the summation of vectors in each subset
+becomes sign-compatible. The merging lemma can turn an arbitrary decomposition into
+a sign-compatible one, despite the fact that the cardinality of each subset is exponential
+in the dimension of the vectors (which means the `∞ -norm of the summands will explode
+by a factor that is exponential in the dimension). Consequently, if we directly merge the
+OFPT (n)-dimensional vectors in the decomposition of Theorem 4, we get a very weak bound.
+To handle this, we consider an alternative sum ỹ, which is derived by averaging multiple
+bricks of y as we mentioned above.
+    By altering the decomposition of y, we get a decomposition of ỹ such that the following
+is true: all the n + 1 bricks of each vector-summand can be divided into OFPT (1) subsets
+where in each subset the bricks are identical. This indicates that, although we are summing
+up OFPT (n)-dimensional vectors to ỹ, it is essentially the same as summing up OFPT (1)-
+dimensional vectors. Such a transformation comes at a cost – summands summing up to
+ỹ do not have OFPT (1)-bounded `∞ -norms, indeed, each vector-summand consists of n
+bricks whose `∞ -norm is OFPT (1), and at most 1 brick (which is a tA -dimensional vector)
+whose `∞ -norm is OFPT (n). Applying our merging lemma, we derive a sign-compatible
+                                                                                       2
+decomposition of ỹ where the summands have an `∞ -norm bounded by OFPT (ntA +1 ).
+
+                                                                                                    ESA 2020
+33:14   New Bounds on Augmenting Steps of Block-Structured IP
+
+
+            It remains to show that at least one summand z in the sign-compatible decomposition
+        of ỹ also satisfies that z @ y. To show this we need to go back to the definition of ỹ. We
+        are averaging bricks of y, but which bricks shall we average? Each brick is a tA -dimensional
+        vector and we consider each coordinate. We set up a threshold Γ. If the absolute value
+        of a coordinate is larger than Γ, we say it is (positive or negative) large. Otherwise it is
+        small. Therefore, each brick can be characterized by identifying its coordinates being positive
+        large, negative large or small (which is defined as the quantity type of a brick). We only
+        average the bricks of the same quantity type. By doing so, we can ensure that ỹi is roughly
+        sign-compatible with yi – if the j-th coordinate of yi is positive or negative large, then this
+        coordinate of ỹi is also positive or negative. Hence, any z @ ỹi is almost sign-compatible
+        with y – indeed, if we can ensure additionally that the j-th coordinate of zi is 0 as long as
+        the j-th coordinate of yi is small, then we can conclude that z @ y. This “if” can be proved
+        using a counting argument, and we get Theorem 5.                                             J
+
+         5      4-block n-fold IP reduces to 3-block n-fold IP
+        In this section, we will show that for any 4-block n-fold IP, there exists an equivalent 3-block
+        n-fold IP which is kernel preserving, as we define in the following.
+        I Definition 17 (Extended formulation). Let n0 ≥ n, m0 ∈ N, A ∈ Zm×n , b ∈ Zm , l, u ∈
+                                 0  0         0                     0
+        (Z ∪ {±∞})n and A0 ∈ Zm ×n , b0 ∈ Zm , l0 , u0 ∈ (Z ∪ {±∞})n . We say that
+
+             A0 (x, y) = b0 , l0 ≤ (x, y) ≤ u0                                                      (EF)
+
+        is an extended formulation of
+
+             Ax = b, l ≤ x ≤ u                                                                   (OrigF)
+
+        if {x | Ax = b, l ≤ x ≤ u} = {x | ∃y : A0 (x, y) = b0 , l0 ≤ (x, y) ≤ u0 }.
+        I Definition 18 (Feasibly kernel-preserving extended formulation). We say that (EF) is a
+        feasibly kernel preserving extended formulation of (OrigF) if for each (x, y) feasible in (EF),
+
+             A0 (g, h) = 0, l0 ≤ (x, y) + (g, h) ≤ u0     =⇒        Ag = 0, l ≤ x + g ≤ u,
+
+        that is, each element (g, h) of ker(A0 ) which is feasible with respect to (x, y) corresponds to
+        an element g ∈ ker(A) which is feasible with respect to x.
+            Extended formulations are commonly used to show how a set of solutions can be embedded
+        in an extended space, perhaps using less inequalities or obeying some extra structural
+        requirements. The basic observation is that if we take an objective function f over the
+        original formulation (OrigF) and optimize f 0 (x, y) = f (x) over (EF), the optimal solution
+        (x, y) over (EF) is such that x is an optimum over (OrigF). In the subsequent theorem we
+        will use it to show that any 4-block n-fold IP can be embedded in a 3-block n-fold IP without
+        blowing up the block sizes too much. The specific notion of a feasibly kernel-preserving
+        extended formulation is useful to show that also our lower bounds on lattice elements are
+        transferred, as we will show subsequently in Theorem 6.
+            Now we come to the main result of this subsection.
+        I Theorem 19. Any 4-block n-fold IP with parameters ∆, sA , sB , sC , sD , tA , tB , tC , tD has a
+        feasibly kernel-preserving extended formulation whose constraint matrix is a 3-block n-fold
+        matrix with parameters ∆,ˆ ŝA , ŝB , ŝD , t̂A , t̂B , t̂D satisfying
+
+             ˆ =∆
+             ∆         t̂A = t̂D = 2tC + tD + sA    t̂B = tB   ŝA = ŝB = sB + tC    ŝD = sD = sC .
+L. Chen, M. Koutecký, L. Xu, and W. Shi                                                                                              33:15
+
+
+Proof. Let us construct a 3-block n-fold IP instance which models the given 4-block IP
+instance. It’s matrix Ĥ0 is a 3-block n-fold matrix composed of blocks Â, B̂ and D̂, and the
+remaining data is b̂, l̂, û and ŵ. Let the blocks be defined as follows.
+
+                                                             −I 0 I 0
+                                                                          
+   D̂ = (C D 0 0)                                   Â =     0 A 0 I                                 B̂ = ( BI )
+
+We call the four block columns of Â and D̂ subbricks and index them by greek letters α, β, γ
+and δ, i.e., x1α is the α-subbrick of the first brick.
+    Now, we add an extra brick which we call an aggregation brick, denoted xd where d = n+1.
+The idea is that the α subbrick is non-zero only at the aggregation brick and corresponds to
+the first-stage variables of the original 4-block n-fold IP. We shall ensure that this is true
+using lower and upper bounds. However, to subsequently “assign” the aggregated values
+to the first stage variables, we also need to modify the B block, which, in turn, forces us
+to introduce new slack variables. This is the meaning of the γ subbrick (slack variables for
+bricks i 6= d) and δ subbrick (slack variables for the dth brick).
+                                                        0                     i                                      d
+    The right hand side b̂ is simply b̂ = b0 and b̂ = (0 bi ) for i 6= d and b̂ = (0 0). We
+set the new lower and upper bounds l̂, û as follows:
+                 iα                                                    dα
+α subbrick l̂ = ûiα = 0 for all i 6= d, and l̂ = −∞, ûdα = +∞. This ensures the α
+   subbrick to be only possibly non-zero in brick d.
+                 iβ                                                               dβ
+β subbrick l̂ = li and ûiβ = ui for all i =6 d and l̂ = ûdβ = 0. This ensures that the β
+   subbrick has the meaning of the original variables xi for all bricks except brick d, where
+   we enforce x̂dβ = 0.
+              dγ                  iγ
+γ subbrick l̂ = ûdγ = 0 and l̂ = −∞, ûiγ = +∞ for i 6= d. Without these variables
+   and due to the structure of Â and B̂, we would be enforcing for each brick i 6= d that
+   x̂0 = x̂iα , and since x̂iα = 0 this would mean x̂0 = 0. The γ subbrick relaxes this to
+   x̂0 = x̂iα + x̂iγ = 0 + x̂iγ which is trivially satisfiable considering our setting of the
+             dγ
+   bounds l̂ and ûdγ .
+             iδ                                dδ
+δ subbrick l̂ = ûiδ = 0 for all i =6 d, and l̂ = −∞, ûdδ = +∞, i.e., the same as for the
+   α subbrick. Similarly to the γ subbrick, without the δ subbrick we would be enforcing
+   B x̂0 + Ax̂dβ = 0, however x̂dβ = 0 so we would be forcing B x̂0 = 0, which is undesired.
+   Thus we relax it to B x̂0 + Ax̂dβ + x̂dδ = B x̂0 + x̂dδ = 0 which is trivially satisfiable.
+
+   To show that the constructed system
+
+   H 0 x̂ = b̂, l̂ ≤ x̂ ≤ û, x̂ ∈ Zt̂B +(n+1)t̂A                                                                             (8)
+
+is truly an extended formulation of Hx = b, l ≤ x ≤ u, x ∈ ZtC +ntA , let us define
+a projection π : Zt̂B +(n+1)t̂A → ZtC +ntA which defines the mapping from the extended
+formulation to the original instance. Specifically, we let
+
+   π((x̂0 , x̂1α , x̂1β , x̂1γ , x̂1δ , x̂2α , . . . , x̂nδ , x̂dα , . . . , x̂dδ ) = (x̂0 , x̂1β , x̂2β , . . . , x̂nβ ) .
+
+By the arguments above we see that x̂0 has precisely the meaning of x0 and x̂iβ for i 6= d
+has the meaning of xi .
+    Finally, let us argue that this extended formulation is also feasibly kernel-preserving.
+Consider now a feasible solution x̂ of (8), and consider any ĝ in ker(H0 ) such that x̂ + ĝ is
+again feasible. We have to show that Hπ(x̂) = 0 and l ≤ x + π(x̂) ≤ u. The latter follows
+easily from the fact that l̂ ≤ x̂ + ĝ ≤ û and that π(l̂) = l and π(û) = u. To see the former,
+consider separately first the upper row (C D · · · D) of H and after that the remaining rows.
+
+
+
+                                                                                                                                    ESA 2020
+33:16   New Bounds on Augmenting Steps of Block-Structured IP
+
+
+        We have that
+                                                 n
+                                                 X
+           C x̂dα + Dx̂dβ + 0x̂dγ + 0x̂dδ +            C x̂iα + Dx̂iβ + 0x̂iγ + 0x̂iδ = 0 .
+                                                 i=1
+
+        Omitting the zero blocks, we obtain
+                                n
+                                X
+           C x̂aα + Dx̂aβ +           C x̂iα + Dx̂iβ = 0 .
+                                i=1
+
+        Recall that our bounds enforce x̂dβ = 0 and x̂iα = 0 for i 6= d, and finally x̂0 = x̂dα , so
+        plugging these in we obtain
+                     n
+                     X
+           C x̂0 +         Dx̂iβ = 0,
+                     i=1
+                                                             Pn
+        which by the definition of π implies that Cπ(x)0 + i=1 Dπ(x)i = 0 as desired. Now it is
+        left to show that, for each i 6= d, Bπ(x)0 + Aπ(x)i = 0. We have that
+
+           B x̂0 + 0x̂iα + Ax̂iβ + 0x̂iγ + I x̂iδ = 0 .
+
+        Omitting the zero blocks and recalling that our bounds enforce x̂iδ = 0 for each i 6= d, we
+        have
+
+           Ax̂0 + Ax̂iβ = 0,
+
+        which, by definition of π, is what we wanted to show.                                         J
+
+        I Remark 20. Theorem 19 has several consequences. One is that 4-block n-fold IP is in FPT
+        if and only if 3-block n-fold IP is in FPT. Furthermore, as the reduction is kernel preserving,
+        we can also utilize Theorem 19 to transfer the Graver basis elements between 4-block n-fold
+        IP and 3-block n-fold IP, as is implied by Theorem 6.
+
+        I Theorem 6. For arbitrary integer t ∈ N, there exists a 3-block n-fold IP with a matrix H
+        such that si , ti ∈ O(t) for i = A, B, C, D, and for any feasible nonzero g ∈ kerZ (H0 ) we have
+        kg0 k∞ = Ω(nt ).
+
+        Proof. Consider the instance constructed in Theorem 2 with H being the 4-block n-fold
+        matrix from the proof. Apply Theorem 19 to this instance to obtain its feasible kernel-
+        preserving extended formulation, which is a 3-block n-fold IP, and consider any x̂ which is a
+        feasible solution for it. Denote by π the projection from the proof of Theorem 19.
+            Now let ĝ ∈ kerZ (H0 ) ⊆ ker(H0 ) be feasible with respect to x̂. By Definition 18, we
+        have g = π(ĝ) ∈ kerZ (H), and by Theorem 2 we have kgk∞ = Ω(nt−1 ) and in particular
+        kg0 k∞ = Ω(nt−1 ). By the definition of π these lower bounds transfer to ĝ and ĝ0 .      J
+
+        I Remark 21. The reader may wonder what if we take a “fat” kernel element of a 4-block
+        n-fold IP, which cannot be decomposed into “thin” kernel element whose infinity norm
+        bounded by OFPT (1), then use Theorem 19 to construct an equivalent 3-block n-fold IP,
+        and apply Theorem 4 to decompose the kernel element of the 3-block n-fold IP into thin
+        elements and transform them back to the original 4-block n-fold IP. This seems to suggest
+        that Theorem 19 is contradicting Theorem 2 and Theorem 4. We emphasize that such
+        a contradiction does not exist. Indeed, our definition of a feasibly-preserving extended
+        formulation is such that it takes kernel elements from 3-block n-fold IP to 4-block n-fold IP
+L. Chen, M. Koutecký, L. Xu, and W. Shi                                                             33:17
+
+
+only if they are feasible in the 3-block n-fold IP. Note that the construction of Theorem 19
+requires specific lower and upper bounds on the extended variables y. This is where the
+non-conformality of the decomposition of Thm 4 comes into play: what happens is that we
+decompose a kernel element of 3-block into “thin” kernel elements, however, we cannot take
+them back to the 4-block because they do not satisfy the bounds on the extended variables,
+and thus the definition of feasibly kernel-preserving extended formulation does not guarantee
+anything for them.
+
+ 6      Algorithms
+Using the upper bound on the Graver basis elements, we can derive algorithms for 3-block
+and 4-block n-fold IP by combining the idea from [16] and the recent progress in [28, 8], as
+indicated by Theorem 7 and Theorem 3.
+   In the following we prove Theorem 7. Theorem 3 can be proved by plugging in the upper
+bound of 4-block n-fold IP and proceed with the same argument.
+                                                                                         2
+I Theorem 7. 3-block n-fold IP can be solved in time min{OFPT (nO(sD tB ) , OFPT (nO(tA tB ) )}.
+
+Proof. Using the idea of approximate Graver-best oracle introduced by Altmanová et al. [1]
+and implicitly by Eisenbrand et al. [8], it suffices for us to solve the following IP for each
+fixed value ρ0 = 20 , 21 , 22 , · · · :
+                                                                                        2
+     min{wx : H0 x = 0, l ≤ x0 + ρ0 x ≤ u, x ∈ Zm , kxk∞ ≤ min{OFPT (nsc ), OFPT (ntA +1 )}}
+                                                                   2
+Let x∗ be the optimal solution. Given that kx∗ k∞ ≤ OFPT (ntA +1 ), we can guess x0∗ and
+                   2
+there are OFPT (n(tA +1)tB ) different possibilities. For each guess, say, x0∗ = v, we solve the
+following problem:
+     min{w · x : H0 x = 0, l ≤ x0 + ρ0 x ≤ u, x ∈ Zm , x0 = v}
+By fixing x0 , the above problem becomes exactly an n-fold IP, which can be solved efficiently
+in OFPT (n2 log n2 ) time [8]. Notice that ρ0 may take OFPT (n log n) distinct values, the
+                                                               2
+overall running time is min{OFPT (nsD tB +3 ) log3 n, OFPT (n(tA +1)tB +3 log3 n)}.         J
+
+ 7      Conclusion
+We consider 4-block n-fold IP and its important special case 3-block n-fold IP, both gener-
+alizing the two-stage stochastic IP and n-fold IP. We show that lattice elements of 3-block
+n-fold IP admit a decomposition whose `∞ -norm is bounded in OFPT (1), while any non-zero
+integral element in the kernel of 4-block n-fold IP may have an `∞ -norm at least Ω(nsc ).
+We provide a matching upper bound on the `∞ -norm of the Graver basis for 4-block n-fold
+IP, which gives an exponential improvement upon the best known result. We also establish
+                                               2
+an upper bound of min{OFPT (nsc ), OFPT (ntA + 1)} on the `∞ -norm of the Graver basis
+for 3-block n-fold IP. A remaining important open problem is whether 4-block n-fold IP, or
+equivalently, 3-block n-fold IP, is in FPT. Our lower bounds give some indication that this is
+unlikely.
+
+       References
+ 1     Katerina Altmanová, Dusan Knop, and Martin Koutecký. Evaluating and tuning n-fold
+       integer programming. ACM Journal of Experimental Algorithmics, 24(1):2.2:1–2.2:22, 2019.
+       doi:10.1145/3330137.
+ 2     Gautam Appa, Balázs Kotnyek, Konstantinos Papalamprou, and Leonidas Pitsoulis. Optimiz-
+       ation with binet matrices. Operations research letters, 35(3):345–352, 2007.
+
+                                                                                                   ESA 2020
+33:18   New Bounds on Augmenting Steps of Block-Structured IP
+
+
+         3   Stephan Artmann, Robert Weismantel, and Rico Zenklusen. A strongly polynomial algorithm
+             for bimodular integer linear programming. In Proceedings of the 49th Annual ACM SIGACT
+             Symposium on Theory of Computing, STOC 2017, pages 1206–1219. ACM, 2017.
+         4   Matthias Aschenbrenner and Raymond Hemmecke. Finiteness theorems in stochastic integer
+             programming. Foundations of Computational Mathematics, 7(2):183–227, 2007.
+         5   Lin Chen and Daniel Marx. Covering a tree with rooted subtrees–parameterized and approx-
+             imation algorithms. In Proceedings of the Twenty-Ninth Annual ACM-SIAM Symposium on
+             Discrete Algorithms, pages 2801–2820. SIAM, 2018.
+         6   Lin Chen, Lei Xu, Weidong Shi, and Martin Kouteckỳ. New bounds on augmenting steps of
+             block-structured integer programs. arXiv preprint, 2018. arXiv:1805.03741.
+         7   Jesús A De Loera, Raymond Hemmecke, Shmuel Onn, and Robert Weismantel. N-fold integer
+             programming. Discrete Optimization, 5(2):231–241, 2008.
+         8   Friedrich Eisenbrand, Christoph Hunkenschröder, and Kim-Manuel Klein. Faster algorithms
+             for integer programs with block structure. In Ioannis Chatzigiannakis, Christos Kaklamanis,
+             Dániel Marx, and Donald Sannella, editors, 45th International Colloquium on Automata,
+             Languages, and Programming, ICALP 2018, July 9-13, 2018, Prague, Czech Republic, volume
+             107 of LIPIcs, pages 49:1–49:13. Schloss Dagstuhl - Leibniz-Zentrum für Informatik, 2018.
+             doi:10.4230/LIPIcs.ICALP.2018.49.
+         9   Friedrich Eisenbrand, Christoph Hunkenschröder, Kim-Manuel Klein, Martin Kouteckỳ, Asaf
+             Levin, and Shmuel Onn. An algorithmic theory of integer programming. arXiv preprint, 2019.
+             arXiv:1904.01361.
+        10   Friedrich Eisenbrand and Robert Weismantel. Proximity results and faster algorithms for
+             integer programming using the steinitz lemma. In Proceedings of the Twenty-Ninth Annual
+             ACM-SIAM Symposium on Discrete Algorithms, pages 808–816. SIAM, 2018.
+        11   Elisabeth Finhold and Raymond Hemmecke. Lower bounds on the graver complexity of m-fold
+             matrices. Annals of Combinatorics, 20(1):73–85, 2016.
+        12   Robert Ganian and Sebastian Ordyniak. The complexity landscape of decompositional
+             parameters for ILP. Artificial Intelligence, 2018.
+        13   Robert Ganian, Sebastian Ordyniak, and MS Ramanujan. Going beyond primal treewidth for
+             (m) ilp. In Thirty-First AAAI Conference on Artificial Intelligence, 2017.
+        14   Jack E Graver. On the foundations of linear and integer linear programming i. Mathematical
+             Programming, 9(1):207–226, 1975.
+        15   Victor S Grinberg and Sergey V Sevast’yanov. Value of the steinitz constant. Functional
+             Analysis and Its Applications, 14(2):125–126, 1980.
+        16   Raymond Hemmecke, Matthias Köppe, and Robert Weismantel. Graver basis and proximity
+             techniques for block-structured separable convex integer minimization problems. Mathematical
+             Programming, 145(1-2):1–18, 2014.
+        17   Raymond Hemmecke, Shmuel Onn, and Lyubov Romanchuk. N-fold integer programming in
+             cubic time. Mathematical Programming, 137(1-2):325–341, 2013.
+        18   Raymond Hemmecke, Shmuel Onn, and Robert Weismantel. A polynomial oracle-time
+             algorithm for convex integer minimization. Mathematical Programming, 126(1):97–117, 2011.
+        19   Raymond Hemmecke and Rüdiger Schultz. Decomposition methods for two-stage stochastic
+             integer programs. In Online optimization of large scale systems, pages 601–622. Springer, 2001.
+        20   Serkan Hoşten and Seth Sullivant. A finiteness theorem for markov bases of hierarchical
+             models. Journal of Combinatorial Theory, Series A, 114(2):311–321, 2007.
+        21   Klaus Jansen, Kim-Manuel Klein, Marten Maack, and Malin Rau. Empowering the
+             configuration-ip - new PTAS results for scheduling with setups times. In Avrim Blum,
+             editor, 10th Innovations in Theoretical Computer Science Conference, ITCS 2019, January
+             10-12, 2019, San Diego, California, USA, volume 124 of LIPIcs, pages 44:1–44:19. Schloss
+             Dagstuhl - Leibniz-Zentrum für Informatik, 2019. doi:10.4230/LIPIcs.ITCS.2019.44.
+        22   Klaus Jansen and Lars Rohwedder. On integer programming and convolution. In Avrim Blum,
+             editor, 10th Innovations in Theoretical Computer Science Conference, ITCS 2019, January
+             10-12, 2019, San Diego, California, USA, volume 124 of LIPIcs, pages 43:1–43:17. Schloss
+             Dagstuhl - Leibniz-Zentrum für Informatik, 2019. doi:10.4230/LIPIcs.ITCS.2019.43.
+L. Chen, M. Koutecký, L. Xu, and W. Shi                                                                33:19
+
+
+23   Richard M Karp. Reducibility among combinatorial problems. In Complexity of computer
+     computations, pages 85–103. Springer, 1972.
+24   Kim-Manuel Klein. About the complexity of two-stage stochastic ips. In Daniel Bienstock
+     and Giacomo Zambelli, editors, Integer Programming and Combinatorial Optimization -
+     21st International Conference, IPCO 2020, London, UK, June 8-10, 2020, Proceedings,
+     volume 12125 of Lecture Notes in Computer Science, pages 252–265. Springer, 2020. doi:
+     10.1007/978-3-030-45771-6_20.
+25   Dusan Knop and Martin Koutecký. Scheduling meets n-fold integer programming. J. Sched.,
+     21(5):493–503, 2018. doi:10.1007/s10951-017-0550-0.
+26   Dusan Knop, Martin Kouteckỳ, and Matthias Mnich. Voting and bribing in single-exponential
+     time. In LIPIcs-Leibniz International Proceedings in Informatics, volume 66. Schloss Dagstuhl-
+     Leibniz-Zentrum fuer Informatik, 2017.
+27   Dušan Knop, Martin Kouteckỳ, and Matthias Mnich. Combinatorial n-fold integer program-
+     ming and applications. Mathematical Programming, pages 1–34, 2019.
+28   Martin Koutecký, Asaf Levin, and Shmuel Onn. A parameterized strongly polynomial algorithm
+     for block structured integer programs. In Ioannis Chatzigiannakis, Christos Kaklamanis,
+     Dániel Marx, and Donald Sannella, editors, 45th International Colloquium on Automata,
+     Languages, and Programming, ICALP 2018, July 9-13, 2018, Prague, Czech Republic, volume
+     107 of LIPIcs, pages 85:1–85:14. Schloss Dagstuhl - Leibniz-Zentrum für Informatik, 2018.
+     doi:10.4230/LIPIcs.ICALP.2018.85.
+29   Shmuel Onn. Nonlinear discrete optimization. Zurich Lectures in Advanced Mathematics,
+     European Mathematical Society, 2010.
+30   Christos H Papadimitriou. On the complexity of integer programming. Journal of the ACM
+     (JACM), 28(4):765–768, 1981.
+
+
+
+
+                                                                                                      ESA 2020
+

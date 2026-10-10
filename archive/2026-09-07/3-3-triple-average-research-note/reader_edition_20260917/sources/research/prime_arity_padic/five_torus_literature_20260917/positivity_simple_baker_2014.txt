@@ -1,0 +1,1314 @@
+                                                     On the Positivity Problem for
+                                                  Simple Linear Recurrence Sequences⋆
+
+                                                                 Joël Ouaknine and James Worrell
+arXiv:1309.1550v3 [cs.DM] 28 Apr 2014
+
+
+
+
+                                                      Department of Computer Science, Oxford University, UK
+
+
+
+                                               Abstract. Given a linear recurrence sequence (LRS) over the integers,
+                                               the Positivity Problem asks whether all terms of the sequence are posi-
+                                               tive. We show that, for simple LRS (those whose characteristic polyno-
+                                               mial has no repeated roots) of order 9 or less, Positivity is decidable,
+                                               with complexity in the Counting Hierarchy.
+
+
+                                        1    Introduction
+                                        A (real) linear recurrence sequence (LRS) is an infinite sequence u =
+                                        hu0 , u1 , u2 , . . .i of real numbers having the following property: there exist con-
+                                        stants b1 , b2 , . . . , bk (with bk 6= 0) such that, for all n ≥ 0,
+
+                                                            un+k = b1 un+k−1 + b2 un+k−2 + . . . + bk un .                    (1)
+
+                                        If the initial values u0 , . . . , uk−1 of the sequence are provided, the recurrence
+                                        relation defines the rest of the sequence uniquely. Such a sequence is said to
+                                        have order k.1
+                                            The best-known example of an LRS was given by Leonardo of Pisa in the
+                                        12th century: the Fibonacci sequence h0, 1, 1, 2, 3, 5, 8, 13, . . .i, which satisfies the
+                                        recurrence relation un+2 = un+1 +un . Leonardo of Pisa introduced this sequence
+                                        as a means to model the growth of an idealised population of rabbits. Not only
+                                        has the Fibonacci sequence been extensively studied since, but LRS now form
+                                        a vast subject in their own right, with numerous applications in mathematics
+                                        and other sciences. A deep and extensive treatise on the mathematical aspects
+                                        of recurrence sequences is the monograph of Everest et al. [15].
+                                            Given an LRS u satisfying the recurrence relation (1), the characteristic
+                                        polynomial of u is
+
+                                                              p(x) = xk − b1 xk−1 − . . . − bk−1 x − bk .                     (2)
+
+                                        An LRS is said to be simple if its characteristic polynomial has no repeated
+                                        roots. Simple LRS, such as the Fibonacci sequence, possess a number of desirable
+                                        ⋆
+                                          This research was partially supported by EPSRC. We are also grateful to Matt Daws
+                                          for considerable assistance in the initial stages of this work.
+                                        1
+                                          Some authors define the order of an LRS as the least k such that the LRS obeys such
+                                          a recurrence relation. The definition we have chosen allows for a simpler presentation
+                                          of our results and is algorithmically more convenient.
+2       Joël Ouaknine and James Worrell
+
+properties which considerably simplify their analysis—see, e.g., [15, 16, 2, 3, 31].
+They constitute a large2 and well-studied class of sequences, and correspond to
+diagonalisable matrices in the matricial formulation of LRS—see Sec. 2.
+    In this paper, we focus on the Positivity Problem for simple LRS over the
+integers (or equivalently, for our purposes, the rationals): given a simple LRS,
+are all of its terms positive?3
+    As detailed in [30], the Positivity Problem (and assorted variants) has ap-
+plications in a wide array of scientific areas, including theoretical biology, eco-
+nomics, software verification, probabilistic model checking, quantum computing,
+discrete linear dynamical systems, combinatorics, formal languages, statistical
+physics, generating functions, etc. Positivity also bears an important relation-
+ship to the well-known Skolem Problem: does a given LRS have a zero? The
+decidability of the Skolem Problem is generally considered to have been open
+since the 1930s (notwithstanding the fact that algorithmic decision issues had
+not at the time acquired the importance that they have today—see [20] for a
+discussion on this subject; see also [38, p. 258] and [23], in which this state of
+affairs—the enduring openness of decidability for the Skolem Problem—is de-
+scribed as “faintly outrageous” by Tao and a “mathematical embarrassment” by
+Lipton). A breakthrough occurred in the mid-1980s, when Mignotte et al. [27]
+and Vereshchagin [41] independently showed decidability for LRS of order 4 or
+less. These deep results make essential use of Baker’s theorem on linear forms
+in logarithms (which earned Baker the Fields Medal in 1970), as well as a p-
+adic analogue of Baker’s theorem due to van der Poorten. Unfortunately, little
+progress on that front has since been recorded.4
+    It is considered folklore that the decidability of Positivity (for arbitrary LRS)
+would entail that of the Skolem Problem [30], noting however that the reduction
+increases the order of LRS quadratically.5 Nevertheless, the earliest explicit ref-
+erences in the literature to the Positivity Problem that we have found are from
+the 1970s (see, e.g., [36, 35, 7]). In [36], the Skolem and Positivity Problems are
+described as “very difficult”, whereas in [34], the authors assert that the Skolem
+and Positivity Problems are “generally conjectured [to be] decidable”. Positivity
+is again stated as an open problem in [19, 6, 22, 24, 39, 30], among others.
+    Unsurprisingly, progress on the Positivity Problem over the last few decades
+has been fairly slow. In the early 1980s, Burke and Webb [11] showed that
+the closely related problem of Ultimate Positivity (are all but finitely many
+2
+  In the measure-theoretic sense, almost all LRS are simple LRS.
+3
+  In keeping with established terminology, ‘positive’ here is taken to mean ‘non-
+  negative’.
+4
+  A proof of decidability of the Skolem Problem for LRS of order 5 was announced
+  in [20]. However, as pointed out in [29], the proof seems to have a serious gap.
+5
+  It is worth noting that, under this reduction, the decidability of the Positivity Prob-
+  lem for simple LRS of order at most 14 would entail the decidability of the Skolem
+  Problem for simple LRS of order 5, which is open and from which the general case of
+  the Skolem Problem at order 5 would follow, based on the work carried out in [20];
+  see also [29], which identifies the last unresolved critical case for the Skolem Problem
+  at order 5, involving simple LRS.
+            On the Positivity Problem for Simple Linear Recurrence Sequences            3
+
+terms of a given LRS positive?) is decidable for LRS of order 2, and nine years
+later Nagasaka and Shiue [28] showed the same for LRS of order 3 that have
+repeated characteristic roots. Much more recently, Halava et al. [19] showed
+that Positivity is decidable for LRS of order 2, and subsequently Laohakosol and
+Tangsupphathawat [22] proved that Positivity is decidable for LRS of order 3. In
+2012, an article purporting to show decidability of Positivity for LRS of order 4
+was published [37], with the authors noting they were unable to tackle the case of
+order 5. Unfortunately, as pointed out in [30] and acknowledged by the authors
+themselves [21], that paper contains a major error, invalidating the order-4 claim.
+Very recently, Positivity was nevertheless shown decidable for arbitrary integer
+LRS of order 5 or less [30], with complexity in the Counting Hierarchy; moreover,
+the same paper shows by way of hardness that the decidability of Positivity for
+integer LRS of order 6 would entail major breakthroughs in analytic number
+theory (certain longstanding Diophantine-approximation open problems would
+become solvable). Finally, in [31], the authors show that Ultimate Positivity for
+simple integer LRS of unrestricted order is decidable within PSPACE, and in
+polynomial time if the order is fixed.
+
+Main Result. The main result of this paper is that the Positivity Problem for
+simple integer LRS of order 9 or less is decidable. An analysis of the decision
+                                                           PPPP
+procedure shows that its complexity lies in coNPPP      , i.e., within the fourth
+level of the Counting Hierarchy (itself contained in PSPACE).6
+
+Comparison with Related Work. It is important to note the fundamental
+difference between the above result and those of [31]: in the latter, Ultimate
+Positivity is shown to be decidable for simple LRS of all orders, but in a non-
+constructive sense: a given LRS may be certified ultimately positive, yet no
+index threshold is provided beyond which all terms of the LRS are positive. At
+the time of writing, this appears to be a fundamental difficulty: for simple LRS of
+any given order, the ability to compute such index thresholds would immediately
+enable one to decide Positivity. Yet as noted earlier, the decidability of Positivity
+for simple LRS of order at most 14 would in turn entail the decidability of the
+Skolem Problem for arbitrary LRS of order 5, a longstanding and major open
+problem.
+    We recall and summarise some standard material on linear recurrence se-
+quences in Sec. 2. We also recall in App. A the statements of various mathemat-
+ical tools needed in our development, notably Baker’s theorem on linear forms
+in logarithms, Masser’s results on multiplicative relationships among algebraic
+numbers, Kronecker’s theorem on simultaneous Diophantine approximation, and
+Renegar’s work on the fine-grained complexity of quantifier elimination in the
+first-order theory of the reals.
+6
+    The complexity is as a function of the bit length of the standard representation of
+    integer LRS; for an LRS of order k as defined by Eq. (1), this representation consists
+    of the 2k-tuple (b1 , . . . , bk , u0 , . . . , uk−1 ) of integers.
+4       Joël Ouaknine and James Worrell
+
+    Our overall approach is similar to that followed in [30], attacking the problem
+via the exponential polynomial solution of LRS using sophisticated tools from
+analytic and algebraic number theory, Diophantine geometry and approximation,
+and real algebraic geometry. However the present paper makes vastly greater and
+deeper use of real algebraic geometry, particularly in the form of Lemmas 10,
+11, and 12 (which serve to establish the key fact that certain varieties are zero-
+dimensional, enabling our application of Baker’s theorem in higher dimensions),
+and throughout the whole of Sec. 3.2, which handles what is by far the most
+difficult and complex critical case in our analysis. Lemmas 10–12 (which can be
+found in App. B), as well as the development of Sec. 3.2, are entirely new.
+    The present paper also markedly differs from [31]. In fact, aside from sharing
+standard material on LRS, the non-constructive approach of [31] eschews most
+of the real algebraic geometry of the present paper, as well as Baker’s theo-
+rem, and is underpinned instead by non-constructive lower bounds on sums of
+S-units, which in turn follow from deep results in Diophantine approximation
+(Schlickewei’s p-adic generalisation of Schmidt’s Subspace theorem).
+
+We present a high-level overview of our proof strategy—split in two parts—
+within Sec. 3, and also briefly discuss why the present approach does not seem
+extendable beyond order 9. As noted earlier, establishing the decidability of
+Positivity for simple LRS of order 14 would entail a major advance, namely the
+decidability of the Skolem Problem for arbitrary LRS of order 5. It is an open
+problem whether similar ‘hardness’ results can be established for simple LRS of
+orders 10–13.
+     In terms of complexity, it is shown in [31] that the Positivity Problem for
+simple integer LRS of arbitrary order is hard for co∃R, the class of problems
+whose complements are solvable in the existential theory of the reals, and which
+is known to contain coNP. However, no lower bounds are known when the order
+is fixed or bounded, as is the case in the present paper. Either establishing non-
+trivial lower bounds or improving the Counting-Hierarchy complexity of the
+present procedure also appear to be challenging open problems.
+
+
+2   Linear Recurrence Sequences
+
+We recall some fundamental properties of (simple) linear recurrence sequences.
+Results are stated without proof, and we refer the reader to [15, 20] for details.
+    Let u = hun i∞n=0 be an LRS of order k over the reals satisfying the recurrence
+relation un+k = b1 un+k−1 + . . . + bk un , where bk 6= 0. We denote by ||u|| the
+bit length of its representation as a 2k-tuple of integers, as discussed in the pre-
+vious section. The characteristic roots of u are the roots of its characteristic
+polynomial (cf. Eq. (2)), and the dominant roots are the roots of maximum
+modulus. The characteristic roots can be computed in time polynomial in ||u||—
+see App. A for further details on algebraic-number manipulations.
+    The characteristic roots divide naturally into real and non-real ones. Since
+the characteristic polynomial has real coefficients, non-real roots always arise in
+           On the Positivity Problem for Simple Linear Recurrence Sequences                 5
+
+conjugate pairs. Thus we may write {ρ1 , . . . , ρℓ , γ1 , γ1 , . . . , γm , γm } to represent
+the set of characteristic roots of u, where each ρi ∈ R and each γj ∈ C \ R. If
+u is a simple LRS, there are algebraic constants a1 , . . . , aℓ ∈ R and c1 , . . . , cm
+such that, for all n ≥ 0,
+
+                                ℓ
+                                X                m
+                                                 X
+                                      ai ρni +         cj γjn + cj γj n .
+                                                                       
+                         un =                                                             (3)
+                                i=1              j=1
+
+
+    This expression is referred to as the exponential polynomial solution of u.
+For fixed k, all constants ai and cj can be computed in time polynomial in ||u||,
+since they can be obtained by solving a system of linear equations involving the
+first k instances of Eq. (3).
+    An LRS is said to be non-degenerate if it does not have two distinct char-
+acteristic roots whose quotient is a root of unity. As pointed out in [15], the
+study of arbitrary LRS can effectively be reduced to that of non-degenerate
+LRS, by partitioning the original LRS into finitely many subsequences, each of
+which is non-degenerate. In general, such a reduction will require exponential
+time. However, when restricting to LRS of bounded order (in our case, of order
+at most 9), the reduction can be carried out in polynomial time. In particular,
+any LRS of order 9 or less can be partitioned in polynomial time into at most
+3.9 · 107 non-degenerate LRS of the same order or less.7 Note that if the original
+LRS is simple, this process will yield a collection of simple non-degenerate sub-
+sequences. In the rest of this paper, we shall therefore assume that all LRS we
+are given are non-degenerate.
+    Any LRS u of order k can alternately be given in matrix form, in the sense
+that there is a square matrix M of dimension k × k, together with k-dimensional
+column vectors v and w, such that, for all n ≥ 0, un = v T M n w. It suffices to take
+M to be the transpose of the companion matrix of the characteristic polynomial
+of u, let v be the vector (uk−1 , . . . , u0 ) of initial terms of u in reverse order,
+and take w to be the vector whose first k − 1 entries are 0 and whose kth entry
+is 1. It is worth noting that the characteristic roots of u correspond precisely
+to the eigenvalues of M , and that if u is simple then M is diagonalisable. This
+translation is instrumental in Sec. 3 to place the Positivity Problem for simple
+LRS of order at most 9 within the Counting Hierarchy.
+    Conversely, given any square matrix M of dimension k × k, and any k-
+dimensional vectors v and w, let un = v T M n w. Then hv T M n wi∞     n=k is an LRS
+of order at most k whose characteristic polynomial divides that of M , as can
+be seen by applying the Cayley-Hamilton Theorem.8 When M is diagonalisable,
+the resulting LRS is simple.
+
+7
+  We obtained
+       √          this value using a bespoke enumeration procedure for order 9. A bound
+  of e2 6·9 log 9 ≤ 2.9 · 109 can be obtained from Cor. 3.3 of [42].
+8
+  In fact, if none of the eigenvalues of M are zero, it is easy to see that the full sequence
+  hv T M n wi∞ n=0 is an LRS (of order at most k).
+6         Joël Ouaknine and James Worrell
+
+3      Decidability and Complexity
+Let u = hun i∞n=0 be an integer LRS of order k. As discussed in the Introduction,
+we assume that u is presented as a 2k-tuple of integers (b1 , . . . , bk , u0 , . . . , uk−1 ) ∈
+Z2k , such that for all n ≥ 0,
+
+                               un+k = b1 un+k−1 + . . . + bk un .                           (4)
+
+     The Positivity Problem asks, given such an LRS u, whether for all n ≥ 0,
+it is the case that un ≥ 0. When this holds, we say that u is positive.
+     In this section, we establish the following:
+Theorem 1. The Positivity Problem for simple integer LRS of order 9 or less
+                              PPPP
+is decidable in coNPPP               .
+      Note that deciding whether the characteristic roots are simple can easily be
+done in polynomial time; cf. App. A.
+      Observe also that Thm. 1 immediately carries over to rational LRS. To
+see this, consider a rational LRS u obeying the recurrence relation (4). Let
+ℓ be the least common multiple of the denominators of the rational numbers
+b1 , . . . , bk , u0 , . . . , uk−1 , and define an integer sequence v = hvn i∞
+                                                                              n=0 by setting
+vn = ℓn+1 un for all n ≥ 0. It is easily seen that v is an integer LRS of the same
+order as u, and that for all n, vn ≥ 0 iff un ≥ 0. Moreover, v is simple iff u is
+simple.
+
+High-Level Synopsis (I). At a high level, the algorithm upon which Thm. 1
+rests proceeds as follows. Given an LRS u, we first decide whether or not u
+is ultimately positive9 by studying its exponential polynomial solution—further
+details on this task are provided shortly. As we prove in this paper, whenever
+u is an ultimately positive simple LRS of order 9 or less, there is a polynomial-
+time computable threshold N of at most exponential magnitude such that all
+terms of u beyond N are positive. Clearly u cannot be positive unless it is
+ultimately positive. Now in order to assert that an ultimately positive LRS u is
+not positive, we use a guess-and-check procedure: find n ≤ N such that un < 0.
+By writing un = v T M n w, for some square integer matrix M and vectors v and
+w (cf. Sec. 2), we can decide whether un < 0 in PosSLP10 via iterative squaring,
+which yields an NPPosSLP procedure for non-Positivity. Thanks to the work of
+                                                              PPPP
+Allender et al. [1], which asserts that PosSLP ⊆ PPP                 , we obtain the required
+               PP
+        PPPP
+coNP                algorithm for deciding Positivity.
+
+The following is an old result concerning LRS; proofs can be found in [18,
+Thm. 7.1.1] and [6, Thm. 2]. It also follows easily and directly from either Pring-
+sheim’s theorem or from [10, Lem. 4]. It plays an important role in our approach
+ 9
+     A sequence is ultimately positive if all but finitely many of its terms are positive.
+10
+     Recall that PosSLP is the problem of determining whether an arithmetic circuit,
+     with addition, multiplication, and subtraction gates, evaluates to a positive integer.
+           On the Positivity Problem for Simple Linear Recurrence Sequences                    7
+
+by enabling us to significantly cut down on the number of subcases that must
+be considered, avoiding the sort of quagmire alluded to in [28].
+Proposition 2. Let hun i∞ n=0 be an LRS with no real positive dominant charac-
+teristic root. Then there are infinitely many n such that un < 0 and infinitely
+many n such that un > 0.
+    By Prop. 2, it suffices to restrict our attention to LRS whose dominant char-
+acteristic roots include one real positive value. Given an integer LRS u, note
+that determining whether the latter holds is easily done in time polynomial in
+||u|| (cf. App. A).
+    Thus let u be a non-degenerate simple integer LRS of order k ≤ 9 having a
+real positive dominant characteristic root ρ > 0. Note that u cannot have a real
+negative dominant characteristic root (which would be −ρ), since otherwise the
+quotient −ρ/ρ = −1 would be a root of unity, contradicting non-degeneracy. Let
+us write the characteristic roots as {ρ, γ1 , γ1 , . . . , γm , γm }∪{γm+1 , γm+2 , . . . , γℓ },
+where we assume that the roots in the first set all have common modulus ρ,
+whereas the roots in the second set all have modulus strictly smaller than ρ.
+    Let λi = γi /ρ for 1 ≤ i ≤ ℓ. We can then write
+                                    m 
+                         un        X                 n
+                                                       
+                           n
+                             = a +     cj λnj + cj λj + r(n) ,                               (5)
+                         ρ         j=1
+
+for some real algebraic constant a and complex algebraic constants c1 , . . . , cm ,
+where r(n) is a term tending to zero exponentially fast.
+    Note that none of λ1 , . . . , λm , all of which have modulus 1, can be a root
+of unity, as each λi is a quotient of characteristic roots and u is assumed to be
+non-degenerate. Likewise, for i 6= j, λi /λj and λi /λj cannot be roots of unity.
+    For i ∈ {1, . . . , ℓ}, observe also that as each λi is a quotient of two roots
+of the same polynomial of degree k, it has degree at most k(k − 1). In fact, it
+is easily seen that ||λi || = ||u||O(1) , ||a|| = ||u||O(1) , and ||ci || = ||u||O(1) (cf.
+App. A).
+    Finally, we place bounds on the rate of convergence of r(n). We have
+
+                             r(n) = cm+1 λnm+1 + . . . + cℓ λnℓ .
+
+Combining our estimates on the height and degree of each λi together with the
+                                                                                O(1)
+                                                                  1
+root-separation bound given by Eq. (15) in App. A, we get 1−|λ      i|
+                                                                       = 2||u||      ,
+for m + 1 ≤ i ≤ ℓ. Thanks also to the bounds on the height and degree of the
+constants ci , it follows that we can find ε ∈ (0, 1) and N ∈ N such that:
+                                           O(1)
+                            1/ε = 2||u||                                                     (6)
+                                   ||u||O(1)
+                            N =2                                                             (7)
+                                                                 n
+                            For all n > N, |r(n)| < (1 − ε) .                                (8)
+
+We can compute such ε and N in time polynomial in ||u||, since all relevant
+calculations on algebraic numbers only require polynomial time (cf. App. A).
+8       Joël Ouaknine and James Worrell
+
+   We now seek to answer positivity and ultimate positivity questions for the
+LRS u = hun i∞                                   n ∞
+              n=0 by studying the same for hun /ρ in=0 .
+   In what follows, we assume that u is as above, i.e., u is a non-degenerate
+simple integer LRS having a real positive dominant characteristic root ρ > 0.
+
+High-Level Synopsis (II). Before launching into technical details, let us pro-
+vide a high-level overview of our proof strategy for deciding whether u is ulti-
+mately positive, and when that is the case, for computing an index threshold N
+beyond which all of its terms are positive. Let us rewrite Eq. (5) as
+                          un
+                             = a + h(λn1 , . . . , λnm ) + r(n) ,                  (9)
+                          ρn
+
+where h : Cm → R is a continuous function. In general, there will be inte-
+ger multiplicative relationships among the λ1 , . . . , λm , forming a free abelian
+group L for which we can compute a basis thanks to Thm. 3 in App. A. These
+multiplicative relationships define a torus T ⊆ Cm on which the joint iterates
+{(λn1 , . . . , λnm ) : n ∈ N} are dense, as per Kronecker’s theorem (in the form of
+Cor. 6 in App. A).
+     Now the critical case arises when a + min h↾T = 0, where h↾T denotes the
+function h restricted to the torus T . Provided that h↾T achieves its minimum
+−a at only finitely many points, we can use Baker’s theorem (in the form of
+Cor. 8 in App. A) to bound the iterates (λn1 , . . . , λnm ) away from these points by
+an inverse polynomial in n. By combining Renegar’s results (Thm. 4 in App. A)
+with techniques from real algebraic geometry, we then argue that h(λn1 , . . . , λnm )
+is itself eventually bounded away from the minimum −a by a (different) inverse
+polynomial in n, and since r(n) decays to zero exponentially fast, we are able
+to conclude that un /ρn is ultimately positive, and can compute a threshold N
+after which all terms un (for n > N ) are positive.
+     Note in the above that a key component is the requirement that h↾T achieve
+its minimum at finitely many points. Lemmas 10–12 in App. B show that this is
+the case provided that L, the free abelian group of multiplicative relationships
+among the λ1 , . . . , λm , has rank 0, 1, m−1, or m. In fact, simple counterexamples
+can be manufactured in the other instances, which seems to preclude the use of
+Baker’s theorem. Since non-real characteristic roots always arise in conjugate
+pairs, the earliest appearance of this vexing state of affairs is at order 10: one
+real dominant root, m = 4 pairs of complex dominant roots, one non-dominant
+root ensuring that the term r(n) is not identically 0, and a free abelian group L
+of rank 2. The difficulty encountered there is highly reminiscent of (if technically
+different from) that of the critical unresolved case for the Skolem Problem at
+order 5, as described in [29].
+
+We now proceed with the formalisation of the above. Recall that u is assumed to
+be a non-degenerate simple LRS of order at most 9, with a real positive dominant
+characteristic root ρ > 0 and complex dominant roots γ1 , γ1 , . . . , γm , γm ∈ C \ R.
+We write λj = γj /ρ for 1 ≤ j ≤ m.
+             On the Positivity Problem for Simple Linear Recurrence Sequences                   9
+
+   Since the number of dominant roots is odd and at most 9, we divide our
+analysis into two cases, there being exactly 9 dominant roots (Sec. 3.1), and
+there being 7 or fewer dominant roots (Sec. 3.2). Our starting point is Eq. (5).
+   Let L = {(v1 , . . . , vm ) ∈ Zm : λv11 . . . λvmm = 1} have rank p (as a free abelian
+group), and let {ℓ1 , . . . , ℓp } be a basis for L. Write ℓq = (ℓq,1 , . . . , ℓq,m ) for
+1 ≤ q ≤ p. Recall from Thm. 3 in App. A that such a basis may be computed in
+polynomial time, and moreover that each ℓq,j may be assumed to have magnitude
+polynomial in ||u||.
+
+3.1      Nine Dominant Roots
+If u has 9 dominant roots, then m = 4 and r(n) is identically 0 in Eq. (5); the
+latter greatly simplifies our analysis.
+    Write T = {z ∈ C : |z| = 1} for the unit circle in the complex plane, and let
+                                                                        ℓ         ℓ
+         T = {(z1 , . . . , z4 ) ∈ T4 : for each q ∈ {1, . . . , p}, z1q,1 . . . z4q,4 = 1} .
+                                                 P4
+      Define h : T → R by h(z1 , . . . , z4 ) = j=1 (cj zj + cj zj ), so that for all n,
+                                   un
+                                      = a + h(λn1 , . . . , λn4 ) .
+                                   ρn
+By Cor. 6 in App. A, the set {(λn1 , . . . , λn4 ) : n ∈ N} is a dense subset of T . Since
+h is continuous, we then have that inf{un /ρn : n ∈ N} = a + min h↾T . It follows
+that u is ultimately positive iff u is positive iff min h↾T ≥ −a iff
+                        ∀(z1 , z2 , z3 , z4 ) ∈ T, h(z1 , z2 , z3 , z4 ) ≥ −a .             (10)
+
+     We now show how to rewrite Assertion (10) as a sentence in the first-order
+theory of the reals, i.e., involving only real-valued variables and first-order quan-
+tifiers, Boolean connectives, and integer constants together with the arithmetic
+operations of addition, subtraction, multiplication, and division.11 The idea is
+to separately represent the real and imaginary parts of each complex quantity
+appearing in Assertion (10), and combine them using real arithmetic so as to
+mimic the effect of complex arithmetic operations.
+     To this end, we use two real variables xj and yj to represent each of the
+zj : intuitively, zj = xj + iyj . Since the real constant a is algebraic, there is a
+formula σa (x) which is true over the reals precisely for x = a. Likewise, the real
+and imaginary parts Re(cj ) and Im(cj ) of the complex algebraic constants cj
+are themselves real algebraic, and can be represented as formulas in the first-
+order theory of the reals. All such formulas can readily be shown to have size
+polynomial in ||u||.
+                             ℓ
+     Terms of the form zj q,j are simply expanded: for example, if ℓq,j is posi-
+               ℓ
+tive, then zj q,j = (xj + iyj )ℓq,j = Aq,j (xj ) + iBq,j (yj ), where Aq,j and Bq,j are
+11
+     In App. A, we do not have division as an allowable operation in the first-order theory
+     of the reals; however instances of division can always be removed in linear time at
+     the cost of introducing a linear number of existentially quantified fresh variables.
+10        Joël Ouaknine and James Worrell
+
+polynomials with integer coefficients. Note that since the magnitude of ℓq,j is
+polynomial in ||u||, so are ||Aq,j || and ||Bq,j ||. The case in which ℓq,j is negative
+is handled similarly, with the additional use of a division operation.
+    Combining everything, we obtain a sentence τ of the first-order theory of
+the reals with division which is true iff Assertion (10) holds. τ makes use of at
+most 17 real variables: two for each of z1 , . . . , z4 , one for a, and one for each of
+Re(c1 ), Im(c1 ), . . . , Re(c4 ), Im(c4 ). In removing divisions from τ , the number of
+variables potentially swells to 29. Finally, the size of τ is polynomial in ||u||. We
+can therefore invoke Thm. 4 in App. A to conclude that Assertion (10)—and
+therefore the positivity of u—can be decided in time polynomial in ||u||.
+
+
+3.2     Seven or Fewer Dominant Roots
+
+We now turn to the main case, i.e., the situation in which u has 7 dominant
+roots, so that m = 3 in Eq. (5). The cases of 1, 3, and 5 dominant roots are very
+similar—if slightly simpler—and are therefore omitted.
+   As before, we let T = {z ∈ C : |z| = 1}, and write
+                                                                         ℓ   ℓ    ℓ
+         T = {(z1 , z2 , z3 ) ∈ T3 : for each q ∈ {1, . . . , p}, z1q,1 z2q,2 z3q,3 = 1} .
+                                                   P3
+      Define h : T → R by h(z1 , z2 , z3 ) =          j=1 (cj zj + cj zj ), so that for all n,
+
+                                un
+                                   = a + h(λn1 , λn2 , λn3 ) + r(n) .                                (11)
+                                ρn
+
+By Cor. 6 in App. A, the set {(λn1 , λn2 , λn3 ) : n ∈ N} is a dense subset of T . Since
+h is continuous, we have inf{h(λn1 , λn2 , λn3 ) : n ∈ N} = min h↾T = µ, for some
+µ ∈ R.
+    We can represent µ via the following formula τ (y):
+
+      ∃(ζ1 , ζ2 , ζ3 ) ∈ T : (h(ζ1 , ζ2 , ζ3 ) = y ∧ ∀(z1 , z2 , z3 ) ∈ T, y ≤ h(z1 , z2 , z3 )) .
+
+Similarly to the translation carried out in Sec. 3.1, we can construct an equivalent
+formula τ ′ (y) in the first-order theory of the reals, over a bounded number of
+real variables, with ||τ ′ (y)|| = ||u||O(1) . According to Thm. 4 in App. A, we can
+then compute in polynomial time an equivalent quantifier-free formula
+                                             Ji
+                                           I ^
+                                           _
+                                 χ(y) =              hi,j (y) ∼i,j 0 .
+                                           i=1 j=1
+
+    Recall that each ∼i,j is either > or =. Now χ(y) must have a satisfiable
+disjunct, and since the satisfying assignment to y is unique (namely y = µ), this
+disjunct must comprise at least one equality predicate. Since Thm. 4 guarantees
+                                                                            O(1)
+that the degree and height of each hi,j are bounded by ||u||O(1) and 2||u||      re-
+spectively, we immediately conclude that µ is an algebraic number and moreover
+that ||µ|| = ||u||O(1) .
+          On the Positivity Problem for Simple Linear Recurrence Sequences              11
+
+    Returning to Eq. (11), we see that if a + µ < 0, then u is neither positive
+nor ultimately positive, whereas if a + µ > 0 then u is ultimately positive. In
+the latter case, thanks to our bounds on ||µ||, together with the root-separation
+                                                           O(1)
+                                               1
+bound given by Eq. (15) in App. A, we have a+µ    = 2||u||      . The latter, together
+with Eqs. (6)–(8), implies an exponential upper bound on the index of possible
+violations of positivity. The actual positivity of u can then be decided via a
+coNP procedure that invokes a PosSLP oracle as outlined earlier.
+    It remains to analyse the case in which µ = −a. To this end, let λj = eiθj
+for 1 ≤ j ≤ 3. From Eq. (5), we have:
+                                3
+                      un       X
+                         = a +     2|cj | cos(nθj + ϕj ) + r(n) .
+                      ρn       j=1
+
+In the above, cj = |cj |eiϕj for 1 ≤ j ≤ 3. We make the further assumption that
+each cj is non-zero; note that if this did not hold, we could simply recast our
+analysis in a lower dimension.
+    Let Z = {(ζ1 , ζ2 , ζ3 ) ∈ T : h(ζ1 , ζ2 , ζ3 ) = µ} be the set of points of T at which
+h achieves its minimum µ. By Lem. 12 in App. B, Z is finite. We concentrate
+on the set Z1 of first coordinates of Z. Write
+
+                        τ1 (x) = ∃z1 : (Re(z1 ) = x ∧ z1 ∈ Z1 )
+                        τ2 (y) = ∃z1 : (Im(z1 ) = y ∧ z1 ∈ Z1 ) .
+
+Similarly to our earlier constructions, τ1 (x) is equivalent to a formula τ1′ (x) in
+the first-order theory of the reals, over a bounded number of real variables, with
+||τ1′ (x)|| = ||u||O(1) . Thanks to Thm. 4 in App. A, we then obtain an equivalent
+quantifier-free formula
+                                         Ji
+                                       I ^
+                                       _
+                            χ1 (x) =             hi,j (x) ∼i,j 0 .
+                                       i=1 j=1
+
+    Note that since there can only be finitely many x̂ ∈ R such that χ1 (x̂) holds,
+each disjunct of χ1 (x) must comprise at least one equality predicate, or can
+otherwise be entirely discarded as having no solution.
+    A similar exercise can be carried out with τ2 (y), yielding χ2 (y). The bounds
+on the degree and height of each hi,j in χ1 (x) and χ2 (y) then enable us to
+conclude that any ζ = x̂ + iŷ ∈ Z1 is algebraic, and moreover satisfies ||ζ|| =
+||u||O(1) . In addition, bounds on I and Ji guarantee that the cardinality of Z1
+is at most polynomial in ||u||.
+    Since λ1 is not a root of unity, for each ζ ∈ Z1 there is at most one value of
+n such that λn1 = ζ. Thm. 3 in App. A then entails that this value (if it exists)
+is at most M = ||u||O(1) , which we can take to be uniform across all ζ ∈ Z1 .
+We can now invoke Cor. 8 in App. A to conclude that, for n > M , and for all
+ζ ∈ Z1 , we have
+                                               1
+                                |λn1 − ζ| > ||u||D ,                          (12)
+                                            n
+12      Joël Ouaknine and James Worrell
+
+where D ∈ N is some absolute constant.
+   Let b > 0 be minimal such that the set
+                                                                       1
+                {z1 ∈ C : |z1 | = 1 and, for all ζ ∈ Z1 , |z1 − ζ| ≥     }
+                                                                       b
+is non-empty. Thanks to our bounds on the cardinality of Z1 , we can use the
+first-order theory of the reals, together with Thm. 4 in App. A, to conclude that
+b is algebraic and ||b|| = ||u||O(1) .
+    Define the function g : [b, ∞) → R as follows:
+                                                                                      1
+g(x) = min{h(z1 , z2 , z3 ) − µ : (z1 , z2 , z3 ) ∈ T and, for all ζ ∈ Z1 , |z1 − ζ| ≥ } .
+                                                                                      x
+    It is clear that g is continuous and g(x) > 0 for all x ∈ [b, ∞). Moreover, as
+before, g can be rewritten as a function in the first-order theory of the reals over
+a bounded number of variables, with ||g|| = uO(1) . It follows from Prop. 2.6.2
+of [8] (invoked with the function 1/g) that there is a polynomial P ∈ Z[x] such
+that, for all x ∈ [b, ∞),
+                                                    1
+                                      g(x) ≥            .                             (13)
+                                                  P (x)
+Moreover, an examination of the proof of [8, Prop. 2.6.2] reveals that P is ob-
+tained through a process which hinges on quantifier elimination. Combining this
+with Thm. 4 in App. A, we are therefore able to conclude that ||P || = ||u||O(1) ,
+a fact which relies among others on our upper bounds for ||b||.
+                                                           O(1)
+    By Eqs. (6)–(8), we can find ε ∈ (0, 1) and N = 2||u||      such that for all
+                                                              O(1)
+n > N , we have |r(n)| < (1 − ε)n , and moreover 1/ε = 2||u||      . Moreover, by
+                                         O(1)
+Prop. 9 in App. A, there is N ′ = 2||u||      such that
+                                     1
+                                              > (1 − ε)n                             (14)
+                                 P (n||u||D )
+for all n ≥ N ′ .
+    Combining Eqs. (11)–(14), we get
+                        un
+                           = a + h(λn1 , λn2 , λn3 ) + r(n)
+                        ρn
+                           ≥ −µ + h(λn1 , λn2 , λn3 ) − (1 − ε)n
+                                       D
+                            ≥ g(n||u|| ) − (1 − ε)n
+                                   1
+                            ≥              − (1 − ε)n
+                              P (n||u||D )
+                            ≥ 0,
+
+provided n > max{M, N, N ′ }, which establishes ultimate positivity of u and
+provides an exponential upper bound on the index of possible violations of posi-
+tivity, as required. We can then decide the actual positivity of u via a coNPPosSLP
+procedure as detailed earlier.
+    This completes the proof of Thm. 1.
+            On the Positivity Problem for Simple Linear Recurrence Sequences          13
+
+A       Mathematical Tools
+In this appendix we summarise the main technical tools used in this paper.
+     For p ∈ Z[x1 , . . . , xm ] a polynomial with integer coefficients, let us denote by
+||p|| the bit length of its representation as a list of coefficients encoded in binary.
+Note that the degree of p is at most ||p||, and the height of p—i.e., the maximum
+of the absolute values of its coefficients—is at most 2||p|| .
+     We begin by recalling some basic facts about algebraic numbers and their
+(efficient) manipulation. The main references include [13, 5, 33].
+     A complex number α is algebraic if it is a root of a single-variable polynomial
+with integer coefficients. The defining polynomial of α, denoted pα , is the
+unique polynomial of least degree, and whose coefficients do not have common
+factors, which vanishes at α. The degree and height of α are respectively those
+of pα .
+     A standard representation12 for algebraic numbers is to encode α as a tuple
+comprising its defining polynomial together with rational approximations of its
+real and imaginary parts of sufficient precision to distinguish α from the other
+roots of pα . More precisely, α can be represented by (pα , a, b, r) ∈ Z[x] × Q3
+provided that α is the unique root of pα inside the circle in C of radius r centred
+at a + bi. A separation bound due to Mignotte [26] asserts that for roots α 6= β
+of a polynomial p ∈ Z[x], we have
+                                                 √
+                                                    6
+                                   |α − β| > (d+1)/2 d−1 ,                           (15)
+                                            d        H
+where d and H are respectively the degree and height of p. Thus if r is required
+to be less than a quarter of the root-separation bound, the representation is
+well-defined and allows for equality checking. Given a polynomial p ∈ Z[x],
+it is well-known how to compute standard representations of each of its roots
+in time polynomial in ||p|| [32, 13, 5]. Thus given α an algebraic number for
+which we have (or wish to compute) a standard representation, we write ||α||
+to denote the bit length of this representation. From now on, when referring to
+computations on algebraic numbers, we always implicitly refer to their standard
+representations.
+    Note that Eq. (15) can be used more generally to separate arbitrary alge-
+braic numbers: indeed, two algebraic numbers α and β are always roots of the
+polynomial pα pβ of degree at most the sum of the degrees of α and β, and of
+height at most the product of the heights of α and β.
+    Given algebraic numbers α and β, one can compute α + β, αβ, 1/α (for
+non-zero α), α, and |α|, all of which are algebraic, in time polynomial in ||α|| +
+||β||. Likewise, it is straightforward to check whether α = β. Moreover, if α ∈
+R, deciding whether α > 0 can be done in time polynomial in ||α||. Efficient
+algorithms for all these tasks can be found in [13, 5].
+    Remarkably, integer multiplicative relationships among a fixed number of
+algebraic numbers can be elicited systematically in polynomial time:
+12
+     Note that this representation is not unique.
+14      Joël Ouaknine and James Worrell
+
+Theorem 3. Let m be fixed, and let λ1 , . . . , λm be complex algebraic numbers
+of modulus 1. Consider the free abelian group L under addition given by
+                     L = {(v1 , . . . , vm ) ∈ Zm : λv11 . . . λvmm = 1} .
+    L has a basis {ℓ1 , . . . , ℓp } ⊆ Zm (with p ≤ m), where the entries of each of
+the ℓj are all polynomially bounded in ||λ1 || + . . . + ||λm ||. Moreover, such a basis
+can be computed in time polynomial in ||λ1 || + . . . + ||λm ||.
+    Note in the above that the bound is on the magnitude of the vectors ℓj
+(rather than the bit length of their representation), which follows from a deep
+result of Masser [25]. For a proof of Thm. 3, see also [17, 12].
+    We now turn to the first-order theory of the reals. Let x = (x1 , . . . , xm )
+and y = (y1 , . . . , yr ) be tuples of real-valued variables, and let σ(x, y) be a
+Boolean combination of atomic predicates of the form g(x, y) ∼ 0, where each
+g(x, y) ∈ Z[x, y] is a polynomial with integer coefficients over these variables,
+and ∼ is either > or =. A formula of the first-order theory of the reals is
+of the form
+                               Q1 x1 . . . Qm xm σ(x, y) ,                     (16)
+where each Qi is one of the quantifiers ∃ or ∀. Let us denote the above formula
+by τ (y), whose free variables are contained in y. When τ has no free variables,
+we refer to it as a sentence. Naturally, ||τ (y)|| denotes the bit length of the
+syntactic representation of the formula, and the degree and height of τ (y)
+refer to the maximum degree and height of the polynomials g(x, y) appearing
+in τ (y).
+    Tarski [40] famously showed that the first-order theory of the reals admits
+quantifier elimination: that is, given τ (y) as above, there is a quantifier-free
+formula χ(y) that is equivalent to τ : for any tuple ŷ = (ŷ1 , . . . , ŷr ) ∈ Rr of real
+numbers, τ (ŷ) holds iff χ(ŷ) holds. An immediate corollary is that the first-order
+theory of the reals is decidable.
+    Tarski’s procedure, however, has non-elementary complexity. Many substan-
+tial improvements followed over the years, starting with Collins’s technique of
+cylindrical algebraic decomposition [14]. For our purposes, we require bounds not
+only on the computation time, but also on the degree and height of the resulting
+equivalent quantifier-free formula, as well as on the number of atomic predicates
+it comprises. Such bounds are available thanks to the work of Renegar [33]. In
+this paper, we focus exclusively on the situation in which the number of variables
+is uniformly bounded.
+Theorem 4 (Renegar). Let M ∈ N be fixed. Let τ (y) be of the form (16)
+above. Assume that the number of (free and bound) variables in τ (y) is bounded
+by M (i.e., m + r ≤ M ). Denote the degree of τ (y) by d and the number of
+atomic predicates in τ (y) by n.
+   Then there is a procedure which computes an equivalent quantifier-free for-
+mula
+                                  I ^
+                                  _  Ji
+                           χ(y) =       hi,j (y) ∼i,j 0
+                                       i=1 j=1
+          On the Positivity Problem for Simple Linear Recurrence Sequences           15
+
+in disjunctive normal form, where each ∼i,j is either > or =, with the following
+properties:
+
+1. Each of I and Ji (for 1 ≤ i ≤ I) is bounded by (nd)O(1) ;
+2. The degree of χ(y) is bounded by (nd)O(1) ;
+                                                   O(1)
+3. The height of χ(y) is bounded by 2||τ (y)||(nd)      .
+
+   Moreover, this procedure runs in time polynomial in ||τ (y)||.
+
+    Note in particular that, when τ is a sentence, its truth value can be deter-
+mined in polynomial time.
+    Thm. 4 follows immediately from Thm. 1.1 (for the case in which τ is a
+sentence) and Thm. 1.2 of [33].
+    Our next result is a special case of Kronecker’s famous theorem on simulta-
+neous Diophantine approximation, a statement and proof of which can be found
+in [9, Chap. 7, Sec. 1.3, Prop. 7].
+    For x ∈ R, write [x]2π to denote the distance from x to the closest integer
+multiple of 2π: [x]2π = min{|x − 2πj| : j ∈ Z}.
+
+Theorem 5 (Kronecker). Let t1 , . . . , tm , x1 , . . . , xm ∈ [0, 2π). The following
+are equivalent:
+
+1. For any ε > 0, there exists n ∈ Z such that, for 1 ≤ j ≤ m, we have
+   [ntj − xj ]2π ≤ ε.
+2. For every tuple (v1 , . . . , vm ) of integers such that v1 t1 + . . . + vm tm ∈ 2πZ,
+   we have v1 x1 + . . . + vm xm ∈ 2πZ.
+
+    We can strengthen Thm. 5 by requiring that n ∈ N in the first assertion.
+Indeed, suppose that in a given instance, we find that n < 0. A straightforward
+pigeonhole argument shows that there exist arbitrarily large positive integers g
+such that [gtj ]2π ≤ ε for 1 ≤ j ≤ m. It follows that [(g + n)tj − xj ]2π ≤ 2ε, which
+establishes the claim for sufficiently large g (noting that ε is arbitrary).
+    Let λ1 , . . . , λm be complex algebraic numbers of modulus 1. For each j ∈
+{1, . . . , m}, write λj = eiθj for some θj ∈ [0, 2π). Let
+
+              L = {(v1 , . . . , vm ) ∈ Zm : λv11 . . . λvmm = 1}
+                = {(v1 , . . . , vm ) ∈ Zm : v1 θ1 + . . . + vm θm ∈ 2πZ} .
+
+Recall from Thm. 3 that L is a free abelian group under addition with basis
+{ℓ1 , . . . , ℓp } ⊆ Zm , where p ≤ m.
+    For each j ∈ {1, . . . , p}, let ℓj = (ℓj,1 , . . . , ℓj,m ). Write
+
+        R = {x = (x1 , . . . , xm ) ∈ [0, 2π)m : ℓj · x ∈ 2πZ for 1 ≤ j ≤ p} .
+
+By Thm. 5, for an arbitrary tuple (x1 , . . . , xm ) ∈ [0, 2π)m , it is the case that,
+for all ε > 0, there exists n ∈ N such that, for j ∈ {1, . . . , m}, [nθj − xj ]2π ≤ ε
+iff (x1 , . . . , xm ) ∈ R.
+16        Joël Ouaknine and James Worrell
+
+    Write T = {z ∈ C : |z| = 1}, and observe that (x1 , . . . , xm ) ∈ R iff
+(eix1 , . . . , eixm ) ∈ T , where
+                                                                      ℓ
+        T = {(z1 , . . . , zm ) ∈ Tm : for each j ∈ {1, . . . , p}, z1j,1 . . . zm
+                                                                                 ℓj,m
+                                                                                      = 1} .
+
+      Since einθj = λnj , we immediately have the following:
+Corollary 6. Let λ1 , . . . , λm and T be as above. Then {(λn1 , . . . , λnm ) : n ∈ N}
+is a dense subset of T .
+    Finally, we give a version of Baker’s deep theorem on linear forms in loga-
+rithms. The particular statement we have chosen is a sharp formulation due to
+Baker and Wüstholz [4].
+    In what follows, log refers to the principal value of the complex logarithm
+function given by log z = log |z| + i arg z, where −π < arg z ≤ π.
+Theorem 7 (Baker and Wüstholz). Let α1 , . . . , αm ∈ C be algebraic num-
+bers different from 0 or 1, and let b1 , . . . , bm ∈ Z be integers. Write
+
+                              Λ = b1 log α1 + . . . + bm log αm .
+
+Let A1 , . . . , Am , B ≥ e be real numbers such that, for each j ∈ {1, . . . , m}, Aj is
+an upper bound for the height of αj , and B is an upper bound for |bj |. Let d be
+the degree of the extension field Q(α1 , . . . , αm ) over Q.
+    If Λ 6= 0, then log |Λ| > −(16md)2(m+2) log A1 . . . log Am log B.
+Corollary 8. There exists D ∈ N such that, for any algebraic numbers λ, ζ ∈ C
+of modulus 1, and for all n ≥ 2, whenever λn 6= ζ, then
+                                                       1
+                                  |λn − ζ| >                      .
+                                                n(||λ||+||ζ||)D
+Proof. We can clearly assume that λ 6= 1, otherwise the result follows immedi-
+ately from Eq. (15). Likewise, the case ζ = 1 is easily handled along the same
+lines as the proof below, so we assume ζ 6= 1.
+    Let θ = arg λ and ϕ = arg ζ. Then for all n ∈ N, there is j ∈ Z with |j| ≤ n
+such that
+                          1                 1
+            |λn − ζ| >      |nθ − ϕ − 2jπ| = |n log λ − log ζ − 2j log(−1)| .
+                          2                 2
+    Let H ≥ e be an upper bound for the heights of λ and ζ, and let d be the
+largest of the degrees of λ and ζ. Notice that the degree of Q(λ, ζ) over Q is at
+most d2 . Applying Thm. 7 to the right-hand side of the above equation, we get
+                  1                                                1
+     |λn − ζ| >     exp −(48d2 )10 log2 H log(2n + 1) =
+                                                     
+                                                                     2            .
+                  2                                     2(2n + 1)(log H)(48d2 )10
+for n ≥ 1, provided λn 6= ζ.
+    The required result follows by noting that log H ≤ ||λ|| + ||ζ|| and d ≤
+||λ|| + ||ζ||.                                                             ⊔
+                                                                           ⊓
+         On the Positivity Problem for Simple Linear Recurrence Sequences    17
+
+   Finally, we record the following fact, whose straightforward proof is left to
+the reader.
+
+Proposition 9. Let a ≥ 2 and ε ∈ (0, 1) be real numbers. Let B ∈ Z[x] have
+                                          D2                             D3
+degree at most aD1 and height at most 2a , and assume that 1/ε ≤ 2a , for
+some D1 , D2 , D3 ∈ N. Then there is D4 ∈ N depending only on D1 , D2 , D3 such
+                    D4   1
+that, for all n ≥ 2a ,       > (1 − ε)n .
+                       B(n)
+18      Joël Ouaknine and James Worrell
+
+B    Zero-Dimensionality Lemmas
+
+We present the key results enabling our application of Baker’s theorem to the
+discrete orbit {(λn1 , . . . , λnm ) : n ∈ N} in two or three complex dimensions. In the
+terminology of Sec. 3, Lem. 12 shows that the function h achieves its minimum
+over the torus T at finitely many points. To do so, it relies on Lem. 10 to handle
+the case in which L, the free abelian group of multiplicative relationships among
+λ1 , . . . , λm , has rank 1 or 0, and invokes Lem. 11 to do the same when L has
+rank m − 1.
+
+Lemma 10. Let a1 , . . . , am ∈ R and ϕ1 , . . . , ϕm ∈ R be two collections of real
+numbers, with each of the ai non-zero, and let ℓ1 , . . . , ℓm ∈ Z be m integers.
+Define f, g : Rm → R by setting
+                              m
+                              X                                                      m
+                                                                                     X
+     f (x1 , . . . , xm ) =         ai cos(xi + ϕi )   and   g(x1 , . . . , xm ) =         ℓi xi .
+                              i=1                                                    i=1
+
+Assume that g(x1 , . . . , xm ) is not of the form ℓ(xi ± xj ), for some non-zero ℓ ∈ Z
+and indices i 6= j. Let ψ ∈ R, and let µ ∈ R be the minimum achieved by the
+function f subject to the constraint g(x1 , . . . , xm ) = ψ.
+   Then f , subject to g(x1 , . . . , xm ) = ψ, achieves µ at only finitely many points
+over the domain [0, 2π)m .
+
+Proof. We will establish the slightly stronger statement that f , subject to the
+constraint g = ψ, achieves its minimum over Rm only finitely often modulo 2π.
+                                                    ′
+               P performing the substitutions xi = xi + ϕi (for 1 ≤ i ≤ m)
+    Note that by
+and ψ ′ = ψ + m      ℓ ϕ
+                 i=1 i i ,  and  rephrasing the statement     in terms of the primed
+variables and constant ψ ′ , we see that we may assume without loss of generality
+that each ϕi = 0.
+    Observe that if each ℓi = 0 (corresponding to there being no constraint),
+the result is immediate: f is minimised when each xi is either an odd or even
+multiple of π, depending on the sign of ai . Without loss of generality, let us
+therefore assume that ℓ1 is non-zero. The case of m = 1 is also immediate, since
+the constraint then reduces the domain of the unique variable x1 to a singleton.
+Let us therefore assume that m ≥ 2.
+    We use the method of Lagrange multipliers. Minima of f subject to the
+constraint g = ψ must satisfy ∇f = λ∇g for some λ ∈ R, i.e., −ai sin xi = λℓi ,
+for 1 ≤ i ≤ m. Note that λ must satisfy |λ| ≤ |a      i|
+                                                   |ℓi | for all 1 ≤ i ≤ m. Observe
+also that each choice of λ gives rise to only finitely many choices of x1 , . . . , xm
+(modulo 2π) which satisfy these equations.
+                                                                   λ2 ℓ2
+   From −ai sin xi = λℓi , it follows that cos2 xi = 1 − a2 i . Taking square roots
+                                                          i
+gives us 2m choices of signs, and for each choice let us write
+                                           s
+                                     m
+                                                    ℓ2
+                           f˜(λ) =
+                                    X
+                                        ±ai 1 − λ2 i2 .
+                                    i=1
+                                                    ai
+            On the Positivity Problem for Simple Linear Recurrence Sequences                      19
+
+    Suppose that there are infinitely many values of (x1 , . . . , xm ) (modulo 2π)
+such that g(x1 , . . . , xm ) = ψ and f (x1 , . . . , xm ) = µ. It then follows that, for
+some fixed choice of signs, there must be infinitely many values of λ such that
+f˜(λ) = µ.
+    Assume without loss of generality that |a         1|   |ai |
+                                                   |ℓ1 | ≤ |ℓi | for 2 ≤ i ≤ m. Notice that
+f˜(λ) is analytic (equal to its Taylor power series) on ( −|a1 | , |a1 | ). Now if the set
+                                                                           |ℓ1 |   |ℓ1 |
+of λ such that f˜(λ) = µ has an accumulation point in ( −|a 1 | |a1 |          ˜
+                                                         |ℓ1 | , |ℓ1 | ), then f is
+identically equal to µ on [ −|a 1 | |a1 |
+                             |ℓ1 | , |ℓ1 | ]. Thus in any case the set of λ such that
+f˜(λ) = µ must have an accumulation point at |a1 | .
+                                                   |ℓ1 |
+                     |a1 |  |ai |
+    Observe that if |ℓ1 | < |ℓi | for all 2 ≤ i ≤ m, then a contradiction is reached
+   ˜
+as f cannot infinitely often take on the constant value µ as λ approaches |a    1|
+
+                                                             q                |ℓ1 | . To
+                                                                      ℓ2
+see this, examine the derivative of each term of the form 1 − λ2 ai2 : it remains
+                                                                       i
+bounded for i 6= 1, but tends to −∞ for i = 1.
+   Let I be the set of indices i ∈ {1, . . . , m} such that |a i|   |a1 |
+                                                            |ℓi | = |ℓ1 | . By the same
+argument as above, for the given choice of signs in f˜, we must have
+                                                                            X
+                                                                               ± ai = 0,
+                                                                                           i∈I
+and therefore for all λ ∈ [ −|a 1 | |a1 |
+                             |ℓ1 | , |ℓ1 | ],
+                                                         s
+                                                                ℓ2
+                                 f˜(λ) =
+                                             X
+                                                   ±ai    1 − λ2 i2 .                            (17)
+                                                                ai
+                                              /
+                                             i∈I
+
+     Observe that |I| ≥ 2. Two cases now arise, according to whether (i) |I| ≥ 3
+or (ii) |I| = 2. In both cases, we derive a contradiction by showing that f subject
+to g = ψ can achieve a value strictly lower than µ.
+     (i) Suppose without loss of generality that I = {1, 2, . . . , p}, where p ≥
+3, and that |ap | ≤ |ai | for 1 ≤ i ≤ p − 1. Pick x̂1 , . . . , x̂m ∈ R such that
+f (x̂1 , . . . , x̂m ) = µ and g(x̂1 , . . . , x̂m ) = ψ. There is some value λ̂ ∈ [ −|a 1 | |a1 |
+                                                                                      |ℓ1 | , |ℓ1 | ]
+such that −ai sin x̂i = λ̂ℓi , for 1 ≤ i ≤ m. Now for the given choice of signs in f˜,
+                         s                                         s
+                   p                                        m
+                  X               ℓ2i                      X               ℓ2
+                                2
+                      ±ai 1 − λ̂ 2 = 0 and                      ±ai 1 − λ̂2 i2 = µ ,
+                  i=1
+                                  ai                      i=p+1
+                                                                           ai
+
+or equivalently,
+                      p
+                      X                                      m
+                                                             X
+                            ai cos x̂i = 0     and                   ai cos x̂i = µ .            (18)
+                      i=1                                    i=p+1
+
+   In order to make f assume a value strictly smaller than µ, pick x̌1 , . . . , x̌p−1
+to be π or 0 depending respectively on the signs of a1 , . . . , ap−1 , and pick x̌p so
+that g(x̌1 , . . . , x̌p , x̂p+1 , . . . , x̂m ) = ψ (noting that ℓp 6= 0 since p ∈ I). Then
+                               p                       p−1
+                                                                !
+                              X                        X
+                                    ai cos x̌i ≤ −         |ai | + |ap | < 0 ,
+                          i=1                       i=1
+20      Joël Ouaknine and James Worrell
+
+where the strict inequality follows from the fact that p ≥ 3 and |ap | ≤ |ai | for
+1 ≤ i ≤ p − 1.
+   It then follows by the right-hand side of (18) that
+                           f (x̌1 , . . . , x̌p , x̂p+1 , . . . , x̂m ) < µ ,
+concluding Case (i).
+     (ii) Without loss of generality, let us have I = {1, 2}, so that |a1 | = |a2 | and
+|ℓ1 | = |ℓ2 |. Note that we then cannot have ℓ3 , . . . , ℓm all zero, otherwise g would
+be of the form ℓ1 (x1 ± x2 ), violating one of our hypotheses. It therefore also
+follows that m ≥ 3.
+     We can thus assume without loss of generality that ℓ3 is non-zero, and fur-
+thermore that |a     3|    |ai |                                                ˜
+                   |ℓ3 | ≤ |ℓi | for 4 ≤ i ≤ m. From Eq. (17), we see that f can be
+analytically extended to the larger domain ( −|a      3 | |a3 |
+                                                   |ℓ3 | , |ℓ3 | ), and by a similar line of
+reasoning as earlier, we can then conclude that there must be a non-empty                set
+                                             |aj |      |a3 |
+                                                                              X
+J ⊆ {3, . . . , m} such that, for all j ∈ J, |ℓj | = |ℓ3 | and moreover           ± aj = 0
+                                                                                j∈J
+for the given choice of signs in f˜. We can therefore write
+                                            s
+                           ˜
+                                     X               ℓ2
+                           f (λ) =      ±ai 1 − λ2 i2 .
+                                                     ai
+                                         /
+                                        i∈I∪J
+
+   But this situation is entirely similar to Case (i) since |I ∪ J| ≥ 3, which
+concludes Case (ii) and the proof of Lem. 10.                                ⊔
+                                                                             ⊓
+Lemma 11. Let u be a non-degenerate simple LRS, with dominant character-
+istic roots ρ ∈ R and γ1 , γ1 , . . . , γm , γm ∈ C \ R. Write λi = γi /ρ for 1 ≤ i ≤ m,
+and assume the free abelian group L = {(v1 , . . . , vm ) ∈ Zm : λv11 . . . λvmm = 1} has
+rank m − 1. Let {ℓ1 , . . . , ℓm−1 } be a basis for L, and write ℓj = (ℓj,1 , . . . , ℓj,m )
+for 1 ≤ j ≤ m − 1. Let
+                                                                  
+                               ℓ1,1      ℓ1,2 . . . ℓ1,m−1    ℓ1,m
+                         ℓ2,1           ℓ2,2 . . . ℓ2,m−1    ℓ2,m 
+                  M = .                  .            .        ..  .
+                                                                  
+                         ..              ..   ..      ..
+                                                  .              . 
+                            ℓm−1,1 ℓm−1,2 . . . ℓm−1,m−1 ℓm−1,m
+Let a1 , . . . , am ∈ R and ϕ1 , . . . , ϕm ∈ R be two collections of m real numbers,
+with each of the ai non-zero, and define f : Rm → R, by setting
+                                                  m
+                                                  X
+                         f (x1 , . . . , xm ) =         ai cos(xi + ϕi ) .
+                                                  i=1
+
+Let q = (q1 , . . . , qm−1 ) ∈ Zm−1 be a column vector of m − 1 integers, and denote
+by x the column vector of variables (x1 , . . . , xm ). Let µ ∈ R be the minimum
+achieved by the function f subject to the constraint M x = 2πq.
+    Then f , subject to M x = 2πq, achieves µ at only finitely many points over
+the domain [0, 2π)m .
+           On the Positivity Problem for Simple Linear Recurrence Sequences                21
+
+Proof. By repeatedly making use of the following row operations:
+
+ 1. Swapping two rows,
+ 2. Multiplying any row by a non-zero integer, and
+ 3. Adding to any row any integer linear combination of any of the other rows,
+
+we can transform the augmented matrix (M |q) into an integer matrix
+                                                                      
+                   n1,1 0 . . . . . . . . . . . . .    0      b1   p1
+                   0 n2,2 0 . . . . . . . . . .       0      b2   p2 
+                   .. . . . .                         .       .    ..  .
+                                                                      
+         (N |p) =  .                  . ..            ..      ..
+                         .    .                                     . 
+                                                                       
+                   0 . . . 0 nm−2,m−2                 0     bm−2 pm−2 
+                     0 .......           0          nm−1,m−1 bm−1 pm−1
+
+    Without loss of generality (relabelling variables and constants if necessary),
+we can assume that this was achieved without the need for any row-swapping
+operations.
+    Note that the rows of N remain in L (though need no longer form a basis).
+                                                                                  n
+Hence for each i ∈ {1, . . . , m − 1}, the λ1 , . . . , λm satisfy the equation λi i,i λbmi =
+1. Since M has rank m − 1, and N is obtained from M by elementary row
+operations, no row of N can be 0. From this and the fact that the LRS u is
+non-degenerate we may conclude that no ni,i can be zero (otherwise λm would
+be a root of unity), and likewise no bi can be zero (otherwise λi would be a root
+of unity). Furthermore, we can never have ni,i = −bi (otherwise λi /λm would be
+a root of unity) nor can we have ni,i = bi (otherwise λi /λm would be a root of
+                                                                                          bj
+unity). In other words, we always have n2i,i 6= b2i . Finally, for i 6= j, nbi,ii
+                                                                                    6= nj,j  :
+                 n                        n   b   b b                        n   b   b b
+indeed, since λi i,i λbmi = 1, we have λi i,i j λmi j = 1, and likewise λj j,j i λmi j = 1,
+                                n b         n b                              bj
+from which we deduce that λi i,i j = λj j,j i . But if we had nbi,i   i
+                                                                         = nj,j , it would
+                                                                        nj,j     −n
+follow that λi /λj is a root of unity. Similarly, by noting that λj          = λj j,j and
+                                                          bj
+repeating the calculation, we deduce that nbi,i  i
+                                                    6= − nj,j for i 6= j. Combining the
+                                        b2i     b2j
+last two disequalities, we have that n2 6= n2 for i 6= j.
+                                         i,i    j,j
+   It is clear that the equations M x = 2πq and N x = 2πp are equivalent (as
+constraints over the vector of real-valued variables x). From the latter, we may
+write xi = npi,i
+              i
+                 − nbi,i
+                      i
+                         xm for 1 ≤ i ≤ m − 1. For ease of notation, let us set
+
+                               bi
+                     di = −        for 1 ≤ i ≤ m − 1, and dm = 1 ;
+                              ni,i
+                          pi
+                  νi =        + ϕi for 1 ≤ i ≤ m − 1, and νm = ϕm .
+                         ni,i
+
+From our earlier observations, let us record that:
+
+ 1. Each di is non-zero, and
+ 2. For 1 ≤ i < j ≤ m, we have d2i 6= d2j .
+22      Joël Ouaknine and James Worrell
+
+Indeed, we have already seen that the second assertion holds when j ≤ m − 1.
+But since n2i,i 6= b2i , for 1 ≤ i ≤ m − 1 we have that d2i 6= 1 = d2m .
+   Substituting into f yields
+                                        m
+                            f˜(xm ) =
+                                        X
+                                              ai cos(di xm + νi ) ,
+                                        i=1
+
+where f˜ is now unconstrained. Since any value of xm in [0, 2π) such that f˜(xm ) =
+µ yields at most one point x in [0, 2π)m satisfying M x = 2πq and such that
+f (x) = µ, it remains to show that f˜ can achieve µ only finitely often over [0, 2π).
+     Thus suppose, to the contrary, that f˜ achieves µ at infinitely many points in
+[0, 2π). These points must accumulate, and since f˜ is analytic over R, f˜ must be
+identically equal to µ all over the reals. It follows that derivatives of all orders
+must vanish everywhere. Now for j ≥ 1, the (2j − 1)th derivative of f˜ is given
+by
+                                  m
+                                    (−1)j di2j−1 ai sin(di xm + νi ) .
+                                  X
+                 f (2j−1) (xm ) =
+                                   i=1
+Writing
+                     1                         1          .......           1
+                                                                                      
+                   −d21                      −d22        .......          −d2m        
+                    d41                       d42         .......          d4m
+                                                                                      
+     D=                                                                               ,
+                                                                                      
+                    ..                        ..            ..             ..         
+                     .                         .             .              .         
+                        2(m−1)                   2(m−1)                       2(m−1)
+              (−1)m−1 d1          (−1)m−1 d2                ...       (−1)m−1 dm
+we therefore have that
+           (1)                                            
+              f (xm )              −d1 a1 sin(d1 xm + ν1 )      0
+           f (3) (xm )          −d2 a2 sin(d2 xm + ν2 )  0
+                  ..         = D            ..            =  .. 
+                                                          
+          
+                  .                         .            .
+               f (2m−1) (xm )            −dm am sin(dm xm + νm )                  0
+
+must hold for all xm ∈ R.
+    But this is a contradiction since D is a Vandermonde matrix which is invert-
+ible (given that for i 6= j, we have −d2i 6= −d2j ) and the vector
+                                                       
+                                −d1 a1 sin(d1 xm + ν1 )
+                              −d2 a2 sin(d2 xm + ν2 ) 
+                                           ..
+                                                       
+                                                       
+                                           .           
+                                −dm am sin(dm xm + νm )
+clearly cannot be identically 0.                                                            ⊔
+                                                                                            ⊓
+Lemma 12. Following the notation of Sec. 3, let u be a non-degenerate sim-
+ple LRS with a real positive dominant characteristic root ρ > 0 and complex
+dominant roots γ1 , γ1 , γ2 , γ2 , γ3 , γ3 ∈ C \ R. Write λj = γj /ρ for 1 ≤ j ≤ 3.
+           On the Positivity Problem for Simple Linear Recurrence Sequences                      23
+
+   Let L = {(v1 , v2 , v3 ) ∈ Z3 : λv11 λv22 λv33 = 1} have rank p (as a free abelian
+group), and let {ℓ1 , . . . , ℓp } be a basis for L. Write ℓq = (ℓq,1 , ℓq,2 , ℓq,3 ) for
+1 ≤ q ≤ p.
+                                                                 ℓ     ℓ     ℓ
+   Let T = {(z1 , z2 , z3 ) ∈ T3 : for each q ∈ {1, . . . , p}, z1q,1 z2q,2 z3q,3 = 1}, where
+T = {z ∈ C : |z| = 1}.
+                                                     P3
+   Define h : T → R by setting h(z1 , z2 , z3 ) = j=1 (cj zj + cj zj ).
+   Then h achieves its minimum µ at only finitely many points over T .
+Proof. (i) We first consider the case in which L has rank 1, and handle the case
+of rank 0 immediately afterwards. Let ℓ1 = (ℓ1,1 , ℓ1,2 , ℓ1,3 ) ∈ Z3 span L. Write
+
+           R = {(x1 , x2 , x3 ) ∈ [0, 2π)3 : ℓ1,1 x1 + ℓ1,2 x2 + ℓ1,3 x3 ∈ 2πZ} .
+
+Clearly, for any (x1 , x2 , x3 ) ∈ [0, 2π)3 , we have (x1 , x2 , x3 ) ∈ R iff (eix1 , eix2 , eix3 ) ∈
+T . Define f : R → R by setting
+                                                3
+                                                X
+                          f (x1 , x2 , x3 ) =         2|cj | cos(xj + ϕj ) .
+                                                j=1
+
+Plainly, for all (x1 , x2 , x3 ) ∈ R, we have f (x1 , x2 , x3 ) = h(eix1 , eix2 , eix3 ), and
+therefore the minima of f over R are in one-to-one correspondence with those
+of h over T .
+    Define g : R3 → R by setting
+
+                         g(x1 , x2 , x3 ) = ℓ1,1 x1 + ℓ1,2 x2 + ℓ1,3 x3 .
+
+Note that g(x1 , x2 , x3 ) cannot be of the form ℓ(xi − xj ), for non-zero ℓ ∈ Z and
+i 6= j, otherwise (by definition of ℓ1 ) λℓi λ−ℓj = 1, i.e., λi /λj would be a root of
+unity, contradicting the non-degeneracy of u. Likewise, g cannot be of the form
+ℓ(xi + xj ), otherwise λi /λj would be a root of unity.
+     Finally, observe that for (x1 , x2 , x3 ) ∈ [0, 2π)3 , we have (x1 , x2 , x3 ) ∈ R iff
+ℓ1,1 x1 + ℓ1,2 x2 + ℓ1,3 x3 = 2πq, for some q ∈ Z with |q| ≤ |ℓ1,1 | + |ℓ1,2 | + |ℓ1,3|. For
+each of these finitely many q, we can invoke Lem. 10 with f , g, and ψ = 2πq,
+to conclude that f achieves its minimum µ at finitely many points over R, and
+therefore that h achieves the same minimum at finitely many points over T .
+     The case of L having rank 0, i.e., when there are no non-trivial integer multi-
+plicative relationships among λ1 , λ2 , λ3 , is now a special case of the above, where
+we have ℓ1,1 = ℓ1,2 = ℓ1,3 = 0.
+     (ii) We now turn to the case of L having rank 2. We have ℓ1 = (ℓ1,1 , ℓ1,2 , ℓ1,3 ) ∈
+Z3 and ℓ2 = (ℓ2,1 , ℓ2,2 , ℓ2,3 ) ∈ Z3 spanning L. Let x denote the column vector
+(x1 , x2 , x3 ), and write
+
+           R = {(x1 , x2 , x3 ) ∈ [0, 2π)3 : ℓ1 · x ∈ 2πZ and ℓ2 · x ∈ 2πZ} .
+                                                          3
+                                                          X
+Define f : R → R by setting f (x1 , x2 , x3 ) =                 2|cj | cos(xj + ϕj ). As before, the
+                                                          j=1
+minima of f over R are in one-to-one correspondence with those of h over T .
+24       Joël Ouaknine and James Worrell
+
+     For (x1 , x2 , x3 ) ∈ [0, 2π)3 , we have ℓ1 ·x ∈ 2πZ and ℓ2 ·x ∈ 2πZ iff there exist
+q1 , q2 ∈ Z, with |q1 | ≤ |ℓ1,1 | + |ℓ1,2 | + |ℓ1,3 | and |q2 | ≤ |ℓ2,1 | + |ℓ2,2 | + |ℓ2,3 |, such
+that ℓ1 · x = 2πq1 and ℓ2 · x = 2πq2 . For each of these         finitely many q = (q1 , q2 ),
+                                                  ℓ1,1 ℓ1,2 ℓ1,3
+we can invoke Lem. 11 with f , M =                                , and q, to conclude that
+                                                  ℓ2,1 ℓ2,2 ℓ2,3
+f achieves its minimum µ at finitely many points over R, and therefore that h
+achieves the same minimum at finitely many points over T .
+     (iii) Finally, observe that L cannot have rank 3, since this would immediately
+entail that every λj is a root of unity (contradicting the non-degeneracy of u),
+following a row-reduction procedure similar to the one presented in the first
+stages of the proof of Lem. 11.                                                                   ⊔
+                                                                                                  ⊓
+          On the Positivity Problem for Simple Linear Recurrence Sequences             25
+
+References
+ [1] E. Allender, P. Bürgisser, J. Kjeldgaard-Pedersen, and P. B. Miltersen. On the
+     complexity of numerical analysis. SIAM J. Comput., 38(5), 2009.
+ [2] F. Amoroso and E. Viada. Small points on subvarieties of a torus. Duke Mathe-
+     matical Journal, 150(3), 2009.
+ [3] F. Amoroso and E. Viada. On the zeros of linear recurrence sequences. Acta
+     Arithmetica, 147(4), 2011.
+ [4] A. Baker and G. Wüstholz. Logarithmic forms and group varieties. Jour. Reine
+     Angew. Math., 442, 1993.
+ [5] S. Basu, R. Pollack, and M.-F. Roy. Algorithms in Real Algebraic Geometry.
+     Springer, 2nd edition, 2006.
+ [6] J. P. Bell and S. Gerhold. On the positivity set of a linear recurrence. Israel Jour.
+     Math., 57, 2007.
+ [7] J. Berstel and M. Mignotte. Deux propriétés décidables des suites récurrentes
+     linéaires. Bull. Soc. Math. France, 104, 1976.
+ [8] J. Bochnak, M. Coste, and M.-F. Roy. Real Algebraic Geometry. Springer, 1998.
+ [9] N. Bourbaki. Elements of Mathematics: General Topology (Part 2). Addison-
+     Wesley, 1966.
+[10] M. Braverman. Termination of integer linear programs. In Proc. Intern. Conf.
+     on Computer Aided Verification (CAV), volume 4144 of LNCS. Springer, 2006.
+[11] J. R. Burke and W. A. Webb. Asymptotic behavior of linear recurrences. Fib.
+     Quart., 19(4), 1981.
+[12] J.-Y. Cai, R. J. Lipton, and Y. Zalcstein. The complexity of the A B C problem.
+     SIAM J. Comput., 29(6), 2000.
+[13] H. Cohen. A Course in Computational Algebraic Number Theory. Springer-Verlag,
+     1993.
+[14] G. E. Collins. Quantifier elimination for real closed fields by cylindrical algebraic
+     decomposition. In Proc. 2nd GI Conf. Automata Theory and Formal Languages.
+     Springer-Verlag, 1975.
+[15] G. Everest, A. van der Poorten, I. Shparlinski, and T. Ward. Recurrence Se-
+     quences. American Mathematical Society, 2003.
+[16] J.-H. Evertse, H. P. Schlickewei, and W. M. Schmidt. Linear equations in variables
+     which lie in a multiplicative group. Ann. Math., 155(3), 2002.
+[17] G. Ge. Algorithms Related to Multiplicative Representations of Algebraic Numbers.
+     PhD thesis, U.C. Berkeley, 1993.
+[18] I. Gyori and G. Ladas. Oscillation Theory of Delay Differential Equations. Oxford
+     Mathematical Monographs. Oxford University Press, 1991.
+[19] V. Halava, T. Harju, and M. Hirvensalo. Positivity of second order linear recurrent
+     sequences. Discrete Appl. Math., 154(3), 2006.
+[20] V. Halava, T. Harju, M. Hirvensalo, and J. Karhumäki. Skolem’s problem — on
+     the border between decidability and undecidability. Technical Report 683, Turku
+     Centre for Computer Science, 2005.
+[21] V. Laohakosol. Personal communication, July 2013.
+[22] V. Laohakosol and P. Tangsupphathawat. Positivity of third order linear recur-
+     rence sequences. Discrete Appl. Math., 157(15), 2009.
+[23] R. J. Lipton. Mathematical embarrassments. Blog entry, December 2009.
+     http://rjlipton.wordpress.com/2009/12/26/mathematical-embarrassments/.
+[24] L. L. Liu. Positivity of three-term recurrence sequences. Electr. J. Comb., 17(1),
+     2010.
+26     Joël Ouaknine and James Worrell
+
+[25] D. W. Masser. Linear relations on algebraic groups. In New Advances in Tran-
+     scendence Theory. Cambridge University Press, 1988.
+[26] M. Mignotte. Some useful bounds. In Computer Algebra, 1982.
+[27] M. Mignotte, T. N. Shorey, and R. Tijdeman. The distance between terms of an
+     algebraic recurrence sequence. Journal für die reine und angewandte Mathematik,
+     349, 1984.
+[28] K. Nagasaka and J.-S. Shiue. Asymptotic positiveness of linear recurrence se-
+     quences. Fib. Quart., 28(4), 1990.
+[29] J. Ouaknine and J. Worrell. Decision problems for linear recurrence sequences. In
+     Proc. Intern. Workshop on Reachability Problems (RP), volume 7550 of LNCS.
+     Springer, 2012.
+[30] J. Ouaknine and J. Worrell. Positivity problems for low-order linear recurrence
+     sequences. In Proc. Symp. on Discrete Algorithms (SODA). ACM-SIAM, 2014.
+[31] J. Ouaknine and J. Worrell. Ultimate Positivity is decidable for simple linear
+     recurrence sequences. In Proc. Intern. Colloq. on Automata, Languages and Pro-
+     gramming (ICALP), LNCS. Springer, 2014. Full version as arXiv:1309.1914.
+[32] V. Pan. Optimal and nearly optimal algorithms for approximating polynomial
+     zeros. Computers & Mathematics with Applications, 31(12), 1996.
+[33] J. Renegar. On the computational complexity and geometry of the first-order
+     theory of the reals. Part I: Introduction. Preliminaries. The geometry of semi-
+     algebraic sets. The decision problem for the existential theory of the reals. J.
+     Symb. Comp., 1992.
+[34] G. Rozenberg and A. Salomaa. Cornerstones of Undecidability. Prentice Hall,
+     1994.
+[35] A. Salomaa. Growth functions of Lindenmayer systems: Some new approaches. In
+     A. Lindenmayer and G. Rozenberg, editors, Automata, Languages, Development.
+     North-Holland, 1976.
+[36] M. Soittola. On D0L synthesis problem. In A. Lindenmayer and G. Rozenberg,
+     editors, Automata, Languages, Development. North-Holland, 1976.
+[37] P. Tangsupphathawat, N. Punnim, and V. Laohakosol. The positivity problem
+     for fourth order linear recurrence sequences is decidable. Colloq. Math., 128(1),
+     2012.
+[38] T. Tao. Structure and Randomness. American Mathematical Society, 2008.
+[39] S. P. Tarasov and M. N. Vyalyi. Orbits of linear maps and regular languages. In
+     Proc. Intern. Comp. Sci. Symp. in Russia (CSR), volume 6651 of LNCS. Springer,
+     2011.
+[40] A. Tarski. A Decision Method for Elementary Algebra and Geometry. University
+     of California Press, 1951.
+[41] N. K. Vereshchagin. The problem of appearance of a zero in a linear recurrence
+     sequence (in Russian). Mat. Zametki, 38(2), 1985.
+[42] K. Yokoyama, Z. Li, and I. Nemes. Finding roots of unity among quotients of the
+     roots of an integral polynomial. In Proc. Intern. Symp. on Symb. and Algebraic
+     Comp., 1995.
+

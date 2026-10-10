@@ -1,0 +1,531 @@
+                           207-
+
+
+
+
+ On a mixed Littlewood conjecture for quadratic
+                   numbers
+
+                        par BERNARD DE MATHAN
+
+
+
+       RÉSUMÉ. Nous étudions un problème diophantien simultané relié
+       à la conjecture de Littlewood. En utilisant des minorations con-
+       nues de formes linéaires de logarithmes p-adiques, nous montrons
+
+       qu’un résultat que nous avons précédemment obtenu, concernant
+       les nombres quadratiques, est presque optimal.
+
+       ABSTRACT. We study a simultaneous diophantine problem re-
+       lated to Littlewood’s conjecture. Using known estimates for linear
+       forms in p-adic logarithms, we prove that a previous result, con-
+       cerning the particular case of quadratic numbers, is close to be
+       the best possible.
+
+
+
+                               1. Introduction
+
+  In a joint paper, with O. Teuli6 [5], we have considered the following
+problem. Let ,~         be a sequence of integers greater than 1. Consider
+the sequence (rn)n&#x3E;o, where ro   =   1 and rn   =
+                                                         -
+                                                                for n &#x3E; 0. For
+q E Z, set
+
+
+
+and
+
+
+
+Notice that     is not necessarily an absolute value, but when 13 is the
+                I.IB
+constant sequence p, where p is a prime number, then 1. 1 L3 is the usual
+p-adic value.
+   For x E R, we denote by fxl the number in (-1/2, 1~2~ such that
+x -      E Z. As usual, we put llxll      =
+
+
+   Let a be a real number. Given a positive integer M, Dirichlet’s Theo-
+rem asserts that for any n, there exists an integer q, with 0     q Mrn,
+satisfying simultaneously the approximation condition llqall       1/M and
+the divisibility condition     i. e.        I/rn- Indeed,   it is enough to
+208
+
+
+
+apply Dirichlet’s Theorem to the number rna. We thus find positive inte-
+gers q with
+
+
+
+By analogy with Littlewood’s conjecture, we ask whether
+
+
+
+holds. The problem is trivial for a rational, and for an irrational number
+a, one can easily see [5] that condition (1) is equivalent to the following:
+for each n E N, consider the continued fraction expansion
+
+
+
+We have (1) if and only if
+
+
+
+
+However, we shall not use this characterization here.
+   We do not know whether (1) is satisfied for any real number a. In [5], we
+have proved that if we assume that the sequence Zi   =          is bounded,
+(1) is true for every quadratic number a.  More  precisely:
+Theorem 1.1. (de Mathan and Teulié [5]) Suppose that the sequence B
+is bounded. Let a be a quadratic real number. Then there exists an infinite
+set of integers q &#x3E; 1 with
+
+
+
+
+and
+
+
+
+
+In particular, we have
+
+
+
+
+   As msual, for positive functions x and y, the notation x C y means that
+there exists a positive constant C such that x C Cy.
+  In our lecture at Graz, for the "Journ6es Arithm6tiques 2003" , it was
+discussed whether the factor Inq in (3) is best possible. We do not know
+the answer to this question, but we shall prove:
+                                                                               209
+
+
+Theorem 1.2. Assume that the sequence L3 is bounded. Let a be a real
+quadratic number, and let S be a set of integers q &#x3E; 1 with
+
+Then there exists a constant A   =
+                                     A(S) such that
+
+
+for any q E S.
+   One may expect that (4) holds for any A &#x3E; 1, but we are not able to
+prove this. We do not even know whether there exists a real number A
+for which (4) holds for any set S of integers q &#x3E; 1 satisfying (2). Indeed,
+Theorem 1.2 does not ensure that sups A(S)       +oo.
+   There is some analogy between this problem, and the classical simultane-
+ous Diophantine approximation. For instance, let us recall Peck’s Theorem.
+Let n be an integer greater than 1, and let al,...,I an,i be n numbers in a
+real algebraic number field of degree n -I- 1 over Q. Then it was proved by
+Peck [7] that there exists an infinite set of integers q &#x3E; 1 with
+
+
+for
+
+
+Assume that 1, aI, ..., an are linearly independent over Q, and let S be an
+infinite set of integers q &#x3E; 1, with
+
+
+for each 1 k n. Then we have proved in [3] that there exists a constant
+K =       such that
+
+
+
+  Theorem 1.2 can be regarded as an analogue of this result with n         =
+                                                                                1,
+and its proof is similar.
+
+                           2. Proof of the result
+2.1. Some rational approximations of a.
+   In the quadratic field ~(a), there exists a unit w of infinite order. Re-
+placing, if necessary, cv by w2 or    1/ w2,
+                                           we may suppose w &#x3E; 1.  In his
+original work, Peck uses units which are "large" and whose  other conjugates
+are "small" and close to be equal. Here, Peck’s units are just the wm,s,
+
+with rn e N. We shall use these units in order to describe the rational
+approximations of a which satisfy (2).
+210
+
+
+   Denote by ao     id and ai = a the automorphisms of ~(a). As usual,
+                     =
+
+
+we denote by Tr the trace form                   ao + cri. The basis (1, a) of
+       admits a dual basis (/30, (3l) for the non-degenerate Q-bilinear form
+(x, y) ~---~      on Q(a). That means that, if we set ao       1 and al
+                                                                     =
+                                                                            a,     =
+
+
+we have              6ki ,
+                     =
+                                  0,1 and 1 0, l, where 611 1, and 6ki 0
+                                    =                 =              =              =
+
+
+
+       l. Here it is easy to calculate (3o
+if we put
+                                              = 2013 ~’~~ and (3¡ ~_)~~~ . Hence,
+                                                                    =
+
+
+
+
+                                                  ,   ,
+
+
+
+
+where q and q’ are rational numbers, we have
+
+
+
+
+Also notice that (5) and (6) imply that
+
+
+   Let D be a positive integer such that Da,
+braic integers.
+                                                  I
+                                                          D ,   are alge-
+
+
+
+   The notation A ~ B, where A and B are positive quantities, means that
+
+
+Lemma 2.1. Let 1 be a positive number in Q(a). Let A be a positive
+integer such that ~1 is an algebraic integer. For each m E N, define the
+rational number
+
+Then Aq is a rational integer, one has q &#x3E; 0 when m is large, and the
+integers DAq satisfy (2).
+Proof. Also define             -        -
+
+
+
+
+As A-yw’ and                  are   algebraic integers, Aq and DAq’ are rational
+integers. As             =         wehave q   =
+                                                      + o-(~y)w-’~’2, hence q &#x3E; 0 as
+soon as   w2m &#x3E; -,7 (7)/7, and then
+
+
+From (7), we get qa - q’      =
+                                   (a -                    hence
+
+
+As DAq and DAq’ are integers, it follows from (10) that for large m we
+have ~~DOqa~~ DD~qa-q’~, and by (9) and (10), the integers DAq satisfy
+                 =
+
+
+
+(2).
+                                                                            211
+
+
+
+   Conversely:
+Lemma 2.2. Let S be a set of positive integers q satisfying (2~ . Then
+there exists a finite set r of numbers 7 E      ~ 0, such that for any
+q S,
+  E    there          E r and  m E N such that
+
+
+
+Proof.     For q E    s, let m(q)   =  m be the positive integer such that
+
+                      We thus   have cv’~’2 ~ q. Let q’ be the rational integer
+such that ~qa ~   =
+                         q’ . Set
+
+
+First, notice that D, is an algebraic integer. From (5), we get (8). Writing
+
+
+
+we see    that q &#x3E; 0 when q is large, and ycv’’2 q. As we have c,’n q, we
+thus get q      1. We also have
+
+
+
+
+hence, by (2), Io-()’)I W wmlq, and thus,        ] W 1. Then, as D-y is an
+algebraic integer in Q(a), and           ~Q(7)~) C 1, the set of the q’s is
+finite.
+
+2.2. End of proof.
+   Denote by P the set of all prime numbers dividing one of the bk. Since
+we assume that the sequence    (bk) is bounded, this set is finite. For p E P,
+we extend the p-adic absolute value to ~(a). The completion of this field is
+
+Qp(a). As above, let w be a unit in Q(a) with w &#x3E; 1. Note that       =  1.
+The ball {~ E                                  is a subgroup of finite index
+in the multiplicative group Ix E Qp(a); Ixlp       =
+                                                    If. Hence, replacing
+by w", where n is a suitable positive integer, we may also suppose that
+Iw -                 for every p E P.
+   We shall use the p-adic logarithm function, which is defined on the mul-
+tiplicative group {j- E Cp; I x -       1} C Cp by
+
+
+
+This function satisfies
+212
+
+
+
+
+      We prove:
+Lemma 2.3. Let p be a number of P.                 be a positive number of Q(a) .
+For m E N, set
+
+
+Then, if
+
+
+we have
+
+
+
+for large rrt; if
+
+then
+
+
+Proof. Recall that q &#x3E; 0 when m is large (Lemma 2.1). From the definition,
+
+
+
+
+if 16 - I lp           then, by (11), we write Iw2m-8lp
+and we obtain (12).
+   Accordingly, in order to achieve the proof of the result, we shall use
+known lower bounds for linear forms in p-adic logarithms. For instance, it
+follows from [8] that:
+Lemma 2.4. (K. Yu [8]) Let x and y be algebraic numbers in Cp, with
+Ix -    P-,/(P-1) and ly - lip p-’I(P-1). Then there exists a real
+constant such that for any pair (k, ~) of rational integers with
+
+
+
+
+   Note that this result is trivial, with r,   =
+                                                   1, if log x and log yare not
+linearly independent over  Q,  and  log x =1= 0, Le, x =1= 1. Indeed, if a log x=
+
+
+
+b log y, where a and b are rational integers with b # 0, then we write
+                                             Hence we                            »
+                                             1, when k log x         y =1= 0.
+                                                                                   213
+
+
+   We can then achieve the proof of Theorem 1.2. Applying Lemma 2.2, we
+can suppose that  the set r contains a unique element 7 &#x3E; 0, i.e., for any
+q E S, there exists Tn e N such that we have (8). It follows from Lemma
+2.3 and 2.4 that there exists a constant such that Iqlp W m-K (one may
+take K = 0 if   10";1’) +Now
+                          lip p-l~~p-1&#x3E; ). As q ~ I.A)m, hence
+                             &#x3E;                                       Inq, we
+                                                                        m ~
+
+get Iqlp »                   set      K   _
+                                              ~~, (the
+                                                  constant   ~~, may depend upon
+p E P). Note that            TIpEP lqlp. Indeed, putting           =
+                                                                        l/rn, we have
+q E       hence                and I1PEP lqlp C flpep                  1/rl" We thus
+get (4) with A  =
+                    Epep Kp, and Theorem 12 is proved.
+2.3. A remark.
+   Note that one may also use Lemma 2.3 for solving the opposite problem.
+For simplicity, consider the case where            is the p-adic value for a prime
+number p. If we take a positive number -y E Q(a) such that ~(7) _ 2013~,
+for instance, q   = a - a(a) (one may replace a by -a, and so, we can
+
+suppose   a -        &#x3E; 0), then we have                   =
+                                                                  0, and by (12),
+we get                      imlp. By Lemma 2.1, there exists a positive integer
+A such that for every large m, the numbers q             =
+                                                           q(m)    =           are
+
+positive integers satisfying (2).     For m    ps=with  s E N, we get Imlp     =
+
+
+
+hence lqlp ~          Since m ~ lnq, we have thus proved that there exists
+an infinite set of integers q &#x3E; 1 satisfying (2) and (3) (which is Theorem
+
+1.1). In this way we obtain integers q &#x3E; 1 satisfying (2) and such that Iqlp
+   One can ask whether there exists an infinite set of integers q &#x3E; 1 satis-
+fying (2), with
+
+   Given a positive decreasing sequence (Em)                               +oo, a
+p-adic version   [4]   of Khintchine’s Theorem   ensures that  for  almost  all x E
+Zp, there exist infinitely many positive integers m such that I x -             em .
+One often considers as reasonable the hypothesis that a given "special"
+irrational number x E Zp satisfies this condition, with Em              1/(mlnrrc)
+                                                                           =
+
+
+
+for m &#x3E; 1 (which is false if x E Zp n Q, since in this case, we have
+Ix -         W          for m large). Let us prove that we can choose -y &#x3E; 0
+in Q(a),
+   , with
+                d   l’
+                          + 11P Iw - 11 p, such that
+number in Zp. In order to make this obvious, we prove:
+                                                         log w
+                                                                   is an irrational
+
+
+Lemma 2.5. There exists ç E Q(a) such that ~ is not a unit, NQ(a):QÇ               =
+                                                                                       1,
+and lçlp 1.
+         =
+
+
+
+
+Proof. The number is a root of the equation             +1     0, where S is
+                                                                       =
+
+
+a rational integer, S  =Tr w. The number ~ must be a root of an equation
+~2-t~-f 1 = 0, where t is a rational number for which there exists a positive
+214
+
+
+rational number p such that t2 - 4    p2(,S’2 - 4). Such pairs (t, p) can be
+                                              =
+
+
+
+expressed by using a rational parameter 0:
+
+
+
+
+Let us show that we can choose 0 E Q* such that t (j. Z and                        1.
+It is enough to take 0        =
+                                 p. As we have S2 &#x3E; 4, hence S2 &#x3E; 9 and
+(S2 - 4)p2 - 1 &#x3E; 4, t cannot be an integer for this choice of 0. But we have
+       1, since ~(S’2 - 4)p2 _ lip 1. Then there exists a number ~ E Q(a)
+                                       =
+
+
+
+such that ~2 - t~ + 1 = 0, and ~ is neither a rational number, since p &#x3E; 0,
+nor an algebraic integer, since t g Z.          Then we have                       1,
+                                                                                    =
+
+
+
+and lçlp    =1 because either condition lçlp          1 or lçlp &#x3E; 1 would imply
+
+
+   Replacing ~ by Çn, where rc is a suitable positive integer, we thus may
+find a satisfying Lemma 2.5, with moreover lip Iw - lip. Then we
+                                                           -
+
+
+
+
+have ] log g]p              Further let us prove that          log wE
+                                                            Qp. Indeed that
+is trivial if a E Qp, since in this case ~ and lie in Qp, hence so do log ~
+and          If Qp (a) has degree 2 over Qp, then log~ and logw lie in Qp (a).
+But Q can be extended into a continuous Qp-automorphism of Qp(a) , and
+we    get                                             since             =           =   1.
+That proves that           E      Qp, and since ] logg]p                    we   conclude
+that            Zp. Lastly,       log wis   not a rational number, since ~ is not a
+unit. Now, by Hilbert’s Theorem, there exists -y E Q(a), with ~y &#x3E; 0,
+such that g = ~cr(7)/~’ We thus have found ~y &#x3E; 0 in Q(ca), such that
+            p                 and               is an irrational element ofZp.p Under
+  i                                  2 log w
+the above hypothesis, it would exist infinitely many integers m &#x3E; 1 with
+
+    2 log w                  1/(m log m), and, by (12), we could obtain an infinite
+set of integers q &#x3E; 1, q
+                          =                   where A is a positive integer, satisfying
+(2) and such that Iqlp              n
+                                          * In particular, (3’) would be satisfied.
+                               q      9
+
+
+
+
+                                    3. Conclusion
+
+   For a sequence ,13 bounded, the Roth-Ridout Theorem [6] allows us to
+see that for any irrationalalgebraic real number a, thus in particular for a
+quadratic, we have:
+                                                                                          215
+
+
+
+(see [5]). Of course, our method is far from enabling us to prove that there
+exists a real constant A such that
+
+
+
+We can only study the approximations with qllqall « 1. It seems difficult
+to study approximations in the "orthogonal direction"                1, with for
+instance, q p’,=   for a prime  number    p. For such approximations, it is not
+known whether infnEN IIpnaII = 0 holds, neither if there exists A such that
+                    0. It is very difficult to obtain more precise results than
+the Roth-Ridout Theorem (see [1]).
+   Even for rational approximations satisfying (2), we are not able to prove
+that the constants A(S) are bounded. This is related to Lemma 2.4. It
+would be necessary to prove that there exists a real constant K for which this
+Lemma holds for x = cv and for any y E Q(a) with Iy -lip p-1/(p-i) and
+               1. There exist many effective estimates of I k log x + t log y lp
+               =
+
+
+
+(see for instance [2] and [8]), but they do not provide the needed result. It
+seems difficult to take the particular conditions required into account.
+
+
+Acknowledgements. The author thanks warmly Michel Waldschmidt for
+their lighting conversations about linear forms in logarithms, at Graz. The
+author also thanks the referee.
+
+
+                                         References
+
+  [1] M. BAUER, M. BENNETT, Applications of the hypergeometric method to the generalized
+      Ramanujan-Nagell equation. Ramanujan J. 6 (2002), 209-270.
+  [2] Y. BUGEAUD, M. LAURENT, Minoration effective de la distance p-adique entre puissances
+      de nombres algébriques. J. Number Theory 61 (1996), 311-342.
+  [3] B. DE MATHAN, Linear forms in logarithms and simultaneous Diophantine approximation.
+      (To appear).
+  [4] B. DE MATHAN, Approximations diophantiennes dans un corps local. Bull. Soc. math.
+      France, Mémoire 21 (1970).
+  [5] B. DE MATHAN, O. TEULIÉ, Problèmes diophantiens simultanés. Monatshefte Math. 143
+      (2004), 229-245.
+  [6] D. RIDOUT, Rational approximations to algebraic numbers. Mathematika 4 (1957), 125-
+      131.
+  [7] L. G. PECK, Simultaneous rational approximations to algebraic numbers. Bull. Amer.
+      Math. Soc. 67 (1961), 197-201.
+  [8] K. Yu, p-adic logarithmic forms and group varieties II. Acta Arith. 89 (1999), 337-378.
+Bernard DE MATHAN
+Universite Bordeaux I
+UFR Math-Info. Laboratoire A2X
+351 cours de la Lib6ration
+33405 Talence, France
+E-mail : Bernard . de-Mathan@math . u-bordeaux l . fr
+

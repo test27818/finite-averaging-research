@@ -1,0 +1,193 @@
+\chapter{偶数内部与上边界}\label{app:lower}
+
+\section{本讲的分支与共同坐标}
+本讲处理 $2<r<p$ 的偶数余量，仍从已建立的核心出发。
+写 $r=2t$、$m=p+t$，并令
+\[
+a=tu+v,\qquad z=u,
+\qquad (A,B,C)=(tu+v,tu-v,-pu).
+\]
+这里换基是整数幺模换基，因而本原性等价于 $\gcd(u,v)=1$。
+块差分的最大公因子为 $\gcd(2v,mu+v)$，由此得到
+\[
+\begin{cases}
+\gcd(v,m)=1,&t\text{ 奇},\\
+\gcd(v,m)=1,\ u+v\text{ 奇},&t\text{ 偶}.
+\end{cases}
+\]
+奇偶分类来自这里：$t$ 偶时 $m$ 奇，模 $2$ 的信息必须另外保留。
+
+先处理内部 $4\le r\le p-3$。标准反射有至少两个；
+当 $t$ 为偶数且还有第三个反射时，用三个反射处理完整方向和尺度。
+两个内部边界再增加一个迹为 $\pm2$ 的返回。
+最后单独处理 $r=p-1$，其中 $p=5$ 需要一组明确矩阵。
+
+\begin{proposition}[偶数余量的其余核心]\label{prop:even}
+若 $p\ge5$、$2<r<p$ 为偶数，则全部合法 $K_{p,r}$ 可归零。
+\end{proposition}
+\begin{proof}
+$4\le r\le p-3$ 使用引理\ref{lem:even-core}；$r=p-1$ 使用引理\ref{lem:upper-boundary}。两引理的根、局部化环和终端均在第\ref{app:lower}讲给出。
+\end{proof}
+
+
+
+\section{一个预备步骤：把二进深度降到一}
+当 $a,z$ 奇偶相反时，其中的偶数可能被很高的 $2$ 幂整除。
+下面的返回把这个指数逐次减一。
+它与整数平方和下降不同：每次允许重新选本原参数，下降量是 $v_2(az)$。
+若某个参数已经为零，可以直接处理相应终端；深度论证只讨论 $az\ne0$。
+
+\begin{lemma}[降低二进深度]\label{lem:binary-depth}
+设 $r<p$ 为正偶数。在合法 $K_{p,r}(a,z)$ 上，若 $az\ne0$，可使本原参数满足 $v_2(az)=1$。
+\end{lemma}
+\begin{proof}
+合法性使 $a,z$ 奇偶相反。若深度 $\nu=v_2(az)\ge2$ 且 $a$ 奇，先用
+\[
+(a,z)\mapsto p^{-1}(dz,-a),\qquad d=[pr-n(r-1)]/2
+\]
+将偶坐标放在 $a$；该两组平均是下文\eqref{eq:even-reflection}取 $s=r-1$ 的返回，$d$ 奇且与 $n$ 互素。于是 $4\mid a,z$ 奇。
+保留 $r$ 份旧 $A$，平均组成 $(p-j-s,j,s)$ 的一组及其补组，给
+\[
+M_{j,s}=\begin{pmatrix}p-2j-s&rj-ps\\-1&0\end{pmatrix}.
+\]
+若 $r\equiv2\pmod4$，取 $(j,s)=(p,0)$。若 $4\mid r$，令 $Q_0=\lfloor n/3\rfloor$，在 $Q_0,Q_0-1,Q_0-2$ 中按顺序取与 $n$ 奇部互素的 $b$：$3\nmid n$ 时取 $Q_0$，否则取不被 $3$ 整除的 $Q_0-1$ 或 $Q_0-2$。有 $r-1\le b\le p-1$；令 $(j,s)=(b-1,2)$。后一范围由 $p-r>0$，以及 $3\mid n$ 时 $p-r\ge3$ 得出。
+两种选择都使 $D=rj-ps$ 恰含一个 $2$，且与 $n$ 奇部互素；后一种用 $D\equiv-2pb\pmod\ell$。
+所选 $D$ 的二进赋值恰为 $1$，而当前 $4\mid a$、$z$ 为奇数。
+因此第一坐标是“被 $4$ 整除的数”加“恰被 $2$ 整除的数”，其赋值必为 $1$。
+整数输出为 $((p-2j-s)a+Dz,-a)$，两项的二进赋值为 $1,\nu$，故本原化后深度减一。见证坐标的输出为 $njz-(2j+s)(a+pz)$，奇素数处保持单位，模 $2$ 亦保持合法。迭代完成。
+\end{proof}
+
+
+\section{偶数内部：从标准反射到终端}
+先取得一个可能很深的同余群，再通过实际可逆倍率反演 $t$ 的奇部。
+这样控制层的素因子就只剩 $n$ 的素因子，后面的局部调整才能在同一控制层内完成。
+
+\begin{lemma}[偶数内部的完整构造]\label{lem:even-core}
+对 $p\ge7$、偶数 $4\le r\le p-3$，全部合法 $K_{p,r}$ 可归零。
+\end{lemma}
+\begin{proof}
+
+\par\noindent\textbf{第一阶段：两个标准反射给出根。}
+写 $r=2t,m=p+t$，用 $a=tu+v,z=u$。合法性为 $\gcd(v,m)=1$；$t$ 偶时还要求 $u+v$ 奇。保留 $r$ 份旧 $A$，对可行奇数 $\max(1,4t-p)\le s\le2t$，平均
+\begin{equation}\label{eq:even-reflection}
+(A^i,B^i,C^s),\quad(A^{p-r-i},B^{p-i},C^{r-s}),\qquad i=(p-s)/2.
+\end{equation}
+所得矩阵为 $J_s/p$，
+\[
+J_s=\begin{pmatrix}-t&-1\\m(t-s)&t\end{pmatrix},\qquad
+J_s^2=-d_sI,\quad d_s=pt-ms.
+\]
+取 $s_0=r-1,s_1=r-3$，对应 $d,e=d+n$ 互素且为奇数，与 $n$ 互素。在 $(a,z)$ 坐标中，同一反射为 $\left(\begin{smallmatrix}0&d_s\\-1&0\end{smallmatrix}\right)$，相邻商为 $\diag(1,e/d)$，与换块 $\Sigma=\left(\begin{smallmatrix}-1&r\\0&1\end{smallmatrix}\right)$ 的交换子为 $U(rn/e)$。因此在 $R_0=\Z[1/|de|]$ 上有双向 $rnR_0$ 根。$|de|>1$，引理\ref{lem:deep}适用。
+
+
+\par\noindent\textbf{第二阶段：用夹乘反演奇数倍率。}
+互补混合给 $F_c=\diag(1,c/p)$，$c$ 为 $|c|\le p$ 的奇数。引理\ref{lem:inverse}先激活 $F_1^{-1}$，得到 $C_c=\diag(1,c)$。若奇数 $c\mid t$，则
+\[
+H=c^{-1}C_cJ_{s_0}C_c
+=\begin{pmatrix}-t/c&-1\\m(t-s_0)&tc\end{pmatrix},\quad
+HJ_{s_0}^{-1}\in\SL_2(R_0).
+\]
+
+因为 $\det H=\det J_{s_0}=d$ 在 $R_0$ 中已经为单位，
+矩阵 $HJ_{s_0}^{-1}$ 的行列式为 $1$，可以使用已有深同余群来实现它的逆。
+这一步避免了直接把可能整除旧控制层的 $c$ 当作安全单位。
+引理\ref{lem:inverse}使 $H^{-1}$ 可实现，而 $J_{s_0}C_cH^{-1}=cC_c^{-1}$。写 $t=2^a t_0$，由引理\ref{lem:localize}可取 $R=R_0[1/(pt_0)]$ 并得到
+\begin{equation}\label{eq:even-deep}
+\Gamma((2^{a+2}m)^2,R).
+\end{equation}
+以后任何与 $n$ 互素的小奇数字均可由引理\ref{lem:inverse}激活；同一根共轭在扩环后保留此层。
+
+
+\par\noindent\textbf{第三阶段：$t$ 为奇数的情形。}
+若 $t$ 奇，已有 $U(2nR)$ 及 $\Gamma(4n^2,R)$。在 $(z,y)$ 基下，标准反射规范化模 $n$ 为 $\left(\begin{smallmatrix}1&-1/p\\0&-1\end{smallmatrix}\right)$，乘换块后取适当整数幂得到定理\ref{thm:terminal}的 $V$。规范化所需的标量 $p$ 由 $P_1$ 的内容分支提供，故该定理适用。
+
+
+\par\noindent\textbf{第四阶段：有三个反射的偶 $t$。}
+设 $t$ 偶且 $8\le r\le p-5$。第三反射 $s_2=r-5$ 亦可用，将 $d+n,d+2n$ 的素因子一并加入 $R$。取奇数 $c_*=(m+\sigma)/2$、$\sigma=\pm1$，则 $c_*\le p$、$\gcd(c_*,n)=1$，而单位 $\epsilon_2=\sigma/c_*$ 模 $m$ 等于 $2$。引理\ref{lem:binary-depth}先令 $v_2(az)=1$；必要时再用标准反射，使 $a$ 奇、$u=z$ 恰含一个 $2$，故 $v$ 奇。取 $v^{-1}\pmod m$ 的平衡代表 $2^h c$，$c$ 奇、$|c|<p$；用 $U(Qk)$ 使第一坐标与 $c$ 互素后施加 $C_c$，便使 $v\bmod m$ 属于实际单位像。这里 $Q=(2^{a+2}m)^2$。
+
+\par\noindent\emph{先控制二进方向。}
+比值 $(d+n)/d,(d+2n)/(d+n)$ 模 $8$ 分别为 $3,7$；取其中的 $\kappa\equiv3$。它作用于 $x=z/a$ 为乘 $\kappa$，换块作用为 $x/(-1+rx)\equiv-x\pmod{16}$。
+把 $x$ 写成 $2w$、$w$ 奇，则模 $16$ 的 $x$ 对应模 $8$ 的四个奇单位。
+乘 $\kappa\equiv3\pmod8$ 和变号生成这四个类，因此覆盖赋值一的全部模 $16$ 方向；$v_2(\kappa^2-1)=3$ 又给全部高层提升。可将二进方向送到
+\[
+u_T=2,\quad a_T=p-r(p-3)/2,\quad v_T=a_T-2t.
+\]
+
+\par\noindent\emph{再控制奇素数方向，同时固定二进方向。}
+奇素数处用 $G_s=-\diag(1,-1)J_s$。其 $G_s/t=I+N$ 满足 $N^2=m(t-s)I/t^2$；相邻 $s$ 可避开引理\ref{lem:local-cycle}的模 $9$ 例外。$G_s$ 的二进矩阵阶为 $2$ 幂，故 CRT 选择幂可在保持二进方向时命中所有奇素数方向。
+
+\par\noindent\emph{最后匹配单位尺度。}
+此时方向相同，所以当前列与目标列模控制层只差一个单位。
+需要证明这个有限单位来自真正的 $R$ 单位。
+尺度模 $m$ 的变化由 $R$ 单位给出，其中 $t$ 的类可用 $\epsilon_2^a t_0$ 表示，且 $v_T\equiv t^2\pmod m$。剩余单位核由 $(d+n)/d$ 和 $(d+2n)/d$ 生成：后者在 $2$ 处从深度 $2$ 开始，在各奇处从 $v_\ell(m)$ 开始；前者补模 $4$ 的另一个类。
+这里使用的升位事实如下。若 $\ell$ 为奇素数，$u=1+\ell^b c$、$\ell\nmid c$，
+则二项式展开给
+\[
+v_\ell(u^\ell-1)=b+1.
+\]
+对 $\ell=2$，同样结论在 $b\ge2$ 时成立。
+所以这样的单位的连续素数幂逐层产生整个主单位核。
+各局部核的阶为对应素数的幂，用中国剩余定理选指数就能同时实现所有分量。
+逐次取素数幂并用指数 CRT 完成所有精度。引理\ref{lem:fiber}精确送到该终端。取 $(p+1)/2$ 份 $A$、$(p-3)/2$ 份 $B$ 和一份 $C$ 即得零和组。
+
+
+\par\noindent\textbf{第五阶段：只有两个标准反射的内部边界。}
+剩下 $r=4$，或 $r=p-3$ 且 $p\equiv3\pmod4$。保留旧 $A$ 的返回 $M=\left(\begin{smallmatrix}a_0&D\\-1&0\end{smallmatrix}\right)$ 可按下表选择，其中第一组为 $(p-j-s,j,s)$、第二组为补集：
+\[
+\begin{array}{c|rrrr}
+&s&j&a_0&D\\\hline
+r=4,p\ge11&1&(p-3)/2&2&p-6\\
+r=p-3,p\equiv1\ (3)&p-4&1&2&-p^2+5p-3\\
+r=p-3,p\equiv2\ (3)&p-6&4&-2&-p^2+10p-12
+\end{array}
+\]
+$p=7,r=4$ 用第二行。代入可验容量非负及 $\gcd(D,rn)=1$。由引理\ref{lem:inverse}取得 $M^{-1}$，相邻商局部化 $D$；与换块的交换子给
+\[U\bigl(2a_0+r(1-D/d_s)\bigr).
+\]
+
+这个新根参数的作用是减少旧根理想中过多的 $2$ 因子。
+该参数属于 $nR$，二进赋值恰为 $2$。与原根 $2^{a+1}nR$ 合并得到 $U(2nR)$，标准反射给另一方向，故有 $\Gamma(4n^2,R)$。标准反射仍提供前述有限 $V$，直接应用定理\ref{thm:terminal}。这覆盖全部偶数内部参数。
+\end{proof}
+
+
+\section{上边界的重叠反射}
+余量达到 $r=p-1$ 时，内部公式的部分库存已经耗尽。
+本节改用重叠反射：先从第一块与载体取一个组，
+保留新值中的 $p-1$ 份，再以另一组及其补组重新组成两个 $p$ 块。
+两个相邻输出仍会给三角商，机制与上一节一致，但具体计数必须重新列出。
+
+\begin{lemma}[余量为p−1的重叠反射]\label{lem:upper-boundary}
+若 $p\ge5$、$r=p-1$，全部合法 $K_{p,r}$ 可归零。
+\end{lemma}
+\begin{proof}
+置 $n=3p-1,d=p^2-n$，标准两步反射为 $A=\left(\begin{smallmatrix}0&-d\\-1&0\end{smallmatrix}\right)$。先平均 $(A^{p-\sigma},C^\sigma)$，保留 $r$ 份新值，再平均 $(A^{h-\sigma},B^h,C^{p+\sigma-2h})$ 及其补集，给
+\[
+J_{\sigma,h}=\begin{pmatrix}-p\sigma&p[nh-p(p+\sigma)]\\-(p-\sigma)&p\sigma\end{pmatrix},
+\quad J_{\sigma,h}^2=pf_{\sigma,h}I,\quad f_{\sigma,h}=p^3-n(p-\sigma)h.
+\]
+$p\ge7$ 时取 $(\sigma,h)=(2,3),(2,4),(3,4),(3,5)$；容量等价于 $0\le h-\sigma\le\sigma$、$0\le p+\sigma-2h\le p-1-\sigma$，均成立。记相邻标量 $f_\sigma,g_\sigma$，它们互素且与 $n$ 互素。相邻商与换块的交换子给 $U(n(n\sigma-pr)/g_\sigma)$。两整数系数的最大公因子为 $\gcd(2n-pr,3n-pr)=2$，故在 $R_0=\Z[1/|f_2g_2f_3g_3|]$ 上有 $U(2nR_0)$。由 $AU(dx)A^{-1}=L(x)$ 得双向根和 $\Gamma(4n^2,R_0)$。
+$A/p$ 在 $(z,y)$ 坐标中模 $n$ 为 $\left(\begin{smallmatrix}1&-1/p\\0&-1\end{smallmatrix}\right)$。与换块组合及有限标量 $p^{-1}$ 提供定理\ref{thm:terminal}所需方向，因此完成 $p\ge7$。
+
+\par\noindent\textbf{最小边界 $p=5,n=14$。}
+这里直接列出三个已有真实分组的矩阵，先得到含额外因子 $3$ 的根。
+随后一次夹乘让 $3$ 成为可逆倍率，根理想便由 $84R$ 化为 $28R$。
+对 $p=5,n=14$，取
+\[
+A=\begin{pmatrix}0&-11\\-1&0\end{pmatrix},\quad
+S=\begin{pmatrix}-1&4\\0&1\end{pmatrix},\quad
+J=\begin{pmatrix}-5&-10\\-4&5\end{pmatrix}.
+\]
+
+这里 $A$ 的两组来源是 $(A,B,C^3)$、$(B^4,C)$，保留四份旧 $A$，实际尺度为 $1/5$。
+$S$ 是交换两个五块的名称。
+$J$ 取重叠构造的 $(\sigma,h)=(1,2)$：先平均 $(A^4,C)$，
+保留四份新值，再平均 $(A,B^2,C^2)$ 及其补组，实际尺度为 $1/25$。
+所以这三个矩阵都已由明确原位置选择实现。
+$A^2=11I,J^2=65I$，且 $W=ASASJ=\left(\begin{smallmatrix}-121&330\\0&65\end{smallmatrix}\right)$，$[S,W]=U(84/65)$。于是 $R_0=\Z[1/(5\cdot11\cdot13)]$ 上有双向 $84R_0$ 根及 $\Gamma(7056,R_0)$。由 $F_1$ 激活 $C_3=\left(\begin{smallmatrix}3&-4\\0&1\end{smallmatrix}\right)$；
+\[
+H=C_3JC_3/3=\begin{pmatrix}1&-18\\-4&7\end{pmatrix},\quad
+\det H=\det J=-65.
+\]
+$HJ^{-1}\in\SL_2(R_0)$，故 $H^{-1}$ 可实现，继而 $JC_3H^{-1}=3C_3^{-1}$。局部化 $3$ 后 $84R=28R$，给 $\Gamma(784,R)$。同一标准反射 $A$ 提供有限方向，仍接定理\ref{thm:terminal}。
+\end{proof}
+

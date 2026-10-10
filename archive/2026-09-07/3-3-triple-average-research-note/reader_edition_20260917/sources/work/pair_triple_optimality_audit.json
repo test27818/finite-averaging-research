@@ -1,0 +1,477 @@
+{
+  "html_sha256": "d71cca94ee272e06b829e4974b8a2f980f49593ae467532418238c6d0d51b76a",
+  "binary_selftests": [
+    {
+      "name": "单元素",
+      "ok": true,
+      "reason": "0 步，独立验解通过，最短已证"
+    },
+    {
+      "name": "两数",
+      "ok": true,
+      "reason": "1 步，独立验解通过，最短已证"
+    },
+    {
+      "name": "三数等差乱序",
+      "ok": true,
+      "reason": "1 步，独立验解通过，最短已证"
+    },
+    {
+      "name": "三数不成等差",
+      "ok": true,
+      "reason": "按条件拒绝"
+    },
+    {
+      "name": "全相等 / g = 0",
+      "ok": true,
+      "reason": "0 步，独立验解通过，最短已证"
+    },
+    {
+      "name": "整数均值但不可解",
+      "ok": true,
+      "reason": "按条件拒绝"
+    },
+    {
+      "name": "五数下降陷阱",
+      "ok": true,
+      "reason": "8 步，独立验解通过，最短已证"
+    },
+    {
+      "name": "六数下降陷阱",
+      "ok": true,
+      "reason": "7 步，独立验解通过，最短已证"
+    },
+    {
+      "name": "二进制分数均值",
+      "ok": true,
+      "reason": "3 步，独立验解通过，最短已证"
+    },
+    {
+      "name": "非二进制分数均值",
+      "ok": true,
+      "reason": "按条件拒绝"
+    },
+    {
+      "name": "64 位以外的大整数",
+      "ok": true,
+      "reason": "2 步，独立验解通过，最短已证"
+    },
+    {
+      "name": "八数最短四步",
+      "ok": true,
+      "reason": "4 步，独立验解通过，最短已证"
+    },
+    {
+      "name": "拒绝同一索引",
+      "ok": true,
+      "reason": "第 1 步非法：须选择两个不同的 1 基索引，范围为 1–2。"
+    },
+    {
+      "name": "拒绝越界索引",
+      "ok": true,
+      "reason": "第 1 步非法：须选择两个不同的 1 基索引，范围为 1–2。"
+    },
+    {
+      "name": "拒绝未完成序列",
+      "ok": true,
+      "reason": "最终第 1 项为 0，不等于均值 1。"
+    },
+    {
+      "name": "拒绝浮点题面",
+      "ok": true,
+      "reason": "第 1 项不是整数：0.1"
+    }
+  ],
+  "exact_examples": [
+    {
+      "name": "ternary-faster",
+      "input": [
+        1,
+        1,
+        -2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "binary": {
+        "format": "two-average/v1",
+        "input": [
+          "1",
+          "1",
+          "-2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "n": 7,
+        "average": "0",
+        "classification": "solvable",
+        "reason": "G = 1，是 2 的幂。",
+        "normalized": [
+          "1",
+          "1",
+          "-2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "gcd": "7",
+        "differenceGcd": "1",
+        "operations": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "steps": 3,
+        "optimal": true,
+        "lowerBound": 3,
+        "verified": true,
+        "metrics": {
+          "judgeMs": 0.09920000000000329,
+          "constructMs": 0.2916000000000025,
+          "optimizeMs": 0.2897000000000034,
+          "verifyMs": 0.05969999999999942,
+          "solveMs": 0.7037000000000049,
+          "expanded": 0
+        },
+        "status": "solved",
+        "verification": {
+          "ok": true,
+          "steps": 3,
+          "reason": "3 步合法，总和逐步守恒，最终 7 项全部精确等于 0。",
+          "target": "0"
+        },
+        "initialSteps": 3,
+        "algorithm": "精确下降 / 零和分组 / 蝶形收尾"
+      },
+      "ternary": {
+        "status": "solved",
+        "steps": 1,
+        "initialSteps": 1,
+        "lowerBound": 1,
+        "optimal": true,
+        "expanded": 0,
+        "completedDepth": 0,
+        "operations": [
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 8.899997919797897e-05,
+        "solveSeconds": 0.0001004999503493309
+      }
+    },
+    {
+      "name": "binary-faster",
+      "input": [
+        1,
+        5,
+        -3,
+        -3,
+        0,
+        0,
+        0
+      ],
+      "binary": {
+        "format": "two-average/v1",
+        "input": [
+          "1",
+          "5",
+          "-3",
+          "-3",
+          "0",
+          "0",
+          "0"
+        ],
+        "n": 7,
+        "average": "0",
+        "classification": "solvable",
+        "reason": "G = 1，是 2 的幂。",
+        "normalized": [
+          "1",
+          "5",
+          "-3",
+          "-3",
+          "0",
+          "0",
+          "0"
+        ],
+        "gcd": "7",
+        "differenceGcd": "1",
+        "operations": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "steps": 3,
+        "optimal": true,
+        "lowerBound": 3,
+        "verified": true,
+        "metrics": {
+          "judgeMs": 0.04469999999999885,
+          "constructMs": 0.15579999999999927,
+          "optimizeMs": 0.050600000000002865,
+          "verifyMs": 0.04370000000000118,
+          "solveMs": 0.2586999999999975,
+          "expanded": 0
+        },
+        "status": "solved",
+        "verification": {
+          "ok": true,
+          "steps": 3,
+          "reason": "3 步合法，总和逐步守恒，最终 7 项全部精确等于 0。",
+          "target": "0"
+        },
+        "initialSteps": 3,
+        "algorithm": "精确下降 / 零和分组 / 蝶形收尾"
+      },
+      "ternary": {
+        "status": "solved",
+        "steps": 4,
+        "initialSteps": 5,
+        "lowerBound": 4,
+        "optimal": true,
+        "expanded": 86,
+        "completedDepth": 3,
+        "operations": [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            3,
+            6,
+            2
+          ],
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            5,
+            3,
+            6
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.00018470000941306353,
+        "solveSeconds": 0.0020824000239372253
+      }
+    },
+    {
+      "name": "equal-length",
+      "input": [
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "binary": {
+        "format": "two-average/v1",
+        "input": [
+          "-1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "n": 7,
+        "average": "0",
+        "classification": "solvable",
+        "reason": "G = 1，是 2 的幂。",
+        "normalized": [
+          "-1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "gcd": "7",
+        "differenceGcd": "1",
+        "operations": [
+          [
+            1,
+            2
+          ]
+        ],
+        "steps": 1,
+        "optimal": true,
+        "lowerBound": 1,
+        "verified": true,
+        "metrics": {
+          "judgeMs": 0.13009999999997035,
+          "constructMs": 0.04570000000001073,
+          "optimizeMs": 0.09040000000004511,
+          "verifyMs": 0.03969999999998208,
+          "solveMs": 0.3066000000000031,
+          "expanded": 0
+        },
+        "status": "solved",
+        "verification": {
+          "ok": true,
+          "steps": 1,
+          "reason": "1 步合法，总和逐步守恒，最终 7 项全部精确等于 0。",
+          "target": "0"
+        },
+        "initialSteps": 1,
+        "algorithm": "精确下降 / 零和分组 / 蝶形收尾"
+      },
+      "ternary": {
+        "status": "solved",
+        "steps": 1,
+        "initialSteps": 1,
+        "lowerBound": 1,
+        "optimal": true,
+        "expanded": 0,
+        "completedDepth": 0,
+        "operations": [
+          [
+            1,
+            3,
+            2
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 8.530006743967533e-05,
+        "solveSeconds": 9.570003021508455e-05
+      }
+    },
+    {
+      "name": "two-zero-triples",
+      "input": [
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3
+      ],
+      "binary": {
+        "format": "two-average/v1",
+        "input": [
+          "-3",
+          "-2",
+          "-1",
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "n": 7,
+        "average": "0",
+        "classification": "solvable",
+        "reason": "G = 1，是 2 的幂。",
+        "normalized": [
+          "-3",
+          "-2",
+          "-1",
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "gcd": "7",
+        "differenceGcd": "1",
+        "operations": [
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "steps": 3,
+        "optimal": true,
+        "lowerBound": 3,
+        "verified": true,
+        "metrics": {
+          "judgeMs": 0.0857000000000312,
+          "constructMs": 0.02630000000004884,
+          "optimizeMs": 0.030599999999992633,
+          "verifyMs": 0.027100000000018554,
+          "solveMs": 0.14949999999998909,
+          "expanded": 0
+        },
+        "status": "solved",
+        "verification": {
+          "ok": true,
+          "steps": 3,
+          "reason": "3 步合法，总和逐步守恒，最终 7 项全部精确等于 0。",
+          "target": "0"
+        },
+        "initialSteps": 3,
+        "algorithm": "精确下降 / 零和分组 / 蝶形收尾"
+      },
+      "ternary": {
+        "status": "solved",
+        "steps": 2,
+        "initialSteps": 2,
+        "lowerBound": 2,
+        "optimal": true,
+        "expanded": 0,
+        "completedDepth": 1,
+        "operations": [
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0001113000325858593,
+        "solveSeconds": 0.0001218999968841672
+      }
+    }
+  ],
+  "packing_checks": 151,
+  "hardness_encoding": {
+    "checked": 100,
+    "yes": 25,
+    "no": 75
+  }
+}

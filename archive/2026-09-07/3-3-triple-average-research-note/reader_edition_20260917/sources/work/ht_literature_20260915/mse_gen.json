@@ -1,0 +1,887 @@
+{
+  "items": [
+    {
+      "tags": [
+        "elementary-number-theory",
+        "finite-groups",
+        "finite-fields",
+        "roots-of-unity"
+      ],
+      "owner": {
+        "account_id": 233602,
+        "reputation": 965,
+        "user_id": 9878,
+        "user_type": "registered",
+        "accept_rate": 72,
+        "profile_image": "https://www.gravatar.com/avatar/1029df625f01f748fcad72987c1d0b4a?s=256&d=identicon&r=PG",
+        "display_name": "wh1t3cat1k",
+        "link": "https://math.stackexchange.com/users/9878/wh1t3cat1k"
+      },
+      "is_answered": true,
+      "view_count": 120,
+      "accepted_answer_id": 141918,
+      "answer_count": 1,
+      "score": 3,
+      "last_activity_date": 1336333865,
+      "creation_date": 1336332814,
+      "question_id": 141912,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/141912/why-are-generators-of-z-p-p-c-cdot-2k-1-so-small",
+      "title": "Why are generators of $Z^{*}_p, p=c \\cdot 2^k + 1$ so small?",
+      "body": "<p>I was implementing NTT for long integer multiplication and thus searched for generators of several $Z^{*}_p$ groups where $p=c\\cdot 2^k + 1$. </p>\n\n<p>I used the algorithm described in <a href=\"http://en.wikipedia.org/wiki/Primitive_root_modulo_n#Finding_primitive_roots\" rel=\"nofollow\">Wikipedia</a> which uses the factorization of (p-1).</p>\n\n<p>Here's a list of what I've found.</p>\n\n<p><a href=\"http://pastebin.com/1iWN3S7F\" rel=\"nofollow\">http://pastebin.com/1iWN3S7F</a></p>\n\n<p>I wonder, why are these generators so small even though the prime numbers present are relatively large? Is it a general tendency or does it happen due to the special form of $p$? </p>\n\n<p>Thank you!</p>\n"
+    },
+    {
+      "tags": [
+        "matrices",
+        "finite-groups",
+        "finite-fields"
+      ],
+      "owner": {
+        "account_id": 1151264,
+        "reputation": 1882,
+        "user_id": 24117,
+        "user_type": "registered",
+        "accept_rate": 86,
+        "profile_image": "https://www.gravatar.com/avatar/25a0f30a8ff4ccd2dd72a40e1cb99e04?s=256&d=identicon&r=PG",
+        "display_name": "Harry Macpherson",
+        "link": "https://math.stackexchange.com/users/24117/harry-macpherson"
+      },
+      "is_answered": true,
+      "view_count": 712,
+      "accepted_answer_id": 188040,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1346180044,
+      "creation_date": 1346179089,
+      "question_id": 188034,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/188034/program-to-find-matrix-group-given-generators-matlab",
+      "title": "program to find matrix group given generators (Matlab)?",
+      "body": "<p>Given a small number of generators for a group of small (e.g. $3\\times3$) matrices over a finite field $\\mathbb{F}_p$ where $p$ is prime, how can we find all the elements of the group?</p>\n\n<p>The best I've come up with so far is to keep taking all possible products of two elements of the group until we no longer get any new elements. This is fine when the groups are small, and it's the algorithm used here: . But some of the groups I'm considering have order over 10000 and therefore need over 100 million matrix multiplications and comparisons, which is taking Matlab far too long to compute!</p>\n\n<p>Is there a way to know when we've got the whole group which is quicker than pairwise multiplication?</p>\n\n<p>Many thanks for any help with this!</p>\n"
+    },
+    {
+      "tags": [
+        "group-theory"
+      ],
+      "owner": {
+        "account_id": 512055,
+        "reputation": 22382,
+        "user_id": 11955,
+        "user_type": "registered",
+        "accept_rate": 60,
+        "profile_image": "https://www.gravatar.com/avatar/df9cbe1faa836fa619454e7a7c579f3d?s=256&d=identicon&r=PG",
+        "display_name": "Ed Pegg",
+        "link": "https://math.stackexchange.com/users/11955/ed-pegg"
+      },
+      "is_answered": false,
+      "view_count": 70,
+      "answer_count": 0,
+      "score": 3,
+      "last_activity_date": 1460474737,
+      "creation_date": 1460474737,
+      "question_id": 1739297,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/1739297/extremal-group-elements-from-generators",
+      "title": "Extremal group elements from generators",
+      "body": "<p>The elements of a group can be generated from generators.  What are the extremal cases called?</p>\n\n<p>For example, the 7920 elements of <a href=\"http://for.mat.bham.ac.uk/atlas/html/M11.html\" rel=\"nofollow\">Mathieu group M11</a> can be generated from GF(2) $10\\times10$ matrices <a href=\"http://for.mat.bham.ac.uk/atlas/atlasreps/M11f2.1\" rel=\"nofollow\">$a$</a> and <a href=\"http://for.mat.bham.ac.uk/atlas/atlasreps/M11f2.2\" rel=\"nofollow\">$b$</a>. The two extremal cases seem to be ababbbabababababbabababbaba and bbabbbabbbabbbabbababababb. In binary, 85283493 and 58160811.  </p>\n\n<p>What are these last holes called? For example, the 86775571046077562880 elements of <a href=\"http://for.mat.bham.ac.uk/atlas/html/J4.html\" rel=\"nofollow\">Janko group J4</a> can be generated from reasonably-sized GF(2) $112\\times112$ matrices <a href=\"http://for.mat.bham.ac.uk/atlas/atlasreps/J4f2.1\" rel=\"nofollow\">$a$</a> and <a href=\"http://for.mat.bham.ac.uk/atlas/atlasreps/J4f2.2\" rel=\"nofollow\">$b$</a>. Is there a handy way of finding the extremal cases for J4 with these generators, or at least finding the expected length of these extremal cases?</p>\n\n<p>Are there any non-small groups that have exceptionally efficient generators, where the extremal values are particularly small when compared to other groups of similar size?  Conversely, is there an exceptionally bad set of generators that has a far-out extremal hole?</p>\n"
+    },
+    {
+      "tags": [
+        "group-theory",
+        "gap"
+      ],
+      "owner": {
+        "account_id": 7048266,
+        "reputation": 565,
+        "user_id": 275915,
+        "user_type": "registered",
+        "accept_rate": 73,
+        "profile_image": "https://www.gravatar.com/avatar/055f5e78d853db211964cc7e7bffad7c?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Jivid",
+        "link": "https://math.stackexchange.com/users/275915/jivid"
+      },
+      "is_answered": true,
+      "view_count": 391,
+      "accepted_answer_id": 1544369,
+      "answer_count": 1,
+      "score": 2,
+      "last_activity_date": 1448373525,
+      "creation_date": 1448371845,
+      "question_id": 1544362,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/1544362/representation-of-groups-with-generators-and-relations",
+      "title": "Representation of groups with generators and relations",
+      "body": "<p>Every finite small group in  GAP has an id. Now my question is:\nIs there a way to find a presentation of a given SmallGroup(m,n)?</p>\n\n<p>By presentation, I mean a set of generators and a set of relations</p>\n"
+    },
+    {
+      "tags": [
+        "abstract-algebra",
+        "matrices",
+        "group-theory",
+        "algebraic-number-theory",
+        "p-adic-number-theory"
+      ],
+      "owner": {
+        "user_type": "does_not_exist",
+        "display_name": "user685167"
+      },
+      "is_answered": true,
+      "view_count": 224,
+      "accepted_answer_id": 3816066,
+      "answer_count": 1,
+      "score": 3,
+      "last_activity_date": 1599547631,
+      "creation_date": 1599119632,
+      "question_id": 3812658,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3812658/generators-of-sl2-mathbfq-p",
+      "title": "generators of $SL(2,\\mathbf{Q}_p)$",
+      "body": "<p>I want to ask how to prove the normal subgroup generated by matrices <span class=\"math-container\">$(1,𝑒;0,1)$</span> and <span class=\"math-container\">$(1,0;𝑒,1)$</span> for <span class=\"math-container\">$𝑒$</span> small is still the whole of <span class=\"math-container\">$SL(2,\\mathbf{Q}_p)$</span>? This is mentioned in the answer of <a href=\"https://mathoverflow.net/questions/34374/any-finite-dimensional-admissiblesmooth-irreducible-representation-of-gl2-q-p\">this question</a>.</p>\n<p>Thanks!</p>\n"
+    },
+    {
+      "tags": [
+        "gap",
+        "p-groups"
+      ],
+      "owner": {
+        "account_id": 4437711,
+        "reputation": 659,
+        "user_id": 148528,
+        "user_type": "registered",
+        "accept_rate": 70,
+        "profile_image": "https://i.sstatic.net/5IVhm.gif?s=256",
+        "display_name": "user148528",
+        "link": "https://math.stackexchange.com/users/148528/user148528"
+      },
+      "is_answered": true,
+      "view_count": 139,
+      "accepted_answer_id": 1398315,
+      "answer_count": 1,
+      "score": 2,
+      "last_activity_date": 1725108117,
+      "creation_date": 1439486646,
+      "last_edit_date": 1439831250,
+      "question_id": 1396128,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/1396128/need-a-3-group-with-3-generators",
+      "title": "need a 3-group with 3 generators",
+      "body": "<p>I need a $3$-group of nilpotency class $3$ with $3$ generators, but I can't find any group meeting these criteria. Does such a group exist?</p>\n\n<p>I've already used GAP-System as far as my PC can handle, and I came up with nothing. I tried a small group of order $3^n,n\\in\\{1,2,3,4,5,6,7,8,9,10\\}$. I tried this code in GAP:</p>\n\n<pre><code>for n in [1..10] do\n  for j in [1..NrSmallGroups(3^n)] do\n    G:=SmallGroup(3^n,j);\n    if NilpotencyClassOfGroup(G)=3 then\n      if Length(GeneratorsOfGroup(G))=3 then\n        Print(n,\", \",j,\"\\n\");\n      fi;\n    fi;\n  od;\nod;\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "linear-algebra",
+        "group-theory"
+      ],
+      "owner": {
+        "account_id": 969475,
+        "reputation": 931,
+        "user_id": 17537,
+        "user_type": "registered",
+        "accept_rate": 88,
+        "profile_image": "https://www.gravatar.com/avatar/3be06f173159fce8f81897ce6c0c5a34?s=256&d=identicon&r=PG",
+        "display_name": "Matthew Kahle",
+        "link": "https://math.stackexchange.com/users/17537/matthew-kahle"
+      },
+      "is_answered": true,
+      "view_count": 600,
+      "accepted_answer_id": 460666,
+      "answer_count": 1,
+      "score": 3,
+      "last_activity_date": 1375742364,
+      "creation_date": 1375740382,
+      "last_edit_date": 1375740503,
+      "question_id": 460653,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/460653/generators-and-relations-for-textpsl2-mathbbf-q",
+      "title": "Generators and relations for $\\text{PSL}(2, \\mathbb{F}_q)$",
+      "body": "<p>Is there a nice presentation for the group $\\text{PSL}(2,\\mathbb{F}_q)$, for every prime $q$?</p>\n\n<p>(I don't have any particular definition in mind for \"nice\", other than, say, a small number of generators and relations.)</p>\n"
+    },
+    {
+      "tags": [
+        "complex-analysis",
+        "algebraic-topology",
+        "algebraic-curves",
+        "riemann-surfaces"
+      ],
+      "owner": {
+        "account_id": 919456,
+        "reputation": 8856,
+        "user_id": 16273,
+        "user_type": "registered",
+        "accept_rate": 76,
+        "profile_image": "https://www.gravatar.com/avatar/8b014bc84a80d7106ebee2d564d5594a?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Appliqu&#233;",
+        "link": "https://math.stackexchange.com/users/16273/appliqu%c3%a9"
+      },
+      "is_answered": true,
+      "view_count": 271,
+      "accepted_answer_id": 603073,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1386783650,
+      "creation_date": 1386783117,
+      "question_id": 603057,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/603057/generators-of-the-first-singular-homology-group-of-a-riemann-surface",
+      "title": "Generators of the first singular homology group of a Riemann surface",
+      "body": "<p>Let $X$ be a Riemann surface embedded in $\\mathbb C^2$ with coordinates $(z,w)$ and let $\\pi_z \\colon X \\to \\mathbb C$ be the projection on first coordinate with property that that for cofinite number of points $z \\in \\mathbb C$ there exists a neighborhood $U_z$, containing $z$, and there exist neighborhoods of points in $\\pi^{-1}(z)$ such that $\\pi_z$ is the biholomorphic map from each of these neighborhoods to $U_z$. For a finite number of points $z_0 \\in \\mathbb C$ we allow to have some points in $\\pi^{-1}(z_0)$ such that they have neighborhoods with local coordinates $u$ in which the map is just $z-z_0 = u^k$, $k \\geq 2$. Now let $\\{\\gamma_j\\}$ be a collection of small closed curves of the form $u = \\varepsilon e^{i\\varphi}$, $\\varphi \\in [0,2\\pi)$, $\\varepsilon$ is small, around these specific points. Is it true that collection $\\{\\gamma_j\\}$ generates $H_1^s(X)$?</p>\n"
+    },
+    {
+      "tags": [
+        "algebraic-geometry",
+        "computer-algebra-systems"
+      ],
+      "owner": {
+        "account_id": 19746,
+        "reputation": 1186,
+        "user_id": 21872,
+        "user_type": "registered",
+        "accept_rate": 84,
+        "profile_image": "https://www.gravatar.com/avatar/73b5c5b992522a5a968b5d2fcb538cf3?s=256&d=identicon&r=PG",
+        "display_name": "tba",
+        "link": "https://math.stackexchange.com/users/21872/tba"
+      },
+      "is_answered": true,
+      "view_count": 398,
+      "accepted_answer_id": 254331,
+      "answer_count": 2,
+      "score": 2,
+      "last_activity_date": 1410226453,
+      "creation_date": 1355010573,
+      "question_id": 254105,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/254105/simple-generators-with-a-complex-gr%c3%b6bner-basis",
+      "title": "Simple generators with a complex Gr&#246;bner basis",
+      "body": "<p>It's known that finding a Gröbner basis of a polynomial ideal has a worst-case space complexity of <a href=\"http://www.scholarpedia.org/article/Buchberger%27s_algorithm#Complexity\" rel=\"nofollow\">$O(2^{2^{c\\cdot n}})$</a>, where c is constant and n is the number of variables $k[x_1,\\ldots,x_n]$.</p>\n\n<p>However, in practice it seems that most ideals have a simple Gröbner basis.</p>\n\n<p>Can anyone give some concrete examples of small generators whose ideal has a large Gröbner basis?\nHow would I go about searching for such examples (besides a brute-force approach of trying random ideals)?</p>\n"
+    },
+    {
+      "tags": [
+        "abstract-algebra",
+        "combinatorics",
+        "number-theory"
+      ],
+      "owner": {
+        "account_id": 19422854,
+        "reputation": 465,
+        "user_id": 884213,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/cb12645e7d0aa16bb25c7a65766c8ab4?s=256&d=identicon&r=PG",
+        "display_name": "DOUGLAS BRUNSON",
+        "link": "https://math.stackexchange.com/users/884213/douglas-brunson"
+      },
+      "is_answered": false,
+      "view_count": 62,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1638636370,
+      "creation_date": 1638636370,
+      "question_id": 4323852,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/4323852/pandigital-generators",
+      "title": "Pandigital Generators",
+      "body": "<p>While doing calculations with large integers in python, I found something I thought was interesting.  Looking at small bases, I've noticed that if I keep raising the base to a higher power, I eventually find a pandigital number.  Several examples are listed below:</p>\n<p><span class=\"math-container\">$$2^{68} = 295147905179352825856,$$</span>\n<span class=\"math-container\">$$278^{8} = 35674538806191022336.$$</span></p>\n<p>Trying this for a few bases less than 1000, it seems that the first pandigital number is never exceptionally large.  For larger bases, it seems that a smaller exponent is required to get the first pandigital.  I haven't taken these experiment very far, so don't take my word for it.</p>\n<p>My question is, can we prove/disprove that this process will always generate a pandigital?  In other words, if I take any number <span class=\"math-container\">$b$</span> as a base, does there exist an exponent <span class=\"math-container\">$e$</span> such that <span class=\"math-container\">$b^e$</span> is pandigital?  I think the answer is yes.  My reasoning so far is that if we multiply a number <span class=\"math-container\">$b*n \\leftarrow n$</span>, every digit of the previous iteration, <span class=\"math-container\">$n$</span> will be changed and possibly we will introduce another digit to <span class=\"math-container\">$n$</span>.  So, intuitively, it seems that if our power will eventually have enough digits to guarantee that every digit from 0 to 9 is included.  The problem I'm having is that I cannot see a pattern in how each digit changes.  For example, if we look at the units digit of a power, there will always be a cycle.  The units digit of <span class=\"math-container\">$2^n$</span> cycles mod 10 over <span class=\"math-container\">$(4,8,6,2)$</span>.  But, the 10s digit does not appear to have any pattern, and I do not know if eventually every digit appears in the 10s place.  I'm not expecting an answer, but perhaps some advice on how to get traction on this problem.  Thanks.</p>\n"
+    },
+    {
+      "tags": [
+        "algebraic-number-theory"
+      ],
+      "owner": {
+        "account_id": 3876090,
+        "reputation": 620,
+        "user_id": 122233,
+        "user_type": "registered",
+        "accept_rate": 90,
+        "profile_image": "https://i.sstatic.net/Pvmvj.jpg?s=256",
+        "display_name": "Qinghua Pi",
+        "link": "https://math.stackexchange.com/users/122233/qinghua-pi"
+      },
+      "is_answered": true,
+      "view_count": 193,
+      "accepted_answer_id": 2142045,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1486971257,
+      "creation_date": 1486969179,
+      "question_id": 2142016,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/2142016/relation-between-the-number-of-generators-of-ideal-and-class-number",
+      "title": "Relation between the number of generators of ideal and class number",
+      "body": "<p>I have a small problem on the number of generators of  ideal and class number.</p>\n\n<p>Let $F$ be a number field with class number $h_F$. If $h_F=1$ then  every ideal of $F$ is princile ideal.<br>\nAssume $h_F&gt;1$. Can we say that the number of generators of ideals of $F$ is at most $h_F$? If it is true, where can I find a proof?</p>\n\n<p>Thanks!</p>\n"
+    },
+    {
+      "tags": [
+        "group-theory",
+        "group-presentation",
+        "finitely-generated",
+        "infinite-groups",
+        "combinatorial-group-theory"
+      ],
+      "owner": {
+        "account_id": 11152209,
+        "reputation": 1362,
+        "user_id": 456347,
+        "user_type": "registered",
+        "accept_rate": 58,
+        "profile_image": "https://www.gravatar.com/avatar/89bea8297aca1d86a7dcca1931fa5dc7?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Friedrich",
+        "link": "https://math.stackexchange.com/users/456347/friedrich"
+      },
+      "is_answered": true,
+      "view_count": 388,
+      "accepted_answer_id": 3941463,
+      "answer_count": 1,
+      "score": 5,
+      "last_activity_date": 1607523658,
+      "creation_date": 1607519984,
+      "last_edit_date": 1607523658,
+      "question_id": 3941422,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3941422/do-you-know-this-finitely-presented-group-on-two-generators",
+      "title": "Do you know this finitely presented group on two generators?",
+      "body": "<p>I computed using Sage the fundamental group of some topological space and got the infinite group\n<span class=\"math-container\">$$\\langle a, b\\mid aba^{-1}ba\\rangle.$$</span>\nBy the change of variables <span class=\"math-container\">$x=b^{-1}$</span> and <span class=\"math-container\">$y=a$</span>, it can also be written as\n<span class=\"math-container\">$$\\langle x, y \\mid xy=y^2x^{-1}\\rangle.$$</span>\nDo you know if this group has a name ? Do you know if there exists a table of finitely presented groups of small &quot;complexity&quot; like this one ?</p>\n"
+    },
+    {
+      "tags": [
+        "probability",
+        "group-theory",
+        "finite-groups",
+        "finitely-generated",
+        "p-groups"
+      ],
+      "owner": {
+        "account_id": 30763485,
+        "reputation": 157,
+        "user_id": 1300468,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/cd8cc5cdd3712bec2d80bae5b351fe5c?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Tod",
+        "link": "https://math.stackexchange.com/users/1300468/tod"
+      },
+      "is_answered": false,
+      "view_count": 123,
+      "answer_count": 0,
+      "score": 3,
+      "last_activity_date": 1767618797,
+      "creation_date": 1710266337,
+      "last_edit_date": 1767618797,
+      "question_id": 4879779,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/4879779/2-generated-p-groups-with-generators-of-order-p",
+      "title": "2-generated $p$-groups with generators of order $p$",
+      "body": "<p>Let <span class=\"math-container\">$G=\\langle a,b\\rangle$</span> be a finite <span class=\"math-container\">$p$</span>-group such that <span class=\"math-container\">$a^p=b^p=1$</span>. Is there any result about the size of the set of <span class=\"math-container\">$p$</span>-elements <span class=\"math-container\">$\\Omega(G):=\\{g\\in G\\mid g^p=1\\}$</span>? In particular, I'm interested in the fraction <span class=\"math-container\">$|\\Omega(G)|/|G|$</span>.</p>\n<p>Edit: I was exactly wondering about if the fraction <span class=\"math-container\">$|Ω(G)|/|G|$</span>\ncould be done arbitrarily small in this class of groups. I'm not able to find a reference to this (or conversely a theorem that states the existence of a positive lower bound <span class=\"math-container\">$c$</span>).</p>\n"
+    },
+    {
+      "tags": [
+        "modules"
+      ],
+      "owner": {
+        "account_id": 15478670,
+        "reputation": 332,
+        "user_id": 651717,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/8847999a72dce77fd2d2c3c2cd2dbaa9?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "user643717",
+        "link": "https://math.stackexchange.com/users/651717/user643717"
+      },
+      "is_answered": true,
+      "view_count": 59,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1568375632,
+      "creation_date": 1568374301,
+      "last_edit_date": 1568374788,
+      "question_id": 3355100,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3355100/finding-generators-for-a-module",
+      "title": "Finding generators for a module",
+      "body": "<p>Suppose, if <span class=\"math-container\">$p$</span> is a prime natural number, that <span class=\"math-container\">$R$</span> is the set of rational numbers such that <span class=\"math-container\">$p$</span>  is not a factor of the denominator after cancelling out common prime factors of numerator and denominator. Consider <span class=\"math-container\">$\\mathbb{Q}$</span> as an <span class=\"math-container\">$R$</span>-module. I know that <span class=\"math-container\">$\\mathbb{Q}$</span> cannot be finitely generated (Nakayama's lemma). But what would be a 'small' set of generators of <span class=\"math-container\">$\\mathbb{Q}$</span> over <span class=\"math-container\">$R$</span> and does a minimal set of generators exist? I know that <span class=\"math-container\">$\\left \\{1, \\dfrac {1}{p}, \\dfrac {1}{p^2}, \\ldots \\right \\}$</span> is a set of generators, therefore, so are <span class=\"math-container\">$\\left \\{\\dfrac {1}{p}, \\dfrac {1}{p^2},\\dfrac {1}{p^3} \\ldots \\right \\}$</span> (since <span class=\"math-container\">$1 = p\\dfrac {1}{p}$</span>), <span class=\"math-container\">$\\left \\{\\dfrac {1}{p^2}, \\dfrac {1}{p^3},\\dfrac {1}{p^4} \\ldots \\right \\}$</span> etc., which might suggest that there is no minimal set of generators or maybe not...</p>\n"
+    },
+    {
+      "tags": [
+        "abstract-algebra",
+        "group-theory",
+        "computational-mathematics",
+        "computer-algebra-systems",
+        "computational-algebra"
+      ],
+      "owner": {
+        "account_id": 1083293,
+        "reputation": 213,
+        "user_id": 51037,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/2c9315cc2e2e0db746311bf3855a3887?s=256&d=identicon&r=PG",
+        "display_name": "emperordali",
+        "link": "https://math.stackexchange.com/users/51037/emperordali"
+      },
+      "is_answered": true,
+      "view_count": 437,
+      "accepted_answer_id": 1162427,
+      "answer_count": 1,
+      "score": 2,
+      "last_activity_date": 1424993665,
+      "creation_date": 1424729268,
+      "last_edit_date": 1424993665,
+      "question_id": 1162384,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/1162384/algorithms-for-generating-a-n-and-s-n-from-specific-generators",
+      "title": "Algorithms for generating $A_n$ and $S_n$ from specific generators",
+      "body": "<p>Is there a simple algorithm to generate the elements of the alternating group $A_n$ in terms of some small set of generators?</p>\n\n<p>For example, when $n = 4$, I'm looking for an algorithm whose <em>output</em> is a generating set, say $\\{ a = (1,2,3), b = (1,2)(3,4) \\}$ together with a list of 12 words in $a$ and $b$ that represent that elements of $A_4$.</p>\n\n<p>What about such an algorithm for the symmetric group? For example, when $n = 4$ an algorithm that outputs, for example, $\\{ a = (1,2,3,4), b = (1,2) \\}$ and a listing of $S_4$ as 24 words in $a$ and $b$.</p>\n"
+    },
+    {
+      "tags": [
+        "group-theory",
+        "permutations",
+        "finite-groups",
+        "algorithms"
+      ],
+      "owner": {
+        "account_id": 71043,
+        "reputation": 6035,
+        "user_id": 7072,
+        "user_type": "registered",
+        "accept_rate": 70,
+        "profile_image": "https://i.sstatic.net/HkbYt.png?s=256",
+        "display_name": "Thomas Ahle",
+        "link": "https://math.stackexchange.com/users/7072/thomas-ahle"
+      },
+      "is_answered": true,
+      "view_count": 500,
+      "accepted_answer_id": 4931656,
+      "answer_count": 1,
+      "score": 11,
+      "last_activity_date": 1718230277,
+      "creation_date": 1718225102,
+      "question_id": 4931631,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/4931631/algorithm-for-finding-intersection-of-two-groups-from-generators",
+      "title": "Algorithm for finding intersection of two groups from generators",
+      "body": "<p>Say I have two subgroups of <span class=\"math-container\">$S_n$</span> defined from their generators.\nE.g.\n<span class=\"math-container\">$G_1 = \\langle (0 3 4 1), (0 3 2 1 4)\\rangle$</span> and\n<span class=\"math-container\">$G_2 = \\langle (4)(0 2 3 1), (0 4 3 2 1)\\rangle$</span>.\nTheir intersection can be written in terms of three generators:\n<span class=\"math-container\">$G_1\\cap G_2 = \n    \\langle (0 1 4 3),\n    (0 4)(1 3),\n    (0 3 4 1)\\rangle$</span>.</p>\n<p>Of course one can find the intersection by generating all elements of <span class=\"math-container\">$G_1$</span> and <span class=\"math-container\">$G_2$</span>. But is there a faster way, assuming each group has just a small number of generators?</p>\n"
+    },
+    {
+      "tags": [
+        "category-theory",
+        "homological-algebra",
+        "abelian-categories",
+        "triangulated-categories"
+      ],
+      "owner": {
+        "account_id": 11814901,
+        "reputation": 3925,
+        "user_id": 482932,
+        "user_type": "registered",
+        "accept_rate": 94,
+        "profile_image": "https://www.gravatar.com/avatar/8b6c7679db5060b55a24837f752d89c2?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Luke",
+        "link": "https://math.stackexchange.com/users/482932/luke"
+      },
+      "is_answered": true,
+      "view_count": 1263,
+      "answer_count": 1,
+      "score": 5,
+      "last_activity_date": 1528625504,
+      "creation_date": 1528560155,
+      "question_id": 2813686,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/2813686/compact-generators-in-a-triangulated-category-and-how-they-relate-to-general-gen",
+      "title": "Compact generators in a triangulated category and how they relate to general generators",
+      "body": "<p>I am familiar with the notion of generators in a locally small category as \"separators\" of morphisms. More precisely, if $\\mathcal{C}$ is a locally small category, we say that a set of objects,\n$$\n\\{  G_{i} \\in \\mathcal{ob}(\\mathcal{C}) : i \\in I  \\},\n$$\nis a <em>family of generators in the sense of Grothendieck</em> if, for any pair of morphisms $f, g: X \\rightarrow Y$ in $\\mathcal{C}$ with $f \\neq g$, there is some $i \\in I$ and a morphism $h: G_{i} \\rightarrow X$ such that\n$$\nf \\circ h \\neq g \\circ h.\n$$\nIn the case that the family of generators only has one element, this is equivalent to the claim that the set valued functor,\n$$\n\\text{Hom}(G, -)\n$$\nis faithful. I am familiar with this idea in the context of, for example, Grothendieck categories. </p>\n\n<p>I have recently started studying triangulated categories, and in particular compactly generated triangulated categories (see for example Bondal &amp; Van den Bergh 2003). In that setting, there is a notion of an object being compact: If $\\mathfrak{T}$ is a triangulated category (and hence additive) admitting all colimits, we say that an object $A \\in \\mathcal{ob}(\\mathfrak{T})$ is compact if the functor \n$$\n\\text{Hom}(X, -)\n$$\npreserves all filtered colimits. This clearly implies that the functor preserves all coproducts (since they are just filtered colimits of finite coproducts). </p>\n\n<p>If $\\mathfrak{T}$ be a triangulated category admitting all colimits. Let $\\{ G_{i} \\in \\mathcal{ob}(\\mathfrak{T}) : i \\in I   \\}$ be a family of compact objects in the above sense. We say that this is a <em>family of generators in the sense of Verdier</em> if the following condition holds:\nIf $X$ is an object of $\\mathfrak{T}$, and if $\\text{Hom}(G_{i}, X[n]) \\simeq 0$ for all $i \\in I$ and all $n \\in \\mathbb{Z}$, then $X \\simeq 0$. Here the notation $[n]$ denotes an application of the translation functor given by the triangulated structure.</p>\n\n<blockquote>\n  <p>Let $\\mathfrak{T}$ be a triangulated category admitting all colimits. Let $\\{ G_{i} \\in \\mathcal{ob}(\\mathfrak{T}) : i \\in I   \\}$ be a family of compact objects generating $\\mathfrak{T}$ in the sense of Verdier. Is this somehow equivalent to the family generating $\\mathfrak{T}$ in the sense of Grothendieck? </p>\n</blockquote>\n\n<p>I am quite familiar with the Grothendieck version of generating, but I have never seen this new sense outside the context of triangulated categories, which makes me think that if they are equivalent in this situation, it will depend heavily on the triangulated structure. Are these seemingly different notions of generators equivalent for compact objects in a triangulated category? </p>\n"
+    },
+    {
+      "tags": [
+        "group-theory",
+        "permutations",
+        "representation-theory"
+      ],
+      "owner": {
+        "account_id": 5748898,
+        "reputation": 27016,
+        "user_id": 213607,
+        "user_type": "registered",
+        "accept_rate": 40,
+        "profile_image": "https://i.sstatic.net/WkZKE.png?s=256",
+        "display_name": "mathreadler",
+        "link": "https://math.stackexchange.com/users/213607/mathreadler"
+      },
+      "is_answered": false,
+      "view_count": 54,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1441426056,
+      "creation_date": 1441426056,
+      "question_id": 1422688,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/1422688/permutations-and-generators-and-matrix-representations",
+      "title": "Permutations and generators and matrix representations.",
+      "body": "<p>I am considering all possible permutations of 3 elements and I want to construct these using the generating elements (switch 1 and 3) and (switch 1 and 2). We can represent these using the matrices:</p>\n\n<p>$${\\bf P}_{13} = \\left[\\begin{array}{ccc}\n0&amp;0&amp;1\\\\\n0&amp;1&amp;0\\\\\n1&amp;0&amp;0\n\\end{array}\\right] \\hspace{1cm} {\\bf P}_{12} = \\left[\\begin{array}{ccc}\n0&amp;1&amp;0\\\\\n1&amp;0&amp;0\\\\\n0&amp;0&amp;1\n\\end{array}\\right]\n$$</p>\n\n<p>We see that ${({\\bf P}_{12})}^2 = {({\\bf P}_{13})}^2 = {\\bf I}$, so higher exponents than 1 are of no use to build.\nInstead we alternate which element to multiply with:\n$${\\bf P}(n) = \\prod_{i=1}^n {{\\bf P}_{12}}^{mod(i,2)}{{\\bf P}_{13}}^{mod(i+1,2)}$$</p>\n\n<p>This seems to build all 6 possible permutations for me. Is it a coincidence that just happens to work for my relatively small group or can this approach be made systematic for larger groups?</p>\n"
+    },
+    {
+      "tags": [
+        "reference-request",
+        "lie-groups",
+        "lie-algebras",
+        "quaternions"
+      ],
+      "owner": {
+        "account_id": 9344253,
+        "reputation": 45,
+        "user_id": 376033,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/7626656a7bef5640c75164910b6a5f7d?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Oliver Miller",
+        "link": "https://math.stackexchange.com/users/376033/oliver-miller"
+      },
+      "is_answered": false,
+      "view_count": 144,
+      "answer_count": 0,
+      "score": 2,
+      "last_activity_date": 1525878833,
+      "creation_date": 1525878833,
+      "question_id": 2773806,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/2773806/generators-for-the-special-quaternionic-orthogonal-lie-algebra-mathfrakso",
+      "title": "Generators for the special quaternionic orthogonal Lie algebra $\\mathfrak{so}^*(2n)$",
+      "body": "<p>I'm searching for a reference of a \"small\" (close to minimal) set of generators for the (real) Lie algebra $\\mathfrak{so}^*(2n)$, which can be defined as\n$$\\mathfrak{so}^*(2n) = \\left\\{ \\begin{pmatrix}A &amp; B \\\\ B^\\intercal &amp; -\\overline{A}\\end{pmatrix} \\ \\Big|\\ A = -A^\\intercal, B = -\\overline{B}^\\intercal, \\text{ $A$, $B$ are $n \\times n$ complex matrices} \\right\\}.$$\nI think that it is called the \"special quaternionic orthogonal\" Lie algebra, although I have not been able to find much information about it.</p>\n\n<p>The (real) dimension of $\\mathfrak{so}^*(2n)$ is $2n^2 - n$ and, if possible, I would like the set of generators to be \"much smaller\" than that. For example, the dimension of $\\mathfrak{so}^*(8)$ is $28$, but I know it can be generated using \nonly $4$ elements. Moreover, $\\mathfrak{so}^*(12)$ is $66$-dimensional and can be generated using $6$ elements.</p>\n"
+    },
+    {
+      "tags": [
+        "group-theory",
+        "cyclic-groups"
+      ],
+      "owner": {
+        "account_id": 1066318,
+        "reputation": 33,
+        "user_id": 31488,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/bf3302711dcb7672c8a664fd5004b3a3?s=256&d=identicon&r=PG",
+        "display_name": "klara-l",
+        "link": "https://math.stackexchange.com/users/31488/klara-l"
+      },
+      "is_answered": false,
+      "view_count": 193,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1656617820,
+      "creation_date": 1337112571,
+      "last_edit_date": 1656617820,
+      "question_id": 145610,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/145610/finding-generators-for-commutative-encryption",
+      "title": "Finding generators for commutative encryption",
+      "body": "<p>The paper <a href=\"https://web.archive.org/web/20130722140408/http://ftp.almaden.ibm.com/cs/people/sasha/pubs/2003_SIGMOD.pdf\" rel=\"nofollow noreferrer\" title=\"Information Sharing Across Private Databases\">Information Sharing Across Private Databases</a> presents a protocol for finding an intersection of two private sets.<br />\nThey use a commutative encryption that is quite similar to the Diffie–Hellman key exchange and operate in <span class=\"math-container\">$\\mathbb{Z}_p^*$</span> with <span class=\"math-container\">$p$</span> being a safe prime.<br />\nBasically they hash each set element <span class=\"math-container\">$x$</span> and then encrypt it with their randomly chosen key <span class=\"math-container\">$k_A$</span> like this: <span class=\"math-container\">$h\\left(x\\right) ^ {k_A} \\mod p$</span>.<br />\nA practical implementation would use a typical hash function like SHA1 and then square the result before encrypting.</p>\n<p><strong>EDIT:</strong></p>\n<blockquote class=\"spoiler\">\n<p> This was my original question, but as it turns out, I missed, that their hashfunction maps to <span class=\"math-container\">$\\mathcal{QR}$</span>. That makes my question dispensable:<br />\n Can they just do that? In my understanding they only have a 50% change to &quot;hit&quot; a generator (<a href=\"https://math.stackexchange.com/questions/145578/what-are-the-generators-for-mathbbz-p-with-p-a-safe-prime\" title=\"What are the generators for Z∗p with p a safe prime?\">in <span class=\"math-container\">$\\mathbb{Z}_p^*$</span> only non quadratic residue are generators</a>).\n Isn't that &quot;dangerous&quot; in terms of short circles and thus reduced security of the protocol?</p>\n</blockquote>\n<p><strong>Still interested in:</strong></p>\n<ol>\n<li>Wouldn't it be faster from a computational point of view to multiply <span class=\"math-container\">$h\\left(x\\right) \\cdot g$</span> where <span class=\"math-container\">$g \\in \\mathcal{NQR}_p$</span> to get a new generator. (g should probably be chosen to be very small, to reduce calculation overhead)?</li>\n</ol>\n<p><strong>EDIT (already solved and basicly the protocol from the paper):</strong><br />\n2. or calculate <span class=\"math-container\">$h\\left(x\\right)^2$</span> to obtain a quadratic residue and then operate only in the subgroup <span class=\"math-container\">$\\mathcal{QR}_p$</span>? Today my professor told me, that  every element in <span class=\"math-container\">$\\mathcal{QR}_p$</span> is a generator for that subgroup, but didn't give a proof. Is that theorem true? How is it proven?</p>\n<p>Thank you for answers.</p>\n"
+    },
+    {
+      "tags": [
+        "algorithms",
+        "exact-sequence",
+        "gap",
+        "group-presentation",
+        "combinatorial-group-theory"
+      ],
+      "migrated_from": {
+        "other_site": {
+          "aliases": [
+            "https://mathoverflow.stackexchange.com",
+            "https://mathoverflow.com"
+          ],
+          "styling": {
+            "tag_background_color": "#FFF",
+            "tag_foreground_color": "#000",
+            "link_color": "#0077CC"
+          },
+          "related_sites": [
+            {
+              "relation": "meta",
+              "api_site_parameter": "meta.mathoverflow.net",
+              "site_url": "https://meta.mathoverflow.net",
+              "name": "MathOverflow Meta"
+            },
+            {
+              "relation": "chat",
+              "site_url": "https://chat.stackexchange.com?tab=site&host=mathoverflow.net",
+              "name": "Chat Stack Exchange"
+            }
+          ],
+          "markdown_extensions": [
+            "MathJax"
+          ],
+          "launch_date": 1254154260,
+          "open_beta_date": 1254154260,
+          "site_state": "normal",
+          "high_resolution_icon_url": "https://mathoverflow.net/Content/Sites/mathoverflow/Img/apple-touch-icon@2.png",
+          "favicon_url": "https://mathoverflow.net/Content/Sites/mathoverflow/Img/favicon.ico",
+          "icon_url": "https://mathoverflow.net/Content/Sites/mathoverflow/Img/apple-touch-icon.png",
+          "audience": "professional mathematicians",
+          "site_url": "https://mathoverflow.net",
+          "api_site_parameter": "mathoverflow.net",
+          "logo_url": "https://mathoverflow.net/Content/Sites/mathoverflow/Img/logo.png",
+          "name": "MathOverflow",
+          "site_type": "main_site"
+        },
+        "on_date": 1396657751,
+        "question_id": 162410
+      },
+      "owner": {
+        "user_type": "does_not_exist",
+        "display_name": "Will"
+      },
+      "is_answered": false,
+      "view_count": 163,
+      "answer_count": 0,
+      "score": 2,
+      "last_activity_date": 1543799339,
+      "creation_date": 1396587633,
+      "last_edit_date": 1543799339,
+      "question_id": 740203,
+      "link": "https://math.stackexchange.com/questions/740203/given-a-set-of-generators-of-a-group-g-is-there-a-method-to-find-a-presentati",
+      "title": "Given a set of generators of a group $G$, is there a method to find a presentation for $G$ using those generators?",
+      "body": "<p>Suppose I have a group $G$, which I know is finitely presentable and infinite. (In particular, I have a presentation for it, though not the one I want).</p>\n\n<p>Suppose I have a small list of generators $\\{g_1,\\ldots,g_n\\}$ for $G$.</p>\n\n<p>Is there an algorithm to find a presentation for $G$ using the given generators?</p>\n\n<p>More specifically, I have an exact sequence of finitely presented groups $$1\\rightarrow F_2\\rightarrow G\\rightarrow H\\rightarrow 1$$\nHere $F_2$ is the free group on 2 generators, and I have presentations for both $G$ and $H$. I'd like to find a presentation of $G$ where the generators have the form $\\{x,y,g_1,\\ldots,g_k\\}$, where $x,y$ are the two free generators of $F_2$.</p>\n\n<p>It looks like GAP would allow me to do this for finite groups $G$, though the same function does not appear to work for infinite groups.</p>\n"
+    },
+    {
+      "tags": [
+        "random"
+      ],
+      "owner": {
+        "account_id": 83432,
+        "reputation": 352,
+        "user_id": 12529,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/2ebb47a2f272e8fe85a1b9106c4c1714?s=256&d=identicon&r=PG",
+        "display_name": "Dov",
+        "link": "https://math.stackexchange.com/users/12529/dov"
+      },
+      "is_answered": false,
+      "view_count": 35,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1447609008,
+      "creation_date": 1447609008,
+      "question_id": 1530481,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/1530481/unltra-simplistic-linear-congruential-random-number-generators",
+      "title": "unltra-simplistic linear congruential random number generators",
+      "body": "<p>The real linear congruential number generators are more complicated but it is possible to generate a sequence that hits every number in 32 bits using only:</p>\n\n<pre><code>seed = seed * m + a\n</code></pre>\n\n<p>Obviously if m = 0 and a = 0, the sequence has length 1\nif m = 1 and a = 1, the sequence counts through the entire range.</p>\n\n<p>I experimentally determined that there are many numbers m and a around 32k, which must be odd, that have this property.  For example (from memory, hopefully I am right)</p>\n\n<p>m = 32097, a = 31079</p>\n\n<p>I wrote a small program and discovered that if m has this property, then there are many primes a that will work.</p>\n\n<p>I do not yet know if for a working m, all prime numbers (except 2) will work.  I will test that empirically, but wondered whether there is some theory that would prove the results.</p>\n\n<p>On the computer, I test that the sequence hits every number by the following simple test:</p>\n\n<pre><code>1. start with seed = 0\n2. count 2^32 times.  For each time, calculate step 3\n3. seed = seed * m + a\n4. if seed == 0, break out, the sequence ends early\n5. if after 2^32 iterations the sequence ends in 0, then every number must have been reached.\n</code></pre>\n\n<p>This mechanical proof won't work well for 64 bit numbers, so if anyone can prove that this is true, is there a way to determine the numbers m and a for which this will work without trying all 2^64  values?</p>\n"
+    },
+    {
+      "tags": [
+        "algebraic-geometry",
+        "polynomials",
+        "ideals"
+      ],
+      "owner": {
+        "account_id": 10949553,
+        "reputation": 285,
+        "user_id": 468680,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/qoyvj.png?s=256",
+        "display_name": "James Cheung",
+        "link": "https://math.stackexchange.com/users/468680/james-cheung"
+      },
+      "is_answered": false,
+      "view_count": 85,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1586612549,
+      "creation_date": 1586612549,
+      "last_edit_date": 1591958336,
+      "question_id": 3620419,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3620419/programs-for-expressing-a-polynomial-f-in-kx-1-cdots-x-n-in-terms-of-gene",
+      "title": "Program(s) for expressing a polynomial $f\\in K[x_1,\\cdots,x_n]$ in terms of generators of the ideal $\\langle f_1,\\cdots,f_r\\rangle$",
+      "body": "<p>Let <span class=\"math-container\">$\\mathbb{K}$</span> be field (<span class=\"math-container\">$\\mathbb{K}\\in \\{\\mathbb{Q},\\mathbb{R},\\mathbb{C}\\}$</span>) and <span class=\"math-container\">$K[x_1,\\cdots,x_n]$</span> be the polynomials ring over <span class=\"math-container\">$\\mathbb{K}$</span>.</p>\n<p>Consider a list of polynomials <span class=\"math-container\">$\\{f_1,\\cdots,f_r\\}$</span> and a polynomial <span class=\"math-container\">$f\\in K[x_1,\\cdots,x_n]$</span>.\nLet <span class=\"math-container\">$\\langle f_1,\\cdots,f_r\\rangle$</span> be the ideal generated by <span class=\"math-container\">$\\{f_1,\\cdots,f_r\\}$</span>.</p>\n<p>I am currently using wxmaxima. There is a command to find out whether <span class=\"math-container\">$f\\in \\langle f_1,\\cdots,f_r\\rangle$</span>.</p>\n<blockquote>\n<ol>\n<li>If <span class=\"math-container\">$f\\in \\langle f_1,\\cdots,f_r\\rangle$</span>, I would like to know whether there is any program (prefer open source program) to find out <span class=\"math-container\">$g_1,\\cdots,g_r\\in K[x_1,\\cdots,x_n]$</span> such that <span class=\"math-container\">$f=g_1f_1+\\cdots+g_rf_r$</span>.</li>\n<li>If we can find out <span class=\"math-container\">$g_1,\\cdots,g_r\\in K[x_1,\\cdots,x_n]$</span>, can we request those <span class=\"math-container\">$g_1,\\cdots,g_r\\in K[x_1,\\cdots,x_n]$</span> are minimal in the sense that their overall degrees is as small as possible?</li>\n</ol>\n</blockquote>\n<p>According to this post: (<a href=\"https://math.stackexchange.com/questions/1702098/radical-membership-and-ideal-membership\">radical membership and ideal membership</a>), we can also determine whether <span class=\"math-container\">$f\\in \\sqrt{\\langle f_1,\\cdots,f_r\\rangle}$</span> with the help of Gröbner basis.</p>\n<blockquote>\n<p>If <span class=\"math-container\">$f\\in \\sqrt{\\langle f_1,\\cdots,f_r\\rangle}$</span>, I would like to know whether there is any program (prefer open source program) to find out <span class=\"math-container\">$m\\in\\mathbb{N}$</span> and <span class=\"math-container\">$h_1,\\cdots,h_r\\in K[x_1,\\cdots,x_n]$</span> such that <span class=\"math-container\">$f^m=h_1f_1+\\cdots+h_rf_r$</span>.</p>\n<p>If we can find out <span class=\"math-container\">$m\\in\\mathbb{N}$</span> and <span class=\"math-container\">$h_1,\\cdots,h_r\\in K[x_1,\\cdots,x_n]$</span>, can we request the following:\n(a) those <span class=\"math-container\">$h_1,\\cdots,h_r\\in K[x_1,\\cdots,x_n]$</span> are minimal in the sense that their overall degrees is as small as possible?\n(b) m is as small as possible?</p>\n</blockquote>\n"
+    },
+    {
+      "tags": [
+        "abstract-algebra",
+        "galois-theory"
+      ],
+      "owner": {
+        "user_type": "does_not_exist",
+        "display_name": "user87543"
+      },
+      "is_answered": false,
+      "view_count": 189,
+      "answer_count": 0,
+      "score": 2,
+      "last_activity_date": 1376303685,
+      "creation_date": 1376303685,
+      "question_id": 465691,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/465691/generators-for-galois-extension",
+      "title": "Generators for Galois Extension",
+      "body": "<p>Original Question is Supposing that $F$ is a field of characteristic $\\neq2$ and  $K/F$ a Galois extension with $Gal(K/F)$ isomorphic to $\\mathbb{Z}_2 \\times \\mathbb{Z}_2$ to prove that $K=F(\\sqrt{D_1},\\sqrt{D_2})$ for some $D_1,D_2\\in F$ with the property that, none of $D_1,D_2$ or $D_1D_2$ is a square in $F$.</p>\n\n<p>It seem to be very obvious, but i am not able to write in detail why is this so... </p>\n\n<p>As Galois group $\\mathbb{Z}_2 \\times \\mathbb{Z}_2$ has an element of order 2, corresponding irreducible polynomial(whose roots are domain element and image of that element) would be of order 2, say $ax^2+bx+c$, as we have assumed it is irreducible, $b^2-4ac$ is not a square. For getting splitting field corresponding to this polynomial we adjoin $\\sqrt{b^2-4ac}$ we let $D_1=b^2-4ac$.</p>\n\n<p>For another element of galois group with order 2, for similar reasons as above, i have a polynomial $px^2+qx+r$ and we adjoin $\\sqrt{q^2-4pr}$ to get splitting field and we set $D_2=q^2-4pr$.</p>\n\n<p>As third element would just be composition of two other elements(non identity elements), we do not have to bother about that element.</p>\n\n<p>By this I conclude that $K=F(\\sqrt{D_1},\\sqrt{D_2})$.</p>\n\n<p>I would like to know is my justification sufficient to claim given result.</p>\n\n<p>I would like to look for a slight generalization, if i have a Galois group (of small order for time being) can i expect to list down the generators of corresponding Galois extension.</p>\n\n<p>Any help/suggestion would be appreciated.</p>\n\n<p>Thank You.</p>\n\n<p>P.S: I am very thankful to the Team who started Mathematics Stack exchange and for other users who were ready to help me with my doubts. I can see drastic change in my attitude to  solve problems with in less than 20 days after joining in this forum.</p>\n"
+    },
+    {
+      "tags": [
+        "linear-algebra",
+        "convex-analysis",
+        "linear-programming"
+      ],
+      "owner": {
+        "account_id": 4822919,
+        "reputation": 701,
+        "user_id": 167131,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/dbccb29f6b221a1e7c3607768436a59a?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "user167131",
+        "link": "https://math.stackexchange.com/users/167131/user167131"
+      },
+      "is_answered": false,
+      "view_count": 186,
+      "answer_count": 0,
+      "score": 4,
+      "last_activity_date": 1463174822,
+      "creation_date": 1463174387,
+      "last_edit_date": 1463174822,
+      "question_id": 1784297,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/1784297/how-to-get-inequality-representation-of-cone-give-by-generators",
+      "title": "How to get inequality representation of cone give by generators",
+      "body": "<p>To be as specific as possible, I have a subspace $I \\subset R^{14}$ of dimension $3$ and an $11\\times14$ matrix $A$ with linearly independent rows spanning the orthogonal complement of $I$. I have an interest in the cone positively spanned by the columns of $A$ (it can be shown that these columns are positively independent). In particular, I would like to find the inequality representation of this cone (which happens to be pointed). My understanding is that in general this is not a simple problem although I have found a small paper published years ago in J. Matrix Anal and Appl (by Carolyn Dobler) presenting a simple method for doing this, unfortunately requiring that the matrix $A^\\prime$ be of full row rank. I was hoping the specific form of $A$ might make it amenable to a similar procedure.</p>\n\n<p>If it would help for me to post the entire matrix I can do that; however, I'm really looking for an approach in a more general context (general dimensions). </p>\n\n<p>Any pointers to relevant areas of research would be appreciated.</p>\n"
+    },
+    {
+      "tags": [
+        "group-theory",
+        "reference-request",
+        "permutations",
+        "symmetric-groups"
+      ],
+      "owner": {
+        "account_id": 16010892,
+        "reputation": 494,
+        "user_id": 677124,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/161442248227962/picture?type=large",
+        "display_name": "Ovinus Real",
+        "link": "https://math.stackexchange.com/users/677124/ovinus-real"
+      },
+      "is_answered": false,
+      "view_count": 215,
+      "answer_count": 0,
+      "score": 6,
+      "last_activity_date": 1655674112,
+      "creation_date": 1655671829,
+      "last_edit_date": 1655674112,
+      "question_id": 4476177,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/4476177/random-generators-of-the-symmetric-group-s-n",
+      "title": "Random generators of the symmetric group $S_n$",
+      "body": "<p>Suppose <span class=\"math-container\">$x_1,x_2,...,x_m\\in S_n$</span> are uniformly randomly chosen (<span class=\"math-container\">$m=O(1)$</span>, or at least <span class=\"math-container\">$m\\ll n!$</span>) and that they generate the entirety of <span class=\"math-container\">$S_n$</span>. (The probability that two random generators (i.e., <span class=\"math-container\">$m=2$</span>) generate <span class=\"math-container\">$S_n$</span> is already about <span class=\"math-container\">$3/4$</span> for large <span class=\"math-container\">$n$</span>, [0] so heuristically you'd expect most combinations for even <span class=\"math-container\">$n=3$</span> to work anyway.) Let <span class=\"math-container\">$a_0=I$</span> begin at the identity permutation and <span class=\"math-container\">$a_{i+1}=a_ix_k$</span>, where <span class=\"math-container\">$k$</span> is chosen uniformly at random. For a fixed, uniformly randomly chosen <span class=\"math-container\">$p\\in S_n$</span>, what is the expected value of the first <span class=\"math-container\">$i$</span> such that <span class=\"math-container\">$a_i=p$</span>? In other words, what is the expected length of a random walk ending on <span class=\"math-container\">$p$</span> on the (directed) Cayley graph of <span class=\"math-container\">$S_n$</span> generated by <span class=\"math-container\">$\\{x_i\\}$</span>?</p>\n<p>I'm looking for crude heuristics, not necessarily rigorous ones—I'm just struggling to visualize the problem. I suppose the difficulty in visualization relates to the unintuitive fact that permutations tend to have a rather small order and thus don't &quot;mix&quot; well. I can find some related results: for example, for <em>two</em> randomly chosen <span class=\"math-container\">$g,h\\in S_n$</span> which generate <span class=\"math-container\">$S_n$</span> (or in fact <span class=\"math-container\">$A_n$</span>), along with their inverses <span class=\"math-container\">$g^{-1},h^{-1}$</span>, the average shortest word to an arbitrary permutation is <span class=\"math-container\">$O(n^2 (\\log n)^c)$</span> for some absolute constant <span class=\"math-container\">$c$</span>. [1] [2] contains some results and a conjecture on the <em>worst-case diameter</em> with <span class=\"math-container\">$O(1)$</span> generators. But I can't seem to find estimates for a random walk.</p>\n<p>[0] <a href=\"https://math.stackexchange.com/a/453068/677124\">https://math.stackexchange.com/a/453068/677124</a></p>\n<p>[1] <a href=\"https://www.sciencedirect.com/science/article/pii/S0021869314004797\" rel=\"nofollow noreferrer\">https://www.sciencedirect.com/science/article/pii/S0021869314004797</a></p>\n<p>[2] <a href=\"https://pages.uoregon.edu/kantor/PAPERS/STOCdiameter.pdf\" rel=\"nofollow noreferrer\">https://pages.uoregon.edu/kantor/PAPERS/STOCdiameter.pdf</a></p>\n"
+    },
+    {
+      "tags": [
+        "permutations"
+      ],
+      "owner": {
+        "account_id": 5968658,
+        "reputation": 993,
+        "user_id": 264042,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/42cdcca2c3b4c50f0504963c8e290360?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "riccardoventrella",
+        "link": "https://math.stackexchange.com/users/264042/riccardoventrella"
+      },
+      "is_answered": true,
+      "view_count": 422,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1529566530,
+      "creation_date": 1529566167,
+      "question_id": 2826972,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/2826972/about-s3-generators-relation-in-artins-algebra",
+      "title": "About S3 generators relation in Artin&#39;s Algebra",
+      "body": "<p>I'm studying groups diving into the fantastic Artin's Algebra book.\nActually, he's presenting the S3 group using the matrix representation of 2 permutations:</p>\n\n<p>$x = (1 3 2)$ and $y = (1 2)$</p>\n\n<p>Actually, he correctly claims the whole group can be generated by these ones, like this (prop. 1.17):</p>\n\n<p>$\\{1,x,x^2,y,xy,x^2y\\}$</p>\n\n<p>To get the above items, we can use the following rules between generators (prop. 1.18):</p>\n\n<p>$x^3=1, y^2=1, yx = x^2y$</p>\n\n<p>From the text, the author suggests these rules can be verified <strong>directly</strong>. \nThe 1st and 2nd ones are straightforward, but I was trying to have a small demo about the 3rd one, i.e. $yx = x^2y$.\nActually, I guess the author means <strong>directly</strong> suggesting to replace directly the x and y by the related permutations, and see the <strong>lhs</strong> and <strong>rhs</strong> actually match as expected.\nHowever, I was struggling trying to demonstrate that rule using other axioms.\nThe most I got, is a different way of expressing the rhs, i.e.:</p>\n\n<p>$x^3 = 1 \\implies x^2 = x^{-1} \\implies x^2y = x^{-1}y$</p>\n\n<p>After a bit of time, I realized this is probably <strong>not possible</strong>, since those 3 rules must be taken together as axioms as a <strong>whole</strong>, without getting one of the other two ones.</p>\n\n<p>In the same paragraph, Artin is claiming any possible pattern of xy can be finally expressed as $x^ny^m$, but in this case the original $x^2y$ is already in that form.</p>\n\n<p>Am I correct in my analysis? I mean: is there a way, using pattern reduction by the rule 1) and 2), to desume the third rule $x^2y$ without direct permutation replacement?</p>\n\n<p>Thanks for the help in advance</p>\n"
+    },
+    {
+      "tags": [
+        "group-theory",
+        "permutations",
+        "cayley-graphs"
+      ],
+      "owner": {
+        "account_id": 311674,
+        "reputation": 731,
+        "user_id": 21498,
+        "user_type": "registered",
+        "accept_rate": 45,
+        "profile_image": "https://i.sstatic.net/OCZqZ.png?s=256",
+        "display_name": "Alexander Chervov",
+        "link": "https://math.stackexchange.com/users/21498/alexander-chervov"
+      },
+      "is_answered": true,
+      "view_count": 259,
+      "accepted_answer_id": 5119767,
+      "answer_count": 1,
+      "score": 3,
+      "last_activity_date": 1768458983,
+      "creation_date": 1737529500,
+      "last_edit_date": 1737549703,
+      "question_id": 5026192,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/5026192/the-longest-element-in-s-n-for-generators-cyclic-shifts-and-transposition",
+      "title": "The &quot;longest&quot; element in $S_n$ for generators: cyclic shifts and transposition (1,2)?",
+      "body": "<p>Consider <a href=\"https://en.wikipedia.org/wiki/Symmetric_group\" rel=\"nofollow noreferrer\">symmetric group</a> <span class=\"math-container\">$S_n$</span> and take three well-known generators - cyclic shifts: left and right, and transposition (1,2). (Shifts are by 1 position).</p>\n<p>It is well-known that every element can be decomposed as product of these three permutations (i.e. they are &quot;generators&quot;). For <span class=\"math-container\">$g\\in S_n$</span> denote length(g) - the length of the shortest possible decomposition, i.e. &quot;<a href=\"https://en.wikipedia.org/wiki/Word_metric\" rel=\"nofollow noreferrer\">word metric</a>&quot;. The &quot;longest&quot; elements are the elements with the maximal possible length.</p>\n<p><strong>Question 1:</strong> is it true that a &quot;longest&quot; element for such generators is given by the full inversion: p(i) = n-i-1 ? I.e. permutation sending (0,1,2,3,...) to (n-1,n-2,...,0).</p>\n<p><strong>Question 2:</strong> What is its length  ?</p>\n<p>If question 1 above is  true :</p>\n<p><strong>Question 3:</strong> is it the only &quot;longest&quot; element ?\n(And if question 1 is not true - what can be the longest elements for such generators?)</p>\n<p>That are most probably some well-known facts. These generators are for example default generators for <span class=\"math-container\">$S_n$</span> for GAP/SAGE computer algebra systems.</p>\n<p>Remark 2 page 4  <a href=\"https://pages.uoregon.edu/kantor/PAPERS/BKL.pdf\" rel=\"nofollow noreferrer\">https://pages.uoregon.edu/kantor/PAPERS/BKL.pdf</a> estimates length of that element as O(n*n).</p>\n<p>&quot;Small-diameter Cayley Graphs for Finite Simple Groups&quot;\nL. BABAI, W . M . KANTOR,  A . LUBOTSKY</p>\n"
+    },
+    {
+      "tags": [
+        "linear-algebra",
+        "lie-groups"
+      ],
+      "owner": {
+        "account_id": 2560201,
+        "reputation": 993,
+        "user_id": 117276,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/Pgksj.png?s=256",
+        "display_name": "yellon",
+        "link": "https://math.stackexchange.com/users/117276/yellon"
+      },
+      "is_answered": true,
+      "view_count": 344,
+      "accepted_answer_id": 3256644,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1560107657,
+      "creation_date": 1560035036,
+      "last_edit_date": 1560036976,
+      "question_id": 3255689,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3255689/linear-independence-and-generators-of-a-lie-group",
+      "title": "Linear independence and generators of a Lie group",
+      "body": "<p>A premise: this comes from a physics book (<em>Quantum Field Theory and Critical Phenomena</em> by J. Zinn-Justin, page 323, 4th edition), so the math may need some correcting...</p>\n\n<p>Let <span class=\"math-container\">$G$</span> be a Lie group acting on <span class=\"math-container\">$\\mathbf{R}^n$</span>, <span class=\"math-container\">$v\\in\\mathbf{R}^n$</span>, and <span class=\"math-container\">$\\{t_a\\}$</span> a basis of the Lie algebra <span class=\"math-container\">$g$</span> of <span class=\"math-container\">$G$</span> such that the first <span class=\"math-container\">$p$</span> elements generate <span class=\"math-container\">$\\mathrm{Stab}_v(G)$</span>, the stabilizer subgroup of <span class=\"math-container\">$v$</span>.\nLet <span class=\"math-container\">$g$</span> have a representation acting on <span class=\"math-container\">$\\mathbf{R}^n$</span>, too, such that it makes sense to write, if <span class=\"math-container\">$h\\in G$</span> is <span class=\"math-container\">$\\exp(\\epsilon^at_a)$</span>,\n<span class=\"math-container\">\\begin{equation}\n\\exp(\\epsilon^at_a)v\\approx\nv+\\epsilon^at_av\n\\tag{1}\n\\end{equation}</span>\nfor small <span class=\"math-container\">$\\epsilon_a$</span>.\nThe author claims that if\n<span class=\"math-container\">\\begin{equation}\n\\sum_{a=p+1}^{n}\\lambda^at_av=0\n\\tag{2}\n\\label{2}\n\\end{equation}</span>\nthen <span class=\"math-container\">$\\lambda_a=0$</span> for all <span class=\"math-container\">$a$</span>, i.e. the <span class=\"math-container\">$t_av$</span> are linearly independent (for <span class=\"math-container\">$a&gt;p$</span>).</p>\n\n<p>I'm trying to prove this claim.\nI see that the first equation implies that <span class=\"math-container\">$t_av=0$</span> for all <span class=\"math-container\">$a=1,\\dotsc,p$</span>, since the result must be equal to <span class=\"math-container\">$v$</span>.\nI tried the following: take a linear combination <span class=\"math-container\">$\\sum_{a=1}^{n}\\lambda_at^a$</span> such that \\eqref{2} holds, then\n<span class=\"math-container\">\\begin{equation}\n\\exp\\biggl(\\sum_{a=1}^{n}\\lambda_at^a\\biggr)v\\approx\nv+\\exp\\sum_{a=1}^{n}\\lambda_at^av=\nv+\\exp\\sum_{a=1}^{p}\\lambda_at^av=\nv\n\\end{equation}</span>\nwhich means that <span class=\"math-container\">$\\exp(\\sum_{a=1}^{n}\\lambda_at^a)\\in\\mathrm{Stab}_v(G)$</span> thus <span class=\"math-container\">$\\lambda_a=0$</span> for all <span class=\"math-container\">$a\\geq p+1$</span>.\nI think there's something wrong in this proof, but I can't quite put my finger on it... </p>\n"
+    },
+    {
+      "tags": [
+        "probability",
+        "combinatorics",
+        "group-theory",
+        "finite-groups"
+      ],
+      "owner": {
+        "account_id": 1020108,
+        "reputation": 62448,
+        "user_id": 174927,
+        "user_type": "registered",
+        "accept_rate": 81,
+        "profile_image": "https://www.gravatar.com/avatar/3c54b832e06ff7eb6658ac8095facc32?s=256&d=identicon&r=PG",
+        "display_name": "Milo Brandt",
+        "link": "https://math.stackexchange.com/users/174927/milo-brandt"
+      },
+      "is_answered": true,
+      "view_count": 77,
+      "accepted_answer_id": 1347699,
+      "answer_count": 1,
+      "score": 2,
+      "last_activity_date": 1435889937,
+      "creation_date": 1435883618,
+      "question_id": 1347632,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/1347632/generating-finite-groups-by-random-premultiplication-with-generators",
+      "title": "Generating Finite Groups By Random Premultiplication With Generators",
+      "body": "<p>Let $G$ be a finite group with identity $e$ and $S$ be a set which generates $G$. Is it always possible to define a procedure of the form:</p>\n\n<ol>\n<li>Start with $x=e$.</li>\n<li>With probability $p_1$, replace $x$ with $s_1x$.</li>\n<li>With probability $p_2$, replace $x$ with $s_2x$.</li>\n</ol>\n\n<p>and so on with $p_i \\in [0,1]$ and $s_i\\in S$ such that the value of $x$ is uniformly distributed by the end of the process. That is, define a sequence of random variables as:\n$$X_0=e$$\n$$P(X_n=s_nX_{n-1})=p_n$$\n $$P(X_n=X_{n-1})=1-p_n$$\nsuch that, for some $n$, we have that $X_n$ is a uniform distribution over $G$?</p>\n\n<hr>\n\n<p>I would assume that <em>constructing</em> such sequences is not a tractable problem (except numerically), but proving existence might be easier. In particular, consider the case of a one element $S=\\{s\\}$. If we continually multiply by $s$ with probability $\\frac{1}2$, we can prove (for instance, by the contraction mapping theorem) that for $g\\in G$: \n$$\\lim_{n\\rightarrow\\infty}P(X_n=g)=\\frac{1}{|G|}.$$\nAnd choosing some sufficiently large $n$, we would expect to be able to \"jigger\" (to use the technical term) the $p_i$ to make things exactly right, as there would be arbitrarily many degrees of freedom available to adjust a fixed set of probabilities an arbitrarily small distance to the goal. One can likely repeat the same argument for $S$ with multiple elements by considering that multiplying by a single element $s$ enough should be able to make $x$ and $sx$ equally likely - and if we repeat this process enough, perhaps we can solve the general case. I'm fairly sure that algebraic solutions can always yield $p_i$ for appropriate choice of $s_i$, but, problematically, may not respect the constraint that $p_i\\in [0,1]$.</p>\n"
+    }
+  ],
+  "has_more": true,
+  "quota_max": 300,
+  "quota_remaining": 296
+}

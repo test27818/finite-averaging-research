@@ -1,5 +1,7 @@
 # 三平均 · Ternary and Triple Averaging
 
+**当前研究入口 / Current research (2026-10-11):** [结论、后续改进与边界 / Claims and boundaries](../../archive/2026-09-07/3-3-triple-average-research-note/knowledge/topics/triple.md) · [证明链 / Proof routes](../../archive/2026-09-07/3-3-triple-average-research-note/knowledge/PROOF_ROUTES.md)。以下保留基线证明的阅读路径。
+
 English: **ternary averaging**, **triple averaging**, **3-averaging**, and finite exact mixing on fixed positions. The direct proof uses two distinct triply repeated values and protected residue witnesses, followed by discrete energy descent; dimensions 7–10 have separate bases. See the [English overview](../../README.md) and [proof guide](../../docs/PROOF_GUIDE.md).
 
 [返回中文首页](../../README.zh-CN.md)

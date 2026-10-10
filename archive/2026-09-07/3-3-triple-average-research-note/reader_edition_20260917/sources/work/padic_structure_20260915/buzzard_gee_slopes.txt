@@ -1,0 +1,716 @@
+                        SLOPES OF MODULAR FORMS
+
+
+                             KEVIN BUZZARD AND TOBY GEE
+
+
+         Abstract. We survey the progress (or lack thereof!) that has been made on
+         some questions about the p-adic slopes of modular forms that were raised by
+         the first author in [Buz05], discuss strategies for making further progress, and
+         examine other related questions.
+
+
+
+
+                                     1. Introduction
+1.1. The question of the distribution of the local components of automorphic rep-
+resentations at finite places has received a great deal of attention.
+    In the case of fixing an automorphic representation and varying the finite place,
+we now have the recently-proved Sato–Tate conjecture for elliptic curves over totally
+real fields [HSBT10, CHT08, Tay08]. More recently, there has been much progress
+on questions where the automorphic representation varies, but the finite place is
+fixed; see [Shi12], and the references discussed in its introduction, for a detailed
+history of the question. Still more recently, there has been the fascinating work
+of [ST12] on hybrid problems, where both the finite place and the automorphic
+representation are allowed to vary, but we will have nothing to say about this here.
+    In this survey we will consider some other variants of this basic question, includ-
+ing p-adic ones. Just as in the classical setting, there are really several questions
+here, which will have different answers depending on what is varying: for example
+if one fixes a weight 2 modular form corresponding to a non-CM elliptic curve, then
+it is ordinary for a density one set of primes; however if one fixes a prime and a
+level and considers eigenforms of all weights, then almost none of them are ordinary
+(the dimension of the ordinary part remains bounded by Hida theory as the weight
+gets bigger).
+    We will for the most part limit ourselves to the case of classical modular forms
+for several reasons. The questions we consider are already interesting (and largely
+completely open) in this case, and in addition, there appear to be interesting phe-
+nomena that we do not expect to generalise in any obvious way (see Remark 4.1.9
+below.) However, it seems worth recording a natural question (from the point of
+view of the p-adic Langlands program) about the distribution of local parameters
+as the tame level varies; for concreteness, we phrase the question for GLn over a
+CM field, but the same question could be asked in greater generality in an obvious
+fashion.
+    Fix a CM field F , and consider regular algebraic essentially conjugate self-dual
+cuspidal automorphic representations π of GLn /F . Fix an isomorphism between
+
+   Both authors were supported in part by EPSRC grant EP/L025485/1. The second author was
+additionally supported by a Leverhulme Prize, Marie Curie Career Integration Grant 303605, and
+ERC Starting Grant 306326.
+                                                1
+2                           KEVIN BUZZARD AND TOBY GEE
+
+
+Qp and C, and a place v|p of F . Assume that πv is unramified (one could in-
+stead consider πv lying on a particular Bernstein component). To such a π is
+associated a Galois representation ρπ : Gal (F /F ) → GLn (Qp ), and ρπ |Gal (Fv /Fv )
+is crystalline, with Hodge–Tate weights determined by π∞ . (See the introduction
+to [CH13] for this result, and a discussion of the history of its proof. Thanks to the
+work of [HLTT13] and [Var14], the result is now known without the assumption
+of essentially conjugate self-duality; but the cuspidal automorphic representations
+of a fixed regular algebraic infinite type which are not essentially conjugate self-
+dual are expected to be rather sparse, and in particular precise asymptotics for
+the number of such representations as the level varies are unknown, and it there-
+fore seems unwise to speculate about equidistribution questions for them. Note
+that in the essentially conjugate self-dual case, these automorphic representations
+arise via endoscopy from automorphic representations on unitary groups which are
+discrete series at infinity, and can thus be counted by the trace formula.) If we
+now run over π 0 of the same infinity type, which have πv0 unramified, and which
+furthermore have ρπ0 ∼  = ρπ (the bar denoting reduction to GLn (Fp )), then the lo-
+cal representations ρπ0 |Gal (F v /Fv ) naturally give rise to points of the corresponding
+(framed) deformation ring for crystalline lifts of ρπ |Gal (F v /Fv ) of the given Hodge–
+Tate weights. The existence of level-raising congruences mean that one can often
+prove that this (multi)set is infinite (and it is expected to always be infinite), and
+one could ask whether some form of equidistribution of the ρπ0 |Gal (F v /Fv ) holds in
+the rigid-analytic generic fibre of the crystalline deformation ring.
+    Unfortunately, this appears to be a very hard problem. Indeed, we do not in
+general even know that every irreducible component of the generic fibre of the local
+deformation space contains even a single ρπ0 |Gal (F v /Fv ) ; it is certainly expected that
+this holds, and a positive solution would yield a huge improvement on the existing
+automorphy lifting theorems (cf. the introduction to [CEG+ 13]). Automorphy
+lifting theorems can sometimes be used to show that if an irreducible component
+contains an automorphic point, then it contains a Zariski-dense set of automorphic
+points, but they do not appear to be able to say anything about p-adic density, or
+about possible equidistribution.
+    More generally, one could allow the weight (and, if one wishes, the level at p) to
+vary (as well as, or instead of, allowing the level to vary) and ask about equidis-
+tribution in the generic fibre of the full deformation ring, with no p-adic Hodge
+theoretic conditions imposed. The points arising will necessarily lie on the sublo-
+cus of crystalline (or more generally, if the level at p varies, potentially semistable)
+representations, but as these are expected to be Zariski dense (indeed, this is known
+in most cases by the results of [Che13] and [Nak14]), it seems reasonable to conjec-
+ture that the points will also be Zariski dense.
+    One could also consider the case of a place v - p, where very similar questions
+could be asked (except that there are no longer any p-adic Hodge-theoretic condi-
+tions), and we are similarly ignorant (although the automorphy lifting machinery
+can often be used to show that each irreducible component contains an automor-
+phic point, using the Khare–Wintenberger method [KW09, Thm. 3.3] and Taylor’s
+Ihara-avoidance result [Tay08]; see [Gee11, §5]).
+    In the case of modular forms (over Q) one can make all of this rather more con-
+crete, due to a pleasing low-dimensional coincidence: an irreducible two-dimensional
+crystalline representation of Gal (Qp /Qp ) is almost always completely determined
+                                                                                        3
+
+
+by its Hodge–Tate weights and the trace of the crystalline Frobenius (because there
+is almost always a unique weakly admissible filtration on the associated filtered φ-
+module – see Section 4.1 below). This means that if we work with modular forms
+of weight k and level prime to p, the local p-adic Galois representation is almost
+always determined by the Hecke eigenvalue ap (modulo the issue of semisimplicity
+in the ordinary case), and the question above reduces to the question of studying
+the p-adic behaviour of ap . Such questions were studied computationally (and in-
+dependently) by Gouvêa and one of us (KB), for the most part in level 1, when
+the era of computation of modular forms was in its infancy. Gouvêa noticed (see
+the questions in §2 of [Gou01]) that in weight k, the p-adic valuation vp (ap ) of ap
+(normalised so that vp (p) = 1) was almost always at most (k − 1)/(p + 1), an
+observation which at the time did not appear to be predicted by any conjectures.
+Gouvêa and Buzzard also noticed that vp (ap ) was almost always an integer, an
+observation which even now is not particularly well-understood. Furthermore, in
+level 1, the primes p for which there existed forms with vp (ap ) > (k − 1)/(p + 1)
+seemed to coincide with the primes for which there existed forms with vp (ap ) 6∈ Z.
+These led Buzzard in §1 of [Buz05] to formulate the notion of an SL2 (Z)-irregular
+prime, a prime for which there exists a level 1 non-ordinary eigenform of weight at
+most p + 1. Indeed one might even wonder whether the following are equivalent:
+
+      • p is SL2 (Z)-irregular;
+      • There exists a level 1 eigenform with vp (ap ) 6∈ Z;
+      • There exists a level 1 eigenform of weight k with vp (ap ) > (k − 1)/(p + 1).
+
+    One can check whether a given prime p is SL2 (Z)-regular or not in finite time
+(one just needs to compute the determinant of the action of Tp on level 1 modular
+forms of weight k for each k ≤ p+1 and check if it is always a p-adic unit; in fact one
+only has to check cusp forms of weights 4 ≤ k ≤ (p + 3)/2 because of known results
+about θ-cyles); one can also verify with machine computations that the second
+or third conditions hold by exhibiting an explicit eigenform with the property in
+question. The authors do not know how to verify with machine computations that
+the second or third conditions fail; equivalently, how to prove for a given p either
+that all Tp -eigenvalues ap of all level 1 forms of all weights have integral p-adic
+valuations, or that they all satisfy vp (ap ) ≤ (k − 1)/(p + 1). In particular it is still
+logically possible that for every prime number there will be some level 1 eigenforms
+satifying vp (ap ) 6∈ Z or vp (ap ) > (k − 1)/(p + 1). However this seems very unlikely
+– for example p = 2 is an SL2 (Z)-regular prime, and the first author has computed
+vp (ap ) for p = 2 and for all k ≤ 2048 and has found no examples where v2 (a2 ) 6∈ Z
+or v2 (a2 ) > (k − 1)/3. Gouvea also made substantial calculations for all other
+p < 100 which add further weight to the idea that the conditions are equivalent.
+    There are precisely two SL2 (Z)-irregular primes less than 100, namely 59 and 79,
+and it does not appear to be known whether there are infinitely many SL2 (Z)-
+regular primes or whether there are infinitely many SL2 (Z)-irregular primes. (How-
+ever, Frank Calegari has given https://galoisrepresentations.wordpress.com/
+2015/03/03/review-of-buzzard-gee/ an argument which shows that under stan-
+dard conjectures about the existence of prime values of polynomials with rational
+coefficients, then there are infinitely many SL2 (Z)-irregular primes.) Note that for
+p = 59 and p = 79 eigenforms with vp (ap ) 6∈ Z and vp (ap ) > (k − 1)/(p + 1) do
+exist, but any given eigenform will typically satisfy at most one of these conditions,
+4                          KEVIN BUZZARD AND TOBY GEE
+
+
+and we do not even know how to show that the second and third conditions are
+equivalent.
+    Buzzard conjectured that for an SL2 (Z)-regular prime, vp (ap ) was integral for all
+level 1 eigenforms, and even conjectured an algorithm to compute these valuations
+in all weights. Similar conjectures were made at more general levels N > 1 prime
+to p, and indeed Buzzard formulated the notion of a Γ0 (N )-regular prime – for
+p > 2 this is a prime p - N such that all eigenforms of level Γ0 (N ) and weight at
+most p + 1 are ordinary, although here one has to be a little more careful when
+p = 2 (and even for p > 2 some care needs to be taken when generalising this
+notion to Γ1 (N ) because allowing odd weights complicates the picture somewhat;
+see Remark 4.1.5.)
+    These observations of Buzzard and Gouvêa can be thought of as saying something
+about the behaviour of the Coleman–Mazur eigencurve near the centre of weight
+space. Results of Buzzard–Kilford [BK05], Roe [Roe14], Wan–Xiao–Zhang [WXZ14]
+and Liu–Wan–Xiao [LWX14] indicate that there is even more structure near the
+boundary of weight space; this structure translates into concrete assertions about
+vp (ap ) when ap is the Up -eigenvalue of a newform of level Γ1 (N pr ) and character
+of conductor M pr for some M | N coprime to p. We make precise conjectures in
+Section 4.2. On the other hand, perhaps these results are intimately related to the
+p-adic Hodge-theoretic coincidence alluded to above – that in this low-dimensional
+situation there is usually only one (up to isomorphism) weakly admissible filtration
+on the Weil–Deligne representation in question. In particular such structure might
+not be so easily found in a general unitary group eigenvariety.
+    Having formulated these conjectures, in Section 5 we discuss a potential approach
+to them via modularity lifting theorems.
+
+
+1.2. Acknowledgements. We would like to thank Christophe Breuil, Frank Cale-
+gari and Matthew Emerton for many helpful conversations over the past 14 years
+about the subjects of this survey. We would like to thank Vytautas Paškūnas for
+a helpful conversation about the Breuil–Mézard conjecture, and Liang Xiao for ex-
+plaining some aspects of the papers [WXZ14] and [LWX14] to us. We would like to
+thank Frank Calegari, Matthew Emerton and James Newton for their helpful com-
+ments on an earlier draft of this paper; in addition, we would like to thank Frank
+Calegari for refereeing the paper (https://galoisrepresentations.wordpress.
+com/2015/03/03/review-of-buzzard-gee/) and for making several helpful com-
+ments in doing so. The second author would like to thank the organisers of the
+Simons Symposium on Automorphic Forms and the Trace Formula for the invita-
+tion to speak at the symposium, and for the suggestion of turning the rough notes
+for the talk into this survey.
+
+
+
+                   2. Limiting distributions of eigenvalues
+   In this section we briefly review some conjectures and questions about the lim-
+iting distributions of eigenvalues of Hecke operators in the p-adic context. These
+questions will not be the main focus of our discussions, but as they are perhaps
+the most natural analogues of the questions considered in [ST12], it seems worth
+recording them.
+                                                                                        5
+
+
+2.1. ` = p: Conjectures of Gouvêa. The reference for this section is the pa-
+per [Gou01]. Fix a prime p, an integer N ≥ 1 coprime to p, and consider the op-
+erator Up on the spaces of classical modular forms Sk (Γ0 (N p)) for varying weights
+k ≥ 2. The characteristic polynomial of Up has integer coefficients so it makes sense
+to consider the slopes of the eigenvalues – by definition, these are the p-adic valua-
+tions of the eigenvalues considered as elements of Qp . The eigenvalues themselves
+fall into two categories. The ones corresponding to eigenforms which are new at p
+(corresponding to Steinberg representations) have Up -eigenvalues ±p(k−2)/2 , and
+thus slope (k − 2)/2. The other eigenvalues come in pairs, each pair being associ-
+ated to an eigenvalue of Tp on Sk (Γ0 (N )), and if the Tp -eigenvalue is ap (considered
+as an element of Qp ) then the corresponding two p-oldforms have eigenvalues given
+by the roots of x2 − ap x + pk−1 ; so the slopes α, β ∈ [0, k − 1] satisfy α + β = k − 1.
+Note that min{α, β} = min{vp (ap ), k−1 2 } by the theory of the Newton polygon, and
+                           k−1
+in particular if vp (ap ) < 2 then vp (ap ) can be read off from α and β.
+   Now consider the (multi-)set of slopes of p-oldforms, normalised by dividing by
+k −1 to lie in the range [0, 1]. More precisely we could consider the measure (a finite
+sum of point measures, normalised to have total mass 1) attached to this multiset
+in weight k. Let k tend to ∞ and consider how these measures vary. Is there a
+limiting measure?
+
+Conjecture 2.1.1. (Gouvêa) The slopes converge to the measure which is uniform
+        1         p
+on [0, p+1 ] ∪ [ p+1 , 1] and 0 elsewhere.
+
+   This is supported by the computational evidence, which is particularly convinc-
+ing in the Γ0 (N )-regular case. This conjecture implies that if ap runs through the
+eigenvalues of Tp on Sk (Γ0 (N )) then we “usually” have v(ap ) ≤ (k−1)/(p+1). This
+appears to be the case, although the reasons why are not well understood. If p > 2 is
+Γ0 (N )-regular however, the (purely local – see below) main result of [BLZ04] shows
+that v(ap ) ≤ b(k − 2)/(p − 1)c. One might hope that the main result of [BLZ04]
+could be strengthened to show that in fact v(ap ) ≤ k−1 p+1 ; it seems likely that the
+required local statement is true, but Berger tells us that the proof in [BLZ04] does
+not seem to extend to this more general range. (This problem is carefully examined
+in Mathieu Vienney’s unpublished PhD thesis.)
+
+
+
+
+2.2. ` 6= p. In the previous subsection we talked about the distribution of ap , the
+eigenvalues of Tp on Sk (Γ0 (N )), considered as elements of Qp . The Ramanujan
+bounds and the Sato–Tate conjecture give us information about the eigenvalues of
+Tp as elements of the complex numbers. What about the behaviour of the ap as
+elements of Ql for ` 6= p prime? We have very little idea what to expect. In this
+short section we merely present a sample of some computational results concerning
+the even weaker question of the distribution of the reductions of the ap as elements
+of Fl . In contrast to the previous section we here vary N and keep k = 2 fixed.
+More precisely, we fix distinct ` and p, and then loop over N ≥ 1 coprime to `p and
+compute the eigenvalues ap of Tp acting on S2 (Γ0 (N ); Fl ). Here is a sample of the
+results with p = 5 and ` = 3, looping over the first 5,533,155 newforms:
+6                           KEVIN BUZZARD AND TOBY GEE
+
+
+     Size of F3 [a5 ] Number of newforms
+            31                80656
+            32                38738
+            33                35880
+            34                32968
+            35                35330
+            36                33372
+            37                34601
+            38                33896
+            39                35262
+           310                33600
+   The numbers in the second column of this the table are not decreasing, which
+is perhaps not what one might initially guess; Frank Calegari observed that this
+could perhaps be explained by observing that if you choose a random element of a
+finite field Fq then the field it generates over Fp might be strictly smaller than Fq ,
+and the heuristics are perhaps complicated by this.
+
+       3. The Gouvêa–Mazur Conjecture/Buzzard’s Conjectures
+3.1. Coleman theory (see Theorem D of [Col97]) tells us that for a fixed prime
+p and tame level N , there is a function M (n) such that if k1 , k2 > n + 1 and
+k1 ≡ k2 (mod pM (n) (p − 1)), then the sequences of slopes (with multiplicities) of
+classical modular forms of level N p and weights k1 , k2 agree up to slope n. A more
+geometric way to think about this theorem is that given a point on the eigencurve of
+slope α ≤ n, there is a small neighbourhood of that point in the eigencurve, which
+maps in a finite manner down to a disc in weight space of some explicit radius
+p−M (n) and such that all the points in the neighbourhood have slope α. Gouvêa
+and Mazur [GM92] conjectured that we could take M (n) = n; for n = 0, this is a
+theorem of Hida (his ordinary families are finite over entire components of weight
+space). Wan [Wan98] deduced from Coleman’s results that M (n) could be taken to
+be quadratic (with the implicit constants depending on both p and N ; as far as we
+know, it is still an open problem to obtain a quadratic bound independent of either
+p or N ). However, Buzzard and Calegari [BC04] found an explicit counterexample
+to the conjecture that M (n) = n always works.
+   On the other hand, Buzzard [Buz05] accumulated a lot of numerical evidence that
+whenever p is Γ0 (N )-regular, many (but not all) families of eigenforms seemed to
+have slopes which were locally equal to n on discs of size p−L(n) with L(n) seemingly
+linear in log(n) – a much stronger bound than the Gouvêa–Mazur conjectures. For
+example if p = 2, N = 1 then the classical slopes at weight k = 2d (the largest of
+which is approximately k/3) seem to be an initial segment of the classical slopes at
+weight 2d+1 . For example, the 2-adic slopes in level 1 and weight 128 = 27 are
+                            3, 7, 13, 15, 17, 25, 29, 31, 33, 37
+and the Gouvêa–Mazur conjectures would predict that the slopes which were at
+most 7 should show up in weight 256 = 28 . However in weight 256 the slopes are
+                    3, 7, 13, 15, 17, 25, 29, 31, 33, 37, 47, 49, 51, . . .
+and more generally the slopes at weight equal to a power of 2 all seem to be initial
+segments of the infinite slope sequence on overconvergent 2-adic forms of weight 0,
+a sequence explicitly computed in Corollary 1 of [BC05]. In particular, if one were
+                                                                                         7
+
+
+to restrict to p = 2, N = 1 and k a power of 2 then M (n) can be conjecturally taken
+to be the base 2 logarithm of 3n. Note also that the counterexamples at level Γ0 (N )
+to the Gouvêa–Mazur conjecture in [BC04] were all Γ0 (N )-irregular. It may well be
+the case that the Gouvêa–Mazur conjectures are true at level Γ0 (N ) if one restricts
+to Γ0 (N )-regular primes – indeed the numerical examples above initially seem to
+lend credence to the hope that something an order of magnitude stronger than the
+Gouvêa–Mazur conjectures might be true in the Γ0 (N )-regular case. However life
+is not quite so easy – numerical evidence seems to indicate that near to a newform
+for Γ0 (N p) on the eigencurve, the behaviour of slopes seems to be broadly speaking
+behaving in the same sort of way as predicted by the Gouvêa–Mazur conjectures.
+For example, again with p = 2 and N = 1, computer calculations give that the
+slopes in weight 38 + 28 are
+             5, 8, 16, 18, 18, 20, 29, 32, 37, 40, 45, 50, 50, 56, 61, 64, 70, . . .
+whereas in weight 38 + 29 they are
+             5, 8, 17, 18, 18, 19, 29, 32, 37, 40, 45, 50, 50, 56, 61, 64, 70, . . . .
+Again one sees evidence of something far stronger than the Gouvêa–Mazur con-
+jecture going on (the Gouvêa–Mazur conjecture only predicts equality of slopes
+which are at most 8); however there seems to be a family which has slope 16 in
+weight 38 + 28 and slope 17 in weight 38 + 29 . This family could well be passing
+through a classical newform of level Γ0 (2) in weight 38, and newforms in weight 38
+have slope (38−2)/2 = 18, so one sees that for just this one family M (n) is behaving
+much more like something linear in n.
+    Staying in the Γ0 (N )-regular case, Buzzard found a lot of evidence for a far more
+precise conjecture than the Gouvêa–Mazur conjecture – one that gives a complete
+description of the slopes in the Γ0 (N )-regular case, in terms of a recursive algorithm,
+which is purely combinatorial in nature and uses nothing about modular forms at
+all. Then (see [Buz05, §3] for a more detailed discussion) the algorithm can for the
+most part be deduced from various heuristic assumptions about families of p-adic
+modular forms, for example the very strong “logarithmic” form of the Gouvêa–
+Mazur conjecture mentioned above, plus some heuristics about behaviour of slopes
+near newforms that seem hard to justify. Unfortunately, essentially nothing is
+known about these conjectures, even in the simplest case N = 1 and p = 2, where
+the slopes are all conjectured to be integers but even this is not known.
+    In fact it does not even seem to be known that the original form of the Gouvêa–
+Mazur conjecture (in the Γ0 (N )-regular case) is a consequence of Buzzard’s con-
+jectures; see [Buz05, Q. 4.11]. It would also be of interest to examine Buzzard’s
+original data to try to formulate a precise conjecture about the best possible value
+of M (n) in the Γ0 (N )-regular case. The following are combinatorial questions, and
+are presumably accessible.
+Question 3.1.1. Say p is Γ0 (N )-regular.
+   (1) Does the Gouvêa–Mazur conjecture for (p, N ), or perhaps something even
+       stronger, follow from Buzzard’s conjectures?
+   (2) Does Conjecture 2.1.1 follow from Buzzard’s conjectures?
+   One immediate consequence of Buzzard’s conjectures is that in the Γ0 (N )-regular
+case, all of the slopes should be integers. This can definitely fail in the Γ0 (N )-
+irregular case (and is a source of counterexamples to the Gouvêa–Mazur conjecture),
+8                           KEVIN BUZZARD AND TOBY GEE
+
+
+and we suspect that understanding this phenomenon could be helpful in proving
+the full conjectures (see the discussion in Section 5 below). In Section 4.1 we will
+explain a purely local conjecture that would imply this integrality.
+   Note that Lisa Clay’s PhD thesis also studies this problem and makes the obser-
+vation that the combinatorial recipes seem to remain valid when restricting to the
+subset of eigenforms with a fixed mod p Galois representation which is reducible
+locally at p.
+
+                                 4. Local questions
+4.1. The centre of weight space. In this section we discuss some purely local
+conjectures and questions about p-adic Galois representations that are motivated
+by the conjectures of Section 3. We briefly recall the relevant local Galois repre-
+sentations and their relationship to the global picture, referring the reader to the
+introduction to [BG09] for further details. If k ≥ 2 and ap ∈ Qp with v(ap ) > 0,
+then there is a two-dimensional crystalline representation Vk,ap with Hodge–Tate
+weights 0, k − 1, with the property that the crystalline Frobenius of the correspond-
+ing weakly admissible module has characteristic polynomial X 2 − ap X + pk−1 . Fur-
+thermore, if a2p 6= 4pk−1 then Vk,ap is uniquely determined up to isomorphism. This
+is easily checked by directly computing the possible Hodge filtrations on the weakly
+admissible module; see for example [BB10, Prop. 2.4.5]. This is a low-dimensional
+coincidence however – a certain parameter space of flags is connected of dimension
+zero in this situation.
+    The relevance of this representation to the questions of Section 3 is that if f ∈
+Sk (Γ0 (N ), Qp ) is an eigenform with a2p 6= 4pk−1 (which is expected to always hold;
+in the case N = 1 it holds by Theorem 1 of [Gou01], and the paper [CE98] proves
+that it holds for general N if k = 2, and for general k, N if one assumes the Tate
+conjecture) then ρf |Gal (Qp /Qp ) ∼
+                                   = Vk,ap .
+    As explained in [Buz05, §1], p > 2 is Γ0 (N )-regular if and only if ρf |Gal (Qp /Qp )
+is reducible for every f ∈ Sk (Γ0 (N )) (and every k ≥ 2). This suggests that the
+problem of determining when V k,ap (the reduction of Vk,ap modulo p) is reducible
+could be relevant to the conjectures of Section 3. To this end, we have the following
+conjecture.
+Conjecture 4.1.1. If p is odd, k is even and v(ap ) ∈
+                                                    / Z then V k,ap is irreducible.
+Remark 4.1.2. Any modular form of level Γ0 (N ) necessarily has even weight, and
+this conjecture would therefore imply for p > 2 that in the Γ0 (N )-regular case, all
+slopes are integral, as Buzzard’s conjectures predict (see §3 above).
+Remark 4.1.3. This conjecture is arguably “folklore” but seems to originate in
+emails between Breuil, Buzzard and Emerton in 2005.
+Remark 4.1.4. The conjecture is of course false without the assumption that v(ap ) ∈ /
+Z; indeed, if v(ap ) = 0 then we are in the ordinary case, and Vk,ap is reducible (and
+so V k,ap is certainly reducible).
+Remark 4.1.5. If k is allowed to be odd then the conjecture would be false – for
+global reasons! There are p-newforms of level Γ1 (N ) ∩ Γ0 (p) and odd weight k0 ,
+which automatically have slope (k0 − 2)/2 ∈   / Z, and in computational examples
+these forms give rise to both reducible and irreducible local mod p representations.
+                                                                                        9
+
+
+The corresponding local p-adic Galois representations are now semistable rather
+than crystalline, and depend on an additional parameter, the L-invariant; the
+reduction of the Galois representation depends on this L-invariant in a complicated
+fashion, see for example the calculations of [BM02]. Considering oldforms which
+are sufficiently p-adically close to such newforms (and these will exist by the theory
+of the eigencurve) produces examples of Vk,ap with v(ap ) = (k0 − 2)/2 and V k,ap
+reducible. If k and k0 are close in weight space then k will also be odd.
+   The main result of [BG13] determines, for odd p, exactly for which ap with
+0 < v(ap ) < 1 the representation V k,ap is irreducible; it is necessary that k ≡ 3
+(mod p − 1), that k ≥ 2p + 1, and that v(ap ) = 1/2, and there are examples for
+all k satisfying these conditions.
+Remark 4.1.6. If p = 2 then the conjecture is also false for the trivial reason that if
+k ≡ 4 mod 6 then V k,0 is reducible and hence V k,a is reducible for v(a) sufficiently
+large (whether or not it is integral) by the main result of [BLZ04]. In particular,
+the conjecture does not offer a local explanation for the global phenomenon that
+thousands of slopes of cusp forms have been computed for N = 1 and p = 2, and
+not a single non-integral one has been found (and the conjectures of [Buz05] predict
+that the slopes will all be integral).
+Remark 4.1.7. Conjecture 4.1.1 is known if v(ap ) ∈ (0, 1), which is the main result
+of [BG09]. It is also known if v(ap ) > b(k−2)/(p−1)c, by the main result of [BLZ04].
+In the case that k ≤ (p2 + 1)/2, it is expected to follow from work in progress of
+Yamashita and Yasuda.
+    The result of [BLZ04] is proved by constructing an explicit family of (φ, Γ)-
+modules which are p-adically close to the representation Vk,0 . Since Vk,0 is induced
+from a Lubin–Tate character, it has irreducible reduction if k is not congruent to
+1 modulo p + 1, and in particular has irreducible reduction when p > 2 and k is
+even, which implies the result.
+    In contrast, the papers [BG09, BG13] use the p-adic local Langlands correspon-
+dence for GL2 (Qp ) to compute V k,ap more or less explicitly. Despite the simplicity
+of the calculations of [BG09], which had originally made us optimistic about the
+prospects of proving Conjecture 4.1.1 in general, it seems that when v(ap ) > 1 the
+calculations involved in computing V k,ap are very complicated, and without having
+some additional structural insight we are pessimistic that Conjecture 4.1.1 can be
+directly proved by this method.
+   In the light of the previous remark, we feel that it is unlikely that Conjecture 4.1.1
+will be proved without some gaining some further understanding of why it should
+be true. We therefore regard the following question as important.
+Question 4.1.8. Are there any local or global reasons that we should expect Con-
+jecture 4.1.1 to hold, other than the computational evidence of the second author
+discussed in [Buz05]?
+Remark 4.1.9. It seems unlikely that any analogue of Conjecture 4.1.1 will hold in
+a more general setting (i.e. for higher-dimensional representations of Gal (Qp /Qp ),
+or for representations of Gal (Qp /F ) of dimension > 1, where F/Qp is a non-trivial
+extension). The reason for this is that there is no analogue of the fact that Vk,ap
+is completely determined by k and ap ; in these more general settings, additional
+parameters are needed to describe the p-adic Hodge filtration, and it is highly likely
+10                         KEVIN BUZZARD AND TOBY GEE
+
+
+that the reduction mod p of the crystalline Galois representations will depend on
+these parameters. (Indeed, as remarked above, this already happens for semistable
+2-dimensional representations of Gal (Qp /Qp ).)
+   For this reason we are sceptical that there is any simple generalisation of the
+conjectures of Section 3, except to the case of Hilbert modular forms over a totally
+real field in which p splits completely. For example, Table 5 in [Loe08] and the
+comments below it show that non-integral slopes appear essentially immediately
+when one computes with U (3).
+4.2. The boundary of weight space. Perhaps surprisingly, near the boundary
+of weight space, the combinatorics of the eigencurve seem to become simpler. For
+example if N = 1 and p = 2 one can compare Corollary 1 of [BC05] (saying that in
+weight 0 all overconvergent slopes are determined by a complicated combinatorial
+formula) with Theorem B of [BK05] (saying that at the boundary of weight space
+the slopes form an arithmetic progression).
+   Now let f be a newform of weight k ≥ 2 and level Γ1 (N pr ), with r ≥ 2, and with
+character whose p-part χ has conductor pr . For simplicity, fix an isomorphism C =
+Qp . Say f has Up -eigenvalue α. One checks that the associated smooth admissible
+representation of GL2 (Qp ) attached to f must be principal series associated to two
+characters of Q×                                                                     r
+                p , one unramified (and sending p to α) and the other of conductor p .
+Now say ρf is the p-adic Galois representation attached to f .
+   By local-global compatibility (the main theorem of [Sai97]), and the local Lang-
+lands correspondence, the F -semisimplified Weil–Deligne representation associated
+to ρf at p will be the direct sum of two characters, one unramified and the other of
+conductor pr . Moreover, the p-adic Hodge-theoretic coincidence still holds: there
+is at most one possible weakly admissible filtration on this Weil–Deligne represen-
+tation with jumps at 0 and k − 1, by Proposition 2.4.5 of [BB10] (or by a direct
+calculation).
+   The resulting weakly admissible module depends only on k, α and χ, and so
+we may call its associated Galois representation Vk,α,χ ; the local-global assertion is
+then that this is representation is the restriction of ρf to the absolute Galois group
+of Qp . Let V k,α,χ denote the semisimplification of the mod p reduction of Vk,α,χ .
+We propose a conjecture which would go some way towards explaining the results
+of [BK05], [Roe14], [Kil08] and [KM12]. We write vχ for the p-adic valuation v
+on Qp normalised so that the image of vχ on Qp (χ)× is Z (so for p > 2 we have
+vχ (p) = 1/(p − 1)pr−2 .)
+Conjecture 4.2.1. If vχ (α) 6∈ Z then V k,α,χ is irreducible.
+   This is a local assertion so does not follow directly from the results in the global
+papers cited above. The four papers above prove that vχ (α) ∈ Z if α is an eigenvalue
+of Up on a space of modular forms of level 2r , 3r , 52 and 72 respectively; note that
+in all these cases, all the local mod p Galois representations which show up are
+reducible locally at p, for global reasons. In fact, slightly more is true in the special
+case p = 2 and r = 2: in this case Qp (χ) = Q2 so the conjecture predicts that if
+v(α) 6∈ Z then V k,α,χ is irreducible; yet in [BK05] it is proved that eigenforms of
+odd weight, level 4, and character of conductor 4, all have slopes in 2Z.
+   It is furthermore expected that in the global setting the sequence of slopes is a
+finite union of arithmetic progressions; see [WXZ14, Conj. 1.1]. Indeed, a version
+of this statement (sufficiently close to the boundary of weight space, in the setting
+                                                                                       11
+
+
+of the eigenvariety for a definite quaternion algebra with p > 2) is proved by Liu–
+Wan–Xiao in [LWX14].
+
+              5. A strategy to prove Buzzard’s conjectures
+5.1. The following strategy for attacking the conjectures of Section 3 was explained
+by the second author to the first author in 2005, and was the motivation for the
+research reported on in the papers [BG09, BG13] (which we had originally hoped
+would result in a proof of Conjecture 4.1.1).
+   Assume that p > 2, and fix a continuous odd, irreducible (and thus modular, by
+Serre’s conjecture), representation ρ : Gal (Q/Q) → GL2 (Fp ). Assume further that
+ρ satisfies the usual Taylor–Wiles condition that ρ|Gal (Q/Q(ζp )) is irreducible.
+   Let Rkloc (ρ) be the (reduced and p-torsion free) universal framed deformation
+ring for lifts of ρ|Gal (Qp /Qp ) which are crystalline with Hodge–Tate weights 0, k − 1.
+This connects to the global setting via the following consequence of the results
+of [Kis09].
+Proposition 5.1.1. Maintain the assumptions and notation of the previous two
+paragraphs, so that p > 2, and ρ : Gal (Q/Q) → GL2 (Fp ) is a continuous, odd,
+irreducible representation with ρ|Gal (Q/Q(ζp )) irreducible.
+   Let N be an integer not divisible by p such that ρ is modular of level Γ1 (N ). If
+p = 3, assume further that ρ|Gal (Qp /Qp ) is not a twist of the direct sum of the mod
+p cyclotomic character and the trivial character. Fix an irreducible component of
+Spec Rkloc (ρ)[1/p]. Then there is a newform f ∈ Sk (Γ1 (N ), Qp ) such that ρf ∼  = ρ,
+and ρf |Gal (Qp /Qp ) corresponds to a point of Spec Rkloc (ρ)[1/p] lying on our chosen
+component.
+Proof. This follows almost immediately from the results of [Kis09], exactly as in
+the proof of [Cal12, Prop. 3.7]. (Note that the condition that f is a newform of
+level Γ1 (N ) can be expressed in terms of the conductor of ρf , and thus in terms of
+the components of the local deformation rings at primes dividing N .)
+    More precisely, this argument immediately gives the result in the case that
+ρf |Gal (Qp /Qp ) is not a twist of an extension of the trivial representation by the
+mod p cyclotomic character. However, this assumption on ρf |Gal (Qp /Qp ) is needed
+only in the proof of [Kis09, Cor. 2.2.17], where this assumption guarantees that the
+Breuil–Mézard conjecture holds for ρf |Gal (Qp /Qp ) (indeed, the Breuil–Mézard con-
+jecture is proved under this assumption in [Kis09]). The Breuil–Mézard conjecture
+is now known for p > 2, except in the case that p = 3 and ρ|Gal (Qp /Qp ) is a twist of
+the direct sum of the mod p cyclotomic character and the trivial character, so the
+result follows. (The case that p ≥ 3 and ρ|Gal (Qp /Qp ) is a twist of a non-split exten-
+sion of the trivial character by the mod p cyclotomic character is treated in [Paš15],
+and the case that p > 3 and ρ|Gal (Qp /Qp ) is a twist of the direct sum of the mod p
+cyclotomic character and the trivial character is proved in [HT13].)                   
+
+  Suppose that ρ|Gal (Qp /Qp ) is reducible, and that Conjecture 4.1.1 holds. Consider
+ap as a rigid-analytic function on Spec Rkloc (ρ)[1/p]; since v(ap ) ∈ Z by assumption,
+we see that v(ap ) is in fact constant on connected (equivalently, irreducible) com-
+ponents of Spec Rkloc (ρ)[1/p].
+12                          KEVIN BUZZARD AND TOBY GEE
+
+
+Corollary 5.1.2. Maintain the assumptions of Proposition 5.1.1, and assume fur-
+ther that ρ|Gal (Qp /Qp ) is reducible. Assume Conjecture 4.1.1. Then the set of slopes
+(without multiplicities) of Tp on newforms f ∈ Sk (Γ1 (N ), Qp ) with ρf ∼     = ρ is de-
+termined purely by k and ρ|Gal (Qp /Qp ) ; more precisely, it is the set of slopes of (the
+crystalline Frobenius of the Galois representations corresponding to) components
+of Spec Rkloc (ρ)[1/p].
+Proof. This is immediate from Proposition 5.1.1 (and the discussion in the preced-
+ing paragraph).                                                                 
+
+Remark 5.1.3. The conclusion of Corollary 5.1.2 seems unlikely to hold if ρ is
+allowed to be (globally) reducible; for example, if p = 2, it is known that the
+slopes of all cusp forms for SL2 (Z) are at least 3, but there are local crystalline
+representations of slope 1 (for example the local 2-adic representation attached to
+the unique weight 6 level 3 cuspidal eigenform). We do not know if there is any
+reasonable “local to global principle” when ρ is reducible.
+   It would be very interesting to be able to have some control on the multiplicities
+with which slopes occur in Sk (Γ1 (N ), Qp ) (for example, to show that these multi-
+plicities agree for two weights which are sufficiently p-adically close, as predicted by
+the Gouvêa–Mazur conjecture), but it is not clear to us how such results could be
+extracted from the modularity lifting machinery. If all the irreducible components
+of Rkloc (ρ) were regular, it would presumably be possible to use the argument of
+Diamond [Dia97] to relate the multiplicities of the same slope in different weights,
+but we do not expect this to hold in any generality.
+   Not withstanding this difficulty, one could still hope to prove the conjectures
+of [Buz05] up to multiplicity. If Conjecture 4.1.1 were known, the main obstruction
+to doing this would be obtaining a strong local constancy result for slopes as k
+varies p-adically. More precisely, we would like to prove the following purely local
+conjecture for some function M (n) as in §3 above.
+Conjecture 5.1.4. Let r̄ : Gal (Qp /Qp ) → GL2 (Fp ) be reducible. If n ≥ 0 is
+an integer, and k, k 0 ≥ n + 1 have k ≡ k 0 (mod (p − 1)pM (n) ), then there is a
+crystalline lift of r̄ with Hodge–Tate weights 0, k − 1 and slope n if and only if there
+is a crystalline lift of r̄ with Hodge–Tate weights 0, k 0 − 1 and slope n.
+   It might well be possible to prove a weak result in the direction of Conjec-
+ture 5.1.4 by the methods of [Ber12] (more precisely, to prove the conjecture with
+a much worse bound on M (n) than would be needed for interesting applications to
+the conjectures of [Buz05], but without any assumption on the reducibility of r̄).
+   Corollary 5.1.2 (which shows, granting as always Conjecture 4.1.1, that the set
+of slopes which occur globally is the same as the set of slopes that occur locally)
+shows that it would be enough to prove the global version of this statement, and it
+is possible that the methods of [Wan98] could allow one to deduce a local constancy
+result where the dependence on n in “sufficiently close” is quadratic in n. (Note
+that while it is not immediately clear how to adapt the methods of [Wan98] to
+allow ρ to be fixed, it seems plausible that the methods used to prove [WXZ14,
+Thm. D] will be able to do this.) Note again that the computations of [BC04]
+(which in particular disprove the original Gouvêa–Mazur conjecture) mean that we
+cannot expect to deduce Conjecture 5.1.4 (for an optimal function M (n) of the kind
+                                                                                             13
+
+
+suggested by Buzzard’s conjectures) from any global result that does not use the
+hypothesis that ρ|Gal (Qp /Qp ) is reducible.
+   However, it seems plausible to us that a weak local constancy result of this kind,
+also valid in the case that ρ|Gal (Qp /Qp ) is irreducible, could be bootstrapped to give
+the required strong constancy, provided that Conjecture 4.1.1 is proved. The idea
+is as follows: under the assumption of Conjecture 4.1.1, v(ap ) is constrained to
+be an integer when ρ|Gal (Qp /Qp ) is reducible. If one could prove a result (with no
+hypothesis on the reducibility of ρ|Gal (Qp /Qp ) ) saying that if k, k 0 are sufficiently
+close in weight space, then the small slopes of crystalline lifts of ρ|Gal (Qp /Qp ) of
+Hodge–Tate weights 0, k − 1 and 0, k 0 − 1 are also close, then the fact that the
+slopes are constrained to be integers could then be used to deduce that the slopes
+are equal (because two integers which differ by less than 1 must be equal.)
+
+
+                                        References
+[BB10]    Laurent Berger and Christophe Breuil, Sur quelques représentations potentiellement
+          cristallines de GL2 (Qp ), Astérisque (2010), no. 330, 155–211.
+[BC04]    Kevin Buzzard and Frank Calegari, A counterexample to the Gouvêa-Mazur conjec-
+          ture, C. R. Math. Acad. Sci. Paris 338 (2004), no. 10, 751–753.
+[BC05]            , Slopes of overconvergent 2-adic modular forms, Compos. Math. 141 (2005),
+          no. 3, 591–604.
+[Ber12]   Laurent Berger, Local constancy for the reduction modp of 2-dimensional crystalline
+          representations, Bull. Lond. Math. Soc. 44 (2012), no. 3, 451–459.
+[BG09]    Kevin Buzzard and Toby Gee, Explicit reduction modulo p of certain two-dimensional
+          crystalline representations, Int. Math. Res. Not. IMRN (2009), no. 12, 2303–2317.
+[BG13]            , Explicit reduction modulo p of certain 2-dimensional crystalline representa-
+          tions, II, Bull. Lond. Math. Soc. 45 (2013), no. 4, 779–788.
+[BK05]    Kevin Buzzard and L. J. P. Kilford, The 2-adic eigencurve at the boundary of weight
+          space, Compos. Math. 141 (2005), no. 3, 605–619.
+[BLZ04]   Laurent Berger, Hanfeng Li, and Hui June Zhu, Construction of some families of
+          2-dimensional crystalline representations, Math. Ann. 329 (2004), no. 2, 365–377.
+[BM02]    Christophe Breuil and Ariane Mézard, Multiplicités modulaires et représentations de
+          GL2 (Zp ) et de Gal(Qp /Qp ) en l = p, Duke Math. J. 115 (2002), no. 2, 205–310, With
+          an appendix by Guy Henniart.
+[Buz05]   Kevin Buzzard, Questions about slopes of modular forms, Astérisque (2005), no. 298,
+          1–15, Automorphic forms. I.
+[Cal12]   Frank Calegari, Even Galois representations and the Fontaine–Mazur conjecture. II,
+          J. Amer. Math. Soc. 25 (2012), no. 2, 533–554.
+[CE98]    Robert F. Coleman and Bas Edixhoven, On the semi-simplicity of the Up -operator on
+          modular forms, Math. Ann. 310 (1998), no. 1, 119–127.
+[CEG+ 13] Ana Caraiani, Matthew Emerton, Toby Gee, David Geraghty, Vytautas Paškūnas, and
+          Sug Woo Shin, Patching and the p-adic local Langlands correspondence, 2013.
+[CH13]    Gaëtan Chenevier and Michael Harris, Construction of automorphic Galois represen-
+          tations, II, Camb. J. Math. 1 (2013), no. 1, 53–73.
+[Che13]   Gaëtan Chenevier, Sur la densité des représentations cristallines de Gal(Qp /Qp ),
+          Math. Ann. 355 (2013), no. 4, 1469–1525.
+[CHT08] Laurent Clozel, Michael Harris, and Richard Taylor, Automorphy for some l-adic lifts
+          of automorphic mod l Galois representations, Publ. Math. Inst. Hautes Études Sci.
+          (2008), no. 108, 1–181, With Appendix A, summarizing unpublished work of Russ
+          Mann, and Appendix B by Marie-France Vignéras.
+[Col97]   Robert F. Coleman, p-adic Banach spaces and families of modular forms, Invent.
+          Math. 127 (1997), no. 3, 417–479.
+[Dia97]   Fred Diamond, The Taylor-Wiles construction and multiplicity one, Invent. Math.
+          128 (1997), no. 2, 379–391.
+14                            KEVIN BUZZARD AND TOBY GEE
+
+
+[Gee11]   Toby Gee, Automorphic lifts of prescribed types, Math. Ann. 350 (2011), no. 1, 107–
+          144.
+[GM92]    F. Gouvêa and B. Mazur, Families of modular eigenforms, Math. Comp. 58 (1992),
+          no. 198, 793–805.
+[Gou01]   Fernando Q. Gouvêa, Where the slopes are, J. Ramanujan Math. Soc. 16 (2001), no. 1,
+          75–99.
+[HLTT13] Michael Harris, Kai-Wen Lan, Richard Taylor, and Jack Thorne, On the rigid coho-
+          mology of certain Shimura varieties, preprint (2013).
+[HSBT10] Michael Harris, Nick Shepherd-Barron, and Richard Taylor, A family of Calabi-Yau
+          varieties and potential automorphy, Ann. of Math. (2) 171 (2010), no. 2, 779–813.
+[HT13]    Yongquan Hu and Fucheng Tan, The Breuil–Mézard conjecture for non-scalar split
+          residual representations, arXiv preprint arXiv:1309.1658 (2013).
+[Kil08]   L. J. P. Kilford, On the slopes of the U5 operator acting on overconvergent modular
+          forms, J. Théor. Nombres Bordeaux 20 (2008), no. 1, 165–182.
+[Kis09]   Mark Kisin, The Fontaine-Mazur conjecture for GL2 , J. Amer. Math. Soc. 22 (2009),
+          no. 3, 641–690.
+[KM12]    L. J. P. Kilford and Ken McMurdy, Slopes of the U7 operator acting on a space of
+          overconvergent modular forms, LMS J. Comput. Math. 15 (2012), 113–139.
+[KW09]    Chandrashekhar Khare and Jean-Pierre Wintenberger, On Serre’s conjecture for 2-
+          dimensional mod p representations of Gal(Q/Q), Ann. of Math. (2) 169 (2009), no. 1,
+          229–253.
+[Loe08]   David Loeffler, Explicit calculations of automorphic forms for definite unitary groups,
+          LMS J. Comput. Math. 11 (2008), 326–342.
+[LWX14] Ruochuan Liu, Daqing Wan, and Liang Xiao, Eigencurve over the boundary of the
+          weight space, 2014.
+[Nak14]   Kentaro Nakamura, Zariski density of crystalline representations for any p-adic field,
+          J. Math. Sci. Univ. Tokyo 21 (2014), no. 1, 79–127.
+[Paš15]  Vytautas Paškūnas, On the Breuil–Mézard conjecture, Duke Math. J. 164 (2015),
+          no. 2, 297–359.
+[Roe14]   David Roe, The 3-adic eigencurve at the boundary of weight space, Int. J. Number
+          Theory 10 (2014), no. 7, 1791–1806.
+[Sai97]   Takeshi Saito, Modular forms and p-adic Hodge theory, Invent. Math. 129 (1997),
+          no. 3, 607–620.
+[Shi12]   Sug Woo Shin, Automorphic Plancherel density theorem, Israel J. Math. 192 (2012),
+          no. 1, 83–120.
+[ST12]    Sug-Woo Shin and Nicolas Templier, Sato–Tate theorem for families and low-lying
+          zeros of automorphic l-functions, arXiv preprint arXiv:1208.1945 (2012).
+[Tay08]   Richard Taylor, Automorphy for some l-adic lifts of automorphic mod l Galois repre-
+          sentations. II, Publ. Math. Inst. Hautes Études Sci. (2008), no. 108, 183–239.
+[Var14]   Ila Varma, Local-global compatibility for Galois representations associated to regular
+          algebraic cuspidal automorphic representations when l = p (in preparation), 2014.
+[Wan98] Daqing Wan, Dimension variation of classical and p-adic modular forms, Invent.
+          Math. 133 (1998), no. 2, 449–463.
+[WXZ14] Daqing Wan, Liang Xiao, and Jun Zhang, Slopes of eigencurves over boundary disks,
+          2014.
+   E-mail address: k.buzzard@imperial.ac.uk
+
+     Department of Mathematics, Imperial College London
+
+     E-mail address: toby.gee@imperial.ac.uk
+
+     Department of Mathematics, Imperial College London
+

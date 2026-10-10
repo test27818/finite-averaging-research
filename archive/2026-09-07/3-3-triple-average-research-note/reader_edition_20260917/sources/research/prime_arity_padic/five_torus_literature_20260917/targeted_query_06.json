@@ -1,0 +1,87 @@
+{
+  "query": "intersection orbits semigroups",
+  "url": "https://api.openalex.org/works?filter=title.search%3Aintersection+orbits+semigroups&per-page=6&select=id%2Ctitle%2Cdoi%2Cpublication_year%2Copen_access%2Clocations",
+  "results": [
+    {
+      "id": "https://openalex.org/W2962385605",
+      "title": "On intersections of polynomial semigroups orbits with plane lines",
+      "doi": "https://doi.org/10.4153/s0008439520000557",
+      "publication_year": 2020,
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/1907.03934",
+        "any_repository_has_fulltext": true
+      },
+      "locations": [
+        {
+          "id": "doi:10.4153/s0008439520000557",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.4153/s0008439520000557",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210217933",
+            "display_name": "Canadian Mathematical Bulletin",
+            "issn_l": "0008-4395",
+            "issn": [
+              "0008-4395",
+              "1496-4287"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310311721",
+            "host_organization_name": "Cambridge University Press",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311721",
+              "https://openalex.org/P4310311702"
+            ],
+            "host_organization_lineage_names": [
+              "Cambridge University Press",
+              "University of Cambridge"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Canadian Mathematical Bulletin",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:1907.03934",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/1907.03934",
+          "pdf_url": "https://arxiv.org/pdf/1907.03934",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        }
+      ]
+    }
+  ]
+}

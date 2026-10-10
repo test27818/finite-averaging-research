@@ -1,0 +1,811 @@
+{
+  "query": "Jacobsthal function reduced residues gaps",
+  "url": "https://api.openalex.org/works?search=Jacobsthal+function+reduced+residues+gaps&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Cauthorships%2Cabstract_inverted_index%2Cprimary_location%2Copen_access&filter=title.search%3AJacobsthal",
+  "count": 2,
+  "results": [
+    {
+      "id": "https://openalex.org/W4316805798",
+      "title": "The Frobenius Number for Jacobsthal Triples Associated with Number of Solutions",
+      "publication_date": "2023-01-17",
+      "doi": "https://doi.org/10.3390/axioms12020098",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5088209852",
+            "display_name": "Takao Komatsu",
+            "orcid": "https://orcid.org/0000-0001-6204-5368"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1328775524",
+              "display_name": "Zhejiang Sci-Tech University",
+              "ror": "https://ror.org/03893we55",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I1328775524"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Takao Komatsu",
+          "raw_affiliation_strings": [
+            "Department of Mathematical Sciences, School of Science, Zhejiang Sci-Tech University, Hangzhou 310018, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-6204-5368",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematical Sciences, School of Science, Zhejiang Sci-Tech University, Hangzhou 310018, China",
+              "institution_ids": [
+                "https://openalex.org/I1328775524"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5015856000",
+            "display_name": "Claudio Pita-Ruiz",
+            "orcid": "https://orcid.org/0000-0002-7673-5746"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I86613570",
+              "display_name": "Universidad Panamericana",
+              "ror": "https://ror.org/01n1q0h77",
+              "country_code": "MX",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I86613570"
+              ]
+            }
+          ],
+          "countries": [
+            "MX"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Claudio Pita-Ruiz",
+          "raw_affiliation_strings": [
+            "Facultad de Ingeniería, Universidad Panamericana, Augusto Rodin 498, Ciudad de México 03920, Mexico"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Facultad de Ingeniería, Universidad Panamericana, Augusto Rodin 498, Ciudad de México 03920, Mexico",
+              "institution_ids": [
+                "https://openalex.org/I86613570"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "In": [
+          0
+        ],
+        "this": [
+          1
+        ],
+        "paper,": [
+          2
+        ],
+        "we": [
+          3
+        ],
+        "find": [
+          4
+        ],
+        "a": [
+          5,
+          15,
+          24,
+          59
+        ],
+        "formula": [
+          6,
+          61
+        ],
+        "for": [
+          7,
+          62,
+          116,
+          123
+        ],
+        "the": [
+          8,
+          34,
+          39,
+          46,
+          53,
+          63,
+          80,
+          84,
+          93,
+          103,
+          124
+        ],
+        "largest": [
+          9,
+          47
+        ],
+        "integer": [
+          10,
+          20,
+          48,
+          127
+        ],
+        "(p-Frobenius": [
+          11
+        ],
+        "number)": [
+          12
+        ],
+        "such": [
+          13,
+          69
+        ],
+        "that": [
+          14,
+          70,
+          91
+        ],
+        "linear": [
+          16,
+          41,
+          71
+        ],
+        "equation": [
+          17
+        ],
+        "of": [
+          18,
+          23,
+          44,
+          49,
+          65
+        ],
+        "non-negative": [
+          19,
+          66,
+          126
+        ],
+        "coefficients": [
+          21
+        ],
+        "composed": [
+          22
+        ],
+        "Jacobsthal": [
+          25,
+          81
+        ],
+        "triplet": [
+          26,
+          105
+        ],
+        "has": [
+          27
+        ],
+        "at": [
+          28,
+          74
+        ],
+        "most": [
+          29,
+          75
+        ],
+        "p": [
+          30,
+          76
+        ],
+        "representations.": [
+          31,
+          77
+        ],
+        "For": [
+          32
+        ],
+        "p=0,": [
+          33
+        ],
+        "problem": [
+          35,
+          43,
+          101
+        ],
+        "is": [
+          36,
+          51
+        ],
+        "reduced": [
+          37
+        ],
+        "to": [
+          38,
+          79
+        ],
+        "famous": [
+          40
+        ],
+        "Diophantine": [
+          42
+        ],
+        "Frobenius,": [
+          45
+        ],
+        "which": [
+          50
+        ],
+        "called": [
+          52
+        ],
+        "Frobenius": [
+          54
+        ],
+        "number.": [
+          55
+        ],
+        "We": [
+          56
+        ],
+        "also": [
+          57
+        ],
+        "give": [
+          58,
+          87
+        ],
+        "closed": [
+          60
+        ],
+        "number": [
+          64
+        ],
+        "integers": [
+          67
+        ],
+        "(p-genus),": [
+          68
+        ],
+        "equations": [
+          72
+        ],
+        "have": [
+          73
+        ],
+        "Extensions": [
+          78
+        ],
+        "polynomial": [
+          82,
+          86
+        ],
+        "and": [
+          83,
+          96,
+          112,
+          118,
+          121
+        ],
+        "Jacobsthal–Lucas": [
+          85
+        ],
+        "more": [
+          88
+        ],
+        "general": [
+          89,
+          125
+        ],
+        "formulas": [
+          90
+        ],
+        "include": [
+          92
+        ],
+        "familiar": [
+          94
+        ],
+        "Fibonacci": [
+          95,
+          104
+        ],
+        "Lucas": [
+          97
+        ],
+        "numbers.": [
+          98
+        ],
+        "A": [
+          99
+        ],
+        "basic": [
+          100
+        ],
+        "with": [
+          102
+        ],
+        "was": [
+          106
+        ],
+        "dealt": [
+          107
+        ],
+        "by": [
+          108,
+          119
+        ],
+        "Marin,": [
+          109
+        ],
+        "Ramírez": [
+          110
+        ],
+        "Alfonsín": [
+          111
+        ],
+        "M.": [
+          113
+        ],
+        "P.": [
+          114
+        ],
+        "Revuelta": [
+          115
+        ],
+        "p=0": [
+          117
+        ],
+        "Komatsu": [
+          120
+        ],
+        "Ying": [
+          122
+        ],
+        "p.": [
+          128
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.3390/axioms12020098",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.3390/axioms12020098",
+        "pdf_url": "https://www.mdpi.com/2075-1680/12/2/98/pdf?version=1675145220",
+        "source": {
+          "id": "https://openalex.org/S4210173132",
+          "display_name": "Axioms",
+          "issn_l": "2075-1680",
+          "issn": [
+            "2075-1680"
+          ],
+          "is_oa": true,
+          "is_in_doaj": true,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310310987",
+          "host_organization_name": "Multidisciplinary Digital Publishing Institute",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310310987"
+          ],
+          "host_organization_lineage_names": [
+            "Multidisciplinary Digital Publishing Institute"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Axioms",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://www.mdpi.com/2075-1680/12/2/98/pdf?version=1675145220",
+        "any_repository_has_fulltext": true
+      }
+    },
+    {
+      "id": "https://openalex.org/W2022632371",
+      "title": "Disproof of a conjecture of Jacobsthal",
+      "publication_date": "2012-03-26",
+      "doi": "https://doi.org/10.1090/s0025-5718-2012-02581-6",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5022149317",
+            "display_name": "Lajos Hajdu",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I132735039",
+              "display_name": "University of Debrecen",
+              "ror": "https://ror.org/02xf66n48",
+              "country_code": "HU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I132735039"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I7597260",
+              "display_name": "Hungarian Academy of Sciences",
+              "ror": "https://ror.org/02ks8qq67",
+              "country_code": "HU",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I7597260"
+              ]
+            }
+          ],
+          "countries": [
+            "HU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "L. Hajdu",
+          "raw_affiliation_strings": [
+            "University of Debrecen, Institute of Mathematics, and the Number Theory Research Group of the Hungarian Academy of Sciences, P.O. Box 12., H-4010 Debrecen, Hungary",
+            "University of Debrecen, Institute of Mathematics, and the Number Theory Research Group of the Hungarian Academy of Sciences, P.O. Box 12, H-4010 Debrecen, Hungary"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Debrecen, Institute of Mathematics, and the Number Theory Research Group of the Hungarian Academy of Sciences, P.O. Box 12., H-4010 Debrecen, Hungary",
+              "institution_ids": [
+                "https://openalex.org/I132735039",
+                "https://openalex.org/I7597260"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Debrecen, Institute of Mathematics, and the Number Theory Research Group of the Hungarian Academy of Sciences, P.O. Box 12, H-4010 Debrecen, Hungary",
+              "institution_ids": [
+                "https://openalex.org/I132735039",
+                "https://openalex.org/I7597260"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5011771098",
+            "display_name": "N. Saradha",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I11947397",
+              "display_name": "Tata Institute of Fundamental Research",
+              "ror": "https://ror.org/03ht1xw27",
+              "country_code": "IN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I11947397",
+                "https://openalex.org/I2799351866",
+                "https://openalex.org/I3149292468"
+              ]
+            }
+          ],
+          "countries": [
+            "IN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "N. Saradha",
+          "raw_affiliation_strings": [
+            "School of Mathematics, Tata Institute of Fundamental Research, Dr. Homibhabha Road, Colaba, Mumbai, India",
+            "School of Mathematics Tata Institute of Fundamental Research Dr. Homibhabha Road Colaba, Mumbai, India"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Mathematics, Tata Institute of Fundamental Research, Dr. Homibhabha Road, Colaba, Mumbai, India",
+              "institution_ids": [
+                "https://openalex.org/I11947397"
+              ]
+            },
+            {
+              "raw_affiliation_string": "School of Mathematics Tata Institute of Fundamental Research Dr. Homibhabha Road Colaba, Mumbai, India",
+              "institution_ids": [
+                "https://openalex.org/I11947397"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "For": [
+          0
+        ],
+        "any": [
+          1,
+          42
+        ],
+        "integer": [
+          2,
+          43
+        ],
+        "n": [
+          3,
+          12,
+          22,
+          33,
+          34,
+          56,
+          60,
+          61,
+          70,
+          79,
+          80
+        ],
+        "≥": [
+          4,
+          45
+        ],
+        "1": [
+          5,
+          7,
+          46,
+          48
+        ],
+        "n\\geq": [
+          6
+        ],
+        ",": [
+          8,
+          49,
+          109
+        ],
+        "let": [
+          9
+        ],
+        "j": [
+          10,
+          54
+        ],
+        "(": [
+          11,
+          21,
+          55,
+          69
+        ],
+        ")": [
+          13,
+          23,
+          57,
+          71
+        ],
+        "j(n)": [
+          14,
+          58
+        ],
+        "denote": [
+          15
+        ],
+        "the": [
+          16,
+          26,
+          50,
+          82,
+          85
+        ],
+        "Jacobsthal": [
+          17,
+          38
+        ],
+        "function,": [
+          18
+        ],
+        "and": [
+          19,
+          102
+        ],
+        "ω": [
+          20,
+          68
+        ],
+        "\\omega": [
+          24,
+          74
+        ],
+        "(n)": [
+          25
+        ],
+        "number": [
+          27
+        ],
+        "of": [
+          28,
+          32,
+          53,
+          84
+        ],
+        "distinct": [
+          29
+        ],
+        "prime": [
+          30
+        ],
+        "divisors": [
+          31
+        ],
+        ".": [
+          35
+        ],
+        "In": [
+          36
+        ],
+        "1962": [
+          37
+        ],
+        "conjectured": [
+          39
+        ],
+        "that": [
+          40,
+          92
+        ],
+        "for": [
+          41,
+          96
+        ],
+        "r": [
+          44,
+          73,
+          87,
+          88,
+          97,
+          105
+        ],
+        "r\\geq": [
+          47
+        ],
+        "maximal": [
+          51
+        ],
+        "value": [
+          52
+        ],
+        "when": [
+          59,
+          78
+        ],
+        "varies": [
+          62
+        ],
+        "over": [
+          63
+        ],
+        "N": [
+          64
+        ],
+        "{\\mathbb": [
+          65
+        ],
+        "N}": [
+          66
+        ],
+        "with": [
+          67
+        ],
+        "=": [
+          72,
+          106
+        ],
+        "(n)=r": [
+          75
+        ],
+        "is": [
+          76,
+          81,
+          94
+        ],
+        "attained": [
+          77
+        ],
+        "product": [
+          83
+        ],
+        "first": [
+          86
+        ],
+        "primes.": [
+          89
+        ],
+        "We": [
+          90
+        ],
+        "show": [
+          91
+        ],
+        "this": [
+          93
+        ],
+        "true": [
+          95
+        ],
+        "≤": [
+          98
+        ],
+        "23": [
+          99,
+          101
+        ],
+        "r\\leq": [
+          100
+        ],
+        "fails": [
+          103
+        ],
+        "at": [
+          104
+        ],
+        "24": [
+          107
+        ],
+        "r=24": [
+          108
+        ],
+        "thus": [
+          110
+        ],
+        "disproving": [
+          111
+        ],
+        "Jacobsthal’s": [
+          112
+        ],
+        "conjecture.": [
+          113
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1090/s0025-5718-2012-02581-6",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1090/s0025-5718-2012-02581-6",
+        "pdf_url": "https://www.ams.org/mcom/2012-81-280/S0025-5718-2012-02581-6/S0025-5718-2012-02581-6.pdf",
+        "source": {
+          "id": "https://openalex.org/S102439543",
+          "display_name": "Mathematics of Computation",
+          "issn_l": "0025-5718",
+          "issn": [
+            "0025-5718",
+            "1088-6842"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310315719",
+          "host_organization_name": "American Mathematical Society",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310315719"
+          ],
+          "host_organization_lineage_names": [
+            "American Mathematical Society"
+          ],
+          "type": "journal"
+        },
+        "license": "public-domain",
+        "license_id": "https://openalex.org/licenses/public-domain",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Mathematics of Computation",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://www.ams.org/mcom/2012-81-280/S0025-5718-2012-02581-6/S0025-5718-2012-02581-6.pdf",
+        "any_repository_has_fulltext": true
+      }
+    }
+  ]
+}

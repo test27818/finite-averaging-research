@@ -1,0 +1,164 @@
+{
+  "index": 12,
+  "query": "synchronizing weighted automata",
+  "url": "https://api.openalex.org/works?filter=title.search%3Asynchronizing+weighted+automata&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 5,
+  "results": [
+    {
+      "id": "https://openalex.org/W1970462373",
+      "title": "Synchronizing weighted automata",
+      "date": "2014-05-21",
+      "doi": "https://doi.org/10.4204/eptcs.151.21",
+      "citations": 5,
+      "authors": [
+        "Szabolcs Iván"
+      ],
+      "abstract": "We introduce two generalizations of synchronizability to automata with transitions weighted in an arbitrary semiring K=(K,+,*,0,1). (or equivalently, to finite sets of matrices in K^nxn.) Let us call a matrix A location-synchronizing if there exists a column in A consisting of nonzero entries such that all the other columns of A are filled by zeros. If additionally all the entries of this designated column are the same, we call A synchronizing. Note that these notions coincide for stochastic matrices and also in the Boolean semiring. A set M of matrices in K^nxn is called (location-)synchronizing if M generates a matrix subsemigroup containing a (location-)synchronizing matrix. The K-(location-)synchronizability problem is the following: given a finite set M of nxn matrices with entries in K, is it (location-)synchronizing? Both problems are PSPACE-hard for any nontrivial semiring. We give sufficient conditions for the semiring K when the problems are PSPACE-complete and show several undecidability results as well, e.g. synchronizability is undecidable if 1 has infinite order in (K,+,0) or when the free semigroup on two generators can be embedded into (K,*,1).",
+      "locations": [
+        {
+          "url": "https://doi.org/10.4204/eptcs.151.21",
+          "pdf": "https://arxiv.org/pdf/1403.5729",
+          "source": "Electronic Proceedings in Theoretical Computer Science"
+        },
+        {
+          "url": "http://arxiv.org/abs/1403.5729",
+          "pdf": "https://arxiv.org/pdf/1403.5729",
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://doaj.org/article/7a5fb94f8a3749738c94b9653b721cea",
+          "pdf": null,
+          "source": "DOAJ (DOAJ: Directory of Open Access Journals)"
+        }
+      ],
+      "reference_count": 19
+    },
+    {
+      "id": "https://openalex.org/W1892400794",
+      "title": "Synchronizing Words for Weighted and Timed Automata",
+      "date": "2014-01-01",
+      "doi": "https://doi.org/10.4230/lipics.fsttcs.2014.121",
+      "citations": 14,
+      "authors": [
+        "Laurent Doyen",
+        "Line Juhl",
+        "Kim G. Larsen",
+        "Nicolas Markey",
+        "Mahsa Shirmohammadi"
+      ],
+      "abstract": "The problem of synchronizing automata is concerned with the existence of a word that sends all states of the automaton to one and the same state. This problem has classically been studied for complete deterministic finite automata, with the existence problem being NLOGSPACE-complete. In this paper we consider synchronizing-word problems for weighted and timed automata. We consider the synchronization problem in several variants and combinations of these, including deterministic and non-deterministic timed and weighted automata, synchronization to unique location with possibly different clock valuations or accumulated weights, as well as synchronization with a safety condition forbidding the automaton to visit states outside a safety-set during synchronization (e.g. energy constraints). For deterministic weighted automata, the synchronization problem is proven PSPACE-complete under energy constraints, and in 3-EXPSPACE under general safety constraints. For timed automata the synchronization problems are shown to be PSPACE-complete in the deterministic case, and undecidable in the non-deterministic case.",
+      "locations": [
+        {
+          "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.679.5066",
+          "pdf": null,
+          "source": null
+        },
+        {
+          "url": "http://hdl.handle.net/2013/ULB-DIPOT:oai:dipot.ulb.ac.be:2013/195986",
+          "pdf": null,
+          "source": "Dépôt institutionnel de l'Université libre de Bruxelles (Université Libre de Bruxelles)"
+        },
+        {
+          "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSTTCS.2014.121",
+          "pdf": null,
+          "source": "DROPS (Schloss Dagstuhl – Leibniz Center for Informatics)"
+        },
+        {
+          "url": "https://vbn.aau.dk/da/publications/45e3bbef-1796-4be1-8df2-94b94455adc0",
+          "pdf": null,
+          "source": "VBN Forskningsportal (Aalborg Universitet)"
+        },
+        {
+          "url": "https://doi.org/10.4230/lipics.fsttcs.2014.121",
+          "pdf": null,
+          "source": "Leibniz international proceedings in informatics"
+        },
+        {
+          "url": "http://www.lsv.ens-cachan.fr/Publis/PAPERS/PDF/DJLMS-fsttcs14.pdf",
+          "pdf": null,
+          "source": "International Conference on Foundation of Software Technology and Theoretical Computer Science"
+        }
+      ],
+      "reference_count": 8
+    },
+    {
+      "id": "https://openalex.org/W3147373105",
+      "title": "Approximation algorithm for finding short synchronizing words in weighted automata",
+      "date": "2021-03-30",
+      "doi": "https://doi.org/10.48550/arxiv.2103.16185",
+      "citations": 0,
+      "authors": [
+        "Jakub Ruszil"
+      ],
+      "abstract": "In this paper we are dealing with the issue of finding possibly short synchronizing words in automata with weight assigned to each letter in the alphabet $Σ$. First we discuss some complexity problems, and then we present new approximation algorithm in four variations.",
+      "locations": [
+        {
+          "url": "http://arxiv.org/abs/2103.16185",
+          "pdf": "https://arxiv.org/pdf/2103.16185",
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2103.16185v1",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        },
+        {
+          "url": "https://doi.org/10.48550/arxiv.2103.16185",
+          "pdf": null,
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 6
+    },
+    {
+      "id": "https://openalex.org/W2766805475",
+      "title": "Conversion of 1-Place-Unbounded Synchronized Petri Nets into Weighted Automata",
+      "date": "2017-07-01",
+      "doi": "https://doi.org/10.1016/j.ifacol.2017.08.2300",
+      "citations": 0,
+      "authors": [
+        "Changshun Wu",
+        "Isabel Demongodin",
+        "Alessandro Giua"
+      ],
+      "abstract": "Testing is a fundamental technique for system design and verification to ensure security and reliability. However its application to discrete event systems modeled by unbounded synchronized Petri nets is not straightforward because there exists no finite exact representation for the infinite state space of these models. In this paper, we consider a special class of synchronized Petri nets, called 1-place-unbounded, that contain a single unbounded place. We show how a coverability graph that precisely describes the state space of such a model can be constructed extending to synchronized nets a technique previously presented for place/transition nets. In addition, this algorithm can also be used to verify whether a given synchronized Petri net contains exactly a single unbounded place. Next, we show that any net belonging to this special class can be converted into an equivalent weighted automaton. Based on this conversion, we observe that the testing of 1-place-unbounded synchronized Petri nets can be approached using the methods and results existing in the literature for the testing of weighted automata.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1016/j.ifacol.2017.08.2300",
+          "pdf": null,
+          "source": "IFAC-PapersOnLine"
+        },
+        {
+          "url": "https://amu.hal.science/hal-01786065",
+          "pdf": null,
+          "source": "HAL (Le Centre pour la Communication Scientifique Directe)"
+        },
+        {
+          "url": "http://hdl.handle.net/11584/234581",
+          "pdf": null,
+          "source": "UNICA IRIS Institutional Research Information System (University of Cagliari)"
+        }
+      ],
+      "reference_count": 10
+    },
+    {
+      "id": "https://openalex.org/W4287251314",
+      "title": "Approximation algorithm for finding short synchronizing words in\\n weighted automata",
+      "date": "2021-03-30",
+      "doi": "https://doi.org/10.48550/arxiv.2103.16185",
+      "citations": 0,
+      "authors": [
+        "Jakub Ruszil"
+      ],
+      "abstract": "In this paper we are dealing with the issue of finding possibly short\\nsynchronizing words in automata with weight assigned to each letter in the\\nalphabet $\\\\Sigma$. First we discuss some complexity problems, and then we\\npresent new approximation algorithm in four variations.\\n",
+      "locations": [
+        {
+          "url": "http://arxiv.org/abs/2103.16185",
+          "pdf": "https://arxiv.org/pdf/2103.16185",
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 0
+    }
+  ]
+}

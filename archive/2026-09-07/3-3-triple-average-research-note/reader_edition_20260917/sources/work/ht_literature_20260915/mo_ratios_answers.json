@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "owner": {
+        "account_id": 3386575,
+        "reputation": 5887,
+        "user_id": 40821,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/2PwjG.gif?s=256",
+        "display_name": "Aurel",
+        "link": "https://mathoverflow.net/users/40821/aurel"
+      },
+      "is_accepted": false,
+      "score": 7,
+      "last_activity_date": 1690495200,
+      "last_edit_date": 1690495200,
+      "creation_date": 1690360986,
+      "answer_id": 451502,
+      "question_id": 451422,
+      "content_license": "CC BY-SA 4.0",
+      "body": "<p><span class=\"math-container\">$\\newcommand{\\Z}{\\mathbb{Z}}$</span>Let <span class=\"math-container\">$U$</span> be a subset of the integers <span class=\"math-container\">$u$</span> that are nonzero mod <span class=\"math-container\">$p$</span> and\nsatisfy <span class=\"math-container\">$|u|&lt;f$</span>.\nConsider <span class=\"math-container\">$V$</span> the space of functions on <span class=\"math-container\">$(\\Z/p\\Z)^\\times$</span>, and the following operator on <span class=\"math-container\">$V$</span>\n<span class=\"math-container\">$$\n  T \\colon F \\mapsto \\frac{1}{|U|}\\sum_{u\\in U,\\, e=\\pm 1}F(u^ex),\n$$</span>\nwhich is self-adjoint for the natural inner product on <span class=\"math-container\">$V$</span>.</p>\n<p>The eigenvalues of <span class=\"math-container\">$T$</span> are the\n<span class=\"math-container\">$$\n    \\lambda_\\chi = \\frac{2}{|U|}\\sum_{u\\in U}\\Re(\\chi(u)),\n$$</span>\nwhere <span class=\"math-container\">$\\chi$</span> ranges over complex characters of <span class=\"math-container\">$(\\Z/p\\Z)^\\times$</span>.</p>\n<p>Let <span class=\"math-container\">$\\Lambda$</span> be an upper bound on <span class=\"math-container\">$|\\lambda_\\chi|$</span> for nontrivial <span class=\"math-container\">$\\chi$</span>.</p>\n<p>By considering the action on <span class=\"math-container\">$T$</span> on the indicator function of two singletons,\nand decomposing orthogonally to the constant function in <span class=\"math-container\">$V$</span>, you see that\nif <span class=\"math-container\">$\\Lambda^n &lt; \\frac{1}{p-1}$</span>, then every <span class=\"math-container\">$m$</span> is a product of <span class=\"math-container\">$n$</span> values <span class=\"math-container\">$u^{\\pm 1}$</span> for <span class=\"math-container\">$u\\in U$</span>. In other words, your problem is directly related to short sums of Dirichlet characters.</p>\n<p>For instance, if you take <span class=\"math-container\">$U$</span> the set of primes up to <span class=\"math-container\">$f$</span>, and assume the\nGeneralised Riemann Hypothesis, then you get <span class=\"math-container\">$\\Lambda = O((\\log p)/\\sqrt{f})$</span> (maybe up to some log factors, or after replacing <span class=\"math-container\">$T$</span> by a sum with smoothing factors) and therefore you can take <span class=\"math-container\">$f = O(p^{2/n}(\\log p)^2)$</span>.</p>\n<p>You should ask someone more knowledgeable about character sums for more bounds.</p>\n"
+    },
+    {
+      "owner": {
+        "account_id": 2947949,
+        "reputation": 118905,
+        "user_id": 11919,
+        "user_type": "registered",
+        "accept_rate": 67,
+        "profile_image": "https://www.gravatar.com/avatar/6175b645fa6edff1247c12681328a0cd?s=256&d=identicon&r=PG",
+        "display_name": "GH from MO",
+        "link": "https://mathoverflow.net/users/11919/gh-from-mo"
+      },
+      "is_accepted": false,
+      "score": 4,
+      "last_activity_date": 1690468510,
+      "last_edit_date": 1690468510,
+      "creation_date": 1690414455,
+      "answer_id": 451534,
+      "question_id": 451422,
+      "content_license": "CC BY-SA 4.0",
+      "body": "<p><span class=\"math-container\">$\\newcommand{\\Z}{\\mathbb{Z}}$</span>Let me add more detail and precision to Aurel's nice answer. First, the characters of <span class=\"math-container\">$(\\Z/p\\Z)^\\times$</span> form an eigenbasis of <span class=\"math-container\">$V$</span> with respect to <span class=\"math-container\">$T$</span>. Indeed, <span class=\"math-container\">$T\\chi=\\lambda_\\chi \\chi$</span>. Now if <span class=\"math-container\">$I_m$</span> denotes the indicator function of an arbitrary element <span class=\"math-container\">$m\\in(\\Z/p\\Z)^\\times$</span>, then <span class=\"math-container\">$(T^n I_m)(1)$</span> equals <span class=\"math-container\">$|U|^{-n}$</span> times the number of representations <span class=\"math-container\">$m=u_1^\\pm\\dotsb u_n^\\pm$</span> with <span class=\"math-container\">$u_1,\\dotsc,u_n\\in U$</span>. On the other hand, the decomposition\n<span class=\"math-container\">$$I_m=\\frac{1}{p-1}\\sum_\\chi\\overline{\\chi(m)}\\chi$$</span>\nshows that\n<span class=\"math-container\">$$(T^n I_m)(1)=\\frac{1}{p-1}\\sum_\\chi\\overline{\\chi(m)}\\lambda_\\chi^n.$$</span>\nAs <span class=\"math-container\">$\\lambda_{\\chi_0}=2$</span>, there exists a representation <span class=\"math-container\">$m=u_1^\\pm\\dotsb u_n^\\pm$</span> with <span class=\"math-container\">$u_1,\\dotsc,u_n\\in U$</span> as long as\n<span class=\"math-container\">$$(p-2)\\Lambda^n&lt;2^n.$$</span>\nIn other words, <span class=\"math-container\">$U$</span> is a good set as long as\n<span class=\"math-container\">$$\\max_{\\chi\\neq\\chi_0}\\left|\\sum_{u\\in U}\\Re(\\chi(u))\\right|&lt;\\frac{|U|}{(p-2)^{1/n}}.$$</span></p>\n"
+    }
+  ],
+  "has_more": false,
+  "quota_max": 300,
+  "quota_remaining": 290
+}

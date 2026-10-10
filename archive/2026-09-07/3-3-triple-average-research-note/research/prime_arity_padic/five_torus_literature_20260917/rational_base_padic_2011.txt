@@ -1,0 +1,1109 @@
+RAIRO-Theor. Inf. Appl. 46 (2012) 87–106                                     Available online at:
+DOI: 10.1051/ita/2011114                                                      www.rairo-ita.org
+
+
+
+
+     RATIONAL BASE NUMBER SYSTEMS FOR p-ADIC
+                    NUMBERS
+
+
+             Christiane Frougny 1 and Karel Klouda 2
+
+         Abstract. This paper deals with rational base number systems for
+         p-adic numbers. We mainly focus on the system proposed by Akiyama
+         et al. in 2008, but we also show that this system is in some sense
+         isomorphic to some other rational base number systems by means of
+         finite transducers. We identify the numbers with finite and eventually
+         periodic representations and we also determine the number of repre-
+         sentations of a given p-adic number.
+
+         Mathematics Subject Classification. 11A67, 11E95.
+
+
+
+
+                                    1. Introduction
+   In this paper, we consider four distinct but similar rational base number sys-
+tems. The starting point of the derivation of all these systems is the classical
+division algorithm which computes the representation of positive integers in an
+integer base b ⩾ 2: for nonzero s in N, put s0 = s and
+
+                        si = bsi+1 + ai ,    ai ∈ {0, 1, . . . , b − 1},                   (1.1)
+
+for i = 0, 1, . . .. The resulting sequence of digits · · · a2 a1 a0 is always ﬁnite, meaning
+that there is some nin N such that an = 0 and ak = 0 for all k > n, and, moreover,
+                          n
+it holds that s = i=0 ai bi . We say that an · · · a0 is the representation of s in
+base b. The same representation can be obtained also using the well-known greedy
+algorithm only with the diﬀerence that it is computed from left to right: the most
+signiﬁcant digit an ﬁrst.
+
+   Keywords and phrases. Rational base number systems, p-adic numbers.
+   1 LIAFA, CNRS UMR 7089, Case 7014, 75205 Paris Cedex 13, and Université Paris 8, France.
+
+   Christiane.Frougny@liafa.jussieu.fr
+   2 Faculty of Information Technology, Kolejnı́ 550/2, 160 00 Prague, Czech Republic.
+
+   karel.klouda@fit.cvut.cz
+
+Article published by EDP Sciences                                          
+                                                                           c EDP Sciences 2011
+88                                     C. FROUGNY AND K. KLOUDA
+
+
+   If one wants to get a rational base representation by the greedy algorithm, it
+suﬃces to replace the integer base b by a rational number pq , p > q ⩾ 1. However,
+even if the input is a positive integer, the returned representations may be inﬁnite
+to the right, i.e., the sequence of digits is not eventually zero. In fact, even if the
+integer base b is replaced by a real β > 1, the greedy algorithm still works. The
+resulting representations are called β-expansions. The notion of β-expansion was
+ﬁrstly introduced by Rényi in [7] and has been studied since then by many authors
+(see [3], Chap. 7, for a survey and references). The β-expansions are obtained by
+the generalization of the greedy algorithm. For the most general setting of the
+greedy algorithm we have: the input can be any nonnegative real number, any
+real number greater than one can be taken as a base, and the β-expansions are,
+in general, inﬁnite to the right.
+   The goal of this paper is to study some generalizations of the division algorithm
+in the case where the input is not a positive integer, and in the case where the
+base is not a positive integer.
+   As for the possible inputs, looking at the key step of the division algorithm (1.1),
+an irrational number can be hardly an input. As we will see below, the algorithm
+can be modiﬁed so that the input can be rational numbers.
+   Regarding the possible bases, again an irrational base is not acceptable. In
+order to get a rational base number system, we have to modify (1.1): let p > q ⩾ 1
+be co-prime integers, if we replace (1.1) by
+
+                       qsi = psi+1 + ai ,           or by    qsi = psi+1 + qai ,              (1.2)
+
+where ai ∈ {0, 1, . . . , p − 1}, we get the rational base number systems we are going
+to study. It is easy to check that for any positive integer s = s0 we get
+             n1
+                  i                        n2
+                                                         i
+                ai p                                      p
+       s=                            or s =         ai        ,       for some n1 , n2 ∈ N,   (1.3)
+             i=0
+                   q      q                   i=0
+                                                          q
+
+respectively. If we further replace p by −p, we get two negative rational base
+systems. Again, all the respective algorithms admit any rational number as an
+input (see Algorithm 3.1).
+     We have said that even negative numbers can be an input of the division algo-
+rithm: let b = 2 and s = −1 in (1.1), then the output is the left-inﬁnite sequence
+· · · a2 a1 a0 = · · · 111. In order
+                                  for this    sequence to be the representation of −1, we
+would have to have −1 = ∞           i=0 2 i
+                                            . This is of course not true with respect to the
+classical absolute value, therefore we have to move to another ﬁeld. In some sense,
+the only candidate is the ﬁeld of 2-adic numbers Q2 . The ﬁelds of r-adic numbers
+Qr , for r a prime number, will be described in the sequel.
+     Now, we can specify what this paper deals with: we will study four rational
+base number systems enabling to represent r-adic numbers in the form
+
+                 i                     i        ai  p i             ai  p i
+                  p                       p
+            ai        ,              ai −      ,                        ,         −     ,     (1.4)
+                  q                       q                 q     q           q     q
+     i⩾k0                     i⩾k0                   i⩾k0                   i⩾k0
+             RATIONAL BASE NUMBER SYSTEMS FOR P -ADIC NUMBERS                           89
+
+where p > q ⩾ 1 are co-prime integers, ai belongs to {0, 1, . . . , p − 1} and k0 is
+in Z. Our strategy is to study one of them and then to show that they all share
+most of their properties. More precisely, we will study the third one, called the
+AFS number system, since this system has already been considered by Akiyama
+et al. in [1]. We ﬁrst study the representations of the negative integers, and show
+that they are representable by a tree, similar to the tree of the representations
+of nonnegative integers of [1]. We characterize the case when there is a natural
+isomorphism of the trees, Proposition 3.13.
+   In Proposition 3.17 we give a combinatorial description of the numbers having
+a ﬁnite expansion.
+   Theorem 3.20 provides an answer to the question of uniqueness of a represen-
+tation and also characterizes all representations of x in Qr , r a prime factor of p,
+which converge to x with respect to | . |r .
+   Then we characterize the numbers with eventually periodic representations:
+more precisely, we show that if x belongs to Qr , r a prime factor of p, then the
+1p
+q q -representation of x, given by algorithm GMD, is eventually periodic if, and
+only if, x is in Q and the 1q pq -representation is equals to the 1q pq -expansion of x
+given by Algorithm MD, Theorem 3.26.
+   Finally we show that, for q > 1, there exist ﬁnite sequential transducers con-
+verting one representation from (1.4) to each other one, Theorem 4.1.
+
+
+
+
+                                2. Preliminaries
+2.1. p-adic numbers
+
+    Within this section, p is a prime number. Detailed introduction to the theory of
+p-adic numbers can be found in many books, see, e.g., [5]. Here we shortly recall
+the deﬁnition and some basic properties we are going to need later on. First,
+deﬁne the p-adic valuation vp : Z \ {0} → R by n = pvp (n) n with p  n . This is
+extended to rationals by vp ( ab ) = vp (a) − vp (b) for any nonzero a, b ∈ Z. Having
+the valuation, we deﬁne the p-adic absolute value of x in Q as |x|p = 0 if x = 0, and
+|x|p = p−vp (x) otherwise. Due to the celebrated Ostrowski’s theorem from 1918,
+the p-adic absolute values and the classical one are the only non-trivial absolute
+values deﬁnable on Q since the theorem says any absolute value is equivalent to
+one of these.
+    The crucial diﬀerence between the classical and the p-adic absolute value is that
+the p-adic one is ultrametric, i.e., for all x, y ∈ Qp it holds |x+y|p ⩽ max{|x|p , |y|p }.
+Moreover, even for non-rational p-adic numbers the absolute value (and valuation)
+still takes only countably many values; more precisely, there exists i ∈ Z such that
+|x|p = pvp (x) = pi for all x ∈ Qp .
+    In the same way as the set R is the completion of Q with respect to the classical
+absolute value, the sets Qp of p-adic numbers are the completions of Q with respect
+90                                C. FROUGNY AND K. KLOUDA
+
+
+to | |p . It is known that any x in Qp has a unique standard representation in base p:
+                
+          x=           ak p k ,   with ak ∈ {0, 1, . . . , p − 1} and k0 = vp (x).
+               k⩾−k0
+
+This standard representation is ﬁnite if, and only if, x is in N, eventually periodic
+for x in Q and aperiodic otherwise. The existence and uniqueness of the standard
+representation implies the following simple but essential lemma; Zp is the set of
+p-adic integers, i.e., numbers x ∈ Qp with |x|p ⩽ 1.
+Lemma 2.1. Let x ∈ Zp and n ∈ N. Then there exists a unique αn ∈ {0, 1, . . . ,
+pn − 1} such that |x − αn |p ⩽ p−n .
+
+2.2. Combinatorics on words
+
+   Any ﬁnite nonempty set A is called alphabet. In particular, we put Ak =
+{0, 1, . . . , k − 1} for any k ∈ N. Any ﬁnite string w = a0 a1 · · · an , ai ∈ A, is
+a ﬁnite word over A of length |w| = n + 1. The set of all ﬁnite words over A
+including the empty word ε is denoted by A∗ . A right-inﬁnite word over A is a
+sequence a = a0 a1 · · · with ai ∈ A; AN is the set of all such words over A. If
+a = uwww · · · = uwω for some u and w in A∗ , then a is said to be eventually
+periodic. If u = ε, a is purely periodic. Left-inﬁnite words and the set NA are
+deﬁned in the same manner. If a = · · · wwwu = ω wu for some w, u ∈ A∗ , then a
+is eventually periodic to the left.
+   If w in A∗ is equal to zu for some z and u in A∗ , then z is a preﬁx and u a
+suﬃx of w. A language L over A is any subset of A∗ . If any preﬁx of any w ∈ L
+belongs also to L, L is a preﬁx-closed language.
+
+                             3. AFS number system
+    In [1] the AFS system is proposed as a new method to represent the nonneg-
+ative integers in the form of the third series from (1.4), where p > q ⩾ 1 are
+co-prime integers and digits ai from the alphabet Ap . It is proved there that such
+a ﬁnite representation is unique and that the language of all such representations
+is preﬁx-closed. In fact, it holds that if w in A∗p is a representation of an integer,
+then there exists at least one a in Ap such that wa represents an integer as well.
+                                             n       −k
+So, if w = an an−1 · · · a1 a0 , we can study k=0 aqk pq     and get a representation
+of a rational number. As we have said, w can always be extended by at least
+one letter and remains a representation of an integer. Doing this extension repet-
+itively, n tends to inﬁnity and we can get even irrational numbers. Such inﬁnite
+representations are then studied in [1] and they turn out to be very interesting
+and to relate to old and diﬃcult problems of number theory; namely, Mahler’s
+problem [4] and the Josephus problem [6,8]. In this paper we will take a diﬀerent
+approach; we will study also inﬁnite series but containing an inﬁnite number of
+positive powers of pq .
+              RATIONAL BASE NUMBER SYSTEMS FOR P -ADIC NUMBERS                                       91
+
+3.1. Modified division algorithm
+
+   In what follows, we assume that p > q ⩾ 1 are co-prime positive integers (we do
+not assume that p is a prime number!). As explained above, the representations
+in the AFS system can be obtained by the division algorithm if the key step (1.1)
+is modiﬁed. The result is the following algorithm, called the modiﬁed division
+(MD) algorithm. It is stated in the most general form so that its input can be any
+rational number x = st with s and t being the lowest terms.
+Algorithm 3.1 (MD algorithm). Let x = st , s being an integer and t a positive
+integer.
+     (i) if s = 0, return the empty word a = ε;
+    (ii) if t is co-prime to p, put s0 = s and for all i ∈ N deﬁne si+1 and ai ∈ Ap
+         by
+                                     qsi   psi+1
+                                         =       + ai .                            (3.1)
+                                      t      t
+         Return a = · · · a2 a1 a0 ;
+                                                                      
+   (iii) if t is not mutually prime with p, multiply st by pq until x pq is of the form
+        s           
+        t , where t is co-prime to p. Then apply the algorithm from (ii) returning
+                    
+        a = · · · a2 a1 a0 . Return a = · · · a1 a0  a−1 · · · a− = · · · a+1 a  a−1 · · · a0 .
+Definition 3.2. Let x be in Q. The word a returned by the previous algorithm
+for x is said to be the 1q pq -expansion of x and denoted by x 1q pq .
+
+   We often omit the radix point if its position is clear.
+Lemma 3.3. Let x = st , where s = 0 and t > 0 is co-prime to p. Then for the
+sequence (si )i⩾1 from the MD algorithm we have:
+     (i) if s > 0 and t = 1, i.e., x ∈ N, (si )i⩾1 is eventually zero;
+    (ii) if s > 0 and t > 1, (si )i⩾1 is either eventually zero or eventually negative;
+   (iii) if s < 0, (si )i⩾1 is negative;
+   (iv) for all i ∈ N, if si < − p−1
+                                  p−q t, then si < si+1 ;
+                              p−1
+    (v) for all i ∈ N, if − p−q t ⩽ si < 0, then − p−1
+                                                     p−q t ⩽ si+1 < 0;
+   (vi) (si )i⩾1 is always bounded and eventually periodic;
+  (vii) (si )i⩾1 is eventually zero (resp. eventually periodic) if, and only if, a is
+         eventually zero (resp. eventually periodic).
+Proof. Items (i), (ii) and (iii) follow from the trivial fact that if si is positive, then
+si+1 < si , and that if si is negative, then si+1 is also negative.
+                                          qsi −(p−1)t
+   If si < − p−1
+             p−q t, we must have si <          p      . And since
+
+                                 qsi − (p − 1)t         q
+                                                ⩽ si+1 ⩽ si
+                                       p                p
+
+for all i ∈ N, item (iv) follows.
+92                                 C. FROUGNY AND K. KLOUDA
+
+                                        p−1
+   Similarly one can prove (v). Let − p−q   t ⩽ si < 0, then by (iii) we get si+1 < 0
+and                                             
+                                             p−1
+                    qsi − (p − 1)t    q  −t  p−q − (p − 1)t        p−1
+             si+1 ⩾                ⩾                         = −t        ·
+                           p                      p                p−q
+Item (vi) is a direct consequence of (ii)–(iv) and of the fact that the value of
+si+1 (and also of ai ) is completely determined by the value of si . The same fact
+implies (vii).                                                                     
+   It follows from the lemma that the interval [−t p−1
+                                                   p−q , 0] is a sort of attractor for
+the sequence (si )i⩾1 and this gives us the following bound for the length of the
+period of 1q pq -expansions.
+                                                                              
+Corollary 3.4. Let x = st be in Q. Then the period of x 1q pq is less than p−1p−q t.
+
+Lemma 3.5. Let x = st be in Q such that its 1q pq -expansion x 1q pq = · · · a−+1 a− ,
+ ∈ N, is not ﬁnite (i.e., it is not eventually zero). Then
+                                             ∞
+                                                 k
+                                               ak p
+                                                    q   q
+                                             k=−
+
+
+converges to x with respect to the r-adic absolute value | |r if, and only if, r is a
+prime factor of p. Moreover, if i is the multiplicity1 of r in p, then for all n ⩾ −
+we have                                 k
+                               n
+                                    ak p
+                         x−                     ⩽ r−i(n+1) .                     (3.2)
+                                     q q
+                                     k=−                   r
+
+Proof. W.l.o.g., assume that t is co-prime to p. Then it follows from (3.1)
+                                                n+1       n   k
+                  s   p s1   a0                 p     sn+1  ak p
+                    =      +    = ··· =                   +         ·
+                  t   q t    q                  q       t     q q
+                                                                      k=0
+
+Since (si )i⩾1 is a sequence of integers, we have 0 < |si |r ⩽ 1 for all i. Hence,
+                   n
+                       k                   n+1                        n+1
+                     ak p                     p                 sn+1       p           1
+             x−                          =                            ⩽                    ·
+                         q     q              q                   t r      q           t r
+                  k=−               r                  r                          r
+
+Obviously, this sequence tends to zero if, and only if, r is a prime factor of p. In
+                       n+1
+such a case, we have pq         1
+                                 t r =r
+                                        −i(n+1)
+                                                .                                 
+                                         r
+
+     Of course, Inequality (3.2) holds even without assuming that x 1q pq is not even-
+tually zero. Some examples of 1q pq -expansions are stated in Table 1.
+
+     1This means that i is the greatest integer such that r i divides p.
+              RATIONAL BASE NUMBER SYSTEMS FOR P -ADIC NUMBERS                                           93
+
+         Table 1. Examples of x 1q pq . The last column contains the ab-
+         solute values for which the 1q pq -expansion from the second column
+         converges to x (in terms of Lem. 3.5).
+
+       x                    x 1q pq   (si )i⩾0                                  Abs. values
+                                             p = 3, q = 2
+      5                     2101        5, 3, 2, 1, 0, 0, . . .                          all
+                            ω
+      –5                    2012        –5, –3, –2, –2, –2, . . .                       | |3
+     11/4                    201        11, 6, 4, 0, 0, . . .                            all
+                          ω
+     11/8                   1222        11, 2, –4, –8, –8, –8, . . .                    | |3
+                     ω
+     11/5              (02)2112         11, 4, 1, –1, –4, –6, –4, –6, . . .             | |3
+                                           p = 30, q = 11
+      5                  11 25          5, 1, 0, 0, . . .                                 all
+                        ω
+      –5                19 8 5          –5, –2, –1, –1,. . .                      | |2 , | |3 , | |5
+             ω
+     11/7      (12 21 5) 23 13          11, 1, –5, –3, –6, –5, . . .              | |2 , | |3 , | |5
+
+3.2. 1q pq -expansions of the negative integers
+
+   The case of 1q pq -expansions of the positive integers has already been studied
+in [1]. In the present subsection, we will study the case of the negative integers.
+Definition 3.6. Let · · · a−+1 a− ,  ∈ N be an eventually periodic word over Ap .
+The evaluation map π is deﬁned by: π(· · · a−+1 a− ) = x if, and only if, x 1q pq =
+· · · a−+1 a− .
+Lemma 3.7. Let · · · a2 a1 a0 be eventually periodic.
+   (i) if π(· · · a2 a1 a0 ) is in Z, then π(· · · a3 a2 a1 ) belongs to Z;
+  (ii) if x = π(· · · a2 a1 a0 ) is a negative integer, then there exists a ∈ Ap such
+       that π(· · · a2 a1 a0 a) is also a negative integer. Moreover,
+
+                                                                              p
+      min {π(· · · a2 a1 a0 a) | π(· · · a2 a1 a0 a) ∈ Z, a ∈ Ap } = x                                 (3.3)
+                                                                              q
+                                                                                       
+                                                                         1
+      max {π(· · · a2 a1 a0 a) | π(· · · a2 a1 a0 a) ∈ Z, a ∈ Ap } =       (px + p − 1) . (3.4)
+                                                                         q
+
+Proof. Let us assume that an integer x has expansion x 1q pq = · · · a3 a2 a1 a0 and
+let s1 be the second element of the corresponding sequence (si )i⩾0 from the MD
+algorithm. Then, clearly, s1  1q pq = · · · a3 a2 a1 .
+   It remains to prove (ii). In other words, we want to prove that there exists
+an integer s such that s1 from the MD algorithm for s0 = s is equal to x, i.e.,
+qs = px + a for some a ∈ Ap . It is equivalent to the condition
+
+                                          1
+                                            (px + a) ∈ Z.                                              (3.5)
+                                          q
+94                                 C. FROUGNY AND K. KLOUDA
+
+
+Clearly, this condition is satisﬁed at least for one a, the rest of the statement (ii)
+follows from the fact that 0 ⩽ a ⩽ p − 1.                                           
+
+    In words, the set of 1q pq -expansions of all negative integers is preﬁx-closed and all
+its elements are extendable to the right. Moreover, the 1q pq -expansion of a negative
+integer is eventually periodic with period 1:
+                                                                         
+Proposition 3.8. Let k be a positive integer. Denote B = p−1          p−q , then:
+
+      (i) if k ⩽ B, then −k 1q pq = ω b with b = k(p − q);
+     (ii) otherwise, −k 1q pq = ω bw with w ∈ A+ p and b = B(p − q).
+
+Proof. Let k ⩽ B. Then, for s0 = −k, we have −qk = qs0 = s1 p + a0 ; this
+equation is satisﬁed (only) for s1 = −k and a = k(p − q) ⩽ p − 1 and the proof of
+(i) follows.
+    If k > B then −k < − p−1p−q . We know, due to Lemma 3.3 (iv), that (si )i⩾0 is
+eventually greater than or equal to −B. Hence, −k 1q pq = ω bw, where π(ω b) is a
+negative integer −k1 , k1 ⩽ B. We will prove that k1 must be equal to B and so,
+due to (i), b = B(p − q).
+    We show that if k1 < B and b1 = k1 (p − q), then the only a ∈ Ap such that
+π(ω b1 a) is an integer is again a = b1 . Let k1 < B, then −k1  1q pq = ω b1 with
+b1 = k1 (p − q). Assume that k0 = π(ω b1 a) ∈ Z. We must have −k0 q = −k1 p + a.
+This is satisﬁed for a = k1 (p − q) and k0 = k1 . Let us suppose that the same
+equation is satisﬁed also for diﬀerent a and k0 . Clearly, a must be equal to
+k1 (p − q) + q for some nonzero  and, at least for one of  = 1 or  = −1,
+it must be true that k1 (p − q) + q ∈ Ap . Then k0 = k1 − 1 or k0 = k1 + 1,
+respectively. It implies that, for some 0 ⩽ k0 ⩽ B, we have two diﬀerent 1q pq -
+expansions: one is given by (i) (or is equal to ε for k0 = 0) and the second one is
+ω
+  b1 a , a contradiction.                                                        
+
+3.2.1. Trees T q1 pq and T 1q pq
+
+   The language of 1q pq -expansions of all positive integers is studied in [1]. It is
+proved there, among other properties of this language, that it is preﬁx-closed and
+extendable to the right. Thus, it is quite natural to represent the language as
+a tree with inﬁnite branches. We ﬁrst recall the results for the case of positive
+integers and then propose their analogues for the negative case.
+
+Lemma 3.9. Deﬁne the language L q1 pq = {w ∈ A∗p | w is the 1q pq -expansion of
+somes ∈ N}. The language L q1 pq is preﬁx-closed, extendable to the right, and not
+context-free (if q = 1).
+
+   The proof is a direct consequence of the pumping lemma and can be found
+in [1].
+             RATIONAL BASE NUMBER SYSTEMS FOR P -ADIC NUMBERS                          95
+
+Definition 3.10. The tree T 1q pq has the nonnegative integers as nodes and the
+directed edges are labeled by letters from Ap . Furthermore:
+     (i) 0 is the root of the tree;
+    (ii) there is an edge from node n1 to node n2 with label a if n2 = (pn1 + a)/q.
+Tree T 1q pq for p = 3, q = 2, is depicted in Figure 1.
+   It is reasonable to ask which nonnegative integer x is the least one with x 1q pq
+of length n. Denote such an integer by Gn : surely G0 = 0 and G1 = 1. The
+children in the tree T q1 pq of node n are given by Condition (3.5), obviously, the
+                         
+least such integer is pq n (cf. Lem. 3.7).
+Lemma 3.11. The least nonnegative integer with 1q pq -expansion of length n ∈ N
+                                            
+                                         p
+is Gn , where G0 = 0, G1 = 1, Gn+1 = q Gn .
+
+   We now propose equivalent objects for the negative integers. The language now
+reads L 1q pq = {w ∈ A∗p | ω bw = s 1q pq , s ⩽ −B, ﬁrst letter of w = b}. Clearly, the
+letter b is equal to B(p−q) with B from Proposition 3.8. Using the same techniques,
+on can prove the same results as the ones of Lemma 3.9 for the language L 1q pq .
+   Since both languages have the same properties, L q1 pq can be also represented
+by a tree T 1q pq . The nodes are the negative integers, the root is equal to −B, and
+there is an edge from node n1 to node n2 with label a in Ap if n2 = (pn1 + a)/q.
+   Tree T 1q pq for p = 3, q = 2 is depicted in Figure 1, too.
+   Again, we can ask which integer ⩽ −B is the least one having the 1q pq -expansion
+ω
+  bw with w ∈ L 1q pq of length n. Using the same reasoning as in the case of positive
+integers, we get:
+Lemma 3.12. The least negative integer with 1q pq -expansion ω bw with b = B(p−q)
+                                                                        
+                                                                    p
+and w ∈ L 1q pq of length n ∈ N is Gn , where G0 = −B, Gn+1 = q Gn .
+
+   Looking at the trees for various values of p and q, one can notice that sometimes
+they are isomorphic and sometimes not. For instance, T 1q pq and T q1 pq are isomorphic
+for p = 3 and q = 2 but not for p = 8 and q = 5, see Figure 2.
+Proposition 3.13. The mapping which maps node k of the tree T q1 pq to node
+−B − k of T q1 pq is an isomorphism if, and only if, p−1
+                                                     p−q is an integer.
+
+Proof. Clearly, the mapping is an isomorphism if, and only if, the nodes k and
+−B − k have the same number of children for all k ∈ N. Denote the number of
+children of a node k by m(k), then (see (3.5)) we have for all k ∈ N
+
+              m(k) =          #{a ∈ Ap | pk + a ≡ 0 (mod q)},
+          m(−B − k) =         #{b ∈ Ap | −p(B + k) + b ≡ 0 (mod q)}
+                          =   #{b ∈ Ap | pk + (p − q)B − b ≡ 0 (mod q)}.
+96                                   C. FROUGNY AND K. KLOUDA
+
+
+
+                                                                          11
+                                                                      1
+
+                                                                 7        10
+                                                             2        2
+                                                             0        0
+                                                        4        6         9
+                                                    2
+                    ω
+                        0        2         1        0        1        1
+                            0          1       2        3        5         8
+
+                    ω
+                        1
+                            -1
+
+                    ω
+                        2        0         1        2        1        1
+                            -2        -3       -4       -5       -7       -10
+                                                    0        2
+                                                                      2
+                                                        -6       -8       -11
+                                                             0        0
+
+                                                                 -9       -12
+                                                                      1
+
+                                                                          -13
+
+
+
+          Figure 1. The graph containing 1q pq -expansions of all integers for
+          p = 3, q = 2: the trees T 1q pq and T q1 pq .
+
+
+The case q = 1 is trivial, so assume that q > 1. Since p and q are co-prime,
+the sequence (pk)k⩾0 “visits” all residue classes (mod q). Therefore, m(k) =
+m(−B − k) for all k if, and only if, the set {(p − q)B − b | b ∈ Ap } has the same
+number of elements in each residue class (mod q) as Ap . This is equivalent to
+{(p − q)B − b | b ∈ Ap } = {q, q + 1, . . . , q + p − 1} for some  ∈ Z. But since
+p − q ⩽ (p− q)B ⩽ p − 1, the only admissible case is that  = 0 and, consequently,
+B = p−1         p−1
+        p−q = p−q .                                                                
+
+
+3.3. Finite 1q pq -expansions
+
+                                                                      m            k
+     If x has a ﬁnite 1q pq -expansion of length m + 1, i.e., x =             ak
+                                                                          k=0 q
+                                                                                    p
+                                                                                    q     , then it
+is equal to qm+1 for some s ⩾ 1. But not all numbers of this form have a ﬁnite 1q pq -
+               s
+
+expansion, e.g., x = 11/8 = 11/23 has an eventually periodic representation ω 1222
+for p = 3 and q = 2, see Table 1. In order to better understand this, we introduce
+an alternative algorithm computing the 1q pq -expansion of numbers of this form.
+Algorithm 3.14. Let x = qsm with s and m positive integers. Put h0 = s. Deﬁne
+hi+1 and bi in Ap as follows. For i = 0, 1, . . . , m − 1 let
+
+                                        hi          hi+1
+                                               = p m−(i+1) + bi .
+                                     q m−(i+1)    q
+             RATIONAL BASE NUMBER SYSTEMS FOR P -ADIC NUMBERS                         97
+
+
+                                                                                 11
+
+                                                                            7
+                                                                                 10
+                          p = 8, q = 5                                       2
+
+                                                                      6          9
+                                                                6            5
+                                                                1            0
+                                                          3           5          8
+                                                  7
+                 ω
+                     0          5                 2             4            3
+                         0                1               2           4          7
+
+                 ω
+                     3
+                         -1
+
+                 ω
+                     6          1                 4             7            5
+                         -2              -3              -4           -5         -7
+                                                                2            0
+
+                                                                      -6         -8
+                                                                             3
+
+                                                                                 -9
+
+
+        Figure 2. The graph containing 1q pq -expansions of all integers for
+        p = 8, q = 5: the trees T 1q pq and T q1 pq .
+
+
+For i ⩾ m let qhi = phi+1 + bi .
+  Return b = · · · b2 b1 b0 .
+  It turns out that b = x 1q pq , as proved in the following result.
+
+Lemma 3.15. Let x = qsm with s and m positive integers. Let b = · · · b2 b1 b0 be
+the word returned by algorithm 3.14 and (hi )i⩾1 the respective sequence; similarly,
+let x 1q pq = · · · a2 a1 a0 and let (si )i⩾1 be the sequence from the MD algorithm.
+Then x 1q pq = b and
+                                     
+                                         hi q i       i = 0, 1, . . . , m − 1,
+                              si =
+                                         hi q m       i = m, m + 1, . . .
+
+Proof. For i = 0, we have qs0 = ps1 + a0 q m and h0 = ph1 + b0 q m−1 . It follows that
+a0 = b0 and s1 = qh1 . We carry on by induction on i = 1, 2, . . . , m − 1. Assuming
+that si = hi q i , the equations qsi = psi+1 + a0 q m and hi = phi+1 + bi q m−(i+1)
+again imply that bi = ai and si+1 = hi+1 ; it suﬃces to multiply the latter one by
+q i+1 to make it clear.
+    The proof continues in an analogous way even for i greater than m − 1.          
+98                           C. FROUGNY AND K. KLOUDA
+
+
+    It is easy to see that (as in the case of the MD algorithm) if · · · b2 b1 b0 is the
+1p                                                          h0
+q q -expansion returned by the alternative algorithm for qm , then · · · b3 b2 b1 is the
+1 p                  h1                                          1p
+q q -expansion of qm−1 . Consequently, · · · bm+2 bm+1 bm is the q q -expansion of the
+integer hm . We already know that the 1q pq -expansion of an integer is ﬁnite if, and
+only if, the integer is nonnegative, so this implies:
+Corollary 3.16. Let x = qsm with s and m positive integers, and let (hi )i⩾1 be
+the sequence constructed for x in Algorithm 3.14. Then x 1q pq is ﬁnite if, and only
+if, hm is a nonnegative integer.
+     Having this knowledge, we are now able to describe all numbers of the form of
+ s
+qm    whose 1q pq -expansion is inﬁnite.
+Proposition 3.17. Let q > 1. Deﬁne for all positive integers m the set
+                          ⎧                             ⎫
+                          ⎨            i                  ⎬
+                INF(m) = i i > 0,               is inﬁnite   .
+                          ⎩           qm 1 p              ⎭
+                                                  q q
+
+
+
+Then INF(1) = ∅ and INF(m) = A(m) ∪ B(m), m = 2, 3, . . . , where
+                                                 
+                 A(m) = −kp+aq m−1 | k > 1, a ∈ Ap ∩ N, and
+                                                         
+                 B(m) = pk+aq m−1 | k ∈ INF(m − 1), a ∈ Ap .
+
+Proof. For m = 1 and qs , s > 0, we get in Algorithm 3.14 s = h0 = ph1 + b0 , it
+implies h1 ⩾ 0 and so, indeed, INF(1) is empty.
+    Now, consider qsm for m > 1. The proof follows from the fact that s ∈ INF(m)
+if, and only if, either h1 < 0 or h1 ∈ INF(m − 1). Indeed, if s ∈ A(m − 1), i.e.,
+s = −kp + aq m−1 for some k > 1 and a ∈ Ap , then we get in Algorithm 3.14
+s = h0 = −kp + aq m−1 = ph1 + b0 q m−1 . Since h1 and b0 are uniquely given,
+h1 = −k < 0. Analogously, s = h0 = pk + aq m−1 for some k ∈ INF(m − 1) and
+a ∈ Ap implies that h1 = k ∈ INF(m − 1).                                       
+
+3.4. 1q pq -representation of r-adic numbers
+
+  Within this subsection letters r, r1 , r2 , . . . stand for prime numbers and p is a
+general integer greater than one.
+Definition 3.18. A left-inﬁnite word · · · a−0 +1 a−0 , 0 ∈ N, over Ap is a 1q pq -
+representation of x ∈ Qr if a−0 > 0 or 0 = 0 and
+                                    ∞        k
+                                          ak p
+                               x=
+                                           q q
+                                      k=−0
+
+
+with respect to | |r .
+             RATIONAL BASE NUMBER SYSTEMS FOR P -ADIC NUMBERS                        99
+
+   So far, we have been concerned with 1q pq -representation of rational numbers in
+Qr . We have shown that there exists at least one 1q pq -representation for all rational
+numbers, namely the 1q pq -expansion obtained by the MD algorithm, provided that
+r is a prime factor of p. Is this representation the only one of this type? Does it
+exist even for non-rational r-adic numbers? Before answering these questions, let
+us consider again Lemma 2.1: the number αn is not the only integer satisfying the
+inequality; it remains true even if αn is replaced by αn + rn for any  ∈ Z. This
+trivial observation turns out to be the reason why there exist even uncountably
+many 1q pq -representations if p is not a power of a single prime. However, there is
+some common property for all such representations.
+Lemma 3.19. Let r be a prime factor of p with multiplicity i and let x be in Qr .
+Given · · · a1 a0 a−1 · · · a−0 , ai in Ap , such that
+                                      ∞
+                                          k
+                                        ak p
+                                   x=          ,
+                                         q q
+                                       k=−0
+
+then, for all integers n ⩾ −0 ,
+                             n
+                                 k
+                               ak p
+                          x−                               ⩽ r−(n+1)i .           (3.6)
+                                q q
+                               k=−0                   r
+
+Proof. The proof is again a consequence of the fact that | |r is ultrametric. We
+have
+      n
+          k              ∞
+                                k                      k
+        ak p                  ak p                     ak p
+x−             =                     ⩽    max                 ⩽ r−(n+1)i .
+         q q                   q q     k=n+1, n+2, ... q  q
+     k=−0            r    k=n+1               r                          r
+                                                                                      
+  Having this necessary condition, we can characterize all 1q pq -representations of
+a given x; the assumption x belongs to Zr means no loss of generality.
+Theorem 3.20. Let r be a prime factor of p with multiplicity i and let x be in
+Zr .
+     (i) If p is not a power of r, then there exist uncountably many 1q pq -represen-
+         tations · · · a2 a1 a0 such that for all n ∈ N:
+                                n
+                                    k
+                                  ak p
+                           x−                          ⩽ r−(n+1)i .               (3.7)
+                                       q   q
+                                k=0                r
+
+         Each of these words is determined by an inﬁnite sequence (mj )j⩾0 , mj ∈
+         {0, 1, . . . , r̃ − 1}; where p = ri r̃;
+    (ii) if p is a power of r, there exists a unique 1q pq -representation satisfying
+         (3.7).
+100                             C. FROUGNY AND K. KLOUDA
+
+
+Proof. If |x|r ⩽ 1, then |qx|r ⩽ 1 as well. By Lemma 2.1, we know that there
+exits a unique u0 ∈ {0, 1, . . . , ri − 1} such that |qx − u0 |r ⩽ r−i . Since the r-adic
+absolute value is ultrametric, we have for all m ∈ N
+
+                |qx − (u0 + mri )|r ⩽ max{|qx − u0 |r , |mri )|r } ⩽ r−i .
+
+Put a0 = u0 + m0 ri for some m0 ∈ {0, 1, . . . , r̃ − 1}, then
+                                              a0
+                     |qx − a0 |r = |x −          | ⩽ r−i             with a0 ∈ Ap .
+                                              q
+
+The integers a0 of this form are the only integers of Ap satisfying this inequality.
+  Now, since |1/p|r = ri , multiplying the inequality by |1/p|r yields
+
+                                          x − aq0
+                                                           ⩽1
+                                               p
+                                                       r
+
+and so, as above, we have a unique u1 ∈ {0, 1, . . . , ri − 1}, arbitrary m1 ∈
+{0, 1, . . . , r̃ − 1} and a1 = u1 + m1 ri such that
+
+                                       x − aq0
+                                  q2               − u1            ⩽ r−i .
+                                          p
+                                                               r
+
+Multiplying by |p/q 2 |r = r−i yields
+
+                                        a0   a1 p
+                                  x−       −       ⩽ r−2i .
+                                        q    q q r
+
+In this way, after n steps, we obtain
+                                  n
+                                      k
+                                    ak p
+                             x−                                ⩽ r−(n+1)i .                 
+                                         q         q
+                                  k=0                      r
+
+Theorem 3.20 provides an answer to the question of uniqueness of a representation
+and also characterizes all representations of x ∈ Qr which converge to x with
+respect to | |r . We have seen that for a rational x, which is an element of Qr for
+all r prime, the 1q pq -expansion x 1q pq converges with respect to all absolute values
+| |r , r a prime factor of p. So, it seems reasonable to study 1q pq -representations
+which represent a rational x in Qr for all r from any nonempty subset of prime
+factors of p.
+Definition 3.21. Let p = r11 · · · rkk be a prime factorization of p, rj are prime
+numbers > 1 and j > 0. Let y = (y1 , · · · , yk ) ∈ {0, 1 }×· · ·×{0, k }\(0, 0, . . . , 0).
+We denote ry = r1y1 · · · rkyk , I(y) = {j | yj = j }, and ry is deﬁned by p = ry ry .
+             RATIONAL BASE NUMBER SYSTEMS FOR P -ADIC NUMBERS                          101
+
+Algorithm 3.22 (generalized modiﬁed division (GMD) algorithm). Let y as in
+Deﬁnition 3.21 be ﬁxed but arbitrary for a given p and x = st ∈ Q such that t > 0
+is co-prime to rj for all j ∈ I(y). Put s0 = s, t0 = t. Moreover let
+
+                                      sj   sj+1 y
+ tj = tj−1 ry = t0 (ry )j   and   q      =      r + uj   with uj ∈ {0, 1, . . . , ry − 1}.
+                                      tj     tj
+
+Choose mj ∈ {0, 1, . . . , ry − 1} at random and put aj = uj + mj ry and sj+1 =
+sj+1 − mj tj . Return · · · a2 a1 a0 .
+    Denote the set of all possible outputs · · · a2 a1 a0 by GMD(x).
+  We now prove that the GMD algorithm returns all 1q pq -representations of x in
+Qrj , j ∈ I(y).
+Lemma 3.23. Given p and y. Let x = st ∈ Q such that t > 0 is co-prime to rj
+for all j ∈ I(y). There exist exactly ry numbers a ∈ Ap satisfying |x − a|rj ⩽ r−j
+for all j ∈ I(y).
+Proof. The existence of ry such numbers follows from the construction of the
+GMD algorithm: cm = u0 + mry , m = 0, 1, . . . , ry − 1 satisfy the inequality,
+0 ⩽ u0 ⩽ ry − 1 is the letter constructed in the ﬁrst step of the GMD algorithm. If
+there is another number in Ap diﬀerent from all cm and satisfying the inequality,
+there must exist ry such digits of the form of dm = d0 + mry , m = 0, 1, . . . , ry − 1
+with 0 ⩽ d0 ⩽ ry − 1.
+   As we know, for all j ∈ I(y), there exists a unique 0 ⩽ b ⩽ rj − 1 such that
+|x − b|rj ⩽ r−j and, furthermore, all other numbers for which this inequality is
+true are of the form of b + nrj , n ∈ Z. Thus, both c0 and d0 are of this form and
+so c0 − d0 is a multiple of rj for all j ∈ I(y). Since rj are distinct primes, c0 − d0
+must be a multiple of ry and hence c0 = d0 .                                         
+
+Theorem 3.24. Let y as in Deﬁnition 3.21 be ﬁxed but arbitrary for a given p
+and x = st ∈ Q such that t > 0 is co-prime to rj for all j ∈ I(y). Further, let
+a = · · · a2 a1 a0 be an inﬁnite word over Ap .
+  Then
+                                        ∞
+                                                k
+                                           ak p
+                                   x=
+                                            q q
+                                         k=0
+with respect to | |rj for all j ∈ I(y) if, and only if, a ∈ GMD(x).
+Proof. First, let us suppose a ∈ GMD(x). We have
+                                                  
+     s0   s1 r y    a0   s1 p a0      p s2 p a1        a0
+x=      =        +     =      +    =         +       +
+     t0   t0 t0     q    t1 q    q    q t2 q     q     q
+          2                                         n+1 n    k
+          p       s3 p a2       p a1   a0          sn+1 p        ak p
+       =               +      +      +    = ··· =            +          ·
+          q       t3 q   q      q q    q           tn+1 q         q q
+                                                                          k=0
+102                             C. FROUGNY AND K. KLOUDA
+
+
+Hence, for all n ∈ N and for all j ∈ I(y)
+              n
+                                      n+1                            n+1
+                ak             sn+1    p                  sn+1          p
+         x−                  =                      =                                ·
+              k=0
+                    q          tn+1    q
+                                               rj
+                                                      t0 (ry )n+1 rj    q
+                                                                                rj
+                        rj
+
+                                                              −(n+1)j
+Since t0 (ry )n+1 is co-prime to rj and |sn+1 |rj ⩽ 1, rj                is an upper bound
+and the sum converges to x.
+   Assume that                               k
+                                      ∞
+                                         ak p
+                                  x=
+                                           q q
+                                         k=0
+with respect to | |rj for all j ∈ I(y). Then |qx − a0 |rj ⩽ rj −j , j ∈ I(y). The
+previous lemma says that there are just ry possible values of a0 , and so they must
+coincide with the ry values of the ﬁrst digit (possibly) obtained in the ﬁrst step of
+the GMD algorithm.
+   Since again                    
+                      q2        a0
+                          x−         − a1 ⩽ rj −j , j ∈ I(y),
+                      p         q        rj
+we can use the same argument for a1 and continue in the same manner for a2 , a3 , . . .
+                                                                                    
+   Obviously, if we take y = (1 , 2 , . . . , k ), then the GMD and MD algorithms
+coincide and the returned word is unique and equal to x 1q pq .
+
+Example 3.25. Let p = 30, q = 11, and y = (1, 1, 0). Here are two examples of
+representations of the number 1:
+
+         · · · 27 24 24 29 26 29 27 25 25 24 28 24 28 27 29 ∈ GMD(1),
+         · · · 20 22 21 22 22 22 19 18 18 19 23 18 22 22 23 ∈ GMD(1),
+
+and of the number 0:
+
+         ··· 7 2 3 7 4 7 8 7 7 5 5 6 6 5 6                         ∈ GMD(0),
+         · · · 15 12 11 15 11 13 15 9 9 9 14 12 12 10 12 ∈ GMD(0).
+
+3.5. Periodicity
+
+   It turns out that the 1q pq -expansion x 1q pq of a rational x plays an important
+role between all representations from GMD(x) not only because it is the only one
+which converges in all Qr , r a prime factor of p. It is also the only one which is
+eventually periodic.
+Theorem 3.26. Let x ∈ Qri , ri > 1 a prime factor of p = r11 · · · rkk . Then
+the 1q pq -representation a of x is eventually periodic if, and only if, x ∈ Q and
+a = x 1q pq .
+             RATIONAL BASE NUMBER SYSTEMS FOR P -ADIC NUMBERS                         103
+
+Proof. The right to left implication is proved in Lemma 3.3.
+   Let us assume, w.l.o.g, that x ∈ Zr and that a = · · · a2 a1 a0 ∈ GMD(x) for some
+y (see Def. 3.21) is eventually periodic, say, a = ω wv, w ∈ A+             ∗
+                                                                   p , v ∈ Ap , |v| = h0 ,
+and |w| = h. The simple fact
+                                       ∞  j
+                                         p              1
+                                                   =
+                                       j=0
+                                               q       1 − pq
+
+immediately implies that x must be rational.
+   Let (sj )j⩾1 and (tj )j⩾1 be the sequences constructed within the run of the GMD
+algorithm. Then we must have for all n ⩾ h0 and j ∈ N
+                                             sn   sn+jh
+                                                =       ,
+                                             tn   tn+jh
+
+                  j
+since tj = t0 ry , we get sn+jh = sn (ry )jh which implies |sn+jh |ri ⩽ ri−jh for all
+i ∈ {1, 2, . . . , k} \ I(y). Deﬁne for all n ⩾ h0 and for all these i a nonnegative
+integer m0 < h by n − h0 ≡ m0 (mod h), then
+
+            n−1
+                      j                n                            n
+              aj       p            sn    p        sh0 +m0 (ry )n−h0 −m0 p
+       x−                         =              =
+          j=0
+              q        q            tn    q   ri         t0 (ry )n       q
+                                                                                 ri
+                             ri
+                                      sh0 +m0     −(n−h0 −m0 )
+                                  =              ri            .
+                                         t0   ri
+
+
+Since the integer m0 is bounded by h for arbitrary n, the sum converges to x with
+respect to all absolute values | |ri , i ∈ {1, 2, . . . , k}. But there is only one such
+1p
+q q -representation: namely, a must be equal to x q q .                             
+                                                           1 p
+
+
+
+
+   4. Converters between rational base number systems
+
+4.1. pq -representations
+
+    Let us now consider the system corresponding to the ﬁrst series from (1.4). In
+the same way as for the AFS system, we deﬁne the pq -expansion of x in Q and
+p
+q -representation of x in Qr . As promised in the introduction, we show that there
+exists a simple converter between them. A transducer is an automaton where
+edges are labelled by couples of words. It is ﬁnite if the set of states and the set of
+edges are ﬁnite. It is said to be sequential if the projection on the ﬁrst component
+is a deterministic automaton. It is letter-to-letter if edges are labelled by couples
+of letters. For more deﬁnitions and results on transducers the reader is referred
+to [9] for instance.
+104                              C. FROUGNY AND K. KLOUDA
+
+
+Theorem 4.1. There exists a ﬁnite letter-to-letter right2 sequential transducer
+C converting the pq -representation of any x ∈ Zr , r prime factor of p, to its 1q pq -
+representation; the inverse of C is also a ﬁnite letter-to-letter right sequential trans-
+ducer.
+Proof. Let C = (Q ⊂ N, Ap × Ap , E, {0}, ω) be the right letter-to-letter sequential
+                                                                 a|b
+transducer whose set of edges E is deﬁned by s −−→ s ⇔ q(a + s) = ps + b
+with a, b ∈ Ap .
+                                                     ∞      i
+   Clearly, if the input is · · · a1 a0 such that x = i=0 ai pq in Qr , r a prime
+                                                 a0 |b0           a1 |b1
+factor of p, then there is in C a path 0 −−−→ s1 −−−→ s2 · · · such that, for each
+k ⩾ 0,
+                   k      i     k     i         k+1
+                            p          bi p           p
+                       ai       =             + sk+1           ·
+                   i=0
+                            q      i=0
+                                       q  q           q
+The states si are nonnegative integers, and so
+                           ∞
+                                  i  ∞     i
+                                   p        bi p
+                               ai     =                                in Qr .
+                           i=0
+                                   q    i=0
+                                            q q
+
+Let us show that C is ﬁnite. From a state s, it is possible to reach the state
+s + k, k ⩾ 1, if there exist a and b in Ap such that q(s + a) = p(s + k) + b, that is,
+if s = qa−kp−b
+         p−q    . Since a ⩽ p − 1, b ⩾ 0, the largest accessible state is
+                                                     ⎧                                 ⎫
+                                                     ⎪
+                                                     ⎪                                 ⎪
+                !                        "           ⎪
+                                                     ⎨                               ⎪
+                                                                                       ⎪
+                                                                                       ⎬
+                    q(p − 1) − kp                    q(p − 1)       p            qp
+smax ⩽ max                        +k         ⩽ max            −k         −1    =
+          k⩾1           p−q                    k⩾1 ⎪
+                                                   ⎪  p−q          p−q       ⎪ p−q
+                                                   ⎪
+                                                   ⎩             $    %&    '⎪
+                                                                             ⎪
+                                                                             ⎭
+                                                                                 >0
+
+and hence the transducer C is ﬁnite. 
+                        a|b          a |b
+   Now, suppose that s −−→ s and s −−→ s , a = a . Then q(a + s) and q(a + s)
+are congruent (mod p), hence a and a are congruent (mod p), which is impossible.
+                     ˜ where the edges Ẽ are deﬁned by
+Thus, the transducer C,
+
+                                    a|b                    b|a
+                                 s −−→ s       ⇔        s −−→ s ,
+                                    C̃                      C
+
+
+is also right sequential, and C˜ realizes the conversion from 1q pq -representations to
+p
+q -representations.                                                                  
+    This result says that there is a one-to-one mapping between the sets of all pq - and
+1 p
+q q -representations of a given x ∈ Zr . This mapping, moreover, preserves eventual
+periodicity, meaning that the eventually periodic inﬁnite words are mapped to
+   2Words are processed from right to left.
+            RATIONAL BASE NUMBER SYSTEMS FOR P -ADIC NUMBERS                        105
+
+1p
+q q -expansions. This is not a surprising result as it is still true that only rational
+numbers can have an eventually periodic pq -representation.
+   Regarding the ﬁniteness of the expansions, there is a diﬀerence. But ﬁnding
+those rationals with ﬁnite pq -representations can be done in the perfectly analogous
+way we used for the 1q pq case in Proposition 3.17.
+   Theorem 4.1 can be easily modiﬁed also for the two negative base systems
+from (1.4). Since the composition of two ﬁnite sequential transducers is again a
+ﬁnite sequential transducer, the theorem is valid for any pair of number systems
+form (1.4). This conversion still preserves eventual periodicity. The question on
+ﬁniteness for the negative base cases is a bit more complex. The two systems with
+negative rational base are canonical number systems (see [2] for more), i.e., each
+x in Z has a unique ﬁnite representation, but there are also rational numbers with
+ﬁnite representations.
+
+
+4.2. Conversion from the integer base system
+
+   Another natural question is whether there exists a converter of representations
+in integer base p to 1q pq -representations. The answer is positive, but the converter
+is not ﬁnite. This is an expected result since if there existed such a ﬁnite converter,
+there would be a ﬁnite converter from the language A∗p of standard positive integer
+representations to the non-context-free language L 1q pq , which is not possible.
+
+Algorithm 4.2. Denote by · · · a1 a0 ∈ NAp the input and by · · · b1 b0 ∈ NAp the
+                                                                     ai |bi
+output. The rewriting rule is deﬁned by: z0 = 0, i = 0 and (zi , i) −−−→ (zi+1 , i + 1),
+with ai , bi ∈ Ap such that
+
+                                                bi  p
+                               ai q i + z i =      + zi+1 .
+                                                q   q
+
+Clearly, zi is always nonnegative and uniquely given.
+
+Proposition
+   ∞          4.3. Let r be a prime factor of p and let · · · a1 a0 ∈ NAp such that
+             i
+x = i=0 ai p ∈ Zr . Then for the output · · · b1 b0 ∈ NAp of Algorithm 4.2 we have
+            i
+x= ∞     bi
+     i=0 q
+               p
+               q   ∈ Zr .
+
+Proof. The proof is simple, it follows from the fact that
+                                              2
+              b0  p           b0   b1 p       p
+     z0 = 0 =    + z 1 − a0 =    +      +         z2 − pa1 − a0
+              q   q           q    q q        q
+                                       k     i  k+1           k
+                                           bi p       p
+                               = ··· =            +         zk+1 −     ai p i
+                                       i=0
+                                           q  q       q            i=0
+106                             C. FROUGNY AND K. KLOUDA
+
+
+for all k ∈ N and from that
+                             k+1
+                             p
+                                   zk+1         −→ 0   as i → ∞.                           
+                             q
+                                            r
+
+This conversion preserves ﬁniteness. Note that Algorithm 4.2 allows to deﬁne a
+letter-to-letter right sequential transducer with a denumerable set of states realiz-
+ing the conversion.
+Lemma 4.4. If the input of Algorithm 4.2 is ﬁnite (i.e., eventually zero), then
+the output is ﬁnite as well.
+Proof. Let the input be equal to · · · a1 a0 ∈ NAp where ai = 0 for all i > k ∈ N.
+Then for all j ∈ N
+                                    
+                    q         bk+j
+          zk+j+1 =     zk+j −           < zk+j if zk+j = 0 or bk+j = 0.
+                    p           q
+
+Thus, the sequences (zi )i⩾0 and (bi )i⩾0 must be eventually zero.                         
+  The input is ﬁnite if it is a representation of a nonnegative integer in base p.
+This implies that the lemma cannot be reversed since, as we know, there are ﬁnite
+outputs obtained for inﬁnite inputs (a trivial example is the representations of pq ).
+
+Acknowledgements. We acknowledge financial support by the Agence Nationale de la
+Recherche, grant ANR-JCJC-06-134288 “DyCoNum”, by the Czech Science Foundation
+grant 201/09/0584, and by the grants MSM6840770039 and LC06002 of the Ministry of
+Education, Youth, and Sports of the Czech Republic. We also thank the CTU student
+grant SGS10/085/OHK4/1T/14.
+
+                                     References
+[1] S. Akiyama, Ch. Frougny and J. Sakarovitch, Powers of rationals modulo 1 and rational base
+    number systems. Isr. J. Math. 168 (2008) 53–91.
+[2] I. Kátai and J. Szabó, Canonical number systems for complex integers. Acta Sci. Math.
+    (Szeged) 37 (1975) 255–260.
+[3] M. Lothaire, Algebraic Combinatorics on Words, Encyclopedia of Mathematics and its Ap-
+    plications 95. Cambridge University Press (2002).
+[4] K. Mahler, An unsolved problem on the powers of 3/2. J. Austral. Math. Soc. 8 (1968)
+    313–321.
+[5] M.R. Murty, Introduction to p-adic analytic number theory. American Mathematical Society
+    (2002).
+[6] A. Odlyzko and H. Wilf, Functional iteration and the Josephus problem. Glasg. Math. J. 33
+    (1991) 235–240.
+[7] A. Rényi, Representations for real numbers and their ergodic properties. Acta Math. Acad.
+    Sci. Hungar. 8 (1957) 477–493.
+[8] W.J. Robinson, The Josephus problem. Math. Gaz. 44 (1960) 47–52.
+[9] J. Sakarovitch, Elements of Automata Theory. Cambridge University Press, New York (2009).
+
+Communicated by G. Richomme.
+Received November 2, 2010. Accepted July 4, 2011.
+

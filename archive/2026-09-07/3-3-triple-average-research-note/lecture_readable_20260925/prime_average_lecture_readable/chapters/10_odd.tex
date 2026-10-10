@@ -1,0 +1,107 @@
+\chapter{先手算十一元五平均，再看一般奇数余量}\label{ch:odd}
+\section{现在要做的，是把任务单上的资源造出来}
+前面已经知道足够的剪切和同余子群能完成核心。现在不能继续把它们当作假设，必须给出真实位置选择。本讲取 $n=2p+r$，$r$ 为奇数且 $1\le r<p$，包括最紧的 $r=1$。
+
+为方便交换两等大块，用对称坐标
+\[u=z,qquad v=a-rz/2,qquad
+A=ru/2+v,quad B=ru/2-v,quad C=-pu.
+\]
+交换 $A,B$ 恰为 $S=\diag(1,-1)$。这就是引入二分之一的目的：把一个原来稍复杂的角色交换变成直接给第二坐标变号。
+
+\section{先看p等于五、r等于一}
+从五份 $A$、五份 $B$、一份 $C$ 出发。
+\begin{enumerate}
+\item 先拿两份 $A$、三份 $B$ 平均，得到五份新值 $D$。
+\item 保留一份 $D$ 作最终单点。剩下 $(A,B,C,D)$ 四类库存为 $(3,2,1,4)$。
+\item 取输出组 $(2,1,0,2)$，即两份 $A$、一份 $B$、两份 $D$，做五平均。再把余下五个位置平均。
+\end{enumerate}
+做完又是两个五块加一个单点。这是一条三步返回。
+
+另一条返回先拿四份 $A$、一份 $B$，保留一份新值后库存为 $(1,4,1,4)$，输出取 $(1,2,0,2)$，再平均补集。注意，两套表是\emph{可选的两条完整词}，不是要求同一轮同时取用两套库存。
+
+在 $(u,v)$ 坐标里，两张清去共同分母的矩阵为
+\[
+J_{-1}=\begin{pmatrix}-5/2&1\\55/4&5/2\end{pmatrix},qquad
+J_3=\begin{pmatrix}-5/2&-3\\55/4&5/2\end{pmatrix}.
+\]
+实际尺度为 $1/25$，两者平方为 $20I,-35I$。因此两条返回都取得了正向射影逆。两者的商为三角矩阵，倍率为 $-7/4$；与 $S$ 作交换子恰给 $U(1)$。倍率及其逆生成 $R=\Z[1/14]$，因而得到 $U(R)$。
+
+这是一段完整的“计数变代数”：三个位置动作，得到一张矩阵；矩阵的平方给逆；两返回比较给倍率；再比较换块前后得到纯剪切。
+
+\section{为什么偏要选择迹零矩阵}
+二阶矩阵满足特征多项式恒等式
+\[J^2-(\operatorname{tr}J)J+\det(J)I=0.
+\]
+因此迹为零时，$J^2=-\det(J)I$。只要行列式非零，重复同一返回就给射影逆。这比先搜索一个很长周期容易得多。
+
+一般公式的第一项工作，就是把输出计数安排得使迹为零。第二项工作，是让两张反射只差一个简单方向。最后再证明所有取用数真的在库存内。你可以带着刚算过的 $(5,1)$ 例子，读下面每个参数。
+\begin{proposition}[奇数余量的全部合法核心]\label{prop:odd}
+若 $p\ge3$ 为奇素数、$1\le r<p$ 为奇数，则全部合法 $K_{p,r}$ 可归零。
+\end{proposition}
+\begin{proof}
+
+\par\noindent\textbf{第一步：选择两组库存内的反射。}
+采用 $u=z,v=a-rz/2$。写 $p-r=4k+2\epsilon$，$\epsilon\in\{0,1\}$。取 $\alpha_0=-r,\alpha_1=4-r$。第一步从 $A,B$ 各取 $(p+\alpha)/2,(p-\alpha)/2$ 份，产生 $p$ 份 $D$，保留 $r$ 份作载体；第二步按
+\[
+(x,y,c,v_D)=\left(\frac{p+2r-\alpha-2\epsilon}{4},\frac{p+\alpha-2\epsilon}{4},\epsilon,\frac{p-r}{2}\right)
+\]
+选择输出，第三步平均其 $p$ 元补集。两组输出分别为 $(r+k,k,\epsilon,2k+\epsilon)$ 和 $(r+k-1,k+1,\epsilon,2k+\epsilon)$；剩余库存分别为 $(r+2k+\epsilon,2k+\epsilon,r,4k+2\epsilon)$ 和 $(r+2k+\epsilon-2,2k+\epsilon+2,r,4k+2\epsilon)$。唯一紧的条件是 $k+\epsilon\ge1$，由 $p-r>0$ 保证。
+
+这三次操作的顺序是：先产生一个新 $p$ 块，留出其中的 $r$ 份作载体，
+再平均一个输出组，最后平均其补组。补组自动有 $p$ 个位置，
+因此只需逐项检查所列输出组不超过剩余库存。
+返回的实际尺度为 $p^{-2}$，矩阵为
+\[
+J_\alpha=\begin{pmatrix}-rp/2&-\alpha\\pn(r-2\epsilon)/4&rp/2\end{pmatrix},
+\quad J_\alpha^2=pF_\alpha I,\quad F_\alpha=\frac{pr^2-n(r-2\epsilon)\alpha}{4}.
+\]
+
+\par\noindent\textbf{第二步：标量周期与参数环。}
+平方标量模 $n$ 为 $p^4$，故非零且安全。令 $c_\epsilon=r$（$\epsilon=0$）或 $1$（$\epsilon=1$），$f_i=F_{\alpha_i}/c_\epsilon$。若 $\epsilon=0$，则 $f_0=r(3p+r)/4,f_1=f_0-n$；若 $\epsilon=1$，则 $f_0=r[pr+n(r-2)]/4,f_1=f_0-n(r-2)$。这给出
+\[
+\gcd(f_0,f_1)=\gcd(f_0f_1,n)=1,\qquad r\mid f_0,
+\]
+且二者奇偶相反。第二种情形的互素性由模 $n$、模 $r-2$ 的等式 $4f_0\equiv pr^2$ 得出。
+
+相邻标量互素，故三角商的倍率 $f_1/f_0$ 约分后仍保留两者的全部素因子。
+而 $f_0,f_1$ 奇偶相反、$r\mid f_0$，所以 $2$ 与 $r$ 都会成为参数环的单位。
+在 $R=\Z[1/|f_0f_1|]$ 中，$2,r$ 为单位，故 $R$ 的单位无限。令 $S=\diag(1,-1)$，则
+\begin{gather*}
+T=J_{\alpha_1}J_{\alpha_0}^{-1}
+=\begin{pmatrix}f_1/f_0&-2r/(c_\epsilon f_0)\\0&1\end{pmatrix},\\
+[S,T]=U\left(\frac{4r}{c_\epsilon f_0}\right).
+\end{gather*}
+根参数为 $R$ 单位，引理\ref{lem:localize}给 $U(R)$。
+
+\par\noindent\textbf{第三步：取得横向剪切。}
+保留 $r$ 份旧 $B$，平均两组
+\[
+(A^{(p+r)/2},B^{(p-r)/2}),\qquad
+(A^{(p-r)/2},B^{(p-r)/2},C^r),
+\]
+得到
+\[
+K=\begin{pmatrix}-r/2&1\\rn/4&r/2\end{pmatrix},\quad K^2=r(p+r)I/2.
+\]
+若 $H=KU(2/r)$，则 $[S,H]=L(n)$。置 $P=\left(\begin{smallmatrix}1&-2\\0&n\end{smallmatrix}\right)$，有
+\[
+P^{-1}U(t)P=U(nt),\quad
+P^{-1}KU(8(p+r)t/r)K^{-1}P=L(nt).
+\]
+
+这里换基矩阵的行列式为 $n$，必须计入一层分母损失。
+引理\ref{lem:deep}先给 $\Gamma(n^3,R)$。对 $t\in R$ 选整数 $k\equiv t\pmod{n^2R}$，分解 $L(nt)=L(nk)L(n(t-k))$，得到 $L(nR)$，再得 $\Gamma(n^2,R)$。
+
+\par\noindent\textbf{第四步：接入共同终端。}
+换到 $(z,y)$ 的矩阵 $C=\left(\begin{smallmatrix}1&0\\n/2&1\end{smallmatrix}\right)$。选 $4\mid k$ 且 $k\equiv-p^{-2}\pmod n$，则 $CU(k)C^{-1}$ 整数且满足定理\ref{thm:terminal}的方向条件。至少一个整数反射的行列式为偶数，而条目公因子为奇数（其左下项 $-\alpha_i$ 奇）；引理\ref{lem:content}提供有限标量 $2I$。定理\ref{thm:terminal}完成证明。
+\end{proof}
+
+\section{为什么先绕到n的三次方，再回到平方}
+证明第三步有个看似绕远的地方：先得到 $\Gamma(n^3,R)$，才取得全部 $L(nR)$，最后得到 $\Gamma(n^2,R)$。
+
+我们起初知道的只有整数步长 $L(nk)$，还不能直接把 $k$ 换成所有环元素 $t$。但每个 $t\in R$ 都能选整数 $k$ 使 $t-k\in n^2R$。所以
+\[L(nt)=L(nk)L(n(t-k)).
+\]
+第一项已经能做，第二项属于已经取得的深子群。这样就补齐所有环参数，再应用两根定理回到平方层。每一次群的使用都有更早的真实操作作起点。
+
+终端已经在上一讲算过：十一元五平均送到 $(-2^5,3^5,-5)$ 的方向后，三份 $-2$ 加两份 $3$ 平均成零，剩下交给含零收尾。大段矩阵最终服务的仍是这一个真实选择。

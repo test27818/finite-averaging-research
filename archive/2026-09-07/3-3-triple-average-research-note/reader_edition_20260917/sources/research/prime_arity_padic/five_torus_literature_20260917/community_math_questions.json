@@ -1,0 +1,64 @@
+{
+  "url": "https://api.stackexchange.com/2.3/questions/3054103;3343242?site=math&filter=withbody&pagesize=50",
+  "data": {
+    "items": [
+      {
+        "tags": [
+          "convergence-divergence",
+          "recursion",
+          "average"
+        ],
+        "owner": {
+          "account_id": 9495616,
+          "reputation": 147,
+          "user_id": 392473,
+          "user_type": "registered",
+          "profile_image": "https://www.gravatar.com/avatar/38a4fabb5195cc186a9bcc52d0a00013?s=256&d=identicon&r=PG&f=y&so-version=2",
+          "display_name": "Psi",
+          "link": "https://math.stackexchange.com/users/392473/psi"
+        },
+        "is_answered": true,
+        "view_count": 366,
+        "accepted_answer_id": 3343264,
+        "answer_count": 1,
+        "score": 0,
+        "last_activity_date": 1567530853,
+        "creation_date": 1567529821,
+        "question_id": 3343242,
+        "content_license": "CC BY-SA 4.0",
+        "link": "https://math.stackexchange.com/questions/3343242/convergence-of-the-average-of-three-numbers",
+        "title": "Convergence of the average of three numbers",
+        "body": "<p>I am trying to find out more about the convergence of moving averages. Unfortunately, the use of moving averages in stock trading has polluted my searches rendering them fruitless. After looking through old posts, hopefully this SE is the best place to ask my question:</p>\n\n<p>Suppose we have an input of three real numbers <span class=\"math-container\">$t_1$</span>, <span class=\"math-container\">$t_2$</span> and <span class=\"math-container\">$t_3$</span> such that 0 <span class=\"math-container\">$\\leq$</span> <span class=\"math-container\">$t_1$</span>, <span class=\"math-container\">$t_2$</span>, <span class=\"math-container\">$t_3$</span> &lt; 1 and an output moving average <span class=\"math-container\">$t_n$</span> = <span class=\"math-container\">$ \\frac{1}{3} (t_{n-1}+t_{n-2}+t_{n-3})$</span>. For example:</p>\n\n<p><code>[0.2 0.4 0.3]</code></p>\n\n<p><code>0.2 [0.4 0.3 0.3]</code></p>\n\n<p><code>0.2 0.4 [0.3 0.3 0.3333...]</code> and so on</p>\n\n<p>Is there a proof that, for any input <span class=\"math-container\">$t_1$</span>, <span class=\"math-container\">$t_2$</span>, <span class=\"math-container\">$t_3$</span>, over time all numbers in <span class=\"math-container\">$t_n$</span> converge to a number between 0 and 1? If so is there a formula for which value it converges to?</p>\n"
+      },
+      {
+        "tags": [
+          "combinatorics"
+        ],
+        "owner": {
+          "account_id": 15017120,
+          "reputation": 401,
+          "user_id": 629792,
+          "user_type": "registered",
+          "profile_image": "https://i.sstatic.net/mHPMs.jpg?s=256",
+          "display_name": "Yousha Tagor",
+          "link": "https://math.stackexchange.com/users/629792/yousha-tagor"
+        },
+        "is_answered": true,
+        "view_count": 4237,
+        "answer_count": 2,
+        "score": 42,
+        "last_activity_date": 1545943599,
+        "creation_date": 1545926841,
+        "last_edit_date": 1545928416,
+        "question_id": 3054103,
+        "content_license": "CC BY-SA 4.0",
+        "link": "https://math.stackexchange.com/questions/3054103/numbers-on-blackboard",
+        "title": "Numbers on blackboard",
+        "body": "<blockquote>\n  <p>All numbers <span class=\"math-container\">$1$</span> to <span class=\"math-container\">$155$</span> are written on a blackboard, one time each. We randomly choose two numbers and delete them, by replacing one of them with their product plus their sum. We repeat the process until there is only one number left. What is the average value of this number?</p>\n</blockquote>\n\n<p>I don't know how to approach it: For two numbers, <span class=\"math-container\">$1$</span> and <span class=\"math-container\">$2$</span>, the only number is <span class=\"math-container\">$1\\cdot 2+1+2=5$</span>\nFor three numbers, <span class=\"math-container\">$1, 2$</span> and <span class=\"math-container\">$3$</span>, we can opt to replace <span class=\"math-container\">$1$</span> and <span class=\"math-container\">$2$</span> with <span class=\"math-container\">$5$</span> and then <span class=\"math-container\">$3$</span> and <span class=\"math-container\">$5$</span> with <span class=\"math-container\">$23$</span>, or\n<span class=\"math-container\">$1$</span> and <span class=\"math-container\">$3$</span> with <span class=\"math-container\">$7$</span> and then <span class=\"math-container\">$2$</span>, <span class=\"math-container\">$7$</span> with <span class=\"math-container\">$23$</span> or\n<span class=\"math-container\">$2$</span>, <span class=\"math-container\">$3$</span> with <span class=\"math-container\">$11$</span> and <span class=\"math-container\">$1$</span>, <span class=\"math-container\">$11$</span> with <span class=\"math-container\">$23$</span> \nso we see that no matter which two numbers we choose, the average number remains the same. Does this lead us anywhere?</p>\n"
+      }
+    ],
+    "has_more": false,
+    "quota_max": 300,
+    "quota_remaining": 293
+  }
+}

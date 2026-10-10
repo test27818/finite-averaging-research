@@ -1,0 +1,170 @@
+{
+  "status": "PASS",
+  "finite_cases": 162,
+  "direction_sources": {
+    "retained-direction": 46,
+    "root-derived": 116
+  },
+  "independent_direction_fields_not_used": 116,
+  "retained_direction_fields": 46,
+  "finite_transports": 1944,
+  "large_formula_transports": 270,
+  "large_root_derived_cases": 33,
+  "algebraic_parameter_checks": 90,
+  "terminal_atoms": 322,
+  "primitive_preparation_checks": 12,
+  "shallow_congruence_lifting_used": false,
+  "binary_unit_fields_used": false,
+  "auxiliary13_retained": true,
+  "special97_retained": false,
+  "examples": [
+    {
+      "p": 11,
+      "s": 3,
+      "kind": "root-derived",
+      "bezout": [
+        0,
+        1
+      ],
+      "terminal_j": 1,
+      "entry_norm_power": 1,
+      "odd_root_parameters": [
+        5423616,
+        4745664
+      ],
+      "dyadic_norm_power": 6,
+      "last_lower_parameter": 1296,
+      "deep_level": 5184
+    },
+    {
+      "p": 11,
+      "s": 3,
+      "kind": "root-derived",
+      "bezout": [
+        0,
+        1
+      ],
+      "terminal_j": 0,
+      "entry_norm_power": 0,
+      "odd_root_parameters": [
+        2033856,
+        2033856
+      ],
+      "dyadic_norm_power": 5,
+      "last_lower_parameter": 0,
+      "deep_level": 5184
+    },
+    {
+      "p": 11,
+      "s": 3,
+      "kind": "root-derived",
+      "bezout": [
+        0,
+        1
+      ],
+      "terminal_j": 1,
+      "entry_norm_power": 0,
+      "odd_root_parameters": [
+        0,
+        4067712
+      ],
+      "dyadic_norm_power": 4,
+      "last_lower_parameter": 3888,
+      "deep_level": 5184
+    },
+    {
+      "p": 11,
+      "s": 3,
+      "kind": "root-derived",
+      "bezout": [
+        0,
+        1
+      ],
+      "terminal_j": 0,
+      "entry_norm_power": 0,
+      "odd_root_parameters": [
+        677952,
+        2711808
+      ],
+      "dyadic_norm_power": 2,
+      "last_lower_parameter": 3888,
+      "deep_level": 5184
+    },
+    {
+      "p": 11,
+      "s": 3,
+      "kind": "root-derived",
+      "bezout": [
+        0,
+        1
+      ],
+      "terminal_j": 0,
+      "entry_norm_power": 1,
+      "odd_root_parameters": [
+        0,
+        4745664
+      ],
+      "dyadic_norm_power": 2,
+      "last_lower_parameter": 4536,
+      "deep_level": 5184
+    },
+    {
+      "p": 11,
+      "s": 3,
+      "kind": "root-derived",
+      "bezout": [
+        0,
+        1
+      ],
+      "terminal_j": 1,
+      "entry_norm_power": 1,
+      "odd_root_parameters": [
+        3389760,
+        3389760
+      ],
+      "dyadic_norm_power": 4,
+      "last_lower_parameter": 2592,
+      "deep_level": 5184
+    },
+    {
+      "p": 11,
+      "s": 3,
+      "kind": "root-derived",
+      "bezout": [
+        0,
+        1
+      ],
+      "terminal_j": 0,
+      "entry_norm_power": 0,
+      "odd_root_parameters": [
+        4067712,
+        4745664
+      ],
+      "dyadic_norm_power": 0,
+      "last_lower_parameter": 3240,
+      "deep_level": 5184
+    },
+    {
+      "p": 11,
+      "s": 3,
+      "kind": "root-derived",
+      "bezout": [
+        0,
+        1
+      ],
+      "terminal_j": 1,
+      "entry_norm_power": 1,
+      "odd_root_parameters": [
+        1355904,
+        2033856
+      ],
+      "dyadic_norm_power": 6,
+      "last_lower_parameter": 3888,
+      "deep_level": 5184
+    }
+  ],
+  "unchanged_frozen_files": 256,
+  "local_links_checked": 81,
+  "seconds": 0.974,
+  "scope": "Exact finite checks support the general written column-lifting theorem; old root supply and exact deep kernel remain assumptions. No search for averaging words or finite group orbits."
+}

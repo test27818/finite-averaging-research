@@ -1,0 +1,560 @@
+ACTA ARITHMETICA
+    129.4 (2007)
+
+
+
+
+             On Erdős–Ginzburg–Ziv inverse theorems
+                                          by
+
+         D. J. Grynkiewicz (Barcelona), O. Ordaz (Caracas),
+         M. T. Varela (Caracas), and F. Villarroel (Cumaná)
+
+    1. Introduction. Let F (G) denote the free abelian monoid over the set
+G with monoid operation written multiplicatively and given by concatena-
+tion, i.e., F (G) consists of all finite sequences over G modulo the equivalence
+relation allowing terms to be permuted. Despite possible confusion, the ele-
+ments of F (G) will be referred to simply as sequences, and if indeed order
+or being infinite are needed in a sequence, it will be explicitly stated when
+the sequence is first introduced.
+    Now let G be an abelian group of order m ≥ 2. The Erdős–Ginzburg–
+Ziv theorem states that every sequence in G of length 2m − 1 contains
+an m-term subsequence with zero sum [5]. There have been many related
+inverse theorems describing the structure of the sequences S in G with length
+|S| = m + k, 1 ≤ k ≤ m − 2, not having any m-term subsequence with zero
+sum. For cyclic groups of order m, the structure of S has been described by
+several authors: when k = m − 2, by Yuster and Peterson in [15], and by
+Bialostocki and Dierker in [1]; when k = m − 3, by Flores and Ordaz in [7];
+when m − ⌊m/4⌋ − 2 ≤ k ≤ m − 2, by Bialostocki, Dierker, Grynkiewicz,
+and Lotspeich in [2] (using a related result of Gao from [8]); and when
+k ≥ ⌈(m − 1)/2⌉, by Chen and Savchev in [3].
+    1.1. Terminology. For S ∈ F (G), we let |S| be the length of S, and
+employ standard multiplicative monoid notation; in particular, ST denotes
+the concatenation of S and T , and S ′ | S indicates that S ′ is a subsequence
+of S, in which case SS ′−1 denotes the subsequence of S obtained by deleting
+all terms from S ′ . Let σ(S) denote the sum of the terms of S, unless S is
+
+    2000 Mathematics Subject Classification: Primary 11B75.
+    Key words and phrases: abelian group, Erdős–Ginzburg–Ziv theorem, zero-sum se-
+quence.
+    Research of D. J. Grynkiewicz supported in part by the National Science Foundation,
+as an MPS-DRF postdoctoral fellow, under grant DMS-0502193.
+    Research of O. Ordaz supported in part by CRIPTOSUM CDCH project.
+
+                                         [307]         c Instytut Matematyczny PAN, 2007
+308                                D. J. Grynkiewicz et al.
+
+the empty sequence, in which case σ(S) := 0. Let
+                         Σn (S) = {σ(S ′ ) : S ′ | S and |S ′ | = n},
+                   t                             |S|
+                   [                             [
+       Σ≤t (S) =         Σn (S),    Σ≥t (S) =          Σn (S),   Σ(S) = Σ≤|S| (S).
+                   n=1                          n=t
+For x ∈ G, let νx (S) be the multiplicity of x in S, and let h(S) =
+maxx∈G {νx (S)}.
+    A subset A of the abelian group G is periodic if A is a union of H-cosets
+for some nontrivial subgroup H ≤ G. We will often write Ha for H if the
+index of H in G is a. If B is another subset of G, then the sumset A + B is
+{a + b : a ∈ A, b ∈ B}. We will often identify a singleton set with its element
+for notational simplicity.
+    A sequence S is squarefree if h(S) ≤ 1, in which case S can be considered
+as a set. An n-setpartition of a sequence S is a sequence of n nonempty,
+squarefree subsequences, say A = A1 , . . . , An , such that S = A1 · · · An . Note
+that we do not use multiplicative notation for the terms of a setpartition
+in order to distinguish the setpartition, A1 , . . . , An , from the sequence it
+partitions/factorizes, A1 · · · An .
+    Finally, the Davenport constant of G, denoted D(G), is the least integer
+n such that every sequence from G of length n contains a nonempty sub-
+sequence whose terms sum to zero. A simple argument (see [6]) shows that
+D(G) ≤ |G|.
+      1.2. Results. We have the following open problem:
+   Problem 1 ([10, 12]). For an abelian group G of order m ≥ 2 and a
+positive integer k, determine the exact value or a bound of
+      h(G, k) = min{h(S) : S ∈ F (G) with |S| = |G| + k and 0 6∈ Σ|G| (S)}.
+    There are a few results pertaining to this problem. When G is cyclic of
+order m, we have h(G, k) ≥ k + 1 provided m − ⌊m/4⌋ − 2 ≤ k ≤ m − 2
+(see [8]); h(G, k) ≥ k + 1 provided m is prime with 1 ≤ k ≤ m − 2 (see [11]);
+h(G, m − 2) = m − 1 (see [1] or [15]); and h(G, m − 3) = m − 1 (see [7]).
+    The main results in this paper confirm the following two conjectures.
+    Conjecture 1.1 ([9, Conjecture 6.9], [12]). Let G be a cyclic group of
+order m ≥ 2, and p the smallest prime divisor of m. Let S ∈ F (G \ 0) with
+|S| = m. If h = h(S) ≥ m/p − 1, then Σ≤h (S) = Σ(S).
+    Conjecture 1.1 was verified for cyclic groups of prime power order in
+[12]. The following example shows that we cannot hope, in general, for the
+equality of the conjecture to hold for smaller h. Indeed, the equality fails
+for h ≤ m/p − 2 and m composite when m/p 6= 0, 1 mod h, and, if p = 2,
+                      On Erdős–Ginzburg–Ziv inverse theorems                    309
+
+m/p 6= −1 mod h. In particular, it does not hold when h = m/p − 2 for
+composite m > 10.
+   Let G = Z/mZ with m composite, let p be the smallest prime divisor
+of m, and let H ≤ G be the subgroup of index m/p. Let h ≤ m/p − 2
+be a positive integer such that m/p 6= 0, 1 mod h, and, if p = 2, such that
+m/p 6= −1 mod h as well. Hence, in particular, h > 1. Let
+                      
+                m+h        m + h + ph − α
+          t=             =                 , where 0 < α ≤ ph.
+                  ph             ph
+Thus
+(1)        ((t − 1)p − 1)h < m = ((t − 1)p − 1)h + α ≤ (tp − 1)h,
+whence 1 < h ≤ m/p − 2 implies that 2 ≤ t ≤ m/p. Let A = H ∪ (1 + H) ∪
+· · · ∪ ((t − 1) + H), and let W be the sequence consisting of all elements of
+A\0, each with multiplicity h. Note that, in view of (1) and 2 ≤ t ≤ m/p, we
+have |W | = (tp − 1)h ≥ m. Hence let S be a subsequence of W with |S| = m
+which contains some element y ∈ (t − 1) + H with multiplicity min{α, h}, as
+well as all the (t − 1)p − 1 elements from (H \ 0) ∪ (1 + H) ∪ · · · ∪ ((t − 2) + H),
+each with multiplicity h, which is possible since m = ((t − 1)p − 1)h + α.
+Note that S contains exactly α elements from (t − 1) + H. Since t ≥ 2, it
+follows that h(S) = h. Note that (1) implies that
+                              m               h−α
+(2)                              = (t − 1)h −        .
+                               p                p
+Hence h − α ≡ 0 mod p. We proceed to show, in two cases depending on
+the value of α, that Σ≤h (S) 6= Σ(S), so S does not satisfy the conclusion
+of Conjecture 1.1 for h ≤ m/p − 2, under the assumed restrictions on m/p
+modulo h.
+      Suppose first that α < h. Then h − α ≡ 0 mod p implies that α ≤ h − p.
+Hence (1) yields m/p ≤ (t − 1)h − 1, whence h ≤ m/p − 2 forces t ≥ 3. Thus
+let x ∈ 1 + H and x′ ∈ (t − 2) + H be distinct elements. Note that
+            αy + (h − α)x′ + x ∈ Σ(S) ∩ ((t − 2)h + α + 1 + H).
+Thus if (t − 2)h + α + 1 < m/p, then
+ αy + (h − α)x′ + x ∈
+                    / Σ≤h (S) ⊆ {0, 1, . . . , α(t − 1) + (h − α)(t − 2)} + H,
+whence Σ(S) 6= Σ≤h (S), as desired. Therefore by (2) we can assume that
+                                  m               h−α
+                  (t − 2)h + α + 1 ≥ = (t − 1)h −     ,
+                                   p               p
+whence α ≤ h − p implies that p ≤ 2. Thus p = 2 and α = h − p = h − 2
+(else the previous arguments yield p < 2), whence m/p = (t − 1)h − 1
+in view of (2). Consequently, m/p ≡ −1 mod h and p = 2, contradicting
+the assumptions on h.
+310                          D. J. Grynkiewicz et al.
+
+    Next suppose that α ≥ h. If α = h, then (2) implies that m/p ≡ 0 mod h,
+which is not the case. Hence α > h. Since t ≥ 2 and α > h, let x ∈ 1 + H
+with x | S and x 6= y. Observe that hy + x ∈ Σ(S) ∩ ((t − 1)h + 1 + H). Thus
+if
+                                              m
+(3)                            (t − 1)h + 1 < ,
+                                               p
+then hy + x ∈ / Σ≤h (S), whence Σ(S) 6= Σ≤h (S), as desired. However, if
+α > h + p, then (2) implies
+                                      m+h−α             m
+                     (t − 1)h + 1 =              +1< ,
+                                          p             p
+whence (3) holds and Σ(S) 6= Σ≤h (S). Therefore we may instead assume
+α ≤ h + p and that (3) does not hold. Thus (2) and α ≥ h imply that
+                                     m
+                         (t − 1)h ≤     ≤ (t − 1)h + 1,
+                                      p
+whence m/p ≡ 0 or 1 mod h, contradicting the assumptions on h, and com-
+pleting the example.
+   Conjecture 1.2 ([9, Conjecture 7.6], [12]). Let G be a cyclic group of
+order m ≥ 2, and p the smallest prime divisor of m. Let k be an integer
+such that k ≥ m/p − 1, and let S ∈ F (G) with |S| = m + k. If 0 6∈ Σm (S),
+then h(S) ≥ k + 1.
+    Conjecture 1.2 was verified for cyclic groups of prime power order in
+[12]. The following example shows we cannot hope, in general, for the bound
+h(S) ≥ k + 1 of Conjecture 1.2 to be true for smaller k. Indeed, the bound
+fails whenever
+                                m−d           m+1
+(4)                                     >k≥
+                               (t − 1)d       td − 2
+for integers t, d ≥ 2 with d | m. In particular, taking d = p and t = 2, we
+see that for k = m/p − 2 and m ≥ 27 composite and odd, the bound of
+Conjecture 1.2 does not hold. Thus, though it appears the bound on k for
+p = 2 could be improved, in all other cases it is tight.
+    Let G = Z/mZ, let H ≤ G be the subgroup of index m/d, let W be the
+sequence consisting of all elements of H ∪ (1 + H) ∪ · · · ∪ ((t − 1) + H), each
+with multiplicity k, and let W ′ be the subsequence consisting of all elements
+of (1 + H) ∪ · · · ∪ ((t − 1) + H), each with multiplicity k. Assume (4) holds.
+Hence t ≤ m/d − 1 and
+(5)                       |W | = tdk ≥ m + 2k + 1,
+(6)                       |W ′ | = (t − 1)dk < m − d.
+   Note that Σ≤k (W ) ⊆ {0, 1, . . . , k(t − 1)} + H. Furthermore, (4) implies
+that k(t − 1) < m/d − 1. We proceed to define a subsequence S | W with
+                     On Erdős–Ginzburg–Ziv inverse theorems               311
+
+|S| = m + k and σ(S) ∈ {k(t − 1) + 1, k(t − 1) + 2, . . . , m/d − 1} + H,
+which is disjoint from Σ≤k (W ) and thus also from Σk (S). Note that such a
+subsequence will have h(S) ≤ h(W ) ≤ k and σ(S) ∈        / Σk (S) = Σ|S|−m (S).
+Moreover, in view of the basic correspondence σ(S) − Σ|S|−m (S) = Σm (S),
+the latter conclusion will imply 0 ∈  / Σm (S), as desired. Thus it remains to
+construct S.
+      Let σ(W ) ≡ α mod (m/d) with 0 ≤ α ≤ m/d − 1. If α ≥ k(t − 1) + 1,
+then in view of (5) and (6) we can find a subsequence S | W of length m + k
+obtained by removing an appropriate number of terms all contained in H;
+hence σ(S) + H = σ(W ) + H = α + H ⊆ {k(t − 1) + 1, . . . , m/d − 1} + H and
+|S| = m + k, yielding a subsequence with the desired properties. Therefore
+we may assume α ≤ k(t − 1). Hence ⌈(α + 1)/(t − 1)⌉ ≤ k + 1 ≤ kd. In
+this case, we can remove ⌈(α + 1)/(t − 1)⌉ − 1 terms from W contained in
+(t − 1) + H, and one appropriately chosen additional term contained in
+(1 + H) ∪ · · · ∪ ((t − 1) + H), to obtain a subsequence S ′ | W with σ(S ′ ) ∈
+m/d − 1 + H. In view of (5) and ⌈(α + 1)/(t − 1)⌉ ≤ k + 1, it follows that
+|S ′ | ≥ m + k. Thus, as in the previous case, we can remove an appropriate
+number of terms from S ′ all contained in H to get a subsequence S | S ′
+with |S| = m + k and σ(S) + H = σ(S ′ ) + H ′ = m/d − 1 + H, yielding a
+subsequence with the desired properties.
+      Conjecture 1.1 will follow from case (i) with t = 0 of the theorem below,
+which is our first main result.
+    Theorem 1.1. Let G be an abelian group of order m ≥ 2, let p be the
+smallest prime divisor of m, let q be the smallest prime divisor of m/p (if
+m is composite), let S ∈ F (G \ 0), and let h ≥ h(S) and t ≥ 0 be integers.
+If |S| ≥ m + t, then any one of the following conditions implies that Σ(S)
+is periodic with
+                      Σ≥t+1 (S) ∩ Σ≤h+t (S) = Σ(S).
+     (i) h + t ≥ m/p − 1,
+    (ii) Σ(S) 6= G and m = pq,
+   (iii) Σ(S) 6= G and h + t ≥ m/pq + q − 3.
+   We will then use Theorem 1.1 to derive the following theorem, which
+provides a mild generalization of Conjecture 1.2.
+   Theorem 1.2. Let G be an abelian group G of order m, let S ∈ F (G),
+and let p be the smallest prime divisor of m. If |S| ≥ m+max{h(S), m/p−1},
+then 0 ∈ Σm (S) and Σm (S) is periodic.
+    Let G be an abelian group of order m, and let p be the smallest prime
+divisor of m. From Theorem 1.2 it follows that h(G, k) ≥ k + 1 for every G
+with |G| = m and k ≥ m/p − 1.
+312                             D. J. Grynkiewicz et al.
+
+   1.3. Tools. We will need the following result that gives simple necessary
+and sufficient conditions for the existence of an n-setpartition, and in the
+case of existence, shows that an n-setpartition may always be found with
+constituent cardinalities of as near equal a size as possible [2], [14].
+    Proposition 1.3. Let n be a positive integer. A sequence S has an
+n-setpartition A = A1 , . . . , An if and only if |S| ≥ n and h(S) ≤ n. Fur-
+thermore, if S has an n-setpartition, then S has an n-setpartition B =
+B1 , . . . , Bn with | |Bi | − |Bj | | ≤ 1 for all i and j.
+    We will also make use of the following classical lower bound for sumsets
+in a prime order group [4].
+   Cauchy–Davenport Theorem (CDT). If A1 , . . . , An ⊆ Z/pZ are
+nonempty with p prime, then
+                   Xn         n X n              o
+                      Ai ≥ min p,   |Ai | − n + 1 .
+                        i=1                 i=1
+
+   Finally, we will need the following partition analog of CDT, which will
+be our main tool for proving Theorem 1.1 [13], [14].
+    Theorem 1.4. Let G be an abelian group of order m ≥ 2, let S ∈ F (G),
+let S ′ | S, let P = P1 , . . . , Pn be an n-setpartition of S ′ , and let p be the
+smallest prime divisor of m. If n ≥ min{m/p − 1, (|S ′ | − n + 1)/p − 1}, then
+either :
+      (i) there is an n-setpartition  = A1 , . . . , An of a subsequence S ′′ of S
+                                     AP
+          with |S | = |S |, i=1 Pi ⊆ ni=1 Ai , and
+                  ′     ′′
+                            Pn
+                           n
+                           X
+                             Ai ≥ min{m, |S ′ | − n + 1},
+                          i=1
+      (ii) there is a proper , nontrivial subgroup Ha of index a, a coset α + Ha
+           such that all but e terms of S are from α + Ha , where
+                                           ′              
+                                             |S | − n
+                          e ≤ min a − 2,                  −1 ,
+                                                |Ha |
+           and an n-setpartition B = B1 , . . . , Bn of                ′′
+                  ′′       ′′
+                                                      Pan subsequence S0 ∈ F (α+Ha )
+           with S0 | S, |S0 | ≤ n + |Ha | − 1, and i=1 Bi = nα + Ha .
+
+    2. Proof of Theorem 1.1. We proceed with the proof of all three parts
+simultaneously. In what follows, we will often make use of the fact that the
+function f (a) = M/a + a for M, a > 0 (and usually M will be of the form m
+or m/x) is maximized at a boundary value of a. Thus for example, if a | m,
+then m/a + a ≤ m/p + p. We begin by showing all three cases imply the
+following claim. Note this completes the case of |G| prime.
+                    On Erdős–Ginzburg–Ziv inverse theorems               313
+
+   Claim 1. Either the conclusion of Theorem 1.1 is true, or there exists
+a proper , nontrivial subgroup Ha of index a such that Σ(Sa ) = Ha and all
+but e ≤ a − 2 terms of S are from Ha , where Sa is the subsequence of S
+consisting of all terms from Ha .
+
+   Proof. First suppose (i) holds. Observe that Σh+t (S0h−1 ) = Σ≥t+1 (S) ∩
+Σ≤h+t (S). Since h ≥ h(S) and |S| ≥ m + t ≥ t + 1, Proposition 1.3 yields
+an (h + t)-setpartition P of S0h−1 . Since h + t ≥ m/p − 1, we can apply
+Theorem 1.4 to P . If (i) of Theorem 1.4 holds, then
+
+     |Σh+t (S0h−1 )| ≥ min{m, (|S| + h − 1) − (h + t) + 1} = m = |G|.
+
+Hence Σ(S) ⊆ G = Σh+t (S0h−1 ) = Σ≥t+1 (S) ∩ Σ≤h+t (S) ⊆ Σ(S) holds
+trivially. So we may assume that (ii) of Theorem 1.4 holds. Consequently,
+all but e ≤ a − 2 terms of S0h−1 are from α + Ha , where Ha is a proper,
+nontrivial subgroup of index a.
+    Suppose that 0 ∈ / α + Ha . As there are only e ≤ a − 2 terms of S0h−1
+outside α + Ha , it follows that h − 1 ≤ a − 2. Since h ≥ h(S), |S| ≥ m + t,
+and e ≤ a − 2, it follows that
+
+            m + t + h − 1 ≤ |S0h−1 | ≤ |Ha |h + e
+                            m                m
+                          ≤    h+a−2≤          (a − 1) + a − 2.
+                             a               a
+Thus h + t ≤ a − m/a − 1 ≤ m/p − 3, contradicting (i). So we may assume
+0 ∈ α + Ha , whence without loss of generality α = 0. Furthermore, since (ii)
+of Theorem 1.4 holds for S0h−1 , it follows that Σh+t (Sa 0h−1 ) = Ha , where
+Sa is the subsequence of terms of S from Ha . As ν0 (Sa 0h−1 ) = h − 1 < h + t
+and all terms of Sa 0h−1 are from Ha , it follows that Σ(Sa ) = Ha , yielding
+the claim. So we may assume either (ii) or (iii) holds, whence Σ(S) 6= G.
+    Note that Σ|S| (S0|S|−1 ) = Σ(S). In view of Proposition 1.3, S0|S|−1 has
+an |S|-setpartition P . Since |S| ≥ m+t ≥ m, we can apply Theorem 1.4 to P .
+If (i) of Theorem 1.4 holds, then |Σ(S)| = |Σ|S| (S0|S|−1 )| ≥ min{m, 2|S| −
+1 − |S| + 1} = m, whence Σ(S) = G, a contradiction. Therefore we can
+assume that (ii) of Theorem 1.4 holds. Thus there exists a proper, nontrivial
+subgroup Ha of index a, and α ∈ G, such that all but e ≤ a − 2 terms of
+S0|S|−1 are from α + Ha . Since ν0 (S0|S|−1 ) = |S| − 1 ≥ m − 1 > a − 2,
+it follows that 0 ∈ α + Ha , whence we can assume α = 0. Furthermore,
+Σ(Sa ) = Ha as before, completing the proof of the claim.
+
+   Assume Ha is chosen to satisfy Claim 1 with minimal cardinality. Note
+that |Sa | = |S| − e ≥ m − e. Since Σ(Sa ) = Ha , it follows that Σ(S) =
+Ha + Σ(0SSa−1 ), whence Σ(S) is periodic. Consequently, it suffices to show
+Σ≥t+1 (S) ∩ Σ≤h+t (S) = Σ(S).
+314                            D. J. Grynkiewicz et al.
+
+  If h ≤ a, then
+                                         
+            m             m              m
+m ≤ |S| ≤      −1 h+e ≤     −1 h+a−2 ≤     − 1 a + a − 2 = m − 2,
+             a            a              a
+a contradiction. Therefore we can assume h ≥ a + 1.
+     Note that |S| ≥ m + t ≥ m/2 + t ≥ m/a + a − 2 + t ≥ m/a + t + e. Hence
+|Sa | ≥ m/a + t. As Σ(Sa ) = Ha , it follows by a simple greedy algorithm
+that there exists a subsequence R of Sa with |R| = m/a and Σ(R) = Ha .
+Since |Sa | ≥ m/a + t, there exists a subsequence Ta | Sa R−1 with |Ta | = t.
+Thus every term of Σ(S) can be expressed as a sum of all t terms from Ta ,
+at most m/a terms of R (and at least one), and at most e ≤ a − 2 terms not
+in Ha , whence Σ(S) = Σ≥t+1 (S) ∩ Σ≤m/a+t+a−2 (S). Consequently, we may
+assume
+                                         m
+(7)                                  h≤     + a − 3,
+                                          a
+else the proof is complete.
+     Let Sa′ = Sa Ta−1 . If |Sa′ | ≤ h−1, then h−1 ≥ |Sa Ta−1 | ≥ m−e ≥ m−a+2.
+Thus (7) implies that
+                           m                       m
+                     m≤         + 2a − 6 ≤ 2 + 2 − 6 = m − 4,
+                            a                       2
+a contradiction. Therefore we can assume |Sa′ | ≥ h. As h(S) ≤ h, Proposition
+1.3 yields an h-setpartition A = A1 , . . . , Ah of Sa′ with | |Ai | − |Aj | | ≤ 1 for
+all i and j. Assume without loss of generality that |A1 | ≥ · · · ≥ |Ah |. Let
+⌊(m − a + 2)/h⌋ = (m − a + 2 − ǫ)/h. Then, since |Sa′ | = |S| − e − t ≥
+m − a + 2, it follows that
+                                    m−a+2−ǫ
+(8)                       |Ai | ≥                     for all i,
+                                          h
+                     m−a+2−ǫ                  m−a+2
+(9)          |Ai | ≥                   +1>                    for all i ≤ ǫ.
+                              h                     h
+                                        Px                                       ′
+     Let x be minimal such that            i=1 |Ai | ≥ m/a (it exists since |Sa | =
+|Sa | − t ≥ m/a). We proceed to show that
+                                      mh/a
+(10)                           x≤           + 1.
+                                    m−a+2
+      If x ≤ ǫ, then (9) implies that
+                                      
+                               mh/a         mh/a
+                       x≤                ≤       + 1,
+                             m−a+2         m−a+2
+yielding (10). If x > ǫ then by (8) and (9),
+                                    
+                         (m/a − ǫ)h        (m/a − ǫ)h
+(11)              x≤                   ≤              + 1.
+                        m−a+2−ǫ           m−a+2−ǫ
+                      On Erdős–Ginzburg–Ziv inverse theorems                  315
+
+If (10) is false, then comparing with (11) yields m < m/a + a − 2 ≤ m − 1,
+a contradiction. Consequently, (10) always holds.
+    Suppose h − e < x. It follows from (10) and e ≤ a − 2 that
+                                        
+                                 m/a
+(12)                       1−              h ≤ a − 2.
+                               m−a+2
+    m/a
+If m−a+2 > 12 , then 2 ≤ a ≤ m/2 would imply that m ≤ 2m/a+a−3 ≤ m−1,
+                            m/a
+a contradiction. Therefore m−a+2 ≤ 12 , which combined with (12) yields
+                                        1
+(13)                              a−2≥    h.
+                                        2
+In view of h − e < x, e ≤ a − 2, and h ≥ a + 1, it follows that
+                      a + 1 ≤ h ≤ x − 1 + e ≤ x + a − 3,
+implying x ≥ 4. Thus (10) and (13) imply that
+                                                 m                       m
+             3m − 3a + 6 = 3(m − a + 2) ≤           (2a − 4) = 2m − 4 ,
+                                                  a                      a
+so that
+                                                m
+(14)                                m ≤ 3a − 4 − 6.
+                                                 a
+If a ≤ m/3, then (14) yields m ≤ 3m/3 − 4 · 3 − 6 = m − 18, a contradiction.
+Therefore we may assume that a = m/2, whence |Ha | = 2. Thus Sa has
+exactly one distinct term equal to the generator of Ha . Consequently, in
+view of h(S) ≤ h and e ≤ a − 2,
+                                                         m               m
+         m ≤ |S| = |Sa | + e ≤ |Sa | + a − 2 = |Sa | +      −2≤h+          − 2.
+                                                          2              2
+Hence h ≥ m/2 + 2 = m/a + a, contradicting (7). So we may assume
+h − e ≥ x.
+      Let Sa′′ = A1 · · · Ax · · · Ah−e . In view of the definition of x, and since
+h − e ≥ x, it follows that |Sa′′ | ≥ m/a. Let B be the (h − e + t)-setpartition of
+Sa′′ Ta 0h−e−1 defined by adding a zero to each Ai with i > 1, and including
+each term of Ta as a singleton set.
+      Suppose |Ha | is prime. Applying CDT to B, it follows that there are at
+least
+               |Sa′′ | + t + (h − e − 1) − (h − e + t) + 1 = |Sa′′ | ≥ m/a
+elements in the sumset of B, whence the sumset is Ha . Thus every element
+of Σ(S) can be expressed as a sum of at most h − e + t, and at least
+                     h − e + t − ν0 (Sa′′ Ta 0h−e−1 ) = t + 1,
+terms from Sa′′ Ta , and at most e terms not in Ha . Hence Σ≥t+1 (S)∩Σ≤h+t (S)
+= Σ(S), as desired. So we can assume |Ha | = m/a is not prime. Since
+316                           D. J. Grynkiewicz et al.
+
+0 < Ha < G, it follows that m has at least three prime factors, which
+completes the proof of (ii). Consequently, since
+                     m         m     m         m     m
+                        −1=       +     −1≥        +    + q − 3,
+                     p         2p 2p           2p pq
+both (i) and (iii) imply
+                                         m
+(15)                            h+t≥        + q − 3.
+                                         pq
+    Suppose h − e + t ≤ m/ap′ − 2, where p′ is the smallest prime divisor of
+m/a. Then e ≤ a − 2 implies that
+                                         m
+(16)                            h + t ≤ ′ + a − 4.
+                                        ap
+If a = p, then p′ = q, whence (16) implies that h + t ≤ m/pq + p − 4 ≤
+m/pq + q − 4. Otherwise, since |Ha | is composite, it follows that q ≤ a ≤
+m/pq, whence, in view of p ≤ p′ and (16),
+                           m             m              m
+                   h+t≤ ′ +a−4≤             +a−4≤          + q − 4.
+                           ap            ap             qp
+In both cases we contradict (15). So we may assume that
+                                             m
+(17)                            h − e + t ≥ ′ − 1.
+                                             ap
+Thus we can apply Theorem 1.4 with S ′ = Sa′′ Ta 0h−e−1 , S = Sa 0h−e−1 ,
+n = h − e + t, G = Ha , and P = B.
+    Suppose (i) of Theorem 1.4 holds. Then there exists S ′′ | Sa 0h−e−1 of
+length |Sa′′ | + t + h − e − 1 with an (h − e + t)-setpartition whose sumset has
+cardinality at least
+                                                                        
+       m        ′′                                               m      ′′   m
+ min     , |Sa | + t + (h − e − 1) − (h − e + t) + 1 = min          , |Sa | = .
+       a                                                         a           a
+Hence Σ≥h−e+t−t′ (S ′′ ) ∩ Σ≤h−e+t (S ′′ ) = Ha , where
+                   t′ = ν0 (S ′′ ) ≤ ν0 (Sa 0h−e−1 ) = h − e − 1.
+Consequently, h−e+t−t′ ≥ t+1. Thus every term of Σ(S) can be expressed
+as a sum of at most h − e + t terms from S ′′ (and at least h − e + t − t′ ≥ t + 1
+terms), and at most e terms not in Ha . Hence Σ(S) = Σ≥t+1 (S)∩Σ≤h+t (S),
+as desired. So we can assume (ii) of Theorem 1.4 holds, whence there exists
+a proper, nontrivial subgroup Hka of index k in Ha , and β ∈ Ha , such that
+all but e′ ≤ k − 2 terms of Sa 0h−e−1 are from β + Hka .
+    Suppose 0 ∈/ β + Hka . Since there are only e′ ≤ k − 2 terms of Sa 0h−e−1
+outside of Hka , it follows that h − e − 1 ≤ k − 2. Thus, in view of (17) and
+e ≤ a − 2, and 2 ≤ a, k ≤ m/2, it follows that
+                           m
+(18)        m − 1 ≤ m + ′ − 2 ≤ m + t + h − e − 1 ≤ |S0h−e−1 |
+                           ap
+                                        m
+                   ≤ |Hka |h + e′ + e ≤    (k + e − 1) + k − 2 + e
+                                        ka
+                      On Erdős–Ginzburg–Ziv inverse theorems                  317
+                                                
+       m                              m       m          m
+     ≤    (k + a − 3) + k + a − 4 =     +a +    +k −3       −4
+       ka                             a       k          ka
+                        
+         m           m            m          m
+     ≤     +2 +         +2 −3        −4=m−3     ≤ m − 3,
+         2            2           ka         ka
+a contradiction. So we may assume 0 ∈ β + Hka , whence without loss of
+generality β = 0.
+   Consequently, all but at most k − 2 + a − 2 ≤ ka − 4 terms of S are from
+the same nontrivial subgroup Hka < Ha . Furthermore, since (ii) of Theorem
+1.4 holds for Sa 0h−e−1 , it follows that Σh−e+t (Ska 0h−e−1 ) = Hka , where
+Ska is the subsequence of terms of Sa from Hka . Hence, as ν0 (Sa 0h−e−1 ) =
+h − e − 1 < h − e + t, it follows that Σ(Ska ) = Hka . Thus Hka contradicts
+the minimality of Ha , completing the proof of both (i) and (iii).
+
+   3. Proof of Theorem 1.2. Since |S| ≥ m + m/p − 1, let |S| = m + k
+with k ≥ m/p − 1. Note that
+                Σm (S) = σ(S) − Σ|S|−m (S) = σ(S) − Σk (S).
+Thus it suffices to show that σ(S) ∈ Σk (S), and that Σk (S) is periodic.
+   By translation we may assume 0 is the term with greatest multiplicity
+h = h(S) in S. Since by hypothesis h = h(S) ≤ |S|−m = k, let t = k −h ≥ 0
+and S ′ = S0−h . Note that |S ′ | = m + k − h = m + t, and h(S ′ ) ≤ h(S) = h.
+Since h + t = k ≥ m/p − 1, it follows that S ′ satisfies (i) of Theorem 1.1,
+whence
+          Σ≥t+1 (S ′ ) ∩ Σ≤h+t (S ′ ) = Σ≥t+1 (S ′ ) ∩ Σ≤k (S ′ ) = Σ(S ′ ),
+and Σ(S ′ ) is periodic.
+   Thus for every z ∈ Σ(S ′ ) = Σ≥t+1 (S ′ ) ∩ Σ≤k (S ′ ), there exists a subse-
+quence Tz of S ′ with sum z such that
+                          k − h + 1 = t + 1 ≤ |Tz | ≤ k.
+Since |SS ′−1 | = h, adding an appropriate number of zeros to Tz yields a
+k-term subsequence whose sum is z. Consequently, Σ(S ′ ) ⊆ Σk (S). Since
+S ′ = S0−h , it follows that Σk (S) \ 0 ⊆ Σ(S ′ ). However, as |S ′ | = m + t ≥
+m = |G| ≥ D(G), it follows that 0 ∈ Σ(S ′ ) as well. Hence the above implies
+that
+                               Σ(S ′ ) = Σk (S).
+As Σ(S ′ ) is periodic, it follows that Σk (S) is periodic, and since σ(S) =
+σ(S ′ ) ∈ Σ(S ′ ), it follows that σ(S) ∈ Σk (S), completing the proof as re-
+marked earlier.
+   Acknowledgments. We thank the referee for his helpful suggestions,
+and for pointing out an inaccuracy in the original lower bound examples.
+318                              D. J. Grynkiewicz et al.
+
+                                       References
+
+ [1]   A. Bialostocki and P. Dierker, On the Erdős–Ginzburg–Ziv theorem and the Ramsey
+       numbers for stars and matchings, Discrete Math. 110 (1992), 1–8.
+ [2]   A. Bialostocki, P. Dierker, D. Grynkiewicz and M. Lotspeich, On some developments
+       of the Erdős–Ginzburg–Ziv Theorem II , Acta Arith. 110 (2003), 173–184.
+ [3]   F. Chen and S. Savchev, Long n-zero-free sequences in finite cyclic groups, Discrete
+       Math., to appear.
+ [4]   H. Davenport, On the addition of residue classes, J. London Math. Soc. 10 (1935),
+       30–32.
+ [5]   P. Erdős, A. Ginzburg and A. Ziv, Theorem in the additive number theory, Bull.
+       Res. Council Israel 10F (1961), 41–43.
+ [6]   P. Erdős and R. L. Graham, Old and New Results in Combinatorial Number Theory,
+       Monograph. L’Enseign. Math. 28, Univ. de Genève, Geneva, 1980.
+ [7]   C. Flores and O. Ordaz, On sequences with zero sum in abelian group, in: Volumen
+       de homenaje al Dr. Rodolfo A. Ricabarra, Vol. Homenaje 1, Univ. Nac. del Sur,
+       Baha Blanca, 1995, 99–106.
+ [8]   W. Gao, An addition theorem for finite cyclic groups, Discrete Math. 163 (1997),
+       257–265.
+ [9]   W. Gao and A. Geroldinger, Zero-sum problems in finite abelian groups: A survey,
+       Expo. Math. 24 (2006), 337–369.
+[10]   W. Gao, A. Panigrahi and R. Thangadurai, On the structure of p-zero-sum free
+       sequences and its application to a variant of Erdős–Ginzburg–Ziv theorem, Proc.
+       Indian Acad. Sci. Math. Sci. 115 (2003), 67–77.
+[11]   W. Gao and R. Thangadurai, A variant of Kemnitz conjecture, J. Combin. Theory
+       Ser. A 107 (2004), 69–70.
+[12]   W. D. Gao, R. Thangadurai and J. Zhuang, Addition theorems on the cyclic groups
+       of order pl, Discrete Math., to appear.
+[13]   D. Grynkiewicz, On a partition analog of the Cauchy–Davenport theorem, Acta
+       Math. Hungar. 107 (2005), 161–174.
+[14]   —, On a conjecture of Hamidoune for subsequence sums, Integers 5 (2005), no. 2,
+       A7, 11 pp. (electronic).
+[15]   T. Yuster and B. Peterson, A generalization of an addition theorem for solvable
+       groups, Canad. J. Math. 3 (1984), 529–536.
+
+Departamento de Matemática Aplicada IV                   Departamento de Matemáticas
+Universitat Politècnica de Catalunya                                       y Centro ISYS
+Campus Nord, Edifici C3                                             Facultad de Ciencias
+C. Jordi Girona, 1-3                                    Universidad Central de Venezuela
+08034 Barcelona, Spain                                                          Ap. 47567
+E-mail: diambri@hotmail.com                                   Caracas 1041-A, Venezuela
+                                                                 E-mail: flosav@cantv.net
+Departamento de Matemáticas Puras y Aplicadas
+Universidad Simón Bolivar                                 Departamento de Matemáticas
+Ap. 89000                                               Escuela de Ciencias, Núcleo Sucre
+Caracas 1080-A, Venezuela                                          Universidad de Oriente
+E-mail: mtvarela@usb.ve                                                Cumaná, Venezuela
+                                                        E-mail: feliciavillarroel@cantv.net
+
+                                  Received on 4.8.2006
+                             and in revised form on 3.7.2007                        (5254)
+

@@ -1,0 +1,1436 @@
+ACTA ARITHMETICA
+    121.3 (2006)
+
+
+
+
+       On the number of m-term zero-sum subsequences
+                                         by
+
+                  David J. Grynkiewicz (Pasadena, CA)
+
+    1. Introduction. A sequence S of terms from an abelian group is zero-
+sum if the sum of the terms of S is zero. In 1961 Erdős, Ginzburg and Ziv
+proved that any sequence of 2m − 1 terms from an abelian group of order
+m contains an m-term zero-sum subsequence [10]. This sparked a flurry of
+generalizations, variations and extensions [1], [3], [7], [8], [11], [13]–[18], [21],
+[25]–[27], [36]. Since a sequence from the cyclic group Z/mZ consisting of
+only 0’s and 1’s has its m-term zero-sum subsequences in exact correspon-
+dence with its m-term monochromatic subsequences, the Erdős–Ginzburg–
+Ziv Theorem can be viewed as a generalization of the pigeonhole principle
+for m pigeons and two boxes. In essence, the Erdős–Ginzburg–Ziv Theorem
+expresses the idea that often the best way to avoid zero-sums is to consider
+sequences with very few distinct terms.
+    For sequences whose length is greater than 2m − 1, a natural question
+to ask is how many m-term zero-sum subsequences one can expect. If the
+sequence S has length nn and    consists
+                                     n 
+                                           of at most two distinct terms, then
+there will be at least ⌈m  2
+                             ⌉
+                                + ⌊m 2
+                                       ⌋
+                                         m-term monochromatic subsequences.
+Thus if the best way to avoid m-term zero-sum subsequences were still to
+use only two distinct residues from Z/mZ, then one would expect there to
+                       n        n 
+always be at least ⌈m  2
+                         ⌉
+                           + ⌊m  2
+                                   ⌋
+                                      m-term zero-sum subsequences. This was
+conjectured by Bialostocki in 1989 [2] and later appeared in [5].
+  Conjecture 1.1. If S is a sequence  of n terms from the cyclic group
+                           n      n 
+Z/mZ, then S has at least ⌈m
+                           2
+                             ⌉
+                               + ⌊m
+                                  2
+                                    ⌋
+                                      m-term zero-sum subsequences.
+    A few years after the conjecture was made, Kisin verified it in the case
+m = pα and m = pα q, where p and q are primes and α ≥ 1, and expressed
+reasons why the conjecture might fail for m not of this form [30]. At the same
+time, Füredi and Kleitman showed that Conjecture 1.1 held for sufficiently
+large n (of order m6m ), as well as for m of the form m = pq, where p and q
+                                         n         n
+are distinct primes, and showed that 2 ⌊m2
+                                           ⌋
+                                             −m2 ⌊m−1
+                                                    2
+                                                      ⌋−1
+                                                           was a general lower
+
+   2000 Mathematics Subject Classification: Primary 11B75; Secondary 11B50.
+                                        [275]
+276                            D. J. Grynkiewicz
+
+bound on the number of m-term zero-sum subsequences [12]. Their results,
+contrary to those of Kisin, led them to strongly believe the conjecture of
+Bialostocki to be true for n > 4m. Unfortunately, the lower bound shown
+by Füredi and Kleitman, while being very nice asymptotically for large n
+and fixed m, tells us very little for small n, particularly if m is also large.
+   The aim of this paper is to give a proof, using some recently developed
+machinery from zero-sum Ramsey theory, of the following general bound on
+the number of m-term zero-sum subsequences.
+
+    Theorem 1.1. If S is a sequence of n terms from an abelian group G
+of order m ≥ 30, then S contains at least
+                        n   n                 
+                          ⌈2⌉       ⌊2⌋      n−m
+                   min          +         ,
+                           m         m      ⌈ 2m−1
+                                                3 ⌉
+m-term zero-sum subsequences.
+
+    Unlike the general bound of Füredi and Kleitman, the bound given by
+Theorem 1.1 is much more accurate for sequences of small length, and, as
+will be shown in Section 3, verifies Conjecture 1.1 for n ≤ 6 31 m. Ironically,
+this confirms the conjecture of Bialostocki for those cases least thought to
+be true. Theorem 1.1 also gives a bound for more general abelian groups in
+addition to cyclic groups.
+
+    2. Preliminaries. Let (G, +, 0) be an abelian group. If A, B ⊆ G, then
+their sumset, A + B, is the set of all possible pairwise sums, i.e. {a + b |
+a ∈ A, b ∈ B}. A set A ⊆ G is Ha -periodic if it is the union of Ha -cosets for
+some subgroup Ha of G (note this definition allows Ha to be trivial). We say
+that A is maximally Ha -periodic if A is Ha -periodic, and Ha is the maximal
+subgroup for which A is Ha -periodic; in this case, Ha = {x ∈ G | x+A = A},
+and Ha is sometimes referred to as the stabilizer of A. A set A which is
+maximally Ha -periodic, with Ha the trivial group, is aperiodic, and otherwise
+we refer to A as periodic. An Ha -hole of A (where the subgroup Ha is usually
+understood) is an element α ∈ (A + Ha ) \ A. For notational convenience, we
+use φa : G → G/Ha to denote the natural homomorphism. If S is a sequence
+of elements from G, then an n-set partition of S is a partition of the sequence
+S into n nonempty subsequences, A1 , . . . , An , such that the terms in each
+subsequence Ai are all distinct (thus allowing each subsequence Ai to be
+considered a set). Also, |S| denotes the cardinality of S, if S is a set, and
+the length of S, if S is a sequence. Finally, if S ′ is a subsequence of S, then
+S \ S ′ denotes the subsequence of S obtained by deleting all terms in S ′ .
+    We begin by stating Kneser’s Theorem [31], [28], [32], [29], [34], [23]. The
+case with m prime is known as the Cauchy–Davenport Theorem [9].
+                       Number of m-term zero-sum subsequences                      277
+
+    Kneser’s Theorem. Let G be an abelian group,     Pnand let A1 , . . . , An
+be a collection of finite, nonempty subsets of G. If  i=1 Ai is maximally
+Ha -periodic, then
+                        n
+                        X                  n
+                                           X
+                              φa (Ai ) ≥         |φa (Ai )| − n + 1.
+                        i=1                i=1
+
+   Note that if A is maximally Ha -periodic, then φa (A) is aperiodic. Also,
+observe that if A + B is maximally Ha -periodic and ̺ = |A + Ha | − |A| +
+|B + Ha | − |B| is the number of holes in A and B, then Kneser’s Theorem
+implies |A+B| ≥ |A|+|B|−|Ha |+̺. Consequently, if either A or B contains
+a unique elementPfrom some Ha -coset, then |A + B| ≥ |A| + |B| − 1. More
+generally, if ̺ = ni=1 |Ha + Ai | − |Ai | is the total number of holes in the Ai ,
+then
+                     Xn       X  n
+                         Ai ≥       |Ai | − (n − 1)|Ha | + ̺.
+                       i=1         i=1
+            Pn           Pn
+Hence, if | i=1 Ai | < i=1 |Ai | − n + 1, then ̺ < (n − 1)(|Ha | − 1).
+    The following characterizes when a sufficiently compressed n-set parti-
+tion exists [20], [4].
+     Proposition 2.1. Let n1 and n0 be positive integers with n0 ≤ n1 .
+A sequence S of terms from G has an n1 -set partition A = A1 , . . . , An1 with
+|Ai | = 1 for i > n0 (and | |Ai |−|Aj | | ≤ 1 for i, j ≤ n0 ) if and only if |S| ≥ n1 ,
+and for every nonempty subset X ⊆ G with |X| ≤ (|S| − n1 − 1)/n0 + 1
+there are at most n1 + (|X| − 1)n0 terms of S from X. In particular , S has
+an n1 -set partition if and only if |S| ≥ n1 and the multiplicity of every term
+of S is at most n1 .
+   The next simple proposition can often be quite useful when dealing with
+n-set partitions [4].
+   Proposition 2.2. Let S be a finite sequence of elements from an      Pabelian
+group G, and let A = A1 , . . . , An be an n-set partition of S, where | ni=1 Ai |
+= r, and maxi {|Ai |} = s.
+    (i) There exists a subsequence S ′ of S and an n′ -set partition A′ =
+        Ai1 , . . . , Ain′ of S ′ , which is a subsequence of the n-set partition A =
+                                                              P ′
+        A1 , . . . , An , such that n′ ≤ r − s + 1 and | nj=1 Aij | = r.
+   (ii) There exists a subsequence S ′ of S of length at most n + r − 1,
+        and an n-set partition A         ′      ′          ′     ′         ′
+                                        Pn= A1′ , . . . , An of S , where Ai ⊆ Ai for
+        i = 1, . . . , n, such that | i=1 Ai | = r.
+  The following theorem [20], [22] is a recent generalization of results of
+Mann [33], Olson [35], Bollobás and Leader [6], and Hamidoune [24].
+278                                 D. J. Grynkiewicz
+
+     Theorem 2.1. Let S ′ be a subsequence of a finite sequence S of terms
+from an abelian group G, let A = A1 , . . . , An be an n-set partition of S ′ ,
+and let ai ∈ Ai for i ∈ {1, . . . , n}. Then there exists an n-set partition A′ =
+A′1 , . . . , A′n of a subsequence S ′′ of S with sumset Ha -periodic, |S ′ | = |S ′′ |,
+Pn                Pn     ′         ′
+   i=1 Ai ⊆         i=1 Ai , ai ∈ Ai for i ∈ {1, . . . , n}, and
+               n
+               X
+                     A′i ≥ (E(A′ , Ha ) + (N (A′ , Ha ) − 1)n + 1)|Ha |,
+               i=1
+
+where
+                                         n
+                       ′       1 \ ′
+                N (A , Ha ) =       (Ai + Ha ) ,
+                              |Ha |
+                                        i=1
+                                n 
+                                X                         n
+                                                          \                
+                       ′
+                 E(A , Ha ) =          |A′j | −   A′j ∩         (A′i + Ha ) .
+                                 j=1                      i=1
+
+Furthermore, if Ha is nontrivial , then φa (x) ∈ φa (A′i) for every i ∈ {1, . . . , n}
+and every x ∈ S \ S ′′ .
+      Note that Theorem 2.1 implies | ni=1 A′i | ≥ min{|G|, |S ′ | − n + 1} unless
+                                         P
+N (A′ , Ha ) > 0 and Ha is a proper, nontrivial subgroup. Let ̺ = N n|Ha | −
+|S ′ |+e, where N = N (A′ , Ha ) andTne = E(A
+                                                ′ , H ), be the number of H -holes
+                                                     a                        a
+                                ′            ′
+contained among the sets Aj ∩ i=1 (Ai + Ha ), j = 1, . . . , n. Also observe
+that if Theorem 2.1 does not hold with Ha trivial, then (e+(N−1)n+1)|Ha|
+≤ |S ′ | − n, implying N n|Ha | − |S ′ | ≤ n(|Ha | − 1) − |Ha | − e|Ha |, which from
+the previous sentences implies
+                 ̺ < (n − 1 − e)(|Ha | − 1) ≤ (n − 1)(|Ha | − 1),
+mirroring the bound obtained from Kneser’s Theorem discussed earlier.
+   We will need the following draining theorem for n-set partitions [19].
+   Theorem 2.2. Let S be a finite sequence of elements from an abelian
+group G. If S has an n-set partition, A = A1 , . . . , An , such that
+                              n
+                              X            n
+                                           X
+                                    Ai ≥         |Ai | − n + 1,
+                              i=1          i=1
+
+then there exists a subsequence S ′     of S, with length |S ′ | ≤ max{|S| − n
+                                           ′ = A′ , . . . , A′ , such that |
+                                                                             Pn    ′
++ 1,
+  Pn  2n}, and  with  an n-set partition, A      1           n                i=1 Ai |
+≥ i=1 |Ai | − n + 1. Furthermore, if | |Ai | − |Aj | | ≤ 1 for all i and j, or if
+|Ai | ≥ 3 for all i, then A′i ⊆ Ai .
+   Finally, we conclude with the following well known and basic theorem
+bounding the real roots of a polynomial with real coefficients.
+                     Number of m-term zero-sum subsequences                 279
+
+    Theorem 2.3. Let P (x) be a polynomial with real coefficients and posi-
+tive leading coefficient, and let a be a real number. If a > 0, and all nonzero
+terms of P (x)/(x − a), including remainder (computed by polynomial divi-
+sion), are positive, then a is an upper bound for all real roots of P (x).
+    Proof. Let P (x) = Q(x)(x − a) + r, with r ∈ R. Since all nonzero terms
+of P (x)/(x−a), including remainder (computed by polynomial division), are
+positive, it follows that r ≥ 0 and Q(x) > 0 for all real x > 0. Thus, since
+for x > a > 0 we have x − a > 0, it follows that P (x) = Q(x)(x − a) + r > 0
+for x > a.
+
+    3. The proof. In view of the results of Kisin [30] mentioned in the
+introduction, it follows that Conjecture 1.1 is known for m < 30, as well as
+for m = 25 = 32, m = 5 · 7 = 35, and m = 2 · 19 = 38. We begin by prov-
+ing several lemmas relating the sizes of two different binomial coefficients.
+Note that in view of the first sentence of this section, Lemma 3.2 below
+and Theorem 1.1 together imply Conjecture 1.1 for n ≤ 6 13 m. Both Lem-
+mas 3.1 and 3.2 are straightforward computations, best done with machine
+assistance, but for the benefit of the reader we include many of the details.
+    Lemma 3.1. If m ≥ 30 and n are integers with 2m − 1 ≤ n ≤ 3m +
+⌈ 2m−1
+    3 ⌉ − 2, then                   n 
+                         n−m          ⌈2⌉
+                                 > 2       .
+                          ⌈m
+                           2 ⌉         m
+   Proof. Let
+                                n+1 
+                         n−m
+        R(n, m) =               /2 2
+                          ⌈m
+                           2 ⌉      m
+                    (n − m) · · · (n − m − ⌈ m                       m
+                                                 2 ⌉ + 1)(m) · · · (⌈ 2 ⌉ + 1)
+                 =                                                             .
+                                  2( n+1         n+1
+                                      2 ) · · · ( 2 − m + 1)
+       n+1     n 
+Since m 2    ≥ ⌈m
+                2
+                  ⌉
+                     , it suffices to show R(n, m) > 1. We begin by showing
+that R(n, m) ≥ R(n + 2, m).
+   Let
+                    (n − m − m+1                        m+1
+                                  2 + 2)(n − m − 2 + 1)( 2 + 1)
+                                                                     n+1
+        Q(n, m) =
+                          (n − m + 2)(n − m + 1)( n+1     2 − m + 1)
+
+                 ≤ R(n, m)/R(n + 2, m).
+To show R(n, m) ≥ R(n + 2, m), we will show that Q(n, m) ≥ 1, i.e. (by
+multiplying out the denominator, expanding and collecting terms) that
+    4(m − 1)n2 − (11m2 − 12m + 17)n + (8m3 − 9m2 + 16m − 15) ≥ 0.
+280                                  D. J. Grynkiewicz
+
+This will occur if both roots of the above polynomial are imaginary, which
+by the quadratic formula occurs when
+                                       8        118 2 88
+(1)                          m4 − m3 −             m −      m − 7 > 0.
+                                       7         7       7
+However, Theorem 2.3 shows that the roots of the polynomial m4 − 87 m3 −
+118 2         88
+ 7 m − 7 m − 7 are bounded from above by 6. Consequently, (1) holds for
+m ≥ 7, and we can assume R(n, m) ≥ R(n + 2, m).
+    Since R(n, m) ≥ R(n + 2, m), it suffices to show R(3 32 m + b, m) > 1
+for b = −2 + (⌈ 2m−1                      2                     2m−1      2
+                              3 ⌉ − 3 m) and b = −3 + (⌈ 3 ⌉ − 3 m). Note b ∈
+{− 53 , − 63 , − 73 , − 38 , − 93 , − 10                   2
+                                       3 }. Let S(m) = R(3 3 m + b, m). Next we show that
+S(m + 6) ≥ S(m). Note that computing S(m) for each m ∈ {30, . . . , 35}
+and both possible values for b shows that S(m) > 1 for those m. Hence the
+proof will be complete once we have shown that S(m + 6) ≥ S(m).
+    Let
+                  ( 8 m+b+16)···( 8 m+b+1)(m+6)···(m+1)( 5 m+ b+1 +5)···( 5 m+ b+1 +1)
+ P (m) = ( 11 m+3b+1 +11)···( 113m+ b+1 +1)( m+1 +3)···( m+1
+                                                          6    2        6      2
+                                                             +1)( 13 m+b+13)···( 13 m+b+1)
+              6      2         6      2        2          2       6              6
+
+         ≤ S(m + 6)/S(m).
+To see that S(m + 6) ≥ S(m), we will show that P (m) ≥ 1. By multiplying
+out denominators, bringing all terms to the left hand side, expanding and
+collecting terms, and rounding coefficients down, it follows that it suffices
+to show
+    − 3 · 1017 − 4 · 1018 m − 3 · 1019 m2 − 2 · 1020 m3 − 4 · 1020 m4
+      − 7 · 1020 m5 − 2 · 1021 m6 − 2 · 1021 m7 − 2 · 1021 m8 − 2 · 1021 m9
+      − 8 · 1020 m10 − 5 · 1020 m11 − 2 · 1020 m12 − 8 · 1019 m13 − 3 · 1019 m14
+      − 7 · 1018 m15 − 2 · 1018 m16 − 4 · 1017 m17 − 6 · 1016 m18
+      − 7 · 1015 m19 − 7 · 1014 m20 − 5 · 1013 m21 − 2 · 1012 m22
+      − 4 · 1010 m23 + 7 · 108 m24 + 2 · 108 m25 + 107 m26 + 3 · 105 m27 > 0
+(the rounded polynomial just given is strictly less, for positive m, than the
+corresponding polynomial for each value of b ∈ {− 53 , − 36 , − 37 , − 83 , − 39 , − 10
+                                                                                     3 }
+obtained by algebraic manipulation). However, by Theorem 2.3, the roots of
+the displayed polynomial are all bounded from above by 23, implying that
+the inequality from the last sentence holds for m ≥ 24, which completes the
+proof.
+   Lemma 3.2. If m ≥ 30 and n are integers either with 2m − 1 ≤ n ≤ 6 31 m,
+m 6= 32, 35, 38, or else with 2m − 1 ≤ n ≤ 6 31 m − 6, then
+                                         n 
+                               n−m         ⌈ ⌉
+                               2m−1   >2 2 .
+                              ⌈ 3 ⌉         m
+                        Number of m-term zero-sum subsequences                        281
+
+   Proof. Let
+                               n+1 
+                       n−m
+     R(n, m) =                 /2 2
+                      ⌈ 2m−1
+                          3  ⌉     m
+                (n − m) · · · (n − m − ⌈ 2m−1                      2m−1
+                                               3 ⌉ + 1)(m) · · · (⌈ 3 ⌉ + 1)
+              =                                                              .
+                                  2( n+1         n+1
+                                      2 ) · · · ( 2 − m + 1)
+       n+1      n 
+Since m 2    ≥ ⌈m2
+                   ⌉
+                     , it suffices to show R(n, m) > 1. We begin by showing
+that R(n, m) ≥ R(n + 2, m).
+   Let
+                   (n − m − 2m+1  3   + 2)(n − m − 2m+1 3   + 1)( n+12 + 1)
+       Q(n, m) =                                       n+1
+                          (n − m + 2)(n − m + 1)( 2 − m + 1)
+                  ≤ R(n, m)/R(n + 2, m).
+To show R(n, m) ≥ R(n + 2, m), we will show that Q(n, m) ≥ 1, i.e. (by
+multiplying out the denominator, expanding and collecting terms) that
+     3(m − 1)n2 − (10m2 − 5m + 13)n + (9m3 − 3m2 + 6m − 12) ≥ 0.
+This will occur if both roots of the above polynomial are imaginary, which
+by the quadratic formula occurs when
+                        11 3 177 2 43              25
+(2)                m4 −    m −       m −       m−      > 0.
+                         2         8        4       8
+However, by Theorem 2.3 the roots of the polynomial m4 − 11           3
+                                                                 2 m − 8 m −
+                                                                            177 2
+43      25
+ 4 m − 8 are bounded from above by 9. Consequently, (2) holds for m ≥ 10,
+and we can assume R(n, m) ≥ R(n + 2, m).
+    First assume that n ≤ 6 13 m with m 6= 32, 35, 38. Since R(n, m) ≥
+R(n + 2, m), it suffices to show R(6 13 m + b, m) > 1 for b = ⌊6 31 m⌋ − 6 31 m
+and b = −1 + (⌊6 13 m⌋ − 6 13 m). Note b ∈ {0, − 31 , − 23 , − 33 , − 34 , − 53 }. Let
+S(m) = R(6 31 m + b, m). Next we show that S(m + 6) ≥ S(m) for m ≥ 43.
+Note that computing S(m) for each m ≤ 48, m 6= 32, 35, 38, and both pos-
+sible values for b, shows that S(m) > 1 for such m. Hence the first part of
+the lemma will be complete once we have shown that S(m + 6) ≥ S(m) for
+m ≥ 43.
+    Let
+P (m) =
+          ( 16 m+b+32)···( 16 m+b+1)(m+6)···(m+1)( 13 m+ b+1 +13)···( 13 m+ b+1 +1)
+            3
+          b+1
+                           3
+                              b+1   2m+1       2m+1
+                                                   6      2           6      2
+                                                                                            .
+     19              19                                  14       1
+    ( 6 m+ 2 +19)···( 6 m+ 2 +1)( 3 +4)···( 3 +1)( 3 m+b+ 3 +28)···( 14      3
+                                                                               m+b+ 1
+                                                                                    3
+                                                                                      +1)
+
+Note that P (m) ≤ S(m+6)/S(m) for m ≥ 43. To see that S(m+6) ≥ S(m),
+it suffices to show P (m) ≥ 1. The proof proceeds as in the previous lemma.
+The case with n ≤ 6 31 m − 6 is handled similarly.
+282                              D. J. Grynkiewicz
+
+      Lemma 3.3. Let n, m, and x be positive integers. If n ≥ 32 m − 1, then
+                                          
+                             x n       n+x
+                           3       ≥           .
+                               m         m
+    Proof. Observe that the following binomial identity holds:
+                                                 
+                            n     n−m+1         n
+(3)                             =                     .
+                           m          m       m−1
+                                           ′       ′
+Since n ≥ 32 m − 1, (3) implies that 2 n+x
+                                        m     ≥ n+x         ′
+                                                 m−1 for x ≥ 0. Hence from
+the Pascal identity, it follows that
+                 n + x′       n + x′     n + x′       n + x′ + 1
+                                                          
+             3           ≥            +           =
+                   m            m        m−1              m
+for x′ ≥ 0. Iterating the above inequality for x′ = 0, . . . , x − 1 yields
+    n     n+x
+3x m ≥ m .
+             
+
+    We now proceed with the proof of Theorem 1.1, which will be divided
+into several steps. For our main method to work, we will need the existence
+of a sufficiently compressed ⌈ n2 ⌉-set partition. Thus we will first handle sev-
+eral special and highly restrictive sequences S which do not admit such a
+compressed set partition.
+    Let Zm (S) denote the number of m-term zero-sum subsequences of S.
+Note that from the Erdős–Ginzburg–Ziv    n 
+                                               Theorem
+                                                   n 
+                                                           it follows trivially that
+Zm (S) ≥ n−2m+2. Thus Zm (S) ≥ ⌈m         2
+                                            ⌉
+                                              + ⌊m 2
+                                                     ⌋
+                                                        for n ≤ 2m. Consequently,
+inductively assume
+                               n   n                        
+                     ′              ⌈2⌉        ⌊2⌋        n−m
+                Zm (S ) ≥ min             +           ,
+                                     m          m        ⌈ 2m−1
+                                                             3 ⌉
+for any sequence S ′ of n′ terms from an abelian group of order m provided
+n′ < n, and also assume that n ≥ 2m + 1. In view of the results of Kisin [30],
+we may assume that m is composite.
+   Step 1 (S essentially monochromatic): Suppose that there is a term x of
+                                                                    n
+S with multiplicity at least ⌈ n2 ⌉. Then there will be at least ⌈m−1
+                                                                    2
+                                                                      ⌉−1
+                                                                           m-term
+monochromatic (and hence also zero-sum) subsequences of S that include x.
+                                                  n−1 ⌉ ⌊ n−1 ⌋ n−m−1
+By induction hypothesis there are at least min ⌈ m     2    + m  2     , ⌈ 2m−1 ⌉
+                                                                             3
+m-term zero-sum subsequences that do not include x. Hence there are in
+total at least
+        n          n−1   n−1   n                                    
+           ⌈2⌉ − 1      ⌈ 2 ⌉          ⌊ 2 ⌋     ⌈2⌉ − 1        n−m−1
+  min               +              +          ,              +
+            m−1           m              m        m−1              ⌈ 2m−1
+                                                                       3 ⌉
+m-term zero-sum subsequences. By the Pascal identity for binomial coeffi-
+                      Number of m-term zero-sum subsequences                      283
+
+cients,
+  n         n−1   n−1   n         n          n 
+   ⌈2⌉ − 1    ⌈ 2 ⌉   ⌊ 2 ⌋    ⌈2⌉ − 1      ⌈2⌉ − 1    ⌊2⌋
+            +       +       =           +            +
+    m−1         m       m       m−1            m        m
+                               n   n 
+                               ⌈2⌉      ⌊2⌋
+                            =       +        .
+                                m        m
+Thus the proof is complete unless
+                              n−1   n−1 
+                    n−m−1         ⌈ 2 ⌉   ⌊ 2 ⌋
+(4)                   2m−1      <       +       ,
+                     ⌈ 3 ⌉          m       m
+and                 n                          
+                    ⌈2⌉ − 1     n−m−1         n−m
+                             +            <           .
+                     m−1         ⌈ 2m−1
+                                     3 ⌉     ⌈ 2m−1
+                                                 3 ⌉
+From the above inequality and the Pascal identity, it follows that
+                      n                       
+                       ⌈2⌉ − 1        n−m−1
+(5)                              <                 .
+                        m−1          ⌈ 2m−1
+                                         3 ⌉−1
+
+From (4) and Lemma 3.2, it follows that n − 1 > 6 31 m − 6. Applying the
+binomial identity given in (3) to (5) yields
+                                   ⌈ 2m−1
+                n
+                                       3 ⌉
+                                                        
+                 ⌈2⌉ − 1                         n−m−1
+(6)                        <                                ,
+                  m−1         n − m − ⌈ 2m−1
+                                           3 ⌉
+                                                  ⌈ 2m−1
+                                                      3 ⌉
+and
+                         ⌈ n2 ⌉ − m          ⌈ 2m−1
+            n
+                                                 3 ⌉
+                                                                      
+             ⌈2⌉ − 1                                         n−m−1
+(7)                    <             ·                                     .
+               m               m       n − m − ⌈ 2m−1 3 ⌉
+                                                               ⌈ 2m−1
+                                                                   3 ⌉
+                                                 n          n
+If n is odd, then (4) implies n−m−1         < ⌈ 2m ⌉−1
+                                                        + ⌈ 2m⌉−1
+                                          
+                                 ⌈ 2m−1 ⌉
+                                                                   , and if n is even,
+                                     3
+then (4) and the Pascal identity imply
+            n   n              n        n      n   
+  n−m−1          ⌈2⌉      ⌈2⌉−1        ⌈2⌉−1    ⌈2⌉−1    ⌈2⌉−1
+             <        +             =         +        +        .
+   ⌈ 2m−1
+       3 ⌉        m          m           m      m−1         m
+Hence from (6) and (7), it follows that
+          
+  n−m−1
+   ⌈ 2m−1
+       3 ⌉
+            ⌈ n2 ⌉ − m       ⌈ 2m−1
+                                 3 ⌉           ⌈ 2m−1
+                                                   3 ⌉
+                                                                    
+                                                              n−m−1
+      < 2·             ·                 +                               ,
+                  m      n − m − ⌈ 2m−1
+                                     3 ⌉   n − m − ⌈ 2m−1
+                                                       3 ⌉
+                                                               ⌈ 2m−1
+                                                                   3 ⌉
+which in turn implies that
+                           2( n+1
+                               2 − m) ·
+                                         2m+1
+                                           3  + m · 2m+1
+                                                      3
+                      1<                                 .
+                                 m · (n − m − 2m+1
+                                                3  )
+284                                D. J. Grynkiewicz
+
+From the above inequality, it follows that (m−1)n < 3m2 +2m+1, implying
+               6
+n < 3m + 5 + m−1  , which contradicts n − 1 > 6 31 m − 6 and m ≥ 30. So we
+may assume that the multiplicity of every term x of S is at most ⌈ n2 ⌉ − 1.
+    Step 2 (S essentially dichromatic): Suppose that every term of S, with
+at most max{m − m           2m−4                                2m−1
+                       p , ⌊ 3 ⌋} exceptions if n ≥ 3m + ⌈ 3 ⌉ − 1, and with
+at most m − m                                    2m−1
+                 p exceptions if n ≤ 3m + ⌈ 3 ⌉ − 2, is equal to one of two
+elements x, y ∈ G, where p is the smallest prime divisor of m. Let nx and
+ny denote the respective multiplicities of x and y in S. Rearrange the terms
+of S so that all the terms equal to x precede all the terms equal to y, which
+in turn precede all terms equal to neither x nor y, and let x1 , . . . , xn be the
+resulting sequence. For i ∈ {1, . . . , ⌊ n2 ⌋}, let Ai = {xi , xi+⌈ n2 ⌉ }, and if n is
+odd, then let A⌈ n2 ⌉ = {x⌈ n2 ⌉ }. Then in view of Step 1, A = A1 , . . . , A⌈ n2 ⌉ is
+an ⌈ n2 ⌉-set partition of S such that either x ∈ Ai or y ∈ Ai for every set Ai .
+                   n 
+    There are ⌊m   2
+                     ⌋
+                         ways to choose m sets Ai from A all with |Ai | = 2, and
+                                   n
+(in case n odd) there are ⌈m−1     2
+                                     ⌉−1
+                                           ways to choose m sets Ai from A that
+include the set A⌈ 2 ⌉ of cardinality one. Consequently, if we can show that
+                       n
+
+any such selection Ai1 , . . . , Aim has a set Aik such that 0 ∈ z + m
+                                                                          P
+                                                                             j=1, j6=k Aij
+for every z ∈ Aik (in which case we will say that the selection Ai1 , . . . , Aim
+                                                                 n         n         n 
+is good ), then there will be (in case n even) at least 2 ⌊m     2
+                                                                   ⌋
+                                                                     = ⌊m    2
+                                                                               ⌋
+                                                                                  + ⌈m 2
+                                                                                         ⌉
+
+m-term zero-sum subsequences, and (in case n odd), in view of the Pascal
+identity, at least
+   n   n               n   n                n           n   n 
+   ⌊ ⌋        ⌈ ⌉−1           ⌊2⌋         ⌈ ⌉−1        ⌈ ⌉−1            ⌊2⌋          ⌈ ⌉
+2 2 + 2                    =          + 2          + 2             =             + 2
+    m          m−1              m           m           m−1               m           m
+m-term zero-sum subsequences, whence the proof is complete. We proceed
+to show this is the case, except for a highly restrictive sequence that we
+handle separately afterwards.
+    If the selection Ai1 , . . . , Aim contains the set A⌈ n2 ⌉ and n is odd, then let
+Aik = A⌈ n2 ⌉ , and otherwise let Aik be a set Aij = {x, y} (such a set exists,
+since at most max{m − m             2m−4
+                              p , ⌊ 3 ⌋} < m terms of S are equal to neither x
+nor y). If
+                     Xm              Xm
+                          Aij ≥          |Aj | − (m − 1) + 1 = m,
+                      j=1          j=1
+                      j6=k         j6=k
+
+then for each z ∈ Aik we can select a term from each of the Aij , j 6= k, so that
+the sum of the m − 1 terms so selected is the additive inverse of z, whence
+the selectionPAi1 , . . . , Aim is good. Otherwise, from Kneser’s Theorem it
+follows that m  j=1, j6=k Aij is maximally Ha -periodic, with Ha of index a and
+1 < a < m.
+                      Number of m-term zero-sum subsequences                    285
+
+    Suppose that φa (x) = φa (y), i.e. x and y are from the same Ha -coset.
+Hence, since every set Aij contains Pm either x or y, it contains a representative
+from the coset x + Ha . Since j=1, j6=k Aij is Ha -periodic, it follows that
+0 ∈ Ha = mx + Ha ⊂ z + m
+                              P
+                                 j=1, j6=k Aij for z ∈ Aik ⊆ {x, y}, and the proof
+is again complete. So we may assume that φa (x) 6= φa (y).
+    If there are at most m − m     p terms of S equal to neither x nor y, then
+there must be at least a − 1 sets Aij , j 6= k, with Aij = {x, y}, and hence,
+since φa (x) 6= φa (y), at least a − 1 sets Aij with |φa (Aij )| = 2. On the other
+hand, if there are at most ⌊ 2m−4 3 ⌋ terms of S equal to neither x nor y, then
+either there likewise must be at least a − 1 sets Aij with |φa (Aij )| = 2, or
+else |Ha | = 2, and there are at least m   2 + 2 sets Aij with Aij 6= {x, y} and Aij
+contained in an Ha -coset. If the former holds, then Kneser’s Theorem yields
+               Xm               X m                            
+                    Aj ≥ |Ha |          |φa (Aj )| − (m − 1) + 1 ≥ m,
+              j=1                j=1
+              j6=k               j6=k
+
+and the proof is again complete. Therefore we may instead assume the lat-
+ter. Consequently, we can assume n ≥ 3m + ⌈ 2m−1  3 ⌉ − 1, that m is even, and
+                               m        m
+that there are at least m − p + 1 = 2 + 1 terms t of S with t ∈   / {x, y}.
+    Suppose that x − y generates a proper subgroup Hb of index b. Since
+there are at most ⌊ 2m−43 ⌋ terms of S equal to neither x nor y, and at least
+m
+ 2 + 1 sets Ai with Ai 6= {x, y} and Ai an Ha -coset, we can re-index the
+sets Ai so that Ai = {x, y} for i ≤ ⌊ n2 ⌋ − ⌊ 2m−4
+                                                  3 ⌋, and Ai is an Ha -coset
+      n      2m−4                 n     2m−4    m
+for ⌊ 2 ⌋ − ⌊ 3 ⌋ + 1 ≤ i ≤ ⌊ 2 ⌋ − ⌊ 3 ⌋ + 2 + 1. Let Ai′1 , . . . , Ai′m be a
+selection of m sets Ai all with
+                                                       
+                 n       2m − 4       m         n      m−8
+            i≤       −              +    +1=        −           + 1.
+                  2          3        2         2         6
+                                     Pm/b−1
+    If Ai′j = {x, y} for all j, then j=1 Ai′j is an Hb -coset, whence there
+                       m         m
+will be at least 2m− b +1 ≥ 2 2 ways to select a term from each Ai′j and
+get an m-term zero-sum subsequence. Next suppose that at least one of
+the Ai′j , say Ai′1 , is an Ha -coset. Since at most m
+                                                     2 + 1 of the Aij can be
+                                                                      ′
+                                 m
+Ha -cosets, there are at least 2 − 1 indices j with Ai′j = {x, y}. Re-index so
+                                              Pm/2
+that Ai′j = {x, y} for 2 ≤ i ≤ m    2 . Hence   j=1 Ai′j is an (Ha + Hb )-coset.
+Thus, since every Ai′j contains either x or y, it is contained in the same
+                                                                        m
+(Ha + Hb )-coset x + Ha + Hb , whence there will also be at least 2 2 ways to
+select a term from each Ai′j and get an m-term zero-sum subsequence. Thus
+there are at least
+                                n
+                                ⌊ 2 ⌋ − ⌊ m−8
+                                                 
+                             m
+                                           6  ⌋+1
+(8)                       2  2
+                                         m
+286                               D. J. Grynkiewicz
+
+m-term zero-sum subsequences. Since n ≥ 3m + ⌈ 2m−13 ⌉ − 1, Lemma 3.3
+shows that
+               n     m−8        n
+                                    ⌊ 2 ⌋ − ⌊ m−8
+                                                        
+             x ⌊2⌋ − ⌊ 6 ⌋ + 1                 6  ⌋+1+x
+           3                    ≥                         .
+                      m                        m
+Hence from (8) it follows that there are at least
+              n
+              ⌊ 2 ⌋ − ⌊ m−8
+                                                n       m−8     
+           m
+                         6  ⌋+1          ⌊ m−2 ⌋ ⌊2⌋ − ⌊ 6 ⌋ + 1
+         2 2                      ≥2·4       4
+                       m                                 m
+                                                 n
+                                                  ⌊ ⌋ − ⌊ m−8
+                                                                  
+                                                           6 ⌋+1
+                                           m−2
+                                  ≥ 2 · 3⌊ 4 ⌋ 2
+                                                         m
+                                      n         m−8
+                                        ⌊ 2 ⌋ − ⌊ 6 ⌋ + ⌊ m−2
+                                                                   
+                                                            4  ⌋+1
+                                  ≥2
+                                                     m
+                                      n   n   n 
+                                        ⌈ ⌉        ⌈2⌉        ⌊2⌋
+                                  ≥2 2         ≥         +
+                                         m          m          m
+m-term zero-sum subsequences, whence the proof is complete. So we may
+assume that x − y generates G, implying G is cyclic of order m.
+    Suppose nx ≤ ⌊ n2 ⌋ − m   2 . Re-index the terms xi in the sequence x1 , . . . , xn
+with xi ∈/ {x, y} (leaving unchanged the terms xi ∈ {x, y}) so that all terms
+xi with xi ∈ / {x, y, y + m  2 } occur in a consecutive block at the very end of
+the sequence. Then, since in a cyclic group there is a unique subgroup of
+order two, it follows that either every set Ai will contain a representative
+from the common Ha -coset y + Ha , or else every set Ai contained in an
+Ha′ -coset with |Ha′ | = 2 and i ≤ ⌊ n2 ⌋ must contain x. In the latter case,
+since nx ≤ ⌊ n2 ⌋ − m                            2m−4     m         m
+                       2 , there are at most ⌊ 3 ⌋ − 2 + 1 < 2 + 2 sets Ai
+contained in an Ha′ -coset with |Ha′ | = 2, which reduces to a case handled
+in the fifth paragraph of Step 2. Therefore we may assume the former case
+       P previous work, we know that any selection Ai1 , . . . , Aim is good
+holds. From
+unless m   j=1, j6=k Aij is maximally Ha′ -periodic with |Ha′ | = 2 and
+                        m
+                        X              m
+                                       X
+                               Aij <          |Aij | − (m − 1) + 1.
+                        j=1            j=1
+                        j6=k           j6=k
+
+However, since there is a unique subgroup Ha of order two, it follows that
+Ha′ = Ha . Hence, sincePevery Ai contains a representative from thePcommon
+Ha -coset y + Ha , and m j=1 Aij is Ha -periodic, it follows that 0 ∈
+                                                                           m
+                                                                           j=1 Aij .
+By the last displayed inequality, and since |Aij | = 2 for j 6= ik , Proposi-
+tion 2.2 shows that there exists Ail with l 6= k such that | m
+                                                                P
+ Pm                             Pm                                j=1, j6=l Aij | =
+| j=1 Aij |, whence every z ∈ j=1 Aij can be represented in at least two
+different ways, including 0 ∈ m
+                              P
+                                 j=1 Aij . Thus every selection Ai1 , . . . , Aim is
+good, completing the proof. So we may assume that nx ≥ ⌊ n2 ⌋ − m      2 + 1.
+                      Number of m-term zero-sum subsequences                     287
+
+    Re-index the terms xi in the sequence x1 , . . . , xn with xi ∈/ {x, y} (leaving
+unchanged the terms xi ∈ {x, y}) so that all terms xi with xi = x + m        2 occur
+                                                                          n
+in a consecutive block at the very end of the sequence. Since nx ≥ ⌊ 2 ⌋− m     2 +1,
+and there are at least m − m    p  +   1 =  m
+                                            2 + 1 terms t with t ∈
+                                                                 / {x, y}, it follows
+that Anx = {x, t} with t ∈    / {x, y}. If n is odd, then modify the definition
+of the set partition A1 , . . . , A⌈ n2 ⌉ by swapping the term equal to x in Anx
+with the term equal to y in A⌈ n2 ⌉ . The proof now proceeds as in the above
+paragraph with the roles of x and y interchanged, completing Step 2. So we
+may assume that given any two elements x, y ∈ G, then there are at least
+m− m                                                                     2m−1
+      p + 1 terms of S equal to neither x nor y, and if n ≥ 3m + ⌈ 3 ⌉ − 1,
+then there are at least ⌊ 2m−13 ⌋ terms of S equal to neither x nor y.
+    Step 3 (|S| ≤ 3m + ⌈ 2m−1  3 ⌉ − 2): Suppose that n ≤ 3m + ⌈ 3 ⌉ − 2.
+                                                                          2m−1
+
+In view of Steps 1 and 2 and Proposition 2.1 applied with n1 = n − m + 1
+and n2 = ⌊ m2 ⌋, there exists an (n − m + 1)-set partition P = P1 , . . . , Pn−m+1
+of S with |Pi | = 1 for i > ⌊ m             ′                               ′
+                                2 ⌋. Let P = P1 , . . . , P⌊ 2 ⌋ , and let S be the
+                                                            m
+
+subsequence partitioned by the ⌊ m                        ′
+                                     2 ⌋-set partition P . Apply Theorem 2.1 to
+                    ′            m                    ′
+the subsequence S of S with ⌊ 2 ⌋-set partition P , and let A = A1 , . . . , A⌊ m2 ⌋
+be the resulting set partition, and Ha the corresponding subgroup of index a.
+    Suppose that
+                      ⌊m/2⌋             ⌊m/2⌋          
+                       X                 X              m
+                            Ai ≥ m =          |Ai | −       + 1.
+                                                        2
+                      i=1                i=1
+Then applying Theorem 2.2 to A and S ′ yields a subsequence S ′′ of S ′ of
+                                                                           P⌊m/2⌋
+length m with an ⌊ m                       ′     ′       ′
+                     2 ⌋-set partition A = A1 , . . . , A⌊ m ⌋ satisfying | i=1 A′i |
+                                                           2
+≥ m. Then given any ⌈ m                                              ′′
+                            2 ⌉-term subsequence T of S \ S , we can find a
+              m                   ′          ′
+selection of ⌊ 2 ⌋ terms from A1 , . . . , A⌊ m ⌋ that sum to the additive inverse
+                                               2
+of the sum of the terms from T . Consequently, there will be at least n−m
+                                                                                   
+                                                                               ⌈m⌉
+                                                                                 2
+m-term zero-sum subsequences. Thus, since n ≤ 3m + ⌈ 2m−1
+                                                       3 ⌉ − 2, the proof
+is complete by Lemma 3.1. So we may assume that
+                  ⌊m/2⌋          ⌊m/2⌋          
+                   X              X             m
+                        Ai < m =       |Ai | −     + 1.
+                                                2
+                      i=1                i=1
+    From Theorem 2.1 it follows that N (A′ , Ha ) = 1 and E(A′ , Ha ) ≤ a − 2,
+with Ha a nontrivial, proper subgroup. Hence all but at most a − 2 terms
+of S are from the same Ha -coset, say α + Ha . Let Hb be a minimal car-
+dinality nontrivial, proper subgroup of index b such that all but at most
+b − 2 terms of S are all from the same Hb -coset, say β + Hb , and there
+exists an (n − m + 1)-set partition B = B1 , . . . , Bn−m+1 of the terms of S
+from β + Ha with |Bi | = 1 for i > ⌊ m
+                                     2 ⌋ (such a subgroup exists in view of
+288                                  D. J. Grynkiewicz
+
+the previous two sentences, and taking Bi = A′i ∩ (α + Ha ) for i ≤ ⌊ m           2 ⌋,
+                                                         m
+and appending on an additional n − m + 1 − ⌊ 2 ⌋ singleton sets using the
+terms from S \ S ′′ ). By translation we may assume β = 0. Let Sb be the
+subsequence of S consisting of terms from Hb , and let Sb′ be the subse-
+quence of Sb partitioned by the set partition B ′ = B1 , . . . , B⌊ m2 ⌋ . Apply
+Theorem 2.1 to the subsequence Sb′ of Sb with ⌊ m                               ′
+                                                            2 ⌋-set partition B and
+with G = Hb , and let B ′′ = B1′ , . . . , B⌊′ m ⌋ be the resulting set partition and
+                                               2
+Hkb the corresponding subgroup with [Hb : Hkb ] = k. If N (B ′′ , Hkb ) = 1
+and E(B ′′ , Hkb ) ≤ k − 2, with Hkb a nontrivial, proper subgroup, then all
+but at most k − 2 + b − 2 ≤ kb − 2 terms of S will be from the same
+Hkb -coset, contradicting the minimality of Hb (the needed (n − m + 1)-
+set partition can be induced from B ′′ as was done for showing the ex-
+istence of B). Therefore we may assume otherwise, whence Theorem 2.1
+yields
+                  ⌊m/2⌋                                    
+                   X
+                         ′            m         ′     m            m
+                        Bi ≥ min           , |Sb | −      +1 = .
+                                       b               2            b
+                     i=1
+Thus applying Proposition 2.2 to B ′′ shows that there exists an ⌊ m               2 ⌋-set par-
+tition B ′′′ = B1′′ , . . . , B⌊′′m ⌋ of a subsequence Sb′′ of Sb′ with |Sb′′ | ≤ ⌊ m     m
+                                                                                    2 ⌋+ b −1
+              P⌊m/2⌋ ′′ 2 m
+such that | i=1 Bi | = b . Consequently, as in the previous paragraph,
+there are at least
+                       n − (⌊ m          m
+                                                                      
+                                  2 ⌋ + b − 1) − (b − 2) ≥ n − m
+                                         ⌈m2⌉                       ⌈m2⌉
+m-term zero-sum subsequences. Thus, since n ≤ 3m + ⌈ 2m−1
+                                                       3 ⌉ − 2, the proof
+is complete by Lemma 3.1. So we may assume that n ≥ 3m + ⌈ 2m−13 ⌉ − 1.
+     Step 4 (S essentially trichromatic): Suppose that every term of S, with
+at most ⌊ m−4 3 ⌋ exceptions, is equal to one of three elements x, y, z ∈ G. Let
+nx , ny , nz be the respective multiplicities of x, y and z in S, and assume
+nx ≥ ny ≥ nz . Let l ≤ ⌊ m−4    3 ⌋ be the number of terms t of S with t ∈     /
+{x, y, z}. In view of Steps 2 and 3, for w ∈ {x, y, z} there are at least
+⌊ 2m−1        m−4      m−4
+    3 ⌋ − ⌊ 3 ⌋ ≥ ⌊ 3 ⌋ + 2 ≥ l + 2 terms of S equal to w.
+      Claim 1. If nx ≤ ⌊ n2 ⌋ − l, then for each w ∈ {x, y, z} there exists an
+⌈ n2 ⌉-set partition A(w) = A1 , . . . , A⌈ n2 ⌉ of S into cardinality at most two sets
+such that if either t ∈ Aj with t ∈      / {x, y, z}, or if |Aj | = 1, then w ∈ Aj .
+   Since nw ≥ l + 2, for i with ⌊ n2 ⌋ − l + 1 ≤ i ≤ ⌊ n2 ⌋, let Ai = {w, ti }, where
+the ti are the terms with ti ∈ / {x, y, z}, and if n is odd, then let A⌈ n2 ⌉ = {w}.
+       ′
+Let S be the subsequence of S obtained by deleting all terms contained in
+the Ai with i ≥ ⌊ n2 ⌋ − l + 1. To show the claim it suffices to show S ′ has
+an (⌊ n2 ⌋ − l)-set partition with all sets of cardinality at most two. However,
+                       Number of m-term zero-sum subsequences                         289
+
+in view of Proposition 2.1, this will be the case provided no term of S ′ has
+multiplicity at least ⌈ n2 ⌉ − l + 1, which we have by assumption of Claim 1.
+Thus the claim is established.
+      Claim 2. If nx ≥ ⌊ n2 ⌋ − l + 1, then for each w ∈ {y, z} there exists an
+⌈ n2 ⌉-set partition A(w) = A1 , . . . , An of S into cardinality at most two sets
+such that: either x ∈ Aj or w ∈ Aj for all j; if |Aj | = 1, then Aj = {w};
+and Aj 6= {y, z} for all j.
+    Let w′ be the remaining element in {y, z}\{w}. Rearrange the sequence S
+so that all the terms equal to x precede all the terms equal w, which precede
+all the terms equal to w′ , which precede all the terms t with t ∈          / {x, y, z},
+and let x1 , . . . , xn be the resulting sequence. Let Ai = {xi , xi+⌈ n2 ⌉ } for i ≤ n2 ,
+and if n is odd, then let A⌈ n2 ⌉ = {x⌈ n2 ⌉ }. In view of Step 1, nx ≤ ⌈ n2 ⌉ − 1.
+Hence, since nw ≥ ⌊ m−4                                   n
+                             3 ⌋ + 2 ≥ l + 2 and nx ≥ ⌊ 2 ⌋ − l + 1, the partition
+A(w) = A1 , . . . , A⌈ n2 ⌉ satisfies the claim.
+     Let A(w) = A1 , . . . , A⌈ n2 ⌉ be the ⌈ n2 ⌉-set partition constructed using w
+from Claim 1 (if nx ≤ ⌊ n2 ⌋ − l) or from Claim 2 (if nx ≥ ⌊ n2 ⌋ − l + 1),
+and re-index A(w) so that if n is odd, then |A⌈ n2 ⌉ | = 1, and Aj               {x, y, z}
+precisely for j satisfying ⌊ n2 ⌋ − l + 1 ≤ j ≤ ⌊ n2 ⌋.
+     If nx ≤ ⌊ n2 ⌋ − l, then suppose that for some w ∈ {x, y, z} the difference
+of the elements in {x, y, z} \ {w} generates a subgroup Hb of index b ≤ 2,
+and if nx ≥ ⌊ n2 ⌋ − l + 1, then suppose that for some w ∈ {y, z} the difference
+of the elements in {x, y, z} \ {w} generates a subgroup Hb of index b ≤ 2.
+Let Ai1 , . . . , Aim be a selection of m sets Ai from A(w) .
+     First suppose that b = 1. As seen in Step 2, it is sufficient to show that
+anyP   such selection Ai1 , . . . , Aim is good. We proceed to show this claim.
+If | m  j=1 Aij | ≥ m, then the selection        is good in view of Proposition 2.2.
+Therefore we may assume that | m
+                                         P
+                  Pm
+                                                 A
+                                           j=1 ij | < m. Then Kneser’s Theorem
+implies that j=1 Aij is maximally Ha -periodic for some proper, nontrivial
+subgroup Ha of index a, and |Aij | > |φa (Aij )| for at least m − 1 − (a − 2)
+sets Aij . Since there are at most ⌊ m−1    3 ⌋ < m − a + 1 sets Ai with either
+|Ai | = 1 or Ai        {x, y, z}, it follows that |Aij ′ | < |φa (Aij ′ )| for some Aij ′
+with Aij ′ ⊆ {x, y, z} and |Aij ′ | = 2. Hence w ∈ Aij ′ , since the difference of
+the pair from {x, y, z} not containing w generates G. Thus the pigeonhole
+principle and the definition of A(w) show that every set Aij will contain a
+representative from the common Ha -coset w + Ha (the representative being
+either w or the other element from Aij ′ , which under the case of Claim 2
+will be x). If n is odd, then let Aik = A⌈ n2 ⌉ . Otherwise, since there are at
+least m − a + 1 ≥ m      a sets Aij with |Aij | > |φa (Aij )| = 1, Proposition 2.2
+                      m
+applied to these a sets yields a set Aik with |Aik | > |φa (Aik )| such that
+290                                D. J. Grynkiewicz
+
+Pm
+                    = m
+                       P
+  j=1, j6=k Aij          j=1 Aij . Since Aik ⊂ w + Ha , since every Aij P     contains
+a representative from the common Ha -coset w + Ha , and since m                  j=1 Aij
+is Ha -periodic, it follows that 0 ∈ Ha = mw + Ha ⊆ t + m
+                                                                   P
+                                                                                 A
+                                                                      j=1, j6=k ij for
+every t ∈ Aik , whence the selection is good. So we may assume that b = 2,
+and consequently from the definition of A(w) the difference of elements from
+every set Ai with Ai ⊆ {x, y, z} generates a proper subgroup.
+     If | m
+          P
+           j=1 Aij | ≥ m, then as seen in the previous paragraph, the selec-
+tion Ai1 , . . .P, Aim is good. If this is not the case, then Kneser’s Theorem
+shows that m       j=1 Aij is maximally Ha -periodic with Ha a nontrivial, proper
+subgroup of index a. Also, if there is a set Aij ⊆ {x, y, z} with w ∈ Aij
+and |Aij | > |φa (Aij )|, then, as in the previous paragraph, every set Aij will
+contain a representative from the common Ha -coset w + Ha implying that
+the selection Ai1 , . . . , Aim is again good. Hence if a selection is not good,
+then all sets Aij with |φa (Aij )| = 1 must satisfy one of the following con-
+ditions:P(a) |Aij | = 1, or (b) Aij         {x, y, z}, or (c) Aij = {x, y, z} \ {w}.
+Since | m   j=1 ijA  | <  m,  Kneser’s  Theorem    shows that there can be at most
+a − 2 sets Aij with |φa (Aij )| = 2, and consequently, in view of the previ-
+ous sentence, at most a − 2 sets Aij with Aij ⊆ {x, y, z}, |Aij | = 2, and
+w ∈ Aij .
+     Since there are at most ⌊ m−1  3 ⌋ < m−a+2 sets Ai satisfying (a) or (b), and
+there are at least m − a + 2 sets Aij with |φa (Aij )| = 1, at least one Aij must
+be contained in an Ha -coset and satisfy (c). Hence |φa ({x, y, z} \ {w})| = 1,
+implying that the subgroup Hb generated by the difference of the elements
+in {x, y, z} \ {w} is a subgroup of Ha . Hence Hb = Ha , since Ha is a proper
+subgroup, and Hb has index b = 2. Consequently, as noted in the previous
+paragraph, there can be at most a − 2 = b − 2 = 0 sets Aij with Aij ⊆
+{x, y, z}, |Aij | = 2, and w ∈ Aij .
+     Since nw ≥ l + 2, there exists a subset Ak ⊆ {x, y, z} with w ∈ Ak
+and |Ak | = 2. In view of the previous paragraph, any selection Ai1 , . . . , Aim
+                                                                               n
+that includes Ak will be a good selection. Thus there are at least 2 ⌊m−1      2
+                                                                                 ⌋−1
+                                                                                      =
+ ⌊n  ⌋−1  ⌈ n ⌉−1                           ⌊ n
+                                                  ⌋−1 ⌊ n ⌋−1    ⌊ n
+                                                                       ⌋−1 ⌈ n ⌉−1
+   2
+  m−1
+          + m−1 2      in case n even, and 2 m−12     + m−2
+                                                          2      = m−1
+                                                                     2       + m−1 2
+
+in case n odd, m-term zero-sum subsequences that use one of the two terms
+contained in Ak . Hence by induction hypothesis there are at least
+          n           n          
+          ⌊2⌋ − 1           ⌈2⌉ − 1
+(9)                    +
+           m−1               m−1
+                                    n          n                          
+                                       ⌊2⌋ − 1        ⌈2⌉ − 1     n−m−2
+                            + min                 +            ,
+                                         m               m         ⌈ 2m−1
+                                                                        3 ⌉
+m-term zero-sum subsequences. In view of the Pascal identity, it follows that
+ ⌊n ⌋−1    n          n          n         n     n 
+         + ⌈m−1
+              ⌉−1
+                   + ⌊ 2m⌋−1
+                              + ⌈ 2m⌉−1
+                                         = ⌊m ⌋
+                                                + ⌈m ⌉
+                                      
+  2
+  m−1
+            2                               2      2   . Hence in view of (9),
+                        Number of m-term zero-sum subsequences                      291
+
+the proof will be complete unless
+                             n           n      
+                   n−m−2          ⌈2⌉ − 1    ⌊2⌋ − 1
+(10)                           <           +           ,
+                    ⌈ 2m−1
+                        3 ⌉         m           m
+and         n        n                          
+            ⌈2⌉ − 1    ⌊2⌋ − 1     n−m−2         n−m
+                     +          +            <           .
+             m−1        m−1         ⌈ 2m−1
+                                        3 ⌉     ⌈ 2m−1
+                                                    3 ⌉
+From the above inequality and the Pascal identity, it follows that
+         n         n                                        
+          ⌈2⌉ − 1       ⌊2⌋ − 1       n−m−2               n−m−1
+(11)               +             <                  +                .
+           m−1           m−1         ⌈ 2m−1
+                                         3 ⌉−1           ⌈ 2m−1
+                                                             3 ⌉−1
+
+                                                           the nbinomial
+From (10) it follows that n ≥ 2m + 2. Hence applying to (11)
+                                                        n
+                                                            = n−m n−1
+                                                                        
+identity given in (3), as well as the binomial identity m            m ,
+implies
+    n         n         
+     ⌈2⌉ − 1       ⌊2⌋ − 1
+               +
+      m−1           m−1
+                    ⌈ 2m−1
+                        3 ⌉
+                                                                 
+                                          n−m−1           n−m−2
+           <                        1+                                .
+             n − m − ⌈ 2m−1
+                          3 ⌉−1        n − m − ⌈ 2m−1
+                                                   3 ⌉
+                                                           ⌈ 2m−1
+                                                               3 ⌉
+
+Applying (3) to the above inequality yields
+ n        n         
+ ⌈2⌉ − 1       ⌊2⌋ − 1
+           +
+    m              m
+      n
+     ⌈2⌉ − m           ⌈ 2m−1
+                           3 ⌉
+                                                                    
+                                              n−m−1           n−m−2
+  <            ·                      1+                                 .
+        m        n − m − ⌈ 2m−1
+                             3 ⌉−1         n − m − ⌈ 2m−1
+                                                       3 ⌉
+                                                               ⌈ 2m−1
+                                                                   3 ⌉
+
+Hence from (10) it follows that
+                n+1                2m+1
+                 2 −m
+                                                              
+                                     3              n−m−1
+           1<              ·                   1+               ,
+                    m        n − m − 2m+1
+                                       3  −1      n − m − 2m+1
+                                                            3
+
+implying that 3(m − 1)n2 − (10m2 + 7m + 1)n + 9m3 + 17m2 + 8m + 2 < 0.
+Hence the quadratic formula yields 8m4 −44m3 −177m2 −86m−25 ≤ 0, else
+the square root of the discriminant will be imaginary. However, Theorem 2.3
+shows the roots of 8m4 − 44m3 − 177m2 − 86m − 25 are bounded from above
+by 9, whence 8m4 − 44m3 − 177m2 − 86m − 25 > 0 for m > 10, a contra-
+diction. So we may assume that if nx ≤ ⌊ n2 ⌋ − l, then none of x − z, x − y,
+and y − z generates a subgroup Hb of index b ≤ 2, and if nx ≥ ⌊ n2 ⌋ − l + 1,
+then none of x − y and x − z generates a subgroup Hb of index b ≤ 2
+in G.
+    For t ∈ {x, y, z} if nx ≤ ⌊ n2 ⌋ − l, and for t ∈ {y, z} if nx ≥ ⌊ n2 ⌋ − l + 1, let
+Hbt be the subgroup of index bt generated by the difference of the elements in
+292                                          D. J. Grynkiewicz
+
+{x, y, z} \ {t}. From the conclusion of the previous paragraph, it follows that
+bt > 2 for each t. Thus given any selection Ai1 , . . . , Aim with all Aij satisfying
+Aij ⊆ {x, y, z} and |Aij | = 2, it follows from the pigeonhole principle that
+there are at least m bt − 1 sets Aij equal to {x, y, z} \ {t} for some t. Note that
+Pm/bt −1
+          {x, y, z} \ {t} is an Hbt -coset, implying that m
+                                                             P
+   i=1                                                         j=1 Aij is maximally
+Ha -periodic with Hbt ≤ Ha . Thus Proposition 2.2 applied with elements
+considered modulo Hbt shows that there exists a re-indexing such that
+                                      m/bt −1+bt −1                m
+                                            X                      X
+(12)                                                   Aij =             Aij ;
+                                            j=1                    j=1
+
+furthermore, Kneser’s Theorem yields |φa (Aij )| = 1 for i > m
+                                                             bt + bt − 2, since
+otherwise
+                 t +bt −2
+             m/bX                               m/bX
+                                                      t +bt −2                       m
+                                                                                       X               
+       φa                   Aij           < φa                   Aij + φa                        Aij       ,
+                   j=1                                j=1                        j=m/bt +bt −1
+
+implying
+       m/bt +bt −2                         t +bt −2
+                                       m/bX                        m                     m
+             X                                                       X                     X
+                         Aij <                        Aij +                      Aij =           Aij ,
+             j=1                            j=1                  j=m/bt +bt −1             j=1
+
+which contradicts (12). Since Aij ⊆ {x, y, z} with |Aij | = 2 for all j, and
+|φbt ({x, y, z} \ {t})| = 1 implies |φa ({x, y, z} \ {t})| = 1 (since Hbt ≤ Ha ),
+the pigeonhole principle shows that every Aij contains a representative from
+{x, y, z} \ {t} + Ha , whence from (12) and the previous sentence there are
+                m− m −b +2
+at least 2 bt t > 0 ways to select a term from each Aij and have the
+resulting m-term sequence be zero-sum. Thus we conclude that there are at
+       m− m −b +2 ⌊ n ⌋−⌊ m−4 ⌋
+least 2 bt t        2
+                        m
+                           3       m-term zero-sum subsequences. If bt 6= m
+                                                                          2 for
+every such selection Ai1 , . . . , Aim , then in view of bt > 2,
+                m− bm −bt +2          2                m                 m−1
+            2       t          ≥ 2 3 m−1 = 2 · 4 3 −1 ≥ 2 · 3⌊ 3 ⌋                 for m ≥ 30,
+whence the proof is complete in view of Lemma 3.3 and Step 3. So we may
+assume bt = m
+            2 for some such selection Ai1 , . . . , Aim ; and it suffices to further
+show that each selection Ai1 , . . . , Aim , with all Aij satisfying Aij ⊆ {x, y, z}
+                                                                                 m−1
+and |Aij | = 2, and with bt = m2 , also has at least 2 · 3
+                                                           ⌊ 3 ⌋
+                                                                 ways to select an
+m-term zero-sum subsequence. We proceed to show this, which will complete
+the proof of Step 4.
+   Since bt = m  2 , by translation we may assume {x, y, z} \ {t} = {0, s},
+where s has order 2. Since t − 0 = t does not generate a subgroup with index
+b ≤ 2, implying the order of t is strictly less than m                          m
+                                                      2 , and since |G/Hbt | = 2 ,
+                         Number of m-term zero-sum subsequences                               293
+
+it follows that φbt (t) generates a proper subgroup Hb′ of G/Hbt with index
+b′ ≥ 2 in G/Hbt .
+    Suppose there are at least 2⌊ m−1   3 ⌋ + 2 sets Aij with |φbt (Aij )| = 1.
+Then, since |Hbt | = 2 implies that |Aij1 + Aij2 | = |Aij1 | when |φbt (Aij1 )| =
+|φbt (Aij2 )| = 1, it follows that we can re-index so that
+                          m−(2⌊(m−1)/3⌋+1)                  m
+                                   X                        X
+                                                  Aij =           Aij ,
+                                   j=1                      j=1
+
+with |φbt (Aij )| = 1 for j > m − (2⌊ m−1
+                                       3 ⌋ + 1). Since there are at least
+ m− m −b +2
+2 bt t            > 0 ways to selectPan m-term zero-sum from the selection
+Ai1 , . . . , Aim , it follows that 0 ∈ m
+                                        j=1 Aij . Thus, by the above display, there
+                      m−1                   m−1
+will be at least 22⌊ 3 ⌋+1 ≥ 2 · 3⌊ 3 ⌋ ways to select an m-term zero-sum
+subsequence from the selection Ai1 , . . . , Aim , completing the proof as noted
+earlier. So, we may assume there are at least m − (2⌊ m−1                     m−1
+                                                               3 ⌋ + 1) ≥ ⌈ 3 ⌉ ≥
+ m         bt
+2b′ − 1 = b′ − 1 sets Aij with |φbt (Aij )| = 2.
+    Hence, since |φbt ({0, s})| = 1, and φbt ({0, t}) = φbt ({s, t}) (as |φbt ({0, s})|
+= 1 implies φbt (0) = φbt (s)), it follows that there are at least bbt′ − 1 sets
+Aij that modulo Hbt have the difference of their elements generating the
+                                        Pbt /b′ −1
+subgroup Hb′ = hφbt (t)i. Note that i=1            φbt ({0, t}) = Hb′ . Hence, since
+there are at least bbt′ − 1 sets Aij with |φbt (Aij )| = 2, and since there are
+at least mbt − 1 sets Aij equal to {x, y, z} \ {t} = {0, s}, Proposition 2.2
+applied with elements considered in (G/Hbt )/Hb′ shows that there exists a
+re-indexing such that
+                         m/bt −1+bt /b′ −1+b′ −1             m
+                                   X                         X
+                                                   Aij =            Aij ;
+                                   j=1                       j=1
+                                                                      bt
+furthermore, Kneser’s Theorem yields |φa (Aij )| = 1 for i > m
+                                                             bt − 1 + b′ − 1 +
+b′ − 1 = bbt′ + b′ − 1, since otherwise
+               bt /b′ +b′ −1                  ′ +b′ −1
+                                        bt /bX                    m
+                   X                                                X
+                               Aij <                     Aij +                  Aij ,
+                   j=1                       j=1                 j=bt /b′ +b′
+                                                                                        Pm
+a contradiction. Thus, since bbt′ + b′ − 1 ≤ m
+                                             4 + 1, and since 0 ∈                        j=1 Aij ,
+                                                   3
+                                                     m−1            ⌊ m−1 ⌋
+it follows that there will be at least 2     ≥ 2·3 4       ways to select an
+                                                                       3
+
+m-term zero-sum subsequence from Ai1 , . . . , Aim , completing the proof of
+Step 4 as noted earlier. So we may assume that given any x, y, z ∈ G, there
+are at least ⌊ m−1
+                3 ⌋ terms of S not equal to x or y or z.
+    Step 5 (The general case): In view of Steps 1–4, and Proposition 2.1,
+it follows that there exists an (n − m + 1)-set partition P = P1 , . . . , Pn−m+1
+294                                  D. J. Grynkiewicz
+
+of S with |Pi | = 1 for i > ⌈ m−1        ′                                   ′
+                               3 ⌉. Let P = P1 , . . . , P⌈ m−1 ⌉ , and let S be
+                                                                    3
+the corresponding subsequence partitioned by P ′ . Apply Theorem 2.1 to the
+subsequence S ′ of S with ⌈ m−1                       ′        ′′
+                              3 ⌉-set partition P , and let S be the resulting
+subsequence, Ha the resulting subgroup of index a, and A = A1 , . . . , A⌈ m−1 ⌉
+                                                                            3
+the resulting set partition of S ′′ .
+   Suppose that
+              ⌈(m−1)/3⌉               ⌈(m−1)/3⌉              
+                 X                       X                m−1
+                        Ai ≥ m =                |Ai | −          + 1.
+                                                           3
+                   i=1                      i=1
+
+Then applying Theorem 2.2 to A and S ′′ yields a subsequence T of S ′′
+of length at most m with a set partition B = B1 , . . . , B⌈ m−1 ⌉ such that
+                                                                      3
+ P⌈(m−1)/3⌉
+| i=1        Bi | ≥ m. Then given any subsequence T ′ of S \ T of length
+m − ⌈ m−1        2m−1                                      m−1
+        3 ⌉ = ⌈ 3 ⌉, we can find a selection of ⌈ 3 ⌉ terms from T , one
+from each of the B1 , . . . , B⌈ m−1 ⌉ , that sum to the additive inverse of the sum
+                                 3
+of the terms from the ⌈ 2m−1                        ′
+                          3 ⌉-term subsequence T . Consequently, there will
+               n−m 
+be at least ⌈ 2m−1 ⌉ m-term zero-sum subsequences, completing the proof.
+                3
+So we can assume that
+              ⌈(m−1)/3⌉           ⌈(m−1)/3⌉              
+                 X                   X                m−1
+(13)                    Ai < m =            |Ai | −         + 1.
+                                                       3
+                   i=1                      i=1
+
+Theorem 2.1 then shows that Ha is a proper, nontrivial subgroup, and that
+either N (A, Ha ) = 1 and E(A, Ha ) ≤ a − 2, or else N (A, Ha ) = 2, |Ha | = 2,
+and E(A, Ha ) ≤ m             m−1             m−10
+                       2 − ⌈ 3 ⌉ − 2 ≤ ⌊ 6 ⌋. The case N (A, Ha ) = 1 and
+E(A, Ha ) ≤ a − 2 can be handled by a minor modification of the arguments
+from the third paragraph of Step 3 (simply replace ⌊ m                   m−1
+                                                                2 ⌋ by ⌈ 3 ⌉ where
+appropriate). Therefore we may assume the latter case holds.
+     Since N (A, Ha ) = 2, choose x, y ∈ G so that φa (x), φa (y) ∈ G/Ha
+                                       T⌈(m−1)/3⌉
+are the two elements from φa ( i=1                  (Ai + Ha )). Suppose first that
+φa (x − y) generates a proper subgroup Ha′ /Ha of G/Ha . If there does not
+exist a set Aj ′ such that {x, y} + Ha ⊆ Aj ′ , then there will be at least
+⌈ m−1        m−1
+    3 ⌉ = ⌈ 3 ⌉(|Ha | − 1) holes contained among the sets Aij , which in
+view of the comments after Theorem 2.1 implies that (13) cannot hold, a
+contradiction. Therefore we may assume that there exists a set Aj ′ with
+{x, y} + Ha ⊆ Aj ′ .
+     For i = j ′ , let Bj ′ = ({x, y} + Ha ) ∩ Aj ′ = {x, y} + Ha , and for i 6= j ′ , let
+Bi be a cardinality two subset of Ai ∩ ({x, y} + Ha ) with |φa (Bi )| = 2. Since
+φa (x − y) generates a proper subgroup Ha′ /Ha , and ⌈ m−1             m
+                                                                3 ⌉ ≥ 4 ≥ |G/Ha |,
+                                                                                        ′
+                    P⌈(m−1)/3⌉
+it follows that i=1             Bi is an Ha′ -coset. Observe that all but at most
+                         Number of m-term zero-sum subsequences                             295
+
+E(A, Ha ) ≤ m            m−1
+                    2 − ⌈ 3 ⌉ − 2 terms of S are from the same Ha -coset x + Ha .
+                                                                          ′                    ′
+
+Let T be the subsequence of S partitioned by B = B1 , . . . , B⌈ m−1 ⌉ . Since
+                                  P⌈(m−1)/3⌉                                       3
+Bi ⊆ x+Ha′ for all i, and i=1                 Bi is an Ha′ -coset, it follows that given
+any ⌈ 2m−1                               ′
+            3 ⌉-term subsequence T of S \ T with all terms from x + Ha , we
+                                                                                          ′
+                               m−1
+can find a selection of ⌈ 3 ⌉ terms from T , one from each B1 , . . . , B⌈ m−1 ⌉ ,
+                                                                                            3
+that sums to the additive inverse of the sum of terms from T ′ . Hence, as
+there are at least
+                                                                                 
+             m−1                                      m−1              m      m−1
+ n− 2                  + 2 + E(A′ , Ha ) ≥ n − 2                  +2+ −                   −2
+                 3                                       3             2          3
+                                           ≥ n−m
+                                                                                         n−m 
+terms of S \ T from x + Ha′ , it follows that there are at least ⌈ 2m−1                       ⌉
+                                                                                          3
+m-term zero-sum subsequences, completing the proof. So we may assume
+that φa (x − y) generates G/Ha .
+    Let x′ be the other element from x + Ha , and y ′ the other element
+from y + Ha . Let nx , nx′ , ny , and ny′ be the respective multiplicities of
+x, x′ , y, and y ′ in S. Since, as noted previously, there is a set Aj ′ such
+that {x, y} + Ha ⊆ Aj ′ , it follows that nx , nx′ , ny , ny′ ≥ 1. We may assume
+that nx + nx′ ≥ ny + ny′ , nx ≥ nx′ , and ny ≥ ny′ . Remove two terms
+from S, one equal to x and one equal to x′ , and let the resulting sequence
+be T . Let B0 be the set consisting of the two removed terms. Rearrange
+the terms of T so that all terms equal to x precede all terms equal to x′ ,
+which precede all terms equal to y, which precede all terms equal to y ′ ,
+which precede all terms t with t ∈           / {x, x′ , y, y ′ }, and let x1 , . . . , xn−2 be
+the resulting sequence. Let Bi = {xi , xi + ⌈ n2 ⌉ − 1} for i = 1, . . . , ⌊ n2 ⌋ − 1,
+and, in case n odd, let B⌈ n2 ⌉−1 = {x⌈ n2 ⌉−1 }. In view of Step 1, B =
+B1 , . . . , B⌈ n2 ⌉−1 is an (⌈ n2 ⌉ − 1)-set partition of T . As seen in the ninth
+paragraph of Step 4, it suffices by induction hypothesis to show that any
+selection B0 , Bi1 , . . . , Bim−1 containing B0 is good. We proceed to show
+this.
+    If | m−1                       m
+           P
+              j=1 φa (Bij )| ≥ 2 , then, since B0 is an Ha -coset, it follows that
+          Pm−1
+|B0 + j=1 Bij | ≥ m, whence the selection B0 , Bi1 , . . . , Bim−1 is good by
+Proposition 2.2. Hence we may assume that
+                                    m−1
+                                    X                    m
+(14)                                       φa (Bij ) <     .
+                                                         2
+                                     j=1
+
+    Suppose that nx + nx′ > ⌈ n2 ⌉. Then every set Bij will contain a represen-
+               common Ha -coset x + Ha . Since B0 is Ha -periodic, it follows
+tative from theP
+that 0 ∈ B0 + m−1j=1 Bij .
+296                                   D. J. Grynkiewicz
+
+       Suppose further that |φa (Bik )| = 1 for some Bik with ik ≥ 1. Then
+                                    m−1
+                                    X                   m−1
+                                                        X
+                             B0 +          Bij = B0 +         Bij ,
+                                    j=1                 j=1
+                                    j6=k
+and it follows that either |Bik | = 1, or else there will be at least two ways
+to represent every x ∈ B0 + m−1
+                                   P                              Pm−1
+                                       j=1 Bj . Since 0 ∈ B0 +        j=1 Bj , it follows
+that the selection B0 , Bi1 , . . . , Bim−1 is good, completing the proof as noted
+earlier. So we may assume |φa (Bik )| = 2 for all ik ≥ 1.
+    Since |φa (Bik )| = 2 for all ik ≥ 1, and |φa ({x, x′ })| = 1, it follows that
+there does not exist a set Bij with ij ≥ 1 and Bij = {x, x′ }. Since there
+are at most E(A, Ha ) ≤ m−10    6     terms t with t ∈ / {x, x′ , y, y ′ }, and every Bij
+contains either x or x , it follows that there are at least m − 2 − m−10
+                        ′
+                                                                                 6   ≥m 2
+sets Bij with the difference of terms in Bij equal modulo Ha to φa (x − y).
+Thus, since φa (x − y) generates G/Ha , it follows that (14) cannot hold, a
+contradiction. So we may assume that nx + nx′ ≤ ⌈ n2 ⌉.
+    Since nx + nx′ ≤ ⌈ n2 ⌉, since nx + nx′ ≥ ny + ny′ , and since all but at
+most E(A′ , Ha ) ≤ m         m−1                m−10
+                      2 − ⌈ 3 ⌉ − 2 ≤ ⌊ 6 ⌋ terms of S are equal to one
+of x, x , y, or y , it follows that at least (m − 3) − m−10
+        ′         ′
+                                                                     6      ≥ m2 sets Bij
+have φa (Bij ) = {φa (x), φa (y)}. As φa (x) − φa (y) generates G/Ha , it follows
+that | m−1                  m
+       P
+          j=1 φa (Bij )| ≥ 2 , contradicting (14) again, and completing the
+proof.
+
+
+                                           References
+
+ [1]    N. Alon and M. Dubiner, Zero-sum sets of prescribed size, in: Combinatorics, Paul
+        Erdős is Eighty, Vol. 1, Bolyai Soc. Math. Stud., János Bolyai Math. Soc., Budapest,
+        1993, 33–50.
+ [2]    A. Bialostocki, Some combinatorial number theory aspects of Ramsey theory, re-
+        search proposal, 1989.
+ [3]    A. Bialostocki and P. Dierker, On the Erdős–Ginzburg–Ziv theorem and the Ramsey
+        numbers for stars and matchings, Discrete Math. 110 (1992), 1–8.
+ [4]    A. Bialostocki, P. Dierker, D. Grynkiewicz, and M. Lotspeich, On some develop-
+        ments of the Erdős–Ginzburg–Ziv Theorem II , Acta Arith. 110 (2003), 173–184.
+ [5]    A. Bialostocki and M. Lotspeich, Some developments of the Erdős–Ginzburg–Ziv
+        theorem I , in: Sets, Graphs and Numbers (Budapest, 1991), Colloq. Math. Soc.
+        János Bolyai 60, North-Holland, 1992, 97–117.
+ [6]    B. Bollobás and I. Leader, The number of k-sums modulo k, J. Number Theory 78
+        (1999), 27–35.
+ [7]    W. Brakemeier, Eine Anzahlformel von Zahlen modulo n, Monatsh. Math. 85 (1978),
+        277–282.
+ [8]    Y. Caro, Remarks on a zero-sum theorem, J. Combin. Theory Ser. A 76 (1996),
+        315–322.
+                        Number of m-term zero-sum subsequences                        297
+
+ [9]   H. Davenport, On the addition of residue classes, J. London Math. Soc. 10 (1935),
+       30–32.
+[10]   P. Erdős, A. Ginzburg, and A. Ziv, Theorem in additive number theory, Bull. Res.
+       Council Israel 10F (1961), 41–43.
+[11]   C. Flores and O. Ordaz, On the Erdős–Ginzburg–Ziv theorem, Discrete Math. 152
+       (1996), 321–324.
+[12]   Z. Füredi and D. J. Kleitman, The minimal number of zero sums, in: Combinatorics,
+       Paul Erdős is Eighty, Vol. 1, Bolyai Soc. Math. Stud., János Bolyai Math. Soc.,
+       Budapest, 1993, 159–172.
+[13]   L. Gallardo and G. Grekos, On Brakemeier’s variant of the Erdős–Ginzburg–Ziv
+       problem, Number Theory (Liptovský Ján, 1999), Tatra Mt. Math. Publ. 20 (2000),
+       91–98.
+[14]   L. Gallardo, G. Grekos, L. Habsieger, F. Hennecart, B. Landreau, and A. Plagne,
+       Restricted addition in Z/nZ and an application to the Erdős–Ginzburg–Ziv problem,
+       J. London Math. Soc. (2) 65 (2002), 513–523.
+[15]   L. Gallardo, G. Grekos, and J. Pihko, On a variant of the Erdős–Ginzburg–Ziv
+       problem, Acta Arith. 89 (1999), 331–336.
+[16]   W. D. Gao and Y. O. Hamidoune, Zero sums in abelian groups, Combin. Probab.
+       Comput. 7 (1998), 261–263.
+[17]   W. Gao and X. Jin, Weighted sums in finite cyclic groups, Discrete Math. 283
+       (2004), 243–247.
+[18]   D. Grynkiewicz, A weighted Erdős–Ginzburg–Ziv theorem, Combinatorica, to ap-
+       pear.
+[19]   —, An extension of the Erdős–Ginzburg–Ziv theorem to hypergraphs, European J.
+       Combin., to appear.
+[20]   —, On a conjecture of Hamidoune for subsequence sums, Integers, to appear.
+[21]   —, On four colored sets with nondecreasing diameter and the Erdős–Ginzburg–Ziv
+       Theorem, J. Combin. Theory Ser. A 100 (2002), 44–60.
+[22]   —, On a partition analog of the Cauchy–Davenport theorem, Acta Math. Hungar.
+       107 (2005), 161–174.
+[23]   H. Halberstam and K. F. Roth, Sequences, Springer, New York, 1983.
+[24]   Y. O. Hamidoune, Subsequence sums, Combin. Probab. Comput. 12 (2003), 413–
+       425.
+[25]   —, On weighted sums in abelian groups, Discrete Math. 162 (1996), 127–132.
+[26]   —, On weighted sequence sums, Combin. Probab. Comput. 4 (1995), 363–367.
+[27]   Y. O. Hamidoune, O. Ordaz, and A. Ortuño, On a combinatorial theorem of Erdős,
+       Ginzburg and Ziv , ibid. 7 (1998), 403–412.
+[28]   X. Hou, K. Leung, and Q. Xiang, A generalization of an addition theorem of Kneser ,
+       J. Number Theory 97 (2002), 1–9.
+[29]   J. H. B. Kemperman, On small sumsets in an abelian group, Acta Math. 103 (1960),
+       63–88.
+[30]   M. Kisin, The number of zero sums modulo m in a sequence of length n, Mathe-
+       matika 41 (1994), 149–163.
+[31]   M. Kneser, Ein Satz über abelsche Gruppen mit Anwendungen auf die Geometrie
+       der Zahlen, Math. Z. 64 (1955), 429–434.
+[32]   —, Abschätzung der asymptotischen Dichte von Summenmengen, ibid. 58 (1953),
+       459–484.
+[33]   H. B. Mann, Two addition theorems, J. Combin. Theory 3 (1967), 233–235.
+[34]   M. B. Nathanson, Additive Number Theory: Inverse Problems and the Geometry of
+       Sumsets, Grad. Texts in Math. 165, Springer, New York, 1996.
+298                                D. J. Grynkiewicz
+
+[35]   J. E. Olson, An addition theorem for finite abelian groups, J. Number Theory 9
+       (1977), 63–70.
+[36]   —, On a combinatorial problem of Erdős, Ginzburg and Ziv , ibid. 8 (1976), 52–57.
+
+Mathematics 253–37
+Caltech
+Pasadena, CA 91125, U.S.A.
+E-mail: diambri@hotmail.com
+
+                                  Received on 18.7.2005                           (5039)
+

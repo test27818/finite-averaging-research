@@ -1,0 +1,1351 @@
+                                                    A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED
+                                                           AUTOMORPHISMS OF K-ALGEBRAS
+
+                                                                    JASON P. BELL AND JEFFREY C. LAGARIAS
+
+                                                 A BSTRACT. This paper proves a commutative algebraic extension of a generalized
+arXiv:1312.5305v1 [math.AG] 18 Dec 2013
+
+
+
+
+                                                 Skolem-Mahler-Lech theorem due to the first author. Let A be a finitely generated
+                                                 commutative K-algebra over a field of characteristic 0, and let σ be a K-algebra auto-
+                                                 morphism of A. Given ideals I and J of A, we show that the set S of integers m such
+                                                 that σ m (I) ⊇ J is a finite union of complete doubly infinite arithmetic progressions in
+                                                 m, up to the addition of a finite set. Alternatively, this result states that for an affine
+                                                 scheme X of finite type over K, an automorphism σ ∈ AutK (X), and Y and Z any
+                                                 two closed subschemes of X, the set of integers m with σ m (Z) ⊆ Y is as above. The
+                                                 paper presents examples showing that this result may fail to hold if the affine scheme X
+                                                 is not of finite type, or if X is of finite type but the field K has positive characteristic.
+
+
+
+
+                                                                                       C ONTENTS
+                                            1. Introduction                                                                                       2
+                                            1.1. The Skolem-Mahler-Lech theorem                                                                   2
+                                            1.2. Main result                                                                                      4
+                                            1.3. Affine scheme version of main result                                                             6
+                                            1.4. Generalizations                                                                                  6
+                                            2. p-Adic Preliminaries                                                                               7
+                                            2.1. Evaluation maps and Jacobians for polynomial endomorphicms                                       7
+                                            2.2. p-adic approximate fixed points for automorphisms                                                9
+                                            2.3. p-adic reduction lemmas                                                                         10
+                                            3. Generalized p-adic Analytic Arc Theorem                                                           11
+                                            4. Polynomial Ring Case                                                                              16
+                                            5. Proof of Main Result                                                                              21
+                                            6. Examples                                                                                          22
+                                            7. Appendix: Dynamics of Endomorphisms–Geometric versus Algebraic                                    25
+                                            References                                                                                           28
+
+
+
+                                            Date: November 21, 2013, rev6.
+                                            2010 Mathematics Subject Classification. Primary: 11D45. Secondary: 14R10. 11Y55, 11D88.
+                                            Key words and phrases. automorphisms, endomorphisms, affine space, commutative algebras,
+                                          Skolem-Mahler-Lech theorem.
+                                            The research of the first-named author was supported by NSERC grant 611456.
+                                            The research of the second author was supported by NSF grants DMS-0801029 and DMS-1101373.
+                                                                                              1
+2                          JASON P. BELL AND JEFFREY C. LAGARIAS
+                                        1. I NTRODUCTION
+   The Skolem-Mahler-Lech theorem is a fundamental result, which characterizes the
+structure of the set of zeros of a linear recurrence; we term the resulting structure the
+SML property below. The paper is motivated by the question: “What is the maximal
+level of generality of the Skolem-Mahler-Lech theorem, in which its conclusion holds?"
+We view this question in the general framework of orbits of dynamical systems of alge-
+braic type.
+   In 2006 the first author gave an algebro-geometric generalization of the Skolem-
+Mahler-Lech theorem which applied to orbits of an automorphism of an affine variety
+acting on geometric points. The object of this paper is to show there is a further algebro-
+geometric generalization of the Skolem-Mahler-Lech theorem that applies to automor-
+phisms on the coordinate ring of the variety acting at the level of ideals. The new result
+may be interpreted as a result about automorphisms of affine schemes. To state it, we
+first review the successive generalizations of the Skolem-Mahler-Lech theorem.
+1.1. The Skolem-Mahler-Lech theorem. The Skolem-Mahler-Lech theorem (here-
+after abbreviated to SML theorem) is a fundamental result which can be stated in several
+apparently different forms. The original formulation of the SML theorem concerned the
+zeros of power series coefficients of rational functions.
+Theorem 1.1. (SML theorem-rational function form) Let K be a field of characteristic
+zero, and let G(x) ∈ K(x) be a rational function that is finite at x = 0. If the Taylor
+expansion G(x) ∈ K[[x]] at x = 0 is given as
+                                          X∞
+                                G(x) =       ak xk ,
+                                               k=0
+then the set of its zero coefficients
+                                   S := {k ∈ N : ak = 0}
+is a union of a finite number of arithmetic progressions {an + b : n ≥ 0}, with a, b > 0,
+together with a (possibly empty) finite set.
+   This result was established by Skolem [30] in 1934 for the case of rational coeffi-
+cients, using a p-adic method he introduced in [29]. It was extended by Mahler [21,
+Sect. 6] in 1935 to series to coefficients in algebraic number fields, and much later in
+1956 ([22]) to coefficients in the complex field C. In this last extension Mahler was
+unaware of the 1953 work of Lech [20] discussed below, see [23].
+   There are now many different proofs and extensions of the Skolem-Mahler-Lech the-
+orem in the literature [8, 18, 26, 27], some described in the book of Everest et al. [14,
+Chap. 2.1]. The result is valid in any field of characteristic zero, however all known
+proofs use p-adic methods.
+   The property of the set S formulated in the conclusion of all versions of the Skolem-
+Mahler-Lech theorem can be stated as follows.
+Definition 1.2. A set of natural numbers S ⊂ N has the (one-sided) SML property if it
+is a finite union of one-sided arithmetic progressions {an + b : n ≥ 0} with a, b > 0,
+augmented by a finite set, possibly empty. (We allow the possibility b > a in the one-
+sided arithmetic progressions, i.e. some initial terms of the complete progression in N
+may be omitted.)
+   A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS                   3
+  A second form of the Skolem-Mahler-Lech theorem concerns zeros of recurrence
+sequences. This version was first formulated by Lech [20] in 1953.
+Theorem 1.3. (SML theorem-recurrence form) Let K be a field of characteristic zero
+and let f : N → K be a K-valued sequence that satisfies a linear recurrence
+            f (n) = a1 f (n − 1) + a2 f (n − 2) + · · · + ar f (n − r), ai ∈ K.
+for all n ≥ r. Then the set of zeros of the recurrence,
+                               S := {n ≥ 1 : f (n) = 0}.
+has the SML property.
+   We can view the recurrence version of the SML theorem as asserting a property of a
+forward orbit of a discrete dynamical system given by the linear recurrence. Note that
+the set S can also be interpreted as the intersection of the forward orbits of two different
+dynamical systems, the first being the recurrence f (n) and the second being the constant
+linear recurrence g(n) = 0.
+   The recurrence form of the SML theorem can be recast in a third equivalent form,
+which concerns iteration of linear maps, and encodes containment relations of orbits of
+invertible linear maps under iteration in a subspace ([4, Theorem 1.2 and Sect. 2]).
+Theorem 1.4. (SML theorem-linear map form) Let K be a field of characteristic 0, and
+let σ : K n → K n be an invertible linear map. If v ∈ K n , and W is a vector subspace
+of K n of codimension 1, then the set
+                               S := {n ∈ N : σ n (v) ∈ W }
+has the SML property.
+   In 2006 the first author [4, 5] found a generalization of the SML theorem to algebraic
+dynamics, which applies at the geometric level to iteration of automorphisms on affine
+algebraic varieties. It concerns two-sided infinite sequences of iterates, and to state it
+we extend the notion of SML property to this case.
+Definition 1.5. A set of integers S ⊂ Z is said to have the two-sided SML property if it
+is a finite union of complete arithmetic {an + b : n ∈ Z} progressions on Z augmented
+by a finite set. (That is, we allow arithmetic progression with a = 0 which give one
+element sets.)
+   The generalization of the SML theorem to automorphisms on affine varieties is as
+follows.
+Theorem 1.6. (Generalized SML Theorem for Affine Varieties) Let K be a field of
+characteristic zero, and let X be an affine K-variety and let σ be an automorphism of
+X. If x is a K-point of X and Y is a subvariety of X (Zariski closed subset of X), then
+the set
+                              S := {n ∈ Z : σ n (x) ∈ Y }
+has the two-sided SML property.
+   Despite its restriction to two-sided infinite sequences, Theorem 1.6 recovers the orig-
+inal (one-sided) recurrence form of the Skolem-Mahler-Lech theorem above, via its im-
+plication of the linear map form (Theorem 1.4). The proof of Theorem 1.6 in [4, 5] again
+4                         JASON P. BELL AND JEFFREY C. LAGARIAS
+relies on a p-adic result, the p-adic analytic arc theorem, first established in [4, 5] and
+then strengthened in [6]. This latter result was recently further strengthened by Poonen
+[25].
+   We also note that since the conclusion of Theorem 1.6 is purely set-theoretic and is
+preserved under extension of scalars, the result for a general field K follows easily from
+the special that K is an algebraically closed field of characteristic zero.
+   Subsequent work of the first author with Ghioca and Tucker [6, Theorem 1.3], es-
+tablished an analogous theorem for forward orbits of étale endomorphisms of quasipro-
+jective varieties defined over C. We also point out that Denis [11] had earlier proved a
+special case of this result for étale self maps of PnC . Recently Sierra [28, Conjecture 5.15]
+suggests a possible extension of these results that would have interesting consequences
+for the algebras studied in noncommutative projective geometry.
+
+1.2. Main result. Our starting point is the observation that Theorem 1.6 can be recast
+in purely algebraic terms. To do this, suppose that K is an algebraically closed field of
+characteristic zero. In classical affine algebraic geometry, we then have a contravariant
+equivalence of categories
+         {Affine K-Varieties} ←→ {Reduced finitely generated K-algebras}
+induced by the functor which takes an affine variety X to its coordinate ring K[X]
+and which takes a morphism φ : X → Y of affine varieties to the homomorphism
+φ∗ : K[Y ] → K[X] of K-algebras given by φ∗ (f ) = f ◦ φ ( [19, Corollaries 1.4 and
+3.8]). The Nullstellensatz gives further information, showing that there is an inclusion
+reversing bijection between the subvarieties of an affine variety X and the radical ideals
+of its coordinate ring K[X]. In particular, for a morphism φ : X → X the inclusion
+φ(V (I)) ⊆ V (J) of zero sets of radical ideals I, J corresponds to the reversed algebraic
+inclusion φ⋆ (I) ⊇ J. It follows that Theorem 1.6 restricted to algebraically closed fields
+K may be recast in algebraic terms as: If A is a finitely generated reduced commutative
+K-algebra with a K-algebra automorphism σ and M and J are ideals of A with M a
+maximal ideal and J a radical ideal, then the set of integers n for which σ n (M) ⊇ J
+has the two-sided SML property.
+   From this algebraic perspective, it is natural to ask whether a similar result holds for
+more general ideal inclusions in finitely generated commutative K-algebras. Our main
+result gives an affirmative answer to this question.
+Theorem 1.7. (Generalized SML theorem for ideal inclusions) Let K be any field of
+characteristic zero and let A be a finitely generated commutative K-algebra. If σ :
+A → A is a K-algebra automorphism and I and J are ideals of A, then
+                         S = S(I, J) := {n ∈ Z : σ n (I) ⊃ J}
+has the two-sided SML property. Here σ(I) := {σ(a) : a ∈ I}.
+   The two-sided SML property of this result also holds for the set of integers n for
+which σ n (J) ⊆ I, because this condition holds if and only if σ −n (I) ⊇ J, where
+σ −1 (I) = {b : σ(b) ∈ I}; apply Theorem 1.7 to the automorphism σ −1 .
+   Theorem 1.7 implies Theorem 1.6 and hence all the earlier forms of the SML theorem
+stated above. In the special case that I is a maximal ideal, Theorem 1.7 is itself deducible
+from the algebraic form of Theorem 1.6. The main content of Theorem 1.7, and also the
+    A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS                      5
+source of the difficulty in proving it, revolves around relaxing the maximality condition
+on I. For example, if A = C[x, y], then a polynomial p(x, y) ∈ A is in the maximal
+ideal (x, y) if and only if p(0, 0) = 0. On the other hand, p(x, y) is in the ideal (x, y 2 ) if
+and only if p(0, 0) = 0 and ∂p(x, y)/∂y vanishes at (0, 0). In this sense, the ideal I =
+(x, y 2 ) encodes additional “infinitesimal” information. It seems easier to understand the
+behavior of the iterates of an element p(x, y) of A under an automorphism σ with respect
+to evaluation at a given point than to understand how the iterates behave with respect
+to more complicated conditions involving the vanishing of partial derivatives at a point.
+This difficulty and, more generally, the possible occurrence of nil ideals and non-radical
+ideals in A adds an extra level of complication to the problem. (see Examples 6.2 and
+6.3).
+   In Section 6 we examples showing that this result is strictly more general than The-
+orem√1.6. √       In particular, there exist two ideals I1 , I2 having the same radical ideal
+I = I1 = I2 and J such the sets S(I1 , J) 6= S(I2 , J), see 6.1.
+   As with previous work, our method to prove Theorem 1.7 makes use of a p-adic re-
+sult. We present a p-adic interpolation result that strengthens the p-adic analytic arc
+theorem established in [5], which we call the generalized p-adic analytic arc theorem
+(Theorem 3.1). This result concerns polynomial automorphisms σ : Zp [x1 , . . . , xd ] →
+Zp [x1 , . . . , xd ] and applies for p ≥ 5. It asserts that for a Zp -algebra S that is finitely
+generated and is a torsion-free Zp -module, the induced (nonlinear) map fσ : S d → S d
+has the property that iterates of a suitable initial point s = (s1 , . . . , sd ) ∈ S d under σ
+can be embedded in a p-adic analytic arc. Note that S is a free Zp -module of finite rank
+r > 0, and one might think that this extension can be obtained by fixing a Zp -module
+isomorphism between S and (Zp )r and then applying the analytic arc theorem of [4]
+separately to each coordinate. This is not the case, however, as application of the map σ
+involves expressions that include combinations of elements from different coordinates.
+Our innovation to get around this obstacle consists of working with a larger ring of func-
+tions than usual; namely, the subset R(S) of S ⊗Zp Qp [z] that consists of all polynomials
+which map Zp into S, and obtaining analytic maps via successive approximations via
+functions in this ring. The commutative ring R(S) is rather pathological, it is not Noe-
+therian and is not of finite type over Zp . Our proof requires establishing a nice property
+of certain subalgebras of R(S), given in Lemma 3.7. As in the case of the p-adic ana-
+lytic arc theorem treated in [4], the generalized p-adic analytic arc theorem fails to hold
+for p = 2, and its truth for p = 3 remains open.
+   The proof of Theorem 1.7 is commutative algebraic, aside from the p-adic interpo-
+lation result. A key idea is to first establish a result for the ring A = Zp [x1 , . . . , xd ],
+treating only for the special case that I, J are p-reduced ideals (Definition 4.2) when
+p ≥ 5 (Theorem 4.5). The p-reduced condition is needed in order to apply the gener-
+alized p-adic analytic arc theorem. Here we also use an idea of Amitsur (Lemma 4.4),
+to handle the case of p-reduced ideals I where (A/I) ⊗ Qp is an infinite-dimensional
+Qp -vector space. We next deduce the result for arbitrary ideals I, J in a polynomial ring
+A = K[x1 , . . . , xd ] over a field of characteristic 0 (Theorem 4.1), as follows. We first
+show that K can be taken to be finitely generated over Q; next, we use the fact that such
+a field embeds into infinitely many p-adic fields Qp via the Chebotarev density theorem;
+finally, passing from Qp to Zp -coefficients, we show that one can pass from ideals to
+suitable p-reduced ideals. We then treat the general case that A is a finitely-generated
+6                        JASON P. BELL AND JEFFREY C. LAGARIAS
+commutative K-algebra, by using a theorem of Srinivas [31, Theorem 2] to reduce this
+case to that of a polynomial ring K[x1 , . . . , xd ].
+  An interesting feature of this proof is that while Theorem 1.7 concerns finitely-
+generated commutative K-algebras A which are Noetherian rings, the proof itself cur-
+rently requires a detour using the non-Noetherian ring R(S).
+1.3. Affine scheme version of main result. We can formulate the main result in the
+category of affine schemes. There is a standard correspondence of categories
+            {Affine Schemes} ←→ {Commutative rings with identity} .
+and using it Theorem 1.7 may be restated as follows.
+Theorem 1.8. Generalized SML theorem for affine schemes of finite type) Let K be
+a field of characteristic zero and let X be an affine scheme of finite type over K. If
+σ ∈ AutK (X) and Y and Z are closed subschemes of X, then
+                       S = S(Z, Y ) := {n ∈ Z : σ n (Z) ⊆ Y }
+has the two-sided SML property.
+   From the scheme-theoretic viewpoint Theorem 1.6 corresponds to the special case
+that Y and Z are reduced closed subschemes and Z = {x} is a point. The main difficulty
+in establishing Theorem 1.8 is to omit the requirement that the source Z and target Y be
+reduced, while allowing a source Z of arbitrary dimension is less of a difficulty.
+   We show in Section 6 via examples that for automorphisms one cannot generalize this
+result to arbitrary affine schemes without altering the conclusion that the set is a two-
+sided SML set. Example 6.4 shows the need for the scheme to be of finite type over K,
+while example 6.5 shows the need to work over a field K of characteristic zero. There
+remains a possibility of generalizing the result to arbitrary schemes of finite type over
+characteristic zero fields.
+1.4. Generalizations. The ultimate level of generalization possible for mappings hav-
+ing the SML property is not clear.
+   A natural question is: “Is there an SML theorem for endomorphisms of algebraic
+varieties?" For endomorphisms that are not automorphisms, the maps τ m with m < 0
+are not defined, and extensions of Theorem 1.7 to endomorphisms must be formulated in
+terms of one-sided infinite arithmetic progressions. Recent work described below shows
+that the SML property does hold for some classes of endomorphisms at the geometric
+level, while endomorphisms at the algebraic level have not yet been studied. At present
+in the characteristic 0 case no counterexamples to the (one-sided) SML property are
+known for any endomorphism at either the geometric and algebraic level.
+   The dynamics of endomorphisms in the geometric setting is currently a very active
+area of study. In 2009 Ghioca and Tucker [16] conjectured that the forward iterates of
+a point P under an endomorphism τ : X → X of a quasiprojective variety over C
+should satisfy the SMLproperty for intersecting a closed subvariety V . They term this
+assertion the dynamical Mordell-Lang conjecture. This conjecture fits in the general
+framework of dynamical conjectures of S. Zhang [33, Sect. 4]. It is now known that one-
+sided versions of the Skolem-Mahler-Lech theorem are valid for some special classes
+of endomorphisms—see for example Benedetto, Ghioca, Kurlberg and Tucker [7]. The
+dynamical Mordell-Lang conjecture currently appears to be difficult in the general case.
+      A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS                          7
+   When endomorphisms are viewed at the ideal level, as in this paper, there are two
+different questions to consider: the first concerns upward inclusions and the second
+concerns downward inclusions of ideals under preimages of endomorphisms of polyno-
+mial rings. Given an endomorphism τ : A → A of a commutative K-algebra A, and a
+nonzero ideal I of A the preimages τ −1 (I) are ideals of A, but the image τ (I) is usually
+not an ideal of A but is an ideal of the image ring A′ := τ (A). To formulate inclusions
+purely in terms of A-ideals, these concern the sets
+
+                             S(I, J) := {m ≥ 0 | I ⊇ (τ m )−1 (J)}
+
+and
+                            S ′ (I, J) := {m ≥ 0 | (τ m )−1 (I) ⊇ J},
+respectively.
+   Our methods in this paper do not give information about either of the sets S(I, J)
+and S ′ (I, J). However a number of results in this paper partially extend to the endo-
+morphism case, see Remarks 2.2 and 3.3. New ideas are certainly needed for general
+endomorphisms, because the generalized analytic arc theorem is known not to hold in
+the p-adic case near some superattracting fixed points.
+
+Acknowledgments. We thank Harm Derksen for comments on the nonzero characteris-
+tic case and Brian Conrad for comments on the scheme theory viewpoint. We thank the
+reviewer for helpful comments.
+
+
+                                   2. p-A DIC P RELIMINARIES
+   Much of our study of automorphisms of algebras relies on reductions to simpler cases.
+We will eventually reduce the proof of Theorem 1.7 to the special case that one is work-
+ing with a polynomial ring over a p-adic field.
+   For the analysis of this special case we establish preliminary results on Jacobian ma-
+trices of p-adic mappings and some results from p-adic analysis. Section 2.1 allows
+S-algebra endomorphisms, while all later sections specialize to the automorphism case.
+
+2.1. Evaluation maps and Jacobians for polynomial endomorphicms. Let R =
+S[x1 , . . . , xd ] be a polynomial ring over an integral domain S. Any S-algebra endo-
+morphism τ : R → R is uniquely determined by its values {τ (xi ) : 1 ≤ i ≤ d}, on the
+monomials xi , and any assignment of values
+
+                  τ (xi ) := Fi (x1 , . . . , xd ) ∈ S[x1 , . . . , xd ],   1 ≤ i ≤ d,
+
+uniquely extends to an endomorphism τ : R → R that acts as the identity on S, given
+by
+               τ (P (x1 , . . . , xd )) := P (τ (x1 ), . . . , τ (xd )) ∈ S[x1 , . . . , xd ].   (2.1)
+Composition of endomorphisms will be denoted τ2 ◦ τ1 (P ) := τ2 (τ1 (P )). In what fol-
+lows we use τ to denote a general S-algebra endomorphism, while symbols σ, ρ are
+reserved for S-algebra automorphisms.
+8                                 JASON P. BELL AND JEFFREY C. LAGARIAS
+    The Jacobian matrix J(τ ; x) ∈ Md×d (S[x1 , . . . , xd ]) of the map τ at x is given by
+                                  ∂        ∂                         
+                                       F
+                                   ∂x1 1 ∂x2 1
+                                               F · · · ∂x∂ d F1
+                                  ∂ F2 ∂ F2 · · · ∂ F2 
+                    J(τ ; x) := 
+                                   ∂x1     ∂x2                 ∂xd    .
+                                                                      
+                                            ···         ···
+                                    ∂       ∂                   ∂
+                                       F
+                                   ∂x1 d ∂x2 2
+                                               F · · · ∂xd Fd
+These matrices satisfy the polynomial identity under composition
+                                   J(τ2 ◦ τ1 ; x) = J(τ2 ; τ1 (x))J(τ1 ; x),
+in the ring Md×d (S[x1 , . . . , xd ]).
+   For s = (s1 , s2 , . . . , sd ) ∈ S d , we define the evaluation map evs : S[x1 , x2 , . . . , xd ] →
+S, which assigns xi 7→ si , i.e.,
+                                evs (F )(x1 , . . . , xd ) := F (s1 , s2 , . . . , sd ).
+(For constants c ∈ S we have evs (c)(x1 , .., xd ) = c.) Using this map, we define the
+Jacobian matrix of a polynomial map τ with its entries evaluated at the point s ∈ S d as:
+                                                                       
+                                               ∂
+            J(τ ; s) := evs (J(τ ; x)) = evs       Fi (x1 , . . . , xd )           ,
+                                              ∂xj                          1≤i,j≤d
+
+with J(τ ; s) ∈ Md×d (S).
+   In the same vein, given an endomorphism τ of S[x1 , . . . , xd ] we obtain a map fτ :
+S d → S d defined for each s ∈ S d , acting coordinatewise, by
+fτ (s) := evs (τ (x1 ), τ (x2 ), · · · , τ (xd )) = (F1 (s1 , . . . , sd ), F2 (s1 , . . . , sd ), . . . , Fd (s1 , . . . , sd )).
+We call fτ the dynamical evaluation map associated to τ . The important property it has
+is compatibility with composition of maps, given as:
+                                           fτ2 ◦τ1 (s) = (fτ2 ◦ fτ1 )(s).                                         (2.2)
+In particular, for iteration of the map fτ one has fτ m = (fτ )m . A consequence of this
+compatibility is that if the endomorphism is an automorphism σ, then the dynamical
+evaluation map fσ : S d → S d is a bijection, because fσ ◦ fσ−1 = fid , the identity map.
+A second consequence is the identity
+                             J(τ2 ◦ τ1 ; s) = J(τ2 ; fτ1 (s))J(τ1 ; s),            s∈S                            (2.3)
+in the ring Md×d (S).
+   The dynamical evaluation map fτ is analogous to a map acting an affine variety as
+in Theorem 1.6. In general it is a nonlinear map, and it usually does not respect ei-
+ther addition or coordinatewise multiplication on S d , i.e. one may have fτ (s1 + s2 ) 6=
+fτ (s1 ) + fτ (s2 ) and fτ (s1 s2 ) 6= fτ (s1 )fτ (s2 ). Furthermore one may have fτ (0) 6= 0,
+where 0 := (0, 0, .., 0) ∈ S d .
+   The above definitions are stated for endomorphisms τ but in the remainder of the pa-
+per we will restrict to the case of automorphisms σ, unless specified otherwise. In the
+Appendix to this paper we prove a result that clarifies the differences between the geo-
+metric and algebraic view of dynamics of endomorphisms τ acting on a variety (Propo-
+sition 7.1).
+    A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS                             9
+2.2. p-adic approximate fixed points for automorphisms. Now we specialize to the
+case that the integral domain S is a Zp -algebra. We consider an automorphism σ of R =
+S[x1 , . . . , xd ]. and study the dynamical evaluation map fσ . The following lemma asserts
+the existence of approximate fixed points (mod p) with invertible Jacobian matrices for
+dynamical evaluation maps of polynomial automorphisms.
+Lemma 2.1. Let p be a prime, let S be a Zp -algebra that is finitely generated as a Zp -
+module and let σ = (F1 , . . . , Fd ) : Zp [x1 , . . . , xd ] → Zp [x1 , . . . , xd ] be an Zp -algebra
+automorphism. Then there is an integer m such that for every point s0 = (s1 , . . . , sd ) ∈
+S d with the property that the dynamical evaluation map fσ : S d → S d at s0 satisfies
+                           fσ (s1 , . . . , sd ) ≡ (s1 , . . . , sd ) (mod pS),
+the Jacobian J(σ m ; x) evaluated at (x1 , x2 , . . . , xd ) = (s1 , . . . , sd ) is the identity matrix
+(mod pS); that is, evs0 (J(σ m ; x)) ≡ I(mod pS).
+
+Proof. The ring S/pS is a finite ring since S is a finitely generated Zp -module. Further-
+more, J(σ; s) has inverse mod p given by J(σ −1 ; s) and hence it is invertible mod p.
+Take m to be the order of GLd (S/pS). We let
+                              J(σ; s) := evs (J(σ; x)) ∈ Md×d (S)
+denote the Jacobian matrix of a polynomial map σ with its entries evaluated at the point
+s ∈ S d . Since σ is a Zp -algebra automorphism, we have for s1 , s2 ∈ S d that
+                   s1 ≡ s2 (mod pS) ⇒ fσ (s1 ) ≡ fσ (s2 ) (mod pS).
+It follows that the quotient map f¯σ : (S/pS)d → (S/pS)d is well-defined. Similarly,
+since J(σ; x) has entries given by polynomials with coefficients in Zp , then
+                   s1 ≡ s2 (mod pS) ⇒ J(σ; s1 ) ≡ J(σ; s2 ) (mod pS),
+where ≡ is taken entry-wise.
+  Then for any point s = (s1 , . . . , sd ) ∈ S d we have
+              J(σ m ; s) = J(σ; fσm−1 (s))J(σ; fσm−2 (s)) · · · J(σ; s)
+                         = J(σ; (fσ )m−1 (s))J(σ; (fσ )m−2 (s)) · · · J(σ; s).
+Hence if s0 is a fixed point of the quotient map f¯σ , then
+                                    (fσ )j (s0 ) ≡ s0 (mod pS),
+for all j ≥ 1, so that
+                            J(σ; (fσ )j (s0 )) ≡ J(σ; s0 ) (mod pS).
+Substituting these in the formula above yields
+                              J(σ m ; s0 ) ≡ J(σ; s0 )m (mod pS).
+By our choice of m, M := J(σ m ; s0 ) is congruent to the identity mod pS, as required.
+                                                                                     
+
+Remark 2.2. The argument of Lemma 2.1 extends to Zp -algebra endomorphisms τ , but
+yields only the weaker conclusion: there exists a fixed point s0 of the evaluation function
+fτ (mod pS) at which the Jacobian evs0 (J(τ m ; x)) ≡ M(mod pS) where M 2 = M
+is an idempotent in Md×d (S/pS).
+10                          JASON P. BELL AND JEFFREY C. LAGARIAS
+2.3. p-adic reduction lemmas. We start with an embedding theorem due to Lech [20,
+§4–5]. His result can be regarded as a p-adic analogue of the Lefschetz principle.
+Lemma 2.3. Let K be a finitely generated extension of Q and let S be a finite subset of
+K. Then there exist infinitely many primes p such that K embeds in Qp ; moreover, for
+all but finitely many of these primes every nonzero element of S is sent to a unit in Zp .
+Proof. This is shown in [4, Lemma 3.1]. The Chebotarev density theorem is used to
+show there exists a positive density set of primes p having the required property. 
+
+   Strassman’s theorem [32] asserts that if a power series f ∈ Qp [[z]] converges in the
+closed p-adic unit disc
+                          BQp (0; 1) := {z ∈ Qp : |z|p ≤ 1} = Zp .
+and has infinitely many zeros in this disc, then it is identically zero. We will use the
+following variant of Strassman’s theorem.
+
+Theorem 2.4. (Extended Strassman’s Theorem) Let p be a prime and let R be a finite-
+dimensional Qp -algebra. Suppose that the formal power series f (z) ∈ R[[z]] is ab-
+solutely convergent for all z ∈ Zp and has infinitely many zeros in Zp . Then f (z) is
+identically zero.
+Proof. Let n denote the dimension of R as a Qp -vector space. We write
+                              R = Qp v1 + Qp v2 + · · · + Qp vn ,
+with v1 = 1. Then
+                              f (z) = v1 f1 (z) + · · · + vn fn (z)
+                     P∞
+with each fi (z) = k=0 ck z k ∈ Qp [[z]], converging for all z ∈ Zp . Linear independence
+of the vi over Qp implies that f (z) = 0 requires that each fi (z) = 0 separately. Since
+f (z) has infinitely many zeros on z ∈ Zp , by Strassman’s theorem ([32], cf. Cassels [10,
+Theorem 4.1]) applied to fi (z), each fi (z) is identically zero. Thus f (z) is identically
+zero.                                                                                    
+     Finally, we will need a finiteness result for reduction (mod p) in a Zp -module.
+
+Lemma 2.5. Let p be prime and let M be a Zp -module that is isomorphic to a submod-
+ule of Qdp for some natural number d, then M/pM is a finite-dimensional Z/pZ-vector
+space.
+
+Proof. Note that M/pM is a Z/pZ-vector space. We claim that its dimension is at most
+d. To see this, let θ1 , . . . , θd+1 be elements of M. If we regard M as a submodule of Qdp ,
+then we see that 0 is a non-trivial Qp -linear combination of the images of θ1 , . . . , θd+1
+in Qdp . Clearing denomiators, we see that there exist a1 , . . . , ad+1 ∈ Zp , not all of
+                                    P
+which are in pZp , such that d+1      i=1 ai θi = 0. Reducing mod pM, we see that the images
+of θ1 , . . . , θd+1 in M/pM are linearly dependent over Z/pZ and thus any set of size
+d + 1 in M/pM is linearly dependent. Hence M/pM is at most d-dimensional and in
+particular it is a finite-dimensional Z/pZ-vector space.                                   
+    A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS 11
+                3. G ENERALIZED p- ADIC A NALYTIC A RC T HEOREM
+   In this section we prove a generalization of the p-adic analytic arc theorem given in
+[5, Theorem 1.1] that applies to a larger class of rings. The generalization applies to any
+Zp -algebra S that is finitely generated and torsion-free as a Zp -module with the added
+hypothesis that p ≥ 5. Examples given in [4] show this theorem does not hold for p = 2;
+the case p = 3 of the result below is currently open.
+Theorem 3.1. (Generalized p-adic analytic arc theorem) Let p ≥ 5 be prime, and sup-
+pose
+σ = (H1 , H2 , . . . , Hd ) is a polynomial automorphism of Zp [x1 , . . . , xd ]. Let S be a
+Zp -algebra that is finitely generated and torsion-free as a Zp -module, and let fσ :
+S d → S d denote the induced dynamical evaluation map. Suppose that an initial value
+s0 = (s1 , . . . , sd ) ∈ S d satisfies the following two conditions:
+     (i) Hi (s1 , . . . , sd ) ≡ si (mod pS) for 0 ≤ i ≤ d;
+    (ii) The Jacobian matrix M = J(σ; x)|x=s0 evaluated at x = s0 is the identity
+         matrix (mod pS).
+Then there exist power series f1 (z), . . . , fd (z) ∈ (S ⊗Zp Qp )[[z]] which converge for all
+z ∈ Zp and which satisfy:
+    (1) fi (z + 1) = Hi (f1 (z), . . . , fd (z)), for 1 ≤ i ≤ d;
+
+    (2) fi (0) = si , for 1 ≤ i ≤ d.
+Remark 3.2. The associated analytic arc in S d constructed in Theorem 3.1 is
+                  C = C(σ, s0 ) := {(f1 (z), . . . , fd (z)) : z ∈ Zp } ⊂ S d .
+                                                                (m)
+The result implies that the arc C contains all the iterates {fσ (s0 ) : m ≥ 0} of the initial
+                              (m)
+value s0 , since (1) shows fσ (s0 ) = (f1 (m), . . . , fd (m)) holds. IT covers cases such
+as S = Z5 with σ(x) = x + 5 on Z5 [x], where one may take s0 = 0, and nevertheless
+the induced dynamical evaluation map fσ has no fixed points. The proof follows the
+basic plan of the result in [4], but involves more complications. It shows that conditions
+                      (pm )
+(i), (ii) imply that fσ (s0 ) converges rapidly to s0 as m → ∞, and uses this to show
+analyticity of the constructed maps f1 (z), . . . , fd (z).
+Remark 3.3. Theorem 3.1 cannot be extended to cover all general algebra endomor-
+phisms of Zp [x1 , ..., xd ]. For general endomorphisms there may be no point where con-
+dition (b) holds, and Remark 2.2 asserts one can only guarantee there exists a point
+where the Jacobian, when evaluated (mod pS), is an idempotent matrix. The worst
+case is where the Jacobian vanishes identically (mod pS). Consider d = 1 with
+H1 (x) = x10 , where we take p = 5 and s0 = 5, a case where the Jacobian vanishes iden-
+                                                   n
+tically. In this case, we have that σ n (s0 ) = 510 for n ≥ 0. Suppose that it were possible
+to find an arithmetic progression {an + b}n∈Z and a 5-adic analytic map f : Z5 → Z5
+with the property that f (n) = σ an+b (s0 ) for all integers n. Then we would necessarily
+have f (5k ) → 0 as k → ∞. But f (0) = σ b (5) 6= 0 and so it is impossible to find even a
+continuous map f : Z5 → Z5 that has the property (1).
+  To begin the proof, we first introduce a ring of polynomials which takes “integral”
+values when evaluated at values in Zp .
+12                          JASON P. BELL AND JEFFREY C. LAGARIAS
+Definition 3.4. Given a prime p and a Zp -algebra S that is finitely generated and torsion-
+free as a Zp -module, let R(S) denote the subring of the polynomial ring (S ⊗Zp Qp )[z]
+that consists of those polynomials which under evaluation at each z ∈ Zp belong to S.
+
+  The Zp -algebra R(S) offers a crucial advantage over the polynomial ring S ⊗Zp Q[z],
+which is that the following closure property holds: if Q(z) ∈ R(S) then the equation
+                                  F (z + 1) − F (z) = Q(z)                                   (3.1)
+has a solution with F (z) ∈ R(S). We use this in proving our general analytic arc
+theorem (Theorem 3.1). We note however that the ring R(S) has some pathological
+properties. It is a non-Noetherian ring, by a general criterion of Cahen and Chabert [9,
+Prop. VI.2.4]. (In fact, for S = Zp , the ring R(S) = Zp [fn (z) = z(z−1)·(z−(n−1))
+                                                                               n!
+                                                                                          :n≥
+0] as a linear space over Zp —see Lemma 3.5 below. An example of an infinite ascending
+chain of ideals in R(S) that does not stabilize is: (z), (z, fp (z)), (z, fp (z), fp2 (z)), . . ..)
+Secondly, it can be shown that R(S) is not of finite type over Zp , i.e., it is not finitely
+generated as a Zp -algebra. Finally, R(S) is not a UFD, in general: for S = Z2 , then
+u := z(z − 1)/2, v := (z − 2)(z − 3)/2, u′ := z(z − 3)/2, v ′ := (z − 1)(z − 2)/2
+are irreducible elements of R(S) and uv = u′ v ′ ; there are similar examples for S = Zp ,
+p ≥ 3.
+Lemma 3.5. Given a prime p and a Zp -algebra S that is finitely generated and torsion-
+free as a Zp -module, the ring R(S) is given by
+                            (          m                            )
+                                     X        z
+                  R(S) = f (z) =          bi     : m ≥ 0 and bi ∈ S .                 (3.2)
+                                      i=0
+                                              i
+                                                                                      
+Proof. In the special case S = Zp the lemma asserts that the polynomials kz =
+z(z−1)···(z−k+1)
+        k!
+                 for k ≥ 0 are a basis of the polynomials in Qp [z] that map Zp into it-
+self. This is a theorem of Mahler [24, p. 49–50]. For the general case, since S is finitely
+generated and torsion-free, S ⊗Zp Qp [z] is a finite direct sum of copies of Qp [z]. The
+result then follows from the special case applied to each copy separately.               
+Lemma 3.6. Let p be prime and let S be a Zp -algebra that is finitely generated and
+torsion-free as a Zp -module. Suppose Q1 (z), . . . , Qd (z) ∈ R(S) are given polynomials
+of degree at most N. Then there exists a solution [h1 (x), . . . , hd (x)]T ∈ R(S)n to the
+equation
+                                                        
+                 h1 (z + 1)         h1 (z)            Q1 (z)
+                     ..     ≡  ...  −               ..   (mod pR(S))           (3.3)
+                       .                                  .
+                 hn (z + 1)         hd (z)            Qd (z)
+such that h1 (0) = · · · = hd (0) = 0 and h1 , . . . , hd have degree at most N + 1.
+
+Proof. By assumption, each Qi (z) ∈ R(S) is of degree at most N, and so
+                                        XN         
+                                                   z
+                               Qi (z) =      ci,k
+                                        k=0
+                                                   k
+      A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS 13
+with each ci,k ∈ S. We define
+                                                    N
+                                                    X                   
+                                                                      z
+                                   hi (z) := −            cj,k            ,                   (3.4)
+                                                    k=0
+                                                                     k+1
+which implies hi ∈ R(S) and is of degree at most N + 1. It is easy to check that this
+gives a solution to equation (3.3), using the identity
+                                                 
+                               z+1             z       z
+                                        −            =   .
+                               k+1          k+1        k
+Furthermore, hi (0) = 0 for 1 ≤ i ≤ d.                                                            
+
+  To create analytic maps in the modified version of the p-adic analytic arc lemma, we
+will use the following lemma about subalgebras of R(S).
+
+Lemma 3.7. Let p be a prime and let S be a Zp -algebra that is finitely generated and
+torsion-free as a Zp -module. Let N be a natural number, and let
+                  (      N
+                                                                                )
+                        X
+          SN = c +          pi hi (z) | c ∈ S, hi (z) ∈ R(S), deg(hi ) ≤ 2i − 1
+                            i=1
+
+and
+                (         M
+                                                                                              )
+                          X
+  TN = SN +       c+            pi hi (z) | M ≥ 1, c ∈ S, hi (z) ∈ R(S), deg(hi ) ≤ 2i − 2 .
+                          i=1
+
+Then the Zp -subalgebra of R(S) generated by SN is contained in TN .
+
+Proof. Since SN and TN are both closed under addition and SN ⊆ TN , it is sufficient to
+show that SN TN ⊆ TN . To do this, suppose
+                                                    N
+                                                    X
+                                  H(z) = c +              pi hi (z) ∈ SN
+                                                    i=1
+
+and
+                                                    M
+                                                    X
+                                  G(z) = d +              pi gi (z) ∈ TN ,
+                                                    i=1
+where c, d ∈ S and hi (z), gi (z) ∈ R(S) with deg(gi ) ≤ 2i − 2 for i > N and
+deg(gi ), deg(hi ) ≤ 2i − 1 for i ≤ N. We must show that H(z)G(z) ∈ TN . Notice
+that
+                                                XN          M
+                                                            X
+                                                    i
+             H(z)G(z) = cG(z) + dH(z) − cd +       p hi (z)   pj gj (z).
+                                                                     i=1           j=1
+
+Then cG(z), dH(z), and cd are all in TN and since TN is closed under addition, it is
+sufficient to show that
+                 N
+                 X                    M
+                                      X                    +M
+                                                          NX          k−1
+                                                                      X
+                          pi hi (z)         pj gj (z) =          pk          gi (z)hk−i (z)
+                    i=1               j=1                 k=2          i=1
+14                        JASON P. BELL AND JEFFREY C. LAGARIAS
+is in TN . But since gi (z) has degree at most 2i − 1 and hk−i (z) has degree at most
+2(k − i) − 1, we see that
+                                   Xk−1
+                                        gi (z)hk−i (z)
+                                         i=1
+has degree at most 2k − 2. It follows that
+                              N
+                              X                M
+                                               X
+                                     i
+                                    p hi (z)         pj gj (z) ∈ TN .
+                              i=1              j=1
+
+The result follows.                                                                       
+
+Proof of Theorem 3.1. We construct (f1 (z), . . . , fd (z)) by successive approximation
+(mod pj R(S)). The approximations will be denoted gi,j (z) for 1 ≤ i ≤ d. We initial-
+ize with
+                             gi,0 (z) := si for 1 ≤ i ≤ d.
+   We prove by induction on j that one can recursively pick
+                                                      j
+                                                      X
+                               gi,j (z) := si +             pk hi,k (z),
+                                                      k=1
+
+such polynomials hi,j (z) ∈ R(S) (1 ≤ i ≤ d) satisfy the three conditions:
+   (1) hi,j (0) = 0 for 1 ≤ i ≤ d;
+   (2) hi,j (z) has degree at most 2j − 1 for 1 ≤ i ≤ d;
+   (3) there holds
+                gi,j (z + 1) ≡ Hi (g1,j (z), . . . , gd,j (z)) (mod pj+1R(S)).
+The base case of the induction is j = 0. Conditions (1) and (2) are vacuous, and (3)
+holds using hypothesis (i), observing that R(S) ∩ S = S.
+  Let j ≥ 1 and assume that we have defined hi,k for 0 ≤ i ≤ d and k < j so that
+conditions (1)–(3) hold. Our object is now to construct
+                              gi,j+1(z) := gi,j (z) + pj hi,j (z),
+in which polynomials hi,j (z) ∈ R(S) are to be determined, so that conditions (1)–(3)
+hold. By assumption
+                gi,j−1(z + 1) − Hi (g1,j−1(z), . . . , gd,j−1(z)) = pj Qi,j (z),       (3.5)
+with Qi,j ∈ R(S) for 1 ≤ i ≤ d. Using the notation of the statement of Lemma 3.7, we
+see that conditions (2) and (3) show that g1,j−1 (z), . . . , gd,j−1(z) are in Sj−1 . Thus by
+Lemma 3.7 we see that
+               pj Qi,j (z) = gi,j−1(z + 1) − Hi (g1,j−1 (z), . . . , gd,j−1(z))
+is in the algebra generated by Sj−1 and hence is in Tj−1 . It follows that we can write
+                    P
+pj Qi,j (z) = ci,j + M      k
+                       k=1 p qi,j,k (z) for some ci,j ∈ S and polynomials qi,j,k (z) ∈ R(S)
+such that deg(qi,j,k ) ≤ 2k − 1 for k ≤ j − 1 and deg(qi,j,k ) ≤ 2k − 2 for k ≥ j.
+Consequently, pj Qi,j (z) is equivalent modulo pj+1 R to the polynomial
+                                               j
+                                               X
+                                     ci,j +          pk qi,j,k (z),
+                                               k=1
+    A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS 15
+a polynomial of degree at most 2j − 2. Hence Qi,j (z) is congruent to a polynomial in
+R(S) of degree at most 2j − 2 mod pR(S). To satisfy property (3) for j it is sufficient
+to find {hi,j (z) ∈ R(S) : 1 ≤ i ≤ d} such that
+ gi,j−1(z + 1) + pj hi,j (z + 1) − Hi (g1,j−1 (z) + pj h1,j (z), . . . , gd,j−1(z) + pj hd,j (z))
+is in pj+1R(S) for 1 ≤ i ≤ d. This expression becomes
+                                           d
+                                           X
+     j             j                   j                    ∂Hi
+    p Qi,j (z) + p hi,j (z + 1) − p              hℓ,j (z)       (x1 , . . . , xd )
+                                           ℓ=1
+                                                            ∂xℓ                    x1 =g1,j (z),...,xd =gd,j (z)
+
+
+modulo pj+1 R(S). It therefore suffices to solve for 1 ≤ i ≤ d the system
+                                 d
+                                 X                ∂Hi
+     Qi,j (z) + hi,j (z + 1) −         hℓ,j (z)       (x1 , . . . , xd )                                       (3.6)
+                                 ℓ=1
+                                                  ∂xℓ                    x1 =g1,j (z),...,xd =gd,j (z)
+
+
+(mod pR(S)), where we may assume that Qi,j is of degree at most 2j − 2. Now
+consider the Jacobian matrix M (j) (z) ∈ Md×d (R(S)) with polynomial entries
+                                    ∂Hi
+                   M (j) (z)iℓ :=       (x1 , . . . , xd )                               .
+                                    ∂xℓ                    x1 =g1,j (z),...,xd =gd,j (z)
+
+Property (1) for j yields for 1 ≤ i ≤ d that
+                                 gi,j (z) ≡ si (mod pR(S)).
+It follows that
+                            M (j) (z) ≡ J(σ; s0 )(mod pR(S)).
+By hypothesis (ii) the matrix M = J(σ; s0 ) ∈ Md×d (S) is congruent to the identity
+(mod pS), and we have
+                                 M (j) (z) ≡ M(mod pR(S)).
+Now equation (3.6) can be rewritten in the form
+                                                    
+           h1,j (z + 1)            h1,j (z)     Q1,j (z)
+                 ..    ≡M          ..    −    ..     (mod pR(S)).
+                   .                   .            .
+             hd,j (z + 1)                  hd,j (z)                Qd,j (z)
+The hypotheses of Lemma 3.6 are satisfied, so we conclude that there exists a solution
+[h1,j (z), . . . , hd,j (z)] ∈ R(S)d with hi,j (0) = 0 for 1 ≤ i ≤ d and hi (z) of degree at
+most 2j − 1. Thus conditions (1)–(3) are satisfied for j, completing the induction step.
+  We now set
+                                                   ∞
+                                                   X
+                                   fi (z) := si +     pj hi,j (z).
+                                                       j=1
+
+Now each hi,j (z) ∈ R(S) is of degree at most 2j − 1 and hence
+                                          2j−1
+                                          X            
+                                                       z
+                               hi,j (z) =      ci,j,k     ,
+                                          k=0
+                                                       k
+16                        JASON P. BELL AND JEFFREY C. LAGARIAS
+with ci,j,k ∈ S. We find that
+                                                               
+                                           ∞
+                                           X     XNj         
+                                                             z 
+                         fi (z) = si +     pj       ci,j,k
+                                       j=1       k=0
+                                                             k
+                                       X∞        
+                                                 z
+                                = s0 +     bi,k                                       (3.7)
+                                       k=0
+                                                 k
+in which
+                                                 ∞
+                                                 X
+                                       bi,k :=          pj ci,j,k
+                                                 j=1
+
+is absolutely convergent p-adically, since each ci,j,k ∈ S. To show the series (3.7)
+converges to an analytic map on z ∈ Zp , we must establish that |bi,k |p /|k!|p → 0 as
+k → ∞, i.e. that for any j > 0 one has bi,k /k! ∈ pj Zp for all sufficiently large k. To do
+this, we note that ci,j,k = 0 if j < (k + 1)/2. Hence
+                                            X
+                                   bi,k :=        pj ci,j,k .
+                                           j≥(k+1)/2
+
+It follows that |bi,k |p < p−(k+1)/2 . Since 1/|k!|p < pk/(p−1) , we see that bi,k /k! → 0
+since p > 3. Hence f1 , . . . , fd are analytic maps on Zp .
+   The argument above also showed that
+                             fi (z) ≡ gi,j (z) (mod pj R(S)).
+It then follows from property (3) above that
+                   fi (z + 1) ≡ Hi (f1 (z), . . . , fd (z))(mod pj R(S))
+Since this holds for all j ≥ 1, we conclude that
+                            fi (z + 1) = Hi (f1 (z), . . . , fd (z)).
+This establishes (1). Finally, we have
+                                                ∞
+                                                X
+                                fi (0) = si +          pj hi,j (0) = si ,
+                                                 j=1
+
+which establishes (2).                                                                  
+
+
+                                4. P OLYNOMIAL R ING C ASE
+  In this section, we consider automorphisms of a polynomial ring over a field. We
+prove the following theorem.
+Theorem 4.1. Let K be a field of characteristic zero and let A = K[x1 , . . . , xd ]. If
+σ : A → A is a K-algebra automorphism and I and J are ideals of A, then
+                                    {n ∈ Z : σ n (I) ⊇ J}
+has the two-sided SML property.
+    A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS 17
+   In Section 5 we will deduce the main Theorem 1.7 from this result. We establish
+Theorem 4.1 using a reduction to the ring Zp [x1 , . . . , xd ], given below (Theorem 4.5).
+A key ingredient in the proof of Theorem 4.5 will be the p-adic analytic arc theorem
+proved earlier, see Proposition 4.3.
+   In restricting ideals from a ring with Qp -coefficients to one with Zp -coefficients, we
+only need to consider the following special subclass of ideals in Zp [x1 , x2 , . . . , xd ], as
+follows.
+Definition 4.2. Let p be a prime and let A be a Zp -algebra. We say that a proper ideal I
+of A is p-reduced if whenever x ∈ A has the property that px ∈ I, we necessarily have
+x ∈ I.
+  The condition that an ideal I of a Zp -algebra A be p-reduced is imposed to ensure
+that the quotient ring A/I is torsion-free as a Zp -module.
+Proposition 4.3. Let p be prime, and let I and J be two p-reduced ideals in
+Zp [x1 , . . . , xd ]. Suppose that (Zp [x1 , . . . , xd ]/I) ⊗Zp Qp is finite dimensional as a
+Qp -vector space. If σ is a Zp -algebra automorphism of Zp [x1 , . . . , xd ], then the set
+{n ∈ Z | σ n (I) ⊇ J} has the two-sided SML property.
+
+Proof. For a polynomial automorphism σ n (I) ⊇ J if and only if σ −n (J) ⊆ I. Thus,
+replacing σ with σ −1 , it is sufficient to show that
+                                       {n ∈ Z : σ n (J) ⊆ I}
+is a finite union of complete arithmetic progressions and a finite set. Let S :=
+Zp [x1 , . . . , xd ]/I. The ring S is a finitely generated and torsion-free Z-algebra, since
+I is p-reduced. Write σ = (F1 , . . . , Fd ) ∈ Zp [x1 , . . . , xd ]d . The automorphism
+σ induces the dynamical evaluation map fσ : S d → S d , given by (s1 , . . . , sd ) 7→
+(F1 (s1 , . . . , sd ), . . . , Fd (s1 , . . . , sd )), for si ∈ S, which is a (nonlinear) bijection on
+S d . Since S is a torsion-free Zp -algebra and since, by hypothesis, S ⊗Zp Qp is finite-
+dimensional, we have S d /pS d is a finite ring. Although fσ is nonlinear, we have
+                                   fσ (s + pS d ) ⊆ fσ (s) + pS d ,
+hence fσ induces a well-defined bijective map of S d /pS d . Since S/pS is finite, there
+exists a positive integer a such that fσa (s) ≡ s (mod pS d ) for all s ∈ S d .
+  Now set ρ = σ ma , where m is chosen as in the statement of Lemma 2.1, and write
+ρ = (H1 , . . . , Hd ). Then for any s ∈ S d , we have fρ (s) ≡ s (mod pS d ) and by
+Lemma 2.1, the Jacobian matrix of ρ is the identity matrix mod pS when evaluated at
+any point in S d . For any polynomial P (x1 , . . . , xd ) ∈ Zp [x1 , . . . , xd ] and for any k with
+0 ≤ k ≤ ma − 1, the fact that σ and ρ are endmorphisms gives (via (2.1))
+         ρn (σ k (P (x1 , . . . , xd ))) ∈ I if and only if P ◦ fρn ◦ fσk (s1 , . . . , sd ) = 0,
+where si := xi + I. We now treat each k separately. By construction,
+                      fρ ◦ fσk (s1 , . . . , sd ) ≡ fσk (s1 , . . . , sd ) (mod pS),
+and the Jacobian matrix J(ρ, fσk (s1 , . . . , sd )) is congruent to the identity mod pS. Now
+the generalized p-adic analytic arc theorem (Theorem 3.1) applies to show there exist
+power series
+                          f1 (z), . . . , fd (z) ∈ (S ⊗Zp Qp )[[z]]
+18                           JASON P. BELL AND JEFFREY C. LAGARIAS
+which are analytic on Zp and which satisfy (f1 (0), . . . , fd (0)) = fσk (s1 , . . . , sd ) and
+                   fi (z + 1) = Hi (f1 (z), . . . , fd (z))            for 1 ≤ i ≤ d.
+By construction, fρn ◦ fσk (s1 , . . . , sd )) = (f1 (n), . . . , fd (n)) for all n ∈ N. Next, select
+a generating set for the ideal J,
+                         J = hP1 (x1 , . . . , xd ), . . . , Pm (x1 , . . . , xd )i.
+Then for 1 ≤ i ≤ m, define
+                     gi (z) := Pi (f1 (z), . . . , fd (z)) ∈ (S ⊗Zp Qp )[[z]].
+Since f1 , . . . , fd are analytic on Zp and P1 , . . . , Pm ∈ Zp [x1 , . . . , xd ], each gi (z) is a
+power series which converges on Zp , for 1 ≤ i ≤ d. Moreover, gi (n) = 0 if and only if
+ρn ◦ σ k (Pi (x1 , . . . , xd )) ∈ I. Notice if gi (n) = 0 for infinitely many integers n, then it
+is identically zero by Theorem 2.4. Thus
+                                    {n ∈ Z | ρn (σ k )(J) ⊆ I}
+is either a finite set or is all of Z. Since this holds for 0 ≤ k ≤ ma1 , result now follows.
+                                                                                           
+We must also treat the case that (Zp [x1 , . . . , xd ]/I) ⊗ Qp is an infinite-dimensional Qp -
+vector space. This is handled by a reduction to the preceding proposition. To do this
+reduction, we use the following lemma, based on an idea of Amitsur [2, Lemma 4, p.
+41].
+Lemma 4.4. Let K be an uncountable field and let A be a finitely generated commuta-
+tive K-algebra. Suppose that there exists a countable set of ideals {Ii | i ≥ 1} of A such
+that each ideal L of A of finite codimension contains one of the Ii . Then there exists a
+finite set j1 , . . . , jd such that
+                                        Ij1 ∩ · · · ∩ Ijd = (0).
+
+Proof. Let J(A) denote the Jacobson radical of A. Since A is a finitely generated K-
+algebra, A is a Jacobson ring (that is, every prime ideal of A is the intersection of the
+maximal ideals containing it) [13, Theorem 4.19]. Thus J(A) is the intersection of the
+prime ideals of A (that is, it is the nilradical of A). By the Hilbert basis theorem A
+is Noetherian and hence some power of the nilradical of A is zero [3, Corollary 7.15].
+Hence there is some m ≥ 1 such that J(A)m = (0). Given a maximal ideal M of A, note
+that there is some i such that Ii ⊆ M m . Let Qi denote the intersection of all ideals of the
+form M m , where M is a maximal ideal of A with the property that M m ⊇ Ii . Similarly,
+we let Pi denote the intersection of all ideals maximal ideals M with the property that
+M m ⊇ Ii . Then Pim = Qi ⊇ Ii for each i ≥ 1.
+   Each maximal ideal M of A necessarily contains some Pi . A result of Amitsur (cf.
+[2, Corollary 4, p. 40]) shows that there exist j1 , . . . , jd such that Pj1 ∩ Pj2 ∩ · · · ∩ Pjd
+is contained in the Jacobson radical J(A) of A. Hence
+          Ij1 ∩ · · · ∩ Ijd ⊆ Qj1 ∩ · · · ∩ Qjd = Pjm1 ∩ · · · ∩ Pjmd ⊆ J(A)m = (0),
+as required.                                                                                       
+    A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS 19
+Theorem 4.5. Let p ≥ 5 be prime, let I and J be two p-reduced ideals in Zp [x1 , . . . , xd ]
+with I ∩ Zp = J ∩ Zp = (0). If σ is a Zp -algebra automorphism of Zp [x1 , . . . , xd ], then
+the set
+                               {m ∈ Z | σ m (I) ⊇ J}
+is the union of a finite number of complete doubly-infinite arithmetic progressions, up to
+the addition of a finite set.
+Proof. Let T denote the collection of subsets of Z which are finite union of com-
+plete doubly-infinite arithmetic progressions along with a finite set. Then T is count-
+able. Suppose first that I ⊆ Zp [x1 , . . . , xd ] is a p-reduced ideal with the property that
+(Zp [x1 , . . . , xd ]/I) ⊗Zp Qp is finite-dimensional as a Qp -vector space. Then by Proposi-
+tion 4.3, we have
+                                    {n ∈ Z | σ n (I) ⊇ J} ∈ T .
+We now treat the general case. Given T ∈ T , let IT denote the intersection of all
+p-reduced ideals L that contain I and such that:
+    (1) L ∩ Zp = (0);
+    (2) (Zp [x1 , . . . , xd ]/L) ⊗Zp Qp is a finite-dimensional Qp -vector space;
+    (3) T = {n ∈ Z | σ n (L) ⊇ J}.
+   Suppose first that T ∈ T is such that IT is a non-empty intersection. We first note
+that if n ∈ T , then σ n (IT ) ⊇ J; moreover IT is an intersection of ideals which contain
+I and hence it contains I. If n 6∈ T , then σ n (I) cannot contain J, since by definition
+σ n (IT ) 6⊇ J and I ⊆ IT . Thus if IT is a non-empty intersection, then {n | σ n (IT ) ⊇
+J} = T .
+   We next note that the collection of ideals
+                         {IT | T ∈ T , IT is a nonempty intersection}
+in Zp [x1 , . . . , xd ] is countable. Consider the ideals IT′ = IT Qp [x1 , . . . , xd ]. By Lemma
+4.4 one of the following holds; either:
+    (1) there exist T1 , . . . , Td ∈ T such that IT′ 1 ∩ · · · ∩ IT′ d ⊆ IQp [x1 , . . . , xd ]; or
+    (2) there is an ideal L ⊃ IQp [x1 , . . . , xd ] of Qp [x1 , . . . , xd ] of finite codimension
+        which does not contain any of the non-empty IT′ .
+In the first case, note that T0 = T1 ∩· · ·∩Td ∈ T and by definition, IT′ 0 ⊆ IT′ 1 ∩· · ·∩IT′ d ⊆
+IQp [x1 , . . . , xd ]. Since IQp [x1 , . . . , xd ] ⊆ IT0 , we see that IQp [x1 , . . . , xd ] = IT0 . It
+follows that the set of integers n for which σ n (I) ⊇ J is exactly T0 .
+   If, on the other hand, (2) holds, then there exists an ideal L of finite codimen-
+sion which contains I but doesn’t contain any of the non-empty IT ; then L1 = L ∩
+Zp [x1 , . . . , xd ] is p-reduced and satisfies Zp [x1 , . . . , xd ]/L1 ⊗Zp Qp ∼
+                                                                                 = Qp [x1 , . . . , xd ]/L
+is finite-dimensional. Hence IT ⊆ L1 for some T ∈ T , and so IT′ ⊆ L, a contradiction.
+We thus obtain the result.                                                                               
+   Now we can prove Theorem 4.1.
+
+Proof of Theorem 4.1. Let K be a field of characteristic 0 and let A = K[x1 , . . . , xd ],
+with σ : A → A a K-algebra automorphism, and let I and J be two proper ideals
+of A. Then there exist polynomials F1 , . . . , Fd , G1 , . . . , Gd in A such that σ(xi ) =
+20                             JASON P. BELL AND JEFFREY C. LAGARIAS
+                          −1
+Fi (x1 , . . . , xd ) and σ (xi ) = Gi (x1 , . . . , xd ) for i ∈ {1, . . . , d}. Next there exist poly-
+nomials C1 , . . . , Cs in A that generate I as an ideal and polynomials D1 , . . . , Dt in A
+that generate J.
+   We let S denote the set of all nonzero elements of K that occur as a coefficient of
+one of F1 , . . . , Fd , G1 , . . . , Gd and C1 , . . . , Cs , D1 , . . . , Ds and we let R0 = [S] denote
+the finitely generated Z-algebra generated by the elements of S inside K and we let K0
+denote the field of fractions of R0 . By construction, σ(R0 [x1 , . . . , xd ]) ⊆ R0 [x1 , . . . , xd ]
+and σ −1 (R0 [x1 , . . . , xd ]) ⊆ R0 [x1 , . . . , xd ], and so σ restricts to an R0 -algebra automor-
+phism of R0 [x1 , . . . , xd ] and to a K0 -algebra automorphism of K0 [x1 , . . . , xd ].
+   We let I0 := I ∩ K0 [x1 , . . . , xd ]) and J0 = J ∩ K0 [x1 , . . . , xd ]), which are both
+K0 [x1 , x2 , . . . , xd ]- ideals. We claim that:
+                            σ n (I) ⊇ J      if and only if σ n (I0 ) ⊇ J0 .
+To see this, first observe that if σ n (I) ⊇ J, then we have σ n (I0 ) ⊇ J0 , since
+σ n (K0 [x1 , . . . , xd ]) = K0 [x1 , . . . , xd ]. Next suppose that n is an integer for which
+σ n (I0 ) ⊇ J0 . Note that σ n (I) is generated by σ n (C1 ), . . . , σ n (Cs ) and each of these
+generators is in K0 [x1 , . . . , xd ]. Since K[x1 , . . . , xd ] is a free K0 [x1 , . . . , xd ]-module, we
+have that σ n (I0 ) is generated by σ n (C1 ), . . . , σ n (Cs ) as an ideal in K0 [x1 , x2 , . . . , xd ].
+By construction of K0 , the generators Di of J lie in J0 for i ∈ {1, . . . , t} and so by
+assumption
+                                    X  t
+                              Di ∈        K0 [x1 , . . . , xd ]σ n (Ci ) ⊆ σ n (I)
+                                    i=1
+for i = 1, . . . , t. It follows that J ⊆ σ n (I), proving the claim.
+   By Lemma 2.3, there exists a prime p ≥ 5 such that R0 embeds in Zp as a Z-algebra.
+We identify R0 with its image in Zp and we similarly identify K0 with its image in Qp .
+We then see that the restriction of σ to K0 [x1 , . . . , xd ] lifts to a Qp -algebra automorphism
+ρ of Qp [x1 , . . . , xd ], by identifying Qp [x1 , . . . , xd ] with (K0 [x1 , . . . , xd ]⊗K0 Qp ) and then
+taking ρ to be the map σ ⊗ id. In addition, the restriction of σ to R0 [x1 , . . . , xd ] lifts
+to a Zp -algebra automorphism ρ0 of Zp [x1 , . . . , xd ] ∼         = (R0 ⊗R0 Zp )[x1 , . . . , xd ]. Note
+that Qp [x1 , . . . , xd ] is a free K0 [x1 , . . . , xd ]-module and hence the ideals I0 and J0 lift
+to ideals I ′ and J ′ of Qp [x1 , . . . , xd ] respectively. Moreover, since any basis for Qp over
+K0 is fixed by ρ, by freeness we have
+                      {m ∈ Z : σ m (I0 ) ⊇ J0 } ≡ {m ∈ Z : ρm (I ′ ) ⊂ J ′ }.
+Next, we let
+                                       Ie = I ′ ∩ Zp [x1 , . . . , xd ]
+and
+                                          Je = J ′ ∩ Zp [x1 , . . . , xd ].
+Since I ′ , J ′ are Qp [x1 , . . . , xd ]-ideals, the ideals I,  e Je are necessarily p-reduced. Since
+ρ restricts to the automorphism ρ0 of Zp [x1 , . . . , xd ], a similar argument to the one em-
+ployed earlier in the proof gives
+                       {m ∈ Z : ρm (I ′ ) ⊂ J ′ } ≡ {m ∈ Z : ρm  e    e
+                                                              0 (I) ⊂ J }.
+
+Theorem 4.5 now applies to show that the set on the right is the union of a finite number
+of complete-doubly infinite arithmetic progressions plus a finite set; this equals the set
+    A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS 21
+of n with σ n (I0 ) ⊇ J0 . Finally, using the claim above, this set is identical to the set of
+integers n for which σ n (I) ⊇ J, giving the result.                                        
+                              5. P ROOF OF M AIN R ESULT
+  In this section we prove Theorem 1.7. This is established by reduction of the general
+case to the polynomial ring case using the following result of Srinivas, and then using
+Theorem 4.1.
+Theorem 5.1. (Srinivas) Let A be a finitely generated algebra over an infinite field K.
+Then there exists a natural number n = n(A) such that for all N > n, if
+                  f : K[x1 , . . . , xN ] → A and g : K[x1 , . . . , xN ] → A
+are two surjective K-algebra homomorphisms, then there is an elementary K-algebra
+automorphism φ : K[x1 , . . . , xN ] → K[x1 , . . . , xN ] such that f = g ◦ φ.
+Remark. Here “elementary K-algebra automorphism” means one that is a finite com-
+position of automorphisms of the types:
+                                         Pci ∈ K;
+    (i) (Translations) xi 7→ xi + ci , with
+   (ii) (Linear transformations) xi 7→ j ci,j xj where (ci,j ) ∈ GLN (K);
+  (iii) (Triangular automorphisms) xi 7→ xi for 1 ≤ i ≤ N − 1 and xN 7→ xN +
+        F (x1 , x2 , . . . , xN −1 ).
+For our application we only need the fact that φ is a K-algebra automorphism.
+Proof. See Srinivas [31, Theorem 2, p. 126].                                               
+  We obtain the following result as an immediate corollary.
+Proposition 5.2. Let A be a finitely generated algebra over a field K and let φ : A → A
+be a K-algebra automorphism. Then there exists a natural number N, a surjective K-
+algebra homomorphism ν : K[x1 , . . . , xN ] → A, and a K-algebra automorphism φ̃ of
+K[x1 , . . . , xN ] such that:
+    (1) ν ◦ φ̃n = φn ◦ ν for all integers n;
+    (2) If I and J are ideals in A, then φn (I) ⊇ J if and only if
+                                  φ̃n (ν −1 (I)) ⊇ ν −1 (J).
+
+Proof. We pick n(A) as in the statement of Theorem 5.1. Since A is finitely generated,
+by f1 , . . . , fr , say, we can take N = max(r, n(A) + 1) and construct a surjective map
+ν : K[x1 , . . . , xN ] → A sending xi 7→ fi for 1 ≤ i ≤ r and, if r < n(A) + 1, sending
+any extra xj to 0. Now, since ν and φ ◦ ν are surjective, by Theorem 5.1 there exists an
+automorphism φ̃ of K[x1 , . . . , xN ] satisfying ν ◦ φ̃ = φ◦ν. By construction ν ◦ φ̃ = φ◦ν.
+Note that by composing on the left by φ−1 and on the right by φ̃−1 , we see
+                                    ν ◦ φ̃−1 = φ−1 ◦ ν.
+   We now prove property (1) by induction on |n|, noting the base case |n| = 1 is
+established (for both n = 1, −1). Assume that it is true for all integers n with 0 < |n| <
+m. Then
+      φm ◦ ν = φ ◦ (φm−1 ◦ ν) = φ ◦ (ν ◦ φ̃m−1 ) = (φ ◦ ν) ◦ φ̃m−1 = ν ◦ φ̃m .
+A similar argument shows that φ−m ◦ ν = ν ◦ φ̃−m , and so (1) follows by induction.
+22                        JASON P. BELL AND JEFFREY C. LAGARIAS
+  To verify (2), suppose that I and J are ideals of A. Since ν is surjective, we have
+ν(ν −1 (L)) = L for every ideal of A. If φn (I) ⊇ J, then φn ◦ ν(ν −1 (I)) ⊇ J. Conse-
+quently, ν ◦ φ̃n (ν −1 (I)) ⊇ J. Thus
+
+                     φ̃n (ν −1 (I)) ⊇ ν −1 (ν ◦ φ̃n (ν −1 (I))) ⊇ ν −1 (J).
+
+Also, if φ̃n (ν −1 (I)) ⊇ ν −1 (J), then ν(φ̃n (ν −1 (I))) ⊇ ν(ν −1 (J)) = J. Since ν ◦ φ̃n =
+φn ◦ ν, we see φn (I) = φn (ν(ν −1 (I)) ⊇ J. Thus (2) is established.                       
+
+Proof of Theorem 1.7. We are given a field K of characteristic 0 and a finitely generated
+commutative K-algebra A with a K-algebra automorphism σ. We wish to show that
+the set of integers n such that σ n (I) ⊇ J is a finite union of complete doubly-infinite
+arithmetic progressions along with a finite set.
+   By Proposition 5.2 there exists a polynomial algebra K[x1 , . . . , xN ] with an automor-
+phism φ and ideals I ′ and J ′ such that
+                              φn (I ′ ) ⊇ J ′ ⇐⇒ σ n (I) ⊆ J.
+The result now follows from Theorem 4.1.                                                  
+
+
+                                       6. E XAMPLES
+   We now give several examples which show that results for √         √ ideals I, J can
+                                                                   general
+change the answers compared to their associated radical ideals I, J: allowing non-
+radical ideals can change the structure of infinite arithmetic progressions, or eliminate
+them entirely. We recall that in a commutative ring R, the radical is the ideal I consist-
+ing of all nilpotent elements of R. In particular, R/I is reduced.
+Example 6.1. Let K be an algebraically closed field of characteristic 0 and let A =
+K[x, y, z, t, u]. We define a K-algebra automorphism σ by
+       x 7→ y − (x − y + yz)t + (x − y + yz),            y 7→ x − y + yz,     z 7→ −z,
+
+                                   t 7→ −t,          u 7→ u.
+Then σ is an automorphism. Let
+                   J = (x2 , xy, y 2, y − x, zt − 1, x − u),
+                   I = (x2 , xy, y 2, y − x, zt − 1, x(z − 1), x − u).
+Then
+                                    √    √
+                               σ n ( I) ⊇ J for all n ∈ Z.
+However we have
+                      σ n (I) ⊇ J if and only if n ≡ 0, 3 (mod 4)
+Also
+                                             √
+                                 σ n (I) ⊇       J never holds.
+      A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS 23
+Proof. We note that σ is an automorphism, since it is a composition of automorphisms
+σ3 ◦ σ2 ◦ σ1 , where
+          σ1 (x) = x + yt − y,           σ2 (x) = y,        σ3 (x) = x − y + yz
+           σ1 (y) = y,                   σ2 (y) = x,        σ3 (y) = y
+           σ1 (z) = z,                   σ2 (z) = z,        σ3 (z) = −z
+           σ1 (t) = t,                    σ2 (t) = t,       σ3 (t) = −t
+          σ1 (u) = u,                    σ2 (u) = u,        σ3 (u) = u
+                √
+We note
+     √    that    J ⊇ (x, y, zt − 1, u), as x2 , y 2 ∈ I and zt − 1, x − u ∈ J. We claim
+that J = (x, y, zt − 1, u). To see this, observe that J ⊆ (x, y, zt − 1, u) and so A/J     √
+surjects onto A/(x, y, zt−1, u) ∼  = K[z, z −1 ]. Since K[z, z√−1
+                                                                  ] is reduced, we see that J
+must have zero image under this homomorphism and so J ⊆ (x, y, zt − 1, u). Thus
+√                                                                                          √
+  J = (x, √ y, zt − 1,√u), which is a σ-invariant ideal. Also J ⊂ (x, y, zt − 1, xz, u) ⊂ I
+hence σ n ( J) ⊆ I for all n ∈ Z. Let L = (x2 , xy, y 2, y − x, zt − 1). We note that
+L ⊆ J is σ-invariant. An easy induction shows that
+                               σ n (x) ≡ (−1)( 2 ) xz n (mod L)
+                                             n−1
+
+
+
+for n ∈ Z, where we interpret z −i as being ti (mod L). Thus σ n (J) ⊆ I if and only if
+                  (−1)( 2 ) xz n − u ∈ L + A(x(z − 1)) + A(x − u).
+                         n−1
+
+
+
+This occurs if and only if
+                    (−1)( 2 ) x − u ∈ L + A(x(z − 1)) + A(x − u).
+                          n−1
+
+
+
+If n ≡ 0, 1 (mod 4) then this occurs. Note that
+              L + A(x(z − 1)) + A(x − u) ⊆ (z − 1, t − 1, x2 , y, x − u)
+and
+                    A/(z − 1, t − 1, x2 , y, x − u) ∼
+                                                    = K[x]/(x2 ).
+The image of (−1)( 2 ) x−u under this homomorphism is (−1)( 2 ) x−x+(x2 ), which
+                  n−1                                          n−1
+
+
+has nonzero image for n ≡ 2, 3 (mod 4). Hence we have two arithmetic progressions
+n ≡ 0 (mod 4) and n ≡ 1 (mod 4) for which σ n (J) ⊆ √     I. Equivalently,
+                                                                 √         σ n (I) ⊇ J if
+and only if n ≡ 0, 3 (mod 4). √ We already saw
+                                             √  that σ n ( I) ⊇ J for all n. Finally,
+note that we always have σ n ( J) 6⊆ I, since J is σ-stable and x 6∈ I.                
+  We next consider finitely generated commutative K-algebras A having a nontrivial
+radical. We give two examples of automorphisms of algebras with nonzero radicals for
+which the radical affects the dynamics non-trivially. We begin with a simple example
+that shows that an automorphism of a ring whose action is trivial on the reduced ring
+can still produce non-trivial dynamics.
+Example 6.2. Let K be a field of characteristic 0 and let A = K[x, y, z]/(x, y)3 . Let
+σ : A → A be the automorphism given by σ(x) = y, σ(y) = x, σ(z) = z. Let I = (x)
+and J = (y). Then
+                        σ n (I) ⊇ J if and only if n ≡ 1 (mod 2).
+.
+24                        JASON P. BELL AND JEFFREY C. LAGARIAS
+Proof. This holds by inspection. The point of this example is that σ induces the trivial
+automorphism on K[z] ∼  = A/J(A), where J(A) denotes the radical of the zero ideal.
+                                                                                      
+   We next give an example of an automorphism of a non-reduced ring A with suitable
+ideals exhibiting nontrivial dynamics, consisting of infinite arithmetic progressions, on
+both A and its reduction A/J(A), but the dynamics differ.
+Example        6.3.       Let    K      be     a     field     of    characteristic     0,
+                          −1     −1        3
+and let A = K[u, v, y, y , z, z ]/(u, v) . We let σ : A → A be the automorphism
+given by σ(u) = uy, σ(v) = vz, σ(y) = −y, σ(z) = z. Let
+                              J = (u + v)
+                              I = (y − 1, z − 1, u + v).
+Then
+                      σ n (I) ⊇ J if and only if n ≡ 0, 3 (mod 4).
+
+Proof. We have
+                                                         
+                           σ n (J) = (−1)( 2 ) uy n + vz n ,
+                                           n−1
+
+
+                                          
+which is contained in I if and only if n−1
+                                        2
+                                             ≡ 0 (mod 2). This occurs exactly when
+n ≡ 0, 1 (mod 4). The result follows.                                           
+
+In Example 6.3 the ring A is non-reduced and the arithmetic progressions that occur each
+have “gaps” of length 4. However when one studies the action of the automorphism σ on
+the reduced ring A/J(A) ≃ K[y, y −1, z, z −1 ] we see that it has order 2, so that its action
+on the reduced ring for any ideals I, J will have orbits which decompose into arithmetic
+progressions whose gaps have length 1 or 2 along with a finite set; in Example 6.3 it is
+all integers n since J ⊆ J(A). An interesting question is whether the “gaps” between
+the two cases can be bounded in terms of the size of the gaps that occur from the induced
+action on the reduced ring and the degree of nilpotency of the radical ideal.
+   We conclude with examples showing that the hypotheses that the commutative K-
+algebra A must be finitely generated over K, and that K must have characteristic zero,
+are both needed for the truth of the theorems above.
+Example 6.4. Let K be a field and let S be an arbitrary subset of the integers. Then
+there exists a commutative K-algebra A = AS which is not Noetherian and which is
+infinitely generated over K, having the property that it has an automorphism σ and
+ideals I and J such that σ i (I) ⊇ J holds if and only if i ∈ S.
+
+Proof. Let A = K[xn : n ∈ Z] be a polynomial ring in infinitely many variables and
+let σ be the two-sided shift automorphism defined by σ(xi ) = xi+1 for i ∈ Z. Given a
+subset S of integers, we let PS = (xi | − i ∈ S). Then σ i ((x0 )) ⊆ PS if and only if
+−i ∈ S and so
+                                    σ n (PS ) ⊇ (x0 )
+precisely when n ∈ S.                                                                     
+    A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS 25
+   If we impose the extra requirement that A be Noetherian, but allow it to be infinitely
+generated, there are nontrivial restrictions on the allowable sets S ⊂ Z giving ideal
+inclusions. A result of Farkas [15, Theorem 8] (applied with G = Z) shows that if A is
+Noetherian and φ is an endomorphism of A, then the set of natural numbers i such that
+φi (I) ⊆ J must either be the entire set of natural numbers, or else must have a syndetic
+complement; that is, there exists a natural number d such that if m is in the complement
+then there exists j with 1 ≤ j ≤ d such that m + j is also in the complement. For
+K a field of characteristic 0, we do not know any example of an infinitely generated
+Noetherian commutative K-algebra A with ideals such that the set S is not a finite
+union of arithmetic progressions, possibly augmented by a finite set.
+   Our final example shows that the hypothesis that the ground field K have characteris-
+tic zero is necessary for Theorem 1.7 to hold. In 1953 Lech [20] gave a counterexample
+in positive characteristic p, and we observe it applies at the level of ideals.
+Example 6.5. (Lech) Let p be a prime, let K = Fp (t) for the finite field Fp , and let
+A = K[x, y]. Define σ : A → A by σ(x) = tx and σ(y) = (1 + t)y. Take
+                                   J = (x + y − 1)
+                                   I = (x − 1, y − 1).
+Then
+                    σ n (I) ⊇ J if and only if n ∈ {−1, −p, −p2 , . . . }.
+
+Proof. We show the equlvalent assertion σ n ((x − y + 1)) ⊆ (x − 1, y − 1) if and only if
+n ∈ {1, p, p2, . . .}. Note that σ n (x − y + 1) = tn x − (1 + t)n y + 1, whence we have the
+ideal inclusion σ n ((x − y + 1)) ⊆ (x − 1, y − 1) if and only if tn − (1 + t)n + 1 = 0.
+This equation holds if and only if n is a power of p.                                     
+
+   In the case K has characteristic p > 0, Derksen [12] has further shown that if σ is a
+linearizable endomorphism of A = K[x1 , . . . , xd ], then for ideals I and J of A, the set
+of m such that σ m (I) ⊆ J can be classified; in particular this set is always a p-automatic
+set, as defined in Allouche and Shallit [1].
+
+       7. A PPENDIX : DYNAMICS OF E NDOMORPHISMS –G EOMETRIC VERSUS
+                                  A LGEBRAIC
+   This appendix presents a result addressing the difference between the geometric and
+algebraic formulations of dynamics of endomorphisms. This result concerns the dif-
+ference between the geometric action of endomorphisms acting as maps on S d by
+forward iteration versus the algebraic action of endomorphisms acting on ideals in
+R = S[x1 , . . . , xd ] by backward iteration. It shows that the two actions differ in some
+circumstances.
+   To state it, suppose that S is an integral domain, take R = S[x1 , . . . , xd ] and let U be
+a subset of R. The set of S-points cut out by U in S d is
+     V (U) := VS (U) = {s = (s1 , . . . , sd ) ∈ S d : evs (p(x)) = 0 for all p(x) ∈ U}.
+Of course V (U) = V (I(U)) where I(U) is the smallest ideal containing U. Note that
+for endomorphisms τ and ideals I that τ −1 (I) is an R-ideal while τ (I) := {τ (p(x)) :
+p(x) ∈ I} need not be an R-ideal.
+26                         JASON P. BELL AND JEFFREY C. LAGARIAS
+Proposition 7.1. Let S be an integral domain of any characteristic, and consider the
+polynomial ring R = S[x1 , . . . , xd ]. Let τ : R → R be a S-algebra endomorphism of
+R. Consider the following possible relations between ideals I and J of R, the S-algebra
+endomorphism τ , and the dynamical evaluation map fτ :
+   (a) τ −1 (I) ⊇ J, in the ring R.
+   (b) I ⊇ τ (J), in the ring R.
+    (c) V (I) ⊆ V (τ (J)) in S d .
+   (d) fτ (V (I)) ⊆ V (J) in S d .
+    (e) V (I) ⊆ (fτ )−1 (V (J)) in S d .
+Then:
+   (1) There holds (a) ⇔ (b) and (c) ⇔ (d) ⇔ (e). In addition (b) ⇒ (c), however in
+        general (c) 6⇒ (b).
+   (2) If S = K is an algebraically closed field of any characteristic and I is a radical
+        ideal then (c) ⇔ (b). In this case all five relations (a)–(e) are equivalent.
+   This proposition shows that for endomorphisms τ the obstruction to the equivalence
+of all five of these properties is (c) 6⇒ (b), which concerns non-radical ideals I. This
+difference matters at the level of the generalized SML theorem for ideal inclusion (Theo-
+rem 1.7) in that it can change the allowed arithmetic
+                                               √     √progressions for inclusion relations
+              ′
+of ideals I, I having the same radical ideal I = I ′ with a fixed J, cf. Example 6.1.
+Proof of Proposition 7.1. Let τ be an S-algebra endomorphism of R = S[x1 , ..., xd ].
+  (1). (a) ⇔ (b). For any U ⊆ R, set τ −1 (Y ) := {r(x) ∈ R : τ (r(x)) ∈ U}. Then we
+have the inclusions
+                           τ ◦ τ −1 (U) ⊆ U ⊆ τ −1 ◦ τ (U).
+Furthermore if τ := σ is an automorphism, then equality holds in both inclusions.
+Suppose τ −1 (I) ⊇ J. We apply τ to both sides to obtain
+                                   I ⊇ τ ◦ τ −1 (I) ⊇ τ (J).
+Conversely, given I ⊇ τ (J), applying τ −1 to both sides gives
+                                  τ −1 (I) ⊇ τ −1 ◦ τ (J) ⊇ J.
+   (b) ⇒ (c). We are given I ⊃ τ (J). Now suppose s ∈ V (I) = VS (I) and we are
+to show s ∈ V (τ (J)). The hypothesis asserts evs (q(x)) = 0 for all q(x) ∈ I. The
+conclusion asserts that
+                     τ (p)(s) := evs (τ (p)(x)) = 0 for all         p(x) ∈ J.
+To verify this, the inclusion τ (J) ⊆ I gives
+                          τ (p)(x) = p(τ (x1 ), . . . , τ (xd )) =: q(x),
+for some q(x) ∈ I. Now
+                      evs (τ (p))(x) = p(evs (τ (x1 )), . . . , evs (τ (xd )))
+and by definition evs (τ (x1 ), . . . , τ (xd )) = fτ (s). We conclude
+                                evs (τ (p)(x)) = evfτ (s) (p(x)).
+    A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS 27
+  Now s ∈ V (I) gives q(s) = 0 whence
+                 0 = q(s) := evs (q(x)) = evs (p(τ (x1 ), . . . , τ (xd )))
+                           = p(evs (τ (x1 ), . . . , τ (xd )) = evfτ (s) (p(x))
+Since this holds for all p(x) ∈ J, we have s ∈ V (τ (J)).
+  (c) ⇔ (d). Let s ∈ S d . The key property is the identity, valid for all r(x) =
+r(x1 , . . . , xd ) ∈ R, that
+         evs (τ (r(x1 , . . . , xd ))) = evs (r(τ (x1 ), . . . , r(τ (xd ))) = evfτ (s) (r(x)).
+In what follows we abbreviate r(s) := evs (r(x1 , . . . , xd )).
+   Suppose V (I) ⊆ V (τ (J)). If s ∈ V (I) then q(s) = 0 for all q(x) ∈ I. We are to
+show that fτ (V (I)) ⊆ V (J), which asserts that for all p(x) ∈ J there holds p(fτ (s)) :=
+evfτ (s) (p(x)) = 0. Here, using the equality above
+                          evfτ (s) (p(x)) = evs (τ (p)(x)) =: τ (p(s)).
+Now τ (p(s)) = 0 because V (I) ⊂ V (τ (J)).
+  Conversely, suppose fτ (V (I)) ⊆ V (J) in S d . We must show V (I) ⊂ V (τ (J)).
+Given s ∈ V (I). then we must show that for each p(x) ∈ J that
+                                 τ (p)(s) := evs (τ (p)(x)) = 0.
+Using the identity above evs (τ (p)(x)) = evfτ (s) (p(x)). But by hypothesis fτ (s) ∈
+V (J), whence
+                              p(fτ (s)) := evfτ (s) (p(x)) = 0,
+as required.
+   (d) ⇔ (e). For any subset N ⊂ S d , set fτ−1 (N ) = {s ∈ S d : fτ (s) ∈ N }. Then we
+have the inclusions
+                            fτ ◦ fτ−1 (N ) ⊆ N ⊆ fτ−1 ◦ fτ (N ).
+Furthermore if τ := σ is an automorphism, we have equality in both inclusions, for
+in this case fσ is a bijection with inverse fσ−1 . The argument is similar to (a) ⇔ (b).
+Suppose fτ (V (I)) ⊂ V (J). Applying fτ−1 yields
+                            V (I) ⊆ fτ−1 ◦ fτ (V (I)) ⊆ fτ (V (J))
+Conversely, suppose V (I) ⊆ fτ−1 (V (J)). Applying fτ−1 yields
+                            fτ (V (I)) ⊆ fτ ◦ fτ−1 (V (J)) ⊆ V (J)
+   (c) 6⇒ (b). This is well known. Take R = K[x], for K a field. and τ (x) = x3 . Take
+I = (x4 ) and J = (x). Then x3 ∈ τ (J) ⊂ (x3 ), so that V (I) = V (τ (J)) = {0}, and
+V (I) ⊆ V (τ (J)). But x3 6∈ I, so I 6⊇ τ (J). (Note also that τ (J) = {τ (p)(x) : p(x) ∈
+J} is not an R-ideal.)
+   (2). The assertion (c) ⇒ (b) when S = K is an algebraically closed field (of any
+characteristic) and I is a radical ideal is the Nullstellensatz. This gives all the equalities
+(a)–(e). No condition is imposed on the ideal J to get the equality.
+                                                                                            
+Remark 7.2. The failure of the methods of this paper to handle general endomorphisms
+arises not from Proposition 7.1, but rather from the failure of the generalized p-adic
+analytic arc theorem to apply to certain endomorphisms.
+28                           JASON P. BELL AND JEFFREY C. LAGARIAS
+                                            R EFERENCES
+ [1] J.-P. Allouche, J. Shallit, Automatic sequences. Theory, applications, generalizations. Cambridge
+     University Press, Cambridge, 2003
+ [2] A. S. Amitsur, Algebras over infinite fields, Proc. Amer. Math. Soc. 7 (1956), 35–48.
+ [3] M. F. Atiyah and I. G. Macdonald, Introduction to commutative algebra. Addison-Wesley Publishing
+     Co., Reading, Mass.-London-Don Mills, Ont. 1969.
+ [4] J. P. Bell, A generalised Skolem-Mahler-Lech Theorem for affine varieties. J. London Math. Soc. 73
+     (2006), 367–379.
+ [5] J. P. Bell, Corrigendum to : “A generalised Skolem-Mahler-Lech Theorem for affine varieties,” J.
+     London Math. Soc. 78 (2008), 267–272.
+ [6] J. P. Bell, D. Ghioca, T. J. Tucker, The dynamical Mordell-Lang problem for étale maps. Amer. J.
+     Math. 132 (2010), no. 6, 1655–1675.
+ [7] R. L. Benedetto, D. Ghioca, P. Kurlberg and T. J. Tucker, A case of the dynamical Mordell-Lang
+     conjecture, Math. Annalen 352 (2012), 1–26.
+ [8] J.-P. Bézivin, Une généralisation du théorème de Skolem-Mahler-Lech. Quart. J. Math. Oxford Ser.
+     (2). 40 (1989), no. 158, 133–138.
+ [9] P. J. Cahen and J.-L. Chabert, Integer-Valued Polynomials, Surveys and Monographs Vol. 48, Amer.
+     Math. Soc.: Providence, RI 1997.
+[10] J. W. S. Cassels, Local fields. London Mathematical Society Student Texts, 3. Cambridge University
+     Press, Cambridge, 1986.
+[11] L. Denis, Géométrie et suites récurrentes. Bull. Soc. Math. France 122 (1994), no. 1, 13–27.
+[12] H. Derksen, A Skolem-Mahler-Lech theorem in positive characteristic and finite automata, Invent.
+     Math. 168 (2007), 175–224.
+[13] D. Eisenbud, Commutative Algebra, with a view towards algebraic geometry, Springer-Verlag: New
+     York 1995.
+[14] G. Everest, A. van der Poorten, I. Shparlinski and T. Ward, Recurrence sequences. Mathematical
+     Surveys and Monographs, 104. American Mathematical Society, Providence, RI, 2003.
+[15] D. R. Farkas. Recurrent behavior in rings. J. Algebra 108 (1987), 127–138.
+[16] D. Ghioca and T. J. Tucker, Periodic points, linearizing maps, and the dynamical Mordell-Lang
+     problem, J. Number Theory 129 (2009), 1392–1403.
+[17] D. Ghioca, T. J. Tucker and M. E. Zieve, Intersections of polynomial orbits, and a dynamical
+     Mordell-Lang conjecture, Invent. Math. 171 (2008), 463–483.
+[18] G. Hansel, Une démonstration simple du théorème de Skolem-Mahler-Lech. Theoret. Comput. Sci.
+     43 (1986), no. 1, 91–98.
+[19] R. Hartshorne, Algebraic Geometry, Springer-Verlag: New York 1977.
+[20] C. Lech, A note on recurring series, Ark. Mat. 2 (1953), 417–421.
+[21] K. Mahler, Eine arithmetische Eigenshaft der Taylor-Koeffizienten rationaler Funktionen, Proc. Kon.
+     Nederlandsche Akad. v. Wetenschappen 38 (1935) 50–60.
+[22] K. Mahler, On the Taylor coefficients of rational functions, Proc. Cambridge Philos. Soc. 52 (1956),
+     39–48.
+[23] K. Mahler, Addendum to the paper "On the Taylor coefficients of rational functions", Proc. Cam-
+     bridge Philos. Soc. 53 (1957), 544.
+[24] K. Mahler, p-adic numbers and their functions second ed. Cambridge University Press, Cambridge,
+     New York, 1981.
+[25] B. Poonen, p-adic interpolation of iterates, arXiv:1307.5887.
+[26] A. J. van der Poorten, Some facts that should be better known; especially about rational functions,
+     Number Theory and Applications ed. Richard A. Mollin, (NATO–Advanced Study Institute, Banff
+     1988), Kluwer Academic Publishers, Dordrecht, 1989, 497-528.
+[27] A. J. van der Poorten, R. Tijdeman, On common zeros of exponential polynomials, Enseignement
+     Math. (2) 21 (1975), no. 1, 57–67.
+[28] S. Sierra, Geometric idealizer rings, Trans. Amer. Math. Soc. 363 (2011), No. 1, 457–500.
+    A SKOLEM-MAHLER-LECH THEOREM FOR ITERATED AUTOMORPHISMS OF K-ALGEBRAS 29
+[29] T. Skolem, Einige Sätze über gewisse Reihenentwicklungen und exponentiale Beziehungen mit An-
+     wendung auf Diophantische Gleichungen, Skrifter Norske Vidensk. Acad. Oslo, Mat. Naturv. Klasse
+     (1933), No. 6.
+[30] T. Skolem, Ein Verfahren zur Behandlung gewisser exponentialer Gleichungen und diophantischer
+     Gleichungen, C. r. 8 congr. scand. à Stockholm (1934), 163–188.
+[31] V. Srinivas, On the embedding dimension of an affine variety, Math. Ann. 289 (1991), 125–132.
+[32] R. Strassman, Über den Wertevorrat von Potenzreihen im Gebiet der p-adischen Zahlen, J. Reine
+     Angew. Math. 159 (1928), 13–28; 65–66.
+[33] Shouwu Zhang, Distributions in algebraic dynamics, A tribute to Professor S.-S. Chern, in: Surveys
+     in Differential Geometry, Vol. 10, 381–430. International Press 2006.
+
+  D EPARTMENT OF M ATHEMATICS , U NIVERSITY OF WATERLOO , WATERLOO , ON, N2L 3G1,
+CANADA
+  E-mail address: jpbell@uwaterloo.ca
+
+   D EPARTMENT OF M ATHEMATICS , U NIVERSITY OF M ICHIGAN , 530 C HURCH S TREET, A NN A R -
+BOR , MI 48109-1043, USA
+  E-mail address: lagarias@umich.edu
+

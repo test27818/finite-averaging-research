@@ -1,0 +1,30 @@
+\section{主定理与证明结构}\label{sec:main}
+配置是一个有序列 $x=(x_1,\ldots,x_n)\in\Q^n$。对 $p$ 元位置集 $S$，令
+\[
+(T_Sx)_i=\begin{cases}p^{-1}\sum_{j\in S}x_j,&i\in S,\\x_i,&i\notin S.\end{cases}
+\]
+这些映射称为 $p$ 平均。其共同固定的线性泛函是总和，故全等终点只能是 $\bar x\mathbf1$，其中 $\bar x=n^{-1}\sum_i x_i$。
+
+若 $x$ 非恒定，选择 $c\in\Q^\times$，使
+\[
+X=c(x-\bar x\mathbf1)\in\Z^n,qquad \sum_iX_i=0,qquad \gcd_iX_i=1.
+\]
+$X$ 唯一至整体符号，称为 $x$ 的本原中心化代表。定义
+\begin{equation}\label{eq:G}
+G(x)=G(X)=\gcd_{i<j}|X_i-X_j|.
+\end{equation}
+
+\begin{theorem}\label{thm:prime}
+设 $p$ 为奇素数，$n\ge2p+1$。非恒定配置 $x\in\Q^n$ 可经有限次 $p$ 平均达到全等，当且仅当 $G(x)=p^e$，其中 $e\ge0$。对每个奇素数 $p$，在 $n=2p$ 存在 $G=1$ 的不可达配置。
+\end{theorem}
+
+\begin{corollary}\label{cor:threshold}
+记 $N(p)$ 为使上述充要条件对所有 $n\ge N(p)$ 成立的最小整数。则奇素数满足 $N(p)=2p+1$；二平均满足 $N(2)=4$。
+\end{corollary}
+
+本文采用如下约定。上标 $a^m$ 表示 $m$ 个取值为 $a$ 的位置；矩阵作用于列向量，复合从右至左。位置始终带标签；交换两个等大块的名称仅改变参数表示。固定平均词与整体仿射变换交换，因而可以在分析中选取本原代表。下文的矩阵返回均覆盖所讨论配置的全部位置。
+
+充分性证明的依赖顺序如下。引理\ref{lem:integer-range}独立处理 $n\ge4p-2+d_p(n)$；命题\ref{prop:threep}独立处理 $n=3p$。二者推出引理\ref{lem:zero-tail}的含零收尾。临界带的入口由命题\ref{prop:entry}给出，核内完成使用定理\ref{thm:terminal}以及命题\ref{prop:odd}, \ref{prop:r2}, \ref{prop:even}, \ref{prop:upper}。不满足整数下降容量的宽维数由命题\ref{prop:wide}补齐。最后在第\ref{sec:completion}节合并各范围。
+
+矩阵部分使用两个已发表结果：Morris 的有限指数定理\cite[Theorem 6.1(2)]{morris}，以及有理 $S$ 整数上 $\SL_2$ 的强同余子群性质\cite{serre,prasad}。它们的精确代入见定理\ref{thm:arithmetic-external}。有限证书的输入全集及检验条件见附录\ref{app:certificates}。
+

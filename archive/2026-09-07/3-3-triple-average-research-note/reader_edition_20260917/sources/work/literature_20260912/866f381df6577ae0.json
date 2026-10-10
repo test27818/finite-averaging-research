@@ -1,0 +1,6 @@
+{
+  "url": "https://api.openalex.org/works?filter=cites%3AW4300607188&per-page=15&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "status": 200,
+  "retrieved": "2026-09-12",
+  "body": "{\"meta\": {\"count\": 0, \"db_response_time_ms\": 22, \"page\": 1, \"per_page\": 15, \"groups_count\": null, \"x_query\": {\"oql\": \"works where it cites (W4300607188)\", \"oqo\": {\"get_rows\": \"works\", \"filter_rows\": [{\"column_id\": \"referenced_works\", \"value\": \"W4300607188\"}]}, \"url\": \"/works?filter=referenced_works:W4300607188&per_page=15\"}, \"cost_usd\": 0.0001}, \"results\": [], \"group_by\": []}"
+}

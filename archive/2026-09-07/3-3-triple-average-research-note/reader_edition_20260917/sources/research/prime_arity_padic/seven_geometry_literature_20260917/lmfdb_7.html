@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<noscript><p>Enable JavaScript, then reload.</p></noscript>
+<script>
+  // Set cookie (expires in 1 day)
+  document.cookie = "human=1; path=/; max-age=86400";
+  // Get the 'gateorig' parameter from URL
+  var params = new URLSearchParams(window.location.search);
+  if (params.has('gateorig')) {
+      var orig = params.get('gateorig');
+      params.delete('gateorig');
+  } else {
+      var orig = '/';
+  }
+  params = params.toString();
+  if (params) {
+      orig = orig + "?" + params;
+  }
+  console.log("leaving gate");
+  // Redirect back to original page
+  window.location.href = orig;
+</script>
+</html>

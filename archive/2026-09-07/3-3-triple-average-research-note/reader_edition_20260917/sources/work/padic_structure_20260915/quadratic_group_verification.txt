@@ -1,0 +1,13 @@
+PASS means that the listed program exited successfully and emitted every expected marker. Its mathematical force is limited by evidence_scope and does not automatically prove the whole claim.
+
+[padic-quadratic-group] Local homographic returns are translations in a degenerating quadratic group; first-lift valuation controls orbit defects at all levels. Applies to all180 retained direction certificates.
+  evidence=symbolic-check  status=proved-local-structure-and-defect-classification-no-threshold-change  runtime=short
+  $ python work/verify_padic_quadratic_group.py
+    quadratic local group symbolic identities: PASS 4
+    local defect cycles and deep orders: PASS 36 5
+    retained certificate quadratic normal forms: PASS 180 364 100
+    p-adic quadratic group and orbit defect interfaces: PASS
+  command PASS (0.52s)
+[padic-quadratic-group] PASS (0.52s)
+
+SUMMARY PASS=1 FAIL=0 SKIP=0 TIME=0.52s

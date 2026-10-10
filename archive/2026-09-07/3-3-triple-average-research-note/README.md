@@ -1,35 +1,26 @@
 # 有限步平均研究
 
-更新：2026-09-15。当前工作是**整理和改进素数平均证明**；合数研究保留原进展，本轮暂停推进。
+**统一接手入口：[knowledge/START_HERE.md](knowledge/START_HERE.md)。** 当前结论、证明链、开放问题、旧路线与核验入口已经集中整理；请从这里进入，不凭某篇旧文的“尚未解决”决定新任务。
 
-对奇素数 p，最优最终阈值已证明为 N(p)=2p+1；二平均 N(2)=4。n 在阈值以上时，非全等有理输入经原位置 p 平均可达全等，当且仅当中心化、本原化后的差分 gcd 是 p 的幂。只有 p 不整除 n 时才能简写成 G=1。
-
-[文件夹地图](outputs/README.md)展示主题目录；[最新简化](outputs/prime_arity/structure/transverse_root_lifting_without_long_orbits.md)用三个共轭根降低同余层，删除奇数n的高阶轨道，统一反射公式覆盖p≥83。
-
-## 从这里开始
-
-| 需要 | 入口 |
+| 要做什么 | 入口 |
 |---|---|
-| 新 AI 接手／理解当前定理 | [素数证明入口](outputs/prime_arity/README.md) |
-| 完整证明链与各维数覆盖 | [总证明](outputs/prime_arity/proof.md) |
-| 统一代数工具与真正的几何结构 | [通用引理](outputs/prime_arity/arithmetic_toolkit.md) · [模曲线与标记格](outputs/prime_arity/geometry.md) |
-| 阅读记录、证明证据、独立审核 | [本轮核验说明](outputs/prime_arity/verification.md) |
-| 合数的现有成果与 GRH 条件 | [合数交接](outputs/general_arity/general_k_three_tasks_progress_20260915.md) |
-| 三平均直接证明、算法和其他主题 | [成果索引](outputs/README.md) |
-| 查询曾试过什么 | [历史路线账本](outputs/history/research_routes_history_20260915.md) · [原根进展日志](HISTORY.md) |
+| 五分钟了解数学状态 | [当前状态](knowledge/STATUS.md) |
+| 看完整证明依赖与剩余接口 | [证明链](knowledge/PROOF_ROUTES.md) |
+| 查相近思路以前做到哪里 | [路线边界](knowledge/ROUTE_GUARDS.md) · [结论卡登记](knowledge/catalog.json) |
+| 找某个结论对应的程序 | [核验说明](knowledge/VERIFICATION.md) |
+| 按文件查文献和历史材料 | [文档清单](knowledge/DOCUMENTS.md) · [旧成果目录](outputs/README.md) |
 
-素数证明无条件，但引用已审核的 Morris/Serre 定理，且九偏移部分保留162组有限反射证书（已从522组缩减）。尚未证明可变 p、n 下的统一多项式操作长度，也未解决一般合数元数的最优最终阈值。旧历史文稿的“未解”不覆盖当前已完成结论。
+三平均 n≥7、全部奇素数平均 n≥2p+1 的 G 判据已有完整证明。自然统一、路径复杂度、五元静态分类与合数最优阈值是不同研究任务，范围和条件见当前状态。
 
-## 核验入口
-
-在项目根目录执行：
+在根目录检索：
 
 ```text
-python work/run_verifications.py --profile prime-proof
+python knowledge/project_knowledge.py context "五元 小分母"
+python knowledge/project_knowledge.py context "两根 列修正"
+python knowledge/project_knowledge.py verify SEVEN-GEOMETRY
+python knowledge/project_knowledge.py check
 ```
 
-这是素数主线的选定核验集，现采用162组精简证书及浅层提升核验；旧180／522组核验仍可按ID单独运行。PASS 的证明范围以[注册清单](work/verification_manifest.json)为准，不能代替正文的一般量词或外部定理。其他脚本见 [work 索引](work/README.md)。
+原证明在 `outputs/`，后续独立研究在 `research/`，计算材料在 `work/`。本次保留全部原文、脚本、证书和路径；导航原件存于[整理快照](work/documentation_memory_20260917/snapshots.json)。数学状态以准确的结论卡和原证明为准，散列／PASS 都不是数学认证。
 
-## 文档维护
-
-当前定理和阅读顺序集中维护，技术附录已按主题移入文件夹，旧文件名保持不变；历史过程归档，不再向两个 README 逐条追加进展。新结果必须区分“完整定理／有限证书／公式核验／探索”，并更新相关依赖与证据边界。
+研究者先读 [AGENTS.md](AGENTS.md)。新成果应更新已有结论卡、来源、后续替代和核验范围，不再把 README 写成时间线。完整维护与审查边界见[整理报告](knowledge/ORGANIZATION_AUDIT_20260917.md)。

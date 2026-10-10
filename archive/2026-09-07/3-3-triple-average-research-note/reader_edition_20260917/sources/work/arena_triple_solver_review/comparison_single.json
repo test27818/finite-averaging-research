@@ -1,0 +1,5371 @@
+{
+  "source": "snapshot provenance.json",
+  "mode": "single",
+  "timing": "Node worker solver functions; excludes load/render; original budget plus external16s safeguard",
+  "cases": [
+    {
+      "id": "paired-0",
+      "suite": "paired_small",
+      "input": [
+        10,
+        13,
+        -18,
+        -20,
+        -18,
+        5,
+        0,
+        12,
+        19,
+        -9,
+        17
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 7,
+        "initialSteps": 7,
+        "lowerBound": 5,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 4,
+        "operations": [
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            10,
+            7,
+            8
+          ],
+          [
+            3,
+            5,
+            6
+          ],
+          [
+            11,
+            9,
+            1
+          ],
+          [
+            3,
+            1,
+            2
+          ],
+          [
+            5,
+            9,
+            1
+          ],
+          [
+            6,
+            11,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0011703999480232596,
+        "solveSeconds": 0.0011738999746739864
+      },
+      "previous_invariant_steps": 18,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            7,
+            8,
+            10
+          ],
+          [
+            3,
+            5,
+            6
+          ],
+          [
+            9,
+            11,
+            1
+          ],
+          [
+            3,
+            9,
+            2
+          ],
+          [
+            5,
+            11,
+            3
+          ],
+          [
+            6,
+            1,
+            5
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 1.5978000000000065,
+        "judge_ms": 0.2715000000000032,
+        "verify_ms": 0.13179999999999836,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 40.89040000000001,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-1",
+      "suite": "paired_small",
+      "input": [
+        5,
+        -14,
+        3,
+        -10,
+        13,
+        -20,
+        -16,
+        -17,
+        -18,
+        -20,
+        -16
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 7,
+        "initialSteps": 7,
+        "lowerBound": 5,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 4,
+        "operations": [
+          [
+            9,
+            8,
+            1
+          ],
+          [
+            6,
+            10,
+            7
+          ],
+          [
+            11,
+            2,
+            3
+          ],
+          [
+            5,
+            1,
+            4
+          ],
+          [
+            6,
+            2,
+            1
+          ],
+          [
+            7,
+            3,
+            4
+          ],
+          [
+            10,
+            11,
+            5
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0011954999063163996,
+        "solveSeconds": 0.0012005999451503158
+      },
+      "previous_invariant_steps": 16,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            1,
+            8,
+            9
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            1
+          ],
+          [
+            10,
+            11,
+            4
+          ],
+          [
+            2,
+            6,
+            10
+          ],
+          [
+            3,
+            7,
+            11
+          ],
+          [
+            5,
+            1,
+            4
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65)",
+        "reported_solve_ms": 1.5100000000000193,
+        "judge_ms": 0.2873000000000161,
+        "verify_ms": 0.10110000000000241,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 42.09440000000001,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-2",
+      "suite": "paired_small",
+      "input": [
+        12,
+        -14,
+        20,
+        0,
+        -11,
+        4,
+        7,
+        -10,
+        7,
+        17,
+        1
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 7,
+        "initialSteps": 7,
+        "lowerBound": 4,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 3,
+        "operations": [
+          [
+            5,
+            4,
+            3
+          ],
+          [
+            8,
+            7,
+            1
+          ],
+          [
+            2,
+            11,
+            6
+          ],
+          [
+            9,
+            10,
+            1
+          ],
+          [
+            2,
+            1,
+            3
+          ],
+          [
+            6,
+            9,
+            1
+          ],
+          [
+            11,
+            10,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0010978999780490994,
+        "solveSeconds": 0.0011019998928532004
+      },
+      "previous_invariant_steps": 13,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            7,
+            8
+          ],
+          [
+            2,
+            6,
+            9
+          ],
+          [
+            10,
+            11,
+            1
+          ],
+          [
+            2,
+            10,
+            3
+          ],
+          [
+            6,
+            11,
+            2
+          ],
+          [
+            9,
+            1,
+            6
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 1.5829999999999984,
+        "judge_ms": 0.2961999999999989,
+        "verify_ms": 0.28110000000000923,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 40.56200000000001,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-3",
+      "suite": "paired_small",
+      "input": [
+        -7,
+        -17,
+        -12,
+        -4,
+        19,
+        -14,
+        11,
+        -9,
+        -7,
+        3,
+        -7
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 7,
+        "initialSteps": 7,
+        "lowerBound": 5,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 4,
+        "operations": [
+          [
+            2,
+            6,
+            5
+          ],
+          [
+            3,
+            8,
+            1
+          ],
+          [
+            9,
+            11,
+            10
+          ],
+          [
+            7,
+            2,
+            4
+          ],
+          [
+            1,
+            9,
+            2
+          ],
+          [
+            3,
+            10,
+            4
+          ],
+          [
+            8,
+            11,
+            7
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0010246000019833446,
+        "solveSeconds": 0.0010284999152645469
+      },
+      "previous_invariant_steps": 19,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            2,
+            5,
+            6
+          ],
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            8,
+            9,
+            2
+          ],
+          [
+            10,
+            11,
+            4
+          ],
+          [
+            1,
+            8,
+            10
+          ],
+          [
+            3,
+            9,
+            11
+          ],
+          [
+            7,
+            2,
+            4
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65)",
+        "reported_solve_ms": 2.2258999999999958,
+        "judge_ms": 0.37000000000000455,
+        "verify_ms": 0.31739999999999213,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 43.03819999999999,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-4",
+      "suite": "paired_small",
+      "input": [
+        12,
+        -11,
+        1,
+        -2,
+        10,
+        2,
+        -14,
+        -13,
+        -12,
+        -4,
+        -2
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 7,
+        "initialSteps": 7,
+        "lowerBound": 5,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 4,
+        "operations": [
+          [
+            9,
+            3,
+            6
+          ],
+          [
+            10,
+            3,
+            4
+          ],
+          [
+            7,
+            8,
+            2
+          ],
+          [
+            11,
+            5,
+            1
+          ],
+          [
+            2,
+            1,
+            3
+          ],
+          [
+            7,
+            5,
+            1
+          ],
+          [
+            8,
+            11,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0010803999612107873,
+        "solveSeconds": 0.0010836999863386154
+      },
+      "previous_invariant_steps": 14,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            3,
+            6,
+            9
+          ],
+          [
+            4,
+            10,
+            3
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            7,
+            8,
+            11
+          ],
+          [
+            1,
+            7,
+            3
+          ],
+          [
+            2,
+            8,
+            1
+          ],
+          [
+            5,
+            11,
+            2
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 1.793100000000038,
+        "judge_ms": 0.283800000000042,
+        "verify_ms": 0.130800000000022,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 41.86540000000002,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-5",
+      "suite": "paired_small",
+      "input": [
+        11,
+        -18,
+        6,
+        -12,
+        16,
+        1,
+        -6,
+        0,
+        -19,
+        -7,
+        6
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 7,
+        "initialSteps": 7,
+        "lowerBound": 4,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 3,
+        "operations": [
+          [
+            2,
+            6,
+            1
+          ],
+          [
+            4,
+            8,
+            3
+          ],
+          [
+            9,
+            10,
+            7
+          ],
+          [
+            11,
+            5,
+            1
+          ],
+          [
+            7,
+            1,
+            2
+          ],
+          [
+            9,
+            5,
+            1
+          ],
+          [
+            10,
+            11,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.001646700082346797,
+        "solveSeconds": 0.001651700004003942
+      },
+      "previous_invariant_steps": 17,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            1,
+            2,
+            6
+          ],
+          [
+            3,
+            4,
+            8
+          ],
+          [
+            5,
+            7,
+            9
+          ],
+          [
+            10,
+            11,
+            1
+          ],
+          [
+            5,
+            10,
+            2
+          ],
+          [
+            7,
+            11,
+            5
+          ],
+          [
+            9,
+            1,
+            7
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 2.1690999999999576,
+        "judge_ms": 0.3746999999999616,
+        "verify_ms": 0.12270000000000891,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 48.989300000000014,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-6",
+      "suite": "paired_small",
+      "input": [
+        15,
+        8,
+        -4,
+        6,
+        12,
+        -19,
+        -18,
+        -2,
+        -11,
+        6,
+        7,
+        0
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 7,
+        "initialSteps": 7,
+        "lowerBound": 4,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 3,
+        "operations": [
+          [
+            6,
+            11,
+            5
+          ],
+          [
+            9,
+            3,
+            1
+          ],
+          [
+            7,
+            8,
+            4
+          ],
+          [
+            10,
+            2,
+            1
+          ],
+          [
+            4,
+            1,
+            3
+          ],
+          [
+            7,
+            2,
+            1
+          ],
+          [
+            8,
+            10,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.001074099913239479,
+        "solveSeconds": 0.0010776999406516552
+      },
+      "previous_invariant_steps": 17,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            5,
+            6,
+            11
+          ],
+          [
+            1,
+            3,
+            9
+          ],
+          [
+            2,
+            4,
+            7
+          ],
+          [
+            8,
+            10,
+            1
+          ],
+          [
+            2,
+            8,
+            3
+          ],
+          [
+            4,
+            10,
+            2
+          ],
+          [
+            7,
+            1,
+            4
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 1.5620999999999867,
+        "judge_ms": 0.2857999999999947,
+        "verify_ms": 0.106899999999996,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 41.852900000000034,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-7",
+      "suite": "paired_small",
+      "input": [
+        4,
+        -15,
+        14,
+        -5,
+        -3,
+        10,
+        15,
+        -6,
+        17,
+        -8,
+        0,
+        1
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 4,
+        "initialSteps": 4,
+        "lowerBound": 4,
+        "optimal": true,
+        "expanded": 0,
+        "completedDepth": 3,
+        "operations": [
+          [
+            2,
+            1,
+            9
+          ],
+          [
+            8,
+            5,
+            7
+          ],
+          [
+            10,
+            11,
+            3
+          ],
+          [
+            4,
+            12,
+            6
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0003306000726297498,
+        "solveSeconds": 0.0003333000931888819
+      },
+      "previous_invariant_steps": 20,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 4,
+        "operations": [
+          [
+            1,
+            2,
+            9
+          ],
+          [
+            5,
+            7,
+            8
+          ],
+          [
+            3,
+            10,
+            11
+          ],
+          [
+            4,
+            6,
+            12
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u4e09\u5143\u7ec4",
+        "reported_solve_ms": 1.2099999999999795,
+        "judge_ms": 0.31279999999998154,
+        "verify_ms": 0.1028999999999769,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 40.771600000000035,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-8",
+      "suite": "paired_small",
+      "input": [
+        -8,
+        17,
+        -16,
+        10,
+        7,
+        -3,
+        -4,
+        -8,
+        -10,
+        -17,
+        -12,
+        8
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 7,
+        "initialSteps": 7,
+        "lowerBound": 4,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 3,
+        "operations": [
+          [
+            3,
+            9,
+            2
+          ],
+          [
+            11,
+            7,
+            5
+          ],
+          [
+            10,
+            1,
+            8
+          ],
+          [
+            12,
+            4,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            8,
+            4,
+            1
+          ],
+          [
+            10,
+            12,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0010588999139145017,
+        "solveSeconds": 0.0010619999375194311
+      },
+      "previous_invariant_steps": 16,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            2,
+            3,
+            9
+          ],
+          [
+            1,
+            5,
+            8
+          ],
+          [
+            4,
+            7,
+            10
+          ],
+          [
+            11,
+            12,
+            1
+          ],
+          [
+            4,
+            11,
+            2
+          ],
+          [
+            7,
+            12,
+            4
+          ],
+          [
+            10,
+            1,
+            7
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 1.7059999999999604,
+        "judge_ms": 0.3960999999999899,
+        "verify_ms": 0.11570000000000391,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 41.56880000000001,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-9",
+      "suite": "paired_small",
+      "input": [
+        -4,
+        8,
+        -20,
+        13,
+        -19,
+        -15,
+        6,
+        -5,
+        17,
+        -13,
+        4,
+        4
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 7,
+        "initialSteps": 7,
+        "lowerBound": 5,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 4,
+        "operations": [
+          [
+            5,
+            1,
+            9
+          ],
+          [
+            3,
+            7,
+            2
+          ],
+          [
+            6,
+            10,
+            8
+          ],
+          [
+            11,
+            12,
+            4
+          ],
+          [
+            6,
+            4,
+            1
+          ],
+          [
+            8,
+            11,
+            1
+          ],
+          [
+            10,
+            12,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0009302000980824232,
+        "solveSeconds": 0.0009334000060334802
+      },
+      "previous_invariant_steps": 15,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            1,
+            5,
+            9
+          ],
+          [
+            2,
+            3,
+            7
+          ],
+          [
+            4,
+            6,
+            8
+          ],
+          [
+            10,
+            11,
+            12
+          ],
+          [
+            4,
+            10,
+            1
+          ],
+          [
+            6,
+            11,
+            4
+          ],
+          [
+            8,
+            12,
+            6
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 1.8088000000000193,
+        "judge_ms": 0.640199999999993,
+        "verify_ms": 0.12860000000000582,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 39.82760000000002,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-10",
+      "suite": "paired_small",
+      "input": [
+        12,
+        -8,
+        14,
+        -6,
+        15,
+        17,
+        -1,
+        12,
+        11,
+        10,
+        -7,
+        3
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 7,
+        "initialSteps": 7,
+        "lowerBound": 4,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 3,
+        "operations": [
+          [
+            2,
+            9,
+            5
+          ],
+          [
+            4,
+            10,
+            3
+          ],
+          [
+            11,
+            7,
+            12
+          ],
+          [
+            1,
+            8,
+            6
+          ],
+          [
+            7,
+            1,
+            2
+          ],
+          [
+            11,
+            6,
+            1
+          ],
+          [
+            12,
+            8,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0008230999810621142,
+        "solveSeconds": 0.000825099996291101
+      },
+      "previous_invariant_steps": 14,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            5,
+            10,
+            11
+          ],
+          [
+            4,
+            6,
+            7
+          ],
+          [
+            8,
+            9,
+            12
+          ],
+          [
+            4,
+            8,
+            1
+          ],
+          [
+            6,
+            9,
+            4
+          ],
+          [
+            7,
+            12,
+            6
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 1.7282000000000153,
+        "judge_ms": 0.375,
+        "verify_ms": 0.14559999999994488,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 40.51690000000002,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-11",
+      "suite": "paired_small",
+      "input": [
+        -17,
+        -12,
+        18,
+        2,
+        -7,
+        -7,
+        -18,
+        11,
+        -17,
+        -4,
+        -16,
+        19
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 7,
+        "initialSteps": 7,
+        "lowerBound": 4,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 3,
+        "operations": [
+          [
+            7,
+            2,
+            3
+          ],
+          [
+            11,
+            5,
+            8
+          ],
+          [
+            1,
+            9,
+            6
+          ],
+          [
+            4,
+            12,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            6,
+            4,
+            1
+          ],
+          [
+            9,
+            12,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0009363000281155109,
+        "solveSeconds": 0.0009385999292135239
+      },
+      "previous_invariant_steps": 16,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            2,
+            3,
+            7
+          ],
+          [
+            5,
+            8,
+            11
+          ],
+          [
+            1,
+            4,
+            6
+          ],
+          [
+            9,
+            12,
+            2
+          ],
+          [
+            1,
+            9,
+            3
+          ],
+          [
+            4,
+            12,
+            1
+          ],
+          [
+            6,
+            2,
+            4
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 1.6862999999999602,
+        "judge_ms": 0.3953999999999951,
+        "verify_ms": 0.16589999999996508,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 41.7201,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-12",
+      "suite": "paired_small",
+      "input": [
+        -17,
+        -8,
+        12,
+        20,
+        1,
+        -11,
+        8,
+        1,
+        10,
+        13,
+        17,
+        10,
+        -3,
+        0,
+        15,
+        -4
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 9,
+        "initialSteps": 9,
+        "lowerBound": 6,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 5,
+        "operations": [
+          [
+            1,
+            3,
+            11
+          ],
+          [
+            2,
+            14,
+            4
+          ],
+          [
+            6,
+            7,
+            15
+          ],
+          [
+            5,
+            8,
+            9
+          ],
+          [
+            16,
+            13,
+            12
+          ],
+          [
+            10,
+            1,
+            2
+          ],
+          [
+            12,
+            1,
+            3
+          ],
+          [
+            13,
+            2,
+            1
+          ],
+          [
+            16,
+            10,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.001830899971537292,
+        "solveSeconds": 0.0018330999882891774
+      },
+      "previous_invariant_steps": 24,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 9,
+        "operations": [
+          [
+            1,
+            3,
+            11
+          ],
+          [
+            2,
+            4,
+            14
+          ],
+          [
+            6,
+            7,
+            15
+          ],
+          [
+            5,
+            8,
+            9
+          ],
+          [
+            10,
+            12,
+            1
+          ],
+          [
+            13,
+            16,
+            2
+          ],
+          [
+            10,
+            13,
+            3
+          ],
+          [
+            12,
+            16,
+            10
+          ],
+          [
+            1,
+            2,
+            13
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 2.2682000000000926,
+        "judge_ms": 0.3625000000000682,
+        "verify_ms": 0.09429999999997563,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 43.01049999999998,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-13",
+      "suite": "paired_small",
+      "input": [
+        -18,
+        19,
+        -8,
+        2,
+        -14,
+        10,
+        -17,
+        9,
+        -15,
+        -4,
+        11,
+        -18,
+        5,
+        -9,
+        -1,
+        -16
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 9,
+        "initialSteps": 9,
+        "lowerBound": 5,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 4,
+        "operations": [
+          [
+            7,
+            5,
+            2
+          ],
+          [
+            9,
+            3,
+            11
+          ],
+          [
+            16,
+            15,
+            13
+          ],
+          [
+            1,
+            2,
+            6
+          ],
+          [
+            12,
+            14,
+            4
+          ],
+          [
+            8,
+            1,
+            2
+          ],
+          [
+            4,
+            1,
+            3
+          ],
+          [
+            12,
+            2,
+            1
+          ],
+          [
+            14,
+            8,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0028294000076130033,
+        "solveSeconds": 0.0028329999186098576
+      },
+      "previous_invariant_steps": 33,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 9,
+        "operations": [
+          [
+            2,
+            5,
+            7
+          ],
+          [
+            3,
+            9,
+            11
+          ],
+          [
+            13,
+            15,
+            16
+          ],
+          [
+            1,
+            6,
+            2
+          ],
+          [
+            4,
+            8,
+            1
+          ],
+          [
+            12,
+            14,
+            2
+          ],
+          [
+            4,
+            12,
+            3
+          ],
+          [
+            8,
+            14,
+            4
+          ],
+          [
+            1,
+            2,
+            12
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 2.3435000000000628,
+        "judge_ms": 0.32389999999998054,
+        "verify_ms": 0.10550000000000637,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 46.871099999999956,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-14",
+      "suite": "paired_small",
+      "input": [
+        -8,
+        -1,
+        3,
+        -20,
+        -12,
+        -4,
+        -16,
+        -11,
+        2,
+        -14,
+        9,
+        5,
+        15,
+        -7,
+        15,
+        -20
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 8,
+        "initialSteps": 8,
+        "lowerBound": 5,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 4,
+        "operations": [
+          [
+            4,
+            14,
+            13
+          ],
+          [
+            7,
+            8,
+            15
+          ],
+          [
+            16,
+            2,
+            11
+          ],
+          [
+            10,
+            5,
+            1
+          ],
+          [
+            9,
+            3,
+            12
+          ],
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            5,
+            9,
+            1
+          ],
+          [
+            10,
+            12,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.001658499939367175,
+        "solveSeconds": 0.0016610999591648579
+      },
+      "previous_invariant_steps": 16,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 8,
+        "operations": [
+          [
+            4,
+            13,
+            14
+          ],
+          [
+            7,
+            8,
+            15
+          ],
+          [
+            2,
+            11,
+            16
+          ],
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            9,
+            10,
+            12
+          ],
+          [
+            1,
+            9,
+            2
+          ],
+          [
+            3,
+            10,
+            1
+          ],
+          [
+            5,
+            12,
+            3
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 2.4658000000000584,
+        "judge_ms": 0.39059999999994943,
+        "verify_ms": 0.10170000000005075,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 42.408500000000004,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-15",
+      "suite": "paired_small",
+      "input": [
+        15,
+        -12,
+        8,
+        4,
+        5,
+        0,
+        2,
+        -15,
+        9,
+        -2,
+        -19,
+        -11,
+        -18,
+        -10,
+        -19,
+        15
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 9,
+        "initialSteps": 9,
+        "lowerBound": 6,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 5,
+        "operations": [
+          [
+            11,
+            7,
+            3
+          ],
+          [
+            13,
+            6,
+            9
+          ],
+          [
+            2,
+            10,
+            5
+          ],
+          [
+            14,
+            2,
+            4
+          ],
+          [
+            15,
+            8,
+            12
+          ],
+          [
+            1,
+            16,
+            2
+          ],
+          [
+            8,
+            1,
+            3
+          ],
+          [
+            12,
+            2,
+            1
+          ],
+          [
+            15,
+            16,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0016979000065475702,
+        "solveSeconds": 0.001700800028629601
+      },
+      "previous_invariant_steps": 19,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 9,
+        "operations": [
+          [
+            3,
+            7,
+            11
+          ],
+          [
+            4,
+            5,
+            13
+          ],
+          [
+            8,
+            9,
+            3
+          ],
+          [
+            1,
+            2,
+            6
+          ],
+          [
+            10,
+            12,
+            14
+          ],
+          [
+            15,
+            16,
+            3
+          ],
+          [
+            1,
+            10,
+            15
+          ],
+          [
+            2,
+            12,
+            16
+          ],
+          [
+            6,
+            14,
+            3
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65)",
+        "reported_solve_ms": 2.09599999999989,
+        "judge_ms": 0.29750000000001364,
+        "verify_ms": 0.09739999999999327,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 40.704399999999964,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-16",
+      "suite": "paired_small",
+      "input": [
+        15,
+        -3,
+        11,
+        -17,
+        10,
+        -19,
+        -18,
+        20,
+        14,
+        12,
+        -19,
+        -16,
+        8,
+        -7,
+        18,
+        7
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 9,
+        "initialSteps": 9,
+        "lowerBound": 6,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 5,
+        "operations": [
+          [
+            6,
+            16,
+            1
+          ],
+          [
+            11,
+            13,
+            9
+          ],
+          [
+            7,
+            5,
+            3
+          ],
+          [
+            12,
+            1,
+            15
+          ],
+          [
+            4,
+            14,
+            2
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            2,
+            1,
+            3
+          ],
+          [
+            4,
+            8,
+            1
+          ],
+          [
+            14,
+            10,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.002993499976582825,
+        "solveSeconds": 0.0029969000024721026
+      },
+      "previous_invariant_steps": 23,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 9,
+        "operations": [
+          [
+            1,
+            6,
+            16
+          ],
+          [
+            5,
+            10,
+            11
+          ],
+          [
+            3,
+            12,
+            13
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            2,
+            4,
+            9
+          ],
+          [
+            14,
+            15,
+            1
+          ],
+          [
+            2,
+            14,
+            3
+          ],
+          [
+            4,
+            15,
+            2
+          ],
+          [
+            9,
+            1,
+            4
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 2.0294000000000096,
+        "judge_ms": 0.28110000000003765,
+        "verify_ms": 0.09329999999999927,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 42.172399999999925,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-17",
+      "suite": "paired_small",
+      "input": [
+        14,
+        -10,
+        -15,
+        -2,
+        0,
+        3,
+        18,
+        6,
+        -18,
+        14,
+        2,
+        -2,
+        -15,
+        6,
+        -19,
+        18
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 19,
+        "initialSteps": 19,
+        "lowerBound": 6,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 5,
+        "operations": [
+          [
+            15,
+            9,
+            3
+          ],
+          [
+            2,
+            4,
+            12
+          ],
+          [
+            13,
+            7,
+            16
+          ],
+          [
+            3,
+            2,
+            1
+          ],
+          [
+            9,
+            4,
+            10
+          ],
+          [
+            15,
+            1,
+            7
+          ],
+          [
+            12,
+            1,
+            13
+          ],
+          [
+            7,
+            2,
+            16
+          ],
+          [
+            15,
+            3,
+            8
+          ],
+          [
+            4,
+            3,
+            14
+          ],
+          [
+            9,
+            8,
+            6
+          ],
+          [
+            10,
+            15,
+            11
+          ],
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            1,
+            10,
+            4
+          ],
+          [
+            12,
+            11,
+            14
+          ],
+          [
+            13,
+            15,
+            1
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            13,
+            3,
+            1
+          ],
+          [
+            15,
+            5,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0025867000222206116,
+        "solveSeconds": 0.002589999930933118
+      },
+      "previous_invariant_steps": 19,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 13,
+        "operations": [
+          [
+            7,
+            9,
+            5
+          ],
+          [
+            4,
+            11,
+            5
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            6,
+            12,
+            5
+          ],
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            3,
+            12,
+            1
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            2,
+            8,
+            10
+          ],
+          [
+            13,
+            14,
+            1
+          ],
+          [
+            15,
+            16,
+            3
+          ],
+          [
+            2,
+            13,
+            15
+          ],
+          [
+            8,
+            14,
+            16
+          ],
+          [
+            10,
+            1,
+            3
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65) \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65)",
+        "reported_solve_ms": 2.460199999999986,
+        "judge_ms": 0.28560000000004493,
+        "verify_ms": 0.10739999999998417,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 41.45010000000002,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-18",
+      "suite": "paired_small",
+      "input": [
+        -13,
+        1,
+        -3,
+        -1,
+        2,
+        6,
+        -8,
+        12,
+        -18,
+        9,
+        13,
+        -20,
+        15,
+        15,
+        7,
+        20,
+        -11,
+        7,
+        13,
+        -6
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 10,
+        "initialSteps": 10,
+        "lowerBound": 7,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 6,
+        "operations": [
+          [
+            12,
+            6,
+            16
+          ],
+          [
+            9,
+            10,
+            13
+          ],
+          [
+            1,
+            15,
+            8
+          ],
+          [
+            7,
+            4,
+            14
+          ],
+          [
+            3,
+            1,
+            18
+          ],
+          [
+            17,
+            20,
+            2
+          ],
+          [
+            11,
+            19,
+            1
+          ],
+          [
+            2,
+            1,
+            3
+          ],
+          [
+            17,
+            11,
+            1
+          ],
+          [
+            20,
+            19,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0026857000775635242,
+        "solveSeconds": 0.0026886999839916825
+      },
+      "previous_invariant_steps": 20,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 10,
+        "operations": [
+          [
+            6,
+            12,
+            16
+          ],
+          [
+            9,
+            10,
+            13
+          ],
+          [
+            1,
+            8,
+            15
+          ],
+          [
+            3,
+            14,
+            20
+          ],
+          [
+            2,
+            7,
+            11
+          ],
+          [
+            4,
+            17,
+            1
+          ],
+          [
+            18,
+            19,
+            2
+          ],
+          [
+            4,
+            18,
+            3
+          ],
+          [
+            17,
+            19,
+            4
+          ],
+          [
+            1,
+            2,
+            18
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 2.819500000000062,
+        "judge_ms": 0.5158999999999878,
+        "verify_ms": 0.102800000000002,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 47.220800000000054,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-19",
+      "suite": "paired_small",
+      "input": [
+        12,
+        17,
+        -18,
+        15,
+        9,
+        -12,
+        -14,
+        -17,
+        2,
+        -1,
+        0,
+        18,
+        19,
+        15,
+        7,
+        12,
+        14,
+        -20,
+        2,
+        -20
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 9,
+        "initialSteps": 9,
+        "lowerBound": 6,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 5,
+        "operations": [
+          [
+            18,
+            15,
+            13
+          ],
+          [
+            20,
+            5,
+            2
+          ],
+          [
+            3,
+            1,
+            16
+          ],
+          [
+            6,
+            11,
+            12
+          ],
+          [
+            8,
+            7,
+            10
+          ],
+          [
+            17,
+            4,
+            14
+          ],
+          [
+            7,
+            4,
+            1
+          ],
+          [
+            8,
+            14,
+            1
+          ],
+          [
+            10,
+            17,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0031432000687345862,
+        "solveSeconds": 0.003146399976685643
+      },
+      "previous_invariant_steps": 32,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 10,
+        "operations": [
+          [
+            1,
+            17,
+            18
+          ],
+          [
+            2,
+            5,
+            20
+          ],
+          [
+            6,
+            10,
+            13
+          ],
+          [
+            7,
+            12,
+            1
+          ],
+          [
+            3,
+            4,
+            8
+          ],
+          [
+            11,
+            14,
+            1
+          ],
+          [
+            15,
+            16,
+            2
+          ],
+          [
+            3,
+            11,
+            15
+          ],
+          [
+            4,
+            14,
+            16
+          ],
+          [
+            8,
+            1,
+            2
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65)",
+        "reported_solve_ms": 2.678800000000024,
+        "judge_ms": 0.3833999999999378,
+        "verify_ms": 0.09919999999999618,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 41.708099999999945,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-20",
+      "suite": "paired_small",
+      "input": [
+        9,
+        -6,
+        11,
+        -9,
+        6,
+        -12,
+        -7,
+        -18,
+        -1,
+        -2,
+        17,
+        -8,
+        -3,
+        5,
+        19,
+        6,
+        6,
+        -9,
+        -4,
+        -20
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 10,
+        "initialSteps": 10,
+        "lowerBound": 7,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 6,
+        "operations": [
+          [
+            20,
+            10,
+            15
+          ],
+          [
+            6,
+            12,
+            11
+          ],
+          [
+            8,
+            5,
+            1
+          ],
+          [
+            2,
+            13,
+            16
+          ],
+          [
+            7,
+            1,
+            14
+          ],
+          [
+            4,
+            18,
+            19
+          ],
+          [
+            17,
+            3,
+            1
+          ],
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            18,
+            3,
+            1
+          ],
+          [
+            19,
+            17,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0023774999426677823,
+        "solveSeconds": 0.0023804999655112624
+      },
+      "previous_invariant_steps": 17,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 10,
+        "operations": [
+          [
+            8,
+            15,
+            19
+          ],
+          [
+            3,
+            5,
+            20
+          ],
+          [
+            6,
+            11,
+            12
+          ],
+          [
+            1,
+            4,
+            13
+          ],
+          [
+            7,
+            10,
+            16
+          ],
+          [
+            2,
+            14,
+            1
+          ],
+          [
+            17,
+            18,
+            3
+          ],
+          [
+            2,
+            17,
+            4
+          ],
+          [
+            14,
+            18,
+            2
+          ],
+          [
+            1,
+            3,
+            17
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 3.138900000000035,
+        "judge_ms": 0.27139999999997144,
+        "verify_ms": 0.17619999999999436,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 45.89470000000006,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-21",
+      "suite": "paired_small",
+      "input": [
+        13,
+        17,
+        6,
+        15,
+        14,
+        -16,
+        -4,
+        -13,
+        2,
+        -14,
+        -10,
+        -16,
+        -16,
+        -7,
+        -3,
+        -18,
+        -13,
+        15,
+        -12,
+        20
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 10,
+        "initialSteps": 10,
+        "lowerBound": 7,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 6,
+        "operations": [
+          [
+            6,
+            11,
+            20
+          ],
+          [
+            12,
+            14,
+            2
+          ],
+          [
+            16,
+            15,
+            4
+          ],
+          [
+            13,
+            7,
+            5
+          ],
+          [
+            10,
+            9,
+            3
+          ],
+          [
+            8,
+            17,
+            19
+          ],
+          [
+            1,
+            18,
+            2
+          ],
+          [
+            8,
+            1,
+            3
+          ],
+          [
+            17,
+            2,
+            1
+          ],
+          [
+            19,
+            18,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.0031350000062957406,
+        "solveSeconds": 0.0031385000329464674
+      },
+      "previous_invariant_steps": 21,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 10,
+        "operations": [
+          [
+            6,
+            11,
+            20
+          ],
+          [
+            2,
+            12,
+            14
+          ],
+          [
+            4,
+            15,
+            16
+          ],
+          [
+            5,
+            7,
+            13
+          ],
+          [
+            3,
+            9,
+            10
+          ],
+          [
+            1,
+            8,
+            17
+          ],
+          [
+            18,
+            19,
+            2
+          ],
+          [
+            1,
+            18,
+            3
+          ],
+          [
+            8,
+            19,
+            1
+          ],
+          [
+            17,
+            2,
+            8
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 3.105400000000145,
+        "judge_ms": 0.5067000000001372,
+        "verify_ms": 0.2539000000001579,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 40.83249999999998,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-22",
+      "suite": "paired_small",
+      "input": [
+        -13,
+        2,
+        -13,
+        16,
+        -17,
+        -11,
+        5,
+        12,
+        10,
+        4,
+        5,
+        16,
+        -15,
+        3,
+        16,
+        -13,
+        4,
+        -18,
+        15,
+        12
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 10,
+        "initialSteps": 10,
+        "lowerBound": 7,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 6,
+        "operations": [
+          [
+            18,
+            7,
+            4
+          ],
+          [
+            5,
+            10,
+            12
+          ],
+          [
+            13,
+            2,
+            15
+          ],
+          [
+            1,
+            17,
+            8
+          ],
+          [
+            3,
+            1,
+            19
+          ],
+          [
+            16,
+            6,
+            14
+          ],
+          [
+            11,
+            9,
+            20
+          ],
+          [
+            6,
+            9,
+            1
+          ],
+          [
+            14,
+            11,
+            1
+          ],
+          [
+            16,
+            20,
+            1
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.003254899987950921,
+        "solveSeconds": 0.003258700016885996
+      },
+      "previous_invariant_steps": 27,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 10,
+        "operations": [
+          [
+            4,
+            7,
+            18
+          ],
+          [
+            5,
+            10,
+            12
+          ],
+          [
+            2,
+            13,
+            15
+          ],
+          [
+            1,
+            8,
+            17
+          ],
+          [
+            3,
+            19,
+            1
+          ],
+          [
+            6,
+            9,
+            11
+          ],
+          [
+            14,
+            16,
+            20
+          ],
+          [
+            6,
+            14,
+            1
+          ],
+          [
+            9,
+            16,
+            6
+          ],
+          [
+            11,
+            20,
+            9
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65)",
+        "reported_solve_ms": 3.65930000000003,
+        "judge_ms": 0.28099999999994907,
+        "verify_ms": 0.37239999999997053,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 40.69190000000003,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "paired-23",
+      "suite": "paired_small",
+      "input": [
+        4,
+        0,
+        17,
+        5,
+        -20,
+        14,
+        -12,
+        2,
+        8,
+        4,
+        1,
+        -3,
+        7,
+        7,
+        11,
+        8,
+        -12,
+        -6,
+        -8,
+        13
+      ],
+      "previous": {
+        "status": "solved",
+        "steps": 10,
+        "initialSteps": 10,
+        "lowerBound": 7,
+        "optimal": false,
+        "expanded": 0,
+        "completedDepth": 6,
+        "operations": [
+          [
+            7,
+            11,
+            3
+          ],
+          [
+            17,
+            1,
+            6
+          ],
+          [
+            19,
+            13,
+            14
+          ],
+          [
+            18,
+            10,
+            9
+          ],
+          [
+            5,
+            12,
+            2
+          ],
+          [
+            4,
+            16,
+            15
+          ],
+          [
+            20,
+            1,
+            3
+          ],
+          [
+            2,
+            4,
+            1
+          ],
+          [
+            5,
+            15,
+            3
+          ],
+          [
+            12,
+            16,
+            20
+          ]
+        ],
+        "verified": true,
+        "constructSeconds": 0.004522399976849556,
+        "solveSeconds": 0.004525500000454485
+      },
+      "previous_invariant_steps": 25,
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 10,
+        "operations": [
+          [
+            3,
+            7,
+            11
+          ],
+          [
+            1,
+            6,
+            17
+          ],
+          [
+            13,
+            14,
+            19
+          ],
+          [
+            9,
+            10,
+            18
+          ],
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            12,
+            15,
+            1
+          ],
+          [
+            16,
+            20,
+            3
+          ],
+          [
+            2,
+            12,
+            16
+          ],
+          [
+            4,
+            15,
+            20
+          ],
+          [
+            5,
+            1,
+            3
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65)",
+        "reported_solve_ms": 4.334100000000035,
+        "judge_ms": 0.38589999999999236,
+        "verify_ms": 1.0480000000000018,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 45.85720000000015,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "height-0",
+      "suite": "height",
+      "input": [
+        -191,
+        162,
+        107,
+        -16,
+        42,
+        58,
+        38,
+        -148,
+        41,
+        123,
+        -29
+      ],
+      "bits": 8,
+      "previous": {
+        "status": "solved",
+        "steps": 22,
+        "solve_seconds": 0.001015300047583878,
+        "energy_bound": 528201,
+        "distance_bound": 5113
+      },
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            5,
+            7,
+            11
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            6,
+            8
+          ],
+          [
+            9,
+            10,
+            5
+          ],
+          [
+            1,
+            4,
+            9
+          ],
+          [
+            2,
+            6,
+            10
+          ],
+          [
+            3,
+            8,
+            5
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65)",
+        "reported_solve_ms": 1.9876999999999043,
+        "judge_ms": 0.4353000000000975,
+        "verify_ms": 0.17509999999992942,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 48.750099999999975,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "height-1",
+      "suite": "height",
+      "input": [
+        23,
+        178,
+        -195,
+        43,
+        22,
+        -86,
+        247,
+        114,
+        123,
+        7,
+        195
+      ],
+      "bits": 8,
+      "previous": {
+        "status": "solved",
+        "steps": 21,
+        "solve_seconds": 0.001004899968393147,
+        "energy_bound": 748098,
+        "distance_bound": 6210
+      },
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 7,
+        "operations": [
+          [
+            5,
+            6,
+            7
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            8,
+            9
+          ],
+          [
+            10,
+            11,
+            5
+          ],
+          [
+            1,
+            4,
+            10
+          ],
+          [
+            2,
+            8,
+            11
+          ],
+          [
+            3,
+            9,
+            5
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65)",
+        "reported_solve_ms": 1.7111999999999625,
+        "judge_ms": 0.3855999999998403,
+        "verify_ms": 0.09269999999992251,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 46.23039999999992,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "height-2",
+      "suite": "height",
+      "input": [
+        -209,
+        251,
+        222,
+        109,
+        84,
+        -103,
+        116,
+        139,
+        -176,
+        -26,
+        -231
+      ],
+      "bits": 8,
+      "previous": {
+        "status": "solved",
+        "steps": 16,
+        "solve_seconds": 0.0012202000943943858,
+        "energy_bound": 1352187,
+        "distance_bound": 8478
+      },
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 9,
+        "operations": [
+          [
+            1,
+            8,
+            7
+          ],
+          [
+            3,
+            10,
+            9
+          ],
+          [
+            11,
+            5,
+            2
+          ],
+          [
+            2,
+            3,
+            9
+          ],
+          [
+            6,
+            4,
+            11
+          ],
+          [
+            5,
+            10,
+            2
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            5,
+            6,
+            8
+          ],
+          [
+            7,
+            10,
+            11
+          ]
+        ],
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 1138.0973,
+        "judge_ms": 0.2621000000001459,
+        "verify_ms": 0.07859999999982392,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 1177.6737,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "height-3",
+      "suite": "height",
+      "input": [
+        36967,
+        29742,
+        -19435,
+        -17610,
+        -35901,
+        55711,
+        60343,
+        -58305,
+        59327,
+        64688,
+        -58322
+      ],
+      "bits": 16,
+      "previous": {
+        "status": "solved",
+        "steps": 42,
+        "solve_seconds": 0.0020127000752836466,
+        "energy_bound": 109031362452,
+        "distance_bound": 2370292
+      },
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 19,
+        "operations": [
+          [
+            8,
+            6,
+            1
+          ],
+          [
+            11,
+            7,
+            2
+          ],
+          [
+            10,
+            3,
+            4
+          ],
+          [
+            9,
+            5,
+            3
+          ],
+          [
+            4,
+            1,
+            6
+          ],
+          [
+            10,
+            8,
+            9
+          ],
+          [
+            3,
+            8,
+            2
+          ],
+          [
+            5,
+            9,
+            7
+          ],
+          [
+            10,
+            1,
+            6
+          ],
+          [
+            11,
+            4,
+            9
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            6,
+            5,
+            8
+          ],
+          [
+            10,
+            7,
+            8
+          ],
+          [
+            1,
+            7,
+            8
+          ],
+          [
+            1,
+            7,
+            10
+          ],
+          [
+            2,
+            8,
+            1
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            2,
+            5,
+            9
+          ],
+          [
+            6,
+            8,
+            11
+          ]
+        ],
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 3428.7515,
+        "judge_ms": 0.371599999999944,
+        "verify_ms": 0.24169999999958236,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 3473.0763,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "height-4",
+      "suite": "height",
+      "input": [
+        -38133,
+        -11874,
+        -59895,
+        -8159,
+        61441,
+        24092,
+        -58421,
+        -43313,
+        -16407,
+        9102,
+        -13115
+      ],
+      "bits": 16,
+      "previous": {
+        "status": "solved",
+        "steps": 31,
+        "solve_seconds": 0.001521000056527555,
+        "energy_bound": 59591020590,
+        "distance_bound": 1737687
+      },
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 13,
+        "operations": [
+          [
+            5,
+            7,
+            8
+          ],
+          [
+            3,
+            6,
+            4
+          ],
+          [
+            10,
+            9,
+            1
+          ],
+          [
+            11,
+            3,
+            6
+          ],
+          [
+            2,
+            1,
+            9
+          ],
+          [
+            5,
+            4,
+            11
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            3,
+            6,
+            9
+          ],
+          [
+            10,
+            7,
+            8
+          ],
+          [
+            5,
+            11,
+            4
+          ],
+          [
+            3,
+            4,
+            7
+          ],
+          [
+            5,
+            6,
+            8
+          ],
+          [
+            9,
+            10,
+            11
+          ]
+        ],
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 2457.3910000000005,
+        "judge_ms": 0.9297999999998865,
+        "verify_ms": 0.1396999999997206,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 2553.826,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "height-5",
+      "suite": "height",
+      "input": [
+        -19157,
+        50988,
+        -37929,
+        -49728,
+        -8903,
+        25048,
+        -36302,
+        -44811,
+        -60673,
+        27604,
+        -58811
+      ],
+      "bits": 16,
+      "previous": {
+        "status": "solved",
+        "steps": 33,
+        "solve_seconds": 0.001920499955303967,
+        "energy_bound": 66153891627,
+        "distance_bound": 1828321
+      },
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 10,
+        "operations": [
+          [
+            10,
+            8,
+            3
+          ],
+          [
+            2,
+            11,
+            4
+          ],
+          [
+            6,
+            9,
+            2
+          ],
+          [
+            7,
+            4,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            5,
+            1,
+            9
+          ],
+          [
+            7,
+            11,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            5,
+            7,
+            8
+          ],
+          [
+            9,
+            10,
+            11
+          ]
+        ],
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 1738.5944,
+        "judge_ms": 0.4007999999994354,
+        "verify_ms": 0.12310000000070431,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 1791.2394999999997,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "height-6",
+      "suite": "height",
+      "input": [
+        1479970710,
+        256482708,
+        1679872035,
+        4067525265,
+        -932183509,
+        -1115248757,
+        -1936546065,
+        -776298024,
+        1444646301,
+        -1461758238,
+        769124755
+      ],
+      "bits": 32,
+      "previous": {
+        "status": "solved",
+        "steps": 81,
+        "solve_seconds": 0.00434710003901273,
+        "energy_bound": 143125026938762124438,
+        "distance_bound": 85007427813
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 9116.5697,
+        "judge_ms": 0.3738999999986845,
+        "verify_ms": 0.020599999999831198,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 9165.296300000002
+      }
+    },
+    {
+      "id": "height-7",
+      "suite": "height",
+      "input": [
+        -1800941691,
+        3820975859,
+        664653352,
+        1532758498,
+        4060197149,
+        429100325,
+        37358445,
+        -507105267,
+        4263898452,
+        2506757822,
+        -2360402174
+      ],
+      "bits": 32,
+      "previous": {
+        "status": "solved",
+        "steps": 76,
+        "solve_seconds": 0.004421400022692978,
+        "energy_bound": 238757513921498811483,
+        "distance_bound": 113389138192
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 9026.848700000002,
+        "judge_ms": 0.400099999998929,
+        "verify_ms": 0.029399999999441206,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 9072.2059
+      }
+    },
+    {
+      "id": "height-8",
+      "suite": "height",
+      "input": [
+        2674369704,
+        -3997893614,
+        816043973,
+        2548646395,
+        3708598397,
+        -3885149323,
+        -2298443713,
+        -2143370829,
+        1331439481,
+        295241069,
+        748138689
+      ],
+      "bits": 32,
+      "previous": {
+        "status": "solved",
+        "steps": 73,
+        "solve_seconds": 0.0055324999848380685,
+        "energy_bound": 321470049071633852817,
+        "distance_bound": 130173345016
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 9314.9212,
+        "judge_ms": 0.46080000000074506,
+        "verify_ms": 0.037600000003294554,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 9382.441599999998
+      }
+    },
+    {
+      "id": "height-9",
+      "suite": "height",
+      "input": [
+        -98,
+        58,
+        195,
+        -42,
+        -247,
+        -12,
+        128,
+        185,
+        -117,
+        208,
+        201,
+        -205,
+        -41,
+        177,
+        -231,
+        -170,
+        -54,
+        234,
+        -182,
+        -47
+      ],
+      "bits": 8,
+      "previous": {
+        "status": "solved",
+        "steps": 35,
+        "solve_seconds": 0.0029848000267520547,
+        "energy_bound": 2303973,
+        "distance_bound": 27294
+      },
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 13,
+        "operations": [
+          [
+            6,
+            15,
+            18
+          ],
+          [
+            10,
+            16,
+            20
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            8,
+            9,
+            11
+          ],
+          [
+            1,
+            8,
+            6
+          ],
+          [
+            2,
+            9,
+            1
+          ],
+          [
+            5,
+            11,
+            2
+          ],
+          [
+            3,
+            4,
+            7
+          ],
+          [
+            12,
+            13,
+            14
+          ],
+          [
+            17,
+            19,
+            1
+          ],
+          [
+            3,
+            12,
+            17
+          ],
+          [
+            4,
+            13,
+            19
+          ],
+          [
+            7,
+            14,
+            1
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65) \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65)",
+        "reported_solve_ms": 4.140499999994063,
+        "judge_ms": 0.34470000000146683,
+        "verify_ms": 0.147000000004482,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 49.63940000000002,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "height-10",
+      "suite": "height",
+      "input": [
+        -224,
+        -145,
+        81,
+        -197,
+        49,
+        -214,
+        28,
+        -217,
+        154,
+        1,
+        80,
+        -192,
+        5,
+        159,
+        -187,
+        23,
+        -228,
+        -218,
+        -166,
+        -192
+      ],
+      "bits": 8,
+      "previous": {
+        "status": "solved",
+        "steps": 37,
+        "solve_seconds": 0.0032891000155359507,
+        "energy_bound": 1693593,
+        "distance_bound": 22588
+      },
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 16,
+        "operations": [
+          [
+            9,
+            17,
+            19
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            5,
+            7,
+            8
+          ],
+          [
+            1,
+            5,
+            9
+          ],
+          [
+            3,
+            7,
+            1
+          ],
+          [
+            4,
+            8,
+            3
+          ],
+          [
+            6,
+            10,
+            1
+          ],
+          [
+            11,
+            15,
+            3
+          ],
+          [
+            6,
+            11,
+            4
+          ],
+          [
+            10,
+            15,
+            6
+          ],
+          [
+            2,
+            12,
+            13
+          ],
+          [
+            14,
+            16,
+            1
+          ],
+          [
+            18,
+            20,
+            3
+          ],
+          [
+            2,
+            14,
+            18
+          ],
+          [
+            12,
+            16,
+            20
+          ],
+          [
+            13,
+            1,
+            3
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65) \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65) \u2192 \u5220\u9664\u5197\u4f59 1 \u6b65",
+        "reported_solve_ms": 5.286499999994703,
+        "judge_ms": 0.7378000000026077,
+        "verify_ms": 0.1532999999981257,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 50.54969999999594,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "height-11",
+      "suite": "height",
+      "input": [
+        240,
+        -11,
+        -182,
+        -24,
+        -208,
+        -161,
+        -134,
+        119,
+        -165,
+        6,
+        -57,
+        19,
+        -206,
+        92,
+        20,
+        -88,
+        132,
+        -141,
+        80,
+        -151
+      ],
+      "bits": 8,
+      "previous": {
+        "status": "solved",
+        "steps": 32,
+        "solve_seconds": 0.004182900069281459,
+        "energy_bound": 1419858,
+        "distance_bound": 21291
+      },
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 17,
+        "operations": [
+          [
+            2,
+            4,
+            16
+          ],
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            9,
+            11,
+            4
+          ],
+          [
+            1,
+            9,
+            16
+          ],
+          [
+            3,
+            11,
+            1
+          ],
+          [
+            2,
+            4,
+            9
+          ],
+          [
+            5,
+            6,
+            7
+          ],
+          [
+            8,
+            10,
+            17
+          ],
+          [
+            5,
+            8,
+            1
+          ],
+          [
+            6,
+            10,
+            5
+          ],
+          [
+            7,
+            17,
+            6
+          ],
+          [
+            12,
+            13,
+            14
+          ],
+          [
+            15,
+            18,
+            1
+          ],
+          [
+            19,
+            20,
+            2
+          ],
+          [
+            12,
+            15,
+            19
+          ],
+          [
+            13,
+            18,
+            20
+          ],
+          [
+            14,
+            1,
+            2
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(5\u6b65) \u2192 \u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65)",
+        "reported_solve_ms": 4.834900000001653,
+        "judge_ms": 0.35130000000208383,
+        "verify_ms": 0.1624999999985448,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 50.22860000000219,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "height-12",
+      "suite": "height",
+      "input": [
+        38679,
+        -2056,
+        48229,
+        -3495,
+        -53966,
+        3317,
+        14404,
+        -60357,
+        -36509,
+        -40462,
+        54020,
+        47907,
+        29298,
+        15210,
+        -58114,
+        64860,
+        -1674,
+        -8798,
+        -8113,
+        -60840
+      ],
+      "bits": 16,
+      "previous": {
+        "status": "solved",
+        "steps": 48,
+        "solve_seconds": 0.006402999977581203,
+        "energy_bound": 140849585532,
+        "distance_bound": 6762357
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65) \u2192 \u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 6296.969499999999,
+        "judge_ms": 0.3382000000055996,
+        "verify_ms": 0.0202999999964959,
+        "partial_steps": 6,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 6338.991099999999
+      }
+    },
+    {
+      "id": "height-13",
+      "suite": "height",
+      "input": [
+        63587,
+        -54029,
+        64111,
+        43155,
+        6466,
+        -37176,
+        39307,
+        28988,
+        48406,
+        54436,
+        51064,
+        50758,
+        44186,
+        46624,
+        -36412,
+        33252,
+        -52808,
+        -2729,
+        -28119,
+        43673
+      ],
+      "bits": 16,
+      "previous": {
+        "status": "solved",
+        "steps": 58,
+        "solve_seconds": 0.006472799926996231,
+        "energy_bound": 139565461986,
+        "distance_bound": 6341109
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96f6\u548c\u5b50\u96c6\u5b8f(6\u6b65) \u2192 \u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 5472.335399999996,
+        "judge_ms": 0.35089999999763677,
+        "verify_ms": 0.021099999998114072,
+        "partial_steps": 6,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 5513.552499999998
+      }
+    },
+    {
+      "id": "height-14",
+      "suite": "height",
+      "input": [
+        56636,
+        -2587,
+        52761,
+        45724,
+        -34343,
+        -43978,
+        -41228,
+        -61196,
+        -11274,
+        47888,
+        64585,
+        -6360,
+        -7957,
+        59769,
+        -18524,
+        -6704,
+        45875,
+        52511,
+        -57039,
+        60301
+      ],
+      "bits": 16,
+      "previous": {
+        "status": "solved",
+        "steps": 46,
+        "solve_seconds": 0.006344399997033179,
+        "energy_bound": 167200936335,
+        "distance_bound": 7241149
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 9090.828300000001,
+        "judge_ms": 0.43409999999857973,
+        "verify_ms": 0.01989999999932479,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 9134.0225
+      }
+    },
+    {
+      "id": "height-15",
+      "suite": "height",
+      "input": [
+        -677888407,
+        -2618148485,
+        1108725859,
+        -268344408,
+        1374726418,
+        -1519234588,
+        4228926225,
+        -1519964094,
+        -2053051841,
+        -3895981539,
+        3881877940,
+        1388796463,
+        -1989388147,
+        679549775,
+        -3056805622,
+        1777971286,
+        -1267147899,
+        2317474502,
+        3594158496,
+        -1431598634
+      ],
+      "bits": 32,
+      "previous": {
+        "status": "solved",
+        "steps": 98,
+        "solve_seconds": 0.009105200064368546,
+        "energy_bound": 487203049285639404795,
+        "distance_bound": 396870825411
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 9031.876500000006,
+        "judge_ms": 0.505700000001525,
+        "verify_ms": 0.020099999994272366,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 9071.737300000008
+      }
+    },
+    {
+      "id": "height-16",
+      "suite": "height",
+      "input": [
+        -207474758,
+        -3849464960,
+        1473638524,
+        -894662185,
+        43000011,
+        1025583305,
+        -3441124939,
+        3156398364,
+        372542214,
+        -3653639169,
+        3207556595,
+        1605279498,
+        1290547533,
+        -3716743266,
+        3482155137,
+        748359886,
+        -1390544266,
+        -1963355755,
+        -2626159394,
+        3773324065
+      ],
+      "bits": 32,
+      "previous": {
+        "status": "solved",
+        "steps": 100,
+        "solve_seconds": 0.010781799908727407,
+        "energy_bound": 549046381700145851487,
+        "distance_bound": 423708522169
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 9041.117000000013,
+        "judge_ms": 0.36439999999129213,
+        "verify_ms": 0.0204000000085216,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 9088.36050000001
+      }
+    },
+    {
+      "id": "height-17",
+      "suite": "height",
+      "input": [
+        2061741870,
+        4275088207,
+        -3772962055,
+        1483445358,
+        2052278730,
+        882941315,
+        2960162510,
+        3293248418,
+        -114892937,
+        2747338870,
+        2401824469,
+        2397249123,
+        2375108503,
+        -2602253294,
+        655660282,
+        -521641076,
+        3181783677,
+        2433837123,
+        1704289064,
+        -2510277377
+      ],
+      "bits": 32,
+      "previous": {
+        "status": "solved",
+        "steps": 126,
+        "solve_seconds": 0.010892899939790368,
+        "energy_bound": 399555429812921807343,
+        "distance_bound": 336369082737
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 10280.3744,
+        "judge_ms": 0.34130000000004657,
+        "verify_ms": 0.03149999999732245,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 10324.715100000001
+      }
+    },
+    {
+      "id": "large-0",
+      "suite": "large",
+      "input": [
+        -17903537204995896691,
+        15364395931157714492,
+        -91864919289574373,
+        -17391326623685869594,
+        -3546821294382628013,
+        -18223650493687653710,
+        -5933310406347343586,
+        -14843899583845665497,
+        12390969048604522725,
+        5048420229352823797,
+        -5657387994398561782
+      ],
+      "bits": 64,
+      "previous": {
+        "status": "solved",
+        "steps": 133,
+        "solve_seconds": 0.007838200079277158,
+        "energy_bound": 6461237957407990800947318029646222012511,
+        "distance_bound": 582492084208232245002
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 8067.001999999993,
+        "judge_ms": 0.3523999999888474,
+        "verify_ms": 0.02800000000570435,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 8110.920700000002
+      }
+    },
+    {
+      "id": "large-2",
+      "suite": "large",
+      "input": [
+        108829629023171999534322849065653680203,
+        24065184173508251710139351990153434397,
+        -218063586662510514215365139595812143787,
+        -48627871165891184716814327529546979639,
+        315709849003364786535911051283671868980,
+        -70238118246943360972289145967367193724,
+        -142917264228959339356149482685387769997,
+        230617606332041009313071828056828530203,
+        -8006820047158289918313848875410853231,
+        -290715780149850205112076133223977060805,
+        -161030934451228993851800825768680079653
+      ],
+      "bits": 128,
+      "previous": {
+        "status": "solved",
+        "steps": 306,
+        "solve_seconds": 0.02381079993210733,
+        "energy_bound": 1552062329478906797512519251796734635148669315979041813925993780037112760704651,
+        "distance_bound": 9048946204758306428547911676142271060601
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 8060.929099999994,
+        "judge_ms": 0.401400000002468,
+        "verify_ms": 0.02070000000821892,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 8107.7166
+      }
+    },
+    {
+      "id": "large-4",
+      "suite": "large",
+      "input": [
+        -445602406297852771,
+        -3468517997918668852,
+        14841937532637859646,
+        -16528406675263099967,
+        7784099686926517436,
+        -10002259400398091876,
+        18321340419613615293,
+        15031077378373193365,
+        13672385160632364735,
+        14700552145065860607,
+        -12570975737417466458,
+        5630662128452776772,
+        17446180407619684327,
+        18209292393243423925,
+        1814404164763267940,
+        9531202613725454951,
+        5689090172036037280,
+        8338778820670266252,
+        -5198972395512576410,
+        14724048222341037065
+      ],
+      "bits": 64,
+      "previous": {
+        "status": "solved",
+        "steps": 222,
+        "solve_seconds": 0.033024300006218255,
+        "energy_bound": 9926896180666406197916297323705890470049,
+        "distance_bound": 1755421148385280716664
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 10544.473700000002,
+        "judge_ms": 0.36269999999785796,
+        "verify_ms": 0.020600000003469177,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 10588.046399999992
+      }
+    },
+    {
+      "id": "large-6",
+      "suite": "large",
+      "input": [
+        245376492001328606427974839220901841424,
+        -258932741444072762345737555596295227204,
+        -280453034695150062717055373486551877365,
+        28008726005609103005122971352913255206,
+        66630098681357548363504482169660644423,
+        -271766334102751127120879893690976211401,
+        -339630671300642774133964115004353797296,
+        -85699674917099475271890020822820828175,
+        285145000780509763900844284913100341659,
+        -271554710751137884129420344827100259538,
+        92298540885846145010857205431812910728,
+        67233705759358127997990288168011985629,
+        268493338399955692934821791082639776172,
+        110876447709769534114517138843154536259,
+        220373399305145305115166933611617265116,
+        -187432555812196639244572775287348596186,
+        127113365952273001333735448466003462245,
+        129957592649237385348015591760848231597,
+        -248240533312275397942639435347879745158,
+        159401882916285551007054093277393217605
+      ],
+      "bits": 128,
+      "previous": {
+        "status": "solved",
+        "steps": 419,
+        "solve_seconds": 0.04983660008292645,
+        "energy_bound": 3883096308245160571151192114271853082598466814210525945107550471195665513349103,
+        "distance_bound": 35054004789955105698963159197937676189353
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 10114.619200000001,
+        "judge_ms": 0.3856999999989057,
+        "verify_ms": 0.023100000005797483,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 10162.964699999997
+      }
+    },
+    {
+      "id": "large-8",
+      "suite": "large",
+      "input": [
+        6907378845441156532,
+        1683338071342136768,
+        -15735965633554003398,
+        5870147138694563619,
+        -16930479184904828148,
+        -13129380546043593698,
+        3747701771039631828,
+        -12924716524994504911,
+        12327152769191057629,
+        -1104607175301426830,
+        9665979684401172741,
+        -8679686289057595664,
+        8346648932664242495,
+        11447586951128581460,
+        -15317708573747195350,
+        13314736654828401149,
+        10323048943555091572,
+        -15994620880053042532,
+        -5788584171331705570,
+        16805783911411604270,
+        7120472236782244519,
+        15928863694011548164,
+        -1085373304425807378,
+        -13506683696675791522,
+        -10287908744657701301,
+        8443079499605546738,
+        -9639359790148496910,
+        16719564530355750927,
+        18136333224275914002,
+        16065777828977520545,
+        6094754712617231069,
+        17178554184881160786,
+        -248458004638426712,
+        -9625482794282849441,
+        9519721801831943826,
+        3484509859258695053,
+        15062864815588559776,
+        -8708615554468253271,
+        -406650901389253735,
+        -5876308625164949595,
+        11760187035853504219,
+        3773226764738872477,
+        1772191097273671942,
+        -12296110278081947442,
+        -11087514564966075277,
+        -18246124627070862140,
+        11680527843731090187,
+        -3703363893596972172,
+        -17615130441099827042,
+        -2530556903161227604
+      ],
+      "bits": 64,
+      "previous": {
+        "status": "solved",
+        "steps": 505,
+        "solve_seconds": 0.17850590008310974,
+        "energy_bound": 28276382904710371333049133176509242613665,
+        "distance_bound": 12091618009262358476067
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 14855.344900000011,
+        "judge_ms": 0.44329999999899883,
+        "verify_ms": 0.022900000010849908,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 14898.959599999987
+      }
+    },
+    {
+      "id": "large-10",
+      "suite": "large",
+      "input": [
+        298899613897280619940977336040678735677,
+        100168714196048663183695874052271724080,
+        -80318584805031519186682819578980322378,
+        -260388947006224357564874309580730931488,
+        -322243671528601143553420845670739246373,
+        -226711755109153514630787340919690554117,
+        -173363582324026996605066030068608674665,
+        -2611977879381299920732727986866005230,
+        -314578215569890354250018382944189328422,
+        123162245940740677452130587698336557497,
+        236497881148956727955181288185120676433,
+        214682594295407615319077394184263350782,
+        -289468732440484036672522603810052774337,
+        -49532050224358768360029615339962817528,
+        -151633362177152331898995034616052839595,
+        -337021881100684388160127311362113657491,
+        -194178248126669201071199752958573822959,
+        75396232657235043008925258661828455540,
+        -94606349476933079423985149994394926982,
+        147140859557280413799642949944655448911,
+        -107012415283304395136064029853641348013,
+        -69977772951444001422287302031192689311,
+        -270760891685535664238517426096946884408,
+        -35596747591190380979626747120761396150,
+        -253551827950272047593371444810089758232,
+        213944168440314631050038792888221086483,
+        -193978196798023996195687612858445662148,
+        -87224776919610624462564141430179788138,
+        -131498095755836488041356070013428021083,
+        -249455977960656598428166808187905148855,
+        98126458607110351384490843766957417221,
+        -145308942783633962360487123622296931249,
+        -277429745643777656663397712016854244500,
+        17489276428332166631489829276208189452,
+        -125711794957070019011228073707870166929,
+        149360917009261576973559002242194389415,
+        -294037854415352217837378228255716024914,
+        -221932306135671049860399214225612611901,
+        -296608335816321106950677664152623770378,
+        34174614015000864756938508577313029859,
+        24558607461360120797285108992705620036,
+        -184570687531116441586238052372004422005,
+        64010099920432034697736756573183983805,
+        -11917821768723437249562896824149222027,
+        43755954306221370807920750867628634741,
+        297675832883244020908603687133846431556,
+        -36560438469397145111295262627746315307,
+        -133389212586748371733740631766698186031,
+        226981196651979476841182981432070012341,
+        185363873385809680045966278663730372865
+      ],
+      "bits": 128,
+      "previous": {
+        "status": "solved",
+        "steps": 920,
+        "solve_seconds": 0.3032534000230953,
+        "energy_bound": 7264550858149215265255289559100740075933279491164861429367834529201325093954284,
+        "distance_bound": 193074024076715764591263134712825113140248
+      },
+      "arena": {
+        "status": "not_found",
+        "G": "1",
+        "steps": null,
+        "operations": null,
+        "method": "\u96c6\u675f\u641c\u7d22",
+        "reported_solve_ms": 11210.881800000003,
+        "judge_ms": 1.0273999999917578,
+        "verify_ms": 0.021299999993061647,
+        "partial_steps": 0,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 11252.93239999999
+      }
+    },
+    {
+      "id": "example",
+      "suite": "scale",
+      "input": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 2,
+        "operations": [
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u4e09\u5143\u7ec4",
+        "reported_solve_ms": 0.9243999999889638,
+        "judge_ms": 0.5191000000049826,
+        "verify_ms": 0.15359999999054708,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 48.078300000022864,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "example-scale-30",
+      "suite": "scale",
+      "input": [
+        0,
+        1000000000000000000000000000000,
+        2000000000000000000000000000000,
+        3000000000000000000000000000000,
+        4000000000000000000000000000000,
+        5000000000000000000000000000000,
+        6000000000000000000000000000000
+      ],
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 2,
+        "operations": [
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u4e09\u5143\u7ec4",
+        "reported_solve_ms": 0.8502000000153203,
+        "judge_ms": 0.3187000000034459,
+        "verify_ms": 0.23790000000735745,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 46.19099999999162,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "example-scale-100",
+      "suite": "scale",
+      "input": [
+        0,
+        10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        60000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ],
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 2,
+        "operations": [
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            7
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u4e09\u5143\u7ec4",
+        "reported_solve_ms": 0.9210000000020955,
+        "judge_ms": 0.4312999999965541,
+        "verify_ms": 0.17650000000139698,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 44.62119999999413,
+        "independent_verified": true
+      }
+    },
+    {
+      "id": "example-scale-310",
+      "suite": "scale",
+      "input": [
+        0,
+        10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        60000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ],
+      "arena": {
+        "status": "solved",
+        "G": "1",
+        "steps": 2,
+        "operations": [
+          [
+            2,
+            3,
+            7
+          ],
+          [
+            1,
+            5,
+            6
+          ]
+        ],
+        "method": "\u96f6\u548c\u4e09\u5143\u7ec4/\u5bf9\u6d88 \u2192 \u96f6\u548c\u4e09\u5143\u7ec4",
+        "reported_solve_ms": 0.856999999989057,
+        "judge_ms": 0.3272999999753665,
+        "verify_ms": 0.14310000001569279,
+        "budget": {
+          "width": 400,
+          "depth": 70,
+          "maxNodes": 60000,
+          "timeMs": 9000,
+          "moveCap": 60
+        },
+        "calls": null,
+        "outer_ms": 43.62989999999991,
+        "independent_verified": true
+      }
+    }
+  ]
+}

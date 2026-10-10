@@ -1,0 +1,1990 @@
+
+[PDF PAGE 1]
+ON THE FINITENESS OF P-ADIC CONTINUED FRACTIONS
+FOR NUMBER FIELDS
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+Abstract. For a prime ideal P of the ring of integers of a number field K, we
+give a general definition of P-adic continued fraction, which also includes classical
+definitions of continued fractions in the field of p–adic numbers. We give some
+necessary and sufficient conditions on K ensuring that for all but finitely many
+P, every α ∈K admits a finite P-adic continued fraction expansion, addressing a
+similar problem posed by Rosen in the archimedean setting.
+1. Introduction
+The classical continued fraction algorithm provides an integer sequence [a0, a1, . . .]
+that represents a real number α0 by means of the following recursive algorithm:
+
+
+
+an = ⌊αn⌋
+αn+1 =
+1
+αn −an
+if αn −an̸ = 0,
+for all n ≥0, where ⌊·⌋denotes the integral part of a real number. The an’s and
+αn’s are called partial and complete quotients, respectively. It is easy to see that, for
+classical continued fractions, the procedure eventually stops if and only if we start
+with a rational number, and, in the case of irrationals, they provide the best rational
+approximations of the number; this is one of the reasons why the study of continued
+fractions is very important in diophantine approximation and transcendence theory.
+Motivated by this property, Rosen [35] posed the problem of finding more gen-
+eral definitions of continued fraction expansions characterizing all the elements of
+an algebraic number field K by means of finite expansions and providing approxi-
+mations of elements not in the field by means of elements in K (as well as classical
+continued fractions provide rational approximations of irrational numbers). In [35],
+Rosen gave an example of such continued fractions in the special case of Q(
+√
+5),
+using expansions of the form
+a0 +
+b1
+a1φ +
+b2
+a2φ + b3
+...
+,
+where φ is the Golden ratio, bn = ±1 and the an ∈Z satisfies the property that
+anφ is the integer multiple of φ nearest to the respective complete quotients. This
+2020 Mathematics Subject Classification. 11J70, 11D88, 11Y65, 11J72.
+Key words and phrases. p-adic continued fractions, finiteness, Weil height, norm Euclidean
+fields, norm Euclidean class
+fractions continues p-adiques, finitude, hauteur de Weil, corps euclidiens pour la norme, classes
+euclidiennes.
+The three authors are members of the INdAM group GNSAGA. The first author is funded by
+DISMA, Politecnico di Torino, Dipartimento di Eccellenza MIUR 2018-2022.
+1
+arXiv:2105.12570v2  [math.NT]  28 Nov 2025
+
+
+[PDF PAGE 2]
+2
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+is a special case of the so called Rosen continued fractions, introduced by the same
+author in [34], where φ is replaced by irrational numbers of the form 2 cos π
+q with
+q ≥3 an odd positive number, with the aim of studying Hecke groups.
+The characterization of the real numbers having a finite Rosen continued fraction
+is still an open problem, see, e.g., [1, 9, 19] for further details. In [5], Bernat defined
+another continued fraction expansion in Q(
+√
+5), slightly different from the Rosen
+one, proving that also these continued fractions represent Q(
+√
+5) uniquely. Very
+recently in [28] the authors generalized Bernat construction defining the so called
+β-continued fraction with the aim of studying when the elements of Q(β) have a
+finite representation, where β is any quadratic Pisot number. More specifically, the
+authors proved that, if β is either a quadratic Perron number or the square root
+of a positive integer, then every element of Q(β) has a finite or eventually periodic
+β-continued fraction expansion. Moreover, assuming a conjecture by Mercat [30],
+there exist only four quadratic Perron numbers β such that the elements of Q(β)
+have finite β-continued fraction expansion.
+The problem of Rosen can be naturally translated into the context of p–adic num-
+bers Qp; indeed, starting from Mahler [27], continued fractions have been introduced
+and studied in Qp by several authors. In this context, however, there is no natural
+definition of a p–adic continued fraction, since there is no canonical definition for a
+p-adic floor function. The two main definitions of a p–adic continued fraction algo-
+rithm are due to Browkin [7] and Ruban [36]; they are both based on the definition
+of a p–adic floor function
+s(α) =
+0
+X
+n=k
+xnpn ∈Q,
+where α =
+∞
+X
+n=k
+xnpn ∈Qp,
+where the xn’s are the representatives modulo p in the interval (−p/2, p/2) for
+Browkin definition and in the interval [0, p−1] for Ruban definition. These continued
+fractions have been widely studied by several authors in terms of quality of the
+approximation, finiteness and periodicity, see, e.g., [2, 4, 8, 11, 10, 22, 33, 37, 17]. In
+this setting however, many differences with the classical case arise: for example, none
+of these definitions provide good approximations as in the real case, and no analogue
+of Lagrange’s theorem holds for both Browkin and Ruban continued fractions, hence
+the problem of finding a standard definition for a p-adic continued fraction remains
+still open. However, it has been proved that rational numbers have always finite
+Browkin continued fraction expansion [8] and finite or eventually periodic Ruban
+continued fraction expansion [22].
+In this paper, we consider the p-adic analogue of Rosen question. Given a number
+field K and a prime ideal P in its ring of integers OK, we give a very general
+definition of P-adic continued fractions; with this definition, the partial quotients
+are the values of a P-adic floor function s which is a locally constant function from
+the P-adic completion of K to the ring of {P}-integers of K. We will call the data
+τ = (K, P, s) a type and we will introduce the notion of continued fractions of type
+τ. With this definition, Browkin and Ruban continued fractions arise as particular
+p-adic types for Q. If every element of K has a finite (resp. periodic) τ-expansion,
+then we shall say that the type τ enjoys the Continued Fraction Finiteness (CFF)
+(resp.
+Continued Fraction Periodicity (CFP)) property.
+Moreover, we shall say
+that the field K enjoys the P-adic CFF (resp.
+CFP) property if there exists a
+CFF (resp. CFP) type τ = (K, P, s). It is well known that Q satisfies the p-adic
+
+
+[PDF PAGE 3]
+CONTINUED FRACTIONS FOR NUMBER FIELDS
+3
+CFF property for every odd prime p because of the finiteness of Browkin continued
+fraction expansions of rational numbers (see [7]).
+In the first part of the paper, we prove a sufficient condition for a type to have
+the CFF (resp. CFP) property using general properties of the multiplicative Weil
+height of algebraic numbers and of the norms of matrices. This result allows us to
+study the P-adic CFF property when K is a norm Euclidean field; in particular,
+we prove that a norm Euclidean field with Euclidean minimum < 1 satisfies the
+P-adic CFF property for all but finitely many prime ideals P. Furthermore, for
+certain Euclidean quadratic fields K we provide some more effective constructions
+by exploiting the form of unitary neighborhoods covering a fundamental domain of
+OK as done in [18].
+In the last part of the paper, we study the CFF property of P–adic continued
+fractions in relation with the structure of the ideal class group for number fields
+which are not necessarily norm Euclidean. First, we show that, if the number field
+K satisfies the P-adic CFF property for all but finitely many prime ideals P, then
+OK is a PID, giving examples of number fields for which the CFF property fails to
+hold. Moreover, under milder hypotheses, we show that it is possible to ensure the
+CFF property for continued fractions associated to (almost all) primes belonging to
+a norm Euclidean class, in the sense of [24]. Finally, for a general number field, we
+show that the obstruction to the CFF property depends on the existence of infinitely
+many partial quotients with P-adic valuation equal to −1.
+We conclude this introduction by pointing out some open problems and direc-
+tions for future work. First, effectiveness: our main results assert the existence of
+CFF types for a given number field, but in general it is not easy to define them
+explicitly. The construction of types satisfying the CFF property and the analysis
+of their properties, such as the study of the arithmetic of partial quotients, or of the
+dependence between the length of a finite continued fraction and the height of the
+algebraic number that it represents are interesting topics that we left outside of the
+scope of the present work. Moreover, it would be nice to obtain a full characteri-
+zation of number fields K satisfying the P-adic CFF for a given ideal P. We show
+that a necessary condition for CFF is that the ideal class group K is generated by
+the class of P. We do not know if this condition is also sufficient, but we do not
+have arguments against this possibility.
+Last, it would be nice to investigate periodicity: although we state a sufficient
+condition for a type to enjoy the CFP property, the present paper focuses specifi-
+cally on finiteness. Nevertheless, periodicity is also a very interesting question, and
+an algebraic characterization of the elements represented by a periodic expansion
+(relatively to a given type) would be a challenging objective.
+2. Notations and prerequisites
+For every rational prime p, let |·|p be the p-adic absolute value, normalized in such
+a way that |p|p = 1
+p. The archimedean absolute values on R or C will be denoted
+by |·| or by |·|∞respectively. We will denote by K an algebraic closure of any field K.
+Let K be a number field of degree d over Q, and let OK be its ring of integers.
+We fix a prime ideal P of OK lying over an odd prime p. Let MK be a set of
+representatives for the places of K. For every rational prime q and every v ∈MK
+above q let Kv ⊆Qq be the completion of K w.r.t. the v-adic valuation and let Ov
+
+
+[PDF PAGE 4]
+4
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+be its valuation ring; we put dv = [Kv : Qq]. Let | · |v = |NKv/Qq(·)|
+1
+dv
+q
+be the unique
+extension of | · |q to Kv. Then the product formula
+Y
+v∈MK
+|x|dv
+v = 1
+holds for all x ∈K× ([6, Prop. 1.4.4]). We recall the definiton of multiplicative Weil
+height that will be useful in the paper.
+Definition 2.1. For α ∈K, the (multiplicative) Weil height is defined as
+H(x) =
+Y
+v∈MK
+sup(1, |x|v)
+dv
+d .
+Notice that all but finitely many factors of the infinite product are equal to 1,
+hence H(x) is well defined. Moreover, thanks to the choice of the normalization, the
+definition does not depend on the number field K, hence it extends to a function
+H : Q →[1, +∞). The function H satisfies the following important properties (see
+[6]):
+Proposition 2.2. For every non-zero x, y ∈Q, we have:
+a) H(x + y) ≤2H(x)H(y);
+b) H(xy) ≤H(x)H(y);
+c) H(xn) = H(x)|n| for all n ∈Z;
+d) H(σ(x)) = H(x) for all σ ∈Gal(Q/Q);
+e) Northcott’s theorem: There are only finitely many algebraic numbers of
+bounded degree and bounded height.
+f) Kronecker’s theorem: H(x) = 1 if and only if x is a root of unity.
+3. P-adic continued fractions
+In this section we show, given a number field K and a prime ideal P of OK, how
+to define a general P-continued fraction. Our general definition will generalise the
+classical definitions of p-adic continued fractions given by Browkin and Ruban.
+3.1. P-adic floor functions and types. Let P be a prime ideal of OK, lying over
+an odd rational prime p and let v0 ∈MK be the place corresponding to P.
+Definition 3.1. A P-adic floor function for K is a function s : Kv0 →K such that
+a) |α −s(α)|v0 < 1 for every α ∈Kv0;
+b) |s(α)|v ≤1 for every non archimedean v ∈MK \ {v0};
+c) s(0) = 0;
+d) s(α) = s(β) if |α −β|v0 < 1.
+We recall the strong approximation theorem in number fields [12, Theorem 4.1].
+Theorem 3.2. Let K be a global field and MK = S ∪T ∪{w} be a partition of
+the places of K with S finite. For every v ∈S, let av be an element in Kv and let
+ϵv ∈R>0. Then, there exists an x in K such that
+|x −av|v < ϵv
+for every v ∈S,
+|x|v ≤1
+for every v ∈T.
+By strong approximation (or some other arguments), P-adic floor functions always
+exist, and there are infinitely many.
+
+
+[PDF PAGE 5]
+CONTINUED FRACTIONS FOR NUMBER FIELDS
+5
+We define
+OK,{v0} = {α ∈K | |α|v ≤1 for every non archimedean v̸ = v0 in MK}.
+Then, we can regard a P-adic floor function as a map s : Kv0/POv0 →OK,{v0} such
+that s(POv0) = 0 and which is a section of the projection map Kv0 →Kv0/POv0.
+Therefore, the choice of a P-adic floor function amounts to choose a set Y of repre-
+sentatives of the cosets of POv0 in Kv0 containing 0 and contained in OK,{v0}.
+We shall call the data τ = (K, P, s) (or (K, P, Y)) a (P-adic) type.
+3.2. Types arising from generators of P. In the case P is principal, there is a
+more natural way of defining a floor function associated to P. Indeed, let π ∈OK be
+generator of P and let R be a complete set of representatives of OK/P containing 0.
+Then, every α ∈Kv0 can be expressed uniquely as a Laurent series α = P∞
+j=−n cjπj,
+where cj ∈R for every j. It is possible to define a P-adic floor function by
+s(α) =
+0
+X
+j=−n
+cjπj ∈K.
+We shall denote the types τ = (K, P, s) obtained in this way by τ = (K, π, R), and
+we will usually call them special types.
+Example 3.3 (Browkin and Ruban types over Q.). When K = Q and π = p odd
+prime, two main special types have been studied in the literature:
+• the Browkin type τB = (Q, p, {−p−1
+2 , . . . , p−1
+2 }) (see [7, 2, 3, 4, 8, 10]);
+• the Ruban type τR = (Q, p, {0, . . . , p −1}) (see [36, 22, 39, 11]).
+Remark 3.4. The absolute Galois group Gal(Q/Q) acts on the set of types; indeed,
+if τ = (K, P, s) is a type, then σ ∈Gal(Q/Q) induces a continuous map Kv0 →Kσ
+v′
+0,
+where v′
+0 ∈MKσ corresponds to Pσ. Then τ σ = (Kσ, Pσ, sσ) is also a type, where
+sσ = σ ◦s ◦σ−1. In particular, if K/Q is a Galois extension and σ belongs to the
+decomposition group
+DP = {σ ∈Gal(Q/Q) | Pσ = P},
+then τ σ = (K, P, sσ) is again a P-adic type.
+3.3. P-adic continued fractions associated to types. In this section we give
+the definition of P-adic continued fraction algorithm associated to P-adic types and
+prove some general properties for these continued fractions generalising the analo-
+gous well-established properties in the case of Browkin and Ruban.
+Let τ = (K, P, s) be a type and put
+Ys := im(s).
+Then, Ys is a discrete subset of Kv0.
+Definition 3.5. Let τ = (K, P, s) be a type. A continued fraction of type τ is a
+possibly infinite sequence
+[a0, a1, . . .]
+of elements of Ys such that |an|v0 > 1 for n ≥1.
+We define the sequences (An)∞
+n=−1, (Bn)∞
+n=−1 by putting
+A−1 = 1, A0 = a0, An = anAn−1 + An−2,
+B−1 = 0, B0 = 1,
+Bn = anBn−1 + Bn−2,
+
+
+[PDF PAGE 6]
+6
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+for n ≥1. By using matrices, we can write
+An
+=
+
+an
+1
+1
+0
+
+for n ≥0,
+(1)
+Bn
+=
+
+An
+An−1
+Bn
+Bn−1
+
+for n ≥0;
+then,
+Bn = Bn−1An = A0A1 . . . An.
+Notice that
+det(An) = −1,
+det(Bn) = (−1)n−1.
+We define the nth−convergent to be
+Qn
+=
+An
+Bn
+= a0 +
+1
+a1 +
+1
+... + 1
+an
+for n ≥0.
+Let [a0, a1, . . .] be a continued fraction of type τ; then, an easy induction shows that
+(2)
+|Bn|v0 =
+n
+Y
+j=1
+|aj|v0.
+We notice that the sequence of the convergents (Qn)n∈N converges P-adically;
+indeed, it is easy to see that |Qn −Qn−1|v0 =
+1
+|Bn|v0|Bn−1|v0 . Then the claim follows
+by (2), because of the hypothesis that |an|v0 > 1 for every n ≥1.
+Conversely, every α ∈Kv0 is the limit of a (unique) continued fraction of type τ
+obtained applying the following algorithm:
+(3)
+
+
+
+α0
+=
+α,
+αn+1
+=
+1
+αn−an,
+an
+=
+s(αn).
+Then, we have the following:
+αn
+=
+an +
+1
+αn+1
+.
+The sequence [a0, a1, . . .] obtained by applying (3) is called the continued fraction
+expansion of type τ of α. For any n ≥−1, we define
+(4)
+Vn := An −αBn.
+The following properties are easily proved (see [10, Section 2]).
+Proposition 3.6. For every n ≥1, one has:
+a) Vn = anVn−1 + Vn−2;
+b) αnVn−1 + Vn−2 = 0;
+c) |Vn|v0 = Qn+1
+j=1
+1
+|aj|v0 ;
+d) Vn = (−1)n+1 Qn+1
+j=1
+1
+αj ;
+e) αnBn−1 + Bn−2 = Qn
+j=1 αj;
+f) α = αnAn−1+An−2
+αnBn−1+Bn−2;
+g) |αn|v0 = |an|v0 > 1.
+
+
+[PDF PAGE 7]
+CONTINUED FRACTIONS FOR NUMBER FIELDS
+7
+3.4. The quality of the P-adic approximation. Given α ∈Kv0, for every n ≥1
+let us put ϵn(α) := |Vn−1|v0, with the convention that ϵ0(α) = 1. Notice that, for
+every i = 0, . . . , n, we have
+(5)
+ϵn(α) = ϵi(α)ϵn−i(αi).
+Proposition 3.7. Given α, α′ ∈Kv0, let [a0, . . . , ak, . . .], [a′
+0, . . . , a′
+k, . . .] be the con-
+tinued fraction expansions of type τ of α and α′, respectively. Assume that the length
+of the expansion of α is bigger or equal than n. If |α−α′|v0 < ϵn(α)2, then the length
+of the expansion of α′ is bigger or equal than n and ai = a′
+i for every i = 0, . . . , n.
+Proof. We argue by induction on n. The claim is certainly true for n = 0, since
+|x −y|v0 < 1 ⇔s(x) = s(y).
+Suppose now that |α −α′|v0 < ϵn+1(α)2. First, for n = 0 we have that a′
+0 = a0;
+moreover, we observe that the hypothesis implies |α −α′|v0 <
+1
+|a1|v0 = |α −a0|v0.
+Applying the properties of the non-archimedean absolute values, we have
+1
+|a′
+1|v0
+= |α′ −a0|v0 = max{|α′ −α|v0, |α −a0|v0} = |α −a0|v0 =
+1
+|a1|v0
+,
+so that |a1|v0 = |a′
+1|v0. By (5) we have ϵn+1(α) =
+1
+|a1|v0 ϵn(α1), hence
+|α1 −α′
+1|v0 =
+
+1
+α −a0
+−
+1
+α′ −a0
+
+v0
+= |a1|2
+v0|α −α′|v0 <
+n+1
+Y
+j=2
+1
+|aj|2
+v0
+= ϵn(α1)2.
+Applying the inductive hypothesis, we have that ai = a′
+i for i = 1, . . . , n + 1, con-
+cluding the proof.
+□
+The next proposition proves that, if the nth-convergents of α and β are the same,
+then the two numbers are v0-adically close. More precisely we have the following
+result:
+Proposition 3.8. Let e be the ramification index of Kv0/Qp. Assume α, β ∈Kv0
+be such that Qα
+n = Qβ
+n. Then |α −β|v0 <
+1
+p
+2n
+e .
+Proof. Notice that the hypothesis Qα
+n = Qβ
+n is equivalent to say that the first n + 1
+partial quotients of α and β are equal. We argue by induction on n. The claim
+is certainly true for n = 0, so assume that n ≥1 and Qα
+n = Qβ
+n. This implies
+that a0 = s(α) = s(β) and Qα1
+n−1 = Qβ1
+n−1, so that |α1 −β1|v0 <
+1
+p
+2(n−1)
+e
+.
+Since
+|α1β1|v0 ≥p
+2
+e, we have
+|α −β|v0 =
+a0 + 1
+α1
+−a0 −1
+β1
+
+v0
+= |α1 −β1|v0
+|α1|v0|β1|v0
+<
+1
+p
+2(n−1)+2
+e
+=
+1
+p
+2n
+e ,
+proving the claim.
+□
+4. Finiteness and periodicity
+Let τ = (K, P, s) be a type. It is clear by the construction that every finite
+continued fraction expansion of type τ represents an element in K, but the converse
+is not true in general. Motivated by a question of Rosen in the archimedean case, we
+are interested in giving necessary and sufficient conditions such that a type satisfies
+the property that every element of K has finite continued fraction expansion of type
+τ.
+
+
+[PDF PAGE 8]
+8
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+Following [28], where the authors adress Rosen problem in the archimedean case,
+we introduce the following definitions.
+Definition 4.1.
+a) We say that τ satisfies the Continued Fraction Finiteness
+property (CFF) (resp. the Continued Fraction Periodicity property (CFP))
+if every α ∈K has a finite (resp. finite or periodic) τ-expansion.
+b) We say that the field K satisfies the P-adic Continued Fraction Finiteness
+property (CFF) (resp. the P-adic Continued Fraction Periodicity property
+(CFP)) if there is a type τ = (K, P, s) satisfying the CFF (resp.
+CFP)
+property.
+In the next sections, we show that the Browkin and Ruban continued fractions
+satisfy the CFF and CFP property, respectively.
+4.1. Browkin expansion of rational numbers. In [7, §3] Browkin proved that,
+for every odd prime p, every rational number has a finite Browkin p-adic continued
+fraction expansion. Although not explicitly stated, the proof also gives a quantitative
+estimate for the length n of the expansion; namely, if α = ps x
+y with s, x, y ∈Z and
+(x, y) = 1, then n does not exceed |x|∞+ 2|y|∞+ 1. We present here a slightly
+different proof improving the bound for n.
+Lemma 4.2. Let (tn)n∈N be a sequence of real numbers ≥0, such that there exist
+c0, c1 ∈R>0 satisfying
+tn+2 < c1tn+1 + c0tn,
+and let ˜x be the (unique) positive real root of the polynomial
+f(X) = X2 −c1X −c0.
+Then,
+a) |tn|∞≤max{t0, t1
+˜x } · ˜xn for every n ∈N;
+b) if c0 + c1 < 1, we have that |tn|∞→0.
+Proof. The first assertion follows easily applying an induction on n. To prove part
+b), first notice that, since ˜x > 0 and
+˜x = c1 + c0
+˜x ,
+then c1 < ˜x. If c0 + c1 < 1, then f(1) = 1 −(c0 + c1) > 0, so that 0 < ˜x < 1, and
+we can conclude that c1 < ˜x < 1. Therefore,
+˜x < 1 ⇔c1 + c0 < 1.
+Then, the claim follows from part a).
+□
+Proposition 4.3. Let α ∈Q, and write α = x0
+y0 , with y0 ∈Z not divisible by p and
+x0 ∈Z
+h
+1
+p
+i
+. Then, the Browkin p-adic continued fraction expansion of α is finite,
+and its length is strictly bounded by
+log(max{|x0|∞, |y0|∞})
+log
+
+p(√
+p2+16−p)
+4
+
+.
+Proof. Consider the sequence (Vn)n∈N defined by (4) and put yn+1 = y0Vn.
+By
+Proposition 3.6 c) we have yn ∈Z[ 1
+p] ∩pnZp = pnZ. Moreover, by Proposition 3.6
+a) the yn’s satisfy the recurrence
+yn+1 = anyn + yn−1,
+
+
+[PDF PAGE 9]
+CONTINUED FRACTIONS FOR NUMBER FIELDS
+9
+with |an|∞< p
+2. Then, yn
+pn ∈Z and, applying Lemma 4.2, we have
+|yn|∞
+pn
+< 1
+2
+|yn−1|∞
+pn−1
++ 1
+p2
+|yn−2|∞
+pn−2
+< M ˜xn,
+where M = max
+n
+|y0|∞, |y1|∞
+p
+o
+and ˜x =
+1
+4p(
+p
+p2 + 16 + p) is the positive root of the
+polynomial X2 −1
+2X −1
+p2. It follows that yn = 0 for ˜xn ≤
+1
+M . Furthermore we have
+|y1|∞
+p
+= 1
+p|x0 −a0y0|∞< 1
+p|x0|∞+ 1
+2|y0|∞,
+therefore
+M < max
+
+|y0|∞, 1
+2(|x0|∞+ |y0|∞)
+
+≤max{|x0|∞, |y0|∞},
+so that yn = 0 for ˜xn ≤
+1
+max{|x0|∞,|y0|∞}, that is for n ≥−log(max{|x0|∞,|y0|∞})
+log(˜x−1)
+, as
+wanted.
+□
+4.2. Ruban expansion of rational numbers. In [36], Ruban introduced a p–adic
+continued fraction corresponding to the type τR = (Q, p, {0, . . . , p −1}), proving
+that the continued fraction expansions coming from this type enjoy nice ergodic
+properties. However, it is easy to see that the Ruban type cannot satisfy CFF,
+since negative rational numbers cannot have a terminating Ruban continued frac-
+tion. In this setting, Laohakosol [22] and, independently, Wang [39] proved that τR
+satisfies CFP, proving in particular that, if a rational number as non-terminating
+τR-expansion, then the tail is equal to
+h
+1 −1
+p
+i
+. However, none of these arguments
+were effective; more recently, in [11] the authors gave a quantitative estimate for the
+length of the expansion in case this is finite, and an estimate on the length of the
+pre-periodic part in terms of the height of the rational number.
+4.3. The main tools. For x ∈C, we define
+θ(x) = 1
+2(|x|∞+
+p
+|x|2
+∞+ 4);
+then, we have the following inequality:
+|x|∞≤θ(x) ≤|x|∞+ 1,
+and the map θ is a bijection from [0, +∞) to [1, +∞) whose inverse is given by
+y 7→y −1
+y. In this section we will prove that, given a type (K, P, τ), a suitable
+bound involving the values of θ on the elements in the image of s and on their
+conjugates will guarantee that the type satisfies the CFF (resp. CFP) property.
+We first need the following lemma:
+Lemma 4.4. Let (an)n≥0 be any sequence of complex numbers and let (vn)n≥−1 be
+a sequence of complex numbers satisfying, for every n ≥2 the recurrence formula:
+vn = anvn−1 + vn−2.
+Then for every n ≥0,
+max{|vn|∞, |vn−1|∞} ≤
+p
+|vn|2
+∞+ |vn−1|2
+∞≤
+p
+|v0|2
+∞+ |v−1|2
+∞·
+n
+Y
+j=1
+θ(aj).
+
+
+[PDF PAGE 10]
+10
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+Proof. For any complex matrix M, let us consider the operator norm
+||M|| = sup
+v̸=0
+||Mv||
+||v||
+where ||v|| denotes the Euclidean norm of a complex vector. The following facts are
+well known (see for example [21, Chapter 5]):
+• ||M1 · M2|| ≤||M1|| · ||M2||;
+• ||M|| =
+p
+|γ|∞, where γ is the dominant eigenvalue of M · M∗(here M ∗
+denotes the transpose conjugate of M).
+In particular we see that, for every a ∈C,
+
+
+
+a
+1
+1
+0
+
+ = θ(a).
+Let An be the matrix defined as in (1); then, for every n ≥1,
+
+
+
+vn
+vn−1
+
+ =
+
+An
+
+vn−1
+vn−2
+
+ ≤||An||
+
+
+
+vn−1
+vn−2
+
+ = θ(an)
+
+
+
+vn−1
+vn−2
+
+ ,
+so that
+max{|vn|∞, |vn−1|∞} ≤
+
+
+
+vn
+vn−1
+
+ ≤
+
+
+
+v0
+v−1
+
+ ·
+n
+Y
+j=1
+θ(aj).
+□
+Theorem 4.5. Let τ = (K, P, s) be a type. Let Σ be the set of embeddings of K in
+C, and let us denote by
+ντ = sup
+(Q
+σ∈Σ θ(aσ)
+|a|
+dv0
+v0
+| a ∈Ys, |a|v0 > 1
+)
+.
+Then,
+a) if ντ ≤1, then τ satisfies CFP;
+b) if ντ < 1, then then τ satisfies CFF.
+Proof. Let α ∈K; we notice that, for every σ ∈Σ, the sequence V σ
+n satisfies the
+recurrence formula
+V σ
+n = aσ
+nV σ
+n−1 + V σ
+n−2,
+for every n ≥1, so by Lemma 4.4, there exists a suitable C > 0 (depending on α)
+such that
+(6)
+Y
+σ∈Σ
+sup{|V σ
+n |∞, |V σ
+n−1|∞} ≤C
+n
+Y
+j=1
+Y
+σ∈Σ
+θ(aσ
+j ).
+Since Vnαn+1 + Vn−1 = 0, and recalling that Vn ∈K, we have that
+H(αn+1)d = H
+
+−Vn−1
+Vn
+d
+=
+Y
+v∈MK
+sup
+(
+Vn−1
+Vn
+
+dv
+v
+, 1
+)
+,
+=
+Y
+v∈MK
+sup{|Vn|dv
+v , |Vn−1|dv
+v }.
+Using that, for every non archimedean place v̸ = v0 we have that
+|Vn|v ≤max{|An|v, |Bn|v|α|v} ≤max{|α|v, 1},
+
+
+[PDF PAGE 11]
+CONTINUED FRACTIONS FOR NUMBER FIELDS
+11
+and that |Vn|v0 < |Vn−1|v0, we can bound from above the previous quantity obtaining
+H(αn+1)d ≤H(α)d · |Vn−1|
+dv0
+v0
+Y
+σ∈Σ
+max{|V σ
+n |∞, |V σ
+n−1|∞},
+and, applying (6), we have
+≤C · H(α)d · |Vn−1|
+dv0
+v0
+n
+Y
+j=1
+Y
+σ∈Σ
+θ(aσ
+j )
+≤C · H(α)d · |Vn−1|
+dv0
+v0 νn
+τ
+n
+Y
+j=1
+|aj|
+dv0
+v0 .
+Since Vn−1 = (−1)n Qn
+j=1
+1
+αj by Proposition 3.6, we have |Vn−1|v0 = Qn
+j=1
+ 1
+aj
+
+v0,
+therefore
+H(αn+1)d ≤C νn
+τ · H(α)d.
+Let us suppose that ντ ≤1; by Northcott finiteness theorem, the αn’s vary in a
+finite set, so that either the continued fraction expansion of type τ for α is finite or
+there exist m, n ∈N such that αm = αn, so that the expansion is periodic. This
+proves part a). As for b), we see that if ντ < 1 then either α has a finite expansion
+or H(αn) becomes eventually zero, and the latter is a contradiction.
+□
+4.4. A particular case:
+the CFF and CFP properties for special types.
+When the type τ = (K, π, R) is special, i.e. the floor function is essentially given
+by the choice of a generator of P and by the choice of a set of representatives R as
+explained in Section 3.2, Theorem 4.5 gives a more explicit criterion to detect CFP
+and CFF properties, which is the following result.
+Theorem 4.6. Let τ = (K, π, R) be a special type, and let Σ be the set of embeddings
+of K in C. For every σ ∈Σ, let Lσ = max{|cσ|∞| c ∈R}, and λσ = |πσ|∞. Assume
+that, for every σ ∈Σ,
+λσ > 1 and Lσ ≤(λσ −1)
+
+1 −1
+λ2
+σ
+
+;
+then,
+a) τ satisfies the CFP property;
+b) if moreover Lσ < (λσ −1)
+
+1 −
+1
+λ2σ
+
+for at least one σ, then τ satifies the
+CFF property.
+Proof. Recall that, for a special type τ = (K, π, R), every a ∈R has the form
+P0
+j=−k cjπj. Then, for every a ∈R and every σ ∈Σ, since by hypothesis λσ > 1,
+we have
+|aσ|∞≤Lσ
+k
+X
+j=0
+1
+λj
+σ
+≤Lσλσ
+λσ −1,
+which using the hypothesis, gives |aσ|∞≤λσ −1
+λσ , so that θ(aσ) ≤λσ. Then, under
+the assumption |a|v0 > 1, we have
+Q
+σ∈Σ θ(aσ)
+|a|
+dv0
+v0
+≤
+Q
+σ∈Σ λσ
+|a|
+dv0
+v0
+≤|NK/Q(π)|∞· |π|
+dv0
+v0
+
+
+[PDF PAGE 12]
+12
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+and, writing dv0 = ev0fv0, where ev0 is the ramification index and fv0 the residual
+degree at v0, we further have
+≤pfv0 ·
+1
+p
+dv0
+ev0
+≤1,
+hence ντ ≤1 and we can apply part a) of Theorem 4.5, which proves a).
+Let us now assume that there exists an embedding σ0 ∈Σ such that Lσ0 <
+(λσ0 −1)
+
+1 −
+1
+λ2σ0
+
+; then, |aσ0|∞≤
+Lσ0λσ0
+λσ0−1 < λσ0 −
+1
+λσ0 , hence
+θ(aσ0) ≤θ
+ Lσ0λσ0
+λσ0 −1
+
+< λσ0.
+Let us put J :=
+1
+λσ0 · θ
+
+Lσ0λσ0
+λσ0−1
+
+< 1. Then, the same calculation as before shows
+that
+Q
+σ∈Σ θ(aσ)
+|a|
+dv0
+v0
+≤J ·
+Q
+σ∈Σ λσ
+|a|
+dv0
+v0
+≤J < 1,
+so that ντ < 1 and the conclusion follows by applying part b) of Theorem 4.5.
+□
+5. The CFF property for norm Euclidean number fields
+Let K be a number field of degree d and let us denote by r1, r2 the number of real
+and complex embeddings of K. For every 1 ≤i ≤r1 let σi be the real embeddings
+and, for every 1 ≤j ≤r2, let (τj, τ j) be the r2 pairs of complex embeddings. We
+denote by Σ be the whole set of embeddings.
+In what follows, we shall denote by | · | the standard complex absolute value.
+Let
+i : K −→Rr1 × Cr2
+λ 7−→(σ1(λ), . . . , σr1(λ), τ1(λ), . . . , τr2(λ))
+be the canonical embedding of K, and
+ℓ: K× →Rr1+r2
+be the logarithmic embedding, i.e., the composition L ◦i where
+L : Rr1 × Cr2 −→Rr1 × Rr2
+(x1, . . . , xr1, y1, . . . , yr2) 7−→(log(|x1|), . . . , log(|xr1|), 2 log(|y1|), . . . , 2 log(|yr2|)).
+For x = (x1, . . . , xr1, y1, . . . , yr2) ∈Rr1 × Cr2, let us define
+N(x) =
+r1
+Y
+i=1
+|xi| ·
+r2
+Y
+j=1
+|yj|2;
+then, N(i(a)) = |NK/Q(a)| for every a ∈K.
+In what follows, we want to deepen the study of types in the case of norm Eu-
+clidean number fields; in this setting, we will see that the existence of P-adic types
+satisfying CFF is related to the notion of Euclidean minimum of the field.
+
+
+[PDF PAGE 13]
+CONTINUED FRACTIONS FOR NUMBER FIELDS
+13
+5.1. Euclidean minimum. We recall the definition and main properties of the
+Euclidean minimum.
+Definition 5.1. Let α ∈K, the Euclidean minimum of α is the real number
+mK(α) = inf
+
+|NK/Q(α −γ)| | γ ∈OK
+	
+.
+The Euclidean minimum can be extended to K⊗QR ≃Rr1×Cr2 as in the following
+definition.
+Definition 5.2. Let x ∈Rr1 × Cr2. The inhomogeneous minimum of x is the real
+number
+mK(x) = inf {|N(x −i(γ))| | γ ∈OK} .
+It is clear that mK(α) = mK(i(α)) for every α ∈K. Moreover, mK induces an
+upper semi-continuous map of the torus Rr1 × Cr2/i(OK), which is a compact set;
+therefore, mK is bounded and attains its maximum. Then, also mK is bounded on
+K, and we can give the following definitions:
+Definition 5.3. The inhomogeneous minimum of K is the positive real number
+M(K) = sup{mK(x) | x ∈Rr1 × Cr2}.
+The Euclidean minimum of K is the positive real number
+M(K) = sup{mK(α) | α ∈K}.
+By the above definition it is clear that M(K) ≤M(K). Moreover, it is easy to
+see that K is norm Euclidean if and only if mK(α) < 1 for every α ∈K. Therefore
+K is norm-Euclidean if M(K) < 1 and it is not norm-Euclidean if M(K) > 1. The
+following non trivial result holds:
+Theorem 5.4. [13, Theorem 3] If K is a number field, then M(K) = M(K).
+5.2. The CFF property for norm Euclidean number fields. In order to prove
+our main results about the CFF property for norm Euclidean fields, we shall impose
+conditions on a P-adic type τ allowing to suitably bound the quantity ντ defined
+in Theorem 4.5. In particular, to apply Theorem 4.5 we need to control the size of
+Q
+σ∈Σ θ(aσ) for a ∈Yτ such that |a|v0 > 1.
+First, let us notice that
+|NK/Q(a)| <
+Y
+σ∈Σ
+θ(aσ) <
+Y
+σ∈Σ
+(|aσ| + 1),
+and we can regard the latter expression as a sum
+Y
+σ∈Σ
+(|aσ| + 1) = |NK/Q(a)| + F(|aσ|, σ ∈Σ).
+We shall exploit norm Euclidean properties of the field to bound |NK/Q(a)|; on the
+other hand, in order to bound the second addend F, we need more refined conditions
+allowing to control each archimedean absolute value of a and not only their product.
+To this purpose, the following lemma will be useful:
+Lemma 5.5. There exists T0 > 0 (depending only on K) such that, for every
+a ∈K×, there exists u ∈O×
+K satisfying, for every σ ∈Σ,
+|(au)σ| ≤T0
+dq
+|NK/Q(a)|.
+
+
+[PDF PAGE 14]
+14
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+Proof. We denote by H the hyperplane in Rr1 × Rr2 defined by
+x′
+1 + ... + x′
+r1 + 2y′
+1 + ... + 2y′
+r2 = 0,
+and we denote as before by ℓ: K× →Rr1+r2 the logarithmic embedding. Since
+ℓ(O×
+K) is a lattice in H, there exists T > 0 such that, for every b ∈H there is
+u ∈O×
+K with ||b + ℓ(u)||∞< T, where || · ||∞is the sup norm in Rr1+r2.
+For a ∈K×, let us take
+b = L
+ 
+i(a)
+dp
+|NK/Q(a)|
+!
+= ℓ(a) −log(|NK/Q(a)|)
+d
+(1, . . . , 1);
+by construction, b ∈H, hence there exists u ∈O×
+K such that ||b + ℓ(u)||∞< T.
+This implies that, for every σ ∈Σ,
+log
+ 
+(au)σ
+dp
+|NK/Q(a)|
+
+! =
+log
+ 
+aσ
+dp
+|NK/Q(a)|
+
+!
++ log(|uσ|)
+ ≤||b + ℓ(u)||∞< T
+so that |(au)σ| < T0
+dp
+|NK/Q(a)| for a suitable T0, as wanted.
+□
+For α ∈OK, ϵ > 0 and x ∈Rr1 × Cr2, we define
+Uϵ(α) = {y ∈Rr1 × Cr2 | |N(i(α) −y)| < ϵ}.
+Then Uϵ(α) is an open subset of Rr1 × Cr2.
+Theorem 5.6. Assume that K is a norm Euclidean number field such that M(K) <
+1. Then, the field K satisfies the P-adic CFF-property for all but finitely many prime
+ideals P of OK.
+Proof. The image of OK in Rr1 × Cr2 ≃Rd is a lattice; we denote by D ⊆Rr1 × Cr2
+a compact fundamental domain for i(OK). Since by assumption the Euclidean min-
+imum M(K) < 1, we have by Theorem 5.4, that D is covered by open neighbour-
+hood of radius 1, i.e.
+D ⊆S
+γ∈OK U1(γ).
+Since D is compact and the U1(α)’s
+are open, there exists a finite number of elements α1, . . . , αs of OK and a real
+0 < ˜ϵ < 1 such that D ⊆Ss
+i=1 U˜ϵ(αi). Let P be a prime ideal of OK; we put
+q = NK/Q(P) = |OK/P|, and, by Lemma 5.5, we choose a generator π of P such
+that |πσ| < T0 d√q for every embedding σ ∈Σ.
+We define a P-adic floor function s as follows: let us consider a non trivial coset
+α + POv0 ⊆Kv0; by strong approximation, it contains an element α′ ∈K such that
+|α′|v ≤1 for every non archimedean v ∈MK and v̸ = v0. Then, α′ ∈OK[ 1
+π]. By
+translating α′
+π by a suitable element of OK, we find a β ∈OK[ 1
+π] such that i(β) ∈D
+and α′ ≡πβ (mod P). Since D is covered by Ss
+i=1 U˜ϵ(αi), there exists αi ∈OK
+such that NK/Q(β −αi) < ˜ϵ. Then, for every γ ∈α+POv0 we put s(γ) := π(β −αi).
+We want now to apply Theorem 4.5 to show that the type associated to this floor
+function satisfies CFF property for all but finitely many prime ideals P of OK. To
+prove this, let us call a = π(β −αi); then, NK/Q(a) ≤˜ϵq. Since i(β) ∈D which is a
+compact set and the αi are finitely many, there exists H > 0 depending only on K
+such that |βσ −ασ
+i | < H for every σ ∈Σ, so that |aσ| < H|πσ| < HT0 d√q. It follows
+that, for every subset S ⊊Σ,
+Y
+σ∈S
+|aσ| ≤(HT0)|S| dp
+q|S|.
+
+
+[PDF PAGE 15]
+CONTINUED FRACTIONS FOR NUMBER FIELDS
+15
+Therefore,
+Y
+σ∈Σ
+θ(aσ) <
+Y
+σ∈Σ
+(1 + |aσ|) =
+X
+S⊆Σ
+Y
+σ∈S
+|aσ| = NK/Q(a) +
+X
+S⊊Σ
+Y
+σ∈S
+|aσ|
+≤˜ϵq +
+X
+S⊊Σ
+(HT0)|S| dp
+q|S| ≤˜ϵq + H1
+dp
+qd−1
+for a suitable H1 depending only on K, hence
+Y
+σ∈Σ
+θ(aσ) < ϵ′q
+for q ≫0,
+for a suitable ϵ′ < 1.
+Since |a|
+dv0
+v0
+≥| 1
+π|
+dv0
+v0
+= |NK/Q(π)|−1
+p
+= q, we find that ντ < 1 for p ≫0. Then the
+claim follows from Theorem 4.5.
+□
+Remark 5.7. We point out that the condition M(K) < 1 in Theorem 5.6 is verified
+for “almost all” norm Euclidean number fields. Indeed, in [13, Corollary 2] it is
+shown that a norm Euclidean number field with M(K) = 1 must have unit rank
+r = r1+r2−1 ≤1. Since d = r1+2r2, the only exceptions can occur in the following
+three cases:
+a) K is quadratic;
+b) K is cubic with negative discriminant;
+c) K is a totally complex quartic field.
+All quadratic norm Euclidean fields have M(K) < 1: this is easily checked for
+imaginary quadratic fields; for real quadratic fields, it is shown in [26, §1.3] that
+the only K such that M(K) = 1 is Q(
+√
+65), which is not Euclidean. On the other
+hand, Davenport proved in [15, 16] that norm Euclidean fields satisfying b) or c) are
+finitely many.
+6. Some more effective results for quadratic fields
+In the case of quadratic fields, we can give more explicit results, proving effective
+bounds on the prime ideals P of K such that K satisfies the P-adic CFF property.
+Moreover, in some cases we will show how to construct explicit examples of types
+satisfying the CFF property. We start our investigation with the case of imaginary
+quadratic fields.
+6.1. Imaginary norm Euclidean quadratic fields. Let K = Q(
+√
+−D) with D
+a square free integer > 0. It is known that
+M(K) =
+ D+1
+4
+if D ≡1, 2
+(mod 4)
+(D+1)2
+16D
+if D ≡3
+(mod 4)
+(see for example [23, Prop. 4.2]). It follows that the only norm Euclidean quadratic
+imaginary fields are Q(
+√
+−D), with D = 1, 2, 3, 7, 11 and M(K) < 1 in each of these
+cases.
+Proposition 6.1. Let K = Q(
+√
+−D) be a imaginary quadratic norm Euclidean
+field. Let P be a prime ideal of OK with odd residual characteristics. Put λ =
+p
+NK/Q(P). Then
+a) if
+p
+M(K) < 1 −1
+λ2, then K satisfies the P-adic CFF property.
+b) if
+p
+M(K) <
+ 1 −1
+λ
+2  1 + 1
+λ
+
+, then there exists a special type τ = (K, π, R)
+satisfying the CFF property.
+
+
+[PDF PAGE 16]
+16
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+Proof. Let P be a prime ideal of OK with odd residual characteristic p, and let π
+be a generator of P. First, notice that NK/Q(π) is either p or p2, according to the
+decomposition of p in OK.
+a) Assume
+p
+M(K) < 1−1
+λ2. Since K is norm Euclidean, for every α ∈Kv0 there is
+a representative β of α
+π (mod Ov0) such that β ∈OK,{v0} and |NK/Q(β)|∞≤M(K).
+Therefore, applying the same construction as in Theorem 5.6, there is a type τ =
+(K, P, s) such that |NK/Q(a)|∞≤M(K)|NK/Q(π)|∞for every a ∈Ys such that
+|a|v0 > 1, that is |a|∞≤
+p
+M(K)λ < λ −1
+λ, hence
+θ(a) ≤θ(
+p
+M(K)λ) < λ,
+and the claim follows by Theorem 4.5 b).
+b) Arguing as above we see that there is a complete set of representatives R of
+OK/P such that |c|∞≤
+p
+M(K) · λ for every c ∈R. Let L = max{|c|∞| c ∈R}.
+Then by hypothesis
+L < (λ −1)
+
+1 −1
+λ2
+
+,
+and if σ is the complex conjugation, then |xσ|∞= |x|∞for every x ∈K, therefore
+Theorem 4.6 b) can be applied to the type (K, π, R), concluding the proof.
+□
+The following list summarises the behaviour of CFF property for imaginary norm
+Euclidean fields K = Q(
+√
+−D):
+D
+1
+2
+3
+7
+11
+CFF property
+for p ≥
+3
+5
+2
+3
+7
+CFF special type
+for p ≥
+7
+23
+11
+13
+127
+6.2. Real norm Euclidean quadratic fields: some explicit constructions.
+It is well known that a real quadratic field Q(
+√
+D) is norm Euclidean if and only
+if D = 2, 3, 11, 13, 17, 19, 21, 29, 33, 37, 41, 57, 73 (see for example [20]). In [18], the
+authors give an explicit proof of the theorem by showing that, in each of these
+cases, the fundamental region is covered by (finitely many) unit neighborhoods of
+the plane, giving the precise list for every of these fields. Using this in combination
+with the construction of the proof of Theorem 5.6, one can show how to construct
+explicitly a P-adic floor function for a prime ideal P of OK.
+Let K = Q(
+√
+D) be a real norm Euclidean field; we consider the plane embedding
+given by
+j : K −→R2
+a + b
+√
+D 7−→(a, b);
+this gives a representation of the elements of K as the points of the plane with
+rational coordinates.
+Under this plane embedding, the algebraic integers correspond to the lattice points
+Z2, if D ≡2, 3 (mod 4), and to the mid-lattice points 1
+2Z2 if D ≡1 (mod 4).
+For any λ ∈OK, we define the neighborhood of λ in K of radius ϵ to be the set
+Vϵ(λ) = {β ∈Q(
+√
+D) | |NK/Q(β −λ)| < ϵ};
+using the plane embedding, this maps to
+Vϵ(x, y) = {(r, s) ∈Q2 | |(r −x)2 −D(s −y)2| < ϵ},
+
+
+[PDF PAGE 17]
+CONTINUED FRACTIONS FOR NUMBER FIELDS
+17
+where (x, y) = j(λ). Notice that these are infinite X-shaped regions in the plane
+bounded by conjugate hyperbolas.
+It is then clear that, since we are assuming K norm Euclidean, each β ∈Q(
+√
+D)
+lies in the neighborhood Vϵ(λ) for some λ ∈OK, i.e. each point (r, s) ∈Q2 lies in
+some neighborhood Vϵ(x, y) in the plane, where (x, y) = j(λ) for some λ ∈OK.
+Let P be a prime ideal in OK; we can associate to every generator π ∈P a type
+τπ = (Q, P, sπ), where the floor function sπ is defined by the following algorithm.
+Given a coset α + POv0 in Kv0, we can find, by strong approximation, an element
+α′ ∈K belonging to this coset such that |α′|v < 1 for every non-archimedean
+v ∈MK \ {v0}; in particular, α′ ∈OK[ 1
+π]. We can now translate α′
+π by a suitable
+element µ ∈OK so that i(β) := i(α′ −µ) belongs to the region
+F(D) :=
+
+(r, s) ∈Q2 |
+−1
+2 < r ≤1
+2, −1
+2 < s ≤1
+2
+
+,
+and such β is unique. We call F(D) fundamental region. Notice that α′ ≡πβ
+(mod P). By [18], we have that F(D) is covered by a finite number of neighborhoods
+or radius ϵ < 1 (depending of D) Vϵ(xk, yk); hence, j(β) lies in (almost) one of these
+neighbourhood. We choose a neighbourhood Vϵ(x′, y′) such that j(β) lies in it and,
+for every γ ∈α + POv0, we put
+sπ(γ) := π(β −j−1(x′, y′)).
+Example 6.2. Let us consider the case D = 17; since D ≡1 (mod 4), then OK =
+Z
+h
+1+
+√
+D
+2
+i
+. Let us divide the fundamental region F(17) into six subsets, namely:
+• F1 = {(x, y) ∈Q2 | 0 < r ≤1/2, −1/4 < s ≤1/4};
+• F2 = {(x, y) ∈Q2 | −1/2 < r ≤0, −1/4 < s ≤1/4};
+• F3 = {(x, y) ∈Q2 | 0 < r ≤1/2, 1/4 < s ≤1/2};
+• F4 = {(x, y) ∈Q2 | 0 < r ≤1/2, −1/2 < s ≤−1/4};
+• F5 = {(x, y) ∈Q2 | −1/2 < r ≤0, 1/4 < s ≤1/2};
+• F6 = {(x, y) ∈Q2 | −1/2 < r ≤0, −1/2 < s ≤−1/4}.
+Then, F(17) is equal to the union of these regions, and the union is disjoint, hence
+every β ∈F(17) belongs to one Fk. We have now to associate to every Fk a unit
+neighborhood V (x, y) that covers the corresponding region; this can be of course
+done in many ways.
+We use an argument analogous to [18]. By easy calculations, we have that the
+point (1/2, 1/4) ∈F1 lies of the top boundary of the neighborhood V13/16(1, 0),
+hence the preimage of every point in F1 satisfies NK/Q(β −1) ≤13/16. Similarly,
+the point (1/2, 1/4) lies on the bottom boundary of the neighborhood V13/16(1, 1/2),
+hence F3 is contained in its closure. Using the symmetry properties of F(17), it is
+easy to see that F2 ⊂V13/16(−1, 0), F4 ⊂V13/16(1, −1/2), F5 ⊂V13/16(−1, 1/2) and
+F6 ⊂V13/16(−1, −1/2). For every k = 1, . . . , 6, let us denote by δk the preimage in
+OK of the center of the corresponding neighborhood, i.e. δk := j−1(xk, yk). Using
+this, we can perform the algorithm described above.
+Given a prime ideal P ⊂Ov0, choose a suitable generator π of POv0. Then, for
+every coset α + POv0, choose α′ ∈α + POv0 ∩OK[1/π], and translate it by an
+element µ ∈OK so that the image of β := α −µ lies in the fundamental region;
+then j(β) ∈Fk for some k = 1, . . . , 6.
+Take any γ ∈α + POv0; then, we denote by
+sπ(γ) := π(β −δi).
+
+
+[PDF PAGE 18]
+18
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+Let us show for example that, if p is an odd prime which is inert in OK, then this
+choice of the floor function gives rise to a type satisfying CFF property.
+If p is inert, then we can take π = p, hence NK/Q(P) = p2. To apply Theorem 4.5,
+we have to estimate θ(aσ) for every a ∈Ys such that |a|v0 > 1 and every embedding
+σ of K into R, which are exactly the identity and the one sending
+√
+17 to −
+√
+17.
+By the above choice of the neighborhoods covering the fundamental region and the
+corresponding construction of the floor function, we have that, for every β ∈Fk
+and for every centre of the corresponding neighborhood δk, |βσ −δσ
+k| ≤
+√
+5/4, and
+NK/Q(βσ −δσ
+k) ≤1/4, hence for every a, we have NK/Q(a) ≤13
+16p2.
+It follows that
+Y
+σ∈Σ
+θ(aσ) <
+Y
+σ∈Σ
+(1 + |aσ|) ≤1 +
+√
+5
+2 p + 13
+16p2.
+Since |a|dp
+p ≥p2, we have that ντπ < 1 if
+1 +
+√
+5
+2 p + 13
+16p2 < p2,
+which holds for every prime p ≥3. We finally point out that a similar argument
+involving another choice of the generator of the prime ideal P can be used in the
+case where p split, as done for example in Lemma 6.4.
+6.3. The CFF property for Q
+ √
+2
+
+. It is well known that K = Q(
+√
+2) is norm
+Euclidean. We can regard K as a subfield of R, so that Σ = {id, σ}, and σ is the
+embedding sending
+√
+2 in −
+√
+2. The fundamental unit is u = 1 +
+√
+2.
+This section is devoted to prove the following result.
+Theorem 6.3. The field Q(
+√
+2) has the P-adic CFF property, for every prime ideal
+P of odd residual characteristics.
+Let P be a prime ideal in OK with residual characteristics p > 2. We can asso-
+ciate to every generator π of P a (not uniquely determined) type τπ = (Q, P, sπ) as
+follows: choose a coset α + POv0 in Kv0; choose b ∈K such that |b −α|v0 < 1 and
+|b|v ≤1 for every non archimedean v ∈MK \ {v0}; then we can write b =
+A
+πk for
+some k ≥1. By dividing A by πk+1, we can find β ∈OK such that
+A
+πk+1 = β + γ
+with γ = x+y
+√
+2, x, y ∈Q, |x|∞, |y|∞≤1
+2. Then, we see that γ ∈OK[ 1
+π] and, if we
+put a = πγ, we find |a −α|v0 < 1 and |a|v ≤1 for every non archimedean v ∈MK.
+We define sπ(α + P) = a.
+We denote by NK/Q(P) = pf (f ∈{1, 2}), and we put λ = |π|∞, λσ = |πσ|∞= pf
+λ .
+Then we have
+|a|∞≤1
+2
+
+1 +
+√
+2
+
+λ,
+|aσ|∞≤1
+2
+
+1 +
+√
+2
+
+λσ;
+and
+NK/Q(a) = pf(x2 −2y2) ≤1
+2pf.
+Hence,
+θ(a)θ(aσ) < (|a|∞+ 1)(|aσ|∞+ 1) ≤|NK/Q(a)|∞+ |a|∞+ |aσ|∞+ 1
+≤1
+2pf + 1
+2
+
+1 +
+√
+2
+ 
+λ + pf
+λ
+
++ 1.
+
+
+[PDF PAGE 19]
+CONTINUED FRACTIONS FOR NUMBER FIELDS
+19
+By imposing the last quantity to be less than pf, we obtain
+λ + pf
+λ < (
+√
+2 −1)(pf −2),
+that is Fp(λ) < 0, where
+Fp(X) = X2 −(
+√
+2 −1)(pf −2)X + pf.
+It follows by Theorem 4.5 that the type τπ has the CFF property for every λ satis-
+fying Fp(λ) < 0.
+Lemma 6.4. Assume that the residual characteristics p satisfies:
+• p ≥41 if p splits in OK;
+• p ≥11 if p is inert in OK;
+then, the P-adic CFF property holds for K.
+Proof. If p is inert in OK, take π = p in the above considerations. Then λ = p and
+we see that Fp(p) < 0 except for p = 3, 5. Therefore the type τp satisfies the CFF
+property.
+Assume now that p splits and let π be the unique generator of P such that 0 < π ≤
+√p and uπ > √p. It follows that
+√p
+u < λ < √p and is straightforward to verify
+that Fp(λ) < 0 for p ≥71. Therefore, the type τπ satisfies the CFF property for a
+splitting p ≥71.
+It remains to consider the cases p ∈{31, 41, 47}, p splitting.
+In this cases it is
+straightforward to see that by setting π = 1+4
+√
+2, 3+5
+√
+2, 5+6
+√
+2 respectively we
+fulfill the requirement Fp(λ) < 0, so that we get types τπ satisfies the CFF property
+also in these last cases.
+□
+In order to complete the proof of Theorem 6.3 it remains to consider the residual
+characteristics p in the set S = {3, 5, 7, 17, 23}. Notice that
+• p is inert for p = 3, 5;
+• p splits for p = 7, 17, 23.
+Moreover, in these cases Fp(X) is strictly positive over R, so that the above technique
+is not applicable. For the prime in S the following proposition holds.
+Proposition 6.5. Let p ∈S and P be a prime ideal in OK with residual charac-
+teristics p. There exists a generator π of P such that the type τπ = (Q(
+√
+2), P, sπ)
+satisfies the CFF property.
+Proof. Let us choose a generator π of P minimizing the distance from √p; for
+example,
+• for p = 3, 5 we set π = p;
+• for p = 7, 17, 23, we choose π such that 1 < π < p and λ + λσ is minimum,
+where λ = |π|∞.
+Let α ∈Kv0 be such that |α|v0 > 1 and put a = sπ(α). Our goal is to show that
+there exists ϵ < 1 such that
+|θ(a)θ(aσ)| ≤ϵpf,
+so that we can apply Theorem 4.5 to prove the theorem. By recalling the construc-
+tion of τπ, this amounts to show that the inequality
+˜Z(x, y) = θ((x +
+√
+2y)π)θ((x −
+√
+2y)πσ) ≤ϵpf
+
+
+[PDF PAGE 20]
+20
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+holds on the square {(x, y) | −1
+2 ≤x, y ≤1
+2}. By symmetry, it suffices to bound
+˜Z on the square {(x, y) | 0 ≤x, y ≤1
+2}. By denoting X = x + y
+√
+2, Y = x −y
+√
+2,
+this amounts to show that
+Z(X, Y ) = θ(Xπ)θ(Y πσ) ≤ϵpf,
+on the parallelogram P delimited by the lines
+r1 : X −Y = 0,
+r2 : X −Y =
+√
+2,
+s1 : X + Y = 0,
+s2 : X + Y = 1.
+Since Z is increasing in the variable X, its maximum on P must be achieved on
+the sides lying on the two lines r2 and s2. We are thus led to show that the two
+functions
+Z1(X) = θ(Xπ)θ((
+√
+2 −X)πσ)
+Z2(X) = θ(Xπ)θ((X −1)πσ)
+are bounded by ϵ p on the two intervals I1 = [
+√
+2
+2 , 1+
+√
+2
+2
+] and I2 = [1
+2, 1+
+√
+2
+2
+] respec-
+tively. The function Z1 is increasing on I1, therefore it achieves its maximum in
+X = 1+
+√
+2
+2
+.
+We split the interval I2 in two sub-intervals I′
+2 = [1
+2, 1] and I′′
+2 = [1, 1+
+√
+2
+2
+]; the
+function Z2 is increasing on I′′
+2 , therefore its maximum is achieved in X = 1+
+√
+2
+2
+. It
+follows that the values of Z over P are bounded by the maximum between Z1(1+
+√
+2
+2
+),
+Z2
+  1
+2
+
+, Z2(1+
+√
+2
+2
+) and the local extremal values of Z2. A direct calculation shows
+that the derivative of Z2 has a unique zero in
+T = 1
+2
+
+1 + 4π2 −(πσ)2
+p2
+
+,
+and it is straightforward to show that
+Z1
+ 
+1 +
+√
+2
+2
+!
+, Z2
+1
+2
+
+, Z2
+ 
+1 +
+√
+2
+2
+!
+, Z2(T) ≤ϵpf,
+for a suitably chosen ϵ < 1. The claim follows by applying Theorem 4.5.
+□
+7. CFF property, class group and Euclidean ideal classes
+All the previous results about the CFF property concern norm Euclidean number
+fields. In the following we investigate more deeply the relationship between CFF
+property and the structure of the ideal class group Cl(K), with the aim to show
+that our hypothesis is not too restrictive. In what follows, for every fractional ideal
+I, we will benote its class in Cl(K) by [I].
+Proposition 7.1. Assume that the field K satisfies the P-adic CFF property. Then,
+Cl(K) is cyclic generated by [P]. In particular, if P is principal then OK is a PID.
+Proof. Let n0 be the order of [P] in Cl(K) and let η be a generator of Pn0; then,
+OK,{v0} = OK[ 1
+η]. Since K satisfies the P-adic CFF property, then every element of
+K can be expressed as a quotient A
+B of elements in OK,{v0} such that A and B are
+coprime in OK,{v0}, i.e., the ideal generated by A and B in OK,{v0} is trivial. This
+implies that a power of η can be written as an OK-linear combination of A and B,
+hence the class of the fractional ideal generated by A and B is a power of [P]. Now,
+let I be any ideal of OK; then I admits a set of generators of cardinality two, i.e.
+I = (α, β), see e. g. [31, §1.1 Cor. 5]). By applying the above argument to α
+β we
+find by [14, Proposition 18] that [I] is a power of [P] in Cl(K).
+□
+
+
+[PDF PAGE 21]
+CONTINUED FRACTIONS FOR NUMBER FIELDS
+21
+Corollary 7.2. Assume that the field K satisfies the P-adic CFF property for all
+but finitely many prime ideals P. Then OK is a PID.
+Proof. This is a direct consequence of Proposition 7.1 since every class of ideals
+contains infinitely many prime ideals (see for example [31, §7.2, Corollary 6 and
+p.93 for notation]). In particular, our hypothesis ensures that K satisfies the P-adic
+CFF property for at least one principal ideal P.
+□
+Proposition 7.1 allows to give examples of number fields K for which the CFF
+property fails to hold. For example, if K = Q(
+√
+−D) is an imaginary quadratic field
+and r is the number of the distinct prime divisors of its discriminant, then Cl(K)
+maps onto (Z/2Z)r−1 (see [31, Theorem 8.23]); hence it is not cyclic for r ≥3. It
+follows that such fields do not satisfy the P-adic CFF property for any prime P.
+Remark 7.3. If Cl(K) is cyclic generated by [P] then OK,{v0} is a PID.
+By as-
+suming the Generalized Riemann Hypothesis, it is Euclidean [38, Theorem 10] (not
+necessarily with respect to the norm), and therefore it satisfies the Euclidean chain
+condition [32, §14.1], i.e. every α ∈K can be expressed as a finite continued fraction
+α
+=
+b0 +
+1
+b1 +
+1
+... + 1
+bn
+= [b0, . . . , bn], with bi ∈OK,{v0} for i ≥0.
+(7)
+If the CFF property holds for K, then every α ∈K admits a representation of the
+form (7) satisfying the following additional properties, i.e.
+• |bi|v0 > 1 for i > 1;
+• if |b0|v0 < 1, then b0 = 0;
+• if bi ≡bj (mod P), then bi = bj.
+We conclude our work by presenting two results which attempt to go beyond
+the Euclidean assumption that we made along this paper. The next Theorem 7.4
+extends Theorem 5.6 to prime ideals lying in a norm Euclidean ideal class in the
+sense of [24]. For a fractional ideal I of K we will consider the following property:
+if β ∈K, there exists α ∈I such that |NK/Q(α −β)| < NK/Q(I).
+This property depends only on the class [I] in Cl(K); such a class is called a norm
+Euclidean class. Theorem 0.3 of [24] shows that Cl(K) contains at most one norm
+Euclidean class and, if there is one, it generates Cl(K). As it is shown in [29], for
+an ideal class C one can give an analogous definition of Euclidean minimum MC and
+of inhomogeneous Euclidean minimum M C; moreover, if the rank r = r1 + r2 −1
+of units is > 1, one has MC = M C. In particular if r > 1, then a class C is norm
+Euclidean if and only if M C < 1.
+We notice that non principal Euclidean classes exist for example for fields like
+Q(√−15) and Q(√−20) (see [24, Prop. 2.1]), and Q(
+√
+10), Q(
+√
+15), Q(
+√
+85) (see
+[24, 2.5]); other examples can be found in [25].
+For number fields having norm Euclidean class with inhomogeneous Euclidean
+minimum < 1, one can generalise the proof of Theorem 7.4 to prove the following
+result.
+Theorem 7.4. Let K be a number field and assume that K has a norm Euclidean
+ideal class C such that M C < 1. Then K satisfies the P-adic CFF property for all
+but finitely many P ∈C.
+
+
+[PDF PAGE 22]
+22
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+Remark 7.5. If r = r1 + r2 −1 > 1, then it is known that MC = M C < 1 for every
+norm Euclidean class C. On the other hand, there are examples where MC = 1,
+when r ≤1 (see [25, 29]). It would be nice to replace the hypothesis M C < 1 in
+Theorem 7.4 with the more natural hypothesis MC < 1; however, unlike the case
+C = OK, we do not know if an analogue of Theorem 5.4 is true for an arbitrary
+norm Euclidean ideal classes.
+Proof of Theorem 7.4. Fix Q a prime ideal in C and let D = DQ ⊆Rr1 × Cr2 be a
+fundamental domain for the lattice i(Q). Since D is compact, there exists a finite
+set α1, . . . , αs ∈Q and ϵ < 1 such that D ⊆Ss
+i=1 UϵNK/Q(Q)(αi).
+For every prime ideal P in C we choose, by Lemma 5.5, an element γP ∈K such
+that γPQ = P and |γσ
+P|∞≤T0
+dp
+|NK/Q(γ)|∞for every σ ∈Σ. Then, DQ = i(γP)D is
+a fundamental domain for i(P). We construct a type τP = (K, P, sP) by mimicking
+the proof of Theorem 5.6: given a coset α + PvP in KvP we find a representative
+β ∈DP ∩OK,{vP} = γP(D ∩OK,{vP}) ; then |NK/Q(γ−1
+P β −αi)|∞< ϵNK/Q(P) for
+some i = 1, . . . , s, so that |NK/Q(β −γPαi)|∞< ϵNK/Q(P). We define
+a = sP(α + PvP) = β −γPαi.
+By construction we have
+(8)
+|NK/Q(a)|∞< ϵNK/Q(P).
+Moreover, since D is bounded and the αi are finitely many, there exists a constant
+C (depending on Q) such that
+(9)
+|aσ|∞≤C|γσ|∞≤CT0
+dq
+|NK/Q(γ)|∞=
+CT0
+dp
+NK/Q(Q)
+dq
+NK/Q(P).
+As in the proof of Theorem 5.6, from (8) and (9) we conclude that
+Y
+σ∈Σ
+θ(aσ) <
+Y
+σ∈Σ
+(|aσ| + 1) < ϵNK/Q(P)
+for NK/Q(P) ≫0.
+Therefore, ντP < 1 for NK/Q(P) ≫0, so that τP satisfies the CFF property by
+Theorem 4.5.
+□
+For an arbitrary number field K we have the following result:
+Theorem 7.6. Let K be a number field. Then, for all but finitely many prime ideals
+P, there exists a type τP = (K, P, sP) with the following property:
+if α ∈K and the continued fraction τP-expansion [a0, a1, a2, . . .] for α is infinite,
+then aj ∈P−1 for infinitely many j ∈N.
+Proof. Fix an ideal class C and let M C be the inhomogeneous euclidean minimum
+of C; let ϵ > M C. As in the proof of Theorem 7.4, we can fix a prime ideal Q ∈C
+and construct for every P ∈C a type τP = (K, P, sP) such that every a belonging
+to the image of sP satisfies conditions (8) and (9). Then, it is easy to see that there
+exists a suitable constant TC < 1, depending only on the class C such that, for every
+δ > 0,
+Y
+σ∈Σ
+θ(aσ) ≤
+Y
+σ∈Σ
+(|aσ| + 1) < ϵNK/Q(P) < TCNK/Q(P)1+δ
+for NK/Q(P) ≫0.
+Since Cl(K) is finite, we deduce that there is a constant T < 1 depending only on
+K such that, for all but finitely many prime ideal P of OK and every a in the image
+
+
+[PDF PAGE 23]
+CONTINUED FRACTIONS FOR NUMBER FIELDS
+23
+of sP, we have
+Y
+σ∈Σ
+θ(aσ) < TNK/Q(P)1+ϵ.
+Now assume by contradiction that there exists α ∈K such that the continued
+fraction τP-expansion [a0, a1, a2, . . .] of α is infinite and such aj̸ ∈P−1 for all but
+finitely many j ∈N. Possibly taking the tail of the expansion, we can assume that
+aj̸ ∈P−1 for every j ∈N; this implies that
+sup
+j
+Q
+σ∈Σ θ(aσ
+j )
+|aj|vP
+
+≤sup
+j
+Q
+σ∈Σ θ(aσ
+j )
+NK/Q(P)2
+
+≤T < 1,
+which gives a contradiction by Theorem 4.5.
+□
+Acknowledgements
+We thank Marzio Mula and Francesco Veneziano for useful conversations.
+References
+[1] P. Arnoux and T. A. Schmidt. Veech surfaces with non-periodic directions in the trace field.
+J. Modern Dynam., 3:611–629, 2009.
+[2] E. Bedocchi. A note on p-adic continued fractions. Annali di Matematica Pura ed Applicata,
+pages 197–207, 1988.
+[3] E. Bedocchi. Remarks on periods of p-adic continued fractions. Bollettino dell’Unione Matem-
+atica Italiana, 7(3-A):209–214, 1989.
+[4] E. Bedocchi. Sur le developpement de √m en fraction continue p-adique. Manuscripta Math-
+ematica, 67:187–195, 1990.
+[5] J. Bernat. Continued fractions and numeration in the Fibonacci base. Discrete Math.,
+306:2828–2850, 2006.
+[6] E. Bombieri and W. Gubler. Heights in Diophantine geometry, volume 4 of New Mathematical
+Monographs. Cambridge University Press, Cambridge, 2006.
+[7] J. Browkin. Continued fractions in local fields i. Demonstratio Mathematica, 11:67–82., 1978.
+[8] J. Browkin. Continued fractions in local fields ii. Mathematics of Computation, 70:1281–1292,
+2000.
+[9] Y. Bugeaud, P. Hubert, and T. A. Schmidt. Transcendence with Rosen continued fractions.
+J. Eur. Math. Soc., 15:39–51, 2013.
+[10] L. Capuano, N. Murru, and L. Terracini. On periodicity of p-adic Browkin continued fractions.
+Math. Z., 305(2):24, 2023. Id/No 17.
+[11] L. Capuano, Veneziano, and U. Zannier. An effective criterion for periodicity of ℓ-adic contin-
+ued fractions. Mathematics of Computation, 88:1851–1882, 2019.
+[12] J. Cassels. Local Fields (London Mathematical Society Student Texts). Cambridge University
+Press, Cambridge, 1986.
+[13] J.-P. Cerri. Inhomogeneous and Euclidean spectra of number fields with unit rank strictly
+greater than 1. J. Reine Angew. Math., 592:49–62, 2006.
+[14] G. E. Cooke. A weakening of the Euclidean property for integral domains and applications to
+algebraic number theory. II. J. Reine Angew. Math., 283(284):71–85, 1976.
+[15] H. Davenport. Euclid’s algorithm in certain quartic fields. Trans. Amer. Math. Soc., 68:508–
+532, 1950.
+[16] H. Davenport. Euclid’s algorithm in cubic fields of negative discriminant. Acta Mathematica,
+84:159 – 179, 1951.
+[17] B. M. M. de Weger. Periodicity of p-adic continued fractions. Elem. Math., 43(4):112–116,
+1988.
+[18] R. B. Eggleton, C. B. Lacampagne, and J. L. Selfridge. Euclidean quadratic fields. Amer.
+Math. Monthly, 99(9):829–837, 1992.
+[19] E. Hanson, A. Merberg, and C. Yudovina. Generalized continued fractions and orbits under
+the action of Hecke triangle groups. Acta Arith., 134:337–348, 2008.
+
+
+[PDF PAGE 24]
+24
+LAURA CAPUANO, NADIR MURRU, AND LEA TERRACINI
+[20] G. H. Hardy and E. M. Wright. An introduction to the theory of numbers. Oxford University
+Press, Oxford, sixth edition, 2008. Revised by D. R. Heath-Brown and J. H. Silverman, With
+a foreword by Andrew Wiles.
+[21] R. A. Horn and C. R. Johnson. Matrix analysis. Cambridge University Press, Cambridge,
+second edition, 2013.
+[22] V. Laohakosol. A characterization of rational numbers by p-adic Ruban continued fractions.
+J. Austral. Math. Soc. Ser. A, 39:300–305, 1985.
+[23] F. Lemmermeyer. The Euclidean algorithm in algebraic number fields. Exposition. Math.,
+13(5):385–416, 1995.
+[24] H. W. Lenstra, Jr. Euclidean ideal classes. In Journées Arithmétiques de Luminy (Colloq.
+Internat. CNRS, Centre Univ. Luminy, Luminy, 1978), volume 61 of Astérisque, pages 121–
+131. Soc. Math. France, Paris, 1979.
+[25] P. Lezowski. Examples of norm Euclidean ideal classes. Int. J. Number Theory, 8(5):1315–
+1333, 2012.
+[26] P. Lezowski. Computation of the Euclidean minimum of algebraic number fields. Math. Comp.,
+83(287):1397–1426, 2014.
+[27] K. Mahler. On a geometrical representation of p-adic numbers. Ann. of Math., 41:8–56, 1940.
+[28] Z. Masáková,
+T. Vávra,
+and F. Veneziano. Finiteness and periodicity of continued
+fractions over quadratic number fields. to appear in Bull. Soc. Math. France,
+2020.
+https://arxiv.org/abs/1911.07670.
+[29] K. J. McGown. Norm-Euclidean cyclic fields of prime degree. Int. J. Number Theory, 8(1):227–
+254, 2012.
+[30] P. Mercat. Construction de fractions continues périodiques uniformément bornées,. J. Théor.
+Nombres Bordeaux, 25:111–146, 2013.
+[31] W. a. a. Narkiewicz. Elementary and analytic theory of algebraic numbers. Springer Mono-
+graphs in Mathematics. Springer-Verlag, Berlin, third edition, 2004.
+[32] O. T. O’Meara. On the finite generation of linear groups over Hasse domains. J. Reine Angew.
+Math., 217:79–108, 1965.
+[33] T. Ooto. Transcendental p–adic continued fractions. Math. Z., 287:1053–1064, 2017.
+[34] D. Rosen. A class of continued fractions associated with certain properly discontinuous groups.
+Duke Math. J., 21:549–564, 1954.
+[35] D. Rosen. Research problems: Continued fractions in algebraic number fields. Amer. Math.
+Monthly, 84(1):37–39, 1977.
+[36] A. A. Ruban. Certain metric properties of the p-adic numbers. Sibirsk. Mat. Ž., 11:222–227,
+1970.
+[37] F. Tilborghs. Periodic p-adic continued fractions. Simon Stevin, 64(3-4):383–390, 1990.
+[38] S. G. Treatman. Euclidean systems. J. Number Theory, 73(2):277–291, 1998.
+[39] L. X. Wang. p-adic continued fractions. I, II. Sci. Sinica Ser. A, 28(10):1009–1017, 1018–1023,
+1985.
+Dipartimento di Matematica e Fisica, Università degli Studi di Roma Tre
+Email address: laura.capuano@uniroma3.it
+Dipartimento di Matematica, Università di Trento
+Email address: nadir.murru@unitn.it
+Dipartimento di Informatica, Università di Torino
+Email address: lea.terracini@unito.it

@@ -1,0 +1,156 @@
+\chapter{上半带：全部参数的具体选择}\label{ch:upper}
+
+\section{本讲只负责供应上一讲的计数表}
+第\ref{app:upper}讲已经证明：只要计数表产生正确的两组最大公因子，
+就能接上共同终端。本讲不再重复算术输送，而按位置容量选择来源和输出。
+记 $s=n-3p$、$r=p+s$，需要覆盖 $1\le s<p$。
+
+\begin{center}
+\begin{tabular}{p{.35\textwidth}p{.5\textwidth}}
+\toprule 参数段 & 选择方式\\\midrule
+$p\ge83,\ r>3p/2$ & 来源偏向载体，输出用一个整数 $l$ 调节\\
+$p\ge83,\ 10\le s\le(p-1)/2$ & 平衡来源，输出用整数 $e$ 调节\\
+$p\ge83,\ 1\le s\le9$ & 两个相邻 $\alpha$，再取两个相邻 $h$\\
+$11\le p<83,\ s\ge10$ & 前两类公式的更精细边界比较\\
+$11\le p<83,\ 1\le s\le9$ & 五返回公式，加上剩余的完整计数表\\
+\bottomrule
+\end{tabular}
+\end{center}
+第一列是证明范围，第二列是实际资源的来源。
+有限表只承担最后一行剩余的有限参数，没有取代任何无穷范围的论证。
+
+\begin{proposition}[上半带的充分性]\label{prop:upper}
+若 $p\ge11$、$3p<n<4p$，全部合法输入可归零。
+\end{proposition}
+\begin{proof}
+$p\ge83$ 时，由引理\ref{lem:upper-supply}得到定理\ref{thm:terminal}的资源。$11\le p<83$ 且 $n=3p+s$、$s\le9$ 时用引理\ref{lem:small-supply}；其余小参数由引理\ref{lem:upper-small}处理。三者都接命题\ref{prop:entry}的入口及引理\ref{lem:zero-tail}的收尾。
+\end{proof}
+
+
+\section{大素数：三个范围的明确公式}
+每种公式均把四个输出容量限制压缩成一个整数区间 $L\le e\le U$（或 $L\le l\le U$）。
+我们需要两张相邻表，因此必须证明 $L+1\le U$。
+这比只找到一张可行表更强：第二张表正是制造三角倍率和剪切的来源。
+
+\begin{lemma}[大素数的三组计数公式]\label{lem:upper-supply}
+若 $p\ge83$、$p<r<2p$，则存在满足推论\ref{cor:resource}且 $\delta=\gcd(n,2)$ 的相邻表。
+\end{lemma}
+\begin{proof}
+全部取 $q_0=2$。按下列三种范围选计数。
+
+\par\noindent\textbf{第一类：靠近 $4p$。} 若 $r>3p/2$，置 $d=2p-r$，取 $\alpha=\lceil d/2\rceil+2,\lceil d/2\rceil+3$，来源 $(\alpha,0,p-\alpha)$，输出
+\[(l,p-\alpha+l,\alpha-2l,0).
+\]
+其精确区间为 $L\le l\le U$，其中
+\[L=\max(0,\lceil(d-\alpha)/2\rceil),\qquad
+U=\min(\lfloor\alpha/2\rfloor,p-2\alpha).
+\]
+取 $l=L+1,L$。有 $L+1\le\lfloor\alpha/2\rfloor$；由 $2\alpha\le d+7$、$L+1\le d/4+1$，另一约束由 $p\ge5d/4+8$ 保证。$d\le(p-1)/2,p\ge83$ 足够。
+
+\par\noindent\textbf{第二类：上半带中部。} 写 $r=p+s$、$10\le s\le(p-1)/2$。取 $\alpha=\lceil p/6\rceil,\lceil p/6\rceil+1$，来源 $(2\alpha,\alpha,p-3\alpha)$，输出
+\[(\alpha-e,p-3\alpha-e,2\alpha-s+2e,s).
+\]
+可行区间为 $L\le e\le U$，
+\[L=\max(5\alpha-p,\lceil s/2\rceil-\alpha),\qquad
+U=\min(\alpha,2\alpha+s-\lceil p/2\rceil).
+\]
+取 $e=L,L+1$。$L+1\le U$ 的四个比较是
+\begin{align*}
+4\alpha&\le p-1,&3\alpha&\le\lfloor p/2\rfloor+s-1,\\
+\lceil s/2\rceil+1&\le2\alpha,&\lceil p/2\rceil+1&\le3\alpha+\lfloor s/2\rfloor.
+\end{align*}
+
+下面说明四个比较的余量。因为 $p/6\le\alpha\le(p+11)/6$，第一式在 $p\ge25$ 时成立；
+第二式左侧至多比 $\lfloor p/2\rfloor$ 大 $6$，而 $s-1\ge9$；
+第三式使用 $s\le(p-1)/2$，在 $p\ge15$ 时足够；
+第四式由 $3\alpha\ge\lceil p/2\rceil$ 及 $\lfloor s/2\rfloor\ge5$ 成立。
+此外 $4\alpha\le p$ 保证第一类来源不超量，$6\alpha\ge p$ 保证载体来源容量，
+$s\le p/2$ 保证新值 $D$ 的库存。因此所列整数区间确实包含相邻两个输出。
+
+\par\noindent\textbf{第三类：紧邻 $3p$ 的九个偏移。} 若 $1\le s\le9$，令 $a_0=\lfloor s/3\rfloor+1$，取 $\alpha=a_0,a_0+1$、$h=\lfloor p/(3\alpha)\rfloor-1,\lfloor p/(3\alpha)\rfloor$。令 $t=p-3\alpha h$，来源和输出为
+\[
+(\alpha(h+1),\alpha h,p-\alpha(2h+1)),\quad
+(\alpha h-e,p-\alpha(2h+1)-e,(\alpha-s)h+\alpha+2e,sh).
+\]
+输出区间为
+\[
+L=\max(0,2\alpha-t,\lceil((s-\alpha)h-\alpha)/2\rceil),\quad
+U=\min(\alpha h,\alpha h+t-\alpha,\lfloor(sh+\alpha+s-t)/2\rfloor).
+\]
+可取 $e=L,L+1$，事实上 $L+2\le U$。逐项移项，充分条件是
+\[
+\begin{gathered}
+h\ge4,\quad(3\alpha-s)h\ge\max(s,\alpha+4),\\
+sh\ge\max(5\alpha+3-s,3\alpha+4-s),\\
+\alpha h\ge\max(4\alpha+4-s,3\alpha+2).
+\end{gathered}
+\]
+对 $\alpha=1,2,3,4,5$，所需 $h$ 下界依次为 $7,12,8,4,4$；$p\ge83$ 时实际最小值为 $26,12,8,5,4$。这同时保证来源及 $sh\le p-s$ 的库存。
+
+
+\par\noindent\textbf{三类计数的最大公因子。}
+到这里已经有真实反射，但还需把它们合成足够浅的根与同余群。
+这一步只计算前一讲的 $H=n(2j+\alpha)-2p^2$。
+三种公式均满足迹零条件。第一种的 $H=n\alpha-2p^2$，第二种为 $3n\alpha-2p^2$，相邻 $\alpha$ 给 $\gcd(H)=\gcd(n,2)$。第三种相邻 $h$ 的差为 $2\alpha n$，相邻 $\alpha$ 互素；再用 $H\equiv-2p^2\pmod n$ 及奇偶性得到同一结论。所有横向系数含两个相邻整数。
+\end{proof}
+
+
+\section{偏移至少10的小素数}
+大素数界 $83$ 为三类公式提供了同一个方便界，并不表示其下所有参数都要查表。
+当 $s\ge10$ 时，前两类容量不等式在更小的素数上仍成立。
+下面逐一把小边界写清楚，避免把这一整片参数误交给有限证书。
+
+\begin{lemma}[偏移至少10时的小素数]\label{lem:upper-small}
+若 $p\ge11$、$10\le s<p$，引理\ref{lem:upper-supply}的前两种计数已提供推论\ref{cor:resource}的全部资源。
+\end{lemma}
+\begin{proof}
+中部 $s\le(p-1)/2$ 时，四个容量比较对 $p\ge29$ 成立：第一项只需 $p\ge25$；第二项由 $s\ge10$ 保证；第三项只需 $p\ge15$；第四项由 $3\alpha\ge\lceil p/2\rceil$ 保证。唯一较小素数是 $p=23,s=10,11$，此时 $\alpha=4,5$，直接代入四式均成立。
+靠近 $4p$ 时，$d=p-s\le(p-1)/2$。充分条件 $p\ge5d/4+8$ 对 $p\ge23$ 成立。若 $p=11,13,17$，还可用 $d\le p-10$，分别得到右侧上界 $9.25,11.75,16.75$。若 $p=19$，$d\le8$ 同样成立；仅余 $d=9$，其 $\alpha=7,8$ 均有 $L=1,U=3$。故两张相邻输出仍在库存内。根和横向系数的最大公因子计算与引理\ref{lem:upper-supply}相同。
+\end{proof}
+
+
+\section{九个低偏移：通式与剩余数表}
+在最后九个偏移中，先使用已有五返回公式。
+它在两张相邻输出之外增加一次沿整数守恒关系的输出交换，直接给出 $U(-n)$。
+满足显式截点的参数都由该公式处理，余下参数才进入附录。
+
+\begin{lemma}[九个低偏移的有限补充]\label{lem:small-supply}
+若 $11\le p<83$、$1\le s\le9$，则全部合法 $K_{p,p+s}$ 可归零。
+\end{lemma}
+\begin{proof}
+先给五返回公式。令 $a=\lceil s/2\rceil$，对 $\alpha=a,a+1$ 写 $p=3\alpha d+\rho$，$0\le\rho<3\alpha$。来源为 $(\alpha(d+1),\alpha d,\alpha d+\rho-\alpha)$，输出为
+\[
+o_e=(\alpha d-e,\alpha d+\rho-\alpha-e,(\alpha-s)d+\alpha+2e,sd).
+\]
+对于第一组 $\alpha=a$，还使用 $o_e+\Delta$，其中 $\Delta=(3\alpha-\rho,-\rho,2\rho-3\alpha-s,s)$。可同时容纳 $o_e,o_{e+1},o_e+\Delta$ 的区间是
+\begin{align*}
+L={}&\max\left(0,5\alpha-2\rho,
+\left\lceil\frac{(s-\alpha)d-\alpha}{2}\right\rceil,
+\left\lceil\frac{(s-\alpha)d+2\alpha+s-2\rho}{2}\right\rceil\right),\\
+U={}&\min\left(\alpha d-\alpha-\mathbf1_{\rho=0},
+\left\lfloor\frac{sd+\alpha+s-\rho-2}{2}\right\rfloor,
+\left\lfloor\frac{sd+4\alpha+2s-3\rho}{2}\right\rfloor\right).
+\end{align*}
+逐项比较给充分条件 $d\ge7,sd\ge9\alpha+2-s,(3\alpha-s)d\ge4\alpha+s+2$。例如最紧的三式是 $5\alpha\le\alpha d-\alpha-1$、$10\alpha\le sd+\alpha+s-2$、$(s-\alpha)d+2\alpha+s\le2(\alpha d-\alpha-1)$；其余比较的余量至少分别为 $\alpha d+2\alpha+s-\rho-3$ 和 $\alpha d+2\alpha+s-\rho-1$。第二组只需相邻输出，条件降为 $d\ge4,sd\ge3\alpha+2-s$。由此得到九个充分截点
+\[
+T_s=(42,24,42,42,63,63,84,84,105).
+\]
+当 $p\ge T_s$ 时，以上计数直接可用。守恒关系 $pA+pB+rC=0$ 使沿 $\Delta$ 的输出和增加 $nD$，故两返回之商为 $U(-n)$。相邻倍率扩展为 $U(nR)$，两横向系数 $a,a+1$ 由引理\ref{lem:transverse}给 $\Gamma(n^2,R)$，接定理\ref{thm:terminal}。
+
+
+\par\noindent\textbf{有限剩余。}
+余下的114组参数及233对相邻表完整列在附录\ref{app:certificates}。它们的非负库存、迹零等式、$\alpha$ 的最大公因子和 $H$ 的最大公因子由命题\ref{prop:root-certificate}核对。除 $(p,s)=(11,3)$ 外均满足推论\ref{cor:resource}。
+
+\par\noindent\textbf{唯一单列参数 $(p,s)=(11,3)$。}
+此时 $n=36$，一般最大公因子接口改由两组明确矩阵完成。
+在此例，来源 $(4,2,5)$、输出 $(2,5,1,3)$ 与 $(3,0,2,6)$ 给
+\[
+J=\begin{pmatrix}-27&568\\-2&27\end{pmatrix},\quad
+M=\begin{pmatrix}45&-404\\-2&27\end{pmatrix},\quad MJ^{-1}=U(-36).
+\]
+库存为 $(3,7,4,8)$，两输出均可用；$J^2=-407I$。相邻输出 $(1,4,3,3)$ 的反射 $G$ 满足
+\[J^{-1}G=\begin{pmatrix}1&-972/37\\0&-35/37\end{pmatrix}.
+\]
+故 $R_0=\Z[1/(5\cdot7\cdot37)]$ 上有 $U(36R_0)$。另一个表 $(4,1,6;2,7,1,1)$ 给 $K=\left(\begin{smallmatrix}-52&905\\-3&52\end{smallmatrix}\right)$、$K^2=-11I$。横向系数 $2,3$ 合并给 $\Gamma(36^2,R_0)$，再取其子群 $\Gamma(4\cdot36^2,R_0)$ 接定理\ref{thm:terminal}。
+\end{proof}
+

@@ -1,0 +1,182 @@
+\chapter{有限余数如何决定精确终端}\label{sec:controllers}
+
+\section{方向之外，还要记住尺度}
+即使已把一个参数比值送到终端比值，也未必已把本原列送进同一个同余类。
+例如模 $5$ 的 $(1,1)^T$ 与 $(2,2)^T$ 方向相同，却是不同的列。
+上一讲的精确纤维引理要求两个列模控制层完全相同。
+本讲解释如何把必要的尺度作为有限数据一起处理。
+
+对整数非零列 $v$，记 $\cont(v)=\gcd(|v_1|,|v_2|)$。
+施加一个整数矩阵后，$Av$ 可能有新的公因子；
+将它除去是选择本原分析代表，实际配置仍保留共同尺度。
+不同公因子会让同一个矩阵在有限本原列集合上产生不同分支。
+
+
+\section{本原化为什么只有有限种分支}
+伴随恒等式 $\operatorname{adj}(A)Av=(\det A)v$ 说明：
+当 $v$ 本原时，$Av$ 的公因子一定整除 $\det A$。
+所以可能的内容只来自一个固定整数的约数，与输入数值有多大无关。
+更强的是：在固定的模 $q$ 输入类中，只要 $\det A$ 与 $q$ 互素，
+每个约数都能通过某个本原提升实现。这正好允许我们选择输出尺度。
+
+\begin{lemma}[本原化的全部有限分支]\label{lem:content}
+设 $A\in M_2(\Z)$ 满秩，条目最大公因子为 $1$，$d=|\det A|$、$\gcd(d,q)=1$。固定模 $q$ 本原列 $x$，则所有整数本原提升的本原输出模 $q$ 恰为
+\begin{equation}\label{eq:content}
+\{g^{-1}Ax:g\mid d,\ g>0\}.
+\end{equation}
+若 $\Gamma(q,\Z)$ 已实现，每个分支都能从当前列实现。
+\end{lemma}
+\begin{proof}
+伴随恒等式说明 $\cont(Av)\mid d$。写 Smith 分解 $A=U\diag(1,d)V$；对本原 $Vv=(s,t)$，内容为 $\gcd(s,d)$。给定 $g\mid d$，在每个 $\ell^e\Vert d$ 指定 $s\equiv\ell^{v_\ell(g)}\pmod{\ell^e}$（指数为 $e$ 时取 $0$）、$t\equiv1\pmod{\ell^e}$。与模 $q$ 数据用 CRT 合并。所得本原剩余列可提升为本原整数列：固定非零第二坐标后，在第一坐标的等差类中避开第二坐标所含的其余有限素因子。其内容恰为 $g$。最后用引理\ref{lem:fiber}实现准备。
+\end{proof}
+
+
+\begin{example}[一个内容分支的具体样子]
+令 $A=\diag(1,6)$，控制模数取 $q=5$。
+对本原列 $(s,t)^T$，内容为 $\gcd(s,6)$，可能取 $1,2,3,6$。
+固定任意本原模 $5$ 类，在模 $2,3$ 处分别选择 $s$ 是否为零，并取 $t$ 为单位，
+就能安排这四种内容；与模 $5$ 的条件由中国剩余定理合并。
+本原输出模 $5$ 因而分别是 $Ax,2^{-1}Ax,3^{-1}Ax,6^{-1}Ax$。
+一般矩阵先经 Smith 标准形化为这个例子的形式。
+\end{example}
+
+\section{为什么可以在有限层面使用一个群}
+我们实际可执行的是正向对应，每一次还可选择内容分支。
+但一个有限集合上的置换，其逆就是某个非负次幂。
+因此有限轨道可以用群来描述。这个结论发生在深同余群已经建立之后：
+每次选择某个内容分支，都先在同余纤维中作真实准备，再执行该返回。
+
+\begin{corollary}[有限正向对应的群化]\label{cor:finite-group}
+设若干返回 $A_i$ 满足引理\ref{lem:content}，并在模 $q$ 保持一个对单位标量封闭的合法列集。它们的正向内容对应轨道等于
+\[
+\langle A_i\bmod q,\ \ell I:\ell\mid\prod_i\det A_i\text{ 为素数}\rangle
+\]
+的群轨道。
+\end{corollary}
+\begin{proof}
+每个分支 $g^{-1}A_i$ 是有限集上的置换。内容 $1$ 分支给 $A_i$，其逆为某个非负幂。若 $A_i$ 的阶为 $m$，一次内容 $g$ 分支后接 $m-1$ 次内容 $1$ 分支，给标量 $g^{-1}I$。这些恰生成所示群。
+\end{proof}
+
+
+\section{局部方向的逐层提升}
+后面少数构造要在模 $\ell^b$ 的所有方向中移动。
+若一个矩阵模 $\ell$ 的作用为非零平移，就已经遍历第一层 $\ell$ 个方向。
+要遍历更高层，需知道取 $\ell$ 次幂恰好把步长增加一个 $\ell$ 因子，
+不能增加得过多。下面把这个检查压缩为矩阵的一个平方参数 $c$。
+
+\begin{definition}[局部整数]
+$\Z_{(\ell)}$ 是分母不被 $\ell$ 整除的有理数环。
+它的单位是赋值为零的元素，可同时约化到所有 $\Z/\ell^b\Z$。
+当列的第二坐标是单位时，用其比值 $x=z/y$ 表示仿射方向。
+矩阵 $\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)$ 对方向的作用为
+$x\mapsto(ax+b)/(cx+d)$，只要分母为单位。
+\end{definition}
+
+\begin{lemma}[局部平移的逐层提升]\label{lem:local-cycle}
+设 $T$ 在 $\Z_{(\ell)}$ 上整可逆，模 $\ell$ 的射影作用为非平凡平移。写 $T=a(I+N)$、$N^2=cI$。若 $\ell\ge5$，或 $\ell=3$ 且 $c\not\equiv6\pmod9$，则其在每个 $\Z/\ell^b\Z$ 的仿射方向上为单循环。对 $\ell=2$，同一结论在 $a$ 为奇单位、$c$ 为偶数时成立。
+\end{lemma}
+\begin{proof}
+此时 $c\in\ell\Z_{(\ell)}$。展开 $(I+N)^\ell=A I+B N$；$A$ 为单位，$v_\ell(B)=1$。在 $\ell=3$ 时 $B=3+c$，在 $\ell=2$ 时 $A=1+c,B=2$。反复取 $\ell$ 次幂后，规范化的 $N$ 系数赋值每次增加一。一般幂的系数赋值因而等于指数的 $\ell$ 进赋值。其在任一方向 $x$ 上的位移还乘一个模 $\ell$ 等于原平移步长的单位。因此固定 $x\bmod\ell^b$ 的指数恰为 $\ell^b$ 的倍数，轨道长度为 $\ell^b$。
+\end{proof}
+
+
+
+\section{把终点写成一族容易选择的列}
+回到三块核心，改用 $(z,y)$ 坐标，其中 $y=a+pz$。
+合法性就是 $y$ 模 $n$ 可逆。
+选择 $j+1$ 份 $A=a$、$j$ 份 $B=rz-a$、$p-1-2j$ 份 $C=-pz$，
+它们的和为
+\[
+(j+1)a+j(rz-a)-(p-1-2j)pz
+=y-(p^2-nj)z.
+\]
+故只要达到 $z=1,\ y=p^2-nj$，便产生一个零和 $p$ 元组。
+计数限制 $0\le p-1-2j\le r$ 正好给出下式的 $j$ 区间。
+
+对核心\eqref{eq:core}，使用列 $(z,y)^T$，其中 $y=a+pz$。终端列取为
+\begin{equation}\label{eq:terminal}
+t_j=(1,p^2-nj)^T,\qquad
+\max(0,\lceil(p-1-r)/2\rceil)\le j\le(p-1)/2.
+\end{equation}
+其零和 $p$ 元组含 $j+1$ 份第一块、$j$ 份第二块及 $p-1-2j$ 份载体。
+
+
+\section{小数字为何足够控制单位}
+两个 $p$ 块互补混合能提供一些行列式因子不超过 $p$ 的返回。
+本原化的内容分支把这些因子变成有限标量。
+我们因而需要一个初等数论事实：在 $2p<n<4p$ 时，
+小于等于 $p$ 的安全数字已经能生成模 $n$ 的全部单位。
+
+\begin{lemma}[小数字生成模n单位群]\label{lem:small-units}
+设 $p\ge5$、$2p<n<4p$、$\gcd(p,n)=1$。$-1$ 和所有 $1\le b\le p$、$\gcd(b,n)=1$ 的类生成 $(\Z/n\Z)^\times$。若 $n$ 偶，还存在安全奇数 $b\le p$ 满足 $b\equiv3$ 或 $5\pmod8$。
+\end{lemma}
+\begin{proof}
+记第一项的生成群为 $H$。$n$ 奇时，若 $H$ 不满，取最小正缺失单位 $p<a<n/2$。$a<n/3$ 时取 $4a-n$，$a>n/3$ 时取 $n-2a$，均为更小的正缺失单位，矛盾。
+若 $n=2m$、$m$ 奇，选奇数 $b=(m\pm1)/2\le p$，则 $H$ 模 $m$ 包含 $2$ 及其逆。每个模 $m$ 单位的平衡代表绝对值小于 $p$，除尽 $2$ 因子后即是已知奇单位。
+若 $4\mid n$，单位在 $(0,n/2)$ 中由 $a\mapsto n/2-a$ 配对，所以 $(0,n/4)$ 恰有 $\varphi(n)/4$ 个单位。它们及负数已属于 $H$，再加 $\pm p$，得到 $|H|>\varphi(n)/2$。
+
+第二项先检查 $3,5,11,13$。$p=5,7$ 时若 $3,5$ 都不安全，则 $30\mid n<4p$，矛盾；$p=11$ 时同理由 $165\mid n$ 排除。若 $p\ge13$ 且四者均不安全，记 $n$ 的不同奇素因子数为 $d\ge4$，$\rho=\prod_{\ell\mid n,\ell\text{奇}}(1-1/\ell)$。等差列 $3+8t\le p$ 的项数 $L\ge(p-4)/8$，容斥给安全项数至少 $L\rho-2^d$。而
+\[
+L\rho>n\rho/32-1/2\ge60\cdot6^{d-4}-1/2>2^d.
+\]
+这里 $n\rho\ge1920\cdot6^{d-4}$，由四个指定素因子及其余奇素因子得到。
+\end{proof}
+
+
+\section{共同终端定理}
+这个定理是后面各参数构造的共同目标。它的三个输入分别是：
+一条真实的整剪切和一个深同余群；模 $n$ 的一次方向平移；
+足够的有限尺度或偶数处足够多的终端选择。
+前两个输入处理“能去哪里”，最后一个处理“以哪个本原尺度到达”。
+
+\begin{theorem}[三块核心的共同终端定理]\label{thm:terminal}
+在\eqref{eq:core}上，令 $h=\delta n$、$q=h^2$，其中 $\delta=1$（$n$ 奇）或 $\delta\in\{2,4\}$（$n$ 偶）。假设：
+\begin{enumerate}
+\item $L(h\Z)$ 和 $\Gamma(q,\Z)$ 可实现；
+\item 若干条目本原的整数满秩返回，其行列式与 $q$ 互素，模 $q$ 保持合法域，且有限内容群包含 $V\equiv U(-p^{-2})\pmod n$；
+\item $n$ 奇时该群包含标量 $2I$；$n$ 偶时\eqref{eq:terminal}的 $j$ 区间含 $\delta$ 个连续整数。
+\end{enumerate}
+则全部合法核心可归零。$p=3,n=7$ 时同样成立。
+\end{theorem}
+\begin{proof}
+
+\par\noindent\textbf{第一步：获得模 $n$ 的全部有限标量。}
+保留载体，两个 $p$ 块互补混合给 $(a,z)$ 坐标中的
+\[
+p^{-1}P_b,\qquad P_b=\begin{pmatrix}b&r(p-b)/2\\0&p\end{pmatrix},
+\quad b\text{ 奇},\quad1\le b\le p.
+\]
+当 $\gcd(b,n)=1$ 时，$P_b$ 的行列式与 $q$ 互素，且 $y'\equiv by\pmod n$。$b<p$ 时条目本原，故推论\ref{cor:finite-group}提供 $p,b$ 的素因子标量；$P_1$ 已提供 $p$。结合假设中的 $2I$ 及引理\ref{lem:small-units}，有限标量模 $n$ 满射。
+
+\par\noindent\textbf{第二步：先把列送对模 $n$。}
+因为 $y$ 为单位，$z/y$ 有定义。
+矩阵 $V\equiv U(-p^{-2})$ 把比值减去 $p^{-2}$，故可以一次指定所需平移次数。
+对当前列，取 $k\equiv p^2zy^{-1}-1\pmod n$，用 $V^k$ 后再乘一个可用有限标量，得到 $(z,y)\equiv(1,p^2)\pmod n$。
+
+
+\par\noindent\textbf{第三步：处理额外的二进信息。}
+$n$ 奇时，$h=n$，本步骤无需操作，直接进入下一步。
+$n$ 偶时写 $n=2^a m$、$m$ 奇，令 $B=2^{2v_2(h)}$。有限群中的 $P_bP_1^{-1}$ 及标量给
+\begin{equation}\label{eq:split}
+D_b=\begin{pmatrix}b^{-1}&0\\n(b^{-1}-1)/2&1\end{pmatrix}.
+\end{equation}
+引理\ref{lem:small-units}选出 $b\equiv3,5\pmod8$，因 $v_2(b^2-1)=3$，$-1,b$ 生成每个有限二进单位群。用\eqref{eq:split}及 $D_{-1}$ 使 $z=1\pmod B$，同时保持 $y\pmod n$。$V\bmod2$ 为上幺幂，逐次平方给 $V^B\equiv I\pmod B$；使用 $V$ 的 $B$ 倍次数恢复模 $m$ 的首坐标。于是 $z=1\pmod h$。
+
+\par\noindent\textbf{第四步：从浅层修正到平方层。}
+按 $y$ 选 $j\bmod\delta$，使当前列与 $t_j$ 模 $h$ 相同。置 $E=E_{21}$、$X=VEV^{-1}$，则模 $n$
+\[
+Et_j=(0,1)^T,\qquad Xt_j=(-2/p^2,2)^T.
+\]
+
+两列的行列式 $2/p^2$ 是模 $m$ 单位。
+为什么这里仅需求解\emph{线性}同余？因为 $q=h^2$，对于任意矩阵 $A,B$，
+\[
+(I+hA)(I+hB)\equiv I+h(A+B)\pmod{h^2}.
+\]
+二次交叉项消失。两个独立切向列于是能修正任意两坐标的一阶误差。
+在奇数部分，$2$ 可逆，所以这两个修正方向足够。用 $L(hk)$ 及其有限 $V$ 共轭，解一次二维线性同余，将两坐标修正到 $t_j\pmod{m^2}$；参数用 CRT 保持模 $B$。随后一次 $L(hk)$ 修正第二坐标模 $B$，并取 $k\equiv0\pmod m$。最终列与 $t_j$ 模 $q$ 相同。
+
+\par\noindent\textbf{第五步：由同余相同到实际相同。}
+每条有限内容分支由引理\ref{lem:content}提升，最后用引理\ref{lem:fiber}精确送到 $t_j$。平均其零和组，再用引理\ref{lem:zero-tail}收尾。$p=3,n=7$ 时，模 $7$ 的单位由 $-1,2$ 生成，其余步骤相同，收尾用引理\ref{lem:zero-base}。
+\end{proof}
+

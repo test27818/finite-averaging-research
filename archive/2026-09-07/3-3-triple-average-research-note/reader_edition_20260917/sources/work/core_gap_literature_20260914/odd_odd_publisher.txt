@@ -1,0 +1,1344 @@
+Monatshefte für Mathematik
+https://doi.org/10.1007/s00605-022-01704-2
+
+
+
+
+Odd-odd continued fraction algorithm
+
+Dong Han Kim1            · Seul Bee Lee2         · Lingmin Liao3,4
+
+Received: 18 February 2020 / Accepted: 9 March 2022
+© The Author(s) 2022, corrected publication 2022
+
+
+
+Abstract
+By using a jump transformation associated to the Romik map, we define a new contin-
+ued fraction algorithm called odd-odd continued fraction, whose principal convergents
+are rational numbers of odd denominators and odd numerators. Among others, it is
+proved that all the best approximating rationals of odd denominators and odd numer-
+ators of an irrational number are given by the principal convergents of the odd-odd
+continued fraction algorithm and vice versa.
+
+Keywords Continued fractions · Diophantine approximation · Romik system
+
+Mathematics Subject Classification Primary 11J70; Secondary 37E05
+
+
+1 Introduction
+
+One main topic of Diophantine approximation studies the approximation of an irra-
+tional number by rational numbers. Given an irrational number x, we call a rational
+p/q a best approximation of x if
+
+
+
+Communicated by H. Bruin.
+
+B Seul Bee Lee
+    seulbee.lee@sns.it
+    Dong Han Kim
+    kim2010@dongguk.edu
+    Lingmin Liao
+    lingmin.liao@u-pec.fr
+
+1   Department of Mathematics Education, Dongguk University–Seoul, 30 Pildong-ro 1-gil,
+    Jung-gu, Seoul 04620, Korea
+2   Centro di Ricerca Matematica Ennio de Giorgi, Scuola Normale Superiore, Piazza dei Cavalieri
+    3, 56126 Pisa, Italy
+3   Université Paris-Est Créteil CNRS, LAMA, F-94010 Créteil, France
+4   Université Gustave Eiffel, LAMA, F-77447 Marne-la-Vallée, France
+
+
+                                                                                          123
+                                                                                     D. H. Kim et al.
+
+                                                  a    p
+           |q x − p| < |bx − a| for any             =   such that 0 < b ≤ q.
+                                                  b    q
+
+Here, and in the whole paper, by convention, when we write a rational number p/q, we
+always assume that p ∈ Z, q ∈ N and p and q are coprime. The celebrated Lagrange
+Theorem (see [17, Chapter II] and [12, Section 6]) states that the best approximations
+of an irrational number x are the convergents, i.e., the finite truncations of the regular
+continued fraction (RCF) of x:
+
+                                                       1
+                                  x = d0 +                             ,                        (1)
+                                                            1
+                                             d1 +
+                                                                 1
+                                                    d2 +
+                                                                ..
+                                                                   .
+
+where d0 ∈ Z and d j ∈ N, for j ≥ 1. More precisely, a rational p/q is a best
+approximation of an irrational x if and only if it is one of the convergents:
+
+              p0R           p1R              1 p2R             1
+                  := d0 ,      := d0 +         ,    := d0 +         , ···
+              q0R            R
+                            q1               d1 q2R         d1 + d1        2
+
+
+  Let H = {z ∈ C : Im(z) > 0} be the upper half-plane. The group SL2 (R) acts on
+H as isometries defined by
+                                   
+                                   ab               az + b
+                         g=           : z → g(z) =        .
+                                   cd               cz + d
+
+There is a close connection between the geodesics on the modular surface SL2 (Z)\H
+and the RCF algorithm (e.g. [22]). Especially, the orbit SL2 (Z)(∞) = Q corresponds
+to a unique cusp of SL2 (Z)\H. Let
+                                                                             
+             ab              ab   10      0 −1
+      =        ∈ SL2 (Z) :     ≡    or                                        (mod 2) .
+             cd              cd   01      1 0
+
+Then  is a subgroup of SL2 (Z) of index 3 and the quotient space \H is a hyperbolic
+surface with two cusps corresponding to the orbits (∞) and (1) of ∞ and 1.
+Kraaikamp–Lopes [14] and Boca–Merriman [4] found that the geodesics on \H is
+strongly related to the even integer continued fraction (EICF) introduced by Schweiger
+[19, 20], which is a continued fraction with even integers such that
+
+                                                  η0
+                                    b0 +                        ,                               (2)
+                                                       η1
+                                           b1 +
+                                                      .
+                                                  b2 + . .
+
+where b0 ∈ 2Z, bi ∈ 2N for i ≥ 1 and ηi ∈ {−1, +1}.
+
+123
+Odd-odd continued fraction algorithm
+
+
+   We classify rational numbers into two classes by the orbits (∞) and (1). If
+p/q ∈ (∞), then p and q are of different parity. If p/q ∈ (1), then p and
+q are both odd. We call a rational number in (∞) an ∞-rational and a rational
+number in (1) a 1-rational. The proportion of odd/even, even/odd and odd/odd in
+the RCF convergents was investigated by Moeckel [15]. Further, the asymptotic density
+of the RCF convergents whose denominators and numerators satisfying congruence
+equations was obtained by Jager-Liadet [10].
+   Short and Walker [23] defined a best ∞-rational approximation of x by a rational
+p/q ∈ (∞) satisfying
+                                       a                   p
+   |q x − p| < |bx − a| for any          ∈ (∞) apart from   such that 0 < b ≤ q,
+                                       b                   q
+                                                                                    (3)
+
+and showed that the best ∞-rational approximations are convergents of EICF.
+   Our motivation of the paper is to study the best 1-rational approximations of an
+irrational number defined as follows.
+Definition 1.1 For x ∈ R \ Q, p/q ∈ (1) is a best 1-rational approximation of x if
+                                        a                  p
+     |q x − p| < |bx − a| for any         ∈ (1) apart from such that 0 < b ≤ q.    (4)
+                                        b                  q
+
+We introduce a new continued fraction, called the odd-odd continued fraction (OOCF,
+see Sect. 2) of the form
+
+                                                   1
+                                 1−                                         ,
+                                                       ε1
+                                       a1 +
+                                                            1
+                                              2−
+                                                                ε2
+                                                   a2 +
+                                                                      1
+                                                            2−
+                                                                     ..
+                                                                        .
+
+where an ∈ N, and εn ∈ {1, −1} for an ≥ 2 and εn = 1 for an = 1. Our first main
+theorem is the following.
+Theorem 1.2 A fraction p/q is a best 1-rational approximation of an irrational num-
+ber x if and only if it is one of the principal convergents of the odd-odd continued
+fraction of x.
+   For RCF, Lagrange and Euler proved that an irrational number has eventually peri-
+odic RCF if and only if it is a quadratic irrational. (See [17, Chapter III-§1] and
+[12, Section 10]). For OOCF, we have the following second main theorem.
+Theorem 1.3 An eventually periodic OOCF expansion converges to an ∞-rational or
+a quadratic irrational. Moreover, a quadratic irrational has an eventually periodic
+OOCF expansion.
+
+                                                                                123
+                                                                               D. H. Kim et al.
+
+
+   We also investigate the relation between the OOCF and the RCF. We show that for
+any real number x, the principal convergents of its OOCF are intermediate conver-
+gents of its RCF (Theorem 5.2). Further, we can convert RCF expansions into OOCF
+expansions (Theorem 5.3).
+   Our paper is organized as follows. In Sect. 2, we introduce the OOCF algorithm and
+give some basic properties of OOCFs. In Sect. 3 we study the principal convergents
+of OOCFs, and prove Theorem 1.3. Sect. 4 is devoted to the proof of Theorem 1.2.
+The relations between the OOCF expansions and the RCF expansions are described
+in the last section.
+
+
+2 Odd-odd continued fraction algorithm
+
+It is known that the partial quotients d j = d j (x) of the RCF of an irrational number
+x as in (1) can be generated by the Gauss map G : [0, 1] → [0, 1] defined by
+                              
+                              1
+                   G(x) =        for x ∈ (0, 1] and G(0) = 0,
+                              x
+
+where {·} is the fractional part. In fact, for an irrational x we have d j (x) =
+ 1/G j−1 (x) for j ≥ 1 with · being the integer part. Further, Gauss map is a
+jump transformation associated to the Farey map defined by
+                                   ⎧
+                                   ⎪
+                                   ⎪x             1
+                                   ⎨   if 0 ≤ x ≤ ,
+                                   1−x            2
+                          F(x) =
+                                 ⎪
+                                 ⎪ 1−x    1
+                                 ⎩     if   ≤ x ≤ 1.
+                                    x     2
+
+In general, let U : [0, 1] → [0, 1] be a map and E be a subset of [0, 1]. The first hitting
+time of x ∈ [0, 1] to E is defined by
+
+                         n E (x) := min{ j ≥ 0 : U j (x) ∈ E}.
+
+A map J : [0, 1] → [0, 1] is called the jump transformation associated to U with
+respect to E (e.g. [21, Chapter 19]) if
+
+                       J (x) = U n E (x)+1 (x) for all x ∈ [0, 1].
+
+We can easily check that G is the jump transformation associated to F with respect to
+E = {0} ∪ (1/2, 1]. In fact,
+
+                         G(x) = F n E (x)+1 (x) for x ∈ [0, 1].
+
+We also note that n E (x)+1 is exactly the first partial quotient a1 of the RCF expansion
+of x.
+
+123
+Odd-odd continued fraction algorithm
+
+
+  Similar to the RCF, the partial quotients of EICF in (2) can be obtained by the EICF
+map TEICF : [0, 1] → [0, 1] defined by
+            ⎧
+            ⎪ 1
+            ⎪ − 2k
+                                  1
+                                      ≤x≤
+                                             1
+                                               ,
+            ⎨               if
+              x                2k + 1       2k
+TEICF (x) =                                           for all k ∈ N,    and   TEICF (0) = 0.
+            ⎪
+            ⎪     1             1         1
+            ⎩2k −           if     ≤x≤         ,
+                  x            2k      2k − 1
+
+The map TEICF turns out to be a jump transformation of the following Romik map
+                                    ⎧
+                                    ⎪    x             1
+                                    ⎪
+                                    ⎪        if 0 ≤ x ≤ ,
+                                    ⎪
+                                    ⎪ 1 − 2x           3
+                                    ⎪
+                                    ⎨
+                                      1         1       1
+                             R(x) =     − 2 if    ≤x≤ ,                                   (5)
+                                    ⎪
+                                    ⎪ x         3       2
+                                    ⎪
+                                    ⎪
+                                    ⎪
+                                    ⎪
+                                    ⎩2 − 1 if 1 ≤ x ≤ 1,
+                                           x    2
+introduced by Romik in [18]. In fact, letting E 1 := {0} ∪ [1/3, 1], we have
+
+                         TEICF (x) = R n E1 (x)+1 (x) for x ∈ [0, 1].
+
+The Romik map was used to investigate an algorithm generating the Pythagorean
+triples by multiplying matrices [1–3, 7, 8]. Some number theoretical properties of the
+Romik map were recently shown in [5, 6]. Panti [16] studied the connection of the
+Romik map with the billiards in the hyperbolic plane.
+   Instead of E 1 , we choose E 2 = [0, 1/2] ∪ {1} and define TOOCF : [0, 1] →
+[0, 1], called the odd-odd continued fraction (OOCF) map, by the jump transformation
+associated to the Romik map R with respect to E 2 , i.e.,
+
+                         TOOCF (x) = R n E2 (x)+1 (x) for x ∈ [0, 1].
+
+By simple calculation, we have
+               ⎧
+               ⎪ kx − (k − 1)    k−1       2k − 1
+               ⎪
+               ⎨              if       ≤x≤        ,
+                 k − (k + 1)x      k       2k + 1
+   TOOCF (x) =                                            for all k ≥ 1 and TOOCF (1) = 1.
+               ⎪
+               ⎪ k − (k + 1)x    2k − 1       k
+               ⎩              if        ≤x≤       ,
+                 kx − (k − 1)    2k + 1     k+1
+                                                                                          (6)
+
+The graph of TOOCF is shown in Fig. 1.
+    Using TOOCF , we can induce an OOCF expansion of x ∈ [0, 1]. For convenience,
+let T := TOOCF . We partition [0, 1] into the subintervals defined by
+
+                      k − 1 2k − 1                            2k − 1   k
+B(k + 1, −1) :=            ,              and    B(k, 1) :=          ,             for k ∈ N.
+                        k    2k + 1                           2k + 1 k + 1
+                                                                                             (7)
+
+                                                                                  123
+                                                                                                               D. H. Kim et al.
+
+        1                                                        1
+
+
+
+
+        1
+        2
+
+        1
+        3
+
+
+
+
+        0      E2    1     1    3 2           1                  0            E2           1   1       3 2 3       1
+                     3     2    5 3                                                        3   2       5 3 4
+
+Fig. 1 The graph of R (left) and the graph of TOOCF (right)
+
+
+By (6), if x = 1, then
+               ⎧
+               ⎪                 −1
+               ⎪
+               ⎨(k + 1) +                 if x ∈ B(k + 1, −1),
+      1                     2 − (1 − T x)
+            =                                                                                          for all k ≥ 1. (8)
+   1−x         ⎪
+               ⎪            1
+               ⎩k +                       if x ∈ B(k, 1),
+                      2 − (1 − T x)
+                         n−1 −i
+                /
+Thus, for all x ∈        i=0 T ({1})
+
+                                                              1
+                         1−x =                                                                     ,                      (9)
+                                                                     ε1
+                                       a1 +
+                                                                          1
+                                              2−
+                                                                              ..
+                                                   ..                              .
+                                                        .
+                                                                           εn
+                                                            an +
+                                                                     2 − (1 − T n x)
+
+where
+                               ⎧
+                               ⎨(k + 1, −1), if T n−1 (x) ∈ B(k + 1, −1),
+               (an , εn ) =                                                                                             (10)
+                               ⎩
+                                   (k, 1),         if T n−1 (x) ∈ B(k, 1).
+
+   In particular, if x = 0, then T (0) = 0 and we have
+                                                             1
+                                    1−x =                                              .
+                                                         −1
+                                              2+
+                                                    2 − (1 − T x)
+
+Thus, 0 has a unique infinite OOCF expansion: 0 = [[(2, −1), (2, −1), · · · ]] =
+[[(2, −1)∞ ]]. If x = k+1
+                       k
+                          ∈ B(k, 1) ∩ B(k + 2, −1) for some k ≥ 1. Then T (x) = 0
+and we have both choices in (8):
+
+123
+Odd-odd continued fraction algorithm
+
+
+                       1                            1                                 1
+           1−x =          =                                           =                          .
+                      k+1                   −1                                     1
+                                  k+2+                                    k+
+                                       2 − (1 − T x)                         2 − (1 − T x)
+
+Hence, a rational number x = k+1 k
+                                     has two infinite OOCF expansions: x = [[(k +
+               ∞
+2, −1), (2, −1) ]] and x = [[(k, 1), (2, −1)∞ ]]. Furthermore, for any x ∈ T −n ({0})
+with some n ≥ 2, we can apply the iteration (8) n −1 times, and then write 1−T n−1 (x)
+in two different ways. Therefore, any x ∈ n≥1 T −n ({0}) has two infinite OOCF
+expansions ending with (2, −1)∞ .
+   Let x = 2k−1
+           2k+1 ∈ B(k + 1, −1) ∩ B(k, 1) for some k ≥ 1. Then T (x) = 1 and
+
+                                             1                                    1
+                1−x =                                        =                            , or
+                                     −1                    −1
+                      (k + 1) +                  (k + 1) +
+                                2 − (1 − T x)              2
+                              1              1
+                1−x =                   =        .
+                                1              1
+                      k+                  k+
+                          2 − (1 − T x)        2
+
+            2k+1 has two finite OOCF expansions: x = [[(k +1, −1)]] and x = [[(k, 1)]].
+Thus x = 2k−1
+Furthermore, for any x ∈ T −n ({1}) with some n ≥ 1 and x = 1, we can apply the
+iteration (8) n − 1 times, and then write 1 − T n−1 (x) in two different ways. Therefore,
+any x ∈ n≥0 T −n ({1}) \ {1} has two finite OOCF expansions which differ at the last
+partial quotient.
+   Note that for a rational m/n, the denominator of TOOCF (m/n) is strictly less than
+n. Note also that TOOCF sends a 1-rational to a 1-rational and an ∞-rational to an
+∞-rational. Thus if m/n is a 1-rational, then TOOCF
+                                                 N    (m/n) = 1 for some N ≥ 1, while
+if m/n is a non-zero ∞-rational, then TOOCF (m/n) = 0 for some N ≥ 1. Hence any
+                                           N
+                                            −N               −N
+1-rational and ∞-rational belongs to TOOCF      ({1}) and TOOCF   ({0}) for some N ≥ 1
+respectively. Finally, we note that
+                                       ∞
+                                              −n
+                                             TOOCF ({0, 1}) = Q.
+                                       n=1
+
+Then for any x ∈ [0, 1] \ Q, we can iterated (9) infinitely and uniquely to get its
+OOCF expansion:
+
+                                                         1
+                              x =1−                                               .
+                                                             ε1
+                                             a1 +
+                                                                  1
+                                                    2−
+                                                                      ε2
+                                                         a2 +
+                                                                            1
+                                                                  2−
+                                                                           ..
+                                                                              .
+
+                                                                                                     123
+                                                                                  D. H. Kim et al.
+
+
+where an ∈ N and εn ∈ {1, −1} for an ≥ 2 and εn = 1 for an = 1.
+  We denote the OOCF expansion of x by
+
+                    x = [[(a1 , ε1 ), (a2 , ε2 ), · · · , (an , εn ), · · · ]],
+
+and call (an , εn ) the n-th partial quotients of x in its OOCF expansion. By the above
+discussion, we have the following proposition.
+
+Proposition 2.1 The following properties hold.
+(1) Any non-zero ∞-rational has exactly two infinite OOCF expansions ending with
+    (2, −1)∞ .
+(2) Each 1-rational has exactly two finite OOCF expansions which differ only in the
+    last partial quotient.
+(3) Every irrational has a unique infinite OOCF expansion.
+
+   To end this section, we remark that the two maps TOOCF and TEICF are conjugate.
+                                         1−x
+Define f : [0, 1] → [0, 1] by f (x) :=        . Then the map TOOCF is conjugate to
+                                         1+x
+TEICF via f , i.e.,
+
+                               f ◦ TOOCF ◦ f −1 = TEICF .
+
+Schweiger [19] proved that TEICF admits an ergodic absolutely continuous invariant
+                  dx
+measure: dμ :=          . Thus, the measure f ∗−1 μ is an ergodic absolutely continuous
+                1 − x2
+invariant measure with respect to TOOCF . Denote by y = f (x). We have
+
+                      dx     (1 + x)2 dy    (1 + x)dy   dy
+                           =              =           =    .
+                    1 − x2    2(1 − x 2 )    2(1 − x)   2y
+
+Hence, we have the following conclusion.
+Proposition 2.2 The map TOOCF : [0, 1] → [0, 1] preserves an infinite ergodic abso-
+                                   1
+lutely continuous invariant measure d x.
+                                   x
+We also remark that the infinity of the absolutely continuous invariant measure comes
+from the fact that the map TOOCF has 0 as an indifferent fixed point.
+
+
+3 Convergents of the odd-odd continued fraction algorithm
+
+For OOCF, we have three types of convergents by truncating the OOCF in three
+different places. We will investigate the basic properties of such convergents of OOCF.
+   Let x ∈ (0, 1) be a real number such that
+
+                    x = [[(a1 , ε1 ), (a2 , ε2 ), · · · , (an , εn ), · · · ]].
+
+123
+Odd-odd continued fraction algorithm
+
+
+For n ≥ 1, the n-th principal convergent of OOCF is defined by
+
+     pn                                                                            1
+        = [[(a1 , ε1 ), (a2 , ε2 ), · · · , (an , εn )]] = 1 −                                                     .
+     qn                                                                                 ε1
+                                                                 a1 +
+                                                                                                 1
+                                                                        2−
+                                                                              ..                 εn−1
+                                                                                   .
+                                                                                                          1
+                                                                                       2−
+                                                                                                              εn
+                                                                                                 an +
+                                                                                                              2
+
+We denote
+
+pn                       1                              pn                                1
+    := 1 −                                       and          := 1 −                                                   ,
+qn                             ε1                       qn                                        ε1
+              a1 +                                                     a1 +
+                                     1                                                                    1
+                     2−                                                       2−
+                           ..        εn−1                                               ..                εn−1
+                                .                                                            .
+                                       1                                                                     1
+                                    2−                                                           2−
+                                       an                                                                 an + εn
+
+and call them the n-th sub-convergent and n-th pseudo-convergent, respectively.
+   To study the convergents of a continued fraction, we have the following general
+lemma proved by induction (see [13, p. 3] for details).
+
+Lemma 3.1 Consider a general infinite continued fraction and its truncated continued
+fraction of the form
+
+                         e0                            rn                      e0
+       g0 +                                     and       := g0 +                                             ,
+                              e1                       sn                               e1
+              g1 +                                                  g1 +
+                                     e2                                                          e2
+                     g2 +                                                  g2 +
+                                  .                                                    ..            en−1
+                              g3 + . .                                                      .+
+                                                                                                      gn
+
+where gn ∈ Z and |en | = 1. Then the following matrix relation holds:
+                                                       
+                      rn en rn−1      g e    g1 e1        g e
+                                   = 0 0             ··· n n .
+                       sn en sn−1     1 0    1 0          1 0
+
+Consequently, we have the following recursive formulas:
+                                     
+                                          rn = gn rn−1 + en−1rn−2 ,
+                                          sn = gn sn−1 + en−1 sn−2 ,
+
+where r−1 = 1, s−1 = 0, r0 = g0 and s0 = 1.
+
+                                                                                                          123
+                                                                                    D. H. Kim et al.
+
+
+   Denote the inverse of TOOCF | B(an ,εn ) by f (an ,εn ) . Then by (8), we have
+
+                                                         1
+                              f (an ,εn ) (t) = 1 −              .                           (11)
+                                                            εn
+                                                      an +
+                                                           1+t
+
+The map f (an ,εn ) corresponds to a linear fractional map on the upper half-plan H given
+by the matrix
+                                                                                  
+               1   −1  an     εn     1    1   a −1           an + εn − 1        0        1
+A(an ,εn ) :=                               = n                           ∈∪                .
+               1   0    1      0     0    1    an              an + εn          1        0
+                                                                                             (12)
+
+By Lemma 3.1, we have
+                                                                                        
+                                           1 −1      1 −1   a1 ε1    2     −1     a2        ε2
+   A(a1 ,ε1 ) A(a2 ,ε2 ) · · · A(an ,εn )         =
+                                           1 0       1 0     1 0     1     0       1        0
+                                                       
+                                                                
+                 2 −1            an εn         2 −1     p  − pn
+          ···                                        = n
+                 1 0              1       0    1 0      qn −qn
+                                                                                             (13)
+
+and
+                                              
+                                              0
+      A(a1 ,ε1 ) A(a2 ,ε2 ) · · · A(an ,εn )
+                                              1
+                                                                     
+              1 −1         a1 ε1        2 −1     a2 ε2        2 −1   an εn    1   pn
+       =                                                 ···                    =
+              1 0           1 0         1 0       1 0          1 0    1 0     1   qn
+                                                                                       (14)
+
+These mean that under the linear fractional map of the matrix A(a1 ,ε1 ) A(a2 ,ε2 ) · · ·
+A(an ,εn ) , the images of 1, ∞ and 0 are pn /qn , pn /qn and pn/qn ,respectively.
+                                                                      01
+   Since A(a1 ,ε1 ) A(a2 ,ε2 ) · · · A(an ,εn ) is contained in  or          , we deduce the
+                                                                      10
+following proposition.
+Proposition 3.2 We have
+
+                         pn                      pn pn
+                            ∈ (1) and              ,     ∈ (∞).
+                         qn                      qn qn
+
+We remark that the name of odd-odd continued fraction comes from the fact that
+the principal convergents pn /qn are 1-rationals, i.e., of odd denominators and odd
+numerators. We also remark that by Proposition 3.2, any finite OOCF is a 1-rational.
+   By (13) and (14), we have the following recursive relations of the three types of
+convergents.
+
+123
+Odd-odd continued fraction algorithm
+
+
+Lemma 3.3 Let p0 = 1, q0 = 0, p0 = 1 and q0 = 1. We have the following recursive
+formulas:
+                                                         
+                     pn = an pn−1 − pn−1  ,               pn = pn + εn pn−1 ,
+                                      
+                                                                                                and
+                    qn = an qn−1 − qn−1 ,                   qn = qn + εn qn−1
+                   
+                     pn = 2 pn + εn pn−1 ,
+                                                          for n ≥ 1.                                         (15)
+                    qn = 2qn + εn qn−1
+
+Further,
+                                                
+              pn = pn + pn ,                      pn−1 = εn ( pn − pn ),
+                                         and                                            for n ≥ 1.           (16)
+              qn = qn + qn                        qn−1 = εn (qn − qn )
+
+Moreover, letting p−1 = −1, q−1 = 1 and ε0 = 1, we have the recursive formulas
+for the principal convergents
+                 
+                    pn = (2an + εn − 1) pn−1 + εn−1 pn−2 ,
+                                                                                    for n ≥ 1.               (17)
+                    qn = (2an + εn − 1)qn−1 + εn−1 qn−2
+
+   Note that 2an + εn − 1 ≥ 2 for all n ∈ N. Since q1 ≥ 2q0 + ε0 q−1 = 3 > q0 , by
+(17), we have
+
+                                         qn+1 > qn , for all n ∈ N.                                          (18)
+
+By (13) and the second assertion of (16), we have
+                                                                                 
+                                                −1     1   ε p                 pn
+      A(a1 ,ε1 ) A(a2 ,ε2 ) · · · A(an ,εn )             = n n−1                            for all n ∈ N.
+                                                 1     1    εn qn−1            qn
+
+Thus, by noting det(A(ai ,εi ) ) = εi , we have
+
+                      pn−1 qn − pn qn−1 = −2ε1 · · · εn−1              for all n ∈ N.                        (19)
+
+   Denote by
+
+                               n−1                                    1
+                        ζn := TOOCF (x) = 1 −                                               .
+                                                                          εn
+                                                         an +
+                                                                               1
+                                                                2−
+                                                                                    εn+1
+                                                                     an+1 +
+                                                                                     ..
+                                                                                        .
+
+                                                                                                      123
+                                                                                       D. H. Kim et al.
+
+
+We can show inductively that
+
+                                   pn + pn ζn+1
+                           x=                         for all n ∈ N.                            (20)
+                                   qn + qn ζn+1
+
+By (16), we have
+⎧                                            ⎧
+⎨ pn = 21 ( pn + εn pn−1 ),                ⎨qn = 21 (qn + εn qn−1 ),
+                                    and                                            for all n ∈ N.
+⎩                                           ⎩ 
+ pn = 21 ( pn − εn pn−1 ),                    qn = 21 (qn − εn qn−1 ),
+
+Thus,
+
+                                pn (1 + ζn+1 ) + εn pn−1 (1 − ζn+1 )
+                       x=                                            .                          (21)
+                                qn (1 + ζn+1 ) + εn qn−1 (1 − ζn+1 )
+
+The following theorem gives the convergence of our OOCF.
+Theorem 3.4 For all x ∈ [0, 1], the OOCF expansion of x converges to x.
+
+Proof Let ξn = 1−ζ n
+               1+ζn . By (21) and (19), we have
+
+               pn   ξn+1 εn ( pn−1 qn − qn−1 pn )      −2ξn+1 ε1 · · · εn
+          x−      =                               =                         .                   (22)
+               qn     qn (qn + εn qn−1 ξn+1 )       qn (qn + εn qn−1 ξn+1 )
+
+Since |εn | = 1 and |ξn+1 | ≤ 1, by (18), we have
+                                    
+                                    
+                             x − pn  < 2           for all n ∈ N.
+                                 q  q
+                                      n       n
+
+Again by (18), qn → ∞ as n → ∞, which concludes pn /qn → x as n → ∞.                                
+                                                                                                    
+
+Lemma 3.5 For all x ∈ (0, 1), x is between pn /qn and pn /qn .
+
+Proof The equations (13) and (14) imply that pn qn − pn qn = ε1 · · · εn . Thus, by (20),
+
+                      pn   ζn+1 ( pn qn − pn qn )    ζn+1 ε1 · · · εn
+                x−     
+                           =             
+                                                          =                ,
+                      qn      qn (qn + qn ζn+1 )           qn (qn + qn ζn+1 )
+
+which means that x − pn /qn and x − pn /qn has opposite signs by comparing with
+(22).                                                                             
+                                                                                  
+
+   With the above preparations, we can now show the following lemma.
+Lemma 3.6 The following statements hold.
+(1) The n-th principal convergent pn /qn is between pn /qn and pn /qn .
+(2) The (n − 1)-th principal convergent pn−1 /qn−1 is not between pn /qn and pn /qn .
+
+123
+Odd-odd continued fraction algorithm
+
+
+(3) The three distinct convergents pn /qn , pn /qn and pn /qn are in the half closed
+                                                  /q 
+    interval In−1 of endpoints pn−1 /qn−1 and pn−1                                   
+                                                        n−1 which contains pn−1 /qn−1
+    but does not contain pn−1 /qn−1 .
+
+Proof The first two assertions follow from (16) and the fact that for two rationals a/b
+and c/d such that bd > 0, if a/b ≤ c/d, then
+
+                                        a   a+c  c
+                                          ≤     ≤ .
+                                        b   b+d  d
+
+   For (3), by Lemma 3.3, we have
+                                                     
+                             ,
+    pn = (an − 1) pn−1 + pn−1                                                          ,
+                                                        pn = (an − 1 + εn ) pn−1 + pn−1
+                         
+                                              and                                   
+    qn = (an − 1)qn−1 + qn−1 ,                          qn = (an − 1 + εn )qn−1 + qn−1 .
+
+Since an − 1 ≥ 0 and an + εn − 1 ≥ 0, both pn /qn and pn /qn are in In−1 . By the
+first assertion, pn /qn is also in In−1 .                                             
+                                                                                      
+
+   Now, we are ready to prove Theorem 1.3.
+Proof of Theorem 1.3 If x has an eventually periodic OOCF, then there exist distinct
+positive integers i and j such that T i (x) = T j (x). Since T i and T j are linear fractional
+maps, T i (x) is either 0 or a quadratic irrational. In the former case x is an ∞-rational,
+while in the latter case x is a quadratic irrational.
+    For the second assertion, let x be a quadratic irrational between 0 and 1 such that
+α1 x 2 + β1 x + γ1 = 0 where α1 , β1 and γ1 are coprime integers. By (20), we have for
+all i ≥ 1,
+
+   α1 ( pi + pi ζi+1 )2 + β1 ( pi + pi ζi+1 )(qi + qi ζi+1 ) + γ1 (qi + qi ζi+1 )2 = 0.
+
+For i ≥ 1, let
+
+                    αi+1 = α1 ( pi )2 + β1 pi qi + γ1 (qi )2 ,
+                    βi+1 = 2α1 pi pi + β1 ( pi qi + pi qi ) + 2γ1 qi qi ,                 (23)
+                    γi+1 = α1 ( pi )2 + β1 pi qi + γ1 (qi )2 .
+
+Then
+
+                              αi+1 ζi+1
+                                    2
+                                        + βi+1 ζi+1 + γi+1 = 0.                                       (24)
+
+Since |qi pi − qi pi | = 1, we can check that
+
+                              βi+1
+                               2
+                                   − 4αi+1 γi+1 = β12 − 4α1 γ1 .                                      (25)
+
+On the other hand, we also have |(x− pi /qi )+( pi /qi −x)| = 1/qi qi . Thus, by Lemma
+3.5 and the fact that pi /qi is between pi /qi and pi /qi , we deduce that x − pi /qi and
+
+                                                                                            123
+                                                                                              D. H. Kim et al.
+
+
+x − pi /qi have opposite signs. Thus, |qi x − pi | < 1/qi and | pi − qi x| < 1/qi .
+Hence, there are |δ| < 1 and |λ| < 1 such that
+
+                         pi = qi x + δ/qi and pi = qi x + λ/qi .                              (26)
+
+By plugging (26) in (23), we derive the following expressions
+                                                              
+                                 qi                       δ
+                       αi+1 = δ       (2α1 x + β1 ) + α1  2 ,                                        (27)
+                                 qi                    (qi )
+                                                             δλ
+                       βi+1 = (2α1 x + β1 )(δ + λ) + 2α1   and                                      (28)
+                                                           qi qi
+                                                            
+                                 qi                        λ
+                       γi+1 = λ       (2α1 x + β1 ) + a 1  2 .                                        (29)
+                                 qi                     (qi )
+
+    By (28), we have |βi+1 | ≤ 2(|2α1 | + |β1 |) + |2α1 |, thus the coefficient βi+1 is
+bounded. If qi ≥ qi , then by (27), we have |αi+1 | < 2|α1 | + |β1 | + |α1 |. Thus, αi+1 is
+bounded. Further, by (25), γi+1 is bounded. Similarly, if qi < qi , then by (29), γi+1 is
+bounded since |γi+1 | < 2|α1 | + |β1 | + |α1 |. Moreover, by (25), αi+1 is also bounded.
+Thus in all cases, the coefficients of the equation (24) are all bounded. Therefore,
+{ζi }i∈N has only finitely many values which means that ζn = ζm for some m and n.
+Therefore, the OOCF expansion of x is eventually periodic.                                  
+                                                                                            
+
+Remark 3.7 From the proof of Proposition 2.1-(1), we see that if x is an ∞-rational,
+then its OOCF ends with (2, −1)∞ and thus there exists n 0 ≥ 0 such that ζn+1 = 0
+for all n ≥ n 0 . Hence, by (20), we have x = pn /qn for all n ≥ n 0 .
+
+   At the end of this section, let us discuss the relation between the OOCF convergents
+of a number x and the EICF convergents of 1 − x.
+   We denote the EICF expansion in (2) by a sequence in a double angle bracket:
+
+              (b1 , η1 ), (b2 , η2 ), · · · , (bn , ηn ), · · ·  = (bn , ηn )n∈N  .
+
+The n-th EICF convergent is denoted by
+
+                        pnE
+                            = (b1 , η1 ), (b2 , η2 ), · · · , (bn , ηn )  .
+                        qnE
+
+By Lemma 3.1, we have the following matrix relation:
+                                                              E               
+                  b0   η0        b1   η1       b         ηn         q        ηn qn−1
+                                                                                 E
+                                           ··· n                  = nE                 .               (30)
+                  1    0         1    0         1        0          pn       ηn pn−1
+                                                                                 E
+
+                                                          
+                                                        01
+Since each matrix in (30) belongs to  ∪                     , each EICF convergent pnE /qnE is
+                                                        10
+an ∞-rational.
+
+123
+Odd-odd continued fraction algorithm
+
+
+   Observe that if pnE (x)/qnE (x) is of type even/odd, then 1 − pnE (x)/qnE (x) is 1-
+rational. If pnE (x)/qnE (x) is of type odd/even, then 1 − pnE (x)/qnE (x) is still of type
+odd/even.
+
+Proposition 3.8 Let x ∈ (0, 1). All rationals of type odd/odd in {1− pnE (1−x)/qnE (1−
+x) : n ≥ 1} are best 1-rational approximations of x, and hence are OOCF principal
+convergents of x.
+
+Proof For each n ≥ 0, denote by Pn /Q n := 1 − pnE (1 − x)/qnE (1 − x). We have
+
+                 Pn = qnE (1 − x) − pnE (1 − x) and Q n = qnE (1 − x).
+
+By the theorem of Short and Walker (see (3); also [23, Theorem 5]), for any a/b ∈
+(∞) such that 1 ≤ b ≤ qnE (1 − x) and a/b = pnE (1 − x)/qnE (1 − x),
+
+   |Pn − Q n x| = |qnE (1 − x) − pnE (1 − x) − x · qnE (1 − x)| < |(1 − x)b − a|.
+
+For any c/d ∈ (1) such that 1 ≤ d ≤ Q n and c/d = Pn /Q n , we have
+
+            d −c      c           d −c
+                 = 1 − ∈ (∞) and      = pnE (1 − x)/qnE (1 − x).
+              d       d             d
+
+Thus |Pn − Q n x| < |(1 − x)d − (d − c)| = |c − d x|, which means that Pn /Q n is a
+best 1-rational approximation of x.                                              
+                                                                                 
+
+  The next proposition describes a connection between the principal convergents of
+OOCF and EICF. Recall that f (x) = 1−x
+                                     1+x is the conjugacy map defined in Sect. 2.
+
+Proposition 3.9 Let x ∈ (0, 1). There is a 1-1 correspondence between the partial quo-
+tients of OOCF of x and that of EICF of f (x). In particular, pnE ( f (x))/qnE ( f (x)) =
+ f ( pn (x)/qn (x)) for all n ≥ 1.
+
+Proof Since
+
+                                    1    1                           1    1
+         f (B(k + 1, −1)) =           ,      ,   f (B(k, 1)) =          ,   ,
+                                   2k 2k − 1                      2k + 1 2k
+
+there is a 1-1 correspondence φ between the partial quotients of OOCF and EICF as
+follows:
+
+                    φ : (k + 1, −1) → (2k, −1), (k, 1) → (2k, 1).
+
+Thus, for x = [[(an , εn )n∈N ]], the EICF expansion of f (x) is  φ(an , εn )n∈N . Con-
+sidering the finite expansions, we obtain the second assertion.                          
+                                                                                         
+
+                                                                                123
+                                                                                               D. H. Kim et al.
+
+
+
+
+         0         11 1 1   1 2 1   2    1   3 2 34   1   54 3 5      2   5   3 7 4   5 6 78       1
+         1         98 7 6   5 9 4   7    3   8 5 79   2   97 5 8      3   7   4 9 5   6 7 89       1
+
+Fig. 2 Ford circles: white circles are based at ∞-rationals and gray circles are based at 1-rationals (color
+figure online)
+
+
+
+4 Best 1-rational approximation
+
+   In this section, we prove Theorem 1.2. Recall that H is the upper half-plane. The
+boundary of H is R∞ = R ∪ {∞}. Denote by Ca/b the horocycle of H based at a/b
+whose Euclidean radius is (2b2 )−1 and C∞ the line {z = x + i ∈ H : x ∈ R} (see
+Fig. 2). We call Ca/b a Ford circle. The radius of Ca/b is denoted by rad(Ca/b ). We
+remark that two Ford circles Ca/b and Cc/d are adjacent to each other if and only if
+|ad −bc| = 1. Let Ra/b (x) be the Euclidean radius of the horocycle based at x tangent
+to Ca/b . Then by Pythagorean theorem,
+
+                                                      1
+                                         Ra/b (x) =     |bx − a|2 .
+                                                      2
+
+Thus
+
+                       |q x − p| < |bx − a| ⇐⇒ R p/q (x) < Ra/b (x).                                    (31)
+
+Since the Ford circles are not overlapped each other, we have
+
+                       rad(Ca/b ) ≤ Rc/d (a/b) for all a/b, c/d ∈ Q.                                    (32)
+
+   With these preparations, we are ready to prove our Theorem 1.2.
+
+Proof of Theorem 1.2 Given x ∈ R \ Q, let us consider its n-th principal convergent
+pn /qn and its n-th pseudo-convergent pn /qn . Let a/b ∈ (1) such that a/b = pn /qn
+and 1 ≤ b ≤ qn . Then
+
+                                        rad(C pn /qn ) ≤ rad(Ca/b ).                                    (33)
+
+123
+Odd-odd continued fraction algorithm
+
+
+
+
+         a/b               pn /qn    x pn /qn               pn /qn     x pn /qn           a/b
+
+Fig. 3 Two possible relative locations of x, pn /qn , a/b and pn /qn in the proof of Theorem 1.2. The dashed
+circles are the horocycles based at x tangent to C pn /qn and Ca/b (color figure online)
+
+
+
+By (13) and (14), the Ford circles C pn /qn and C pn /qn are tangent to each other. By
+Lemma 3.5, x is between pn /qn and pn /qn , then
+
+                                      R pn /qn (x) ≤ rad(C pn /qn ).                                  (34)
+
+Let In be the closed interval of endpoints pn /qn and pn /qn . Since rad(Cr /s ) ≤
+rad(C pn /qn ) for any r /s ∈ In ∩ Q, we deduce from (33) (as shown in Fig. 3) that
+    / In . Then we have
+a/b ∈
+
+                                       rad(C pn /qn ) < Ra/b (x).                                     (35)
+
+By (34) and (35), we have R pn /qn (x) < Ra/b (x). Hence by (31), pn /qn is a best
+1-rational approximation of x.
+   Conversely, assume that a/b ∈ (1) is not a principal convergent of OOCF of
+x. Then there are consecutive principal convergents pn−1 /qn−1 and pn /qn such that
+qn−1 ≤ b < qn and a/b = pn−1 /qn−1 . Thus,
+
+                                      rad(C pn /qn ) < rad(Ca/b ).                                        (36)
+
+By (13) and (14), C pn−1 /qn−1 and C pn /qn are tangent to both C pn /qn and C pn /qn . Without
+loss of generality, we assume that pn−1 /qn−1 < pn /qn < pn /qn (see Fig. 4). By
+          / [ pn /qn , pn /qn ]. Now we will show that R pn−1 /qn−1 (x) < Ra/b (x) which
+(36), a/b ∈
+by (31), implies that a/b is not a best 1-rational approximation of x. We distinguish
+three cases.
+(1) If a/b < pn−1 /qn−1 , then obviously R pn−1 /qn−1 (x) < Ra/b (x).
+(2) Now assume a/b > pn /qn . We note that, for r /s ∈ Q and t, t  ∈ R,
+
+                      |t − r /s| < |t  − r /s| implies that Rr /s (t) < Rr /s (t  ).                    (37)
+
+     Then we have
+
+
+       R pn−1 /qn−1 (x) < R pn−1 /qn−1 ( pn /qn ) = rad(C pn /qn ) ≤ Ra/b ( pn /qn ) < Ra/b (x).
+                                                                                                          (38)
+
+                                                                                                  123
+                                                                                               D. H. Kim et al.
+
+
+
+
+                                                                            C
+
+
+
+                                                                                                C
+
+
+                                                                     •
+                                                                    x
+              pn−1                             a     pn      pn            p
+                                                                             n
+              qn−1                             b     qn      qn             
+                                                                            qn
+
+Fig. 4 A possible relative position of x, a/b and the convergents. The dashed circles C and C  are horocycles
+based at x tangent to Ca/b and C pn−1 /qn−1 (color figure online)
+
+
+
+    The first and last inequalities in (38) follow from (37) and the fact pn−1 /qn−1 <
+    x < pn /qn < a/b. The equality in (38) holds since C pn /qn and C pn−1 /qn−1 are
+    tangent to each other. The second last inequality in (38) follows from (32).
+(3) Finally, let a/b ∈ ( pn−1 /qn−1 , pn /qn ). Denote by C and C  the horocycles based
+    at x tangent to Ca/b and C pn−1 /qn−1 , respectively (see Fig. 4). Since the tangent
+    point of C and Ca/b is an interior point of the area bounded by C pn−1 /qn−1 , C pn /qn
+    and the real line, we conclude that C intersects C pn−1 /qn−1 . Thus, C is larger than
+    C  , i.e, R pn−1 /qn−1 (x) < Ra/b (x).
+                                                                                                            
+                                                                                                            
+
+
+5 Relation with the regular continued fraction
+
+For simplicity, we denote a RCF as in (1) by [d0 ; d1 , d2 , · · · , d j , · · · ]. For 1 ≤ j ≤ dn
+and for n ≥ 1, the fractions
+
+                                        R
+                                       pn,          R + j pR
+                                           j       pn−2    n−1
+                                        R
+                                               =    R + jq R
+                                       qn, j       qn−2   n−1
+
+are called the intermediate convergents (see [12, Section 6] and [17, p.36]). Kraaikamp
+and Lopes [14] showed that the convergents of EICF are intermediate convergents of
+RCF. In this section, we show that the OOCF principal convergents are also interme-
+diate convergents of RCF.
+   The following lemma tells us how the piecewise inverses of OOCF act on RCF
+expansions.
+
+123
+Odd-odd continued fraction algorithm
+
+
+Lemma 5.1 Let x = [0; d1 , d2 , · · · ]. Then, the RCF expansion of f (a,ε) (x) is as fol-
+lows:
+                    ⎧
+                    ⎪
+                    ⎪ [0; 2, d1 , d2 , · · · ]               if ε = 1, a = 1,
+                    ⎨
+                      [0; 1, (a − 1), 1, d1 , d2 , · · · ]   if ε = 1, a ≥ 2,
+      f (a,ε) (x) =
+                    ⎪
+                    ⎪ [0; (d1 +   2),  d 2 , · · · ]         if ε = −1, a = 2,
+                    ⎩
+                      [0; 1, (a − 1), (d1 + 1), d2 , · · · ] if ε = −1, a ≥ 3.
+
+Proof If ε = 1, then
+                                                       
+                                                           [0; 2, d1 , d2 , · · · ]      if a = 1,
+     f (a,ε) (x) = 1 − [0; a, 1, d1 , d2 , · · · ] =
+                                                           [0; 1, a − 1, 1, d1 , · · · ] if a ≥ 2.
+
+If ε = −1, then
+
+                             1                                       1
+ f (a,ε) (x) = 1 −                             =1−
+                  a − [0; 1, d1 , d2 , · · · ]      (a − 1) + 1 − [0; 1, d1 , d2 , · · · ]
+                                                    
+                                                      [0; d1 + 2, d2 , · · · ]              if a = 2,
+            = 1 − [0; a − 1, d1 + 1, d2 , · · · ] =
+                                                      [0; 1, a − 1, 1, d1 + 1, d2 , · · · ] if a ≥ 3.
+
+                                                                                                        
+                                                                                                        
+   Applying Lemma 5.1, we have the following theorem.
+Theorem 5.2 The OOCF principal convergents of x are intermediate convergents of
+x.
+Proof Let x = [0; d1 , d2 , · · · ] = [[(a1 , ε1 ), (a2 , ε2 ), · · · ]]. Note that
+
+            x = f (a1 ,ε1 ) ◦ f (a2 ,ε2 ) ◦ · · · ◦ f (ak ,εk ) ([[(ak+1 , εk+1 ), · · · ]]) and
+           pk
+              = f (a1 ,ε1 ) ◦ f (a2 ,ε2 ) ◦ · · · ◦ f (ak ,εk ) (1).
+           qk
+
+By Lemma 5.1, x and pk /qk have the same prefix in their RCF expansions, except for
+                                                                                       
+the last partial quotient of pk /qk . Thus, pk /qk is an intermediate convergent of x. 
+  Next, we show that we can convert RCF expansions into OOCF expansions. Before
+we state the theorem, let us introduce the following notations:
+           
+             x = [0; d1 , · · · , dn , τ ]                          if G n (x) = τ,
+             x = [[(a1 , ε1 ), (a2 , ε2 ), · · · , (an , εn ), γ ]] if TOOCF
+                                                                        n     (x) = γ .
+
+Theorem 5.3 We can convert RCF expansions into OOCF expansions by the following
+relations:
+                        ⎧           d1 −1
+                        ⎪                                                               1
+                        ⎨ [[(2, −1) d 2−1 , (d2 + 1, 1), F(τ )]] if d1 is odd and τ ∈ [ 2 , 1),
+                        ⎪
+ x = [0; d1 , d2 , τ ] = [[(2, −1) 2 , (d2 + 2, −1), F(τ )]] if d1 is odd and τ ∈ [0, 1 ),
+                                     1
+                        ⎪
+                        ⎪                                                                   2
+                        ⎩           d1
+                          [[(2, −1) 2 −1 , (1, 1), G(x)]]        if d1 is even.
+
+
+                                                                                                   123
+                                                                                    D. H. Kim et al.
+
+
+Proof Noting 1+τ
+              1
+                 =1−           1
+                                    , we have
+                              1+ τ1
+
+
+                                                1                   1
+                    [0; 1, d2 , τ ] =                   =1−                 .
+                                            1 + d21+τ          (d2 + 1) + τ
+
+
+If τ ∈ [ 21 , 1), then τ = 1+G(τ
+                             1
+                                 ) . If τ ∈ [0, 2 ), then
+                                                1
+
+
+
+                                                         1
+                                τ =1−                                .
+                                               1 + [τ −1 ]−1+G(τ
+                                                           1
+                                                                 )
+
+
+Thus F(τ ) = [τ −1 ]−1+G(τ
+                     1
+                           )
+                             if τ ∈ [0, 21 ) and F(τ ) = G(τ ) if τ ∈ ( 21 , 1). In the case
+of d1 = 1, we have
+                                    
+                                        [[(d2 + 1, 1), F(τ )]], if τ ∈ [ 21 , 1),
+                [0; 1, d2 , τ ] =                                                            (39)
+                                        [[(d2 + 2, −1), F(τ )]], if τ ∈ [0, 21 ).
+
+Similarly, if d1 = 2, then
+
+                                    1            1
+        x = [0; 2, G(x)] =               =1−            = [[(1, 1), G(x)]].                  (40)
+                                2 + G(x)     1 + 1+G(x)
+                                                   1
+
+
+
+If d1 ≥ 3, i.e., x ∈ (0, 13 ), then
+
+                                                1                 1
+              x = [0; d1 , G(x)] =                    =1−
+                                            d1 + G(x)     1 + 1+(d −2)+G(x)
+                                                                    1
+                                                                          1
+                                    1
+                 = 1−                               = [[(2, −1), TOOCF (x)]].                (41)
+                         2−          1
+                                       1
+                              1+ (d −2)+G(x)
+                                        1
+
+
+Note that there are n ∈ N and r ∈ {0, 1} such that d1 − 1 = 2n + r . Since TOOCF (x) =
+[0; d1 − 2, G(x)], by repeating the process in (41), we have
+
+   [0; d1 , G(x)] = [[(2, −1)n , TOOCF
+                                  n
+                                       (x)]] and TOOCF
+                                                  n
+                                                       (x) = [0; r + 1, G(x)].
+
+Then we can complete the proof by (39) and (40).                                                 
+                                                                                                 
+
+   Since pnR /qnR is a best approximation, if pnR /qnR is a 1-rational, then pnR /qnR is a
+best 1-rational approximation. Thus, by Theorem 1.2, pnR /qnR is an OOCF convergent.
+Now we check when an intermediate convergent is an OOCF convergent. Keita [11]
+proved the following propostion.
+
+
+123
+Odd-odd continued fraction algorithm
+
+
+Proposition (Keita, Proposition 1.2 in [11]) We have
+
+     R
+    qn,0 = qn−2
+            R
+                < qn−1
+                   R
+                       ≤ qn,1
+                          R
+                              < · · · < qn,d
+                                         R
+                                             n
+                                               = qnR and
+                                       |qn,d
+                                         R
+                                             n
+                                               x − pn,d
+                                                    R
+                                                        n
+                                                          | = |qnR x − pnR | < |qn−1
+                                                                                 R
+                                                                                     x − pn−1
+                                                                                          R
+                                                                                              |
+           ≤ |qn,d
+               R
+                   n −1
+                        x − pn,d
+                             R
+                                 n −1
+                                      | < · · · < |qn,0
+                                                    R
+                                                        x − pn,0
+                                                             R
+                                                                 | = |qn−2
+                                                                       R
+                                                                           x − pn−2
+                                                                                R
+                                                                                    |.
+
+
+   By the above proposition and Theorem 5.2, if pn−1   R /q R
+                                                             n−1 is a 1-rational, then
+pn, j /qn, j is not an OOCF principal convergent for any 1 ≤ j < dn . If pn−1
+  R     R                                                                    R /q R
+                                                                                   n−1
+is an ∞-rational and pn, R /q R is a 1-rational, then p R /q R is an OOCF principal
+                          j n, j                       n, j n, j
+convergent.
+
+Acknowledgements We thank the referee for her/his valuable remarks and suggestions which significantly
+improve the presentation of the paper. D. K. and S. L. were supported by the National Research Founda-
+tion of Korea (NRF-2018R1A2B6001624). S. L. also acknowledges the support of the Centro di Ricerca
+Matematica Ennio de Giorgi and of UniCredit Bank R&D group for financial support through the Dynamics
+and Information Theory Institute at the Scuola Normale Superiore.
+
+Funding Open access funding provided by Scuola Normale Superiore within the CRUI-CARE Agreement.
+
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which
+permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give
+appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence,
+and indicate if changes were made. The images or other third party material in this article are included
+in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If
+material is not included in the article’s Creative Commons licence and your intended use is not permitted
+by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the
+copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+
+
+
+References
+ 1. Alperin, R.C.: The modular tree of Pythagoras. Am. Math. Mon. 112(9), 807–816 (2005)
+ 2. Barning, F.J.M.: On Pythagorean and quasi-Pythagorean triangles and a generation process with the
+    help of unimodular matrices. Math. Cent. Amsterdam Afd. Zuivere Wisk. 1963(ZW–011), 37 (1963)
+ 3. Berggren, B.: Pytagoreiska triangular. Tidskr. Elementär Mat. Fys. Kemi. 17, 129–139 (1934)
+ 4. Boca, F.P., Merriman, C.: Coding of geodesics on some modular surfaces and applications to odd and
+    even continued fractions. Indag. Math. 29(5), 1214–1234 (2018)
+ 5. Cha, B., Kim, D.H.: Intrinsic Diophantine approximation of a unit circle and its Lagrange spectrum
+    (2019) (available at arXiv:1903.02882)
+ 6. Cha, B., Kim, D.H.: Number theoretical properties of Romik’s dynamical system. Bull. Korean Math.
+    Soc. 57(1), 251–274 (2020)
+ 7. Cha, B., Nguyen, E., Tauber, B.: Quadratic forms and their Berggren trees. J. Number Theory 185,
+    218–256 (2018)
+ 8. Conrad, K.: Pythagorean descent. (2007) (available at http://www.math.uconn.edu/~kconrad/blurbs/
+    linmultialg/descentPythag.pdf)
+ 9. Ito, S.: Algorithms with mediant convergence and their metrical theory. Osaka J. Math. 26(3), 557–578
+    (1989)
+10. Jager, H., Liardet, P.: Distributions arithmétiques des dénominateurs de convergents de fractions con-
+    tinues. Indag. Math. 91(2), 181–197 (1988)
+11. Keita, A.: Continued fractions and parametric geometry of numbers. J. Théor. Nr. Bordx. 29(1), 129–
+    135 (2017)
+
+
+                                                                                               123
+                                                                                            D. H. Kim et al.
+
+
+12. Khinchin, A.Y.: Continued Fractions, Translated from the 3rd (1961) Russian ed., Reprint of the 1964
+    Translation. Dover Publications, Mineola (1997)
+13. Kraaikamp, C.: A new class of continued fraction expansions. Acta Arith. 57(1), 1–39 (1991)
+14. Kraaikamp, C., Lopes, A.: The theta group and the continued fraction expansion with even partial
+    quotients. Geom. Dedicata. 59(3), 293–333 (1996)
+15. Moeckel, R.: Geodesics on modular surfaces and continued fractions. Ergod. Thoery Dyn. Syst. 2(1),
+    69–83 (1982)
+16. Panti, G.: Billiards on pythagorean triples and their Minkowski functions. Discret. Contin. Dyn. Syst.
+    40(7), 4341–4378 (2020)
+17. Rockett, A.M., Szüsz, P.: Continued Fractions. World Scientific Publishing Co., Singapore (1992)
+18. Romik, D.: The dynamics of Pythagorean triples. Trans. Am. Math. Soc. 360(11), 6045–6064 (2008)
+19. Schweiger, F.: Continued fractions with odd and even partial quotients. Arbeitsber. Math. Inst. Univ.
+    Salzburg. 4, 59–70 (1982)
+20. Schweiger, F.: On the approximation by continued fractions with odd and even partial quotients.
+    Arbeitsber. Math. Inst. Univ. Salzburg. 1(2), 105–114 (1984)
+21. Schweiger, F.: Ergodic Theory of Fibred Systems and Metric Number Theory. Oxford University Press,
+    Oxford (1995)
+22. Series, C.: The modular surface and continued fractions. J. Lond. Math. Soc. s2–31(1), 69–80 (1985)
+23. Short, I., Walker, M.: Even-integer continued fractions and the Farey tree. In: Symmetries in Graphs,
+    Maps, and Polytopes Workshop (Springer Proc. in Math. Stat. 159), pp. 287–300. Springer, (2016)
+
+
+Publisher’s Note Springer Nature remains neutral with regard to jurisdictional claims in published maps
+and institutional affiliations.
+
+
+
+
+123
+

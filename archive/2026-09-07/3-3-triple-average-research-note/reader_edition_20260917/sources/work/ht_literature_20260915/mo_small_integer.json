@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "tags": [
+        "nt.number-theory",
+        "diophantine-equations"
+      ],
+      "owner": {
+        "account_id": 101055,
+        "reputation": 4866,
+        "user_id": 2784,
+        "user_type": "registered",
+        "accept_rate": 60,
+        "profile_image": "https://www.gravatar.com/avatar/1585f2a4b289d1a55918a443ef4791f5?s=256&d=identicon&r=PG",
+        "display_name": "Victor Miller",
+        "link": "https://mathoverflow.net/users/2784/victor-miller"
+      },
+      "is_answered": true,
+      "view_count": 854,
+      "accepted_answer_id": 126319,
+      "answer_count": 1,
+      "score": 10,
+      "last_activity_date": 1364940075,
+      "creation_date": 1364918489,
+      "last_edit_date": 1364934815,
+      "question_id": 126284,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/126284/binary-expansion-of-squares",
+      "title": "Binary expansion of squares",
+      "body": "<p>I came across the following simple question: what odd integer squares have exactly 3 ones in their binary expansion?</p>\n\n<p>After looking at it for a while I convinced myself that the only solutions to $r^2 = 1+ 2^m + 2^n$ (with $n &gt; m \\ge 3$) are $n=2m-2$ (the \"trivial\" case) and $(m,n) = (4,5),(4,9)$ (the \"sporadic\" cases).  My first attempt was to analyze things 2-adically: write out the Taylor Series:\n$f(x) = 1 - 2 \\sum_{n=1}^{\\infty} (-1)^n C_{n-1} x^n$, where $C_n = \\frac{1}{n+1} \\binom{2n}{n}$ is the $n$-th Catalan number, and $v_2(x) &gt; 0$.  We have $f(x)^2 = 1 + 4x$, so that $a_m := \\sqrt{1+2^m} = f(2^{m-2})$ (Note that $1+2^m$ is not a rational square when $m \\ne 3$).  If such an integer $r$ exists, then we must have $r \\equiv \\epsilon(a_m + 2^{n-1}) \\bmod {2^{n+1}}$, where $\\epsilon = \\pm 1, \\pm (1+2^n)$ is one of the 4 square roots of 1 modulo $2^{n+1}$.  Also, we must have $r &lt; 2^{(n+1)/2}$.  To get rid of the annoying cases, take all of this modulo $2^{n-1}$, where we find that the top $(n-3)/2$ bits of $a_m \\bmod 2^{n-1}$ must be either all 0's or all 1's.  By writing out the first few terms of $f(x)$ I found that there's a run of $m-2$ 0's which corresponds to the trivial solution, and a run of $m-1$ 1's which corresponds to the sporadic solution (the condition that $m-1 \\ge (n-3)/2$ limits the possible $m$'s and $n$'s to a small set).  However, I don't see any easy way to show that there are no long \"runs\" of 1's or 0's among the higher bits of $a_m$ (by the bits, I mean to write out $a_m = \\sum_{n=0}^{\\infty} b_{m,n} 2^n$, where $b_{m,n} \\in \\{0,1\\}$).  Such a statement would be to the effect that we can't approximate $a_m$ too closely by small integers -- this is the sort of $p$-adic Diophantine approximation statement that I would think should be true, but I can't find it.</p>\n\n<p>Absent that, another approach is via $S$-unit equations.  This show (see below) that for each $m$, there are only a finite number $n$'s for which $1+2^m + 2^n$ is a rational square, but I'd like to prove (with the exception of the sporadic solution) that there is exactly 1.  Since, as I mentioned above, $1+2^m$ is not a rational square when $m &gt; 3$, denote by $K = K_m = \\mathbb{Q}(\\sqrt{1+2^m})$.  It's easy to see that the prime 2 splits in $K$: call $\\frak{a},\\frak{a}'$ the ideals above 2. Let $k&gt;0$ denote the order of $\\frak{a}$ in the ideal class group of $K$ and $\\beta$ a generator of the principal ideal $\\frak{a}^k$.  Also denote conjugation of $K/\\mathbb{Q}$ by $\\quad '$.  Then we have $r+\\sqrt{1+2^m} = \\epsilon \\beta^t 2^u$, for some non-negative integers $t,u$ and $\\epsilon \\in K$ is a unit.  Note that we might need to look at $r-\\sqrt{1+2^m}$ instead.  By taking norms we see that $2^{2n} = 2^{2u + kt}$, so that $2n = 2u+kt$.  By noting that $\\epsilon \\beta^t 2^u - \\epsilon' {\\beta'}^t 2^u = 2 \\sqrt{1+2^m}$, we see that $u=0,1$.  For each of those values we then have an equation of the form $\\alpha - \\alpha' = \\gamma$, where $\\gamma$ is fixed, and $\\alpha,\\alpha'$ are $S$-units (here $S$ consists of the primes above 2), so we know that there are only a finite number of solutions.  Any suggestions as to how to proceed to show that my initial guesses are correct?</p>\n"
+    }
+  ],
+  "has_more": false,
+  "quota_max": 300,
+  "quota_remaining": 293
+}

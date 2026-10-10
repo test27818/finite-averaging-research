@@ -1,0 +1,270 @@
+PASS means that the listed program exited successfully and emitted every expected marker. Its mathematical force is limited by evidence_scope and does not automatically prove the whole claim.
+
+[transverse-root-shallow-lifting] Three conjugate tangent roots lift the retained nine-offset local control to a shallow congruence kernel: Gamma(n,R) for odd n and Gamma(2 delta n,R) for even n, reducing the uniform formula boundary to p>=83 and retaining162 physical cases below83.
+  evidence=theorem-certificate  status=proved-shallow-global-lift-with-stated-Morris-Serre-dependencies  runtime=short
+  $ python work/verify_transverse_root_lifting.py
+    three conjugate tangent determinant: PASS
+    exact layer corrections without orbit enumeration: PASS 36
+    shallow-kernel retained physical certificates: PASS 162 676
+    three-row uniform formulas from83: PASS 387
+    small-unit interval covers: PASS 15
+    transverse root lifting and shallow terminal interfaces: PASS
+  command PASS (1.63s)
+[transverse-root-shallow-lifting] PASS (1.63s)
+
+[two-p-plus-two-uniform] For every prime p>=5, every n=2p+2 input has the complete G=1 criterion without omega(p+1) restrictions. A corrected one-output three-atom overlap reflection yields U(Z[1/p]), L(h Z[1/p]) and Gamma(h^2,Z[1/p]); state-dependent Mp and Mq returns set the carrier coordinate to +-1 modulo h^2, then an integer upper shift and exact principal fiber terminate.
+  evidence=symbolic-check  status=proved-all-two-p-plus-two-with-stated-Morris-Serre-dependencies  runtime=short
+  $ python work/verify_two_p_plus_two_uniform.py
+    2p+2 corrected one-carrier reflection returns: PASS 166
+    2p+2 original-position reflection replays: PASS 80
+    2p+2 state-dependent M_p/M_q CRT normalization: PASS 1992
+    2p+2 former p29 two-prime descent obstruction: PASS
+    2p+2 exact terminal congruence interface: PASS
+  command PASS (0.69s)
+[two-p-plus-two-uniform] PASS (0.69s)
+
+[three-p-minus-one-completion] For every prime p>=5, all n=3p-1 inputs satisfy the complete G=1 criterion. For p>=7, two overlapping reflection families give roots with ideal 2n, multiplication by3 folds every unit representative below p, one fixed reflection supplies a universal local direction cycle, and exact principal fibers finish. The p=5,n=14 case is closed by one explicit affine sandwich and the same local interface, yielding N(5)=11.
+  evidence=symbolic-check  status=proved-all-three-p-minus-one-and-five-average-optimal-threshold-with-stated-Morris-Serre-dependencies  runtime=short
+  $ python work/verify_three_p_minus_one_completion.py
+    three-p-minus-one uniform reflections and roots: PASS 50
+    three-p-minus-one complete odd unit representatives: PASS 7874
+    three-p-minus-one direction-scale and exact-fiber checks: PASS 200
+    three-p-minus-one literal original-position returns: PASS 78
+    five-average fourteen inverse sandwich and unit generators: PASS 336
+    five-average fourteen exact terminal interfaces: PASS 12
+    all-prime three-p-minus-one completion: PASS
+  command PASS (0.45s)
+[three-p-minus-one-completion] PASS (0.45s)
+
+[upper-band-small-prime-interface] A common capacity, affine-minor, unit-density and local-congruence interface completes the eight upper-boundary pairs for p19,23,29,31 and the three remaining pairs(13,50),(13,51),(17,66). Together with the old prime-position43/67 cases, the existing p>=37 upper band and the completed4p tail, this proves N(p)<=3p+10 for every prime p>=5, without small-prime threshold exceptions.
+  evidence=symbolic-check  status=proved-all-prime-three-p-plus10-threshold-with-stated-Morris-Serre-dependencies  runtime=short
+  $ python work/verify_upper_band_small_prime_interface.py
+    interface-row (19, 74, 4, 4, 13, 35, 12, 36, (25, 6, 8, -31, 117))
+    interface-row (19, 75, 4, 4, 11, 36, 14, 40, None)
+    interface-row (23, 90, 5, 5, 15, 43, 8, 24, (29, 7, 9, -37, 143))
+    interface-row (23, 91, 4, 5, 13, 44, 24, 72, None)
+    interface-row (29, 114, 6, 6, 18, 55, 12, 36, (35, 8, 10, -103, 125))
+    interface-row (29, 115, 5, 6, 16, 56, 31, 88, None)
+    interface-row (31, 122, 6, 6, 19, 59, 21, 60, (37, 8, 10, -171, 73))
+    interface-row (31, 123, 6, 6, 17, 60, 28, 80, None)
+    small-prime upper-boundary capacity interfaces: PASS 8
+    small-prime upper-boundary literal scalar returns: PASS 32
+    small-prime upper-boundary full unit representatives: PASS 436
+    small-prime upper-boundary exact local terminal interfaces: PASS 40
+    uniform upper boundaries for every prime at least19: PASS
+  command PASS (0.28s)
+  $ python work/verify_upper_band_three_residual_interfaces.py
+    residual-interface-row 13 50 (10, 23, 6) -29/21 -303/197
+    residual-interface-row 13 51 (8, 24, 10) -22/29 -353/157
+    residual-interface-row 17 66 (12, 31, 7) -37/29 -631/293
+    three residual affine-minor and saturation interfaces: PASS 3
+    three residual original-position returns: PASS 36
+    three residual full unit representatives: PASS 72
+    three residual complete direction-scale transports: PASS 15
+    all-prime three-p-plus10 threshold interfaces: PASS
+  command PASS (0.19s)
+[upper-band-small-prime-interface] PASS (0.46s)
+
+[four-p-tail-completion] Every prime p>=5 has the complete p-power G criterion for all n>=4p. Every dimension missed by n>=4p-2+d_p(n) has n=4p+s and omega(n)>=s+3, which forces explicit capacities and unit density. Unrestricted entry to a (2p,p,p+s) core, four five-atom involutions, root gcd equal to gcd(n,5), local directions and all-unit scales give exact termination. Together with the established upper band this proves N(p)<=3p+10 for every prime p>=37.
+  evidence=symbolic-check  status=proved-all-four-p-tail-and-three-p-plus10-threshold-with-stated-Morris-Serre-dependencies  runtime=short
+  $ python work/verify_four_p_tail_completion.py
+    four-p tail arithmetic and unit-density bounds: PASS 366
+    four-p tail five-atom systems and root gcd: PASS 366 39
+    four-p tail literal return cycles: PASS 32
+    four-p tail complete direction-scale transports: PASS 732
+    four-p tail formerly missing761-3045: PASS
+    four-p tail unrestricted original-input entries: PASS 3 22
+    four-p tail repair interfaces: PASS
+  command PASS (6.84s)
+[four-p-tail-completion] PASS (6.84s)
+
+[upper-band-overlap-completion] For every prime p>=37 and (p+21)/2<=r<=p-1, all inputs at n=3p+r have the G=1 criterion. This completes both4p-2 and4p-1 uniformly, and combines with the previous interior theorem to cover3p+10<=n<=4p-1. A carrier replacement using one overlapping average gives a trace-zero matrix independent of the block weight m whenever its explicit capacities hold.
+  evidence=symbolic-check  status=proved-near-four-p-and-both-upper-boundaries-for-p-at-least37-with-stated-external-dependencies  runtime=short
+  $ python work/verify_upper_band_overlap_completion.py
+    overlap upper-band capacities and root identities: PASS 1666
+    overlap upper-band local-p congruence removal: PASS 1666
+    overlap upper-band literal scalar returns: PASS 40
+    overlap upper-band complete direction-scale transports: PASS 3332
+    overlap upper-band two final dimensions: PASS 70
+    overlap arity-independent weighted return formula: PASS 36
+    overlap upper-band completion: PASS
+  command PASS (5.20s)
+[upper-band-overlap-completion] PASS (5.20s)
+
+[upper-band-unrestricted-completion] For every prime p>=13 and every 3p+10<=n<=4p-3, all legal original inputs have the complete G=1 criterion without parity, mod3 or prime-factor-count restrictions. Existing deep congruence control activates actual return inverses, removes the auxiliary factors of r, and supports full projective direction and unit-scale transport to an exact zero terminal.
+  evidence=symbolic-check  status=proved-unrestricted-upper-interior-with-stated-Morris-Serre-dependencies-fringes-and-tail-open  runtime=short
+  $ python work/verify_upper_band_unrestricted_completion.py
+    upper interior capacity, inverse and unit formulas: PASS 3707
+    upper interior literal original-position returns: PASS 192
+    upper interior all-prime direction transports: PASS 7414
+    upper interior unit-scale lifts and exact fibers: PASS 322
+    upper interior unrestricted completion interfaces: PASS
+  command PASS (36.10s)
+[upper-band-unrestricted-completion] PASS (36.11s)
+
+[even-interior-completion] For every prime p>=7 and every even remainder 4<=r<=p-3, all legal (p,p,r) cores and all legal original inputs at n=2p+r have the complete G=1 criterion. The proof combines a finite-inverse lifting lemma, odd-divisor carrier scaling, prime-power projective cycles, principal-unit scale generation and exhaustive dyadic parameter certificates. The two remaining even single-involution boundaries r=2 and r=p-1 are excluded.
+  evidence=symbolic-check  status=proved-all-internal-even-remainders-with-unrestricted-entry-and-stated-Morris-Serre-dependencies-boundaries-open  runtime=short
+  $ python work/verify_even_odd_half_core.py
+    odd-half even-core uniform algebra systems: PASS 65
+    all finite unit classes have small realizable representatives: PASS 9200
+    exact principal terminal transports: PASS 520
+    positive p-inverse activation identities: PASS 13
+    odd-half even-core literal upper and lower roots: PASS 30
+    uniform seven-atom full zero paths: PASS 5
+    unrestricted input entry joined to even-core terminal matrix: PASS 3
+    Gamma1 finite-ring elimination including even levels: PASS 3408
+    all interior odd-half even-core systems: PASS 110
+    finite congruence bridge activates odd t inverse: PASS 110
+    prime-power projective cycles and principal-unit lifts: PASS 880 880
+    exceptional mod9 return repaired by adjacent choice: PASS 5
+    beyond balanced-capacity exact terminal matrices: PASS 2
+    uniform odd-half even-remainder completion: PASS
+  command PASS (0.96s)
+  $ python work/verify_even_interior_completion.py
+    uniform r4 normalized dyadic certificate: PASS 64 2048
+    uniform r=p-3 normalized dyadic certificate: PASS 256 128
+    uniform safe trace-two returns and root-ideal improvement: PASS 7
+    general interior returns and odd-divisor inverse sandwiches: PASS 30 6
+    all 4-divisible interior remainders finite terminal lifts: PASS 255
+    r4 and r=p-3 complete normalized terminal lifts: PASS 48
+    all internal even-remainder completion: PASS
+  command PASS (1.04s)
+[even-interior-completion] PASS (2.00s)
+
+[unrestricted-endpoint-entry] A three-singleton exchange commutator gives the explicit transfer I+((p-1)/p)(e_k-e_j)e_i^T. Formal inverses are compiled into positive powers only modulo rad(n), which is sufficient for entry. Degenerate primes divide gcd(p-1,n)=gcd(p-1,r+2), so r surviving singleton roles protect them while CRT or a short sieve transfers all other witnesses. This proves unrestricted legal two-block entry for coprime n=2p+r, 1<=r<p. Joining existing core theorems proves the complete G=1 criterion for every odd-p endpoint n=2p+1 and all odd lower-band dimensions for prime p, with no factor-count or density restriction.
+  evidence=symbolic-check  status=proved-unrestricted-endpoint-all-input-and-all-odd-lower-band-with-existing-core-dependencies-even-core-termination-open  runtime=short
+  $ python work/verify_unrestricted_endpoint_entry.py
+    three-singleton exact rational commutator: PASS 79
+    positive modular inverses roots and reserve capacity: PASS 1965
+    unrestricted original-position two-block entries: PASS 28
+    unrestricted entry joined to weighted-core reduction: PASS 16
+    seven-prime covering obstruction crossed by fixed positive roots: PASS 53127847 106255695
+    old r-below-prime-count entry gaps crossed: PASS 3
+    unrestricted endpoint and lower-band entry: PASS
+  command PASS (5.42s)
+[unrestricted-endpoint-entry] PASS (5.42s)
+
+[seven-average-sharp-completion] Seven-averaging in dimensions20 and22 has the complete G=1 criterion, giving the sharp final threshold N(7)=15 when joined to the previously completed dimensions. Fixed scalar cycles (PQF)^2=1449I and(FA^2)^2=-7I supply positive inverses. Exact commutator roots and the deep-congruence lemma give principal subgroups. For22, a648-element complete mod9 certificate removes an auxiliary3-primary level, and the full3872-state quotient retains the two unit-scale classes. Both complete finite quotients reach a literal zero-sum seven-tuple.
+  evidence=theorem-certificate  status=proved-dimensions20-and22-and-sharp-seven-average-threshold15-with-stated-external-dependencies  runtime=short
+  $ python work/verify_seven_average_sharp_completion.py
+    seven-average natural cycles have isolated p7 trace zero: PASS 2
+    seven-average fixed scalar cycles and inverse/root replays: PASS 38
+    twenty-two auxiliary3 removal: PASS 648 440
+    seven-average complete finite direction/scale quotient: PASS 20 640 1600 9
+    seven-average exact principal terminal lifts: PASS 20 1600
+    seven-average complete finite direction/scale quotient: PASS 22 440 3872 8
+    seven-average exact principal terminal lifts: PASS 22 3872
+    seven-average full-input entries and literal tails: PASS 96 2
+    seven-average known14-dimensional lower-bound input: PASS
+    seven-average dimensions20 and22 complete; N7=15: PASS
+  command PASS (1.05s)
+[seven-average-sharp-completion] PASS (1.05s)
+
+[upper-band-four-return-congruence] For n=3p+r, whenever both existing carrier-involution parameter intervals contain adjacent pairs, four literal returns yield U(rn^2R), L(rn^2R), hence Gamma(r^2n^4,R) by the previously proved deep-congruence lemma. R=Z[1/(de*mu*nu)] is justified by the two multiplier rings. The capacity condition holds for every prime p>=13 and10<=r<=p-3. This is a group-control theorem, not terminal coverage or a new solved dimension.
+  evidence=symbolic-check  status=proved-uniform-upper-band-deep-congruence-interface-terminal-coverage-open  runtime=short
+  $ python work/verify_upper_band_four_return_congruence.py
+    upper-band four-return matrix systems: PASS 2188
+    upper-band uniform interior capacities: PASS 2172
+    upper-band literal four-return checks: PASS 344
+    upper-band first-fringe capacity boundary: PASS
+    upper-band deep congruence interface: PASS
+  command PASS (1.47s)
+[upper-band-four-return-congruence] PASS (1.47s)
+
+[uniform-odd-middle-cores] For every prime p>=5 and odd3<=r<p, all legal (p,p,r) cores are reachable. Two universally available returns yield U(nZ[1/2]) and L(nZ[1/2]); integer conjugate nilpotents and finite-index/strong-CSP theorems give Gamma(n,Z[1/2]). A CRT matrix sandwich makes the carrier-preserving F1 contraction positively invertible. A balanced representative and one dyadic fold replace primitive-root assumptions, giving exact terminal transport. With the existing entry criterion this solves all prime dimensions2p<n<3p and qualifying odd composite dimensions, including seven-averaging17 and19.
+  evidence=symbolic-check  status=proved-uniform-odd-remainder-cores-and-qualified-full-input-dimensions-no-threshold-drop  runtime=short
+  $ python work/verify_uniform_odd_middle_cores.py
+    odd middle core parameter systems: PASS 71
+    odd middle literal return checks: PASS 426
+    odd middle exact terminal transports: PASS 284 52
+    CRT principal inverse activation: PASS 6
+    odd middle existing full-input entries: PASS 69
+    uniform odd middle core theorem: PASS
+  command PASS (0.94s)
+[uniform-odd-middle-cores] PASS (0.94s)
+
+[endpoint-congruence-completion] For A=Z[1/2] and every odd n, U(A) and L(nA) generate Gamma1(n,A): Morris 2007 Theorem6.1(2) gives finite index, Serre's strong congruence subgroup property gives a principal congruence subgroup, and the document supplies explicit generation in every finite quotient. A balanced small unit representative then places integer Gamma0(2p+1) in the existing positive endpoint controller for every odd arity p>=3. All legal endpoint cores are reachable. Existing omega(n)<=6 or Theta(n)<1 entry theorems yield full-input endpoint criteria in those ranges.
+  evidence=symbolic-check  status=proved-using-stated-external-arithmetic-group-theorems-general-entry-and-threshold-open  runtime=short
+  $ python work/verify_endpoint_congruence_completion.py
+    finite congruence images: PASS 34 184597
+    constructive quotient decompositions: PASS 4947
+    balanced unit and coset reduction: PASS 9422 9422
+    existing positive compiler coset representatives: PASS 28
+    endpoint congruence completion algebra: PASS
+  command PASS (1.27s)
+[endpoint-congruence-completion] PASS (1.27s)
+
+[upper-band-three-value-reduction] For every prime p>=5 and 3p<n<4p, every primitive zero-sum G=1 input reaches a legal weighted (2p,p,n-3p) core in at most 12+3*omega(n) original-position averages. No remainder or prime-factor-count condition is needed. The core has G=gcd(y,n), an explicit energy of discriminant -8*n*(n-3p), and physical three-step trace-zero returns for every remainder r>=4.
+  evidence=symbolic-check  status=proved-uniform-upper-band-entry-and-core-identities-terminal-coverage-open  runtime=short
+  $ python work/verify_upper_band_three_value_reduction.py
+    upper-band elementary residue selector: PASS 1770 106534
+    upper-band all-remainder labelled entries: PASS 376 18 17
+    upper-band forced multi-prime support growth: PASS 5 5
+    upper-band simultaneous main-block repair and fold: PASS 4
+    upper-band quadratic core and primitive-height boundary: PASS 564 544
+    upper-band physical trace-zero core returns: PASS 700
+    upper-band uniform three-value reduction: PASS
+  command PASS (12.54s)
+[upper-band-three-value-reduction] PASS (12.54s)
+
+[inverse-egz-threshold] For every prime p>=5, n>=4p-2+d_p(n) implies the full p-power G criterion with at most one additional p-adic digit. Thus N(p)<=4p+ceil(log2 p), N(5)<=19, and N(7)<=27. Three-heavy closure already holds at n>=3p+2; two distinct-residue heavy values with total multiplicity at least3p-2 can share their reserve. An elementary inverse EGZ theorem at2p-2 and one/two borrowed-anchor repairs close the remaining protected pool.
+  evidence=symbolic-check  status=proved-inverse-egz-improved-uniform-threshold  runtime=short
+  $ python work/verify_inverse_egz_threshold.py
+    inverse EGZ complete unordered boundary residues: PASS 19059
+    inverse EGZ threshold large-coordinate closure: PASS 1650
+    inverse EGZ borrowed-anchor collision certificates: PASS {'borrow-two': 28, 'borrow-vary-spare': 28, 'borrow-one': 4, 'borrow-vary-selected': 4}
+    combined heavy-reserve two-sided crossings: PASS {'combined-negative-crossing': 6, 'combined-positive-crossing': 6}
+    inverse EGZ threshold literal one-digit full paths: PASS 36 111
+    inverse EGZ threshold observed branches: {'anchor-residue-double': 8, 'anchor-residue-single': 1093, 'borrow-one': 8, 'coefficient-crossing': 26, 'combined-single': 309, 'four-heavy-common-residue': 5, 'four-heavy-extreme-anchor': 16, 'inverse-EGZ-subset': 824, 'protected-EGZ': 10, 'same-residue': 221, 'same-residue-background': 23, 'single-value-controller': 207, 'three-heavy-light-above': 154, 'three-heavy-light-below': 351, 'three-heavy-minimum-spare': 87, 'three-heavy-shared-residue': 196, 'three-opposite-terminal': 36}
+    inverse EGZ improved threshold: PASS
+  command PASS (0.79s)
+  $ python work/verify_three_heavy_two_spares.py
+    three-heavy two-spare exact closure: PASS {'one-middle': 379, 'two-middle': 456, 'opposite-terminal': 34}
+    three-heavy two-spare lemma: PASS
+  command PASS (0.14s)
+[inverse-egz-threshold] PASS (0.93s)
+
+[prime-arity-middle-band] For every odd prime averaging arity p, all n=3p inputs satisfy the p-power G criterion. For p>=5, two explicit nonnegative3-by-3 transport tables realize U(1) and U(-1) on three p-copy blocks; block relabelling supplies L(3), and the same four-coset Gamma_0(3) certificate, a mod3 partition repair and a three-average terminal cover all inputs. The p=3 case is the nine-position network. Also, n>=3p+d_p(n) suffices for safe integer double-heavy closure when the two heavy values are congruent modulo p.
+  evidence=symbolic-check  status=proved-three-p-dimension-and-same-residue-heavy-closure  runtime=instant
+  $ python work/verify_prime_arity_middle_band.py
+    three-p nonnegative transport and literal basis replay: PASS 40
+    three-p complete Gamma0(3) Schreier certificate: PASS 12
+    three-p former invariant-obstruction family: PASS 7
+    three-p legal G=p complete paths: PASS 7
+    three-p arbitrary-input literal Fraction complete paths: PASS 56 105
+    three-p-scale same-residue heavy closure: PASS 996
+    prime-arity middle-band structure: PASS
+  command PASS (0.62s)
+[prime-arity-middle-band] PASS (0.62s)
+
+[prime-arity-linear-threshold] For any prime averaging arity p, the full p-power gcd criterion holds when n>=d_p(n)+8p-7, hence for every n>=9p-5, with one extra p-adic digit of precision. Protected EGZ subsets, an extreme unused heavy value and a sorted negative-coefficient crossing remove the earlier quadratic and cubic losses. For odd p, the G1 state(-p,0^(p-1),1^p) at n=2p is unreachable, whereas adding one zero makes this family four-step reachable. At n=2p+1, the legal state(1^p,2^p,-3p) has only one nonconstant integer operation, which destroys the double-p-heavy invariant.
+  evidence=finite-sanity  status=proved-linear-upper-bound-and-critical-dimension-obstructions  runtime=short
+  $ python work/verify_prime_arity_linear_threshold.py
+    linear threshold capacity checks: PASS 1240
+    EGZ fixed-cardinality residue witnesses: PASS 1200
+    coefficient-crossing exact checks: PASS 3144
+    linear-threshold large-integer closure: PASS 1313
+    linear-threshold initialization: PASS 24
+    2p obstruction and 2p+1 four-step family: PASS 7
+    2p+1 double-heavy one-step closure obstruction: PASS 7
+    linear-threshold labelled complete paths: PASS 20 longest (232, 11, 101)
+    linear proof branches: {'coefficient-crossing': 11, 'four-heavy-common-residue': 90, 'four-heavy-extreme-anchor': 1206, 'large-progression-heavy': 1, 'large-second-heavy': 98, 'opposite-pairs-terminal': 20, 'protected-EGZ': 520, 'same-residue-background': 76, 'single-value-controller': 1059}
+    prime-arity linear threshold and boundary: PASS
+  command PASS (1.01s)
+[prime-arity-linear-threshold] PASS (1.01s)
+
+[all-dimensions-double-triple-invariant] Every integral zero-sum n-state with n>=11 that is incongruent at every non-three prime dividing n reaches zero on its original positions with at most one additional trit. A double-triple invariant has a direct safe integer move or an explicit opposite-triples terminal. Multi-prime pool protection, affine witnesses at2 and coprimality exclusions remove the primality hypothesis. The n>=7 criterion follows using only independent7,8,10 base cases and the nine-point network, without general composite reduction.
+  evidence=finite-sanity  status=proved-by-general-case-analysis  runtime=short
+  $ python work/verify_all_dimensions_double_triple_invariant.py
+    uniform protected-pool capacity checks: PASS 9990
+    composite-inclusive bounded closure checks: PASS 17575
+    multi-prime large-coordinate closure checks: PASS 4458
+    multi-prime two-step initialization checks: PASS 4799
+    characteristic-two obstruction and affine repair: PASS 64
+    all-dimension labelled one-trit replays: PASS 80 longest (768, 210)
+    proof branches exercised: {'different-heavy-affine-double': 266, 'different-heavy-neighbor': 6679, 'different-heavy-spare': 390, 'different-heavy-third-residue-choice': 84, 'many-heavy-same-residue': 16806, 'one-affine-singleton-choice': 8, 'one-affine-singleton-spare': 78, 'same-heavy-cross-pools': 137, 'same-heavy-neighbor': 327, 'same-heavy-protected-pool': 18, 'same-heavy-spare': 2111, 'terminal': 20, 'three-heavy-light': 3961, 'three-heavy-rainbow': 996, 'two-affine-singletons': 9, 'two-minimal-heavy-protected-pool': 19}
+    all-dimension double-triple invariant: PASS
+  command PASS (3.23s)
+[all-dimensions-double-triple-invariant] PASS (3.23s)
+
+SUMMARY PASS=18 FAIL=0 SKIP=0 TIME=81.85s

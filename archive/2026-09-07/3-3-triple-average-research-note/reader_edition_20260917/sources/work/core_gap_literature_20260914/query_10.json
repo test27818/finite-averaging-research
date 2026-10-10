@@ -1,0 +1,2017 @@
+{
+  "query": "generalized continued fractions even numerators",
+  "url": "https://api.openalex.org/works?search=generalized+continued+fractions+even+numerators&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Cauthorships%2Cabstract_inverted_index%2Cprimary_location%2Copen_access&filter=title.search%3Acontinued+fractions",
+  "count": 191,
+  "results": [
+    {
+      "id": "https://openalex.org/W2053248030",
+      "title": "Vector continued fractions using a generalized inverse",
+      "publication_date": "2003-12-09",
+      "doi": "https://doi.org/10.1088/0305-4470/37/1/011",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5011837697",
+            "display_name": "Roger Haydock",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I181233156",
+              "display_name": "University of Oregon",
+              "ror": "https://ror.org/0293rh119",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I181233156"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Roger Haydock",
+          "raw_affiliation_strings": [
+            "Department of Physics, University of Oregon, Eugene, OR 97403-1274, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Physics, University of Oregon, Eugene, OR 97403-1274, USA",
+              "institution_ids": [
+                "https://openalex.org/I181233156"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5004503800",
+            "display_name": "C.M.M. Nex",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I181233156",
+              "display_name": "University of Oregon",
+              "ror": "https://ror.org/0293rh119",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I181233156"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "C M M Nex",
+          "raw_affiliation_strings": [
+            "Department of Physics, University of Oregon, Eugene, OR 97403-1274, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Physics, University of Oregon, Eugene, OR 97403-1274, USA",
+              "institution_ids": [
+                "https://openalex.org/I181233156"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5034404489",
+            "display_name": "G Wexler",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210107224",
+              "display_name": "Cavendish Hospital",
+              "ror": "https://ror.org/01gnx5040",
+              "country_code": "GB",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210107224",
+                "https://openalex.org/I4210121323"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Geoffrey Wexler",
+          "raw_affiliation_strings": [
+            "Cavendish Laboratory, Madingley Road, Cambridge CB3 0HE, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Cavendish Laboratory, Madingley Road, Cambridge CB3 0HE, UK",
+              "institution_ids": [
+                "https://openalex.org/I4210107224"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "A": [
+          0
+        ],
+        "real": [
+          1
+        ],
+        "vector": [
+          2,
+          15,
+          22,
+          37,
+          42,
+          50,
+          56,
+          75
+        ],
+        "space": [
+          3
+        ],
+        "combined": [
+          4
+        ],
+        "with": [
+          5
+        ],
+        "an": [
+          6
+        ],
+        "inverse": [
+          7,
+          38
+        ],
+        "for": [
+          8,
+          32
+        ],
+        "vectors": [
+          9
+        ],
+        "is": [
+          10
+        ],
+        "sufficient": [
+          11
+        ],
+        "to": [
+          12,
+          55,
+          69
+        ],
+        "define": [
+          13
+        ],
+        "a": [
+          14
+        ],
+        "continued": [
+          16,
+          47
+        ],
+        "fraction": [
+          17,
+          77
+        ],
+        "whose": [
+          18
+        ],
+        "parameters": [
+          19
+        ],
+        "consist": [
+          20
+        ],
+        "of": [
+          21,
+          26,
+          30,
+          35,
+          41,
+          44,
+          61,
+          71
+        ],
+        "shifts": [
+          23
+        ],
+        "and": [
+          24,
+          57,
+          86
+        ],
+        "changes": [
+          25
+        ],
+        "scale.": [
+          27
+        ],
+        "The": [
+          28,
+          74
+        ],
+        "choice": [
+          29
+        ],
+        "sign": [
+          31
+        ],
+        "different": [
+          33
+        ],
+        "components": [
+          34
+        ],
+        "the": [
+          36,
+          45,
+          62
+        ],
+        "permits": [
+          39
+        ],
+        "construction": [
+          40
+        ],
+        "analogues": [
+          43
+        ],
+        "Jacobi": [
+          46,
+          51,
+          76
+        ],
+        "fraction.": [
+          48
+        ],
+        "These": [
+          49
+        ],
+        "fractions": [
+          52
+        ],
+        "are": [
+          53,
+          83
+        ],
+        "related": [
+          54
+        ],
+        "scalar-valued": [
+          58
+        ],
+        "polynomial": [
+          59
+        ],
+        "functions": [
+          60
+        ],
+        "vectors,": [
+          63
+        ],
+        "which": [
+          64,
+          82
+        ],
+        "satisfy": [
+          65
+        ],
+        "recurrence": [
+          66
+        ],
+        "relations": [
+          67
+        ],
+        "similar": [
+          68
+        ],
+        "those": [
+          70
+        ],
+        "orthogonal": [
+          72
+        ],
+        "polynomials.": [
+          73
+        ],
+        "has": [
+          78
+        ],
+        "strong": [
+          79
+        ],
+        "convergence": [
+          80
+        ],
+        "properties": [
+          81
+        ],
+        "demonstrated": [
+          84
+        ],
+        "analytically,": [
+          85
+        ],
+        "illustrated": [
+          87
+        ],
+        "numerically.": [
+          88
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1088/0305-4470/37/1/011",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1088/0305-4470/37/1/011",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S4210167992",
+          "display_name": "Journal of Physics A Mathematical and General",
+          "issn_l": "0305-4470",
+          "issn": [
+            "0305-4470",
+            "1361-6447"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310311669",
+          "host_organization_name": "Institute of Physics",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310311669"
+          ],
+          "host_organization_lineage_names": [
+            "Institute of Physics"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Journal of Physics A: Mathematical and General",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/math-ph/0310041",
+        "any_repository_has_fulltext": true
+      }
+    },
+    {
+      "id": "https://openalex.org/W2022382077",
+      "title": "Matrix interpretations and applications of the continued fraction algorithm",
+      "publication_date": "1974-06-01",
+      "doi": "https://doi.org/10.1216/rmj-1974-4-2-213",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5060633436",
+            "display_name": "William B. Gragg",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "William B. Gragg",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "abstract_inverted_index": null,
+      "primary_location": {
+        "id": "doi:10.1216/rmj-1974-4-2-213",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1216/rmj-1974-4-2-213",
+        "pdf_url": "https://projecteuclid.org/journals/rocky-mountain-journal-of-mathematics/volume-4/issue-2/Matrix-interpretations-and-applications-of-the-continued-fraction-algorithm/10.1216/RMJ-1974-4-2-213.pdf",
+        "source": {
+          "id": "https://openalex.org/S118967163",
+          "display_name": "Rocky Mountain Journal of Mathematics",
+          "issn_l": "0035-7596",
+          "issn": [
+            "0035-7596",
+            "1945-3795"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4320800688",
+          "host_organization_name": "Rocky Mountain Mathematics Consortium",
+          "host_organization_lineage": [
+            "https://openalex.org/P4320800688"
+          ],
+          "host_organization_lineage_names": [
+            "Rocky Mountain Mathematics Consortium"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Rocky Mountain Journal of Mathematics",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://projecteuclid.org/journals/rocky-mountain-journal-of-mathematics/volume-4/issue-2/Matrix-interpretations-and-applications-of-the-continued-fraction-algorithm/10.1216/RMJ-1974-4-2-213.pdf",
+        "any_repository_has_fulltext": false
+      }
+    },
+    {
+      "id": "https://openalex.org/W1966329175",
+      "title": "Schur's Algorithm, Orthogonal Polynomials, and Convergence of Wall's Continued Fractions in L2( )",
+      "publication_date": "2001-02-01",
+      "doi": "https://doi.org/10.1006/jath.2000.3500",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": null,
+            "display_name": "Sergei Khrushchev",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Sergei Khrushchev",
+          "raw_affiliation_strings": [
+            "Dolgoozernaya ul. 6, Block 1, Apt. 116, 197373, St. Petersburg, Russia",
+            "Dolgoozernaya ul. 6, Block 1, Apt. 116, 197373, St. Petersburg, Russia#TAB#"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Dolgoozernaya ul. 6, Block 1, Apt. 116, 197373, St. Petersburg, Russia",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Dolgoozernaya ul. 6, Block 1, Apt. 116, 197373, St. Petersburg, Russia#TAB#",
+              "institution_ids": []
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "primary_location": {
+        "id": "doi:10.1006/jath.2000.3500",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1006/jath.2000.3500",
+        "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0021904500935007/pdf",
+        "source": {
+          "id": "https://openalex.org/S35093870",
+          "display_name": "Journal of Approximation Theory",
+          "issn_l": "0021-9045",
+          "issn": [
+            "0021-9045",
+            "1096-0430"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Journal of Approximation Theory",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://www.sciencedirect.com/science/article/pii/S0021904500935007/pdf",
+        "any_repository_has_fulltext": false
+      }
+    },
+    {
+      "id": "https://openalex.org/W2014897584",
+      "title": "Vector continued fractions",
+      "publication_date": "1968-07-01",
+      "doi": "https://doi.org/10.1016/0024-3795(68)90015-3",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5038384957",
+            "display_name": "P. Wynn",
+            "orcid": "https://orcid.org/0000-0002-1221-5530"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I135310074",
+              "display_name": "University of Wisconsin–Madison",
+              "ror": "https://ror.org/01y2jtd41",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I135310074"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "P. Wynn",
+          "raw_affiliation_strings": [
+            "University of Wisconsin Madison, Wisconsin, USA",
+            "University of Wisconsin—Madison, Wisconsin, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Wisconsin Madison, Wisconsin, USA",
+              "institution_ids": [
+                "https://openalex.org/I135310074"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Wisconsin—Madison, Wisconsin, USA",
+              "institution_ids": [
+                "https://openalex.org/I135310074"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "primary_location": {
+        "id": "doi:10.1016/0024-3795(68)90015-3",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1016/0024-3795(68)90015-3",
+        "pdf_url": "https://www.sciencedirect.com/science/article/pii/0024379568900153/pdf",
+        "source": {
+          "id": "https://openalex.org/S159544283",
+          "display_name": "Linear Algebra and its Applications",
+          "issn_l": "0024-3795",
+          "issn": [
+            "0024-3795",
+            "1873-1856"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Linear Algebra and its Applications",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://www.sciencedirect.com/science/article/pii/0024379568900153/pdf",
+        "any_repository_has_fulltext": false
+      }
+    },
+    {
+      "id": "https://openalex.org/W1920452216",
+      "title": "Contiguous relations, continued fractions and orthogonality",
+      "publication_date": "1998-01-01",
+      "doi": "https://doi.org/10.1090/s0002-9947-98-01879-0",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5112558311",
+            "display_name": "Dharma P. Gupta",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I185261750",
+              "display_name": "University of Toronto",
+              "ror": "https://ror.org/03dbr7087",
+              "country_code": "CA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I185261750"
+              ]
+            }
+          ],
+          "countries": [
+            "CA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Dharma Gupta",
+          "raw_affiliation_strings": [
+            "Department of Mathematics, University of Toronto, Toronto, M5S 3G3, Canada",
+            "Department of Mathematics, University of Toronto, Toronto, M5S 3G3 Canada"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics, University of Toronto, Toronto, M5S 3G3, Canada",
+              "institution_ids": [
+                "https://openalex.org/I185261750"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematics, University of Toronto, Toronto, M5S 3G3 Canada",
+              "institution_ids": [
+                "https://openalex.org/I185261750"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5077539054",
+            "display_name": "David R. Masson",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I185261750",
+              "display_name": "University of Toronto",
+              "ror": "https://ror.org/03dbr7087",
+              "country_code": "CA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I185261750"
+              ]
+            }
+          ],
+          "countries": [
+            "CA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "David Masson",
+          "raw_affiliation_strings": [
+            "Department of Mathematics, University of Toronto, Toronto, M5S 3G3, Canada",
+            "Department of Mathematics, University of Toronto, Toronto, M5S 3G3 Canada"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics, University of Toronto, Toronto, M5S 3G3, Canada",
+              "institution_ids": [
+                "https://openalex.org/I185261750"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematics, University of Toronto, Toronto, M5S 3G3 Canada",
+              "institution_ids": [
+                "https://openalex.org/I185261750"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "We": [
+          0,
+          25
+        ],
+        "examine": [
+          1
+        ],
+        "a": [
+          2,
+          23,
+          56,
+          84,
+          110
+        ],
+        "special": [
+          3
+        ],
+        "linear": [
+          4
+        ],
+        "combination": [
+          5
+        ],
+        "of": [
+          6,
+          41,
+          87,
+          103,
+          112
+        ],
+        "balanced": [
+          7
+        ],
+        "very-well-poised": [
+          8,
+          160
+        ],
+        "10": [
+          9
+        ],
+        "ϕ": [
+          10,
+          145,
+          162
+        ],
+        "9": [
+          11
+        ],
+        "{_{10}": [
+          12
+        ],
+        "\\phi": [
+          13,
+          148,
+          165
+        ],
+        "_{9}}": [
+          14
+        ],
+        "basic": [
+          15
+        ],
+        "hypergeometric": [
+          16
+        ],
+        "series": [
+          17
+        ],
+        "that": [
+          18,
+          32,
+          59
+        ],
+        "is": [
+          19,
+          70,
+          127
+        ],
+        "known": [
+          20,
+          140
+        ],
+        "to": [
+          21,
+          55,
+          82
+        ],
+        "satisfy": [
+          22
+        ],
+        "transformation.": [
+          24
+        ],
+        "call": [
+          26
+        ],
+        "this": [
+          27,
+          76
+        ],
+        "Φ": [
+          28,
+          46,
+          133
+        ],
+        "\\Phi": [
+          29,
+          47,
+          134
+        ],
+        "and": [
+          30,
+          109,
+          142,
+          154
+        ],
+        "show": [
+          31
+        ],
+        "it": [
+          33
+        ],
+        "satisfies": [
+          34
+        ],
+        "certain": [
+          35
+        ],
+        "three-term": [
+          36,
+          57,
+          130,
+          143
+        ],
+        "contiguous": [
+          37,
+          43
+        ],
+        "relations.": [
+          38
+        ],
+        "From": [
+          39,
+          75
+        ],
+        "two": [
+          40
+        ],
+        "these": [
+          42,
+          159
+        ],
+        "relations": [
+          44
+        ],
+        "for": [
+          45,
+          63,
+          96,
+          132,
+          158
+        ],
+        "we": [
+          48,
+          79
+        ],
+        "obtain": [
+          49
+        ],
+        "fifty-six": [
+          50
+        ],
+        "pairwise": [
+          51
+        ],
+        "linearly": [
+          52
+        ],
+        "independent": [
+          53
+        ],
+        "solutions": [
+          54
+        ],
+        "recurrence": [
+          58,
+          62
+        ],
+        "generalizes": [
+          60,
+          137
+        ],
+        "the": [
+          61,
+          115,
+          139
+        ],
+        "Askey-Wilson": [
+          64
+        ],
+        "polynomials.": [
+          65
+        ],
+        "The": [
+          66
+        ],
+        "associated": [
+          67
+        ],
+        "continued": [
+          68,
+          77,
+          107
+        ],
+        "fraction": [
+          69,
+          78
+        ],
+        "evaluated": [
+          71
+        ],
+        "using": [
+          72
+        ],
+        "Pincherle’s": [
+          73
+        ],
+        "theorem.": [
+          74
+        ],
+        "are": [
+          80,
+          123,
+          152
+        ],
+        "able": [
+          81
+        ],
+        "derive": [
+          83
+        ],
+        "discrete": [
+          85
+        ],
+        "system": [
+          86
+        ],
+        "biorthogonal": [
+          88
+        ],
+        "rational": [
+          89,
+          97
+        ],
+        "functions.": [
+          90
+        ],
+        "This": [
+          91
+        ],
+        "ties": [
+          92
+        ],
+        "together": [
+          93
+        ],
+        "Wilson’s": [
+          94
+        ],
+        "results": [
+          95
+        ],
+        "biorthogonality,": [
+          98
+        ],
+        "Watson’s": [
+          99
+        ],
+        "q": [
+          100,
+          101,
+          119,
+          120
+        ],
+        "-analogue": [
+          102
+        ],
+        "Ramanujan’s": [
+          104
+        ],
+        "Entry": [
+          105
+        ],
+        "40": [
+          106
+        ],
+        "fraction,": [
+          108
+        ],
+        "conjecture": [
+          111
+        ],
+        "Askey": [
+          113
+        ],
+        "concerning": [
+          114
+        ],
+        "latter.": [
+          116
+        ],
+        "Some": [
+          117
+        ],
+        "new": [
+          118,
+          153
+        ],
+        "-series": [
+          121
+        ],
+        "identities": [
+          122,
+          157
+        ],
+        "also": [
+          124
+        ],
+        "obtained.": [
+          125
+        ],
+        "One": [
+          126
+        ],
+        "an": [
+          128
+        ],
+        "important": [
+          129
+        ],
+        "transformation": [
+          131
+        ],
+        "’s": [
+          135
+        ],
+        "which": [
+          136
+        ],
+        "all": [
+          138
+        ],
+        "two-": [
+          141
+        ],
+        "8": [
+          144,
+          161
+        ],
+        "7": [
+          146,
+          163
+        ],
+        "{_{8}": [
+          147,
+          164
+        ],
+        "_{7}}": [
+          149,
+          166
+        ],
+        "transformations.": [
+          150
+        ],
+        "Others": [
+          151
+        ],
+        "unexpected": [
+          155
+        ],
+        "quadratic": [
+          156
+        ],
+        "’s.": [
+          167
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1090/s0002-9947-98-01879-0",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1090/s0002-9947-98-01879-0",
+        "pdf_url": "https://www.ams.org/tran/1998-350-02/S0002-9947-98-01879-0/S0002-9947-98-01879-0.pdf",
+        "source": {
+          "id": "https://openalex.org/S60030702",
+          "display_name": "Transactions of the American Mathematical Society",
+          "issn_l": "0002-9947",
+          "issn": [
+            "0002-9947",
+            "1088-6850"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310315719",
+          "host_organization_name": "American Mathematical Society",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310315719"
+          ],
+          "host_organization_lineage_names": [
+            "American Mathematical Society"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Transactions of the American Mathematical Society",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://www.ams.org/tran/1998-350-02/S0002-9947-98-01879-0/S0002-9947-98-01879-0.pdf",
+        "any_repository_has_fulltext": false
+      }
+    },
+    {
+      "id": "https://openalex.org/W1798325575",
+      "title": "The Generating Function of Ternary Trees and Continued Fractions",
+      "publication_date": "2006-06-12",
+      "doi": "https://doi.org/10.37236/1079",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5050163260",
+            "display_name": "Ira M. Gessel",
+            "orcid": "https://orcid.org/0000-0003-1061-5095"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I6902469",
+              "display_name": "Brandeis University",
+              "ror": "https://ror.org/05abbep66",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I6902469"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ira M. Gessel",
+          "raw_affiliation_strings": [
+            "Department of Mathematics Brandeis University Waltham MA 02454-9110"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics Brandeis University Waltham MA 02454-9110",
+              "institution_ids": [
+                "https://openalex.org/I6902469"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5049446116",
+            "display_name": "Guoce Xin",
+            "orcid": "https://orcid.org/0000-0001-6259-1385"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I6902469",
+              "display_name": "Brandeis University",
+              "ror": "https://ror.org/05abbep66",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I6902469"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Guoce Xin",
+          "raw_affiliation_strings": [
+            "Department of Mathematics Brandeis University Waltham MA 02454-9110"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics Brandeis University Waltham MA 02454-9110",
+              "institution_ids": [
+                "https://openalex.org/I6902469"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Michael": [
+          0
+        ],
+        "Somos": [
+          1
+        ],
+        "conjectured": [
+          2
+        ],
+        "a": [
+          3,
+          41,
+          46,
+          54,
+          61,
+          70,
+          79,
+          108,
+          112,
+          124
+        ],
+        "relation": [
+          4
+        ],
+        "between": [
+          5
+        ],
+        "Hankel": [
+          6,
+          74,
+          98,
+          113
+        ],
+        "determinants": [
+          7,
+          30,
+          84,
+          99
+        ],
+        "whose": [
+          8
+        ],
+        "entries": [
+          9,
+          39
+        ],
+        "${1\\over": [
+          10
+        ],
+        "2n+1}{3n\\choose": [
+          11
+        ],
+        "n}$": [
+          12
+        ],
+        "count": [
+          13
+        ],
+        "ternary": [
+          14,
+          139
+        ],
+        "trees": [
+          15,
+          140
+        ],
+        "and": [
+          16,
+          23,
+          103,
+          141
+        ],
+        "the": [
+          17,
+          34,
+          65,
+          86,
+          116,
+          136,
+          147
+        ],
+        "number": [
+          18,
+          71,
+          117,
+          137,
+          148
+        ],
+        "of": [
+          19,
+          49,
+          56,
+          64,
+          72,
+          110,
+          118,
+          129,
+          132,
+          138,
+          149
+        ],
+        "certain": [
+          20
+        ],
+        "plane": [
+          21
+        ],
+        "partitions": [
+          22
+        ],
+        "alternating": [
+          24,
+          119
+        ],
+        "sign": [
+          25,
+          120
+        ],
+        "matrices.": [
+          26,
+          121
+        ],
+        "Tamm": [
+          27
+        ],
+        "evaluated": [
+          28
+        ],
+        "these": [
+          29,
+          38
+        ],
+        "by": [
+          31
+        ],
+        "showing": [
+          32
+        ],
+        "that": [
+          33,
+          44
+        ],
+        "generating": [
+          35,
+          87
+        ],
+        "function": [
+          36,
+          88
+        ],
+        "for": [
+          37,
+          53,
+          82,
+          89,
+          115
+        ],
+        "has": [
+          40
+        ],
+        "continued": [
+          42,
+          51,
+          66
+        ],
+        "fraction": [
+          43,
+          52,
+          67
+        ],
+        "is": [
+          45
+        ],
+        "special": [
+          47
+        ],
+        "case": [
+          48
+        ],
+        "Gauss's": [
+          50
+        ],
+        "quotient": [
+          55
+        ],
+        "hypergeometric": [
+          57
+        ],
+        "series.": [
+          58
+        ],
+        "We": [
+          59,
+          76,
+          122
+        ],
+        "give": [
+          60
+        ],
+        "systematic": [
+          62
+        ],
+        "application": [
+          63
+        ],
+        "method": [
+          68,
+          81
+        ],
+        "to": [
+          69,
+          100,
+          107
+        ],
+        "similar": [
+          73
+        ],
+        "determinants.": [
+          75
+        ],
+        "also": [
+          77
+        ],
+        "describe": [
+          78
+        ],
+        "simple": [
+          80
+        ],
+        "transforming": [
+          83
+        ],
+        "using": [
+          85
+        ],
+        "their": [
+          90
+        ],
+        "entries.": [
+          91
+        ],
+        "In": [
+          92
+        ],
+        "this": [
+          93
+        ],
+        "way": [
+          94
+        ],
+        "we": [
+          95,
+          104
+        ],
+        "transform": [
+          96
+        ],
+        "Somos's": [
+          97
+        ],
+        "known": [
+          101
+        ],
+        "determinants,": [
+          102
+        ],
+        "obtain,": [
+          105
+        ],
+        "up": [
+          106
+        ],
+        "power": [
+          109
+        ],
+        "$3$,": [
+          111
+        ],
+        "determinant": [
+          114,
+          133,
+          144
+        ],
+        "obtain": [
+          123
+        ],
+        "combinatorial": [
+          125
+        ],
+        "proof,": [
+          126
+        ],
+        "in": [
+          127
+        ],
+        "terms": [
+          128
+        ],
+        "nonintersecting": [
+          130
+        ],
+        "paths,": [
+          131
+        ],
+        "identities": [
+          134,
+          145
+        ],
+        "involving": [
+          135,
+          146
+        ],
+        "more": [
+          142
+        ],
+        "general": [
+          143
+        ],
+        "$r$-ary": [
+          150
+        ],
+        "trees.": [
+          151
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.37236/1079",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.37236/1079",
+        "pdf_url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1r53/pdf",
+        "source": {
+          "id": "https://openalex.org/S38448739",
+          "display_name": "The Electronic Journal of Combinatorics",
+          "issn_l": "1077-8926",
+          "issn": [
+            "1077-8926",
+            "1097-1440"
+          ],
+          "is_oa": true,
+          "is_in_doaj": true,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310317970",
+          "host_organization_name": "Electronic Journal of Combinatorics",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310317970"
+          ],
+          "host_organization_lineage_names": [
+            "Electronic Journal of Combinatorics"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "The Electronic Journal of Combinatorics",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "diamond",
+        "oa_url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1r53/pdf",
+        "any_repository_has_fulltext": false
+      }
+    },
+    {
+      "id": "https://openalex.org/W2950127584",
+      "title": "-DEFORMED RATIONALS AND -CONTINUED FRACTIONS",
+      "publication_date": "2020-01-01",
+      "doi": "https://doi.org/10.1017/fms.2020.9",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": null,
+            "display_name": "SOPHIE MORIER-GENOUD",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1294671590",
+              "display_name": "Centre National de la Recherche Scientifique",
+              "ror": "https://ror.org/02feahw73",
+              "country_code": "FR",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1294671590"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I204730241",
+              "display_name": "Université Paris Cité",
+              "ror": "https://ror.org/05f82e368",
+              "country_code": "FR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I204730241"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I3017942884",
+              "display_name": "Institut de Mathématiques de Jussieu-Paris Rive Gauche",
+              "ror": "https://ror.org/03fk87k11",
+              "country_code": "FR",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I204730241",
+                "https://openalex.org/I3017942884",
+                "https://openalex.org/I39804081",
+                "https://openalex.org/I4210141950"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I39804081",
+              "display_name": "Sorbonne Université",
+              "ror": "https://ror.org/02en5vm52",
+              "country_code": "FR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I39804081"
+              ]
+            }
+          ],
+          "countries": [
+            "FR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "SOPHIE MORIER-GENOUD",
+          "raw_affiliation_strings": [
+            "Sorbonne Université, Université Paris Diderot, CNRS, Institut de Mathématiques de Jussieu-Paris Rive Gauche, F-75005, Paris, France;"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Sorbonne Université, Université Paris Diderot, CNRS, Institut de Mathématiques de Jussieu-Paris Rive Gauche, F-75005, Paris, France;",
+              "institution_ids": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I204730241",
+                "https://openalex.org/I3017942884",
+                "https://openalex.org/I39804081"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": null,
+            "display_name": "VALENTIN OVSIENKO",
+            "orcid": "https://orcid.org/0000-0003-0146-1573"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1294671590",
+              "display_name": "Centre National de la Recherche Scientifique",
+              "ror": "https://ror.org/02feahw73",
+              "country_code": "FR",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1294671590"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210155549",
+              "display_name": "Laboratoire de Mathématiques Blaise Pascal",
+              "ror": "https://ror.org/05sd5r855",
+              "country_code": "FR",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I198244214",
+                "https://openalex.org/I4210141950",
+                "https://openalex.org/I4210155549"
+              ]
+            }
+          ],
+          "countries": [
+            "FR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "VALENTIN OVSIENKO",
+          "raw_affiliation_strings": [
+            "Centre national de la recherche scientifique, Laboratoire de Mathématiques, UMR du CNRS 9008, U.F.R. Sciences Exactes et Naturelles Moulin de la Housse - BP 1039 51687 Reims cedex 2, France;"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-0146-1573",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Centre national de la recherche scientifique, Laboratoire de Mathématiques, UMR du CNRS 9008, U.F.R. Sciences Exactes et Naturelles Moulin de la Housse - BP 1039 51687 Reims cedex 2, France;",
+              "institution_ids": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I4210155549"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "We": [
+          0
+        ],
+        "introduce": [
+          1
+        ],
+        "a": [
+          2,
+          21,
+          24,
+          105
+        ],
+        "notion": [
+          3
+        ],
+        "of": [
+          4,
+          23,
+          59,
+          69,
+          74,
+          91,
+          111
+        ],
+        "$q$": [
+          5,
+          10,
+          15,
+          38,
+          64,
+          89,
+          98
+        ],
+        "-deformed": [
+          6,
+          11,
+          16,
+          39
+        ],
+        "rational": [
+          7,
+          17,
+          112
+        ],
+        "numbers": [
+          8
+        ],
+        "and": [
+          9,
+          26,
+          97
+        ],
+        "continued": [
+          12
+        ],
+        "fractions.": [
+          13
+        ],
+        "A": [
+          14
+        ],
+        "is": [
+          18,
+          34,
+          51
+        ],
+        "encoded": [
+          19
+        ],
+        "by": [
+          20,
+          53
+        ],
+        "triangulation": [
+          22
+        ],
+        "polygon": [
+          25
+        ],
+        "can": [
+          27
+        ],
+        "be": [
+          28
+        ],
+        "computed": [
+          29
+        ],
+        "recursively.": [
+          30
+        ],
+        "The": [
+          31,
+          57
+        ],
+        "recursive": [
+          32
+        ],
+        "formula": [
+          33
+        ],
+        "analogous": [
+          35
+        ],
+        "to": [
+          36,
+          78,
+          107
+        ],
+        "the": [
+          37,
+          43,
+          48,
+          54,
+          60,
+          63,
+          70,
+          75,
+          79,
+          92,
+          108
+        ],
+        "Pascal": [
+          40,
+          49
+        ],
+        "identity": [
+          41
+        ],
+        "for": [
+          42
+        ],
+        "Gaussian": [
+          44
+        ],
+        "binomial": [
+          45
+        ],
+        "coefficients,": [
+          46
+        ],
+        "but": [
+          47
+        ],
+        "triangle": [
+          50
+        ],
+        "replaced": [
+          52
+        ],
+        "Farey": [
+          55,
+          93
+        ],
+        "graph.": [
+          56
+        ],
+        "coefficients": [
+          58
+        ],
+        "polynomials": [
+          61
+        ],
+        "defining": [
+          62
+        ],
+        "-rational": [
+          65
+        ],
+        "count": [
+          66
+        ],
+        "quiver": [
+          67
+        ],
+        "subrepresentations": [
+          68
+        ],
+        "maximal": [
+          71
+        ],
+        "indecomposable": [
+          72
+        ],
+        "representation": [
+          73
+        ],
+        "graph": [
+          76
+        ],
+        "dual": [
+          77
+        ],
+        "triangulation.": [
+          80
+        ],
+        "Several": [
+          81
+        ],
+        "other": [
+          82
+        ],
+        "properties,": [
+          83,
+          88
+        ],
+        "such": [
+          84
+        ],
+        "as": [
+          85,
+          102,
+          104
+        ],
+        "total": [
+          86
+        ],
+        "positivity": [
+          87
+        ],
+        "-deformation": [
+          90
+        ],
+        "graph,": [
+          94
+        ],
+        "matrix": [
+          95
+        ],
+        "presentations": [
+          96
+        ],
+        "-continuants": [
+          99
+        ],
+        "are": [
+          100
+        ],
+        "given,": [
+          101
+        ],
+        "well": [
+          103
+        ],
+        "relation": [
+          106
+        ],
+        "Jones": [
+          109
+        ],
+        "polynomial": [
+          110
+        ],
+        "knots.": [
+          113
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1017/fms.2020.9",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1017/fms.2020.9",
+        "pdf_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E9501876182C0956FB248EDD5619F30C/S2050509420000092a.pdf/div-class-title-span-class-inlineformula-span-class-alternatives-img-class-inline-graphic-mathjax-alternative-mathjax-alt-graphic-mathjax-off-data-mimesubtype-png-data-type-src-staticdomain-binary-version-id-urn-cambridge-org-id-binary-20200305132731252-0251-s2050509420000092-s2050509420000092-inline1-png-span-class-mathjax-tex-wrapper-data-mathjax-type-texmath-span-class-tex-math-mathjax-tex-math-mathjax-on-q-span-span-span-span-deformed-rationals-and-span-class-inlineformula-span-class-alternatives-img-class-inline-graphic-mathjax-alternative-mathjax-alt-graphic-mathjax-off-data-mimesubtype-png-data-type-src-staticdomain-binary-version-id-urn-cambridge-org-id-binary-20200305132731252-0251-s2050509420000092-s2050509420000092-inline2-png-span-class-mathjax-tex-wrapper-data-mathjax-type-texmath-span-class-tex-math-mathjax-tex-math-mathjax-on-q-span-span-span-span-continued-fractions-div.pdf",
+        "source": {
+          "id": "https://openalex.org/S2914224842",
+          "display_name": "Forum of Mathematics Sigma",
+          "issn_l": "2050-5094",
+          "issn": [
+            "2050-5094"
+          ],
+          "is_oa": true,
+          "is_in_doaj": true,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310311721",
+          "host_organization_name": "Cambridge University Press",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310311721",
+            "https://openalex.org/P4310311702"
+          ],
+          "host_organization_lineage_names": [
+            "Cambridge University Press",
+            "University of Cambridge"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Forum of Mathematics, Sigma",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E9501876182C0956FB248EDD5619F30C/S2050509420000092a.pdf/div-class-title-span-class-inlineformula-span-class-alternatives-img-class-inline-graphic-mathjax-alternative-mathjax-alt-graphic-mathjax-off-data-mimesubtype-png-data-type-src-staticdomain-binary-version-id-urn-cambridge-org-id-binary-20200305132731252-0251-s2050509420000092-s2050509420000092-inline1-png-span-class-mathjax-tex-wrapper-data-mathjax-type-texmath-span-class-tex-math-mathjax-tex-math-mathjax-on-q-span-span-span-span-deformed-rationals-and-span-class-inlineformula-span-class-alternatives-img-class-inline-graphic-mathjax-alternative-mathjax-alt-graphic-mathjax-off-data-mimesubtype-png-data-type-src-staticdomain-binary-version-id-urn-cambridge-org-id-binary-20200305132731252-0251-s2050509420000092-s2050509420000092-inline2-png-span-class-mathjax-tex-wrapper-data-mathjax-type-texmath-span-class-tex-math-mathjax-tex-math-mathjax-on-q-span-span-span-span-continued-fractions-div.pdf",
+        "any_repository_has_fulltext": true
+      }
+    }
+  ]
+}

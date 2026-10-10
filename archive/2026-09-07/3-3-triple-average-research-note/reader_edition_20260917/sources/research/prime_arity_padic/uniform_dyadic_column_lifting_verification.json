@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "date": "2026-09-16",
+  "complete_mod8_parameter_classes": 4096,
+  "exact_rational_parameter_cases": 48,
+  "finite_precision_column_checks": 432,
+  "tested_bit_precisions": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    10,
+    17,
+    32,
+    65
+  ],
+  "old_parameter_classes": {
+    "r4": 64,
+    "edge": 256
+  },
+  "old_class_deterministic_transports_checked": 3840,
+  "actual_prime_parameter_interfaces": 48,
+  "mixed_modulus_transports_preserving_v_mod_m": 384,
+  "literal_original_position_average_atoms": 576,
+  "signed_original_generator_actions_replayed": 346928,
+  "unchanged_frozen_files": 256,
+  "examples": [
+    {
+      "p": 7,
+      "r": 4,
+      "modulus": 1296,
+      "input": [
+        703,
+        100
+      ],
+      "output": [
+        672,
+        145
+      ],
+      "chronological_named_powers": [
+        [
+          "Z",
+          1
+        ],
+        [
+          "U",
+          1
+        ],
+        [
+          "K12",
+          1
+        ],
+        [
+          "K12",
+          2
+        ],
+        [
+          "K0",
+          2
+        ]
+      ]
+    },
+    {
+      "p": 11,
+      "r": 4,
+      "modulus": 10816,
+      "input": [
+        6432,
+        105
+      ],
+      "output": [
+        6144,
+        9153
+      ],
+      "chronological_named_powers": [
+        [
+          "K0",
+          2
+        ],
+        [
+          "K0",
+          8
+        ]
+      ]
+    }
+  ],
+  "scope": "All-parameter theorem is proved by identities and induction in the note. No group/orbit or averaging-word search. Transports are compressed words in old generators and their already-proved positive projective inverses; the full inverse/deep-kernel atomic words are not expanded here.",
+  "local_links_checked": 70,
+  "wall_seconds": 2.965
+}

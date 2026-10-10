@@ -1,0 +1,82 @@
+\section{宽维数中的剩余容量}\label{sec:wide}
+\begin{proposition}\label{prop:wide}
+对 $p\ge5$ 的每个素数，所有 $n\ge4p$ 满足定理\ref{thm:prime}的判据。
+\end{proposition}
+\begin{proof}
+由引理\ref{lem:integer-range}，只须考虑
+\begin{equation}\label{eq:tail-range}
+n=4p+s,quad1\le s<\lceil\log_2p\rceil,quad d=\omega(n)\ge s+3.
+\end{equation}
+$n$ 奇时至少含四个不同奇素数，$n\ge1155,\varphi(n)\ge480$；$n$ 偶时 $s$ 为正偶数，至少含五个素数，$n\ge2310,\varphi(n)\ge480$。每增加一个不同素因子，最小乘积至少乘 $13$，最小欧拉函数至少乘 $12$。归纳给
+\begin{equation}\label{eq:tail-estimates}
+p\ge16s+21,\qquad \varphi(n)>8\cdot2^d+7s+36.
+\end{equation}
+例如可先证 $n\ge65d-111$ 和 $\varphi(n)>8\cdot2^d+7d+15$，再代入 $s\le d-3$。容斥从而给
+\[(p-1)\varphi(n)/n\ge[\varphi(n)-s-4]/4>2^d-1.
+\]
+故引理\ref{lem:short-choice}的配比选择在这些宽维数仍有效。
+
+保护单点 $w$ 及见证，建立两个块，用引理\ref{lem:concentrate}集中 $a-w$ 的支持，再避开 $w$ 建立第三、第四个块。按命题\ref{prop:entry}的见证修复，使前三块不全同余。写 $p=3m+\epsilon$。先混合 $b,c$，再混合 $a,b$，使 $m(a+b+c)+\epsilon a-pd_0$ 在全部危险处非零；各条件至多禁止一个配比。三行折叠后得到 $(A^{2p},B^p,d_0^p,x_1,\ldots,x_s)$ 且 $A-d_0$ 全支持。平均 $p-s$ 份 $A$ 与全部单点，留下 $p+s$ 份 $A$ 作载体；将其余三个 $p$ 块再折叠一次，进入
+\begin{equation}\label{eq:wide-core}
+(a^{2p},(-2a+rz)^p,(-pz)^r),\qquad r=p+s.
+\end{equation}
+本原参数的合法性仍为 $\gcd(a+pz,n)=1$。
+
+取 $\epsilon=\pm1$、$p\equiv\epsilon\pmod4$，$t_0=(p-\epsilon)/4,t_1=t_0+s$。对 $t=t_0,t_1$，令 $b=p-s-3t$、$\beta=nt-p^2+ps$。先平均两组 $(A^{p-b-t},B^t,C^b)$，产生 $2p$ 份 $D=(sa+\beta z)/p$，保留 $r$ 份。再平均两组
+\[
+(A^{2h+t-b},B^h,C^{p-2t+b-3h},D^t)
+\]
+及全部余下 $p$ 份。五次操作给 $J_{t,h}/p^2$，其中
+\begin{equation}\label{eq:tail-J}
+J_{t,h}=\begin{pmatrix}\beta&prh-p^2(p-2t+b-3h)+t\beta\\-s&-\beta\end{pmatrix},
+\quad J_{t,h}^2=pf_{t,h}I,
+\end{equation}
+\[
+f_{t,h}=p^3+n[4t^2+(s-2p)t-sh].
+\]
+容量允许
+\[
+\max(0,\lceil(5p-5s-16t)/6\rceil)\le h\le b.
+\]
+写 $t=t_0+\delta$、$\delta=0,s$，未截断端点差为 $(p+\epsilon-2s-4\delta)/12>2$，且 $b\ge4$；故有相邻 $h,h+1$。代入还得 $b-t\le0$、$b\le(p-2t)/2$，这些不等式正好保证两阶段所有库存约束。
+
+保留旧 $A$ 的三步反射为
+\[
+A_j=\begin{pmatrix}0&-d_j\\-1&0\end{pmatrix},\quad d_j=p^2-nj,\qquad
+\lceil(p-s)/6\rceil\le j\le\lfloor(p-s)/4\rfloor.
+\]
+其两重复组各取 $(A^{2j},B^j,C^{p-3j})$，余组取补集，保留 $r$ 份 $A$。因 $p-s\ge36$，可取三个相邻 $j$，记标量 $d_0,d_1,d_2$。对固定 $t$，相邻 $h$ 的标量为 $f,g_t=f-sn$，且互素：$f\equiv p(p-4t)^2\pmod s$，而 $p-4t\equiv\epsilon\pmod s$。
+相邻反射商与 $A_j^{-1}A_{j+1}$ 的交换子给
+\[
+U\left(\frac{\beta_t n^2}{d_1g_t}\right),\qquad
+\gcd(\beta_{t_0},\beta_{t_1})=\gcd(n,5)=g.
+\]
+后式用差为 $ns$、$\gcd(\beta_{t_0},s)=1$ 以及 $\beta_t\equiv p(s-p)\pmod n$。相邻倍率及引理\ref{lem:localize}给 $R_0$，其反演素数来自这些互素标量且不除 $n$。于是有双向 $gn^2R_0$ 根和
+\begin{equation}\label{eq:tail-level}
+\Gamma(M,R_0),\qquad M=g^2n^4.
+\end{equation}
+$R_0$ 含绝对值不同于 $1$ 的相邻标量，所以满足定理\ref{thm:arithmetic-external}的单位条件。保载体返回以 $p-3j=\pm1$ 激活 $p$，第三个 $A$ 的倍率激活 $d_2$。
+
+一般保留 $A$ 的三步返回为
+\[
+M_{q,j}=\begin{pmatrix}p-q&nj-pq\\-1&0\end{pmatrix},\qquad q=3j+k,
+\]
+其中 $0\le j\le\lfloor p/2\rfloor$、$0\le k\le\lfloor r/2\rfloor$、$\lceil r/2\rceil\le j+k\le p$。这些计数覆盖全部整数区间
+\[
+I=[L,2p-1],\qquad L=r/2+2\ (r\text{偶}),\quad L=(r+9)/2\ (r\text{奇}).
+\]
+固定 $j$ 所给区间为 $[2j+\lceil r/2\rceil,\min(3j+\lfloor r/2\rfloor,2j+p)]$，相邻区间相接即证覆盖。安全 $q$ 的行列式与 $M$ 互素，引理\ref{lem:inverse}和\ref{lem:localize}允许将其加入最终环 $R$，并重建\eqref{eq:tail-level}。由\eqref{eq:tail-estimates}及 $|I|\ge(3n-7s-36)/8$，$I$ 中单位数超过 $\varphi(n)/4$。正负代表超过单位群一半，故每个模 $n$ 单位是其中两者之比，$R^\times$ 模 $n$ 满射。
+
+在 $(z,y)=(z,a+pz)$ 中，$V=J_{t,h}A_j/p^3$ 满足
+\[
+V\equiv U(-5/p)\pmod n,\quad
+\operatorname{tr}V=2-\frac n{p^3}(pt+t^2+ph+sj).
+\]
+若 $n\equiv2\pmod4$，选偶 $h$，则迹为 $2\pmod4$；$4\mid n$ 时自动成立。若 $v_3(n)=1$，规范化平方参数满足
+\[
+\frac c3\equiv\frac{n/3}{p^3}[(p-s)(j+t-h)-5t^2]\pmod3.
+\]
+相邻 $j$ 避开引理\ref{lem:local-cycle}的唯一坏类。若 $5\mid n$，先在 $I$ 选安全 $q\equiv-p\pmod5$；固定该类的容斥主项为 $|I|\rho/4$，误差小于 $2^{d-1}$，而\eqref{eq:tail-estimates}使主项更大。其 $M_{q,j}$ 模 $5$ 给非平凡平移，先完成五进方向；$V\bmod5=I$，随后使其指数为完整五进阶的倍数，再用 CRT 完成其余局部方向。得到 $z/y=0\pmod M$。
+单位 $d_1/d_0=1-n/d_0$ 和 $d_2/d_0=1-2n/d_0$ 生成模 $M$ 到模 $n$ 的单位核。奇素数处由二项式展开逐层升位；$n\equiv2\pmod4$ 时第二个单位生成 $1\pmod4$ 的部分，第一个补另一个类。于是 $R^\times$ 模 $M$ 满射。引理\ref{lem:fiber}将列精确送到 $(0,\epsilon)$。最终配置为 $(\epsilon^{2p},(-2\epsilon)^p,0^{p+s})$；选全部非零位置和 $p$ 个零，使用引理\ref{lem:integer-range}已独立证明的 $4p$ 维结论。
+\end{proof}
+

@@ -1,0 +1,6 @@
+{
+  "url": "https://api.openalex.org/works?filter=title.search%3Abounded+generation+relative+subgroups&per-page=4&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "status": 200,
+  "retrieved": "2026-09-12",
+  "body": "{\"meta\": {\"count\": 0, \"db_response_time_ms\": 15, \"page\": 1, \"per_page\": 4, \"groups_count\": null, \"x_query\": {\"oql\": \"works where title has (bounded generation relative subgroups)\", \"oqo\": {\"get_rows\": \"works\", \"filter_rows\": [{\"column_id\": \"display_name.search\", \"value\": \"bounded generation relative subgroups\", \"operator\": \"has\"}]}, \"url\": \"/works?filter=display_name.search:bounded generation relative subgroups&per_page=4\"}, \"cost_usd\": 0.001}, \"results\": [], \"group_by\": []}"
+}

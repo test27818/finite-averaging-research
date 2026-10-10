@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="theme-color" content="#d9d8d1">
+
+<title>About&mdash;The Stacks project</title>
+
+<meta name="description" content="an open source textbook and reference work on algebraic geometry">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/print.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ['tex2jax.js'],
+    jax: ['input/TeX','output/HTML-CSS'],
+    TeX: {
+      extensions: ['AMSmath.js', 'AMSsymbols.js', '/static/XyJax/extensions/TeX/xypic.js'],
+      Macros: {
+        linebreak: ["", 1, ""],
+        },
+      TagSide: 'left'
+    },
+    tex2jax: {
+      inlineMath: [['$','$']],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    },
+    'HTML-CSS': {
+    	scale: 100,
+	availableFonts: [],
+    }
+  });
+</script>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" integrity="sha384-yBEPaZw444dClEfen526Q6x4nwuzGO6PreKpbRVSLFCci3oYGE5DnD1pNsubCxYW" crossorigin="anonymous">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js" integrity="sha384-cd07Jx5KAMCf7qM+DveFKIzHXeCSYUrai+VWCPIXbYL7JraHMFL/IXaCKbLtsxyB" crossorigin="anonymous"></script>
+
+<link rel="icon" type="image/vnd.microsoft.icon" href="/static/stacks.ico">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/static/stacks.ico">
+
+
+  <style type="text/css">
+dl#history dt + dd {
+  border-left: 1px solid black;
+}
+  </style>
+
+
+</head>
+
+<body>
+<div class="container-fluid bounded">
+  <div id="first-bar" class="row topbar inner-top top">
+    <header class="col">
+      <h1><a href="/">The Stacks project</a></h1>
+    </header>
+
+    <nav id="header">
+      <ul id="quicklinks">
+        <li><a href="/bibliography">bibliography</a>
+        <li><a href="https://www.math.columbia.edu/~dejong/wordpress/">blog</a>
+      </ul>
+
+      <form id="quicksearch" action="/search">
+        <span id="search-icon"><img src="/static/images/search.svg"></span>
+        <input type="search" name="query" size="16" placeholder="keywords or a tag" value="">
+      </form>
+    </nav>
+  </div>
+
+  <nav id="second-bar" class="row topbar sticky-top">
+    
+      <ul class="col-11 col-sm-11 col-md-11 col-lg-12 col-xl-12" id="crumbs">
+        <li><a href="/browse">Table of contents</a></li>
+        
+  <li><a href="/about">About</a>
+
+      </ul>
+    
+
+    
+      <div class="col-1 col-sm-1 col-md-1" id="burger">
+        <input type="checkbox" id="burger-input"></input>
+
+        <label id="burger-icon" for="burger-input">
+          <span id="top-bun"></span>
+          <span id="meat"></span>
+          <span id="bottom-bun"></span>
+        </label>
+
+        <div id="burger-content">
+          
+  
+  <ul>
+    <li><a href="/about">about</a>
+    <li><a href="/acknowledgements">acknowledgements</a>
+    <li><a href="/statistics">statistics</a>
+    <li><a href="/tags">tags explained</a>
+    <li><a href="/contribute">how to contribute</a>
+    <li><a href="/contributors">contributors</a>
+    <li><a href="/api"><abbr title='Application Programming Interface'>API</abbr></a>
+  </ul>
+
+
+        </div>
+      </div>
+    
+
+    
+  </nav>
+
+  <div class="row" id="content">
+    <section id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+      
+<h2>About</h2>
+<p>The Stacks project is an ever growing open source textbook and reference work on algebraic stacks and the algebraic geometry needed to define them. Here are some quick facts:
+<ol>
+  <li><p>The Stacks project is not an introductory text. It is written for graduate students and researchers in algebraic geometry.
+  <li><p>The aim is to build algebraic geometry and use this in laying the foundations for algebraic stacks. The theory of commutative algebra, schemes, varieties, and algebraic spaces forms an integral part of the Stacks project.
+  <li><p>The Stacks project has a maintainer (currently <a href="https://www.math.columbia.edu/~dejong/">Aise Johan de Jong</a>) who accepts changes etc. proposed by <a href="/contributors">contributors</a>. Everyone is <a href="/contribute">encouraged to participate</a>.
+  <li><p>The Stacks project is meant to be <em>read online</em>. Consequently we do not worry about length of the chapters, etc. With hyperlinks and the search function it is possible to quickly browse through the chapters to find the lemmas, theorems, etc. that a given result depends on.
+  <li><p>We use <em>tags</em> to identify results, which are permanent identifiers for a result. You can read more about this on the <a href="/tags">tags explained</a> page.
+</ol>
+<p>For a longer discussion, please read the blog post <a href="https://www.math.columbia.edu/~dejong/wordpress/?p=866">What is the stacks project?</a>
+
+<h2>History</h2>
+
+<dl id="history" class="row">
+  <dt class="col-sm-3">July 5, 2005</dt>
+  <dd class="col-sm-9">Birth of the idea<dd>
+  <dd class="col-sm-9 offset-sm-3">Originally it was meant to be a collaborative web-based project with the aim of writing an introductory text about algebraic stacks. Temporarily there was a mailing list and some discussion as to how to proceed.</dd>
+
+  <dt class="col-sm-3">May 20, 2008</dt>
+  <dd class="col-sm-9"><a href="https://github.com/stacks/stacks-project/commit/3d32323ff9f1166afb3ee0ecaa10093dc764a50d">First commit for the Stacks project</a>
+  <dd class="col-sm-9 offset-sm-3">It started as 70 pages of preliminary notes. We've come a long way.</dd>
+
+  <dt class="col-sm-3">July 19, 2012</dt>
+  <dd class="col-sm-9">The first version of the website <a href="https://www.math.columbia.edu/~dejong/wordpress/?p=2641">goes online</a></dd>
+  <dd class="col-sm-9 offset-sm-3">Before that there was a rudimentary tag lookup system (since May 2009, see <a href="https://github.com/stacks/stacks-project/commit/fad2e125112d54e1b53a7e130ef141010f9d151d">fad2e12</a>), but no navigation, rendering, comments, ...</dd>
+
+  <dt class="col-sm-3">July 31&ndash;Aug 4, 2017
+  <dd class="col-sm-9">The (first) <a href="https://stacks.github.io/">Stacks project workshop</a>
+  <dd class="col-sm-9 offset-sm-3">We had the first Stacks project workshop, with small groups dedicated to studying a topic related to algebraic stacks, and producing new content for the Stacks project.
+
+  <dt class="col-sm-3">May 20, 2018</dt>
+  <dd class="col-sm-9">The second version of the website goes online.</dd>
+  <dd class="col-sm-9 offset-sm-3">This is what you are looking at right now.</dd>
+</dl>
+
+<h2>Workshops</h2>
+<p>As mentioned in the history overview, we have had a <a href="https://stacks.github.io">Stacks project workshop</a> in Ann Arbor, from July 31 to August 4 2017. It was a great success.
+<p>We will organise a new workshop in the future. Stay tuned for more news (which will be made available via the <a href="https://www.math.columbia.edu/~dejong/wordpress/">Stacks project blog</a>).
+
+<h2>Acknowledgements</h2>
+<p>The Stacks project <a href="/acknowledgements">acknowledges the following financial and technical support</a>.
+
+    </section>
+	  <div class="col-lg-4 col-xl-4">
+	    <section id="meta" class="row topbar sticky-top">
+        
+  
+  <ul>
+    <li><a href="/about">about</a>
+    <li><a href="/acknowledgements">acknowledgements</a>
+    <li><a href="/statistics">statistics</a>
+    <li><a href="/tags">tags explained</a>
+    <li><a href="/contribute">how to contribute</a>
+    <li><a href="/contributors">contributors</a>
+    <li><a href="/api"><abbr title='Application Programming Interface'>API</abbr></a>
+  </ul>
+
+
+      </section>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js" integrity="sha384-3ziFidFTgxJXHMDttyPJKDuTlmxJlwbSkojudK/CkRqKDOmeSbN6KLrGdrBQnT2n" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

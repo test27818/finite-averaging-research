@@ -2,6 +2,8 @@
 
 **[English](README.md) · 简体中文 · [证明路线](docs/PROOF_GUIDE.md) · [核验指南](docs/VERIFICATION.md) · [中英术语](docs/TERMINOLOGY.md)**
 
+**工作区快照已更新至2026-10-11。** 后续研究、准确范围与未解问题请先读[统一研究入口](archive/2026-09-07/3-3-triple-average-research-note/knowledge/START_HERE.md)、[当前结论状态](archive/2026-09-07/3-3-triple-average-research-note/knowledge/STATUS.md)和[证明链](archive/2026-09-07/3-3-triple-average-research-note/knowledge/PROOF_ROUTES.md)。本次新增3210个原文件、更新10个，包括知识索引、独立研究、论文和讲义；见[同步记录](catalog/SYNC_2026-10-11.json)。原基线证明与历史核验报告继续保留。
+
 **什么时候，一组有理数能在固定位置上通过有限次平均变得精确全等？** 每次选恰好 $`k`$ 个不同位置，把这些位置的值全部替换为其算术平均；不增加副本、不丢弃输出。我们研究完美可混合性／完全可混合性（**perfect mixability**）、混合图（**mixing graphs**）以及二平均、三平均、素数 $`p`$ 平均与一般 $`k`$ 平均。
 
 > **项目重点：三平均已有独立直接证明；全部素数平均的最优最终阈值已完成；一般 $`k`$ 平均已有统一下界、明确的精细阈值猜想和多族已证结果。当前继续追求更自然、易读且结构统一的证明，并推进合数元数的剩余问题。**
@@ -132,15 +134,17 @@ scripts/             归档检查与临时副本复现工具
 archive/
   2026-09-07/
     3-3-triple-average-research-note/
+      knowledge/     当前结论、证明依赖、研究路线与知识索引
       outputs/       按主题分类的证明、文献与研究历史
       research/      独立结构改进
       work/          原核验器、证书、探索脚本和来源材料
     new-chat-3/      二平均求解器与基准库
   2026-09-09/cha/    历史文稿审阅
   2026-09-10/new-chat/ 论文、算法测试集和补充研究
+  2026-09-24/c-users-19226-documents-codex-2026/ 素数平均讲义制作与源文件
 ~~~
 
-**公开快照：2026-09-16。** 保留1905个原文件，包括590篇Markdown、479个Python脚本、42份PDF及22份LaTeX源码。日期层级保留原导入和跨目录引用，专题导航提供当前阅读顺序。历史原稿有过期“未解”和旧路径，按[来源与移植说明](PROVENANCE.md)定位；原归档不随首页整理被改写。
+**公开快照：2026-10-11。** 保留5115个原文件，包括1428篇Markdown、1114个Python脚本、149份PDF及191份LaTeX源码。日期层级保留原导入和跨目录引用。源文件逐字节复制，旧版本保留在Git历史中；当前数学状态请从上方统一研究入口进入，历史路径见[来源与移植说明](PROVENANCE.md)。
 
 ## 怎样检验
 
@@ -154,7 +158,7 @@ python -B scripts/build_check_index.py --check
 python -B scripts/reproduce.py --suite review
 ~~~
 
-[复现指南](docs/VERIFICATION.md)说明每项检查的范围、命令和外部依赖；[完整review日志](catalog/reproduction_review.txt)保留实际结果。**最近一次完整review的数学检查通过，二平均Python有1项零预算计时状态测试失败**，原因及确定性诊断见[已知问题](docs/KNOWN_ISSUES.md)，没有将该次运行标成全绿。
+[复现指南](docs/VERIFICATION.md)说明每项检查的范围、命令和外部依赖；[完整review日志](catalog/reproduction_review.txt)保留实际结果。**2026-09-16记录的完整review的数学检查通过，二平均Python有1项零预算计时状态测试失败**，原因及确定性诊断见[已知问题](docs/KNOWN_ISSUES.md)，没有将该次运行标成全绿。
 
 二平均可直接下载并打开[离线网页](archive/2026-09-07/new-chat-3/averaging_benchmark/solver.html)。更多脚本按需使用[可选依赖](requirements.txt)。归档完整性检查、有限证书重放与一般数学证明承担不同任务。
 

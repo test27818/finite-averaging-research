@@ -1,0 +1,59 @@
+{
+  "exact_bounded": [
+    {
+      "p": 7,
+      "n": 14,
+      "bound": 1,
+      "states": 6,
+      "solvable": 6,
+      "unsolvable": 0,
+      "ratio": 0.0,
+      "distance_distribution": {
+        "1": 3,
+        "2": 3
+      },
+      "examples": [],
+      "seconds": 0.0008010000456124544,
+      "memo_states": 7,
+      "sampling_model": "sorted primitive zero-sum states in [-bound,bound], conditioned on G=7^k"
+    }
+  ],
+  "random": [
+    {
+      "p": 7,
+      "n": 14,
+      "bound": 5,
+      "samples": 200,
+      "accepted": 200,
+      "rejected": 0,
+      "solvable": 200,
+      "unsolvable": 0,
+      "ratio": 0.0,
+      "distance_distribution": {
+        "2": 196,
+        "3": 4
+      },
+      "seconds": 4.587923499988392,
+      "examples": [],
+      "sampling_model": "14 independent uniform integers in [-bound,bound], final coordinate closes zero sum, primitive-normalized, conditioned on G=7^k"
+    },
+    {
+      "p": 7,
+      "n": 14,
+      "bound": 10,
+      "samples": 200,
+      "accepted": 200,
+      "rejected": 0,
+      "solvable": 200,
+      "unsolvable": 0,
+      "ratio": 0.0,
+      "distance_distribution": {
+        "2": 193,
+        "3": 7
+      },
+      "seconds": 62.10521660000086,
+      "examples": [],
+      "sampling_model": "14 independent uniform integers in [-bound,bound], final coordinate closes zero sum, primitive-normalized, conditioned on G=7^k"
+    }
+  ]
+}

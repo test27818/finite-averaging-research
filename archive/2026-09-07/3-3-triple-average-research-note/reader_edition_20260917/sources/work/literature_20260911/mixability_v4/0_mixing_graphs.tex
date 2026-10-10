@@ -1,0 +1,190 @@
+\documentclass[a4paper,UKenglish]{lipics-v2018}
+
+\usepackage[ruled]{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{microtype}%if unwanted, comment out or use option "draft"
+\nolinenumbers %UNCOMMENT FOR ARXIV SUBMITION
+
+%\graphicspath{{./FIGURES/}} %COMMENT FOR ARXIV SUBMITION
+
+%%  when submiting to arxiv, add all lipics files (including the pdf images).
+%% also, use bbl references, not bib
+
+\title{Towards a Theory of Mixing Graphs:
+A Characterization of Perfect Mixability}
+
+\titlerunning{Mixing Graphs}
+
+\author{Miguel Coviello Gonzalez}{Department of Computer Science\\ University of California at Riverside}{}{}{}
+
+\author{Marek Chrobak$\star$}{Department of Computer Science\\ University of California at Riverside}{}{}{}%\\ Riverside, CA 92521}{marek@cs.ucr.edu}{}{}
+
+\Copyright{The copyright is retained by the authors}
+
+\authorrunning{M. Coviello Gonzalez and M. Chrobak}
+
+\subjclass{%
+	\ccsdesc[500]{Discrete Mathematics~Combinatorial Optimization $\bullet$}
+	\ccsdesc[500]{Theory of Computation~Network Flows}
+}
+
+\keywords{algorithms, graph theory, lab-on-chip, fluid mixing}
+
+\funding{Research supported by NSF grant CCF-1536026.}
+
+\input{macros.tex}
+
+\begin{document}
+	
+\maketitle
+
+\begin{abstract}
+	Some microfluidic lab-on-chip devices contain modules whose function is to mix two
+	fluids, called reactant and buffer, in desired proportions. 
+	In one of the technologies for fluid mixing the process
+	can be represented by a directed acyclic graph whose nodes represent micro-mixers
+	and edges represent micro-channels. 
+	A micro-mixer has two input channels and two output channels;
+	it receives two fluid droplets, one from each input, mixes them perfectly, and produces two
+	droplets of the mixed fluid on its output channels. Such a mixing graph converts a
+	set $I$ of input droplets into a set $T$ of output droplets, where the droplets are specified
+	by their reactant concentrations. 
+	The most fundamental algorithmic question related to mixing graphs is to determine,
+	given an input set $I$ and a target set $T$, whether there is a mixing graph
+	that converts $I$ into $T$. We refer to this decision problem as \emph{mix-reachability}.
+	While the complexity of this problem remains open, we provide a 
+	solution to its natural sub-problem, called \emph{perfect mixability}, 
+	in which we ask whether, given a collection $C$ of droplets,
+	there is a mixing graph that mixes $C$ perfectly,
+	producing only droplets whose concentration is the average concentration of $C$.
+	We provide a complete characterization of such perfectly mixable sets and 
+	an efficient algorithm for testing perfect mixability. Further, we prove
+	that any perfectly mixable set has a perfect-mixing graph of polynomial size, and that
+	this graph can be computed in polynomial time.
+\end{abstract}
+
+%\noindent \newline Declarations of interest: none.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+\label{sec: introduction}
+\input{1_Introduction.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Preliminaries}
+\label{sec: preliminaries}
+\input{2_preliminaries.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Necessity of Condition~(MC)}
+\label{sec: necessity of mc}
+\input{3_necessity_of_mc.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Some Auxiliary Lemmas}
+\label{sec: some auxiliary lemmas}
+\input{4_auxiliary_lemmas.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Sufficiency of Condition~(MC)}
+\label{sec: sufficiency of condition mc}
+\input{5_sufficiency_mc_intro.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Perfect Mixability of Near-Final Configurations}
+\label{subsec: near-final configurations}
+\input{5-1_near-final_configurations.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Proof for arbitrary $n \geq 7$}
+\label{subsec: proof for n greater-equal than 7}
+\input{5-2_proof_greater_equal_7.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Proof for $n=5$}
+\label{subsec: proof for n equal 5}
+\input{5-3_proof_equal_5.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Proof for $n=6$}
+\label{subsec: proof for n equal 6}
+\input{5-4_proof_equal_6.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Polynomial bound for the number of mixing operations}
+\label{sec: polynomial proof}
+\input{6_polynomial_proof.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Auxiliary observations}
+\label{sec: polynomial - auxiliary observations}
+\input{6-1_auxiliary_observations.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Proof for near-final configurations}
+\label{sec: polynomial - near final}
+\input{6-2_near-final.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{An exponential bound on mixing sequences}
+\label{sec: an exponential bound}
+\input{6-3_exponential_bound.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{A polynomial bound on mixing sequences}
+\label{sec: polynomial - arbitrary n}
+\input{6-4_polynomial_bound.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Polynomial running time}
+\label{sec: polynomial running time}
+\input{7_polynomial_running_time.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Final Comments}
+\label{sec: final comments}
+\input{8_final_comments.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  References %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\bibliographystyle{plainurl}
+%\bibliography{mixing_references}
+
+\input{0_mixing_graphs.bbl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+\section{Counter-Example for the Algorithm of Dinh~{\etal}~\cite{dinh2014network}}
+\label{sec: counter-example for algorihtm of Dinh}
+\input{A_counter_example_to_dinh.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{$\NP$-hardness proof of \MixReachability~for constant-depth mixing graphs}
+\label{sec: NP-hardness}
+\input{B_np-hardness.tex}
+
+\end{document}

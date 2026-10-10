@@ -1,0 +1,144 @@
+{
+  "status": "PASS",
+  "finite_cases": 162,
+  "independent_direction_fields_used": 0,
+  "binary_unit_fields_used": 0,
+  "old_direction_conditions_replaced": 162,
+  "bad_trace_cases_now_completed": 43,
+  "finite_transports": 2592,
+  "large_formula_transports": 360,
+  "literal_torus_and_terminal_atoms": 682,
+  "nonintegral_R_column_checks": 30,
+  "small_digit_instances": 499459,
+  "noninitial_digit_cases": 4,
+  "shallow_group_lifting_used": false,
+  "smith_primitive_preparation_used": false,
+  "auxiliary13_retained": true,
+  "examples": [
+    {
+      "p": 11,
+      "s": 1,
+      "root_bezout": [
+        1
+      ],
+      "terminal_j": 0,
+      "small_digit": 3,
+      "digit_sign": -1,
+      "digit_exponent": 15,
+      "odd_translation_exponent": 64,
+      "odd_root_parameters": [
+        4511936,
+        2776576
+      ],
+      "last_lower_parameter": 2312,
+      "deep_level": 18496
+    },
+    {
+      "p": 11,
+      "s": 1,
+      "root_bezout": [
+        1
+      ],
+      "terminal_j": 3,
+      "small_digit": 3,
+      "digit_sign": 1,
+      "digit_exponent": 3,
+      "odd_translation_exponent": 640,
+      "odd_root_parameters": [
+        5206080,
+        3123648
+      ],
+      "last_lower_parameter": 13872,
+      "deep_level": 18496
+    },
+    {
+      "p": 11,
+      "s": 1,
+      "root_bezout": [
+        1
+      ],
+      "terminal_j": 2,
+      "small_digit": 3,
+      "digit_sign": -1,
+      "digit_exponent": 3,
+      "odd_translation_exponent": 1024,
+      "odd_root_parameters": [
+        1735360,
+        3123648
+      ],
+      "last_lower_parameter": 9248,
+      "deep_level": 18496
+    },
+    {
+      "p": 11,
+      "s": 1,
+      "root_bezout": [
+        1
+      ],
+      "terminal_j": 0,
+      "small_digit": 3,
+      "digit_sign": -1,
+      "digit_exponent": 3,
+      "odd_translation_exponent": 1024,
+      "odd_root_parameters": [
+        4164864,
+        5206080
+      ],
+      "last_lower_parameter": 0,
+      "deep_level": 18496
+    },
+    {
+      "p": 11,
+      "s": 1,
+      "root_bezout": [
+        1
+      ],
+      "terminal_j": 1,
+      "small_digit": 3,
+      "digit_sign": -1,
+      "digit_exponent": 0,
+      "odd_translation_exponent": 576,
+      "odd_root_parameters": [
+        347072,
+        347072
+      ],
+      "last_lower_parameter": 11560,
+      "deep_level": 18496
+    },
+    {
+      "p": 11,
+      "s": 1,
+      "root_bezout": [
+        1
+      ],
+      "terminal_j": 0,
+      "small_digit": 3,
+      "digit_sign": -1,
+      "digit_exponent": 5,
+      "odd_translation_exponent": 128,
+      "odd_root_parameters": [
+        1388288,
+        1041216
+      ],
+      "last_lower_parameter": 0,
+      "deep_level": 18496
+    }
+  ],
+  "negative_control": {
+    "terminal_j": 2,
+    "small_digit": 3,
+    "digit_sign": 1,
+    "digit_exponent": 1,
+    "odd_translation_exponent": 192,
+    "odd_root_parameters": [
+      2082432,
+      1735360
+    ],
+    "last_lower_parameter": 4624,
+    "deep_level": 18496
+  },
+  "unchanged_frozen_files": 256,
+  "seconds": 1.609,
+  "local_links_checked": 89,
+  "scope": "Exact finite support and transport checks. The all-parameter theorem is in the companion proof. Old root supplies, base units, exact deep kernel and auxiliary13 remain. No averaging-word or large-group orbit search."
+}

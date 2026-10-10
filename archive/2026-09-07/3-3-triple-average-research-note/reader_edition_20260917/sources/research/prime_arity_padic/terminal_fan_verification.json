@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "even_certificate_cases": 90,
+  "by_delta": {
+    "4": 35,
+    "2": 55
+  },
+  "finite_case_transports": 2160,
+  "large_formula_transports": 200,
+  "literal_zero_sum_terminal_atoms": 300,
+  "primitive_preparation_examples": 12,
+  "normalized_cycle_parameter_checks": 416,
+  "binary_unit_fields_read": 0,
+  "special_97_over13_used": false,
+  "unchanged_frozen_files": 256,
+  "examples": [
+    {
+      "p": 13,
+      "s": 3,
+      "input_mod_Q": [
+        137,
+        11
+      ],
+      "eps": 11,
+      "normalized_cycle_power": 3,
+      "lower_toggle": 1,
+      "terminal_j": 0
+    },
+    {
+      "p": 13,
+      "s": 3,
+      "input_mod_Q": [
+        11,
+        137
+      ],
+      "eps": 11,
+      "normalized_cycle_power": 0,
+      "lower_toggle": 1,
+      "terminal_j": 1
+    },
+    {
+      "p": 13,
+      "s": 3,
+      "input_mod_Q": [
+        53,
+        95
+      ],
+      "eps": 11,
+      "normalized_cycle_power": 1,
+      "lower_toggle": 0,
+      "terminal_j": 0
+    }
+  ],
+  "scope": "Finite exact checks of the written general terminal-fan theorem. Old root/direction certificates and auxiliary13 for (11,3) remain; no finite orbit search.",
+  "local_links_checked": 78,
+  "seconds": 0.88
+}

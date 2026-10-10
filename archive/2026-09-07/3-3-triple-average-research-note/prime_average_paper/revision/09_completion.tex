@@ -1,0 +1,18 @@
+\section{全部参数的覆盖}\label{sec:completion}
+\begin{proof}[定理\ref{thm:prime}的证明]
+必要性由引理\ref{lem:obstruction}给出，下界由命题\ref{prop:lower}给出。对于充分性，$p\ge11$ 时：$n\ge4p$ 用命题\ref{prop:wide}；$n=3p$ 用命题\ref{prop:threep}；其余临界带先用命题\ref{prop:entry}压缩，再按下表完成。
+\begin{center}
+\begin{tabular}{ll}
+\toprule 参数范围 & 核内结论\\\midrule
+$n=2p+r,\ 1\le r<p,\ r$ 奇 & 命题\ref{prop:odd}\\
+$r=2$ & 命题\ref{prop:r2}\\
+$4\le r<p,\ r$ 偶 & 命题\ref{prop:even}\\
+$3p<n<4p$ & 命题\ref{prop:upper}\\\bottomrule
+\end{tabular}
+\end{center}
+$p=5$ 时，$11\le n\le15$ 已由上述下半带及等块结论处理；$n=16,17,18$ 用引理\ref{lem:collision-small}；$n=19$ 满足引理\ref{lem:integer-range}；$n\ge20$ 用命题\ref{prop:wide}。
+$p=7$ 时，下半带处理 $15\le n\le21$；$n=22$ 用引理\ref{lem:seven22}；$23\le n\le26$ 用引理\ref{lem:collision-small}；$n=27$ 满足引理\ref{lem:integer-range}；更大维数用命题\ref{prop:wide}。
+$p=3$ 时，$n=7$ 用命题\ref{prop:entry}及\ref{prop:odd}，$n=8,10$ 用引理\ref{lem:eight}、\ref{lem:ten}，$n\ge11$ 用引理\ref{lem:triple-large}。$n=9$ 将位置排成 $3\times3$，先平均各行再平均各列，六次操作即达到全局均值。
+这些范围覆盖全部奇素数及全部 $n\ge2p+1$。推论\ref{cor:threshold}随定理和第\ref{sec:obstruction}节的二平均论证成立。
+\end{proof}
+

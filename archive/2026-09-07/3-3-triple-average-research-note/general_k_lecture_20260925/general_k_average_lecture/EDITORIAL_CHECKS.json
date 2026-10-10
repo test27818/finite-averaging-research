@@ -1,0 +1,142 @@
+{
+  "scope": "Editorial arithmetic and finite exact checks; not a new proof or a rerun of all historical verifiers.",
+  "checks": [
+    {
+      "name": "B/C values and automatic-G list",
+      "scope": "Arithmetic only; no sufficiency inferred.",
+      "count": 26,
+      "result": "PASS"
+    },
+    {
+      "name": "Four-step networks",
+      "scope": "Full standard-basis replay at seven specified parameter pairs.",
+      "count": 7,
+      "result": "PASS"
+    },
+    {
+      "name": "Dyadic network family",
+      "scope": "Full basis replay for 2/4, 10/16, 42/64.",
+      "count": 3,
+      "result": "PASS"
+    },
+    {
+      "name": "Six-average G=2 worked example",
+      "scope": "Independent two-operation replay.",
+      "count": 1,
+      "result": "PASS"
+    },
+    {
+      "name": "Square-controller identities",
+      "scope": "Exact rational substitution for t=2,...,15; general proof remains in lecture/source.",
+      "count": 14,
+      "result": "PASS"
+    },
+    {
+      "name": "Two/three square-multiple identities",
+      "scope": "Exact rational substitution at 24 parameter pairs.",
+      "count": 24,
+      "result": "PASS"
+    },
+    {
+      "name": "High odd-power three-step returns",
+      "scope": "Position-level replay for six templates and both parameter basis vectors; no general controllability claim.",
+      "count": 12,
+      "result": "PASS"
+    },
+    {
+      "name": "Inverse-designed zero-sum family",
+      "scope": "Twelve exact two-step replays, including composite k=9 and 15; five-step tail inherited.",
+      "count": 12,
+      "result": "PASS"
+    },
+    {
+      "name": "Small-unit illustrations",
+      "scope": "Exact mod-105 group; numerical illustration at t=1000 (the all-t inequality is proved in text).",
+      "count": 2,
+      "result": "PASS"
+    },
+    {
+      "name": "Direct prime-factor substitutions",
+      "scope": "Arithmetic hypotheses for the four explicitly added examples.",
+      "count": 4,
+      "result": "PASS"
+    },
+    {
+      "name": "Package and cross-reference integrity",
+      "scope": "Snapshot hashes, all general-arity articles, source IDs and native-LaTeX references.",
+      "count": 157,
+      "result": "PASS"
+    }
+  ],
+  "automatic_B_points": [
+    [
+      2,
+      4
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      10,
+      16
+    ],
+    [
+      12,
+      16
+    ],
+    [
+      20,
+      25
+    ],
+    [
+      30,
+      36
+    ],
+    [
+      42,
+      49
+    ],
+    [
+      54,
+      64
+    ],
+    [
+      56,
+      64
+    ],
+    [
+      75,
+      81
+    ],
+    [
+      90,
+      96
+    ],
+    [
+      110,
+      121
+    ],
+    [
+      120,
+      125
+    ],
+    [
+      132,
+      144
+    ],
+    [
+      138,
+      162
+    ],
+    [
+      156,
+      169
+    ],
+    [
+      182,
+      196
+    ]
+  ],
+  "all_passed": true
+}

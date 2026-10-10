@@ -1,0 +1,2354 @@
+{
+  "query": "congruence subgroup continued fraction algorithms",
+  "url": "https://api.openalex.org/works?search=congruence+subgroup+continued+fraction+algorithms&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Cauthorships%2Cabstract_inverted_index%2Cprimary_location%2Copen_access&filter=title.search%3Acontinued+fractions",
+  "count": 25,
+  "results": [
+    {
+      "id": "https://openalex.org/W2963491126",
+      "title": "Hyperelliptic continued fractions and generalized jacobians",
+      "publication_date": "2019-01-01",
+      "doi": "https://doi.org/10.1353/ajm.2019.0000",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5017792265",
+            "display_name": "Umberto Zannier",
+            "orcid": "https://orcid.org/0000-0003-3119-3303"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I157210198",
+              "display_name": "Scuola Normale Superiore",
+              "ror": "https://ror.org/03aydme10",
+              "country_code": "IT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I157210198"
+              ]
+            }
+          ],
+          "countries": [
+            "IT"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Zannier U.",
+          "raw_affiliation_strings": [
+            "Scuola Normale Superiore Piazza dei Cavalieri , 7 -56126 Pisa - ITALY",
+            "Scuola Normale Superiore Piazza dei Cavalieri, 7 -56126 Pisa -ITALY"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Scuola Normale Superiore Piazza dei Cavalieri , 7 -56126 Pisa - ITALY",
+              "institution_ids": [
+                "https://openalex.org/I157210198"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Scuola Normale Superiore Piazza dei Cavalieri, 7 -56126 Pisa -ITALY",
+              "institution_ids": [
+                "https://openalex.org/I157210198"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "For": [
+          0
+        ],
+        "a": [
+          1,
+          71,
+          102,
+          191,
+          196,
+          224
+        ],
+        "complex": [
+          2
+        ],
+        "polynomial": [
+          3
+        ],
+        "D(t)": [
+          4
+        ],
+        "of": [
+          5,
+          14,
+          31,
+          42,
+          45,
+          59,
+          74,
+          83,
+          86,
+          108,
+          133,
+          140,
+          143,
+          155,
+          168,
+          195,
+          198,
+          223,
+          233
+        ],
+        "even": [
+          6
+        ],
+        "degree,": [
+          7
+        ],
+        "one": [
+          8
+        ],
+        "may": [
+          9
+        ],
+        "define": [
+          10
+        ],
+        "the": [
+          11,
+          39,
+          60,
+          84,
+          87,
+          106,
+          109,
+          124,
+          134,
+          138,
+          141,
+          153,
+          166,
+          169,
+          234
+        ],
+        "continued": [
+          12,
+          135
+        ],
+        "fraction": [
+          13
+        ],
+        "D(t).": [
+          15
+        ],
+        "This": [
+          16,
+          99
+        ],
+        "was": [
+          17,
+          95
+        ],
+        "found": [
+          18
+        ],
+        "relevant": [
+          19
+        ],
+        "already": [
+          20
+        ],
+        "by": [
+          21,
+          27,
+          49
+        ],
+        "Abel": [
+          22
+        ],
+        "in": [
+          23,
+          79,
+          162,
+          215,
+          230
+        ],
+        "1826,": [
+          24
+        ],
+        "and": [
+          25,
+          51,
+          210
+        ],
+        "then": [
+          26
+        ],
+        "Chebyshev,": [
+          28
+        ],
+        "concerning": [
+          29
+        ],
+        "integration": [
+          30
+        ],
+        "(hyperelliptic)": [
+          32
+        ],
+        "differentials;": [
+          33
+        ],
+        "they": [
+          34
+        ],
+        "realized": [
+          35
+        ],
+        "that,": [
+          36,
+          69
+        ],
+        "contrary": [
+          37
+        ],
+        "to": [
+          38,
+          152,
+          190
+        ],
+        "classical": [
+          40
+        ],
+        "case": [
+          41
+        ],
+        "square": [
+          43
+        ],
+        "roots": [
+          44
+        ],
+        "positive": [
+          46
+        ],
+        "integers": [
+          47
+        ],
+        "treated": [
+          48
+        ],
+        "Lagrange": [
+          50
+        ],
+        "Galois,": [
+          52
+        ],
+        "we": [
+          53,
+          66,
+          113
+        ],
+        "do": [
+          54
+        ],
+        "not": [
+          55
+        ],
+        "always": [
+          56,
+          90
+        ],
+        "have": [
+          57
+        ],
+        "pre-periodicity": [
+          58,
+          82
+        ],
+        "partial": [
+          61,
+          88,
+          144
+        ],
+        "quotients.": [
+          62,
+          145
+        ],
+        "In": [
+          63
+        ],
+        "this": [
+          64,
+          93,
+          163,
+          218,
+          231
+        ],
+        "paper": [
+          65,
+          164
+        ],
+        "shall": [
+          67,
+          114,
+          128,
+          219
+        ],
+        "prove": [
+          68,
+          115
+        ],
+        "however,": [
+          70
+        ],
+        "correct": [
+          72
+        ],
+        "analogue": [
+          73
+        ],
+        "Lagrange’s": [
+          75
+        ],
+        "theorem": [
+          76
+        ],
+        "still": [
+          77
+        ],
+        "exists": [
+          78
+        ],
+        "full": [
+          80
+        ],
+        "generality:": [
+          81
+        ],
+        "degrees": [
+          85,
+          107
+        ],
+        "quotients": [
+          89
+        ],
+        "holds.": [
+          91
+        ],
+        "Apparently,": [
+          92
+        ],
+        "fact": [
+          94
+        ],
+        "never": [
+          96
+        ],
+        "noted": [
+          97
+        ],
+        "before.": [
+          98
+        ],
+        "also": [
+          100
+        ],
+        "yields": [
+          101
+        ],
+        "corresponding": [
+          103
+        ],
+        "formula": [
+          104
+        ],
+        "for": [
+          105,
+          111,
+          187,
+          226
+        ],
+        "convergents,": [
+          110
+        ],
+        "which": [
+          112,
+          118,
+          179
+        ],
+        "new": [
+          116
+        ],
+        "bounds": [
+          117
+        ],
+        "are": [
+          119
+        ],
+        "generally": [
+          120
+        ],
+        "best": [
+          121
+        ],
+        "possible": [
+          122
+        ],
+        "(halving": [
+          123
+        ],
+        "known": [
+          125
+        ],
+        "ones).": [
+          126
+        ],
+        "We": [
+          127
+        ],
+        "further": [
+          129
+        ],
+        "study": [
+          130
+        ],
+        "other": [
+          131,
+          204
+        ],
+        "aspects": [
+          132
+        ],
+        "fraction,": [
+          136
+        ],
+        "like": [
+          137
+        ],
+        "growth": [
+          139
+        ],
+        "heights": [
+          142
+        ],
+        "Throughout,": [
+          146
+        ],
+        "some": [
+          147
+        ],
+        "striking": [
+          148
+        ],
+        "phenomena": [
+          149
+        ],
+        "appear,": [
+          150
+        ],
+        "related": [
+          151
+        ],
+        "geometry": [
+          154
+        ],
+        "(gen-eralized)": [
+          156
+        ],
+        "Hyperelliptic": [
+          157
+        ],
+        "Jacobians.": [
+          158
+        ],
+        "Another": [
+          159
+        ],
+        "conclusion": [
+          160
+        ],
+        "central": [
+          161
+        ],
+        "concerns": [
+          165
+        ],
+        "poles": [
+          167
+        ],
+        "convergents:": [
+          170
+        ],
+        "there": [
+          171
+        ],
+        "can": [
+          172
+        ],
+        "be": [
+          173
+        ],
+        "only": [
+          174
+        ],
+        "finitely": [
+          175
+        ],
+        "many": [
+          176,
+          182
+        ],
+        "rational": [
+          177
+        ],
+        "ones": [
+          178
+        ],
+        "occur": [
+          180
+        ],
+        "infinitely": [
+          181
+        ],
+        "times.": [
+          183
+        ],
+        "(This": [
+          184
+        ],
+        "is": [
+          185
+        ],
+        "crucial": [
+          186
+        ],
+        "certain": [
+          188
+        ],
+        "applications": [
+          189
+        ],
+        "function": [
+          192
+        ],
+        "field": [
+          193
+        ],
+        "version": [
+          194,
+          225
+        ],
+        "question": [
+          197
+        ],
+        "McMullen.)": [
+          199
+        ],
+        "Our": [
+          200
+        ],
+        "methods": [
+          201
+        ],
+        "rely,": [
+          202
+        ],
+        "among": [
+          203
+        ],
+        "things,": [
+          205
+        ],
+        "on": [
+          206
+        ],
+        "linking": [
+          207
+        ],
+        "Padé": [
+          208
+        ],
+        "approximants": [
+          209
+        ],
+        "convergents": [
+          211
+        ],
+        "with": [
+          212
+        ],
+        "divisor": [
+          213
+        ],
+        "relations": [
+          214
+        ],
+        "generalized": [
+          216
+        ],
+        "Jacobians;": [
+          217
+        ],
+        "allow": [
+          220
+        ],
+        "an": [
+          221
+        ],
+        "application": [
+          222
+        ],
+        "algebraic": [
+          227
+        ],
+        "groups,": [
+          228
+        ],
+        "proved": [
+          229
+        ],
+        "paper,": [
+          232
+        ],
+        "Skolem-Mahler-Lech": [
+          235
+        ],
+        "theorem.": [
+          236
+        ]
+      },
+      "primary_location": {
+        "id": "pmh:oai:ricerca.sns.it:11384/83399",
+        "is_oa": true,
+        "landing_page_url": "http://hdl.handle.net/11384/83399",
+        "pdf_url": "https://ricerca.sns.it/bitstream/11384/83399/5/1602.00934.pdf",
+        "source": {
+          "id": "https://openalex.org/S7407050981",
+          "display_name": "Scuola Normale Superiore di Pisa",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": null,
+          "host_organization_name": null,
+          "host_organization_lineage": [],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": "other-oa",
+        "license_id": "https://openalex.org/licenses/other-oa",
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": null,
+        "raw_type": "info:eu-repo/semantics/article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://ricerca.sns.it/bitstream/11384/83399/5/1602.00934.pdf",
+        "any_repository_has_fulltext": true
+      }
+    },
+    {
+      "id": "https://openalex.org/W2040770047",
+      "title": "Ramanujan's cubic continued fraction revisited",
+      "publication_date": "2007-01-01",
+      "doi": "https://doi.org/10.4064/aa126-4-2",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5003995449",
+            "display_name": "Heng Huat Chan",
+            "orcid": "https://orcid.org/0000-0002-9215-0895"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I165932596",
+              "display_name": "National University of Singapore",
+              "ror": "https://ror.org/01tgyzw49",
+              "country_code": "SG",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I165932596"
+              ]
+            }
+          ],
+          "countries": [
+            "SG"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Heng Huat Chan",
+          "raw_affiliation_strings": [
+            "Department of Mathematics National University of Singapore 2 Science Drive 2, Singapore 117543",
+            "Department of Mathematics, National University of Singapore, 2 Science Drive 2, Singapore 117543#TAB#"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics National University of Singapore 2 Science Drive 2, Singapore 117543",
+              "institution_ids": [
+                "https://openalex.org/I165932596"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematics, National University of Singapore, 2 Science Drive 2, Singapore 117543#TAB#",
+              "institution_ids": [
+                "https://openalex.org/I165932596"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5045029910",
+            "display_name": "Kok Ping Loo",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I165932596",
+              "display_name": "National University of Singapore",
+              "ror": "https://ror.org/01tgyzw49",
+              "country_code": "SG",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I165932596"
+              ]
+            }
+          ],
+          "countries": [
+            "SG"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kok Ping Loo",
+          "raw_affiliation_strings": [
+            "Department of Mathematics National University of Singapore 2 Science Drive 2, Singapore 117543",
+            "Department of Mathematics, National University of Singapore, 2 Science Drive 2, Singapore 117543#TAB#"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics National University of Singapore 2 Science Drive 2, Singapore 117543",
+              "institution_ids": [
+                "https://openalex.org/I165932596"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematics, National University of Singapore, 2 Science Drive 2, Singapore 117543#TAB#",
+              "institution_ids": [
+                "https://openalex.org/I165932596"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Abstract.": [
+          0
+        ],
+        "In": [
+          1,
+          25
+        ],
+        "this": [
+          2
+        ],
+        "paper,": [
+          3
+        ],
+        "we": [
+          4,
+          27
+        ],
+        "study": [
+          5
+        ],
+        "the": [
+          6,
+          9
+        ],
+        "divisibility": [
+          7
+        ],
+        "of": [
+          8,
+          38
+        ],
+        "function": [
+          10
+        ],
+        "a(n)": [
+          11,
+          35
+        ],
+        "defined": [
+          12
+        ],
+        "by": [
+          13
+        ],
+        "n≥0": [
+          14
+        ],
+        "a(n)q": [
+          15
+        ],
+        "n:": [
+          16
+        ],
+        "=": [
+          17
+        ],
+        "(q;": [
+          18
+        ],
+        "q)−1": [
+          19
+        ],
+        "∞": [
+          20
+        ],
+        "(q": [
+          21
+        ],
+        "2;": [
+          22
+        ],
+        "q2)−1": [
+          23
+        ],
+        "∞.": [
+          24
+        ],
+        "particular,": [
+          26
+        ],
+        "prove": [
+          28
+        ],
+        "certain": [
+          29
+        ],
+        "“Ramanujan": [
+          30
+        ],
+        "type": [
+          31
+        ],
+        "congruences": [
+          32
+        ],
+        "”": [
+          33
+        ],
+        "for": [
+          34
+        ],
+        "modulo": [
+          36
+        ],
+        "powers": [
+          37
+        ],
+        "3.": [
+          39
+        ],
+        "1.": [
+          40
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.4064/aa126-4-2",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.4064/aa126-4-2",
+        "pdf_url": "https://www.impan.pl/shop/publication/transaction/download/product/82720?download.pdf",
+        "source": {
+          "id": "https://openalex.org/S141074886",
+          "display_name": "Acta Arithmetica",
+          "issn_l": "0065-1036",
+          "issn": [
+            "0065-1036",
+            "1730-6264"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310317485",
+          "host_organization_name": "Polish Academy of Sciences",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310317485"
+          ],
+          "host_organization_lineage_names": [
+            "Polish Academy of Sciences"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Acta Arithmetica",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://www.impan.pl/shop/publication/transaction/download/product/82720?download.pdf",
+        "any_repository_has_fulltext": false
+      }
+    },
+    {
+      "id": "https://openalex.org/W1980575252",
+      "title": "On Ramanujan's cubic continued fraction as a modular function",
+      "publication_date": "2010-01-01",
+      "doi": "https://doi.org/10.2748/tmj/1294170348",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5019084488",
+            "display_name": "Bumkyu Cho",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Bumkyu Cho",
+          "raw_affiliation_strings": [
+            "DEPARTMENT OF MATHEMATICAL SCIENCES KOREA ADVANCED INSTITUTE OF SCIENCE AND TECHNOLOGY 373-",
+            "Department of Mathematics Pohang University of Science and Technology"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "DEPARTMENT OF MATHEMATICAL SCIENCES KOREA ADVANCED INSTITUTE OF SCIENCE AND TECHNOLOGY 373-",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematics Pohang University of Science and Technology",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5113838092",
+            "display_name": "Ja Kyung Koo",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I157485424",
+              "display_name": "Korea Advanced Institute of Science and Technology",
+              "ror": "https://ror.org/05apxxy63",
+              "country_code": "KR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I157485424"
+              ]
+            }
+          ],
+          "countries": [
+            "KR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ja Kyung Koo",
+          "raw_affiliation_strings": [
+            "DEPARTMENT OF MATHEMATICAL SCIENCES KOREA ADVANCED INSTITUTE OF SCIENCE AND TECHNOLOGY 373-",
+            "Department of Mathematical Sciences,Korea Advanced Institute of Science and Technology"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "DEPARTMENT OF MATHEMATICAL SCIENCES KOREA ADVANCED INSTITUTE OF SCIENCE AND TECHNOLOGY 373-",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematical Sciences,Korea Advanced Institute of Science and Technology",
+              "institution_ids": [
+                "https://openalex.org/I157485424"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5112424342",
+            "display_name": "Yoon Kyung Park",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I157485424",
+              "display_name": "Korea Advanced Institute of Science and Technology",
+              "ror": "https://ror.org/05apxxy63",
+              "country_code": "KR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I157485424"
+              ]
+            }
+          ],
+          "countries": [
+            "KR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yoon Kyung Park",
+          "raw_affiliation_strings": [
+            "DEPARTMENT OF MATHEMATICAL SCIENCES KOREA ADVANCED INSTITUTE OF SCIENCE AND TECHNOLOGY 373-",
+            "GUSEONG-DONG YUSEONG-GU DAEJEON 305-701 REPUBLIC OF KOREA",
+            "Department of Mathematics Pohang University of Science and Technology"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "DEPARTMENT OF MATHEMATICAL SCIENCES KOREA ADVANCED INSTITUTE OF SCIENCE AND TECHNOLOGY 373-",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "GUSEONG-DONG YUSEONG-GU DAEJEON 305-701 REPUBLIC OF KOREA",
+              "institution_ids": [
+                "https://openalex.org/I157485424"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematics Pohang University of Science and Technology",
+              "institution_ids": []
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "We": [
+          0,
+          41
+        ],
+        "first": [
+          1
+        ],
+        "extend": [
+          2
+        ],
+        "the": [
+          3,
+          10,
+          25
+        ],
+        "results": [
+          4
+        ],
+        "of": [
+          5,
+          13,
+          28
+        ],
+        "Chan": [
+          6
+        ],
+        "and": [
+          7,
+          31,
+          61
+        ],
+        "Baruah": [
+          8
+        ],
+        "on": [
+          9
+        ],
+        "modular": [
+          11,
+          29,
+          39
+        ],
+        "equations": [
+          12
+        ],
+        "Ramanujan's": [
+          14
+        ],
+        "cubic": [
+          15
+        ],
+        "continued": [
+          16
+        ],
+        "fraction": [
+          17
+        ],
+        "$C(\\tau)$": [
+          18
+        ],
+        "to": [
+          19
+        ],
+        "all": [
+          20
+        ],
+        "primes": [
+          21
+        ],
+        "$p$": [
+          22
+        ],
+        "by": [
+          23,
+          45
+        ],
+        "finding": [
+          24
+        ],
+        "affine": [
+          26
+        ],
+        "models": [
+          27
+        ],
+        "curves": [
+          30
+        ],
+        "then": [
+          32
+        ],
+        "derive": [
+          33
+        ],
+        "Kronecker's": [
+          34
+        ],
+        "congruence": [
+          35
+        ],
+        "relations": [
+          36
+        ],
+        "for": [
+          37
+        ],
+        "these": [
+          38
+        ],
+        "equations.": [
+          40
+        ],
+        "further": [
+          42
+        ],
+        "show": [
+          43
+        ],
+        "that": [
+          44,
+          68
+        ],
+        "its": [
+          46
+        ],
+        "singular": [
+          47
+        ],
+        "values": [
+          48
+        ],
+        "we": [
+          49
+        ],
+        "can": [
+          50
+        ],
+        "generate": [
+          51
+        ],
+        "ray": [
+          52
+        ],
+        "class": [
+          53,
+          64
+        ],
+        "fields": [
+          54,
+          60
+        ],
+        "modulo": [
+          55
+        ],
+        "6": [
+          56
+        ],
+        "over": [
+          57
+        ],
+        "imaginary": [
+          58
+        ],
+        "quadratic": [
+          59
+        ],
+        "find": [
+          62
+        ],
+        "their": [
+          63
+        ],
+        "polynomials": [
+          65
+        ],
+        "after": [
+          66
+        ],
+        "proving": [
+          67
+        ],
+        "$1/C(\\tau)$": [
+          69
+        ],
+        "is": [
+          70
+        ],
+        "an": [
+          71
+        ],
+        "algebraic": [
+          72
+        ],
+        "integer.": [
+          73
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.2748/tmj/1294170348",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.2748/tmj/1294170348",
+        "pdf_url": "https://projecteuclid.org/journals/tohoku-mathematical-journal/volume-62/issue-4/On-Ramanujans-cubic-continued-fraction-as-a-modular-function/10.2748/tmj/1294170348.pdf",
+        "source": {
+          "id": "https://openalex.org/S40579697",
+          "display_name": "Tohoku Mathematical Journal",
+          "issn_l": "0040-8735",
+          "issn": [
+            "0040-8735",
+            "1881-2015",
+            "2186-585X"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310313307",
+          "host_organization_name": "Tohoku University",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310313307"
+          ],
+          "host_organization_lineage_names": [
+            "Tohoku University"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Tohoku Mathematical Journal",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://projecteuclid.org/journals/tohoku-mathematical-journal/volume-62/issue-4/On-Ramanujans-cubic-continued-fraction-as-a-modular-function/10.2748/tmj/1294170348.pdf",
+        "any_repository_has_fulltext": true
+      }
+    },
+    {
+      "id": "https://openalex.org/W3006248430",
+      "title": "Odd-odd continued fraction algorithm",
+      "publication_date": "2022-04-11",
+      "doi": "https://doi.org/10.1007/s00605-022-01704-2",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5100616112",
+            "display_name": "Dong Han Kim",
+            "orcid": "https://orcid.org/0000-0001-5764-9466"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I205490536",
+              "display_name": "Dongguk University",
+              "ror": "https://ror.org/057q6n778",
+              "country_code": "KR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I205490536"
+              ]
+            }
+          ],
+          "countries": [
+            "KR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Dong Han Kim",
+          "raw_affiliation_strings": [
+            "Department of Mathematics Education, Dongguk University–Seoul, 30 Pildong-ro 1-gil, Jung-gu, Seoul, 04620, Korea"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-5764-9466",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics Education, Dongguk University–Seoul, 30 Pildong-ro 1-gil, Jung-gu, Seoul, 04620, Korea",
+              "institution_ids": [
+                "https://openalex.org/I205490536"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5103279317",
+            "display_name": "Seul Bee Lee",
+            "orcid": "https://orcid.org/0000-0003-4903-4693"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I157210198",
+              "display_name": "Scuola Normale Superiore",
+              "ror": "https://ror.org/03aydme10",
+              "country_code": "IT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I157210198"
+              ]
+            }
+          ],
+          "countries": [
+            "IT"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Seul Bee Lee",
+          "raw_affiliation_strings": [
+            "Centro di Ricerca Matematica Ennio de Giorgi, Scuola Normale Superiore, Piazza dei Cavalieri 3, 56126, Pisa, Italy"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-4903-4693",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Centro di Ricerca Matematica Ennio de Giorgi, Scuola Normale Superiore, Piazza dei Cavalieri 3, 56126, Pisa, Italy",
+              "institution_ids": [
+                "https://openalex.org/I157210198"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5073859796",
+            "display_name": "Lingmin Liao",
+            "orcid": "https://orcid.org/0000-0001-8763-1582"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1294671590",
+              "display_name": "Centre National de la Recherche Scientifique",
+              "ror": "https://ror.org/02feahw73",
+              "country_code": "FR",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1294671590"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I197681013",
+              "display_name": "Université Paris-Est Créteil",
+              "ror": "https://ror.org/05ggc9x40",
+              "country_code": "FR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I197681013"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210144844",
+              "display_name": "Laboratoire d’Analyse et de Mathématiques Appliquées",
+              "ror": "https://ror.org/0581g8849",
+              "country_code": "FR",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I197681013",
+                "https://openalex.org/I4210141950",
+                "https://openalex.org/I4210144844",
+                "https://openalex.org/I4210154111"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210154111",
+              "display_name": "Université Gustave Eiffel",
+              "ror": "https://ror.org/03x42jk29",
+              "country_code": "FR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4210154111"
+              ]
+            }
+          ],
+          "countries": [
+            "FR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Lingmin Liao",
+          "raw_affiliation_strings": [
+            "Université Gustave Eiffel, LAMA, F-77447, Marne-la-Vallée, France",
+            "Université Paris-Est Créteil CNRS, LAMA, F-94010, Créteil, France"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Université Gustave Eiffel, LAMA, F-77447, Marne-la-Vallée, France",
+              "institution_ids": [
+                "https://openalex.org/I4210144844",
+                "https://openalex.org/I4210154111"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Université Paris-Est Créteil CNRS, LAMA, F-94010, Créteil, France",
+              "institution_ids": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I197681013",
+                "https://openalex.org/I4210144844"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Abstract": [
+          0
+        ],
+        "By": [
+          1
+        ],
+        "using": [
+          2
+        ],
+        "a": [
+          3,
+          13
+        ],
+        "jump": [
+          4
+        ],
+        "transformation": [
+          5
+        ],
+        "associated": [
+          6
+        ],
+        "to": [
+          7
+        ],
+        "the": [
+          8,
+          41,
+          58,
+          62
+        ],
+        "Romik": [
+          9
+        ],
+        "map,": [
+          10
+        ],
+        "we": [
+          11
+        ],
+        "define": [
+          12
+        ],
+        "new": [
+          14
+        ],
+        "continued": [
+          15,
+          20,
+          64
+        ],
+        "fraction": [
+          16,
+          65
+        ],
+        "algorithm": [
+          17,
+          66
+        ],
+        "called": [
+          18
+        ],
+        "odd-odd": [
+          19,
+          63
+        ],
+        "fraction,": [
+          21
+        ],
+        "whose": [
+          22
+        ],
+        "principal": [
+          23,
+          59
+        ],
+        "convergents": [
+          24,
+          60
+        ],
+        "are": [
+          25,
+          55
+        ],
+        "rational": [
+          26
+        ],
+        "numbers": [
+          27
+        ],
+        "of": [
+          28,
+          45,
+          51,
+          61
+        ],
+        "odd": [
+          29,
+          32,
+          46,
+          49
+        ],
+        "denominators": [
+          30,
+          47
+        ],
+        "and": [
+          31,
+          48,
+          67
+        ],
+        "numerators.": [
+          33
+        ],
+        "Among": [
+          34
+        ],
+        "others,": [
+          35
+        ],
+        "it": [
+          36
+        ],
+        "is": [
+          37
+        ],
+        "proved": [
+          38
+        ],
+        "that": [
+          39
+        ],
+        "all": [
+          40
+        ],
+        "best": [
+          42
+        ],
+        "approximating": [
+          43
+        ],
+        "rationals": [
+          44
+        ],
+        "numerators": [
+          50
+        ],
+        "an": [
+          52
+        ],
+        "irrational": [
+          53
+        ],
+        "number": [
+          54
+        ],
+        "given": [
+          56
+        ],
+        "by": [
+          57
+        ],
+        "vice": [
+          68
+        ],
+        "versa.": [
+          69
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1007/s00605-022-01704-2",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1007/s00605-022-01704-2",
+        "pdf_url": "https://link.springer.com/content/pdf/10.1007/s00605-022-01704-2.pdf",
+        "source": {
+          "id": "https://openalex.org/S25806919",
+          "display_name": "Monatshefte für Mathematik",
+          "issn_l": "0026-9255",
+          "issn": [
+            "0026-9255",
+            "1436-5081",
+            "1812-8076"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310319900",
+          "host_organization_name": "Springer Science+Business Media",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310319900",
+            "https://openalex.org/P4310319965"
+          ],
+          "host_organization_lineage_names": [
+            "Springer Science+Business Media",
+            "Springer Nature"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Monatshefte für Mathematik",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://link.springer.com/content/pdf/10.1007/s00605-022-01704-2.pdf",
+        "any_repository_has_fulltext": true
+      }
+    },
+    {
+      "id": "https://openalex.org/W2585023527",
+      "title": "A continued fraction of order twelve as a modular function",
+      "publication_date": "2017-02-01",
+      "doi": "https://doi.org/10.1090/mcom/3259",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5100644394",
+            "display_name": "Yoonjin Lee",
+            "orcid": "https://orcid.org/0000-0001-9510-3691"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I138925566",
+              "display_name": "Ewha Womans University",
+              "ror": "https://ror.org/053fp5c05",
+              "country_code": "KR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I138925566"
+              ]
+            }
+          ],
+          "countries": [
+            "KR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yoonjin Lee",
+          "raw_affiliation_strings": [
+            "Department of Mathematics, Ewha Womans University, Seoul 03760, South Korea"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics, Ewha Womans University, Seoul 03760, South Korea",
+              "institution_ids": [
+                "https://openalex.org/I138925566"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5005273392",
+            "display_name": "Yoon Kyung Park",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I138925566",
+              "display_name": "Ewha Womans University",
+              "ror": "https://ror.org/053fp5c05",
+              "country_code": "KR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I138925566"
+              ]
+            }
+          ],
+          "countries": [
+            "KR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yoon Kyung Park",
+          "raw_affiliation_strings": [
+            "Institute of Mathematical Sciences, Ewha Womans University, Seoul 03760, South Korea"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institute of Mathematical Sciences, Ewha Womans University, Seoul 03760, South Korea",
+              "institution_ids": [
+                "https://openalex.org/I138925566"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "We": [
+          0,
+          19,
+          100,
+          123
+        ],
+        "study": [
+          1
+        ],
+        "a": [
+          2,
+          77,
+          176
+        ],
+        "continued": [
+          3
+        ],
+        "fraction": [
+          4
+        ],
+        "U": [
+          5,
+          25,
+          116,
+          155,
+          164,
+          181
+        ],
+        "(": [
+          6,
+          26,
+          40,
+          50,
+          56,
+          117,
+          156,
+          165,
+          182
+        ],
+        "τ": [
+          7,
+          27,
+          118,
+          157,
+          166,
+          183
+        ],
+        ")": [
+          8,
+          10,
+          28,
+          30,
+          42,
+          44,
+          52,
+          59,
+          119,
+          121,
+          158,
+          160,
+          167,
+          169,
+          184
+        ],
+        "U(\\tau": [
+          9,
+          29,
+          120,
+          159,
+          168
+        ],
+        "of": [
+          11,
+          24,
+          36,
+          80,
+          84,
+          115
+        ],
+        "order": [
+          12
+        ],
+        "twelve": [
+          13
+        ],
+        "using": [
+          14,
+          154
+        ],
+        "the": [
+          15,
+          21,
+          33,
+          81,
+          112,
+          131,
+          142,
+          162
+        ],
+        "modular": [
+          16,
+          22,
+          37,
+          113,
+          128
+        ],
+        "function": [
+          17
+        ],
+        "theory.": [
+          18
+        ],
+        "obtain": [
+          20
+        ],
+        "equations": [
+          23,
+          114,
+          129
+        ],
+        "by": [
+          31,
+          153
+        ],
+        "computing": [
+          32
+        ],
+        "affine": [
+          34
+        ],
+        "models": [
+          35
+        ],
+        "curves": [
+          38
+        ],
+        "X": [
+          39
+        ],
+        "Γ": [
+          41,
+          46,
+          48,
+          54
+        ],
+        "X(\\Gamma": [
+          43
+        ],
+        "with": [
+          45
+        ],
+        "=": [
+          47,
+          61
+        ],
+        "1": [
+          49
+        ],
+        "12": [
+          51,
+          57,
+          147,
+          148
+        ],
+        "∩": [
+          53
+        ],
+        "0": [
+          55
+        ],
+        "n": [
+          58,
+          72,
+          73,
+          97,
+          98
+        ],
+        "\\Gamma": [
+          60,
+          62,
+          66
+        ],
+        "_1": [
+          63
+        ],
+        "(12)": [
+          64
+        ],
+        "\\cap": [
+          65
+        ],
+        "_0(12n)": [
+          67
+        ],
+        "for": [
+          68,
+          110
+        ],
+        "any": [
+          69
+        ],
+        "positive": [
+          70,
+          95
+        ],
+        "integer": [
+          71,
+          96
+        ],
+        ";": [
+          74
+        ],
+        "this": [
+          75
+        ],
+        "is": [
+          76,
+          175
+        ],
+        "complete": [
+          78
+        ],
+        "extension": [
+          79
+        ],
+        "previous": [
+          82
+        ],
+        "result": [
+          83
+        ],
+        "Mahadeva": [
+          85
+        ],
+        "Naika": [
+          86
+        ],
+        "et": [
+          87,
+          91
+        ],
+        "al.": [
+          88,
+          92
+        ],
+        "and": [
+          89,
+          161
+        ],
+        "Dharmendra": [
+          90
+        ],
+        "to": [
+          93
+        ],
+        "every": [
+          94
+        ],
+        ".": [
+          99,
+          122
+        ],
+        "point": [
+          101
+        ],
+        "out": [
+          102
+        ],
+        "that": [
+          103,
+          126,
+          138
+        ],
+        "we": [
+          104,
+          136,
+          139
+        ],
+        "provide": [
+          105
+        ],
+        "an": [
+          106,
+          171
+        ],
+        "explicit": [
+          107
+        ],
+        "construction": [
+          108
+        ],
+        "method": [
+          109
+        ],
+        "finding": [
+          111
+        ],
+        "also": [
+          124
+        ],
+        "prove": [
+          125
+        ],
+        "these": [
+          127
+        ],
+        "satisfy": [
+          130
+        ],
+        "Kronecker": [
+          132
+        ],
+        "congruence": [
+          133
+        ],
+        "relations.": [
+          134
+        ],
+        "Furthermore,": [
+          135
+        ],
+        "show": [
+          137
+        ],
+        "can": [
+          140
+        ],
+        "construct": [
+          141
+        ],
+        "ray": [
+          143
+        ],
+        "class": [
+          144
+        ],
+        "field": [
+          145
+        ],
+        "modulo": [
+          146
+        ],
+        "over": [
+          149
+        ],
+        "imaginary": [
+          150,
+          172
+        ],
+        "quadratic": [
+          151,
+          173
+        ],
+        "fields": [
+          152
+        ],
+        "value": [
+          163
+        ],
+        "at": [
+          170
+        ],
+        "argument": [
+          174
+        ],
+        "unit.": [
+          177
+        ],
+        "In": [
+          178
+        ],
+        "addition,": [
+          179
+        ],
+        "if": [
+          180
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1090/mcom/3259",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1090/mcom/3259",
+        "pdf_url": "https://www.ams.org/mcom/2018-87-312/S0025-5718-2017-03259-2/S0025-5718-2017-03259-2.pdf",
+        "source": {
+          "id": "https://openalex.org/S102439543",
+          "display_name": "Mathematics of Computation",
+          "issn_l": "0025-5718",
+          "issn": [
+            "0025-5718",
+            "1088-6842"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310315719",
+          "host_organization_name": "American Mathematical Society",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310315719"
+          ],
+          "host_organization_lineage_names": [
+            "American Mathematical Society"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Mathematics of Computation",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://www.ams.org/mcom/2018-87-312/S0025-5718-2017-03259-2/S0025-5718-2017-03259-2.pdf",
+        "any_repository_has_fulltext": false
+      }
+    },
+    {
+      "id": "https://openalex.org/W2592560125",
+      "title": "On periodicity of geodesic continued fractions",
+      "publication_date": "2017-03-07",
+      "doi": "https://doi.org/10.1016/j.jnt.2017.01.003",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5008519341",
+            "display_name": "Hohto Bekki",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I74801974",
+              "display_name": "The University of Tokyo",
+              "ror": "https://ror.org/057zh3y96",
+              "country_code": "JP",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I74801974"
+              ]
+            }
+          ],
+          "countries": [
+            "JP"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Hohto Bekki",
+          "raw_affiliation_strings": [
+            "Graduate School of Mathematical Sciences, The University of Tokyo, 3-8-1 Komaba, Meguro, Tokyo, 153-8914 Japan"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Graduate School of Mathematical Sciences, The University of Tokyo, 3-8-1 Komaba, Meguro, Tokyo, 153-8914 Japan",
+              "institution_ids": [
+                "https://openalex.org/I74801974"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "primary_location": {
+        "id": "doi:10.1016/j.jnt.2017.01.003",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1016/j.jnt.2017.01.003",
+        "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0022314X17300689/pdf",
+        "source": {
+          "id": "https://openalex.org/S40813394",
+          "display_name": "Journal of Number Theory",
+          "issn_l": "0022-314X",
+          "issn": [
+            "0022-314X",
+            "1096-1658"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Journal of Number Theory",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://www.sciencedirect.com/science/article/pii/S0022314X17300689/pdf",
+        "any_repository_has_fulltext": true
+      }
+    },
+    {
+      "id": "https://openalex.org/W2269596368",
+      "title": "Modularity of a Ramanujan–Selberg continued fraction",
+      "publication_date": "2016-02-08",
+      "doi": "https://doi.org/10.1016/j.jmaa.2016.01.065",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5100644394",
+            "display_name": "Yoonjin Lee",
+            "orcid": "https://orcid.org/0000-0001-9510-3691"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I138925566",
+              "display_name": "Ewha Womans University",
+              "ror": "https://ror.org/053fp5c05",
+              "country_code": "KR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I138925566"
+              ]
+            }
+          ],
+          "countries": [
+            "KR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yoonjin Lee",
+          "raw_affiliation_strings": [
+            "Department of Mathematics, Ewha Womans University, Seoul 03760, South Korea"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics, Ewha Womans University, Seoul 03760, South Korea",
+              "institution_ids": [
+                "https://openalex.org/I138925566"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5005273392",
+            "display_name": "Yoon Kyung Park",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I138925566",
+              "display_name": "Ewha Womans University",
+              "ror": "https://ror.org/053fp5c05",
+              "country_code": "KR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I138925566"
+              ]
+            }
+          ],
+          "countries": [
+            "KR"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Yoon Kyung Park",
+          "raw_affiliation_strings": [
+            "Institute of Mathematical Sciences, Ewha Womans University, Seoul 03760, South Korea"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institute of Mathematical Sciences, Ewha Womans University, Seoul 03760, South Korea",
+              "institution_ids": [
+                "https://openalex.org/I138925566"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": null,
+      "primary_location": {
+        "id": "doi:10.1016/j.jmaa.2016.01.065",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1016/j.jmaa.2016.01.065",
+        "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0022247X16000998/pdf",
+        "source": {
+          "id": "https://openalex.org/S151579836",
+          "display_name": "Journal of Mathematical Analysis and Applications",
+          "issn_l": "0022-247X",
+          "issn": [
+            "0022-247X",
+            "1096-0813"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Journal of Mathematical Analysis and Applications",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://www.sciencedirect.com/science/article/pii/S0022247X16000998/pdf",
+        "any_repository_has_fulltext": false
+      }
+    }
+  ]
+}

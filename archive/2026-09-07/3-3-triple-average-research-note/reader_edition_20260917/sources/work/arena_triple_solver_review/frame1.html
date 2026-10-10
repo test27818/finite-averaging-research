@@ -1,0 +1,2033 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-平均 · 交互式求解器</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+    --color-amber-400: oklch(82.8% 0.189 84.429);
+    --color-emerald-300: oklch(84.5% 0.143 164.978);
+    --color-emerald-700: oklch(50.8% 0.118 165.612);
+    --color-emerald-900: oklch(37.8% 0.077 168.94);
+    --color-emerald-950: oklch(26.2% 0.051 172.552);
+    --color-cyan-200: oklch(91.7% 0.08 205.041);
+    --color-cyan-300: oklch(86.5% 0.127 207.078);
+    --color-cyan-400: oklch(78.9% 0.154 211.53);
+    --color-cyan-500: oklch(71.5% 0.143 215.221);
+    --color-cyan-700: oklch(52% 0.105 223.128);
+    --color-cyan-900: oklch(39.8% 0.07 227.392);
+    --color-zinc-200: oklch(92% 0.004 286.32);
+    --color-zinc-300: oklch(87.1% 0.006 286.286);
+    --color-zinc-400: oklch(70.5% 0.015 286.067);
+    --color-zinc-500: oklch(55.2% 0.016 285.938);
+    --color-zinc-600: oklch(44.2% 0.017 285.786);
+    --color-zinc-800: oklch(27.4% 0.006 286.033);
+    --color-zinc-900: oklch(21% 0.006 285.885);
+    --spacing: 0.25rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    --tracking-wide: 0.025em;
+    --leading-tight: 1.25;
+    --leading-relaxed: 1.625;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring:where(:not(iframe)) {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .fixed {
+    position: fixed;
+  }
+  .sticky {
+    position: sticky;
+  }
+  .top-0 {
+    top: 0px;
+  }
+  .bottom-5 {
+    bottom: calc(var(--spacing) * 5);
+  }
+  .left-1\/2 {
+    left: calc(1 / 2 * 100%);
+  }
+  .z-40 {
+    z-index: 40;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mt-1 {
+    margin-top: var(--spacing);
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .mb-1 {
+    margin-bottom: var(--spacing);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .ml-auto {
+    margin-left: auto;
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
+  .h-3\.5 {
+    height: calc(var(--spacing) * 3.5);
+  }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-14 {
+    height: calc(var(--spacing) * 14);
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .h-36 {
+    height: calc(var(--spacing) * 36);
+  }
+  .h-full {
+    height: 100%;
+  }
+  .max-h-20 {
+    max-height: calc(var(--spacing) * 20);
+  }
+  .max-h-44 {
+    max-height: calc(var(--spacing) * 44);
+  }
+  .max-h-\[300px\] {
+    max-height: 300px;
+  }
+  .min-h-\[52px\] {
+    min-height: 52px;
+  }
+  .min-h-\[76px\] {
+    min-height: 76px;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-3\.5 {
+    width: calc(var(--spacing) * 3.5);
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
+  }
+  .w-24 {
+    width: calc(var(--spacing) * 24);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-\[1680px\] {
+    max-width: 1680px;
+  }
+  .min-w-\[64px\] {
+    min-width: 64px;
+  }
+  .min-w-\[120px\] {
+    min-width: 120px;
+  }
+  .min-w-\[180px\] {
+    min-width: 180px;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+  .-translate-x-1\/2 {
+    --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .items-baseline {
+    align-items: baseline;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .justify-start {
+    justify-content: flex-start;
+  }
+  .gap-1 {
+    gap: var(--spacing);
+  }
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  :where(.space-y-1\.5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 1.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 1.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-3 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-4 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-cyan-500\/40 {
+    border-color: color-mix(in srgb, oklch(71.5% 0.143 215.221) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-cyan-500) 40%, transparent);
+    }
+  }
+  .border-cyan-700\/60 {
+    border-color: color-mix(in srgb, oklch(52% 0.105 223.128) 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-cyan-700) 60%, transparent);
+    }
+  }
+  .border-cyan-900\/60 {
+    border-color: color-mix(in srgb, oklch(39.8% 0.07 227.392) 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-cyan-900) 60%, transparent);
+    }
+  }
+  .border-emerald-700\/60 {
+    border-color: color-mix(in srgb, oklch(50.8% 0.118 165.612) 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-emerald-700) 60%, transparent);
+    }
+  }
+  .border-emerald-900\/60 {
+    border-color: color-mix(in srgb, oklch(37.8% 0.077 168.94) 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-emerald-900) 60%, transparent);
+    }
+  }
+  .border-zinc-800 {
+    border-color: var(--color-zinc-800);
+  }
+  .border-zinc-800\/80 {
+    border-color: color-mix(in srgb, oklch(27.4% 0.006 286.033) 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-zinc-800) 80%, transparent);
+    }
+  }
+  .bg-\[\#0e0e14\]\/90 {
+    background-color: color-mix(in oklab, #0e0e14 90%, transparent);
+  }
+  .bg-\[\#0e0e15\] {
+    background-color: #0e0e15;
+  }
+  .bg-cyan-500 {
+    background-color: var(--color-cyan-500);
+  }
+  .bg-cyan-500\/15 {
+    background-color: color-mix(in srgb, oklch(71.5% 0.143 215.221) 15%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-cyan-500) 15%, transparent);
+    }
+  }
+  .bg-emerald-950\/40 {
+    background-color: color-mix(in srgb, oklch(26.2% 0.051 172.552) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-emerald-950) 40%, transparent);
+    }
+  }
+  .bg-zinc-800 {
+    background-color: var(--color-zinc-800);
+  }
+  .bg-zinc-900 {
+    background-color: var(--color-zinc-900);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-2\.5 {
+    padding-inline: calc(var(--spacing) * 2.5);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .py-1 {
+    padding-block: var(--spacing);
+  }
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .pt-1 {
+    padding-top: var(--spacing);
+  }
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
+  }
+  .pr-1 {
+    padding-right: var(--spacing);
+  }
+  .pr-2 {
+    padding-right: calc(var(--spacing) * 2);
+  }
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .text-\[10px\] {
+    font-size: 10px;
+  }
+  .text-\[11px\] {
+    font-size: 11px;
+  }
+  .text-\[12px\] {
+    font-size: 12px;
+  }
+  .text-\[13px\] {
+    font-size: 13px;
+  }
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
+  }
+  .leading-tight {
+    --tw-leading: var(--leading-tight);
+    line-height: var(--leading-tight);
+  }
+  .font-black {
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
+  }
+  .break-all {
+    word-break: break-all;
+  }
+  .text-amber-400\/90 {
+    color: color-mix(in srgb, oklch(82.8% 0.189 84.429) 90%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-amber-400) 90%, transparent);
+    }
+  }
+  .text-cyan-200 {
+    color: var(--color-cyan-200);
+  }
+  .text-cyan-300 {
+    color: var(--color-cyan-300);
+  }
+  .text-cyan-400 {
+    color: var(--color-cyan-400);
+  }
+  .text-emerald-300 {
+    color: var(--color-emerald-300);
+  }
+  .text-zinc-200 {
+    color: var(--color-zinc-200);
+  }
+  .text-zinc-300 {
+    color: var(--color-zinc-300);
+  }
+  .text-zinc-400 {
+    color: var(--color-zinc-400);
+  }
+  .text-zinc-500 {
+    color: var(--color-zinc-500);
+  }
+  .text-zinc-600 {
+    color: var(--color-zinc-600);
+  }
+  .shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .backdrop-blur {
+    --tw-backdrop-blur: blur(8px);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  @media (hover: hover) {
+    .hover\:text-zinc-200:hover {
+      color: var(--color-zinc-200);
+    }
+  }
+  @media (width >= 48rem) {
+    .md\:flex {
+      display: flex;
+    }
+    .md\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .md\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  @media (width >= 64rem) {
+    .lg\:col-span-2 {
+      grid-column: span 2 / span 2;
+    }
+    .lg\:col-span-3 {
+      grid-column: span 3 / span 3;
+    }
+    .lg\:grid-cols-5 {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    .lg\:px-6 {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+  }
+  @media (width >= 80rem) {
+    .xl\:col-span-3 {
+      grid-column: span 3 / span 3;
+    }
+    .xl\:col-span-6 {
+      grid-column: span 6 / span 6;
+    }
+    .xl\:grid-cols-8 {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+    .xl\:grid-cols-12 {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-space-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+    }
+  }
+}
+</style>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+SC:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<style>
+  html { color-scheme: dark; }
+  body { font-family: 'Noto Sans SC', system-ui, sans-serif; background:#0b0b10; }
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .dotbg { background-image: radial-gradient(rgba(255,255,255,0.045) 1px, transparent 1px); background-size: 22px 22px; }
+  .panel { background:#12121a; border:1px solid #23232e; border-radius: 1rem; }
+  .panel-h { display:flex; align-items:center; gap:.5rem; padding:.85rem 1.1rem; border-bottom:1px solid #23232e; color:#a1a1aa; font-size:.8rem; font-weight:700; letter-spacing:.08em; }
+  .chip { background:#1b1b26; border:1px solid #2c2c3a; border-radius:.5rem; padding:.15rem .5rem; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.45rem; border-radius:.65rem; font-weight:600; transition:all .15s; cursor:pointer; border:1px solid transparent; }
+  .btn:active { transform: translateY(1px) scale(.99); }
+  .btn:disabled { opacity:.4; cursor:not-allowed; }
+  .btn-accent { background:#0e7490; color:#ecfeff; }
+  .btn-accent:hover:not(:disabled) { background:#0891b2; }
+  .btn-ghost { background:#1b1b26; color:#d4d4d8; border-color:#2c2c3a; }
+  .btn-ghost:hover:not(:disabled) { background:#252533; border-color:#3d3d52; }
+  .btn-danger { background:#3f1d24; color:#fda4af; border-color:#5b2733; }
+  .btn-danger:hover:not(:disabled) { background:#52242e; }
+  .tile { background:#181824; border:1px solid #2a2a38; border-radius:.7rem; transition: all .25s ease; position:relative; }
+  .tile.sel { border-color:#22d3ee; box-shadow:0 0 0 1px #22d3ee, 0 0 18px rgba(34,211,238,.28); transform: translateY(-3px); background:#0e2a33; }
+  .tile.zero { opacity:.45; border-style:dashed; }
+  .tile.changed { animation: pop .5s ease; }
+  @keyframes pop { 0%{ background:#134e4a; border-color:#2dd4bf;} 100%{} }
+  .bar-track { height:64px; display:flex; align-items:center; }
+  input[type=range] { accent-color:#22d3ee; }
+  input[type=number], textarea, select { background:#0f0f16; border:1px solid #2c2c3a; border-radius:.55rem; color:#e4e4e7; outline:none; }
+  input[type=number]:focus, textarea:focus, select:focus { border-color:#22d3ee; box-shadow:0 0 0 1px rgba(34,211,238,.35); }
+  .scrollthin::-webkit-scrollbar { width:8px; height:8px; }
+  .scrollthin::-webkit-scrollbar-thumb { background:#2c2c3a; border-radius:8px; }
+  .opitem { border:1px solid #26263a; background:#16161f; border-radius:.6rem; cursor:pointer; transition:all .15s; }
+  .opitem:hover { border-color:#22d3ee; }
+  .opitem.cur { border-color:#22d3ee; background:#0e2a33; }
+  details summary { cursor:pointer; list-style:none; }
+  details summary::-webkit-details-marker { display:none; }
+  .kbd { border:1px solid #2c2c3a; border-bottom-width:2px; border-radius:.35rem; padding:0 .35rem; background:#1b1b26; }
+  .fadein { animation: fadein .35s ease; }
+  @keyframes fadein { from{opacity:0; transform:translateY(4px);} to{} }
+  .spin { animation: spin 1s linear infinite; }
+  @keyframes spin { to{ transform:rotate(360deg);} }
+</style>
+</head>
+<body class="dotbg min-h-screen text-zinc-200">
+
+<!-- ===================== HEADER ===================== -->
+<header class="border-b border-zinc-800/80 bg-[#0e0e14]/90 sticky top-0 z-40 backdrop-blur">
+  <div class="max-w-[1680px] mx-auto px-4 lg:px-6 h-16 flex items-center gap-3">
+    <div class="w-9 h-9 rounded-lg bg-cyan-500/15 border border-cyan-500/40 flex items-center justify-center text-cyan-300">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sigma" aria-hidden="true" class="lucide lucide-sigma w-5 h-5"><path d="M18 7V5a1 1 0 0 0-1-1H6.5a.5.5 0 0 0-.4.8l4.5 6a2 2 0 0 1 0 2.4l-4.5 6a.5.5 0 0 0 .4.8H17a1 1 0 0 0 1-1v-2"></path></svg>
+    </div>
+    <div>
+      <h1 class="font-black text-lg leading-tight tracking-wide">3-平均 <span class="text-cyan-400">·</span> 交互式求解器</h1>
+      <p class="text-[11px] text-zinc-500 leading-tight">三数均值替换 (x, y, z) → (x+y+z)/3 · 精确判定 · 构造求解 · 独立验证</p>
+    </div>
+    <div class="ml-auto hidden md:flex items-center gap-2 text-[11px]">
+      <span class="chip mono text-cyan-300 border-cyan-900/60">n ≥ 7</span>
+      <span class="chip mono text-cyan-300 border-cyan-900/60">G = 3^k ⟺ 可行</span>
+      <span class="chip mono text-emerald-300 border-emerald-900/60">BigInt 精确算术</span>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-[1680px] mx-auto px-4 lg:px-6 py-5 space-y-5">
+
+  <!-- ===================== WORKSPACE ===================== -->
+  <div class="grid grid-cols-1 xl:grid-cols-12 gap-5">
+
+    <!-- ========== LEFT: CONTROLS ========== -->
+    <div class="xl:col-span-3 space-y-5">
+      <section class="panel">
+        <div class="panel-h"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sliders-horizontal" aria-hidden="true" class="lucide lucide-sliders-horizontal w-4 h-4 text-cyan-400"><path d="M10 5H3"></path><path d="M12 19H3"></path><path d="M14 3v4"></path><path d="M16 17v4"></path><path d="M21 12h-9"></path><path d="M21 19h-5"></path><path d="M21 5h-7"></path><path d="M8 10v4"></path><path d="M8 12H3"></path></svg>实例生成</div>
+        <div class="p-4 space-y-4">
+          <div class="grid grid-cols-2 gap-3">
+            <label class="block">
+              <span class="text-xs text-zinc-400 font-medium">数字个数 n</span>
+              <input id="inpN" type="number" min="7" max="60" value="10" class="mono mt-1 w-full px-3 py-2 text-sm">
+            </label>
+            <label class="block">
+              <span class="text-xs text-zinc-400 font-medium">值域 ±V</span>
+              <input id="inpV" type="number" min="1" max="1000000000" value="30" class="mono mt-1 w-full px-3 py-2 text-sm">
+            </label>
+          </div>
+          <input id="rngN" type="range" min="7" max="40" value="10" class="w-full">
+          <div class="grid grid-cols-1 gap-2">
+            <button id="btnGen" class="btn btn-accent px-3 py-2.5 text-sm w-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="dices" aria-hidden="true" class="lucide lucide-dices w-4 h-4"><rect width="12" height="12" x="2" y="10" rx="2" ry="2"></rect><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"></path><path d="M6 18h.01"></path><path d="M10 14h.01"></path><path d="M15 6h.01"></path><path d="M18 9h.01"></path></svg>生成可平均实例
+            </button>
+            <button id="btnGenAny" class="btn btn-ghost px-3 py-2 text-sm w-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shuffle" aria-hidden="true" class="lucide lucide-shuffle w-4 h-4"><path d="m18 14 4 4-4 4"></path><path d="m18 2 4 4-4 4"></path><path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22"></path><path d="M2 6h1.972a4 4 0 0 1 3.6 2.2"></path><path d="M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45"></path></svg>随机一组（不过滤，可能不可行）
+            </button>
+          </div>
+          <p id="genInfo" class="text-[11px] text-zinc-500 mono leading-relaxed">真随机抽样 + 判据筛选（拒绝采样），不做任何逆向构造。</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-h"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="pencil-line" aria-hidden="true" class="lucide lucide-pencil-line w-4 h-4 text-cyan-400"><path d="M13 21h8"></path><path d="m15 5 4 4"></path><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path></svg>手动输入</div>
+        <div class="p-4 space-y-3">
+          <textarea id="inpArr" rows="3" spellcheck="false" class="mono w-full px-3 py-2 text-sm" placeholder="逗号或空格分隔的整数，例如：
+0, 1, 2, 3, 4, 5, 6"></textarea>
+          <div class="flex gap-2">
+            <button id="btnLoad" class="btn btn-ghost px-3 py-2 text-sm flex-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="log-in" aria-hidden="true" class="lucide lucide-log-in w-4 h-4"><path d="m10 17 5-5-5-5"></path><path d="M15 12H3"></path><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path></svg>载入数组</button>
+            <button id="btnExample" class="btn btn-ghost px-3 py-2 text-sm" title="填入一个可平均示例"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" aria-hidden="true" class="lucide lucide-sparkles w-4 h-4"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>示例</button>
+          </div>
+          <p class="text-[11px] text-zinc-500 leading-relaxed">支持 n=1,2,3 与 n≥7；<span class="text-amber-400/90">n=4,5,6 暂不支持</span>。导出文本中的题面可直接粘贴回此处。</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-h"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="cpu" aria-hidden="true" class="lucide lucide-cpu w-4 h-4 text-cyan-400"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg>求解</div>
+        <div class="p-4 space-y-3">
+          <button id="btnSolve" class="btn btn-accent px-3 py-3 text-base w-full font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap" aria-hidden="true" class="lucide lucide-zap w-5 h-5"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></svg>判定并求解
+          </button>
+          <details class="text-sm">
+            <summary class="flex items-center gap-2 text-zinc-400 hover:text-zinc-200 py-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="settings-2" aria-hidden="true" class="lucide lucide-settings-2 w-4 h-4"><path d="M14 17H5"></path><path d="M19 7h-9"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg>搜索预算（高级）</summary>
+            <div class="grid grid-cols-2 gap-2 mt-2">
+              <label class="text-xs text-zinc-500">集束宽度<input id="inpBeam" type="number" min="20" max="2000" value="400" class="mono mt-1 w-full px-2 py-1.5 text-xs"></label>
+              <label class="text-xs text-zinc-500">超时 (ms)<input id="inpTime" type="number" min="500" max="60000" value="9000" class="mono mt-1 w-full px-2 py-1.5 text-xs"></label>
+              <label class="text-xs text-zinc-500">最大深度<input id="inpDepth" type="number" min="10" max="200" value="70" class="mono mt-1 w-full px-2 py-1.5 text-xs"></label>
+              <label class="text-xs text-zinc-500">节点上限<input id="inpNodes" type="number" min="2000" max="300000" value="60000" class="mono mt-1 w-full px-2 py-1.5 text-xs"></label>
+            </div>
+          </details>
+          <p class="text-[11px] text-zinc-500 leading-relaxed">求解管线：贪心消元 → 零和子集宏（中间相遇）→ 一步构造 → 集束搜索 → 冗余步删除。全程精确有理数。</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ========== MIDDLE: VISUALIZATION ========== -->
+    <div class="xl:col-span-6 space-y-5">
+      <section class="panel">
+        <div class="panel-h">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="activity" aria-hidden="true" class="lucide lucide-activity w-4 h-4 text-cyan-400"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg>收敛过程可视化
+          <span id="vizState" class="ml-auto mono text-[11px] text-zinc-500">未求解</span>
+        </div>
+        <div class="p-4 space-y-4">
+          <div id="arrTiles" class="flex flex-wrap gap-2 min-h-[76px] items-start"><div class="tile px-2.5 py-2 min-w-[64px] text-center zero" title="位置 1 = 0"><div class="text-[10px] text-zinc-500 mono">1</div><div class="mono text-[13px] font-medium text-zinc-200">0</div></div><div class="tile px-2.5 py-2 min-w-[64px] text-center" title="位置 2 = 1"><div class="text-[10px] text-zinc-500 mono">2</div><div class="mono text-[13px] font-medium text-zinc-200">1</div></div><div class="tile px-2.5 py-2 min-w-[64px] text-center" title="位置 3 = 2"><div class="text-[10px] text-zinc-500 mono">3</div><div class="mono text-[13px] font-medium text-zinc-200">2</div></div><div class="tile px-2.5 py-2 min-w-[64px] text-center" title="位置 4 = 3"><div class="text-[10px] text-zinc-500 mono">4</div><div class="mono text-[13px] font-medium text-zinc-200">3</div></div><div class="tile px-2.5 py-2 min-w-[64px] text-center" title="位置 5 = 4"><div class="text-[10px] text-zinc-500 mono">5</div><div class="mono text-[13px] font-medium text-zinc-200">4</div></div><div class="tile px-2.5 py-2 min-w-[64px] text-center" title="位置 6 = 5"><div class="text-[10px] text-zinc-500 mono">6</div><div class="mono text-[13px] font-medium text-zinc-200">5</div></div><div class="tile px-2.5 py-2 min-w-[64px] text-center" title="位置 7 = 6"><div class="text-[10px] text-zinc-500 mono">7</div><div class="mono text-[13px] font-medium text-zinc-200">6</div></div></div>
+          <div class="rounded-xl border border-zinc-800 bg-[#0e0e15] p-3">
+            <div class="flex items-center justify-between text-[11px] text-zinc-500 mb-1">
+              <span>偏差 aᵢ − A（青 = 正，品红 = 负）</span>
+              <span id="devMax" class="mono">max |dev| = 3.00e+0</span>
+            </div>
+            <div id="arrBars" class="flex items-center gap-1.5 bar-track"><div class="flex-1 h-full flex flex-col justify-end" title="pos 1 dev=-3.00"><div style="height:56px;background:#701a75;border-radius:3px;"></div></div><div class="flex-1 h-full flex flex-col justify-end" title="pos 2 dev=-2.00"><div style="height:37px;background:#701a75;border-radius:3px;"></div></div><div class="flex-1 h-full flex flex-col justify-end" title="pos 3 dev=-1.00"><div style="height:19px;background:#701a75;border-radius:3px;"></div></div><div class="flex-1 h-full flex flex-col justify-start" title="pos 4 dev=0.00"><div style="height:2px;background:#155e75;border-radius:3px;"></div></div><div class="flex-1 h-full flex flex-col justify-start" title="pos 5 dev=1.00"><div style="height:19px;background:#155e75;border-radius:3px;"></div></div><div class="flex-1 h-full flex flex-col justify-start" title="pos 6 dev=2.00"><div style="height:37px;background:#155e75;border-radius:3px;"></div></div><div class="flex-1 h-full flex flex-col justify-start" title="pos 7 dev=3.00"><div style="height:56px;background:#155e75;border-radius:3px;"></div></div></div>
+          </div>
+          <div id="stepCaption" class="rounded-xl border border-zinc-800 bg-[#0e0e15] px-4 py-3 text-sm text-zinc-400 min-h-[52px] flex items-center">已载入实例（n = 7）。点击「判定并求解」。</div>
+          <!-- transport -->
+          <div class="flex flex-wrap items-center gap-2">
+            <button id="btnRestart" class="btn btn-ghost w-10 h-10" title="从头回放"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="rotate-ccw" aria-hidden="true" class="lucide lucide-rotate-ccw w-4 h-4"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg></button>
+            <button id="btnPrev" class="btn btn-ghost w-10 h-10" title="上一步"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="step-back" aria-hidden="true" class="lucide lucide-step-back w-4 h-4"><path d="M13.971 4.285A2 2 0 0 1 17 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z"></path><path d="M21 20V4"></path></svg></button>
+            <button id="btnPlay" class="btn btn-accent w-10 h-10" title="播放 / 暂停"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="play" aria-hidden="true" class="lucide lucide-play w-4 h-4" id="playIcon"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg></button>
+            <button id="btnNext" class="btn btn-ghost w-10 h-10" title="下一步"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="step-forward" aria-hidden="true" class="lucide lucide-step-forward w-4 h-4"><path d="M10.029 4.285A2 2 0 0 0 7 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z"></path><path d="M3 4v16"></path></svg></button>
+            <input id="scrub" type="range" min="0" max="0" value="0" class="flex-1 min-w-[120px]">
+            <span id="stepLabel" class="mono text-xs text-zinc-400 w-16 text-right">0 / 0</span>
+            <select id="selSpeed" class="text-xs px-2 py-2 mono">
+              <option value="1600">0.5×</option>
+              <option value="800" selected="">1×</option>
+              <option value="350">2×</option>
+              <option value="140">4×</option>
+            </select>
+          </div>
+          <div class="rounded-xl border border-zinc-800 bg-[#0e0e15] p-3">
+            <div class="text-[11px] text-zinc-500 mb-1">收敛曲线 · max |aᵢ − A|（随步数）</div>
+            <svg id="convChart" class="w-full h-14" preserveAspectRatio="none" viewBox="0 0 600 56"><polyline points="0.0,6.0" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linejoin="round" opacity="0.9"></polyline><line x1="0" y1="0" x2="0" y2="56" stroke="#e879f9" stroke-width="1.5" opacity="0.8"></line></svg>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ========== RIGHT: DECISION + SOLUTION ========== -->
+    <div class="xl:col-span-3 space-y-5">
+      <section class="panel">
+        <div class="panel-h"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="scale" aria-hidden="true" class="lucide lucide-scale w-4 h-4 text-cyan-400"><path d="M12 3v18"></path><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"></path><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M7 21h10"></path></svg>判定结果</div>
+        <div id="decisionBody" class="p-4 space-y-3 text-sm"><div class="rounded-lg border border-emerald-700/60 bg-emerald-950/40 text-emerald-300 px-3 py-2.5 flex items-center gap-2 text-[13px]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="circle-check-big" aria-hidden="true" class="lucide lucide-circle-check-big w-4 h-4 shrink-0"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>判定：可行</div><div class="space-y-1.5"><div class="flex justify-between gap-2 items-baseline"><span class="text-zinc-500 text-xs shrink-0">n</span><span class="mono text-[13px] text-zinc-200 text-right break-all">7</span></div><div class="flex justify-between gap-2 items-baseline"><span class="text-zinc-500 text-xs shrink-0">S = Σaᵢ</span><span class="mono text-[13px] text-zinc-200 text-right break-all">21</span></div><div class="flex justify-between gap-2 items-baseline"><span class="text-zinc-500 text-xs shrink-0">均值 A</span><span class="mono text-[13px] text-zinc-200 text-right break-all">3</span></div><div class="flex justify-between gap-2 items-baseline"><span class="text-zinc-500 text-xs shrink-0">g = gcd|naᵢ−S|</span><span class="mono text-[13px] text-zinc-200 text-right break-all">7</span></div><div class="flex justify-between gap-2 items-baseline"><span class="text-zinc-500 text-xs shrink-0">G = gcd|eᵢ−e₁|</span><span class="mono text-[13px] text-zinc-200 text-right break-all">1 = 3^0</span></div></div><div><div class="text-xs text-zinc-500 mb-1">本原偏差 eᵢ（约分后）</div><div class="flex flex-wrap gap-1 max-h-20 overflow-y-auto scrollthin"><span class="chip mono text-[11px] text-zinc-300">-3</span><span class="chip mono text-[11px] text-zinc-300">-2</span><span class="chip mono text-[11px] text-zinc-300">-1</span><span class="chip mono text-[11px] text-zinc-300">0</span><span class="chip mono text-[11px] text-zinc-300">1</span><span class="chip mono text-[11px] text-zinc-300">2</span><span class="chip mono text-[11px] text-zinc-300">3</span></div></div><p class="text-[12px] text-zinc-400 leading-relaxed border-t border-zinc-800 pt-2">G = 1 = 3^0，满足判据。</p></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-h"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="list-ordered" aria-hidden="true" class="lucide lucide-list-ordered w-4 h-4 text-cyan-400"><path d="M11 5h10"></path><path d="M11 12h10"></path><path d="M11 19h10"></path><path d="M4 4h1v5"></path><path d="M4 9h2"></path><path d="M6.5 20H3.4c0-1 2.6-1.925 2.6-3.5a1.5 1.5 0 0 0-2.6-1.02"></path></svg>解法与验证</div>
+        <div class="p-4 space-y-3">
+          <div id="solveSummary" class="text-sm text-zinc-500"><span class="text-zinc-400">已判定可行，点击「判定并求解」构造序列。</span></div>
+          <div id="opsList" class="space-y-1.5 max-h-[300px] overflow-y-auto scrollthin pr-1"></div>
+          <div class="grid grid-cols-2 gap-2 pt-1">
+            <button id="btnCopyProblem" class="btn btn-ghost px-2 py-2 text-xs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clipboard" aria-hidden="true" class="lucide lucide-clipboard w-3.5 h-3.5"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>复制题面</button>
+            <button id="btnCopyReport" class="btn btn-ghost px-2 py-2 text-xs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clipboard-copy" aria-hidden="true" class="lucide lucide-clipboard-copy w-3.5 h-3.5"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path><path d="M16 4h2a2 2 0 0 1 2 2v4"></path><path d="M21 14H11"></path><path d="m15 10-4 4 4 4"></path></svg>复制完整报告</button>
+            <button id="btnExport" class="btn btn-ghost px-2 py-2 text-xs col-span-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" aria-hidden="true" class="lucide lucide-download w-3.5 h-3.5"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>导出为文本文件 (.txt)</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ===================== BATCH ===================== -->
+  <section class="panel">
+    <div class="panel-h">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="flask-conical" aria-hidden="true" class="lucide lucide-flask-conical w-4 h-4 text-cyan-400"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"></path><path d="M6.453 15h11.094"></path><path d="M8.5 2h7"></path></svg>批量实验 · 效率统计
+      <span class="ml-auto text-[11px] text-zinc-500 font-normal">每个实例独立随机生成并求解一次 · 筛选耗时与求解耗时分别统计</span>
+    </div>
+    <div class="p-4 space-y-4">
+      <div class="flex flex-wrap items-end gap-3">
+        <label class="text-xs text-zinc-400">实例数 M
+          <input id="inpM" type="number" min="5" max="500" value="50" class="mono mt-1 w-24 px-2 py-1.5 text-xs block">
+        </label>
+        <label class="text-xs text-zinc-400">单例超时 (ms)
+          <input id="inpBTime" type="number" min="200" max="20000" value="1500" class="mono mt-1 w-24 px-2 py-1.5 text-xs block">
+        </label>
+        <button id="btnBatch" class="btn btn-accent px-4 py-2 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="circle-play" aria-hidden="true" class="lucide lucide-circle-play w-4 h-4"><path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"></path><circle cx="12" cy="12" r="10"></circle></svg>运行批量求解</button>
+        <button id="btnBatchCancel" class="btn btn-danger px-4 py-2 text-sm" disabled=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="octagon-x" aria-hidden="true" class="lucide lucide-octagon-x w-4 h-4"><path d="m15 9-6 6"></path><path d="M2.586 16.726A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2h6.624a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586z"></path><path d="m9 9 6 6"></path></svg>取消</button>
+        <div class="flex-1 min-w-[180px]">
+          <div class="h-2 rounded-full bg-zinc-800 overflow-hidden"><div id="batchProg" class="h-full bg-cyan-500 transition-all" style="width:0%"></div></div>
+          <div id="batchProgText" class="text-[11px] text-zinc-500 mono mt-1">空闲</div>
+        </div>
+        <button id="btnBatchExport" class="btn btn-ghost px-3 py-2 text-xs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" aria-hidden="true" class="lucide lucide-download w-3.5 h-3.5"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>导出批量报告</button>
+      </div>
+
+      <div id="batchStats" class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-2"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-4">
+        <div class="lg:col-span-2 rounded-xl border border-zinc-800 bg-[#0e0e15] p-3">
+          <div class="text-[11px] text-zinc-500 mb-2">操作步数分布</div>
+          <div id="hist" class="flex items-end gap-1 h-36"></div>
+        </div>
+        <div class="lg:col-span-3 rounded-xl border border-zinc-800 bg-[#0e0e15] p-3">
+          <div class="text-[11px] text-zinc-500 mb-2">实例明细</div>
+          <div class="max-h-44 overflow-y-auto scrollthin">
+            <table class="w-full text-xs mono">
+              <thead class="text-zinc-500 sticky top-0 bg-[#0e0e15]">
+                <tr><th class="text-left py-1 pr-2">#</th><th class="text-left pr-2">数组</th><th class="text-right pr-2">n</th><th class="text-right pr-2">步数</th><th class="text-right pr-2">耗时</th><th class="text-right">结果</th></tr>
+              </thead>
+              <tbody id="batchRows"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER: CRITERION ===================== -->
+  <section class="panel">
+    <div class="panel-h"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="book-open" aria-hidden="true" class="lucide lucide-book-open w-4 h-4 text-cyan-400"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg>判据速览</div>
+    <div class="p-5 grid md:grid-cols-2 gap-4 text-sm text-zinc-400 leading-relaxed">
+      <div>
+        <p class="mb-2">每次操作任选三个不同位置 <span class="mono text-zinc-200">x, y, z</span>，替换为 <span class="mono text-cyan-300">(x+y+z)/3</span>。若能使所有数相等，公共值必为均值 <span class="mono text-zinc-200">A = S/n</span>。</p>
+        <p>令 <span class="mono text-zinc-200">g = gcd|n·aᵢ − S|</span>，<span class="mono text-zinc-200">eᵢ = (n·aᵢ − S)/g</span>，<span class="mono text-zinc-200">G = gcdᵢ|eᵢ − e₁|</span>。对所有 <span class="mono text-zinc-200">n ≥ 7</span>：</p>
+        <p class="mt-2 font-bold text-zinc-200">有限步可行 ⟺ <span class="mono text-cyan-300">G = 3^k (k ≥ 0)</span>（含 G = 1 = 3⁰）。</p>
+      </div>
+      <div class="text-[13px] space-y-1.5">
+        <p>· 输入已全部相等：可行，0 步。</p>
+        <p>· n = 1, 2：仅当原本全等时可行；n = 3：恒可（一次平均）。</p>
+        <p>· <span class="text-amber-400/90">n = 4, 5, 6：本工具暂不支持，不套用 G 判据。</span></p>
+        <p>· 求解未在预算内找到序列时，明确报告「已判定可行，但尚未找到解」，绝不误报不可行。</p>
+        <p>· 判定、求解、验证全程 BigInt 精确有理数算术；显示与导出均为整数或约分分数，位置从 1 编号。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-[11px] text-zinc-600 pb-6">3-平均交互式求解器 · 单文件 HTML · 精确算术 / 拒绝采样 / 集束搜索 / 独立验证</footer>
+</main>
+
+<div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 hidden">
+  <div class="bg-zinc-900 border border-cyan-700/60 text-cyan-200 text-sm px-4 py-2.5 rounded-xl shadow-2xl flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="circle-check-big" aria-hidden="true" class="lucide lucide-circle-check-big w-4 h-4"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span id="toastMsg"></span>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   精确算术层：BigInt 分数
+============================================================ */
+const absBI = x => x < 0n ? -x : x;
+function gcdBI(a, b){ a = absBI(a); b = absBI(b); while(b){ const t = a % b; a = b; b = t; } return a; }
+class Fr{
+  constructor(n, d = 1n){
+    if(d < 0n){ n = -n; d = -d; }
+    const g = gcdBI(n, d) || 1n;
+    this.n = n / g; this.d = d / g;
+  }
+  static of(x){ return x instanceof Fr ? x : new Fr(BigInt(x)); }
+  add(o){ o = Fr.of(o); return new Fr(this.n*o.d + o.n*this.d, this.d*o.d); }
+  sub(o){ o = Fr.of(o); return new Fr(this.n*o.d - o.n*this.d, this.d*o.d); }
+  neg(){ return new Fr(-this.n, this.d); }
+  abs(){ return this.n < 0n ? new Fr(-this.n, this.d) : this; }
+  isZero(){ return this.n === 0n; }
+  cmp(o){ o = Fr.of(o); const L = this.n*o.d, R = o.n*this.d; return L < R ? -1 : (L > R ? 1 : 0); }
+  key(){ return this.d === 1n ? this.n.toString() : this.n + '/' + this.d; }
+  toString(){ return this.key(); }
+  num(){ return Number(this.n) / Number(this.d); }
+}
+const avg3 = (a,b,c) => { const s = a.add(b).add(c); return new Fr(s.n, s.d * 3n); };
+const log3 = (G) => { let k = 0; while(G % 3n === 0n){ G /= 3n; k++; } return G === 1n ? k : -1; };
+function smallestNonThreeFactor(G){
+  G = absBI(G);
+  while(G % 3n === 0n) G /= 3n;
+  if(G === 1n) return null;
+  for(let p = 2n; p*p <= G && p < 1000000n; p++) if(G % p === 0n) return p;
+  return G;
+}
+
+/* ============================================================
+   判定
+============================================================ */
+function analyze(arr){
+  const n = arr.length;
+  const S = arr.reduce((s,x) => s + x, 0n);
+  const A = new Fr(S, BigInt(n));
+  const allEqual = arr.every(x => x === arr[0]);
+  const info = { n, S, A, allEqual, supported:true, feasible:null, trivial:false, reason:'', e:null, g:null, G:null, k:null };
+  if(allEqual){ info.feasible = true; info.trivial = true; info.reason = '所有数已经相等，0 步即可。'; return info; }
+  if(n === 2){ info.feasible = false; info.reason = 'n = 2：仅当两数原本相等时可行。'; return info; }
+  if(n === 3){ info.feasible = true; info.reason = 'n = 3：恒可，一次平均即可。'; return info; }
+  if(n >= 4 && n <= 6){ info.supported = false; info.reason = 'n = 4, 5, 6 暂不支持（G 判据仅适用于 n ≥ 7）。'; return info; }
+  if(n >= 7){
+    const d = arr.map(x => BigInt(n)*x - S);
+    let g = 0n; for(const x of d) g = gcdBI(g, x);
+    const e = d.map(x => x / g);
+    let G = 0n; for(let i = 1; i < n; i++) G = gcdBI(G, absBI(e[i] - e[0]));
+    const k = log3(G);
+    info.e = e; info.g = g; info.G = G; info.k = k;
+    info.feasible = (k >= 0);
+    info.reason = info.feasible
+      ? ('G = ' + G.toString() + ' = 3^' + k + '，满足判据。')
+      : ('G = ' + G.toString() + '，含非 3 素因子 ' + smallestNonThreeFactor(G) + '，不是 3 的幂。');
+  }
+  return info;
+}
+
+/* ============================================================
+   求解器内部工具（在偏差坐标系 v[i] = a[i] − A，目标全零）
+============================================================ */
+function viewOf(v){
+  const nums = v.map(f => f.num());
+  const nz = [], zl = [];
+  for(let i = 0; i < v.length; i++) (v[i].isZero() ? zl : nz).push(i);
+  const sorted = nums.map((x,i) => ({x, i})).sort((p,q) => p.x - q.x);
+  return { v, nums, nz, zl, sorted };
+}
+function applyOpArr(v, i, j, l){
+  const m = avg3(v[i], v[j], v[l]);
+  const w = v.slice(); w[i] = m; w[j] = m; w[l] = m; return w;
+}
+// 在排序数组中找值最接近 t 的下标（排除 exc）
+function nearestIdx(view, t, exc){
+  const s = view.sorted; let lo = 0, hi = s.length - 1, best = null, bd = Infinity;
+  while(lo <= hi){ const mid = (lo + hi) >> 1; if(s[mid].x < t) lo = mid + 1; else hi = mid - 1; }
+  for(const c of [lo-1, lo, lo+1]){
+    if(c < 0 || c >= s.length) continue;
+    const idx = s[c].i; if(exc && exc.has(idx)) continue;
+    const d = Math.abs(s[c].x - t); if(d < bd){ bd = d; best = idx; }
+  }
+  return best;
+}
+// 零和三元组（含借助零位置的 (u,-u,0) 与 (u,u,-2u)）：精确判定，Number 预筛
+function findKill(view){
+  const { v, nums, nz, sorted } = view;
+  const P = nz.length;
+  if(P < 2) return null;
+  let best = null, bestScore = -1;
+  for(let a = 0; a < P; a++){
+    for(let b = a + 1; b < P; b++){
+      const i = nz[a], j = nz[b];
+      const t = -(nums[i] + nums[j]);
+      const tol = 1e-9 * (1 + Math.abs(nums[i]) + Math.abs(nums[j]));
+      // 二分定位窗口左端，再扫描整个窗口
+      let lo = 0, hi = sorted.length - 1;
+      while(lo <= hi){ const mid = (lo + hi) >> 1; if(sorted[mid].x < t - tol) lo = mid + 1; else hi = mid - 1; }
+      for(let c = Math.max(0, lo - 1); c < sorted.length && sorted[c].x <= t + tol; c++){
+        const l = sorted[c].i;
+        if(l === i || l === j) continue;
+        if(!v[i].add(v[j]).add(v[l]).isZero()) continue;
+        const killNz = v[l].isZero() ? 2 : 3;
+        const mag = Math.abs(nums[i]) + Math.abs(nums[j]) + Math.abs(nums[l]);
+        const score = killNz * 1e15 + mag;
+        if(score > bestScore){ bestScore = score; best = [i, j, l]; }
+      }
+    }
+  }
+  return best;
+}
+// 中间相遇：单趟查找大小 ∈ sizes（按优先序）的精确零和子集
+function mitmZeroSubset(v, idxList, sizes){
+  const half = idxList.length >> 1;
+  const A = idxList.slice(0, half), B = idxList.slice(half);
+  const maxSize = Math.max(...sizes);
+  const mapA = new Map(); // "sz|key" -> mask
+  const nA = A.length;
+  const total = 1 << nA;
+  const szOf = new Uint8Array(total); const sumOf = new Array(total);
+  sumOf[0] = new Fr(0n);
+  mapA.set('0|0', 0); // 空子集：允许纯 B 侧命中
+  for(let m = 1; m < total; m++){
+    const lb = m & (-m); const bit = 31 - Math.clz32(lb);
+    const pm = m ^ lb;
+    szOf[m] = szOf[pm] + 1;
+    sumOf[m] = sumOf[pm].add(v[A[bit]]);
+    if(szOf[m] <= maxSize){
+      const k = szOf[m] + '|' + sumOf[m].key();
+      if(!mapA.has(k)) mapA.set(k, m);
+    }
+  }
+  const nB = B.length; const totalB = 1 << nB;
+  const szB = new Uint8Array(totalB); const sumB = new Array(totalB);
+  sumB[0] = new Fr(0n);
+  for(let m = 0; m < totalB; m++){
+    if(m > 0){
+      const lb = m & (-m); const bit = 31 - Math.clz32(lb); const pm = m ^ lb;
+      szB[m] = szB[pm] + 1; sumB[m] = sumB[pm].add(v[B[bit]]);
+    }
+    if(szB[m] > maxSize) continue;
+    const negKey = sumB[m].neg().key();
+    for(const size of sizes){
+      const needSz = size - szB[m];
+      if(needSz < 0 || needSz > nA) continue;
+      const am = mapA.get(needSz + '|' + negKey);
+      if(am !== undefined){
+        const out = [];
+        for(let b = 0; b < nA; b++) if(am & (1 << b)) out.push(A[b]);
+        for(let b = 0; b < nB; b++) if(m & (1 << b)) out.push(B[b]);
+        if(out.length === size) return { size, indices: out };
+      }
+    }
+  }
+  return null;
+}
+// 宏构造：输入位置数组 P（其值精确和为 0）与零位置列表 zl
+function buildMacro(size, P, zl){
+  const [p1,p2,p3,p4,p5,p6,p7,p8,p9] = P;
+  if(size === 4){ const [z1,z2,z3] = zl; return [[p1,p2,z1],[p3,p4,z2],[p1,p3,z3],[p2,p4,p1],[z1,z2,p3]]; }
+  if(size === 5){ const [z1,z2] = zl; return [[p1,p2,p3],[p4,p5,z1],[p1,p4,z2],[p2,p5,p1],[p3,z1,p2]]; }
+  if(size === 6){ const [z1] = zl; return [[p1,p2,p3],[p4,p5,p6],[p1,p4,z1],[p2,p5,p1],[p3,p6,p2]]; }
+  if(size === 7){ const [z1,z2] = zl; return [[p1,p2,p3],[p4,p5,z1],[p6,p7,z2],[p1,p4,p6],[p2,p5,p7],[p3,z1,z2]]; }
+  if(size === 8){ const [z1] = zl; return [[p1,p2,p3],[p4,p5,p6],[p7,p8,z1],[p1,p4,p7],[p2,p5,p8],[p3,p6,z1]]; }
+  if(size === 9){ return [[p1,p2,p3],[p4,p5,p6],[p7,p8,p9],[p1,p4,p7],[p2,p5,p8],[p3,p6,p9]]; }
+  return null;
+}
+const MACRO_ORDER = [[9,0],[8,1],[7,2],[6,1],[5,2],[4,3]];
+function findMacro(view){
+  const p = view.nz.length;
+  if(p < 4 || p > 24) return null;
+  const sizes = MACRO_ORDER.filter(([size, needZ]) => p >= size && view.zl.length >= needZ).map(x => x[0]);
+  if(!sizes.length) return null;
+  const hit = mitmZeroSubset(view.v, view.nz, sizes);
+  if(hit) return buildMacro(hit.size, hit.indices, view.zl);
+  return null;
+}
+// 一步构造：尝试一个操作使下一步可以立即消元
+function findFab(view){
+  const { v, nums, nz, zl } = view;
+  const p = nz.length;
+  const pool = nz.slice().sort((a,b) => Math.abs(nums[b]) - Math.abs(nums[a])).slice(0, 12);
+  let best = null, bestNnz = p, bestAbs = Infinity;
+  const curAbs = nz.reduce((s,i) => s + Math.abs(nums[i]), 0);
+  for(let a = 0; a < pool.length; a++){
+    for(let b = a + 1; b < pool.length; b++){
+      const i = pool[a], j = pool[b];
+      const s = nums[i] + nums[j];
+      const cand = [];
+      const ln = nearestIdx(view, -s, new Set([i, j]));
+      if(ln !== null && ln !== undefined) cand.push(ln);
+      if(zl.length) cand.push(zl[0]);
+      for(const l of cand){
+        if(l === i || l === j) continue;
+        const v2 = applyOpArr(v, i, j, l);
+        const vw2 = viewOf(v2);
+        const kt = findKill(vw2);
+        if(!kt) continue;
+        const nnz2 = vw2.nz.length - (v2[kt[2]].isZero() ? 2 : 3);
+        const abs2 = vw2.nz.reduce((s2,i2) => s2 + Math.abs(vw2.nums[i2]), 0);
+        if(nnz2 < bestNnz || (nnz2 === bestNnz && abs2 < bestAbs - 1e-9)){
+          bestNnz = nnz2; bestAbs = abs2; best = [[i, j, l], kt];
+        }
+      }
+    }
+  }
+  if(best && bestNnz < p) return best;
+  return null;
+}
+/* ---------------- 集束搜索 ---------------- */
+function sigOf(v){ return v.map(f => f.key()).sort().join('|'); }
+function scoreOf(view){
+  let sa = 0; for(const i of view.nz) sa += Math.abs(view.nums[i]);
+  const distinct = new Set(view.nz.map(i => view.v[i].key())).size;
+  return view.nz.length * 1e12 + distinct * 1e6 + sa;
+}
+function genMoves(view, cap){
+  const { v, nums, nz, zl } = view;
+  const moves = []; const seen = new Set();
+  const push = (i,j,l) => {
+    if(i === j || i === l || j === l) return;
+    const key = [i,j,l].sort((x,y) => x - y).join(',');
+    if(seen.has(key)) return; seen.add(key); moves.push([i,j,l]);
+  };
+  // 1) 精确消元
+  const P = nz.length;
+  const sortedPool = nz.slice().sort((a,b) => Math.abs(nums[b]) - Math.abs(nums[a]));
+  outer:
+  for(let a = 0; a < P; a++) for(let b = a + 1; b < P; b++){
+    const i = nz[a], j = nz[b];
+    const t = -(nums[i] + nums[j]);
+    const l = nearestIdx(view, t, new Set([i, j]));
+    if(l === null || l === undefined) continue;
+    if(Math.abs(nums[l] - t) <= 1e-9 * (1 + Math.abs(nums[i]) + Math.abs(nums[j]))){
+      if(v[i].add(v[j]).add(v[l]).isZero()){ push(i, j, l); if(moves.length >= 14) break outer; }
+    }
+  }
+  // 2) 构造候选：大幅值/异号配对 + 最近伙伴 + 零伙伴
+  const pairs = [];
+  const top = sortedPool.slice(0, 14);
+  for(let a = 0; a < top.length; a++) for(let b = a + 1; b < top.length; b++){
+    const i = top[a], j = top[b];
+    const mixed = (nums[i] > 0) !== (nums[j] > 0);
+    pairs.push({ i, j, w: (mixed ? 1e15 : 0) + Math.abs(nums[i] + nums[j]) * -1 });
+  }
+  pairs.sort((p,q) => q.w - p.w);
+  for(const pr of pairs.slice(0, 22)){
+    const s = nums[pr.i] + nums[pr.j];
+    const l1 = nearestIdx(view, -s, new Set([pr.i, pr.j]));
+    if(l1 !== null && l1 !== undefined) push(pr.i, pr.j, l1);
+    if(zl.length) push(pr.i, pr.j, zl[0]);
+    if(moves.length >= cap) break;
+  }
+  // 2b) 制造等值：op 后 m 恰好等于某个现有值（为 (u,u,-2u)/三消铺路）
+  let dupCount = 0;
+  const uniqIdx = nz.slice(0, 24);
+  for(const pr of pairs.slice(0, 10)){
+    const s = nums[pr.i] + nums[pr.j];
+    for(const t of uniqIdx){
+      const target = 3 * nums[t] - s; // 需要 v_l = 3v_t − (v_i+v_j)
+      const l = nearestIdx(view, target, new Set([pr.i, pr.j, t]));
+      if(l === null || l === undefined) continue;
+      if(Math.abs(nums[l] - target) > 1e-9 * (1 + Math.abs(target))) continue;
+      const mVal = avg3(v[pr.i], v[pr.j], v[l]);
+      if(mVal.cmp(v[t]) !== 0) continue;
+      push(pr.i, pr.j, l);
+      if(++dupCount >= 16) break;
+    }
+    if(dupCount >= 16 || moves.length >= cap) break;
+  }
+  // 3) 分散操作以制造副本
+  if(zl.length >= 2 && sortedPool.length) push(sortedPool[0], zl[0], zl[1]);
+  return moves.slice(0, cap);
+}
+async function beamSearch(v0, budget, shouldCancel){
+  const t0 = performance.now();
+  const W = budget.width, D = budget.depth, cap = budget.moveCap;
+  const visited = new Set([sigOf(v0)]);
+  let beam = [{ v: v0, parent: null, op: null, h: scoreOf(viewOf(v0)) }];
+  let nodes = 1;
+  for(let depth = 0; depth < D; depth++){
+    let cand = [];
+    for(const node of beam){
+      const view = viewOf(node.v);
+      const moves = genMoves(view, cap);
+      for(const m of moves){
+        const v2 = applyOpArr(node.v, m[0], m[1], m[2]);
+        const s = sigOf(v2);
+        if(visited.has(s)) continue;
+        visited.add(s);
+        const vw2 = viewOf(v2);
+        const nn = { v: v2, parent: node, op: m, h: scoreOf(vw2) };
+        nodes++;
+        if(vw2.nz.length === 0){
+          const ops = []; let cur = nn;
+          while(cur && cur.op){ ops.push(cur.op); cur = cur.parent; }
+          return ops.reverse();
+        }
+        cand.push(nn);
+      }
+      if((nodes & 511) === 0){
+        if(shouldCancel && shouldCancel()) return null;
+        if(performance.now() - t0 > budget.timeMs) return null;
+        if(nodes > budget.maxNodes) return null;
+        await new Promise(r => setTimeout(r, 0));
+      }
+    }
+    if(!cand.length) return null;
+    cand.sort((x, y) => x.h - y.h);
+    beam = cand.slice(0, W);
+    cand = null;
+  }
+  return null;
+}
+
+/* ============================================================
+   主求解入口
+============================================================ */
+async function solveFeasible(arr, info, budget, shouldCancel){
+  const n = arr.length;
+  const t0 = performance.now();
+  if(info.trivial) return { ops: [], method: '已全等（0 步）', timeMs: 0 };
+  if(n === 3) return { ops: [[0,1,2]], method: 'n=3 一次平均', timeMs: performance.now() - t0 };
+  let v = arr.map(x => new Fr(x).sub(info.A));
+  const ops = [];
+  const notes = new Set();
+  const doOp = (i, j, l) => { const m = avg3(v[i], v[j], v[l]); v[i] = m; v[j] = m; v[l] = m; ops.push([i, j, l]); };
+  let guard = 3000;
+  while(guard-- > 0){
+    const view = viewOf(v);
+    const p = view.nz.length;
+    if(p === 0) break;
+    if(p === 2){
+      if(view.zl.length){ doOp(view.nz[0], view.nz[1], view.zl[0]); notes.add('正负对消元'); continue; }
+      break;
+    }
+    if(p === 3){ doOp(view.nz[0], view.nz[1], view.nz[2]); notes.add('零和三元组'); continue; }
+    const kt = findKill(view);
+    if(kt){ doOp(kt[0], kt[1], kt[2]); notes.add('零和三元组/对消'); continue; }
+    const mc = findMacro(view);
+    if(mc){ for(const o of mc) doOp(o[0], o[1], o[2]); notes.add('零和子集宏(' + mc.length + '步)'); continue; }
+    const fb = findFab(view);
+    if(fb){ doOp(fb[0][0], fb[0][1], fb[0][2]); doOp(fb[1][0], fb[1][1], fb[1][2]); notes.add('一步构造+消元'); continue; }
+    break;
+  }
+  if(!v.every(x => x.isZero())){
+    notes.add('集束搜索');
+    const rest = await beamSearch(v, budget, shouldCancel);
+    if(!rest) return { ops: null, notFound: true, partialOps: ops.length, timeMs: performance.now() - t0, method: [...notes].join(' → ') };
+    for(const o of rest) doOp(o[0], o[1], o[2]);
+  }
+  let finalOps = ops;
+  if(finalOps.length <= 60){ // 冗余步删除优化
+    let i = 0, trimmed = 0;
+    while(i < finalOps.length){
+      const cand = finalOps.slice(0, i).concat(finalOps.slice(i + 1));
+      const r = verify(arr, cand, false);
+      if(r.ok){ finalOps = cand; trimmed++; } else i++;
+    }
+    if(trimmed) notes.add('删除冗余 ' + trimmed + ' 步');
+  }
+  return { ops: finalOps, method: [...notes].join(' → '), timeMs: performance.now() - t0 };
+}
+
+/* ============================================================
+   独立验证器：从原始输入精确重放
+============================================================ */
+function verify(arr, ops, wantTrace = true){
+  const n = arr.length;
+  const S = arr.reduce((s,x) => s + x, 0n);
+  const A = new Fr(S, BigInt(n));
+  let v = arr.map(x => new Fr(x));
+  const trace = wantTrace ? [v] : null;
+  for(let t = 0; t < ops.length; t++){
+    const [i, j, l] = ops[t];
+    const bad = [i, j, l].some(x => !Number.isInteger(x) || x < 0 || x >= n);
+    if(bad || i === j || i === l || j === l) return { ok: false, failAt: t + 1, msg: '第 ' + (t+1) + ' 步位置不合法（越界或重复）' };
+    const m = avg3(v[i], v[j], v[l]);
+    v = v.slice(); v[i] = m; v[j] = m; v[l] = m;
+    if(wantTrace) trace.push(v);
+  }
+  const ok = v.every(x => x.cmp(A) === 0);
+  return ok
+    ? { ok: true, trace, msg: '重放 ' + ops.length + ' 步，终态全部精确等于均值 A = ' + A.toString() }
+    : { ok: false, trace, msg: '终态未全部等于均值' };
+}
+
+/* ============================================================
+   随机实例：真随机抽样 + 判据筛选（拒绝采样）
+============================================================ */
+function randInt(V){ return Math.floor(Math.random() * (2 * V + 1)) - V; }
+function genSolvable(n, V){
+  const t0 = performance.now();
+  let attempts = 0, arr = null, info = null;
+  while(attempts < 400000){
+    attempts++;
+    const a = Array.from({length: n}, () => BigInt(randInt(V)));
+    const inf = analyze(a);
+    if(!inf.supported || !inf.feasible) continue;
+    if(inf.trivial) continue; // 跳过太平凡的全等
+    arr = a; info = inf; break;
+  }
+  return { arr, info, attempts, ms: performance.now() - t0 };
+}
+
+/* ============================================================
+   UI 状态
+============================================================ */
+const S = {
+  arr: null, info: null, solution: null, ver: null,
+  step: 0, playing: false, timer: null,
+  gen: null,
+  batch: { running: false, cancel: false, results: [], genMs: 0, attempts: 0 }
+};
+const el = id => document.getElementById(id);
+const icons = () => lucide.createIcons();
+function toast(msg){
+  el('toastMsg').textContent = msg;
+  el('toast').classList.remove('hidden');
+  icons();
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => el('toast').classList.add('hidden'), 2200);
+}
+const fmtMs = ms => ms < 1 ? ms.toFixed(2) + ' ms' : (ms < 1000 ? ms.toFixed(1) + ' ms' : (ms/1000).toFixed(2) + ' s');
+const frShort = (f, len = 14) => { const s = f.toString(); return s.length > len ? s.slice(0, len - 1) + '…' : s; };
+
+function getBudget(){
+  return {
+    width: +el('inpBeam').value || 400,
+    timeMs: +el('inpTime').value || 9000,
+    depth: +el('inpDepth').value || 70,
+    maxNodes: +el('inpNodes').value || 60000,
+    moveCap: 60
+  };
+}
+
+/* ---------------- 渲染：判定 ---------------- */
+function renderDecision(){
+  const box = el('decisionBody');
+  if(!S.info){ box.innerHTML = '<div class="text-zinc-500 text-sm">尚无实例。</div>'; icons(); return; }
+  const inf = S.info;
+  let banner = '';
+  if(!inf.supported) banner = '<div class="rounded-lg border border-amber-700/60 bg-amber-950/40 text-amber-300 px-3 py-2.5 flex items-center gap-2 text-[13px]"><i data-lucide="triangle-alert" class="w-4 h-4 shrink-0"></i>该规模暂不支持判定</div>';
+  else if(inf.feasible) banner = '<div class="rounded-lg border border-emerald-700/60 bg-emerald-950/40 text-emerald-300 px-3 py-2.5 flex items-center gap-2 text-[13px]"><i data-lucide="circle-check-big" class="w-4 h-4 shrink-0"></i>判定：可行' + (inf.trivial ? '（已全等，0 步）' : '') + '</div>';
+  else banner = '<div class="rounded-lg border border-rose-700/60 bg-rose-950/40 text-rose-300 px-3 py-2.5 flex items-center gap-2 text-[13px]"><i data-lucide="circle-x" class="w-4 h-4 shrink-0"></i>判定：不可行</div>';
+  const row = (k, v) => '<div class="flex justify-between gap-2 items-baseline"><span class="text-zinc-500 text-xs shrink-0">' + k + '</span><span class="mono text-[13px] text-zinc-200 text-right break-all">' + v + '</span></div>';
+  let html = banner + '<div class="space-y-1.5">'
+    + row('n', inf.n)
+    + row('S = Σaᵢ', inf.S.toString())
+    + row('均值 A', inf.A.toString())
+    + (inf.g !== null ? row('g = gcd|naᵢ−S|', inf.g.toString()) : '')
+    + (inf.G !== null ? row('G = gcd|eᵢ−e₁|', inf.G.toString() + (inf.k >= 0 ? ' = 3^' + inf.k : '')) : '')
+    + '</div>';
+  if(inf.e){
+    html += '<div><div class="text-xs text-zinc-500 mb-1">本原偏差 eᵢ（约分后）</div><div class="flex flex-wrap gap-1 max-h-20 overflow-y-auto scrollthin">'
+      + inf.e.map(x => '<span class="chip mono text-[11px] text-zinc-300">' + x.toString() + '</span>').join('') + '</div></div>';
+  }
+  html += '<p class="text-[12px] text-zinc-400 leading-relaxed border-t border-zinc-800 pt-2">' + inf.reason + '</p>';
+  box.innerHTML = html;
+  icons();
+}
+
+/* ---------------- 渲染：解法 ---------------- */
+function renderSolution(){
+  const sum = el('solveSummary'), list = el('opsList');
+  if(!S.info){ sum.innerHTML = '尚未求解。'; list.innerHTML = ''; return; }
+  const inf = S.info;
+  if(!inf.supported){ sum.innerHTML = '<span class="text-amber-300">规模不支持，未尝试求解。</span>'; list.innerHTML = ''; return; }
+  if(inf.feasible === false){ sum.innerHTML = '<span class="text-rose-300">已判定不可行：不存在有限步操作序列。</span>'; list.innerHTML = ''; return; }
+  if(!S.solution){ sum.innerHTML = '<span class="text-zinc-400">已判定可行，点击「判定并求解」构造序列。</span>'; list.innerHTML = ''; return; }
+  const sol = S.solution;
+  if(sol.notFound){
+    sum.innerHTML = '<div class="rounded-lg border border-amber-700/60 bg-amber-950/40 text-amber-300 px-3 py-2.5 text-[13px] flex items-center gap-2"><i data-lucide="triangle-alert" class="w-4 h-4 shrink-0"></i>已判定可行，但尚未找到解（超出搜索预算 ' + fmtMs(sol.timeMs) + '）。可调大预算重试。</div>';
+    list.innerHTML = ''; return;
+  }
+  const vBadge = S.ver && S.ver.ok
+    ? '<span class="chip text-[11px] text-emerald-300 border-emerald-800/70 bg-emerald-950/40 inline-flex items-center gap-1"><i data-lucide="shield-check" class="w-3 h-3"></i>独立验证通过</span>'
+    : '<span class="chip text-[11px] text-rose-300 border-rose-800/70 bg-rose-950/40">验证失败</span>';
+  sum.innerHTML = '<div class="grid grid-cols-3 gap-2 mb-2">'
+    + '<div class="rounded-lg bg-[#0e0e15] border border-zinc-800 p-2 text-center"><div class="text-[10px] text-zinc-500">操作步数</div><div class="mono font-bold text-lg text-cyan-300">' + sol.ops.length + '</div></div>'
+    + '<div class="rounded-lg bg-[#0e0e15] border border-zinc-800 p-2 text-center"><div class="text-[10px] text-zinc-500">求解耗时</div><div class="mono font-bold text-lg text-cyan-300">' + fmtMs(sol.timeMs) + '</div></div>'
+    + '<div class="rounded-lg bg-[#0e0e15] border border-zinc-800 p-2 text-center"><div class="text-[10px] text-zinc-500">验证</div><div class="mt-1">' + vBadge + '</div></div>'
+    + '</div>'
+    + '<div class="text-[11px] text-zinc-500">策略：' + sol.method + '</div>'
+    + (S.ver ? '<div class="text-[11px] text-zinc-500">' + S.ver.msg + '</div>' : '');
+  list.innerHTML = sol.ops.map((o, t) => {
+    const pre = S.ver.trace[t]; const post = S.ver.trace[t + 1];
+    const vs = o.map(i => pre[i].toString()).join(', ');
+    const m = post[o[0]].toString();
+    return '<div class="opitem px-2.5 py-1.5 text-xs mono flex items-center gap-2" data-step="' + (t + 1) + '">'
+      + '<span class="text-zinc-500 w-6 shrink-0">#' + (t + 1) + '</span>'
+      + '<span class="text-cyan-300 shrink-0">(' + o.map(i => i + 1).join(', ') + ')</span>'
+      + '<span class="text-zinc-400 truncate" title="' + vs + '">' + vs + '</span>'
+      + '<span class="text-zinc-600">→</span><span class="text-emerald-300 truncate" title="' + m + '">' + m + '</span>'
+      + '</div>';
+  }).join('');
+  list.querySelectorAll('.opitem').forEach(it => it.addEventListener('click', () => { pause(); setStep(+it.dataset.step); }));
+  icons();
+}
+
+/* ---------------- 渲染：可视化 ---------------- */
+function currentTrace(){ return S.ver && S.ver.trace ? S.ver.trace : (S.arr ? [S.arr.map(x => new Fr(x))] : null); }
+function setStep(k){
+  const tr = currentTrace();
+  if(!tr) return;
+  S.step = Math.max(0, Math.min(k, tr.length - 1));
+  renderViz();
+}
+function renderViz(){
+  const tr = currentTrace();
+  const tiles = el('arrTiles'), bars = el('arrBars'), cap = el('stepCaption');
+  if(!tr){ tiles.innerHTML = '<div class="text-zinc-600 text-sm">暂无数据</div>'; bars.innerHTML = ''; return; }
+  const k = S.step, vals = tr[k], n = vals.length;
+  const A = S.info ? S.info.A : new Fr(vals.reduce((s,x) => s.add(x), new Fr(0n)), BigInt(n));
+  const selOp = (S.solution && S.solution.ops && k >= 1) ? S.solution.ops[k - 1] : null;
+  const sel = selOp ? new Set(selOp) : new Set();
+  const maxLen = n > 24 ? 9 : 14;
+  tiles.innerHTML = vals.map((f, i) => {
+    const cls = ['tile px-2.5 py-2 min-w-[64px] text-center'];
+    if(sel.has(i)) cls.push('sel');
+    if(f.isZero()) cls.push('zero');
+    if(k > 0 && sel.has(i)) cls.push('changed');
+    return '<div class="' + cls.join(' ') + '" title="位置 ' + (i + 1) + ' = ' + f.toString() + '">'
+      + '<div class="text-[10px] text-zinc-500 mono">' + (i + 1) + '</div>'
+      + '<div class="mono text-[13px] font-medium ' + (sel.has(i) ? 'text-cyan-200' : 'text-zinc-200') + '">' + frShort(f, maxLen) + '</div>'
+      + '</div>';
+  }).join('');
+  // bars
+  const devs = vals.map(f => f.sub(A).num());
+  const mx = Math.max(1e-12, ...devs.map(Math.abs));
+  el('devMax').textContent = 'max |dev| = ' + (mx === 0 ? '0' : mx.toExponential(2));
+  bars.innerHTML = devs.map((d, i) => {
+    const h = Math.max(2, Math.round(Math.abs(d) / mx * 56));
+    const up = d >= 0;
+    const color = sel.has(i) ? (up ? '#22d3ee' : '#e879f9') : (up ? '#155e75' : '#701a75');
+    return '<div class="flex-1 h-full flex flex-col ' + (up ? 'justify-start' : 'justify-end') + '" title="pos ' + (i + 1) + ' dev=' + d.toPrecision(3) + '">'
+      + '<div style="height:' + h + 'px;background:' + color + ';border-radius:3px;' + (sel.has(i) ? 'box-shadow:0 0 8px ' + color : '') + '"></div></div>';
+  }).join('');
+  // caption
+  if(!S.solution){ cap.innerHTML = '已载入实例（n = ' + n + '）。点击「判定并求解」。'; }
+  else if(S.solution.notFound){ cap.innerHTML = '<span class="text-amber-300">已判定可行，但搜索预算内尚未找到完整序列。</span>'; }
+  else if(S.solution.ops.length === 0){ cap.innerHTML = '<span class="text-emerald-300">所有数已经相等，无需任何操作。</span>'; }
+  else if(k === 0){ cap.innerHTML = '初始状态 · 共 ' + S.solution.ops.length + ' 步 · 点击播放或下一步开始。'; }
+  else{
+    const o = S.solution.ops[k - 1]; const pre = tr[k - 1]; const m = tr[k][o[0]];
+    const done = (k === S.solution.ops.length) ? ' <span class="text-emerald-300 font-bold">· 完成，全部相等 ✓</span>' : '';
+    cap.innerHTML = '<span>第 <b class="text-cyan-300">' + k + '</b> / ' + S.solution.ops.length + ' 步 · 选中位置 '
+      + '<span class="mono text-cyan-300">(' + o.map(i => i + 1).join(', ') + ')</span> · 操作前 '
+      + '<span class="mono text-zinc-200">' + o.map(i => pre[i].toString()).join(', ') + '</span> → 均值 '
+      + '<span class="mono text-emerald-300">' + m.toString() + '</span>' + done + '</span>';
+  }
+  // 操作列表高亮当前步并滚动跟随
+  const items = el('opsList').querySelectorAll('.opitem');
+  items.forEach(it => {
+    const cur = +it.dataset.step === k;
+    it.classList.toggle('cur', cur);
+    if(cur) it.scrollIntoView({ block: 'nearest' });
+  });
+  el('stepLabel').textContent = k + ' / ' + (tr.length - 1);
+  const sc = el('scrub'); sc.max = tr.length - 1; sc.value = k;
+  el('vizState').textContent = S.solution ? (S.solution.notFound ? '未找到完整解' : '共 ' + (tr.length - 1) + ' 步') : '未求解';
+  renderConv();
+  icons();
+}
+function renderConv(){
+  const svg = el('convChart');
+  const tr = currentTrace();
+  if(!tr || !S.info){ svg.innerHTML = ''; return; }
+  const A = S.info.A;
+  const series = tr.map(vals => Math.max(...vals.map(f => f.sub(A).abs().num())));
+  const mx = Math.max(1e-12, ...series);
+  const W = 600, H = 56, n = series.length;
+  const pts = series.map((v, i) => ((i / Math.max(1, n - 1)) * W).toFixed(1) + ',' + (H - 4 - (v / mx) * (H - 10)).toFixed(1));
+  const curX = (S.step / Math.max(1, n - 1)) * W;
+  svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+  svg.innerHTML = '<polyline points="' + pts.join(' ') + '" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linejoin="round" opacity="0.9"/>'
+    + '<line x1="' + curX + '" y1="0" x2="' + curX + '" y2="' + H + '" stroke="#e879f9" stroke-width="1.5" opacity="0.8"/>';
+}
+
+/* ---------------- 播放控制 ---------------- */
+function pause(){
+  S.playing = false;
+  if(S.timer){ clearInterval(S.timer); S.timer = null; }
+  el('playIcon').setAttribute('data-lucide', 'play'); icons();
+}
+function play(){
+  const tr = currentTrace();
+  if(!tr || tr.length <= 1) return;
+  if(S.step >= tr.length - 1) S.step = 0;
+  S.playing = true;
+  el('playIcon').setAttribute('data-lucide', 'pause'); icons();
+  S.timer = setInterval(() => {
+    if(S.step >= tr.length - 1){ pause(); return; }
+    setStep(S.step + 1);
+  }, +el('selSpeed').value);
+}
+
+/* ============================================================
+   求解流程
+============================================================ */
+async function doSolve(){
+  if(!S.arr){ toast('请先生成或输入实例'); return; }
+  pause();
+  S.info = analyze(S.arr);
+  S.solution = null; S.ver = null; S.step = 0;
+  renderDecision(); renderSolution(); renderViz();
+  if(!S.info.supported || !S.info.feasible){ return; }
+  const btn = el('btnSolve');
+  btn.disabled = true;
+  btn.innerHTML = '<i data-lucide="loader-circle" class="w-5 h-5 spin"></i>求解中…'; icons();
+  await new Promise(r => setTimeout(r, 30));
+  const sol = await solveFeasible(S.arr, S.info, getBudget(), () => false);
+  S.solution = sol;
+  if(!sol.notFound){ S.ver = verify(S.arr, sol.ops, true); }
+  S.step = 0;
+  btn.disabled = false;
+  btn.innerHTML = '<i data-lucide="zap" class="w-5 h-5"></i>判定并求解';
+  renderSolution(); renderViz();
+  if(S.solution.notFound) toast('已判定可行，但预算内未找到解');
+  else{
+    toast('求解完成：' + S.solution.ops.length + ' 步，验证' + (S.ver.ok ? '通过' : '失败'));
+    if(S.ver.ok && S.solution.ops.length > 0) setTimeout(() => { if(!S.playing) play(); }, 450);
+  }
+}
+
+/* ============================================================
+   实例装载
+============================================================ */
+function loadArray(arr, genMeta){
+  pause();
+  S.arr = arr; S.info = null; S.solution = null; S.ver = null; S.step = 0; S.gen = genMeta || null;
+  el('inpArr').value = arr.join(', ');
+  el('inpN').value = arr.length;
+  if(arr.length >= 7 && arr.length <= 40) el('rngN').value = arr.length;
+  S.info = analyze(arr);
+  renderDecision(); renderSolution(); renderViz();
+}
+function parseInput(text){
+  const parts = text.split(/[\s,，、;；|]+/).filter(s => s.length > 0);
+  if(!parts.length) return null;
+  const out = [];
+  for(const p of parts){
+    if(!/^[+-]?\d+$/.test(p)) return { error: '无法解析：「' + p + '」不是整数' };
+    out.push(BigInt(p));
+  }
+  return out;
+}
+
+/* ============================================================
+   导出 / 复制
+============================================================ */
+function reportText(){
+  if(!S.arr) return '';
+  const inf = S.info || analyze(S.arr);
+  const L = [];
+  L.push('========== 3-平均 求解报告 ==========');
+  L.push('题面（可直接粘贴求解）: ' + S.arr.join(', '));
+  L.push('n = ' + inf.n + '   S = ' + inf.S + '   均值 A = ' + inf.A.toString());
+  if(inf.g !== null) L.push('g = ' + inf.g + '   e = [' + inf.e.join(', ') + ']   G = ' + inf.G + (inf.k >= 0 ? ' = 3^' + inf.k : '（不是 3 的幂）'));
+  if(!inf.supported){ L.push('判定：该规模（n=' + inf.n + '）暂不支持。'); return L.join('\n'); }
+  L.push('判定：' + (inf.feasible ? '可行' : '不可行') + ' —— ' + inf.reason);
+  if(!inf.feasible) return L.join('\n');
+  const sol = S.solution;
+  if(!sol){ L.push('求解：尚未运行。'); return L.join('\n'); }
+  if(sol.notFound){ L.push('求解：已判定可行，但尚未找到解（搜索超时/资源限制，耗时 ' + fmtMs(sol.timeMs) + '）。'); return L.join('\n'); }
+  L.push('求解：成功 · ' + sol.ops.length + ' 步 · 耗时 ' + fmtMs(sol.timeMs) + ' · 策略：' + sol.method);
+  L.push('---- 操作序列（位置从 1 开始，(i,j,k): x,y,z -> m）----');
+  const tr = S.ver.trace;
+  sol.ops.forEach((o, t) => {
+    const pre = tr[t], m = tr[t + 1][o[0]];
+    L.push((t + 1) + '. (' + o.map(i => i + 1).join(', ') + ') : ' + o.map(i => pre[i].toString()).join(', ') + ' -> ' + m.toString());
+  });
+  L.push('---- 独立验证 ----');
+  L.push(S.ver.ok ? '通过：从原始数组精确重放全部 ' + sol.ops.length + ' 步，位置合法、每步计算正确，终态所有位置 = A = ' + inf.A.toString() : '失败：' + S.ver.msg);
+  return L.join('\n');
+}
+async function copyText(txt, okMsg){
+  try{ await navigator.clipboard.writeText(txt); toast(okMsg); }
+  catch(e){
+    const ta = document.createElement('textarea');
+    ta.value = txt; document.body.appendChild(ta); ta.select();
+    try{ document.execCommand('copy'); toast(okMsg); } catch(_){ toast('复制失败'); }
+    ta.remove();
+  }
+}
+function downloadTxt(txt, name){
+  const blob = new Blob([txt], { type: 'text/plain;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 3000);
+}
+
+/* ============================================================
+   批量实验
+============================================================ */
+function batchBudget(){
+  return { width: 140, depth: 45, maxNodes: 14000, timeMs: +el('inpBTime').value || 1500, moveCap: 42 };
+}
+async function runBatch(){
+  if(S.batch.running) return;
+  const M = Math.max(5, Math.min(500, +el('inpM').value || 50));
+  const n = Math.max(7, +el('inpN').value || 10);
+  const V = Math.max(1, +el('inpV').value || 30);
+  S.batch.running = true; S.batch.cancel = false; S.batch.results = [];
+  S.batch.genMs = 0; S.batch.attempts = 0;
+  el('btnBatch').disabled = true; el('btnBatchCancel').disabled = false;
+  const budget = batchBudget();
+  for(let k = 0; k < M; k++){
+    if(S.batch.cancel) break;
+    const g = genSolvable(n, V);
+    S.batch.genMs += g.ms; S.batch.attempts += g.attempts;
+    let rec;
+    if(!g.arr){ rec = { ok: false, genFail: true, steps: null, ms: 0, arr: null }; }
+    else{
+      const sol = await solveFeasible(g.arr, g.info, budget, () => S.batch.cancel);
+      if(sol.notFound){ rec = { ok: false, notFound: true, steps: null, ms: sol.timeMs, arr: g.arr }; }
+      else{
+        const vr = verify(g.arr, sol.ops, false);
+        rec = { ok: vr.ok, notFound: false, steps: sol.ops.length, ms: sol.timeMs, arr: g.arr, verFail: !vr.ok };
+      }
+    }
+    S.batch.results.push(rec);
+    updateBatchUI(k + 1, M);
+    await new Promise(r => setTimeout(r, 0));
+  }
+  S.batch.running = false;
+  el('btnBatch').disabled = false; el('btnBatchCancel').disabled = true;
+  el('batchProgText').textContent = S.batch.cancel ? '已取消（' + S.batch.results.length + ' / ' + M + '）' : '完成（' + S.batch.results.length + ' / ' + M + '）';
+  updateBatchUI(S.batch.results.length, M);
+}
+function updateBatchUI(done, M){
+  const R = S.batch.results;
+  el('batchProg').style.width = (done / M * 100).toFixed(1) + '%';
+  el('batchProgText').textContent = (S.batch.running ? '运行中 ' : '') + done + ' / ' + M;
+  const solved = R.filter(r => r.ok);
+  const failed = R.filter(r => !r.ok);
+  const times = R.map(r => r.ms);
+  const totalMs = times.reduce((a,b) => a + b, 0);
+  const stepsArr = solved.map(r => r.steps);
+  const stat = (label, val, sub) => '<div class="rounded-lg bg-[#0e0e15] border border-zinc-800 p-2.5"><div class="text-[10px] text-zinc-500">' + label + '</div><div class="mono font-bold text-cyan-300 text-lg leading-tight">' + val + '</div>' + (sub ? '<div class="text-[10px] text-zinc-500 mono">' + sub + '</div>' : '') + '</div>';
+  const nfCount = failed.filter(r => r.notFound).length, otCount = failed.length - nfCount;
+  el('batchStats').innerHTML =
+    stat('实例数', R.length, '目标 ' + M) +
+    stat('成功求解', solved.length, failed.length ? ('未找到 ' + nfCount + (otCount ? ' · 失败 ' + otCount : '')) : '全部成功') +
+    stat('求解总耗时', fmtMs(totalMs), '') +
+    stat('平均耗时', R.length ? fmtMs(totalMs / R.length) : '—', '') +
+    stat('最快', R.length ? fmtMs(Math.min(...times)) : '—', '') +
+    stat('最慢', R.length ? fmtMs(Math.max(...times)) : '—', '') +
+    stat('平均步数', stepsArr.length ? (stepsArr.reduce((a,b)=>a+b,0)/stepsArr.length).toFixed(1) : '—', stepsArr.length ? ('min ' + Math.min(...stepsArr) + ' / max ' + Math.max(...stepsArr)) : '') +
+    stat('筛选耗时', fmtMs(S.batch.genMs), '平均尝试 ' + (R.length ? (S.batch.attempts / R.length).toFixed(1) : '—') + ' 次');
+  // histogram
+  const hist = el('hist');
+  if(!stepsArr.length){ hist.innerHTML = '<div class="text-zinc-600 text-xs self-center">暂无数据</div>'; }
+  else{
+    const mn = Math.min(...stepsArr), mx = Math.max(...stepsArr);
+    const bins = Math.min(12, Math.max(1, mx - mn + 1));
+    const width = (mx - mn + 1) / bins;
+    const counts = new Array(bins).fill(0);
+    for(const s of stepsArr) counts[Math.min(bins - 1, Math.floor((s - mn) / width))]++;
+    const cmax = Math.max(...counts);
+    hist.innerHTML = counts.map((c, i) => {
+      const lo = Math.round(mn + i * width), hi = Math.round(mn + (i + 1) * width - 1);
+      const h = c ? Math.max(6, Math.round(c / cmax * 120)) : 2;
+      return '<div class="flex-1 flex flex-col items-center justify-end gap-1" title="步数 ' + lo + (hi > lo ? '–' + hi : '') + '：' + c + ' 例">'
+        + '<div class="text-[10px] mono text-zinc-400">' + (c || '') + '</div>'
+        + '<div style="height:' + h + 'px" class="w-full bg-cyan-700/80 rounded-t"></div>'
+        + '<div class="text-[9px] mono text-zinc-600">' + lo + (hi > lo ? '–' + hi : '') + '</div></div>';
+    }).join('');
+  }
+  // rows
+  el('batchRows').innerHTML = R.map((r, i) => {
+    const arrTxt = r.arr ? (r.arr.join(' ').length > 26 ? r.arr.join(' ').slice(0, 25) + '…' : r.arr.join(' ')) : '—';
+    const status = r.ok ? '<span class="text-emerald-400">成功</span>' : (r.notFound ? '<span class="text-amber-400">未找到</span>' : '<span class="text-rose-400">失败</span>');
+    return '<tr class="border-t border-zinc-800/60" title="' + (r.arr ? r.arr.join(', ') : '') + '">'
+      + '<td class="py-1 pr-2 text-zinc-500">' + (i + 1) + '</td>'
+      + '<td class="pr-2 text-zinc-300">' + arrTxt + '</td>'
+      + '<td class="text-right pr-2">' + (r.arr ? r.arr.length : '—') + '</td>'
+      + '<td class="text-right pr-2 text-cyan-300">' + (r.steps === null ? '—' : r.steps) + '</td>'
+      + '<td class="text-right pr-2">' + fmtMs(r.ms) + '</td>'
+      + '<td class="text-right">' + status + '</td></tr>';
+  }).join('');
+}
+function batchReport(){
+  const R = S.batch.results;
+  const solved = R.filter(r => r.ok);
+  const L = [];
+  L.push('========== 3-平均 批量求解报告 ==========');
+  L.push('实例数: ' + R.length + '   成功: ' + solved.length + '   未找到: ' + R.filter(r => r.notFound).length + '   失败: ' + R.filter(r => !r.ok && !r.notFound).length);
+  if(R.length){
+    const total = R.reduce((a,r) => a + r.ms, 0);
+    L.push('求解总耗时: ' + fmtMs(total) + '   平均: ' + fmtMs(total / R.length) + '   最快: ' + fmtMs(Math.min(...R.map(r=>r.ms))) + '   最慢: ' + fmtMs(Math.max(...R.map(r=>r.ms))));
+    L.push('随机筛选总耗时: ' + fmtMs(S.batch.genMs) + '   平均尝试: ' + (S.batch.attempts / R.length).toFixed(2) + ' 次/例');
+    const st = solved.map(r => r.steps);
+    if(st.length) L.push('步数: 平均 ' + (st.reduce((a,b)=>a+b,0)/st.length).toFixed(2) + '   最少 ' + Math.min(...st) + '   最多 ' + Math.max(...st));
+  }
+  L.push('---- 明细 ----');
+  R.forEach((r, i) => {
+    if(!r.arr){ L.push((i + 1) + '. [生成失败]'); return; }
+    L.push((i + 1) + '. [' + r.arr.join(', ') + ']  n=' + r.arr.length + '  ' +
+      (r.ok ? ('成功 ' + r.steps + ' 步') : (r.notFound ? '已判定可行但未找到解' : '验证失败')) + '  耗时 ' + fmtMs(r.ms));
+  });
+  return L.join('\n');
+}
+
+/* ============================================================
+   事件绑定
+============================================================ */
+el('rngN').addEventListener('input', () => el('inpN').value = el('rngN').value);
+el('inpN').addEventListener('input', () => { const v = +el('inpN').value; if(v >= 7 && v <= 40) el('rngN').value = v; });
+el('btnGen').addEventListener('click', () => {
+  const n = Math.max(7, Math.min(60, +el('inpN').value || 10));
+  const V = Math.max(1, +el('inpV').value || 30);
+  const g = genSolvable(n, V);
+  if(!g.arr){ toast('筛选超时，请调大值域或重试'); return; }
+  loadArray(g.arr, g);
+  el('genInfo').innerHTML = '拒绝采样：<span class="text-cyan-300">' + g.attempts + '</span> 次抽样命中 · 筛选耗时 <span class="text-cyan-300">' + fmtMs(g.ms) + '</span>（与求解耗时分别统计）';
+  toast('已生成可平均实例（' + g.attempts + ' 次抽样）');
+});
+el('btnGenAny').addEventListener('click', () => {
+  const n = Math.max(7, Math.min(60, +el('inpN').value || 10));
+  const V = Math.max(1, +el('inpV').value || 30);
+  const arr = Array.from({length: n}, () => BigInt(randInt(V)));
+  loadArray(arr, null);
+  el('genInfo').textContent = '未过滤随机实例（1 次抽样），是否可行以判定为准。';
+});
+el('btnLoad').addEventListener('click', () => {
+  const r = parseInput(el('inpArr').value);
+  if(!r){ toast('请输入整数数组'); return; }
+  if(r.error){ toast(r.error); return; }
+  if(r.length < 1 || r.length > 200){ toast('长度需在 1–200 之间'); return; }
+  loadArray(r, null);
+  toast('已载入 n = ' + r.length + ' 的数组');
+});
+el('btnExample').addEventListener('click', () => { el('inpArr').value = '0, 1, 2, 3, 4, 5, 6'; el('btnLoad').click(); });
+el('btnSolve').addEventListener('click', doSolve);
+el('btnRestart').addEventListener('click', () => { pause(); setStep(0); });
+el('btnPrev').addEventListener('click', () => { pause(); setStep(S.step - 1); });
+el('btnNext').addEventListener('click', () => { pause(); setStep(S.step + 1); });
+el('btnPlay').addEventListener('click', () => S.playing ? pause() : play());
+el('scrub').addEventListener('input', () => { pause(); setStep(+el('scrub').value); });
+el('selSpeed').addEventListener('change', () => { if(S.playing){ pause(); play(); } });
+el('btnCopyProblem').addEventListener('click', () => { if(!S.arr) return toast('暂无实例'); copyText(S.arr.join(', '), '题面已复制（可直接粘贴求解）'); });
+el('btnCopyReport').addEventListener('click', () => { if(!S.arr) return toast('暂无实例'); copyText(reportText(), '完整报告已复制'); });
+el('btnExport').addEventListener('click', () => { if(!S.arr) return toast('暂无实例'); downloadTxt(reportText(), '3averaging_solution.txt'); toast('已导出文本文件'); });
+el('btnBatch').addEventListener('click', runBatch);
+el('btnBatchCancel').addEventListener('click', () => { S.batch.cancel = true; });
+el('btnBatchExport').addEventListener('click', () => { if(!S.batch.results.length) return toast('暂无批量结果'); downloadTxt(batchReport(), '3averaging_batch.txt'); toast('批量报告已导出'); });
+
+/* 初始化 */
+icons();
+loadArray([0n, 1n, 2n, 3n, 4n, 5n, 6n], null);
+el('genInfo').textContent = '真随机抽样 + 判据筛选（拒绝采样），不做任何逆向构造。';
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;cfb6543e268d4ceb92c8170675caa481&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
+
+
+</body></html>

@@ -1,0 +1,1097 @@
+     DEVELOPMENTS ON THE CONGRUENCE SUBGROUP
+    PROBLEM AFTER THE WORK OF BASS, MILNOR AND
+                      SERRE
+
+
+                    GOPAL PRASAD AND ANDREI S. RAPINCHUK
+
+
+
+1. Introduction. The papers of Bass-Milnor-Serre [3] and Serre [49] initiated the
+investigation of the congruence subgroup problem for arbitrary semi-simple alge-
+braic groups. The aim of this article is to survey the results in the area obtained
+after, and inﬂuenced by, [3], and also to discuss some remaining open questions.
+We would like to point out that the impact of [3] can be seen far beyond the con-
+gruence subgroup problem; in particular, it and the paper [52] of Steinberg inspired
+the development of algebraic K-theory. In this article, however, we will limit our
+account exclusively to the congruence subgroup problem for linear algebraic groups.
+For abelian varieties, the problem originated with a question of J.W.S. Cassels on
+elliptic curves, and was settled by Serre in [48], [50]. We refer the reader interested
+in K-theoretic aspects to the classical monographs [1], [20], and also to the more
+recent book [45] which includes a discussion of applications of algebraic K-theory
+to topology.
+    The literature devoted to the congruence subgroup problem is quite substantial
+– the reader can ﬁnd detailed references in the survey articles [34], [35], [39], [40],
+and the book [54] (the last one treats only elementary aspects of the theory). In this
+article, we will focus our discussion on how the results established in [3] and [49]
+ﬁt in, and can be derived from, the more general results and techniques available
+today.
+
+2. The congruence subgroup problem
+
+   In this section, we will recall the congruence subgroup problem as originally
+described in [3], §14, make some additional comments, and give the reduction of
+the problem (over number ﬁelds) to absolutely simple simply connected groups. In
+the next section, we will discuss the connection between the congruence subgroup
+and the metaplectic problem, ﬁrst pointed out in [3], §15, in a somewhat more
+general framework. The subsequent sections are devoted to the results obtained on
+these problems after [3] and [49].
+2.1. Throughout this article, k will denote a global ﬁeld, i.e., either a number
+ﬁeld, or the function ﬁeld of an algebraic curve over a ﬁnite ﬁeld. We let V de-
+note the set of all places of k, and Vf (resp., V∞ ) the subset of nonarchimedean
+(resp., archimedean) places, and as usual, for v ∈ V , we let kv denote the cor-
+responding completion. Let S be a (not necessarily ﬁnite) subset of V which,
+everywhere except in the deﬁnition of the “S-metaplectic kernel” M (S, G) recalled
+below, will be assumed to be nonempty and to contain all the archimedean places
+of k. Then the corresponding ring of S-integers is deﬁned to be
+                      OS = {x ∈ k | v(x) ⩾ 0 for all v ∈
+                                                       / S}.
+                                           1
+
+                                                                 JOHN MILNOR        307
+2                              PRASAD AND RAPINCHUK
+
+                                                                ι
+Now, given an algebraic k-group G, we ﬁx a k-embedding G → GLn and then deﬁne
+the corresponding group of S-integral points Γ = G(OS ) to be G(k) ∩ GLn (OS )
+(or, more precisely, ι−1 (ι(G(k)) ∩ GLn (OS ))). For an ideal a of OS , the principal
+S-congruence subgroup of level a is deﬁned to be Γa := Γ ∩ GLn (OS , a), where
+GLn (OS , a) is the subgroup of GLn (OS ) consisting of matrices congruent to the
+identity matrix modulo a. A subgroup Γ of Γ that contains Γa for some nonzero
+a is called an S-congruence subgroup (in which case obviously [Γ : Γ ] < ∞). The
+congruence subgroup problem (CSP) (for Γ) is the question whether every subgroup
+of ﬁnite index of Γ is an S-congruence subgroup (cf. [3], p. 128). (The answer to
+                                                       ι
+this question is independent of the k-embedding G → GLn chosen, see 2.3 below.)
+In this (classical) formulation, CSP goes back to the works of Fricke and Klein
+on automorphic functions in the 19th century who discovered that Γ = SL2 (Z)
+(which corresponds to G = SL2 over k = Q, and S = V∞ ) has plenty of subgroups
+of ﬁnite index which are not congruence subgroups, providing thereby a negative
+answer to the problem. The ﬁrst positive results on CSP appeared only in the
+early 1960s when Bass-Lazard-Serre [2] and Mennicke [19] solved the problem in
+the aﬃrmative for Γ = SLn (Z), n ⩾ 3. The pioneering study of CSP undertaken in
+[3] led to an elegant and useful reformulation of the problem and to the introduction
+of an object, called the S-congruence kernel, which we will now describe.
+2.2. Let Na (resp., Nc ) be the family of all normal subgroups of ﬁnite index of Γ
+(resp., all principal S-congruence subgroups). One can introduce two topologies,
+τa and τc , on Γ, compatible with the group structure, that admit Na and Nc as
+fundamental systems of neighborhoods of the identity (these topologies are called
+the S-arithmetic and S-congruence topologies, respectively), and then the aﬃrma-
+tive answer to the congruence subgroup problem for Γ is equivalent to the assertion
+that
+(T)                                   τa = τc .
+Furthermore, one observes that Γ admits completions Γ       and Γ with respect to τa
+                                                                               πΓ
+                                                                             −→
+and τc , and since τa is ﬁner than τc , there is a continuous homomorphism Γ       Γ.
+Then (T) amounts to the assertion that the S-congruence kernel
+                                  C S (G) := ker π Γ
+is the trivial group. In any case, since Γ    and Γ can be described in terms of
+projective limits of ﬁnite groups as follows
+                     = limN ∈N Γ/N
+                    Γ                    and      Γ = lima=0 Γ/Γa ,
+                               a
+                          ←−                           ←−
+                      Γ
+the homomorphism π is surjective and the S-congruence kernel C S (G) is a proﬁ-
+nite group. Another useful observation is that the families Na and Nc constitute
+fundamental systems of neighborhoods of the identity for topologies, compatible
+with the group structure, not only on Γ = G(OS ), but also on G(k). We will let τa
+(resp., τc ) denote also the topology on G(k) deﬁned by the family Na (resp., Nc ).
+Moreover, G(k) admits completions G    and G with respect to τa and τc respectively,
+and both G    and G are topological groups; see, for example, [49], 1.1, or the ﬁrst
+paragraph of §9 in [29]. There is a continuous homomorphism G      −→π
+                                                                          G. It easily
+follows from the deﬁnitions that Γ  and Γ can be identiﬁed with the closures of Γ in
+G and G, and they are open in the respective groups G and G, that C S (G) = ker π Γ
+
+
+308    COLLECTED PAPERS
+          CONGRUENCE SUBGROUP PROBLEM AFTER BASS-MILNOR-SERRE                         3
+
+
+coincides with ker π, and that π is surjective. Thus, we arrive at the following exact
+sequence of locally compact topological groups
+
+
+(C)                                        −→ G → 1.
+                           1 → C S (G) −→ G
+                                                π
+
+
+
+
+Notice that by construction there is a natural homomorphism G(k) −→ G,  which
+means that (C) splits over G(k) (⊂ G). We collect these preliminary observations
+in the following proposition.
+Proposition 1. The S-congruence kernel C S (G) is the kernel in the extension (C)
+of locally compact topological groups which splits over G(k). It is a proﬁnite group
+which is trivial if and only if the congruence subgroup problem for Γ = G(OS ) has
+the aﬃrmative answer.
+2.3. It is not diﬃcult to see that a k-isomorphism ϕ : G → G of matrix algebraic
+k-groups induces an isomorphism ϕ        : C S (G) → C S (G ) of the corresponding S-
+congruence kernels, for any S, which in particular implies that the answer to the
+                                                                                     ι
+congruence subgroup problem is independent of the choice of a k-embedding G →
+                    S
+GLn . In general, C (G) provides a natural measure of deviation from the aﬃrmative
+answer to CSP for Γ = G(OS ), so by introducing the former, [3] and [49] oﬀered a
+new quantitative formulation of the congruence subgroup problem as the problem
+of computation of C S (G) for all G and S. The results obtained in [3] exhibited
+two possibilities for C S (G) for G = SLn (n ⩾ 3) and Sp2n (n ⩾ 2): if S contains
+a noncomplex place (i.e., a place v such that kv = C), then C S (G) is trivial;
+otherwise C S (G) is isomorphic to the (ﬁnite cyclic) group μk of all roots of unity
+in k. Subsequently, it was shown in [49] that this description of C S (G) remains
+valid for G = SL2 if |S| > 1; on the other hand, if |S| = 1, then C S (G) is inﬁnite.
+Since this article is a commentary on [3], we will focus our attention on the results
+yielding the ﬁniteness and the precise description of C S (G) for various G, and just
+brieﬂy mention now some references dealing with the structure of C S (G) when it is
+inﬁnite. It was shown by O.V. Melnikov that for Γ = SL2 (Z) the congruence kernel
+is a free proﬁnite group of countable rank, and this result was extended by Zalesskii
+[61] to all arithmetic lattices in SL2 (R). Lubotzky [13] showed that for Γ = SL2 (O),
+where O is the ring of integers of an imaginary quadratic number ﬁeld (such a Γ is
+called a Bianchi group), the congruence kernel contains a closed normal subgroup
+which is a free proﬁnite group of countable rank. Regarding the structure of C S (G)
+when it is inﬁnite and k is of positive characteristic - see [60] and the recent paper
+[17].
+2.4. In [5], Chevalley settled the congruence subgroup problem in the aﬃrmative
+for all algebraic tori over number ﬁelds and any ﬁnite S. ([5] contains two diﬀerent
+proofs of this result, but it was pointed out by Serre in the 1960s that while the
+ﬁrst proof is perfectly correct, the second one is wrong.)
+   If k is a number ﬁeld, then the CSP for the one dimensional additive group Ga
+is easily seen to have the aﬃrmative solution, for any S. On the other hand, it is
+well-known that in this case, any unipotent k-group U is split (over k), i.e., there
+is a descending chain of normal k-subgroups
+
+(1)                        U = U0 ⊃ U1 ⊃ · · · ⊃ Ur = {e}
+
+                                                                 JOHN MILNOR        309
+4                                 PRASAD AND RAPINCHUK
+
+
+such that the successive quotients Ui /Ui+1 are isomorphic to Ga , for all i =
+0, . . . , r −1. Then an easy inductive argument yields the congruence subgroup prop-
+erty for U, again for any S.
+    Now combining the aﬃrmative solution of the CSP for tori and connected unipo-
+tent groups, and using the Levi decomposition, one can essentially reduce the com-
+putation of C S (G) for an arbitrary group G over a number ﬁeld k, and any ﬁnite
+S, to the case where G is an absolutely simple simply connected group; so we will
+focus exclusively on such groups in the rest of this article. More precisely, if k
+is a number ﬁeld, then given an arbitrary algebraic group G, one can pick a Levi
+k-subgroup L of the identity component G◦ and consider the derived subgroup
+H = [L, L], which is a semi-simple k-group (and in fact, it is a maximal connected
+semi-simple subgroup of G). One proves that for any ﬁnite S ⊃ V∞ , there is a
+natural isomorphism between C S (H) and C S (G), reducing the problem to G semi-
+simple. Then one considers the universal cover G     −→θ
+                                                           G deﬁned over k, and relates
+C S (G) and C S (G). It turns out that if the fundamental group F = ker θ is nontriv-
+ial, then C S (G) is inﬁnite for any ﬁnite S, so if one is interested in the situations
+where C S (G) is ﬁnite, one needs to assume that G is simply connected. Finally,
+as a k-simple simply connected group is obtained from an absolutely simple simply
+connected group, deﬁned over a ﬁnite extension of k, by restriction of scalars, we
+are reduced to the case of an absolutely simple simply connected G.
+    When k is of positive characteristic, a full reduction of the computation of C S (G)
+to the absolutely simple simply connected case is hardly possible as even for the
+additive group Ga the S-congruence kernel is inﬁnite, and on the other hand, general
+unipotent groups can be very complicated (in particular, they may not possess a
+normal series like (1)). However, here is one simple fact which is often used: let
+G be a semi-direct product over k of a connected k-group H and a vector group
+U ; assume that H acts on U without any nontrivial ﬁxed points and that H(OS )
+is Zariski-dense in H; then there is a natural isomorphism C S (H) ≃ C S (G). It
+would be interesting to generalize this result and show, for example, that if U is
+a connected unipotent normal k-subgroup of G such that the adjoint action of G
+on the Lie algebra of U has no nonzero ﬁxed points, then in case G(OS ) is Zariski-
+dense in G, we have an isomorphism C S (G/U ) ≃ C S (G). This would, to a large
+extent, reduce the problem to the case where G is pseudo-reductive (that is, it does
+not contain any nontrivial connected normal unipotent k-subgroups). Furthermore,
+it may be possible to use the recent results on the structure of pseudo-reductive
+groups, obtained in [6], to reduce the computation of C S (G) to reductive groups.
+
+3. The metaplectic problem
+
+3.1. Henceforth, G will denote an absolutely simple simply connected k-group.
+Based on the results in [3] and [49], Serre formulated (as a footnote in [49]) the
+following conjecture, known as the congruence subgroup conjecture, which gives a
+qualitative description of C S (G) for such groups. For S ﬁnite, deﬁne the S-rank
+rkS G of G as the sum of the relative ranks rkkv G, of G over the completions kv , for
+v ∈ S. Then C S (G) is ﬁnite if rkS G ⩾ 2 and rkkv G > 0 for all v ∈ S \ V∞ ,1 and
+
+                        kv G > 0 for all v ∈ S \ V∞ was missing in Serre’s formulation, but one
+   1 The condition rk
+
+easily sees that it is necessary for C S (G) to be ﬁnite. More precisely, if rkS G > 0 and there is
+v ∈ S \ V∞ with rkkv G = 0, then C S (G) is inﬁnite.
+
+
+310     COLLECTED PAPERS
+           CONGRUENCE SUBGROUP PROBLEM AFTER BASS-MILNOR-SERRE                           5
+
+
+is inﬁnite if rkS G = 1 (these two cases are usually referred to as the higher rank
+case and the rank one case, respectively). We notice that if rkS G = 0, then G(OS )
+is ﬁnite and therefore C S (G) is trivial, so this case can be excluded from further
+consideration. We also notice that Serre’s conjecture implies that for any inﬁnite
+S such that rkkv G > 0 for all v ∈ S \ V∞ , the S-congruence kernel C S (G) must be
+ﬁnite (in fact, trivial, see the remark following Theorem 3 below). In this section
+we will discuss an approach to attack Serre’s conjecture in the higher rank case
+that goes back to [3], §15, and is based on relating the S-congruence kernel C S (G)
+to the metaplectic kernel M (S, G), which we will now deﬁne (in this deﬁnition, the
+set S can be arbitrary, even empty).
+3.2. Let AS denote the k-algebra of S-adèles, i.e., the restricted topological product
+of the completions kv , for v ∈/ S, with respect to the rings of integers Ov of kv for
+nonarchimedean v. Thus,
+                             
+             AS = {(xv ) ∈                                        / S ∪ V∞ }.
+                                    kv : xv ∈ Ov for almost all v ∈
+                             v ∈S
+                               /
+
+
+Then the group G(AS ) of AS -points of an algebraic k-group G can also be viewed
+as the restricted topological product of the G(kv )’s, for v ∈     / S, with respect to the
+G(Ov )’s, for v ∈ / S ∪ V∞ , where the groups G(Ov ) are deﬁned as G(kv ) ∩ GLn (Ov ) in
+terms of a ﬁxed k-embedding G → GLn . So, whenever necessary (cf., for example,
+the statement of Theorem 4), we will regard G(kv ) for any v ∈         / S as a subgroup of
+G(AS ). The group G(AS ) of S-adèles is a locally compact topological       group for the
+natural topology with a basis consisting of the sets of the form Ω × v∈S∪T      /    G(Ov )
+where
+      T ⊂   V \S   is an arbitrary ﬁnite  subset  containing  (V \S)∩V   ∞ and  Ω ⊂ G T :=
+  v∈T G(k  v ) is  an  open subset  (cf. [23], §5.1, for the details). The  (S-)metaplectic
+kernel of an absolutely simple simply connected k-group G is deﬁned as follows:
+                                    2           res         
+                     M (S, G) = ker Hm (G(AS )) −→ H 2 (G(k)) ,
+
+         2
+where Hm   (G(AS )) denotes the second cohomology group of G(AS ) with coeﬃcients
+in I := R/Z (with the trivial action of G(AS ) on I) based on measurable cochains,
+H 2 (G(k)) denotes the second cohomology of G(k) with coeﬃcients in I based on
+abstract cochains, and the restriction map is taken relative to the natural diagonal
+embedding G(k) → G(AS ). It is known that for a locally compact second countable
+topological group G, the group Hm  2
+                                     (G) classiﬁes topological central extensions of G
+by I, and for an abstract group G, the group H 2 (G) classiﬁes abstract central
+extensions of G by I. Furthermore, it follows from the results of Wigner [59] that
+when S ⊃ V∞ (which is always the case in the situations arising from the congruence
+                                  2
+subgroup problem), the group Hm     (G(AS )) in this deﬁnition can be identiﬁed with
+                          2
+the cohomology group Hct (G(AS )) deﬁned in terms of continuous cochains with
+values in I.
+3.3. Before describing the connection between the S-congruence kernel C S (G) and
+the metaplectic kernel M (S, G), we formulate the following important ﬁniteness
+result.
+Theorem 1. Let G be an absolutely simple simply connected group over a global
+ﬁeld k. For any (possibly, empty) set S of places of k, the metaplectic kernel M (S, G)
+is ﬁnite.
+
+                                                                    JOHN MILNOR        311
+6                              PRASAD AND RAPINCHUK
+
+
+   In the ﬁnal form, this theorem was proved in [29], Theorem 2.7, as a consequence
+of the particular cases considered earlier in [26], Theorems 2.10 and 3.4, and [32],
+                                         2
+Theorem 2.1, and the ﬁniteness of Hct      (G(kv )) for all nonarchimedean v established
+in [27], Theorem 9.4, if G is kv -isotropic and in [28], Theorem 8.1, if G is kv -
+anisotropic. A simple proof of ﬁniteness in the case where k is a number ﬁeld and
+S ⊃ V∞ is given in [25] using some results of M. Lazard.
+3.4. To link C S (G) and M (S, G), one observes that the S-congruence topology
+τc on G(k) coincides with the topology induced on it by the diagonal embedding
+G(k) → G(AS ). So, since G(AS ) is locally compact, the completion G can be
+identiﬁed with the closure of G(k) in G(AS ), for any G. But since G is assumed
+to be absolutely simple and simply connected in this section, and besides we are
+ interested in the situation where rkS G > 0, or equivalently, the group GS =
+only
+  v∈S G(kv ) is noncompact, G has the strong approximation property with respect
+to S (cf. [23], 7.4), i.e., G(k) is dense in G(AS ). Thus, in this case, G is isomorphic
+to G(AS ), and the congruence subgroup sequence (C) can be rewritten in the form
+(C )                                     −→ G(AS ) → 1.
+                          1 → C S (G) −→ G
+                                              π
+
+
+Next, we consider the following exact sequence obtained from the Hochschild-Serre
+spectral sequence for continuous cohomology with coeﬃcients in I :
+                         ϕ  1                               ψ
+(2)         1
+           Hct (G(AS )) −→ Hct (G) −→ Hct
+                                       1
+                                          (C S (G))G(AS ) −→ Hct
+                                                              2
+                                                                 (G(AS )).
+The fact that (C ) splits over G(k) implies that Im ψ is contained in the metaplectic
+kernel M (S, G). Moreover, using the ﬁniteness of M (S, G) and arguing as in the
+proof of Theorem 15.1 in [3], one shows that Im ψ = M (S, G). Thus, (2) leads to
+the following short-exact sequence.
+(3)             1 → Coker ϕ −→ Hct
+                                1
+                                   (C S (G))G(AS ) −→ M (S, G) → 1.
+By the results of Margulis [15] that the commutator subgroup [G(k), G(k)] is always
+of ﬁnite index in G(k), using which we easily show that
+(4)                 Coker ϕ ≃ Hom([G(k), G(k)]/[G(k), G(k)], I),
+where [G(k), G(k)] is the closure of [G(k), G(k)] in G(k) in the S-congruence topol-
+ogy. Thus, Coker ϕ is always ﬁnite, and moreover, is trivial if G(k) is perfect, i.e.,
+G(k) = [G(k), G(k)] (which was an assumption in Theorem 15.1 of [3]). In the
+general case, the description of Coker ϕ is related to the following conjecture about
+the normal subgroups of G(k), known as the Margulis-Platonov conjecture (MP)
+for G/k:
+    Let G be an absolutely simple simply connected group over a global ﬁeld k, and
+    let T be the (ﬁnite) set of all nonarchimedean places v of k such that G is kv -
+                                              subgroup N of G(k), there exists
+    anisotropic. Then for any noncentral normal
+    an open normal subgroup W of GT := v∈T G(kv ) such that N = δ −1 (W ),
+    where δ : G(k) → GT is the diagonal map. In particular, if T = ∅, then G(k)
+    does not have proper noncentral normal subgroups.
+If (MP) holds for G/k, we will say that the normal subgroups of G(k) have the
+standard description. Notice that G(k) can be viewed as an S-arithmetic group for
+S = V K \T and that (MP) is equivalent to the aﬃrmative answer to the congruence
+subgroup problem in this setting. So, it is not surprising that the assumption that
+(MP) holds for G/k is present in the statements, and plays an important role in the
+
+312      COLLECTED PAPERS
+          CONGRUENCE SUBGROUP PROBLEM AFTER BASS-MILNOR-SERRE                          7
+
+
+proofs, of practically all results on the congruence subgroup problem. Fortunately,
+the truth of (MP) has already been established for a large number of groups. We
+will describe the known results in this direction in the following two paragraphs.
+3.5. If G is k-isotropic, then obviously T = ∅, and (MP) simply asserts that G(k)
+does not contain any proper noncentral normal subgroups. So, in this case (MP)
+is equivalent to the Kneser-Tits conjecture that G(k) = G(k)+ , where G(k)+ is
+the normal subgroup of G(k) generated by the k-rational points of the unipotent
+radicals of parabolic k-subgroups.
+    The proof of the Kneser-Tits conjecture over global ﬁelds was recently completed
+by P. Gille, who not only settled the case of a rank one form of type 2E6 , which had
+remained open for a long time, but also provided a uniform geometric approach
+for a proof of the conjecture over general ﬁelds for a certain class of groups (see
+his Bourbaki talk [11]). The truth of (MP) for anisotropic groups of type Bn , Cn ,
+Dn (except the triality forms 3,6D4 ), E7 , E8 , F4 , and G2 was established in the
+1980s (see [23], Ch. IX). Subsequently, (MP) was also established for all anisotropic
+inner forms of type An . This result involved the eﬀorts of several mathematicians:
+ﬁrst, using the previous results of Platonov-Rapinchuk and Raghunathan (cf. [23],
+Ch. IX, §2), Potapchik and Rapinchuk [42] reduced (MP) to the assertion that for
+a ﬁnite-dimensional central division algebra D over k, the multiplicative group D×
+cannot have a quotient which is a nonabelian ﬁnite simple group, and then Segev [46]
+and Segev-Seitz [47] proved the truth of this assertion over arbitrary ﬁelds (see the
+appendix in [43] for a detailed description of the strategy of the entire proof). The
+work of Segev [46] initiated a series of interesting results about ﬁnite quotients of
+the multiplicative group of ﬁnite-dimensional division algebras over general ﬁelds.
+Of special relevance for our account are the various versions of the congruence
+subgroup theorem established in [43] and [44] for the multiplicative group D× of
+a ﬁnite dimensional division algebra D over an arbitrary ﬁeld, which led to the
+result that all ﬁnite quotients of D× are solvable. The techniques developed in [43]
+and [44] were used in [41] to give a relatively short proof of (MP) for anisotropic
+inner forms of type An in which the use of the classiﬁcation of ﬁnite simple groups
+is limited to the fact that these groups are 2-generated. So, at the time of this
+writing, (MP) remains open only for certain anisotropic outer forms of type An ,
+anisotropic triality forms 3,6D4 , and certain anisotropic forms of type E6 .
+3.6. We now observe that the description of Coker ϕ given in (4) implies that it is
+trivial if N = [G(k), G(k)] is closed in G(k) in the S-congruence topology (this is
+the case if (MP) holds, and rkkv G > 0 for all v ∈ S \ V∞ , which is our standing
+                                           1
+assumption). Thus, the middle term Hct       (C S (G))G(AS ) of (3) is always ﬁnite, and
+it is isomorphic to M (S, G) if (MP) holds. On the other hand, it is easy to see that
+since G(k) is dense in G,
+                1
+               Hct (C S (G))G(AS ) = Homct (C S (G)/[C S (G), G(k)], I).
+So, in order to recover C S (G), we need to make the fundamental assumption, which
+is really pivotal in the consideration of the higher rank case of Serre’s conjecture,
+                                             i.e., C S (G) is central. Then
+that C S (G) is contained in the center of G,
+                        1
+                       Hct (C S (G))G(AS ) = Homct (C S (G), I),
+the Pontrjagin dual of (the compact abelian group) C S (G). This discussion leads
+to the ﬁrst assertion of the following theorem.
+
+                                                                   JOHN MILNOR      313
+8                              PRASAD AND RAPINCHUK
+
+
+Theorem 2. Let G be an absolutely simple simply connected algebraic group over a
+global ﬁeld k, and let S be a nonempty set of places, containing all the archimedean
+ones if k is a number ﬁeld, such that rkS G > 0 and rkkv G > 0 for all v ∈ S \ V∞ .
+    (1) If the congruence kernel C S (G) is central, then it is ﬁnite. In addition, if
+        (MP) holds, then C S (G) is isomorphic to the Pontrjagin dual of M (S, G).
+    (2) Conversely, if C S (G) is ﬁnite and (MP) holds for G/k, then C S (G) is
+        central (and hence isomorphic to the Pontrjagin dual of M (S, G)).
+   Assertion (2) of this theorem has the following generalization proved in [38] and
+[24]: if (MP) holds for G/k and rkkv G > 0 for all v ∈ S \ V∞ , then the ﬁnite
+generation of C S (G) as a proﬁnite group implies that C S (G) is central. Thus, in
+the presence of (MP) for G/k, we have the following interesting dichotomy: C S (G)
+is either central and ﬁnite, or it is not topologically ﬁnitely generated.
+   We see that the ﬁniteness of C S (G) is equivalent to its centrality, and if it
+is central, then it is isomorphic to the dual of the metaplectic kernel M (S, G).
+Thus, the consideration of the higher rank case of Serre’s conjecture splits into two
+problems: proving the centrality of the S-congruence kernel and computing the
+metaplectic kernel (“the metaplectic problem”). Both the problems have generated
+a large number of results which we will review in sections 4 and 5 below. It should
+be noted, however, that while the metaplectic problem has been solved completely,
+there are important cases in the problem of centrality (e.g., G = SL1,D , where D is
+a division algebra - even a quaternion division algebra) which look inaccessible at
+this time.
+3.7. The sequence (C ) has another property which is related to the isomorphism
+in Theorem 2(1). Assume that G(k) is perfect, G is kv -isotropic for all v ∈ / S and
+the S-congruence kernel C S (G) is central. Then (C ) has the following universal
+property (cf. [26], proof of Theorem 2.9): given a topological central extension
+                            1 → C −→ E −→ G(AS ) → 1,
+with C discrete, which splits over G(k), there is a unique continuous homomorphism
+ → E such that the following diagram commutes:
+G
+                                 
+                  1 → C S (G) −→ G             −→ G(AS )      →    1
+                         ↓       ↓
+                  1 →    C    −→ E             −→ G(AS )      → 1.
+
+3.8. The ﬁniteness of C S (G) has several important consequences. In particular,
+it was proved in [3], Theorem 16.2, that if k = Q, then the ﬁniteness of C S (G)
+implies that any homomorphism of an S-arithmetic subgroup of G(Q) into GLn (Q)
+coincides, on a subgroup of ﬁnite index of the S-arithmetic subgroup, with a Q-
+rational homomorphism of G into GLn . Results of this nature in a more general
+setting were obtained in [49], §2.7. These are the ﬁrst instances of “super-rigidity”
+which was proved later in 1974 in a general framework by G.A. Margulis, and was
+used by him to derive his celebrated arithmeticity theorem (cf. [16]).
+
+4. Computation of the metaplectic kernel
+
+4.1. The metaplectic kernel M (S, G) was computed in [3], Theorem 15.3, for G =
+SLn , n ⩾ 3, and Sp2n , n ⩾ 2, using the solution of the congruence subgroup problem
+
+314     COLLECTED PAPERS
+           CONGRUENCE SUBGROUP PROBLEM AFTER BASS-MILNOR-SERRE                         9
+
+
+for S-arithmetic subgroups of these groups. Subsequent work in this direction
+(essentially complete by now) took a diﬀerent course, stemming from the paper of
+Moore [21], which we will sketch below. Moore used the results of R. Steinberg on
+central extensions of the group of rational points of a simply connected Chevalley
+group over an arbitrary ﬁeld to link topological central extensions of the groups of
+rational points of such groups over nonarchimedean local ﬁelds with norm residue
+symbols of local class ﬁeld theory. More precisely, let G be an absolutely simple
+simply connected k-split group, and let v ∈ Vf . Then to every xv ∈ Hm    2
+                                                                            (G(kv )),
+there corresponds a topological central extension
+                                                πx
+(E(xv ))                      1 → I −→ Gxv −→
+                                            v
+                                              G(kv ) → 1.
+On the other hand, according to Steinberg [52], the extension (E(xv )) is uniquely
+characterized by a certain 2-cocycle cxv : kv× ×kv× → I (called a Steinberg 2-cocycle).
+Using the fact that (E(xv )) is a topological central extension, Moore showed that
+the associated 2-cocycle cxv is of the form cxv (∗, ∗) = χxv ((∗, ∗)v ) for a unique
+character χxv : μkv → I of the group μkv of roots of unity in kv , where (∗, ∗)v is the
+norm residue symbol on kv× . Furthermore, the correspondence xv → χxv deﬁnes
+an injective homomorphism ιv : Hm    2
+                                       (G(kv ))−→              kv is the dual of μkv .
+                                                    μkv , where μ
+Moore was able to prove that ιv is an isomorphism if G = SL2 ; for arbitrary simple
+simply connected k-split groups this was established later by Matsumoto [18].
+   Next, Moore proved that for an arbitrary ﬁnite set S of places of k, one has the
+following:
+                                            
+                             2                    2
+(A)                        Hm  (G(AS )) =       Hm  (G(kv )).
+                                                v ∈S
+                                                  /
+
+Now let x ∈ M (S, G), and let
+                                                π
+                              1 → I −→ Gx −→
+                                           x
+                                             G(AS ) → 1
+be the corresponding topological central extension. According to (A), we can write
+          / , with xv ∈ Hm (G(kv )). Let χxv = ιv (xv ) in the above notation. Then
+                          2
+x = (xv )v∈S
+the Steinberg 2-cocycle corresponding to the induced extension
+                        1 → I −→ πx−1 (G(k)) −→
+                                                       π
+(5)                                           x
+                                                G(k) → 1
+is                                 
+                     cx (α, β) =          χxv ((α, β)v ) for α, β ∈ k× .
+                                   v ∈S
+                                     /
+Since x ∈ M (S, G), the extension (5) splits, which imposes the following relation
+                      
+(6)                       χxv ((α, β)v ) = 1 for all α, β ∈ k× .
+                       v ∈S
+                         /
+This relation connects the norm residue symbols for diﬀerent places of k, and there-
+fore can be thought of as a reciprocity law. From global class ﬁeld theory, one knows
+the following reciprocity law called the Artin product formula:
+                                  
+(P)                                  (α, β)vmv /m = 1,
+                                   v∈V
+
+where m = |μk | and mv = |μkv | (by deﬁnition, mv = 0 if kv = C). Moore proved
+that this reciprocity law is actually unique in the sense that any relation between
+the norm residue symbols that holds on k× × k× is a power of (P). This fact enables
+one to conclude that if S contains a v with kv = C, so that the corresponding norm
+
+                                                                       JOHN MILNOR   315
+10                            PRASAD AND RAPINCHUK
+
+
+residue symbol (∗, ∗)v is nontrivial, then in (6) all the χv ’s must be trivial. This
+implies that in this case the metaplectic kernel M (S, G) is trivial for any simple
+simply connected k-split group G. On the other hand, if S is totally complex, then
+(P) still holds if one omits the factors corresponding to v ∈ S. Now for a given
+χ ∈ μk , we deﬁne χv ∈ μ  kv by the formula χv (t) = χ(tmv /m ). Assuming that
+                                     / S, we can consider x = (xv ) ∈ Hm
+the ιv ’s are isomorphisms for all v ∈                                     2
+                                                                             (G(AS )),
+where xv ∈ Hm (G(kv )) is such that ι(xv ) = χv . Then (6) holds, and hence, x ∈
+                 2
+
+M (S, G), leading eventually to an isomorphism M (S, G) ≃ μ      k . This completes
+our brief review of how the results of Moore [21] yield a proof of the Metaplectic
+Conjecture formulated in [3], §15, for G = SL2 , and in conjunction with the results
+of Matsumoto [18], for all simple simply connected k-split groups.
+4.2. Steinberg’s generators-relations approach for the study of central extensions
+of split groups was generalized by Deodhar [7] to quasi-split groups, which en-
+abled him to compute the metaplectic kernel for these groups. Further results
+                                                                          2
+required essentially new techniques. In [27], the cohomology group Hct      (G(K)) was
+computed for any absolutely simple simply connected isotropic algebraic group G
+over a nonarchimedean local ﬁeld K using the Bruhat-Tits theory and spectral se-
+quences. (We note here that according to a result of Wigner [59] the natural map
+Hct2
+     (G(K)) → Hm  2
+                    (G(K)) is an isomorphism.) It is known that any absolutely sim-
+ple simply connected anisotropic group over such a ﬁeld K is of the form G = SL1,D ,
+where D is a ﬁnite dimensional central division K-algebra. For such groups, impor-
+                                    2
+tant qualitative results about Hct    (G(K)) were established in [28]; recently, Ershov
+                                                                    2
+[9] has been able to obtain an upper bound for the order of Hct       (G(K)) which is
+sharp if K is a cyclotomic extension of Qp .
+    Using their local results [27], Prasad and Raghunathan [26] computed the meta-
+plectic kernel for all absolutely simple simply connected k-isotropic groups. The
+following result for arbitrary absolutely simple simply connected groups, which set-
+tles the metaplectic problem, was obtained by Prasad and Rapinchuk [29].
+Theorem 3. Let G be an absolutely simple simply connected algebraic group de-
+ﬁned over a global ﬁeld k, and S be a ﬁnite (possibly, empty) set of places of k.
+Then the metaplectic kernel M (S, G) is isomorphic to a subgroup of μ k , the dual of
+the group μk of all roots of unity in k. Moreover, if S contains a place v0 which is
+either nonarchimedean and G is kv0 -isotropic, or is real and G(kv0 ) is not topolog-
+ically simply connected, then M (S, G) is trivial. Furthermore, M (∅, G) is always
+isomorphic to μk .
+   In case S does not contain all the archimedean places of k, the proof of this
+theorem for certain groups of type 2 An requires the validity of Conjecture (U)
+stated in §2 of [29]. This conjecture still remains unproven. Recall that in the
+deﬁnition of S-arithmetic groups, and so also in the congruence subgroup problem,
+S is assumed to contain all the archimedean places of k.
+   We note that for some groups G of type An and some S, the metaplectic kernel
+M (S, G) can be a proper subgroup of μ   k . We also note that it follows from the
+above theorem that M (S, G) is trivial for any inﬁnite set S. Thus, a consequence
+of Theorems 2 and 3 is that the truth of the higher rank case of Serre’s conjecture
+and that of the Margulis-Platonov conjecture imply that C S (G) is trivial for any
+inﬁnite S.
+
+
+
+316    COLLECTED PAPERS
+           CONGRUENCE SUBGROUP PROBLEM AFTER BASS-MILNOR-SERRE                         11
+
+
+5. Centrality of the S-congruence kernel
+
+5.1. According to Theorem 2, the higher rank case of Serre’s conjecture is equiv-
+alent to the centrality of C S (G) provided that rkS G > 1, and rkkv G > 0 for all
+v ∈ S \ V∞ . The centrality of C S (G) has been established in a large number of
+cases: for G = SLn and Sp2n , in [3], §14, and [49], §2. The result was extended
+to all split (Chevalley) groups by Matsumoto [18]. Some nonsplit isotropic groups
+of classical types were treated by L.N. Vaserstein. A proof of Serre’s conjecture for
+general isotropic groups was given by Raghunathan [31], [33]. Martin Kneser was
+the ﬁrst to prove the centrality of the S-congruence kernel for a k-anisotropic group.
+He treated the spinor groups of quadratic forms in n ⩾ 5 variables in [12], and then
+Rapinchuk and Tomanov extended his method to some other classical groups (see
+the discussion below for an outline of Kneser’s method and the precise references).
+Rapinchuk [37], [38] also considered some exceptional groups. At the time of this
+writing, the centrality of C S (G) in the higher rank case of Serre’s conjecture is
+not known for any anisotropic inner form, and for most of the anisotropic outer
+forms, of type An , for the anisotropic triality forms of type D4 , and for most of
+the anisotropic groups of type E6 . One of the important, but surprisingly diﬃcult,
+open cases is where G = SL1,D , with D a quaternion central division algebra over
+k.
+5.2. The results on the centrality of C S (G) mentioned above use a variety of
+techniques, and we refer the reader to the surveys [34], [35], [39] and [40] for the
+precise formulations and some discussion of the methods involved in various cases.
+Unfortunately, at this point there does not exist a uniform strategy to attack the
+problem of centrality (cf., however, the concluding paragraph of this section), so we
+have decided to outline two diﬀerent approaches here, and show how each of them
+yields the centrality for G = SLn , n ⩾ 3, originally established in [3], Theorem 14.1.
+The ﬁrst one, which can be traced back to Kneser [12], is based on the following
+two simple propositions (cf. [36], [38]).
+Proposition 2. Let G be an absolutely simple simply connected algebraic group
+over a global ﬁeld k such that the group G(k) does not contain any proper noncentral
+normal subgroups. Assume that there exists a k-subgroup H of G with the following
+properties:
+                                  ι
+  (1) the natural map C S (H) −→ C S (G) is surjective;
+  (2) there exists a nontrivial k-automorphism σ of G such that σ|H = idH .
+                           
+Then C S (G) is central in G.
+
+Proof. Indeed, σ induces a continuous automorphism of the topological group G           
+which we will denote by σ . It follows from condition (2) that σ  acts trivially on the
+                                    −→
+                                       ι    But according to condition (1), we have
+image Im  ι of the natural map H         G.
+the inclusion C (G) ⊂ Im 
+                 S
+                            ι, so σ acts trivially on C S (G). Then for any g ∈ G  and
+any x ∈ C (G), we have
+           S
+
+
+                                 σ (g −1 xg)g −1 = (g
+           x = g(g −1 xg)g −1 = g                               σ (g)−1 )−1 .
+                                                     σ (g)−1 )x(g
+In particular, all elements of the form gσ(g)−1 with g ∈ G(k), commute with
+C S (G). On the other hand, since σ is nontrivial, there exists g ∈ G(k) for which
+gσ(g)−1 ∈/ Z(G). Thus, the kernel of the conjugation action of G(k) on C S (G) is
+
+                                                                   JOHN MILNOR       317
+12                                     PRASAD AND RAPINCHUK
+
+
+a noncentral normal subgroup, so our assumption that G(k) does not contain any
+proper noncentral normal subgroups implies that the action is trivial. Then the
+           is also trivial, hence C S (G) is central.
+action of G                                                                  
+
+Proposition 3. Let G × X −→ X be a k-action of G on an aﬃne k-variety X,
+and let x ∈ X(k). Assume that for every normal subgroup N of Γ = G(OS ) of
+ﬁnite index, the orbit N · x is open in the orbit Γ · x in the topology induced from
+X(AS ) (i.e., in the S-congruence topology). Then for the stabilizer H = Gx of x,
+the natural map C S (H) → C S (G) is surjective.
+                                                                     
+Proof. It is enough to show that C S (G) is contained in the closure H(OS ) of H(OS )
+    Clearly,
+in G.
+                             C S (G) = limN ∈Na N /N,
+                                                  ←−
+
+where N denotes the closure of N in the S-congruence topology. So, to prove the
+                    
+inclusion C S (G) ⊂ H(OS ), it suﬃces to prove that
+
+                                             N ⊂ H(OS )N
+for any N ∈ Na . Since the action G(AS ) × X(AS ) −→ X(AS ) is continuous, the
+openness of N · x in Γ · x implies that there exists a congruence subgroup Γa such
+that Γa · x ⊂ N · x. Then N ⊂ N Γa , and therefore
+                                      N · x ⊂ (N Γa ) · x = N · x,
+i.e., N · x = N · x. It follows that N = (H(OS ) ∩ N )N, as required.                            
+
+5.3. We will now derive the centrality of C S (G) for G = SLn , n ⩾ 3, using the above
+two propositions. We consider the natural action of G on the n-dimensional vector
+space V, and let H denote the subgroup of G consisting of matrices of the form
+diag(A, 1) with A ∈ SLn−1 . Then H is ﬁxed elementwise by the automorphism σ =
+Int g of G, where g = diag(1, . . . , 1, α), α ∈ k× , α = 1. So, in view of Proposition 2,
+it is enough to show that the map C S (H) → C S (G) is surjective. For this, we take
+x = (0, . . . , 0, 1) and observe that the orbit G(OS ) · x consists of all unimodular
+y = (a1 , . . . , an ) ∈ OnS . (Recall that (a1 , . . . , an ) ∈ OnS is said to be unimodular if
+the ideal generated by a1 , . . . , an is OS .) Furthermore, given a nonzero a ∈ OS , for
+any unimodular y ∈ OnS satisfying y ≡ x (mod a2 OS ), there exists g ∈ En (aOS )
+such that y = gx, where, for a nonzero ideal a of OS , we let En (a) denote the normal
+subgroup of G(OS ) generated by the elementary matrices with nondiagonal entries
+in a (cf. [3], §4). Indeed, using the fact that a is invertible modulo an OS , we can
+ﬁnd β1 , . . . , βn−2 ∈ aOS such that b := β1 a1 + · · · + βn−2 an−2 + an−1 is prime to an ,
+and then there exists g1 ∈ En (aOS ) taking y to z = (a1 , . . . , an−2 , b, an ), and the
+latter vector is ≡ x (mod a2 OS ). Next, we pick γ, δ ∈ OS such that γb + δan = 1,
+and let g2 ∈ En (aOS ) be an element transforming z to
+ (a1 − a1 γb − a1 δan , . . . , an−2 − an−2 γb − an−2 δan , b, an ) = (0, . . . , 0, b, an ) =: w.
+Finally, we consider the following sequence of transformations
+                w → (0, . . . , 0, aγb + aδan , b, an ) = (0, . . . , 0, a, b, an ) →
+                                     b           an − 1
+             (0, . . . , 0, a, b −     · a, an −        · a) = (0, . . . , a, 0, 1) → x.
+                                     a             a
+
+318     COLLECTED PAPERS
+          CONGRUENCE SUBGROUP PROBLEM AFTER BASS-MILNOR-SERRE                        13
+
+
+Using the fact b ≡ 0 (mod a2 OS ) and an ≡ 1 (mod a2 OS ), we easily see that
+this sequence of transformations is implemented by some g3 ∈ En (aOS ). Then
+(g3 g2 g1 )y = x, so g = g1−1 g2−1 g3−1 ∈ En (aOS ) is as required. (We notice that the
+element g we have constructed belongs to the subgroup (and not only to the normal
+subgroup) generated by the elementary matrices with nondiagonal entries in aOS .)
+   Now, if N ⊂ G(OS ) is a normal subgroup of ﬁnite index, then there exists a
+nonzero ideal a of OS such that N ⊃ En (a) (cf. Theorem 7.5(e) in [3]). Pick a
+nonzero a ∈ a. It follows from the computation above that the orbit En (a) · x
+contains all y ∈ G(OS ) · x satisfying y ≡ x (mod a2 OS ), and therefore is open in
+G(OS )·x in the S-congruence topology. Then the orbit N ·x is also open in G(OS )·x,
+and hence according to Proposition 3 the map C S (Gx ) → C S (G) is surjective. (One
+can show that for any nonzero ideal a of OS , the orbit En (a) · x is precisely the set
+of all unimodular y’s satisfying y ≡ x (mod a), but the proof of this fact is longer,
+see Theorem 3.3 in [1], Ch. V.) Furthermore, Gx = U  H where U is the unipotent
+radical of Gx , which is a vector group. So, it follows from the discussion at the end
+of section 2 that the map C S (H) → C S (Gx ) is an isomorphism. We obtain that
+C S (H) → C S (G) is surjective, completing the argument.
+   Kneser used a similar argument in [12] to prove the centrality of C S (G) for
+G = Spin(f ), where f is a nondegenerate quadratic form in n ⩾ 5 variables. His
+argument was extended by Rapinchuk [36], [37] (a detailed exposition was given in
+[38]) and Tomanov [56], [57] to other classical groups deﬁned in terms of sesqui-
+linear forms of a suﬃciently large dimension, and to the groups of type G2 .
+5.4. Another approach to proving centrality is based on the following theorem
+(announced in [40]) which for isotropic groups was proved by Raghunathan in a
+somewhat diﬀerent form and with additional restrictions (cf. Proposition 2.14 in
+[33]). The general case follows from our result on the congruence subgroup property
+for the groups of points over semi-local rings [29], §9 (which was the ﬁrst result in
+the investigation of the congruence subgroup problem that does not require any
+case-by-case considerations).
+
+Theorem 4. Let G be an absolutely simple simply connected algebraic group over a
+global ﬁeld k such that the normal subgroups of G(k) have the standard description.
+Assume that for every v ∈                                   so that the following
+                            / S, there is a subgroup Gv of G
+conditions are satisﬁed:
+                              / S, where π is as in the exact sequence (C  ) of 3.4;
+(i) π(Gv ) = G(kv ) for all v ∈
+(ii) Gv1 and Gv2 commute elementwise for all v1 , v2 ∈ / S, v1 = v2 ;
+(iii) the subgroup generated by the Gv , for v ∈                 
+                                               / S, is dense in G.
+                           
+Then C S (C) is central in G.
+
+5.5. We will now show how Theorem 4 applies to G = SLn , n ⩾ 3. For 1 ⩽
+i, j ⩽ n, i = j, let Uij be the 1-dimensional unipotent subgroup of G formed by the
+elementary matrices eij (∗). The following commutator relation for the elementary
+matrices is well-known and simple to verify:
+                                         ⎧
+                                         ⎨ 1,         i = m, j = l
+(7)                 [eij (s), elm (t)] =   eim (st), j = l, i = m
+                                         ⎩
+                                           elj (−st), j = l, i = m
+
+                                                                   JOHN MILNOR      319
+14                                  PRASAD AND RAPINCHUK
+
+
+It is easy to see that the topologies τa and τc of G(k) induce the same topology
+on each Uij (k) (cf. Theorem 7.5(e) in [3]). So, if U                  ij and U ij denote the clo-
+                                                                    π
+sures of Uij (k) in G and G, respectively, then GS −→ GS restricts to an isomor-
+phism U    ij −→
+                πij
+                     U ij . By the strong approximation property of k+ , the isomorphism
+eij : k+ → Uij (k), t → eij (t), extends to an isomorphism AS → U ij which will be
+denoted eij . Then eij := πij        −1
+                                         ◦ eij is an isomorphism between AS and U         ij . We will
+let Gv , for v ∈  / S, denote the subgroup of G           generated by eij (t) for all t ∈ kv ⊂ AS
+and all i = j. Clearly, the Gv ’s satisfy condition (i) of Theorem 2. The closed sub-
+group of G    generated by the Gv , v ∈        / S, contains eij (t) for all t ∈ k, hence also G(k),
+and therefore it coincides with G,            verifying condition (iii). Finally, to check (ii),
+we observe that the density of k in AS implies that (7) yields a similar expression
+for [          elm (t)] for any s, t ∈ AS . Now, if s ∈ kv1 , t ∈ kv2 , where v1 = v2 , then
+       eij (s), 
+st = 0 in AS , which implies that eij (s) and elm (t) commute except possibly when
+l = j and m = i. In the latter case, as n ⩾ 3, we can pick l = i, j and then write
+eji (t) = [ejl (t), eli (1kv2 )]. Since eij (s) is already known to commute with ejl (t) and
+eli (1Kv2 ), it commutes with eji (t) as well. This shows that Gv1 and Gv2 commute
+elementwise, which completes the argument.
+5.6. Theorem 4 enables one to establish the centrality of C S (G) in many other
+situations. For example, we will now use it to prove centrality for G = SL2 when
+|S| > 1, established ﬁrst by Serre in [49]. (It is worth noting that the argument
+below, unlike Serre’s original argument, does not require Tchebotarev’s Density
+Theorem.) To keep our notations simple, we will give the argument for k = Q,
+S = {v∞ , vp }, but it extends immediately to the general situation. Let us introduce
+the following notations:
+                         1 a                         1 0                      t  0
+           u+ (a) =                 , u− (b) =                 , h(t) =                    .
+                         0 1                         b 1                      0 t−1
+We will think of u+ , u− , and h as parametrizations of the subgroups U + , U − ,
+and H of upper unitriangular, lower tringular, and diagonal matrices in G, respec-
+tively. One easily checks that for a, b ∈ k such that ab = 1 we have the following
+commutator identity
+                                              a2 b           1                ab2
+(8)           [u+ (a), u− (b)] = u+ −                  h              u−               .
+                                            1 − ab         1 − ab           1 − ab
+
+As above, we let U          ± and U ± denote the closures of U ± (k) in G       and G, re-
+                                                                        ±
+                             ±                           ±
+spectively. Again, u induce isomorphisms u : AS → U , and π : G                     → G re-
+                                          ±    ±
+stricts to isomorphisms U          ± −→π
+                                             U which enables us to deﬁne isomorphisms
+u ±             ± −1
+ := (π ) ◦ u : AS → U    ±             . For v ∈
+                                        ±
+                                                  / S, let Gv be the subgroup of G      gener-
+ated by u      + (kv ) and u− (kv ). Then the subgroups Gv clearly satisfy conditions (i)
+and (iii) of Theorem 4, so we only need to verify condition (ii). In other words,
+we need to show that for v1 = v2 , the subgroups u                         − (kv2 ) commute
+                                                              + (kv1 ) and u
+elementwise. First, we construct nonzero a0 ∈ kv1 and b0 ∈ kv2 such that u              + (a0 )
+and u − (b0 ) commute in G.      Let q1 , q2 be the primes corresponding to v1 , v2 , and let
+q3 , q4 , . . . be all other primes = p. For each m ⩾ 2, we can ﬁnd n(m) divisible by
+m! so that
+                                  pn(m) ≡ 1 (mod (q1 · · · qm )2m ).
+
+320      COLLECTED PAPERS
+            CONGRUENCE SUBGROUP PROBLEM AFTER BASS-MILNOR-SERRE                               15
+
+
+Then we can write 1 − pn(m) = am bm with
+                        am ≡ 0 (mod (q2 . . . qm )m ), (am , q1 ) = 1
+and
+                       bm ≡ 0 (mod (q1 q3 · · · qm )m ), (bm , q2 ) = 1.
+For a suitable subsequence {mj }, we have
+                        amj −→ a0 ∈ kv×1 and bmj −→ b0 ∈ kv×2 .
+Using (8), we obtain
+                                                                                   
+   [u+ (am ), u− (bm )] = u+ (−a2m bm p−n(m) )h(p−n(m) )u− (am b2m p−n(m) ) → 1 in G,
+because a2m bm , am b2m −→ 0 in AS , and h(pn(m) ) −→ 1 in G as n(m) is divisible by
+                       −                         ×
+             +
+           u (a0 ), u
+m!. Thus, [          (b0 )] = 1. Now, for t ∈ k , the automorphism σt of G given
+by conjugation by diag(t, 1) extends to an automorphism σ          S . Then
+                                                            t of G
+                    1 = σt ([         − (b0 )]) = [
+                             u+ (a0 ), u                        − (t−1 b0 )]
+                                                     u+ (ta0 ), u
+for any t ∈ k× , and since k× is dense in kv×1 × kv×2 by weak approximation, we obtain
+              − (b)] = 1 for all a ∈ kv1 , b ∈ kv2 , as required.
+      u+ (a), u
+that [
+5.7. Some elaboration of the argument given in 5.5 and 5.6 allows one to give a
+relatively short proof of the centrality of C S (G) for any k-isotropic G if rkS G ⩾ 2
+(at least when char k = 2) - the details are given in [30]. Theorem 4 can also be
+used to simplify the original proof of centrality for anisotropic groups of types E7 ,
+E8 and F4 given in [37], [38].
+    Finally, we would like to mention some results on the centrality of C S (G) for
+inﬁnite S (and then in these situations C S (G) is actually trivial - cf. the remark
+following Theorem 3). Assume that (MP) holds for G/k and that rkkv G > 0 for
+all v ∈ S \ V∞ . Then, as we have already mentioned prior to the statement of
+Theorem 4, C S (G) is known to be central (hence trivial) in the semi-local case,
+i.e., when V \ S is ﬁnite. A much stronger fact is established in [30]: C S (G) is
+central whenever S almost contains a “generalized arithmetic progression” (with
+some minor restrictions in the case where G is an outer form over k). These results
+are proved using techniques that do not require any case-by-case considerations,
+hence may lead to a general approach to Serre’s congruence subgroup conjecture.
+
+6. Bounded generation of arithmetic subgroups and the CSP
+
+6.1. Let k be a number ﬁeld and O be the ring of integers of k. Using some
+techniques developed in [3] (Mennicke symbols), Carter and Keller [4] established
+the following remarkable fact: for n ⩾ 3, there exists d ∈ N such that every x ∈
+SLn (O) is a product of ⩽ d elementary matrices (notice that Corollary 4.3(a) in [3]
+states that every x ∈ SLn (O) is a product of some unspeciﬁed number of elementary
+matrices). This result motivated the following.
+Deﬁnition. An abstract (discrete) group Γ is boundedly generated if there exist
+γ1 , . . . , γt ∈ Γ such that Γ = γ1  · · · γt , where γi  is the cyclic subgroup generated
+by γi .
+    A proﬁnite group Δ is boundedly generated (as a proﬁnite group) if there are
+δ1 , . . . , δt ∈ Δ for which Δ = δ1  · · · δt , where δi  is the closure of δi .
+
+                                                                         JOHN MILNOR         321
+16                            PRASAD AND RAPINCHUK
+
+
+   The result of Carter-Keller implies that Γ = SLn (O) for n ⩾ 3 is boundedly gen-
+erated (of course, SL2 (Z), being virtually free, is not boundedly generated). More
+importantly, the use in [4] of techniques developed to solve the congruence sub-
+group problem was far from coincidental: as the following theorem shows, bounded
+generation of S-arithmetic groups always implies that C S (G) is ﬁnite.
+Theorem 5. ([14], [24]). Let G be an absolutely simple simply connected algebraic
+group over a number ﬁeld k. Set Γ = G(OS ), and assume that the normal subgroups
+of G(k) have the standard description. Then bounded generation of the proﬁnite
+completion Γ is equivalent to the centrality (hence ﬁniteness) of the S-congruence
+         S
+kernel C (G). In particular, if Γ is boundedly generated as a discrete group, then
+C S (G) is ﬁnite.
+   This theorem in conjunction with [4] provides yet another way to prove the
+centrality of the congruence kernel in [3], and the hope is that this approach may
+lead to the resolution of some new cases in the congruence subgroup problem. At
+the time of this writing (2008), bounded generation of Γ = G(OS ) is known if G is
+either split or quasi-split over k, and has k-rank > 1 (Tavgen [55]), G = SL2 and
+OS has inﬁnitely many units or equivalently rkS G > 1 - see [22], and G = SO(f ),
+where f is a nondegenerate quadratic form in n ⩾ 5 variables over k, and either
+the Witt index of f is ⩾ 2, or it is 1 and S contains a nonarchimedean place [10].
+Unfortunately, we still do not have a single example of a k-anisotropic group with an
+inﬁnite boundedly generated S-arithmetic subgroup, nor do we know that SLn (OS ),
+where n ⩾ 3, can be boundedly generated by a (ﬁnite) system of generic semi-simple
+elements (here we call an element x ∈ SLn (k) generic if the Galois group over k of
+its characteristic polynomial is the symmetric group Sn ). In view of the signiﬁcant
+diﬃculties associated with verifying bounded generation, some eﬀorts were made
+to ﬁnd other conditions that still imply the congruence subgroup property but are
+easier to check. For example, in [24] such conditions were formulated in terms of
+polynomial index growth and its variants. Furthermore, it was shown that one
+of those variants can be veriﬁed for SLn , n ⩾ 3, by a simple computation based
+exclusively on the commutation relations (7) for elementary matrices. Thus, the
+centrality in [3] can be derived by methods of combinatorial group theory (cf. also
+Steinberg [53]).
+6.2. Groups with bounded generation property arise also in other areas. For exam-
+ple, in the theory of pro-p groups, the bounded generation property characterizes
+analytic pro-p groups [8]. In representation theory, one proves that discrete groups
+Γ with bounded generation satisfying condition (Fab) (which means that any sub-
+group Δ ⊂ Γ of ﬁnite index has ﬁnite abelianization Δab = Δ/[Δ, Δ]), are repre-
+sentation rigid, i.e., have only ﬁnitely many inequivalent irreducible representations
+in each dimension. Bounded generation of SLn (O) with respect to elementary ma-
+trices was used by Shalom [51] to estimate the Kazhdan constant for this group -
+notice that Shalom’s methods apply to general rings, however bounded generation
+has not been established yet over any ring other than the rings of algebraic integers.
+In fact, it is known that SL3 (C[x]) does not have bounded generation with respect
+to elementary matrices ([58]). Whether or not SLn (Z[x]) and SLn (Q[x]), n ⩾ 3,
+are boundedly generated remains an open question.
+
+
+
+
+322    COLLECTED PAPERS
+            CONGRUENCE SUBGROUP PROBLEM AFTER BASS-MILNOR-SERRE                                 17
+
+
+Acknowledgments. It is a pleasure to thank Brian Conrad and Jean-Pierre Serre
+for their comments and corrections.
+   Both the authors acknowledge partial support from the NSF (grants DMS-
+0653512 and DMS-0502120), BSF (grant 2004083), and the Humboldt Foundation.
+During the preparation of this article they enjoyed the hospitality of the SFB 701
+(Universität Bielefeld).
+
+
+                                         References
+1.    H. Bass, Algebraic K-theory, W. A. Benjamin, Inc., New York-Amsterdam, 1968.
+2.    H. Bass, M. Lazard and J-P. Serre, Sous-groupes d’indices ﬁnis dans SL(n, Z), Bull. Amer.
+      Math. Soc. 70(1964), 385-392.
+3.    H. Bass, J. Milnor and J-P. Serre, Solution of the congruence subgroup problem for SLn
+      (n ⩾ 3) and Sp2n (n ⩾ 2), Publ. Math. IHES 33(1967), 59-137.
+4.    D. Carter and G. Keller, Bounded elementary generation of SLn (O), Amer. J.
+      Math. 105(1983), 673-687.
+5.    C. Chevalley, Deux théorèmes d’arithmétique, J. Math. Soc. Japan 3(1951), 36-44.
+6.    B. Conrad, O. Gabber and G. Prasad, Pseudo-reductive groups (preliminary draft), available
+      at: http://math.stanford.edu/ conrad/
+7.    V. Deodhar, On central extensions of rational points of algebraic groups, Amer. J.
+      Math. 100(1978), 303-386.
+8.    J.D. Dixon, M.P.F. du Sautoy, A. Mann and D. Segal, Analytic pro-p groups, London Math.
+      Soc. Lecture Notes # 157, Cambridge Univ. Press, 1991.
+9.    M.V. Ershov, On the second cohomology of the norm one group of a p-adic division algebra,
+      available at: http://people.virginia.edu/ mve2x/Research/
+10.   I.V. Erovenko and A.S. Rapinchuk, Bounded generation of S-arithmetic subgroups of
+      isotropic orthogonal groups over number ﬁelds, J. Number Theory 119(2006), no. 1, 28-48.
+11.   P. Gille, Le problème de Kneser-Tits, Séminaire Bourbaki, 60ème année, n◦ 983 (November
+      2007).
+12.   M. Kneser,      Normalteiler ganzzahliger Spingruppen,             J.  Reine   und    Angew.
+      Math. 311/312(1979), 191-214.
+13.   A. Lubotzky, Free quotients and the congruence kernel for SL2 , J. Algebra 77(1982), 411-
+      418.
+14.   A. Lubotzky, Subgroup growth and congruence subgroups, Invent. Math. 119(1995), 267-295.
+15.   G.A. Margulis, Finiteness of quotients of discrete groups, Funct. Anal. Appl. 13(1979), 28-
+      39.
+16.   G.A. Margulis, Discrete Subgroups of Semisimple Lie Groups, Springer-Verlag, 1991.
+17.   A. W. Mason, A. Premet, B. Sury and P. A. Zalesskii, The congruence kernel of an arithmetic
+      lattice in a rank one algebraic group over a local ﬁeld, J. Reine und Angew. Math. 623(2008),
+      43-72.
+18.   H. Matsumoto, Sur les sous-groupes arithmétiques des groupes semi-simples déployés, Ann.
+      Sci. Ecole Norm. Sup. (4) 2(1969), 1-62.
+19.   J. Mennicke, Finite factor groups of the unimodular group, Ann. Math. 81(1965), 31-37.
+20.   J. Milnor, Introduction to algebraic K-theory, Annals of Mathematics Studies #72. Prince-
+      ton University Press, Princeton, 1971.
+21.   C. Moore, Group extensions of p-adic and adelic groups, Publ. Math. IHES 35(1968), 5-70.
+22.   D. Morris-Witte, Bounded generation of SL(n, A) (after D. Carter, G. Keller, and E. Paige),
+      New York J. Math. 13(2007), 383-421.
+23.   V.P. Platonov and A.S. Rapinchuk, Algebraic Groups and Number Theory, Academic Press,
+      1991.
+24.   V.P. Platonov and A.S. Rapinchuk, Abstract properties of S-arithmetic groups and the con-
+      gruence subgroup problem, Russian Acad. Sci. Izv. Math. 40(1993), 455-476.
+25.   G. Prasad,On some work of Raghunathan, Proc. Int. Conf. on Algebraic Groups and Arith-
+      metic, TIFR, Mumbai (Dec. 2001), pp. 25-40.
+26.   G. Prasad and M.S. Raghunathan, On the congruence subgroup problem: Detrmination of
+      the metaplectic kernel, Invent. Math. 71(1983), 21-42.
+
+
+                                                                          JOHN MILNOR          323
+18                                 PRASAD AND RAPINCHUK
+
+
+27.   G. Prasad and M.S. Raghunathan, Topological central extensions of semi-simple groups over
+      local ﬁelds, Ann. Math. 119(1984), 143-268.
+28.   G. Prasad and M.S. Raghunathan, Topological central extensions of SL1 (D), In-
+      vent. Math. 92(1988), 645-689.
+29.   G. Prasad and A.S. Rapinchuk, Computation of the metaplectic kernel, Publ. Math.
+      IHES 84(1996), 91-187.
+30.   G. Prasad and A.S. Rapinchuk, On the centrality of the congruence kernel, preprint.
+31.   M.S. Raghunathan, On the congruence subgroup problem, Publ. Math. IHES 46(1976), 107-
+      161.
+32.   M.S. Raghunathan, Torsion in cocompact lattices in coverings of Spin(2, n), Math.
+      Ann. 266(1984), 403-419 (Corrigendum: ibid., 303(1995), 575-578).
+33.   M.S. Raghunathan, On the congruence subgroup problem II, Invent. Math. 85(1986), 73-117.
+34.   M.S. Raghunathan, The congruence subgroup problem, Proc. Hyderabad Conf. on Algebraic
+      Groups (ed. by S. Ramanan with the cooperation of C. Musili and N.M. Kumar), Manoj
+      Prakashan, 1991, 465-494.
+35.   M.S. Raghunathan, The congruence subgroup problem, Proc. Indian Acad. Sci. (Math.
+      Sci.) 114(2004), no. 4, 299-308.
+36.   A.S. Rapinchuk, The congruence subgroup problem for algebraic groups and strong approxi-
+      mation in aﬃne varieties, Dokl. Akad. Nauk BSSR 32(1988), No. 7, 581-584.
+37.   A.S. Rapinchuk, On the congruence subgroup problem for algebraic groups, Dokl. Akad. Nauk
+      SSSR 306(1989), 1304-1307.
+38.   A.S. Rapinchuk, The congruence subgroup problem, Habilitationsschrift, Institute of Math-
+      ematics, Acad. Sci. of Belarus, Minsk, 1990.
+39.   A.S. Rapinchuk, Congruence subgroup problem for algebraic groups: old and new. Journées
+      Arithmétiques, 1991 (Geneva). Astérisque # 209(1992), 73–84.
+40.   A.S. Rapinchuk, The congruence subgroup problem, Algebra, K-theory, groups, and educa-
+      tion (New York, 1997), Contemp. Math. #243, pp. 175–188, Amer. Math. Soc., Providence,
+      RI, 1999.
+41.   A.S. Rapinchuk, The Margulis-Platonov conjecture for SL1,D and 2-generation of ﬁnite
+      simple groups, Math. Z. 252(2006), 295-313.
+42.   A. Rapinchuk, A. Potapchik, Normal subgroups of SL1,D and the classiﬁcation of ﬁnite
+      simple groups, Proc. Indian Acad. Sci. Math. Sci. 106(1996), 329-368.
+43.   A.S. Rapinchuk, Y. Segev, Valuation-like maps and the congruence subgroup property, In-
+      vent. Math. 144(2001), 571-607.
+44.   A.S. Rapinchuk, Y. Segev, G.M. Seitz, Finite quotients of the multiplicative group of a ﬁnite
+      dimensional division algebra are solvable, J. Amer. Math. Soc. 15(2002), 929-978.
+45.   J. Rosenberg, Algebraic K-theory and its applications, GTM 147, Springer, 1994.
+46.   Y. Segev, On ﬁnite homomorphic images of the multiplicative group of a division algebra,
+      Ann. of Math. 149(1999), 219-251.
+47.   Y. Segev, G.M. Seitz, Anisotropic groups of type An and the commuting graph of ﬁnite
+      simple groups, Paciﬁc J. Math. 202(2002), 125-225.
+48.   J-P. Serre, Sur les groupes de congruence des variétés abéliennes, Izv. Akad. Nauk SSSR
+      Ser. Mat. 28(1964), 3-18.
+49.   J-P. Serre, Le problème des groupes de congruence pour SL2 , Ann. Math. 92(1970), 489-527.
+50.   J-P. Serre, Sur les groupes de congruence des variétés abéliennes II, Izv. Akad. Nauk SSSR
+      Ser. Mat. 35(1971), 731–735.
+51.   Y. Shalom, Bounded generation and Kazhdan’s property (T), Publ. Math. IHES 90(2001),
+      145-168.
+52.   R. Steinberg, Générateurs, relations et revêtements de groupes algébriques, 1962 Colloq.
+      Théorie des Groupes Algébriques (Bruxelles, 1962), pp. 113-127, Librairie Universitaire,
+      Louvain; Gauthier-Villars, Paris.
+53.   R. Steinberg, Some consequences of the elementary relations in SLn , Finite groups–coming
+      of age (Montreal, Que., 1982), 335-350, Contemp. Math. #45, AMS, 1985.
+54.   B. Sury, The congruence subgroup problem. An elementary approach aimed at applications,
+      Texts and Readings in Mathematics#24. Hindustan Book Agency, New Delhi, 2003.
+55.   O.I. Tavgen, Bounded generation of Chevalley groups over the rings of S-integers, Izv. Akad.
+      Nauk SSSR, Ser. Mat., 54(1990), 97-122.
+
+
+
+
+324      COLLECTED PAPERS
+             CONGRUENCE SUBGROUP PROBLEM AFTER BASS-MILNOR-SERRE                               19
+
+
+56.    G. Tomanov, On the congruence subgroup problem for some anisotropic algebraic groups
+       over number ﬁelds, J. Reine Angew. Math. 402(1989), 138-152
+57.    G. Tomanov, Remarques sur la structure des groupes algébriques déﬁnis sur des corps de
+       nombres, C. R. Acad. Sci. Paris, Sér. Math. 310(1990), no. 2, 33-36.
+58.    W. van der Kallen, SL3 (C[X]) does not have bounded word length, Algebraic K-theory, Part
+       I (Oberwolfach, 1980), pp. 357-361, Lecture Notes in Math. #966, Springer-Verlag, 1982.
+59.    D. Wigner, Algebraic cohomology of topological groups, Trans. AMS 178(1973), 83-93.
+60.    P.A. Zalesskii, Normal subgroups of free constructions of proﬁnite groups, Izv. Ros. Akad.
+       Nauk., Ser. Mat., 59(1995), 59-76.
+61.    P.A. Zalesskii, Proﬁnite surface groups and the congruence kernel of arithmetic lattices in
+       SL2 (R), Israel J. Math. 146(2005), 111-123.
+
+      Department of Mathematics, University of Michigan, Ann Arbor, MI 48109
+      E-mail address: gprasad@umich.edu
+
+      Department of Mathematics, University of Virginia, Charlottesville, VA 22904
+      E-mail address: asr3x@virginia.edu
+
+
+
+
+                                                                         JOHN MILNOR          325
+

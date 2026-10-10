@@ -1,0 +1,1034 @@
+One-Parametric Presburger Arithmetic
+Has Quantifier Elimination
+Alessio Mansutti #
+IMDEA Software Institute, Madrid, Spain
+Mikhail R. Starchak #
+St. Petersburg State University, Russia
+
+      Abstract
+We give a quantifier elimination procedure for one-parametric Presburger arithmetic, the extension
+of Presburger arithmetic with the function x 7→ t · x, where t is a fixed free variable ranging over the
+integers. This resolves an open problem proposed in [Bogart et al., Discrete Analysis, 2017]. As
+                                                         x  elimination is obtained for the extended
+conjectured in [Goodrick, Arch. Math. Logic, 2018], quantifier
+structure featuring all integer division functions x 7→ f (t)  , one for each integer polynomial f .
+     Our algorithm works by iteratively eliminating blocks of existential quantifiers. The elimination
+of a block builds on two sub-procedures, both running in non-deterministic polynomial time. The
+first one is an adaptation of a recently developed and efficient quantifier elimination procedure for
+Presburger arithmetic, modified to handle formulae with coefficients over the ring Z[t] of univariate
+polynomials. The second is reminiscent of the so-called “base t division method” used by Bogart et al.
+As a result, we deduce that the satisfiability problem for the existential fragment of one-parametric
+Presburger arithmetic (which encompasses a broad class of non-linear integer programs) is in NP,
+and that the smallest solution to a satisfiable formula in this fragment is of polynomial bit size.
+
+2012 ACM Subject Classification Computing methodologies → Symbolic and algebraic algorithms;
+Theory of computation → Logic
+
+Keywords and phrases decision procedures, quantifier elimination, non-linear integer arithmetic
+
+Digital Object Identifier 10.4230/LIPIcs.MFCS.2025.72
+
+Related Version Full Version: https://doi.org/10.48550/arXiv.2506.23730
+
+Funding Alessio Mansutti: Funded by the Madrid Regional Government (César Nombela grant
+2023-T1/COM-29001), and by MCIN/AEI (grant PID2022-138072OB-I00).
+Mikhail R. Starchak: Supported by the Russian Science Foundation, project 23-71-01041.
+
+
+ 1      Introduction
+The first-order theory of the integers Z with addition and order, which is also known as
+Presburger arithmetic (PrA) or linear integer arithmetic, has been intensively studied during
+almost a century [26]. It is a textbook fact that Presburger arithmetic admits quantifier
+elimination when the structure ⟨Z; 0, 1, +, ≤⟩ is extended with the predicates (d | (·))d∈Z
+for divisibilities by fixed integers d: in the theory of this extended structure, for every
+quantifier-free formula φ(x, y) there is a quantifier-free formula ψ(y) that is equivalent to
+∃x : φ(x, y). The construction of ψ is effective, which implies the decidability of Presburger
+arithmetic. The algorithm to decide PrA is the canonical example for the notion of quantifier
+elimination procedure. The computational complexity of the many variants of this procedure
+has a long history, beginning with Oppen’s proof [25] that Cooper’s procedure [12] runs in
+triply exponential time, and followed by refinements from Reddy and Loveland [27], and
+later Weispfenning [30], which enable handling formulae with fixed quantifier alternations in
+doubly exponential time. Recent research on quantifier elimination aims at narrowing the
+complexity gap for the existential fragment (only last year it was discovered that quantifier
+elimination can be performed in exponential time in this case [11, 20]) and on extending
+            © Alessio Mansutti and Mikhail R. Starchak;
+            licensed under Creative Commons License CC-BY 4.0
+50th International Symposium on Mathematical Foundations of Computer Science (MFCS 2025).
+Editors: Paweł Gawrychowski, Filip Mazowiecki, and Michał Skrzypczak; Article No. 72; pp. 72:1–72:18
+                   Leibniz International Proceedings in Informatics
+                   Schloss Dagstuhl – Leibniz-Zentrum für Informatik, Dagstuhl Publishing, Germany
+72:2   One-Parametric Presburger Arithmetic Has Quantifier Elimination
+
+
+       the procedure to handle additional predicates and functions [3, 11, 22, 28], or other forms
+       of quantification [4, 10, 21]. The reader can find an extensive bibliography on Presburger
+       arithmetic, and quantifier elimination, in the survey papers by Haase [19] and Chistikov [9].
+           This paper addresses the open problem raised in the papers [6] and [15] regarding the
+       existence of a quantifier elimination procedure for the theory Th⟨Z; 0, 1, +, x 7→ t · x, ≤⟩,
+       known as one-parametric Presburger arithmetic (PrA[t]). In this theory, the structure of
+       Presburger arithmetic is extended with the function x 7→ t · x for multiplication by a single
+       parameter t ranging
+                             over Z. Every PrA[t] formula φ(x) defines a parametric Presburger
+       family S(φ)  :=   JφKk : k ∈ Z , where JφKk is the set of (integer) solutions of the Presburger
+       arithmetic formula obtained from φ by replacing the parameter t with the integer k.
+
+       ▶ Example 1. Consider the statement “for every two successive positive integers t and t + 1,
+       and for all integers a and b, there is an integer x in the interval [0, t(t + 1) − 1] that is
+       congruent to a modulo t, and to b modulo t + 1”. The truth of this sentence follows from the
+       Chinese remainder theorem together with the fact that successive positive integers are always
+       coprime. We can encode this statement in PrA[t] with the formula ∀a∀b : χ(a, b), where
+
+          χ := t ≥ 1 =⇒ ∃x : 0 ≤ x ∧ x ≤ t2 + t − 1 ∧ (∃y : x − a = t · y) ∧ (∃z : x − b = (t + 1) · z).
+
+       From the validity of the statement, we find JχKk = Z2 for every k ∈ Z. That is to say, for
+       every instantiation of t, both φ and χ are tautologies of PrA.                          ◀
+
+       There are many natural decision problems regarding PrA[t] (all taking a formula φ as input):
+
+           satisfiability: Is φ satisfiable for an instantiation of the parameter (i.e., S(φ) ̸= {∅}) ?
+           universality: Is φ satisfiable for all instantiations of the parameter (i.e., ∅ ̸∈ S(φ)) ?
+           finiteness: Is φ satisfiable for only finitely many instantiations of the parameter t ?
+
+           In [6], Bogart, Goodrick, and Woods consider a search problem that generalises all the
+       problems above: they show how to compute, from an input formula φ, a closed expression
+       for the function f (k) := #JφKk , where #S stands for the cardinality of a set S. By relying
+       on properties of this function, one can solve satisfiability, universality, and finiteness. In their
+       proof, the first ingredient is given by Goodrick’s bounded quantifier elimination procedure [15].
+       In contrast to the quantifier elimination procedures for PrA, in this procedure every quantified
+       variable x is not completely eliminated from the formula φ, but acquires instead a bound
+       0 ≤ x ≤ f (t), for some univariate polynomial f (t). An example of this is given by the
+       variable x in Example 1, which is bounded in [0, t(t + 1) − 1]. Closely related bounded
+       quantifier elimination procedures were also developed in [23, 31]. The second ingredient of
+       the construction is given by a method developed by Chen, Li, and Sam for the study of
+       parametric polytopes [8], and dubbed “base t division method” in [6]. This method produces
+       a quantifier-free PrA[t] formula ψ satisfying #JψKk = #JφKk for every k ∈ Z.
+           The combination of the two ingredients has a drawback: the equivalence of the initial
+       formula φ with the quantifier-free formula ψ over Z is not preserved. In [6, p. 13], the authors
+       ask whether this issue can be fixed: “one might try to show that any formula [ of PrA[t] ] is
+       logically equivalent to a quantifier-free formula in a slightly larger language with additional
+       “well-behaved” function and relation symbols [ . . . ] But we already know that quantifier
+       elimination in the original language [ of the structure ⟨Z; 0, 1, +, x 7→ t · x, ≤⟩ ] is impossible,
+       and finding a reasonable language for quantifier elimination seems difficult”. A candidate for
+       the extended structure was suggested by Goodrick     xin[15, Conjecture 2.6]: PrA[t] must be
+       extended with all integer division functions x 7→ |f (t)|   , one for each integer polynomial f (t)
+A. Mansutti and M. R. Starchak                                                                            72:3
+
+
+(these functions are assumed to occur in a formula only under the proviso that f (t) ̸= 0).
+               xtight
+This is a rather      conjecture, as all added functions are trivially definable in PrA[t]: the
+equality y = |f (t)|  holds if and only if f (t) ̸= 0 ∧ |f (t)| · y ≤ x ∧ x < |f (t)| · y + |f (t)|.
+    We give a positive answer to Goodrick’s conjecture:
+
+▶ Theorem 2. One-parametric Presburger arithmetic admits       effective quantifier elimination
+                                                           x
+in the extended structure ⟨Z; 0, 1, +, x 7→ t · x, x 7→ |f (t)| , ≤⟩.
+
+    Above, the adjective “effective” reflects the fact that there is a quantifier elimination
+procedure for constructing, given an input formula φ, an equivalent quantifier-free formula ψ.
+The main contribution towards the proof of Theorem 2 is a procedure for removing bounded
+quantifiers while preserving formula equivalence; hence obtaining JψKk = JφKk for all k ∈ Z,
+instead of the weaker #JψKk = #JφKk obtained with the “base t division method” from [6].
+    As mentioned above, an active area of research in quantifier elimination focuses on
+existential Presburger arithmetic (∃PrA) and its extensions. This interest is motivated, on the
+one hand, by the goal of improving both the performance and expressiveness of SMT solvers,
+mostly targeting existential theories [2, 14]. On the other hand, recent work has revisited
+the computational complexity of quantifier elimination procedures. For many years, these
+procedures were regarded as inefficient when applied to ∃PrA. Notably, Weispfenning’s classic
+approach [30] yields only a NExpTime upper bound for satisfiability, despite fundamental
+results from integer programming [7, 29] establishing that ∃PrA is in NP. It was not until
+2024 that two independent works [11, 20] provided quantifier elimination procedures with
+matching NP upper bounds. The approach in [20] builds on the geometric ideas from [29],
+while [11] adapts Bareiss’ fraction-free Gaussian elimination procedure [1] to ∃PrA. Starting
+from the fact that Bareiss’ algorithm works in any integral domain, we show that the second
+approach extends naturally to PrA[t]. By analysing the runtime of our procedure, we derive:
+
+▶ Theorem 3. For the class of all existential formulae of PrA[t], the following holds:
+
+             Satisfiability              Universality                    Finiteness
+             NP-complete               coNExp-complete                 coNP-complete
+Our result on the satisfiability problem generalises the feasibility in NP of non-linear integer
+programs A · x ≤ b(t), where b(t) is a vector of quotients of integer polynomials in t, proved
+by Gurari and Ibarra [17]. We remark that both problems are NP-hard in fixed dimension:
+solvability of systems x ≥ 0 ∧ a · t2 + b · x = c is a well-known NP-complete problem [24].
+
+Future work. This paper does not provide a complexity analysis for full PrA[t]. A back-of-
+the-envelope calculation of the runtime of the procedures in [6] and [15] suggests that the
+satisfiability problem for PrA[t] is in elementary time (potentially in 3ExpTime). However,
+these procedures do not yield an NP upper bound for the existential fragment. In contrast, the
+procedure we introduce shows ∃PrA[t] in NP, but it may in principle run in non-elementary
+time on arbitrary formulae. Unifying these procedures into a single “optimal” one seems
+possible and will be addressed in a forthcoming extended version of this paper. This would
+also provide an extension to the 3ExpTime quantifier-elimination procedure for almost linear
+arithmetic proposed by Weispfenning in [30].
+    Most of the literature on PrA[t] focuses on computing the function f (k) := #JφKk , as
+introduced in [6]. Not much is known regarding the complexity of computing this function.
+To our knowledge, the most significant result in this direction is the one in [5], where Bogart,
+Goodrick, Nguyen, and Woods show that f (k) can be computed in polynomial time (in the
+bit-length of k given as part of the input) whenever φ is a fixed PrA[t]-formula. We believe
+Theorem 3 to be a good starting point for further research in this direction.
+
+
+                                                                                                       M FC S 2 0 2 5
+72:4   One-Parametric Presburger Arithmetic Has Quantifier Elimination
+
+
+           While our work shows that the feasibility problem for integer programs in which a
+       single variable occurs non-linearly is in NP, the paper does not discuss related optimisation
+       problems of minimisation/maximisation. From our quantifier elimination procedure, we can
+       show that if there are optimal solutions to a linear polynomial with coefficients in Z[t] subject
+       to a formula in ∃PrA[t], then one is of polynomial bit size. Generalising this result to other
+       non-convex objectives is an interesting avenue for future research.
+
+        2       Preliminaries
+       We write N for the non-negative integers, and Z[t] for the set of univariate polynomials
+              Pd
+       f (t) = i=0 ai · ti , where the coefficients a1 , . . . , ad and the constant a0 are over the integers Z.
+       The height h(f ), degree deg(f ) and bit size ⟨f ⟩ of f are defined as h(f ) := max{|ai | : i ∈ [0, d]},
+       deg(f ) := max{0, i ∈ [0, d] : ai ̸= 0}, and ⟨f ⟩ := (deg(f ) + 1) · (⌈log2 (h(f ) + 1)⌉ + 1),
+       respectively. For example, f (t) = 2 · t2 − 3 has degree 2, height 3 and bit size 9. Vectors of
+       variables are denoted by x, y, z, etc.; we write ⌊·⌋ for the floor function.
+
+       On extending the structure of PrA[t]. As discussed in Section 1, the paper concerns the
+              x of the first-order theory of ⟨Z; 0, 1, +, x 7→ t · x, ≤⟩ by all integer division functions
+       extension
+       x 7→ | f | , where f ∈ Z[t]. However, in the context of our quantifier elimination procedure,
+       it is more natural to work within the (equivalent) first-order theory of the structure:
+
+             Z; 0, 1, +, x 7→ t · x, x 7→ txd
+                                                                                                
+                                                     d∈N
+                                                           ,       x 7→ (x mod f )    f ∈Z[t]
+                                                                                                ,       f |x   f ∈Z[t]
+                                                                                                                         , =, ≤
+
+       where:
+         The integer division x 7→ txd is only defined for t ̸= 0, with the obvious interpretation.
+                                   
+
+         The integer remainder function x 7→ (x mod f (t)) is defined following the equivalence
+                                                                                                                        x
+                                                                                                                              
+                (x mod f (t) = y) ⇐⇒ (f (t) = 0 ∧ y = x) ∨ (f (t) ̸= 0 ∧ y = x − |f (t)| ·                           |f (t)|       ).
+
+            We remark that whenever f (t) ̸= 0 the result of (x mod f (t)) belongs to [0, |f (t)| − 1].
+            (Also note that the absolute value function |.| is easily definable in Presburger arithmetic.)
+            The divisibility relation f (t) | x is a unary relation, and is defined following the equivalence
+
+                (f (t) | x) ⇐⇒ (f (t) = 0 ∧ x = 0) ∨ (f (t) ̸= 0 ∧ (x mod f (t) = 0)).
+
+            We remark that the divisibility relations and integer remainder functions are defined to
+            satisfy the equivalence f (t) | x ⇐⇒ f (t) | (x mod f (t)) also when f (t) evaluates to 0.
+       For simplicity, we still denote this first-order theory with PrA[t]. Observe    that we have
+       ultimately defined (f (t) | ·) and x 7→ (x mod f (t)) in terms of x 7→ | fx | . As a result,
+       every formula in this first-order theory can be translated into a formula from the theory
+       in Theorem 2. This translation can be performed in polynomial time by introducing new
+       existential quantifiers, or in exponential time without adding quantifiers (the blow-up is only
+       due to the disjunctions in the definitions of (f (t) | ·) and x 7→ (x mod f (t))).
+           The terms of PrA[t] are built from the constants 0, 1, integer variables, and the functions
+       of the structure. Without loss of generality, we restrict ourselves to (finite) terms of the form
+                          Pn                    Pm                   τ         Pk
+         τ := f0 (t) +      i=1 fi (t) · xi +    i=n+1 fi (t) ·              +    i=m+1 fi (t) · (τi mod gi (t)),                       (1)
+                                                                        i
+                                                                      td i
+
+       where all fi and gi belong to Z[t], all di belong to N, and each τi is another term of this form.
+       The term τ is said to be linear, if fi (t) = 0 for i ∈ [n + 1, k] (i.e., it does not contain integer
+A. Mansutti and M. R. Starchak                                                                              72:5
+
+
+division,
+        nor integer remainder functions), and non-shifted whenever f0 (t) = 0. Above, the
+terms tτdii and (τi mod gi (t)) are linear occurrences of the integer division functions and
+integer remainder functions, and are said to occur linearly in τ . When every fi is an integer
+                                                               Pk
+(a degree 0 polynomial), we define 1-norm of τ as ∥τ ∥1 := i=0 |fi |.
+    Moving to the atomic formulae of the theory, it is easy to see that equalities, inequalities
+and divisibility relations can be rewritten (in polynomial time) to be of the form τ = 0, τ ≤ 0
+and f (t) | τ , respectively, where τ is a term of the form given in Equation (1). Syntactically,
+we will only work with atomic formulae of these forms, which we call PrA[t] constraints.
+However, for readability, we will still sometimes write (in)equalities featuring non-zero terms
+on both sides (i.e., τ1 ≤ τ2 ), and strict inequalities τ1 < τ2 and τ2 > τ1 ; both are short for
+τ1 − τ2 + 1 ≤ 0. A PrA[t] constraint is said to be linear if the term τ featured in it is linear.
+    We restrict ourselves to formulae in prenex normal form ∃x1 ∀x2 . . . ∃xn : φ where φ is a
+positive Boolean combination of PrA[t] constraints; that is, the only Boolean connectives
+featured in φ are conjunctions ∧ and disjunctions ∨. This restriction is without loss of
+generality, as De Morgan’s laws allow to push all negations at the level of literals, which can
+then be removed with the equivalences ¬(τ = 0) ⇐⇒ τ < 0 ∨ τ > 0, ¬(τ ≤ 0) ⇐⇒ τ > 0
+and ¬(f (t) | τ ) ⇐⇒ (f (t) = 0 ∧ (τ < 0 ∨ τ > 0)) ∨ (τ mod f (t) > 0).
+    For two terms τ1 and τ2 , we write [τ2 / τ1 ] for a term substitution. We see these substitu-
+tions as functions from terms to terms or from formulae to formulae: τ [τ2 / τ1 ] is the term
+obtained by replacing, in the term τ , every occurrence of τ1 with τ2 . Analogously, φ[τ2 / τ1 ] is
+the formula obtained from φ by replacing the term τ with τ [τ2 / τ1 ] in every atomic formula
+τ = 0, τ ≤ 0, or f (t) | τ . In Section 4 we will also need a stronger notion of substitution,
+called vigorous substitution in [11]; we defer its definition to that section.
+
+
+ 3     Outline of the quantifier elimination procedure
+In this section, we provide a high-level overview of our quantifier elimination procedure,
+highlighting the interactions among its various components. A detailed analysis of the two
+main components will be provided in the subsequent sections of the paper.
+    Let us consider a formula ψ(x0 ) := ∃x1 ∀x2 . . . ∃xn : φ(x0 , . . . , xn ), where φ is a positive
+Boolean combination of PrA[t] constraints. Our quantifier elimination procedure will work
+under the assumption that the parameter t is greater than or equal to 2. This simplifying
+assumption is without loss of generality, as the general problem is then solved as follows:
+    For every k ∈ {−1, 0, 1}, call a quantifier elimination procedure for Presburger arithmetic
+    (e.g., the one in [30]) on the formula ψ[k / t], obtaining ψk′ . Let ψk := ψk′ ∧ (t = k).
+    Call our procedure on ψ, obtaining a formula ψ + . Let ψ≥2 := ψ + ∧ t ≥ 2.
+    Call our procedure on ψ[−t / t], obtaining ψ − . Let ψ≤−2 := ψ − [−t / t] ∧ t ≤ −2.
+Then, the formula ψ≤−2 ∨ ψ−1 ∨ ψ0 ∨ ψ1 ∨ ψ≥2 is quantifier-free, and equivalent to ψ.
+    As a second assumption, we only consider the case where ψ has a single block of existential
+quantifiers: ψ(x0 ) = ∃x1 : φ(x0 , x1 ). A procedure for this type of formulae can be iterated
+bottom-up to eliminate arbitrarily many blocks of quantifiers (rewriting ∀x as ¬∃x¬).
+    The pseudocode of our procedure is given in Algorithm 1 (PrA[t]-QE). It describes a non-
+deterministic algorithm: for an input ∃x : φ, each non-deterministic execution of PrA[t]-QE
+returns a positive Boolean combination of PrA[t] constraints ψ(z). The disjunction obtained
+by aggregating all output formulae is equivalent to ∃x : φ; so it is this disjunction that must
+ultimately be used to perform quantifier elimination. The choice to present the procedure
+in this manner is not merely stylistic: it automatically implements Reddy and Loveland’s
+optimisation for Presburger arithmetic [27]. In quantifier elimination procedures for PrA,
+
+
+
+                                                                                                         M FC S 2 0 2 5
+72:6   One-Parametric Presburger Arithmetic Has Quantifier Elimination
+
+
+             Algorithm 1 PrA[t]-QE: A quantifier elimination procedure for PrA[t].
+       Input: ∃x : φ(x, z) where φ is a positive Boolean combination of PrA[t] constraints.
+       Output of each branch (β): positive Boolean combination ψβ (z) of PrA[t] constraints.
+                  W
+       Ensuring: β ψβ is equivalent to ∃x : φ.
+        1: while φ contains a subterm of the form tτd do
+                                                      
+
+        2:   append a fresh variable x to x
+             φ ← φ[x / tτd ] ∧ (td · x ≤ τ ) ∧ (τ < td · x + td )
+                         
+        3:
+        4: y ← ∅;       B←∅           ▷ variables and map used to remove occurrences of (· mod f (t))
+        5: while φ contains a subterm of the form (τ mod f (t)) do
+        6:       if ∗ then                                ▷ non-deterministic choice: skip or execute
+        7:           φ ← φ[τ / τ mod f (t)] ∧ f (t) = 0
+        8:           continue
+        9:       guess ± ← symbol in {+, −}
+       10:       append a fresh variable y to y and update B : add the key-value pair (y, ±f (t) − 1)
+       11:       φ ← φ[y / τ mod f (t)] ∧ (f (t) | τ − y)
+       12: return ElimBounded(ElimDiv(∃y ≤ B : BoundedQE(∃x : φ(x, y, z))))
+
+
+                                                                                          W
+       eliminating a single variable x from an existential block ∃y∃x produces a formula i γi with
+       a DNF-like structure. Reddy and Loveland observed that pushing the remaining existential
+                                                                              W         W
+       quantifiers ∃y inside the scope of the disjunctions, i.e., rewriting ∃y i γi into i ∃yγi , and
+       then performing quantifier elimination locally to each disjunct leads to a faster procedure.
+       By keeping variables local to a non-deterministic branch, one achieves the same effect.
+           We now describe the four components that make up PrA[t]-QE, which can be summarized
+       under the following titles: pre-processing (lines 1–11), bounded quantifier elimination (call
+       to BoundedQE), elimination of divisibility constraints (call to ElimDiv), and elimination of
+       all bounded quantifiers (call to ElimBounded). For the rest of the section, let ∃x : φ(x, z)
+       be the input to PrA[t]-QE, where φ is a positive Boolean combination of PrA[t] constraints.
+
+
+       Pre-processing (lines   1–11). These lines remove all occurrences of the integer division
+       functions x 7→ txd and of the integer remainder functions x 7→ (x mod f (t)), at the expense
+                          
+
+       of adding new existentially quantified variables that are later eliminated. After this step,
+       the formula is a positive Boolean combination of linear constraints. For the integer division
+       function, the algorithm simply  adds   to the sequence of variables x to be eliminated
+                                                                                             a fresh
+       variable x to proxy a term tτd (line2). It then relies on the equivalence x = tτd ⇐⇒
+                                         
+
+       td · x ≤ τ ∧ τ < td · (x + 1) to replace tτd with x (line 3). The removal of integer remainder
+       functions is performed differently. First, let us observe that the following equivalence holds:
+
+             y = (τ mod f (t)) ⇐⇒ (f (t) = 0 ∧ y = τ ) ∨ (0 ≤ y ∧ y < |f (t)| − 1 ∧ f (t) | τ − y).
+
+       The formula f (t) = 0 ∧ y = τ on the right-hand side of the equivalence is considered in
+       line 8. This line is executed conditionally to a non-deterministic branching (line 6). If
+       it is not executed, then lines 9–11 are executed instead; these correspond to the formula
+       0 ≤ y ∧ y < |f (t)| − 1 ∧ f (t) | τ − y. The interesting property of this formula is that the
+       variable y appears bounded by 0 from below, and by either f (t) − 1 or −f (t) − 1 from above
+       (following the sign of f (t)). Insteadof quantifying y using standard existential quantifiers
+       (as done for the variables replacing tτd ), in line 10 we use a bounded quantifier:
+A. Mansutti and M. R. Starchak                                                                         72:7
+
+
+   Algorithm 2 ElimDiv: Elimination of divisibility constraints.
+Input: ∃w ≤ B : ψ(w, z), with ψ positive Boolean combination of linear PrA[t] constraints.
+Output of each branch (β): a formula ∃wβ ≤ Bβ : ψβ (wβ , z) in PrA[t], where ψβ is a
+    positive Boolean combination of linear equalities and inequalities, and equalities of the
+    form σ(w) + (τ (z) mod f (t)) = 0, with σ linear, and τ linear and non-shifted.
+             W
+Ensuring: β (∃wβ ≤ Bβ : ψβ ) is equivalent to ∃w ≤ B : ψ.
+ 1: foreach divisibility f (t) | σ(w) + τ (z) in ψ, where τ is non-shifted do
+                                        Pn
+ 2:    let σ(w) be the term f0 (t) + i=1 fi (t) · wi , where w = (w1 , . . . , wn )
+ 3:    d ← (n + 3) · max{⟨f ⟩, ⟨f0 ⟩, ⟨fi ⟩ · ⟨B(wi )⟩ : i ∈ [1, n]}
+ 4:    append a fresh variable y to w and update B : add the key-value pair (y, td )
+ 5:    guess ± ← symbol in {+, −}
+ 6:    update ψ : replace (f (t) | σ(w) + τ (z)) with ±f (t) · y + σ(w) + (τ mod f (t)) = 0
+ 7: return ∃w ≤ B : ψ
+
+
+
+▶ Definition 4. A block of bounded quantifiers ∃w ≤ B is given by a sequence of variables
+w = (w1 , . . . , wm ) and a map B assigning to each variable in w a polynomial in Z[t]. Its
+                                                               Vm
+semantics is given by the equivalence ∃w ≤ B : ψ ⇐⇒ ∃w : i=1 (0 ≤ wi ≤ B(wi )) ∧ ψ.
+
+   Let us write xβ , yβ , Bβ and φβ for the values taken by x, y, B and φ in the non-
+deterministic branch β, when the control flow of the program reaches line 12. The following
+                                         W
+equivalence holds, where the disjunction β ranges across all non-deterministic branches:
+                       W
+   ∃x : φ(x, z) ⇐⇒       β ∃yβ ≤ Bβ ∃xβ : φβ (xβ , yβ , z).                                   (2)
+
+Bounded quantifier elimination. Once reaching line 12, the algorithm proceeds by calling
+the procedure BoundedQE. We will discuss this procedure in Section 4. In a nutshell, its
+role is to replace the quantifiers ∃xβ on the right-hand side of Equation (2) with bounded
+quantifiers, that are merged with the already existing block of bounded quantifiers ∃yβ ≤ Bβ .
+The formal specification of BoundedQE is given in the next lemma.
+
+▶ Lemma 5. There is a non-deterministic procedure with the following specification:
+  Input: ∃x : φ(x, z), with φ positive Boolean combination of linear PrA[t] constraints.
+  Output of each branch (β): a formula ∃wβ ≤ Bβ : ψβ (wβ , z), where ψβ is a positive
+      Boolean combination of linear PrA[t] constraints.
+                                             W
+The algorithm ensures that the disjunction β ∃wβ ≤ Bβ : ψβ of output formulae ranging
+over all non-deterministic branches is equivalent to ∃x : φ.
+
+    As stated, the lemma above is also proved by Goodrick in [15], who introduced the
+first bounded quantifier elimination procedure specifically for PrA[t]. When applied to
+existential formulae, that procedure requires doubly-exponential time, making it unsuitable for
+establishing Theorem 3. In contrast, BoundedQE runs in non-deterministic polynomial time.
+Due to this difference, we cannot rely directly on [15] and must thus re-establish Lemma 5.
+
+Removing divisibility constraints: more bounded quantifiers. BoundedQE introduces
+divisibility constraints f (t) | τ . The next step, detailed in Algorithm 2 (ElimDiv), eliminates
+all divisibility constraints in favour, once more, of bounded quantifiers.
+    The idea behind Algorithm 2 is as follows. Let f (t) | σ(w) + τ (z) be a constraint from the
+input formula, where w are the variables in the block of bounded quantifiers (these correspond
+to the variables yβ from Equation (2) and those introduced by BoundedQE), and z are
+
+
+                                                                                                    M FC S 2 0 2 5
+72:8   One-Parametric Presburger Arithmetic Has Quantifier Elimination
+
+
+       the free variables. Notice that this constraint is equivalent to f (t) | σ(w) + (τ (z) mod f (t)),
+       which is in turn equivalent to the existential formula ∃y : f (t)·y +σ(w)+(τ (z) mod f (t)) = 0,
+       where y is a fresh variable ranging over Z. Since w is constrained by bounded quantifiers,
+       we can upper-bound the number of digits in the base t encoding of the linear term σ(w)
+       (recall: t ≥ 2). When f (t) ̸= 0, the same applies to (τ (z) mod f (t)), which ranges between
+       0 and f (t) − 1; and this in turn imposes a bound on the base t representation of y. When
+       f (t) = 0 instead, the truth of f (t) · y + σ(w) + (τ (z) mod f (t)) = 0 only depends on whether
+       σ(w) + (τ (z) mod f (t)) = 0, and we can thus restrict y to any non-empty interval. This
+       allows us to replace the quantifier ∃y with a bounded quantifier (lines 3 and 4). Since y
+       ranges over Z, whereas bounded quantifiers use non-negative ranges, the algorithm explicitly
+       guesses the sign of y in line 5, allowing y to only range over N instead. Formalising these
+       arguments yields the following lemma.
+
+       ▶ Lemma 6. Algorithm 2 (ElimDiv) complies with its specification.
+
+       Elimination of all bounded quantifiers. From the output of ElimDiv, the final operation
+       by PrA[t]-QE is a call to ElimBounded, which removes all bounded quantifiers. This
+       algorithm is detailed in Section 5. Its specification is given in the next lemma.
+
+       ▶ Lemma 7. There is a non-deterministic procedure with the following specification:
+       Input: ∃w ≤ B : φ(w,z), with φ positive Boolean combination of linear PrA[t] (in)equalities
+           and constraints σ(w) + (τ (z) mod f (t)) = 0, with σ linear, and τ linear and non-shifted.
+       Output of each branch (β): a positive Boolean combination ψβ (z) of PrA[t] constraints.
+           In all divisibility constraints f (t) | τ , the divisor f (t) is an integer.
+                                                         W
+       The algorithm ensures that the disjunction β ψβ of output formulae ranging over all non-
+       deterministic branches is equivalent to ∃w ≤ B : φ.
+
+       Together, Equation (2) and Lemmas 5–7 show that PrA[t]-QE meets its specification; thus
+       showing Theorem 2 conditionally to the correctness of BoundedQE and ElimBounded.
+
+        4      Efficient bounded quantifier elimination in PrA[t]
+       This section outlines the arguments leading to the procedure BoundedQE. Its pseudocode is
+       given in Algorithm 3. We start with an example demonstrating the key idea used to develop
+       a version of bounded quantifier elimination in PrA[t]. These arguments are sufficient for
+       establishing Lemma 5; although they do not result in an optimal procedure complexity-wise.
+       We will then recall the main arguments used in [11] to obtain an optimal procedure, which,
+       when implemented, yield BoundedQE.
+           Let us consider a formula ∃x : φ(x, z) where, for simplicity, φ is of the form:
+                                                          
+           τ (z) ≤ a · x ∧ b · x ≤ ρ(z) ∧ m | c · x + σ(z) ∧ a > 0 ∧ b > 0 ∧ m > 0,
+
+       where a, b, c and m are polynomials from Z[t], and τ , ρ and σ are linear PrA[t] terms. For
+       the time being, we invite the reader to pick some values for t and the free variables z, so
+       that the formula φ becomes a formula from Presburger arithmetic in a single variable x. The
+       standard argument for eliminating x in PrA goes as follows (see, e.g., [30]). We first update
+       the inequalities to ensure that all coefficients of x are equal; this results in the inequalities
+       b · τ ≤ a · b · x and a · b · x ≤ a · ρ. The quantification ∃x expresses that there is g ∈ Z such that
+                                                                                                         g
+       (i) g is a multiple of a · b that belongs to the interval [b · τ, a · ρ]; and (ii) m divides c · a·b + σ.
+       The key observation is that such an integer (if it exists) can be found by only looking at
+A. Mansutti and M. R. Starchak                                                                                     72:9
+
+
+elements of [b · τ, a · ρ] that are “close” to b · τ . More precisely, the properties (i) and (ii)
+must be simultaneously satisfied by b · τ + r, for some r ∈ [0, a · b · m]. We can thus restrict x
+to satisfy an additional constraint a · b · x = b · τ + r. A small refinement: since this equality
+is unsatisfiable when the shift r is not a multiple of b > 0, we can rewrite it as a · x = τ + s,
+where the shift s now ranges in [0, a · m]. Observe that s lies in an interval that is independent
+of the values picked for z; as a and m were originally polynomials in t.
+    Let us keep assigning a value to the parameter t (so, a and m are still integers), but
+reinstate the variables z. From the above argument, the formula ∃x : φ(x, z) is equivalent to
+Wa·m
+   s=0 ∃x (φ(x, z) ∧ a · x = τ + s). It is now straightforward to eliminate x from each disjunct
+∃x (φ(x, z) ∧ a · x = τ + s): we simply “apply” the equality a · x = τ + s, substituting x
+for τ +r
+      a , and add a divisibility constraint forcing τ + s to be a multiple of a. After this
+substitution, both a · x = τ + s and τ (z) ≤ a · x become ⊤. The resulting disjunct is
+
+  ψ(s, z) := b · (τ + s) ≤ a · ρ ∧ (m · a | c · (τ + s) + a · σ) ∧ (a | τ + s) ∧ a > 0 ∧ b > 0 ∧ m > 0,
+     Wa·m
+and s=0 ψ(s, z) is equivalent to ∃x : φ(x, z). (For PrA, this concludes the quantifier
+elimination procedure.) When restoring the parameter t, these two formulae are still
+                                               Wa·m
+equivalent, but the number of disjunctions s=0 now depends on t. We replace them with
+                                    Wa·m
+a bounded quantifier, rewriting s=0 ψ(s, z) as ∃s ≤ B : ψ(s, z), where B(s) := a(t) · m(t).
+This is, in a nutshell, the bounded quantifier elimination procedure from [15, 31].
+    When the signs of a, b, and m are unknown (i.e., φ does not feature the constraints a > 0,
+b > 0 and m > 0), we must perform a “sign analysis”: we write a disjunction (or guess) over
+all possible signs of the three polynomials. In Algorithm 3, the lines marked in yellow are
+related to this analysis; e.g., line 16 guesses the sign of the (non-zero) coefficient a of x.
+
+Taming the complexity of the procedure. Problems arise when looking at the complex-
+ity of the procedure outlined above. To understand this point, consider the inequality
+b · (τ + s) ≤ a · ρ, which was derived by substituting τ +s             a for x in b · x ≤ ρ, and suppose
+τ = c · y + τ ′ and ρ = d · y + ρ′ , for some variable y. This inequality can be rewritten as
+(b · c − a · d) · y + b · τ ′ − a · ρ′ + b · s ≤ 0. When looking at the coefficient (b · c − a · d)
+of y one deduces that, if quantifier elimination is performed carelessly on a block ∃x of
+multiple existential quantifiers, the coefficients of the variables in the formula will grow
+quadratically with each eliminated variable. Then, by the end of the procedure, their binary
+bit size will be exponential in the number of variables in x. However, this explosion can be
+avoided by noticing that coefficients are updated following the same pattern as in Bareiss’
+polynomial-time Gaussian elimination procedure [1]. This insight was highlighted in [11],
+building upon an earlier observation from [31]. In Bareiss’ algorithm, the key to keeping coef-
+ficients polynomially bounded is given by the Desnanot–Jacobi identity. Consider an m × d
+matrix A. Let us write A[i1 , . . . , ir ; j1 , . . . , jℓ ] for the r × ℓ sub-matrix of A made of the rows
+with indices i1 , . . . , ir ∈ [1, m] and columns with indices j1 , . . . , jℓ ∈ [1, d]. For i, j, ℓ ∈ N with
+                                                                         (ℓ)
+0 ≤ ℓ ≤ min(m, d), 1 ≤ i ≤ m and 1 ≤ j ≤ d, we define ai,j := det A[1, . . . , ℓ, i; 1, . . . , ℓ, j].
+
+▶ Proposition 8 (Desnanot–Jacobi identity). For every i, j, ℓ ∈ N with ℓ ≥ 2, ℓ < i ≤ m and
+                     (ℓ−1)  (ℓ−1)   (ℓ−1)   (ℓ−1)     (ℓ−2)     (ℓ)
+ℓ < j ≤ d, we have (aℓ,ℓ · ai,j − aℓ,j · ai,ℓ ) = aℓ,ℓ · ai,j .
+
+The Desnanot–Jacobi identity is true for all matrices with entries over an integral domain
+(a non-zero commutative ring in which the product of non-zero elements is non-zero), and
+therefore we can take the entries of A to be polynomials in Z[t].
+     Returning to our informal discussion, we now see that the coefficient (b · c − a · d) of y is
+oddly similar to the left-hand side of the Desnanot–Jacobi identity. Suppose that the elements
+ (ℓ−1)
+ai,j    are the coefficients of the variables in the formula currently being processed by the
+
+
+                                                                                                                M FC S 2 0 2 5
+72:10   One-Parametric Presburger Arithmetic Has Quantifier Elimination
+
+
+              Algorithm 3 BoundedQE: A bounded quantifier elimination procedure for PrA[t].
+        Input: ∃x : φ(x, z) where φ is a positive Boolean combination of linear PrA[t] constraints.
+        Output of each branch (β): a formula ∃wβ ≤ Bβ : ψβ (wβ , z) where ψβ is a positive
+            Boolean combination of linear PrA[t] constraints.
+                   W
+        Ensuring: β ∃wβ ≤ Bβ : ψβ is equivalent to ∃x : φ.
+         1: guess Z ← subset of {f (t) : the relation (f (t) | ·) occurs in φ}
+         2: foreach f (t) in Z do
+         3:    update φ : replace each divisibility f (t) | τ with τ = 0
+         4:    φ ← φ ∧ (f (t) = 0)
+        5: guess ± ← symbol in {−, +}                   ▷ sign required to make m(t) below positive
+                      Q
+        6: m(t) ← ± {f (t) : the relation (f (t) | ·) occurs in φ}
+        7: χ ← (m(t) > 0)
+        8: (±, ℓ(t)) ← (+, 1);  B←∅                        ▷ B: map from variables to upper bounds
+        9: update φ : replace each inequality τ ≤ 0 with τ + y = 0, where y is a fresh slack variable
+        10: foreach x in x do
+        11:     if ∗ then                                ▷ non-deterministic choice: skip or execute
+        12:         update B : add the key-value pair (x, m(t) − 1)
+        13:         continue
+        14:        guess f (t) · x + τ = 0 ← equality in φ that contains x
+        15:        p(t) ← ℓ(t); ℓ(t) ← f (t)                 ▷ previous and current leading coefficients
+        16:        ± ← guess a symbol in {−, +}                                          ▷ sign of f (t)
+        17:        χ ← χ ∧ (±f (t) > 0)
+        18:        m(t) ← ±f (t) · m(t)
+        19:        if τ contains a slack variable y such that B(y) is undefined then
+        20:            update B : add the key-value pair (y, m(t) − 1)
+        21:        φ ← φ[[ f−τ
+                            (t) / x]]
+        22:        update φ : divide all constraints by p(t)     ▷ both sides for divisibility constraints
+        23:        φ ← φ ∧ (f (t) | τ )
+        24: foreach equality η = 0 of φ with a slack variable y such that B(y) is undefined do
+        25:        update φ : replace η = 0 with η[0/y] ≤ 0 if the sign ± is plus else with η[0/y] ≥ 0
+        26: return ∃w ≤ B : φ ∧ χ where w is the sequence of keys of the map B
+
+
+
+        quantifier elimination procedure, and we are eliminating the ℓ-th quantifier. Proposition 8
+        tells us that all coefficients produced by the naïve elimination (left-hand side of the identity)
+                (ℓ−2)
+        have aℓ,ℓ     as a common factor. By dividing through by this common factor, we obtain
+                                                                                  (ℓ)
+        smaller coefficients for the next step of variable elimination – namely, ai,j . When eliminating
+        the first variable (ℓ = 1), the common factor is 1. Otherwise, it is the coefficient a that the
+        (ℓ − 1)-th eliminated variable x has in the equality a · x = τ + s used for the elimination.
+        In Algorithm 3, the lines marked in blue implement Bareiss’ optimisation: line 8 initialises
+        the common factor ℓ(t) and its sign, line 15 updates it, and line 22 performs the division.
+
+
+        Some details on BoundedQE. Lines 1–4 handle the divisibility constraints f (t) | τ with
+        the divisor f (t) equal to 0. Such constraints are equalities in disguise, and the procedure
+        replaces them with τ = 0. When the procedure reaches line 5, all divisors in the divisibility
+        constraints are assumed non-zero. Following the example from the previous paragraph, recall
+A. Mansutti and M. R. Starchak                                                                               72:11
+
+
+that the shifts s belong to intervals that depend on these divisors; when multiple divisors
+occur, the procedure for PrA takes their lcm (instead of just m as in our example). For
+simplicity, instead of lcm, BoundedQE considers the absolute value m(t) of their product
+(line 6). After guessing the sign ± of this product, the procedure enforces m(t) > 0 in line 7.
+This information is stored in the formula χ, which accumulates all sign guesses made by the
+algorithm; these are conjoined to φ when the procedure returns.
+    Line 9 replaces all inequalities with equalities by introducing slack variables ranging
+over N. (This step is inherited from [11].) Slack variables represent the shifts s from the
+quantifier elimination procedure for PrA. Line 12 covers the corner cases of x not appearing
+in equalities, or t being such that all the coefficients f (t) of x evaluate to zero. After guessing
+an equality f (t) · x + τ = 0 to perform the substitution (line 14), line 19 checks whether τ
+features a slack variable y (i.e., the equality was originally an inequality). If so, the procedure
+generates a bounded quantifier for y. The elimination of x (line 21) is performed with the
+vigorous substitution φ[[ f−τ(t) / x]] which works as follows: 1: Replace every equality ρ = 0
+with f (t) · ρ = 0, and every divisibility g(t) | ρ with f (t) · g(t) | f (t) · ρ; this is done also for
+constraints where x does not occur. 2: Replace every occurrence of f (t) · x with τ (from
+step 1, each coefficient of x in the system can be factored as f (t) · h(t) for some h ∈ Z[t]).
+    After applying the vigorous substitution, the procedure divides all coefficients of the
+inequalities and divisibility constraints in φ by the common factor of the Bareiss’ optimisation
+(line 22). In the case of divisibility constraints, divisors are also affected. Proposition 8
+ensures that these divisions are all without remainder. In practice, the traditional Euclidean
+algorithm for polynomial division can be used to construct the quotient in polynomial time.
+As a result of these divisions, throughout the procedure all polynomials f (t) guessed in
+line 14 have polynomial bit sizes in the size of the input formula.
+    After the foreach loop of line 10 completes, all variables from x have been eliminated
+(line 21) or bounded (line 12). A benefit of translating inequalities into equalities in line 9 is
+that x can be eliminated independently of the sign of its coefficient f (t); inequalities would
+need to flip for f (t) negative instead. The final step (lines 24 and 25) drops all slack variables
+for which no bound was assigned in line 20, reintroducing the inequalities (the sign stored
+in ± tells us the direction of these inequalities). This step is also inherited from [11].
+    By fully developing the arguments above, one shows that BoundedQE is correct:
+▶ Lemma 9. Algorithm 3 (BoundedQE) complies with its specification.
+This lemma implies Lemma 5. In the sequel we will also need the next lemma, discussing
+properties of the outputs of BoundedQE for “Presburger-arithmetic-like” inputs.
+▶ Lemma 10. Let ∃x : φ(x, z) be a formula input of Algorithm 3, in which all coefficients
+of the variables in x, and all divisors f (t) in relations (f (t) | ·), are integers. The map Bβ
+in the output of each non-deterministic branch β ranges over the integers.
+
+ 5      Elimination of polynomially bounded quantifiers
+We move to Algorithm 4 (ElimBounded), which eliminates the bounded quantifiers in three
+steps: replacement of bounded variables by their t-ary expansions; “ divisions by t” until
+all t-digits have integer coefficients; elimination of t-digits via BoundedQE.
+
+Base t expansion (lines 1–6). Following the semantics of bounded quantifiers, line 1 adds
+to φ the bounds 0 ≤ w ∧ w ≤ B(w), for each bounded variable w. The subsequent lines “bit
+blast” w into its t-ary expansion tM · yM + · · · + t · y1 + y0 , where M is the largest bit size of
+the bounds in B (line 2). All added variables y are t-digits, i.e., they range in [0, t − 1].
+
+
+                                                                                                           M FC S 2 0 2 5
+72:12   One-Parametric Presburger Arithmetic Has Quantifier Elimination
+
+
+              Algorithm 4 ElimBounded: Elimination of polynomially bounded quantifiers.
+        Input: ∃w ≤ B : φ(w, z), with φ positive Boolean combination of linear PrA[t] (in)equalities,
+            and constraints σ(w) + (τ (z) mod f (t)) = 0, with σ linear, and τ linear and non-shifted.
+        Output of each branch (β): a positive Boolean combination ψβ (z) of PrA[t] constraints.
+                    W
+        Ensuring: β ψβ is equivalent to ∃w ≤ B : φ.
+                     V
+         1: φ ← φ ∧ w∈w (0 ≤ w) ∧ (w ≤ B(w))
+         2: M ← max{⟨B(w)⟩ : w ∈ w}
+         3: y ← ∅                  ▷ y is a vector of variables used to “bit blast” bounded variables
+         4: foreach w in w do
+         5:    append fresh variables y0 , . . . , yM to y
+                                                            VM
+         6:    φ ← φ[(tM · yM + · · · + t · y1 + y0 ) / w] ∧ i=0 ((0 ≤ yi ) ∧ (yi ≤ t − 1))
+        7: while a variable from y has a non-integer coefficient in a constraint (η ∼ 0) of φ do
+        8:        if the symbol ∼ is ≤ then η ← η − 1                ▷ we work with η − 1 < 0; else ∼ is =
+        9:        let η be (σ(y) · t + ρ(y) + τ (z)), where ρ does not contain t, and τ is non-shifted
+        10:        ρ ← ρ(y) + (τ (z) mod t)                     ▷ add to ρ the unbounded part modulo t
+        11:        guess r ← integer in [−∥ρ∥1 , ∥ρ∥1 ]              ▷ quotient of the division of ρ by t
+        12:        if the symbol ∼ is = then
+        13:            γ ← (t · r = ρ)
+        14:        else
+        15:            γ ← (t · r ≤ ρ) ∧ (ρ ≤ t · (r + 1) − 1)
+        16:            r ←r+1
+                   update φ : replace (η ∼ 0) with γ ∧ (σ + r + τt ∼ 0
+                                                                         
+        17:
+        18: z ′ ← ∅;  S←∅         ▷ z ′ are used to rewrite φ as a combination of linear constraints
+        19: foreach constraint (ρ(y) + τ (z) ∼ 0) of φ, where τ is non-shifted do
+        20:    append a fresh variable z ′ to z ′ and update S : add the key-value pair (z ′ , τ (z))
+        21:    φ ← φ[z ′ / τ (z)]
+        22: ∃w ′ ≤ B ′ : ψ(w ′ , z ′ ) ← BoundedQE(y, φ(y, z ′ ))
+        23: foreach w in w ′ do                                            ▷ now every B ′ (w) is an integer
+        24:        guess g ← integer in [0, B ′ (w)]
+        25:        ψ ← ψ[g / w]
+        26: return ψ[[S(z ′ ) / z ′ ] : z ′ ∈ z ′ ]
+
+
+
+        ▶ Example 11. Let us see this step in action on a bounded version of the formula in Example 1:
+                                                                                          
+           ∃(x, y, z) ≤ B : t · y = x + (−a mod t) ∧ (t + 1) · z = x + (−b mod t + 1) ,
+
+        where B(x) = t2 + t − 1, and B(y) = B(z) = t + 2. By “bit blasting” the bounded variables
+        into t-digits x = (x0 , x1 , x2 ), y = (y0 , y1 , y2 ), and z = (z0 , z1 , z2 ), we obtain the formula
+                        ^                                                            ^                    
+            ∃x, y, z :                   0 ≤ (w2 · t2 + w1 · t + w0 ) ≤ B(w) ∧                   0 ≤ wi < t
+                            w∈{x,y,z}                                               i∈{0,1,2}
+                                     2                       2
+                        ∧ t · (y2 · t + y1 · t + y0 ) = (x2 · t + x1 · t + x0 ) + (−a mod t)
+                  ∧ (t + 1) · (z2 · t2 + z1 · t + z0 ) = (x2 · t2 + x1 · t + x0 ) + (−b mod t + 1).        ◀
+
+        ▶ Lemma 12. Let φ∅ (y, z) be the formula obtained from φ by performing lines 1–6 of
+        Algorithm 4. Then, the input formula ∃w ≤ B : φ(w, z) is equivalent to ∃y : φ∅ (y, z) and
+        every (t-digit) variable in y has only linear occurrences in φ∅ .
+A. Mansutti and M. R. Starchak                                                                               72:13
+
+
+The coefficients of the t-digits become integers (lines 7–17). This step is defined by the
+while loop of line 7, whose goal is to transform the formula φ∅ into an equivalent positive
+Boolean combination of equalities and inequalities in which all coefficients of y are integers.
+
+▶ Example 13. Before delving into the details, let us illustrate the transformation on the
+equality (t + 1) · (z2 · t2 + z1 · t + z0 ) = (x2 · t2 + x1 · t + x0 ) + (−b mod t + 1) from Example 11.
+Grouping terms according to powers of t, we obtain:
+
+    −z2 · t3 + (x2 − z1 − z2 ) · t2 + (x1 − z0 − z1 ) · t + (x0 − z0 ) + (−b mod t + 1) = 0.
+
+We symbolically perform a division with remainder        on the sub-term (−b mod t+1) concerning
+the free variables, rewriting it as −b mod    t+1
+                                                  
+                                           t        · t +  ((−b mod t + 1) mod t). In the resulting
+equality, we notice that (x0 − z0 ) + ((−b mod t + 1) mod t) must be divisible by t. Since both
+x0 and z0 belong to [0, t − 1], only two multiples of t are possible: 0 and t. Consider the latter
+case: we can rewrite the equality as the conjunction of t = (x0 − z0 ) + ((−b mod t + 1) mod t)
+and −z2 · t3 + (x2 − z1 − z2 ) · t2 + (x1 − z0 − z1 ) · t + −b modt
+                                                                    t+1
+                                                                         · t + t = 0. By dividing the
+second equality by t, the variables x0 , x1 and z0 end up appearing with integer coefficients
+only. Repeating this process guarantees that all quantified variables satisfy this property:
+the second iteration “frees” x2 and z1 , and the third iteration handles the variable z2 . ◀
+
+    The while loop guesses some integers in line 11. Let Ri be the (finite) set of all sequences s
+of guesses from the first i iterations of the loop (so, s has length i), and let φs be the unique
+formula obtained from φ∅ after iterating the loop i times, using s as the sequence of guesses.
+(The subscript ∅ corresponds to the empty sequence of guesses; the only element in R0 .)
+    Together with proving that the while loop preserves formula equivalence (across non-
+deterministic branches), the critical parameter to track during the execution of the loop is
+the degrees of all coefficients of the t-digits y. Showing that this parameter reaches 0 implies
+loop termination, and correctness of this step of the procedure. More formally, we inductively
+define the y-degree deg(y, φ) of a positive Boolean combination of PrA[t] constraints φ(y, z),
+where the variables y = (y1 , ..., yℓ ) occur only linearly, as follows (below, ∼ ∈ {≤, =}):
+                                                                          Pℓ
+    deg(y, φ) = max{deg(fi ) : i ∈ [1, ℓ]}         if φ is an (in)equality i=1 fi (t)·yi +τ (z) ∼ 0;
+    deg(y, φ) = deg(y, φ1 ) + deg(y, φ2 )          if φ is either (φ1 ∧ φ2 ) or (φ1 ∨ φ2 ).
+Then, the defining property of the while loop of line 7 can be stated as follows:
+
+▶ Lemma 14. Consider s ∈ Ri with deg(y, φs ) > 0, and the set G := {sr ∈ Ri+1 : r ∈ Z}.
+                             W
+Then, (i) φs is equivalent to r∈G φr , and (ii) deg(y, φs ) > deg(y, φr ) for every r ∈ G.
+
+Proof sketch. The while loop considers an (in)equality η ∼ 0 from φs (line 7); inequalities
+are transformed into strict inequalities η − 1 < 0 in line 8, as in this case the latter are easier
+to work with. Line 9 represents the term of the (in)equality as σ(y) · t + ρ(y) + τ (z), where
+σ is linear, ρ is a linear term with coefficients in Z, and τ (z) is non-shifted.
+▶ Remark. Observe that line 17 will later replace η ∼ 0 with σ + r + τt ∼ 0. If the latter
+                                                                            
+
+(in)equality is considered  again by the while loop at a later iteration, this replacement
+                          τt 
+                                 , which can be rewritten as tτ2 . We assume the algorithm to
+                                                              
+will produce the term       t
+implicitly perform this rewriting, so that the term above can in fact be written as
+
+    σ(y) · t + ρ(y) + τ t(z)           where k ≥ 0, such that tτ0 := τ .
+                                                             
+                          k    ,                                                                (3)
+
+    Let us define η ′ = σ(y) + tτk+1      and ρ′ = ρ(y) + τ t(z)
+                                   (z)                                 
+                                                                k    mod t , so that the term in Equa-
+tion (3) is then equal to η ′ · t + ρ′ . (Note: ρ′ is exactly the term in line 10.) We are now ready
+to perform the symbolic division by t. Indeed, since all variables in y, as well as the term
+
+
+
+                                                                                                           M FC S 2 0 2 5
+72:14   One-Parametric Presburger Arithmetic Has Quantifier Elimination
+
+          τ (z) 
+                 mod t , belong to [0, t − 1], we conclude that ρ′ ∈ −t · N , t · N ] where N := ∥ρ′ ∥1 .
+                                                                    
+             tk
+        Line 11 guesses an integer r from the segment [−N , N ], which stands for the quotient of the
+        division of ρ′ by t. Each guess corresponds to a disjunct from the following two equivalences:
+                                       WN
+              η ′ · t + ρ′ = 0                     η′ + r = 0                 ∧ r · t = ρ′
+                                                                                                                
+                                 ⇐⇒                                                                               ,
+                                       Wr=−N
+                                        N
+              η ′ · t + ρ′ < 0                     η′ + r + 1 ≤ 0             ∧ t · r ≤ ρ′ ∧ ρ′ < t · (r + 1)
+                                                                                                                
+                                 ⇐⇒      r=−N                                                                     .
+                                                   quotient of the division      formula γ in the pseudocode
+
+        These equivalences “perform” the symbolic division by t. In line 17, the algorithm substitutes
+        the constraint η ∼ 0 with the result of the division, that is, the conjunction of the quotient
+        and the remaining part that is stored the formula γ (lines 12–16). Observe a key property
+        of γ: in it, all the coefficients of the t-digits y only have integer coefficients, i.e., deg(y, γ) = 0.
+            Let χr be the formula obtained from φ by performing the replacement in line 17. This for-
+                                                              WN
+        mula belongs to Ri+1 and, moreover, φs ⇐⇒ r=−N χr . We have G = {sr : r ∈ [−N, N ]},
+        and Item (i) is proved. To prove Item (ii), observe that
+             deg(y, χr ) = deg(y, φs ) − deg(y, η ∼ 0) + deg(y, η ′ ∼ 0) + deg(y, γ)
+                           = deg(y, φs ) − deg(y, σ · t ∼ 0) + deg(y, σ ∼ 0) = deg(y, φs ) − 1.                       ◀
+
+        Elimination of t-digits (lines 18–26). By inductively applying Lemma 14, we deduce that
+        the while loop performs at most deg(y, φ∅ ) iterations, and that the disjunction (over all
+        non-deterministic branches) of formulae φr obtained at the end of this loop is equivalent
+                                                                                           Pℓ
+        to φ∅ . The constraints in each φr are (in)equalities f (t) + τ (z) + i=1 ai · yi ∼ 0, where
+        a1 , . . . , aℓ ∈ Z, f ∈ Z[t], all y1 , . . . , yℓ are t-digits, and τ is a non-shifted term of PrA[t].
+             The last step is to remove the t-digits y by appealing to BoundedQE (line 22). Recall
+        that this algorithm requires all PrA[t] constraints in the input          to be linear, while terms τ (z)
+        in φr may contain (nested) occurrences of the functions t·d and (· mod f (t)). In order to
+        respect this specification, ElimBounded first replaces each non-shifted term τ (z) in φr
+        with a fresh variable z ′ , storing the substitution [τ (z)/z ′ ] in the map S (line 20). These
+        terms are restored at the end of the procedure (line 26). Since the variables z ′ occur free
+        in the formula in input to BoundedQE, and this procedure preserves formula equivalence
+        (Lemma 9), the overall process remains sound.
+             The formula in input of BoundedQE has no divisibility constraints, and the eliminated
+        variables y have integer coefficients. By Lemma 10 the output of each non-deterministic
+        branch is a formula ∃w′ ≤ B ′ : ψ(w′ , z ′ ) where, for every variable w in w′ , the bound B ′ (w) is
+        an integer. We can thus replace w with a (guessed) integer g ∈ [0, B ′ (w)] (lines 23–25). After
+        restoring the terms stored in S, the resulting formula is quantifier-free and the disjunction
+        over all outputs of ElimBounded is equivalent to the input formula.
+        ▶ Lemma 15. Algorithm 4 (ElimBounded) complies with its specification.
+        This lemma implies Lemma 7, which was the last missing piece required to complete the
+        proof of Theorem 2. To simplify the complexity arguments in the next section, we make use
+        of the two observations in the following lemma, concerning the output of ElimBounded.
+        ▶ Lemma 16. In every output of ElimBounded, all functions t·d and (· mod f (t)) are
+                                                                                 
+
+        applied to non-shifted terms. In divisibility relations (f (t) | ·), the divisor f (t) is an integer.
+
+         6        Solving satisfiability, universality and finiteness
+        Now that we have established that PrA[t] admits quantifier elimination, let us discuss the
+        decision problems of satisfiability, universality and finiteness defined in Section 1. Without
+        loss of generality, we add to the formula φ in input to these problems a prefix of existential
+        quantifiers over all its free variables; thus assuming that φ is a sentence.
+A. Mansutti and M. R. Starchak                                                                              72:15
+
+
+    Applying our quantifier elimination procedure to the sentence φ results in a variable-free
+formula ψ whose truth only depends on the valuetaken         by the parameter t. Furthermore,
+from Lemma 16, all occurrences of the functions t·d and (· mod f (t)) are applied to the
+constant 0 (the only variable-free non-shifted term) and can thus be replaced with 0; and all
+divisibility relations (f (t) | ·) are such that f (t) is an integer. That is to say, ψ is a positive
+Boolean combination of univariate polynomial inequalities g(t) ≤ 0, equalities g(t) = 0 and
+divisibility constraints d | g(t), where g ∈ Z[t] and d ∈ Z.
+    We study the solutions to such a univariate formula ψ(t). First, recall that computing
+the set of all integer roots of a polynomial in Z[t] can be done in polynomial time:
+
+▶ Theorem 17 ([13, Theorem 1]). There is a polynomial time algorithm that returns the set
+of integer roots of an input polynomial f ∈ Z[t].
+
+This theorem implies that the every integer root of f ∈ Z[t] has bit size polynomial in ⟨f ⟩. Let
+r1 < · · · < rn be the roots of all the polynomials occurring in (in)equalities of ψ. These roots
+partition Z in 2n + 1 regions (−∞, r1 − 1], {r1 }, [r1 + 1, r2 − 1], {r2 }, . . . , {rn }, [rn + 1, ∞).
+The truth of all (in)equalities in ψ remains invariant for integers within the same region.
+Furthermore, the solutions to the divisibility constraints in ψ are periodic with period
+p := lcm{d : (d | ·) occurs in ψ} > 0, i.e., setting t = b satisfies the same divisibility con-
+straints as t = b + p, for every integer b. Then, a solution to ψ (if it exists) can be found
+in the interval [r1 − p, rn + p]. Moreover, ψ has infinitely many solutions if and only if one
+solution lies in intervals [r1 − p, r1 − 1] or [rn + 1, rn + p]. To recap:
+
+▶ Lemma 18. Let ψ be a positive Boolean combination of polynomial inequalities g ≤ 0,
+equalities g = 0 and divisibility constraints d | g, where g ∈ Z[t] and d ∈ Z. Then,
+ 1. If ψ has a solution, then it has one of bit size polynomial in the size of ψ.
+ 2. If ψ has a polynomial bit size solution that is either larger or smaller than all roots of the
+    polynomials in (in)equalities of ψ, then ψ has infinitely many solutions, and vice versa.
+
+The complexity of the existential fragment. Lemma 18 implies decidability of all the
+decision problems of satisfiability, universality and finiteness. We now analyse their complexity
+for the existential fragment of PrA[t], establishing Theorem 3. For simplicity of the exposition,
+we keep assuming t ≥ 2. Our reasoning can be extended in a straightforward way to all
+t ∈ Z, following the discussion given at the beginning of Section 3.
+    First and foremost, we study the complexity of our quantifier elimination procedure.
+
+▶ Lemma 19. Algorithm 1 (PrA[t]-QE) runs in non-deterministic polynomial time.
+
+Proof idea. For the proof we track the evolution of the following parameters as Algorithm 1
+executes, where φ is a formula, and B is a map used for the bounded quantification:
+                                                                      
+    atom(φ) := number of occurrences of atomic formulae in φ ,
+                                         
+    vars(φ) := number of variables in φ ,
+    func(φ) := number of occurrences of t·d and (· mod f (t)) in an atomic formula of φ ,
+                                                                                                
+
+    ⟨const⟩(φ) := max{⟨f ⟩ : f ∈ Z[t] occurs in φ},
+    ⟨B⟩ := max{0, ⟨B(w)⟩ : w is in the domain of B}.  
+                                                 f2 ·x+f3 · yt +f4 
+For example, for the formula γ := (g | f1 · x +          t          + f5 ), we have atom(γ) = 1,
+vars(γ) = 2, func(γ) = 2 (two occurrences of t· ), ⟨const⟩(γ) = max{⟨g⟩, ⟨f1 ⟩, . . . , ⟨f5 ⟩, ⟨t⟩}.
+The bit size of φ is polynomial in the values of these parameters.
+    One can show that throughout the procedure each of these parameters remain polynomially
+bounded with respect to all the parameters of the input formula. For instance, during the
+first two steps of ElimBounded, the number of variables in the manipulated formulae (φ
+
+
+                                                                                                          M FC S 2 0 2 5
+72:16   One-Parametric Presburger Arithmetic Has Quantifier Elimination
+
+
+        and γ) increases at most polynomially in ⟨B⟩, due to the bit blasting of the bounded variables.
+        However, by the end of the procedure, it reduces to the number of free variables – as expected
+        by a quantifier elimination procedure.
+             While tedious, this proof is not dissimilar to the other complexity analyses of quantifier
+        elimination procedures for PrA; see, e.g., [30]. Once the evolution of the parameters is known,
+        it is simple to show that Algorithm 1 runs in non-deterministic polynomial time.             ◀
+
+             Our results on decision problems for existential formulae of PrA[t] follow.
+
+        Proof of Theorem 3. Satisfiability. By Lemma 19 and Lemma 18.1, if the input sentence
+           γ := ∃x : φ(x) is satisfiable (equivalently, valid), then JγKk = ̸ ∅ for some k of bit size
+           polynomial in the size of γ. Observe that replacing t for k in γ yields an existential
+           sentence of Presburger arithmetic of size polynomial in the size of γ. Checking satisfiability
+           for ∃PrA is a well-known NP-complete problem [29]. We conclude that the satisfiability
+           problem for existential formulae of PrA[t] is also NP-complete.
+        Universality. By Lemma 19, Algorithm 1 can be implemented by a deterministic exponential
+           time Turing machine T : given an input sentence γ, T computes an equivalent disjunc-
+                       W
+           tion ψ := β ψβ of exponentially many polynomial-size formulae ψβ . By Lemma 16,
+           each ψβ is a positive Boolean combination of (in)equalities g(t) ∼ 0 and divisibility con-
+           straints d | g(t), with g ∈ Z[t] and d ∈ N \ {0}. From Theorem 17, all roots r1 < · · · < rn
+           of polynomials in (in)equalities of ψ are of bit size polynomial in the size of γ. However,
+           the period p := lcm{d : (d | ·) occurs in ψ} may be of exponential bit size.
+           As a certificate asserting that γ is a negative instance, we can take ψ, the sequence of
+           configurations reached by T when computing ψ from γ, and a number k ∈ [r1 − p, rn + p].
+           The certificate is verified in polynomial time (in its size) by checking that the sequence of
+           configurations is a valid run of T computing ψ from γ, and that k is not a solution to ψ(t).
+           Since the certificate has exponential size, universality is in coNExp. (coNExp-hardness
+           follows from the coNExp-hardness of the ∀∃∗ fragment of PrA [16, 18].)
+        Finiteness. Equivalently, we show that the problem of checking whether a sentence γ is sat-
+           isfiable for infinitely many instantiations of t is NP-complete. The proof of NP-hardness
+           is trivial: for sentences without t, this problem is equivalent to the satisfiability problem
+                                                                                 W
+           for ∃PrA. For the NP membership, let us consider the formula β ψβ computed from an
+           input sentence γ via Algorithm 1. If γ is satisfied by infinitely many values of t, then
+           the same holds for least one of the formulae ψβ . By Lemma 18.2, ψβ has infinitely many
+           solutions if and only if it has a solution k of bit size polynomial in the size of γ, such that k
+           is either larger or smaller than all roots of polynomials appearing in (in)equalities of ψβ .
+           Then, as a certificate asserting that γ has infinitely many solutions we can provide ψβ ,
+           the sequence of non-deterministic guesses made by Algorithm 1 to compute ψβ from γ,
+           and the value k. This certificate can be verified in polynomial time: first, run Algorithm 1
+           using the provided sequence of guesses, and check that the output is ψβ . Then, compute
+           (in polynomial time) all roots of the polynomials appearing in the (in)equalities of ψβ ,
+           and verify that k is a solution to ψβ that is either larger or smaller than all of them. ◀
+
+
+               References
+         1    Erwin H. Bareiss. Sylvester’s identity and multistep integer-preserving Gaussian elimination.
+              Math. Comput., 1968. doi:10.1090/S0025-5718-1968-0226829-0.
+         2    Clark W. Barrett and Cesare Tinelli. Satisfiability modulo theories. In Handbook of Model
+              Checking. 2018. doi:10.1007/978-3-319-10575-8_11.
+A. Mansutti and M. R. Starchak                                                                          72:17
+
+
+ 3   Michael Benedikt, Dmitry Chistikov, and Alessio Mansutti. The complexity of Presburger
+     arithmetic with power or powers. In ICALP, 2023. doi:10.4230/LIPICS.ICALP.2023.112.
+ 4   Pascal Bergsträßer, Moses Ganardi, Anthony W. Lin, and Georg Zetzsche. Ramsey quantifiers
+     in linear arithmetics. In POPL, 2024. doi:10.1145/3632843.
+ 5   Tristram Bogart, John Goodrick, Danny Nguyen, and Kevin Woods. Parametric Presburger
+     arithmetic: complexity of counting and quantifier elimination. Math. Logic Quart., 2019.
+     doi:10.1002/malq.201800068.
+ 6   Tristram Bogart, John Goodrick, and Kevin Woods. Parametric Presburger arithmetic: logic,
+     combinatorics, and quasi-polynomial behavior. Discrete Analysis, 2017. doi:10.19086/da.
+     1254.
+ 7   Itshak Borosh and Leon B. Treybig. Bounds on positive integral solutions of linear Diophantine
+     equations. Proc. Am. Math. Soc., 55(2):299–304, 1976. doi:10.2307/2041711.
+ 8   Sheng Chen, Nan Li, and Steven V. Sam. Generalized Ehrhart polynomials. Trans. Amer.
+     Math. Soc., 2012. doi:10.1090/S0002-9947-2011-05494-2.
+ 9   Dmitry Chistikov. An introduction to the theory of linear integer arithmetic. In FSTTCS,
+     2024. doi:10.4230/LIPIcs.FSTTCS.2024.1.
+10   Dmitry Chistikov, Christoph Haase, and Alessio Mansutti. Quantifier elimination for counting
+     extensions of Presburger arithmetic. In FoSSaCS, 2022. doi:10.1007/978-3-030-99253-8_12.
+11   Dmitry Chistikov, Alessio Mansutti, and Mikhail R. Starchak. Integer linear-exponential
+     programming in NP by quantifier elimination. In ICALP, 2024. (Full version of this paper:
+     arXiv:2407.07083). doi:10.4230/LIPICS.ICALP.2024.132.
+12   David C. Cooper. Theorem proving in arithmetic without multiplication. Machine Intelligence,
+     1972.
+13   Felipe Cucker, Pascal Koiran, and Steve Smale. A polynomial time algorithm for diophantine
+     equations in one variable. J. Symb. Comput., 1999. doi:10.1006/jsco.1998.0242.
+14   Florian Frohn and Jürgen Giesl. Satisfiability modulo exponential integer arithmetic. In
+     IJCAR, 2024. doi:10.1007/978-3-031-63498-7_21.
+15   John Goodrick. Bounding quantification in parametric expansions of Presburger arithmetic.
+     Arch. Math. Logic, 2018. doi:10.1007/s00153-017-0593-0.
+16   Erich Grädel. Dominoes and the complexity of subclasses of logical theories. Ann. Pure Appl.
+     Log., 1989. doi:10.1016/0168-0072(89)90023-7.
+17   Eitan M. Gurari and Oscar H. Ibarra. An NP-complete number-theoretic problem. J. ACM,
+     26(3):567–581, 1979. doi:10.1145/322139.322152.
+18   Christoph Haase. Subclasses of Presburger arithmetic and the weak EXP hierarchy. In
+     CSL-LICS, pages 47:1–47:10, 2014. doi:10.1145/2603088.2603092.
+19   Christoph Haase. A survival guide to Presburger arithmetic. ACM SIGLOG News, 2018.
+     doi:10.1145/3242953.3242964.
+20   Christoph Haase, Shankara Narayanan Krishna, Khushraj Madnani, Om Swostik Mishra, and
+     Georg Zetzsche. An efficient quantifier elimination procedure for Presburger arithmetic. In
+     ICALP, 2024. doi:10.4230/LIPIcs.ICALP.2024.142.
+21   Peter Habermehl and Dietrich Kuske. On Presburger arithmetic extended with non-unary
+     counting quantifiers. Log. Methods Comput. Sci., 2023. doi:10.46298/lmcs-19(3:4)2023.
+22   Toghrul Karimov, Florian Luca, Joris Nieuwveld, Joël Ouaknine, and James Worrell. On
+     the decidability of presburger arithmetic expanded with powers. In SODA, 2025. doi:
+     10.1137/1.9781611978322.89.
+23   Aless Lasaruk and Thomas Sturm. Effective quantifier elimination for Presburger arithmetic
+     with infinity. In CASC, 2009. doi:10.1007/978-3-642-04103-7_18.
+24   Kenneth L. Manders and Leonard Adleman. NP-complete decision problems for binary
+     quadratics. Journal of Computer and System Sciences, 16(2):168–184, 1978. doi:10.1016/
+     0022-0000(78)90044-2.
+                            2pn
+25   Derek C. Oppen. A 22       upper bound on the complexity of Presburger arithmetic. J. Comput.
+     Syst. Sci., 1978. doi:10.1016/0022-0000(78)90021-1.
+
+
+
+
+                                                                                                      M FC S 2 0 2 5
+72:18   One-Parametric Presburger Arithmetic Has Quantifier Elimination
+
+
+        26   Mojżesz Presburger. Über die Vollständigkeit eines gewissen Systems der Arithmetik ganzer
+             Zahlen, in welchem die Addition als einzige Operation hervortritt. In Comptes Rendus du
+             I Congrès des Mathématiciens des Pays Slaves, pages 92–101. 1929.
+        27   Cattamanchi R. Reddy and Donald W. Loveland. Presburger arithmetic with bounded
+             quantifier alternation. In STOC, 1978. doi:10.1145/800133.804361.
+        28   Mikhail R. Starchak. Positive existential definability with unit, addition and coprimeness. In
+             ISSAC, 2021. doi:10.1145/3452143.3465515.
+        29   Joachim von zur Gathen and Malte Sieveking. A bound on solutions of linear integer equalities
+             and inequalities. Proc. Am. Math. Soc., 1978. doi:10.1090/S0002-9939-1978-0500555-0.
+        30   Volker Weispfenning. The complexity of almost linear Diophantine problems. J. Symb.
+             Comput., 1990. doi:10.1016/S0747-7171(08)80051-X.
+        31   Volker Weispfenning. Complexity and uniformity of elimination in Presburger arithmetic. In
+             ISSAC, pages 48–53, 1997. doi:10.1145/258726.258746.
+

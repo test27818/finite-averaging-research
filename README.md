@@ -2,6 +2,8 @@
 
 **English · [简体中文](README.zh-CN.md) · [Proof guide](docs/PROOF_GUIDE.md) · [Verification](docs/VERIFICATION.md) · [Terminology](docs/TERMINOLOGY.md)**
 
+**Workspace snapshot updated: 2026-10-11.** Start with the [current research index](archive/2026-09-07/3-3-triple-average-research-note/knowledge/START_HERE.md), [claim status](archive/2026-09-07/3-3-triple-average-research-note/knowledge/STATUS.md) and [proof routes](archive/2026-09-07/3-3-triple-average-research-note/knowledge/PROOF_ROUTES.md) for later research and precise boundaries. The sync adds 3,210 source files and updates 10, including the knowledge catalog, independent research, papers and lectures; see the [sync record](catalog/SYNC_2026-10-11.json). The original baseline proofs and earlier verification reports remain available.
+
 **When can rational numbers on fixed positions be made exactly equal by finitely many averaging operations?** Each operation selects exactly $`k`$ distinct positions and replaces all their values by their arithmetic mean. No additional copies or discarded outputs are allowed. This repository studies **perfect mixability**, **mixing graphs**, binary, ternary, prime-arity and general k-ary averaging.
 
 > **Highlights: an independent direct proof for ternary averaging; the optimal final threshold for every prime arity; a precise composite-arity threshold conjecture with a proved universal lower bound and several completed families. Work continues toward more natural, readable and structurally unified proofs, and the remaining composite-arity cases.**
@@ -130,15 +132,17 @@ scripts/             Archive checks and temporary-copy reproduction
 archive/
   2026-09-07/
     3-3-triple-average-research-note/
+      knowledge/     Current claims, dependencies, research routes and navigation
       outputs/       Organized proofs, literature and research history
       research/      Independent structural improvements
       work/          Original verifiers, certificates, exploration and sources
     new-chat-3/      Binary solver and benchmark
   2026-09-09/cha/    Historical document review
   2026-09-10/new-chat/ Paper, algorithm challenges and supplements
+  2026-09-24/c-users-19226-documents-codex-2026/ Prime-averaging lecture sources
 ~~~
 
-**Snapshot: 2026-09-16.** The archive preserves 1,905 source files, including 590 Markdown documents, 479 Python scripts, 42 PDFs and 22 LaTeX sources. Dated paths preserve original imports and cross-workspace references; topic pages give current reading routes. Original research is mainly in Chinese; these English guides are not translations of every proof. Historical notes may contain outdated status or paths; see [provenance and portability](PROVENANCE.md). The archived sources are unchanged by editorial updates.
+**Snapshot: 2026-10-11.** The archive preserves 5,115 source files, including 1,428 Markdown documents, 1,114 Python scripts, 149 PDFs and 191 LaTeX sources. Dated paths preserve original imports and cross-workspace references. Source files are copied byte for byte; previous versions remain in Git history. Original research is mainly in Chinese. Use the current research index above for status, and see [provenance and portability](PROVENANCE.md) for historical paths.
 
 ## Verify the evidence
 
@@ -152,7 +156,7 @@ python -B scripts/build_check_index.py --check
 python -B scripts/reproduce.py --suite review
 ~~~
 
-The [verification guide](docs/VERIFICATION.md) explains commands, scope and dependencies. The [complete review log](catalog/reproduction_review.txt) records actual results. **The latest full review passed the selected mathematical checks but failed one binary Python zero-budget timing-status test.** Its cause and deterministic diagnostic are disclosed in [known issues](docs/KNOWN_ISSUES.md); the run is not labeled all-green.
+The [verification guide](docs/VERIFICATION.md) explains commands, scope and dependencies. The [complete review log](catalog/reproduction_review.txt) records actual results. **The full review recorded on 2026-09-16 passed the selected mathematical checks but failed one binary Python zero-budget timing-status test.** Its cause and deterministic diagnostic are disclosed in [known issues](docs/KNOWN_ISSUES.md); the run is not labeled all-green.
 
 The binary [offline webpage](archive/2026-09-07/new-chat-3/averaging_benchmark/solver.html) can be downloaded and opened directly. Some additional scripts require [optional dependencies](requirements.txt). Archive integrity, exact finite verification and general mathematical proof are different levels of evidence.
 

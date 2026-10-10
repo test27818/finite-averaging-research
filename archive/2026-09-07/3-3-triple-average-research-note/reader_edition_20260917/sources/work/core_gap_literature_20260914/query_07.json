@@ -1,0 +1,2359 @@
+{
+  "query": "paired Jacobsthal function",
+  "url": "https://api.openalex.org/works?search=paired+Jacobsthal+function&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Cauthorships%2Cabstract_inverted_index%2Cprimary_location%2Copen_access",
+  "count": 420,
+  "results": [
+    {
+      "id": "https://openalex.org/W2139878845",
+      "title": "Crosscorrelation of m-sequences, exponential sums, bent functions and Jacobsthal sums",
+      "publication_date": "2011-06-29",
+      "doi": "https://doi.org/10.1007/s12095-011-0048-0",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5026698531",
+            "display_name": "Tor Helleseth",
+            "orcid": "https://orcid.org/0000-0003-1290-3541"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4432739",
+              "display_name": "University of Bergen",
+              "ror": "https://ror.org/03zga2b32",
+              "country_code": "NO",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4432739"
+              ]
+            }
+          ],
+          "countries": [
+            "NO"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Tor Helleseth",
+          "raw_affiliation_strings": [
+            "The Selmer Center, Department of Informatics, University of Bergen, PB 7800, 5020, Bergen, Norway",
+            "The Selmer Center, Department of Informatics, University of Bergen, Bergen, Norway 5020#TAB#"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "The Selmer Center, Department of Informatics, University of Bergen, PB 7800, 5020, Bergen, Norway",
+              "institution_ids": [
+                "https://openalex.org/I4432739"
+              ]
+            },
+            {
+              "raw_affiliation_string": "The Selmer Center, Department of Informatics, University of Bergen, Bergen, Norway 5020#TAB#",
+              "institution_ids": [
+                "https://openalex.org/I4432739"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5045469952",
+            "display_name": "Alexander Kholosha",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4432739",
+              "display_name": "University of Bergen",
+              "ror": "https://ror.org/03zga2b32",
+              "country_code": "NO",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4432739"
+              ]
+            }
+          ],
+          "countries": [
+            "NO"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Alexander Kholosha",
+          "raw_affiliation_strings": [
+            "The Selmer Center, Department of Informatics, University of Bergen, PB 7800, 5020, Bergen, Norway",
+            "The Selmer Center, Department of Informatics, University of Bergen, Bergen, Norway 5020#TAB#"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "The Selmer Center, Department of Informatics, University of Bergen, PB 7800, 5020, Bergen, Norway",
+              "institution_ids": [
+                "https://openalex.org/I4432739"
+              ]
+            },
+            {
+              "raw_affiliation_string": "The Selmer Center, Department of Informatics, University of Bergen, Bergen, Norway 5020#TAB#",
+              "institution_ids": [
+                "https://openalex.org/I4432739"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "The": [
+          0
+        ],
+        "crosscorrelation": [
+          1,
+          60
+        ],
+        "of": [
+          2,
+          37,
+          46,
+          78,
+          80
+        ],
+        "maximal": [
+          3
+        ],
+        "length": [
+          4
+        ],
+        "linear": [
+          5
+        ],
+        "shift": [
+          6
+        ],
+        "register": [
+          7
+        ],
+        "sequences": [
+          8
+        ],
+        "is": [
+          9,
+          22
+        ],
+        "a": [
+          10,
+          44,
+          76
+        ],
+        "well-studied": [
+          11
+        ],
+        "problem": [
+          12,
+          21
+        ],
+        "that": [
+          13,
+          55,
+          63
+        ],
+        "has": [
+          14,
+          42
+        ],
+        "many": [
+          15,
+          26
+        ],
+        "applications": [
+          16
+        ],
+        "in": [
+          17
+        ],
+        "sequence": [
+          18
+        ],
+        "designs.": [
+          19
+        ],
+        "This": [
+          20,
+          73
+        ],
+        "known": [
+          23
+        ],
+        "to": [
+          24,
+          29,
+          58,
+          65
+        ],
+        "have": [
+          25,
+          52
+        ],
+        "important": [
+          27
+        ],
+        "connections": [
+          28,
+          67
+        ],
+        "exponential": [
+          30
+        ],
+        "sums.": [
+          31,
+          72
+        ],
+        "In": [
+          32
+        ],
+        "recent": [
+          33
+        ],
+        "years,": [
+          34
+        ],
+        "the": [
+          35,
+          59
+        ],
+        "study": [
+          36
+        ],
+        "p": [
+          38
+        ],
+        "-ary": [
+          39
+        ],
+        "bent": [
+          40
+        ],
+        "functions": [
+          41,
+          51
+        ],
+        "received": [
+          43
+        ],
+        "lot": [
+          45
+        ],
+        "attention": [
+          47
+        ],
+        "and": [
+          48,
+          62,
+          68
+        ],
+        "several": [
+          49
+        ],
+        "new": [
+          50,
+          66
+        ],
+        "been": [
+          53
+        ],
+        "found": [
+          54
+        ],
+        "are": [
+          56
+        ],
+        "related": [
+          57
+        ],
+        "function": [
+          61
+        ],
+        "lead": [
+          64
+        ],
+        "problems": [
+          69
+        ],
+        "on": [
+          70
+        ],
+        "Jacobsthal": [
+          71
+        ],
+        "paper": [
+          74
+        ],
+        "gives": [
+          75
+        ],
+        "survey": [
+          77
+        ],
+        "some": [
+          79
+        ],
+        "these": [
+          81
+        ],
+        "connections.": [
+          82
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1007/s12095-011-0048-0",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1007/s12095-011-0048-0",
+        "pdf_url": "https://link.springer.com/content/pdf/10.1007/s12095-011-0048-0.pdf",
+        "source": {
+          "id": "https://openalex.org/S129219326",
+          "display_name": "Cryptography and Communications",
+          "issn_l": "1936-2447",
+          "issn": [
+            "1936-2447",
+            "1936-2455"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310319900",
+          "host_organization_name": "Springer Science+Business Media",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310319900",
+            "https://openalex.org/P4310319965"
+          ],
+          "host_organization_lineage_names": [
+            "Springer Science+Business Media",
+            "Springer Nature"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by-nc",
+        "license_id": "https://openalex.org/licenses/cc-by-nc",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Cryptography and Communications",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://link.springer.com/content/pdf/10.1007/s12095-011-0048-0.pdf",
+        "any_repository_has_fulltext": false
+      }
+    },
+    {
+      "id": "https://openalex.org/W2022632371",
+      "title": "Disproof of a conjecture of Jacobsthal",
+      "publication_date": "2012-03-26",
+      "doi": "https://doi.org/10.1090/s0025-5718-2012-02581-6",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5022149317",
+            "display_name": "Lajos Hajdu",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I132735039",
+              "display_name": "University of Debrecen",
+              "ror": "https://ror.org/02xf66n48",
+              "country_code": "HU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I132735039"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I7597260",
+              "display_name": "Hungarian Academy of Sciences",
+              "ror": "https://ror.org/02ks8qq67",
+              "country_code": "HU",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I7597260"
+              ]
+            }
+          ],
+          "countries": [
+            "HU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "L. Hajdu",
+          "raw_affiliation_strings": [
+            "University of Debrecen, Institute of Mathematics, and the Number Theory Research Group of the Hungarian Academy of Sciences, P.O. Box 12., H-4010 Debrecen, Hungary",
+            "University of Debrecen, Institute of Mathematics, and the Number Theory Research Group of the Hungarian Academy of Sciences, P.O. Box 12, H-4010 Debrecen, Hungary"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Debrecen, Institute of Mathematics, and the Number Theory Research Group of the Hungarian Academy of Sciences, P.O. Box 12., H-4010 Debrecen, Hungary",
+              "institution_ids": [
+                "https://openalex.org/I132735039",
+                "https://openalex.org/I7597260"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Debrecen, Institute of Mathematics, and the Number Theory Research Group of the Hungarian Academy of Sciences, P.O. Box 12, H-4010 Debrecen, Hungary",
+              "institution_ids": [
+                "https://openalex.org/I132735039",
+                "https://openalex.org/I7597260"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5011771098",
+            "display_name": "N. Saradha",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I11947397",
+              "display_name": "Tata Institute of Fundamental Research",
+              "ror": "https://ror.org/03ht1xw27",
+              "country_code": "IN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I11947397",
+                "https://openalex.org/I2799351866",
+                "https://openalex.org/I3149292468"
+              ]
+            }
+          ],
+          "countries": [
+            "IN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "N. Saradha",
+          "raw_affiliation_strings": [
+            "School of Mathematics, Tata Institute of Fundamental Research, Dr. Homibhabha Road, Colaba, Mumbai, India",
+            "School of Mathematics Tata Institute of Fundamental Research Dr. Homibhabha Road Colaba, Mumbai, India"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Mathematics, Tata Institute of Fundamental Research, Dr. Homibhabha Road, Colaba, Mumbai, India",
+              "institution_ids": [
+                "https://openalex.org/I11947397"
+              ]
+            },
+            {
+              "raw_affiliation_string": "School of Mathematics Tata Institute of Fundamental Research Dr. Homibhabha Road Colaba, Mumbai, India",
+              "institution_ids": [
+                "https://openalex.org/I11947397"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "For": [
+          0
+        ],
+        "any": [
+          1,
+          42
+        ],
+        "integer": [
+          2,
+          43
+        ],
+        "n": [
+          3,
+          12,
+          22,
+          33,
+          34,
+          56,
+          60,
+          61,
+          70,
+          79,
+          80
+        ],
+        "≥": [
+          4,
+          45
+        ],
+        "1": [
+          5,
+          7,
+          46,
+          48
+        ],
+        "n\\geq": [
+          6
+        ],
+        ",": [
+          8,
+          49,
+          109
+        ],
+        "let": [
+          9
+        ],
+        "j": [
+          10,
+          54
+        ],
+        "(": [
+          11,
+          21,
+          55,
+          69
+        ],
+        ")": [
+          13,
+          23,
+          57,
+          71
+        ],
+        "j(n)": [
+          14,
+          58
+        ],
+        "denote": [
+          15
+        ],
+        "the": [
+          16,
+          26,
+          50,
+          82,
+          85
+        ],
+        "Jacobsthal": [
+          17,
+          38
+        ],
+        "function,": [
+          18
+        ],
+        "and": [
+          19,
+          102
+        ],
+        "ω": [
+          20,
+          68
+        ],
+        "\\omega": [
+          24,
+          74
+        ],
+        "(n)": [
+          25
+        ],
+        "number": [
+          27
+        ],
+        "of": [
+          28,
+          32,
+          53,
+          84
+        ],
+        "distinct": [
+          29
+        ],
+        "prime": [
+          30
+        ],
+        "divisors": [
+          31
+        ],
+        ".": [
+          35
+        ],
+        "In": [
+          36
+        ],
+        "1962": [
+          37
+        ],
+        "conjectured": [
+          39
+        ],
+        "that": [
+          40,
+          92
+        ],
+        "for": [
+          41,
+          96
+        ],
+        "r": [
+          44,
+          73,
+          87,
+          88,
+          97,
+          105
+        ],
+        "r\\geq": [
+          47
+        ],
+        "maximal": [
+          51
+        ],
+        "value": [
+          52
+        ],
+        "when": [
+          59,
+          78
+        ],
+        "varies": [
+          62
+        ],
+        "over": [
+          63
+        ],
+        "N": [
+          64
+        ],
+        "{\\mathbb": [
+          65
+        ],
+        "N}": [
+          66
+        ],
+        "with": [
+          67
+        ],
+        "=": [
+          72,
+          106
+        ],
+        "(n)=r": [
+          75
+        ],
+        "is": [
+          76,
+          81,
+          94
+        ],
+        "attained": [
+          77
+        ],
+        "product": [
+          83
+        ],
+        "first": [
+          86
+        ],
+        "primes.": [
+          89
+        ],
+        "We": [
+          90
+        ],
+        "show": [
+          91
+        ],
+        "this": [
+          93
+        ],
+        "true": [
+          95
+        ],
+        "≤": [
+          98
+        ],
+        "23": [
+          99,
+          101
+        ],
+        "r\\leq": [
+          100
+        ],
+        "fails": [
+          103
+        ],
+        "at": [
+          104
+        ],
+        "24": [
+          107
+        ],
+        "r=24": [
+          108
+        ],
+        "thus": [
+          110
+        ],
+        "disproving": [
+          111
+        ],
+        "Jacobsthal’s": [
+          112
+        ],
+        "conjecture.": [
+          113
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1090/s0025-5718-2012-02581-6",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1090/s0025-5718-2012-02581-6",
+        "pdf_url": "https://www.ams.org/mcom/2012-81-280/S0025-5718-2012-02581-6/S0025-5718-2012-02581-6.pdf",
+        "source": {
+          "id": "https://openalex.org/S102439543",
+          "display_name": "Mathematics of Computation",
+          "issn_l": "0025-5718",
+          "issn": [
+            "0025-5718",
+            "1088-6842"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310315719",
+          "host_organization_name": "American Mathematical Society",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310315719"
+          ],
+          "host_organization_lineage_names": [
+            "American Mathematical Society"
+          ],
+          "type": "journal"
+        },
+        "license": "public-domain",
+        "license_id": "https://openalex.org/licenses/public-domain",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Mathematics of Computation",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://www.ams.org/mcom/2012-81-280/S0025-5718-2012-02581-6/S0025-5718-2012-02581-6.pdf",
+        "any_repository_has_fulltext": true
+      }
+    },
+    {
+      "id": "https://openalex.org/W2972564875",
+      "title": "On characteristic polynomial of higher order generalized Jacobsthal numbers",
+      "publication_date": "2019-09-11",
+      "doi": "https://doi.org/10.1186/s13662-019-2327-6",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5082327574",
+            "display_name": "Diego Marques",
+            "orcid": "https://orcid.org/0000-0002-5663-3785"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I150729083",
+              "display_name": "Universidade de Brasília",
+              "ror": "https://ror.org/02xfp8v59",
+              "country_code": "BR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I150729083"
+              ]
+            }
+          ],
+          "countries": [
+            "BR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Diego Marques",
+          "raw_affiliation_strings": [
+            "Departemento de Matemática, Universidade de Brasília, Brasília, Brazil"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Departemento de Matemática, Universidade de Brasília, Brasília, Brazil",
+              "institution_ids": [
+                "https://openalex.org/I150729083"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5072631017",
+            "display_name": "Pavel Trojovský",
+            "orcid": "https://orcid.org/0000-0001-8992-125X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I75092371",
+              "display_name": "University of Hradec Králové",
+              "ror": "https://ror.org/05k238v14",
+              "country_code": "CZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I75092371"
+              ]
+            }
+          ],
+          "countries": [
+            "CZ"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Pavel Trojovský",
+          "raw_affiliation_strings": [
+            "Faculty of Science, University of Hradec Králové, Hradec Králové, Czech Republic"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-8992-125X",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Faculty of Science, University of Hradec Králové, Hradec Králové, Czech Republic",
+              "institution_ids": [
+                "https://openalex.org/I75092371"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "Abstract": [
+          0
+        ],
+        "In": [
+          1,
+          52
+        ],
+        "this": [
+          2
+        ],
+        "paper,": [
+          3
+        ],
+        "we": [
+          4,
+          54,
+          66
+        ],
+        "study": [
+          5
+        ],
+        "a": [
+          6,
+          44
+        ],
+        "higher": [
+          7
+        ],
+        "order": [
+          8
+        ],
+        "generalization": [
+          9
+        ],
+        "of": [
+          10,
+          59
+        ],
+        "the": [
+          11,
+          15,
+          75,
+          79
+        ],
+        "Jacobsthal": [
+          12
+        ],
+        "sequence,": [
+          13
+        ],
+        "namely,": [
+          14
+        ],
+        "$(k,c)$": [
+          16
+        ],
+        "(": [
+          17,
+          25,
+          28
+        ],
+        "k": [
+          18,
+          29,
+          40
+        ],
+        ",": [
+          19,
+          30
+        ],
+        "c": [
+          20,
+          31,
+          48
+        ],
+        ")": [
+          21,
+          32,
+          33
+        ],
+        "-Jacobsthal": [
+          22
+        ],
+        "sequence": [
+          23
+        ],
+        "$(J^{(k,c)}_{n})$": [
+          24
+        ],
+        "J": [
+          26
+        ],
+        "n": [
+          27
+        ],
+        "for": [
+          34
+        ],
+        "any": [
+          35
+        ],
+        "integers": [
+          36
+        ],
+        "n,": [
+          37
+        ],
+        "$k\\geq": [
+          38
+        ],
+        "2$": [
+          39
+        ],
+        "≥": [
+          41
+        ],
+        "2": [
+          42
+        ],
+        "and": [
+          43,
+          78
+        ],
+        "real": [
+          45
+        ],
+        "number": [
+          46
+        ],
+        "$c>0$": [
+          47
+        ],
+        ">": [
+          49
+        ],
+        "0": [
+          50
+        ],
+        ".": [
+          51
+        ],
+        "particular,": [
+          53
+        ],
+        "find": [
+          55
+        ],
+        "information": [
+          56
+        ],
+        "about": [
+          57
+        ],
+        "roots": [
+          58
+        ],
+        "its": [
+          60
+        ],
+        "characteristic": [
+          61
+        ],
+        "polynomial.": [
+          62
+        ],
+        "For": [
+          63
+        ],
+        "that": [
+          64
+        ],
+        "purpose,": [
+          65
+        ],
+        "combine": [
+          67
+        ],
+        "some": [
+          68
+        ],
+        "powerful": [
+          69
+        ],
+        "tools": [
+          70
+        ],
+        "such": [
+          71
+        ],
+        "as": [
+          72
+        ],
+        "Marden’s": [
+          73
+        ],
+        "method,": [
+          74
+        ],
+        "Perron–Frobenius": [
+          76
+        ],
+        "theorem,": [
+          77
+        ],
+        "Eneström–Kakeya": [
+          80
+        ],
+        "theorem.": [
+          81
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.1186/s13662-019-2327-6",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1186/s13662-019-2327-6",
+        "pdf_url": "https://advancesindifferenceequations.springeropen.com/track/pdf/10.1186/s13662-019-2327-6",
+        "source": {
+          "id": "https://openalex.org/S169017477",
+          "display_name": "Advances in Difference Equations",
+          "issn_l": "1687-1839",
+          "issn": [
+            "1687-1839",
+            "1687-1847"
+          ],
+          "is_oa": true,
+          "is_in_doaj": true,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310319965",
+          "host_organization_name": "Springer Nature",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310319965"
+          ],
+          "host_organization_lineage_names": [
+            "Springer Nature"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Advances in Difference Equations",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://advancesindifferenceequations.springeropen.com/track/pdf/10.1186/s13662-019-2327-6",
+        "any_repository_has_fulltext": true
+      }
+    },
+    {
+      "id": "https://openalex.org/W4210494627",
+      "title": "Fibonacci–Lucas–Pell–Jacobsthal relations",
+      "publication_date": "2022-01-01",
+      "doi": "https://doi.org/10.33039/ami.2022.01.002",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5015924206",
+            "display_name": "Robert Frontczak",
+            "orcid": "https://orcid.org/0000-0002-9373-5297"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Robert Frontczak",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5082059950",
+            "display_name": "Taras Goy",
+            "orcid": "https://orcid.org/0000-0002-6212-3095"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Taras Goy",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5028347723",
+            "display_name": "Mark Shattuck",
+            "orcid": "https://orcid.org/0000-0001-7441-1759"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Mark Shattuck",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "abstract_inverted_index": {
+        "In": [
+          0
+        ],
+        "this": [
+          1
+        ],
+        "paper,": [
+          2
+        ],
+        "we": [
+          3,
+          38
+        ],
+        "prove": [
+          4
+        ],
+        "several": [
+          5
+        ],
+        "identities": [
+          6,
+          44,
+          84
+        ],
+        "involving": [
+          7
+        ],
+        "linear": [
+          8
+        ],
+        "combinations": [
+          9
+        ],
+        "of": [
+          10,
+          12,
+          27,
+          63,
+          78,
+          103
+        ],
+        "convolutions": [
+          11
+        ],
+        "the": [
+          13,
+          50,
+          72,
+          79,
+          104
+        ],
+        "generalized": [
+          14
+        ],
+        "Fibonacci": [
+          15
+        ],
+        "and": [
+          16,
+          56,
+          75
+        ],
+        "Lucas": [
+          17
+        ],
+        "sequences.": [
+          18,
+          59,
+          81
+        ],
+        "Our": [
+          19
+        ],
+        "results": [
+          20
+        ],
+        "apply": [
+          21
+        ],
+        "more": [
+          22
+        ],
+        "generally": [
+          23
+        ],
+        "to": [
+          24,
+          66,
+          98
+        ],
+        "broader": [
+          25
+        ],
+        "classes": [
+          26
+        ],
+        "second-order": [
+          28
+        ],
+        "linearly": [
+          29
+        ],
+        "recurrent": [
+          30
+        ],
+        "sequences": [
+          31,
+          48
+        ],
+        "with": [
+          32
+        ],
+        "constant": [
+          33
+        ],
+        "coefficients.": [
+          34
+        ],
+        "As": [
+          35
+        ],
+        "a": [
+          36,
+          99
+        ],
+        "consequence,": [
+          37
+        ],
+        "obtain": [
+          39
+        ],
+        "as": [
+          40
+        ],
+        "special": [
+          41
+        ],
+        "cases": [
+          42
+        ],
+        "many": [
+          43
+        ],
+        "relating": [
+          45
+        ],
+        "exactly": [
+          46
+        ],
+        "four": [
+          47
+        ],
+        "amongst": [
+          49
+        ],
+        "Fibonacci,": [
+          51
+        ],
+        "Lucas,": [
+          52
+        ],
+        "Pell,": [
+          53
+        ],
+        "Pell–Lucas,": [
+          54
+        ],
+        "Jacobsthal,": [
+          55
+        ],
+        "Jacobsthal–Lucas": [
+          57
+        ],
+        "number": [
+          58
+        ],
+        "We": [
+          60
+        ],
+        "make": [
+          61
+        ],
+        "use": [
+          62
+        ],
+        "algebraic": [
+          64
+        ],
+        "arguments": [
+          65
+        ],
+        "establish": [
+          67
+        ],
+        "our": [
+          68,
+          83
+        ],
+        "results,": [
+          69
+        ],
+        "frequently": [
+          70
+        ],
+        "employing": [
+          71
+        ],
+        "Binet-like": [
+          73
+        ],
+        "formulas": [
+          74
+        ],
+        "generating": [
+          76
+        ],
+        "functions": [
+          77
+        ],
+        "corresponding": [
+          80
+        ],
+        "Finally,": [
+          82
+        ],
+        "above": [
+          85
+        ],
+        "may": [
+          86
+        ],
+        "be": [
+          87
+        ],
+        "extended": [
+          88
+        ],
+        "so": [
+          89
+        ],
+        "that": [
+          90
+        ],
+        "they": [
+          91
+        ],
+        "include": [
+          92
+        ],
+        "only": [
+          93
+        ],
+        "terms": [
+          94
+        ],
+        "whose": [
+          95
+        ],
+        "subscripts": [
+          96
+        ],
+        "belong": [
+          97
+        ],
+        "given": [
+          100
+        ],
+        "arithmetic": [
+          101
+        ],
+        "progression": [
+          102
+        ],
+        "non-negative": [
+          105
+        ],
+        "integers.": [
+          106
+        ]
+      },
+      "primary_location": {
+        "id": "doi:10.33039/ami.2022.01.002",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.33039/ami.2022.01.002",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S4210231701",
+          "display_name": "Az Eszterházy Károly Tanárképző Főiskola tudományos közleményei. Tanulmányok a matematikai tudományok köréből/Az Eszterházy Károly Főiskola tudományos közleményei. Tanulmányok a matematikai tudományok köréből/Annales mathematicae et informaticae",
+          "issn_l": "1216-6014",
+          "issn": [
+            "1216-6014",
+            "1589-6498",
+            "1787-5021",
+            "1787-6117"
+          ],
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": null,
+          "host_organization_name": null,
+          "host_organization_lineage": [],
+          "host_organization_lineage_names": [],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Annales Mathematicae et Informaticae",
+        "raw_type": "journal-article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "diamond",
+        "oa_url": "https://doi.org/10.33039/ami.2022.01.002",
+        "any_repository_has_fulltext": true
+      }
+    },
+    {
+      "id": "https://openalex.org/W2768319650",
+      "title": "Jacobsthal-Lucas series and their applications",
+      "publication_date": "2017-10-07",
+      "doi": null,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5108296316",
+            "display_name": "Mykola Pratsiovytyi",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I155627368",
+              "display_name": "Pedagogical University",
+              "ror": "https://ror.org/0331kj160",
+              "country_code": "MZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I155627368"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I3131271221",
+              "display_name": "Dragomanov Ukrainian State University",
+              "ror": "https://ror.org/00batt813",
+              "country_code": "UA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I3131271221"
+              ]
+            }
+          ],
+          "countries": [
+            "MZ",
+            "UA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Mykola Pratsiovytyi",
+          "raw_affiliation_strings": [
+            "National Dragomanov Pedagogical University"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "National Dragomanov Pedagogical University",
+              "institution_ids": [
+                "https://openalex.org/I155627368",
+                "https://openalex.org/I3131271221"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5030945298",
+            "display_name": "Dmitriy Karvatsky",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I155627368",
+              "display_name": "Pedagogical University",
+              "ror": "https://ror.org/0331kj160",
+              "country_code": "MZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I155627368"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I3131271221",
+              "display_name": "Dragomanov Ukrainian State University",
+              "ror": "https://ror.org/00batt813",
+              "country_code": "UA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I3131271221"
+              ]
+            }
+          ],
+          "countries": [
+            "MZ",
+            "UA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Dmitriy Karvatsky",
+          "raw_affiliation_strings": [
+            "National Dragomanov Pedagogical University"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "National Dragomanov Pedagogical University",
+              "institution_ids": [
+                "https://openalex.org/I155627368",
+                "https://openalex.org/I3131271221"
+              ]
+            }
+          ]
+        }
+      ],
+      "abstract_inverted_index": {
+        "In": [
+          0,
+          22
+        ],
+        "this": [
+          1,
+          48
+        ],
+        "paper": [
+          2
+        ],
+        "we": [
+          3,
+          24,
+          60
+        ],
+        "study": [
+          4,
+          61
+        ],
+        "the": [
+          5,
+          17,
+          26,
+          29,
+          42
+        ],
+        "properties": [
+          6,
+          27
+        ],
+        "of": [
+          7,
+          16,
+          19,
+          28,
+          31,
+          44,
+          47,
+          55,
+          65
+        ],
+        "positive": [
+          8,
+          56
+        ],
+        "series": [
+          9,
+          49
+        ],
+        "such": [
+          10
+        ],
+        "that": [
+          11,
+          41
+        ],
+        "its": [
+          12
+        ],
+        "terms": [
+          13
+        ],
+        "are": [
+          14
+        ],
+        "reciprocals": [
+          15
+        ],
+        "elements": [
+          18
+        ],
+        "Jacobsthal-Lucas": [
+          20,
+          70
+        ],
+        "sequence.": [
+          21,
+          71
+        ],
+        "particular,": [
+          23
+        ],
+        "consider": [
+          25
+        ],
+        "set": [
+          30,
+          43,
+          54
+        ],
+        "incomplete": [
+          32,
+          45
+        ],
+        "sums": [
+          33,
+          46
+        ],
+        "as": [
+          34,
+          36
+        ],
+        "well": [
+          35
+        ],
+        "their": [
+          37
+        ],
+        "applications.": [
+          38
+        ],
+        "We": [
+          39
+        ],
+        "prove": [
+          40
+        ],
+        "is": [
+          50
+        ],
+        "a": [
+          51
+        ],
+        "nowhere": [
+          52
+        ],
+        "dense": [
+          53
+        ],
+        "Lebesgue": [
+          57
+        ],
+        "measure.": [
+          58
+        ],
+        "Also": [
+          59
+        ],
+        "singular": [
+          62
+        ],
+        "random": [
+          63
+        ],
+        "variables": [
+          64
+        ],
+        "Cantor": [
+          66
+        ],
+        "type": [
+          67
+        ],
+        "related": [
+          68
+        ],
+        "to": [
+          69
+        ]
+      },
+      "primary_location": {
+        "id": "pmh:oai:dspace.nbuv.gov.ua:123456789/156645",
+        "is_oa": true,
+        "landing_page_url": "http://dspace.nbuv.gov.ua/handle/123456789/156645",
+        "pdf_url": "http://dspace.nbuv.gov.ua/handle/123456789/156645",
+        "source": {
+          "id": "https://openalex.org/S4306401959",
+          "display_name": "The scientific electronic library of periodicals of the National Academy of Sciences of Ukraine (National Academy of Sciences of Ukraine)",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I149851306",
+          "host_organization_name": "National Academy of Sciences of Ukraine",
+          "host_organization_lineage": [
+            "https://openalex.org/I149851306"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": "",
+        "raw_type": "Article"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "http://dspace.nbuv.gov.ua/handle/123456789/156645",
+        "any_repository_has_fulltext": true
+      }
+    },
+    {
+      "id": "https://openalex.org/W2626632417",
+      "title": "A short note on the computation of the generalised Jacobsthal function for paired progressions",
+      "publication_date": "2017-06-12",
+      "doi": "https://doi.org/10.48550/arxiv.1706.03668",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5113819537",
+            "display_name": "Mario Ziller",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Ziller, Mario",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5046785769",
+            "display_name": "John F. Morack",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Morack, John F.",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "abstract_inverted_index": {
+        "Jacobsthal's": [
+          0
+        ],
+        "function": [
+          1,
+          20,
+          54,
+          60
+        ],
+        "was": [
+          2,
+          12
+        ],
+        "recently": [
+          3
+        ],
+        "generalised": [
+          4
+        ],
+        "for": [
+          5,
+          23,
+          43,
+          61,
+          64
+        ],
+        "the": [
+          6,
+          24,
+          31,
+          44,
+          47,
+          57,
+          73,
+          88,
+          92
+        ],
+        "case": [
+          7
+        ],
+        "of": [
+          8,
+          18,
+          26,
+          30,
+          46,
+          56,
+          87
+        ],
+        "paired": [
+          9,
+          58
+        ],
+        "progressions.": [
+          10
+        ],
+        "It": [
+          11
+        ],
+        "proven": [
+          13
+        ],
+        "that": [
+          14
+        ],
+        "a": [
+          15,
+          84
+        ],
+        "specific": [
+          16,
+          75
+        ],
+        "bound": [
+          17
+        ],
+        "this": [
+          19,
+          80
+        ],
+        "is": [
+          21
+        ],
+        "sufficient": [
+          22
+        ],
+        "truth": [
+          25
+        ],
+        "Goldbach's": [
+          27
+        ],
+        "conjecture": [
+          28,
+          34
+        ],
+        "and": [
+          29,
+          39,
+          51,
+          91
+        ],
+        "prime": [
+          32
+        ],
+        "pairs": [
+          33
+        ],
+        "as": [
+          35
+        ],
+        "well.": [
+          36
+        ],
+        "We": [
+          37
+        ],
+        "extended": [
+          38
+        ],
+        "adapted": [
+          40
+        ],
+        "algorithms": [
+          41
+        ],
+        "described": [
+          42
+        ],
+        "computation": [
+          45
+        ],
+        "common": [
+          48
+        ],
+        "Jacobsthal": [
+          49,
+          59
+        ],
+        "function,": [
+          50
+        ],
+        "computed": [
+          52
+        ],
+        "respective": [
+          53
+        ],
+        "values": [
+          55,
+          71
+        ],
+        "primorial": [
+          62
+        ],
+        "numbers": [
+          63
+        ],
+        "primes": [
+          65
+        ],
+        "up": [
+          66
+        ],
+        "to": [
+          67,
+          79
+        ],
+        "73.": [
+          68
+        ],
+        "All": [
+          69
+        ],
+        "these": [
+          70
+        ],
+        "fulfil": [
+          72
+        ],
+        "conjectured": [
+          74
+        ],
+        "bound.": [
+          76
+        ],
+        "In": [
+          77
+        ],
+        "addition": [
+          78
+        ],
+        "note,": [
+          81
+        ],
+        "we": [
+          82
+        ],
+        "provide": [
+          83
+        ],
+        "detailed": [
+          85
+        ],
+        "review": [
+          86
+        ],
+        "algorithmic": [
+          89
+        ],
+        "approaches": [
+          90
+        ],
+        "complete": [
+          93
+        ],
+        "computational": [
+          94
+        ],
+        "results": [
+          95
+        ],
+        "in": [
+          96
+        ],
+        "ancillary": [
+          97
+        ],
+        "files.": [
+          98
+        ]
+      },
+      "primary_location": {
+        "id": "pmh:oai:arXiv.org:1706.03668",
+        "is_oa": true,
+        "landing_page_url": "http://arxiv.org/abs/1706.03668",
+        "pdf_url": "https://arxiv.org/pdf/1706.03668",
+        "source": {
+          "id": "https://openalex.org/S4306400194",
+          "display_name": "arXiv (Cornell University)",
+          "issn_l": "2331-8422",
+          "issn": [
+            "2331-8422"
+          ],
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I205783295",
+          "host_organization_name": "Cornell University",
+          "host_organization_lineage": [
+            "https://openalex.org/I205783295"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": null,
+        "raw_type": "text"
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/1706.03668",
+        "any_repository_has_fulltext": true
+      }
+    },
+    {
+      "id": "https://openalex.org/W4293153241",
+      "title": "A short note on the computation of the generalised Jacobsthal function\\n for paired progressions",
+      "publication_date": "2017-06-12",
+      "doi": "https://doi.org/10.48550/arxiv.1706.03668",
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5113819537",
+            "display_name": "Mario Ziller",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Ziller, Mario",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5046785769",
+            "display_name": "John F. Morack",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Morack, John F.",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "abstract_inverted_index": {
+        "Jacobsthal's": [
+          0
+        ],
+        "function": [
+          1,
+          19,
+          55
+        ],
+        "was": [
+          2,
+          11
+        ],
+        "recently": [
+          3
+        ],
+        "generalised": [
+          4
+        ],
+        "for": [
+          5,
+          21,
+          40,
+          56,
+          59
+        ],
+        "the": [
+          6,
+          22,
+          29,
+          43,
+          52,
+          67,
+          81
+        ],
+        "case": [
+          7
+        ],
+        "of": [
+          8,
+          17,
+          24,
+          28,
+          42,
+          51,
+          80
+        ],
+        "paired\\nprogressions.": [
+          9
+        ],
+        "It": [
+          10
+        ],
+        "proven": [
+          12
+        ],
+        "that": [
+          13
+        ],
+        "a": [
+          14,
+          77
+        ],
+        "specific": [
+          15,
+          69
+        ],
+        "bound": [
+          16
+        ],
+        "this": [
+          18
+        ],
+        "is\\nsufficient": [
+          20
+        ],
+        "truth": [
+          23
+        ],
+        "Goldbach's": [
+          25
+        ],
+        "conjecture": [
+          26
+        ],
+        "and": [
+          27,
+          36,
+          47,
+          84
+        ],
+        "prime": [
+          30
+        ],
+        "pairs\\nconjecture": [
+          31
+        ],
+        "as": [
+          32
+        ],
+        "well.": [
+          33
+        ],
+        "We": [
+          34
+        ],
+        "extended": [
+          35
+        ],
+        "adapted": [
+          37
+        ],
+        "algorithms": [
+          38
+        ],
+        "described": [
+          39
+        ],
+        "the\\ncomputation": [
+          41
+        ],
+        "common": [
+          44
+        ],
+        "Jacobsthal": [
+          45,
+          54
+        ],
+        "function,": [
+          46
+        ],
+        "computed": [
+          48
+        ],
+        "respective": [
+          49
+        ],
+        "function\\nvalues": [
+          50
+        ],
+        "paired": [
+          53
+        ],
+        "primorial": [
+          57
+        ],
+        "numbers": [
+          58
+        ],
+        "primes": [
+          60
+        ],
+        "up": [
+          61
+        ],
+        "to\\n73.": [
+          62
+        ],
+        "All": [
+          63
+        ],
+        "these": [
+          64
+        ],
+        "values": [
+          65
+        ],
+        "fulfil": [
+          66
+        ],
+        "conjectured": [
+          68
+        ],
+        "bound.": [
+          70
+        ],
+        "In": [
+          71
+        ],
+        "addition": [
+          72
+        ],
+        "to": [
+          73
+        ],
+        "this\\nnote,": [
+          74
+        ],
+        "we": [
+          75
+        ],
+        "provide": [
+          76
+        ],
+        "detailed": [
+          78
+        ],
+        "review": [
+          79
+        ],
+        "algorithmic": [
+          82
+        ],
+        "approaches": [
+          83
+        ],
+        "the\\ncomplete": [
+          85
+        ],
+        "computational": [
+          86
+        ],
+        "results": [
+          87
+        ],
+        "in": [
+          88
+        ],
+        "ancillary": [
+          89
+        ],
+        "files.\\n": [
+          90
+        ]
+      },
+      "primary_location": {
+        "id": "pmh:oai:arXiv.org:1706.03668",
+        "is_oa": true,
+        "landing_page_url": "http://arxiv.org/abs/1706.03668",
+        "pdf_url": "https://arxiv.org/pdf/1706.03668",
+        "source": {
+          "id": "https://openalex.org/S4306400194",
+          "display_name": "arXiv (Cornell University)",
+          "issn_l": "2331-8422",
+          "issn": [
+            "2331-8422"
+          ],
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I205783295",
+          "host_organization_name": "Cornell University",
+          "host_organization_lineage": [
+            "https://openalex.org/I205783295"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": "",
+        "raw_type": null
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/1706.03668",
+        "any_repository_has_fulltext": true
+      }
+    }
+  ]
+}

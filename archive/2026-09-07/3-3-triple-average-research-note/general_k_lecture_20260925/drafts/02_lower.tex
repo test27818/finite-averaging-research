@@ -1,0 +1,71 @@
+\chapter{临界尺度为什么要看素因子的指数}\label{ch:lower}
+\section{只看最大素因子不够}
+四平均六元有反例，八平均十二元也有反例。它们的底层素数都是二，却需要不同的剩余位置数量。决定这项下界的不是单独的 $p\mid k$，而是 $p$ 在 $k$ 中的指数。
+
+写 $p^a\parallel k$，定义
+\begin{equation}\label{eq:S}
+s_p(k)=p^{\lceil a/2\rceil},\qquad S(k)=\max_{p^a\parallel k}s_p(k).
+\end{equation}
+$s_p(k)$ 是平方能被 $p^a$ 整除的最小正 $p$ 幂。例如
+\[
+S(4)=2,\quad S(8)=4,\quad S(9)=3,\quad
+S(18)=3,\quad S(24)=4,\quad S(36)=3.
+\]
+为什么出现“半个指数”？下面的陷阱需要平均前后的赋值间隙都足够大，两边的要求交在这个平方根尺度上。\src{S01}
+
+\section{一个不能逃走的最低赋值块}
+记 $n=k+r$。考虑 $k$ 份相同值 $u$，其 $p$ 进赋值为 $\nu$；外部 $r$ 个值赋值至少为 $\nu+h$。取
+\[m=\lceil a/2\rceil-1,\qquad h=a-m,\qquad h>m.
+\]
+一次非恒等操作若选了 $j$ 个外部位置，就用了 $k-j$ 份 $u$。只要 $1\le j<s_p(k)$，就有 $v_p(j)\le m<a$，并且
+\[v_p(k-j)=v_p(j).
+\]
+重块部分的和有赋值 $\nu+v_p(j)$，外部部分的赋值更高，所以无法抵消。除以 $k$ 后，新均值的赋值恰为
+\begin{equation}\label{eq:valuation-drop}
+\nu'=\nu+v_p(j)-a<\nu.
+\end{equation}
+它又形成 $k$ 个同值位置，而留下的旧值与它至少相差 $a-v_p(j)\ge h$ 个 $p$ 因子。因此同样的状态结构重新出现。
+
+\begin{theorem}[严格下界]
+任意 $k\ge2$，在 $k<n<k+S(k)$ 都存在 $G=1$ 的不可达输入。在 $n=k+S(k)$，若 $\rad(n)\nmid k$，仍有这样的反例。
+\end{theorem}
+\begin{proof}
+当 $2\le r<s_p(k)$，取
+\[X_{k,r}=((-1)^k,0^{r-1},k).
+\]
+它零和、本原且含相差一的坐标，故 $G=1$。外部赋值至少 $a$，满足上述间隙。每个非恒等操作都按\eqref{eq:valuation-drop}重新产生非零的最低块，无法全零。
+当 $r=s_p(k)=s$，唯一新选择是一次拿走全部外部位置。零和使所选和为 $-su$，所以输出为 $((-su/k)^k,u^s)$。本原代表是
+\[((-1)^k,(k/s)^s),\qquad G=k/s+1.
+\]
+若它含不整除 $k$ 的素因子，则退出赋值陷阱后立即进入共同余数陷阱。因此仍不可达。$s\mid k$ 给 $\rad(k/s+1)\mid k\iff\rad(k+s)\mid k$。
+最后处理 $r=1$。$k+1$ 个位置可达当且仅当某个输入已经等于总均值：第一次操作后为 $(a^k,-ka)$；若非零，下一步只有恒等或将参数换为 $-a/k$。零和向量 $(-k-1,-1,1^{k-2},4)$ 无零且 $G=1$，故给反例。
+\end{proof}
+
+\section{临界线B与非自动临界线C}
+上述证明给出严格下界
+\begin{equation}\label{eq:B}
+B(k)=k+S(k)+\begin{cases}0,&\rad(k+S(k))\mid k,\\1,&\text{否则},\end{cases}
+\qquad M(k),N(k)\ge B(k).
+\end{equation}
+而 $H$ 要跳过所有自动点，因此它的候选下界为
+\begin{equation}\label{eq:C}
+C(k)=\min\{n>k+S(k):\rad(n)\nmid k\},\qquad H(k)\ge C(k).
+\end{equation}
+不能总把 $C$ 写成 $B+1$：有时 $B$ 自己已经非自动，有时 $B$ 虽然由加一得到却仍自动。十平均与十二平均都是 $B=16$ 自动、$C=17$。
+
+\begin{conjecture}[当前统一猜想]
+任意 $k\ge2$ 有 $M(k)=B(k)$，并且 $N(k)=M(k)$。相应地预测 $H(k)=C(k)$。
+\end{conjecture}
+第一句问下界能否达到，第二句问成功能否延续。它们是两项尚未完成的量词；已经证明很多第一句的参数族，并不能替第二句。
+
+\section{为什么少数边界没有加一}
+达到最大尺度的素数唯一，记为 $p_*$。若其指数 $a_*\ge2$，则 $k/S$ 仍含 $p_*$，也含 $k$ 的其他全部素因子。因此 $k/S+1>1$ 与 $k$ 互素，边界必失败。
+只有 $a_*=1$ 时，边界退出的 $G$ 才可能合法，此时必须
+\[k/p_*+1=p_*^b,\qquad k=p_*(p_*^b-1).
+\]
+于是 $k+S=p_*^{b+1}$，成为允许素数幂的自动点。六平均九元、二十平均二十五元正属此形。
+
+对素数幂 $k=p^a,a\ge2$，下界统一为
+\[B(p^a)=p^a+p^{\lceil a/2\rceil}+1.
+\]
+前篇奇素数的 $2p+1$ 正是指数一的情况。24平均27元则有 $r=3<S(24)=4$，所以第一节的自动G反例确实落在赋值陷阱里。

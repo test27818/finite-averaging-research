@@ -1,0 +1,36 @@
+{
+  "checked_at_utc": "2026-09-17T17:10:40.169959+00:00",
+  "pdf_pages": 128,
+  "latex_labels": 300,
+  "bibliographic_entries": 5,
+  "construction_sources": 35,
+  "original_files_compared": 2440,
+  "standalone_tex": true,
+  "certificate_check": {
+    "cases": 114,
+    "pairs": 233,
+    "unexpected_root_exceptions": [],
+    "source_sha256": "b498d7c0cb39392c1764be104683cbd7ddabc8f2469470babd3489d5afffab74",
+    "scope": "Exact capacity, trace, scalar, root gcd and reduced-ratio localization checks; not external group theorem verification."
+  },
+  "finite_checks": {
+    "five": [
+      903,
+      22
+    ],
+    "seven": [
+      57026,
+      11
+    ],
+    "twenty_two": {
+      "auxiliary_group": 648,
+      "unit_image": 440,
+      "marked_states": 3872,
+      "maximum_depth": 8
+    }
+  },
+  "tex_sha256": "2d4e3fa2a3805c4a72cf6b89a3c24ac061668411ec3dff71bdae7475f837b415",
+  "pdf_sha256": "9fb01913429501271f35638a2a6309ede332b912bcee001f0baec75c88064afc",
+  "scope": "Editorial integrity, exact finite checks and compilation; not an independent full mathematical review.",
+  "errors": []
+}

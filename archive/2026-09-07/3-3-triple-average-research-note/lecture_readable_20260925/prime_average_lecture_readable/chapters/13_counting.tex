@@ -1,0 +1,89 @@
+\chapter{把一张取数表，逐行翻译成矩阵}\label{app:upper}
+\section{上半带的大载体从哪里来}
+设 $n=3p+s$，$r=p+s$。核心是 $(A^p,B^p,C^r)$。现在载体有 $r>p$ 份，如果想全部换成一个新均值，做一次平均只会产生 $p$ 份，显然不够。因此先做两组\emph{组成相同、位置不交}的平均，共产生 $2p$ 份新值 $D$。
+
+每组从 $A,B,C$ 取 $i,j,k$ 份，$i+j+k=p$。新值为
+\[D=\frac{iA+jB+kC}{p}
+=\frac{(i-j)a+(rj-pk)z}{p}.
+\]
+保留 $r$ 份 $D$ 作新载体，其余恰有 $2p$ 个位置，分成两组输出即可。这件事的全部自由度，就是来源三项计数，以及第一输出组的四项计数。
+
+\section{先把库存列出来，再做任何代数}
+两组来源用去 $2i,2j,2k$ 份旧值。保留 $r$ 份 $D$ 后，剩余四类库存是
+\[(p-2i, p-2j, r-2k, 2p-r).
+\]
+第一输出取 $(x,y,u,v)$。它必须逐项不超过库存，且四项和为 $p$。第二输出自动是剩下的 $p$ 项。此处 $y$ 是一项计数，暂时不是先前的见证坐标 $a+pz$；读局部公式时要按本段定义使用。
+
+新载体满足 $-pz'=D$，所以矩阵第二行直接得到。第一输出的均值是 $a'$，所以把 $(xA+yB+uC+vD)/p$ 展开，就得到第一行。
+\begin{lemma}[由库存表计算返回矩阵]\label{lem:count-interface}
+在 $K_{p,r}$ 上，选择 $q_0\in\{1,2\}$ 组不交且组成相同的来源 $(i,j,k)$，$i+j+k=p$，保留 $r$ 份新值作载体。剩余库存为
+\begin{equation}\label{eq:stock}
+(p-q_0i,p-q_0j,r-q_0k,q_0p-r).
+\end{equation}
+若输出 $(x,y,u,v)$ 在库存内、和为 $p$，再平均其补集，返回矩阵为 $J/p^2$，其中
+\begin{equation}\label{eq:count-matrix}
+J=\begin{pmatrix}p(x-y)+\alpha v&pry-p^2u+\beta v\\-\alpha&-\beta\end{pmatrix},
+\quad \alpha=i-j,\quad\beta=rj-pk.
+\end{equation}
+若 $p(x-y)+\alpha v=\beta$，则 $J^2=pfI$，$pf\equiv p^4\pmod n$。若一组这样的表与其相邻输出 $(x-1,y-1,u+2,v)$ 同时可用，记相邻标量为 $pf,pg$，则
+\begin{equation}\label{eq:root-count}
+g-f=\alpha n,\qquad
+[\Sigma,J_f^{-1}J_g]=U(nH/g),\quad H=n(2j+\alpha)-2p^2,
+\end{equation}
+其中 $\Sigma=\left(\begin{smallmatrix}-1&r\\0&1\end{smallmatrix}\right)$。
+\end{lemma}
+\begin{proof}
+
+新载体值满足 $-pz'=D$，所以
+\[
+z'=-\frac{\alpha a+\beta z}{p^2}.
+\]
+第一输出组的均值为
+\begin{align*}
+a'&=\frac{xA+yB+uC+vD}{p}\\
+&=\frac{p(x-y)+\alpha v}{p^2}a
+ +\frac{pry-p^2u+\beta v}{p^2}z.
+\end{align*}
+这分别给出矩阵的第二行与第一行；将输出组的和除以 $p$ 给出\eqref{eq:count-matrix}。迹零即得标量平方；代入 $r\equiv-2p\pmod n$ 得其模 $n$ 值。相邻输出使右上项减少 $pn$，故 $g-f=\alpha n$。相乘得到
+\[
+J_f^{-1}J_g=\begin{pmatrix}1&-\beta n/f\\0&g/f\end{pmatrix},
+\]
+再与 $\Sigma$ 作交换子即得\eqref{eq:root-count}。
+\end{proof}
+
+\section{一整套数字：十一平均、三十四个位置}
+取 $p=11,s=1,r=12,n=34$。来源 $(i,j,k)=(4,3,4)$。做两次相同组成的平均后，留下十二份 $D$，库存为
+\[(3,5,4,10).
+\]
+可选择两个不同输出方案 $(3,4,1,3)$ 和 $(2,3,3,3)$。每个方案各自形成一条四次平均的完整返回。
+
+$\alpha=i-j=1$，$\beta=rj-pk=-8$。矩阵为
+\[
+J_f=\begin{pmatrix}-8&383\\-1&8\end{pmatrix},qquad
+J_g=\begin{pmatrix}-8&9\\-1&8\end{pmatrix}.
+\]
+平方分别为 $-319I$ 和 $55I$，故 $f=-29,g=5$，且 $g-f=34=\alpha n$。它们的商给倍率 $-5/29$，环为 $\Z[1/145]$。再算
+\[H=n(2j+\alpha)-2p^2=34\cdot7-242=-4,
+\]
+得到上剪切 $U(-136/5)$。横向系数 $\alpha=1$，根步长是 $4nR$，便能进入共同终端允许的偶数层。
+
+这张表里的数字不是“某几个输入能平均”的例子。它给出的矩阵等式对任意参数 $a,z$ 恒成立，所以这一个计数表可以处理整个无界的二维配置族。
+
+\section{两张很像的表，为什么比一张强很多}
+从第一输出改成 $(x-1,y-1,u+2,v)$，总项数没变，$x-y$ 也没变，迹零条件仍成立；只有右上项少了 $pr+2p^2=pn$。
+
+于是比较两反射会产生三角矩阵；再用换块的对称性消去三角矩阵的倍率，剩下一个剪切。若有几组表，利用剪切参数相加和裴蜀等式，就把它们的步长合成最大公因数。
+
+下面的推论把后面的工作归结为两个清楚的目标：横向系数的最大公因数为一，根系数的最大公因数足够小。满足这两项，群论和终端部分已经不用重新证明。
+\begin{corollary}[相邻输出表的充分条件]\label{cor:resource}
+设 $p\ge11$、$p<r<2p$。若有限组相邻表满足引理\ref{lem:count-interface}，$0<\alpha<p$，所有 $\alpha$ 的最大公因子为 $1$，所有 $H$ 的最大公因子为 $\delta$，其中 $\delta=1$（$n$ 奇）或 $\delta\in\{2,4\}$（$n$ 偶），则全部合法核心可归零。
+\end{corollary}
+\begin{proof}
+
+\par\noindent\textbf{根与控制层。}
+令 $R$ 为所有约分倍率 $g/f$ 及其逆生成的整数环。它是有限局部化环，反演素数均不除 $n$。某一倍率必不为 $\pm1$：$g=f$ 与 $\alpha\ne0$ 矛盾，而 $g=-f$ 与 $g-f=\alpha n$、$\gcd(f,n)=1$、$n>2$ 矛盾。因此 $R$ 有无限单位。
+由\eqref{eq:root-count}先取整数倍得到 $U(nH)$，再作倍率共轭及裴蜀合并，取得 $U(\delta nR)$。引理\ref{lem:transverse}及 $\gcd(\alpha)=1$ 给 $\Gamma(\delta^2n^2,R)$。换到 $(z,y)$，上根变为下根。
+
+\par\noindent\textbf{有限方向与尺度。}
+规范反射 $J/p^2$ 模 $n$ 为 $\left(\begin{smallmatrix}1&-\alpha/p^2\\0&-1\end{smallmatrix}\right)$。其条目公因子整除 $\alpha<p$；所需有限标量由安全小数字提供。换块、反射和 $\alpha$ 的裴蜀组合给 $V\equiv U(-p^{-2})$。$n$ 奇时，选奇 $\alpha$；相邻 $f,g$ 奇偶相反，而条目公因子为奇数，所以引理\ref{lem:content}给 $2I$。因 $r>p$，终端的 $j$ 区间包含至少六个整数，覆盖 $\delta$ 个连续值。定理\ref{thm:terminal}适用。
+\end{proof}

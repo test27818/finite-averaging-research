@@ -1,0 +1,71 @@
+{
+  "url": "https://api.stackexchange.com/2.3/questions/3054103;3343242/answers?site=math&filter=withbody&pagesize=50",
+  "data": {
+    "items": [
+      {
+        "owner": {
+          "account_id": 511463,
+          "reputation": 195514,
+          "user_id": 9340,
+          "user_type": "registered",
+          "accept_rate": 96,
+          "profile_image": "https://i.sstatic.net/3KFKvZ1l.png?s=256",
+          "display_name": "Sangchul Lee",
+          "link": "https://math.stackexchange.com/users/9340/sangchul-lee"
+        },
+        "is_accepted": true,
+        "score": 3,
+        "last_activity_date": 1567530853,
+        "creation_date": 1567530853,
+        "answer_id": 3343264,
+        "question_id": 3343242,
+        "content_license": "CC BY-SA 4.0",
+        "body": "<p>This is a typical example of linear recurrence, so we may adopt the standard approach. The characteristic equation of the recurrence relation is given by</p>\n\n<p><span class=\"math-container\">$$ x^3 = \\tfrac{1}{3}(x^2 + x + 1). $$</span></p>\n\n<p>This equation has 3 zeros <span class=\"math-container\">$x = 1, \\alpha, \\bar{\\alpha}$</span>, where <span class=\"math-container\">$\\alpha = \\frac{-1+i\\sqrt{2}}{3}$</span>. Then the general solution of the equation takes the form</p>\n\n<p><span class=\"math-container\">$$ t_n = A + B \\alpha^n + C \\bar{\\alpha}^n. \\tag{*} $$</span></p>\n\n<p>Indeed you may easily check, using the characteristic equation, that <span class=\"math-container\">$\\text{(*)}$</span> indeed solves the given recurrence relation. Conversely, any solution is determined by knowing 3 leading terms <span class=\"math-container\">$t_1, t_2, t_3$</span>, and we can always find <span class=\"math-container\">$A, B, C$</span> for which <span class=\"math-container\">$\\text{(*)}$</span> produces those prescribed leading terms. More precisely, <span class=\"math-container\">$A, B, C$</span> are given by the unique solution of the following system of equations</p>\n\n<p><span class=\"math-container\">$$ \\begin{pmatrix} t_1 \\\\ t_2 \\\\ t_3 \\end{pmatrix}\n= \\begin{pmatrix}\n1 &amp; \\alpha &amp; \\bar{\\alpha} \\\\\n1 &amp; \\alpha^2 &amp; \\bar{\\alpha}^2 \\\\\n1 &amp; \\alpha^3 &amp; \\bar{\\alpha}^3\n\\end{pmatrix}\n\\begin{pmatrix} A \\\\ B \\\\ C \\end{pmatrix} $$</span></p>\n\n<p>Now, since <span class=\"math-container\">$|\\alpha| = |\\bar{\\alpha}| = \\frac{1}{\\sqrt{3}} &lt; 1$</span>, we know that <span class=\"math-container\">$\\alpha^n \\to 0$</span> and <span class=\"math-container\">$\\bar{\\alpha}^n \\to 0$</span>. So it follows that the limit of <span class=\"math-container\">$\\text{(*)}$</span> is simply <span class=\"math-container\">$A$</span>. Then, solving the above equation, we get</p>\n\n<p><span class=\"math-container\">$$ \\lim_{n\\to\\infty} t_n = A = \\frac{t_1 + 2t_2 + 3t_3}{6}. $$</span></p>\n\n<p>Moreover, the difference between <span class=\"math-container\">$t_n$</span> and the limit <span class=\"math-container\">$A$</span> decays at least exponentially fast.</p>\n"
+      },
+      {
+        "owner": {
+          "account_id": 473127,
+          "reputation": 294769,
+          "user_id": 14366,
+          "user_type": "registered",
+          "accept_rate": 79,
+          "profile_image": "https://www.gravatar.com/avatar/f76d986b54e90fa6c431160e9a0796cd?s=256&d=identicon&r=PG",
+          "display_name": "hmakholm left over Monica",
+          "link": "https://math.stackexchange.com/users/14366/hmakholm-left-over-monica"
+        },
+        "is_accepted": false,
+        "score": 45,
+        "last_activity_date": 1545930542,
+        "last_edit_date": 1545930542,
+        "creation_date": 1545929053,
+        "answer_id": 3054142,
+        "question_id": 3054103,
+        "content_license": "CC BY-SA 4.0",
+        "body": "<p>Another way to think of Sorin's observation, without appealing to induction explicitly:</p>\n\n<p>Suppose your original numbers (both the original 155 numbers and later results) are written in <em>white</em> chalk. Now above each <em>white</em> number write that number plus one, in <em>red</em> chalk. Write new red companions to each new white number, and erase the red numbers when their white partners go away.</p>\n\n<p>When we erase <span class=\"math-container\">$x$</span> and <span class=\"math-container\">$y$</span> and write <span class=\"math-container\">$x+y+xy$</span>, the new red number is <span class=\"math-container\">$x+y+xy+1=(x+1)(y+1)$</span>, exactly the product of the two red companions we're erasing.</p>\n\n<p>So we can reformulate the entire game as:</p>\n\n<blockquote>\n  <p>Write in red the numbers from <span class=\"math-container\">$2$</span> to <span class=\"math-container\">$156$</span>. Keep erasing two numbers and writing their product instead. At the end when you have <em>one</em> red number left, subtract one and write the result in white.</p>\n</blockquote>\n\n<p>Since the order of factors is immaterial, the result must be <span class=\"math-container\">$2\\cdot 3\\cdots 156-1$</span>.</p>\n"
+      },
+      {
+        "owner": {
+          "account_id": 10510391,
+          "reputation": 2109,
+          "user_id": 604426,
+          "user_type": "registered",
+          "profile_image": "https://www.gravatar.com/avatar/44cf217652fc58626e6581b766288c6f?s=256&d=identicon&r=PG&f=y&so-version=2",
+          "display_name": "Sorin Tirc",
+          "link": "https://math.stackexchange.com/users/604426/sorin-tirc"
+        },
+        "is_accepted": false,
+        "score": 50,
+        "last_activity_date": 1545928158,
+        "last_edit_date": 1545928158,
+        "creation_date": 1545927752,
+        "answer_id": 3054116,
+        "question_id": 3054103,
+        "content_license": "CC BY-SA 4.0",
+        "body": "<p>Claim: if <span class=\"math-container\">$a_1,...,a_n$</span> are the <span class=\"math-container\">$n$</span> numbers on the board then after n steps we shall be left with <span class=\"math-container\">$(1+a_1)...(1+a_n)-1$</span>.</p>\n\n<p>Proof: <em>induct on <span class=\"math-container\">$n$</span></em>. Case <span class=\"math-container\">$n=1$</span> is true, so assume the proposition holds for a fixed <span class=\"math-container\">$n$</span> and any <span class=\"math-container\">$a_1$</span>,...<span class=\"math-container\">$a_n$</span>. Consider now <span class=\"math-container\">$n+1$</span> numbers <span class=\"math-container\">$a_1$</span>,...,<span class=\"math-container\">$a_{n+1}$</span>. Suppose that at the first step we choose <span class=\"math-container\">$a_1$</span> and <span class=\"math-container\">$a_2$</span>. We will be left with <span class=\"math-container\">$ n$</span> numbers <span class=\"math-container\">$b_1=a_1+a_2+a_1a_2$</span>, <span class=\"math-container\">$b_2=a_3$</span>,...,<span class=\"math-container\">$b_n=a_{n+1}$</span>, so by the induction hypothesis at the end we will be left with <span class=\"math-container\">$(b_1+1)...(b_n+1)-1=(a_1+1)...(a_{n+1}+1)-1$</span> as needed, because <span class=\"math-container\">$b_1+1=a_1+a_2+a_1a_2+1=(a_1+1)(a_2+1)$</span></p>\n\n<p>Where did I get the idea of the proof from? I guess from the n=2 case: for <span class=\"math-container\">$a_1,a_2$</span> you are left with <span class=\"math-container\">$a_1+a_2+a_1a_2=(1+a_1)(1+a_2)-1$</span> and I also noted this formula generalises for <span class=\"math-container\">$n=3$</span></p>\n\n<p>So in your case we will be left with <span class=\"math-container\">$156!-1=1\\times 2\\times...\\times 156 -1$</span></p>\n"
+      }
+    ],
+    "has_more": false,
+    "quota_max": 300,
+    "quota_remaining": 292
+  }
+}

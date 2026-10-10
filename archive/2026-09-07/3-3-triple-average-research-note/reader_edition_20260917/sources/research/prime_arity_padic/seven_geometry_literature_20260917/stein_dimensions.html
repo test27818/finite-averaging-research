@@ -1,0 +1,708 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Dimension Formulas &mdash; Modular Forms, A Computational Approach v0.1 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Modular Forms, A Computational Approach v0.1 documentation" href="index.html" />
+    <link rel="next" title="Linear Algebra" href="linear_algebra.html" />
+    <link rel="prev" title="Eisenstein Series and Bernoulli Numbers" href="eisenstein.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="linear_algebra.html" title="Linear Algebra"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="eisenstein.html" title="Eisenstein Series and Bernoulli Numbers"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Modular Forms, A Computational Approach v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  
+  <div class="section" id="dimension-formulas">
+<span id="ch-dim"></span><h1>Dimension Formulas<a class="headerlink" href="#dimension-formulas" title="Permalink to this headline">¶</a></h1>
+<p>When computing with spaces of modular forms, it is helpful to have
+easy-to-compute formulas for dimensions of these spaces.  Such
+formulas provide a check on the output of the algorithms from
+Chapter <a class="reference external" href="modular_symbols.html#ch-modsym"><em>General Modular Symbols</em></a> that compute explicit bases for spaces of
+modular forms.  We can also use dimension formulas to improve the
+efficiency of some of the algorithms in Chapter <a class="reference external" href="modular_symbols.html#ch-modsym"><em>General Modular Symbols</em></a>, since
+we can use them to determine the ranks of certain matrices without
+having to explicitly compute those matrices.  Dimension formulas can also be
+used in generating bases of <img class="math" src="_images/math/0615acc3725de21025457e7d6f7694dab8e2f758.png" alt="q" />-expansions; if we know the dimension
+of <img class="math" src="_images/math/fd8a388aabac45bdeca35b54e4b3afb250924ae3.png" alt="M_k(N,\eps)" /> and if we have a process for computing <img class="math" src="_images/math/0615acc3725de21025457e7d6f7694dab8e2f758.png" alt="q" />-expansions
+of elements of <img class="math" src="_images/math/fd8a388aabac45bdeca35b54e4b3afb250924ae3.png" alt="M_k(N,\eps)" />, e.g., multiplying together
+<img class="math" src="_images/math/0615acc3725de21025457e7d6f7694dab8e2f758.png" alt="q" />-expansions of certain forms of smaller weight, then we can tell
+when we are done generating <img class="math" src="_images/math/fd8a388aabac45bdeca35b54e4b3afb250924ae3.png" alt="M_k(N,\eps)" />.</p>
+<p>This chapter contains formulas for dimensions of spaces of modular
+forms, along with some remarks about how to evaluate these formulas.
+In some cases we give dimension formulas for spaces that we
+will define in later chapters.
+We also give
+many examples, some of which were computed using the modular symbols
+algorithms from Chapter <a class="reference external" href="modular_symbols.html#ch-modsym"><em>General Modular Symbols</em></a>.</p>
+<p>Many of the dimension formulas and algorithms we give below grew out
+of Shimura&#8217;s book [<a class="reference external" href="bibliography.html#shi94"><strong>Shi94</strong></a>] and a program that Bruce Kaskel
+wrote (around 1996) in PARI, which Kevin Buzzard extended.  That
+program codified dimension formulas that Buzzard and Kaskel found or
+extracted from the literature (mainly [<a class="reference external" href="bibliography.html#shi94"><strong>Shi94</strong></a>, Section 2.6]).
+The algorithms for dimensions of spaces with nontrivial character are
+from [<a class="reference external" href="bibliography.html#co77"><strong>CO77</strong></a>], with some refinements
+suggested by Kevin Buzzard.</p>
+<p>For the rest of this chapter, <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" /> denotes a positive integer and
+<img class="math" src="_images/math/58a0ef476cf5452cdb5a980c9697dc1068e0731b.png" alt="k\geq 2" /> is an integer.  We will give <em>no simple formulas</em> for
+dimensions of spaces of weight <img class="math" src="_images/math/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" alt="1" /> modular forms; in fact, it
+might not be possible to give such formulas since the
+methods used to derive the formulas below do not apply in the case
+<img class="math" src="_images/math/5ed8470bc717a49aafe4556c7e2c2e11ddc7b687.png" alt="k=1" />.  If <img class="math" src="_images/math/badf0ecd1ef8289387d8462393438c6e2710ff28.png" alt="k=0" />, the only modular forms are the constants, and for
+<img class="math" src="_images/math/f0b043119262a2beb49176cb4beb5c50ec1915a2.png" alt="k&lt;0" /> the dimension of <img class="math" src="_images/math/fd8a388aabac45bdeca35b54e4b3afb250924ae3.png" alt="M_k(N,\eps)" /> is <img class="math" src="_images/math/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" alt="0" />.</p>
+<p>For a nonzero integer <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" /> and a prime <img class="math" src="_images/math/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" alt="p" />, let <img class="math" src="_images/math/c14c93f3a73758bb4731d45d5c9ca054120216b7.png" alt="v_p(N)" /> be the largest
+integer <img class="math" src="_images/math/a3a59bb1293ee3f6dec19de4019a7178874219ae.png" alt="e" /> such that <img class="math" src="_images/math/bf338c30d7c7bdf5c025d0b811a82bf65a6b4998.png" alt="p^e \mid N" />.  In the formulas in this
+chapter, <img class="math" src="_images/math/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" alt="p" /> always denotes a prime number.  Let <img class="math" src="_images/math/fd8a388aabac45bdeca35b54e4b3afb250924ae3.png" alt="M_k(N,\eps)" /> be the
+space of modular forms of level <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" /> weight <img class="math" src="_images/math/8c325612684d41304b9751c175df7bcc0f61f64f.png" alt="k" /> and character <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" />,
+and let <img class="math" src="_images/math/46908f80dbf868a3dfe954da8045fd970d2854e1.png" alt="S_k(N,\eps)" /> and <img class="math" src="_images/math/738646a8a82c3c6f0c69f2f3ad8c5e8fc38c2ab0.png" alt="E_k(N,\eps)" /> be the cuspidal and Eisenstein
+subspaces, respectively.</p>
+<p>The dimension formulas below for <img class="math" src="_images/math/3bab7122db9a5121867315abdb5149f8ed977f19.png" alt="S_k(\Gamma_0(N))" />,
+<img class="math" src="_images/math/6b83af676e1fa2e2b68f2a8bbeecb9e38d807901.png" alt="S_k(\Gamma_1(N))" />, <img class="math" src="_images/math/284eb38fe26a93e26a27ba116963e382caa22d9e.png" alt="E_k(\Gamma_0(N))" /> and <img class="math" src="_images/math/2b643cd6f78d2d90ab881ddb72db8fe914e5ed71.png" alt="E_k(\Gamma_1(N))" /> can be
+found in [<a class="reference external" href="bibliography.html#ds05"><strong>DS05</strong></a>, Ch. 3],
+[<a class="reference external" href="bibliography.html#shi94"><strong>Shi94</strong></a>, Section 2.6] <a class="footnote-reference" href="#f1" id="id1">[1]</a> and
+[<a class="reference external" href="bibliography.html#miy89"><strong>Miy89</strong></a>, Section 2.5]. They are derived using the Riemann-Roch Theorem
+applied to the covering <img class="math" src="_images/math/8e2417b1d56aef5e534c2bad3ecbdafe19d0e233.png" alt="X_0(N)\to X_0(1)" /> or <img class="math" src="_images/math/e5b0b389f43c06a4a7a771341be8caf6ef7ef239.png" alt="X_1(N)\to X_1(1)" /> and
+appropriately chosen divisors.  It would be natural to give a sample
+argument along these lines at this point, but we will not since it
+easy to find such arguments in other books and survey papers (see,
+e.g., [<a class="reference external" href="bibliography.html#di95"><strong>DI95</strong></a>]).  So you will not learn much about how to
+derive dimension formulas from this chapter.  What you will learn is
+precisely what the dimension formulas are, which is something that is
+often hard to extract from obscure references.</p>
+<p>In addition to reading this chapter, the reader may wish to consult
+[<a class="reference external" href="bibliography.html#mar05"><strong>Mar05</strong></a>] for proofs of similar dimension formulas,
+asymptotic results, and a nonrecursive formula for dimensions of
+certain new subspaces.</p>
+<div class="section" id="modular-forms-for">
+<span id="sec-dimg0"></span><h2>Modular Forms for <img class="math" src="_images/math/0ce4343a7316d048508371ec15ac0cc5c641e53c.png" alt="\Gamma_0(N)" /><a class="headerlink" href="#modular-forms-for" title="Permalink to this headline">¶</a></h2>
+<p>For any prime <img class="math" src="_images/math/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" alt="p" /> and any positive integer <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />, let <img class="math" src="_images/math/c14c93f3a73758bb4731d45d5c9ca054120216b7.png" alt="v_p(N)" /> be
+the power of <img class="math" src="_images/math/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" alt="p" /> that divides <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />. Also, let</p>
+<div class="math">
+<p><img src="_images/math/eb875bd69472b9b54fa3a23940377d3ee2fda301.png" alt="\mu_0(N) &amp;= \prod_{p\mid N} \left( p^{v_p(N)} + p^{v_p(N)-1} \right),\\
+\mu_{0,2}(N) &amp;= \begin{cases}
+0 &amp; \text{if $4\mid N$,}\\
+\prod_{p\mid N} \left(1 + \kr{-4}{p}\right) &amp; \text{otherwise,}
+\end{cases}\\
+\mu_{0,3}(N) &amp;= \begin{cases}
+0 &amp; \text{if $2\mid N$ or $9\mid N$,}\\
+\prod_{p\mid N} \left(1 + \kr{-3}{p}\right) &amp; \text{otherwise,}
+\end{cases}\\
+c_0(N) &amp;= \sum_{d\mid N} \vphi(\gcd(d,N/d)),\\
+g_0(N) &amp;= 1 + \frac{\mu_0(N)}{12} - \frac{\mu_{0,2}(N)}{4} - \
+\frac{\mu_{0,3}(N)}{3} - \frac{c_0(N)}{2}.\\" />
+</div></p><p>Note that <img class="math" src="_images/math/ee8c06372632eb497b543e2eaa55bf797a1bf4cc.png" alt="\mu_0(N)" /> is the index of <img class="math" src="_images/math/0ce4343a7316d048508371ec15ac0cc5c641e53c.png" alt="\Gamma_0(N)" /> in <img class="math" src="_images/math/03efd9d1dd9aa04843b5096ad7073ce28c31de60.png" alt="\SL_2(\Z)" />
+(see <a class="reference internal" href="#ex:mu0n"><em>Exercise 6.1</em></a>).</p>
+<div class="admonition " id="prop:dimg0">
+<span id="index-69"></span><p class="first admonition-title">Proposition 6.1</p>
+<p>We have <img class="math" src="_images/math/cda068c8117b97bfc3cc51023d982707b0f934af.png" alt="\dim S_2(\Gamma_0(N)) = g_0(N)" />, and
+for <img class="math" src="_images/math/3736a55b0da1d74205bb37de71884e9833d024e6.png" alt="k\geq 4" /> even,</p>
+<div class="math">
+<p><img src="_images/math/4f9ab9c561f9e2a6f7731007c9c1deeeaf41c0ac.png" alt="\dim S_k(\Gamma_0(N)) &amp;=
+(k-1) \cdot (g_0(N) - 1) \,\,+ \,\,
+\left( \frac{k}{2} - 1 \right) \cdot c_0(N) \,\,   \\
+&amp;\qquad\qquad   + \mu_{0,2}(N)\cdot \left\lfloor\frac{k}{4}\right\rfloor \,\,+ \,\,
+\mu_{0,3}(N)\cdot \left\lfloor \frac{k}{3}\right\rfloor." />
+</div></p><p>The dimension of the Eisenstein subspace is</p>
+<div class="last math">
+<p><img src="_images/math/fb2a8e0550cefd47a4f15db7933e360e0fef8859.png" alt="\dim E_k(\Gamma_0(N)) =
+\begin{cases}
+c_0(N) &amp; \text{if $k\neq 2$,}\\
+c_0(N)-1 &amp; \text{if $k=2$.}
+\end{cases}" />
+</div></p></div>
+<p>The following is a table of <img class="math" src="_images/math/fd81d0dc48f6e69b46c73586b9e96c978eac7e97.png" alt="\dim S_k(\Gamma_0(N))" />
+for some values of <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" /> and <img class="math" src="_images/math/8c325612684d41304b9751c175df7bcc0f61f64f.png" alt="k" />:</p>
+<div class="math">
+<p><img src="_images/math/77a477d1e9490c5df165dafd09c3322b47248347.png" alt="\begin{tabular}{|l|llll|}\hline
+$N$ &amp; $S_2(\Gamma_0(N))$ &amp; $S_4(\Gamma_0(N))$ &amp;
+      $S_6(\Gamma_0(N))$ &amp; $S_{24}(\Gamma_0(N))$\\\hline
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 2\\
+10 &amp; 0 &amp; 3 &amp; 5 &amp; 33\\
+11 &amp; 1 &amp; 2 &amp; 4 &amp; 22\\
+100 &amp; 7 &amp; 36 &amp; 66 &amp; 336\\
+389 &amp; 32 &amp; 97 &amp; 161 &amp; 747\\
+1000 &amp; 131 &amp; 430 &amp; 730 &amp; 3430\\
+2007 &amp; 221 &amp; 806 &amp; 1346 &amp; 6206\\
+100000 &amp; 14801 &amp; 44800 &amp; 74800 &amp; 344800\\\hline
+\end{tabular}" />
+</div></p><div class="admonition ">
+<p class="first admonition-title">Example 6.2</p>
+<p id="index-70">Use the commands <tt class="xref docutils literal"><span class="pre">dimension_cusp_forms</span></tt>,
+<tt class="xref docutils literal"><span class="pre">dimension_eis</span></tt>, and <tt class="xref docutils literal"><span class="pre">dimension_modular_forms</span></tt>
+to compute the dimensions of the three spaces <img class="math" src="_images/math/3bab7122db9a5121867315abdb5149f8ed977f19.png" alt="S_k(\Gamma_0(N))" />,
+<img class="math" src="_images/math/284eb38fe26a93e26a27ba116963e382caa22d9e.png" alt="E_k(\Gamma_0(N))" /> and <img class="math" src="_images/math/cee1ec6525817c0d51ef4f32c37027a53b26ec0f.png" alt="M_k(\Gamma_0(N))" />, respectively.
+For example,</p>
+<div class="last highlight-python"><div class="highlight"><pre><span class="gp">sage: </span><span class="n">dimension_cusp_forms</span><span class="p">(</span><span class="n">Gamma0</span><span class="p">(</span><span class="mf">2007</span><span class="p">),</span><span class="mf">2</span><span class="p">)</span>
+<span class="go">221</span>
+<span class="gp">sage: </span><span class="n">dimension_eis</span><span class="p">(</span><span class="n">Gamma0</span><span class="p">(</span><span class="mf">2007</span><span class="p">),</span><span class="mf">2</span><span class="p">)</span>
+<span class="go">7</span>
+<span class="gp">sage: </span><span class="n">dimension_modular_forms</span><span class="p">(</span><span class="n">Gamma0</span><span class="p">(</span><span class="mf">2007</span><span class="p">),</span><span class="mf">2</span><span class="p">)</span>
+<span class="go">228</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition ">
+<p class="first admonition-title">Remark 6.3</p>
+<p>Csirik, Wetherell, and Zieve prove in
+[<a class="reference external" href="bibliography.html#cwz01"><strong>CWZ01</strong></a>] that a random positive integer has
+probability <img class="math" src="_images/math/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" alt="0" /> of being a value of</p>
+<div class="math">
+<p><img src="_images/math/6c894baf461241376cb888bed31e5f33abe9c465.png" alt="g_0(N)=\dim S_2(\Gamma_0(N))," />
+</div></p><p class="last">and they give bounds on the size of the set of values of <img class="math" src="_images/math/acad891fbf3bcca2226e13c194a1f8af617e02cc.png" alt="g_0(N)" /> below
+some given <img class="math" src="_images/math/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" alt="x" />.  For example, they show that <img class="math" src="_images/math/243ec89332a2917f1c5a542fa3b4dc7daf0c3e7f.png" alt="150, 180, 210, 286,
+304, 312, \ldots" /> are the first few integers that are not of the
+form <img class="math" src="_images/math/acad891fbf3bcca2226e13c194a1f8af617e02cc.png" alt="g_0(N)" /> for any <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />.  See <a class="reference internal" href="#fig:dims2g0"><em>Figure 6.1</em></a>
+for a plot of the very erratic function <img class="math" src="_images/math/acad891fbf3bcca2226e13c194a1f8af617e02cc.png" alt="g_0(N)" />.  In
+contrast, the function <img class="math" src="_images/math/5767b045592676c05fc1c8699289e8b0f865bd50.png" alt="k\mapsto \dim S_{2k}(\Gamma_0(12))" /> is very
+well behaved (see <a class="reference internal" href="#fig:dimskg012"><em>Figure 6.2</em></a>).</p>
+</div>
+<div class="admonition " id="fig:dims2g0">
+<p class="first admonition-title">Figure 6.1</p>
+<p>Dimension of <img class="math" src="_images/math/252d190820aad2217f31f27efbcbea106b1d99c9.png" alt="S_2(\Gamma_0(N))" /> as a function of <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" /></p>
+<div align="center" class="align-center"><img alt="_images/dims2g0.png" class="last align-center" src="_images/dims2g0.png" /></div>
+</div>
+<div class="admonition " id="fig:dimskg012">
+<p class="first admonition-title">Figure 6.2</p>
+<p>Dimension of <img class="math" src="_images/math/bd4f5d0046fdc8c1fd632a74d612e2b8ada44ca9.png" alt="S_{2k}(\Gamma_0(12))" /> as a function of <img class="math" src="_images/math/8c325612684d41304b9751c175df7bcc0f61f64f.png" alt="k" />.</p>
+<div align="center" class="align-center"><img alt="_images/dimskg012.png" class="last align-center" src="_images/dimskg012.png" /></div>
+</div>
+<div class="section" id="new-and-old-subspaces">
+<span id="sec-newold"></span><h3>New and Old Subspaces<a class="headerlink" href="#new-and-old-subspaces" title="Permalink to this headline">¶</a></h3>
+<p>In this section we assume the reader is either
+familiar with newforms or has read Section <a class="reference external" href="newforms.html#sec-all"><em>Atkin-Lehner-Li Theory</em></a>.</p>
+<p>For any integer <img class="math" src="_images/math/eff43e84f8a3bcf7b6965f0a3248bc4d3a9d0cd4.png" alt="R" />, let</p>
+<div class="math">
+<p><img src="_images/math/e4b112b0112509cbd8784cd72a4962463b9646bb.png" alt="\overline{\mu}(R) =
+\begin{cases}
+0 &amp; \text{if $p^3\mid R$ for some $p$,}\\
+\ds \prod_{p\mid\mid R} -2 &amp; \text{otherwise},
+\end{cases}" />
+</div></p><p>where the product is over primes that exactly divide <img class="math" src="_images/math/eff43e84f8a3bcf7b6965f0a3248bc4d3a9d0cd4.png" alt="R" />.
+Note that <img class="math" src="_images/math/7a1461031818e08761dbc677b4b8c9c34beebd7e.png" alt="\overline{\mu}" /> is <em>not</em> the Moebius function, but it
+has a similar flavor.</p>
+<div class="admonition " id="prop:newg0">
+<p class="first admonition-title">Proposition 6.4</p>
+<p>The dimension of the new subspace is</p>
+<div class="math">
+<p><img src="_images/math/5e22971a200d67df9bc2ab0e4d24c2d28ff5de37.png" alt="\dim S_k(\Gamma_0(N))_{\new} = \sum_{M\mid N} \overline{\mu}(N/M)
+\cdot \dim S_k(\Gamma_0(M))," />
+</div></p><p>where the sum is over the positive divisors <img class="math" src="_images/math/5d1e4485dc90c450e8c76826516c1b2ccb8fce16.png" alt="M" /> of <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />.
+As a consequence of <a class="reference external" href="newforms.html#thm:all"><em>Theorem 9.4</em></a>,
+we also have</p>
+<div class="math">
+<p><img src="_images/math/a981f8733cb3ac40973b9c08d1470aba0abffcd7.png" alt="\dim S_k(\Gamma_0(N)) = \sum_{M\mid N} \sigma_0(N/M)
+\dim S_k(\Gamma_0(M))_{\new}," />
+</div></p><p class="last">where <img class="math" src="_images/math/f7a3af1d382ac90793fb27f9da2c6b1dff9277cf.png" alt="\sigma_0(N/M)" /> is the number of divisors of <img class="math" src="_images/math/c8d98b13225f98afd23689884c27def5dd6c156c.png" alt="N/M" />.</p>
+</div>
+<div class="admonition ">
+<p class="first admonition-title">Example 6.5</p>
+<p id="index-71">We compute the dimension of the new subspace of <img class="math" src="_images/math/3bab7122db9a5121867315abdb5149f8ed977f19.png" alt="S_k(\Gamma_0(N))" />
+using the Sage command <tt class="xref docutils literal"><span class="pre">dimension_new_cusp_forms</span></tt>
+as follows:</p>
+<div class="last highlight-python"><div class="highlight"><pre><span class="gp">sage: </span><span class="n">dimension_new_cusp_forms</span><span class="p">(</span><span class="n">Gamma0</span><span class="p">(</span><span class="mf">11</span><span class="p">),</span><span class="mf">12</span><span class="p">)</span>
+<span class="go">8</span>
+<span class="gp">sage: </span><span class="n">dimension_cusp_forms</span><span class="p">(</span><span class="n">Gamma0</span><span class="p">(</span><span class="mf">11</span><span class="p">),</span><span class="mf">12</span><span class="p">)</span>
+<span class="go">10</span>
+<span class="gp">sage: </span><span class="n">dimension_new_cusp_forms</span><span class="p">(</span><span class="n">Gamma0</span><span class="p">(</span><span class="mf">2007</span><span class="p">),</span><span class="mf">12</span><span class="p">)</span>
+<span class="go">1017</span>
+<span class="gp">sage: </span><span class="n">dimension_cusp_forms</span><span class="p">(</span><span class="n">Gamma0</span><span class="p">(</span><span class="mf">2007</span><span class="p">),</span><span class="mf">12</span><span class="p">)</span>
+<span class="go">2460</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Modular Forms for <img class="math" src="_images/math/e1ce758e7944584095efc8e60f73a69edd624a20.png" alt="\Gamma_1(N)" /><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>This section follows Section <a class="reference internal" href="#sec-dimg0"><em>Modular Forms for </em></a> closely, but with
+suitable modifications with <img class="math" src="_images/math/0ce4343a7316d048508371ec15ac0cc5c641e53c.png" alt="\Gamma_0(N)" /> replaced by <img class="math" src="_images/math/e1ce758e7944584095efc8e60f73a69edd624a20.png" alt="\Gamma_1(N)" />.</p>
+<p>Define functions of a positive integer <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" /> by the following formulas:</p>
+<div class="math">
+<p><img src="_images/math/cbb961b632fba86b87903460fb111930d3667465.png" alt="\mu_1(N) &amp;=
+\begin{cases}
+\mu_0(N) &amp; \text{if $N=1,2$,}\\
+\ds\frac{\phi(N)\cdot \mu_0(N)}{2} &amp; \text{otherwise,}
+\end{cases} \\
+\mu_{1,2}(N) &amp;= \begin{cases}
+0 &amp; \text{if $N\geq 4$,}\\
+\mu_{0,2}(N) &amp; \text{otherwise,}
+\end{cases}\\
+\mu_{1,3}(N) &amp;= \begin{cases}
+0 &amp; \text{if $N\geq 4$,}\\
+\mu_{0,3}(N) &amp; \text{otherwise,}
+\end{cases}\\
+c_1(N) &amp;=
+\begin{cases}
+c_0(N) &amp; \text{if $N=1,2$,}\\
+3      &amp; \text{if $N=4$,}\\
+\ds \sum_{d \mid N} \frac{\phi(d)\phi(N/d)}{2} &amp; \text{otherwise},
+\end{cases} \\
+g_1(N) &amp;= 1 + \frac{\mu_1(N)}{12} - \frac{\mu_{1,2}(N)}{4} - \frac{\mu_{1,3}(N)}{3}
+- \frac{c_1(N)}{2}." />
+</div></p><p>Note that <img class="math" src="_images/math/eb4c8b1df3a55646c9a3b2b95bed015dcc60ea83.png" alt="g_1(N)" /> is the genus of the modular curve <img class="math" src="_images/math/5010abb71338c8002713ba7f215b6f6f0e686e9f.png" alt="X_1(N)" /> (associated
+to <img class="math" src="_images/math/e1ce758e7944584095efc8e60f73a69edd624a20.png" alt="\Gamma_1(N)" />) and <img class="math" src="_images/math/5b3c3b26d41943038d888113b598003da36a12b0.png" alt="c_1(N)" /> is the number of cusps of <img class="math" src="_images/math/5010abb71338c8002713ba7f215b6f6f0e686e9f.png" alt="X_1(N)" />.</p>
+<div class="admonition " id="index-72">
+<p class="first admonition-title">Proposition 6.6</p>
+<p>We have <img class="math" src="_images/math/d74e4809093132d88b3ccc5480c8fc10d923546c.png" alt="\dim S_2(\Gamma_1(N)) = g_1(N)" />.  If <img class="math" src="_images/math/e0c69b5fa3a662c4f676bcf8b326c84b4fc1fbfc.png" alt="N\leq 2" />, then
+<img class="math" src="_images/math/df88008c97064c19e804ff1dfdcf9187b4d5f1b4.png" alt="\Gamma_0(N)=\Gamma_1(N)" /> so</p>
+<div class="math">
+<p><img src="_images/math/8bb13dac6f42086ae79d73d419d5ddeafc181a94.png" alt="\dim
+S_k(\Gamma_1(N)) = \dim S_k(\Gamma_0(N))," />
+</div></p><p>where <img class="math" src="_images/math/fd81d0dc48f6e69b46c73586b9e96c978eac7e97.png" alt="\dim S_k(\Gamma_0(N))" /> is given by the formula of
+<a class="reference internal" href="#prop:dimg0"><em>Proposition 6.1</em></a>.  If <img class="math" src="_images/math/40ddf6383f6768d83cd5023bbcbe02eb31ad0d54.png" alt="k\geq 3" />, let</p>
+<div class="math">
+<p><img src="_images/math/8ae373f89dbc94352ad619ffe4dd868aa613b802.png" alt="a(N,k) = (k-1)(g_1(N)
+- 1) + \left(\frac{k}{2} -1\right)\cdot c_1(N)." />
+</div></p><p>Then for <img class="math" src="_images/math/1c6cd0e0e92a5f5eb04f01febb9316dc1f06e4f5.png" alt="N\geq 3" />,</p>
+<div class="math">
+<p><img src="_images/math/e9daa054f9600784f880960df03cea6b71a2636b.png" alt="\dim S_k(\Gamma_1(N)) =
+\begin{cases}
+a + 1/2 &amp; \text{if $N=4$ and $2\nmid k$,}\\
+a + \lfloor{} k/3\rfloor{} &amp; \text{if $N=3$,}\\
+a &amp; \text{otherwise.}
+\end{cases}" />
+</div></p><p>The dimension of the Eisenstein subspace is as follows:</p>
+<div class="math">
+<p><img src="_images/math/9408304de955a4ee109091f4375bd2aee53efaf6.png" alt="\dim E_k(\Gamma_1(N)) =
+\begin{cases}
+c_1(N) &amp; \text{if $k\neq 2$,}\\
+c_1(N)-1 &amp; \text{if $k=2$.}
+\end{cases}" />
+</div></p><p>The dimension of the new subspace of <img class="math" src="_images/math/415f7b40093c8f1921cc3f89a3ebd58a2d687103.png" alt="M_k(\Gamma_1(N))" /> is</p>
+<div class="math">
+<p><img src="_images/math/95b800c556b24c2529d4e407d245ce4f82b56b6b.png" alt="\dim S_k(\Gamma_1(N))_{\new} =
+\sum_{M \mid N} \overline{\mu}(N/M) \cdot \dim S_k(\Gamma_1(M))," />
+</div></p><p class="last">where <img class="math" src="_images/math/7a1461031818e08761dbc677b4b8c9c34beebd7e.png" alt="\overline{\mu}" /> is as in the statement
+of <a class="reference internal" href="#prop:newg0"><em>Proposition 6.4</em></a>.</p>
+</div>
+<div class="admonition ">
+<p class="first admonition-title">Remark 6.7</p>
+<p class="last">Since <img class="math" src="_images/math/f4bd93bc702590f07616ce2b5220cd2deaa35a82.png" alt="M_k = S_k \oplus E_k" />, the formulas above for
+<img class="math" src="_images/math/56a59d564c6026e0e4661f6549ef3f91403516ab.png" alt="\dim S_k" /> and <img class="math" src="_images/math/127ba2b5f25de10e0bb9e2b35fd7e0a72dbf5106.png" alt="\dim E_k" /> also yield
+a formula for the dimension of <img class="math" src="_images/math/2d2e634a37481384d574ce449c610d1af04f04bc.png" alt="M_k" />.</p>
+</div>
+<div class="admonition ">
+<p class="first admonition-title">Figure 6.3</p>
+<p>Dimension of <img class="math" src="_images/math/df64ef02daf13b2dece3d4fcf10d7adbb151f31b.png" alt="S_2(\Gamma_1(N))" /> as a function of <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />.</p>
+<div align="center" class="align-center"><img alt="_images/dims2g1.png" class="last align-center" src="_images/dims2g1.png" /></div>
+</div>
+<p>The following table contains the dimension of <img class="math" src="_images/math/6b83af676e1fa2e2b68f2a8bbeecb9e38d807901.png" alt="S_k(\Gamma_1(N))" />
+for some sample values of <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" /> and <img class="math" src="_images/math/8c325612684d41304b9751c175df7bcc0f61f64f.png" alt="k" />:</p>
+<div class="math">
+<p><img src="_images/math/54517ff938faa443af56a28ba6b6b575b3ffb477.png" alt="\begin{tabular}{|l|llll|}\hline
+$N$ &amp; $S_2(\Gamma_1(N))$ &amp; $S_3(\Gamma_1(N))$ &amp;
+      $S_4(\Gamma_1(N))$ &amp; $S_{24}(\Gamma_1(N))$\\\hline
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 2\\
+10 &amp; 0 &amp; 2 &amp; 5 &amp; 65\\
+11 &amp; 1 &amp; 5 &amp; 10 &amp; 110\\
+100 &amp; 231 &amp; 530 &amp; 830 &amp; 6830\\
+389 &amp; 6112 &amp; 12416 &amp; 18721 &amp; 144821\\
+1000 &amp; 28921 &amp; 58920 &amp; 88920 &amp; 688920\\
+2007 &amp; 147409 &amp; 296592 &amp; 445776 &amp; 3429456\\
+ 100000 &amp; 299792001 &amp; 599792000 &amp; 899792000 &amp; 6899792000\\\hline
+\end{tabular}" />
+</div></p><div class="admonition ">
+<p class="first admonition-title">Example 6.8</p>
+<p id="index-73">We compute dimensions of spaces of modular forms for <img class="math" src="_images/math/e1ce758e7944584095efc8e60f73a69edd624a20.png" alt="\Gamma_1(N)" />:</p>
+<div class="last highlight-python"><div class="highlight"><pre><span class="gp">sage: </span><span class="n">dimension_cusp_forms</span><span class="p">(</span><span class="n">Gamma1</span><span class="p">(</span><span class="mf">2007</span><span class="p">),</span><span class="mf">2</span><span class="p">)</span>
+<span class="go">147409</span>
+<span class="gp">sage: </span><span class="n">dimension_eis</span><span class="p">(</span><span class="n">Gamma1</span><span class="p">(</span><span class="mf">2007</span><span class="p">),</span><span class="mf">2</span><span class="p">)</span>
+<span class="go">3551</span>
+<span class="gp">sage: </span><span class="n">dimension_modular_forms</span><span class="p">(</span><span class="n">Gamma1</span><span class="p">(</span><span class="mf">2007</span><span class="p">),</span><span class="mf">2</span><span class="p">)</span>
+<span class="go">150960</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="modular-forms-with-character">
+<h2>Modular Forms with Character<a class="headerlink" href="#modular-forms-with-character" title="Permalink to this headline">¶</a></h2>
+<p>Fix a Dirichlet character <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" /> of modulus <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />,
+and let <img class="math" src="_images/math/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" alt="c" /> be the conductor of <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" /> (we do <em>not</em>
+assume that <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" /> is primitive).
+Assume that <img class="math" src="_images/math/b2f164c226014095a86db2e2b9308d9f9e833395.png" alt="\eps \neq 1" />, since otherwise
+<img class="math" src="_images/math/cf527ea53e49cc95a43fedb62e5b722cfb0726de.png" alt="M_k(N,\eps) = M_k(\Gamma_0(N))" /> and the formulas of
+Section <a class="reference internal" href="#sec-dimg0"><em>Modular Forms for </em></a> apply.  Also, assume that <img class="math" src="_images/math/149b2744c1837da412db96f9236ee5ba262a2742.png" alt="\eps(-1)=(-1)^k" />,
+since otherwise <img class="math" src="_images/math/0cbb239eb5d9dd5d4a93d10aa4800965439605d2.png" alt="\dim M_k(\Gamma_0(N)) = 0" />.  In this section we
+discuss formulas for computing each of <img class="math" src="_images/math/fd8a388aabac45bdeca35b54e4b3afb250924ae3.png" alt="M_k(N,\eps)" />, <img class="math" src="_images/math/46908f80dbf868a3dfe954da8045fd970d2854e1.png" alt="S_k(N,\eps)" />
+and <img class="math" src="_images/math/738646a8a82c3c6f0c69f2f3ad8c5e8fc38c2ab0.png" alt="E_k(N,\eps)" />.</p>
+<p>In [<a class="reference external" href="bibliography.html#co77"><strong>CO77</strong></a>], Cohen and
+Oesterl&#8217;e assert (without <em>published</em> proof; see Remark <a class="reference internal" href="#rem:co"><em>Remark 6.11</em></a> below)
+that for any <img class="math" src="_images/math/ff0e36e5a032fd8d377b97ef2ce329041b68d4d8.png" alt="k\in\Z" /> and <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />, <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" />
+as above,</p>
+<div class="math">
+<p><img src="_images/math/a3e53292101ffc1ead4c402057aa48522da4523c.png" alt="\dim S_k(N,\eps) &amp;- \dim M_{2-k}(N,\eps)\\
+&amp;= \frac{k-1}{12} \cdot \mu_0(N) \,\,-\,\,
+\frac{1}{2} \cdot \prod_{p\mid N} \lambda(p, N, v_p(c))\\
+&amp;\qquad + \gamma_4(k) \cdot\!\!
+\sum_{x \in A_4(N)} \eps(x) \,\,\,+\,\,\,
+\gamma_3(k) \cdot \!\! \sum_{x \in A_3(N)} \eps(x)" />
+</div></p><p>where <img class="math" src="_images/math/ee8c06372632eb497b543e2eaa55bf797a1bf4cc.png" alt="\mu_0(N)" /> is as in Section <a class="reference internal" href="#sec-dimg0"><em>Modular Forms for </em></a>,
+<img class="math" src="_images/math/dece0638d6f038bfd12dc6acd008321fab1ceaf9.png" alt="A_4(N) = \{x \in \Z/N\Z : x^2 +1 = 0\}" /> and
+<img class="math" src="_images/math/668d8b7b9106fbef047a8ae265f54c16e04ad2fc.png" alt="A_3(N) = \{x \in \Z/N\Z : x^2 + x + 1 = 0 \}" />,
+and <img class="math" src="_images/math/ef649eaec73d9c08e65d0fb4c00d9eb48657db3c.png" alt="\gamma_3, \gamma_4" /> are</p>
+<div class="math">
+<p><img src="_images/math/fe1c32c0582d99243dcbeafe7f9a0407087fba44.png" alt="\gamma_4(k) &amp;=
+\begin{cases}
+-1/4 &amp; \text{if $k\con 2\pmod{4}$,}\\
+1/4 &amp; \text{if $k\con 0\pmod{4}$,}\\
+0 &amp; \text{if $k$ is odd.}
+\end{cases}\\
+\gamma_3(k) &amp;=
+\begin{cases}
+-1/3 &amp; \text{if $k\con 2\pmod{3}$,}\\
+1/3 &amp; \text{if $k\con 0\pmod{3}$,}\\
+0 &amp; \text{if $k\con 1\pmod{3}$.}
+\end{cases}" />
+</div></p><p>It remains to define <img class="math" src="_images/math/ce4588fd900d02afcbd260bc07f54cce49a7dc4a.png" alt="\lambda" />.
+Fix a prime divisor <img class="math" src="_images/math/76081c70c8d6b0625124ee581d37e0cabb077d79.png" alt="p\mid N" /> and let <img class="math" src="_images/math/6fba9294b135458fbca9f84e24fa305b46a6a61f.png" alt="r=v_p(N)" />.
+Then</p>
+<div class="math">
+<p><img src="_images/math/b24fb8b86aaccc3917cfdd7a7346b2e7d1108812.png" alt="\lambda(p,N,v_p(c)) =
+\begin{cases}
+p^{\frac{r}{2}} + p^{\frac{r}{2} - 1} &amp; \text{if $2\cdot v_p(c)\leq r$ and $2\mid r$,}\\
+2\cdot p^{\frac{r-1}{2}} &amp; \text{if $2\cdot v_p(c)\leq r$ and $2\nmid r$,}\\
+2\cdot p^{r-v_p(c)} &amp; \text{if $2\cdot v_p(c) &gt; r$.}
+\end{cases}" />
+</div></p><p>This flexible formula can be used to compute the dimension of
+<img class="math" src="_images/math/fd8a388aabac45bdeca35b54e4b3afb250924ae3.png" alt="M_k(N,\eps)" />,
+<img class="math" src="_images/math/46908f80dbf868a3dfe954da8045fd970d2854e1.png" alt="S_k(N,\eps)" />, and <img class="math" src="_images/math/738646a8a82c3c6f0c69f2f3ad8c5e8fc38c2ab0.png" alt="E_k(N,\eps)" /> for any <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />, <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" />, <img class="math" src="_images/math/812625658d2d323dec714abb9128b9880dd68630.png" alt="k\neq 1" />,
+by using that</p>
+<div class="math">
+<p><img src="_images/math/c349cf7aa8268d0b506fad32b1b285d4621fb420.png" alt="\dim S_k(N,\eps) &amp;= 0 \qquad \text{if $k\leq 0$,}\\
+\dim M_k(N,\eps) &amp;= 0 \qquad \text{if $k&lt;0$,}\\
+\dim M_0(N,\eps) &amp;= 1 \qquad \text{if $k=0$.}" />
+</div></p><p>One thing that is not straightforward when implementing an algorithm
+to compute the above dimension formulas is how to efficiently compute
+the sets <img class="math" src="_images/math/ca8f49f32924f0bfd01654a9a1f905561c3ba0ae.png" alt="A_4(N)" /> and <img class="math" src="_images/math/609457f60ce3225e8ef67694ee2b1e00592c33d2.png" alt="A_6(N)" />.  Kevin Buzzard suggested the
+following two algorithms.  Note that if <img class="math" src="_images/math/8c325612684d41304b9751c175df7bcc0f61f64f.png" alt="k" />
+is odd, then <img class="math" src="_images/math/8c81fe1da07919946ad158b743f8c80483129c3d.png" alt="\gamma_4(k)=0" />, so the sum over
+<img class="math" src="_images/math/ca8f49f32924f0bfd01654a9a1f905561c3ba0ae.png" alt="A_4(N)" /> is only needed when <img class="math" src="_images/math/8c325612684d41304b9751c175df7bcc0f61f64f.png" alt="k" /> is even.</p>
+<div class="admonition " id="alg:suma4">
+<p class="first admonition-title">Algorithm 6.9</p>
+<p>Given a positive integer <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" /> and an even
+Dirichlet character <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" /> of modulus <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />,
+this algorithm computes  <img class="math" src="_images/math/c11befa2876ea1e46ffd2a08df89003e9c5439a8.png" alt="\sum_{x \in A_4(N)} \eps(x)" />.</p>
+<ol class="last arabic">
+<li><p class="first">[Factor <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />]  Compute the prime factorization
+<img class="math" src="_images/math/fb75b8b3c1eb80466df7f2f2d01575241c9ccfa4.png" alt="p_1^{e_1} \cdots p_n^{e_n}" /> of <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />.</p>
+</li>
+<li><p class="first">[Initialize] Set <img class="math" src="_images/math/c2fe96aa466e243cdf677b1e72b36304a97705ea.png" alt="t\set 1" /> and <img class="math" src="_images/math/c2c3cb85e64cb4f896d903699675b7a5c53806f7.png" alt="i\set 0" />.</p>
+</li>
+<li id="alg-sum1go"><p class="first">[Loop Over Prime Divisors] Set <img class="math" src="_images/math/ef5c688ae52885f60106b1f325031c34846de6e2.png" alt="i\set i+1" />.
+If <img class="math" src="_images/math/2c4976006cd1ed4e155b10a6a90d9f46fd46fd94.png" alt="i&gt;n" />, return <img class="math" src="_images/math/e0d2bf360290fd61d1c1557e763f2622363b3d35.png" alt="t" />.  Otherwise set <img class="math" src="_images/math/19a4a18a614a3a0318afdb3c7f436f11538cab19.png" alt="p\set p_i" /> and
+<img class="math" src="_images/math/337aef5ea37f6ebb10cf0051c71fcf51b73d1146.png" alt="e\set e_i" />.</p>
+<ol class="loweralpha simple" id="alg-a4-3a">
+<li>If <img class="math" src="_images/math/94880694c4a99e347a960dfd3f0edc91008a2b8f.png" alt="p\con 3\pmod{4}" />, return <img class="math" src="_images/math/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" alt="0" />.</li>
+<li id="alg-a4-3b">If <img class="math" src="_images/math/25b803838ba4ded99f094071740c256527784b2e.png" alt="p=2" /> and <img class="math" src="_images/math/8e1a4572ba74dc375952125ad591b0e1aca32a66.png" alt="e&gt;1" />, return <img class="math" src="_images/math/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" alt="0" />.</li>
+<li>If <img class="math" src="_images/math/25b803838ba4ded99f094071740c256527784b2e.png" alt="p=2" /> and <img class="math" src="_images/math/d7ce46690101dc115651decd6ff241a518a44609.png" alt="e=1" />, go to step <a class="reference internal" href="#alg-sum1go"><em>(3)</em></a>.</li>
+<li id="alg-a4-3d">Compute a generator <img class="math" src="_images/math/46176a7cfcce79d9c36cf74fdab7ce06e4eb0e92.png" alt="a\in (\Z/p\Z)^*" /> using
+<a class="reference external" href="dirichlet_characters.html#alg:mingens"><em>Algorithm 4.4</em></a>.</li>
+<li>Compute <img class="math" src="_images/math/3d56b86b65a801d4195a3169989f676e98046c84.png" alt="\omega = a^{(p-1)/4}" />.</li>
+<li>Use the Chinese Remainder Theorem to find <img class="math" src="_images/math/27105468ca17a838935e3c3af6a4c189c3c5e9a0.png" alt="x\in\Z/N\Z" />
+such that <img class="math" src="_images/math/2f5e2b50ff097ee35c1181efdb4888f26855933f.png" alt="x\con a\pmod{p}" /> and <img class="math" src="_images/math/1bf787a4fdfa8ad9952fd58be5cece3ff066aada.png" alt="x\con 1\pmod{N/p^e}" />.</li>
+<li id="alg-a4-3g">Set <img class="math" src="_images/math/9cae04cc9bbbb93dd4beeaea6868a66fb2852582.png" alt="x \set x^{p^{r-1}}" />.</li>
+<li id="alg-a4-3h">Set <img class="math" src="_images/math/125f60c9431bf9b74e4af2e27141100e6a94841a.png" alt="s\set \eps(x)" />.</li>
+</ol>
+<blockquote>
+</blockquote>
+<ol class="lowerroman simple" id="alg-a4-3i">
+<li>If <img class="math" src="_images/math/fb16e2177f55574e2538c0d9b240b1ee7d46d767.png" alt="s=1" />, set <img class="math" src="_images/math/759134c6e2453e0bcd515ff9d946c63e721261d9.png" alt="t\set 2t" /> and go to
+step <a class="reference internal" href="#alg-sum1go"><em>(3)</em></a>.</li>
+</ol>
+<ol class="loweralpha simple" id="alg-a4-3j" start="10">
+<li>If <img class="math" src="_images/math/0bcbce27ea902a9d70832c89259202ec3af5d3c5.png" alt="s=-1" />, set <img class="math" src="_images/math/4a8be328221be4ebeda4c278acd784d36b287023.png" alt="t\set -2t" /> and go to
+step <a class="reference internal" href="#alg-sum1go"><em>(3)</em></a>.</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="admonition ">
+<p class="first admonition-title">Proof</p>
+<p>Note that <img class="math" src="_images/math/40f590d0c0dee967236f4a15309244715e15d5dd.png" alt="\eps(-x)=\eps(x)" />, since <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" /> is even.  By the Chinese
+Remainder Theorem, the set <img class="math" src="_images/math/ca8f49f32924f0bfd01654a9a1f905561c3ba0ae.png" alt="A_4(N)" /> is empty if and only if there is
+no square root of <img class="math" src="_images/math/bae5aba07d37ff6ff813107e76260fb31ad5794e.png" alt="-1" /> modulo some prime power divisor of <img class="math" src="_images/math/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" alt="p" />.  If
+<img class="math" src="_images/math/ca8f49f32924f0bfd01654a9a1f905561c3ba0ae.png" alt="A_4(N)" /> is empty, the algorithm correctly detects this fact in
+steps <a class="reference internal" href="#alg-a4-3a"><em>(a)</em></a> &#8211; <a class="reference internal" href="#alg-a4-3b"><em>(b)</em></a>.
+Thus assume <img class="math" src="_images/math/ca8f49f32924f0bfd01654a9a1f905561c3ba0ae.png" alt="A_4(N)" /> is
+nonempty.  For each prime power <img class="math" src="_images/math/4101abf229ca5198f3e9fb26f0931354f0ea5b9d.png" alt="p_i^{e_i}" /> that exactly divides
+<img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />, let <img class="math" src="_images/math/06888bdba9c3e2a3ba2213b1cd74d3e33b7e66da.png" alt="x_i \in Z/N\Z" /> be such that <img class="math" src="_images/math/6ee48cd4e0d9f559695b6c53fdd62e755ff6d17f.png" alt="x_i^2 = -1" /> and <img class="math" src="_images/math/d51f3dd05045eab742ec0afef24bcf301739a647.png" alt="x_i\con
+1\pmod{p_j^{e_j}}" /> for <img class="math" src="_images/math/743293b410b7d3bdf6a048265134ab7aa60b38b0.png" alt="i \neq j" />.  This is the value of <img class="math" src="_images/math/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" alt="x" />
+computed in steps  <a class="reference internal" href="#alg-a4-3d"><em>(d)</em></a> &#8211; <a class="reference internal" href="#alg-a4-3g"><em>(g)</em></a>
+(as one sees using elementary number theory).</p>
+<p>The next key observation is that</p>
+<div class="math" id="equation-eqn:a4prodsum">
+<p><span class="eqno">(1)</span><img src="_images/math/153196b02fe87721f4a613a41ab8a81f5e2504b9.png" alt="\prod_i (\eps(x_i) + \eps(-x_i)) =
+\sum_{x \in A_4(N)} \eps(x)," />
+</div></p><p class="last">since by the Chinese Remainder Theorem the elements of <img class="math" src="_images/math/ca8f49f32924f0bfd01654a9a1f905561c3ba0ae.png" alt="A_4(N)" /> are
+in bijection with the choices for a square root of <img class="math" src="_images/math/bae5aba07d37ff6ff813107e76260fb31ad5794e.png" alt="-1" /> modulo each
+prime power divisors of <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />.  The observation <a href="#equation-eqn:a4prodsum">(1)</a>
+is a huge gain from an efficiency point of view&#8212;if <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" /> had <img class="math" src="_images/math/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" alt="r" />
+prime factors, then <img class="math" src="_images/math/ca8f49f32924f0bfd01654a9a1f905561c3ba0ae.png" alt="A_4(N)" /> would have size <img class="math" src="_images/math/a2d230fae6558a1a3ada3c4452aeb2561e9a0e71.png" alt="2^r" />, which could be
+prohibitive, where the product involves only <img class="math" src="_images/math/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png" alt="r" /> factors.  To finish
+the proof, just note that steps
+<a class="reference internal" href="#alg-a4-3h"><em>(h)</em></a> &#8211; <a class="reference internal" href="#alg-a4-3j"><em>(j)</em></a>
+compute the local factors <img class="math" src="_images/math/5f18dca06813d4ec63e87cfa49e154ba0a43337b.png" alt="\eps(x_i) + \eps(-x_i) = 2\eps(x_i)" />,
+where again we use that <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" /> is even.  Note that a solution
+of <img class="math" src="_images/math/01e29f31d316439aaa6ad758d01d98b438c65ece.png" alt="x^2+1 \con 0\pmod{p}" /> lifts uniquely to a solution mod <img class="math" src="_images/math/4f284850aa8df581404b2dbecc37eabce44eb96b.png" alt="p^n" /> for
+any <img class="math" src="_images/math/174fadd07fd54c9afe288e96558c92e0c1da733a.png" alt="n" />, because the kernel of the natural homomorphism <img class="math" src="_images/math/0e19b7a5db35672d52a047397d558d81360e05ea.png" alt="(\Z/p^n\Z)^*
+\to (\Z/p\Z)^*" /> is a group of <img class="math" src="_images/math/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" alt="p" />-power order.</p>
+</div>
+<p>The algorithm for computing the sum over <img class="math" src="_images/math/6dad059e510ff6f992182e4afff7fc6d22ac51d6.png" alt="A_3(N)" /> is similar.</p>
+<p>For <img class="math" src="_images/math/58a0ef476cf5452cdb5a980c9697dc1068e0731b.png" alt="k\geq 2" />, to compute <img class="math" src="_images/math/f2f868555319c2b6ec5b72d7fe91a15eddb4e5b6.png" alt="\dim S_k(N,\eps)" />, use the formula directly
+and the fact that <img class="math" src="_images/math/9812daeac4905fa679a160e95fe0e7f558b5cdc1.png" alt="\dim M_{2-k}(N,\eps) = 0" />, unless <img class="math" src="_images/math/926e1cd4d244f16556e29e60b88a85a3997e37a9.png" alt="\eps=1" /> and <img class="math" src="_images/math/4f681bd84648c174d45eed0037702cae77ed0686.png" alt="k=2" />.
+To compute <img class="math" src="_images/math/73b32fd53455421982153f5ddbf02029b0a6cf5a.png" alt="\dim M_k(N,\eps)" /> for <img class="math" src="_images/math/58a0ef476cf5452cdb5a980c9697dc1068e0731b.png" alt="k\geq 2" />, use the fact that the big
+formula at the beginning of this section
+is valid for any integer <img class="math" src="_images/math/8c325612684d41304b9751c175df7bcc0f61f64f.png" alt="k" /> to replace <img class="math" src="_images/math/8c325612684d41304b9751c175df7bcc0f61f64f.png" alt="k" />
+by <img class="math" src="_images/math/8e4f93ea1dc6c5e51d7f6bc387616bf4cf8b9b43.png" alt="2-k" /> and
+that <img class="math" src="_images/math/03bb77ba784be2ca1df115221ef01bc15c0246fc.png" alt="\dim S_k(N,\eps)=0" /> for <img class="math" src="_images/math/7a7b7bb5a67e99d432048bce9bd50ab39e904ca8.png" alt="k\leq 0" /> to rewrite the formula as</p>
+<div class="math">
+<p><img src="_images/math/ca1482932789adbf615b722b6064c11517dde9f9.png" alt="\dim M_k(N,\eps) &amp;= - (\dim S_{2-k}(N,\eps) - \dim M_{k}(N,\eps))\\
+&amp;=-\Bigl( \frac{1-k}{12} \cdot \mu_0(N) \,\,-\,\,
+\frac{1}{2} \cdot \prod_{p\mid N} \lambda(p, N, v_p(c))\\
+&amp;\qquad + \gamma_4(2-k) \cdot\!\!
+\sum_{x \in A_4(N)} \eps(x) \,\,\,+\,\,\,
+\gamma_3(2-k) \cdot \!\! \sum_{x \in A_3(N)} \eps(x)\Bigr)." />
+</div></p><p>Note also that for <img class="math" src="_images/math/badf0ecd1ef8289387d8462393438c6e2710ff28.png" alt="k=0" />, <img class="math" src="_images/math/f58f2cf0d94ee82aff9c87de1593b08a689870d1.png" alt="\dim E_k(N,\eps) = 1" /> if
+and only if <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" /> is trivial and it equals <img class="math" src="_images/math/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" alt="0" /> otherwise.
+We then also obtain</p>
+<div class="math">
+<p><img src="_images/math/a33bb675b9aa5742de7d9f289535f3b1800ffe0e.png" alt="\dim E_k(N,\eps) = \dim M_k(N,\eps) - \dim S_k(N,\eps)." />
+</div></p><p>We can also compute <img class="math" src="_images/math/51e4ccae34e09371ba8199e4b26d5c5c3f4778e7.png" alt="\dim E_k(N,\eps)" /> when <img class="math" src="_images/math/5ed8470bc717a49aafe4556c7e2c2e11ddc7b687.png" alt="k=1" />
+directly, since</p>
+<div class="math">
+<p><img src="_images/math/6d8e8540f52b279856680903aff9b722fe2e49d3.png" alt="\dim S_{2-1}(N,\eps) = \dim S_{1}(N,\eps)." />
+</div></p><p>The following table contains the dimension of <img class="math" src="_images/math/46908f80dbf868a3dfe954da8045fd970d2854e1.png" alt="S_k(N,\eps)" />
+for some sample values of <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" /> and <img class="math" src="_images/math/8c325612684d41304b9751c175df7bcc0f61f64f.png" alt="k" />.  In each case, <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" />
+is the product of characters <img class="math" src="_images/math/7cb962f70afa56912aa285547a927650b13fc414.png" alt="\eps_p" /> of maximal order
+corresponding to the prime power factors of <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" /> (i.e.,
+the product of the generators of the group
+<img class="math" src="_images/math/fc0957d1663ffb3e1d620a4d08386704ab667431.png" alt="D(N,\C^*)" /> of Dirichlet characters of modulus <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />).</p>
+<div class="math">
+<p><img src="_images/math/415a904f4791e4e0766b2acc4f2aa82862746137.png" alt="\begin{tabular}{|l|llll|}\hline
+$N$ &amp; $\dim S_2(N,\eps)$ &amp; $\dim S_3(N,\eps)$ &amp;
+      $\dim S_4(N,\eps)$ &amp; $\dim S_{24}(N,\eps)$\\\hline
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 2\\
+10 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+11 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+100 &amp; 13 &amp; 0 &amp; 43 &amp; 343\\
+389 &amp; 0 &amp; 64 &amp; 0 &amp; 0\\
+1000 &amp; 148 &amp; 0 &amp; 448 &amp; 3448\\
+2007 &amp; 222 &amp; 0 &amp; 670 &amp; 5150\\\hline
+\end{tabular}" />
+</div></p><div class="admonition ">
+<p class="first admonition-title">Example 6.10</p>
+<p>We compute the last line of the above table.  First
+we create the character <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" />.</p>
+<div class="highlight-python" id="index-74"><div class="highlight"><pre><span class="gp">sage: </span><span class="n">G</span> <span class="o">=</span> <span class="n">DirichletGroup</span><span class="p">(</span><span class="mf">2007</span><span class="p">)</span>
+<span class="gp">sage: </span><span class="n">e</span> <span class="o">=</span> <span class="n">prod</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">gens</span><span class="p">(),</span> <span class="n">G</span><span class="p">(</span><span class="mf">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Next we compute the dimension of the four spaces.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">sage: </span><span class="n">dimension_cusp_forms</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="mf">2</span><span class="p">)</span>
+<span class="go">222</span>
+<span class="gp">sage: </span><span class="n">dimension_cusp_forms</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="mf">3</span><span class="p">)</span>
+<span class="go">0</span>
+<span class="gp">sage: </span><span class="n">dimension_cusp_forms</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="mf">4</span><span class="p">)</span>
+<span class="go">670</span>
+<span class="gp">sage: </span><span class="n">dimension_cusp_forms</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="mf">24</span><span class="p">)</span>
+<span class="go">5150</span>
+</pre></div>
+</div>
+<p>We can also compute dimensions of the corresponding
+spaces of Eisenstein series.</p>
+<div class="last highlight-python"><div class="highlight"><pre><span class="gp">sage: </span><span class="n">dimension_eis</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="mf">2</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">sage: </span><span class="n">dimension_eis</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="mf">3</span><span class="p">)</span>
+<span class="go">0</span>
+<span class="gp">sage: </span><span class="n">dimension_eis</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="mf">4</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">sage: </span><span class="n">dimension_eis</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="mf">24</span><span class="p">)</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition " id="rem:co">
+<p class="first admonition-title">Remark 6.11</p>
+<p class="last">Cohen and Oesterl&#8217;e also give dimension formulas for spaces of
+half-integral weight modular forms, which we do not give in this
+chapter.  Note that [<a class="reference external" href="bibliography.html#co77"><strong>CO77</strong></a>] does not
+contain any <em>proofs</em> that their claimed formulas are correct,
+but instead they say only that &#8220;Les formules qui les donnent sont
+connues de beaucoup de gens et il existe plusieurs m&#8217;ethodes
+permettant de les obtenir (th&#8217;eor`eme de Riemann-Roch, application
+des formules de trace donn&#8217;ees par Shimura).&#8221; <a class="footnote-reference" href="#f2" id="id3">[2]</a>
+Fortunately, in [<a class="reference external" href="bibliography.html#que06"><strong>Que06</strong></a>],
+Jordi Quer derives the
+(integral weight) formulas of [<a class="reference external" href="bibliography.html#co77"><strong>CO77</strong></a>]
+along with formulas for dimensions of spaces <img class="math" src="_images/math/2ddaa363c396c00192a29c863be053d7a6f633b3.png" alt="S_k(G)" /> and
+<img class="math" src="_images/math/24fe20d94198d4f4a87a06a2cb4f69c7fee5418f.png" alt="M_k(G)" /> for more general congruence subgroups.</p>
+</div>
+<p>Let <img class="math" src="_images/math/bb2c93730dbb48558bb3c4738c956c4e8f816437.png" alt="f" /> be the conductor of a Dirichlet character <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" /> of modulus <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />.
+Then the dimension of the new subspace of <img class="math" src="_images/math/fd8a388aabac45bdeca35b54e4b3afb250924ae3.png" alt="M_k(N,\eps)" /> is</p>
+<div class="math">
+<p><img src="_images/math/2bfbe28c4f9e6a95162bac357b648da6413163ed.png" alt="\dim S_k(N,\eps)_{\new} =
+\sum_{M\text{ such that }f \mid M \mid N} \overline{\mu}(N/M) \cdot \dim S_k(M,\eps')," />
+</div></p><p>where <img class="math" src="_images/math/7a1461031818e08761dbc677b4b8c9c34beebd7e.png" alt="\overline{\mu}" /> is as in the statement
+of <a class="reference internal" href="#prop:newg0"><em>Proposition 6.4</em></a>, and <img class="math" src="_images/math/5ea0e43f6c6f124acab57b2df8da0519cc22d906.png" alt="\eps'" /> is the restriction
+of <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" /> mod <img class="math" src="_images/math/5d1e4485dc90c450e8c76826516c1b2ccb8fce16.png" alt="M" />.</p>
+<div class="admonition ">
+<p class="first admonition-title">Example 6.12</p>
+<p>We compute the dimension of <img class="math" src="_images/math/11d6f7f5a99ad983d719c231d6c1128ff92ac5e2.png" alt="S_2(2007,\eps)_{\new}" />
+for <img class="math" src="_images/math/5f1c6c749a58643b8269936f03d0629396ee47ad.png" alt="\eps" /> a quadratic character of modulus <img class="math" src="_images/math/b0db9f93bcba529c93ae151a1ac5c740eec7cca3.png" alt="2007" />.</p>
+<div class="last highlight-python"><div class="highlight"><pre><span class="gp">sage: </span><span class="n">G</span> <span class="o">=</span> <span class="n">DirichletGroup</span><span class="p">(</span><span class="mf">2007</span><span class="p">,</span> <span class="n">QQ</span><span class="p">)</span>
+<span class="gp">sage: </span><span class="n">e</span> <span class="o">=</span> <span class="n">prod</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">gens</span><span class="p">(),</span> <span class="n">G</span><span class="p">(</span><span class="mf">1</span><span class="p">))</span>
+<span class="gp">sage: </span><span class="n">dimension_new_cusp_forms</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="mf">2</span><span class="p">)</span>
+<span class="go">76</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<div class="admonition " id="ex:mu0n">
+<p class="first admonition-title">Exercise 6.1</p>
+<p>Let <img class="math" src="_images/math/7548319dd93c27598143e27cd09522e0c727ef4f.png" alt="\mu_0" /> and <img class="math" src="_images/math/f5f8c57c136c66a683714048b0820ec466bfc35e.png" alt="\mu_1" /> be as in this chapter.</p>
+<ol class="last loweralpha simple">
+<li>Prove that <img class="math" src="_images/math/aaeeb88680491cd95f63f7d19defb0c7cebaf2f3.png" alt="\mu_0(N) = [\SL_2(\Z):\Gamma_0(N)]" />.</li>
+<li>Prove that for <img class="math" src="_images/math/1c6cd0e0e92a5f5eb04f01febb9316dc1f06e4f5.png" alt="N\geq 3" />, <img class="math" src="_images/math/0e4537e50b92631658a8397b7ec3cd1b32975b45.png" alt="\mu_1(N) = [\SL_2(\Z):\Gamma_1(N)]/2" />,
+so <img class="math" src="_images/math/7fd1cf225b33a12cdf1a4c20ff3a51f074027103.png" alt="\mu_1(N)" /> is the index of <img class="math" src="_images/math/25f56382e8c69b92b392e1fea78ed0a7d3c52191.png" alt="\Gamma_1(N) \cdot \{\pm 1\}" />
+in <img class="math" src="_images/math/64dca0858441abd58549c9f91e42bd3962fd0a9d.png" alt="\PSL_2(\Z) = \SL_2(\Z)/\{\pm 1\}" />.</li>
+</ol>
+</div>
+<div class="admonition " id="ex:formsl2z">
+<p class="first admonition-title">Exercise 6.2</p>
+<p class="last">Use <a class="reference internal" href="#prop:newg0"><em>Proposition 6.4</em></a> to find a formula
+for <img class="math" src="_images/math/491ee802d0a2ba1e0c1c79dae363e14b8cf6aac5.png" alt="\dim S_k(\SL_2(\Z))" />.  Verify that this formula is
+the same as the one in Corollary <a class="reference external" href="level_one.html#cor:dim1"><em>Corollary 2.16</em></a>.</p>
+</div>
+<div class="admonition " id="ex:newmatch">
+<p class="first admonition-title">Exercise 6.3</p>
+<p class="last">Suppose either that <img class="math" src="_images/math/ffbf0e3d6449ddf18d2352976ba403dc41dd46b5.png" alt="N=1" /> or that <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" /> is prime and <img class="math" src="_images/math/4f681bd84648c174d45eed0037702cae77ed0686.png" alt="k=2" />.
+Prove that <img class="math" src="_images/math/6242d66fb887b6a5fa50cf6f9f5a87d19f87f3bf.png" alt="M_k(\Gamma_0(N))_{\new} = M_k(\Gamma_0(N))" />.</p>
+</div>
+<div class="admonition " id="ex:suma4">
+<p class="first admonition-title">Exercise 6.4</p>
+<p class="last">Fill in the details of the proof of <a class="reference internal" href="#alg:suma4"><em>Algorithm 6.9</em></a>.</p>
+</div>
+<div class="admonition " id="ex:sagedim">
+<p class="first admonition-title">Exercise 6.5</p>
+<blockquote class="last">
+Implement a computer program to compute <img class="math" src="_images/math/fd81d0dc48f6e69b46c73586b9e96c978eac7e97.png" alt="\dim S_k(\Gamma_0(N))" /> as
+a function of <img class="math" src="_images/math/8c325612684d41304b9751c175df7bcc0f61f64f.png" alt="k" /> and <img class="math" src="_images/math/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png" alt="N" />.</blockquote>
+</div>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>The formulas in  [<a class="reference external" href="bibliography.html#shi94"><strong>Shi94</strong></a>, Section 2.6] contain some minor mistakes.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>The formulas that we give here are well known and there exist
+many methods to prove them, e.g., the Riemann-Roch theorem and
+applications of the trace formula of Shimura.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="">Dimension Formulas</a><ul>
+<li><a class="reference external" href="#modular-forms-for">Modular Forms for <img class="math" src="_images/math/0ce4343a7316d048508371ec15ac0cc5c641e53c.png" alt="\Gamma_0(N)" /></a><ul>
+<li><a class="reference external" href="#new-and-old-subspaces">New and Old Subspaces</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#id2">Modular Forms for <img class="math" src="_images/math/e1ce758e7944584095efc8e60f73a69edd624a20.png" alt="\Gamma_1(N)" /></a></li>
+<li><a class="reference external" href="#modular-forms-with-character">Modular Forms with Character</a></li>
+<li><a class="reference external" href="#exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="eisenstein.html" title="previous chapter">Eisenstein Series and Bernoulli Numbers</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="linear_algebra.html" title="next chapter">Linear Algebra</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/dimension_formulas.txt">Show Source</a></li>
+            </ul>
+    
+          <h3>Quick search</h3>
+            <form class="search" action="search.html" method="get">
+              <input type="text" name="q" size="18" /> <input type="submit" value="Go" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+    <br><br>
+    <h3>
+    <a
+href="http://www.ams.org/bookstore?co1=AND&co2=AND&co3=AND&d=BOOK&f=G&fn=105&l=100&op1=AND&op2=AND&op3=AND&p=1&pg1=&pg2=&pg3=ALLF&r=12&s1=&s2=&s3=modular%20forms&subject=genint&u=">
+Purchase a hardcopy of this book from the AMS</a></h3>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="linear_algebra.html" title="Linear Algebra"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="eisenstein.html" title="Eisenstein Series and Bernoulli Numbers"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Modular Forms, A Computational Approach v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009, William Stein.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.5.1.
+    </div>
+  </body>
+</html>

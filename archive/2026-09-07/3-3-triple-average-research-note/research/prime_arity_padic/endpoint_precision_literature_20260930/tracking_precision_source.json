@@ -1,0 +1,8 @@
+{
+  "name": "tracking_precision",
+  "url": "https://arxiv.org/pdf/1402.7142",
+  "pages": 24,
+  "sha256": "4d40ccebb258d60208ad6f6719bddc999cdff60a820d71945396d1840a2fa229",
+  "text_length": 79495,
+  "preview": "\n[PDF PAGE 1]\narXiv:1402.7142v1  [math.NT]  28 Feb 2014\nTracking p-adic precision\nXavier Caruso, David Roe & Tristan Vaccon\nFebruary 2014\nAbstract\nWe present a new method to propagate p-adic precision in computations, which also applies\nto other ultrametric ﬁelds. We illustrate it with many examples and give a toy application to\nthe stable computation of the SOMOS 4 sequence.\nContents\n1\nIntroduction\n1\n2\nPrecision proposals\n3\n3\nLattices and diﬀerentials\n5\n4\nPrecision in practice\n10\nA Generalization to manifolds\n14\nB Diﬀerential of usual operations\n18\n1\nIntroduction\nThe last two decades have seen a rise in the popularity of p-adic methods in computational algebra.\nFor example,\n• Bostan et al. [4] used Newton sums for polynomials over Zp to compute composed products\nfor polynomials over Fp;\n• Gaudry et al. [8] used p-adic lifting methods to generate genus 2 CM hyperelliptic curves;\n• Kedlaya [10], Lauder [11] and many followers used p-adic cohomology to count points on\nhyperelliptic curves over ﬁnite ﬁelds;\n• Lercier and Sirvent [12] computed isogenies between elliptic curves over ﬁnite ﬁelds using\np-adic diﬀerential equations.\nLike real numbers, most p-adic numbers cannot be represented exactly, but instead must be stored\nwith some ﬁnite precision. In this paper we focus on methods for handling p-adic precision that\napply across many diﬀerent algorithms.\nTwo sources of inspiration arise when studying p-adic algorithms. The ﬁrst relates Zp to its\nquotients Z/pnZ. The preimage in"
+}

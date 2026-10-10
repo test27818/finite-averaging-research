@@ -1,0 +1,155 @@
+{
+  "items": [
+    {
+      "tags": [
+        "ac.commutative-algebra",
+        "algebraic-number-theory"
+      ],
+      "owner": {
+        "account_id": 9051552,
+        "reputation": 257,
+        "user_id": 125074,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/75761f97f3b2bc73656eacb757588598?s=256&d=identicon&r=PG",
+        "display_name": "Algebrus",
+        "link": "https://mathoverflow.net/users/125074/algebrus"
+      },
+      "is_answered": true,
+      "view_count": 823,
+      "accepted_answer_id": 343024,
+      "answer_count": 2,
+      "score": 3,
+      "last_activity_date": 1570121477,
+      "creation_date": 1570034092,
+      "last_edit_date": 1570088923,
+      "question_id": 342965,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/342965/generators-of-prime-ideals-and-factorization-of-polynomials",
+      "title": "Generators of prime ideals and factorization of polynomials",
+      "body": "<p>Let <span class=\"math-container\">$\\alpha \\in \\mathbb{C}$</span> be a zero of a monic irreducible polynomial <span class=\"math-container\">$f \\in \\mathbb{Z}[X]$</span>. Define <span class=\"math-container\">$K = \\mathbb{Q}[\\alpha]$</span> and <span class=\"math-container\">$A := \\mathbb{Z}[\\alpha]$</span>, then <span class=\"math-container\">$A \\subseteq O_K$</span>, where the latter denotes the ring of integers of the number field <span class=\"math-container\">$K$</span>.</p>\n\n<p>Let <span class=\"math-container\">$p$</span> be a prime number, and assume that <span class=\"math-container\">$f$</span> factors modulo <span class=\"math-container\">$p$</span> as \n<span class=\"math-container\">$$f \\equiv g_1^{\\alpha_1} \\cdots g_k^{\\alpha_k},$$</span>\nwhere the <span class=\"math-container\">$g_i$</span> are monic and irreducible modulo <span class=\"math-container\">$p$</span> (i.e., irreducible as elements in <span class=\"math-container\">$(\\mathbb{Z}/p\\mathbb{Z})[X]$</span>). Suppose further that there exist prime ideals <span class=\"math-container\">$\\mathfrak{q}_1,\\ldots, \\mathfrak{q}_k \\subseteq O_K$</span> such that \n<span class=\"math-container\">$$p O_K = \\mathfrak{q}_1^{\\alpha_1} \\cdots \\mathfrak{q}_k^{\\alpha_k}$$</span>\nand such that \n<span class=\"math-container\">$$\\text{each } \\mathfrak{q}_i \\text{ has degree } \\deg(g_i), i.e., [O_K/\\mathfrak{q}_i:\\mathbb{Z}/p\\mathbb{Z}] = \\deg(g_i).$$</span>\n(EDIT: If necessary, one may assume here that the above holds for <em>every</em> prime number <span class=\"math-container\">$p$</span>.)</p>\n\n<p><strong>Is it then true<span class=\"math-container\">$^\\star$</span> that</strong><br>\n<span class=\"math-container\">$$\\mathfrak{q}_i = \\langle p, g_i(\\alpha) \\rangle_{O_K} := p \\cdot O_K + g_i(\\alpha) \\cdot O_K \\text{ ?}$$</span></p>\n\n<p><span class=\"math-container\">$\\big($</span> <span class=\"math-container\">$^\\star$</span> This is meant up to ''reasonable'' permutation. E.g., if <span class=\"math-container\">$g_i$</span> and <span class=\"math-container\">$g_j$</span> have the same degree and <span class=\"math-container\">$\\alpha_i = \\alpha_j$</span>, then it could of course happen that <span class=\"math-container\">$\\mathfrak{q}_j = \\langle p, g_i(\\alpha) \\rangle_{O_K}$</span> and <span class=\"math-container\">$\\mathfrak{q}_i = \\langle p, g_j(\\alpha) \\rangle_{O_K}$</span>.<span class=\"math-container\">$\\big)$</span></p>\n\n<p>Of course, my claim holds for all but finitely many prime numbers <span class=\"math-container\">$p$</span>, which is precisely the <strong>Kummer-Dedekind</strong>-Theorem. To be concrete, it holds for all <span class=\"math-container\">$p$</span> not dividing the index <span class=\"math-container\">$[O_K : A]$</span>. Hence I am asking here whether the generators of the prime ideals <span class=\"math-container\">$\\mathfrak{q}_i$</span> are nevertheless as predicted by Kummer-Dedekind, if we assume that <span class=\"math-container\">$f$</span> and <span class=\"math-container\">$pO_K$</span> have the same factorization pattern.</p>\n\n<p><em>A few observations:</em> </p>\n\n<ol>\n<li>The ideals <span class=\"math-container\">$\\mathfrak{p_i} := \\langle p, g_i(\\alpha) \\rangle_A = p \\cdot A + g_i(\\alpha) \\cdot A$</span> are precisely the prime ideals in <span class=\"math-container\">$A$</span> containing <span class=\"math-container\">$p$</span>, which is due to the isomorphisms \n<span class=\"math-container\">$$A/pA \\cong \\mathbb{Z}[X]/(f,p) \\cong (\\mathbb{Z}/p \\mathbb{Z})[X]/(f).$$</span></li>\n<li>The ideals <span class=\"math-container\">$\\mathfrak{q}_i$</span> are precisely the prime ideals in <span class=\"math-container\">$O_K$</span> containing <span class=\"math-container\">$p$</span>.</li>\n<li>Since <span class=\"math-container\">$O_K \\mid A$</span> is an integral ring extension, for every <span class=\"math-container\">$\\mathfrak{p}_i$</span> there exists a prime ideal in <span class=\"math-container\">$O_K$</span> lying over it which (necessarily) contains <span class=\"math-container\">$p$</span>. In particular, by 1. and 2., there is a permutation <span class=\"math-container\">$\\sigma \\in S_k$</span> such that <span class=\"math-container\">$\\mathfrak{p}_i = \\mathfrak{q}_{\\sigma(i)} \\cap A$</span>. However, (to my knowledge) this is not strong enough to conclude that <span class=\"math-container\">$\\mathfrak{q}_{\\sigma(i)} = \\mathfrak{p}_i \\cdot O_K = \\langle p, g_i(\\alpha) \\rangle_{O_K}$</span>. At least, we may conclude that <span class=\"math-container\">$\\mathfrak{p}_i \\cdot O_K$</span> is a power of <span class=\"math-container\">$\\mathfrak{q}_{\\sigma(i)}$</span>.</li>\n<li>By the isomorphisms from 1., we know that <span class=\"math-container\">$|A/\\mathfrak{p}_i| = |(\\mathbb{Z}/p\\mathbb{Z})[X]/(g_i)| = p^{\\deg(g_i)}$</span>. Further, our assumptions imply that <span class=\"math-container\">$|O_K/\\mathfrak{q}_i| = p^{\\deg(g_i)}$</span>. In the notation of 3., we have a canonical injection <span class=\"math-container\">$A/\\mathfrak{p}_i \\to O_K/\\mathfrak{q}_{\\sigma(i)}$</span>, hence <span class=\"math-container\">$\\deg(g_i) \\leq \\deg(g_{\\sigma(i)})$</span> for every <span class=\"math-container\">$1 \\leq i \\leq k$</span>, hence these must be equalities, thus even <span class=\"math-container\">$A/\\mathfrak{p}_i \\cong O_K/\\mathfrak{q}_{\\sigma(i)}$</span> for every <span class=\"math-container\">$1 \\leq i \\leq k$</span>.</li>\n<li>Let's now involve <span class=\"math-container\">$p$</span>-adic numbers. By Hensel's Lemma, the factorization <span class=\"math-container\">$f \\equiv g_1^{\\alpha_1} \\cdots g_k^{\\alpha_k}$</span> modulo <span class=\"math-container\">$p$</span> can be lifted to a decomposition of <span class=\"math-container\">$f$</span> as a product \n<span class=\"math-container\">$$f = G_1 \\cdots G_k \\text{ in } \\mathbb{Z}_p[X],$$</span>\nwhere each <span class=\"math-container\">$G_i$</span> is monic and reduces to <span class=\"math-container\">$g_i^{\\alpha_i}$</span> modulo <span class=\"math-container\">$p$</span>, in particular <span class=\"math-container\">$\\deg(G_i) = \\alpha_i \\cdot \\deg(g_i)$</span>.</li>\n<li>Using the isomorphism\n<span class=\"math-container\">$$K \\otimes_\\mathbb{Q} \\mathbb{Q}_p \\cong \\prod_{\\substack{\\mathfrak{p} \\in \\mathrm{Spec}(O_K) \\\\ \\mathfrak{p} \\cap \\mathbb{Z} = p\\mathbb{Z}}} K_\\mathfrak{p},$$</span>\nwhere <span class=\"math-container\">$K_\\mathfrak{p}$</span> denotes the completion of <span class=\"math-container\">$K$</span> with respect to the <span class=\"math-container\">$\\mathfrak{p}$</span>-adic topology, the factorization \n<span class=\"math-container\">$$p O_K = \\mathfrak{q}_1^{\\alpha_1} \\cdots \\mathfrak{q}_k^{\\alpha_k}$$</span>\n(togehter with the nice properties of étale algebras) implies that the factorization of <span class=\"math-container\">$f$</span> over <span class=\"math-container\">$\\mathbb{Z}_p$</span> consists of precisely <span class=\"math-container\">$k$</span> (monic) irreducible factors, whose degrees are given by <span class=\"math-container\">$\\deg(g_i) \\cdot \\alpha_i$</span>, <span class=\"math-container\">$1 \\leq i \\leq k$</span>. This proves that <span class=\"math-container\">$G_1, \\ldots, G_k$</span> are irreducible. </li>\n</ol>\n\n<p>Note that this is not a homework problem, hence my claim could possibly be wrong. Any help is appreciated!</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "analytic-number-theory",
+        "algebraic-number-theory",
+        "computational-number-theory",
+        "class-field-theory"
+      ],
+      "owner": {
+        "account_id": 16312082,
+        "reputation": 43,
+        "user_id": 167267,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/1597612840375884/picture?type=large",
+        "display_name": "Rashad Ek",
+        "link": "https://mathoverflow.net/users/167267/rashad-ek"
+      },
+      "is_answered": true,
+      "view_count": 367,
+      "accepted_answer_id": 464542,
+      "answer_count": 1,
+      "score": 4,
+      "last_activity_date": 1708533483,
+      "creation_date": 1708437042,
+      "last_edit_date": 1708437714,
+      "question_id": 464527,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/464527/generators-of-the-ideal-class-group",
+      "title": "Generators of the ideal class group",
+      "body": "<p>Theorem 4 of Eric Bach's <em>&quot;Explicit bounds for primality testing and related problems&quot;</em> states the following:</p>\n<p>Let <span class=\"math-container\">$K$</span> be a number field of degree greater than 1. Let <span class=\"math-container\">$d$</span> be the absolute value of the discriminant of <span class=\"math-container\">$K$</span>. Let <span class=\"math-container\">$\\chi$</span> be a nonprincipal character of the ideals of <span class=\"math-container\">$k$</span> that is defined modulo <span class=\"math-container\">$\\mathfrak{f}$</span>. Then:\n<span class=\"math-container\">\\begin{align*} \n\\chi (p) &amp;\\neq 1 \\text{  occurs for  }  N(\\mathfrak{p}) \\leq 3\\log^{2}(d^2N(\\mathfrak{f})) \\\\\n\\chi (p) &amp; \\neq 0,1 \\text{  occurs for  }  N(\\mathfrak{p}) \\leq 12\\log^{2}(d^2N(\\mathfrak{f}))\\\\\n\\chi (p)  &amp; \\neq 0,1 \\text{ and } \\text{degree}(\\mathfrak{p})=1  \\text{  occurs for  }  N(\\mathfrak{p}) \\leq 18\\log^{2}(d^2N(\\mathfrak{f}))\n\\end{align*}</span></p>\n<p>How do I get the result that the ideal class group is generated by the prime ideals of norm less than <span class=\"math-container\">$12\\log^{2}(d)$</span> from above theorem?</p>\n"
+    },
+    {
+      "tags": [
+        "gr.group-theory",
+        "algorithms",
+        "symmetric-groups"
+      ],
+      "owner": {
+        "account_id": 1106041,
+        "reputation": 18441,
+        "user_id": 1306,
+        "user_type": "registered",
+        "accept_rate": 85,
+        "profile_image": "https://www.gravatar.com/avatar/5a908b097e29e0523a31df2bab40f7dc?s=256&d=identicon&r=PG",
+        "display_name": "Vladimir Dotsenko",
+        "link": "https://mathoverflow.net/users/1306/vladimir-dotsenko"
+      },
+      "is_answered": false,
+      "view_count": 138,
+      "answer_count": 0,
+      "score": 3,
+      "last_activity_date": 1522068731,
+      "creation_date": 1522064555,
+      "last_edit_date": 1522068731,
+      "question_id": 296210,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://mathoverflow.net/questions/296210/working-with-symmetric-groups-presented-via-nonstandard-generators",
+      "title": "working with symmetric groups presented via nonstandard generators",
+      "body": "<p>This is follow-up to <a href=\"https://mathoverflow.net/questions/286316/recognition-of-symmetric-groups-in-gap\">my earlier question</a>.</p>\n\n<p>Suppose that we have elements $\\sigma_1,\\ldots,\\sigma_k\\in S_n$, and that we established that these elements actually generate $S_n$. \nSince that previous question, I learned that the <a href=\"https://www.sciencedirect.com/science/article/pii/S074771719990295X\" rel=\"nofollow noreferrer\">Bratus-Pak algorithm</a> for recognising symmetric groups actually also produces a way to express every element of $S_n$ as a word in sigmas. </p>\n\n<p>However, in some specific applications I have in mind (where $n$ is about 60), the transpositions $(i,j)$ in $S_n$ are thus expressed as words of length about 800 in sigmas, and I have strong reasons to suspect that there are much shorter ways to represent them (shorter than 100). Are there some methods that are known [in practice] to produce reasonably short words in the word group in such situation?  </p>\n\n<p>EDIT: in principle, I can even reduce my problem a little bit, and ask just for a representatives in cosets of transpositions modulo $H$, where $H$ is some explicitly given subgroup of $S_n$. Maybe that could help.</p>\n"
+    },
+    {
+      "tags": [
+        "nt.number-theory",
+        "computational-number-theory",
+        "computer-algebra",
+        "number-fields",
+        "sage"
+      ],
+      "owner": {
+        "account_id": 12549786,
+        "reputation": 131,
+        "user_id": 161897,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/05db4c777e9e6ad8406e6ccf5f71fcac?s=256&d=identicon&r=PG",
+        "display_name": "xion3582",
+        "link": "https://mathoverflow.net/users/161897/xion3582"
+      },
+      "is_answered": true,
+      "view_count": 418,
+      "accepted_answer_id": 484190,
+      "answer_count": 1,
+      "score": 4,
+      "last_activity_date": 1758629282,
+      "creation_date": 1732486739,
+      "last_edit_date": 1734294315,
+      "question_id": 483102,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/483102/compute-generators-for-group-of-totally-positive-units-of-a-number-field",
+      "title": "Compute generators for group of totally positive units of a number field?",
+      "body": "<p>Given a number field <span class=\"math-container\">$K$</span>, I would like to compute (in Sage) generators for the group of totally positive units of <span class=\"math-container\">$K$</span>.</p>\n<p><strong>Update:</strong> I've tried some code (details below), which I've received some help on in the comments. To clarify, my ideal would be to write up my own algorithm (rather than use code I found, as I discuss below).</p>\n<p>I see reference to a strategy in the comments of the related question <a href=\"https://mathoverflow.net/questions/236812/magma-generators-for-unit-group-sage-totally-positive\">magma generators for unit group/ sage totally positive</a>. The comment says that &quot;it takes a bit of linear algebra mod 2 to construct a basis of totally positive units&quot; from an existing set of fundamental units. I see some matrix algebra modulo 2 in the Pari code I found, but I don't know Pari well.</p>\n<p><strong>Question:</strong> Can anyone clarify the linear algebra to be done modulo 2, because then I could just go ahead and implement it in Sage myself?</p>\n<hr />\n<hr />\n<p><strong>Option 1: (existing Sage functions)</strong> The Sage function</p>\n<pre><code>K.S_units(S = [])\n</code></pre>\n<p>computes a set of (not necessarily positive) generators. For <span class=\"math-container\">$K$</span> of degree 3 or 4, I have successfully used this to get to a system of totally positive units. But I want an algorithm I can write for general degrees. I searched for other Sage functions that might help, without success. (Maybe I missed something?)</p>\n<p><strong>Option 2: (existing GP/Pari functions)</strong> I'm aware that I can use Pari in Sage. I've tried to adapt code on page 103 of the &quot;User's Guide to PARI&quot;, link at <a href=\"https://math.mit.edu/%7Ebrubaker/PARI/PARIusers.pdf\" rel=\"nofollow noreferrer\">https://math.mit.edu/~brubaker/PARI/PARIusers.pdf</a> to arrive at the following (where I use %%gp to tell Sage to use GP for the cell):</p>\n<pre><code>%%gp \n\nbnf = bnfinit(x^3 + x^2 - 1)\n\nS = bnfsignunit(bnf)\nd = matsize(S)\nS = matrix(d[1],d[2], i,j, if (S[i,j] &lt; 0, 1,0))\nS = concat(S, vectorv(d[1],i,1))\nK = lift(matker(S * Mod(1,2)))\n\nif(K, ex = mathnfmodid(K, 2), ex = 2*matid(d[1]))\nunits = concat(bnf.tu[2], bnf.fu)\nresult = vector(length(ex)-1, i, factorback([units, ex[,i+1]]))\n\nprint(result)\n</code></pre>\n<p>The code runs without errors. But I'm not getting expected results. For example, the shown polynomial of <span class=\"math-container\">$x^3 + x^2 - 1$</span> gives me a result of <span class=\"math-container\">$2x$</span> -- I note that this is just 2 times the unit returned by bnf.fu (which happens to already be totally positive). Meanwhile, I tried it on <span class=\"math-container\">$x^4 + x - 1$</span> with result <span class=\"math-container\">$(-2x, -x^3 - 1)$</span>, neither of which is totally positive.</p>\n"
+    },
+    {
+      "tags": [
+        "mp.mathematical-physics",
+        "topological-quantum-field-theory",
+        "conformal-geometry",
+        "conformal-field-theory",
+        "conformal-maps"
+      ],
+      "owner": {
+        "account_id": 6926019,
+        "reputation": 3125,
+        "user_id": 115363,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/85ecb500b9797633600ed3acf94d036e?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Andi Bauer",
+        "link": "https://mathoverflow.net/users/115363/andi-bauer"
+      },
+      "is_answered": false,
+      "view_count": 258,
+      "answer_count": 0,
+      "score": 6,
+      "last_activity_date": 1640542126,
+      "creation_date": 1640542126,
+      "question_id": 412559,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/412559/what-are-the-generators-and-relations-of-the-conformal-cobordism-category",
+      "title": "What are the generators and relations of the conformal cobordism category?",
+      "body": "<p>According to a definition by Segal, a <span class=\"math-container\">$2$</span>-dimensional CFT is a symmetric monoidal functor from the category of oriented conformal cobordisms to the cateogry of projective complex vectorspaces. Coming from a TQFT background, I find this a very sensible and clear approach to CFT. However, I haven't found any place so far where this approach is really followed through in a straight-forward manner. In particular, I haven't found an explicit presentation of the conformal cobordism category in terms of parametrizations of the corresponding conformal moduli spaces.</p>\n<p><em>Question</em>: Is there a presentation of the conformal cobordism category in terms of generators and relations, labelled by a finite number of real parameters? If not, I'd be happy with at least some partial insights, like the dimensions of the relevant moduli spaces, or the generators alone.</p>\n<p>Here my partial thoughts/guesses on the subject, please comment and correct:</p>\n<ol>\n<li>It seems pretty reasonable to assume that it suffices to consider all the conformal pairs of pants, conformal annuli, and conformal disks as generators (together with a cup and cap if we distinguish input and outputs), and likewise all conformal versions of the 2d TQFT relations as relations.</li>\n<li>A genus-<span class=\"math-container\">$g$</span> surface with <span class=\"math-container\">$n$</span> punctures for high enough <span class=\"math-container\">$g$</span> and <span class=\"math-container\">$n$</span> (such that the conformal automorphisms vanish) as a manifold with boundary has a moduli space of dimension <span class=\"math-container\">$6g-6+3n$</span>. However, conformal cobordisms also come with an embedding of a standard annulus into the vicinity of each boundary circle which yields a moduli space of dimension <span class=\"math-container\">$6g-6+4n$</span>, with one more parameter per puncture corresponding to rotating the embedding of the annulus.</li>\n<li>An annulus has a 2-dimensional moduli space, corresponding to the ratio of radius and width, and the rotation between the two embedded boundary annuli.</li>\n<li>The pair of pants has a <span class=\"math-container\">$6$</span>-dimensional moduli space. Modulo gluing annuli to the three boundary circles, the moduli space is <span class=\"math-container\">$0$</span>-dimensional. Maybe it is possible define a single pair of pants where &quot;the surface between the punctures is infinitely thin&quot;, from which any other pair of pants can be obtained by gluing annuli?</li>\n</ol>\n<p>If there exists an answer, I also have a few bonus questions:</p>\n<ol>\n<li>Are there examples for CFTs for which one can really spell out the tensors associated to different conformal cobordisms?</li>\n<li>What is the interpretation of the (chiral) vertex (operator) algebra, operator product expansion, and Virasoro algebra in terms of the Segal definition?</li>\n<li>In particular, it looks like the vertex operator algebra is the tensor associated to a conformal pair of pants, and it is tempting to think that the parameter <span class=\"math-container\">$z$</span> therein parametrizes different pairs of pants in the conformal moduli space. Is that a correct interpretation, and if so, where are the other <span class=\"math-container\">$4$</span> parameters?</li>\n<li>Is there a way to see directly from (some part of) the generators and relations, that any functor to a finite-dimensional vector space must necessarily be topological?</li>\n</ol>\n"
+    }
+  ],
+  "has_more": false,
+  "quota_max": 300,
+  "quota_remaining": 297
+}

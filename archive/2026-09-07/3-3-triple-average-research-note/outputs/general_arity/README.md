@@ -1,5 +1,7 @@
 # 一般元数与合数研究
 
+新接手先读[统一一般元数主题](../../knowledge/topics/composite.md)。精确区分M、H、N与GRH条件；下文的“本轮”描述原交接时点，不自动决定后来用户任务。
+
 当前交接为general_k_three_tasks_progress_20260915。保留GRH条件与开放范围；本轮只整理，不推进这些定理。
 
 [回到成果索引](../README.md)

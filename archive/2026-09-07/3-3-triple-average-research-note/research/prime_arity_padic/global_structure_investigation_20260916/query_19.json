@@ -1,0 +1,68 @@
+{
+  "query": "integer hull two-dimensional",
+  "url": "https://api.openalex.org/works?filter=title.search%3Ainteger+hull+two-dimensional&per-page=5&select=id%2Ctitle%2Cdoi%2Cpublication_year%2Copen_access%2Clocations",
+  "results": [
+    {
+      "id": "https://openalex.org/W2051739235",
+      "title": "Computing Two-Dimensional Integer Hulls",
+      "doi": "https://doi.org/10.1137/s009753979528977x",
+      "publication_year": 1999,
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "locations": [
+        {
+          "id": "doi:10.1137/s009753979528977x",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1137/s009753979528977x",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S153560523",
+            "display_name": "SIAM Journal on Computing",
+            "issn_l": "0097-5397",
+            "issn": [
+              "0097-5397",
+              "1095-7111"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320508",
+            "host_organization_name": "Society for Industrial and Applied Mathematics",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320508"
+            ],
+            "host_organization_lineage_names": [
+              "Society for Industrial and Applied Mathematics"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "SIAM Journal on Computing",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:CiteSeerX.psu:10.1.1.31.9678",
+          "is_oa": false,
+          "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.31.9678",
+          "pdf_url": null,
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "http://www-icparc.icparc.ic.ac.uk/papers/computing_two-dimensional_integer_hulls.ps",
+          "raw_type": "text"
+        }
+      ]
+    }
+  ]
+}

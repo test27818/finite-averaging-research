@@ -1,39 +1,24 @@
-# 素数平均的独立 p 进改进研究
+# 独立研究入口
 
-2026-09-16更新。今后的改进、算法和验证只在本目录记录。原完成证明、主索引和全项目核验注册保持冻结；本目录的阶段结果不能直接覆盖原证明。
+这里保存原完成证明之后的改进，以及五元、六元、七元的算术研究。技术稿和原位置验证文件均保留；本入口不再追加“最新进展”时间线。
 
-## 当前实际进展
+**先读[统一接手页](../../knowledge/START_HERE.md)及[当前状态](../../knowledge/STATUS.md)。** 本目录全部技术文稿已经关联结论卡、后续替代与核验命令。
 
-| 层次 | 已证明内容 | 尚未完成 |
-|---|---|---|
-| 二进表的统一替代 | 三个旧返回的平方、交换子和列提升，统一替代内部偶余量64／256类轨道表 | 九偏移物理计数与根理想证书仍保留 |
-| 全参数入口 | 任意k≥2、n≥2k+1安全进入两个k块加剩余单点 | 入口后的统一终止 |
-| 偶数载体取逆 | 所有奇素数p、1≤t<p的(p,p,2t)核心具有同一规则的十二步标量闭路 | 根族、共同理想和终端 |
-| 最新根构造 | t≡2 mod4时，保持来源、交换一份输出，正向实现L(qR)及两种符号 | 其它t、横向根、整体覆盖 |
-| 算术编译 | 已有完整根族和深核后，一次有限环标量同余修正 | 从新宏生成这些前提及高效深核词展开 |
+| 主题 | 当前入口 |
+|---|---|
+| 素数证明：从三共轭根到列修正、有限对应和共同反射 | [素数主题](../../knowledge/topics/prime.md) |
+| 五元完整算法与尚未完成的静态算术分类 | [低维主题](../../knowledge/topics/subcritical.md) |
+| 七元范数、尖点与全维数根格解释 | [三平均主题](../../knowledge/topics/triple.md) |
+| 外部定理、旧Hecke路线与复制／窗口限制 | [公共接口](../../knowledge/topics/interfaces.md) |
+| 结论到程序的对应 | [核验说明](../../knowledge/VERIFICATION.md) |
+| 按文件追溯全部历史 | [文件清单](../../knowledge/DOCUMENTS.md) |
 
-**尚未彻底统一。** 新的二进列提升证明已能替代内部偶余量的64／256类表，但原文件保持冻结，未物理删除。九偏移162组及其两个补充、其它小基例仍未被替代。“第二个矩阵不交换”不等于已有根；“切向量独立”也不自动制造可执行根族。
+本目录的“已证明”默认是文稿已有一般论证，不表示全部新结论均已独立审稿或纳入冻结主证明。原阈值定理已经完整；保留114组根资源、统一奇数下半带等属于具体改进范围，不能与旧基线162组计数混用。
 
-## 阅读顺序
+继续研究前：
 
-优先读[整体结构复盘与统一二进列提升](structural_reassessment_and_uniform_dyadic_orbits.md)：区别物理资源证书与有限列覆盖；第4—5节是替代两张二进表的一般证明及其与旧证明的衔接，第7节记录核验。
+```text
+python knowledge/project_knowledge.py context "对应关键词"
+```
 
-1. [保持来源、交换输出](output_exchange_produces_roots.md)：最新实质结果；输出差分直接产生真实剪切。含固定模板为何不能自动覆盖其它t的证明。
-2. [全部偶数载体一致取逆](uniform_even_carrier_inverse.md)：根构造依赖的统一真实逆。
-3. [载体更新正常形](carrier_refresh_normal_form.md)：同一来源与输出计数的完整矩阵。
-4. [从局部证明提取整体主线](local_proofs_to_global_balance.md)：哪些成功构造可以复用。
-5. [通用移动—合并入口](move_witnesses_then_merge.md)与[单载体格位移](carrier_balance_and_uniform_mechanism.md)：入口规则及不能只靠单载体取逆的全称障碍。
-6. [平方零编译](square_zero_hensel_compiler.md)与[实现](square_zero_compiler.py)：以已有真实根和深核为前提的算术算法。
-7. [统一计数公式](uniform_reflection_formula.md)与[证书解剖](certificate_anatomy_and_odd_offsets.md)：现有p≥83公式及仍未被替代的物理、理想和尺度条件。
-
-## 本轮证据
-
-[二进列提升核验](uniform_dyadic_column_lifting_verification.json)通过4096类模8公式、原64／256类上的3840次确定性输送，以及384次保留奇数部分尺度的混合模数输送。一般结论由恒等式和逐层归纳证明；没有搜索平均词或枚举群轨道。原256份冻结文件未改动。
-
-[输出交换核验](output_exchange_roots_verification.json)记录66项一般根／仿射恒等式、110对参数上660条正负根的十二步原位置重放，共7920步。全参数结论由正文公式证明，有限检查不替代量词。
-
-[全偶载体核验](uniform_even_carrier_inverse_verification.json)、[对称重建核验](symmetric_rebuild_verification.json)、[通用入口核验](carrier_balance_verification.json)和[平方零核验](verification_results.json)保留各阶段的准确范围。已冻结的256份文件按existing_documents_snapshot.json核对，未修改原证明或注册。
-
-本轮未运行平均词或有限轨道搜索。回读了载体更新、全偶闭路、旧两类对合与相邻倍率根公式。此前把证书称为“运输半群的整数空洞／正规性”没有证明依据，已明确撤回；只使用有原位置计数的具体整数移动。
-
-原项目入口仅作只读来源：[完成证明](../../outputs/prime_arity/README.md)。
+原先累计入口已完整保存在[整理快照](../../work/documentation_memory_20260917/originals/research/prime_arity_padic/README.md)中，仅作原始版本恢复。数学稿与证书未搬动。新的阅读顺序与状态统一在 `knowledge/catalog.json` 维护。

@@ -1,0 +1,110 @@
+\section{返回矩阵与同余输送}\label{sec:arithmetic}
+\begin{definition}\label{def:return}
+设 $E_\pi:\Q^2\to\Q^n$ 按分组 $\pi$ 将两个参数展开为等值块配置。若平均词 $W$ 满足
+\begin{equation}\label{eq:return}
+WE_\pi=\lambda E_{\pi'}M,\qquad \lambda\in\Q^\times,
+\end{equation}
+且 $\pi'$ 与 $\pi$ 具有相同块重数，称 $M$ 是一个可实现返回。构造须对每个同形状分组适用。可逆矩阵的可实现性按非零共同标量识别。
+\end{definition}
+各返回的分组将由非负整数计数给出。式\eqref{eq:return}允许组合返回；如果 $M^j=cI$、$c\ne0$，其 $j-1$ 次返回实现 $M^{-1}$。
+
+记 $U(t)=\left(\begin{smallmatrix}1&t\\0&1\end{smallmatrix}\right)$、$L(t)=\left(\begin{smallmatrix}1&0\\t&1\end{smallmatrix}\right)$，以及
+\[
+R_D=\Z[1/D],\qquad
+\Gamma(q,R_D)=\ker(\SL_2(R_D)\to\SL_2(R_D/qR_D)).
+\]
+以下每次扩张 $R_D$ 均由引理\ref{lem:localize}给出；$D$ 的素因子不与相应配置的危险素数相交。
+
+\begin{lemma}\label{lem:localize}
+假设 $U(hR)$ 全部可实现，且上三角矩阵 $T=\left(\begin{smallmatrix}1&b\\0&\kappa\end{smallmatrix}\right)$ 及其逆可实现。则 $U(hR[\kappa,\kappa^{-1}])$ 全部可实现。若 $\kappa=A/B$ 约分，则新环为 $R[1/(AB)]$。
+\end{lemma}
+\begin{proof}
+使用 $TU(t)T^{-1}=U(t/\kappa)$、$T^{-1}U(t)T=U(\kappa t)$ 和 $U(s)U(t)=U(s+t)$。新环中每个元素是有限个 $r_i\kappa^i$ 的和。裴蜀等式 $uA+vB=1$ 给出 $u\kappa+v=1/B$；对逆倍率同理得到 $1/A$。
+\end{proof}
+
+\begin{theorem}[Morris；Serre]\label{thm:arithmetic-external}
+设 $D>1$、$R=R_D$。对于 $\SL_2(R)$ 的任一有限指数子群 $H$：
+\begin{enumerate}
+\item $H$ 中的上下初等矩阵生成 $H$ 的一个有限指数子群；
+\item $H$ 包含某个非零层的主同余子群 $\Gamma(q,R)$。
+\end{enumerate}
+\end{theorem}
+第一项为\cite[Theorem 6.1(2)]{morris}的二维无限单位特例。第二项用\cite{serre}在 $S=\{\infty\}\cup\{\ell:\ell\mid D\}$ 上的结论：$|S|>1$ 且包含实处，同余核平凡。此版本的陈述见\cite[pp.308--309, Proposition 1 and Section 2.3]{prasad}。
+
+\begin{lemma}\label{lem:deep}
+若 $D>1$、$h\ne0$，则
+\[
+\Gamma(h^2,R_D)\subseteq\langle U(hR_D),L(hR_D)\rangle.
+\]
+\end{lemma}
+\begin{proof}
+记右侧为 $H$。定理\ref{thm:arithmetic-external}先给出 $H$ 有限指数，再给出 $\Gamma(q_0,R_D)\subseteq H$。令 $q=h^2q_0$、$B=R_D/qR_D$。
+对 $g=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)\in\Gamma(h^2,R_D)$ 的模 $q$ 像，用 CRT 选 $k\in B$，使 $u=a+hkc$ 为单位：剩余特征整除 $h$ 时 $a=1$；其余分量若 $c\ne0$ 只排除一个 $k$ 类，若 $c=0$ 则 $a$ 已为单位。置 $v=b+hkd$，有
+\[
+g=U(-hk)L(c/u)\diag(u,u^{-1})U(v/u).
+\]
+取 $t\in hB$ 使 $ht=u-1$。恒等式
+\[
+\diag(u,u^{-1})=U(h)L(t)U(-h/u)L(-tu)
+\]
+把中间项也分解为参数属于 $hB$ 的根。提升各参数至 $hR_D$，得到 $e\in H$ 与 $g$ 模 $q$ 相同。于是 $e^{-1}g\in\Gamma(q,R_D)\subseteq H$。
+\end{proof}
+
+\begin{lemma}\label{lem:transverse}
+假设 $U(hR)$ 以及 $J,J^{-1}$ 可实现，其中 $J=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)\in M_2(R)$、$c\det J\ne0$。写 $c=g\epsilon$、$\epsilon\in R^\times$、$g\in\Z\setminus\{0\}$。则 $\Gamma(g^3h^2,R)$ 可实现。若有多个这样的 $g_i$，可将其层合并为 $\gcd(g_i)^3h^2$。
+\end{lemma}
+\begin{proof}
+令 $P=(e_1,Je_1)=\left(\begin{smallmatrix}1&a\\0&c\end{smallmatrix}\right)$。相乘得
+\[
+P^{-1}U(t)P=U(ct),\qquad
+P^{-1}JU(t)J^{-1}P=L(-ct/\det J).
+\]
+取 $t=hs$ 和 $t=\det J\,hs$，在 $P$ 基下得到两条完整 $ghR$ 根。引理\ref{lem:deep}给 $P\Gamma(g^2h^2,R)P^{-1}$。因 $P,gP^{-1}$ 整于 $R$，该群包含 $\Gamma(g^3h^2,R)$。
+合并时先约化到各层的公倍数。在每个素数幂分量上，主同余条件嵌套，两个像生成较浅的条件；CRT 及初等矩阵提升给出各分量的乘积。接上已知公倍数层的核，即得最大公因子层。
+\end{proof}
+
+\begin{lemma}\label{lem:fiber}
+若 $v,w\in R^2$ 本原且 $v\equiv w\pmod q$，则存在 $\gamma\in\Gamma(q,R)$ 使 $\gamma v=w$。
+\end{lemma}
+\begin{proof}
+取 $x$ 使 $\det(v,x)=1$，写 $\det(w,x)=1+qk$。本原性使 $z\mapsto\det(w,z)$ 满射，故取 $z$ 使其值为 $-k$。令 $y=x+qz$，则 $(w,y)\equiv(v,x)\pmod q$，两矩阵行列式皆为 $1$。取 $\gamma=(w,y)(v,x)^{-1}$。
+\end{proof}
+
+\begin{lemma}\label{lem:inverse}
+若 $\Gamma(q,R)$ 可实现，则每个可实现 $Z\in\SL_2(R)$ 的逆可实现。若整数满秩返回 $A$ 满足 $\gcd(\det A,q)=1$，则 $A^{-1}$ 亦有射影实现。
+\end{lemma}
+\begin{proof}
+第一项取 $m$ 使 $Z^m\equiv I\pmod q$，用 $Z^{-1}=Z^{m-1}(Z^m)^{-1}$。
+第二项取偶数 $m$ 使 $P=A^m\equiv I\pmod q$，令 $\Delta=\det P>0$。选 $L,R'\in\SL_2(\Z)$ 使 $LPR'=\diag(a,b)$、$ab=\Delta$。置 $J_0=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)$、$g_*=R'J_0L$，则 $Pg_*P$ 各项被 $\Delta$ 整除。
+利用 CRT 及 $\SL_2(\Z)$ 对有限模数的满射，取 $g\equiv g_*\pmod\Delta$、$g\equiv I\pmod q$。则 $H=\Delta^{-1}PgP\in\Gamma(q,\Z)$，而 $gPH^{-1}=\Delta P^{-1}$。接上 $A^{m-1}$ 得结论。所用约化满射由有限局部环上的初等消元、CRT 和整数参数提升得到。
+\end{proof}
+
+\begin{lemma}\label{lem:content}
+设 $A\in M_2(\Z)$ 满秩，条目最大公因子为 $1$，$d=|\det A|$、$\gcd(d,q)=1$。固定模 $q$ 本原列 $x$，则所有整数本原提升的本原输出模 $q$ 恰为
+\begin{equation}\label{eq:content}
+\{g^{-1}Ax:g\mid d,\ g>0\}.
+\end{equation}
+若 $\Gamma(q,\Z)$ 已实现，每个分支都能从当前列实现。
+\end{lemma}
+\begin{proof}
+伴随恒等式说明 $\cont(Av)\mid d$。写 Smith 分解 $A=U\diag(1,d)V$；对本原 $Vv=(s,t)$，内容为 $\gcd(s,d)$。给定 $g\mid d$，在每个 $\ell^e\Vert d$ 指定 $s\equiv\ell^{v_\ell(g)}\pmod{\ell^e}$（指数为 $e$ 时取 $0$）、$t\equiv1\pmod{\ell^e}$。与模 $q$ 数据用 CRT 合并。所得本原剩余列可提升为本原整数列：固定非零第二坐标后，在第一坐标的等差类中避开第二坐标所含的其余有限素因子。其内容恰为 $g$。最后用引理\ref{lem:fiber}实现准备。
+\end{proof}
+
+\begin{corollary}\label{cor:finite-group}
+设若干返回 $A_i$ 满足引理\ref{lem:content}，并在模 $q$ 保持一个对单位标量封闭的合法列集。它们的正向内容对应轨道等于
+\[
+\langle A_i\bmod q,\ \ell I:\ell\mid\prod_i\det A_i\text{ 为素数}\rangle
+\]
+的群轨道。
+\end{corollary}
+\begin{proof}
+每个分支 $g^{-1}A_i$ 是有限集上的置换。内容 $1$ 分支给 $A_i$，其逆为某个非负幂。若 $A_i$ 的阶为 $m$，一次内容 $g$ 分支后接 $m-1$ 次内容 $1$ 分支，给标量 $g^{-1}I$。这些恰生成所示群。
+\end{proof}
+
+\begin{lemma}\label{lem:local-cycle}
+设 $T$ 在 $\Z_{(\ell)}$ 上整可逆，模 $\ell$ 的射影作用为非平凡平移。写 $T=a(I+N)$、$N^2=cI$。若 $\ell\ge5$，或 $\ell=3$ 且 $c\not\equiv6\pmod9$，则其在每个 $\Z/\ell^b\Z$ 的仿射方向上为单循环。对 $\ell=2$，同一结论在 $a$ 为奇单位、$c$ 为偶数时成立。
+\end{lemma}
+\begin{proof}
+此时 $c\in\ell\Z_{(\ell)}$。展开 $(I+N)^\ell=A I+B N$；$A$ 为单位，$v_\ell(B)=1$。在 $\ell=3$ 时 $B=3+c$，在 $\ell=2$ 时 $A=1+c,B=2$。反复取 $\ell$ 次幂后，规范化的 $N$ 系数赋值每次增加一。一般幂的系数赋值因而等于指数的 $\ell$ 进赋值。其在任一方向 $x$ 上的位移还乘一个模 $\ell$ 等于原平移步长的单位。因此固定 $x\bmod\ell^b$ 的指数恰为 $\ell^b$ 的倍数，轨道长度为 $\ell^b$。
+\end{proof}
+

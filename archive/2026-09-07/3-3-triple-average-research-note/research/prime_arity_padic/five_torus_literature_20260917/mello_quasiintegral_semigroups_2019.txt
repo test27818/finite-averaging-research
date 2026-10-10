@@ -1,0 +1,1041 @@
+              New York Journal of Mathematics
+                        New York J. Math. 25 (2019) 1091–1111.
+
+
+            On quantitative estimates for
+           quasiintegral points in orbits of
+            semigroups of rational maps
+                                 Jorge Mello
+        Abstract. We give quantitative bounds for the number of quasi-integral
+        points in orbits of semigroups of rational maps under some conditions,
+        generalizing previous work of Hsia and Silverman (2011) for orbits gen-
+        erated by the iterations of one rational map.
+
+
+
+
+                                     Contents
+  1. Introduction                                                                 1091
+  2. Canonical heights                                                            1092
+  3. Distance and dynamics on the projective line                                 1095
+  4. A distance estimate and a quantitative Roth’s Theorem                        1098
+  5. A bound for the number of quasiintegral points in an orbit                   1100
+  Acknowledgements                                                                1110
+  References                                                                      1110
+
+
+1. Introduction
+   Let K be a number field, S a finite set of places of K, and  > 0. An
+element x ∈ K is said to be quasi-(S, )-integral if
+               X [Kv : Qv ]
+                             log(max{|x|v , 1}) ≥ h([x, 1]),
+                    [K : Q]
+                  v∈S
+where h is the absolute logarithmic height in P1 (Q) and [x, 1] ∈ P1 (Q).
+   Let F = {φ1 , ..., φk } ⊂ K(z) be a finite set of rational functions of degree
+at least 2, let P ∈ K and let
+                OF (P ) = {φin ◦ ... ◦ φi1 (P )|n ∈ N, ij = 1, ..., k}
+
+   Received May 10, 2019.
+   2010 Mathematics Subject Classification. Primary 37P15, Secondary 11B37, 11G99,
+14G99.
+   Key words and phrases. Integral points on orbits, arithmetic dynamics, quantitative
+estimates.
+
+                                                                      ISSN 1076-9803/2019
+
+                                        1091
+1092                            JORGE MELLO
+
+denote the forward orbit of P under the semigroup of functions generated
+by F. When k = 1 and φ21 = φ1 ◦ φ1 ∈    / k[z], Hsia and Silverman proved [4]
+that the number of quasi-(S, )- integral points in the orbit of a point P with
+infinite orbit is bounded by a constant depending only on φ1 , ĥφ1 (P ), , S,
+and [K : Q] ( see Section 2 for the correspondent definitions). We also
+note that these results, according to (Remark 1, [4]), have some applica-
+tions as the existence of quantitative estimates for the size of Zsigmondy
+sets for such orbits and their primitive divisors, as well for quantitative ver-
+sions of a dynamical local-global principle in orbits on the projective line.
+This research was also used to prove finiteness of multiplicatively dependent
+iterated values by rational functions in [1].
+   In this present paper we generalize this bound for cases of dynamical
+systems with several rational functions, obtaining, among other results, the
+following integrality result for orbits, that recovers Theorem 2.1 of [8] of
+Silverman using a different approach and with a different hypothesis.
+
+Theorem A Let F = {φ1 , ..., φk } ⊂ K(x) be a set of rational maps of
+respective degrees 2 ≤ d1 ≤ ... ≤ dk that are not totally ramified at the F-
+orbit of ∞ or that the F-orbit of ∞ has no repeated points. Then there is a
+constant γ = γ(S, F, [K : Q]) such that for all points P ∈ P1 (K) that are not
+Φ-preperiodic for any sequence Φ of terms in F, the number of S-integers
+in the F−orbit of P is bounded by
+                                                   kM − 1
+                   #{Q ∈ OF (P ); x(Q) ∈ RS } ≤           ,
+                                                    k−1
+where x(Q) is the x-coordinate of Q and
+                                                
+                                  +     h(F)
+                    M = γ + logd1 inf ĥ (P )  + 1.
+                                                  
+                                           Φ       
+                                         Φ
+   In Sections 2 and 3 we remind important facts about height functions,
+distance and dynamics on the projective line. In Section 4 we state a quan-
+titative version of Roth’s theorem and some facts about the index of ramifi-
+cation. The main results are proved in Section 5, namely, Theorem 5.2 and
+its Corollaries.
+
+2. Canonical heights
+   We always assume that K is a fixed number field and K(z) is the field
+of rational functions over K for the rest of the paper. We identify K ∪
+{∞} = P1 (K) by fixing an affine coordinate z on P1 , so α ∈ K is equal to
+[α, 1] ∈ P1 (K), and the point at infinity is [1, 0]. In this way, we assume z
+is the first left coordinate for points in P1 , and with respect to this affine
+coordinate, we identify rational self-maps of P1 with rational functions in
+K(z).
+   If P = [x0 , ..., xN ] ∈ PN (K), the naive logarithmic height is given by
+      ESTIMATES FOR QUASIINTEGRAL POINTS IN SEMIGROUP ORBITS                 1093
+
+                            P        [Kv : Qv ]
+                  h(P ) =    v∈MK               log(maxi |xi |v ),
+                                      [K : Q]
+where, MK is the set of places of K, MK    ∞ is the set of archimedean (infinite)
+                0
+places of K, MK is the set of nonarchimedean (finite) places of K, and for
+each v ∈ MK , |.|v denotes the corresponding absolute value on K whose
+restriction to Q gives the usual v-adic absolute value on Q. Also, we write
+Kv for the completion of K with respect to |.|v , and we let Cv denote the
+completion of an algebraic closure of Kv . To simplify notation, we let dv =
+[Kv : Qv ]/[K : Q]. Initially, let us recall some theorems on height functions.
+Lemma 2.1. (Theorem B.3.2, [3]) There is a way to attach to any projective
+variety X over Q̄ and any line bundle L on X a function
+                               hL : X(Q̄) → R
+with the following properties:
+   (i) hL⊗M = hL + hM + O(1) for any line bundles L and M on X, where
+O(1) is a bounded function for P in X(Q̄).
+   (ii) If X = PN and L = OPN (1), then hOPN (1) = h + O(1).
+   (iii) If f : Y → X is a morphism of projective varieties and L is a line
+bundle on
+   X, then hf ∗ L = hL ◦ f + O(1).
+Moreover, the height functions hL are determined up to O(1) by the above
+three properties.
+   Recalling that a line bundle in called very ample if it has enough global
+sections to set up an embedding of the variety into some projective space,
+and that is called ample if one of its positive powers is very ample, we have
+Lemma 2.2. (Theorem B.3.2, [3]) Assume L is an ample line bundle of X.
+Let hX,L be a height function corresponding to L.
+   (1) (Northcott’s finiteness property) For any real number c and positive
+integer D, the set
+                    {x ∈ X(Q̄)|[Q(x) : Q] ≤ D, hL (x) ≤ c}
+is finite.
+   (2) (positivity) There is a constant c0 such that hL (x) ≥ c0 for all x ∈
+X(Q̄).
+   Given a projective variety X over a number field K and L a line bundle
+on X, a height function hX,L corresponding to L is fixed. Let H be a set
+of morphisms f : X → X over K such that f ∗ L ∼          = L⊗df for some integer
+df ≥ 2. For f ∈ H, we set
+                                         1
+                  c(f ) := supx∈X(K̄)       hL (f (x)) − hL (x) .
+                                        df
+                                                      Q∞
+For f = (fi )∞
+             i=1 a sequence with fi ∈ H, i.e, f ∈       i=1 H, we set
+                       c(f ) := supi≥1 c(fi ) ∈ R ∪ {+∞}.
+1094                                   JORGE MELLO
+
+When c(f ) < +∞, the sequence is said to be bounded. The property of being
+bounded is independent of the choice of height functions corresponding to
+L.
+   Let B be the set of all bounded sequences in H, and for c > 0, we define
+                      Bc := {f = (fi )∞   i=1 ∈ B|c(f ) ≤ c}.
+It is easy to see that if H is a finite set of self-maps on a projective space,
+then any sequence of maps arising from H belongs to Bc for some c.
+   In fact, for H = {g1 , ...gk }, we set
+                                ∞
+                                Y
+       J = {1, ...k}, W :=            J, and fw := (gwi )∞
+                                                         i=1 for w = (wi ) ∈ W.            (1)
+                                i=1
+
+                                  then {fw |w ∈ W } ⊂ Bc .
+If c := max{c(g1 ),Q..., c(gk )}, Q
+   We also let S : ∞  i=1 H   →     ∞                                           ∞
+                                    i=1 H be the shift map which sends f = (fi )i=1
+to
+                                   S(f ) = (fi+1 )∞
+                                                  i=1 .
+Then S maps B intoQ      B and Bc into Bc for any c.
+                          ∞
+   For f = (fi )∞
+                i=1 ∈     i=1 H and x ∈ X(K̄), denoting
+                              f (n) := fn (fn−1 (...(f1 (x))),
+the set
+    {x, f(1) (x), f(2) (x), f(3) (x), ...} = {x, f1 (x), f2 (f1 (x)), f3 (f2 (f1 (x))), ...}
+is called the forward orbit of x under f , denoted by Of (x). The point x is
+said to be f -preperiodic if Of (x) is finite. If f = f1 = f2 = ...., then the
+forward orbit is the forward orbit under f in the usual sense.
+Lemma 2.3. (Theorem 3.3, [5]) Let X be a projective variety over K, and
+L a line bundle on X. Let hL be a height function corresponding to L, and
+f = (fi )∞                                        ∗ ∼ ⊗dfi for integers
+         i=1 a bounded sequence over K such that fi L = L
+dfi ≥ 2
+   (1) There is a unique way to attach to the sequence f = (fi )∞
+                                                                i=1 ∈ B a
+canonical height function
+                                       ĥf : X(K̄) → R
+such that
+  (i) supx∈X(K̄) |ĥf (x) − hL (x)| ≤ 2c(f ).
+  (ii) ĥS(f ) ◦ f1 = df1 ĥf . In particular, ĥS n (f ) ◦ fn ◦ ... ◦ f1 = dfn ...df1 ĥL,f .
+  (2) Assume L is ample. Then ĥf satisfies the following properties:
+  (iii) ĥf (x) ≥ 0 for all x ∈ X(K̄).
+  (iv) ĥf = 0 if and only if x is f -preperiodic.
+We call ĥf a canonical height function (normalized) for f .
+Lemma 2.4. (Corollary 3.4, [5]) Assume L is an ample line bundle on X.
+   (1) Let c be a nonnegative number, and D a positive integer. Then the
+set
+       ESTIMATES FOR QUASIINTEGRAL POINTS IN SEMIGROUP ORBITS                1095
+                [
+                       {x ∈ X(K̄)|[K(x) : K] ≤ D, x is f -preperiodic }
+               f ∈Bc
+is finite.
+   (2) Let H = {g1 , ...gk }, and we set J and W as in (2.1). Then for any
+positive integer D, the set
+      {x ∈ X(K̄)|[K(x) : K] ≤ D, x is fw -preperiodic for some w ∈ W }
+is finite.
+   Under similar conditions of the previous lemma, namely, X is a projective
+                                                                      ⊗d
+variety over K, L is a line bundle on X, H = {g1 , ...gk }, gj∗ L ∼= L gj , we
+have
+                         g1∗ L ⊗ ... ⊗ gk∗ L ∼
+                                             = L⊗(dg1 +...+dgk ) .
+Thus (X, g1 , ..., gk ) becomes a particular case of what we call a dynamical
+eigensystem for L of degree dg1 + ... + dgk . For this, Kawaguchi also proved
+that
+Lemma 2.5. (Theorem 1.2.1, [6]) There exists the canonical height function
+                                    ĥH : X(K̄) → R
+for (X, g1 , ..., gk , L) characterized by the following two properties :
+(i) ĥH = hL + O(1);
+(ii) kj=1 ĥH ◦ gj = (dg1 + ... + dgk )ĥH .
+     P
+
+Lemma 2.6. (Proposition 4.1, [5]) Give J = {1, ..., k} the discrete topology
+(each subset is an open set), and let ν be the measure on J that assigns
+           dgj
+                      to j ∈ J. Let µ := ∞
+                                           Q
+mass                                         i=1 ν be the product measure on
+      dg1 + ... + dgk
+W . Then we have, for x ∈ X(K̄), H = {g1 , ...gk }, that
+                                    Z
+                          ĥH (x) =   ĥfw (x)dµ(w).
+                                          W
+In particular,
+              |ĥH (x) − hL (x)| ≤ 2c and |ĥH (x) − ĥfw (x)| ≤ 4c
+for all x ∈ X(K̄), w ∈ W , where c = max{c(g1 ), ..., c(gk )}.
+Proof. The only thing different from the original statement of [5] is the last
+part. The first inequality above is the first inequality after (4.1) in the proof
+of Proposition 4.1 [5]. The second is derived from the first and from Lemma
+2.3.                                                                           
+
+3. Distance and dynamics on the projective line
+  For each v ∈ MK , we let ρv denote the chordal metric defined on P1 (Cv ),
+where we recall that for [x1 , y1 ], [x2 , y2 ] ∈ P1 (Cv ),
+
+  ρv ([x1 , y1 ], [x2 , y2 ]) =
+1096                                   JORGE MELLO
+
+                                  |x1 y2 − x2 y1 |v
+                       
+                       
+                                                                                        ∞,
+                                                                                 if v ∈ MK
+                        p                 p
+                          |x1 |2v + |y1 |2v |x2 |2v + |y2 |2v
+                                       |x1 y2 − x2 y1 |v                                 0.
+                                                                                 if v ∈ MK
+                       
+                       
+                       
+                          max{|x1 |v , |y1 |v } max{|x2 |v , |y2 |v }
+Definition 3.1. The logarithmic chordal metric function
+                       λv : P1 (Cv ) × P1 (Cv ) → R ∪ {∞}
+is defined by
+              λv ([x1 , y1 ], [x2 , y2 ]) = − log ρv ([x1 , y1 ], [x2 , y2 ]).
+  It is a matter of fact that λv is a particular choice of an arithmetic distance
+function as defined by Hsia and Silverman [4], which is a local height function
+λP1 ×P1 ,∆ , where ∆ is the diagonal of P1 ×P1 . The logarithmic chordal metric
+and the usual metric can relate in the following way.
+Lemma 3.2. (Lemma 3, [4]) Let v ∈ MK and let λv be the logarithmic
+chordal metric on P1 (Cv ). Define lv = 2 if v is archimedean, and lv = 1 if v
+is nonarchimedean. Then for x, y ∈ Cv the inequality λv (x, y) > λv (y, ∞) +
+log lv implies
+           λv (y, ∞) ≤ λv (x, y) + log |x − y|v ≤ 2λv (y, ∞) + log lv .
+   Now, let F = {φ1 , ..., φk } be such that each φj : P1 → P1 is a rational
+map of degree dj ≥ 2 defined over K. We set J, W , and w as in (2.1). In
+this situation we let
+                               (n)
+                             Φw = φwn ◦ ... ◦ φw1
+        (0)                                (n)
+with Φw =Id, and also Fn := {Φw |w ∈ W }.
+  For a point P ∈ P1 , the F-orbit of P is defined as
+                       [                                    [
+ OF (P ) = {φ(P )|φ ∈     Fn } = {Φ(n)
+                                    w (P )|n ≥ 0, w ∈ W } =   OΦw (P ).
+                            n≥1                                              w∈W
+
+The point P is called preperiodic for F if OF (P ) is finite.
+    We recall that for P = [x0 , x1 ] ∈ P1 (K) the height of P is
+                              P
+                      h(P ) = v∈MK dv log(max{|x1 |v , |x1 |v }.
+And using the definition of λv , we see that
+                                P
+                        h(P ) = v∈MK dv λv (P, ∞) + O(1).
+                                 ai z i and an absolute value v ∈ MK , we define
+                              P
+    For a polynomial f =
+|f |v = maxi {|ai |v } and
+                                       P
+                             h(f ) = v∈MK dv log |f |v .
+Given a rational function φ(z) = f (z)/g(z)        ∈ K(z) of degree
+                                                               P d written in
+normalized form, let us write f (z) = i≤d ai z i , g(z) = i≤d bi z i with ad
+                                             P
+
+and bd different from zero, and f and g relatively prime in K[z].
+    For v ∈ MK , we set |φ|v = max{|f |v , |g|v }, and then the height of φ is
+defined by
+                                       P
+                             h(φ) := v∈MK dv log |φ|v .
+      ESTIMATES FOR QUASIINTEGRAL POINTS IN SEMIGROUP ORBITS                 1097
+
+For F = {φ1 , ..., φk }, we define
+                              h(F) := maxi h(φi ).
+   Also, for any φ(z), ψ(z) rational functions in K(z), it is a fact, by Propo-
+sition 5 (c), [4], that
+            h(φ ◦ ψ) ≤ h(φ) + (deg φ)h(ψ) + (deg φ)(deg ψ) log 8.
+Using this one can conclude the following preliminar estimate:
+Proposition 3.3. Let F = {φ1 , ..., φk } be a finite set of rational functions
+with deg φi = di ≥ 2, and d := maxi di . Then for all n ≥ 1 and φ ∈ Fn , we
+have
+                       n                   n−1      
+                        d −1                 d      −1
+              h(φ) ≤            h(F) + d2                 log 8.
+                        d−1                     d−1
+Proof. For n = 1 the result is easily true. We assume the it is true for n.
+Let φ = φin+1 ◦ φin ◦ ... ◦ φi1 ∈ Fn+1 . Then by the previous proposition and
+the induction hypothesis
+   h(φ) ≤ h(φin+1 ◦ φin ◦ ... ◦ φi2 ) + dn h(φi1 ) + dn+1 log 8
+           n                     n−1       
+            d −1                 2 d       −1
+        ≤            h(F) + d                     log 8 + dn h(F) + dn+1 log 8
+            d−1                        d−1
+           n+1                       n     
+            d    −1                 2 d −1
+        ≤               h(F) + d                  log 8,
+              d−1                       d−1
+and we conclude thus the proof.                                                  
+Lemma 3.4. (Proposition 6, [4]) For a rational map φ : P1 → P1 of degree
+d ≥ 2 defined over K and L = OP1 (1), it is true that
+  (a) |h(φ(P )) − dh(P )| ≤ c1 h(φ) + c2 .
+  (b) ĥφ (P ) = limn h(φ(n) (P ))/dn .
+  (c) |ĥφ (P ) − h(P )| ≤ c3 h(φ) + c4 .
+  Where c1 , c2 , c3 and c4 above depend only on d.
+   Gathering these facts with Lemma 2.3 and Lemma 2.6, we derive the
+following:
+Lemma 3.5. Let F = {φ1 , ..., φk } such that each φj : P1 → P1 is a rational
+function of degree dj ≥ 2 over K. There are constants c1 , c2 , c3 and c4
+depending only on the degrees d1 , ..., dk such that
+                     (i) |ĥΦw (P ) − h(P )| ≤ c1 h(F) + c2 ,
+                     (ii) |ĥF (P ) − ĥΦw (P )| ≤ c3 h(F) + c4
+for any P , and any w = (wj )∞
+                             j=1 ∈ W .
+
+Proof. By Lemma 3.4, we see that maxi c(φi ) ≤ c1 h(F) + c2 in the notation
+of Lemma 2.3. Then Lemma 2.6 completes the proof.                         
+1098                                     JORGE MELLO
+
+4. A distance estimate and a quantitative Roth’s Theorem
+   We will state two known results that will be needed to prove our main
+theorems. The first one is a result due to Silverman that gives explicit
+estimates for the dependence on local heights of points and function.
+   Let us recall that, for a rational function f (z), P 6= ∞ and f (P ) 6= ∞,
+the ramification index of f at P is defined as the order of P as a zero of the
+rational function f (z) − f (P ), i.e.,
+                                 eP (f ) = ordP (f (z) − f (P )).
+If P = ∞, or f (P ) = ∞, we change coordinates through a linear fractional
+transformation L, such that L−1 (P ) = β 6= ∞, L−1 (f (L(β))) 6= ∞, and
+define eP (f ) = eβ (L−1 ◦ f ◦ L). It will not depend on the choice of L. We
+say that f is totally ramified at P if eP (f ) = deg f . It is also an exercise to
+show that
+                                  eP (g ◦ f ) = eP (f )eg (f (P ))
+for every f, g rational functions and P ∈ K ∪ {∞}.
+   The result is as follows.
+Lemma 4.1. (Proposition 7, [4]) Let ψ ∈ K(z) be a nontrivial rational
+function, let S ⊂ MK be a finite set of absolute values on K, each extended
+in some way to K̄, and let A, P ∈ P1 (K). Then
+X                                 X
+      max eA0 (ψ)dv λv (P, A0 ) ≥     dv λv (ψ(P ), A) − O(h(A) + h(ψ) + 1),
+       A0 ∈ψ −1 (A)
+v∈S                                          v∈S
+
+where the implied constant depends only on the degree of the map ψ.
+  The second result is the following quantitative version of Roth’s theorem.
+Lemma 4.2. (Theorem 10, [4]) Let S be a finite subset of MK that contains
+all infinite places. We assume that each place in S is extended to K̄ in some
+fashion. Let s is the cardinality of S, Υ a finite GK̄/K -invariant subset of
+K̄, β a map S → Υ, µ > 2, and M ≥ 0. Then there are constants r1 and
+r2 , depending only on [K : Q], #Υ and µ, such that there are at most 4s r1
+elements x ∈ K satisfying both of the following conditions:
+                       +
+                            |x − βv |−1
+       P
+(1)       v∈S dv log                 v ≥ µh(x) − M .
+
+(2) h(x) ≥ r2 max{h(βv ), M, 1}.
+                      v∈S
+
+   For quantitative bounds on this Theorem, we refer to [2].
+   To end this section let again be F = {φ1 , ..., φk } such that each φj : P1 →
+ 1
+P is a rational function of degree dj ≥ 2 defined over a number field K. For
+                                                             (n)
+J, W , and w as in (2.1), we have Φw := (φwj )∞  j=1 and Φw = φwn ◦ ... ◦ φw1
+           (0)                                                       (n)
+with Φw =Id. We fix w and denote Φ := Φw , Φn := Φw by simplicity.
+      ESTIMATES FOR QUASIINTEGRAL POINTS IN SEMIGROUP ORBITS                    1099
+
+Lemma 4.3. Suppose that the Φ-orbit of P does not repeat points or oth-
+erwise that no point in its Φ-orbit is totally ramified for any φj in F. Then
+there exist two positive contants κ1 > 0 and 0 < κ2 < 1 depending only on
+the degrees of the functions belonging to F = {φ1 , ..., φk } such that
+                  eP (Φm ) ≤ κ1 κm      m
+                                 2 deg Φ for any m ≥ 0.
+
+Proof. Let P ∈ P1 (K) be a point whose Φ-orbit does not have any periodic
+points within it, namely, that Φn (P ) 6= Φm (P ) for all n 6= m. Then using
+well known facts such as the multiplicativity of the ramification index, and
+the formula
+                         P
+                           (eP (f ) − 1) = deg f − 2
+                           P
+
+for rational functions f , we can compute that
+         eP (Φm ) = eP (φwm ◦ ... ◦ φw1 )
+                  = eP (φw1 )eφw1 (P ) (φw2 )...eφwm−1 (...(φw1 (P ))) (φwm )
+                  = eP (φw1 )eΦ1 (P ) (φw2 )...eΦm−1 (P ) (φwm )
+                  = e1 .e2 ...em ,
+  where we make
+                ei := eφwi−1 (...(φw1 (P ))) (φwi ) = eΦi−1 (P ) (φwi ).        (2)
+
+Therefore
+
+                                     e1 + ... + em m
+                                                   
+         eP (Φm ) = e1 e2 ...em ≤
+                                            m
+                                                                    m
+                                     (e1 − 1) + ... + (em − 1)
+                                 =                              +1
+                                                   m
+                                   P                     m
+                                        i≤k (2di − 2)
+                                 ≤                     +1
+                                             m
+                                                                    m
+                                    P
+                                          (2di −2)             1
+                                 ≤e   i≤k          = κ1 = κ1      d1    .
+                                                               d1
+Hence, with κ2 = 1/d1 , we get the desired.
+   Now we work out we work out the second situation. Using the nota-
+tion (4.1), the ramification hypothesis implies that ei ≤ dii − 1 for each i.
+Therefore
+                                        Y
+               eP (Φm ) = e1 e2 ...em ≤   (dij − 1)
+                                          j≤m
+                                          Y    1
+                                                   Y
+                                        ≤   1−        dij
+                                               dij
+                                          j≤m                j≤m
+1100                                 JORGE MELLO
+                                                             m Y
+                                                      1
+                                         ≤ 1−                            dij
+                                                    maxi di
+                                                                   j≤m
+                                                             m
+                                                      1
+                                         = 1−                      deg Φm ,
+                                                    maxi di
+                                                           
+                                                      1
+which is as desired with κ1 = 1, κ2 =            1−           .
+                                                    maxi di
+                                                                                     
+
+5. A bound for the number of quasiintegral points in an
+   orbit
+   In this section, we show explicit bounds for the number of S-integral
+points in a given orbit of a wandering point for a dynamical system of
+rational functions extending previous work by Hsia and Silverman [4].
+   It was first showed by J. Silverman that orbits of this kind have only a
+finite number of S-integers, which we recall below.
+Theorem 5.1. (Theorem 2.1, [8]) Let RS be the ring of S-integers of K,
+and let F = {φ1 , ..., φk } be a set of rational maps of degree at least two
+defined over K. Let OF (P ) be the orbit of P under the semigroup generated
+by F. Assume that no map in the semigroup is totally ramified in its fixed
+points. Then for any function z ∈ K(P1 ), the set
+                 {Q ∈ P1 (K)|Q ∈ OF (P ) and z(Q) ∈ RS }
+is finite.
+  The next quantitative theorem generalizes Theorem 11 of Hsia and Silver-
+man [4] to a semigroup situation. The definitions and strategy of the proof
+are inspired by their ideas with diophantine approximation, but now making
+use of the more general canonical height functions constructed Kawaguchi,
+and their more general properties, as well as the ramification result for se-
+quences of several functions from last section.
+Theorem 5.2. Let F = {φ1 , φ2 , ..., φk } ⊂ K(z) be a set of rational maps of
+respective degrees 2 ≤ d1 ≤ d2 ≤ ... ≤ dk . We fix a sequence Φ = (φij )∞    j=1 of
+                         n                                1
+functions in F, with Φ = φin ◦...◦φi1 ∈ Fn , and P ∈ P (K) not preperiodic
+for Φ. Fix A ∈ P1 (K) such that no two points in the Φ-orbit of A coincide,
+or otherwise that no point in its orbit is totally ramified for any map in F.
+For any finite set of places S ⊂ MK and any constant 1 ≥  > 0, define a
+set of nonnegative integers by
+     ΓΦ,S (A, P, ) := {n ≥ 0 : v∈S dv λv (Φn (P ), A) ≥ ĥS n (Φ) (Φn (P ))}.
+                               P
+
+(a) There exist effective constants
+       γ1 = γ2 (d1 , ..., dk , , [K : Q]) and γ2 = γ2 (d1 , ..., dk , , [K : Q])
+such that
+       ESTIMATES FOR QUASIINTEGRAL POINTS IN SEMIGROUP ORBITS                    1101
+       (                                                                  !)
+                                                     ĥF (A) + h(F)
+    # n ∈ ΓΦ,S (A, P, ) : n > γ1 + log+
+                                       d1                                ≤ 4#S γ2 .
+                                                   ĥΦ (P )
+In particular, there is an effective constant γ3 (d1 , ..., dk , , [K : Q]) such that
+                                                                       !
+                                             +    ĥF  (A)   +   h(F)
+              #ΓΦ,S (A, P, ) ≤ 4#S γ3 + logd1
+                                                        ĥΦ (P )
+(b) If P is not Φ-preperiodic for each Φ, there is a constant γ3 (K, S, F, A, )
+that is independent of P and of the sequence Φ chosen from F such that
+                            max ΓΦ,S (A, P, ) ≤ γ4 .
+                              Φ,P
+
+Proof. For simplicity, we write ΓS () instead of ΓΦ,S (A, P, ). Taking κ1
+and κ2 < 1 the constants from Lemma 4.3, we choose m ≥ 1 minimal such
+that κm
+      2 ≤ /5κ1 . Then κ1 , κ2 and m depend only on d1 , .., dk and on .
+  If n ≤ m for all n ∈ ΓS (), then
+                                      log(5κ1 ) + log(−1 )
+                    #ΓS () ≤ m ≤                           + 1,
+                                           log(κ−1
+                                                 2 )
+which is in the desired form. If there is an n ∈ ΓS () such that n > m, we
+fix n for instance. Then by definition of ΓS () we have
+                                           X
+                    ĥS n (Φ) (Φn (P )) ≤   dv λv (Φn (P ), A).         (3)
+                                            v∈S
+
+We can write Φn = ψ ◦ Φn−m for ψ = φ            in ◦ ... ◦ φin−m+1 ∈ Fm .
+
+
+For our chosen m, we denote
+                             em :=       max        eA0 (ψ).
+                                     A0 ∈ψ −1 (A)
+
+By Lemma 4.4 and our choice of m, we notice that
+                        em ≤ κ1 (κ2 )m deg ψ ≤  deg ψ/5
+ Therefore, Lemma 4.1 yields, for Q ∈ P1 (K) and ψ ∈ Fm , that
+ X                                         X
+   dv λv (ψ(Q), A)−O(h(A)+h(ψ)+1) ≤ em           max dv λv (Q, A0 ). (4)
+                                                                A0 ∈ψ −1 (A)
+ v∈S                                                      v∈S
+
+Gathering (5.1) and (5.2) with Q := Φn−m (P ), we obtain that
+                                    X
+          ĥS n (Φ) (Φn (P )) ≤ em   max dv λv (Φn−m (P ), A0 )
+                                           A0 ∈ψ −1 (A)
+                                     v∈S
+                                 + O(h(A) + h(Fm ) + 1),
+where the involved constants depend only on the degree of the functions in
+Fm , and so on d1 , ...dk and on .
+  For each v ∈ S, we choose A0v ∈ ψ −1 (A) such that
+                λv (Φn−m (P ), A0v ) =      max         λv (Φn−m (P ), A0 ),
+                                         A0 ∈ψ −1 (A)
+1102                                       JORGE MELLO
+
+so that
+ ĥS n (Φ) (Φn (P )) ≤ em                    n−m (P ), A0 ) + O(h(A) + h(F ) + 1).
+                             P
+                                  v∈S dv λv (Φ           v                 m
+
+For instance, we can assume that z(A0 ) 6= ∞ for all A0 ∈ Ψ−1 (A), Ψ ∈ Fm .
+If this is not the case, we use z for some of the A0 and z −1 for the others.
+   Let S 0 ⊂ S be the set of places in S defined by
+            S 0 = {v ∈ S; λv (Φn−m (P ), A0v ) > λv (A0v , ∞) + log lv },
+where again lv = 2 for v archimedean and lv = 1 otherwise.
+   Set S 00 := S − S 0 . Applying Lemma 3.2 to the places in S 0 and using the
+definition of S 00 we find that
+                          X
+ĥS n (Φ) (Φn (P )) ≤ em    dv λv (Φn−m (P ), A0v ) + O(h(A) + h(Fm ) + 1)
+                          v∈S
+                          X
+                  ≤ em            dv (2λv (A0v , ∞) − log |z(Φn−m (P )) − z(A0v )| + log lv )
+                          v∈S 0
+                                   X
+                        + em               dv (λv (A0v , ∞) + log lv ) + O(h(A) + h(Fm ) + 1)
+                                  v∈S 00
+                          X
+                  ≤ em            dv log |z(Φn−m (P )) − z(A0v )|−1
+                          v∈S 0
+                                  X
+                        + em            dv (2λv (A0v , ∞) + log lv ) + O(h(A) + h(Fm ) + 1).
+                                  v∈S
+
+Now using Lemma 2.3 and Lemma 3.5 it can be checked that
+ X                   X X
+   dv λv (A0v , ∞) ≤        dv λv (A0 , ∞)
+v∈S                     A0 ∈ψ −1 (A) v∈S
+                             X
+                    ≤                   h(A0 )
+                        A0 ∈ψ −1 (A)
+                             X
+                    ≤                   ĥS n−m (Φ) (A0 ) + O(h(F) + 1)
+                        A0 ∈ψ −1 (A)
+                             X
+                    =                 (deg ψ)−1 ĥS m (S n−m (Φ)) (ψ(A0 )) + O(h(F) + 1)
+                        A0 ∈ψ −1 (A)
+                             X
+                    ≤                 (deg ψ)−1 ĥS n (Φ) (A) + O(h(F) + 1)
+                        A0 ∈ψ −1 (A)
+
+                    ≤ ĥS n (Φ) (A) + O(h(F) + 1)
+                    ≤ ĥF (A) + O(h(F) + 1).
+The constants depend only on m and d1 , ..., dk .
+  Further, from the definition of lv , we have
+                          P
+                             v∈S dv log lv ≤ log 2.
+        ESTIMATES FOR QUASIINTEGRAL POINTS IN SEMIGROUP ORBITS                            1103
+
+Also, from Proposition 3.3 it follows that h(Fm ) = O(h(F) + 1).
+  All the inequalities above together imply that
+                                                                                      !
+                                          X
+        (ĥS n (Φ) (Φn (P )) ≤ em                dv log |z(Φn−m (P )) − z(A0v )|−1
+                                          v∈S 0
+                                                     
+                                + O ĥF (A) + h(F) + 1 .
+Let us set some definitions in order to apply Roth’s theorem. We define
+                           Υ = {z(A0 ) : A0 ∈ ψ −1 (A)} ⊂ K̄,                             (5)
+which is GK̄/K -invariant and #Υ ≤ dm                                    0
+                                        k . We define the map β : S → Υ
+            0
+by βv := Av and analyze the points x = Φ    n−m (P ) for n ∈ ΓS (). Applying
+                                   0
+Lemma 4.2 for the set of places S , M = 0 and µ = 5/2, yields that there
+exist constants r1 , r2 depending only on [K : Q], d1 , ..., dk and  such that
+the set of n ∈ ΓS () with n > m can be written as a union
+                         {n ∈ ΓS () : n > m} = T1 ∪ T2 ∪ T3
+such that
+            0
+#T1 ≤ 4#S r1 ,
+                  X                                          5
+T2 = {n > m :             dv log |z(Φn−m (P )) − z(A0v )|−1 ≤ h(Φn−m (P ))},
+                        0
+                                                             2
+                  v∈S
+T3 = {n > m : h(Φn−m (P )) ≤ r2 max0 {h(A0v ), 1)}}.
+                                           v∈S
+
+We already have a bound for the size of T1 . For T3 , we use again Lem-
+mas 2.3 and 3.5 to compute
+                h(A0v ) ≤ ĥS n−m (Φ) (A0v ) + c1 h(F) + c2
+                         = (deg ψ)−1 ĥS m (S n−m (Φ)) (A) + c1 h(F) + c2
+                         = (deg ψ)−1 ĥS n (Φ) (A) + c1 h(F) + c2
+                         ≤ c5 ĥF (A) + c6 h(F) + c7 ,
+and
+                h(Φn−m (P )) ≥ ĥS n−m (Φ) (Φn−m (P )) − c1 h(F) − c2
+                                = deg(Φn−m) )ĥΦ (P ) − c1 h(F) − c2 .
+Hence
+            T3 ⊂ {n > m : dn−m
+                           1   ĥΦ (P ) ≤ c5 ĥF (A) + c8 h(F) + c9 },
+so every n ∈ T3 satisfies
+                                                       !                                    !
+                   c5 ĥF (A) + c10 h(F) + c11                             ĥF (A) + h(F)
+n ≤ m + log+
+           d1                                              ≤ c12 + log+
+                                                                      d1                     .
+                               ĥΦ (P )                                       ĥΦ (P )
+1104                                      JORGE MELLO
+
+Finally, we consider the set T2 . Again using Lemmas 2.3 and 3.5 we derive
+                  h(Φn−m (P )) ≤ ĥS n−m (Φ) (Φn−m (P )) + c1 h(F) + c2
+                                    = deg(Φn−m )ĥΦ (P ) + c1 h(F) + c2 ,
+and then, for n ∈ T2 , using that em ≤  deg ψ/5
+       ĥS n (Φ) (Φn (P ))
+       =  deg(Φn )ĥΦ (P )
+              X
+       ≤ em (    dv log |z(Φn−m (P )) − z(A0v )|−1 ) + c13 (ĥF (A) + h(F) + 1)
+               v∈S 0
+       deg ψ 5
+       ≤ ( ) deg(Φn−m )ĥΦ (P ) + c10 (ĥF (A) + h(F) + 1)
+         5   2
+           n
+   = deg(Φ )ĥΦ (P ) + c14 (ĥF (A) + h(F) + 1).
+     2
+Thus
+      n
+2 deg(Φ )ĥΦ (P ) ≤ c14 (ĥF (A) + h(F) + 1), which implies that
+                               n
+                              2 d1 ĥΦ (P ) ≤ c14 (ĥF (A) + h(F) + 1),
+
+equivalent to
+                                                                   !
+                                                  ĥF (A) + h(F)
+                              n ≤ c15 + log+
+                                           d1                          .
+                                                       ĥΦ (P )
+We observe that the set Υ defined by (5.3) does not depend on the point,
+so the largest element in T1 is bounded independently of P . We also note
+that the quantity
+        ĥmin                                                    1
+          F ,K := inf{ĥΦ (P ) : Φ a sequence of maps in F, P ∈ P (K) is not
+                                    preperiodic for Φ}
+is strictly positive. Namely, from Lemma 3.5, we know that
+                                  ĥF (P ) ≤ ĥΦ (P ) + O(h(F)),                    (6)
+and O does not depend on Φ chosen from F, and neither on P .
+  If P is a Φ-wandering point, then ĥF (P ) > 0. Also, for some c > 0 big,
+we have
+         ĥmin                                 1
+           F ,K := inf{ĥΦw (P ) : w ∈ W, P ∈ P (K) and 0 < ĥΦw (P ) ≤ c}.
+
+Since
+
+  {P ∈ P1 (K) : w ∈ W, and 0 < ĥΦw (P ) ≤ c}
+                                             ⊂ {P ∈ P1 (K) : 0 < ĥF (P ) ≤ c + O(1)}
+      ESTIMATES FOR QUASIINTEGRAL POINTS IN SEMIGROUP ORBITS             1105
+
+
+by (5.4), and this last set is finite by the Northcott property for ĥF , the
+infimum observed is taken over a finite set of positive numbers.
+   Therefore, max(T1 ∪ T2 ∪ T3 ) can be bounded independently of P and the
+choice of the sequence Φ generated by the semigroup F.                     
+  Moreover, one can make the last item of Theorem 5.2 more precise.
+Proposition 5.3. Under the conditions and notations of the proof of The-
+orem 5.2, there exists γ2 depending only on A, F, K, S,  such that
+                                                               !
+                                             ĥ F (A)  +  h(F)
+            max(T1 ∪ T2 ∪ T3 ) ≤ γ2 + log+d1                     .
+                                                   ĥΦ (P )
+Proof. Due to the proof of Theorem 5.2, we only need to prove such bound
+for max T1 .
+   According to the proof of theorem B from [2], page 131, line 6, for the
+algebraic numbers x approximating α satisfying Roth’s theorem hypothesis,
+there exists a finite number( depending on the constants given by Lemma
+4.2) of βi ’s approximating α that depend only on α and on the parameters
+of Lemma 4.2 such that
+                                                               
+                         4rn 1
+           log(4H(x)) ≤          log(4H(α)) + log(4 maxi H(βi )) ,
+                          η    η
+where r, n and η depend only on Υ defined in (5.3).
+   This implies that h(x) ≤ C(h(α) + maxi h(βi )), where C depends only on
+the parameters of Lemma 4.2. Translating this for the notation of our set
+T1 , as in the proof of Theorem 5.2, we have that
+              h(Φn−m (P )) ≤ C( max         h(A0v ) + max h(βi,v ))
+                                 v∈S,ψ∈Fm             i,v,ψ
+
+                            = O(ĥF (A) + h(F) + max h(βi,v ))
+                                                     i,v,ψ
+
+                            = O(ĥF (A) + h(F)) + γ,
+for each n ∈ T1 , where γ depends only on A, F, K, S and  by our previous
+choice of m.
+   We have thus that
+           dn−m
+            1   ĥΦ (P ) ≤ deg(Φn−m )ĥΦ (P ) = ĥS n−m Φ (Φn−m (P ))
+                        = h(Φn−m (P )) + O(1)
+                        ≤ O(ĥF (A) + h(F)) + γ1 ,
+for each n ∈ T1 , where γ1 depends only on A, F, K, S and .
+   Therefore,
+                                                              !
+                                    O( ĥF (A) +  h(F)) + γ 1
+              max T1 ≤ m + log+ d1
+                                             ĥΦ (P )
+1106                               JORGE MELLO
+                                                          !
+                                         ĥF (A) + h(F)
+                        ≤ γ2 + log+
+                                  d1                          ,
+                                             ĥΦ (P )
+where γ2 ({βi,v )}i,v,ψ ) depends only on A, F, K, S and , concluding the
+proof.                                                                  
+Corollary 5.4. Let S ⊂ MK be a finite set of places that includes all
+archimedean places, let RS be the ring os S-integers of K, and let 2 ≤
+d1 ≤ ... ≤ dk . There is an effective constant γ = γ(d1 , ..., dk , [K : Q]) such
+that for all sets F = {φ1 , ..., φk } ⊂ K(z) of k rational maps of respective
+degrees d1 , ..., dk that are not totally ramified at the F-orbit of ∞ or that the
+F-orbit of ∞ has no repeated points, and for any sequence Φ of maps from
+F and all points P ∈ P1 (K) that are not preperiodic for Φ, the number of
+S-integers in the Φ−orbit of P is bounded by
+                                                                      !
+                                                              h(F)
+             #{n ≥ 1; z(Φn (P )) ∈ RS } ≤ 4#S γ + log+    d1           .
+                                                             ĥΦ (P )
+Proof. An element α ∈ K is in RS if and only if |α|v ≤ 1 for all v 6∈ S, or
+equivalently, if and only if
+                             P
+                      h(α) = v∈S dv log max{|α|v , 1}.
+Another fact is that
+                       log max{|α|v , 1} ≤ λv (α, ∞).
+                                      P
+This implies for α ∈ RS that h(α) ≤ v∈S dv λv (α, ∞).
+  Let n ≥ 1 satisfy z(Φn (P )) ∈ RS . Then
+                    h(Φn (P )) ≤ v∈S dv λv (Φn (P ), ∞).
+                                 P
+
+Lemmas 3.5 and 2.3 tell us that
+h(Φn (P )) ≥ ĥS n (Φ) (Φn (P )) − c3 h(F) − c4 = deg(Φn )ĥΦ (P ) − c3 h(F) − c4 ,
+which implies that
+           deg(Φn )ĥΦ (P ) − c3 h(F) − c4 ≤                  n
+                                               P
+                                                  v∈S dv λv (Φ (P ), ∞).
+
+The rest of the proof is divided in two cases: First one, when
+                        deg(Φn )ĥΦ (P ) ≤ 2c3 h(F) + 2c4 .
+In this case, dn1 ĥΦ (P ) ≤ 2C3 h(F) + 2c4 , and then
+                                                         !
+                                       2c3 h(F)   +  2c4
+                            n ≤ log+
+                                   d1                     .
+                                            ĥΦ (P )
+
+In the second case , deg(Φn )ĥΦ (P ) ≥ 2c3 h(F) + 2c4 . Therefore
+       P              n           1       n            1            n
+          v∈S dv λv (Φ (P ), ∞) ≥ 2 deg(Φ )ĥΦ (P ) = 2 ĥS n (Φ) (Φ (P )).
+      ESTIMATES FOR QUASIINTEGRAL POINTS IN SEMIGROUP ORBITS                 1107
+
+Now the previous theorem with  = 1/2, A = ∞ (∞ is not totally ramified
+for any map of the system) tells us that n is at most
+                                                      !
+                                 +   h(F)  +  ĥΦ (∞)
+                    4#S γ3 + logd1                      ,
+                                         ĥΦ (P )
+for γ3 depending only on [K : Q], d1 , ..., dk . Both bounds are on the desired
+form since ĥΦ (∞) ≤ h(∞) + O(1) = 0 + O(1).                                 
+Corollary 5.5. Under the conditions of Corollary 5.4, there is a constant
+γ = γ(S, F, [K : Q]) such that for all sets F = {φ1 , ..., φk } ⊂ K(z) of
+rational maps of respective degrees d1 , ..., dk that are not totally ramified at
+the F-orbit of ∞ or that the F-orbit of ∞ has no repeated points, and all
+points P ∈ P1 (K) that are not preperiodic for any sequence Φ of terms in
+F, the number of S-integers in the F−orbit of P is bounded by
+                                                      kM − 1
+                  #{Q ∈ OF (P ); z(Q) ∈ RS } ≤               ,
+                                                       k−1
+where
+                                            h(F )
+                      M = dγ + log+  d1 ( min      )e + 1.
+                                          ĥF ,K (P )
+
+Proof. If Q ∈ OF (P ), z(Q) ∈ RS , then there exists a sequence Φ of maps
+from F, and an n ≥ 1, such that Q = Φn (P ) and z(Φn (P )) ∈ RS . By
+Theorem 5.2, Corollary 5.4 and Proposition 5.3, there exists a suitable γ
+such that
+                                                   !
+                                         h(F)
+                        n ≤ γ + log+
+                                   d1               .
+                                       ĥmin
+                                         F ,K (P )
+
+And for each m, there are at most k m maps inside Fm , and therefore at
+most k m S-integer points on the set {f (P )|f ∈ Fm }. The result follows from
+                                 k n+1 − 1
+the identity 1 + k + ... + k n =           .                                 
+                                   k−1
+Remark 5.6. In the particular case of a system of polynomial maps that
+are non-special (not monomials neither Tchebychev’s), the number of points
+for which some orbit has repeated points is finite, due to Theorem 1.7 of [7],
+and therefore only for a finite number of points A the hypothesis of Theorem
+5.2 will not be satisfied.
+Remark 5.7. Theorem 5.2 delivers, in particular, under its conditions for
+sequences Φ of rational functions in a given system over a certain number
+field and P, A rational numbers, an explicit upper bound for
+                             1
+               #{n ≥ 1; n           is quasi-(S, )-integral },
+                         Φ (P ) − A
+and this does not depend on which Φ was chosen from the initial dynamical
+system F.
+1108                            JORGE MELLO
+
+Corollary 5.8. Under the hypothesis of Theorem 5.2,
+                    λv (Φn (P ), A)
+                lim                 = 0 for every v ∈ MK .
+               n→∞     deg(Φn )
+Proof. Applying Theorem 5.2 for the set of places that contains just the
+place v, we conclude that for every natural n big enough, it will be true that
+                          λv (Φn (P ), A)    ĥΦ (P )
+                                   n
+                                          ≤          .
+                             deg(Φ )            dv
+Choosing  sufficiently small, the result is proven.
+                                                                               
+   Note that, due to Theorem 5.2, the convergence above has an uniformity
+for the semigroup of maps, in the sense that the big natural n does not
+depend on the Φ chosen in the semigroup generated by the initial dynamical
+system, so that actually the stronger fact
+                                           !
+                           λv (Φn (P ), A)
+           lim      sup                      = 0 for every v ∈ MK
+          n→∞ Φ seq. of F     deg(Φn )
+is also true.
+Corollary 5.9. Suppose that a set ={φ1 , ..., φk } ⊂ Q(z) of rational func-
+tions of degree at least 2 satisfies the hypothesis of theorem 5.2 with P =
+α ∈ Q, A = 0 and A = ∞, and let Φ be a sequence of functions of F such
+that #OΦ (α) = ∞. Write
+                       an (α)
+             Φn (α) =          ∈ Q as a fraction in lowest terms.
+                       bn (α)
+Then
+                                   log |an (α)|
+                              lim               = 1.
+                             n→∞ log |bn (α)|
+
+Proof. From previous corollary, for v the place at infinity, it is true that
+                    λv (Φn (α), 0)        λv (Φn (α), ∞)
+                lim                =  lim                = 0.
+                n→∞   deg(Φn )       n→∞     deg(Φn )
+Working out similarly as in the proof of previous corollary, using Lemma
+3.4 (i), it is true that
+                        λv (Φn (α), 0)           λv (Φn (α), ∞)
+                lim                     =   lim                  = 0.
+                 n→∞ h(Φn (α))             n→∞      h(Φn (α))
+                             a
+On the other hand, if t = ∈ Q written in lowest terms, since max{|a|, |b|} ≤
+p                            b
+ |a|2 + |b|2 , then h(t) = log max{|a|, |b|} and
+                                                        p             !
+                                                          |a|2 + |b|2
+                λv (t, ∞) = λv ([a, b], [1, 0]) = log
+                                                             |b|
+                                               p
+                          = − log |b| + log( |a|2 + |b|2 )
+      ESTIMATES FOR QUASIINTEGRAL POINTS IN SEMIGROUP ORBITS                      1109
+
+                        ≥ − log |b| + h(t).
+And in the same way
+                                                       p            !
+                                                        |a|2 + |b|2
+              λv (t, 0) = λv ([a, b], [0, 1]) = log
+                                                           |a|
+                                               p
+                       = − log |a| + log(       |a|2 + |b|2 )
+                       ≥ − log |a| + h(t).
+                                                           an (α)
+Gathering these facts, and recalling that Φn (α) =                yields
+                                                           bn (α)
+       − log |bn (α)| + h(Φn (α))        − log |an (α)| + h(Φn (α))
+    lim                           =  lim                            = 0,
+   n→∞         h(Φn (α))            n→∞          h(Φn (α))
+and thus
+                log |bn (α)|                              log |an (α)|
+    lim                                 = lim                                  = 1.
+   n→∞ log max{|an (α)|, |bn (α)|}           n→∞ log max{|an (α)|, |bn (α)|}
+
+This implies that
+                                   log |an (α)|
+                               lim              = 1.
+                               n→∞ log |bn (α)|
+
+                                                                                      
+Remark 5.10. Again, from Theorem 5.2, for a given α ∈ Q, the last result
+does not depend on Φ, in the sense that for every sequence Φ of functions
+in the tree of functions belonging to the initial set F, the correspondent
+                    log |an (α)|
+quotient sequences               converge to 1 as n goes to ∞ with the same
+                    log |bn (α)|
+speed.
+  The Φ-uniformity pointed in Remark 5.10 results in the following semi-
+group integrality result.
+Corollary 5.11. Suppose that a set F = {φ1 , ..., φk } ⊂ Q(z) of rational
+functions of degree at leats 2 satisfies the hypothesis of Theorem 5.2 with
+P = α ∈ Q, A = 0 and A = ∞, and that #OF (α) = ∞ for each sequence Φ
+of functions in F. Suppose also that for some M > 0, Φn (α) 6= 0 for any
+n > M and any Φ sequence of maps in F. Write
+                       af (α)
+               f (α) =         ∈ Q as a fraction in lowest terms
+                        bf (α)
+for each f in the semigroup generated by F.
+   Then                                            
+                              1  X    log |af (α)| 
+                        lim n                         = 1.
+                       n→∞ k          log |bf (α)| 
+                                     f ∈Fn
+
+Proof. By Corollary 5.9 with its notation, for any  > 0 we have that
+1110                               JORGE MELLO
+
+                                     log |an (α)|
+                            1−≤                  ≤1+
+                                     log |bn (α)|
+for n sufficiently large, and uniformly for Φ. For such numbers n, this implies
+that
+                                                      
+                                1   X    log |af (α)| 
+                  1 −  ≤ lim n                          ≤ 1 + ,
+                           n→∞ k         log |bf (α)| 
+                                      f ∈Fn
+
+from where the result follows, since  is arbitrary.                                
+
+Acknowledgements
+   I would like to say especially thanks to Alina Ostafe, Igor Shparlinski
+and John Roberts for encouraging me to think in this problem, and I am
+very grateful for the much helpful suggestions of Igor Shparlinski, and every
+clarifying conversation that we had about this research. I also am very
+grateful for the Referee for so helpful suggestions and comments. I am very
+thankful to Australian Research Council Discovery Grant DP180100201 and
+UNSW for supporting me in this research.
+
+References
+ [1] Bérczes, Attila; Ostafe, Alina; Shparlinski, Igor E.; Silverman, Joseph
+     H. Multiplicative dependence among iterated values of rational functions modulo
+     finitely generated groups. Int. Math. Res. Not. IMRN, 2019, Art. ID rnz 091.
+     doi: 10.1093/imrn/rnz091.
+ [2] Gross, Robert. A note on Roth’s theorem. J. Number Theory 36 (1990), no. 1,
+     127–132. MR1068678, Zbl 0722.11034, doi: 10.1016/0022-314X(90)90010-O.
+ [3] Hindry, Marc; Silverman, Joseph H. Diophantine geometry. An introduc-
+     tion. Graduate Texts in Mathematics, 201, Springer-Verlag, New York, 2000.
+     xiv+558 pp. ISBN: 0-387-98975-7; 0-387-98981-1. MR1745599, Zbl 0948.11023,
+     doi: 10.2307/3620828.
+ [4] Hsia, Lian-Chung; Silverman, Joseph H. A quantitative estimate for quasiinte-
+     gral points in orbits. Pacific J. Math. 249 (2011), no. 2, 321–342. MR2782672, Zbl
+     1272.37039, doi: 10.2140/pjm.2011.249.321.
+ [5] Kawaguchi, Shu. Canonical heights, invariant currents, and dynamical eigensys-
+     tems of morphisms for line bundles. J. Reine Angew. Math. 597 (2006), 135–173.
+     MR2264317, Zbl 1109.14025, doi: 10.1515/CRELLE.2006.065.
+ [6] Kawaguchi, Shu. Canonical heights for random iterations in certain varieties. In-
+     ternational Mathematics Research Notices 2007, no. 7, Art. ID rnm 023, 33 pp.
+     MR2345343, Zbl 1208.37056, doi: 10.1093/imrn/rnm023.
+ [7] Ostafe, Alina; Young, Marley. On algebraic integers of bounded house and
+     preperiodicity in polynomial semigroup dynamics. Preprint, 2018 arXiv:1807.11645
+ [8] Silverman, Joseph H. The theory of height functions. Arithmetic geometry (Storrs,
+     Conn., 1984), 151–166, (1986), Springer, New York, 1986. ISBN: 978-1-4613-8657-5.
+     MR0861975, Zbl 0604.14022.
+ [9] Silverman, Joseph H. Integer points, Diophantine approximation, and iteration of
+     rational maps. Duke Math. J. 71 (1993), no. 3, 793–829. MR1240603, Zbl 0811.11052,
+     doi: 10.1215/S0012-7094-93-07129-3.
+      ESTIMATES FOR QUASIINTEGRAL POINTS IN SEMIGROUP ORBITS                 1111
+
+[10] Silverman, Joseph H. The arithmetic of dynamical systems. Graduate Texts in
+     Mathematics, 241. Springer, New York, 2007. x+511 pp. ISBN: 978-0-387-69903-5
+     MR2316407, Zbl 1130.37001, doi: 10.1007/978-0-387-69904-2.
+
+(Jorge Mello) University of New South Wales, School of Mathematics and Sta-
+tistics, UNSW Sydney, NSW, 2052, Australia
+j.mello@unsw.edu.au
+This paper is available via http://nyjm.albany.edu/j/2019/25-47.html.
+

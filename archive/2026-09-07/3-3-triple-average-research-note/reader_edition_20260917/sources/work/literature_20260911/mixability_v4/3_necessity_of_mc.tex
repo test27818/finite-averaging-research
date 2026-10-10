@@ -1,0 +1,40 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Necessity of Condition~{\MixCond}}
+%\label{sec: necessity of mc}
+%\input{3_necessity_of_mc.tex}
+
+In this section we prove that Condition~{\MixCond} in 
+Theorem~\ref{thm: miscibility characterization}(a) is necessary for perfect mixability.
+So let $C\cup \braced{\mu}\ingroundset\integers$, where $\mu = \average(C)$, and assume that
+$C$ is perfectly mixable. Let $G$ be a graph (or a sequence) that mixes $C$ perfectly.
+We want to prove that $C$ satisfies Condition~{\MixCond}.
+
+Suppose that $C$ is $b$-congruent for some odd $b\in\posintegers$.
+Consider an auxiliary configuration
+$C' = C\cdot 2^\delta$, where $\delta$ is sufficiently large, so that all
+intermediate concentrations in $G$ when applying $G$ to $C'$ are integral. 
+This $C'$ is $b$-congruent, and starting from $C'$, $G$ produces a perfect mixture of $C'$,
+that is $\braced{n:\mu'}$, for $\mu' = 2^\delta\mu$.
+
+Since $C'$ is $b$-congruent, there is $\beta\in\braced{0,...,b-1}$ such that
+for each $x\in C'$ we have $x\equiv \beta \pmod{b}$.
+We claim that this property is preserved as we apply mixing operations to
+droplets in $C'$. Indeed, suppose that we mix two droplets with concentrations
+$x,y\in C'$, producing two droplets with concentration $z$.  
+Since $x\equiv \beta \pmod{b}$ and $y\equiv \beta \pmod{b}$,
+we have $x = \alpha b + \beta$ and $y = \alpha' b + \beta$, for some $\alpha, \alpha'\in \integers$,
+so $z = \half(x+y) = (\half(\alpha+\alpha'))b + \beta$. As $b$ is odd
+(and $z$ is integer), $\alpha+\alpha'$ must be even, and therefore
+$z\equiv \beta \pmod{b}$, as claimed. Eventually $G$ produces $\mu'$,
+so this must also hold for $z = \mu'$. This implies that 
+$C'\cup\braced{\mu'}$ is $b$-congruent.
+
+Finally, since $C'\cup\braced{\mu'}$ is $b$-congruent, for
+all $2^\delta x, 2^\delta y\in C'\cup\braced{\mu'}$ it holds
+that $2^\delta x \equiv 2^\delta y \pmod{b}$. 
+But this implies that  $x \equiv y \pmod{b}$, because
+$b$ is odd. So we can conclude that 
+$C\cup\braced{\mu}$ is $b$-congruent, thus proving that
+$C$ satisfies Condition~{\MixCond}.

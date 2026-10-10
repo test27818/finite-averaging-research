@@ -1,0 +1,169 @@
+    Some notes on principal series representations.
+                                  Kevin Buzzard
+                                   April 26, 2012
+
+
+1      Definitions.
+(Written 3/6/04; typo fixed 4/4/6)
+    Let K be a finite extension of Qp , let q denote the cardinality of the residue
+field, let |.| : K × → C× be the map sending a uniformiser to 1/q. Fix an
+integer n ≥ 1. These are some notes about the principal series representations
+of G := GLn (K).
+    If χ1 , χ2 , . . . , χn are continuous group homomorphisms K × → C× then there
+is an obvious representation of the Borel B of upper triangular matrices in G
+                                                                          ×
+         Qnto this collection: namely the representation χ : B → C defined by
+associated
+χ(b) = i=1 χi (bii ). Define I(χ) to be the normalised induction of χ from B
+to G. We recall explicitly what this is in this case: define a function δ : B → C×
+by
+                                      Y                  n
+                                                         Y
+                            δ(b) =         |bii /bjj | =   |bii |n+1−2i .
+                             1≤i<j≤n               i=1
+
+Then
+                   I(χ) = {f : G → C|f (bg) = χ(b)δ(b)1/2 f (g)}
+where the functions are locally constant, b ∈ B and g ∈ G. Define a G-action
+on this space by gf (h) = f (hg). The normalisation constant I think screws up
+Frobenius reciprocity a bit but it makes some other things work much better.
+     It turns out that I(χ) is irreducible if χi 6= χj |.| for all i, j (and I think this
+might be iff). If I(χ) and I(χ0 ) are irreducible then they are isomorphic iff the
+characters χi and χ0i are the same after possible reordering. An example of a re-
+ducible case is when n > 1 and χ = δ −1/2 ; for example if n = 2 this corresponds
+to χ1 = |.|−1/2 and χ2 = |.|1/2 . In this case I(χ) is just the functions B\G → C
+and the constant functions are a G-invariant one-dimensional subspace. It turns
+out that if n = 2 then the quotient is irreducible (the Steinberg representation)
+but if n > 2 then one also has to worry about functions which are invariant
+under other parabolics containing B and the situation is more complicated (but
+still well-understood). I think that there is a unique generic irreducible sub-
+quotient of I(χ) but I forget why I think this, and I think it’s the Steinberg
+representation.
+
+
+
+                                           1
+2     Duals.
+            g or I(χ)∨ of I(χ) is just the smooth vectors in the algebraic dual
+The dual I(χ)
+space to I(χ). Because we are using normalised induction, the dual of I(χ) is
+just I(χ̃), where χ̃ denotes the dual of χ. Becuase χ is 1-dimensional, its dual is
+                      g = I(χ−1 ). The reason for all this is that the duality is
+just its inverse, so I(χ)
+explicitly given by an integral; given elements of I(χ) and I(χ−1 ) the product is
+a function G → C that transforms in a certain way related to Haar measure on
+the Borel; but there is some kind of twisted integral (“Haar measure on B\G”;
+Theorem 1.21 of Bernshtein-Zelevinskii Russian Math Surveys) that takes as
+input exactly such a function and gives out a number; this gives the duality.
+
+
+3     Twisting.
+Let ψ be a continuous group homomorphism K × → C× . Then we can twist
+the representation I(χ) by the 1-dimensional representation ψ ◦ det of G. If we
+think of I(χ) ⊗ (ψ ◦ det) as being the set I(χ) but with a twisted action defined
+by gf (h) = ψ(det(g))f (hg), and, for f ∈ I(χ) ⊗ (ψ ◦ det), we define f˜ : G → C
+by f˜(g) = f (g)ψ(det(g)), then we check easily that f˜(bg) = f (bg)ψ(det(bg)) =
+χ(b)δ(b)1/2 ψ(det(b))f˜(g) and hence f˜ ∈ I(χ.(ψ ◦ det)). Moreover, recalling
+that f ∈ I(χ) ⊗ (ψ ◦ det), so the action of G on f is defined by (gf )(h) =
+                              f = g f˜, so we have proved that
+f (hg)ψ(det(h)), we see that gf
+
+                         I(χ) ⊗ (ψ ◦ det) = I(χ.(ψ ◦ det)).
+
+
+4     Hecke actions.
+Let $ be a uniformiser of K. Say χ = (χi ) and all the χi are unramified, and
+χi ($) = αi . Let us also assume that I(χ) is irreducible, although I don’t know
+whether that’s necessary (probably not). If 0 ≤ m ≤ n then define γm ∈ G
+to be the diagonal matrix diag($, $, . . . , $, 1, 1, . . . , 1) where there are m $s.
+Define G0 := GLn (O) where O is the integers in K. Recall that the Hecke
+algebra associated to G0 \G/G0 is commutative and if Tm is the Hecke operator
+[G0 γm G0 ] then this Hecke algebra can be formed by taking the polynomial ring
+in the Tm , 1 ≤ m ≤ n, and then inverting Tn . This Hecke algebra acts on
+the 1-dimensional space of K-invariants in I(χ) (recall I am assuming the χi
+are unramified) and if σm is the mth symmetric polynomial in the αi then the
+                                                          m(n−m)
+eigenvalue of Tm on this 1-dimensional space is q 2 σm . For example T1
+acts as q (n−1)/2 (α1 + α2 + . . . + αn ) and Tn acts as α1 α2 . . . αn . In his thesis,
+Russ Mann works out how these Hecke operators act on I(χ)M for certain other
+compact open subgroups M (M for “mirahoric”, I think).
+
+
+
+
+                                           2
+5     Outer automorphisms.
+The group G has an outer automorphism ι, sending g to g −t , the inverse of
+the transpose of g. If π is a representation of G then so is π ◦ ι, and let’s call
+this representation ι(π). If I(χ) is irreducible and unramified (with χi ($) = αi
+as usual), here’s a way of working out ι(I(χ)): an unramified representation is
+determined by the associated representation of the unramified Hecke algebra.
+Because   G0 is preserved ` by inverse and transpose, we see that if G0 gG0 =
+   G0 gi then G0 g −t G0 = G0 gi−t and hence if [G0 gG0 ] acts on v ∈ I(χ)G0 as
+`
+multiplication by λ then [G0 g −t G0 ] acts on v ∈ ι(I(χ))G0 as multiplcation by λ
+                        −t                                              −1
+as well. Because [G Q0 γm G0 ] = [G0 γn−m /$G0 ] = [G0 γn−m G0 ][G0 $ GQ    0 ] and
+Tn has eigenvalue i αi , we see that the eigenvalue for Tm on ι(I(χ)) is i αi−1
+times the eigenvalue of Tn−m on I(χ), which is the smae as the eigenvalue of
+Tm on I(χ−1 ). I guess this is enough to conclude that ι(I(χ)) = I(χ−1 ) for
+unramified irreducible principal series, although it may be easy to work out
+what’s going on in the general irreducible case as well.
+
+
+6     Normalisations for Local Langlands.
+Say π := I(χ) is irreducible. Harris and Taylor associate two n-dimensional
+representations of the Weil group to I(χ), one called recK (π) and the other
+called rl (π). Strictly speaking recK (π) is a complex representation and rl (π) is
+an l-adic one, but we fix an isomorphism Ql = C so there’s not much difference
+in this case. The point is that these representations are not “the same”, they
+differ by a duality and a twist in general. I will explicitly write them both
+down here. I think that the point is that, vaguely speaking, recK (π) works
+better for things like matching L-functions but rl (π) works better for local-
+global compatibilities.
+    Let’s fix notation as in the Harris-Taylor book. Let
+
+                               ArtK : K × → WK
+                                             ab
+
+
+be the map sending $, a uniformiser, to a geometric Frobenius. Let’s fix a norm
+on WK that’s compatible with ArtK , that is, define |g| = | Art−1K (g)|. So for
+example the norm of a geometric Frobenius is 1/q.
+    Here is the explicit dictionary. If χi : K × → C× is a continuous character
+then let χi also denote the associated 1-dimensional representation of the Weil
+group. The dictionary in the 1-dimensional case is:
+
+                                   rl (χ) = χ−1
+and
+                                  recK (χ) = χ.
+This follows from the remarks on p6 of the Harris-Taylor book. In particular, if
+χ is unramified and sends $ to α then rl (χ) sends an arithmetic Frobenius to
+α and recK (χ) sends a geometric Frobenius to α.
+
+                                        3
+    The general case:
+
+                          rl (I(χ)) = ⊕ni=1 χ−1 .|.|(1−n)/2
+
+and
+                                 recK (I(χ)) = χ
+again; this also follows easily from remarks on p6 of Harris-Taylor.
+
+
+7     A concrete example: n = 2 unramified princi-
+      pal series.
+As a concrete example—if n = 2 and χ1 , χ2 are unramified characters with
+χi ($) = αi , and χ1 /χ2 6= |.|±1 , then π := I(χ) is unramified principal series,
+the usual Hecke operators T and S defined using double cosets have eigenvalues
+√
+  q(α1 +α2 ) and α1 α2 respectively, rl (π) sends a geometric Frobenius to a matrix
+                  √            √
+with eigenvalues q/α1 and q/α2 , and recK (π) sends a geometric Frobenius
+to a matrix with eigenvalues α1 , α2 .
+
+
+
+
+                                         4
+

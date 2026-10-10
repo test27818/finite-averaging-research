@@ -1,0 +1,168 @@
+{
+  "claims": 63,
+  "independent_research_notes": 45,
+  "legacy_verification_entries": 185,
+  "active_markdown_inventory": 305,
+  "retrieval_scenarios": [
+    {
+      "query": "五元 小分母",
+      "required_card": "FIVE-TEMPLATE-ESCAPE",
+      "top_results": [
+        "FIVE-TEMPLATE-ESCAPE",
+        "FIVE-ESCAPE-OPEN",
+        "FIVE-DENOMINATORS",
+        "FIVE-NORMAL-FORM"
+      ]
+    },
+    {
+      "query": "两根 列修正",
+      "required_card": "PRIME-TWO-ROOTS",
+      "top_results": [
+        "PRIME-TWO-ROOTS"
+      ]
+    },
+    {
+      "query": "七元 尖点",
+      "required_card": "SEVEN-GEOMETRY",
+      "top_results": [
+        "SEVEN-GEOMETRY",
+        "SEVEN-STRUCTURE",
+        "TRIPLE-BASES",
+        "OLD-HECKE-AUDIT"
+      ]
+    },
+    {
+      "query": "GRH",
+      "required_card": "COMPOSITE-FRONTIER",
+      "top_results": [
+        "COMPOSITE-FRONTIER"
+      ]
+    },
+    {
+      "query": "21504",
+      "required_card": "N91-CONTAINER-CORRECTION",
+      "top_results": [
+        "N91-CONTAINER-CORRECTION"
+      ]
+    },
+    {
+      "query": "全词 逃逸",
+      "required_card": "FIVE-ESCAPE-OPEN",
+      "top_results": [
+        "FIVE-ESCAPE-OPEN",
+        "FIVE-TEMPLATE-ESCAPE",
+        "FIVE-HECKE",
+        "FIVE-SUMMARY"
+      ]
+    },
+    {
+      "query": "局部均值",
+      "required_card": "WINDOW-MEAN",
+      "top_results": [
+        "WINDOW-MEAN"
+      ]
+    },
+    {
+      "query": "仿射 交换子",
+      "required_card": "AFFINE-IDEAL",
+      "top_results": [
+        "AFFINE-IDEAL",
+        "G-OBSTRUCTION",
+        "WINDOW-MEAN"
+      ]
+    },
+    {
+      "query": "上半带 九偏移",
+      "required_card": "PRIME-CRITICAL-CONTROLLER",
+      "top_results": [
+        "PRIME-CRITICAL-CONTROLLER",
+        "PRIME-FIVE-RETURNS",
+        "PRIME-NATURAL-UNIFICATION",
+        "PRIME-CERTIFICATE-ANATOMY"
+      ]
+    },
+    {
+      "query": "2p+2 3p-1",
+      "required_card": "PRIME-2P2",
+      "top_results": [
+        "PRIME-2P2",
+        "PRIME-3PM1"
+      ]
+    },
+    {
+      "query": "2p+2 3p-1",
+      "required_card": "PRIME-3PM1",
+      "top_results": [
+        "PRIME-2P2",
+        "PRIME-3PM1"
+      ]
+    },
+    {
+      "query": "偶数部分统一了吗",
+      "required_card": "PRIME-NATURAL-UNIFICATION",
+      "top_results": [
+        "PRIME-NATURAL-UNIFICATION",
+        "PRIME-EVEN-INTERIOR",
+        "PRIME-2P2",
+        "PRIME-3PM1"
+      ]
+    },
+    {
+      "query": "偶数部分统一了吗",
+      "required_card": "PRIME-EVEN-INTERIOR",
+      "top_results": [
+        "PRIME-NATURAL-UNIFICATION",
+        "PRIME-EVEN-INTERIOR",
+        "PRIME-2P2",
+        "PRIME-3PM1"
+      ]
+    },
+    {
+      "query": "上半区三段选参是否合并",
+      "required_card": "PRIME-CRITICAL-CONTROLLER",
+      "top_results": [
+        "PRIME-CRITICAL-CONTROLLER",
+        "PRIME-NATURAL-UNIFICATION",
+        "PRIME-ODD-PENCIL",
+        "PRIME-TOTAL"
+      ]
+    },
+    {
+      "query": "小p资源是否统一",
+      "required_card": "PRIME-NATURAL-UNIFICATION",
+      "top_results": [
+        "PRIME-NATURAL-UNIFICATION",
+        "PRIME-FIVE-RETURNS",
+        "PRIME-ODD-PENCIL",
+        "PRIME-EVEN-INVERSE"
+      ]
+    }
+  ],
+  "source_change_detection": "PASS",
+  "evidence_change_detection": "PASS",
+  "original_navigation_snapshots_verified": 7,
+  "frozen_policy_negative_tests": [
+    "proof-modification",
+    "proof-deletion",
+    "original-backup",
+    "new-unregistered-navigation",
+    "snapshot-rewrite",
+    "proof-disguised-as-navigation"
+  ],
+  "single_source_propagation": "PASS",
+  "two_level_successor_context": "PASS",
+  "scope": "Navigation checks only. The repair task separately reran four impacted mathematical verifiers, recorded in the review response.",
+  "consistency_check": {
+    "claims": 63,
+    "research_documents_registered": 45,
+    "legacy_verifications": 185,
+    "frozen_materials": {
+      "legacy_total": 256,
+      "strictly_unchanged": 250,
+      "reviewed_navigation_migrations": 6,
+      "errors": [],
+      "semantics": "All non-navigation files must match the original snapshot; reviewed READMEs require both the original backup and accepted current version."
+    },
+    "errors": []
+  }
+}

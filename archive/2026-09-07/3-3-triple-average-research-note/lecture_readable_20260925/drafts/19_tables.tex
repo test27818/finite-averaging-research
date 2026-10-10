@@ -1,0 +1,8 @@
+\chapter{剩余根计数表：怎样逐行复查}\label{app:certificates}
+附录保留原讲义的114组参数、233对相邻表。第一列 $p$ 是每次平均元数，第二列 $s$ 给 $n=3p+s$。七元组前面三项是来源 $(i,j,k)$，后面四项是输出 $(x,y,u,v)$。
+
+读一行时，先算四类库存 $(p-2i,p-2j,p+s-2k,p-s)$，确认输出逐项不超量、和为 $p$。然后算 $\alpha=i-j$、$\beta=(p+s)j-pk$，检查迹零条件 $p(x-y)+\alpha v=\beta$。最后比较同一参数的几对表，计算 $\alpha$ 和根系数 $H$ 的最大公因数。
+
+第13讲的 $p=11,s=1$ 已经示范了一整行。这里每行承担同一种有限算术检查，不另引入新的终止原理。
+\InsertProof{prop:root-certificate}
+\InsertTables{19_tables.tex}

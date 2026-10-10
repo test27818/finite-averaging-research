@@ -1,0 +1,8 @@
+{
+  "name": "cf_extra_denominators",
+  "url": "https://arxiv.org/pdf/2311.14034",
+  "pages": 23,
+  "sha256": "577f762a2121fdb06b40fea83986f42f5445d904c04d607035073b62c4e47e14",
+  "text_length": 56248,
+  "preview": "\n[PDF PAGE 1]\nON P-ADIC CONTINUED FRACTIONS WITH EXTRANEOUS\nDENOMINATORS: SOME EXPLICIT FINITENESS RESULTS\nLAURA CAPUANO, SARA CHECCOLI, MARZIO MULA, AND LEA TERRACINI\nAbstract. Let K be a number field. We show that, up to allowing a finite set\nof denominators in the partial quotients, it is possible to define algorithms for\nP-adic continued fractions satisfying the finiteness property on K for every prime\nideal P of sufficiently large norm. This provides, in particular, a new algorithmic\napproach to the construction of division chains in number fields.\n1. Introduction\nLet K be a field. A (finite) continued fraction in K is an expression of the form\n[a0, a1, . . . , an] = a0 +\n1\na1 +\n1\n... + 1\nan\n, with a1, . . . , an ∈K.\nThe elements a0, a1, . . . are called the partial quotients of the continued fraction.\nWhen K is endowed with a topology, one can also define infinite continued fractions\nas\n[a0, a1, . . . , an, . . .] = lim\nn→∞[a0, a1, . . . , an],\nprovided that this limit exists in the completion of K.\nContinued fractions are\na classical and fascinating topic which has been investigated in many branches of\nmathematics and beyond, ranging from Diophantine approximation [AA15] to the\nstudy of astronomy [RS92, §4.1] and the tuning of musical instruments [DM99].\nAn approach to generating continued fraction expansions involves an iterative\nprocedure that employs a floor function s : K →K.\nGiven α ∈K, a typical\nalgorithm works as follows:\n(1)\n\n\n\n\n\nα0 = α\nan = s(αn)\nαn+1 =\n1"
+}

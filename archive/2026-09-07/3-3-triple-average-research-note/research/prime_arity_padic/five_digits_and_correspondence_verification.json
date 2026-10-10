@@ -1,0 +1,99 @@
+{
+  "isolated_point_periods": [
+    {
+      "k": 1,
+      "reduced_denominator": 2,
+      "eventual_ternary_period": 1
+    },
+    {
+      "k": 2,
+      "reduced_denominator": 1,
+      "eventual_ternary_period": 1
+    },
+    {
+      "k": 3,
+      "reduced_denominator": 8,
+      "eventual_ternary_period": 2
+    },
+    {
+      "k": 4,
+      "reduced_denominator": 19,
+      "eventual_ternary_period": 18
+    },
+    {
+      "k": 5,
+      "reduced_denominator": 62,
+      "eventual_ternary_period": 30
+    },
+    {
+      "k": 6,
+      "reduced_denominator": 181,
+      "eventual_ternary_period": 45
+    },
+    {
+      "k": 7,
+      "reduced_denominator": 548,
+      "eventual_ternary_period": 136
+    },
+    {
+      "k": 8,
+      "reduced_denominator": 1639,
+      "eventual_ternary_period": 740
+    },
+    {
+      "k": 9,
+      "reduced_denominator": 4922,
+      "eventual_ternary_period": 583
+    },
+    {
+      "k": 10,
+      "reduced_denominator": 14761,
+      "eventual_ternary_period": 3556
+    },
+    {
+      "k": 11,
+      "reduced_denominator": 44288,
+      "eventual_ternary_period": 2752
+    },
+    {
+      "k": 12,
+      "reduced_denominator": 132859,
+      "eventual_ternary_period": 132858
+    }
+  ],
+  "finite_digit_diagnostics": [
+    {
+      "depth": 5,
+      "prefix_depth": 2,
+      "allowed_prefixes": 4,
+      "distinct_finite_continuation_sets": 4
+    },
+    {
+      "depth": 7,
+      "prefix_depth": 3,
+      "allowed_prefixes": 8,
+      "distinct_finite_continuation_sets": 7
+    },
+    {
+      "depth": 9,
+      "prefix_depth": 4,
+      "allowed_prefixes": 16,
+      "distinct_finite_continuation_sets": 15
+    },
+    {
+      "depth": 11,
+      "prefix_depth": 5,
+      "allowed_prefixes": 32,
+      "distinct_finite_continuation_sets": 31
+    },
+    {
+      "depth": 13,
+      "prefix_depth": 6,
+      "allowed_prefixes": 64,
+      "distinct_finite_continuation_sets": 61
+    }
+  ],
+  "rational_curve_identities": 10458,
+  "positive_orbit_edges": 4094,
+  "scope": "Proof gives nonregularity only for ordinary slope-prefix language; quotient curve retains directed reachability."
+}

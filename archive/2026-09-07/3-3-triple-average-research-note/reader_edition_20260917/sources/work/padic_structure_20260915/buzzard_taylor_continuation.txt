@@ -1,0 +1,1509 @@
+         Analytic continuation of overconvergent
+                       eigenforms.
+                                     Kevin Buzzard∗
+                                    October 21, 2004
+
+
+                                         Abstract
+         Let f be an overconvergent p-adic eigenform of level N pr , r ≥ 1, with
+      non-zero Up -eigenvalue. We show how f may be analytically continued
+      to a subset of X1 (N pr )an containing, for example, all the supersingular
+      locus. Using these results we extend the main theorem of [BT] to many
+      ramified cases.
+
+
+Introduction
+Firstly we give an overview of our main results and applications. Let r ≥ 1 be an
+integer, let p be a prime, and let N ≥ 5 be a positive integer prime to p. Let k be
+an integer and let f be an overconvergent p-adic modular form of weight k and
+level N pr . That is, f is a section of ω ⊗k over a rigid analytic subspace of X1 (N pr )
+strictly containing the connected component of the ordinary locus containing the
+cusp ∞ (we shall be more precise about these notions in Section 1 below). We
+show that if Up f = ap f for some non-zero p-adic number ap then f can be
+analytically continued to a section of ω ⊗k over a rather large analytic subspace
+of X1 (N pr ). This subspace can be succinctly described as the complement of
+the component of the ordinary locus which contains the cusp 0. Note that this
+subspace contains the entire supersingular locus, and if r > 1 then it contains a
+lot of the ordinary locus as well.
+   ∗ The author would like to thank the Miller Institute and UC Berkeley for the financial
+
+support and hospitality they offered him whilst he was obtaining the majority of these results.
+The write-up was done over a period of several years, in Rennes, the IHP in Paris, Cambridge
+UK, and Imperial College London, and the author would also like to thank these institutions
+for their hospitality. He would also like to thank the referee for several helpful remarks.
+  Descriptive title: Overconvergent Eigenforms
+2000 AMS subject classifications:
+  Primary: 11F80, 11F33.
+  Secondary: 11G18,14G22,14G35.
+  Key words and phrases: Galois representations, p-adic modular forms.
+
+
+
+
+                                              1
+    As an application of this result, we explain how one can extend the results
+of [BT] to cover a larger class of representations. The main result of [BT] is a
+criterion for establishing that certain 2-dimensional continuous odd irreducible
+p-adic representations of Gal(Q/Q) which are unramified at p are in fact modu-
+lar, coming from classical weight 1 eigenforms. Because of the overconvergence
+results mentioned in the previous paragraph, one can now extend these results
+to cover certain cases where the p-adic representation is ramified at p.
+    More precisely, let p be a prime, and let L/Qp be a finite extension. Let O de-
+note the integers of L and let λ be the maximal ideal of O. Let ρ : Gal(Q/Q) →
+GL2 (O) be a continuous representation, and let ρ denote the mod λ reduction
+   pLet Dp denote a decomposition group of Gal(Q/Q). Let K denote the field
+of ρ.
+Q( (−1)(p−1)/2 p) if p is odd, and Q(i) if p = 2.
+Theorem. Assume that
+   • ρ is ramified at only finitely many primes,
+   • ρ is modular,
+   • ρ is absolutely irreducible when restricted to Gal(Q/K),
+   • ρ|Dp is the direct sum of two 1-dimensional characters α and β : Dp →
+     O× , such that α(Ip ) and β(Ip ) are finite, and (α/β) mod λ is non-trivial.
+If furthermore p = 2, assume that
+   • ρ(c) 6= 1
+   • ρ(c) is both α-modular and β-modular, in the sense that there are eigen-
+     forms fα with T2 -eigenvalue α(Frob2 ) and fβ with T2 -eigenvalue β(Frob2 )
+     giving rise to ρ.
+   • The projective image of ρ is not dihedral.
+   Then ρ is modular, in the sense that there exists an embedding i : L ,→ C
+and a classical weight 1 cuspidal eigenform f such that the composite i ◦ ρ is
+isomorphic to the representation associated to f by Deligne and Serre.
+Remarks.   1. The extra assumptions for p = 2 are because we only know
+    Dickinson’s R = T theorem under these assumptions, and in particular
+    the necessary “companion form” result has only been proved by Gross
+    modulo unchecked compatibilities.
+  2. The theorem implies that the image of ρ is finite, and moreover that the
+     L-function of i ◦ ρ has an analytic continuation to all of C.
+  3. The paper [BT] proves the theorem in the case that both α and β are
+     unramified. Moreover, the introduction to [BT] gives several reasons why
+     we were motivated to look at this problem.
+
+
+
+                                        2
+    4. The strategy of this paper is broadly the same as that of [BT], in that one
+       obtains the classical weight 1 form by glueing together two overconvergent
+       forms and applying rigid GAGA. But the techniques used for glueing in
+       this paper are rather different to those used in [BT]. Two new ideas seem
+       to be needed, one to prove the result when α/β is tamely ramified, and
+       another for the case of wild ramification, and one of the motivations of this
+       paper is to explain these ideas. Also we shall explain another construction
+       of the glueing in the case where α/β is unramified. These glueing results
+       appear in sections 9–11.
+    5. In the arguments of this paper, we frequently pass without comment from
+       the algebraic to the p-adic analytic theory. For example, it is “clear” that
+       the analytification of a modular curve parametrises generalised elliptic
+       curves plus level structure in the rigid-analytic category. Also, if one takes
+       an algebraic modular form and considers the associated analytic section
+       of the associated analytic sheaf, then it is “clear” that the algebraically-
+       defined q-expansion of the form, defined in terms of the algebraic Tate
+       curve, equals the analytic q-expansion of the form, defined in terms of
+       rigid-analytic Tate curves. Although we felt that these compatibilities
+       were always justifiable, it was not in the spirit of the paper to justify
+       them, and we knew of no references in the literature to put the reader’s
+       mind at rest. We are hence very grateful to Brian Conrad for developing
+       the foundations of this theory in the paper [Con], and the reader who is
+       concerned with these foundational matters is referred to this paper.
+    6. Edray Goins seems to have recently used the glueing results in this paper
+       to give a new proof that “Buhler’s representation” ([Bu]) is modular.
+
+
+1     Modular curves.
+In this section we define arithmetic models of the modular curves that we shall
+be interested in. This section is just a collection of results that we shall need
+later; everything here has been known to the experts for about 15 years, and a
+reference for this entire section is [KM].
+    Let p be a prime, and let N ≥ 5 be an integer prime to p. In this sec-
+tion we recall the definitions and basic properties of certain modular curves.
+Firstly we remark that there are two conventions currently in use for defining
+the curve X1 (M ), where M is a positive integer. One possibility is to think
+of the non-cuspidal locus of X1 (M ) as parameterising elliptic curves equipped
+with a point of order M, and the other is to think of it as parameterising elliptic
+curves equipped with embeddings of µM . It turns out that we shall be doing
+computations involving the Tate curve, and that it is convenient to use embed-
+dings of µM when M is prime to p. However, because we will be considering
+certain models of these curves over bases in which p is not invertible, it is more
+convenient to stick with the notation of [KM] and use points of order M when
+
+
+                                          3
+M is a power of p. The resulting curves are sometimes therefore hybrid and
+rather non-standard, but only differ by twists from either of the usual defini-
+tions. In particular, if our base contains an M th root of unity then all the curves
+we use are isomorphic to the modular curves defined by either of the standard
+conventions.
+    By Y1 (N ) we shall mean the smooth curve over Z[1/N ] which parameterises
+elliptic curves E over Z[1/N ]-schemes equipped with an embedding from µN
+to E. By X1 (N ) we mean the usual compactification of Y1 (N ), which is smooth
+and proper over Z[1/N ]. The curve X1 (N ) comes equipped with an invertible
+sheaf ωX1 (N ) , which when restricted to Y1 (N ) is the pushforward ωY1 (N ) of the
+sheaf of differentials of the universal elliptic curve over Y1 (N ).
+    If R is a Z[1/N ]-algebra, then X1 (N )R will denote the base change of X1 (N )
+to R, and we shall denote the pullback of ωX1 (N ) to X1 (N )R by ωX1 (N ) , which
+is unlikely to cause confusion because the base we are working over will usually
+be clear.
+    By X1 (N ; p) we shall mean the usual proper flat model over Z[1/N ] of the
+modular curve associated to the group Γ1 (N ) ∩ Γ0 (p). More precisely, X1 (N ; p)
+is the curve described in [KM] whose non-cuspidal points parameterise elliptic
+curves E over Z[1/N ]-schemes equipped with an embedding i : µN → E and an
+isogeny α : E → E 0 of degree p. The fibre of X1 (N ; p) in characteristic p is not
+smooth—it is the union of two smooth curves both isomorphic to X1 (N )Fp , and
+these curves cross transversally at points corresponding to supersingular elliptic
+curves.
+    The curve X1 (N ; p) also comes equipped with a sheaf, which we shall call
+ωX1 (N ;p) , which again on the non-cuspidal locus is the pushforward of the sheaf
+of differentials on the universal elliptic curve. For R a Z[1/N ]-algebra, we shall
+denote by X1 (N ; p)R the base change of X1 (N ; p) to R, and denote the pullback
+of ωX1 (N ;p) also by ωX1 (N ;p) .
+    There are two degeneracy maps X1 (N ; p) → X1 (N ). The first, which we
+shall denote π1 , is induced on the non-cuspidal locus by the morphism of moduli
+problems sending (E, i, α : E → E 0 ) to (E, i). The second, denoted π2 , is defined
+by sending (E, i, α : E → E 0 ) to (E 0 , αi) (recall that N is prime to p). Both
+these morphisms are finite and flat. If R is a Z[1/N ]-algebra we shall still use
+π1 and π2 to denote the base extension of these morphisms from X1 (N ; p)R to
+X1 (N )R . We have that π1∗ ωX1 (N ) = ωX1 (N ;p) .
+    Let m > 0 be an integer, and let X1 (N pm ) denote the proper flat curve
+over Z[1/N ] associated to Γ1 (N pm ). More precisely, we shall think of the non-
+cuspidal locus of this curve as parameterising the slightly hybrid structure of
+elliptic curves E over Z[1/N ]-schemes equipped with an embedding of µN and a
+point of exact order pm in the sense of [KM]. For R a Z[1/N ]-algebra, we denote
+by X1 (N pm )R the base extension of X1 (N pm ) to R. If R is a Z[1/N p][ζ]-algebra,
+where ζ is a fixed primitive pm th root of unity, then X1 (N pm )R inherits an
+automorphism w = wζ , which on non-cuspidal points is the following morphism
+of moduli problems: For an elliptic curve E/S/Z[1/N p][ζ] equipped with an
+
+                                         4
+embedding i : µN → E and a point P ∈ E(S) of exact order pm , we define
+φ : E → F := E/hP i and choose Q ∈ ker(φ̌)(S) ⊂ F (S) such that under the
+canonical pairing h , iφ : ker(φ) × ker(φ̌) → Gm , we have hP, Qiφ = ζ (We
+remark here that there are 2 choices of “canonical pairing”. To fix ideas we
+shall use the one defined in §2.8 of [KM]. We could also tie down this pairing by
+stating that on the n-torsion in a Tate curve, hζn , q 1/n i = ζn ). The morphism
+w sends (E, i, P ) to (F, i, Q). This morphism extends to the cusps and induces
+an automorphism of X1 (N pm )R .
+    The most esoteric curves that we shall consider will only be  needed in char-
+acteristic prime to N p. Let Γ0 (p) denote the matrices ac db in SL2 (Z) such
+that b ≡ 0 mod p. Let m > 0 be an integer, and let X1 (N pm ; p) denote the
+smooth proper curve over Z[1/N p] associated to the group Γ1 (N pm ) ∩ Γ0 (p). In
+other words, the non-cuspidal locus of X1 (N pm ; p) parameterises elliptic curves
+equipped with an embedding of µN , a point P of exact order pm and a cyclic
+subgroup of order p which has trivial intersection with the subgroup generated
+by P . As ever, if R is a Z[1/N p]-algebra then let X1 (N pm ; p)R denote the base
+extension of X1 (N pm ; p) to R.
+    There are two natural morphisms from X1 (N pm ; p) to X1 (N pm )Z[1/N p] , de-
+noted π1 and π2 , where π1 is the morphism which forgets the subgroup of order
+p, and π2 quotients out by it. Both are finite and flat of degree p + 1.
+   Finally, observe that the non-cuspidal locus of X1 (N p; p)Z[1/N p][ζp ] can be
+thought of as parameterising elliptic curves equipped with an embedding of µN ,
+and two points P and Q of order p generating E[p] and such that hP, Qi = ζp .
+This is basically because every cyclic subgroup D as above will have a unique
+generator which pairs with P to ζp .
+
+
+2    The geometric description of modular forms
+     and q-expansions.
+Let N ≥ 5 be an integer. The functor on Z[1/N ]-schemes, sending a Z[1/N ]-
+scheme S to the set of isomorphism classes of elliptic curves over S equipped
+with an embedding of µN , is then representable. This functor is represented
+by a universal elliptic curve E1 (N ) over Y1 (N ). This leads to a rather slick
+definition of the space of meromorphic modular forms of level N and weight k
+defined over a Z[1/N ]-algebra R. Namely, such a form is just an element of
+H 0 (E1 (N )R , (Ω1E1 (N )R /Y1 (N )R )⊗k ) = H 0 (Y1 (N )R , ωY⊗k
+                                                                 1 (N )R
+                                                                         ).
+    If one wants to discuss holomorphic modular forms using this method, there
+are two ways to proceed. One way, explained in [DR], is to use the fact that
+X1 (N ) parameterises generalised elliptic curves over Z[1/N ]-schemes equipped
+with an embedding of µN meeting every irreducible component of every geo-
+metric fibre. Then one can extend ω to X1 (N ) in an appropriate way and take
+sections of tensor powers of this extended invertible sheaf, over X1 (N ).
+    Another way, as explained in [K], is to define the Tate curve “Gm /q Z ” as
+an elliptic curve over a Z((q)) ⊗Z Z[1/N ]-algebra R, and then to define various
+
+                                        5
+embeddings of µN into this curve, after a possible extension of R. The resulting
+elliptic curve with level structure gives rise to a map from R to Y1 (N ) and
+one can demand that the sections of (Ω1E1 (N )/Y1 (N ) )⊗k ), when pulled back to
+the Tate curve, are of the form ( n≥0 an q n )(ωcan )⊗k , that is, such that the
+                                            P
+coefficient of q n in this expansion is zero for all n < 0. This is the point of
+view that we shall be adopting. For more details on why these two concepts
+coincide, we refer the reader to [Con]. Given a cusp c of a modular curve, we
+shall refer to the Tate curve and embedding of µN controlling holomorphicity at
+this point as the “Tate curve at c”. We shall normalise things so that the Tate
+curve at ∞ is the curve Gm /q Z equipped with the embedding of µN induced
+from the natural inclusion µN → Gm .
+    One important result in this theory (see for example §1.6 of [K]) is the q-
+expansion principle, which loosely stated, says that if one is working over an
+irreducible modular curve (as will be the case for all curves we shall consider),
+then a modular form of some fixed     P weight k is determined by its q-expansion at
+∞, which is exactly the sum n≥0 an q n that one obtains above when pulling
+back the form to the Tate curve at ∞. Hence we can sometimes prove that two
+modular forms are equal if we know that they have equal q-expansions.
+    We shall in fact be considering some slightly more general situations, where
+we will be taking sections of slightly modified sheaves.
+    Recall that Y1 (N p; p)Z[1/N p] parameterises elliptic curves equipped with an
+embedding i of µN , a point P of exact order p, and a cyclic subgroup C of
+order p not containing P . Let π2 : Y1 (N p; p)Z[1/N p] → Y1 (N p)Z[1/N p] be
+the map which quotients out by the subgroup C, and consider the pullback
+(π2 )∗ ω ⊗k on Y1 (N p; p)Z[1/N p] , where we write ω for ωY1 (N ) , the pushforward
+of the differentials on the universal elliptic curve. Now a calculation on uni-
+versal curves shows that a section of π2∗ ω ⊗k can be thought of as an element
+of H 0 (E1 (N p; p)/C, (Ω1(E1 (N p;p)/C)/Y1 (N p;p) )⊗k ), where C is the universal cyclic
+subgroup of E1 (N p; p) of order p. Moreover, one can check that a given section
+extends to the cusps by evaluating the corresponding rule on the Tate curves at
+various cusps, and moreover the q-expansion principle still holds, when correctly
+interpreted in this setting.
+    One further generalisation that we need to make is that we shall sometimes
+be working in the category of rigid-analytic spaces instead of the category of
+schemes. In short, the analytic analogue of everything above still remains true,
+and details of many arguments can be found in [Con]. We summarise some of
+the facts that we need. Consider the curve Y1 (N )K , where K is any complete
+subfield of Cp . A global section of (ω an )⊗k can be thought of as an element of
+H 0 (E1 (N )an , ((Ω1E1 (N )/Y1 (N ) )⊗k )an ) where E1 (N ) is the universal elliptic curve
+over Y1 (N ). In this optic, the Tate curve at infinity can be thought of as the
+pullback of E1 (N ) to the punctured disc consisting of the points of Y1 (N )K
+which reduce to the cusp ∞ in X1 (N )Fp , and the other Tate curves can be
+thought of in a similar way. Again, one can verify that a section of (ω an )⊗k
+extends to the cusps by computing q-expansions on these Tate curves. Finally,
+we have a q-expansion principle, saying that a section of (ω an )⊗k is determined
+
+
+                                             6
+by its q-expansion at ∞. One simple way of seeing this latter fact is that if an
+analytic function vanishes on a small disc then it must vanish everywhere, and
+one can apply this to any small disc contained in the punctured disc at infinity.
+    Next, we must extend the above paragraphs to certain admissible subsets of
+Y1 (N )an . So let U be a connected admissible open subset of X1 (N )an , containing
+the cusp ∞. Choose a small disc U∞ in U which contains ∞, and then remove
+∞ from it. The Tate curve at infinity in this setting can be thought of as the
+pullback of E1 (N )an to U∞ , and one can deal with the other cusps in U in the
+same way. An element of (ω an )⊗k (U − {cusps}) can be thought of as an element
+of H 0 (E1 (N ) ×Y1 (N ) (U − {cusps}), ((Ω1E1 (N )/Y1 (N ) )⊗k )an ), one can check to see
+that it extends to U by a computation on Tate curves, and finally, because U is
+connected, we see that a section is determined by its pullback to U∞ \{∞} and
+so the q-expansion principle holds.
+    Finally, we observe that one can consider other sheaves such as (π2∗ ω ⊗k )an
+in this setting as well, and can think of sections of this sheaf over rigid analytic
+open subsets of (X1 (N p; p)K )an as rigid differentials on a curve isogenous to the
+universal curve, as in the algebraic case.
+
+
+3     The theory of the canonical subgroup.
+In this section we review and extend the theory of the canonical subgroup. Many
+of the results here appear in [K] (for the canonical subgroup of order p) and [G]
+(for the extension to canonical subgroups of order pn ). These latter references
+put mild assumptions on p, which we remove.
+    As before, let p be a prime and let N ≥ 5 be an integer prime to p. Let
+W denote the ring of Witt vectors of Fp , and let K0 be its field of fractions.
+Let K be any finite field extension of K0 , and let OK denote the integers of
+K. We shall identify the residue fields of K and W with Fp . Normalise the
+norm on K so that |p| = p−1 . We know that K is complete with respect to this
+norm, and hence there is a theory of rigid analytic spaces over K. We shall use
+the foundations of rigid analysis as set up in [BGR]. The only notation that
+we shall use here that is not defined in [BGR] is that of a wide-open subspace
+of a smooth curve, which is defined in [Col2] in the generality that we need.
+For the purposes of this paper, a wide-open space is a rigid-analytic space over
+K that is isomorphic to an admissible open in a smooth proper curve over K
+whose complement is, after a finite extension of K if necessary, isomorphic to a
+disjoint union of a non-zero finite number of affinoid discs.
+    The non-cuspidal points on X1 (N )K parameterise elliptic curves (with extra
+structure), and in this section we shall explain something about the region of
+X1 (N )K corresponding to the elliptic curves with supersingular reduction. This
+region is neither Zariski-open nor closed, but it is an admissible open subset of
+the rigid analytic space X1 (N )an over K associated to X1 (N )K , and we shall
+use rigid analysis to understand this region more clearly.
+
+
+
+                                            7
+    There are a finite non-zero number of supersingular points in the special fibre
+of X1 (N )OK , that is, points which correspond to supersingular elliptic curves
+equipped with a point of order N. Let x ∈ X1 (N )OK (Fp ) = X1 (N )W (Fp ) be a
+supersingular point. Then the completion of the local ring OX1 (N )W ,x is a W -
+algebra which is non-canonically isomorphic to W [[Tx ]] for some parameter Tx .
+Fix such an isomorphism. The subset Bx of X1 (N )an consisting of points which
+reduce to x is a rigid space, isomorphic to the open unit disc, and the choice of Tx
+can be thought of as a choice of a parameter on this disc. Indeed, we can think
+of Tx as an isomorphism of rigid spaces from Bx to the open unit disc in K. The
+fact that Bx is indeed a disc seems to be known to the experts, although a lot
+of the literature on this subject appears to only consider the case when the base
+field K is algebraically closed (which is clearly not true here). One reference
+which proves everything in the generality we need is Propositions 0.3.5 and 0.2.7
+of [Be].
+    If 0 < r ≤ 1 is of the form pq with q a rational number, then define Bx,<r
+to be the subdisc of Bx consisting of points P ∈ Bx such that |Tx (P )| < r. In
+general this disc will depend on the choice of Tx . However, the only W -algebra
+automorphisms of W [[Tx ]] send Tx to ap + uTx , where a ∈ W and u ∈ W [[Tx ]]
+is a unit, and this implies that for r > 1/p the disc Bx,<r only depends on x
+and r.
+    For 1/p < r = pq ≤ 1 as above, define X1 (N )≥r to be the complement
+of ∪x∈SS Bx,<r in X1 (N )an , where SS denotes the (finite non-empty) set of
+supersingular points. Then X1 (N )≥r is the intersection of finitely many affi-
+noids in a separated space and is hence affinoid. We shall refer to X1 (N )≥1 =
+X1 (N )an \ ∪x∈SS Bx as the ordinary locus of X1 (N )an and to the X1 (N )≥r for
+r < 1 as a system of strict neighbourhoods of X1 (N )≥1 . If ω an denotes the ana-
+lytification of the sheaf ω on X1 (N )K , and if k is an integer, then the Banach
+space H 0 (X1 (N )≥1 , (ω an )⊗k ) is the space of p-adic modular forms of weight k,
+and the union of the subspaces H 0 (X1 (N )≥r , (ω an )⊗k ) for r < 1 as above is the
+space of overconvergent p-adic forms of weight k.
+    If N ≤ 4 then there is still a theory, but one must be slightly more careful
+because the sheaf ω may not exist. In this case, one may proceed by adding
+an auxiliary level structure, working at higher level, and then taking invariants.
+The structure of the supersingular discs might be slightly more complicated
+if N ≤ 4, and we shall avoid the problem completely by working only at level
+N ≥ 5, and using the trick above to deal with smaller levels when necessary.
+    We now briefly explain how this approach to p-adic modular forms relates to
+the one described by Katz in [K] and by Gouvêa in [G]. Katz and Gouvêa use
+the Eisenstein series Ep−1 to give a parameter near each supersingular point.
+Because Ep−1 is not a true modular form when p ≤ 3, Katz has to put some extra
+conditions on N in these cases, and Gouvêa avoids small primes completely.
+If Ep−1 exists then it is a section of ω ⊗(p−1) on X1 (N )W . If x is a supersingular
+point then choose an open affine U ⊆ X1 (N )W over which ω ⊗(p−1) becomes
+isomorphic to OU . Then Ep−1 can be thought of as a section of OU (U ) and
+it is known that Ep−1 mod p is the Hasse invariant, which has a simple zero
+
+
+                                         8
+at x. Hence the image of Ep−1 in OX1 (N )W ,x can be used as a choice for Tx .
+Our approach of choosing Tx arbitrarily has the advantage that it avoids these
+problems when p ≤ 3. As far as we know, this approach was first adopted in [BT]
+but presumably it was known before then.
+    We explain how some of the theorems on the canonical subgroup in chapter 3
+of [K] can be applied to (integral models of) elliptic curves corresponding to
+points in X1 (N )≥r when r = p−p/(p+1) . In fact the extra conditions imposed by
+Katz on the level structure when p ≤ 3 can be removed, in the cases that we
+are interested in. We firstly recall some of the results on the canonical subgroup
+proved in [K], results which Katz attributes to Lubin.
+    Let L be a finite extension of K and let E/L be an elliptic curve, equipped
+with an embedding i : µN → E defined over L. Then the pair (E, i) defines an
+L-valued point α of X1 (N )K . We define a rational number v(E, i) associated
+(non-canonically) to the pair (E, i) (the definition is non-canonical because it
+depends on our choices of parameters Tx ). Note first that N ≥ 5 and hence
+E cannot have additive reduction. If E has multiplicative or good ordinary
+reduction then define v(E, i) = 0. If however E has supersingular reduction,
+then let x ∈ X1 (N )(Fp ) be the point corresponding to the reduction of (E, P ).
+Recall that we have fixed a parameter Tx on the disc Bx of points above x.
+Define |(E, i)| = |Tx (α)| and define v(E, i) by |(E, i)| = p−v(E,i) . Note that if
+|(E, i)| is zero then technically v(E, i) = +∞ is not defined, but our arguments
+will only concern elliptic curves corresponding to points near the edge of the
+supersingular discs and in particular we shall never be concerned with the exact
+value v(E, i) if it is at least 1. We remark here that if v(E, i) < p/(p + 1)
+then one can use Theorem 3.10.7 of [K] to verify that v(E, i) is determined by
+the formal group of E and is hence independent of i and of T . Note that the
+calculation at this point of [K] does not depend on the fact that p ≥ 5. In
+fact, although Katz has to be slightly careful when p ≤ 3 in his definition of
+the canonical subgroup for an elliptic curve over a p-adic ring, Theorem 3.10.7
+of [K] can be used to deduce that if we restrict ourselves to elliptic curves defined
+over the integers of a finite extension of K0 , everything is independent of the
+level structure that we chose. What seems to be happening is that Katz is
+actually defining a rigid-analytic function on the supersingular discs, such that
+v(E, i) is the valuation of the value of this function at (E, i). When p is less
+than 5, the actual value of the function could depend on the choice of i, but the
+valuation of this value does not, at least near the boundary of the disc. See also
+the forthcoming definition of v 0 , which is in general perhaps a more canonical
+measure of the “supersingularity” of E, but which depends on the choice of an
+auxiliary subgroup of order p.
+Definition 3.1. Let L/K be a finite extension, and say E/L is an elliptic
+curve. Say that E is not too supersingular if, after a finite extension L0 of L if
+necessary, there exists an embedding i : µN → E such that v(E, i) < p/(p + 1)
+(If this is the case for one embedding then it will be true for all embeddings).
+   Note that this condition is also independent of both the choice of i and
+of T. If E fails to be not too supersingular, then we shall say that E is too
+
+                                         9
+supersingular. Note that elliptic curves with multiplicative or good ordinary
+reduction are not too supersingular.
+Remark 3.2. Geometrically speaking, the supersingular but not too supersingu-
+lar elliptic curves are the ones near the outer edges of the supersingular discs Bx .
+   If E is not too supersingular, then v(E, i) is independent of the finite field
+extension L0 and the choice of i, and we call it v(E). In [K], Katz explains
+how to associate a canonical subgroup to an elliptic curve which is not too
+supersingular. If p ≤ 3 then Katz must choose some auxiliary level structure
+before he can define a canonical subgroup. But because we are only working
+with elliptic curves over finite extensions of K0 , Theorem 3.10.7 of [K] shows us
+that the canonical subgroup will be independent of this choice. We remark also
+that Katz attributes this work to Lubin.
+   We now recall some of the main results about canonical subgroups in this
+language.
+Theorem 3.3 (Katz, Lubin). For a not too supersingular elliptic curve E/L,
+let H = H(E) ⊂ E be its canonical subgroup. Then H has order p. Moreover,
+  (i) If v(E) = 0 then H is the finite étale subgroup of E corresponding to the
+      kernel of the reduction map from E[p](L) to the p-torsion in the Néron
+      model of E over OL .
+ (ii) If v(E) < 1/(p + 1) then E/H is not too supersingular, and v(E/H) =
+      pv(E).
+(iii) If v(E) = 1/(p + 1) then E/H is too supersingular.
+ (iv) If v(E) ∈ (1/(p + 1), p/(p + 1)), then E/H is again not too supersingular,
+      v(E/H) = 1 − v(E), and furthermore the canonical subgroup of E/H is
+      E[p]/H.
+ (v) If v(E) < p/(p + 1) and C 6= H is a subgroup of E of order p, then
+     v(E/C) = v(E)/p and the canonical subgroup H(E/C) of E/C is E[p]/C.
+ (vi) If v(E) ≥ p/(p + 1) and C ⊂ E is a subgroup of order p, then v(E/C) =
+      1/(p + 1) and the canonical subgroup H(E/C) of E/C is E[p]/C.
+Proof. All these results other than (iii) are contained in either the beginning
+of §3.4 of [K], or Theorem 3.10.7 of [K]. We deduce (iii) as follows. If v(E) =
+1/(p + 1) then by the proof of [K] 3.10.7(2) we see that there are points on
+(E/H)[p] with ordinal 1/(p2 − 1). But [K] 3.10.7(1) shows that this cannot
+happen if E/H is not too supersingular.
+
+
+    We now extend the definition of a canonical subgroup to canonical subgroups
+of order pn for n > 1, as in [G].
+    Let E/L be an elliptic curve, which is not too supersingular. If n ≥ 1 is an
+integer, and v(E) < p2−n /(p + 1), then define a subgroup Hn = Hn (E) of E
+
+
+                                         10
+as follows. The definition is inductive. If n = 1 then set H1 (E) = H(E), the
+canonical subgroup of E. For n > 1, let Hn (E) be the preimage of Hn−1 (E/H)
+under the natural projection E → E/H. Note that we used part (ii) of Theo-
+rem 3.3 above to show that Hn−1 (E/H) makes sense. Moreover, it is a simple
+exercise, using part (v) of Theorem 3.3, to show that Hn is cyclic of order pn .
+
+Definition 3.4. If E and n are as above, with v(E) < p2−n /(p + 1), then call
+Hn = Hn (E) the canonical subgroup of order pn of E. More compactly, if E
+is not too supersingular and v(E) < p2−n /(p + 1), we shall say that E has a
+canonical subgroup, or E has an Hn for brevity.
+    The main result we need on these higher canonical subgroups is below. Be-
+fore we state the result, we establish some notation. Say E/L is an elliptic curve
+such that E has an Hn . Let m ≥ 0 be an integer, and let Cm denote any cyclic
+subgroup of E of order pm , such that Cm ∩ Hn = 0. Finally, say Dm+n is a
+cyclic subgroup of order pm+n in E, such that Hn ⊆ Dm+n .
+Proposition 3.5. With notation as above, v(E/Cm ) < p2−(m+n) /(p + 1), so
+E/Cm has an Hm+n . Moreover, Hm+n (E/Cm ) = (Dm+n + Cm )/Cm .
+Proof. This can no doubt be proved in the same way as Katz proves The-
+orem 3.10.7 of [K], but we shall instead show how it can be deduced from
+Theorem 3.3.
+    Repeated applications of (v) of Theorem 3.3 gives us that E/Cm has an
+Hm+n . So it remains to verify that it is the image of Dm+n .
+    The Proposition is vacuous for m = 0. Say we have proved it for m = 1.
+Then by induction on m, the Proposition is true. Hence it suffices to show the
+result for m = 1. In this case we have to show that the H1+n (E/C1 ) is the
+image of D1+n . By definition, H1+n (E/C1 ) is the preimage in E/C1 of the Hn
+of the quotient of this curve by its canonical subgroup. Hence by Theorem 3.3
+(v), H1+n is the preimage of Hn (E) under the map E/C1 → E/E[p]∼       =E. So
+H1+n (E/C1 ) is the preimage of (D1+n + E[p])/E[p], which equals (D1+n +
+E[p])/C1 = (D1+n ⊕ C1 )/C1 = D1+n .
+
+
+Geometric remarks. If E has an Hn then this means geometrically that either
+E has good ordinary or multiplicative reduction, or that E is supersingular
+but is very close to the boundary of the supersingular disc, in some sense. The
+proposition above shows that if one quotients out a not too supersingular elliptic
+curve by a “non-canonical” subgroup of order pm , that is, one which has trivial
+intersection with the canonical subgroup, then it becomes even less supersingu-
+lar. Conversely, by Theorem 3.3, if one quotients out a not too supersingular
+elliptic curve by its canonical subgroup, one usually ends up with an elliptic
+curve which is “more supersingular”, and if one continues to do this then it
+could happen that after a while the curve becomes too supersingular and hence
+does not have a canonical subgroup. The geometry of this situation will be
+clarified in the next section.
+
+
+                                       11
+4    Admissible subspaces of modular curves.
+Let X1 (N ; p)an denote the rigid space associated to X1 (N ; p)K . Let ∞ denote
+the cusp of X1 (N ; p) corresponding to the Tate curve Eq := Gm /q Z equipped
+with the natural embedding of µN into Gm and the subgroup of pth roots of
+unity in Gm . The reduction mod p of this cusp is a smooth point on one
+of the components of X1 (N ; p)Fp ; call this component X∞ . The non-cuspidal
+Fp -valued points on X∞ correspond to elliptic curves over Fp equipped with a
+point of order N and a finite flat subgroup scheme of order p which only has
+one geometric point.
+    Let W0 (p) ⊂ X1 (N ; p)an denote the set of points whose reduction lies in X∞ .
+Then W0 (p) is an admissible open subset of X1 (N ; p)an , and is in fact a wide-
+open space, as can be seen for example by checking that the proof of Propo-
+sition 3.3 of [Col1] does not use the fact that the base field is Cp . We shall
+now define a function v 0 : W0 (p) → Q which is related to v but has the advan-
+tage that it does not depend on the choice of uniformisers at each supersingular
+point.
+    Let x ∈ W0 (p) be a point. If x is a cusp then define v 0 (x) = 0. Otherwise,
+x corresponds to a closed point of Y1 (N ; p)K whose reduction lies in X∞ . In
+particular, there is a finite extension L/K, and an elliptic curve E/L equipped
+with an embedding i of µN and a subgroup C of order p, such that the data
+(E, i, C) corresponds to x. Now define v 0 (x) as follows. If E is ordinary then
+define v 0 (x) = 0. If E has supersingular reduction but E is not too supersingular,
+and C happens to be the canonical subgroup of E, then define v 0 (x) = v(E). If
+v(E, i) ≥ p/(p + 1) and hence E has no canonical subgroup, then define v 0 (x) =
+p/(p + 1). Finally, if E has supersingular reduction, and E has a canonical
+subgroup but it is not C, then by part (v) of Theorem 3.3, we have v(E/C) <
+1/(p + 1), and we set v 0 (x) = 1 − v(E/C, i) ∈ (p/(p + 1), 1). A case by case
+check shows that v 0 does not depend on the choice of uniformising parameters
+at the supersingular points (we used these choices to define v but our definitions
+were independent of choice near the edges of the discs). Moreover, v 0 does not
+depend on i, and hence we can speak about v 0 (E, C) when we mean v 0 (x) for
+some point x corresponding to (E, i, C) for some embedding i of µN .
+    A more concise definition of v 0 is the following: away from the supersingular
+region, v 0 = 0. In the supersingular region, v 0 (E, C) = v(E) if C is the canonical
+subgroup of E, and in general v 0 (E, C) + v 0 (E/C, E[p]/C) = 1, where we note
+that either C or E[p]/C are canonical by part (vi) of Theorem 3.3.
+    We explain another way of thinking about the function v 0 . On a supersin-
+gular annulus, v 0 looks rather like the valuation of an isomorphism between the
+annulus and the subset {1/p < |z| < 1} of affine 1-space. In fact, things are
+slightly more complicated, but not overly so. Let q be a rational number such
+that 1/2 < q < p/(p + 1), and let r = p−q . Consider the preimage of X1 (N )≥r
+under π1 in X1 (N, p)an . This preimage is two disjoint affinoids. Moreover, the
+component X1 (N, p)≥r of this preimage containing the cusp ∞ maps isomorphi-
+cally down to X1 (N )≥r by π1 again, by the theory of the canonical subgroup.
+
+
+                                         12
+The pullbacks of the parameters Tx that we chose on the supersingular discs of
+X1 (N )an give us a function on the supersingular part of X1 (N, p)≥r , and on a
+point in this region, v 0 agrees with the valuation of this function.
+    Things are equally simple at the other end of the annulus: if we consider
+the preimage of X1 (N )≥r under π2 , then the component not containing ∞ is
+an affinoid mapping one-to-one down to X1 (N )≥r , and pulling back the func-
+tions Tx onto the supersingular annuli in this affinoid gives us a function defined
+on these annuli, such that 1 − v 0 agrees with the valuation of this function. So
+“at either end” of the supersingular annuli in X1 (N, p), the function v 0 looks
+like the valuation of an isomorphism to an explicit annulus in the affine line,
+and part (iv) of Theorem 3.3 guarantees that things match up in the middle of
+the annuli.
+    For n ≥ 0 define Vn ⊂ W0 (p) to be the points x of W0 (p) such that v 0 (x) ≤
+1 − 1/pn−1 (p + 1).
+Proposition 4.1. All of the Vn are admissible open affinoid subsets of the curve
+X1 (N ; p)an . Moreover, all the Vn are connected. We have V0 ⊂ V1 ⊂ V2 ⊂ . . .,
+and the union of the Vi is W0 (p). Moreover, the Vi form an admissible cover
+of W0 (p).
+Proof. One painless way of seeing this is as follows. That V0 is an affinoid is
+standard—in fact V0 is isomorphic to X1 (N )≥p−1/(p+1) . For n ≥ 1, we consider
+a supersingular annulus in W0 (p), and equip it with the function π2∗ (Tx ), where
+Tx is our parameter on the corresponding supersingular disc in X1 (N )an . Near
+the “far” end of the annulus, this function is an isomorphism onto an annulus
+in affine 1-space, and so we can use it to glue a disc onto W0 (p), as in the proof
+of Proposition 3.3 (ii) of [Col1]. Doing this to all the supersingular annuli in
+W0 (p) we construct a proper rigid space, for which Vn are affinoid subspaces
+obtained by removing finitely many open discs. Now everything follows without
+too much difficulty.
+   We now prove a result about these affinoids which shall be important in the
+sequel.
+Lemma 4.2. Let L/K be a finite field extension.
+  1. Let x ∈ X1 (N ; p)K (L) be a point corresponding to the data (E, i, C), such
+     that for some n ≥ 2 we have v(E, i) ∈ [1/pn−2 (p + 1), p/(p + 1) ). Then
+     x ∈ Vn .
+  2. Let E/L be an elliptic curve equipped with i and C as usual, correspond-
+     ing to the point x ∈ Vn+1 for some n ≥ 0. Let D be any cyclic sub-
+     group of order p of E such that D 6= C, and let y correspond to the data
+     (E/D, i mod D, C + D/D). Then y ∈ Vn .
+Proof. 1) First we observe that E has a canonical subgroup, so let H be this
+subgroup. If H = C then v 0 (x) < p/(p + 1) < 1 − 1/pn−1 (p + 1) and we are
+home. If not, then v(E/C, i) = (1/p)v(E, i) ≥ 1/pn−1 (p + 1) by assumption and
+
+
+                                        13
+part (v) of Theorem 3.3, and so by definition we have v 0 (x) ≤ 1 − 1/pn−1 (p + 1)
+and again we are home.
+      2) We consider first the case n = 0. In this case, v 0 (x) ≤ p/(p + 1), and
+the theorem is an easy corollary of Theorem 3.3, as follows. There are two
+possibilities: Either v 0 (x) < p/(p + 1), in which case E is not too supersingular
+and we use part (v) of the theorem, or v 0 (x) = p/(p + 1), so E has no canonical
+subgroup and we use part (vi).
+      Next we deal with the case n = 1. It suffices to prove the result for x ∈
+V2 \V1 . In this case, v 0 (x) ∈ (1 − 1/(p + 1), 1 − 1/p(p + 1)] and so v(E/C, i) ∈
+[1/p(p + 1), 1/(p + 1) ). Our assumption that x 6∈ V1 implies that E is not too
+supersingular, and that E has a canonical subgroup H such that H 6= C. We
+now consider two subcases. Firstly if v(E/C) > 1/p(p + 1) then by part (v)
+of Theorem 3.3 we see that v(E, i) ∈ (1/(p + 1), p/(p + 1)), and so E/D has a
+canonical subgroup which is E[p]/D = C + D/D by (iv) of Theorem 3.3. So
+in this case, (E/D, i, C + D/D) ∈ V1 . We are left with the case v(E/C, i) =
+1/p(p + 1). In this case, we deduce from Theorem 3.3 that v(E) = 1/(p + 1).
+There are now two cases. If D = H then v(E/D) ≥ p/(p + 1) and we deduce
+that (E/D, i, C + D/D) ∈ V1 . Finally, if D 6= H we have v(E/D, i) = 1/p(p + 1)
+and then (E/D, i, C + D/D) ∈ V0 .
+      Finally we deal with the case n ≥ 2. We may assume that x ∈ Vn+1 \Vn ,
+and so v 0 (x) ∈ (1 − 1/pn−1 (p + 1), 1 − 1/pn (p + 1)]. We deduce that v(E/C) ∈
+[1/pn (p + 1), 1/pn−1 (p + 1)) and so E has a canonical subgroup H. Because
+v 0 (x) 6= v(E) we must have C 6= H, and we see that v(E) ∈ [1/pn−1 (p +
+1), 1/pn−2 (p + 1)). Hence either v(E/D) ∈ [1/pn (p + 1), 1/pn−1 (p + 1)) or
+v(E/D) ∈ [1/pn−2 (p + 1), 1/pn−3 (p + 1)). In the former case, D 6= H so (E/D)
+has a canonical subgroup, namely the image of C, and (E/D, i, C + D/D) ∈
+V1 ⊆ Vn . In the latter case we apply part 1 of the Lemma to deduce that
+(E/D, i, C + D/D) ∈ Vn .
+    We now move to a higher level. Let m be a positive integer and let π :
+X1 (N pm )K → X1 (N ; p)K be the map which on non-cuspidal points corresponds
+to the morphism of moduli problems sending (E, i, P ) to (E/hpP i, i, hP i). Set
+W1 (pm ) = (π an )−1 (W0 (p)) and for n ≥ 0 set Zn = (π an )−1 (Vn ) ⊂ X1 (N pm )an .
+Note that if x ∈ X1 (N pm ) corresponds to (E, i, P ), then x is in W1 (pm ) iff E has
+either got supersingular reduction, or E has ordinary reduction and P reduces
+to the identity in characteristic p. So W1 (pm ) corresponds to the preimage of a
+characteristic p “outer component” in the Katz-Mazur canonical balanced model
+of X1 (N pm ) over Zp [ζpm ]. Note that W1 (pm ) contains all the supersingular
+locus, which is in general rather complicated geometrically for m ≥ 2. Indeed,
+already in the case of X0 (N p2 ), Edixhoven’s arguments in [E] show that the
+special fibre of a stable model for X0 (N p2 ) contains hyperelliptic curves of high
+genus which reduce to supersingular points in the Katz-Mazur model.
+Proposition 4.3. The subsets W1 (pm ) and Zn of X1 (N pm )an are all admissible
+open. The space W1 (pm ) is a connected wide-open, and the Zn are connected
+affinoids for n ≥ 0. We have Z0 ⊂ Z1 ⊂ Z2 . . ., and the Zn form an admissible
+cover of W1 (pm ).
+
+                                         14
+Proof. This follows essentially immediately from Proposition 4.1. Connected-
+ness comes from the fact that the ordinary locus of W1 (pm ) is connected, which
+follows from Proposition 3.3 (i) of [Col1] applied to the canonical balanced
+model of X1 (N pm ) over Zp [ζpm ]. Indeed, we see that W1 (pm ) is the preimage
+of a component of this model, and the ordinary locus of W1 (pm ) is contained in
+Z0 .
+   Recall that there are morphisms π1 and π2 : X1 (N pm ; p)K → X1 (N pm )K ,
+where π1 forgets the subgroup of order p and π2 quotients out by it. We can
+now state the main result of this section:
+Proposition 4.4. We have (π1an )−1 (Zn+1 ) ⊆ (π2an )−1 (Zn ) for all n ≥ 0.
+Proof. The maps π1 and π2 are finite, and hence the claimed inclusions are
+between affinoids. So it suffices to check on non-cuspidal points, where the
+result is immediate from part 2 of Lemma 4.2.
+
+
+5     Correspondences on rigid spaces and the first
+      analytic continuation results.
+In this section we explain a construction the Hecke operator Up in the rigid-
+analytic category, and observe that it gives us a rather easy proof that certain
+eigenvectors for Up satisfy certain analytic continuation properties.
+    Let C and D be smooth proper geometrically irreducible algebraic curves
+over K, and let f : C → D be a finite flat K-morphism. If F is an invertible
+sheaf on D, then there is a natural OD -linear trace map f∗ f ∗ F → F, defined
+locally using the fact that if A is Noetherian and B is a finite flat A-algebra
+then there is an A-linear trace map B → A.
+    Now say g : C → D is another K-morphism, and that we are given a map of
+sheaves of OC -modules g ∗ F → f ∗ F. This map induces a map f∗ g ∗ F → f∗ f ∗ F
+and by composition with the trace map we obtain a map f∗ g ∗ F → F.
+    Now let us analytify the situation. There are rigid spaces C an and Dan
+associated to C and D. The coherent sheaf F on D gives rise to a coherent
+analytic sheaf F an on Dan , and the morphisms f and g give rise to morphisms
+f an and g an . Moreover, one can define the analytic pushforward, or pullback,
+of a sheaf of Oan -modules, and check that (f∗ g ∗ F)an is canonically isomorphic
+to f∗an g an,∗ F an . In particular, we have a natural map f∗an g an,∗ F an → F an and
+hence, for all admissible open U in Dan , a map (f∗an g an,∗ F an )(U ) → F an (U ).
+    By definition, we have (f∗an g an,∗ F an )(U ) = (g an,∗ F an )(f −1 (U )), and hence
+if V is any admissible open subset of Dan such that f −1 U ⊆ g −1 V, then we have
+natural maps
+                                           res
+        F an (V ) → (g an,∗ F an )(g −1 V ) −−→ (g an,∗ F an )(f −1 U ) → F an (U ).
+Let us simply refer to the composite of these maps as “the trace map”.
+    We now apply this theory to the subspaces of the modular curves defined
+in the previous section to deduce some analytic continuation results. As far as
+
+                                            15
+we are aware, these analytic continuation results are new, although they could
+have been noticed and proved 25 years ago.
+    Recall the sheaf ω on X1 (N pm )K , which on non-cuspidal points is the push-
+forward of the differentials on the universal elliptic curve. It is standard that
+if k is an integer then the global sections of ω ⊗k are modular forms of weight
+k. In the notation used at the beginning of this section, set C = X1 (N pm ; p)K
+and D = X1 (N pm )K . Set f = π1 and g = π2 . Finally, let k be any inte-
+ger, and define F = ω ⊗k . We deduce from Proposition 4.4 and the remarks
+at the beginning of this section that we have, for every n ≥ 0, a trace map
+tr : (ω an )⊗k (Zn ) → (ω an )⊗k (Zn+1 ).
+    We can see this morphism explicitly as follows. Let x be a point in Zn . Then
+x corresponds to an elliptic curve E 0 over a finite extension L of K, equipped
+with an embedding of µN and a point of order pm . The fibre of ω ⊗k,an at x is
+canonically isomorphic to H 0 (E 0 , Ω1 )⊗k and hence one can think of f (x) as being
+an element of H 0 (E 0 , Ω1 )⊗k . Similarly if y is a point of Zn+1 corresponding
+to (E, i, P ) then the value of tr(f ) at y can be thought of as an element of
+H 0 (E, Ω1 )⊗k . We can actually compute tr(f ) explicitly, as follows. For all cyclic
+subgroups C of order p in E such that C does not contain pm−1 P , the point
+(E/C, i, P ) corresponds to a point of Zn , by Theorem 4.4. Let pr : E → E/C
+denote the projection. Then one can check that
+                                          X
+                                            (pr)∗ f (E/C, i, P )
+                                                                
+                       tr(f )(E, i, P ) =
+                                        C
+
+where (pr)∗ denotes pulling back k-fold differentials, and the sum is over all C
+of order p not containing pm−1 P .
+    The Tate curve Eq := Gm /q Z can be thought of as an elliptic curve over
+the base Z((q)) or alternatively, if q ∈ K is an element of norm less than 1, as
+an elliptic curve over a finite extension of K. The Tate curve has a canonical
+differential which we shall call dt/t, where t can be thought of as a parameter
+on Gm . From now on, q will be an element of K with norm less than 1.
+    If i : µN → Gm is the canonical inclusion, and P ∈ Gm is our fixed pm th
+root of unity, then (Eq , i, P ) corresponds to a point on X1 (N pm )an close to the
+cusp ∞. Evaluating a weight k modular form f on (Eq , i, P ) gives us an element
+of H 0 (Eq , Ω1Eq )⊗k of the form c(q)(dt/t)k , and c(q) is an analytic function of q.
+In fact c(q) = n≥0 an q n if f is holomorphic at the cusp ∞, and c(q) is said to
+                  P
+be the q-expansion of f .
+
+Proposition 5.1. The natural traceP   map (ω an )⊗k
+                                                  P(Zn ) → (ω an )⊗k (Zn+1 ), cal-
+                                           n             n
+culated on q-expansions, is the map    an q 7→ p anp q . In other words, the
+trace map is just an analytic manifestation of the Hecke operator pUp .
+
+                                          P equation
+Proof. This is now an easy corollary of the            above and the theory of the
+                                                 n
+Tate curve.    If the q-expansion of f is   an q   then f evaluated at (Eq , i, ζpm )
+     an q n (dt/t)k for any q with |q| < 1. Hence the q-expansion of tr(f ) is b(q)
+   P
+is
+
+
+
+                                         16
+where
+
+                 b(q)(dt/t)k = tr(f )(Eq , i, ζpm )
+                               X
+                             =    (pr)∗ f (Eq /C, i, ζpm )
+                                    C
+                                    p−1
+                                    X
+                                =         (pr)∗ f (Gm /hζpj q 1/p i, i, ζpm )
+                                    j=0
+                                    p−1
+                                    X             X
+                                =         (pr)∗         an (ζpj q 1/p )n (dt/t)k
+                                    j=0           n≥0
+                                    p−1 X
+                                    X
+                                =              an ζpnj q n/p (dt/t)k
+                                    j=0 n≥0
+                                        X
+                                =p                an q n/p (dt/t)k
+                                     n≥0,p|n
+                                     X
+                                =p          arp q r (dt/t)k .
+                                     r≥0
+
+
+
+
+   Recall that W1 (pm ) =                                 m an
+                            S
+                                n≥0 Zn ⊂ X1 (N p            ) .
+Theorem 5.2 (analytic continuation).        1. If m ≥ 1 is an integer, and h
+    is an overconvergent modular form of weight k and level N pm , which is an
+    eigenvector for Up with non-zero eigenvalue, then h extends to a section
+    of (ω an )⊗k on W1 (pm ).
+  2. If f is an overconvergent modular form of level N and weight k which is an
+     eigenvector for Up with non-zero eigenvalue, then f extends to a section
+     of (ω an )⊗k (W0 (p)).
+Proof of theorem. 1) By definition, h is a section of ω ⊗k over some region of
+X1 (N pm ) which strictly contains the component of the ordinary locus containing
+infinity. Because Up preserves overconvergence, it is well-known that h extends
+to a section of ω ⊗k on Z0 . Let the eigenvalue of Up on h be λ. Now by induction
+define hr ∈ (ω an )⊗k (Zr ) for all r ≥ 0 by h0 = h and hr+1 = tr(hr )/pλ. By
+Proposition 5.1, the q-expansion of hr is equal to the q-expansion of h. Now
+because Zmin{r,s} is connected, a section of (ω an )⊗k on Xmin{r,s} is determined
+by its q-expansion. Hence hr and hs agree on Zmin{r,s} . Finally, W1 (pm ) is
+admissibly covered by the Zn . Hence the hr glue to give a section of (ω an )⊗k
+on W1 (pm ).
+    2) One could use similar techniques to prove this part, but in fact it can
+be deduced from part 1 by thinking of f as having level N p, extending f to a
+section of ω ⊗k on W1 (p) and then using the fact that f is invariant under the
+Diamond operators at p to descend f to W0 (p).
+
+
+                                               17
+Remarks.     • We have worked for simplicity with points of order N , but the
+    result, and the proof, are valid for modular curves associated to any suf-
+    ficiently fine level N structure.
+    • This result seems stronger than any analytic continuation result of this
+      form in the literature, in the sense that the continuation goes further than
+      any other results that we are aware of.
+    • Of course, an overconvergent form of level N with non-zero Up -eigenvalue
+      cannot in general be extended over the supersingular discs in X1 (N ), as
+      this would imply that it was classical by rigid GAGA ([Kö]). Also, a
+      classical newform of level N p2 with trivial character at p can be regarded
+      as overconvergent of level N , and will have Up -eigenvalue equal to 0. Then
+      Theorem 5.2 will not apply, and indeed one cannot expect f to extend
+      to W0 (p) because in general the value of f on a supersingular elliptic
+      curve will depend on the subgroup of order p2 .
+
+
+6     More analytic continuation.
+We do not know how to improve on the results of Section 5 in the level N p
+cases, that is, we do not know whether one can extend eigenforms beyond the
+supersingular locus. But if we are working on level N pm with m > 1 then,
+rather surprisingly, we can do even better, and the object of this section is to
+explain how to do so.
+    Let 0 ≤ r < m be integers (we allow m = 1 for the time being, but only for
+notational reasons). We define Ur to be the wide-open subset of X1 (N pm )an
+whose non-cuspidal locus parameterises (E/L, i, P ) where either E has supersin-
+gular reduction, or E has ordinary reduction and Hm−r (E) = hpr P i. In other
+words, the non-cuspidal locus of Ur parameterises elliptic curves with additional
+structure (E/L, i, P ) such that the order of the reduction of P has order at most
+pr . It is clear that U0 ⊆ U1 ⊆ . . . ⊆ Um−1 , and moreover all the Ui are con-
+nected because they are preimages of connected closed subsets of the canonical
+balanced Katz-Mazur model of X1 (N pm ) over Zp [ζpm ]. Moreover, U0 is just the
+rigid space W1 (pm ). Let U1 (pm ) denote the union of the Ui for 0 ≤ i ≤ m − 1.
+Then the Ui admissibly cover U1 (pm ).
+    As in the previous section, let π1 and π2 : X1 (N pm ; p) → X1 (N pm ) denote
+the two degeneracy maps.
+Lemma 6.1. For 0 ≤ r ≤ m − 2 we have π1−1 (Ur+1 ) ⊆ π2−1 (Ur ).
+Proof. It suffices to check on non-cuspidal points. We first unravel the lemma.
+Let (E, i, P ) be an elliptic curve over a finite extension of K, equipped with an
+embedding of µN and a point of exact order pm . Assume that E has an Hm−r−1
+and that it is generated by pr+1 P . Because r ≤ m − 2 we deduce that E has
+an H and it is generated by pm−1 P .
+
+
+
+
+                                        18
+    Now let D ⊂ E be a cyclic subgroup of order p, such that D intersects H
+trivially. Then by Proposition 3.5 we see that E/D has an Hm−r and further-
+more that it is generated by the image of pr P . This proves that the Lemma
+holds on the ordinary locus. On the supersingular locus the Lemma is clear,
+because all the supersingular locus is contained in all of the Ui .
+Corollary 6.2 (more analytic continuation). If m ≥ 2 and f is an over-
+convergent modular form of level N pm , such that Up f = λf for some λ 6= 0,
+then f has an analytic continuation to all of U1 (pm ).
+Proof. Exactly the same techniques as before prove this result. We have already
+proved that f extends to a section of U0 , and then for 0 ≤ i ≤ m − 1 the
+section Upi f /λi is a section of Ui which agrees with f on Uj for j < i, as Uj is
+connected.
+   The complement of U1 (pm ) in X1 (N pm )an is an affinoid, because it is the
+preimage of an affine open in the Katz-Mazur model of X1 (N pm )OK . In fact, if
+X 0 denotes the “outer” component of X1 (N pm )Fp not containing the cusp ∞,
+then the complement of U1 (pm ) is precisely the preimage of the ordinary locus
+of X 0 .
+
+
+7    Application of results of Wiles and others.
+In this section and the next we explain how, given a representation as in the
+Main Theorem of the introduction, one can construct some p-adic modular
+objects (weight one overconvergent p-adic modular forms). Useful references
+are §1 of [BT] and §§2–3 of [BDST].
+   Assume we are given ρ : Gal(Q/Q) → GL2 (O) satisfying the hypotheses   of
+the Main Theorem in the introduction. In particular we have ρ|Dp ∼= α0 β0 for
+characters α and β : Gal(Q/Q) → O× which are distinct modulo λ and such
+that α(Ip ) and β(Ip ) are finite.
+   Let β0 : Gal(Q/Q) → O× denote the character of finite order and conductor
+a power of p such that β0 |Ip = β|Ip . Let ρβ0 denote the mod λ reduction
+of ρ ⊗ β0−1 . Let Σ be a finite set of primes containing p and all the primes
+where ρ is ramified. Consider deformations ρeβ of ρβ to complete noetherian
+local W (O/λ)-algebras with residue field O/λ, which are unramified outside Σ
+and satisfy
+                                                 
+                                          ∼   ∗ ∗
+                                  ρeβ |Dp =
+                                              0 ψ
+with ψ an unramified lifting of (β/β0 )|Dp .
+   It is a theorem of Mazur that there is a universal such deformation, and
+a theorem of Diamond (for p > 2) and Dickinson (for p = 2), building on
+work of Wiles and Taylor-Wiles, that under the assumptions of our theorem,
+the universal deformation ring is isomorphic to a Λ-adic Hecke algebra of the
+
+
+                                       19
+type considered by Hida. In particular, this shows us that to the representation
+ρ ⊗ β0−1 , which is a deformation of ρβ of the type considered above, there
+corresponds a homomorphism from this Hecke algebra to O× .
+    We say a little about this Hecke algebra. Define Λ = Zp [[T ]]. Then there
+is an integer N, a finite extension L of the field of fractions of Λ, a height 1
+prime ℘ of the integral closure OL of Λ in L, a Hecke algebra h0 (N ) of the
+type considered by Hida, and a Λ-adic modular form G : h0 (N ) → L such that
+the reduction mod ℘ of the Galois representation to GL2 (OL ) attached to G is
+isomorphic to ρ ⊗ β0−1 . A reference for more of the details of this construction
+is §1 of [BT].
+    Switching the roles of α and β, and applying the deformation theory tech-
+niques to the mod λ reduction of ρ ⊗ α0−1 gives us a second Hida eigenform F ,
+called a “Λ-adic companion form” for G in [BT].P
+                                                              n
+    Let R denote the ring OL /℘ and let f =           n>0 an q denote the mod ℘
+reduction of F, that Pis, the power series in R[[q]] satisfying an = F (T (n)) mod
+℘. Similarly, let g = n>0 bn q n denote the mod ℘ reduction of G. Next, let pm
+be the conductor of the character α0 /β0 , or p if this character is unramified.
+    We have defined f and g as formal q-expansions. Let us assume that we have
+proved that the q-expansion of f is the q-expansion of a classical modular form of
+weight 1 and level N pm . Then by construction we have that f is an eigenform,
+and bl equals the trace of ρ ⊗ α0−1 (Frobl ) for almost all primes l, and hence
+the representation associated to f by Deligne and Serre will be isomorphic to
+ρ⊗α0−1 . Now twisting f will show that ρ is also modular, and the Main Theorem
+of the introduction will be proved. In the final sections of this paper, we explain
+various methods that allow us to show in certain cases that the q-expansion of
+f is that of a classical modular form, and these sections complete the proof of
+the main theorem.
+
+
+8    Geometric interpretation of f and g.
+In this section we explain how one can interpret the formal q-expansions f and
+g as p-adic analytic objects, and hence how one can use the methods of earlier
+sections of this paper to manipulate them.
+    The Hida families which arose in the deformation theory arguments above
+can be interpreted in terms of the theory of p-adic modular forms. We shall use
+the very geometric interpretation of this theory, which Coleman has developed in
+the last few years. In Coleman’s language, the q-expansions of the p-adic forms
+f and g introduced above are q-expansions of overconvergent p-adic modular
+forms of level N pm . We shall explain more about what this means, and what
+it implies, below.
+    Firstly, let us simplify the situation slightly byPdealing with bad primes. So
+let l be a prime dividing N , and assume that f = an q n with al 6= 0. Then the
+                    l                                          0
+form f (q) −Pal f (q ) is an overconvergent p-adic eigenform f of level N l with q-
+expansion l-n an q n ; moreover, f 0 is an eigenvector of Ul with eigenvalue zero.
+By modifying f and g in this way and increasing N , if necessary, we can assume
+
+
+                                        20
+that f = an q n and g = bn q n with an = bn = 0 if n is not coprime to N .
+           P                P
+    Now we do not yet know that f and g are classical weight 1 modular forms.
+But because f and g lie in Hida families, we do know that their q-expansions are
+limits of q-expansions of classical modular eigenforms of level N pm . Hence by
+a theorem of Coleman, we see that f and g are overconvergent p-adic modular
+forms, that is, they are rigid-analytic sections of ω on a strict neighbourhood
+of the component of the ordinary locus of X1 (N pm )an containing ∞. Perhaps
+the best reference for this result of Coleman is currently §2 of [BDST], which
+deals only with the unramified case. However, the arguments of this section
+go through with little difficulty. In particular, an appropriate generalisation of
+Lemma 2.9 of [BDST] proves that f and g are overconvergent, and because Up
+increases overconvergence, we see that f and g can be thought of as rigid sections
+of ω on Z0 . Moreover, we have proved in Theorem 5.2 that any such section
+may be analytically extended to all of U = U0 (p) or U1 (pm ) as appropriate, and
+we shall now think of f and g as being sections of ω defined on U.
+    Let us assume from now on that K contains all the pm th roots of unity, and
+let us fix a pm th root of unity ζpm in K. We have already mentioned the au-
+tomorphism w of X1 (N pm ) defined over K: for an elliptic curve E/S/ Spec(K)
+equipped with an embedding i : µN → E and a point P ∈ E(S) of exact
+order pm , we define w(E, i, P ) = (F, i, Q) where φ : E → F := E/hP i and
+Q ∈ ker(φ̌)(S) ⊂ F (S) is the point such that hP, Qiφ = ζpm . This morphism
+w extends to the cusps and induces an automorphism of X1 (N pm )K and hence
+of the rigid space X1 (N pm )an . Note that with notation as above, we have
+hP, Qiφ hQ, P iφ̌ = 1 and hence w2 (E, i, P ) = w(E, pi, −P ).
+    Now f is defined in a neighbourhood of ∞, and w∗ g is a rigid section of w∗ ω
+defined in a neighbourhood of w(∞). Because p is invertible on the base, the
+natural map w∗ ω → ω induced by pulling back differentials on the universal
+curve is an isomorphism. Let g|w denote the rigid section of ω defined by the
+image of w∗ g under this natural map. Then g|w is defined in a neighbourhood
+of w∞.
+    More precisely, we have extended f and g until they are sections of ω on
+the wide-open space U ⊂ X, where U = W0 (p) and X = X1 (N ; p) if α/β is
+unramified, and U = U1 (pm ) and X = X1 (N pm ) if α/β is ramified of conductor
+pm . It is not hard to see that in either case, U is the complement of the
+component of the ordinary locus of X containing the cusp w(∞). Moreover, the
+automorphism w sends w(∞) to a cusp on the same connected component of
+the ordinary locus as ∞. It is not too difficult to deduce from this that {U, wU}
+is an admissible covering of X.
+   We now summarise what we know about the q-expansions of f and g. We
+have that              X                    X
+                    f=     an q n , and g =   bn q n
+with
+• a1 = b1 = 1, and an = bn = 0 if n and N are not coprime,
+• al = trace(ρ(Frobl ))/α0 (l) and bl = trace(ρ(Frobl ))/β0 (l) if l is a prime not
+dividing N p,
+
+                                        21
+• an α0 (n) = bn β0 (n) if n is prime to N p,
+• The character of f at p is β0 /α0 , and the character of g at p is α0 /β0 . The
+characters of f and g away from p are equal.
+• ap = (α/α0 )(Frobp ) and bp = (β/β0 )(Frobp ), and ap bp = χp (p), where χp is
+the character of f (and g) away from p.
+    These facts can be read off from what is known about the Galois represen-
+tations attached to Hida families of modular forms. See section 1 of [BT], for
+example.
+    Next we come to the “glueing” procedure. The claim here is that there
+is a constant c ∈ K such that f and cg|w agree on U ∩ wU. Assuming this,
+we can finish the proof of the theorem. For f and cg|w can be glued on this
+intersection to give a rigid section of ω an on all of X, and by rigid GAGA ([Kö])
+we deduce that this section is in fact an algebraic section, that is, an element
+of H 0 (XK(ζpm ) , ω).
+    To finish the proof of the theorem, we just have to show that c exists such
+that f and cg|w agree on U ∩ wU. In the case where α/β is unramified there
+is already a proof of this in [BT] but we shall give another proof in the next
+section. In the case where α/β is tamely ramified but not unramified, we shall
+glue using a new method, explained in Section 10. These two methods do not
+in fact need the full strength of the analytic continuation techniques that have
+been developed so far in this paper. Finally, we shall prove the Main Theorem in
+the case that α/β is wildly ramified, using another method which relies strongly
+on the analytic continuation theorems. In fact, one of the motivations of this
+paper was to present these new glueing methods in the hope that they will be
+useful more generally.
+
+
+9     The unramified case.
+In this section we shall explain another proof of the theorem in [BT], although
+in fact it is perhaps just another way of looking at the same proof. Note that we
+shall explain all our glueing results for overconvergent forms of a general integer
+weight k, although in all the applications in this paper we will have k = 1.
+                               an q n and g =     bn q n be cuspidal overconvergent
+                             P                 P
+Theorem 9.1. Let f =
+Up -eigenforms of weight k and level N , where N ≥ 5 is an integer prime to p.
+Assume that
+    • a1 = b1 = 1.
+    • ap and bp are distinct and non-zero.
+    • an = bn for all n prime to p.
+Then f and g are classical forms of level N p.
+Proof. Because ap and bp are non-zero, we know by Theorem 5.2 that f and g
+both have analytic continuation to all of W0 (p). It suffices to prove that there
+is a constant c such that f and cg|w agree on the supersingular locus of W0 (p).
+
+                                        22
+    Let W denote a supersingular annulus in W0 (p), lying over a supersingular
+disc B in X1 (N ). Choose a rational number q with p/(p + 1) < q < 1 and
+consider the subannulus A ⊂ B defined by |T | > p−q , where T is our fixed
+parameter on B. The preimage of A under the map π2 : W → B is two annuli—
+in fact it is the annuli defined by 0 < v 0 < p(1 − q) and q < v 0 < 1, where v 0 is
+the function on W defined earlier. Let C denote the annulus 0 < v 0 < p(1 − q),
+considered as a subannulus of W . Then we have a commutative diagram
+                                          /W ,
+                                   C
+                                         π2          π2
+                                                  
+                                     A             /B
+
+where the horizontal maps are inclusions, and the vertical ones are induced
+by π2 . Note that the left hand vertical map is finite and flat of degree p, and
+the right hand one is finite and flat of degree p + 1.
+    If we define f0 = (ap f − bp g)/(ap − bp ) then f0 is an overconvergent section
+of ω ⊗k and it suffices to prove that it extends to B, because then f0 will be
+classical of level N , and f = f0 (q) − bp f0 (q p ) and g = f0 (q) − ap f0 (q p ) will be
+classical of level N p. This is in fact what we shall prove.
+    Choose a trivialisation of ω ⊗k on B, and note that this induces a trivialisa-
+tion of ω ⊗k on A and of π2∗ ω ⊗k on W and on C. The natural map from π2∗ ω ⊗k
+to ω ⊗k is an isomorphism, because p is invertible in this situation, and we iden-
+tify π2∗ ω ⊗k with ω ⊗k . Now consider f1 = phpiN (f − g)/(ap − bp ), thought of as a
+section of ω ⊗k on C. An easy calculation on Tate curves shows that f1 = π2∗ f0 ,
+and the fact that f and g extend to W0 (p) means that f1 extends to a section
+of ω ⊗k on W . Our fixed trivialisations mean that we may consider f0 and f1
+as functions on A and W , whose pullbacks to C are equal. Taking fields of
+fractions of everything gives us a diagram
+
+                                 K(C) o            ? _ K(W )
+                                   O                     O
+                                     p                    p+1
+                                  ?                    ?
+                                 K(A) o            ? _ K(B)
+
+of fields, where the vertical maps are finite field extensions of degrees p and p+1,
+and all maps are inclusions. It suffices to prove that K(A) ∩ K(W ) = K(B)
+as subfields of K(C), as this will establish that f0 extends to B. Set L =
+K(A) ∩ K(W ) and M = K(A).K(W ). Firstly note that certainly K(W ) is not
+contained within K(A), as there are injective functions from W to the affine
+line, and any function on A is not injective when pulled back to C. Hence
+M 6= K(A) and so must be K(C), as [K(C) : K(A)] = p is prime. We deduce
+that [K(W ) : L] ≥ p. But [K(W ) : K(B)] = p + 1 and L contains K(B), hence
+L = K(B).
+   We remark that in fact the full strength of Theorem 5.2 is not in fact
+needed in this result, as we can replace B by a disc of radius slightly larger
+
+                                              23
+than p−p/(p+1) , replace A by an annulus at the boundary of B, and replace C
+and W by appropriate preimages of A and B, where f and g were already known
+to extend, and the argument still works.
+
+
+10     The tame case.
+In this section we explain another method for glueing the forms f and g|w which
+works when the character α/β is tamely ramified but not unramified. Perhaps
+surprisingly, this case seems to be the trickiest case, the wild case being rather
+easy because of our strong analytic continuation results.
+
+Theorem 10.1. Let f and g be overconvergent cusp forms of level N p and
+weight k, which are eigenforms for the Diamond operators and such that f has
+characterPχ = χN χp : (Z/NP   pZ)× → K and g has character χN χ−1   p . Assume
+                  n
+that f = n an q and g =         bn q n are eigenforms for Up with non-zero eigen-
+values ap and bp . Finally, assume that
+   • a1 = b1 = 1 and an = χp (n)bn for all n prime to p,
+   • χp is non-trivial, and
+   • ap bp = χN (p)pk−1 .
+Then f and g are classical eigenforms of level N p.
+Proof. By Theorem 5.2, f and g extend to sections of ω ⊗k on W1 (p). We shall
+glue f and cg|w for some constant c, and this will suffice to prove the theorem.
+Recall that the curve X1 (N p; p)Z[1/N p][ζp ] can be thought of as the completion
+of the curve parameterising elliptic curves equipped with an embedding of µN
+and two points of order p, P and Q, which generate E[p] and which pair to ζp .
+For this section then, let us assume that our base contains ζp , a fixed pth root
+of unity.
+    We have several maps X1 (N p; p)an → X1 (N p)an defined by the following
+maps of moduli problems:
+
+                            π : (E, i, P, Q) 7→ (E, i, P )
+and for 0 ≤ j ≤ p − 1,
+
+                     σj : (E, i, P, Q) 7→ (E/hjP + Qi, i, P ).
+
+    Define T = π −1 (W1 (p)) ⊂ X1 (N p; p)an . Then T is a wide-open space, and
+the non-cuspidal points of T parameterise elliptic curves (E, i, P, Q) such that
+either E has supersingular reduction, or E has ordinary reduction and H(E) =
+hP i. It is easily checked that π and σj all induce maps T → W1 (p). Note that T
+is connected because it is the preimage of a geometrically connected component
+of the Katz-Mazur model of X1 (N p; p) over Zp [ζp ], which has reduced special
+fibre. Note also that there is a natural sheaf ω = ωX1 (N p;p) on X1 (N p; p)an
+
+
+                                         24
+and hence on T . Moreover π ∗ ω = ω (with apologies for the two meanings of
+ω) and there is a natural map σj∗ ω → ω induced on the non-cuspidal locus
+by pulling back differentials on the universal curves. Hence π and σj induce
+maps of modular forms H 0 (W1 (p), ω ⊗k ) → H 0 (T, ω ⊗k ), denoted h 7→ h|π and
+h 7→ h|σj respectively. We now compute what these maps do on q-expansions.
+Sublemma. If h ∈ H 0 (W1 (p), ω ⊗k ) has q-expansion equal to n≥0 dn q n (dt/t)k
+                                                               P
+
+            (Gm /q Z , i, ζp ) and c ∈ T denotes
+at the cusp P                                       cusp (Gm /q Z , i, ζp , q 1/p ), then
+                                              P the jn
+                  n         k
+(h|π)(c) = dn q (dt/t) and (h|σj )(c) = dn ζp q n/p (dt/t)k .
+Proof of sublemma. The statement for π is obvious. For σj we note that
+
+                         (h|σj )(c) = pr∗ h(Gm /hζpj q 1/p i, i, ζp )
+                                      X
+                                    =     dn (ζpj q 1/p )n (dt/t)k
+                                      X
+                                    =     dn ζpjn q n/p (dt/t)k .
+
+
+
+   Hence
+              p−1
+              X                         X                  p−1
+                                                           X
+                                                     n/p
+                                                                 ζpjn χp (j)(dt/t)k
+                              
+                    χp (j)f |σj (c) =         an q
+              j=1                       n≥1                j=1
+                                                      X
+                                    = W (χp )                an /χp (n)q n/p (dt/t)k
+                                                 n≥1,p-n
+
+                    Pp−1   j
+                                                 Pp−1       jn
+                                                                         
+where W (χp ) =       j=1 ζp χp (j) = χp (n)           j=1 ζp χp (j) . So
+
+           p−1
+           X                               X
+                                             bn q n/p (dt/t)k
+                            
+                 χp (j)f |σj (c) = W (χp )
+           j=1                                n≥1,p-n
+                                               X                     X
+                                                      bn q n/p −           bmp q m (dt/t)k
+                                                                                  
+                                  = W (χp )
+                                               n≥1                   m≥1
+
+                                  = W (χp )(g|σ0 − bp g|π)(c)
+
+   and by connectivity of T we deduce that
+
+                        Xp−1
+                       (     χp (j)f |σj ) = W (χp )(g|σ0 − bp g|π)                          (†)
+                        j=1
+
+
+as sections of ω ⊗k on T . In particular, this relationship holds on the supersin-
+gular locus of T and it is this relation (†) that we shall exploit to show that the
+forms f and g|w glue on the supersingular region of X1 (N p).
+
+
+
+
+                                               25
+   If (E, i, P, Q) corresponds to a point in T then
+    pap f (E, i, Q) − pr∗ f (E/hP i, i, Q) = pUp f (E, i, Q) − pr∗ f (E/hP i, i, Q)
+                                                    X
+                                           =                    pr∗ f (E/C, i, Q)
+                                                 C⊂E,C6=hQi,C6=hP i
+
+where the sum is over subgroups C of E of order p. Hence we see
+                                            p−1
+                                            X
+ pap f (E, i, Q) − pr∗ f (E/hP i, i, Q) =         pr∗ f (E/hjP + Qi, i, Q)
+                                            j=1
+                                                      p−1
+                                                      X
+                                         = χp (−1)          χp (j)pr∗ f (E/hjP + Qi, i, P )
+                                                      j=1
+                                                      p−1
+                                                      X
+                                         = χp (−1)          χp (j)f |σj (E, i, P, Q)
+                                                      j=1
+
+and hence using (†) we deduce that
+            pap f (E, i, Q) − pr∗ f (E/hP i, i, Q)
+                                                                           
+                   = χp (−1)W (χp ) g|σ0 (E, i, P, Q) − bp g|π(E, i, P, Q)
+                   = χp (−1)W (χp ) pr∗ g(E/hQi, i, P ) − bp g(E, i, P ) ,
+                                                                        
+
+valid in particular for any (E, i, P, Q) such that E has supersingular reduction
+(and such that the Weil pairing hP, Qip equals ζp , by definition of T ).
+    From now on, we only consider this equation (which we proved by looking
+near a cusp) as an identity only on elliptic curves with supersingular reduction.
+We now use the definition of g|w and the relation ap bp = χp (p)pk−1 to deduce
+that
+pap f (E, i, Q) − pr∗ f (E/hP i, i, Q)
+  = χp (−1)W (χp ) (g|w)(E, i, −Q) − (pap )−1 χp (p)pr∗ (g|w)(E/hP i, p−1 i, −Q)
+                                                                                
+
+  = W (χp ) (g|w)(E, i, Q) − (pap )−1 pr∗ (g|w)(E/hP i, i, Q)
+                                                             
+
+and hence
+   pap f (E, i, Q) − W (χp )(g|w)(E, i, Q)
+         = (pr)∗ f (E/hP i, i, Q) − W (χp )(pap )−1 pr∗ (g|w)(E/hP i, i, Q).           (∗)
+We are now finally in a position to glue f and g|w. Let SS denote the region
+in X1 (N p)an corresponding to elliptic curves with supersingular reduction, and
+define h ∈ H 0 (SS, ω ⊗k ) by
+                               h = pap f − W (χp )(g|w).
+If we can prove that h is identically zero then we will be able to glue f and
+(pap )−1 W (χp )g|w and we are home. But note that equation (∗) above says
+
+                                            26
+that if E is an elliptic curve with supersingular reduction and P , Q are points
+of order p such that hP, Qip = ζp , then
+
+                     h(E, i, Q) = (pap )−1 pr∗ h(E/hP i, i, Q).
+
+This implies that for E, P and Q as above, and n any integer, h(E, i, Q) =
+h(E, i, nP + Q), as hP, nP + Qi = ζp . Now replacing P by P + mQ for any
+integer m we deduce that
+
+                     h(E, i, Q) = h(E, i, nP + (1 + nm)Q).
+
+Setting n = 1 and m = −1 we deduce that h(E, i, Q) = h(E, i, P ). Fi-
+nally, choosing n ∈ Z such that χp (n) 6= 1 and choosing m ∈ Z such that
+nm ≡ −1 mod p, we deduce that h(E, i, nP ) = h(E, i, Q) = h(E, i, P ). But
+h(E, i, nP ) = χp (n)h(E, i, P ) because the same is true for f and g|w. Hence we
+must have h(E, i, P ) = 0 and h vanishes identically on the supersingular locus,
+as was to be proved.
+
+
+
+11     The wild case.
+In this section we explain another method for glueing the forms that works in
+the wild case. The point is that in the wild case, we have analytically continued
+both f and g|w to areas whose intersection contains cusps.
+Theorem 11.1. Let f and g be overconvergent cusp forms of weight k and
+level N pm , with m ≥ 2, and assume that f and g are eigenforms for Up with
+non-zero eigenvalues. Assume moreover that f and g are eigenforms for the
+Diamond operators at N and at p, with χp : (Z/pm Z)× → K the character
+                 −1                                                        m
+            P χp n the character
+of f at p and               P ofn g at p. Assume that χp has conductor p .
+Write f =      an q and g =    bn q . Assume that f and g satisfy a1 = b1 = 1,
+and an = χp (n)bn for all n prime to p. Then f and g are classical.
+Remark 11.2. As a consequence of the proof, we shall see that, in the situation
+above, ap is determined by an for n prime to p.
+Proof. Note that by Theorem 5.2 we know that f and g can be extended to
+sections of ω ⊗k on W1 (pm ).
+    Let us consider the cusp (Gm /q Z , i, q 1/p ζpm ), corresponding to a point c ∈
+X1 (N pm )an defined over K, which we shall assume contains a fixed primi-
+tive pm th root of unity, ζ = ζpm . Then c is not in U0 but is in U1 , because
+Hm−1 (Gm /q Z ) is hζ p i. In particular, both f and g|w can be analytically con-
+tinued to an admissible open subset of X1 (N pm )an containing c. Note that this
+in fact makes the argument rather easier than the tame cases. Let us compute
+the q-expansions of f and g|w at c.
+
+
+
+
+                                        27
+                            cn q n/p )(dt/t)k where
+                        P
+Sublemma. f (c) = (
+                                         p−1
+                                         X                            m−1
+                     cn = an /(pap )           χp (1 − jpm−1 )ζ p           jn
+                                                                                 .
+                                         j=0
+
+                                         m−1
+Proof of sublemma. Write µ = ζ p               , a primitive pth root of unity. Then
+
+        pap f (c) = tr(f )(c) = tr(f )(Gm /q Z , i, q 1/p ζ)
+                                 X
+                              =        pr∗ f (Gm /q Z /C, i, q 1/p ζ)
+                                   C6=hµi
+                                   p−1
+                                   X
+                               =         pr∗ f (Gm /hµj q 1/p i, i, q 1/p ζ)
+                                   j=0
+                                   p−1
+                                   X
+                               =         pr∗ f (Gm /hµj q 1/p i, i, ζµ−j )
+                                   j=0
+                                   p−1
+                                   X                                             m−1
+                               =         pr∗ f (Gm /hµj q 1/p i, i, ζ 1−jp             )
+                                   j=0
+                                   p−1
+                                   X
+                               =         χp (1 − jpm−1 )pr∗ f (Gm /hµj q 1/p i, i, ζ)
+                                   j=0
+                                   p−1
+                                   X                          X
+                               =         χp (1 − jpm−1 )            an (µj q 1/p )n (dt/t)k
+                                   j=0                        n≥0
+
+                                   X                p−1
+                                                    X
+                               =         an q n/p         χp (1 − jpm−1 )µjn (dt/t)k
+                                   n≥0              j=0
+
+as required.
+
+    Before we go on, we make some remarks about this q-expansion. We know
+that χp has conductor pm and hence χp (1 + pm−1 ) must be a primitive pth
+root of unity. Write χp (1 + pm−1 ) = µr with 0 < r < p. Now note that
+χp (1 − jpm−1 ) = µ−rj and hence
+                        p−1
+                        X                                   p−1
+                                                            X
+                              χp (1 − jpm−1 )µjn =                µjn−jr
+                        j=0                                 j=0
+
+which vanishes unless n ≡ r mod p, in which case it is p. Hence
+Corollary 11.3 (of sublemma).
+                                               X
+                    f (c) = (ap )−1                         an q n/p (dt/t)k .
+                                      n≥1,n≡r mod p
+
+
+
+
+                                                28
+                                                                                     
+   This corollary implies that, in the situation that we are in, f is determined
+by an for n prime to p. This is because if f1 and f2 were as in the Theorem,
+with the same an (p - n) and distinct non-zero ap , then a non-trivial linear
+combination of f1 and f2 would vanish in a neighbourhood of c and would
+hence be identically zero. This partially answers a question of Gouvêa.
+   We now calculate g|w(c). Firstly, notice that by definition of w, we have
+(g|w)(E, i, P ) = pr∗ g(E/hP i, i, Q), where pr : E → E/hP i is the projection
+and Q is chosen such that hP, Qi = ζ. Next note that raising to the power pm−1
+                                                            m−2
+on Gm induces an isomorphism Gm /hq, q 1/p ζi → Gm /hq p        µi, and that the
+dual of the map                         m−1
+                                       p           m−2
+                        pr : Gm /q Z −−−−→Gm /hq p     µi
+                   m−2
+is a map Gm /hq p     µi → Gm /q Z induced by the pth power map on Gm .
+            1/p
+Moreover, q     generates the kernel of this map. Hence
+
+                  (g|w)(c) = (g|w)(Gm /q Z , i, q 1/p ζ)
+                                               m−2
+                            = pr∗ (g(Gm /hq p        µi, pm−1 i, q 1/p )).
+                                  m−2
+   Note that the cusp (Gm /hq p       µi, pm−1 i, q 1/p ) is in Um−1 and so we will be
+able to evaluate g on it by iterating the Up operator m−1 times. More precisely,
+we know that
+
+                                                            X
+        (pap )m−1 g(E, i, P ) = (pUp )m−1 g(E, i, P ) =          pr∗ g(E/C, i, P )
+                                                             C
+
+where the sum is over the cyclic subgroups of E of order pm−1 which have trivial
+intersection with hP i.
+                              m−2                                         m−2
+    If E is the curve Gm /hq p    µi and P = q 1/p then hpm−1 P i = hq p      i=
+hµ−1 i = µp and we deduce that the pm−1 cyclic subgroups C over which the
+sum is taken are the groups generated by q 1/p ζ 1+sp for 0 ≤ s ≤ pm−1 −1. Hence
+
+                                pm−1
+                                  X−1
+        (g|w)(c) = (pap ) 1−m
+                                        pr∗ g(Gm /hq 1/p ζ 1+sp i, pm−1 i, q 1/p )
+                                  s=0
+
+where pr : Gm /q Z → Gm /hq 1/p ζ 1+sp i is induced by raising to the power pm−1
+on Gm . In particular, there are non-zero constants κ1 and κ2 (which are easy
+
+
+
+
+                                          29
+to compute, but which are suppressed for simplicity) such that
+
+                          pm−1
+                            X−1
+         (g|w)(c) = κ1              pr∗ g(Gm /hq 1/p ζ 1+sp i, i, q −1/p )
+                           s=0
+                          pm−1
+                            X−1
+                   = κ1             pr∗ g(Gm /hq 1/p ζ 1+sp i, i, ζ 1+sp )
+                           s=0
+                          pm−1
+                            X−1
+                   = κ1             χp (1 + sp)−1 pr∗ g(Gm /hq 1/p ζ 1+sp i, i, ζ)
+                           s=0
+                          pm−1
+                            X−1                          X
+                   = κ2             χp (1 + sp)−1             bn q n/p ζ n+nsp (dt/t)k
+                           s=0                          n≥0
+                                           m−1
+                          X                p X−1
+                   = κ2         bn q n/p              χp (1 + sp)−1 ζ n+nsp (dt/t)k .
+                          n≥0               s=0
+
+                   Ppm−1 −1
+Now define γn := s=0           χp (1 + sp)−1 ζ n+nsp . Replacing the sum over s by a
+          0          m−2
+sum over s = s − p       , it is easy to deduce that γn = µn−r γn , and hence that
+γn vanishes if n is not congruent to r mod p. Moreover, a similar easy exercise
+shows that for n ≡ r mod p and j ≡ 1 mod p, we have γnj = χp (j)γn , and
+hence that γn /χp (n) is independent of n if n ≡ r mod p. So for some non-zero
+constant κ3 we have
+                                       X
+                 (g|w)(c) = κ3                   χp (n)bn q n/p (dt/t)k
+                                   n≥1,n≡r mod p
+                                           X
+                           = κ3                          an q n/p (dt/t)k .
+                                   n≥1,n≡r mod p
+
+From this and the earlier corollary, we deduce that for some non-zero constant
+κ4 we have that f and κ4 g|w agree on an open disc around the cusp c and hence
+that f and g|w can be glued together to form a rigid (and hence algebraic)
+section of ω ⊗k on the whole of X1 (N pm ), which was what we wanted.
+   We remark that the constants that were involved in the computation above
+can easily be made explicit (they involve Gauss sums, for example) but some
+are rather nasty to write down, and all are irrelevant, so we have suppressed
+them.
+
+
+References
+[Be]     P.    Berthelot,     Cohomologie   rigide     et     cohomolo-
+         gie  rigide  à  supports propres,   preprint    available  at
+         http://www.maths.univ-rennes1.fr/~berthelo/.
+
+
+                                                 30
+[Bu]     J. P. Buhler, Icosahedral Galois representations, Springer-Verlag,
+         Berlin, 1978, Lecture Notes in Mathematics, Vol. 654.
+[BGR]    S. Bosch, U. Güntzer, R. Remmert, Non-Archimedean Analysis,
+         Grundlehren der mathematischen Wissenschaften 261, Springer, 1984.
+
+[BDST] K. Buzzard, M. Dickinson, N. Shepherd-Barron, R. Taylor, On
+       Icosahedral Galois Representations, accepted for publication in Duke
+       Math. Journal.
+[BT]     K. Buzzard and R. Taylor, Companion forms and weight 1 forms, An-
+         nals of Mathematics 149 (1999), 905–919.
+
+[Col1]   R. Coleman, Reciprocity laws on curves, Compos. Math. 72 (1989),
+         205–235.
+[Col2]   R. Coleman, The Monodromy Pairing, pre-print.
+[Con]    B. Conrad, Modular curves and rigid analytic spaces, pre-print.
+[D]      F. Diamond, On deformation rings and Hecke rings, Ann. Math. 144
+         (1996), 137–166.
+[DR]     P. Deligne and M. Rapoport, Les schémas de modules de courbes el-
+         liptiques, LNM 349, Springer-Verlag (1971), 123–165.
+[E]      S. Edixhoven, Minimal resolution and stable reduction of X0 (N ), Ann.
+         Inst. Fourier 40(1) (1990), 31–67.
+[G]      F. Gouvêa, Arithmetic of p-adic modular forms, Springer LNM 1304
+         (1988)
+[K]      N. Katz, p-adic properties of modular schemes and modular forms,
+         LNM 350 (1973), 69–170.
+[Kö]    U. Köpf, Über eigentliche Familien algebraischer Varietäten über affi-
+         noiden Räumen, /schriftenreihe des Mathematischen Instituts der Uni-
+         versität Münster, 2 Serie, Heft 7 (1974).
+
+[KM]     N. Katz and B. Mazur, Arithmetic moduli of elliptic curves, Annals of
+         Math. Stud. 108, Princeton University (1985).
+
+
+
+
+                                       31
+

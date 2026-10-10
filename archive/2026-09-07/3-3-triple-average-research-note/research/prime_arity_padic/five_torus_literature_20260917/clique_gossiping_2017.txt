@@ -1,0 +1,1429 @@
+                                                                                       Clique Gossiping
+
+                                                                    Yang Liu, Bo Li, Brian D. O. Anderson, and Guodong Shi∗
+
+
+
+
+                                                                                                   Abstract
+
+                                                      This paper proposes and investigates a framework for clique gossip protocols. As complete subnet-
+                                                  works, the existence of cliques is ubiquitous in various social, computer, and engineering networks. By
+arXiv:1706.02540v1 [cs.DC] 8 Jun 2017
+
+
+
+
+                                                  clique gossiping, nodes interact with each other along a sequence of cliques. Clique-gossip protocols are
+                                                  defined as arbitrary linear node interactions where node states are vectors evolving as linear dynamical
+                                                  systems. Such protocols become clique-gossip averaging algorithms when node states are scalars under
+                                                  averaging rules. We generalize the classical notion of line graph to capture the essential node inter-
+                                                  action structure induced by both the underlying network and the specific clique sequence. We prove
+                                                  a fundamental eigenvalue invariance principle for periodic clique-gossip protocols, which implies that
+                                                  any permutation of the clique sequence leads to the same spectrum for the overall state transition
+                                                  when the generalized line graph contains no cycle. We also prove that for a network with n nodes,
+                                                  cliques with smaller sizes determined by factors of n can always be constructed leading to finite-time
+                                                  convergent clique-gossip averaging algorithms, provided n is not a prime number. Particularly, such
+                                                  finite-time convergence can be achieved with cliques of equal size m if and only if n is divisible by
+                                                  m and they have exactly the same prime factors. A proven fastest finite-time convergent clique-gossip
+                                                  algorithm is constructed for clique-gossiping using size-m cliques. Additionally, the acceleration effects
+                                                  of clique-gossiping are illustrated via numerical examples.
+
+
+
+                                        1        Introduction
+
+                                        Gossip protocols provide a scalable and self-organized way of carrying out information dissemination
+                                        over networks in the absence of centralized decision makers [1–6]. In a gossip process, a pair of nodes is
+                                        selected randomly or deterministically at any given time, and then this pair of nodes gossip by exchanging
+                                        information between each other as a fundamental resource allocation protocol for computer networks [7,8].
+                                        Today, gossip processes are natural models for interpersonal interactions and opinion evolutions in social
+                                        networks [9]; distributed systems running gossip protocols have been developed to realize in-network
+                                        control [10], filtering [11], signal processing [12], and computation [13].
+                                            ∗
+                                                Y. Liu, B. D. O. Anderson, and G. Shi are with the Research School of Engineering, The Australian National University,
+                                        ACT 0200, Canberra, Australia. B. Li is with Key Lab of Mathematics Mechanization, Chinese Academy of Sciences, Beijing
+                                        100190, China. Email: yang.liu@anu.edu.au, libo@amss.ac.cn, brian.anderson@anu.edu.au, guodong.shi@anu.edu.au.
+
+
+
+
+                                                                                                        1
+  Particularly, gossip averaging algorithms serve as a basic model for gossip protocols, where during one
+gossip interaction the two involved nodes average their states, which are simply real numbers [14,15]. The
+rate of convergence of such gossip averaging algorithms can represent the performance of gossip protocols
+that are built on top of that, and quantify efficiency and robustness of the underlying network structure.
+For random gossip algorithms, various results reveal that the network structure plays a critical role in
+shaping the convergence speed in the asymptotic sense [14,15]. With deterministic gossiping, scheduling of
+the gossiping pairs becomes equally influential [16]; indeed, even finite-time convergence can be achieved
+with suitable number of nodes [17]. It is worth mentioning that in certain cases transitions can be made
+between deterministic and random gossip algorithms, where the Borel-Cantelli lemma provides immediate
+connections [18].
+
+  In this paper, we propose and investigate a framework involving clique gossip protocols, where simul-
+taneous node interactions can take place among cliques instead of being restricted to pairs. Cliques are
+subnetworks that form a complete graph in their local topologies, whose existence is universal in social,
+computer, and engineering networks. In fact, the use of cliques for beamforming and clustering has been
+employed in wireless sensor networks [19, 20]. In a general model, each node holds a vector state at any
+given time, and clique-gossip protocols are arbitrary linear node dynamical interactions along a sequence
+of cliques that forms a coverage of the underlying network. When the node state vector is one-dimensional
+and the node interaction rules are simply averaging, the clique-gossip protocol is reduced to a clique-gossip
+averaging algorithm. To facilitate the analysis of the network structure that governs the node interactions,
+we first generalize the classical notion of line graph in graph theory. Then our contributions are made
+through a few important convergence properties of clique gossiping:
+
+   • We prove a fundamental eigenvalue invariance principle for scheduling periodic clique-gossip pro-
+     tocols, valid for arbitrary clique-gossip protocols represented by linear dynamical systems. Such an
+     invariance principle implies that any permutation of the clique sequence leads to the same spectrum
+     for the overall state transition matrix if the generalized line graph associated with the clique-gossip
+     algorithm contains no cycle.
+
+   • We prove that for a network with n nodes, there always exist ways of constructing cliques with
+     smaller sizes leading to finite-time convergent clique-gossip averaging algorithms, provided that n is
+     not a prime number. We also prove that such finite-time convergence can be achieved with cliques
+     of equal size m if and only if n is divisible by m and they have exactly the same prime factors.
+
+It is worth mentioning that for clique gossiping with equal size m cliques, we have constructed one of the
+fastest finite-time convergent clique-gossip algorithms, which is shown to reach the fundamental complexity
+lower bound by elementary number theory. Additionally, we illustrate how multi-clique gossiping can be
+built over an existing clique-gossiping protocol, and the acceleration effects of clique-gossiping are shown
+via numerical examples.
+
+
+                                                     2
+    The remainder of this paper is organized as follows. Section 2 presents the clique-gossip model. Sec-
+tion 3 studies periodic clique-gossip protocols by establishing the eigenvalue invariance principle and
+investigating the rate of convergence. Section 4 focuses on the possibilities of finite-time convergence for
+clique-gossip averaging algorithms. Finally Section 5 concludes the paper with a few remarks on potential
+future directions.
+
+
+
+2     Problem Definition
+
+2.1    Network Model
+
+Consider a group of nodes whose interaction structure is described by a simple undirected graph G =
+(V, E), where V = {1, 2, . . . , n} is the node set and an element (i, j) ∈ E is an unordered pair of two
+distinct nodes i, j ∈ V. Define the neighbor node set Ni of node i by Ni = {j : (i, j) ∈ E}. Associated
+with a node subset S ⊂ V, its induced graph G[S] is defined as the graph with node set S and the edge
+set containing all edges in E with both endpoints in S. A clique C is a subset of V whose induced graph
+G[C] is a complete graph. Let HG be the set containing all the cliques of G. We index the elements in HG
+                                                                                        T
+as C1 , . . . , CD . We say that two cliques Ci , Cj ∈ HG with i 6= j are adjacent if Ci Cj 6= ∅.
+
+
+
+
+Figure 1: A connected graph G. Here C1 = {1, 2, 3}, C2 = {3, 4}, C3 = {4, 5, 6, 7}, C4 = {4, 6, 7, 8}, C5 =
+{2, 9, 13}, C6 = {3, 11, 12}, C7 = {9, 10}. Clearly {C1 , C2 , . . . , C7 } is a clique coverage. Links within the
+same clique are marked with the same color and style.
+
+
+Definition 1. A subset H∗G = {Cµ1 , . . . , Cµd } ⊂ HG with d ≥ 1 is called a clique coverage of G if
+S                                   S
+  Ci ∈H∗ Ci = V and the union graph   Ci ∈H∗ G[Ci ] is connected.
+       G                                       G
+
+
+
+    Note that every connected graph has a clique coverage. Let H∗G be the collection of pairs of the endpoints
+of all edges in G. Then H∗G is clearly a clique coverage.
+
+
+
+
+                                                        3
+2.2    Clique-gossip Protocols
+
+Let H∗G = {Cµ1 , . . . , Cµd } be a clique coverage of G where µk ∈ {1, . . . , D} for k = 1, . . . , d. Each node
+i ∈ V of G holds a vector xi (k) ∈ Rb evolving at discretized time t = 0, 1, 2, . . . . For each clique Cµl ∈ H∗G ,
+we assign a matrix Aij (µl ) ∈ Rb×b to edge (i, j) ∈ E for all i, j ∈ Cµl and Aii (µl ) ∈ Rb×b to each node
+i ∈ Cµl . Introduce a function σ(·) : Z≥0 → {µ1 , µ2 , . . . , µd }. We define a clique gossip protocol over the
+graph G as follows.
+
+Definition 2. (Clique-gossip Protocol) At each time t = 0, 1, . . . , one clique Cσ(t) ∈ H∗G is selected. The
+nodes update their states by
+                                               X
+                                              
+                                              
+                                                 Aij (σ(t))xj (t)        if i ∈ Cσ(t) ;
+                               xi (t + 1) =      j∈Cσ(t)
+                                              
+                                              
+                                               x (t)
+                                                  i                       if i ∈
+                                                                               / Cσ(t) .
+
+   Note that the signal σ(·) plays a role in selecting a clique gossip process which can be deterministic or
+random. After Cσ(t) is determined at time t, the nodes within the clique Cσ(t) interact with each other as
+specified by the state transition matrices Aij (µl ). We remark that at this point we are not imposing any
+conditions on the Aij (µl ), whose choices depend on the requirements for individual problems. For each
+clique Cµl ∈ H∗G , we define a block matrix Mµl ∈ Rnb×nb whose diagonal blocks equal Ib except the iith
+block is Aii (µl ) for all i ∈ Cµl , and off-diagonal blocks equal 0b except the ijth block is Aij (µl ) and the
+jith block is Aij (µl ) for all i, j ∈ Cµl , i 6= j. Then the above clique-gossip protocol can be put in vector
+form equivalently
+
+                                                 x(t + 1) = Mσ(t) x(t),                                        (1)
+
+where x(t) = [x1 (t)> . . . xn (t)> ]> ∈ Rnb .
+
+   Therefore, by our definition a clique gossip protocol can be any linear dynamical system that runs over
+the network G, under which the node interactions take place along a sequence of cliques. Practically of
+course we would like the system (1) to asymptotically converge, preferably to some intrinsically nontrivial
+limits as solvers to certain network computation problems. This leads us to wonder how we can design
+the Aij (µl ) to meet such a criterion in practice. We present the following example as a network linear
+equation solver [13].
+
+Example 1. Consider a linear algebraic equation with respect to the unknown variable y ∈ Rm
+
+                                                           Hy = z                                              (2)
+
+with H ∈ Rn×m , z ∈ Rn . Then (2) can be expressed in a system of linear equations h>
+                                                                                    i y = zi , i = 1, . . . , n,
+where h>    m
+       i ∈ R denotes the i-th row of H and zi ∈ R is the i-th component of z. Assume that (2) has a
+unique solution.
+
+
+                                                             4
+   Consider an n-node graph G = (V, E) with a clique coverage H∗G . We let each node i ∈ V hold a linear
+equation h>
+          i y = zi and be assigned a state xi (t), t = 0, 1, 2, . . . . Suppose each node i is only permitted to
+share its state with its neighbors. Inspired by the distributed linear equation solver developed in [13] by
+using the conventional gossip protocol, we apply the clique-gossip protocol to solve (2) in a distributed
+sense as follows. At each time t = 0, 1, 2, . . . , we choose Cσ(t) ∈ H∗G . Then for those nodes i ∈
+                                                                                                   / Cσ(t) ,
+xi (t + 1) = xi (t). For i ∈ Cσ(t) , the update rule is
+                                      X
+                 xi (t + 1) = Pi (             xj (t)/|Cσ(t) | − xi (t)) + xi (t)
+                                     j∈Cσ(t)
+                                                                                    X
+                           = (Im − (|Cσ(t) | − 1)/|Cσ(t) |Pi )xi (t) +                         Pi xj (t)/|Cσ(t) |,   (3)
+                                                                               j∈Cσ(t) ,j6=i
+
+
+where Pi = Im − hi h>    >
+                    i /(hi hi ) ∈ R
+                                    m×m denotes the projection matrix to the kernel of h> . Now we see
+                                                                                        i
+from (3) that the solver is an instance of the clique-gossip protocol by letting
+                                  
+                                   Im − (|Cσ(t) | − 1)/|Cσ(t) |Pi if i = j, i, j ∈ Cσ(t) ;
+                     Aij (σ(t)) =
+                                   P /|C |                        if i 6= j, i, j ∈ Cσ(t) ,
+                                      i    σ(t)
+
+which in turn determines a particular Mσ(t) . One can easily prove that the distributed linear equation
+solver developed using the clique-gossip protocol drives all nodes of the network to asymptotically compute
+the solution of (2) if the sequence Cσ(0) , Cσ(1) , Cσ(2) , . . . is periodic and the elements in its subsequence
+over any one period form the clique coverage H∗G .
+
+
+2.3    Clique-gossip Averaging Algorithm
+
+One primary gossip protocol comes from the case where nodes simply average their current states during
+their meetings, leading to the so-called random or deterministic gossip algorithms. Such gossip algorithms
+serve as algorithmic descriptions of node interactions over time, and the simple structure of such gossip
+algorithms enables clear investigation of the convergence rates related to the underlying network structure.
+Therefore, despite the fact that the exact node interactions can have various different forms in real-world
+gossip protocols, the corresponding gossip algorithm is a good indicator to the performance of the protocols.
+In the same spirit now we define a clique-gossip averaging algorithm as follows.
+
+Definition 3. (Clique-gossip Averaging Algorithm) Let xi (t) ∈ R. At time t, Cσ(t) ∈ H∗G is selected. The
+nodes update their states by
+                                                   X
+                                                  
+                                                  
+                                                     xj (t)/|Cσ(t) |           if i ∈ Cσ(t) ;
+                               xi (t + 1) =          j∈Cσ(t)
+                                                  
+                                                  
+                                                   x (t)
+                                                       i                        if i ∈
+                                                                                     / Cσ(t) .
+
+   We can see that the clique-gossip averaging algorithm is an instance of the clique-gossip protocol by
+setting Aij (σ(t)) = 1/|Cσ(t) | for all i, j ∈ Cσ(t) , which in turn determine Mσ(t) .
+
+
+                                                                5
+3     Clique Gossip Protocols
+
+In this section, we investigate deterministic clique-gossip protocols with periodic clique selections. For the
+purpose of guaranteeing the reaching of global agreement and the formulation of an eigenvalue invariance
+theorem, we introduce the following assumption on the function σ(t).
+
+Assumption 1. (i) σ(·) : Z≥0 → {µ1 , µ2 , . . . , µd } is a periodic function with period d; (ii) σ(t) visits each
+element in {µ1 , µ2 , . . . , µd } once and only once in any period.
+
+
+3.1     Eigenvalue Invariance
+
+3.1.1     Generalized Line Graph
+
+Recall that given a graph G, its conventional line graph K(G) is defined by the requirements (i) each node
+of K(G) represents an edge of G; (ii) two nodes of K(G) are linked if and only if the corresponding edges
+of G share a common endpoint. In the following, we define the generalized line graph L(H∗G ) for a graph
+G based on the clique coverage H∗G .
+
+Definition 4. Let H∗G be a clique coverage of G. Its generalized line graph, L(H∗G ) = (V(H∗G ), E(H∗G )),
+is an undirected graph defined by V(H∗G ) = {Ci : Ci ∈ H∗G } and E(H∗G ) = (Ci , Cj ) ∈ V(H∗G ) × V(H∗G ) :
+                                                                          
+
+Ci ∩ Cj 6= ∅, i 6= j .
+
+    A sequence Ci1 , Ci2 , . . . , Cik is called a path of cliques if Cij , Cij+1 are adjacent for all j = 1, . . . , k −1. A
+cycle of L(H∗G ) is a path of cliques Ci1 , Ci2 , . . . , Cik such that Cij ∈ H∗G for all j = 1, . . . , k and Ci1 = Cik .
+
+
+
+
+                      Figure 2: The generalized line graph L(H∗G ) for G given in Figure 1.
+
+    Note that the generalized line graph is equivalent to the conventional line graph if every clique in the
+clique coverage contains two nodes. An illustration of a connected graph G is shown in Figure 1, with its
+generalized line graph given in Figure 2.
+
+Lemma 1. Let G be a connected graph with a clique coverage H∗G . Then L(H∗G ) is a connected graph.
+
+
+                                                              6
+Proof. For two arbitrary cliques Cu , Cv ∈ H∗G , we select two nodes ku ∈ Cu , kv ∈ Cv of G. Then there
+                                     S
+exists a path in the union graph         G[Ci ], denoted as (ku , k1 ), (k1 , k2 ), . . . , (kn−1 , kn ), (kn , kv ), that
+                                        Ci ∈H∗
+                                             G
+connects ku and kv . For the sake of convenience, we let k0 = ku , kn+1 = kv . As a result, there exists
+a clique Cjm such that (km , km+1 ) is an edge in G[Cjm ] for each m = 0, . . . , n. Therefore, the sequence
+Cu , Cj0 , . . . , Cjn , Cv , which can have consecutive repeated elements, is a path of cliques that connects Cu
+and Cv . This completes the proof.
+
+
+3.1.2         A Spectrum Invariance Theorem
+
+Introduce F = Mσ(d) . . . Mσ(1) (Blocks Aij (σ(t)), i, j ∈ σ(t) in Mσ(t) , t = 1, . . . , d are arbitrary). Then
+F is the state transition matrix for the periodic gossiping protocol defined by a periodic signal σ(·) with
+period d. Let π(·) be a permutation with order d, i.e., π(·) is a one-to-one mapping from {1, . . . , d} to
+{1, . . . , d}. Denote Fπ = Mσ(π(d)) . . . Mσ(π(1)) . This represents the state transition matrix generated by a
+permuted order of clique selections. Let cp(Q) denote the characteristic polynomial for a matrix Q.
+
+   Define πs , s = 1, . . . , d − 1 as the swapping permutation over {1, . . . , d} with πs (s) = s + 1, πs (s + 1) = s,
+and πs (i) = i, i 6= s, i 6= s + 1. In the following, we present a theorem regarding the eigenvalue invariance
+of the state transition matrix under swapping permutations, generalizing the result of [13].
+
+Theorem 1. Let H∗G = {Cµ1 , . . . , Cµd } be a clique coverage of G = (V, E) and let Assumption 1 hold. Then
+along any periodic clique-gossip protocol there holds cp(F) = cp(Fπs ) if s satisfies one of the following
+conditions:
+
+  (i) Cσ(s) and Cσ(s+1) are not adjacent,
+
+ (ii) Cσ(s) and Cσ(s+1) are adjacent but neither of them is contained in any cycles of L(H∗G ).
+
+Proof. It is evident for Condition (i) that Mσ(s) Mσ(s+1) = Mσ(s+1) Mσ(s) if Cσ(s) and Cσ(s+1) are not
+adjacent. Thus, in the rest of the proof, we focus on proving cp(F) = cp(Fπs ) for s satisfying Condition
+(ii), i.e.,
+                                  F = Mσ(d) . . . Mσ(s+2) Mσ(s+1) Mσ(s) . . . Mσ(1) ,
+
+                                Fπs = Mσ(d) . . . Mσ(s+2) Mσ(s) Mσ(s+1) . . . Mσ(1) .
+
+Now we take three steps to complete the proof.
+
+Step 1. Since cp(AB) = cp(BA) for any A, B ∈ Rnb×nb (Theorem 1.3.22 [26]), we have
+
+                        cp(F) = cp(Mσ(s+1) Mσ(s) Mσ(s−1) . . . Mσ(1) Mσ(d) . . . Mσ(s+2) ).                           (4)
+
+Step 2. In this step, we reorganize the terms in the product Mσ(s−1) . . . Mσ(1) Mσ(d) . . . Mσ(s+2) by repeat-
+edly interchanging the two consecutive commutable terms. Denote
+
+  A1 = {j : there exists a path of cliques between Cσ(j) and Cσ(s) that does not pass through Cσ(s+1) },
+
+                                                            7
+  A2 = {k : there exists a path of cliques between Cσ(k) and Cσ(s+1) that does not pass through Cσ(s) }.
+
+Based on Condition (ii), there hold
+
+           S
+  (i) A1       A2 = {s − 1, . . . , 1, d, . . . , s + 2};
+           T
+ (ii) A1       A2 = ∅;
+           T
+(iii) Cj       Ck = ∅ for all j ∈ A1 , k ∈ A2 .
+
+Therefore, Mσ(j) Mσ(k) = Mσ(k) Mσ(j) if j ∈ A1 , k ∈ A2 and j, k are two consecutive entries in the sequence
+s − 1, . . . , 1, d, . . . , s + 2. Then it follows
+
+                                  Mσ(s−1) . . . Mσ(1) Mσ(d) . . . Mσ(s+2) = P2 P1 = P1 P2 ,                                (5)
+
+where
+                                                    P1 = Mσ(j|A | ) . . . Mσ(j1 ) ,
+                                                                   1
+
+
+                                                    P2 = Mσ(k|A | ) . . . Mσ(k1 ) ,
+                                                                   2
+
+
+with j|A1 | , . . . , j1 ∈ A1 , k|A2 | , . . . , k1 ∈ A2 following the same order as they are in the sequence s − 1, . . . , 1,
+d, . . . , s + 2. Plugging (5) into (4), we obtain
+
+                                               cp(F) = cp(Mσ(s+1) Mσ(s) P2 P1 ).                                           (6)
+
+
+Step 3. In this step, we prove cp(F) = cp(Fπ ) and complete the proof. We observe that Mσ(s) P2 =
+P2 Mσ(s) , due to the fact that Cσ(s) and Cσ(k) are not adjacent for all k ∈ A2 . Then (6) yields
+
+                                               cp(F) = cp(Mσ(s+1) P2 Mσ(s) P1 ),                                           (7)
+
+which in turn gives
+                                               cp(F) = cp(Mσ(s) P1 Mσ(s+1) P2 ).                                           (8)
+
+Similarly, we also know Mσ(s+1) P1 = P1 Mσ(s+1) because Cσ(s+1) and Cσ(j) are not adjacent for all j ∈ A1 .
+Finally, we have
+                                     a)
+                            cp(F) = cp(Mσ(s) Mσ(s+1) P1 P2 )
+                                     b)
+                                     = cp(Mσ(s) Mσ(s+1) Mσ(s−1) . . . Mσ(1) Mσ(d) . . . Mσ(s+2) )
+                                     c)
+                                     = cp(Mσ(d) . . . Mσ(s+2) Mσ(s) Mσ(s+1) . . . Mσ(1) )
+
+                                     = cp(Fπs ),
+where a) follows from (8), b) is acquired based on (5), and c) is again due to the fact that cp(AB) = cp(BA)
+for any A, B ∈ Rnb×nb . This completes the proof.
+
+Corollary 1. Let Assumption 1 hold. Then along any clique-gossip protocol there holds there holds cp(F) =
+cp(Fπ ) for any permutation π if the generalized line graph L(H∗G ) contains no cycle.
+
+                                                                  8
+Proof. From [22] we know that an arbitrary permutation from {1, . . . , d} to {1, . . . , d} can be generated
+by d − 1 swapping permutations π1 , . . . , πd−1 . Therefore, we only need to prove cp(F) = cp(Fπs ) for all
+s = 1, . . . , d − 1. Based on the condition of the corollary that L(H∗G ) contains no cycle, either of the two
+conditions in Theorem 1 is met for all s. Hence it can be concluded that cp(F) = cp(Fπs ) for all s. This
+completes the proof.
+
+
+3.2       Performance Analysis
+
+In this section, we analyze the convergence performance of periodic clique-gossip protocols. A precise
+definition of the convergence of a clique-gossip protocol is given below.
+
+Definition 5. A clique-gossip protocol is convergent if there holds
+
+                                                      lim x(t) = ȳ(x(0))
+                                                     t→∞
+
+for all x(0) ∈ Rnb , where ȳ(x(0)) is a static state depending perhaps on x(0).
+
+   Let Mσ(t) , t = 0, 1, 2, . . . define a clique-gossip protocol in the form of (1). For a periodic clique-gossip
+protocol with period d ∈ Z+ , we term1
+
+                                                  Fd = Mσ(d−1) . . . Mσ(0) ,
+
+as a period-based state transition matrix in view of the recursion
+
+                                          x((q + 1)d) = Fd x(qd), q = 0, 1, 2, . . . .
+
+
+   Let σ(A) and ρ(A) denote the spectrum and spectral radius of a matrix A, respectively. The following
+lemma holds from the basic knowledge of linear systems.
+
+Lemma 2. Let Assumption 1 hold. Let the periodic clique-gossip protocol admit a period-based state
+transition matrix Fd ∈ Rnb×nb . The protocol is convergent if and only if the following conditions hold:
+
+  (i) ρ(Fd ) ≤ 1;
+
+ (ii) If 1 ∈ σ(Fd ), then eigenvalue one has equal algebraic multiplicity and geometric multiplicity;
+
+(iii) If λ ∈ σ(Fd ) and |λ| = 1, then λ = 1;
+
+(iv) There holds Mσ(k) . . . Mσ(0) β = β for all β ∈ I := {α ∈ Rnb : Fd α = α}.
+
+   Next, we define precisely the convergence rates of standard gossiping and clique-gossiping protocols.
+   1
+       Note that F = Mσ(d) . . . Mσ(1) and Fd = Mσ(d−1) . . . Mσ(0) have the same spectrum regardless of the underlying network
+structure and the generalized line graph of the clique coverage.
+
+
+
+
+                                                                9
+Definition 6. For a convergent clique-gossip protocol, the rate of convergence is O(ν t ) if there exists a
+unique ν ∈ (0, 1) such that
+                                                          kx(t) − ȳk
+                                       0 < lim sup                    < +∞, ∀x(0) ∈
+                                                                                  / I,
+                                              t→∞             νt
+where ȳ = lim x(t).
+           t→∞
+
+  Introduce the symbol |λ2 (F)| as the magnitude of the eigenvalues of F ∈ Rnb×nb with the second largest
+modulus of all its eigenvalues, i.e., |λ2 (F)| = max{|λ| : λ ∈ σ(F), |λ| < ρ(F)}. Let dxe be the smallest
+integer greater than or equal to x ∈ R and bxc be the largest integer less than or equal to x ∈ R. Now
+we present a proposition that reveals the relationship between |λ2 (Fd )| and the convergence rate ν for
+clique-gossping.
+
+Proposition 1. Let Assumption 1 hold and consider the resulting periodic clique-gossip protocol with
+period d ∈ Z+ . Let Fd ∈ Rnb×nb be a period-based state transition matrix of the protocol and assume the
+protocol is convergent. Suppose |λ2 (Fd )| > 0. Then there holds ν = |λ2 (Fd )|1/d , i.e., the convergence rate
+of the protocol is O |λ2 (Fd )|t/d .
+                                  
+
+
+Proof. By the basic knowledge of the stability of linear systems
+                                      kx(b dt cd) − ȳk                 kx(d dt ed) − ȳk
+                            lim sup                 t       = lim sup                t      = C(x(0)).                (9)
+                              t→∞       |λ2 (Fd )|b d c        t→∞       |λ2 (Fd )|d d e
+with ȳ = lim x(t), where C(x(0)) is a constant relying on the network initial value. Let Mσ(t) , t ≥ 0 be
+          t→∞
+the state transition matrix corresponding to each Cσ(t) in the clique gossip sequence. By the convergence
+of x(t), we have
+                              ȳ = lim x(t) = lim x((q + 1)d) = lim Fd x(qd) = Fd ȳ,                                (10)
+                                    t→∞            q→∞                      t→∞
+
+which yields ȳ ∈ I for all x(0). By (9), (10), and Lemma 2.(iv), we obtain
+
+                       kx(t) − ȳk            kMσ(t−1) . . . Mσ(b t cd) x(b dt cd) − ȳk
+                                                                     d
+               lim sup          t/d
+                                    = lim sup
+                 t→∞ |λ2 (Fd )|         t→∞                  |λ2 (Fd )|t/d
+                                              kMσ(t−1) . . . Mσ(b t cd) (x(b dt cd) − ȳ)k
+                                                                     d
+                                    = lim sup                              t/d
+                                        t→∞                   |λ 2 (F d )|
+                                                                              kx(b dt cd) − ȳk
+                                    ≤ kMσ(t−1) . . . Mσ(b t cd) k lim sup
+                                                          d         t→∞         |λ2 (Fd )|t/d
+                                                                              kx(b dt cd) − ȳk             t    t
+                                    ≤ kMσ(t−1) . . . Mσ(b t cd) k lim sup                  t    |λ2 (Fd )|b d c− d
+                                                          d         t→∞        |λ2 (Fd )|b d c
+                                      < |λ2 (Fd )|−1 B1 C(x(0)),                                                     (11)
+
+with B1 = max{kMσ(k) . . . Mσ(0) k : k = 0, . . . , d − 1}. Similarly, noticing
+                                   kMσ(d t ed−1) . . . Mσ(t) x(t) − ȳk                    kx(d dt ed) − ȳk
+                                          d
+                         lim sup                                            = lim sup                        ,
+                          t→∞                  |λ2 (Fd )|t/d                    t→∞          |λ2 (Fd )|t/d
+one also has
+                                                 kx(t) − ȳk
+                                       lim sup                 > |λ2 (Fd )|B2−1 C(x(0)),                             (12)
+                                        t→∞      |λ2 (Fd )|t/d
+
+                                                                 10
+with B2 = min{kMσ(d−1) . . . Mσ(k) k : k = 0, . . . , d − 1}. From (11) and (12), the desired characterization
+to the rate of convergence follows.
+
+   We note that the above discussions on convergence and convergence rate of clique-gossip protocols cover
+standard gossip protocols since standard gossiping is a special case of clique-gossiping with all cliques being
+node pairs.
+
+
+3.3    Multi-clique-gossip Protocols
+
+Recall that in a clique-gossip protocol, one clique is selected at each time slot and the clique-gossiping
+operation is undertaken among all nodes in this clique, while the other nodes maintain their states. For the
+purpose of speeding up the information spreading over networks, we generalize the notion of multi-gossip
+in a standard gossip process [16] to a clique gossip. Based on the clique coverage H∗G = {Cµ1 , . . . , Cµd },
+we define a multi-clique coverage M (H∗G ) = {C1 , . . . , Cν } with each Ck ⊂ H∗G , termed a clique class, being
+a set of Cµl , where νk=1 Ck = H∗G , and where any two cliques in one clique class Ck are non-adjacent for
+                    S
+
+all k = 1, . . . , ν. We also define C∗i (Ck ) ∈ Ck as the unique clique containing node i and belonging to Ck .
+Introduce a function σ(·) : Z≥0 → {1, . . . , ν}. Then a multi-clique-gossip protocol is defined as follows.
+
+Example 2. Consider the graph G in Figure 1. Let cliques C1 = {1, 2, 3}, C2 = {3, 4}, C3 = {4, 5, 6, 7}, C4 =
+{4, 6, 7, 8}, C5 = {2, 9, 13}, C6 = {3, 11, 12}, C7 = {9, 10} form its clique coverage H∗G . Then its general-
+ized line graph L(H∗G ) is given in Figure 2. By observing L(H∗G ), we can obtain that possible multi-clique
+coverages M (H∗G ) include {C1 , C4 , C7 }, {C3 , C5 , C6 }, {C2 } , {C1 , C7 }, {C2 , C5 }, {C4 , C6 }, {C3 } .
+                                                                   
+
+
+Definition 7. (Multi-clique-gossip Protocol) Select Cσ(t) ∈ M (H∗G ) at each time t = 0, 1, . . . . Then the
+node state update rule is described by
+                                           X                                    [
+                                     
+                                     
+                                                  Aij (µl )xj (t)   if i ∈                Cµl ;
+                                     
+                                      j∈C∗ (C )
+                                            i σ(t)                            Cµl ∈Cσ(t)
+                        xi (t + 1) =                                             [
+                                       xi (t)                        if i ∈
+                                                                          /                Cµl .
+                                     
+                                     
+                                     
+                                     
+                                     
+                                                                              Cµl ∈Cσ(t)
+
+
+   We can see that in contrast to the clique-gossip protocol, the multi-clique-gossip protocol allows multiple
+non-adjacent cliques to perform internal clique-gossip operations simultaneously. Evidently, the simulta-
+neous operations over non-adjacent cliques are not mutually influential because no node serves as the
+intermediary for information transmission. By direct intuition, we know that in order to speed up the con-
+vergence to a global agreement, one should arrange as many cliques as possible to perform gossiping oper-
+ation in every time slot, i.e., minimize |M (H∗G )|. Define the clique-class index by ρ(H∗G ) = min{|M (H∗G )| :
+M (H∗G ) is a multi-clique coverage induced by H∗G }. Let ∆(L(H∗G )) denote the maximum node degree of
+the generalized line graph L(H∗G ). Define α(L(H∗G )) = max{|C| : C ⊂ H∗G |Ci ∩ Cj = ∅, ∀Ci , Cj ∈ C} as the
+independence number of L(H∗G ). Then we have the following proposition.
+
+
+                                                        11
+Proposition 2. If L(H∗G ) is neither a complete graph nor a cycle graph with an odd number of nodes,
+then
+                                         |H∗G |
+                                                  ≤ ρ(H∗G ) ≤ ∆(L(H∗G )).
+                                       α(L(H∗G ))
+In particular, ρ(H∗G ) = |H∗G | if L(H∗G ) is a complete graph, and ρ(H∗G ) = 3 if L(H∗G ) is a cycle graph with
+an odd number of nodes.
+
+Proof. The left inequality naturally holds because of the definitions of α(·) and ρ(·). Now we prove the
+right inequality. Consider the vertex coloring problem of the generalized line graph L(H∗G ), which is a
+labeling of the graph’s nodes with colors such that any two nodes which are the endpoints of some edge
+have different colors. We denote the smallest number of colors needed to color the nodes of graph L(H∗G ),
+namely its chromatic number, as χ(L(H∗G )). It can observed that based on the same clique coverage H∗G ,
+the minimum number of clique classes equals the chromatic number of its generalized line graph, i.e.,
+ρ(H∗G ) = χ(L(H∗G )). Then by Brooks’ Theorem [21], χ(G) ≤ ∆(G) if G is a simple connected graph but
+not a complete graph or a cycle graph with odd nodes. Therefore, we have ρ(H∗G ) ≤ ∆(L(H∗G )) unless
+L(H∗G ) is a complete graph or a cycle graph with odd nodes. The particular values of ρ(H∗G ) for complete
+graphs and odd cycle graphs result easily from their specific structures.
+
+  From the proof of Proposition 2, it can be seen that finding the clique classes of a graph is equivalent
+to finding a vertex coloring of its generalized line graph. It is known [23] that finding the number of
+conventional multigossips of a graph is intrinsically obtaining an edge coloring of the graph, which is a
+labeling of the edges of the graph such that any two edges sharing the same endpoint have different colors.
+Then it follows that the edge coloring of the graph is equivalent to a vertex coloring of its conventional
+line graph. Since the conventional line graph is a special case of the generalized line graph by letting every
+clique in H∗G possess two nodes, we can conclude that the problem of finding the clique classes of a graph
+in this paper is consistent with the result regarding multigossips in [23].
+
+  It is hard to find ρ(H∗G ) of an arbitrary graph G. Inspired by the greedy algorithm in [24], however, we
+can generate a multi-clique coverage M (H∗G ) from the clique coverage H∗G by visiting every node of L(H∗G )
+in order and assign it into the first available clique class, so that we can obtain a relatively small |M (H∗G )|.
+
+
+3.4     Numerical Examples
+
+In this section, we provide a few numerical examples to illustrate the result in Theorem 1 and investigate
+the performance of the clique-gossip averaging algorithm by comparing it to the standard gossip algorithm,
+and the multi-clique-gossiping in contrast to pure clique-gossiping.
+
+
+3.4.1    Validation of Theorem 1
+
+The following example validates the result in Theorem 1.
+
+                                                       12
+Example 3. Consider the graph G in Figure 1 with the clique coverage H∗G = {C1 , . . . , C7 }, where
+C1 , . . . , C7 are specified in Figure 1. In order to validate two conditions in Theorem 1, we compute the
+spectrum of
+                                             F = M1 M4 M5 M7 M2 M3 M6 ,
+
+                                           Fπ6 = M1 M4 M5 M7 M2 M6 M3 ,
+
+                                           Fπ3 = M1 M4 M7 M5 M2 M3 M6 ,
+
+where Mµ , µ = 1, . . . , 7, corresponding to Cµ , µ = 1, . . . , 7, are as defined as in Section 2.3. This implies
+that F, Fπ6 , Fπ3 are the state transition matrices for the clique-gossip averaging algorithm. Obviously
+π6 is the permutation that interchanges two non-adjacent cliques C3 , C6 , and π3 interchanges C5 , C7 ,
+neither of which is contained in any cycle of L(H∗G ) plotted in Figure 2. As computed, σ(F) = σ(Fπ6 ) =
+σ(Fπ3 ) = {1, 0.8504, 0.6920, 0.3683, 0.1522, 0.1871, 0, 0, 0, 0, 0, 0, 0}, i.e., cp(F) = cp(Fπ6 ) = cp(Fπ3 ). This
+is consistent with Theorem 1.
+
+
+3.4.2     Performance Discussion
+
+In the following example, we compare the convergence speed of the periodic clique-gossip averaging al-
+gorithm and the standard periodic gossip averaging algorithm and discuss the performance improvement
+with the application of multi-clique-gossiping.
+
+Example 4. Consider the graph G in Figure 1. Let Mµ , µ = 1, . . . , 7 be the same as in Example 2. Denote
+the system states along standard gossiping and clique-gossiping as xg (t), xc (t), t = 0, 1, 2, . . . , respectively.
+Define
+                                            Fc = M5 M7 M1 M6 M2 M3 M4
+
+as the period-based state transition matrix for the periodic clique-gossip averaging algorithm. Then we let
+(2, 13),(2, 9),(9, 13),(9, 10),(1, 2),(1, 3),(2, 3),(3, 12),(3, 11),(11, 13),(3, 4),(8, 11),(4, 5),(5, 6),(4, 6),(6, 7), (7, 8),
+(4, 8),(4, 7), (6, 8) be a 20 edges gossip sequence for the standard periodic gossip averaging algorithm. De-
+note Fg as the period-based state transition matrix corresponding to the standard gossip sequence. First we
+compute that the second largest eigenvalues of Fg , Fc are 0.8061, 0.8504, respectively. Then by Proposition
+                                                                               √       √
+1, the convergence speed for these two algorithms can be represented by 20 0.8061, 7 0.8504, respectively.
+                                                     7                             7
+                                                        (xi (t) − x̄)2 , with x̄ =
+                                                     P                             P
+   Next we plot the trajectories of error e(t) =                                      xi (0)/7, for these two
+                                                             i=1                              i=1
+algorithms in Figure 3. It is known [16] that the second largest eigenvalue of the state transition matrix
+determines the convergence speed of its corresponding algorithm. Then we can conclude from the fact that
+√
+7
+            √
+  0.8504 < 20 0.8061 that the periodic clique-gossip averaging algorithm has faster convergence speed than
+the standard periodic gossip averaging algorithm. Moreover, this conclusion is directly verified as shown in
+Figure 3, because it can be clearly seen that the trajectories of error for clique-gossiping are steeper than
+gossiping, implying that the states of all nodes of G undertaking clique-gossiping approach the average x̄
+faster.
+
+                                                             13
+   Based on the clique coverage H∗G = {C1 , . . . , C7 } and the generalized line graph L(H∗G ) in Figure 2,
+we define a multi-clique coverage M (H∗G ) = {C1 , C2 , C3 } with C1 = {C1 , C4 , C7 }, C2 = {C3 , C5 , C6 }, C3 =
+{C2 }. Let the multi-clique gossiping occur over the multi-clique coverage M (H∗G ). Then the trajectory of
+error e(t) for multi-clique-gossiping is plotted in Figure 3. It can be seen that multi-clique-gossiping yields
+much faster convergence speed than either clique-gossiping or standard gossiping. To make this conclusion
+numerically clear, we calculate that the second largest eigenvalue of the state transition matrix for the
+                       √                                                   √
+multi-clique-gossiping 3 0.8504 is less than that for the clique-gossiping 7 0.8504.
+
+                                                     Trajectories of Error
+                           10 5
+                                                                                     Gossiping
+                                                                                     Clique-gossiping
+                                                                                     Multi-clique-gossiping
+                           10 0
+
+
+
+
+                           10 -5
+
+
+
+
+                          10 -10
+
+
+
+
+                          10 -15
+
+
+
+
+                          10 -20
+
+
+
+
+                          10 -25
+
+
+
+
+                          10 -30
+                                   0   100        200         300        400             500                  600
+                                                             time
+
+                                               7                               7
+                                                   (xi (t) − x̄)2 with x̄ =
+                                               P                               P
+Figure 3: The trajectories of error e(t) =                                           xi (0)/7 for the periodic multi-clique-
+                                               i=1                             i=1
+gossiping, clique-gossip averaging algorithm and the standard periodic gossip averaging algorithm.
+
+
+
+   Now we study a few typical graphs and provide two examples to illustrate the way that clique-gossiping
+yields faster convergence speed than standard gossiping.
+
+Example 5. Consider the graphs Gm with m = 3, . . . , 20 whose topologies are given in Figure 4. It can be
+seen that Gm has a typical structure that the induced graphs G[{1, 2, . . . , m}] and G[{m+2, m+3, . . . , 2m+
+1}] are both ring graphs, which are linked by a complete induced graph G[{1, m+1, m+2}]. Then it follows
+that C1 = {1, m + 1, m + 2} is a 3-node clique. Let e1 = (1, m + 1), e2 = (1, m + 2), e3 = (m + 1, m + 2).
+Define clique sequence Sleftp = (1, 2), (2, 3), . . . , (m, 1), Sright = (m + 2, m + 3), (m + 3, m + 4), . . . , (2m +
+1, m + 2). Let Sleft , e3 , e1 , e2 , Sright and Sleft , e1 , e2 , e3 , Sright be two standard gossip averaging sequences
+with their period-based state transition matrix denoted by Fg1 , Fg2 , respectively. Correspondingly, we
+replace (1, m + 1), (m + 1, m + 2), (1, m + 2) with C1 to form the clique-gossip averaging sequence, with
+its period-based state transition matrix denoted by Fc . Note that the period length for clique-gossiping is
+shorter than that for standard gossiping. First we plot the values of |λ2 (Fg1 )|, |λ2 (Fg2 )|, |λ2 (Fc )| varying
+with m = 3, . . . , 20 in Figure 5. As can be seen, |λ2 (Fg2 )| < |λ2 (Fg1 )| = |λ2 (Fc )| for all m. This shows
+
+
+                                                            14
+that the application of the clique gossiping does not necessarily reduce the second largest eigenvalue of
+the period-based state transition matrix. Based on Proposition 1, we next investigate the relationship
+among the convergence rate |λ2 (Fg1 )|1/(2m+3) , |λ2 (Fg2 )|1/(2m+3) and |λ2 (Fc )|1/(2m+1) for all m = 3, . . . , 20
+in Figure 6. The calculated result shows |λ2 (Fc )|1/(2m+1) < |λ2 (Fg2 )|1/(2m+3) < |λ2 (Fg1 )|1/(2m+3) for all
+m = 3, . . . , 20, which indicates that clique-gossiping has faster convergence speed than standard gossiping,
+especially when the ring graphs G[{1, 2, . . . , m}] and G[{m + 2, m + 3, . . . , 2m + 1}] have small size.
+
+
+
+
+                                         Figure 4: Graph Gm , m = 3, . . . , 20.
+
+                                                          |6 (F )|
+                                                               2
+                            1
+                                                                                   Gossiping 1
+                                                                                   Clique-gossiping
+                          0.95                                                     Gossiping 2
+
+
+
+
+                           0.9
+
+
+
+                          0.85
+
+
+
+                           0.8
+
+
+
+                          0.75
+
+
+
+                           0.7
+
+
+
+                          0.65
+
+
+
+                           0.6
+                                 2   4      6      8     10        12   14    16         18           20
+                                                               m
+
+
+
+Figure 5: The values of |λ2 (Fg1 )|, |λ2 (Fg2 )| for standard gossiping and |λ2 (Fc )| for clique-gossiping varying
+with m = 3, . . . , 20.
+
+Example 6. Consider the 101-node graphs Gk = (V, Ek ), k = 1, . . . , 99 with one such topology shown
+in Figure 7, which satisfy Ek = {(1, 2), (1, 3), . . . , (1, 101), (l + 1, l + 2)}, l = 1, . . . , k. Note that Gk has k
+3-node cliques, denoted by Cl = {1, l + 1, l + 2}, l = 1, . . . , k. Let all 100 + k edges of Gk be a standard
+gossip averaging sequence in a fixed but arbitrarily chosen order, whose period-based state transition
+matrix is denoted by Fg . By replacing (l + 1, l + 2) with cliques Cl , l = 1, . . . , k, k = 1, . . . , 99, we obtain a
+clique-gossip averaging sequence with its period-based state transition matrix denoted by Fc . Evidently,
+
+
+                                                              15
+                                                            |62(F )|1/r
+                           1
+                                                                                         Gossiping 1
+                                                                                         Clique-gossiping
+                                                                                         Gossiping 2
+                         0.99
+
+
+
+
+                         0.98
+
+
+
+
+                         0.97
+
+
+
+
+                         0.96
+
+
+
+
+                         0.95
+
+
+
+
+                         0.94
+                                2   4         6      8      10        12   14     16           18           20
+                                                                  m
+
+
+
+Figure   6:   The    trajectories       of   |λ2 (Fg1 )|1/(2m+3) , |λ2 (Fg2 )|1/(2m+3)      for        standard   gossiping   and
+|λ2 (Fc )|1/(2m+1) for clique-gossiping varying with m = 3, . . . , 20.
+
+
+the clique-gossiping and standard gossiping share the same period length. Then we plot |λ2 (Fg )| and
+|λ2 (Fc )| for values of k = 1, . . . , 99 in Figure 8. Since the period lengths for clique-gossiping and standard
+gossiping are equal, |λ2 (Fg )| and |λ2 (Fc )| embody their convergence speeds, respectively. We can see
+that the convergence speed of clique-gossiping is observably faster than standard gossiping. Moreover, the
+performance improvement becomes greater as the number of 3-node cliques involved increases.
+
+
+
+
+                                        Figure 7: A 101-node graph Gk , k = 2.
+
+   It is implied from Proposition 1 that the convergence speed for periodic standard gossiping or clique-
+gossiping is determined by two factors: the period length and the second largest eigenvalue magnitude of
+the period-based state transition matrix. Clique-gossiping may provide faster convergence than standard
+gossiping by reducing the period length (as verified in Example 5) or decreasing the the second largest
+
+
+                                                                 16
+                                                        |6 (F )|
+                                                          2
+                            1
+                                                                                  Gossiping
+                                                                                  Clique-gossiping
+
+
+                        0.9
+
+
+
+
+                        0.8
+
+
+
+
+                        0.7
+
+
+
+
+                        0.6
+
+
+
+
+                        0.5
+
+
+
+
+                        0.4
+                                0   10   20   30   40     50       60   70   80          90          100
+                                                           k
+
+
+
+Figure 8: The values of |λ2 (Fg )| and |λ2 (Fc )| for standard gossiping and clique-gossiping varying with
+k = 1, . . . , 99. Since they have the same period length, we can conclude that clique-gossiping has faster
+convergence speed than standard gossiping.
+
+
+eigenvalue magnitude (as verified in Example 6). An intriguing phenomenon observed from these two
+examples lies in that the performance improvement becomes more pronounced when we replace more
+edges in gossip sequence with cliques of size greater than two, and reduce the number of the nodes unable
+to be covered by cliques. Therefore, we conjecture that it is always encouraged to replace a pure gossip
+with a clique-gossip for the graphs containing cliques, in order to speed up distributed computation and
+make improvement in the algorithm performance. However, it is difficult to prove that clique-gossiping is
+more efficient than standard gossiping in a general case, because making comparison among the second
+largest eigenvalues in magnitude of different period-based state transition matrices is a difficult problem.
+
+
+
+4    Clique-gossip Algorithms with Finite-time Convergence
+
+In this section, we investigate the clique-gossip averaging algorithm introduced in Definition 3. Formally
+the algorithm is written as
+                                               x(t + 1) = Mσ(t) x(t)                                       (13)
+
+where x(t) = (x1 (t) . . . xn (t))> and Mσ(t) is induced by the matrices Aij (σ(t)) = 1/|Cσ(t) |. The asymptotic
+convergence of this algorithm has been clear from Lemma 2. Interestingly enough for standard gossip
+algorithms, finite-time convergence is possible providing a definitive solution within a finite time steps [17].
+Inspired by this we now study the finite-time convergence of clique-gossip algorithms. First we introduce
+the following definition.
+
+
+                                                         17
+Definition 8. A clique-gossip averaging algorithm achieves finite-time convergence with respect to initial
+value x(0) = c ∈ Rn , if there exists a nonnegative integer T (which may depend on c) such that x(T ) ∈
+span{1}.
+
+   Naturally, we say a clique-gossiping averaging algorithm achieves global finite-time convergence if finite-
+time convergence can be reached for any initial value in Rn . A feasible process of producing global finite-
+time convergence is provided in the following example.
+
+Example 7. Consider a node set V = {1, 2, . . . , 12} shown in Figure 9. Let C1 = {1, 7}, C2 = {2, 8}, C3 =
+{3, 9}, C4 = {4, 10}, C5 = {5, 11}, C6 = {6, 12}, C7 = {1, 2, . . . , 6}, C8 = {7, 8, . . . , 12}. Suppose the node
+                   8
+                      G[Ci ] is V. Let H∗G = {C1 , C2 , . . . , C8 } be a clique coverage of G. It is evident that by
+                   S
+set of graph G =
+                     i=1
+performing averaging operations on first C1 , C2 , . . . , C6 in an arbitrary order, then C7 , C8 in an arbitrary
+order (or first C7 , C8 in an arbitrary order, then C1 , C2 , . . . , C6 in an arbitrary order), global finite-time
+convergence can be achieved over G.
+
+
+
+
+Figure 9: A 12-node complete graph G (only a subset of the edges are shown) with a clique coverage
+H∗G = {C1 , C2 , . . . , C8 }, where C1 = {1, 7}, C2 = {2, 8}, C3 = {3, 9}, C4 = {4, 10}, C5 = {5, 11}, C6 =
+{6, 12}, C7 = {1, 2, . . . , 6}, C8 = {7, 8, . . . , 12}.
+
+
+   As can be seen in Example 7, the number of nodes n = 12 = 6 × 2. As a result, global finite-time
+convergence can be achieved in 2 + 6 = 8 steps by constructing two cliques of size 6 and six cliques of
+size 2. Inspired by Example 7, we present a sufficient condition for finite-time convergence in the following
+theorem.
+
+Theorem 2. Consider a node set V = {1, 2, . . . , n} with n = r1 r2 for two integers r1 , r2 ≥ 2. Then there
+exists a graph G with its node set being V and a clique coverage H∗G that consists of only cliques with sizes
+r1 or r2 leading to a globally finite-time convergent clique-gossip averaging algorithm. Furthermore, such
+finite-time convergence can be achieved in r1 + r2 steps.
+
+Proof. Define cliques Cp = {r1 (p−1)+1, r1 (p−1)+2, . . . , r1 p}, p = 1, . . . , r2 and Qq = {q, r1 +q, . . . , r1 (r2 −
+                                      r2
+                                      S         r1
+                                              S S
+1) + q}, q = 1, . . . , r1 . Let G = ( G[Ci ]) ( G[Qi ]). Next we prove that along the r1 + r2 long sequence
+                                      i=1             i=1
+of cliques C1 , . . . , Cr2 , Q1 , . . . , Qr1 , the algorithm yields a global finite-time convergence. Note that the
+cliques Cp , p = 1, . . . , r2 (or Qq , q = 1, . . . , r1 ) are mutually disjoint. Suppose every node i holds the initial
+state xi (0). After undertaking averaging operations over Cp s, we have the node i ∈ Cp ’s state at time
+
+
+                                                            18
+t = r2
+                                                          1 X
+                                             xi (r2 ) =       xj (0).                                        (14)
+                                                          r1
+                                                              j∈Cp
+
+Then we perform averaging operations over Qq s and one has for node i ∈ Qq
+
+                                                              1 X
+                                         xi (r1 + r2 ) =          xj (r2 ).                                  (15)
+                                                              r2
+                                                                j∈Qq
+
+It is worth noting that every node j, contained in the same Qq , belongs to a distinct Cp . Thus by (14)
+and (15), and the fact that Cp s are mutually disjoint
+                                                          n
+                                                     1 X
+                                  xi (r1 + r2 ) =         x(0), ∀i = 1, . . . , n.
+                                                    r1 r2
+                                                          j=1
+
+This completes the proof.
+
+Remark 1. Let us consider the case where n = r1 r2 . . . rk with integers r1 , r2 , . . . , rk ≥ 2. By recursively
+applying Theorem 2, a clique sequence with the cliques’ sizes being r1 , r2 , . . . , rk can be constructed along
+which finite-time convergent averaging algorithm is defined with convergence achieved in
+                                                    k
+                                                    X k
+                                                      Y
+                                                                   rj
+                                                    i=1 j=1,j6=i
+
+steps. The intuition is that one can embed the n nodes into a k-dimensional lattice with the j’th dimension
+containing rj nodes. Then finite-time convergence can be built along each dimension. In particular, when
+n = 2k , the clique coverage H∗G with all cliques being gossip edges can be found to produce finite-time
+convergence, as is known from [17].
+
+  Theorem 2 provides the method of constructing a clique sequence for finite-time convergence, on con-
+dition that the total number of a graph’s nodes is the product of two integers greater than one, which are
+exactly the size of the cliques to be constructed. In practical engineering problems, however, the number
+of the nodes contained in each selected clique is required to be unchanged, for the convenience of synchro-
+nization, noise computation, delay elimination, etc. In order to analyze the finite-time convergence in this
+background, we first provide the following definition.
+
+Definition 9. A clique coverage H∗G for a graph G is m-regular if every clique in H∗G possesses exactly
+m nodes. The resulting clique-gossip averaging algorithm is called an m-regular clique-gossip averaging
+algorithm.
+
+  It is obvious that not all connected graphs have an m-regular clique coverage if m ≥ 3. For a complete
+graph with n nodes, there always exists an m-regular clique coverage of the graph for any m ≤ n. Now we
+are interested in the finite-time convergence of m-regular clique-gossip averaging algorithms. We present
+the following theorem.
+
+
+
+                                                          19
+Theorem 3. Let V = {1, 2, . . . , n}. There exists a graph G with its node set being V such that one can find
+an m-regular clique coverage H∗G which can lead to a globally finite-time convergent clique-gossip averaging
+algorithm if and only if n is divisible by m with the same prime factors as m. More precisely, the following
+statements hold.
+
+  (i) If n is not a multiple of m, or n contains a different prime factor compared to m, then no m-
+      regular clique-gossip averaging algorithm converges globally in finite time. In fact, in that case any
+      given m-regular clique-gossip averaging algorithm fails to converge in finite time for almost all initial
+      values.
+
+ (ii) Suppose there exist factorizations m = pr11 · · · prdd and n = ps11 · · · psdd with p1 , . . . , pd being prime
+      numbers and si ≥ ri > 0 for all 1 ≤ i ≤ d. Then there exists a globally convergent m-regular
+      clique-gossip averaging algorithm. Moreover, a fastest m-regular clique-gossip averaging algorithm
+      converges in                                          
+                                                           si
+                                                    n max       /m
+                                                      1≤i≤d ri
+
+      steps.
+
+   Theorem 3 is a generalization of the results on finite-time convergence with a standard gossip averaging
+algorithm [17], which corresponds to the special case of m = 2. The sufficiency proof of the theorem is
+based on a constructive algorithm, where clearly only a small fraction of edges in the complete graph
+has been used. Therefore, the usefulness of this finite-time convergent result is not restricted only to the
+complete graph case. Finite-time convergence is also possible if we allow the Aij (σ(t)) to be genuinely
+time-dependent, e.g., [25], which will result in a consensus algorithm with time-varying state transitions.
+Now we provide an example to illustrate the finite-time convergence in Theorem 3.
+
+Example 8. Consider the 18-node complete graph G in Figure 10 (only a subset of the edges are shown).
+Let C1 = {1, 2, 3, 4, 5, 6}, C2 = {7, 8, 9, 10, 11, 12}, C3 = {13, 14, 15, 16, 17, 18}, C4 = {1, 2, 7, 8, 13, 14}, C5 =
+{3, 4, 9, 10, 15, 16}, C6 = {5, 6, 11, 12, 17, 18} and H∗G = {C1 , C2 , . . . , C6 } be a 6-regular clique coverage of
+G. Also we plot its generalized line graph L(H∗G ) in Figure 11. Note that L(H∗G ) is a complete bipartite
+graph. It can be seen that G with the clique coverage H∗G satisfies the finite-time convergence condition
+in Theorem 3 and one can indentify that n = 18 = 2 × 32 , m = 2 × 3. By undertaking the averaging op-
+erations on first C1 , C2 , C3 in an arbitrary order, then C4 , C5 , C6 in an arbitrary order (or first C4 , C5 , C6
+in an arbitrary order, then C1 , C2 , C3 in an arbitrary order), the clique-gossip averaging algorithm yields
+finite-time convergence regardless of initial states.
+
+
+
+
+                                                          20
+Figure 10: A 18-node complete graph G(only a subset of the edges are shown) with a 6-regular
+clique coverage H∗G = {C1 , C2 , . . . , C6 }, where C1 = {1, 2, 3, 4, 5, 6}, C2 = {7, 8, 9, 10, 11, 12}, C3 =
+{13, 14, 15, 16, 17, 18}, C4 = {1, 2, 7, 8, 13, 14}, C5 = {3, 4, 9, 10, 15, 16}, C6 = {5, 6, 11, 12, 17, 18}.
+
+
+
+
+Figure 11: The generalized line graph L(H∗G ) for G in Figure 10. It can be seen that L(H∗G ) is a complete
+bipartite graph.
+
+
+4.1     Proof of Sufficiency for Theorem 3
+
+In this section, we prove that if n is divisible by m with the same prime factors as m, then there exists
+a graph G with its node set being V such that one can find an m-regular clique coverage H∗G which can
+lead to a globally finite-time convergent clique-gossip averaging algorithm.
+
+   Let m = pr11 · · · prdd and n = ps11 · · · psdd with si ≥ ri > 0. We introduce
+                                                                      
+                                                                     si
+                                                 δ(n, m) := max            .
+                                                               1≤i≤d ri
+
+We denote by (Q1 . . . Ql1 ) a finite sequence of cliques of length l1 , where Qi ∈ H∗G , 1 ≤ i ≤ l1 . Let
+(Q01 . . . Q0l2 ) be another finite sequence of cliques of length l2 . We define the concatenation of (Q1 . . . Ql1 )
+and (Q01 . . . Q0l2 ) as
+                                (Q1 . . . Ql1 ) ◦ (Q01 . . . Q0l2 ) = (Q1 . . . Ql1 Q01 . . . Q0l2 ),
+
+
+
+                                                                21
+which is a finite sequence of length l1 + l2 . We now present a recursive algorithm as a clique selection
+process over the complete graph G = (V, E), the output of which is a finite sequence of cliques with m
+nodes.
+CliqueSelect(V, m)
+             n
+ 1: Let n1 = m .
+ 2: If n1 = 1, return V.
+                            
+ 3: Otherwise, let Qi =      m(i − 1) + 1, . . . , mi for i = 1, . . . , n1 .
+                                                m
+ 4: Let m1 = min{b ∈ N : m | n1 b}. Denote n2 = m .         1
+
+ 5: Let Q∗ij =
+                 
+                m(i − 1) + m1 (j − 1) + 1, . . . , m(i − 1) + m1 j for j = 1, . . . , n2 , i = 1, . . . , n1 .
+              n 1
+ 6: Let Q∗j =     Q∗ij , j = 1, . . . , n2 .
+              S
+                 i=1
+ 7: return     (Q1 . . . Qn1 ) ◦ CliqueSelect(Q∗1 , m) ◦ · · · ◦ CliqueSelect(Q∗n2 , m);
+
+
+   We first show this algorithm is well defined. Note that the following mathematical notations are all
+defined in the algorithm above. From the expressions m = pr11 · · · prdd and n = ps11 · · · psdd we know n1 =
+                                                                        r0      r0
+ps11 −r1 · · · psdd −rd . By the definition of m1 , there holds m1 = p11 · · · pdd , where
+
+                                          r10 = max{0, r1 − (s1 − r1 )} ≤ r1 ,
+
+                                           ......
+
+                                          rd0 = max{0, rd − (sd − rd )} ≤ rd .
+
+Therefore, m1 | m, which implies that n2 is a well defined integer. We further know that each Q∗ij contains
+m1 nodes, and each Q∗j contains m1 n1 nodes. The definition of m1 ensures m | m1 n1 with m1 n1 containing
+no distinct prime factor compared to m. That is to say,
+
+                               CliqueSelect(Q∗1 , m), . . . , CliqueSelect(Q∗n2 , m)
+
+can be reasonably recursively invoked.
+
+   Next, we prove by an induction argument that the clique sequence produced by CliqueSelect(V, m)
+is of length δ(n, m)n/m, and the resulting clique-gossip algorithm converges in δ(n, m)n/m time steps.
+We complete the remainder of the proof in three steps.
+
+Step 1. There holds n = m if δ(n, m) = 1. The CliqueSelect(V, m) returns one clique V, and obviously
+the resulting clique-gossip algorithm converge in one step. Now we assume
+
+Induction Hypothesis. For δ(n, m) ≤ K − 1 with K > 1, CliqueSelect(V, m) generates a sequence
+of δ(n, m)n/m cliques, along which the resulting clique-gossip algorithm converges in δ(n, m)n/m time
+steps.
+
+Step 2. Let δ(n, m) = K > 1. Note that every clique selected by CliqueSelect(Q∗j , m) contains m1 n1
+                                                                                 s0     s0
+nodes. By the definition of m1 and n1 , we can verify that m1 n1 = p11 · · · pdd , where
+
+                                 s01 = max{r1 , s1 − r1 }, . . . , s0d = max{rd , sd − rd }.
+
+                                                             22
+This implies δ(n1 m1 , m) = K − 1, and by our induction hypothesis, each CliqueSelect(Q∗j , m) produces
+a sequence of (K−1)n
+                 m
+                     1 m1
+                          cliques. Thus, the total length of the sequence CliqueSelect(V, m) is
+
+                                               (K − 1)n1 m1      Kn
+                                        n1 +                n2 =    .
+                                                    m            m
+
+This establishes the number of cliques generated by the algorithm CliqueSelect(V, m).
+
+Step 3. We finally prove finite-time convergence of the resulting clique-gossip algorithm along the clique
+sequence CliqueSelect(V, m). Fix the initial value at all nodes. Then after the first n1 steps, all nodes
+       
+in Qi = vm(i−1)+1 , . . . , vmi hold a common value zi for i = 1, . . . , n1 .
+
+  Note that each Qi is decomposed as n2 disjoint subsets Q∗ij , j = 1, . . . , n2 , where each Q∗ij contains m1
+                                                                                                         n
+                                                                                                         S1 ∗
+nodes. Therefore, at time n1 and for i = 1, . . . , n1 , there are m1 nodes which hold value zi in Q∗j =    Qij .
+                                                                                                         i=1
+Because the Q∗j are mutually disjoint, the clique-gossip algorithm given by CliqueSelect(Q∗j , m) does not
+influence the values of nodes outside Q∗j . Again by our induction hypothesis, for any j = 1, . . . , n2 , the
+clique-gossip algorithm given by CliqueSelect(Q∗j , m) ensures that all nodes in Q∗j hold the same value
+
+                                               1n               n
+                                            1 X       1X
+                                                 zi =    xi (0).
+                                            n1        n
+                                               i=1           j=1
+
+Therefore, all nodes in V will hold the same value as the average of the network initial values along the
+clique-gossip algorithm generated by CliqueSelect(V, m) after δ(n, m)n/m time steps.                            
+
+
+4.2   Proof of Necessity for Theorem 3
+
+Now we prove that if there exists a graph G with its node set being V such that one can find an m-regular
+clique coverage H∗G which can lead to a globally finite-time convergent clique-gossip averaging algorithm,
+then n is divisible by m with the same prime factors as m. We only need to find a particular initial value
+c ∈ Rn that any deterministic clique-gossip algorithm will fail to converge in finite steps. We know that
+m can be written uniquely as pr11 · · · prkd , where p1 < · · · < pd are prime numbers and ri > 0, 1 ≤ i ≤ d.
+
+  Given an arbitrary clique-gossip algorithm. We investigate two cases, respectively.
+
+   • Let n have a prime factor p that m does not have. Choose the initial value c = (1, 0, . . . , 0)T . For
+      any t, it is easy to see that
+                                                                αi (t)
+                                                     xi (t) =          ,
+                                                                βi (t)
+      where αi (t) and βi (t) are coprime integers with βi (t) having no prime factor that m does not have.
+      That is to say, βi (t) does not contain the prime factor p, for any t. The limit of xi (t) however must
+      be ni=1 xi (0)/n = 1/n. Because n has p as its prime factor, such a value cannot be reached at any
+        P
+
+      finite time steps.
+
+   • Let n be represented by ps11 · · · psdd , where si ≥ 0, 1 ≤ i ≤ d with some 1 ≤ a ≤ d that sa < ra . Again
+
+
+                                                        23
+       we choose the initial value c = (1, 0, . . . , 0)T . Similarly, for any t we have
+
+                                                                    αi (t)
+                                                         xi (t) =          ,
+                                                                    βi (t)
+
+       where αi (t) and βi (t) are coprime integers with βi (t) being some multiple of praa . Because praa cannot
+       divide n and the node state limit must be 1/n, finite-time convergence is impossible.
+
+
+4.3     Proof of Almost Everywhere Impossibility
+
+Note that Theorem 3.(i) asserts a stronger non-existence of claim in that any m-regular clique gossip
+algorithm fails to reach agreement in finite steps for almost all initial values. Let M be a set consisting of
+at most countable n × n real matrices. Define
+
+                   SM = c ∈ Rn : ∃t ≥ 1, M1 , . . . , Mt ∈ M , s.t. Mt · · · M1 c ∈ span{1} .
+                       
+
+
+It is easy to verify that
+                                                 ∞
+                                                 [          [
+                                          SM =                         SM0 ...Mt ,
+                                                 t=0 M0 ,...,Mt ∈M
+
+where
+                                 SM1 ...Mt = c ∈ Rn : Mt · · · M1 c ∈ span{1}
+                                            
+
+
+with M1 , . . . , Mt ∈ M .
+
+   Note that each SM1 ...Mt is a linear subspace of Rn , with a dimension no larger than n. If all SM1 ...Mt
+are lower-dimensional subspaces of Rn , SM1 ...Mt has zero measure for any M0 , . . . , Mt ∈ M . This in turn
+tells us that SM is a zero-measure set for M is a union of countably many zero-measure sets. On the other
+hand, if there exists M0 , . . . , Mt ∈ M such that SM1 ...Mt is n dimension, we have SM = Rn . Therefore,
+either SM = Rn or SM is a zero-measure set in Rn . The desired almost everywhere impossibility conclusion
+holds immediately since we already proved non-existence of globally finite-time convergent m-regular clique
+gossiping.
+
+
+4.4     Proof of Complexity
+
+Recall that m = pr11 · · · prdd and n = ps11 · · · psdd with si ≥ ri > 0. We have provided an algorithm that
+converges in δ(n, m)n/m steps. Now we prove that it is indeed the fastest algorithm. Consider any m-
+regular clique gossip algorithm that converges globally in finite time. Then there must exist T ≥ 0 such
+that
+                                                                       1 T
+                                            Mσ(T ) · · · Mσ(1) =         11 .
+                                                                       n
+                                                                          1
+                                                     
+Introduce N(t) = Mσ(t) · · · Mσ(1) and hi (t) =          s : [Mσ(s) ]ii = m , 1 ≤ s ≤ t . Note that hi (t) represents
+the number of times at which i is in the selected cliques for the first t steps.
+
+
+
+                                                            24
+    Denote τ = arg max1≤i≤d d srii e. Associated with the prime number pτ , we define a function Pτ (·) over
+all natural numbers by
+                                  Pτ (x) = max{k : x = ypkτ , y ∈ N, k ∈ Z}.
+In other words, Pτ (x) is the number of powers of the prime number pτ in the arithmetic decomposition
+of x.
+
+    We can verify recursively that
+                                                           γii (t)
+                                              [N(t)]ii =           ,
+                                                           δii (t)
+where γii (t) and δii (t) are coprime numbers with Pτ (δii (t)) ≤ hi (t)rτ . Based the facts that [N(T )] = 1/n
+and Pτ (n) > δ(n, m) − 1 rτ , we obtain
+                             
+
+
+                              δ(n, m) − 1 rτ < Pτ (n) = Pτ (δii (T )) ≤ hi (T )rτ .
+                                         
+
+
+This implies hi (T ) ≥ δ(n, m). On the other hand, there must hold
+                                                     n
+                                                     X
+                                        δ(n, m)n ≤         hi (T ) = T m.
+                                                     i=1
+
+We can now conclude T ≥ δ(n, m)n/m, and this is the fundamental lower bound that any m-regular
+clique gossip algorithm can reach in terms of convergence time. We have now proved the complexity claim
+in Theorem 3.(ii).
+
+
+
+5       Conclusions
+
+We have presented a framework for clique gossip protocols where node interactions utilize cliques as com-
+plete subnetworks in gossip processes. Clique-gossip protocols and clique-gossip averaging algorithms have
+been defined as generalizations of standard gossip protocols and gossip averaging algorithms, respectively.
+A fundamental eigenvalue invariance principle for periodic clique-gossip protocols was established, and
+the possibilities of realizing finite-time convergent clique-gossip averaging were thoroughly investigated.
+Numerical examples also revealed the acceleration effects of clique-gossiping compared to standard gossip-
+ing. Interesting future directions include concrete theoretical validations of how much improvement can
+be gained via clique-gossiping in terms of efficiency, and self-organized or engineering mechanism that
+produces local cliques across a network.
+
+
+
+References
+
+[1] P. T. Eugster, R. Guerraoui, S. B. Handurukande, and P. Kouznetsov, “Lightweight probabilistic
+    broadcast,” ACM Trans. Computer Systems, 21(4): 341–374, 2003.
+
+[2] M. Jelasity, A. Montresor, and O. Babaoglu, “Gossip-based aggregation in large dynamic networks,”
+    ACM Trans. Computer Systems, 23(3): 291–252, 2005.
+
+                                                      25
+[3] D. Shah. Gossip algorithms. Foundations and Trends in Networking, 3(1): 1–125, 2008.
+
+[4] V. Ravelomanana, “Optimal initialization and gossiping algorithms for random radio networks,” IEEE
+   Transactions on Parallel and Distributed Systems, vol. 18, no. 1, 2007.
+
+[5] K. Hopkinson, K. Jenkins, K. Birman, J. Thorp, G. Toussaint, and M. Parashar, “Adaptive gravita-
+   tional gossip: A gossip-based communication protocol with user-selectable rates,” IEEE Transactions
+   on Parallel and Distributed Systems, vol. 20, no. 12, pp. 1830–1843, 2009.
+
+[6] K. Iwanicki and M. van Steen, “Gossip-based self-management of a recursive area hierarchy for large
+   wireless sensornets,” IEEE Transactions on Parallel and Distributed Systems, vol. 21, no. 4, pp. 562–
+   576, 2010.
+
+[7] A. Demers, D. Greene, C. Hauser, W. Irish, J. Larson, S. Shenker, H. Sturgis, D. Swinehart, and
+   D. Terry, “Epidemic algorithms for replicated database maintenance,” Proceedings of the 7th ACM
+   Symposium on Operating Systems Principles. ACM, New York, 1–12, 1987.
+
+[8] D. Kempe, J. Kleinberg, and A. Demers, “Spatial gossip and resource location protocols,” Journal of
+   ACM, 51(6): 943–967, 2004.
+
+[9] B. Doerr, M. Fouz, and T. Friedrich, “Why rumors spread so quickly in social networks?” Communi-
+   cations of ACM, 55(6): 2012.
+
+[10] F. Bullo, R. Carli, and P. Frasca, “Gossip coverage control for robotic networks: dynamical systems
+   on the space of partitions,” SIAM J. Control Optim., 50(1): 419–447, 2012.
+
+[11] A. G. Dimakis, S. Kar, J. M. F. Moura, M. G. Rabbat, and A. Scaglione, “Gossip algorithms for
+   distributed signal processing,” Proceedings of IEEE, 98(11): 1847–1864, 2010.
+
+[12] K. I. Tsianos and M. G. Rabbat, “Consensus-based distributed online prediction and optimization,”
+   IEEE GlobalSIP Network Theory Symposium, pp. 807–810, 2013.
+
+[13] S. Mou and B. D. Anderson, “Eigenvalue invariance of inhomogeneous matrix products in distributed
+   algorithms,” IEEE Control Systems Letters, vol. 1, pp. 8–13, 2017.
+
+[14] D. Kempe, A. Dobra, and J. Gehrke, “Gossip-based computation of aggregate information,” Proc.
+   Foundations of Computer Science, 482–491, 2003.
+
+[15] S. Boyd, A. Ghosh, B. Prabhakar and D. Shah, “Randomized gossip algorithms,” IEEE Trans. In-
+   formation Theory, 52(6): 2508–2530, 2006.
+
+[16] J. Liu, S. Mou, A. S. Morse, B. D. Anderson, and C. Yu, “Deterministic gossiping,” Proceedings of
+   the IEEE, vol. 99, no. 9, pp. 1505–1524, 2011.
+
+
+
+
+                                                    26
+[17] G. Shi, B. Li, M. Johansson, and K. H. Johansson, “Finite-time convergent gossiping,” IEEE/ACM
+   Transactions on Networking, vol. 24, no.4, pp. 2782–2794, 2016.
+
+[18] G. Shi, B. D. O. Anderson, and K. H. Johansson, “Consensus over random graphs: network Borel-
+   Cantelli lemmas for almost sure convergence,” IEEE Transactions on Information Theory, 61(10):
+   5690-5707, 2015.
+
+[19] Y. Zeng, R. C. Hendriks, and R. Heusdens, “Clique-based distributed beamforming for speech en-
+   hancement in wireless sensor networks,” in Signal Processing Conference (EUSIPCO), 2013 Proceed-
+   ings of the 21st European, pp. 1–5, 2013.
+
+[20] K. Biswas, V. Muthukkumarasamy, E. Sithirasenan, and M. Usman, “An energy efficient clique based
+   clustering and routing mechanism in wireless sensor networks,” Wireless Communications and Mobile
+   Computing Conference, pp. 171–176, 2013.
+
+[21] R. L. Brooks, “On colouring the nodes of a network,” in Mathematical Proceedings of the Cambridge
+   Philosophical Society, vol. 37, pp. 194–197, Cambridge Univ Press, 1941.
+
+[22] J. B. Fraleigh, A First Course in Abstract Algebra. Pearson Education India, 2003.
+
+[23] S. Mou, C. Yu, B. D. Anderson, and A. S. Morse, “Deterministic gossiping with a periodic protocol,”
+   in Decision and Control (CDC), 2010 49th IEEE Conference on, pp. 5787–5791, IEEE, 2010.
+
+[24] T. H. Cormen, C. E. Leiserson, R. L. Rivest, C. Stein, “Introduction to Algorithms,” MIT Press,
+   vol. 44, pp. 97–138, 1990.
+
+[25] J. M. Hendrickx, G. Shi, and K. H. Johansson, “Finite-time consensus using stochastic matrices with
+   positive diagonals,” IEEE Transactions on Automatic Control, vol. 60, no. 4, pp. 1070–1073, 2015.
+
+[26] R. A. Horn and C. R. Johnson, Matrix Analysis. Cambridge university press, 2012.
+
+
+
+
+                                                  27
+

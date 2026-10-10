@@ -1,0 +1,679 @@
+                                                  ON HIGHER DIMENSIONAL INTEGRALITY AND
+                                                  MULTIPLICATIVE DEPENDENCE IN SEMI-GROUP
+                                                            ALGEBRAIC DYNAMICS
+
+
+                                                                    JORGE MELLO AND YU YASUFUKU
+
+
+                                                  Abstract. We study multiplicative dependence of points in semi-group or-
+arXiv:2604.03745v1 [math.NT] 4 Apr 2026
+
+
+
+
+                                                  bits in higher-dimensions. More specifically, we show that the non-density
+                                                  of integral points in semi-group orbits implies sparsity of multiplicative de-
+                                                  pendence in orbits. This can be viewed as a semi-group dynamical and a
+                                                  higher-dimensional version of recent results by Bérczes–Ostafe–Shparlinski–
+                                                  Silverman, which in turn can be viewed as a generalization of theorems of
+                                                  Northcott and Siegel. We also confirm that the non-density hypothesis of
+                                                  integral points in orbits is implied by Vojta’s conjecture.
+
+
+
+
+                                                                              1. Introduction
+                                             Starting with Silverman [16], integral points in orbits under rational maps have
+                                          been studied extensively. For example, [10] has studied how the number of integral
+                                          points varies depending on various parameters, and [4, 8] have also studied this
+                                          problem over function fields and fields of bounded degree, to cite a few. Moreover,
+                                          the first author [13] treated a generalization to the setting of semi-group dynamics.
+                                          The arithmetic dynamics of a single map is analogous to a rank-one abelian variety,
+                                          and the full analogy with abelian varieties is in some sense the semi-group dynamics
+                                          of multiple maps. Further, several authors [18, 19, 12, 7, 5, 14] have studied the
+                                          higher-dimensional analogs.
+                                             Some of the integrality results in dimension 1 have implications on the multi-
+                                          plicative dependence of elements in an orbit of a point. Namely, in [2, 15], the
+                                          authors prove finiteness results for algebraic numbers whose iterates by a rational
+                                          function are multiplicatively dependent. For example, when k is a number field,
+                                          f (x) ∈ k(x) has degree at least 2 and is not a constant multiple of power maps,
+                                          and Γ ⊂ k ∗ is a finitely-generated group,
+                                                      (n, m, α, u) : α ∈ P1 (k), u ∈ Γ, (f ◦n (α))r = u(f ◦m (α))s , n ≫ m
+                                                    
+
+                                          is finite for any fixed nonzero integers r, s, where we denote by f ◦n the n-th iterate
+                                          of f . Their results were recently generalized to multiplicative dependence modulo
+                                          approximate finitely generated groups [1]. These types of results can be viewed
+                                          as generalizations of Siegel’s theorem on the finiteness of elements with algebraic
+                                          integer images under a rational function and also of Northcott’s Theorem on the
+                                          finiteness of preperiodic points.
+                                              In this paper, we generalize these results to multiplicative dependence under
+                                          multiple maps on higher-dimensional varieties. Unlike in dimension 1, known in-
+                                          tegrality results are rather scarce and often based on conjectures, so our main
+                                          result deals with multiplicative dependence for semi-group dynamics assuming that
+                                          a certain Zariski-non-density result holds for integral points in orbits. To state
+                                          our results precisely, let ϕ1 , . . . , ϕℓ be self-maps. We denote by F the semi-group
+                                          generated by ϕ1 , . . . , ϕℓ under composition, and by OF (P ) the semi-group orbit of
+                                          a point P
+                                                                                   {ϕ(P ) : ϕ ∈ F}.
+                                                                                        1
+2                              JORGE MELLO AND YU YASUFUKU
+
+
+On PN , we can define the multiplicative structure by defining [a0 : · · · : aN ] · [b0 :
+· · · : bN ] = [a0 b0 : · · · : aN bN ], and we denote [ar0 : · · · : arN ] by [a0 : · · · : aN ]r for
+any r ∈ Z if none of the coordinates is zero. Via the standard inclusion GN                 m ,→ P
+                                                                                                    N
+                                                                                                  N
+defined by (a1 , . . . , aN ) 7→ [1 : a1 : · · · : aN ], the multiplicative structures on P is
+compatible with that of GN         m . Our first result generalizes some instances of [2] to
+higher dimension for multiple maps.
+Theorem 1.1. Let k be a number field, and Γ be a finitely generated subgroup of
+GN         N                                                         N
+  m (k) ⊂ P (k). For i = 1, . . . , ℓ, let ϕi be an endomorphism of P of degree di ≥ 2
+defined over a number field k, and let F be the semi-group generated by ϕ1 , . . . , ϕℓ
+under composition. Now, for ϵ ∈ [0, 1), let us consider the following hypothesis:
+        There exists a nontrivial subdivisor D of (X0 X1 · · · XN = 0) such
+        that for all sufficiently large finite subset S of places containing all
+        archimedean ones,
+                 [                             X
+(Hypϵ )                  ϕ(P ) : ϕ ∈ F \ {id},     λv (D, ϕ(P )) < ϵh(D, ϕ(P ))
+                 P ∈PN (k)                           v ∈S
+                                                       /
+
+          is contained in some Zariski-closed Zϵ = Zϵ,D,S ̸= PN .
+Then for any c < 1, the above hypothesis for some ϵ ≥ 1+c        2 implies that there exist
+finitely many points P1 , . . . , Pm such that
+
+         ϕ(P ) : P ∈ PN (k), ϕ(P )r = u · ψ(P )s , ϕ ∈ F \ {id}, ψ ∈ F, u ∈ Γ,
+       
+(1)
+                                                                     s                 o
+                                              / |D|, r, s ∈ Z \ {0},
+                                 ϕ(P ), ψ(P ) ∈                        deg ψ ≤ c deg ϕ
+                                                                     r
+is contained in
+                                            [m
+                                      Zϵ ∪      OF (Pi ).
+                                               i=1
+
+   From the proof of Theorem 1.1, it will be clear that we can generalize it to
+the setting of projective varieties, if we have endomorphisms ϕ1 , . . . , ϕℓ which are
+polarized by the same divisor; see Remark 3.1 for more details. We will also mention
+in Remark 3.2 how Theorem 1.1 can also be generalized to “vector-type” relations.
+In addition, we will comment in Remark 3.3 on what more one can say when we
+fix r and s.
+   It will be interesting to know if there are examples where (1) is not contained in
+a Zariski-non-dense set but only contained in its union with finitely many orbits.
+In other words, Theorem 1.1 does not rule out the possibility that there is a P
+whose F -orbit is Zariski-dense and there exist infinitely many ϕ ∈ F for which
+ϕ(P ) belongs to (1). In the case of one-variable polynomials with Γ being trivial,
+Young [20] has shown that such a relation for infinitely many orbit points forces
+the maps to be special, but it is not clear if the same holds in higher-dimensions
+and/or when Γ has some generators.
+   We now consider the case when the group relation occurs between an iterate and
+its post-composition with other maps.
+Theorem 1.2. Under the same setup as Theorem 1.1, for any c < 1, (Hypϵ ) of
+Theorem 1.1 for some ϵ ≥ 1+c
+                          2 implies that for any s, r ∈ Z \ {0}
+
+        (ϕ(ψ(P )), ψ(P )) : P ∈ PN (k), ϕ ∈ F \ {id}, ψ ∈ F , ϕ(ψ(P )) ∈
+      
+(2)                                                                    / Zϵ ,
+                                                     r               s            o
+             u ∈ Γ, ϕ(ψ(P )), ψ(P ) ∈/ |D|, ϕ(ψ(P )) = u · ψ(P )s ,       ≤ c deg ϕ
+                                                                       r
+is finite.
+                                                                                       3
+
+
+   Note that for the case of an orbit under a single map f , f ◦n is equal to f ◦m
+post-composed with f ◦(n−m) when n > m. As a result, we have the following
+corollary.
+Corollary 1.3. Under the same setup as Theorem 1.1 but suppose that F is gen-
+erated by just one map f of degree d. Then for any c < 1, (Hypϵ ) of Theorem 1.1
+for some ϵ ≥ 1+c 2 implies that for any s, r ∈ Z \ {0}
+    ◦n
+     (f (P ), f ◦m (P )) : P ∈ PN (k), n > m, f ◦n (P ) ∈
+                                                        / Zϵ ,
+                                                    r             s s         o
+                                     / |D|, f ◦n (P ) = u · f ◦m (P ) ,
+         u ∈ Γ, f ◦n (P ), f ◦m (P ) ∈                                    ≤ cdn−m
+                                                                        r
+is finite.
+   This corollary can be thought of as a higher-dimensional generalization of [2],
+as explained in more detail in Remark 3.5. The proof of Theorem 1.1 uses the
+usual height, while the proof of Theorem 1.2 takes advantage of canonical heights
+to obtain more precise height bounds, as explained in further details in Remark
+3.6.
+        P comment on the hypothesis (Hypϵ ). Since a set of (D, S)-integral points
+   We now
+satisfy v∈S / λv (D, P ) ≤ C for some constant C, this hypothesis in particular shows
+Zariski-non-density of integral points in semi-group orbit. Moreover, if the orbit is
+generic (i.e. any infinite subset is Zariski-dense), it follows that the set of integral
+points in the semi-group orbit is finite. While (Hypϵ ) is known to be true for di-
+mension 1 by [16, 10], it is still open in dimension at least 2. The first author has
+obtained results [14] in this direction using Diophantine approximation results for
+hypersurfaces by Evertse–Ferretti [6], which in turn is based on Schmidt subspace
+theorem. For a single map in higher-dimension, the second author [18] has obtained
+results in the direction of hypothesis (Hypϵ ) assuming a deep Diophantine conjec-
+ture by Vojta [17], which can be thought of as a vast generalization of the Schmidt
+subspace theorem and a strengthening of results of Evertse–Ferretti. Following
+these ideas, we show in Theorem 4.2 situations where (Hypϵ ) holds for sufficiently
+small ϵ, assuming Vojta’s Main Conjecture. Since Theorems 1.1 and 1.2 require
+knowing (Hypϵ ) for sufficiently large ϵ, this is nowhere near satisfactory even under
+assuming Vojta’s conjecture; we present it here merely to demonstrate that the
+hypothesis (Hypϵ ) at least seems reasonable. We provide a specific example of all
+of our results in Example 4.4.
+
+                          2. Preliminaries on heights
+  In this section, we set some notations and conventions around height functions.
+For more details, see for example [3] and [9]. Let k be a number field, and let
+Mk be the set of places. For the unique archimedean place of MQ , we use the
+usual absolute value on R as the normalized one. For the non-archimedean place of
+MQ corresponding to the prime p, we normalize the absolute value by defining the
+absolute value of p to be p1 . We then normalize the absolute value corresponding to
+                                                 v :Qv ]
+each place v ∈ Mk by defining |x|v to be the [k[k:Q]     -th power of the absolute value
+in v whose restriction to Q is a normalized absolute value on Q. We then define a
+Weil (global) height on the projective space PN by
+                                               X
+                       h([a0 : · · · : aN ]) =    log max |ai |v
+                                                       i
+                                            v∈Mk
+
+for [a0 : · · · : aN ] ∈ PN (k). This becomes a well-defined function on PN (Q). For
+a nontrivial effective divisor D on PN defined over k, we choose a homogeneous
+4                            JORGE MELLO AND YU YASUFUKU
+
+
+polynomial F of degree d with coefficients in the ring Ok of integers of k so that D
+is defined by F , and we define a local height function for each v ∈ Mk by
+                                                           (max |ai |v )d
+                      λv (D, [a0 : · · · : aN ]) = log                           .
+                                                         |F (a0 , . . . , aN )|v
+This is a well-defined function on (PN \ |D|)(k). For a general divisor D on a
+projective variety X, we first write D as the difference of two very ample Cartier
+divisors D1 and D2 , where Di = φ∗i (Hi ) for some closed immersion φi : X −→ PNi
+and Hi is a hyperplane in PNi . We then define Weil height to be
+                            h(D, P ) = h(φ1 (P )) − h(φ2 (P )).
+Moreover, letting si,1 , . . . , si,ℓi be a basis of global sections of the line bundle L (Di )
+and choosing one rational section s of L (D), we can define local height to be
+               λv (D, P ) = max min log s1,m ⊗ (s2,ℓ ⊗ s)−1 (P ) v ,
+                                                                       
+                                 m     ℓ
+
+where we evaluate at P via the isomorphism L (D1 ) ⊗ (L (D2 ) ⊗ L (D))−1 ∼    = OX .
+This notion is well-defined in the sense that if we choose different parameters for
+the ample divisors or the global/rational sections, the two local height functions
+agree on all but finitely many places and even at those finitely many places, their
+difference is a bounded function.
+   The local and Weil height are functorial with respect to pullbacks, namely, when-
+ever φ : Y −→ X is a morphism of algebraic varieties, there exists a constant C
+such that
+                           |h(φ∗ D, P ) − h(D, φ(P ))| ≤ C
+for P ∈ Y (Q), and there exists a sequence of constants {Cv }v∈Mk such that Cv = 0
+for all but finitely many v and
+                            |λv (φ∗ D, P ) − λv (D, φ(P ))| ≤ Cv
+for all P ∈ Y (k) \ φ−1 |D| and v ∈ Mk . Moreover, there exists a constant C such
+that
+                                      X
+(3)                        h(D, P ) −     λv (D, P ) ≤ C
+                                           v∈Mk
+
+holds for P ∈ (X \ |D|)(k). For an effective divisor D, there exists a sequence
+{Cv }v∈Mk such that Cv = 0 for all but finitely many v and
+                                       λv (D, P ) ≥ Cv
+holds for P outside |D| for each v; in particular, for a finite subset S ⊂ Mk , there
+exists a constant C such that
+                           X
+(4)                            λv (D, P ) ≤ h(D, P ) + C
+                               v ∈S
+                                 /
+
+for all P outside |D|.
+
+                         3. Proofs of the main theorems
+Proof of Theorem 1.1. Since ϕi ’s are morphisms of degree di on PN , there exists a
+constant C such that
+                             h(ϕi (Q))
+                                        − h(Q) ≤ C
+                                  di
+holds for all Q ∈ PN (Q) and for all i = 1, . . . , ℓ. By an inductive argument using
+                 h(ϕ ◦ ψ(Q))
+                                − h(Q)
+                deg(ϕ) · deg(ψ)
+                                                                                      5
+
+
+                    1    h(ϕ ◦ ψ(Q))             h(ψ(Q))
+              ≤                      − h(ψ(Q)) +         − h(Q)
+                  deg(ψ)   deg(ϕ)                 deg(ψ)
+
+
+we must have
+                        h(ϕ(Q))                C
+(5)                             − h(Q) ≤          1       =: C1
+                         deg(ϕ)          1 − min deg(ϕ i)
+
+for all ϕ ∈ F. Moreover, there exists a constant C2 such that
+                                |h(D, Q) − (deg D)h(Q)| ≤ C2
+for all Q ∈ PN (Q). Now, let S be the set of places large enough so that hypothesis
+(Hypϵ ) is satisfied and the coordinates of all the generators are S-units. This makes
+any coordinate of any element of Γ into an S-unit (if nonzero). Suppose that ϕ(P )
+is in the set (1), ϕ(P ) ∈
+                         / Z for a certain ϵ to be chosen later, and ϕ(P ) lies outside
+|D|. Then because of hypothesis (Hypϵ ) and the fact that any element in Γ does
+not have any valuation outside of S,
+                                                           
+                  ϵ (deg D) deg(ϕ)h(P ) − deg(ϕ)C1 − C2
+                                             
+                    ≤ ϵ (deg D)h(ϕ(P )) − C2
+                  ≤ ϵh(D, ϕ(P ))
+                    X
+                  ≤    λv (D, ϕ(P ))
+                      v ∈S
+                        /
+                       s X
+(6)               ≤        λv (D, ψ(P ))        (∵ u ∈ Γ)
+                       r
+                             v ∈S
+                               /
+                   s
+                  ≤  (h(D, ψ(P )) + C3 )     (∵ (4))
+                   r
+                   s
+                ≤    ((deg D)h(ψ(P )) + C4 )
+                   r 
+                   s                                          
+                ≤      (deg D) deg(ψ)h(P ) + deg(ψ)C1 + C4 .
+                   r
+Therefore, we have
+                        s       
+(7) (deg D) ϵ deg(ϕ) −     deg(ψ) h(P )
+                     r                         s
+                 ≤ ϵ (deg D) deg(ϕ)C1 + C2 +        ((deg D) · deg(ψ)C1 + C4 ) .
+                                                 r
+By choosing ϵ to be at least c+1
+                               2 , it follows from (1) that the coefficient of h(P ) on
+the left-hand side of the (7) is at least deg D · 1−c
+                                                    2 · deg(ϕ), while the right-hand
+side can be bounded above by
+                   (ϵ(deg D)C1 + c(deg D)C1 + cC4 ) deg(ϕ) + ϵC2 .
+Thus, dividing both sides by deg(ϕ), it follows that h(P ) must be bounded above
+by a constant, independent of ϕ or ψ. Thus P must come from a finite list by the
+Northcott property, and such a ϕ(P ) must lie in finitely many orbits.        □
+
+Remark 3.1. This theorem extends to “simultaneously polarizable endomorphisms”
+on a projective variety X. Namely, we fix an embedding ι : X ,→ PN , and suppose
+that there is an ample divisor A such that ϕ∗i (A) is linearly equivalent to di A for
+some di ≥ 2. Then the same statement as the theorem holds if the hypothesis
+is satisfied after viewing the points in PN via ι and assuming the hypothesis via
+ι. The proof is exactly the same as above, and for this reason we have avoided
+6                             JORGE MELLO AND YU YASUFUKU
+
+
+using for example h(A, Q) = (deg A)h(Q), which is true without any adjustment
+by constants on projective space.
+Remark 3.2. From the proof, it is evident that one can generalize Theorem 1.1
+to more general multiplicative relations. Namely, letting ⃗r ∈ (Z \ {0})N , we define
+(a1 , . . . , aN )⃗r = (ar11 , . . . , arNN ) if none of the coordinates is zero. This does not in
+general extend to a multiplication on PN , but whenever the orbit does not intersect
+the divisor (X0 · · · XN = 0), this multiplication is well-defined via the inclusion
+GNm ,→ P
+               N
+                  we used above. Since the only part of the argument affected by this
+change is (6), we would obtain the same conclusion for the set
+      ϕ(P ) ∈ Pn (k) : ϕ(P ), ψ(P ) ∈          / (X0 · · · XN = 0), ϕ(P )⃗r = uψ(P )⃗s ,
+   
+                                                                                                 
+                                                                            deg ϕ             si
+                                             u ∈ Γ, ⃗r, ⃗s ∈ (Z \ {0})N , c       ≥      max       .
+                                                                            deg ψ i:(Xi =0)⊂D ri
+Remark 3.3. Rearranging (7), we obtain
+                                  s                                 s
+             (deg D) ϵ deg(ϕ) −      deg(ψ) (h(P ) − C1 ) ≤ ϵC2 +        C4 .
+                                   r                                  r
+Our choice of ϵ as in the proof thus shows
+                          1−c                                     s
+                  deg D ·       · deg(ϕ)(h(P ) − C1 ) ≤ ϵC2 +       C4 .
+                            2                                     r
+Therefore, either h(P ) ≤ C1 +1 and thus P comes from a finite set by the Northcott
+property, or we have
+                                 1−c                       s
+                        deg D ·       · deg(ϕ) < ϵC2 +       C4 .
+                                   2                       r
+In the latter case, if we assume further that r and s are fixed (or at least if | rs | is
+bounded), it follows that deg(ϕ) is bounded and hence there are only finitely many
+possibilities for ϕ. Thus, we can conclude that ϕ(P ) as in (1) either lies in Zϵ or P
+comes from a finite set.
+   As for the conclusion ϕ(P ) ∈ Zϵ , it seems difficult to change this to some kind of
+a finiteness statement, even under further assumptions. For a single P , ϕ(P ) ∈ Zϵ
+only occurs for finitely many ϕ’s if we assume that the semigroup orbit of P is
+generic, that is, any infinite subset is Zariski-dense. However, when we allow P
+to vary, one could in theory have infinitely many ϕ(P )’s lying in Zϵ , coming from
+infinitely many P ’s with each having generic semigroup orbit.
+   We now prove Theorem 1.2, which deals with multiplicative dependence occur-
+ring between an iterate and its further iterate.
+Proof of Theorem 1.2. Let (ϕ ◦ ψ(P ), ψ(P )) be in the set (2). If γ = (γm )m≥1 is an
+infinite word consisting of ϕ1 , . . . , ϕℓ , Kawaguchi [11, Theorem 3.3] has defined the
+                 hγ with respect to γ by
+canonical height b
+                                           h(γn ◦ · · · ◦ γ1 (P ))
+                             hγ (P ) = lim
+                             b                                     ,
+                                      n→∞ deg(γn ◦ · · · ◦ γ1 )
+
+and shown that
+                        b                              hγ (P )
+                         h(γm )m≥2 (γ1 (P )) = deg(γ1 )b
+for all P and that there exists a constant C5 (depending on ϕ1 , . . . , ϕℓ , but inde-
+pendent of γ) such that
+                                 hγ (P ) − h(P )| ≤ C5
+                                |b
+for all P . Let γ be the infinite word corresponding to ϕ ◦ ϕ ◦ · · · . Then letting
+Q = ψ(P ), whenever ϕ ◦ ψ(P ) ∈ / Zϵ ∪ |D|, we must have
+                                                             
+                      ϵ (deg D) deg(ϕ)b    hγ (Q) − C5 − C2
+                                                                                       7
+
+                                                       
+(8)                                  hγ (ϕ(Q)) − C5 − C2
+                         = ϵ (deg D) b
+                                                
+                         ≤ ϵ (deg D)h(ϕ(Q)) − C2
+                         ≤ ϵh(D, ϕ(Q))
+                           X
+                         ≤    λv (D, ϕ(Q))
+                             v ∈S
+                               /
+                              s X
+                         ≤        λv (D, Q)
+                              r
+                                    v ∈S
+                                      /
+                             s
+                         ≤     (h(D, Q) + C3 )
+                             r 
+                             s                      
+                         ≤       (deg D)h(Q) + C4
+                             r 
+                             s                             
+                         ≤       (deg D) bhγ (Q) + C5 + C4 ,
+                             r
+where we used C2 , C3 , C4 as in the proof of Theorem 1.1. Rearranging terms, we
+must have
+                          s b
+(9) (deg D) ϵ deg(ϕ) −         hγ (Q)
+                           r
+                                                              s
+                                    ≤ ϵ((deg D)C5 + C2 ) +      ((deg D)C5 + C4 ).
+                                                              r
+Choosing ϵ ≥ 1+c , the coefficient of b
+                2                     hγ (Q) in (9) is bounded below by
+                                      1−c
+                                           deg(ϕ),
+                                     (deg D)
+                                       2
+while the right-hand side of (9) is a constant (note that r and s are fixed for
+this theorem). Therefore, we conclude that deg(ϕ)b hγ (Q) is bounded above by a
+constant. Since
+          deg(ϕ)b        hγ (ϕ(Q)) ≥ h(ϕ(Q)) − C5 = h(ϕ(ψ(P ))) − C5 ,
+                hγ (Q) = b
+it follows that h(ϕ(ψ(P ))) is also bounded above by a constant, and by the North-
+cott property, there are only finitely many such ϕ(ψ(P ))’s. This argument also
+shows that b hγ (Q) is also bounded, so we obtain the finiteness of Q = ψ(P ) as
+well.                                                                           □
+Remark 3.4. The same proof works even for an infinitely-generated F, as long as
+the generators form a “bounded” set of maps, as defined in Kawaguchi [11].
+Remark 3.5. This can be thought of as a natural generalization of Bérczes–Ostafe–
+Shparlinski–Silverman [2]: for a single map f , f ◦(n+k) = f ◦n ◦f ◦k , so we can always
+write in the form ϕ ◦ ψ, and (Hypϵ ) of Theorem 1.1 was proved affirmatively by
+Silverman [16] for rational functions f on P1 whose preimages of 0 contain more
+than 2 points. The condition in [2] is
+                                            log |s/r|
+                                       n≥             + 1,
+                                              log d
+and for ϕ = f ◦n , this is equivalent to d1 deg(ϕ) ≥ |s/r|.
+Remark 3.6. We use the canonical height, instead of the naive height, in the proof
+of Theorem 1.2 because of step (8). If we use the naive height, we only have (5), so it
+will be necessary to adjust by a constant multiple of deg ϕ in (8) and the argument
+does not work. Similarly, since the value of the canonical height b hγ depends on γ,
+the argument of the proof of Theorem 1.2 does not immediately generalize to the
+general orbit dependency of ϕ(P )r = u · ψ(P )s .
+8                            JORGE MELLO AND YU YASUFUKU
+
+
+          4. Regarding Hypothesis (Hypϵ ) and Vojta’s conjecture
+    We will first recall the Main Conjecture of Vojta [17, Conjecture 3.4.3].
+Conjecture 4.1. Let X be a smooth projective variety defined over a number field
+k, K be a canonical divisor, A be an ample divisor, and D be a reduced normal-
+crossings divisor. Let S be a finite subset of Mk . Then given ϵ > 0, there exists a
+Zariski-closed Z = Zϵ ̸= X such that
+                        X
+(10)                        λv (D, P ) + h(K, P ) ≤ ϵh(A, P )
+                            v∈S
+
+for all P ∈ (X \ Z)(k).
+  One of the known cases of the conjecture above is when X is the projective space
+and D is a union of hyperplanes, known as Schmidt subspace theorem. We now use
+Conjecture 4.1 to obtain paucity of integral points in orbits, confirming hypothesis
+(Hypϵ ) for sufficiently small ϵ:
+Theorem 4.2. Let X be a smooth projective variety defined over a number field k,
+K be a canonical divisor of X, A an ample divisor of X, S be a finite set of places of
+k, and ϕ1 , . . . , ϕℓ be endomorphisms of X defined over k. Let F be the semi-group
+generated by ϕ1 , . . . , ϕℓ under composition. Suppose that there exist ψ1 , . . . , ψm ∈ F
+and a nontrivial effective divisor D defined over k such that
+                     (nc)         (rest)                        (rest)
+      (i) ψi∗ (D) = Di + Di        for an effective divisor Di
+            (nc)
+     (ii) Di     is a reduced normal-crossings divisor
+            (nc)
+    (iii) Di + K is big
+                       m
+                       [
+    (iv) F \ {id} =       ψi ◦ F .
+                     i=1
+                                                   (nc)
+Then assuming Vojta’s conjecture for (X, Di ), for all sufficiently small ϵ, the set
+                                        X
+(11)     ϕ(P ) : P ∈ X(k), ϕ ∈ F \ {id},   λv (D, ϕ(P )) ≤ ϵh(A, ϕ(P ))
+                                                 v ∈S
+                                                   /
+
+is Zariski-non-dense in X. If (iv) is replaced by
+                                      m
+                                                !
+                                      [
+                        F \ {id} ∪       ψi ◦ F is finite,
+                                           i=1
+
+the set (11) is contained in the union of a Zariski-non-dense set with the images of
+k-rational points by these finitely many maps.
+   From the proof, it will become clear how small ϵ has to be, and we will explore
+this in Example 4.4. As noted in the introduction, a similar result was obtained
+by the first author [14, Theorem 5.1] using Evertse–Ferretti result [6] in place of
+Vojta’s conjecture. Note that in one-dimension, the set of P ∈ P1 (k) for which
+ϕ(P ) is quasi-integral is finite by Siegel’s theorem as long as ϕ has at least three
+poles. As a result, for P1 , we conclude that (11) is finite as long
+                                              m
+                                                       !
+                                             [
+                                F \ {id} ∪      ψi ◦ F
+                                                 i=1
+
+is finite and each rational function in this set has at least three poles. An ana-
+log of Siegel’s theorem is not unconditionally known in higher-dimensions, and we
+typically have to assume conditions like (i)–(iii) even under Vojta’s conjecture.
+                                                                                                                       9
+
+                                                  (nc)
+Proof of Theorem 4.2. Since Di + K is big, there exists a proper Zariski-closed
+set Z1 and a positive constant c′i such that
+                                           (nc)
+(12)                                  h(Di        + K, Q) ≥ c′i h(A, Q) − O(1)
+for all Q ∈
+          / Z1 , where we use Landau’s big O notation. Now suppose ϕ(P ) belongs
+to the set (11) for some ϕ ∈ F. We may assume that ϕ = ψi ◦ η for some η ∈ F
+and i ≤ m. By the functoriality of heights,
+             X                                       X
+                  λv (D, ϕ(P )) ∼ h(D, ψi ◦ η(P )) −   λv (D, ψi ◦ η(P ))
+                    v ∈S
+                      /                                                    v∈S
+                                                         X
+                           ∼ h(ψi∗ (D), η(P )) −               λv (ψi∗ (D), η(P ))
+                                                         v∈S
+                               X
+(13)                       ∼          λv (ψi∗ (D), η(P ))
+                               v ∈S
+                                 /
+
+where we use ∼ to indicate that the difference of both sides is a bounded function
+away from a Zariski-non-dense subset of X(k). In addition, because of ampleness,
+there exist c′′i such that
+(14)                                    h(ψi∗ (A), Q) ≤ c′′i h(A, Q) + O(1)
+for all Q, so we have
+(15)                h(A, ψi ◦ η(P )) ∼ h(ψi∗ (A), η(P )) ≤ c′′i h(A, η(P )) + O(1).
+Applying (12) with Q = η(P ) and combining with (13), (15), and the condition in
+(11), we have
+                                        ϵc′′i h(A, η(P ))
+                                          ≥ ϵh(ψi∗ (A), η(P )) − O(1)
+                                          ≥ ϵh(A, ψi ◦ η(P )) − O(1)
+                                            X
+                                          ≥    λv (D, ψi ◦ η(P )) − O(1)
+                                              v ∈S
+                                                /
+                                              X
+                                          ≥          λv (ψi∗ (D), η(P )) − O(1)
+                                              v ∈S
+                                                /
+                                                          (nc)
+                                              X
+                                          ≥          λv (Di      , η(P )) − O(1),
+                                              v ∈S
+                                                /
+so
+                (nc)                                              (nc)                               (nc)
+     X                                                                                   X
+           λv (Di      , η(P )) + h(K, η(P )) ∼ h(Di                     + K, η(P )) −          λv (Di      , η(P ))
+     v∈S                                                                                 v ∈S
+                                                                                           /
+     ≥ c′i h(A, η(P )) − ϵc′′i h(A, η(P )) − O(1).
+Therefore, whenever ϵ is small enough so that c′i −ϵc′′i > 0 for all i, Vojta’s conjecture
+                            (nc)
+applied to the divisor Di         implies that there exists a proper Zariski-closed set Z2
+such that η(P ) ∈ Z2 . This argument shows that if ψi (η(P )) is in the set (11),
+ψi (η(P )) ∈ ψi (Z1 ) ∪ ψi (Z2 ).                                                        □
+                                                                     P
+Remark 4.3. Since the set of (D, S)-integral points satisfy v∈S          / λv (D, P ) ≤ C
+for some constant C, this theorem shows Zariski-non-density of integral points in
+semi-group orbit. More generally, for quasi-(D, S)-integral points, namely, for P
+satisfying
+                                   X
+                                      λv (D, P ) < ϵ′ h(D, P )
+                                             v ∈S
+                                               /
+10                           JORGE MELLO AND YU YASUFUKU
+
+
+then A being ample means that there exists a constant C such that h(D, P ) ≤
+Ch(A, P ) for all P , so we must have
+                             X
+                                λv (D, P ) < ϵ′ Ch(A, P ).
+                                v ∈S
+                                  /
+
+Hence for ϵ′ = Cϵ , such P lies in (11).
+  We include a quick unconditional example of Theorem 4.2 together with its
+implication to Theorem 1.1.
+Example 4.4. Let ϕ1 = [F0 : · · · : FN −1 : L1 · · · Ld ] and ϕ2 = [G0 : · · · : GN −1 :
+M1 · · · Md ] be endomorphisms on PN , where Fi and Gi are homogeneous polyno-
+mials of degree d, and where L1 , . . . , Ld and M1 , . . . , Md are linear forms in general
+position, respectively. If d > N + 1 then for D = (XN = 0), c′i in the proof of
+Theorem 4.2 can be taken to be d − (N + 1) while c′′i to be d. Therefore, if d is large
+enough so that d−(N   d
+                        +1)
+                            > 1+c
+                                2 , we have (Hypϵ ) unconditionally for sufficiently large
+ϵ by Theorem 4.2 using Schmidt subspace theorem in place of Vojta’s conjecture,
+and it follows that the set (1) and the set (2) are Zariski-non-dense from Theorems
+1.1 and 1.2 respectively.
+     Similarly, assume that ϕ1 = [X1 · · · XN F0 : F1 : · · · : FN ] and ϕ2 = [G0 :
+· · · : GN ] are endomorphisms on PN with F0 of degree d − N , F1 , . . . , FN are
+each product of d linear forms so that their total union is in general position, and
+where G1 , . . . , GN are each products of e linear forms whose total union is in general
+position and G0 is a product of e linear forms in general position. Then (ϕ◦2        ∗
+                                                                                 1 ) (X0 =
+                                                                                 ∗
+0) contains the union of dN hyperplanes in general position, (ϕ1 ◦ ϕ2 ) (X0 = 0)
+contains the union of eN hyperplanes in general position, and ϕ∗2 (X0 = 0) is the
+union of e hyperplanes in general position. Since
+                F \ {id} = {ϕ1 } ∪ (ϕ◦2
+                                     1 ◦ F ) ∪ (ϕ1 ◦ ϕ2 ◦ F ) ∪ (ϕ2 ◦ F ),
+as long as dN and e are sufficiently large (so this may work with a smaller d than
+the situation of the previous paragraph) and integral points in ϕ1 (PN (k)) are known
+to be Zariski-non-dense, (Hypϵ ) holds unconditionally for a large enough ϵ so that
+the set (1) and the set (2) are both Zariski-non-dense.
+   Acknowledgements: This project was initiated during the conference “Com-
+plex Dynamics and Related Topics” at RIMS of Kyoto University and continued
+during the AIM workshop “Dynamics of Multiple Maps.” Jorge Mello was sup-
+ported by the ARC Grant DP180100201 and Oakland University FCT and BFA
+grants, while Yu Yasufuku is supported by JSPS Kakenhi 19K03412, 24K06696,
+and 25H00587.
+
+                                        References
+ 1. Attila Bérczes, Yann Bugeaud, Kálmán Györy, Jorge Mello, Alina Ostafe, and Min Sha,
+    Multiplicative dependence of rational values modulo approximate finitely generated groups,
+    Math. Proc. Cambridge Philos. Soc. 177 (2024), no. 1, 149–165.
+ 2. Attila Bérczes, Alina Ostafe, Igor E. Shparlinski, and Joseph H. Silverman, Multiplicative
+    dependence among iterated values of rational functions modulo finitely generated groups, Int.
+    Math. Res. Not. IMRN (2021), no. 12, 9045–9082.
+ 3. Enrico Bombieri and Walter Gubler, Heights in Diophantine geometry, New Mathematical
+    Monographs, vol. 4, Cambridge University Press, Cambridge, 2006.
+ 4. Alexander Carney, Wade Hindes, and Thomas J. Tucker, Isotriviality, integral points, and
+    primitive primes in orbits in characteristic p, Algebra Number Theory 17 (2023), no. 9,
+    1573–1594.
+ 5. Pietro Corvaja, Vijay Sookdeo, Thomas J. Tucker, and Umberto Zannier, Integral points in
+    two-parameter orbits, J. Reine Angew. Math. 706 (2015), 19–33.
+ 6. Jan-Hendrik Evertse and Roberto G. Ferretti, Diophantine inequalities on projective varieties,
+    Int. Math. Res. Not. (2002), no. 25, 1295–1330.
+                                                                                                11
+
+
+ 7. Nathan Grieve and Chatchai Noytaptim, On non-Zariski density of (D, S)-integral points in
+    forward orbits and the subspace theorem, J. Number Theory 265 (2024), 36–47.
+ 8. Joseph Gunther and Wade Hindes, Integral points of bounded degree on the projective line
+    and in dynamical orbits, Proc. Amer. Math. Soc. 145 (2017), no. 12, 5087–5096.
+ 9. Marc Hindry and Joseph H. Silverman, Diophantine geometry: an introduction, Graduate
+    Texts in Mathematics, vol. 201, Springer-Verlag, New York, 2000.
+10. Liang-Chung Hsia and Joseph H. Silverman, A quantitative estimate for quasiintegral points
+    in orbits, Pacific J. Math. 249 (2011), no. 2, 321–342.
+11. Shu Kawaguchi, Canonical heights for random iterations in certain varieties, Int. Math. Res.
+    Not. IMRN (2007), no. 7, Art. ID rnm 023, 33.
+12. Yohsuke Matsuzawa, Growth of local height functions along orbits of self-morphisms on pro-
+    jective varieties, Int. Math. Res. Not. IMRN (2023), no. 4, 3533–3575.
+13. Jorge Mello, On quantitative estimates for quasiintegral points in orbits of semigroups of
+    rational maps, New York J. Math. 25 (2019), 1091–1111.
+14.         , On sparsity of integral points in orbits and correspondences with big pullbacks under
+    iterates, 2025, arXiv:2501.04642v2.
+15. Alina Ostafe, Min Sha, Igor E. Shparlinski, and Umberto Zannier, On multiplicative depen-
+    dence of values of rational functions and a generalization of the Northcott theorem, Michigan
+    Math. J. 68 (2019), no. 2, 385–407.
+16. Joseph H. Silverman, Integer points, Diophantine approximation, and iteration of rational
+    maps, Duke Math. J. 71 (1993), no. 3, 793–829.
+17. Paul Vojta, Diophantine approximations and value distribution theory, Lecture Notes in
+    Mathematics, vol. 1239, Springer-Verlag, Berlin, 1987.
+18. Yu Yasufuku, Integral points and relative sizes of coordinates of orbits in PN , Math. Z. 279
+    (2015), no. 3-4, 1121–1141.
+19.         , Uniformity of quasi-integral points of bounded degree in higher-dimensional orbits,
+    Math. Proc. Cambridge Philos. Soc. 178 (2025), no. 1, 15–29.
+20. Marley Young, On multiplicative dependence between elements of polynomial orbits, 2024,
+    arXiv:2402.13712.
+
+   Department of Mathematics and Statistics, Oakland University, Michigan, USA
+   Email address: jorgedemellojr@oakland.edu
+
+   Department of Mathematics, School of Education, Waseda University, Tokyo, Japan
+   Email address: yasufuku@waseda.jp
+

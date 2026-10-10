@@ -1,0 +1,177 @@
+{
+  "index": 34,
+  "query": "stabilizability switched linear systems",
+  "url": "https://api.openalex.org/works?filter=title.search%3Astabilizability+switched+linear+systems&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 631,
+  "results": [
+    {
+      "id": "https://openalex.org/W2062974796",
+      "title": "Stability and Stabilizability of Switched Linear Systems: A Survey of Recent Results",
+      "date": "2009-02-01",
+      "doi": "https://doi.org/10.1109/tac.2008.2012009",
+      "citations": 2681,
+      "authors": [
+        "Hai Lin",
+        "Panos J. Antsaklis"
+      ],
+      "abstract": "During the past several years, there have been increasing research activities in the field of stability analysis and switching stabilization for switched systems. This paper aims to briefly survey recent results in this field. First, the stability analysis for switched systems is reviewed. We focus on the stability analysis for switched linear systems under arbitrary switching, and we highlight necessary and sufficient conditions for asymptotic stability. After a brief review of the stability analysis under restricted switching and the multiple Lyapunov function theory, the switching stabilization problem is studied, and a variety of switching stabilization methods found in the literature are outlined. Then the switching stabilizability problem is investigated, that is under what condition it is possible to stabilize a switched system by properly designing switching control laws. Note that the switching stabilizability problem has been one of the most elusive problems in the switched systems literature. A necessary and sufficient condition for asymptotic stabilizability of switched linear systems is described here.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/tac.2008.2012009",
+          "pdf": null,
+          "source": "IEEE Transactions on Automatic Control"
+        },
+        {
+          "url": "http://scholarbank.nus.edu.sg/handle/10635/57500",
+          "pdf": null,
+          "source": "National University of Singapore"
+        }
+      ],
+      "reference_count": 110
+    },
+    {
+      "id": "https://openalex.org/W2031780472",
+      "title": "Stability and Stabilization of Switched Linear Systems With Mode-Dependent Average Dwell Time",
+      "date": "2011-12-09",
+      "doi": "https://doi.org/10.1109/tac.2011.2178629",
+      "citations": 1203,
+      "authors": [
+        "Xudong Zhao",
+        "Lixian Zhang",
+        "Peng Shi",
+        "Ming Liu"
+      ],
+      "abstract": "In this paper, the stability and stabilization problems for a class of switched linear systems with mode-dependent average dwell time (MDADT) are investigated in both continuous-time and discrete-time contexts. The proposed switching law is more applicable in practice than the average dwell time (ADT) switching in which each mode in the underlying system has its own ADT. The stability criteria for switched systems with MDADT in nonlinear setting are firstly derived, by which the conditions for stability and stabilization for linear systems are also presented. A numerical example is given to show the validity and potential of the developed techniques.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/tac.2011.2178629",
+          "pdf": null,
+          "source": "IEEE Transactions on Automatic Control"
+        },
+        {
+          "url": "https://vuir.vu.edu.au/23124/",
+          "pdf": null,
+          "source": "Victoria University Research Repository (Victoria University)"
+        },
+        {
+          "url": "http://hdl.handle.net/2440/77928",
+          "pdf": null,
+          "source": "Adelaide Research & Scholarship (AR&S) (University of Adelaide)"
+        }
+      ],
+      "reference_count": 32
+    },
+    {
+      "id": "https://openalex.org/W2077402293",
+      "title": "Stability and Stabilization of Continuous‐Time Switched Linear Systems",
+      "date": "2006-01-01",
+      "doi": "https://doi.org/10.1137/050646366",
+      "citations": 560,
+      "authors": [
+        "José C. Geromel",
+        "Patrizio Colaneri"
+      ],
+      "abstract": "This paper addresses two strategies for the stabilization of continuous‐time, switched linear systems. The first one is of open loop nature (trajectory independent) and is based on the determination of a minimum dwell time by means of a family of quadratic Lyapunov functions. The relevant point on dwell time calculation is that the proposed stability condition does not require the Lyapunov function to be uniformly decreasing at every switching time. The second one is of closed loop nature (trajectory dependent) and is designed from the solution of what we call Lyapunov–Metzler inequalities from which the stability condition (including chattering) is expressed. Being nonconvex, a more conservative but simpler‐to‐solve version of the Lyapunov–Metzler inequalities is provided. The theoretical results are illustrated by means of examples.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1137/050646366",
+          "pdf": null,
+          "source": "SIAM Journal on Control and Optimization"
+        },
+        {
+          "url": "http://www.repositorio.unicamp.br/jspui/handle/REPOSIP/74461",
+          "pdf": null,
+          "source": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)"
+        },
+        {
+          "url": "http://americanae.aecid.es/americanae/es/registros/registro.do?tipoRegistro=MTD&idBib=2837601",
+          "pdf": null,
+          "source": "Americanae (AECID Library)"
+        }
+      ],
+      "reference_count": 18
+    },
+    {
+      "id": "https://openalex.org/W2168146995",
+      "title": "Stabilization of switched linear systems",
+      "date": "2005-05-01",
+      "doi": "https://doi.org/10.1109/tac.2005.846594",
+      "citations": 326,
+      "authors": [
+        "Daizhan Cheng",
+        "Lei Guo",
+        "Yuandan Lin",
+        "Yuan Wang"
+      ],
+      "abstract": "In this note, we study the stabilization problem of systems that switch among a finite set of controllable linear systems with arbitrary switching frequency. For both cases of known and unknown switching functions, feedback laws are designed to achieve exponential stability. For the later case, a method combining on-line adaptive estimation and feedback stabilization is developed in the controller design.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/tac.2005.846594",
+          "pdf": null,
+          "source": "IEEE Transactions on Automatic Control"
+        }
+      ],
+      "reference_count": 33
+    },
+    {
+      "id": "https://openalex.org/W2033505412",
+      "title": "Robust Stability and Stabilization of Linear Switched Systems With Dwell Time",
+      "date": "2010-12-11",
+      "doi": "https://doi.org/10.1109/tac.2010.2097351",
+      "citations": 394,
+      "authors": [
+        "Liron I. Allerhand",
+        "U. Shaked"
+      ],
+      "abstract": "Sufficient conditions are given for the stability of linear switched systems with dwell time and with polytopic type parameter uncertainty. A Lyapunov function, in quadratic form, which is non-increasing at the switching instants is assigned to each subsystem. During the dwell time, this function varies piecewise linearly in time after switching occurs. It becomes time invariant afterwards. This function leads to asymptotic stability conditions for the nominal set of subsystems that can be readily extended to the case where these subsystems suffer from polytopic type parameter uncertainties. The method proposed is then applied to stabilization via state-feedback both for the nominal and the uncertain cases.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/tac.2010.2097351",
+          "pdf": null,
+          "source": "IEEE Transactions on Automatic Control"
+        }
+      ],
+      "reference_count": 14
+    },
+    {
+      "id": "https://openalex.org/W1983156283",
+      "title": "Controllability and stabilizability of switched linear-systems",
+      "date": "2002-12-30",
+      "doi": "https://doi.org/10.1016/s0167-6911(02)00288-8",
+      "citations": 269,
+      "authors": [
+        "Guangming Xie",
+        "Long Wang"
+      ],
+      "abstract": null,
+      "locations": [
+        {
+          "url": "https://doi.org/10.1016/s0167-6911(02)00288-8",
+          "pdf": null,
+          "source": "Systems & Control Letters"
+        }
+      ],
+      "reference_count": 15
+    },
+    {
+      "id": "https://openalex.org/W2111722166",
+      "title": "Adaptive stabilization of linear systems via switching control",
+      "date": "1986-12-01",
+      "doi": "https://doi.org/10.1109/tac.1986.1104187",
+      "citations": 314,
+      "authors": [
+        "Minyue Fu",
+        "B. Ross Barmish"
+      ],
+      "abstract": "In this paper, we develop a method for adaptive stabilization without a minimum-phase assumption and without knowledge of the sign of the high-frequency gain. In contrast to recent work by Martensson [8], we include a compactness requirement on the set of possible plants and assume that an upper bound on the order of the plant is known. Under these additional hypotheses, we generate a piecewise linear time-invariant switching control law which leads to a guarantee of Lyapunov stability and an exponential rate of convergence for the state. One of the main objectives in this paper is to eliminate the possibility of \"large state deviations\" associated with a search Over the space of gain matrices which is required in [8].",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1109/tac.1986.1104187",
+          "pdf": null,
+          "source": "IEEE Transactions on Automatic Control"
+        }
+      ],
+      "reference_count": 9
+    }
+  ]
+}

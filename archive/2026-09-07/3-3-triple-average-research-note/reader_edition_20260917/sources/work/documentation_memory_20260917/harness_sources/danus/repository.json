@@ -1,0 +1,2577 @@
+{
+  "repository": "frenzymath/Danus",
+  "commit": "6d92e8d415933ca2ef52fd1a4da73fdfcd418f1c",
+  "metadata": {
+    "id": 1291688318,
+    "node_id": "R_kgDOTP2Zfg",
+    "name": "Danus",
+    "full_name": "frenzymath/Danus",
+    "private": false,
+    "owner": {
+      "login": "frenzymath",
+      "id": 192176269,
+      "node_id": "O_kgDOC3RgjQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/192176269?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/frenzymath",
+      "html_url": "https://github.com/frenzymath",
+      "followers_url": "https://api.github.com/users/frenzymath/followers",
+      "following_url": "https://api.github.com/users/frenzymath/following{/other_user}",
+      "gists_url": "https://api.github.com/users/frenzymath/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/frenzymath/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/frenzymath/subscriptions",
+      "organizations_url": "https://api.github.com/users/frenzymath/orgs",
+      "repos_url": "https://api.github.com/users/frenzymath/repos",
+      "events_url": "https://api.github.com/users/frenzymath/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/frenzymath/received_events",
+      "type": "Organization",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/frenzymath/Danus",
+    "description": "Orchestrating Mathematical Reasoning Agents with Fact-Graph Memory",
+    "fork": false,
+    "url": "https://api.github.com/repos/frenzymath/Danus",
+    "forks_url": "https://api.github.com/repos/frenzymath/Danus/forks",
+    "keys_url": "https://api.github.com/repos/frenzymath/Danus/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/frenzymath/Danus/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/frenzymath/Danus/teams",
+    "hooks_url": "https://api.github.com/repos/frenzymath/Danus/hooks",
+    "issue_events_url": "https://api.github.com/repos/frenzymath/Danus/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/frenzymath/Danus/events",
+    "assignees_url": "https://api.github.com/repos/frenzymath/Danus/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/frenzymath/Danus/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/frenzymath/Danus/tags",
+    "blobs_url": "https://api.github.com/repos/frenzymath/Danus/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/frenzymath/Danus/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/frenzymath/Danus/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/frenzymath/Danus/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/frenzymath/Danus/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/frenzymath/Danus/languages",
+    "stargazers_url": "https://api.github.com/repos/frenzymath/Danus/stargazers",
+    "contributors_url": "https://api.github.com/repos/frenzymath/Danus/contributors",
+    "subscribers_url": "https://api.github.com/repos/frenzymath/Danus/subscribers",
+    "subscription_url": "https://api.github.com/repos/frenzymath/Danus/subscription",
+    "commits_url": "https://api.github.com/repos/frenzymath/Danus/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/frenzymath/Danus/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/frenzymath/Danus/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/frenzymath/Danus/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/frenzymath/Danus/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/frenzymath/Danus/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/frenzymath/Danus/merges",
+    "archive_url": "https://api.github.com/repos/frenzymath/Danus/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/frenzymath/Danus/downloads",
+    "issues_url": "https://api.github.com/repos/frenzymath/Danus/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/frenzymath/Danus/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/frenzymath/Danus/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/frenzymath/Danus/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/frenzymath/Danus/labels{/name}",
+    "releases_url": "https://api.github.com/repos/frenzymath/Danus/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/frenzymath/Danus/deployments",
+    "created_at": "2026-07-07T02:44:28Z",
+    "updated_at": "2026-09-16T10:55:09Z",
+    "pushed_at": "2026-08-27T03:34:32Z",
+    "git_url": "git://github.com/frenzymath/Danus.git",
+    "ssh_url": "git@github.com:frenzymath/Danus.git",
+    "clone_url": "https://github.com/frenzymath/Danus.git",
+    "svn_url": "https://github.com/frenzymath/Danus",
+    "homepage": "",
+    "size": 1004,
+    "stargazers_count": 441,
+    "watchers_count": 441,
+    "language": "Python",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": false,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 61,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    },
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [
+      "agents",
+      "ai4math",
+      "automated-reasoning",
+      "claude-code",
+      "codex",
+      "llm",
+      "mathematics",
+      "multi-agent"
+    ],
+    "visibility": "public",
+    "forks": 61,
+    "open_issues": 0,
+    "watchers": 441,
+    "default_branch": "codex",
+    "temp_clone_token": null,
+    "custom_properties": {},
+    "organization": {
+      "login": "frenzymath",
+      "id": 192176269,
+      "node_id": "O_kgDOC3RgjQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/192176269?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/frenzymath",
+      "html_url": "https://github.com/frenzymath",
+      "followers_url": "https://api.github.com/users/frenzymath/followers",
+      "following_url": "https://api.github.com/users/frenzymath/following{/other_user}",
+      "gists_url": "https://api.github.com/users/frenzymath/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/frenzymath/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/frenzymath/subscriptions",
+      "organizations_url": "https://api.github.com/users/frenzymath/orgs",
+      "repos_url": "https://api.github.com/users/frenzymath/repos",
+      "events_url": "https://api.github.com/users/frenzymath/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/frenzymath/received_events",
+      "type": "Organization",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "network_count": 61,
+    "subscribers_count": 3
+  },
+  "tree": {
+    "sha": "6d92e8d415933ca2ef52fd1a4da73fdfcd418f1c",
+    "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/6d92e8d415933ca2ef52fd1a4da73fdfcd418f1c",
+    "tree": [
+      {
+        "path": ".agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3df55dfa592968555de7885d3c1fe32c76efeea4",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/3df55dfa592968555de7885d3c1fe32c76efeea4"
+      },
+      {
+        "path": ".agents/skills",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "aa1333dbcecbbfefa0fffb9a574a9719525b8991",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/aa1333dbcecbbfefa0fffb9a574a9719525b8991"
+      },
+      {
+        "path": ".agents/skills/elaboration",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "195aa3cc4048fbf41e17e9a9088f5421a70e5e14",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/195aa3cc4048fbf41e17e9a9088f5421a70e5e14"
+      },
+      {
+        "path": ".agents/skills/elaboration/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2260b8d4b72578bf179fe8a9b0af797565307031",
+        "size": 14770,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/2260b8d4b72578bf179fe8a9b0af797565307031"
+      },
+      {
+        "path": ".agents/skills/human-summary",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f5567c6694c416aa1de76c91bc2a54a1d9fc0761",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/f5567c6694c416aa1de76c91bc2a54a1d9fc0761"
+      },
+      {
+        "path": ".agents/skills/human-summary/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "90329a188d1dc4bdccac38247298325e69f7198e",
+        "size": 6915,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/90329a188d1dc4bdccac38247298325e69f7198e"
+      },
+      {
+        "path": ".agents/skills/human-summary/doctor.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "9c821ae352c925869524323230bda40b3fa654e6",
+        "size": 1333,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/9c821ae352c925869524323230bda40b3fa654e6"
+      },
+      {
+        "path": ".agents/skills/human-summary/examples",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "9e08163cd4762a2b2904494c9812d468f0979ee8",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/9e08163cd4762a2b2904494c9812d468f0979ee8"
+      },
+      {
+        "path": ".agents/skills/human-summary/examples/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "155d36ae5f1b07dd86bb5cfb9bdde9d2cfbd976a",
+        "size": 1278,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/155d36ae5f1b07dd86bb5cfb9bdde9d2cfbd976a"
+      },
+      {
+        "path": ".agents/skills/human-summary/examples/odd-sum",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "02642befe275874b15d3fc3d3d67fc0eed68cd10",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/02642befe275874b15d3fc3d3d67fc0eed68cd10"
+      },
+      {
+        "path": ".agents/skills/human-summary/examples/odd-sum/PROBLEM.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f2bb5d9d4a3b5cf90ef947c76065c94d4b7ccfab",
+        "size": 413,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/f2bb5d9d4a3b5cf90ef947c76065c94d4b7ccfab"
+      },
+      {
+        "path": ".agents/skills/human-summary/examples/odd-sum/fact_graph",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "807fe15ae895b4885888ab2c67de7c383ee45812",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/807fe15ae895b4885888ab2c67de7c383ee45812"
+      },
+      {
+        "path": ".agents/skills/human-summary/examples/odd-sum/fact_graph/facts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2be00146f63049068fb36edf1a6695c81c61231f",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/2be00146f63049068fb36edf1a6695c81c61231f"
+      },
+      {
+        "path": ".agents/skills/human-summary/examples/odd-sum/fact_graph/facts/fact_odd_recurrence.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3a539eaf132f8cbaa6f37d04a9f13878ff5dc6d1",
+        "size": 509,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/3a539eaf132f8cbaa6f37d04a9f13878ff5dc6d1"
+      },
+      {
+        "path": ".agents/skills/human-summary/examples/odd-sum/fact_graph/facts/fact_odd_sum_main.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6dee6f1a347e33c66bf4d43e839f58668f381205",
+        "size": 774,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/6dee6f1a347e33c66bf4d43e839f58668f381205"
+      },
+      {
+        "path": ".agents/skills/human-summary/examples/odd-sum/fact_graph/facts/fact_square_recurrence.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "43d180e11e5f925740d7daa4c76f851564cce066",
+        "size": 405,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/43d180e11e5f925740d7daa4c76f851564cce066"
+      },
+      {
+        "path": ".agents/skills/human-summary/examples/report.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "899df7c1db737d77720120a758818a833211cf86",
+        "size": 1802,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/899df7c1db737d77720120a758818a833211cf86"
+      },
+      {
+        "path": ".agents/skills/human-summary/md2html.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b751a9692289f272fe847ace764715290c3e622d",
+        "size": 3503,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/b751a9692289f272fe847ace764715290c3e622d"
+      },
+      {
+        "path": ".agents/skills/human-summary/package.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4b70052d127378243735ff10f698635dd37c73f5",
+        "size": 82,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/4b70052d127378243735ff10f698635dd37c73f5"
+      },
+      {
+        "path": ".agents/skills/human-summary/render_pdf.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "dc06eedfab4368206c02502a93e4351cd28ddfaa",
+        "size": 1798,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/dc06eedfab4368206c02502a93e4351cd28ddfaa"
+      },
+      {
+        "path": ".agents/skills/initialize",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f3c0299d7e034b13efd2a5691008b4b429e15ec0",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/f3c0299d7e034b13efd2a5691008b4b429e15ec0"
+      },
+      {
+        "path": ".agents/skills/initialize/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ced43fbe9bfe08a660903fdbb51e23b123dd638f",
+        "size": 5782,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/ced43fbe9bfe08a660903fdbb51e23b123dd638f"
+      },
+      {
+        "path": ".agents/skills/write-paper",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "9faab71300eb635e72ae1bc0bde9d5259c8b1e88",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/9faab71300eb635e72ae1bc0bde9d5259c8b1e88"
+      },
+      {
+        "path": ".agents/skills/write-paper/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "221b7c02ce699c11d12937b0eb550e9ee2a5b703",
+        "size": 14333,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/221b7c02ce699c11d12937b0eb550e9ee2a5b703"
+      },
+      {
+        "path": ".agents/skills/write-paper/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6128a3984ce0095a8bfc2e8ba856d520a7f64637",
+        "size": 71535,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/6128a3984ce0095a8bfc2e8ba856d520a7f64637"
+      },
+      {
+        "path": ".agents/skills/write-paper/driver",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3547746c8a71e985f91b1dca820308dbc6a3f748",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/3547746c8a71e985f91b1dca820308dbc6a3f748"
+      },
+      {
+        "path": ".agents/skills/write-paper/driver/anchors_stale.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "2d58d17a87f4441eba48c60b79c6931b00b12ddc",
+        "size": 2036,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/2d58d17a87f4441eba48c60b79c6931b00b12ddc"
+      },
+      {
+        "path": ".agents/skills/write-paper/driver/compile_verify.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "011da834eaf766657a5fc6ad0af2232659c7fc4b",
+        "size": 5178,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/011da834eaf766657a5fc6ad0af2232659c7fc4b"
+      },
+      {
+        "path": ".agents/skills/write-paper/driver/latex_git_push.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "f091408b6ee512868c1fcecf3a92cf377af4377d",
+        "size": 3122,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/f091408b6ee512868c1fcecf3a92cf377af4377d"
+      },
+      {
+        "path": ".agents/skills/write-paper/driver/seed_ledger.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "d96facf6f490d84bf85bcda97e50482f35de85d5",
+        "size": 8558,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d96facf6f490d84bf85bcda97e50482f35de85d5"
+      },
+      {
+        "path": ".agents/skills/write-paper/templates",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "74677fe8ebfa1a1888700934e88ba53f79a86fc3",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/74677fe8ebfa1a1888700934e88ba53f79a86fc3"
+      },
+      {
+        "path": ".agents/skills/write-paper/templates/PROJECT_BRIEF.md.template",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d330a34a76b5b4e2ad2f6e471b890877fdc4774d",
+        "size": 2422,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d330a34a76b5b4e2ad2f6e471b890877fdc4774d"
+      },
+      {
+        "path": ".agents/skills/write-paper/templates/REVISION_LOG.md.template",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f93524a7cdaede43a093997782d88b6f4e592616",
+        "size": 615,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/f93524a7cdaede43a093997782d88b6f4e592616"
+      },
+      {
+        "path": ".codex",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "526e2212ceabb88e2b1319e8566bcc27869a4b53",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/526e2212ceabb88e2b1319e8566bcc27869a4b53"
+      },
+      {
+        "path": ".codex/config.toml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0ab74f531c4158ebaaca80a6bbc098da390e7ebb",
+        "size": 2118,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/0ab74f531c4158ebaaca80a6bbc098da390e7ebb"
+      },
+      {
+        "path": ".github",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8a2fbf4910751df4840bd8c1d6405b38d64e81c6",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/8a2fbf4910751df4840bd8c1d6405b38d64e81c6"
+      },
+      {
+        "path": ".github/workflows",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c86dc7cdbb67e81498146fe9c673e75db7ddcbf8",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/c86dc7cdbb67e81498146fe9c673e75db7ddcbf8"
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f02bd5f4eab96fa5c058b8c33d0bb14766fa5958",
+        "size": 580,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/f02bd5f4eab96fa5c058b8c33d0bb14766fa5958"
+      },
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1dbc815d10036b81c74827e36316b249398c4a1f",
+        "size": 1369,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/1dbc815d10036b81c74827e36316b249398c4a1f"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5cea656d26b39ba19c58ab8a1c1c8a41dcc19429",
+        "size": 12762,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/5cea656d26b39ba19c58ab8a1c1c8a41dcc19429"
+      },
+      {
+        "path": "ARCHITECTURE.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eea1b392d4c7135d037df84a564491065c722e4d",
+        "size": 8424,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/eea1b392d4c7135d037df84a564491065c722e4d"
+      },
+      {
+        "path": "CITATION.cff",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "309fd19c442d2ec1febdda4ca43a540a7afa0f83",
+        "size": 973,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/309fd19c442d2ec1febdda4ca43a540a7afa0f83"
+      },
+      {
+        "path": "LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "50496b7dde1c61e4ec24d3f0303dc2583cecc665",
+        "size": 11340,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/50496b7dde1c61e4ec24d3f0303dc2583cecc665"
+      },
+      {
+        "path": "OPERATOR.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8e53e836f5ea637ab1efe7cab1bc5208d7100b03",
+        "size": 1349,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/8e53e836f5ea637ab1efe7cab1bc5208d7100b03"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7032287c9905687bd154862ec63cb6299c2ac4cc",
+        "size": 9695,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/7032287c9905687bd154862ec63cb6299c2ac4cc"
+      },
+      {
+        "path": "agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "167c55256c2a76618e515528820399054e0d4372",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/167c55256c2a76618e515528820399054e0d4372"
+      },
+      {
+        "path": "agents/contracts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "87b666021a3637f1f97a52410da0da7565e7230c",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/87b666021a3637f1f97a52410da0da7565e7230c"
+      },
+      {
+        "path": "agents/contracts/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f2352bec27f3c798f92e898c59bc942a4ee1aed4",
+        "size": 2885,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/f2352bec27f3c798f92e898c59bc942a4ee1aed4"
+      },
+      {
+        "path": "agents/contracts/main_agent.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b80cbed73b6e26db4bbd3543b56c4752ec93e7d0",
+        "size": 8119,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/b80cbed73b6e26db4bbd3543b56c4752ec93e7d0"
+      },
+      {
+        "path": "agents/contracts/verifier.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "52edeed45fdc73546b91de3e84cee8235f58868f",
+        "size": 13231,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/52edeed45fdc73546b91de3e84cee8235f58868f"
+      },
+      {
+        "path": "agents/contracts/worker.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "97adff8e0214374bd313ec7cd73f65e0bac7342b",
+        "size": 19737,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/97adff8e0214374bd313ec7cd73f65e0bac7342b"
+      },
+      {
+        "path": "agents/skills",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8277021b859728ec49c66f48a119dfdf4dc150d8",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/8277021b859728ec49c66f48a119dfdf4dc150d8"
+      },
+      {
+        "path": "agents/skills/human-summary",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "cf3f7d0ba53e7cda1061d0ccd130fd30a5a0ed80",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/cf3f7d0ba53e7cda1061d0ccd130fd30a5a0ed80"
+      },
+      {
+        "path": "agents/skills/human-summary/REPORT_WRITER_PROMPT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "27d8e992f84aa60ab9d4c5fc26c22fa2b8dc23ac",
+        "size": 11809,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/27d8e992f84aa60ab9d4c5fc26c22fa2b8dc23ac"
+      },
+      {
+        "path": "agents/skills/verify",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "63681198f232234cf806298c04983e43492e8db4",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/63681198f232234cf806298c04983e43492e8db4"
+      },
+      {
+        "path": "agents/skills/verify/check-referenced-statements",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "14178a9744c03ad2c9e48783740b23abc6754091",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/14178a9744c03ad2c9e48783740b23abc6754091"
+      },
+      {
+        "path": "agents/skills/verify/check-referenced-statements/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "72ce9460709787806edb00a90fd232b7f9e03ae6",
+        "size": 3410,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/72ce9460709787806edb00a90fd232b7f9e03ae6"
+      },
+      {
+        "path": "agents/skills/verify/check-referenced-statements/agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "214e65fb285de0ea13a4b18aa02409ddf952330f",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/214e65fb285de0ea13a4b18aa02409ddf952330f"
+      },
+      {
+        "path": "agents/skills/verify/check-referenced-statements/agents/openai.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b1f42a4091610106f21a512c959adc9d78bc48f0",
+        "size": 304,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/b1f42a4091610106f21a512c959adc9d78bc48f0"
+      },
+      {
+        "path": "agents/skills/verify/synthesize-verification-report",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b8b6339893faf31511eeb87f09117cb1c0982878",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/b8b6339893faf31511eeb87f09117cb1c0982878"
+      },
+      {
+        "path": "agents/skills/verify/synthesize-verification-report/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8424b312aef005adfccaf65d3ce5b8b27197d6d5",
+        "size": 2544,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/8424b312aef005adfccaf65d3ce5b8b27197d6d5"
+      },
+      {
+        "path": "agents/skills/verify/synthesize-verification-report/agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1f523ae3e37d513e9d42e603a68625a71a4f6213",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/1f523ae3e37d513e9d42e603a68625a71a4f6213"
+      },
+      {
+        "path": "agents/skills/verify/synthesize-verification-report/agents/openai.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7c55b80c36d9b758ae35ce2be8e32d24d694d8ca",
+        "size": 325,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/7c55b80c36d9b758ae35ce2be8e32d24d694d8ca"
+      },
+      {
+        "path": "agents/skills/verify/test_verification_schema.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fe70471a4976cd5e84f9296ebf86b7e15e77afd6",
+        "size": 6068,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/fe70471a4976cd5e84f9296ebf86b7e15e77afd6"
+      },
+      {
+        "path": "agents/skills/verify/verify-sequential-statements",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7b9a074f5f5368b9e167361807e087dd72e14e03",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/7b9a074f5f5368b9e167361807e087dd72e14e03"
+      },
+      {
+        "path": "agents/skills/verify/verify-sequential-statements/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "237fe027c9c24b9bd5782faf3b41ae4e27df56b7",
+        "size": 3199,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/237fe027c9c24b9bd5782faf3b41ae4e27df56b7"
+      },
+      {
+        "path": "agents/skills/verify/verify-sequential-statements/agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e1173305fe821809894fbf67139bd6892a59b53a",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/e1173305fe821809894fbf67139bd6892a59b53a"
+      },
+      {
+        "path": "agents/skills/verify/verify-sequential-statements/agents/openai.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6458e7317ee1de403b41483cbbb4958b3f2cae51",
+        "size": 284,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/6458e7317ee1de403b41483cbbb4958b3f2cae51"
+      },
+      {
+        "path": "agents/skills/worker",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "14fb425dd01c09bd3687439af2b5f5e1ae656739",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/14fb425dd01c09bd3687439af2b5f5e1ae656739"
+      },
+      {
+        "path": "agents/skills/worker/check_conformance.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7be6ceb3bdf96543595b1b521cd24b08e9e5c938",
+        "size": 3850,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/7be6ceb3bdf96543595b1b521cd24b08e9e5c938"
+      },
+      {
+        "path": "agents/skills/worker/construct-counterexamples",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8668b0d220236cc8ca281aa3b12d35569511782a",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/8668b0d220236cc8ca281aa3b12d35569511782a"
+      },
+      {
+        "path": "agents/skills/worker/construct-counterexamples/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c908e9869fe84b96982b74ee782265b434281927",
+        "size": 3157,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/c908e9869fe84b96982b74ee782265b434281927"
+      },
+      {
+        "path": "agents/skills/worker/construct-counterexamples/agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3971d5b00243f360f8c11f85638d2bfa8874dcf7",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/3971d5b00243f360f8c11f85638d2bfa8874dcf7"
+      },
+      {
+        "path": "agents/skills/worker/construct-counterexamples/agents/openai.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2c7558dd37daa59f2e536cec2104f6de0c4aba39",
+        "size": 276,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/2c7558dd37daa59f2e536cec2104f6de0c4aba39"
+      },
+      {
+        "path": "agents/skills/worker/construct-toy-examples",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c8a36abc0bb14ac5396c1397ace4c1ac79a60dbf",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/c8a36abc0bb14ac5396c1397ace4c1ac79a60dbf"
+      },
+      {
+        "path": "agents/skills/worker/construct-toy-examples/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "85aeb4da156a06ada293e031778da452ed428449",
+        "size": 2163,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/85aeb4da156a06ada293e031778da452ed428449"
+      },
+      {
+        "path": "agents/skills/worker/construct-toy-examples/agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c7e0a43d3406be3cdfb8a4898532935480f39115",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/c7e0a43d3406be3cdfb8a4898532935480f39115"
+      },
+      {
+        "path": "agents/skills/worker/construct-toy-examples/agents/openai.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7f81bb584fb77674969146be376ecc471f2cea12",
+        "size": 282,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/7f81bb584fb77674969146be376ecc471f2cea12"
+      },
+      {
+        "path": "agents/skills/worker/direct-proving",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8bf374b266452026da413f152a962c564618f310",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/8bf374b266452026da413f152a962c564618f310"
+      },
+      {
+        "path": "agents/skills/worker/direct-proving/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "07b70d9be28ba0355483bf4942b86f5f1c6be612",
+        "size": 5168,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/07b70d9be28ba0355483bf4942b86f5f1c6be612"
+      },
+      {
+        "path": "agents/skills/worker/direct-proving/agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "cf774f59a585ed2f8b9541b558e26063929fdbf4",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/cf774f59a585ed2f8b9541b558e26063929fdbf4"
+      },
+      {
+        "path": "agents/skills/worker/direct-proving/agents/openai.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "51dfff47faa593be91c4a44a88f7e1d982cfea70",
+        "size": 416,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/51dfff47faa593be91c4a44a88f7e1d982cfea70"
+      },
+      {
+        "path": "agents/skills/worker/identify-key-failures",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "be0c31df54d26661267c4994edb6d44bedd5def6",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/be0c31df54d26661267c4994edb6d44bedd5def6"
+      },
+      {
+        "path": "agents/skills/worker/identify-key-failures/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4959dd186b839c65e2847315a360e5dfdf9baf19",
+        "size": 2344,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/4959dd186b839c65e2847315a360e5dfdf9baf19"
+      },
+      {
+        "path": "agents/skills/worker/identify-key-failures/agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "40fc2c109ec7940d52eba2331973184a6c2a9698",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/40fc2c109ec7940d52eba2331973184a6c2a9698"
+      },
+      {
+        "path": "agents/skills/worker/identify-key-failures/agents/openai.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "db12af230f73f7c29d0c27fb860361f95120c6d1",
+        "size": 264,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/db12af230f73f7c29d0c27fb860361f95120c6d1"
+      },
+      {
+        "path": "agents/skills/worker/obtain-immediate-conclusions",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "fa5ff9d8d7eb86a2617e662af7c386b130641259",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/fa5ff9d8d7eb86a2617e662af7c386b130641259"
+      },
+      {
+        "path": "agents/skills/worker/obtain-immediate-conclusions/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d742cb731d2164e12c25f48e5becca3624f51752",
+        "size": 2345,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d742cb731d2164e12c25f48e5becca3624f51752"
+      },
+      {
+        "path": "agents/skills/worker/obtain-immediate-conclusions/agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "9c827de2f63e9c59bf65e3e4d0cc1cf1d1fc22cc",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/9c827de2f63e9c59bf65e3e4d0cc1cf1d1fc22cc"
+      },
+      {
+        "path": "agents/skills/worker/obtain-immediate-conclusions/agents/openai.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "050cf3a9bf1aaddb962fcb5c394edca503b44dcb",
+        "size": 295,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/050cf3a9bf1aaddb962fcb5c394edca503b44dcb"
+      },
+      {
+        "path": "agents/skills/worker/propose-subgoal-decomposition-plans",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "60f145cebf966ed948e2fbd63db0f638ccf724ad",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/60f145cebf966ed948e2fbd63db0f638ccf724ad"
+      },
+      {
+        "path": "agents/skills/worker/propose-subgoal-decomposition-plans/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d600860155a8e9030f6b81c1da2ee5f19dc7fe04",
+        "size": 2320,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d600860155a8e9030f6b81c1da2ee5f19dc7fe04"
+      },
+      {
+        "path": "agents/skills/worker/propose-subgoal-decomposition-plans/agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c13341bc28e8a1009e1f872d767663f25552cd14",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/c13341bc28e8a1009e1f872d767663f25552cd14"
+      },
+      {
+        "path": "agents/skills/worker/propose-subgoal-decomposition-plans/agents/openai.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d5e046142c0dee7c6025f594f6955e84ad3842cb",
+        "size": 293,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d5e046142c0dee7c6025f594f6955e84ad3842cb"
+      },
+      {
+        "path": "agents/skills/worker/query-memory",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "0e89fa8da4b4c3913024c6d202cabd026265694e",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/0e89fa8da4b4c3913024c6d202cabd026265694e"
+      },
+      {
+        "path": "agents/skills/worker/query-memory/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "242087bea71b2ca512b439307994fff9aec4b812",
+        "size": 3153,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/242087bea71b2ca512b439307994fff9aec4b812"
+      },
+      {
+        "path": "agents/skills/worker/query-memory/agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "9bc85d5313b6e63b8a2fa6e36d24af32a096ce50",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/9bc85d5313b6e63b8a2fa6e36d24af32a096ce50"
+      },
+      {
+        "path": "agents/skills/worker/query-memory/agents/openai.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b065d1c05f81819f8825c42c0aac4bb9a50edf91",
+        "size": 312,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/b065d1c05f81819f8825c42c0aac4bb9a50edf91"
+      },
+      {
+        "path": "agents/skills/worker/search-math-results",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6a5a54c76b083f20e4739853458e87df2c7b5d2e",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/6a5a54c76b083f20e4739853458e87df2c7b5d2e"
+      },
+      {
+        "path": "agents/skills/worker/search-math-results/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "966837b129d1c170c998dd3c186266179fdaf554",
+        "size": 12009,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/966837b129d1c170c998dd3c186266179fdaf554"
+      },
+      {
+        "path": "agents/skills/worker/search-math-results/agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "fb4a8c18e8d900f27c8c9f4e67061445ee702912",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/fb4a8c18e8d900f27c8c9f4e67061445ee702912"
+      },
+      {
+        "path": "agents/skills/worker/search-math-results/agents/openai.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "70053eb8c14f3161259b37247ab44b74900c79d5",
+        "size": 311,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/70053eb8c14f3161259b37247ab44b74900c79d5"
+      },
+      {
+        "path": "agents/skills/worker/verify-proof",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "275044f1c453fa0e26bebab36ae0903471030008",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/275044f1c453fa0e26bebab36ae0903471030008"
+      },
+      {
+        "path": "agents/skills/worker/verify-proof/SKILL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b7720f0c87cf726278a099242e31ffe3bc963596",
+        "size": 5692,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/b7720f0c87cf726278a099242e31ffe3bc963596"
+      },
+      {
+        "path": "agents/skills/worker/verify-proof/agents",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d1e67702c2a8ef1727784e629c57155976c7312c",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/d1e67702c2a8ef1727784e629c57155976c7312c"
+      },
+      {
+        "path": "agents/skills/worker/verify-proof/agents/openai.yaml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d7edf6a40934cda5fe602a37f94a1666e35ec1c2",
+        "size": 393,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d7edf6a40934cda5fe602a37f94a1666e35ec1c2"
+      },
+      {
+        "path": "agents/skills/write-paper",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "728150d8bb29e3e2cc6ad1f4ffb8907cb1d81eb7",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/728150d8bb29e3e2cc6ad1f4ffb8907cb1d81eb7"
+      },
+      {
+        "path": "agents/skills/write-paper/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9aa9cc1914d96fdf7662c8ea1b22d34ae09e4cd0",
+        "size": 3320,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/9aa9cc1914d96fdf7662c8ea1b22d34ae09e4cd0"
+      },
+      {
+        "path": "agents/skills/write-paper/boilerplate",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d1dc9badfc178ef2c2741b8a64d3e60325372da0",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/d1dc9badfc178ef2c2741b8a64d3e60325372da0"
+      },
+      {
+        "path": "agents/skills/write-paper/boilerplate/acknowledgement.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "00faae9122c62856410d6c441d64b00eff37d0d4",
+        "size": 5626,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/00faae9122c62856410d6c441d64b00eff37d0d4"
+      },
+      {
+        "path": "agents/skills/write-paper/examples",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2adb71c8984c870d7ae25cff3b40ffd709342d6f",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/2adb71c8984c870d7ae25cff3b40ffd709342d6f"
+      },
+      {
+        "path": "agents/skills/write-paper/examples/paper",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "552a047b9c6681fb226ea1eec912fa335f7b8165",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/552a047b9c6681fb226ea1eec912fa335f7b8165"
+      },
+      {
+        "path": "agents/skills/write-paper/examples/paper/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4b7badbd3c0766fd01aa9dd3a3d3f1835a93ba0c",
+        "size": 3218,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/4b7badbd3c0766fd01aa9dd3a3d3f1835a93ba0c"
+      },
+      {
+        "path": "agents/skills/write-paper/examples/paper/expected_main.tex",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6792405960803dd686ea2c079e19ba77c1720083",
+        "size": 4329,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/6792405960803dd686ea2c079e19ba77c1720083"
+      },
+      {
+        "path": "agents/skills/write-paper/examples/paper/project",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5b1802cd10534f8df2428a39524ea35a79066068",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/5b1802cd10534f8df2428a39524ea35a79066068"
+      },
+      {
+        "path": "agents/skills/write-paper/examples/paper/project/PROBLEM.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "159da73944181aad167e080ca490c2fc4620b5fa",
+        "size": 404,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/159da73944181aad167e080ca490c2fc4620b5fa"
+      },
+      {
+        "path": "agents/skills/write-paper/examples/paper/project/fact_graph",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "0e28b4460faa04d5cbf22210a302a99f8d6a3884",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/0e28b4460faa04d5cbf22210a302a99f8d6a3884"
+      },
+      {
+        "path": "agents/skills/write-paper/examples/paper/project/fact_graph/facts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f613178b1d8f6f84dc82a935370d4a7007264efc",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/f613178b1d8f6f84dc82a935370d4a7007264efc"
+      },
+      {
+        "path": "agents/skills/write-paper/examples/paper/project/fact_graph/facts/fact_odd_recurrence.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4a0c9f5163f6ead925396660ca3fe03e80c76896",
+        "size": 1107,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/4a0c9f5163f6ead925396660ca3fe03e80c76896"
+      },
+      {
+        "path": "agents/skills/write-paper/examples/paper/project/fact_graph/facts/fact_odd_sum_main.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d1ee93e1ed05395b90d97d2f9fda696eb360c34c",
+        "size": 1240,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d1ee93e1ed05395b90d97d2f9fda696eb360c34c"
+      },
+      {
+        "path": "agents/skills/write-paper/examples/paper/project/fact_graph/facts/fact_square_recurrence.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fd632a463f87f1969bccdee4872856599afe9426",
+        "size": 480,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/fd632a463f87f1969bccdee4872856599afe9426"
+      },
+      {
+        "path": "agents/skills/write-paper/examples/paper/project/paper",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "52b005594f84173b289a1143aad4f68c91e91ded",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/52b005594f84173b289a1143aad4f68c91e91ded"
+      },
+      {
+        "path": "agents/skills/write-paper/examples/paper/project/paper/PROJECT_BRIEF.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b98dc168307a52e65af5c5eacf60d0e8f882fdcd",
+        "size": 2494,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/b98dc168307a52e65af5c5eacf60d0e8f882fdcd"
+      },
+      {
+        "path": "agents/skills/write-paper/roles",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "60b2a19d5b155a9cb7d3620e5d3d967bcce8c750",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/60b2a19d5b155a9cb7d3620e5d3d967bcce8c750"
+      },
+      {
+        "path": "agents/skills/write-paper/roles/AGENTS.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fedc0093493f77980f5af89c9ee23afa7411db7f",
+        "size": 4888,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/fedc0093493f77980f5af89c9ee23afa7411db7f"
+      },
+      {
+        "path": "agents/skills/write-paper/roles/PAPER_MATH_VERIFIER_PROMPT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b867bcca3cc476eb6620f7a6ad3dd6bf1a9dae76",
+        "size": 5197,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/b867bcca3cc476eb6620f7a6ad3dd6bf1a9dae76"
+      },
+      {
+        "path": "agents/skills/write-paper/roles/PAPER_PLANNER_PROMPT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c62a571b393c125aca0fa720f61a4821d7f36528",
+        "size": 6586,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/c62a571b393c125aca0fa720f61a4821d7f36528"
+      },
+      {
+        "path": "agents/skills/write-paper/roles/PAPER_REVISER_PROMPT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "01adfd00aa15d776210500c4d7d2c9ab2d9344f9",
+        "size": 25857,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/01adfd00aa15d776210500c4d7d2c9ab2d9344f9"
+      },
+      {
+        "path": "agents/skills/write-paper/roles/PAPER_SECTION_WRITER_PROMPT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8c20d799b69e7df5c95d141da44ce6d59356dcee",
+        "size": 6380,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/8c20d799b69e7df5c95d141da44ce6d59356dcee"
+      },
+      {
+        "path": "agents/skills/write-paper/roles/PAPER_WRITER_PROMPT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d26ef2e40a53d2a731628bfcc49a60e17adb4685",
+        "size": 19011,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d26ef2e40a53d2a731628bfcc49a60e17adb4685"
+      },
+      {
+        "path": "agents/skills/write-paper/roles/REFERENCE_AUDITOR_PROMPT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4136a32540be866516589e8e38d1e5a93df085c7",
+        "size": 9039,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/4136a32540be866516589e8e38d1e5a93df085c7"
+      },
+      {
+        "path": "agents/skills/write-paper/roles/REFERENCE_VERIFIER_PROMPT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "25cce9e150dc39dc05419df7d0cea916a1c81ab0",
+        "size": 8159,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/25cce9e150dc39dc05419df7d0cea916a1c81ab0"
+      },
+      {
+        "path": "agents/skills/write-paper/roles/STYLE_DISTILLER_PROMPT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a877be2c3da91556c6e98bf5de04c5c35398a23a",
+        "size": 5331,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/a877be2c3da91556c6e98bf5de04c5c35398a23a"
+      },
+      {
+        "path": "agents/skills/write-paper/style",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3150e220c8a2efd7ea681b7775496810130236c9",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/3150e220c8a2efd7ea681b7775496810130236c9"
+      },
+      {
+        "path": "agents/skills/write-paper/style/PAPER_STRUCTURE.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "576e5c395cf6e113a8d63e7d894dc96d51c009a4",
+        "size": 19050,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/576e5c395cf6e113a8d63e7d894dc96d51c009a4"
+      },
+      {
+        "path": "agents/skills/write-paper/style/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6c0b97b8e4cb10aee88fde043efd81bc5abe05e2",
+        "size": 2827,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/6c0b97b8e4cb10aee88fde043efd81bc5abe05e2"
+      },
+      {
+        "path": "agents/skills/write-paper/style/STYLE_GUIDE.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "281ef7b54ae52e76b65522d1fbdcde6c352f6d62",
+        "size": 10970,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/281ef7b54ae52e76b65522d1fbdcde6c352f6d62"
+      },
+      {
+        "path": "agents/skills/write-paper/style/anchors",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e39540fa9d095c4e0fdf88005addae32f3cd3ca5",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/e39540fa9d095c4e0fdf88005addae32f3cd3ca5"
+      },
+      {
+        "path": "agents/skills/write-paper/style/anchors/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0bc36a51b9f1f665df42705828d562af34e93575",
+        "size": 2752,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/0bc36a51b9f1f665df42705828d562af34e93575"
+      },
+      {
+        "path": "bin",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4c8e1d9499f6075f171fa6fdf0259cbd3406679f",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/4c8e1d9499f6075f171fa6fdf0259cbd3406679f"
+      },
+      {
+        "path": "bin/codex",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "db7f5591bbd64fb59d63b2c2fb19c03bdc0ce336",
+        "size": 1136,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/db7f5591bbd64fb59d63b2c2fb19c03bdc0ce336"
+      },
+      {
+        "path": "bin/danus",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "031271e50660b7aac59584f0f7aadaab3ab06067",
+        "size": 305,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/031271e50660b7aac59584f0f7aadaab3ab06067"
+      },
+      {
+        "path": "bin/danus-mcp",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "f92e9ca52956fc45e82a9f0ff975e7a8240f4d13",
+        "size": 439,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/f92e9ca52956fc45e82a9f0ff975e7a8240f4d13"
+      },
+      {
+        "path": "bin/human-summary-mcp",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "99b4eb4487225b56601cad344345bbc2dea44d64",
+        "size": 720,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/99b4eb4487225b56601cad344345bbc2dea44d64"
+      },
+      {
+        "path": "bin/write-paper-mcp",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "8cfa3bbb55fb0f780b7d522e91edb783e661cfca",
+        "size": 681,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/8cfa3bbb55fb0f780b7d522e91edb783e661cfca"
+      },
+      {
+        "path": "config",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "31d4be02ed77e5553402da748eb3d7696699984d",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/31d4be02ed77e5553402da748eb3d7696699984d"
+      },
+      {
+        "path": "config/codex.env.example",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4d74f854dcfc537148047ac9442d62dcfbe71e22",
+        "size": 2079,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/4d74f854dcfc537148047ac9442d62dcfbe71e22"
+      },
+      {
+        "path": "config/danus.env.example",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "648b401e13a70caf9d468956a211c06b49c47bdf",
+        "size": 3037,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/648b401e13a70caf9d468956a211c06b49c47bdf"
+      },
+      {
+        "path": "config/latex-git.env.example",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e3102a7924786c8b4b7245835c80aa80e43765ca",
+        "size": 952,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e3102a7924786c8b4b7245835c80aa80e43765ca"
+      },
+      {
+        "path": "danus",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4e061d2354a68ab529f976ebafd55dd645ad2dd1",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/4e061d2354a68ab529f976ebafd55dd645ad2dd1"
+      },
+      {
+        "path": "danus/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9ee14efed2b625fa6d6f3467c9aa6e76e9807e16",
+        "size": 265,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/9ee14efed2b625fa6d6f3467c9aa6e76e9807e16"
+      },
+      {
+        "path": "danus/_mcp.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "aaca20cc3272ce11dcc93ae25fce990668a1354b",
+        "size": 816,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/aaca20cc3272ce11dcc93ae25fce990668a1354b"
+      },
+      {
+        "path": "danus/authoring",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c0f259424d99ba220cc8659fb26c67343f1435c7",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/c0f259424d99ba220cc8659fb26c67343f1435c7"
+      },
+      {
+        "path": "danus/authoring/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7dd57df00fa158fe454aa4b4c49d02ad4f114444",
+        "size": 1104,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/7dd57df00fa158fe454aa4b4c49d02ad4f114444"
+      },
+      {
+        "path": "danus/authoring/common.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "06962f16d543e805fbe74b3d43739594c4389f43",
+        "size": 7693,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/06962f16d543e805fbe74b3d43739594c4389f43"
+      },
+      {
+        "path": "danus/authoring/driver.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "89279aa493fd0a28d1fed4268ba7762b0808d74d",
+        "size": 6650,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/89279aa493fd0a28d1fed4268ba7762b0808d74d"
+      },
+      {
+        "path": "danus/authoring/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ee4fbc8818c15d994dbc2411e08e4843c826241e",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/ee4fbc8818c15d994dbc2411e08e4843c826241e"
+      },
+      {
+        "path": "danus/authoring/tests/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "12e66723d36713a4c2ae03faf85832e0ac0b00f8",
+        "size": 76,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/12e66723d36713a4c2ae03faf85832e0ac0b00f8"
+      },
+      {
+        "path": "danus/authoring/tests/_fixtures.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6272953b7e96cd856b86419257e1696228164a82",
+        "size": 618,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/6272953b7e96cd856b86419257e1696228164a82"
+      },
+      {
+        "path": "danus/authoring/tests/fake_codex.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "3ab2d8b2b72f2feaf2f6c366e15df60cece00b0d",
+        "size": 2065,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/3ab2d8b2b72f2feaf2f6c366e15df60cece00b0d"
+      },
+      {
+        "path": "danus/authoring/tests/test_common.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7c8290553b5e952fbf749ed3985baff7eae8831b",
+        "size": 7514,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/7c8290553b5e952fbf749ed3985baff7eae8831b"
+      },
+      {
+        "path": "danus/authoring/tests/test_driver.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6582dff7a96e6349510fc6cd0cf04eecd4217e25",
+        "size": 6521,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/6582dff7a96e6349510fc6cd0cf04eecd4217e25"
+      },
+      {
+        "path": "danus/codex.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a5ceec76418eb7603569ea4bc3cadf1d15fe86f2",
+        "size": 8669,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/a5ceec76418eb7603569ea4bc3cadf1d15fe86f2"
+      },
+      {
+        "path": "danus/core",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a143044a79266c02f9ea3c1ed4bb418adf30e0e8",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/a143044a79266c02f9ea3c1ed4bb418adf30e0e8"
+      },
+      {
+        "path": "danus/core/DATA_MODEL.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5561d804304c084e6659420654fd6ef4cd9ce333",
+        "size": 22585,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/5561d804304c084e6659420654fd6ef4cd9ce333"
+      },
+      {
+        "path": "danus/core/INTERFACES.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d1a17bebad7b921a9fb3f77199fa246ad84067f8",
+        "size": 8656,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d1a17bebad7b921a9fb3f77199fa246ad84067f8"
+      },
+      {
+        "path": "danus/core/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "350abc3b0c625fa52bf36d7ed538c97d61964c5b",
+        "size": 4062,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/350abc3b0c625fa52bf36d7ed538c97d61964c5b"
+      },
+      {
+        "path": "danus/core/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bc267016e25f9ea237115c1a5b0e9582fb81d622",
+        "size": 1226,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/bc267016e25f9ea237115c1a5b0e9582fb81d622"
+      },
+      {
+        "path": "danus/core/_util.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "964ccf99b28e0dbb7ccfee2a780a7ab983c72628",
+        "size": 1146,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/964ccf99b28e0dbb7ccfee2a780a7ab983c72628"
+      },
+      {
+        "path": "danus/core/bm25.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "aaf17365cdf753da46a1e749ca3e7ac27f57ec17",
+        "size": 1965,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/aaf17365cdf753da46a1e749ca3e7ac27f57ec17"
+      },
+      {
+        "path": "danus/core/factgraph.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dce2b74f0ba3566280e05e8574e69521a7a2684a",
+        "size": 13505,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/dce2b74f0ba3566280e05e8574e69521a7a2684a"
+      },
+      {
+        "path": "danus/core/global_memory.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eebaffbd6c02775948c184e00aa8b7f667687c02",
+        "size": 5252,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/eebaffbd6c02775948c184e00aa8b7f667687c02"
+      },
+      {
+        "path": "danus/core/glossary.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "acdd12229ab5df561490eb2edc6bcdc63384325c",
+        "size": 4389,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/acdd12229ab5df561490eb2edc6bcdc63384325c"
+      },
+      {
+        "path": "danus/core/glossary_global.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5050583a8e530652d8351acf75acc1f89392ff1e",
+        "size": 10054,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/5050583a8e530652d8351acf75acc1f89392ff1e"
+      },
+      {
+        "path": "danus/core/local_memory.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "de09ac4d60351d62fdb1cf05f440a49ba8138308",
+        "size": 2894,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/de09ac4d60351d62fdb1cf05f440a49ba8138308"
+      },
+      {
+        "path": "danus/core/schema.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cfe7999fdc683b554efb47ab48cd352b3a038692",
+        "size": 5388,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/cfe7999fdc683b554efb47ab48cd352b3a038692"
+      },
+      {
+        "path": "danus/core/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "db80afdd8641fb95d8ac64751cdb42b2488c61d2",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/db80afdd8641fb95d8ac64751cdb42b2488c61d2"
+      },
+      {
+        "path": "danus/core/tests/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "size": 0,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      {
+        "path": "danus/core/tests/test_core.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "88cc3b8ea20c8aa1756662dfe7b8e7341f3b4343",
+        "size": 20426,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/88cc3b8ea20c8aa1756662dfe7b8e7341f3b4343"
+      },
+      {
+        "path": "danus/execution",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c387746af3dc06de2848b25afaf28c282b2a9ed8",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/c387746af3dc06de2848b25afaf28c282b2a9ed8"
+      },
+      {
+        "path": "danus/execution/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "70300addf4d500db28fb979e4ba34360550fd4c0",
+        "size": 2376,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/70300addf4d500db28fb979e4ba34360550fd4c0"
+      },
+      {
+        "path": "danus/execution/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3982d590ded7b038900e46d302e78cef7f4f75a4",
+        "size": 1687,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/3982d590ded7b038900e46d302e78cef7f4f75a4"
+      },
+      {
+        "path": "danus/execution/__main__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3cee95f268cd0356b342d9c890174b1b8086e1a5",
+        "size": 420,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/3cee95f268cd0356b342d9c890174b1b8086e1a5"
+      },
+      {
+        "path": "danus/execution/layout.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5b3682d3f229fdb6e0c41e580665162988320adb",
+        "size": 8659,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/5b3682d3f229fdb6e0c41e580665162988320adb"
+      },
+      {
+        "path": "danus/execution/loop.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "70ab1b5ac512ddb00be47870f5224663b882e44a",
+        "size": 9880,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/70ab1b5ac512ddb00be47870f5224663b882e44a"
+      },
+      {
+        "path": "danus/execution/scaffold.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5ac681e0d4c40d04b9612723ca2e94d3a23e68f8",
+        "size": 7342,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/5ac681e0d4c40d04b9612723ca2e94d3a23e68f8"
+      },
+      {
+        "path": "danus/execution/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5506a01ad18a00ad4a847f18c90d909267edc32e",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/5506a01ad18a00ad4a847f18c90d909267edc32e"
+      },
+      {
+        "path": "danus/execution/tests/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "size": 0,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      {
+        "path": "danus/execution/tests/conftest.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bcd7079477be1337f81655c6699a2949904b7881",
+        "size": 403,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/bcd7079477be1337f81655c6699a2949904b7881"
+      },
+      {
+        "path": "danus/execution/tests/test_execution.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "64eb0d4464c1d2bab7093c9c333d8d00a5f707b5",
+        "size": 8677,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/64eb0d4464c1d2bab7093c9c333d8d00a5f707b5"
+      },
+      {
+        "path": "danus/execution/tests/test_loop.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fc25d70fb5ad29727c18d3ba643262e43719acb0",
+        "size": 18528,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/fc25d70fb5ad29727c18d3ba643262e43719acb0"
+      },
+      {
+        "path": "danus/gateway",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "9e138218f97bf977bca6c06c20a8e8d65739efb7",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/9e138218f97bf977bca6c06c20a8e8d65739efb7"
+      },
+      {
+        "path": "danus/gateway/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "693bbd0b0f8319388d6307b80c00f8ca6224fce4",
+        "size": 2035,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/693bbd0b0f8319388d6307b80c00f8ca6224fce4"
+      },
+      {
+        "path": "danus/gateway/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6aeb1c3e5db8f4d9172f2ef12c9912594eddb077",
+        "size": 414,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/6aeb1c3e5db8f4d9172f2ef12c9912594eddb077"
+      },
+      {
+        "path": "danus/gateway/__main__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c6eb616842c7e6cd161c526c8ac7c187125c9712",
+        "size": 328,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/c6eb616842c7e6cd161c526c8ac7c187125c9712"
+      },
+      {
+        "path": "danus/gateway/roles.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8306b64c281809f22ac22c22be9783a5ef3c5dce",
+        "size": 1854,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/8306b64c281809f22ac22c22be9783a5ef3c5dce"
+      },
+      {
+        "path": "danus/gateway/server.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2c326df8c68e12d04bf7cfd4e24a24959d57ff22",
+        "size": 13751,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/2c326df8c68e12d04bf7cfd4e24a24959d57ff22"
+      },
+      {
+        "path": "danus/gateway/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ad44909159a878c77f4c477b1a3fd47e7ea72087",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/ad44909159a878c77f4c477b1a3fd47e7ea72087"
+      },
+      {
+        "path": "danus/gateway/tests/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "size": 0,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      {
+        "path": "danus/gateway/tests/test_gateway.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8a8b4845b42f10dfc880a62f823ba155b69a0a4d",
+        "size": 14710,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/8a8b4845b42f10dfc880a62f823ba155b69a0a4d"
+      },
+      {
+        "path": "danus/human_summary",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1d94e634c25cae1af9a6128577bff0a3bbb0f3b6",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/1d94e634c25cae1af9a6128577bff0a3bbb0f3b6"
+      },
+      {
+        "path": "danus/human_summary/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e675b3035a99f41456b6ddaafdb7ee0b1c42af85",
+        "size": 914,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e675b3035a99f41456b6ddaafdb7ee0b1c42af85"
+      },
+      {
+        "path": "danus/human_summary/__main__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d1835de1c2df3effdf5fa8a1daaec60ba479cee8",
+        "size": 288,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d1835de1c2df3effdf5fa8a1daaec60ba479cee8"
+      },
+      {
+        "path": "danus/human_summary/assemble.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f422a93f734dfe5ce9d37768a849e65b1e622688",
+        "size": 8675,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/f422a93f734dfe5ce9d37768a849e65b1e622688"
+      },
+      {
+        "path": "danus/human_summary/server.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d19bf158a081d71d531077167f0b415bf628ed14",
+        "size": 8737,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d19bf158a081d71d531077167f0b415bf628ed14"
+      },
+      {
+        "path": "danus/human_summary/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "29b57e3e5f0508fc3b696ef175b1cf2bcfe9be1d",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/29b57e3e5f0508fc3b696ef175b1cf2bcfe9be1d"
+      },
+      {
+        "path": "danus/human_summary/tests/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1161b77896e53ad7bce7f42aad188e61ed22b866",
+        "size": 72,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/1161b77896e53ad7bce7f42aad188e61ed22b866"
+      },
+      {
+        "path": "danus/human_summary/tests/_fixtures.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2e7e39caef842291652770bba732bbe491530e53",
+        "size": 1531,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/2e7e39caef842291652770bba732bbe491530e53"
+      },
+      {
+        "path": "danus/human_summary/tests/test_assemble.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8e74147f148d15c71872cb7c4b882104def28481",
+        "size": 6098,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/8e74147f148d15c71872cb7c4b882104def28481"
+      },
+      {
+        "path": "danus/human_summary/tests/test_server.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c1e136b2c25ba940b07d216ef2be3e5a02ce51dc",
+        "size": 11277,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/c1e136b2c25ba940b07d216ef2be3e5a02ce51dc"
+      },
+      {
+        "path": "danus/integrations",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1d9a1b9822df2a957015826e90b63fe2c0073146",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/1d9a1b9822df2a957015826e90b63fe2c0073146"
+      },
+      {
+        "path": "danus/integrations/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "30464e9dc2ffbb5e4e03603ab7dcf3c40dddfad1",
+        "size": 1543,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/30464e9dc2ffbb5e4e03603ab7dcf3c40dddfad1"
+      },
+      {
+        "path": "danus/integrations/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "976ac707cd8217f2dea40d6b341af4b5d2686e20",
+        "size": 398,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/976ac707cd8217f2dea40d6b341af4b5d2686e20"
+      },
+      {
+        "path": "danus/integrations/matlas.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "059ac7ae63cd8c499e75a81d6d2050c8982f9101",
+        "size": 4247,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/059ac7ae63cd8c499e75a81d6d2050c8982f9101"
+      },
+      {
+        "path": "danus/integrations/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "35e38c709353e6a7ffd94f8340ab608b39c6fb04",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/35e38c709353e6a7ffd94f8340ab608b39c6fb04"
+      },
+      {
+        "path": "danus/integrations/tests/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "size": 0,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      {
+        "path": "danus/integrations/tests/test_integrations.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9acc1f41590e89a05c7340854473a68e93229d51",
+        "size": 5841,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/9acc1f41590e89a05c7340854473a68e93229d51"
+      },
+      {
+        "path": "danus/observability",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "161fade7e35ca06ee0bc3813e37154abe223c19a",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/161fade7e35ca06ee0bc3813e37154abe223c19a"
+      },
+      {
+        "path": "danus/observability/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "904f5b9e35854a7aaee4673e4d858fa6ead519d6",
+        "size": 1764,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/904f5b9e35854a7aaee4673e4d858fa6ead519d6"
+      },
+      {
+        "path": "danus/observability/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2a26d7d076fec4c539081acda9117d82678f727e",
+        "size": 716,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/2a26d7d076fec4c539081acda9117d82678f727e"
+      },
+      {
+        "path": "danus/observability/__main__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "640847f522791d51a3be50777fff54b791b6b1d5",
+        "size": 185,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/640847f522791d51a3be50777fff54b791b6b1d5"
+      },
+      {
+        "path": "danus/observability/app.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "38fcb4acf56520c62958fe7ebbaff6afd5402245",
+        "size": 11963,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/38fcb4acf56520c62958fe7ebbaff6afd5402245"
+      },
+      {
+        "path": "danus/observability/static",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8482329667f52a93ecf4882374c7233a6cc153ad",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/8482329667f52a93ecf4882374c7233a6cc153ad"
+      },
+      {
+        "path": "danus/observability/static/app.js",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "aa5a0f22ab12e28ac598e2af070c0874c5eb57ad",
+        "size": 10935,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/aa5a0f22ab12e28ac598e2af070c0874c5eb57ad"
+      },
+      {
+        "path": "danus/observability/static/index.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "87084d2bcc74c1fb41ca7ea02f5a0eb5d1f22f42",
+        "size": 2821,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/87084d2bcc74c1fb41ca7ea02f5a0eb5d1f22f42"
+      },
+      {
+        "path": "danus/observability/static/style.css",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b33ba315e95679df871fa5cba0e1853dc4986c51",
+        "size": 9499,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/b33ba315e95679df871fa5cba0e1853dc4986c51"
+      },
+      {
+        "path": "danus/observability/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8b76009de1dea8001fcbe25f94bd40ab8b0a9918",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/8b76009de1dea8001fcbe25f94bd40ab8b0a9918"
+      },
+      {
+        "path": "danus/observability/tests/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "size": 0,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      {
+        "path": "danus/observability/tests/test_observability.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "164b4a857a1d0a7eca38786b02877a273857eb78",
+        "size": 9529,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/164b4a857a1d0a7eca38786b02877a273857eb78"
+      },
+      {
+        "path": "danus/observability/tests/test_observability_main.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b8f120cb6891339f41f95f84760e043291162841",
+        "size": 5978,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/b8f120cb6891339f41f95f84760e043291162841"
+      },
+      {
+        "path": "danus/orchestration",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1c97c0a934031c5761fa3fe875e44112a062d248",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/1c97c0a934031c5761fa3fe875e44112a062d248"
+      },
+      {
+        "path": "danus/orchestration/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ec9d803877de6a295243bd6f00602d6d1e75e935",
+        "size": 1638,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/ec9d803877de6a295243bd6f00602d6d1e75e935"
+      },
+      {
+        "path": "danus/orchestration/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6826042d975d06832d12446d08cfa339095a46ca",
+        "size": 814,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/6826042d975d06832d12446d08cfa339095a46ca"
+      },
+      {
+        "path": "danus/orchestration/__main__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7dbc88b5612d19639dea31aa3377bdbfc7101245",
+        "size": 214,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/7dbc88b5612d19639dea31aa3377bdbfc7101245"
+      },
+      {
+        "path": "danus/orchestration/cli.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "db7a1b1fc50bb97910bcdead509de9a4b9e03d93",
+        "size": 17128,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/db7a1b1fc50bb97910bcdead509de9a4b9e03d93"
+      },
+      {
+        "path": "danus/orchestration/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "792405089b14040a19345c396f8713f63752be0d",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/792405089b14040a19345c396f8713f63752be0d"
+      },
+      {
+        "path": "danus/orchestration/tests/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "size": 0,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      {
+        "path": "danus/orchestration/tests/conftest.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "53ac74935f8fe55d10c928e0eec4e52e26aceba8",
+        "size": 327,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/53ac74935f8fe55d10c928e0eec4e52e26aceba8"
+      },
+      {
+        "path": "danus/orchestration/tests/test_cli_verbs.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "67c72c85f4cb8a40973071efc56191dd4312d2e4",
+        "size": 31304,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/67c72c85f4cb8a40973071efc56191dd4312d2e4"
+      },
+      {
+        "path": "danus/orchestration/tests/test_orchestration.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f1650f4773e6ea4d8ed5f4d7be6a0a5dbf003a24",
+        "size": 8884,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/f1650f4773e6ea4d8ed5f4d7be6a0a5dbf003a24"
+      },
+      {
+        "path": "danus/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "752acc2d1c98f30a4795a5a5c07f5c624a9aea22",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/752acc2d1c98f30a4795a5a5c07f5c624a9aea22"
+      },
+      {
+        "path": "danus/tests/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cdaf1f18411cd4291c9be92ca610cb95b31e2c4d",
+        "size": 41,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/cdaf1f18411cd4291c9be92ca610cb95b31e2c4d"
+      },
+      {
+        "path": "danus/tests/test_codex.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f7b0f207b903e56f9b4a89365d72066b0c113e2c",
+        "size": 10101,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/f7b0f207b903e56f9b4a89365d72066b0c113e2c"
+      },
+      {
+        "path": "danus/tests/test_codex_env.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e84a56b58e1971ef7b0376bc9161cbf19fef49e4",
+        "size": 3051,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e84a56b58e1971ef7b0376bc9161cbf19fef49e4"
+      },
+      {
+        "path": "danus/verify",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "094d84cbab96c35a31459b958538e4c56e4946a6",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/094d84cbab96c35a31459b958538e4c56e4946a6"
+      },
+      {
+        "path": "danus/verify/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f1f42986397f8d14ec98433cbf1a5fcfba596353",
+        "size": 5205,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/f1f42986397f8d14ec98433cbf1a5fcfba596353"
+      },
+      {
+        "path": "danus/verify/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "740bd1ea5838f7b617aa1a3e27655596da1c998d",
+        "size": 470,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/740bd1ea5838f7b617aa1a3e27655596da1c998d"
+      },
+      {
+        "path": "danus/verify/__main__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9677feba1853a026f522b79fa710d28bda8ba728",
+        "size": 635,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/9677feba1853a026f522b79fa710d28bda8ba728"
+      },
+      {
+        "path": "danus/verify/launcher.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7d4ac3bc1790909ae9aa0151a0b36dbcb30e7485",
+        "size": 8650,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/7d4ac3bc1790909ae9aa0151a0b36dbcb30e7485"
+      },
+      {
+        "path": "danus/verify/prechecks.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a034396acc1adcfd6d5bf8929eba033c0e991088",
+        "size": 11129,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/a034396acc1adcfd6d5bf8929eba033c0e991088"
+      },
+      {
+        "path": "danus/verify/service.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e6a70351459e87ef2013552dd44d8b3a26f3d4b1",
+        "size": 2009,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e6a70351459e87ef2013552dd44d8b3a26f3d4b1"
+      },
+      {
+        "path": "danus/verify/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5982c3ef4cb52c4f01f6fb398867410122abbc02",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/5982c3ef4cb52c4f01f6fb398867410122abbc02"
+      },
+      {
+        "path": "danus/verify/tests/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "size": 0,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      {
+        "path": "danus/verify/tests/fake_codex.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "36bbfd2f9ce53fc8d76e5519a3e87ab878feb516",
+        "size": 2376,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/36bbfd2f9ce53fc8d76e5519a3e87ab878feb516"
+      },
+      {
+        "path": "danus/verify/tests/test_launcher.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1ae3a0671324769b6345a91fdb8665e4353bd52a",
+        "size": 11192,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/1ae3a0671324769b6345a91fdb8665e4353bd52a"
+      },
+      {
+        "path": "danus/verify/tests/test_prechecks.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8d0072654bae46cf70ae006403a9cc3b583ca690",
+        "size": 10989,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/8d0072654bae46cf70ae006403a9cc3b583ca690"
+      },
+      {
+        "path": "danus/verify/tests/test_service.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8b5bdaf4fc5022c8959eb8345984b7b06e6abd00",
+        "size": 8322,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/8b5bdaf4fc5022c8959eb8345984b7b06e6abd00"
+      },
+      {
+        "path": "danus/verify/tests/test_verify.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "819bc3c0d9111dd233e3fae34bcc7e5b334ed700",
+        "size": 4345,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/819bc3c0d9111dd233e3fae34bcc7e5b334ed700"
+      },
+      {
+        "path": "danus/write_paper",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4449a175acfc2d4bd87f76d473cd89aab8a95402",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/4449a175acfc2d4bd87f76d473cd89aab8a95402"
+      },
+      {
+        "path": "danus/write_paper/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "421e9a5d4cd41472f0b33bb5eb7d363227da02c4",
+        "size": 849,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/421e9a5d4cd41472f0b33bb5eb7d363227da02c4"
+      },
+      {
+        "path": "danus/write_paper/__main__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "db3870c6eea27fbaf29da753c095bb2a86f92d22",
+        "size": 280,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/db3870c6eea27fbaf29da753c095bb2a86f92d22"
+      },
+      {
+        "path": "danus/write_paper/assemble.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2838a21e0746ef5e9ab1d7b691517c4d7e9960b8",
+        "size": 60053,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/2838a21e0746ef5e9ab1d7b691517c4d7e9960b8"
+      },
+      {
+        "path": "danus/write_paper/paper_chunked.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "976fa5f4d25bea97a376e7e921450c75ffecf0ba",
+        "size": 23119,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/976fa5f4d25bea97a376e7e921450c75ffecf0ba"
+      },
+      {
+        "path": "danus/write_paper/paper_math_verify.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c73488d14218bebacac07620a4efd948925cd432",
+        "size": 9186,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/c73488d14218bebacac07620a4efd948925cd432"
+      },
+      {
+        "path": "danus/write_paper/server.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef1eea01cb8a1f737318dee8ace34ae081a4d7b3",
+        "size": 92173,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/ef1eea01cb8a1f737318dee8ace34ae081a4d7b3"
+      },
+      {
+        "path": "danus/write_paper/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "248413c0a3c158018ea86bdce0c22bf0227fc70c",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/248413c0a3c158018ea86bdce0c22bf0227fc70c"
+      },
+      {
+        "path": "danus/write_paper/tests/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "size": 0,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      {
+        "path": "danus/write_paper/tests/_fixtures.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "63c32ec62095a309471dae31dcb3ac941cb1e787",
+        "size": 3529,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/63c32ec62095a309471dae31dcb3ac941cb1e787"
+      },
+      {
+        "path": "danus/write_paper/tests/test_assemble.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fc858efb385a9aa9de167b65f8316311f32f6909",
+        "size": 20021,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/fc858efb385a9aa9de167b65f8316311f32f6909"
+      },
+      {
+        "path": "danus/write_paper/tests/test_assemble_edge.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eda89236354bce8db1c1a16f1a979431e466b5a1",
+        "size": 3837,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/eda89236354bce8db1c1a16f1a979431e466b5a1"
+      },
+      {
+        "path": "danus/write_paper/tests/test_chunked.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "65d3ad2a7058940c9892ae79e0ad64d48119285c",
+        "size": 20211,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/65d3ad2a7058940c9892ae79e0ad64d48119285c"
+      },
+      {
+        "path": "danus/write_paper/tests/test_multi_paper.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "aaa4094f51f79558b07494023862486d92ebc5f9",
+        "size": 16143,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/aaa4094f51f79558b07494023862486d92ebc5f9"
+      },
+      {
+        "path": "danus/write_paper/tests/test_paper_math_verify.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5929fd74e76a30507d566593b4ec378c3091aca6",
+        "size": 16503,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/5929fd74e76a30507d566593b4ec378c3091aca6"
+      },
+      {
+        "path": "danus/write_paper/tests/test_reform.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d8e6c0b0cce7c05064abebdee7b341e5008b64f5",
+        "size": 15596,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d8e6c0b0cce7c05064abebdee7b341e5008b64f5"
+      },
+      {
+        "path": "danus/write_paper/tests/test_server.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4d59063137bb7ba75d382de63accff88cfc10629",
+        "size": 67360,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/4d59063137bb7ba75d382de63accff88cfc10629"
+      },
+      {
+        "path": "danus/write_paper/tests/test_subgraph.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ce9da214b0c0bbabf8d70bb1c0d6598213cfd5b5",
+        "size": 11822,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/ce9da214b0c0bbabf8d70bb1c0d6598213cfd5b5"
+      },
+      {
+        "path": "docs",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7dcd0573ee7d5a7abfe8c9eaf5ababa4965c9a62",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/7dcd0573ee7d5a7abfe8c9eaf5ababa4965c9a62"
+      },
+      {
+        "path": "docs/assets",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a97d666335fb4b2e101e718797ff8e0d2db541a9",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/a97d666335fb4b2e101e718797ff8e0d2db541a9"
+      },
+      {
+        "path": "docs/assets/agent-tools.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "99bd88b87cc9979946e7ddb9a1d5e21d674a8740",
+        "size": 127519,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/99bd88b87cc9979946e7ddb9a1d5e21d674a8740"
+      },
+      {
+        "path": "docs/assets/architecture.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a260e7f7c4d52d6c90bfa10841b3b1c02dd7f072",
+        "size": 114404,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/a260e7f7c4d52d6c90bfa10841b3b1c02dd7f072"
+      },
+      {
+        "path": "docs/assets/fact-graph.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "52287e03a4aeeff287349e0711869082b07c8928",
+        "size": 204304,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/52287e03a4aeeff287349e0711869082b07c8928"
+      },
+      {
+        "path": "docs/assets/verify-loop.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "16893723e0e86060bb506f0278cf181d342d6ab6",
+        "size": 52733,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/16893723e0e86060bb506f0278cf181d342d6ab6"
+      },
+      {
+        "path": "docs/cli-and-tools.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "45d615ac8b0bcc37cc162c7c44b37eaa76f35660",
+        "size": 6872,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/45d615ac8b0bcc37cc162c7c44b37eaa76f35660"
+      },
+      {
+        "path": "docs/concepts.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1de8ddeb8c623a95663eb42113c49fc16eba0864",
+        "size": 8088,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/1de8ddeb8c623a95663eb42113c49fc16eba0864"
+      },
+      {
+        "path": "docs/configuration.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c745dde9ac5804e37145003d96fefaef3ed7cb4c",
+        "size": 5925,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/c745dde9ac5804e37145003d96fefaef3ed7cb4c"
+      },
+      {
+        "path": "docs/getting-started.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5071380e356dbd9bdc0133956244c03fb2d1c0d3",
+        "size": 5620,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/5071380e356dbd9bdc0133956244c03fb2d1c0d3"
+      },
+      {
+        "path": "docs/operating-guide.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bf4a7968a5ea6257ee08c9a9ee72b77ae2123d21",
+        "size": 6489,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/bf4a7968a5ea6257ee08c9a9ee72b77ae2123d21"
+      },
+      {
+        "path": "docs/operations.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8f965729f926ba12238961da5568f459087ccf27",
+        "size": 6013,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/8f965729f926ba12238961da5568f459087ccf27"
+      },
+      {
+        "path": "docs/security-and-trust.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7c090af1fe2b550c4283bdd366135c27a8a3672e",
+        "size": 6447,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/7c090af1fe2b550c4283bdd366135c27a8a3672e"
+      },
+      {
+        "path": "examples",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4b95b258f7538aa7dddb28d3250e59d14fc424f8",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/4b95b258f7538aa7dddb28d3250e59d14fc424f8"
+      },
+      {
+        "path": "examples/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "41d078d0b74137694df1b7f26c2b1dcb4dceaca5",
+        "size": 3664,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/41d078d0b74137694df1b7f26c2b1dcb4dceaca5"
+      },
+      {
+        "path": "examples/ops",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5fa8ba097fd7ede51e8b29d6cebe368233165bcd",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/5fa8ba097fd7ede51e8b29d6cebe368233165bcd"
+      },
+      {
+        "path": "examples/ops/main-agent-tmux.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "dd718375f84f557ef61e20208b1656db00be9075",
+        "size": 2132,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/dd718375f84f557ef61e20208b1656db00be9075"
+      },
+      {
+        "path": "examples/ops/watchdog.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "f8539bfda57e0cba5324e1cc29b780b4ae8acb56",
+        "size": 2924,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/f8539bfda57e0cba5324e1cc29b780b4ae8acb56"
+      },
+      {
+        "path": "examples/project",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ee1dc2a969df0b53948ea83c58dd161dbfb12be0",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/ee1dc2a969df0b53948ea83c58dd161dbfb12be0"
+      },
+      {
+        "path": "examples/project/PROBLEM.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bc232ae2d3e5608faa164602a58a3b9c8b3ab205",
+        "size": 665,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/bc232ae2d3e5608faa164602a58a3b9c8b3ab205"
+      },
+      {
+        "path": "examples/project/fact_graph",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "9a1b18e6966bb7ec90cfe1d121d81d22c060114e",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/9a1b18e6966bb7ec90cfe1d121d81d22c060114e"
+      },
+      {
+        "path": "examples/project/fact_graph/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "05ffc481a9741105b8fb8da0897140a13091c105",
+        "size": 1592,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/05ffc481a9741105b8fb8da0897140a13091c105"
+      },
+      {
+        "path": "examples/project/fact_graph/facts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2f1ff9da897f0b1505fbe419969cb51cc1d1e7a1",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/2f1ff9da897f0b1505fbe419969cb51cc1d1e7a1"
+      },
+      {
+        "path": "examples/project/fact_graph/facts/3b0c70d292e73ebe.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c21b64d7698b53b6cae68b4c195ca629652dbab8",
+        "size": 668,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/c21b64d7698b53b6cae68b4c195ca629652dbab8"
+      },
+      {
+        "path": "examples/project/fact_graph/facts/8033e998b558da98.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1c2a91822b16f5c833233e9bfefd64984246bfaa",
+        "size": 653,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/1c2a91822b16f5c833233e9bfefd64984246bfaa"
+      },
+      {
+        "path": "examples/project/fact_graph/glossary.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "369a24626e92ffdbb0a2451c7a73a7bbb01dde75",
+        "size": 80,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/369a24626e92ffdbb0a2451c7a73a7bbb01dde75"
+      },
+      {
+        "path": "pyproject.toml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e101f796c786fff9dafadcb9e5cfc474266e9690",
+        "size": 1911,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/e101f796c786fff9dafadcb9e5cfc474266e9690"
+      },
+      {
+        "path": "scripts",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "44f84acbc943799dc2be731c5bc07ce68ee05c4e",
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/trees/44f84acbc943799dc2be731c5bc07ce68ee05c4e"
+      },
+      {
+        "path": "scripts/bootstrap.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "9391161833d68b587e4806e1724581ab9a1173ea",
+        "size": 7499,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/9391161833d68b587e4806e1724581ab9a1173ea"
+      },
+      {
+        "path": "scripts/check-codex.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "99844eea175437c7fccfd12306f6ba1b2b384a38",
+        "size": 4146,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/99844eea175437c7fccfd12306f6ba1b2b384a38"
+      },
+      {
+        "path": "scripts/doctor.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "993916c9b9347c572ed67e5fab5a01dac27a6cdd",
+        "size": 3465,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/993916c9b9347c572ed67e5fab5a01dac27a6cdd"
+      },
+      {
+        "path": "scripts/env.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "d55215af62ab953050aea166c14cc0ecb3c414b8",
+        "size": 5306,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/d55215af62ab953050aea166c14cc0ecb3c414b8"
+      },
+      {
+        "path": "scripts/install-tex.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "14cd8ea897ea6286bb1e7935d65f4f7d1838ec25",
+        "size": 1943,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/14cd8ea897ea6286bb1e7935d65f4f7d1838ec25"
+      },
+      {
+        "path": "scripts/recover.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "eb74fdc924753a4caed4f2a05cac2c48771ab06b",
+        "size": 1944,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/eb74fdc924753a4caed4f2a05cac2c48771ab06b"
+      },
+      {
+        "path": "scripts/services.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "bac6e34fe04e98c2f32d6d981e9c8ef731b32716",
+        "size": 5147,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/bac6e34fe04e98c2f32d6d981e9c8ef731b32716"
+      },
+      {
+        "path": "scripts/setup-codex.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "8dff145d7ea44e7c10b1ea32711f4110584f0ed6",
+        "size": 3122,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/8dff145d7ea44e7c10b1ea32711f4110584f0ed6"
+      },
+      {
+        "path": "scripts/start-dashboard.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "ce3c7048f75d208df0d9f3a7612dec9b59672448",
+        "size": 574,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/ce3c7048f75d208df0d9f3a7612dec9b59672448"
+      },
+      {
+        "path": "scripts/start-verify.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "a988b3641d41e67be7ee7edf39c687c52ec136d4",
+        "size": 832,
+        "url": "https://api.github.com/repos/frenzymath/Danus/git/blobs/a988b3641d41e67be7ee7edf39c687c52ec136d4"
+      }
+    ],
+    "truncated": false
+  }
+}

@@ -1,0 +1,4489 @@
+{
+  "meta": {
+    "count": 76,
+    "db_response_time_ms": 210,
+    "page": 1,
+    "per_page": 6,
+    "groups_count": null,
+    "x_query": {
+      "oql": "works where full text has (stemmed \"Numbers with small prime factors\")",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "fulltext.search",
+            "value": "\"Numbers with small prime factors\"",
+            "operator": "has"
+          }
+        ]
+      },
+      "url": "/works?filter=fulltext.search:%22Numbers with small prime factors%22&per_page=6"
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W2013892149",
+      "doi": "https://doi.org/10.1090/memo/0106",
+      "title": "Numbers with small prime factors, and the least 𝑘th power non-residue",
+      "display_name": "Numbers with small prime factors, and the least 𝑘th power non-residue",
+      "relevance_score": 265.88257,
+      "publication_year": 1971,
+      "publication_date": "1971-01-01",
+      "ids": {
+        "openalex": "https://openalex.org/W2013892149",
+        "doi": "https://doi.org/10.1090/memo/0106",
+        "mag": "2013892149"
+      },
+      "language": "en",
+      "primary_location": {
+        "id": "doi:10.1090/memo/0106",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1090/memo/0106",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S104585175",
+          "display_name": "Memoirs of the American Mathematical Society",
+          "issn_l": "0065-9266",
+          "issn": [
+            "0065-9266",
+            "1947-6221"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310315719",
+          "host_organization_name": "American Mathematical Society",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310315719"
+          ],
+          "host_organization_lineage_names": [
+            "American Mathematical Society"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Memoirs of the American Mathematical Society",
+        "raw_type": "journal-article"
+      },
+      "type": "article",
+      "indexed_in": [
+        "crossref"
+      ],
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5016097616",
+            "display_name": "Karl K. Norton",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Karl K. Norton",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 0,
+      "institutions_distinct_count": 0,
+      "corresponding_author_ids": [
+        "https://openalex.org/A5016097616"
+      ],
+      "corresponding_institution_ids": [],
+      "apc_list": null,
+      "apc_paid": null,
+      "fwci": 1.6497,
+      "has_fulltext": false,
+      "cited_by_count": 80,
+      "citation_normalized_percentile": {
+        "value": 0.85273492,
+        "is_in_top_1_percent": false,
+        "is_in_top_10_percent": false
+      },
+      "cited_by_percentile_year": {
+        "min": 89,
+        "max": 98
+      },
+      "biblio": {
+        "volume": "0",
+        "issue": "106",
+        "first_page": null,
+        "last_page": null
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T11166",
+        "display_name": "Analytic Number Theory Research",
+        "score": 0.9111999869346619,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2602",
+          "display_name": "Algebra and Number Theory"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/26",
+          "display_name": "Mathematics"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T11166",
+          "display_name": "Analytic Number Theory Research",
+          "score": 0.9111999869346619,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2602",
+            "display_name": "Algebra and Number Theory"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11693",
+          "display_name": "Cryptography and Residue Arithmetic",
+          "score": 0.9049999713897705,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1710",
+            "display_name": "Information Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/mathematics",
+          "display_name": "Mathematics",
+          "score": 0.7925987839698792
+        },
+        {
+          "id": "https://openalex.org/keywords/residue",
+          "display_name": "Residue (chemistry)",
+          "score": 0.5691733956336975
+        },
+        {
+          "id": "https://openalex.org/keywords/prime",
+          "display_name": "Prime (order theory)",
+          "score": 0.4982728958129883
+        },
+        {
+          "id": "https://openalex.org/keywords/arithmetic",
+          "display_name": "Arithmetic",
+          "score": 0.38273361325263977
+        },
+        {
+          "id": "https://openalex.org/keywords/combinatorics",
+          "display_name": "Combinatorics",
+          "score": 0.232062429189682
+        },
+        {
+          "id": "https://openalex.org/keywords/chemistry",
+          "display_name": "Chemistry",
+          "score": 0.11738830804824829
+        },
+        {
+          "id": "https://openalex.org/keywords/organic-chemistry",
+          "display_name": "Organic chemistry",
+          "score": 0.060515135526657104
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.7925987839698792
+        },
+        {
+          "id": "https://openalex.org/C2781338088",
+          "wikidata": "https://www.wikidata.org/wiki/Q903495",
+          "display_name": "Residue (chemistry)",
+          "level": 2,
+          "score": 0.5691733956336975
+        },
+        {
+          "id": "https://openalex.org/C184992742",
+          "wikidata": "https://www.wikidata.org/wiki/Q7243229",
+          "display_name": "Prime (order theory)",
+          "level": 2,
+          "score": 0.4982728958129883
+        },
+        {
+          "id": "https://openalex.org/C94375191",
+          "wikidata": "https://www.wikidata.org/wiki/Q11205",
+          "display_name": "Arithmetic",
+          "level": 1,
+          "score": 0.38273361325263977
+        },
+        {
+          "id": "https://openalex.org/C114614502",
+          "wikidata": "https://www.wikidata.org/wiki/Q76592",
+          "display_name": "Combinatorics",
+          "level": 1,
+          "score": 0.232062429189682
+        },
+        {
+          "id": "https://openalex.org/C185592680",
+          "wikidata": "https://www.wikidata.org/wiki/Q2329",
+          "display_name": "Chemistry",
+          "level": 0,
+          "score": 0.11738830804824829
+        },
+        {
+          "id": "https://openalex.org/C178790620",
+          "wikidata": "https://www.wikidata.org/wiki/Q11351",
+          "display_name": "Organic chemistry",
+          "level": 1,
+          "score": 0.060515135526657104
+        }
+      ],
+      "mesh": [],
+      "locations_count": 1,
+      "locations": [
+        {
+          "id": "doi:10.1090/memo/0106",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1090/memo/0106",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S104585175",
+            "display_name": "Memoirs of the American Mathematical Society",
+            "issn_l": "0065-9266",
+            "issn": [
+              "0065-9266",
+              "1947-6221"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310315719",
+            "host_organization_name": "American Mathematical Society",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310315719"
+            ],
+            "host_organization_lineage_names": [
+              "American Mathematical Society"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Memoirs of the American Mathematical Society",
+          "raw_type": "journal-article"
+        }
+      ],
+      "best_oa_location": null,
+      "sustainable_development_goals": [],
+      "awards": [],
+      "funders": [],
+      "has_content": {
+        "pdf": false,
+        "grobid_xml": false
+      },
+      "content_urls": null,
+      "referenced_works_count": 0,
+      "referenced_works": [],
+      "related_works": [
+        "https://openalex.org/W1979597421",
+        "https://openalex.org/W2007980826",
+        "https://openalex.org/W4245490552",
+        "https://openalex.org/W4225152035",
+        "https://openalex.org/W2061531152",
+        "https://openalex.org/W3002753104",
+        "https://openalex.org/W2077600819",
+        "https://openalex.org/W1587224694",
+        "https://openalex.org/W2911598644",
+        "https://openalex.org/W2142036596"
+      ],
+      "abstract_inverted_index": null,
+      "counts_by_year": [
+        {
+          "year": 2023,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2022,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2020,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2019,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2017,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2016,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2015,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2014,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2013,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2012,
+          "cited_by_count": 5
+        }
+      ],
+      "updated_date": "2026-08-21T09:56:20.448147",
+      "created_date": "2025-10-10T00:00:00"
+    },
+    {
+      "id": "https://openalex.org/W2020360749",
+      "doi": "https://doi.org/10.1112/s0024611502013655",
+      "title": "VINOGRADOV'S INTEGRAL AND BOUNDS FOR THE RIEMANN ZETA FUNCTION",
+      "display_name": "VINOGRADOV'S INTEGRAL AND BOUNDS FOR THE RIEMANN ZETA FUNCTION",
+      "relevance_score": 105.0721,
+      "publication_year": 2002,
+      "publication_date": "2002-10-14",
+      "ids": {
+        "openalex": "https://openalex.org/W2020360749",
+        "doi": "https://doi.org/10.1112/s0024611502013655",
+        "mag": "2020360749"
+      },
+      "language": "en",
+      "primary_location": {
+        "id": "doi:10.1112/s0024611502013655",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1112/s0024611502013655",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S2898222998",
+          "display_name": "Proceedings of the London Mathematical Society",
+          "issn_l": "0024-6115",
+          "issn": [
+            "0024-6115",
+            "1460-244X"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320595",
+          "host_organization_name": "Wiley",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320595"
+          ],
+          "host_organization_lineage_names": [
+            "Wiley"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Proceedings of the London Mathematical Society",
+        "raw_type": "journal-article"
+      },
+      "type": "article",
+      "indexed_in": [
+        "crossref"
+      ],
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": null,
+            "display_name": "KEVIN FORD",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I157725225",
+              "display_name": "University of Illinois Urbana-Champaign",
+              "ror": "https://ror.org/047426m28",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I157725225"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "KEVIN FORD",
+          "raw_affiliation_strings": [
+            "Department of Mathematics, University of Illinois at Urbana–Champaign, Urbana, IL 61801, USA",
+            "Department of Mathematics, University of Illinois at Urbana-ChampaignUrbana, IL 61801, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mathematics, University of Illinois at Urbana–Champaign, Urbana, IL 61801, USA",
+              "institution_ids": [
+                "https://openalex.org/I157725225"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematics, University of Illinois at Urbana-ChampaignUrbana, IL 61801, USA",
+              "institution_ids": [
+                "https://openalex.org/I157725225"
+              ]
+            }
+          ]
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 1,
+      "institutions_distinct_count": 1,
+      "corresponding_author_ids": [],
+      "corresponding_institution_ids": [
+        "https://openalex.org/I157725225"
+      ],
+      "apc_list": {
+        "value": 4700,
+        "currency": "USD",
+        "value_usd": 4700
+      },
+      "apc_paid": null,
+      "fwci": 3.3457,
+      "has_fulltext": false,
+      "cited_by_count": 158,
+      "citation_normalized_percentile": {
+        "value": 0.90934394,
+        "is_in_top_1_percent": false,
+        "is_in_top_10_percent": true
+      },
+      "cited_by_percentile_year": {
+        "min": 96,
+        "max": 100
+      },
+      "biblio": {
+        "volume": "85",
+        "issue": "3",
+        "first_page": "565",
+        "last_page": "633"
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T11166",
+        "display_name": "Analytic Number Theory Research",
+        "score": 0.9878000020980835,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2602",
+          "display_name": "Algebra and Number Theory"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/26",
+          "display_name": "Mathematics"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T11166",
+          "display_name": "Analytic Number Theory Research",
+          "score": 0.9878000020980835,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2602",
+            "display_name": "Algebra and Number Theory"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10061",
+          "display_name": "Algebraic Geometry and Number Theory",
+          "score": 0.002099999925121665,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2608",
+            "display_name": "Geometry and Topology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11428",
+          "display_name": "Advanced Mathematical Identities",
+          "score": 0.0019000000320374966,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2602",
+            "display_name": "Algebra and Number Theory"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/mathematics",
+          "display_name": "Mathematics",
+          "score": 0.8586220741271973
+        },
+        {
+          "id": "https://openalex.org/keywords/combinatorics",
+          "display_name": "Combinatorics",
+          "score": 0.6466432809829712
+        },
+        {
+          "id": "https://openalex.org/keywords/riemann-hypothesis",
+          "display_name": "Riemann hypothesis",
+          "score": 0.6410452127456665
+        },
+        {
+          "id": "https://openalex.org/keywords/exponential-function",
+          "display_name": "Exponential function",
+          "score": 0.6010215282440186
+        },
+        {
+          "id": "https://openalex.org/keywords/riemann-zeta-function",
+          "display_name": "Riemann zeta function",
+          "score": 0.5995744466781616
+        },
+        {
+          "id": "https://openalex.org/keywords/upper-and-lower-bounds",
+          "display_name": "Upper and lower bounds",
+          "score": 0.5612897276878357
+        },
+        {
+          "id": "https://openalex.org/keywords/bounding-overwatch",
+          "display_name": "Bounding overwatch",
+          "score": 0.5341609716415405
+        },
+        {
+          "id": "https://openalex.org/keywords/lambda",
+          "display_name": "Lambda",
+          "score": 0.5201852321624756
+        },
+        {
+          "id": "https://openalex.org/keywords/sigma",
+          "display_name": "Sigma",
+          "score": 0.4947316348552704
+        },
+        {
+          "id": "https://openalex.org/keywords/function",
+          "display_name": "Function (biology)",
+          "score": 0.4795546233654022
+        },
+        {
+          "id": "https://openalex.org/keywords/prime",
+          "display_name": "Prime (order theory)",
+          "score": 0.4245394468307495
+        },
+        {
+          "id": "https://openalex.org/keywords/mathematical-analysis",
+          "display_name": "Mathematical analysis",
+          "score": 0.2150234878063202
+        },
+        {
+          "id": "https://openalex.org/keywords/physics",
+          "display_name": "Physics",
+          "score": 0.07404080033302307
+        },
+        {
+          "id": "https://openalex.org/keywords/quantum-mechanics",
+          "display_name": "Quantum mechanics",
+          "score": 0.05742886662483215
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.8586220741271973
+        },
+        {
+          "id": "https://openalex.org/C114614502",
+          "wikidata": "https://www.wikidata.org/wiki/Q76592",
+          "display_name": "Combinatorics",
+          "level": 1,
+          "score": 0.6466432809829712
+        },
+        {
+          "id": "https://openalex.org/C199479865",
+          "wikidata": "https://www.wikidata.org/wiki/Q205966",
+          "display_name": "Riemann hypothesis",
+          "level": 2,
+          "score": 0.6410452127456665
+        },
+        {
+          "id": "https://openalex.org/C151376022",
+          "wikidata": "https://www.wikidata.org/wiki/Q168698",
+          "display_name": "Exponential function",
+          "level": 2,
+          "score": 0.6010215282440186
+        },
+        {
+          "id": "https://openalex.org/C35235930",
+          "wikidata": "https://www.wikidata.org/wiki/Q187235",
+          "display_name": "Riemann zeta function",
+          "level": 2,
+          "score": 0.5995744466781616
+        },
+        {
+          "id": "https://openalex.org/C77553402",
+          "wikidata": "https://www.wikidata.org/wiki/Q13222579",
+          "display_name": "Upper and lower bounds",
+          "level": 2,
+          "score": 0.5612897276878357
+        },
+        {
+          "id": "https://openalex.org/C63584917",
+          "wikidata": "https://www.wikidata.org/wiki/Q333286",
+          "display_name": "Bounding overwatch",
+          "level": 2,
+          "score": 0.5341609716415405
+        },
+        {
+          "id": "https://openalex.org/C2778113609",
+          "wikidata": "https://www.wikidata.org/wiki/Q10897",
+          "display_name": "Lambda",
+          "level": 2,
+          "score": 0.5201852321624756
+        },
+        {
+          "id": "https://openalex.org/C2778049214",
+          "wikidata": "https://www.wikidata.org/wiki/Q7512234",
+          "display_name": "Sigma",
+          "level": 2,
+          "score": 0.4947316348552704
+        },
+        {
+          "id": "https://openalex.org/C14036430",
+          "wikidata": "https://www.wikidata.org/wiki/Q3736076",
+          "display_name": "Function (biology)",
+          "level": 2,
+          "score": 0.4795546233654022
+        },
+        {
+          "id": "https://openalex.org/C184992742",
+          "wikidata": "https://www.wikidata.org/wiki/Q7243229",
+          "display_name": "Prime (order theory)",
+          "level": 2,
+          "score": 0.4245394468307495
+        },
+        {
+          "id": "https://openalex.org/C134306372",
+          "wikidata": "https://www.wikidata.org/wiki/Q7754",
+          "display_name": "Mathematical analysis",
+          "level": 1,
+          "score": 0.2150234878063202
+        },
+        {
+          "id": "https://openalex.org/C121332964",
+          "wikidata": "https://www.wikidata.org/wiki/Q413",
+          "display_name": "Physics",
+          "level": 0,
+          "score": 0.07404080033302307
+        },
+        {
+          "id": "https://openalex.org/C62520636",
+          "wikidata": "https://www.wikidata.org/wiki/Q944",
+          "display_name": "Quantum mechanics",
+          "level": 1,
+          "score": 0.05742886662483215
+        },
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C154945302",
+          "wikidata": "https://www.wikidata.org/wiki/Q11660",
+          "display_name": "Artificial intelligence",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C78458016",
+          "wikidata": "https://www.wikidata.org/wiki/Q840400",
+          "display_name": "Evolutionary biology",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C86803240",
+          "wikidata": "https://www.wikidata.org/wiki/Q420",
+          "display_name": "Biology",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "mesh": [],
+      "locations_count": 1,
+      "locations": [
+        {
+          "id": "doi:10.1112/s0024611502013655",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1112/s0024611502013655",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S2898222998",
+            "display_name": "Proceedings of the London Mathematical Society",
+            "issn_l": "0024-6115",
+            "issn": [
+              "0024-6115",
+              "1460-244X"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320595",
+            "host_organization_name": "Wiley",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320595"
+            ],
+            "host_organization_lineage_names": [
+              "Wiley"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Proceedings of the London Mathematical Society",
+          "raw_type": "journal-article"
+        }
+      ],
+      "best_oa_location": null,
+      "sustainable_development_goals": [],
+      "awards": [],
+      "funders": [],
+      "has_content": {
+        "pdf": false,
+        "grobid_xml": false
+      },
+      "content_urls": null,
+      "referenced_works_count": 0,
+      "referenced_works": [],
+      "related_works": [
+        "https://openalex.org/W4295267532",
+        "https://openalex.org/W1543217399",
+        "https://openalex.org/W2616126985",
+        "https://openalex.org/W2610184042",
+        "https://openalex.org/W4294651012",
+        "https://openalex.org/W1513480133",
+        "https://openalex.org/W2986559382",
+        "https://openalex.org/W2964407532",
+        "https://openalex.org/W2086661656",
+        "https://openalex.org/W3200545397"
+      ],
+      "abstract_inverted_index": {
+        "The": [
+          0,
+          44
+        ],
+        "main": [
+          1
+        ],
+        "result": [
+          2,
+          96
+        ],
+        "is": [
+          3,
+          97,
+          111,
+          116
+        ],
+        "an": [
+          4,
+          63
+        ],
+        "upper": [
+          5
+        ],
+        "bound": [
+          6,
+          101
+        ],
+        "for": [
+          7,
+          34,
+          71,
+          77
+        ],
+        "the": [
+          8,
+          13,
+          56,
+          98
+        ],
+        "Riemann": [
+          9
+        ],
+        "zeta": [
+          10
+        ],
+        "function": [
+          11
+        ],
+        "in": [
+          12
+        ],
+        "critical": [
+          14
+        ],
+        "strip:": [
+          15
+        ],
+        "$\\zeta(\\sigma": [
+          16
+        ],
+        "+": [
+          17,
+          145
+        ],
+        "it)": [
+          18
+        ],
+        "\\le": [
+          19,
+          36,
+          38,
+          104,
+          131,
+          136,
+          142
+        ],
+        "A|t|^{B(1": [
+          20
+        ],
+        "-": [
+          21,
+          107
+        ],
+        "\\sigma)^{3/2}}": [
+          22
+        ],
+        "\\log^{2/3}": [
+          23
+        ],
+        "|t|$": [
+          24
+        ],
+        "with": [
+          25
+        ],
+        "$A": [
+          26
+        ],
+        "=": [
+          27,
+          31,
+          121,
+          127
+        ],
+        "76.2$": [
+          28
+        ],
+        "and": [
+          29,
+          40,
+          74,
+          125
+        ],
+        "$B": [
+          30
+        ],
+        "4.45$,": [
+          32
+        ],
+        "valid": [
+          33
+        ],
+        "$\\frac12": [
+          35
+        ],
+        "\\sigma": [
+          37
+        ],
+        "1$": [
+          39
+        ],
+        "$|t|": [
+          41
+        ],
+        "\\ge": [
+          42
+        ],
+        "3$.": [
+          43
+        ],
+        "previous": [
+          45
+        ],
+        "best": [
+          46
+        ],
+        "constant": [
+          47
+        ],
+        "$B$": [
+          48
+        ],
+        "was": [
+          49
+        ],
+        "18.5.": [
+          50
+        ],
+        "Tools": [
+          51
+        ],
+        "include": [
+          52
+        ],
+        "a": [
+          53,
+          112,
+          117
+        ],
+        "variant": [
+          54
+        ],
+        "of": [
+          55,
+          59,
+          66,
+          80,
+          92
+        ],
+        "Korobov–Vinogradov": [
+          57
+        ],
+        "method": [
+          58
+        ],
+        "bounding": [
+          60
+        ],
+        "exponential": [
+          61,
+          81,
+          99
+        ],
+        "sums,": [
+          62
+        ],
+        "explicit": [
+          64,
+          75
+        ],
+        "version": [
+          65
+        ],
+        "T.": [
+          67
+        ],
+        "D.": [
+          68
+        ],
+        "Wooley's": [
+          69
+        ],
+        "bounds": [
+          70,
+          76
+        ],
+        "Vinogradov's": [
+          72
+        ],
+        "integral,": [
+          73
+        ],
+        "mean": [
+          78
+        ],
+        "values": [
+          79
+        ],
+        "sums": [
+          82
+        ],
+        "over": [
+          83
+        ],
+        "numbers": [
+          84
+        ],
+        "without": [
+          85
+        ],
+        "small": [
+          86
+        ],
+        "prime": [
+          87
+        ],
+        "factors,": [
+          88
+        ],
+        "also": [
+          89
+        ],
+        "using": [
+          90
+        ],
+        "methods": [
+          91
+        ],
+        "Wooley.": [
+          93
+        ],
+        "An": [
+          94
+        ],
+        "auxiliary": [
+          95
+        ],
+        "sum": [
+          100
+        ],
+        "$S(N,": [
+          102
+        ],
+        "t)": [
+          103
+        ],
+        "9.463": [
+          105
+        ],
+        "N^{1": [
+          106
+        ],
+        "1/(133.66\\lambda^2)}$,": [
+          108
+        ],
+        "where": [
+          109
+        ],
+        "$N$": [
+          110
+        ],
+        "positive": [
+          113
+        ],
+        "integer,": [
+          114
+        ],
+        "$t$": [
+          115
+        ],
+        "real": [
+          118
+        ],
+        "number,": [
+          119
+        ],
+        "$\\lambda": [
+          120
+        ],
+        "(\\log": [
+          122
+        ],
+        "t)/(\\log": [
+          123
+        ],
+        "N)$": [
+          124
+        ],
+        "$S(N,t)": [
+          126
+        ],
+        "\\max_{0": [
+          128
+        ],
+        "<": [
+          129,
+          134,
+          140
+        ],
+        "u": [
+          130
+        ],
+        "1}": [
+          132
+        ],
+        "\\max_{N": [
+          133
+        ],
+        "R": [
+          135
+        ],
+        "2N}": [
+          137
+        ],
+        "\\left|": [
+          138
+        ],
+        "\\sum_{N": [
+          139
+        ],
+        "n": [
+          141
+        ],
+        "R}": [
+          143
+        ],
+        "(n": [
+          144
+        ],
+        "u)^{-it}": [
+          146
+        ],
+        "\\right|.$$": [
+          147
+        ],
+        "2000": [
+          148
+        ],
+        "Mathematical": [
+          149
+        ],
+        "Subject": [
+          150
+        ],
+        "Classification:": [
+          151
+        ],
+        "primary": [
+          152
+        ],
+        "11M06,": [
+          153
+        ],
+        "11N05,": [
+          154
+        ],
+        "11L15;": [
+          155
+        ],
+        "secondary": [
+          156
+        ],
+        "11D72,": [
+          157
+        ],
+        "11M35.": [
+          158
+        ]
+      },
+      "counts_by_year": [
+        {
+          "year": 2026,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2025,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2024,
+          "cited_by_count": 15
+        },
+        {
+          "year": 2023,
+          "cited_by_count": 9
+        },
+        {
+          "year": 2022,
+          "cited_by_count": 4
+        },
+        {
+          "year": 2021,
+          "cited_by_count": 7
+        },
+        {
+          "year": 2020,
+          "cited_by_count": 10
+        },
+        {
+          "year": 2019,
+          "cited_by_count": 25
+        },
+        {
+          "year": 2018,
+          "cited_by_count": 8
+        },
+        {
+          "year": 2017,
+          "cited_by_count": 7
+        },
+        {
+          "year": 2016,
+          "cited_by_count": 6
+        },
+        {
+          "year": 2015,
+          "cited_by_count": 7
+        },
+        {
+          "year": 2014,
+          "cited_by_count": 7
+        },
+        {
+          "year": 2013,
+          "cited_by_count": 7
+        },
+        {
+          "year": 2012,
+          "cited_by_count": 10
+        }
+      ],
+      "updated_date": "2026-08-21T09:56:20.448147",
+      "created_date": "2025-10-10T00:00:00"
+    },
+    {
+      "id": "https://openalex.org/W2060773193",
+      "doi": "https://doi.org/10.1070/rm1967v022n03abeh001221",
+      "title": "APPLICATION OF SOME INTEGRAL EQUATIONS TO PROBLEMS OF NUMBER THEORY",
+      "display_name": "APPLICATION OF SOME INTEGRAL EQUATIONS TO PROBLEMS OF NUMBER THEORY",
+      "relevance_score": 91.673004,
+      "publication_year": 1967,
+      "publication_date": "1967-06-30",
+      "ids": {
+        "openalex": "https://openalex.org/W2060773193",
+        "doi": "https://doi.org/10.1070/rm1967v022n03abeh001221",
+        "mag": "2060773193"
+      },
+      "language": "en",
+      "primary_location": {
+        "id": "doi:10.1070/rm1967v022n03abeh001221",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1070/rm1967v022n03abeh001221",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S132681663",
+          "display_name": "Russian Mathematical Surveys",
+          "issn_l": "0036-0279",
+          "issn": [
+            "0036-0279",
+            "1468-4829",
+            "1473-2009"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320083",
+          "host_organization_name": "IOP Publishing",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320083",
+            "https://openalex.org/P4310311669"
+          ],
+          "host_organization_lineage_names": [
+            "IOP Publishing",
+            "Institute of Physics"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Russian Mathematical Surveys",
+        "raw_type": "journal-article"
+      },
+      "type": "article",
+      "indexed_in": [
+        "crossref"
+      ],
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5006343400",
+            "display_name": "Б. В. Левин",
+            "orcid": "https://orcid.org/0000-0002-0790-9415"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "B V Levin",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5014876083",
+            "display_name": "A. S. Fainleib",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "A S Fainleib",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 0,
+      "institutions_distinct_count": 2,
+      "corresponding_author_ids": [],
+      "corresponding_institution_ids": [],
+      "apc_list": null,
+      "apc_paid": null,
+      "fwci": 0.5185,
+      "has_fulltext": false,
+      "cited_by_count": 46,
+      "citation_normalized_percentile": {
+        "value": 0.59931896,
+        "is_in_top_1_percent": false,
+        "is_in_top_10_percent": false
+      },
+      "cited_by_percentile_year": {
+        "min": 89,
+        "max": 96
+      },
+      "biblio": {
+        "volume": "22",
+        "issue": "3",
+        "first_page": "119",
+        "last_page": "204"
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T11166",
+        "display_name": "Analytic Number Theory Research",
+        "score": 0.9998000264167786,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2602",
+          "display_name": "Algebra and Number Theory"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/26",
+          "display_name": "Mathematics"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T11166",
+          "display_name": "Analytic Number Theory Research",
+          "score": 0.9998000264167786,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2602",
+            "display_name": "Algebra and Number Theory"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12812",
+          "display_name": "Meromorphic and Entire Functions",
+          "score": 0.9993000030517578,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2604",
+            "display_name": "Applied Mathematics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11130",
+          "display_name": "Coding theory and cryptography",
+          "score": 0.995199978351593,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/mathematics",
+          "display_name": "Mathematics",
+          "score": 0.9322691559791565
+        },
+        {
+          "id": "https://openalex.org/keywords/integral-equation",
+          "display_name": "Integral equation",
+          "score": 0.5079947113990784
+        },
+        {
+          "id": "https://openalex.org/keywords/applied-mathematics",
+          "display_name": "Applied mathematics",
+          "score": 0.4908007085323334
+        },
+        {
+          "id": "https://openalex.org/keywords/calculus",
+          "display_name": "Calculus (dental)",
+          "score": 0.39138391613960266
+        },
+        {
+          "id": "https://openalex.org/keywords/mathematical-analysis",
+          "display_name": "Mathematical analysis",
+          "score": 0.29401659965515137
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.9322691559791565
+        },
+        {
+          "id": "https://openalex.org/C27016315",
+          "wikidata": "https://www.wikidata.org/wiki/Q580101",
+          "display_name": "Integral equation",
+          "level": 2,
+          "score": 0.5079947113990784
+        },
+        {
+          "id": "https://openalex.org/C28826006",
+          "wikidata": "https://www.wikidata.org/wiki/Q33521",
+          "display_name": "Applied mathematics",
+          "level": 1,
+          "score": 0.4908007085323334
+        },
+        {
+          "id": "https://openalex.org/C2777686260",
+          "wikidata": "https://www.wikidata.org/wiki/Q144037",
+          "display_name": "Calculus (dental)",
+          "level": 2,
+          "score": 0.39138391613960266
+        },
+        {
+          "id": "https://openalex.org/C134306372",
+          "wikidata": "https://www.wikidata.org/wiki/Q7754",
+          "display_name": "Mathematical analysis",
+          "level": 1,
+          "score": 0.29401659965515137
+        },
+        {
+          "id": "https://openalex.org/C199343813",
+          "wikidata": "https://www.wikidata.org/wiki/Q12128",
+          "display_name": "Dentistry",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C71924100",
+          "wikidata": "https://www.wikidata.org/wiki/Q11190",
+          "display_name": "Medicine",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "mesh": [],
+      "locations_count": 1,
+      "locations": [
+        {
+          "id": "doi:10.1070/rm1967v022n03abeh001221",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1070/rm1967v022n03abeh001221",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S132681663",
+            "display_name": "Russian Mathematical Surveys",
+            "issn_l": "0036-0279",
+            "issn": [
+              "0036-0279",
+              "1468-4829",
+              "1473-2009"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320083",
+            "host_organization_name": "IOP Publishing",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320083",
+              "https://openalex.org/P4310311669"
+            ],
+            "host_organization_lineage_names": [
+              "IOP Publishing",
+              "Institute of Physics"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Russian Mathematical Surveys",
+          "raw_type": "journal-article"
+        }
+      ],
+      "best_oa_location": null,
+      "sustainable_development_goals": [],
+      "awards": [],
+      "funders": [],
+      "has_content": {
+        "pdf": false,
+        "grobid_xml": false
+      },
+      "content_urls": null,
+      "referenced_works_count": 15,
+      "referenced_works": [
+        "https://openalex.org/W280658904",
+        "https://openalex.org/W800188608",
+        "https://openalex.org/W1566623825",
+        "https://openalex.org/W1576266188",
+        "https://openalex.org/W1989597834",
+        "https://openalex.org/W2004875894",
+        "https://openalex.org/W2008543002",
+        "https://openalex.org/W2034131337",
+        "https://openalex.org/W2074039616",
+        "https://openalex.org/W2107434619",
+        "https://openalex.org/W2109304932",
+        "https://openalex.org/W2128745083",
+        "https://openalex.org/W2159622301",
+        "https://openalex.org/W2909901056",
+        "https://openalex.org/W3140177514"
+      ],
+      "related_works": [
+        "https://openalex.org/W1979597421",
+        "https://openalex.org/W2007980826",
+        "https://openalex.org/W4245490552",
+        "https://openalex.org/W4225152035",
+        "https://openalex.org/W2061531152",
+        "https://openalex.org/W3002753104",
+        "https://openalex.org/W2077600819",
+        "https://openalex.org/W1587224694",
+        "https://openalex.org/W2911598644",
+        "https://openalex.org/W2142036596"
+      ],
+      "abstract_inverted_index": {
+        "CONTENTSBasic": [
+          0
+        ],
+        "notationIntroductionChapter": [
+          1
+        ],
+        "I.": [
+          2
+        ],
+        "Auxiliary": [
+          3
+        ],
+        "lemmas": [
+          4
+        ],
+        "§": [
+          5,
+          15,
+          26,
+          44,
+          51,
+          60,
+          64,
+          89,
+          99,
+          106,
+          119,
+          126,
+          144,
+          154
+        ],
+        "1.": [
+          6,
+          45,
+          90,
+          145
+        ],
+        "The": [
+          7,
+          136
+        ],
+        "functions": [
+          8,
+          59
+        ],
+        ",": [
+          9,
+          10,
+          11
+        ],
+        "and": [
+          12,
+          41,
+          83,
+          87,
+          95
+        ],
+        "their": [
+          13
+        ],
+        "properties": [
+          14
+        ],
+        "2.": [
+          16,
+          52,
+          100,
+          155
+        ],
+        "Estimates": [
+          17
+        ],
+        "for": [
+          18,
+          40,
+          48,
+          56,
+          110,
+          151
+        ],
+        "the": [
+          19,
+          31,
+          68,
+          79,
+          93,
+          103,
+          130,
+          148
+        ],
+        "solutions": [
+          20,
+          32
+        ],
+        "of": [
+          21,
+          30,
+          33,
+          67,
+          71,
+          78,
+          92,
+          102,
+          133,
+          138,
+          147
+        ],
+        "some": [
+          22,
+          34,
+          72,
+          96
+        ],
+        "approximating": [
+          23
+        ],
+        "integro-difference": [
+          24
+        ],
+        "equations": [
+          25
+        ],
+        "3.": [
+          27,
+          61,
+          107
+        ],
+        "Asymptotic": [
+          28
+        ],
+        "behaviour": [
+          29
+        ],
+        "differential-difference": [
+          35
+        ],
+        "equationsChapter": [
+          36
+        ],
+        "II.": [
+          37
+        ],
+        "An": [
+          38,
+          46
+        ],
+        "estimate": [
+          39,
+          47
+        ],
+        "its": [
+          42
+        ],
+        "applications": [
+          43,
+          88
+        ],
+        ".": [
+          49
+        ],
+        "Examples": [
+          50
+        ],
+        "Local": [
+          53
+        ],
+        "distribution": [
+          54
+        ],
+        "laws": [
+          55
+        ],
+        "additive": [
+          57,
+          73
+        ],
+        "arithmetic": [
+          58,
+          139,
+          152
+        ],
+        "Integral": [
+          62
+        ],
+        "theorems": [
+          63
+        ],
+        "4.": [
+          65,
+          120
+        ],
+        "Equidistribution": [
+          66
+        ],
+        "fractional": [
+          69
+        ],
+        "parts": [
+          70
+        ],
+        "functionsChapter": [
+          74
+        ],
+        "III.": [
+          75
+        ],
+        "Generalized": [
+          76
+        ],
+        "problem": [
+          77,
+          94,
+          105,
+          150
+        ],
+        "numbers": [
+          80,
+          114
+        ],
+        "with": [
+          81,
+          115,
+          122,
+          141
+        ],
+        "small": [
+          82,
+          116,
+          123
+        ],
+        "large": [
+          84
+        ],
+        "prime": [
+          85,
+          117,
+          124
+        ],
+        "factors,": [
+          86
+        ],
+        "Statement": [
+          91
+        ],
+        "special": [
+          97
+        ],
+        "cases": [
+          98
+        ],
+        "Solution": [
+          101,
+          146
+        ],
+        "general": [
+          104,
+          149
+        ],
+        "Upper": [
+          108
+        ],
+        "bounds": [
+          109
+        ],
+        "sums": [
+          111
+        ],
+        "extended": [
+          112
+        ],
+        "over": [
+          113
+        ],
+        "factors": [
+          118,
+          125
+        ],
+        "Numbers": [
+          121
+        ],
+        "5.": [
+          127
+        ],
+        "Applications": [
+          128
+        ],
+        "to": [
+          129
+        ],
+        "probabilistic": [
+          131
+        ],
+        "theory": [
+          132
+        ],
+        "numbersChapter": [
+          134
+        ],
+        "IV.": [
+          135
+        ],
+        "case": [
+          137
+        ],
+        "progressions": [
+          140,
+          153
+        ],
+        "increasing": [
+          142
+        ],
+        "differences": [
+          143
+        ],
+        "Some": [
+          156
+        ],
+        "applicationsReferences": [
+          157
+        ]
+      },
+      "counts_by_year": [
+        {
+          "year": 2025,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2023,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2022,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2020,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2019,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2018,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2017,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2015,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2013,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2012,
+          "cited_by_count": 1
+        }
+      ],
+      "updated_date": "2026-06-11T09:08:48.828518",
+      "created_date": "2025-10-10T00:00:00"
+    },
+    {
+      "id": "https://openalex.org/W3177693470",
+      "doi": "https://doi.org/10.1109/tc.2021.3095669",
+      "title": "Fast Generation of RSA Keys Using Smooth Integers",
+      "display_name": "Fast Generation of RSA Keys Using Smooth Integers",
+      "relevance_score": 29.62924,
+      "publication_year": 2021,
+      "publication_date": "2021-07-08",
+      "ids": {
+        "openalex": "https://openalex.org/W3177693470",
+        "doi": "https://doi.org/10.1109/tc.2021.3095669",
+        "mag": "3177693470"
+      },
+      "language": "en",
+      "primary_location": {
+        "id": "doi:10.1109/tc.2021.3095669",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1109/tc.2021.3095669",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S157670870",
+          "display_name": "IEEE Transactions on Computers",
+          "issn_l": "0018-9340",
+          "issn": [
+            "0018-9340",
+            "0016-9340",
+            "1557-9956",
+            "2326-3814"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310319808",
+          "host_organization_name": "Institute of Electrical and Electronics Engineers",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310319808"
+          ],
+          "host_organization_lineage_names": [
+            "Institute of Electrical and Electronics Engineers"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "IEEE Transactions on Computers",
+        "raw_type": "journal-article"
+      },
+      "type": "article",
+      "indexed_in": [
+        "arxiv",
+        "crossref"
+      ],
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/1912.11546",
+        "any_repository_has_fulltext": true
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": null,
+            "display_name": "Vassil Dimitrov",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Vassil Dimitrov",
+          "raw_affiliation_strings": [
+            "IOTA Foundation, Berlin, Germany"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "IOTA Foundation, Berlin, Germany",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Luigi Vigneri",
+            "orcid": "https://orcid.org/0000-0002-2922-3748"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Luigi Vigneri",
+          "raw_affiliation_strings": [
+            "IOTA Foundation, Berlin, Germany"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-2922-3748",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "IOTA Foundation, Berlin, Germany",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": null,
+            "display_name": "Vidal Attias",
+            "orcid": "https://orcid.org/0000-0001-5095-4740"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Vidal Attias",
+          "raw_affiliation_strings": [
+            "IOTA Foundation, Berlin, Germany"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-5095-4740",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "IOTA Foundation, Berlin, Germany",
+              "institution_ids": []
+            }
+          ]
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 0,
+      "institutions_distinct_count": 0,
+      "corresponding_author_ids": [],
+      "corresponding_institution_ids": [],
+      "apc_list": {
+        "value": 2045,
+        "currency": "USD",
+        "value_usd": 2045
+      },
+      "apc_paid": null,
+      "fwci": 0.5605,
+      "has_fulltext": false,
+      "cited_by_count": 8,
+      "citation_normalized_percentile": {
+        "value": 0.73956426,
+        "is_in_top_1_percent": false,
+        "is_in_top_10_percent": false
+      },
+      "cited_by_percentile_year": {
+        "min": 89,
+        "max": 97
+      },
+      "biblio": {
+        "volume": "71",
+        "issue": "7",
+        "first_page": "1575",
+        "last_page": "1585"
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T10237",
+        "display_name": "Cryptography and Data Security",
+        "score": 0.319599986076355,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1702",
+          "display_name": "Artificial Intelligence"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/17",
+          "display_name": "Computer Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T10237",
+          "display_name": "Cryptography and Data Security",
+          "score": 0.319599986076355,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11693",
+          "display_name": "Cryptography and Residue Arithmetic",
+          "score": 0.25040000677108765,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1710",
+            "display_name": "Information Systems"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11017",
+          "display_name": "Chaos-based Image/Signal Encryption",
+          "score": 0.1826999932527542,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1707",
+            "display_name": "Computer Vision and Pattern Recognition"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/primality-test",
+          "display_name": "Primality test",
+          "score": 0.9072999954223633
+        },
+        {
+          "id": "https://openalex.org/keywords/cryptography",
+          "display_name": "Cryptography",
+          "score": 0.5949000120162964
+        },
+        {
+          "id": "https://openalex.org/keywords/key-generation",
+          "display_name": "Key generation",
+          "score": 0.5927000045776367
+        },
+        {
+          "id": "https://openalex.org/keywords/random-number-generation",
+          "display_name": "Random number generation",
+          "score": 0.5491999983787537
+        },
+        {
+          "id": "https://openalex.org/keywords/key",
+          "display_name": "Key (lock)",
+          "score": 0.42989999055862427
+        },
+        {
+          "id": "https://openalex.org/keywords/encryption",
+          "display_name": "Encryption",
+          "score": 0.39160001277923584
+        },
+        {
+          "id": "https://openalex.org/keywords/prime",
+          "display_name": "Prime (order theory)",
+          "score": 0.34869998693466187
+        },
+        {
+          "id": "https://openalex.org/keywords/prime-number",
+          "display_name": "Prime number",
+          "score": 0.34060001373291016
+        },
+        {
+          "id": "https://openalex.org/keywords/integer-factorization",
+          "display_name": "Integer factorization",
+          "score": 0.3370000123977661
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C191421660",
+          "wikidata": "https://www.wikidata.org/wiki/Q829546",
+          "display_name": "Primality test",
+          "level": 3,
+          "score": 0.9072999954223633
+        },
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.6333000063896179
+        },
+        {
+          "id": "https://openalex.org/C178489894",
+          "wikidata": "https://www.wikidata.org/wiki/Q8789",
+          "display_name": "Cryptography",
+          "level": 2,
+          "score": 0.5949000120162964
+        },
+        {
+          "id": "https://openalex.org/C163173736",
+          "wikidata": "https://www.wikidata.org/wiki/Q3308558",
+          "display_name": "Key generation",
+          "level": 3,
+          "score": 0.5927000045776367
+        },
+        {
+          "id": "https://openalex.org/C201866948",
+          "wikidata": "https://www.wikidata.org/wiki/Q228206",
+          "display_name": "Random number generation",
+          "level": 2,
+          "score": 0.5491999983787537
+        },
+        {
+          "id": "https://openalex.org/C80444323",
+          "wikidata": "https://www.wikidata.org/wiki/Q2878974",
+          "display_name": "Theoretical computer science",
+          "level": 1,
+          "score": 0.44209998846054077
+        },
+        {
+          "id": "https://openalex.org/C26517878",
+          "wikidata": "https://www.wikidata.org/wiki/Q228039",
+          "display_name": "Key (lock)",
+          "level": 2,
+          "score": 0.42989999055862427
+        },
+        {
+          "id": "https://openalex.org/C94375191",
+          "wikidata": "https://www.wikidata.org/wiki/Q11205",
+          "display_name": "Arithmetic",
+          "level": 1,
+          "score": 0.42160001397132874
+        },
+        {
+          "id": "https://openalex.org/C148730421",
+          "wikidata": "https://www.wikidata.org/wiki/Q141090",
+          "display_name": "Encryption",
+          "level": 2,
+          "score": 0.39160001277923584
+        },
+        {
+          "id": "https://openalex.org/C11413529",
+          "wikidata": "https://www.wikidata.org/wiki/Q8366",
+          "display_name": "Algorithm",
+          "level": 1,
+          "score": 0.3596000075340271
+        },
+        {
+          "id": "https://openalex.org/C184992742",
+          "wikidata": "https://www.wikidata.org/wiki/Q7243229",
+          "display_name": "Prime (order theory)",
+          "level": 2,
+          "score": 0.34869998693466187
+        },
+        {
+          "id": "https://openalex.org/C113429393",
+          "wikidata": "https://www.wikidata.org/wiki/Q49008",
+          "display_name": "Prime number",
+          "level": 2,
+          "score": 0.34060001373291016
+        },
+        {
+          "id": "https://openalex.org/C119677069",
+          "wikidata": "https://www.wikidata.org/wiki/Q4846249",
+          "display_name": "Integer factorization",
+          "level": 4,
+          "score": 0.3370000123977661
+        },
+        {
+          "id": "https://openalex.org/C11045955",
+          "wikidata": "https://www.wikidata.org/wiki/Q1162410",
+          "display_name": "ElGamal encryption",
+          "level": 4,
+          "score": 0.32280001044273376
+        },
+        {
+          "id": "https://openalex.org/C203062551",
+          "wikidata": "https://www.wikidata.org/wiki/Q201339",
+          "display_name": "Public-key cryptography",
+          "level": 3,
+          "score": 0.3212999999523163
+        },
+        {
+          "id": "https://openalex.org/C14036430",
+          "wikidata": "https://www.wikidata.org/wiki/Q3736076",
+          "display_name": "Function (biology)",
+          "level": 2,
+          "score": 0.31380000710487366
+        },
+        {
+          "id": "https://openalex.org/C111335779",
+          "wikidata": "https://www.wikidata.org/wiki/Q3454686",
+          "display_name": "Reduction (mathematics)",
+          "level": 2,
+          "score": 0.29750001430511475
+        },
+        {
+          "id": "https://openalex.org/C77618280",
+          "wikidata": "https://www.wikidata.org/wiki/Q1155772",
+          "display_name": "Scheme (mathematics)",
+          "level": 2,
+          "score": 0.296099990606308
+        },
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.2948000133037567
+        },
+        {
+          "id": "https://openalex.org/C181149355",
+          "wikidata": "https://www.wikidata.org/wiki/Q897511",
+          "display_name": "Cryptanalysis",
+          "level": 3,
+          "score": 0.28439998626708984
+        },
+        {
+          "id": "https://openalex.org/C173259116",
+          "wikidata": "https://www.wikidata.org/wiki/Q864003",
+          "display_name": "Discrete logarithm",
+          "level": 4,
+          "score": 0.2793999910354614
+        },
+        {
+          "id": "https://openalex.org/C187455244",
+          "wikidata": "https://www.wikidata.org/wiki/Q942353",
+          "display_name": "Boolean function",
+          "level": 2,
+          "score": 0.27549999952316284
+        },
+        {
+          "id": "https://openalex.org/C193702766",
+          "wikidata": "https://www.wikidata.org/wiki/Q1414548",
+          "display_name": "Concurrency",
+          "level": 2,
+          "score": 0.26499998569488525
+        },
+        {
+          "id": "https://openalex.org/C179799912",
+          "wikidata": "https://www.wikidata.org/wiki/Q205084",
+          "display_name": "Computational complexity theory",
+          "level": 2,
+          "score": 0.2630999982357025
+        },
+        {
+          "id": "https://openalex.org/C13533509",
+          "wikidata": "https://www.wikidata.org/wiki/Q1064349",
+          "display_name": "Deterministic algorithm",
+          "level": 2,
+          "score": 0.26179999113082886
+        },
+        {
+          "id": "https://openalex.org/C81539297",
+          "wikidata": "https://www.wikidata.org/wiki/Q33456",
+          "display_name": "Exponentiation",
+          "level": 2,
+          "score": 0.26089999079704285
+        },
+        {
+          "id": "https://openalex.org/C47750902",
+          "wikidata": "https://www.wikidata.org/wiki/Q1557574",
+          "display_name": "Key size",
+          "level": 4,
+          "score": 0.2558000087738037
+        }
+      ],
+      "mesh": [],
+      "locations_count": 2,
+      "locations": [
+        {
+          "id": "doi:10.1109/tc.2021.3095669",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tc.2021.3095669",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S157670870",
+            "display_name": "IEEE Transactions on Computers",
+            "issn_l": "0018-9340",
+            "issn": [
+              "0018-9340",
+              "0016-9340",
+              "1557-9956",
+              "2326-3814"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Computers",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:1912.11546",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/1912.11546",
+          "pdf_url": "https://arxiv.org/pdf/1912.11546",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        }
+      ],
+      "best_oa_location": {
+        "id": "pmh:oai:arXiv.org:1912.11546",
+        "is_oa": true,
+        "landing_page_url": "http://arxiv.org/abs/1912.11546",
+        "pdf_url": "https://arxiv.org/pdf/1912.11546",
+        "source": {
+          "id": "https://openalex.org/S4306400194",
+          "display_name": "arXiv (Cornell University)",
+          "issn_l": "2331-8422",
+          "issn": [
+            "2331-8422"
+          ],
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I205783295",
+          "host_organization_name": "Cornell University",
+          "host_organization_lineage": [
+            "https://openalex.org/I205783295"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": null,
+        "raw_type": "text"
+      },
+      "sustainable_development_goals": [],
+      "awards": [],
+      "funders": [],
+      "has_content": {
+        "pdf": false,
+        "grobid_xml": false
+      },
+      "content_urls": null,
+      "referenced_works_count": 33,
+      "referenced_works": [
+        "https://openalex.org/W1498896551",
+        "https://openalex.org/W1528177095",
+        "https://openalex.org/W1552918515",
+        "https://openalex.org/W1964053266",
+        "https://openalex.org/W1971540551",
+        "https://openalex.org/W1997891615",
+        "https://openalex.org/W1998777945",
+        "https://openalex.org/W2015880590",
+        "https://openalex.org/W2022919722",
+        "https://openalex.org/W2026386874",
+        "https://openalex.org/W2061405134",
+        "https://openalex.org/W2082683690",
+        "https://openalex.org/W2083421868",
+        "https://openalex.org/W2087290829",
+        "https://openalex.org/W2101040389",
+        "https://openalex.org/W2141040012",
+        "https://openalex.org/W2148728375",
+        "https://openalex.org/W2159341052",
+        "https://openalex.org/W2178934104",
+        "https://openalex.org/W2285379436",
+        "https://openalex.org/W2330778380",
+        "https://openalex.org/W2332971197",
+        "https://openalex.org/W2486439685",
+        "https://openalex.org/W2765206040",
+        "https://openalex.org/W2766724343",
+        "https://openalex.org/W2794719057",
+        "https://openalex.org/W2884026699",
+        "https://openalex.org/W2956989650",
+        "https://openalex.org/W3033521143",
+        "https://openalex.org/W4249572609",
+        "https://openalex.org/W6605315231",
+        "https://openalex.org/W6635669087",
+        "https://openalex.org/W6753582937"
+      ],
+      "related_works": [],
+      "abstract_inverted_index": {
+        "Primality": [
+          0
+        ],
+        "generation": [
+          1,
+          91,
+          129
+        ],
+        "is": [
+          2,
+          21,
+          55,
+          150,
+          159
+        ],
+        "the": [
+          3,
+          29,
+          74,
+          78,
+          89,
+          98,
+          111,
+          121,
+          127,
+          141,
+          148,
+          151,
+          163
+        ],
+        "cornerstone": [
+          4
+        ],
+        "of": [
+          5,
+          16,
+          77,
+          88,
+          100,
+          113,
+          126,
+          147,
+          153
+        ],
+        "several": [
+          6
+        ],
+        "essential": [
+          7,
+          145
+        ],
+        "cryptographic": [
+          8
+        ],
+        "systems.": [
+          9,
+          194
+        ],
+        "The": [
+          10,
+          82
+        ],
+        "problem": [
+          11
+        ],
+        "has": [
+          12
+        ],
+        "been": [
+          13
+        ],
+        "a": [
+          14,
+          23,
+          69,
+          86,
+          154
+        ],
+        "subject": [
+          15
+        ],
+        "deep": [
+          17
+        ],
+        "investigations,": [
+          18
+        ],
+        "but": [
+          19
+        ],
+        "there": [
+          20
+        ],
+        "still": [
+          22
+        ],
+        "substantial": [
+          24
+        ],
+        "room": [
+          25
+        ],
+        "for": [
+          26,
+          57,
+          61,
+          116,
+          188
+        ],
+        "improvements.": [
+          27
+        ],
+        "Typically,": [
+          28
+        ],
+        "algorithms": [
+          30,
+          130
+        ],
+        "used": [
+          31,
+          166,
+          174,
+          187
+        ],
+        "have": [
+          32
+        ],
+        "two": [
+          33
+        ],
+        "parts": [
+          34
+        ],
+        "–": [
+          35
+        ],
+        "trial": [
+          36,
+          123
+        ],
+        "divisions": [
+          37
+        ],
+        "aimed": [
+          38
+        ],
+        "at": [
+          39,
+          134
+        ],
+        "eliminating": [
+          40
+        ],
+        "numbers": [
+          41
+        ],
+        "with": [
+          42
+        ],
+        "small": [
+          43
+        ],
+        "prime": [
+          44
+        ],
+        "factors": [
+          45
+        ],
+        "and": [
+          46,
+          59,
+          181
+        ],
+        "primality": [
+          47,
+          79,
+          90
+        ],
+        "tests": [
+          48
+        ],
+        "based": [
+          49
+        ],
+        "on": [
+          50
+        ],
+        "an": [
+          51
+        ],
+        "easy-to-compute": [
+          52
+        ],
+        "statement": [
+          53
+        ],
+        "that": [
+          54,
+          71,
+          158
+        ],
+        "valid": [
+          56
+        ],
+        "primes": [
+          58
+        ],
+        "invalid": [
+          60
+        ],
+        "composites.": [
+          62
+        ],
+        "In": [
+          63
+        ],
+        "this": [
+          64
+        ],
+        "paper,": [
+          65
+        ],
+        "we": [
+          66
+        ],
+        "will": [
+          67,
+          72
+        ],
+        "showcase": [
+          68
+        ],
+        "technique": [
+          70
+        ],
+        "eliminate": [
+          73
+        ],
+        "first": [
+          75
+        ],
+        "phase": [
+          76
+        ],
+        "testing": [
+          80
+        ],
+        "algorithms.": [
+          81
+        ],
+        "computational": [
+          83
+        ],
+        "simulations": [
+          84
+        ],
+        "show": [
+          85
+        ],
+        "reduction": [
+          87
+        ],
+        "time": [
+          92
+        ],
+        "by": [
+          93
+        ],
+        "about": [
+          94
+        ],
+        "30": [
+          95
+        ],
+        "percent": [
+          96
+        ],
+        "in": [
+          97,
+          110,
+          167
+        ],
+        "case": [
+          99,
+          112
+        ],
+        "1024-bit": [
+          101
+        ],
+        "RSA": [
+          102,
+          118
+        ],
+        "key": [
+          103,
+          128
+        ],
+        "pairs.": [
+          104
+        ],
+        "This": [
+          105,
+          137,
+          170
+        ],
+        "can": [
+          106,
+          131,
+          172
+        ],
+        "be": [
+          107,
+          132,
+          173,
+          185
+        ],
+        "particularly": [
+          108
+        ],
+        "beneficial": [
+          109
+        ],
+        "decentralized": [
+          114
+        ],
+        "environments": [
+          115
+        ],
+        "shared": [
+          117
+        ],
+        "keys": [
+          119
+        ],
+        "as": [
+          120
+        ],
+        "initial": [
+          122
+        ],
+        "division": [
+          124
+        ],
+        "part": [
+          125
+        ],
+        "avoided": [
+          133
+        ],
+        "no": [
+          135
+        ],
+        "cost.": [
+          136
+        ],
+        "also": [
+          138,
+          183
+        ],
+        "significantly": [
+          139
+        ],
+        "reduces": [
+          140
+        ],
+        "communication": [
+          142
+        ],
+        "complexity.": [
+          143
+        ],
+        "Another": [
+          144
+        ],
+        "contribution": [
+          146
+        ],
+        "paper": [
+          149
+        ],
+        "introduction": [
+          152
+        ],
+        "new": [
+          155,
+          177,
+          191
+        ],
+        "one-way": [
+          156
+        ],
+        "function": [
+          157,
+          171
+        ],
+        "computationally": [
+          160
+        ],
+        "simpler": [
+          161
+        ],
+        "than": [
+          162
+        ],
+        "existing": [
+          164
+        ],
+        "ones": [
+          165
+        ],
+        "public-key": [
+          168,
+          192
+        ],
+        "cryptography.": [
+          169
+        ],
+        "to": [
+          175
+        ],
+        "create": [
+          176
+        ],
+        "random": [
+          178
+        ],
+        "number": [
+          179
+        ],
+        "generators,": [
+          180
+        ],
+        "it": [
+          182
+        ],
+        "could": [
+          184
+        ],
+        "potentially": [
+          186
+        ],
+        "designing": [
+          189
+        ],
+        "entirely": [
+          190
+        ],
+        "encryption": [
+          193
+        ]
+      },
+      "counts_by_year": [
+        {
+          "year": 2026,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2025,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2024,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2023,
+          "cited_by_count": 1
+        }
+      ],
+      "updated_date": "2026-08-28T12:50:07.497085",
+      "created_date": "2021-07-19T00:00:00"
+    },
+    {
+      "id": "https://openalex.org/W2088772065",
+      "doi": "https://doi.org/10.5802/jtnb.101",
+      "title": "Integers without large prime factors",
+      "display_name": "Integers without large prime factors",
+      "relevance_score": 7.771636,
+      "publication_year": 1993,
+      "publication_date": "1993-01-01",
+      "ids": {
+        "openalex": "https://openalex.org/W2088772065",
+        "doi": "https://doi.org/10.5802/jtnb.101",
+        "mag": "2088772065"
+      },
+      "language": "fr",
+      "primary_location": {
+        "id": "doi:10.5802/jtnb.101",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.5802/jtnb.101",
+        "pdf_url": "https://jtnb.centre-mersenne.org/item/10.5802/jtnb.101.pdf",
+        "source": {
+          "id": "https://openalex.org/S2478343494",
+          "display_name": "Journal de Théorie des Nombres de Bordeaux",
+          "issn_l": "1246-7405",
+          "issn": [
+            "1246-7405",
+            "2118-8572"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310311479",
+          "host_organization_name": "Institut de Mathématiques de Bordeaux",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310311479"
+          ],
+          "host_organization_lineage_names": [
+            "Institut de Mathématiques de Bordeaux"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Journal de théorie des nombres de Bordeaux",
+        "raw_type": "journal-article"
+      },
+      "type": "article",
+      "indexed_in": [
+        "crossref"
+      ],
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://jtnb.centre-mersenne.org/item/10.5802/jtnb.101.pdf",
+        "any_repository_has_fulltext": false
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5044835369",
+            "display_name": "Adolf Hildebrand",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210110412",
+              "display_name": "Délégation Centre-Est",
+              "ror": "https://ror.org/01tz1zp46",
+              "country_code": "FR",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I4210110412",
+                "https://openalex.org/I4210139971"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I90183372",
+              "display_name": "Université de Lorraine",
+              "ror": "https://ror.org/04vfs2w97",
+              "country_code": "FR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I90183372"
+              ]
+            }
+          ],
+          "countries": [
+            "FR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Adolf Hildebrand",
+          "raw_affiliation_strings": [
+            "D6partement de Math6matiques Universite Nancy 1 PP239 F-54506 Vandoeuvre Cedex France"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "D6partement de Math6matiques Universite Nancy 1 PP239 F-54506 Vandoeuvre Cedex France",
+              "institution_ids": [
+                "https://openalex.org/I4210110412",
+                "https://openalex.org/I90183372"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5053988158",
+            "display_name": "Gérald Tenenbaum",
+            "orcid": "https://orcid.org/0000-0002-0478-3693"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210110412",
+              "display_name": "Délégation Centre-Est",
+              "ror": "https://ror.org/01tz1zp46",
+              "country_code": "FR",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I4210110412",
+                "https://openalex.org/I4210139971"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I90183372",
+              "display_name": "Université de Lorraine",
+              "ror": "https://ror.org/04vfs2w97",
+              "country_code": "FR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I90183372"
+              ]
+            }
+          ],
+          "countries": [
+            "FR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Gerald Tenenbaum",
+          "raw_affiliation_strings": [
+            "D6partement de Math6matiques Universite Nancy 1 PP239 F-54506 Vandoeuvre Cedex France"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "D6partement de Math6matiques Universite Nancy 1 PP239 F-54506 Vandoeuvre Cedex France",
+              "institution_ids": [
+                "https://openalex.org/I4210110412",
+                "https://openalex.org/I90183372"
+              ]
+            }
+          ]
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 1,
+      "institutions_distinct_count": 2,
+      "corresponding_author_ids": [],
+      "corresponding_institution_ids": [],
+      "apc_list": null,
+      "apc_paid": null,
+      "fwci": 6.4991,
+      "has_fulltext": true,
+      "cited_by_count": 314,
+      "citation_normalized_percentile": {
+        "value": 0.98353458,
+        "is_in_top_1_percent": false,
+        "is_in_top_10_percent": true
+      },
+      "cited_by_percentile_year": {
+        "min": 97,
+        "max": 100
+      },
+      "biblio": {
+        "volume": "5",
+        "issue": "2",
+        "first_page": "411",
+        "last_page": "484"
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T11703",
+        "display_name": "Rings, Modules, and Algebras",
+        "score": 0.9253000020980835,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2602",
+          "display_name": "Algebra and Number Theory"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/26",
+          "display_name": "Mathematics"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T11703",
+          "display_name": "Rings, Modules, and Algebras",
+          "score": 0.9253000020980835,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2602",
+            "display_name": "Algebra and Number Theory"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/prime",
+          "display_name": "Prime (order theory)",
+          "score": 0.4923645257949829
+        },
+        {
+          "id": "https://openalex.org/keywords/mathematics",
+          "display_name": "Mathematics",
+          "score": 0.3915027379989624
+        },
+        {
+          "id": "https://openalex.org/keywords/combinatorics",
+          "display_name": "Combinatorics",
+          "score": 0.37208065390586853
+        },
+        {
+          "id": "https://openalex.org/keywords/biology",
+          "display_name": "Biology",
+          "score": 0.3689040243625641
+        },
+        {
+          "id": "https://openalex.org/keywords/computer-science",
+          "display_name": "Computer science",
+          "score": 0.33325356245040894
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C184992742",
+          "wikidata": "https://www.wikidata.org/wiki/Q7243229",
+          "display_name": "Prime (order theory)",
+          "level": 2,
+          "score": 0.4923645257949829
+        },
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.3915027379989624
+        },
+        {
+          "id": "https://openalex.org/C114614502",
+          "wikidata": "https://www.wikidata.org/wiki/Q76592",
+          "display_name": "Combinatorics",
+          "level": 1,
+          "score": 0.37208065390586853
+        },
+        {
+          "id": "https://openalex.org/C86803240",
+          "wikidata": "https://www.wikidata.org/wiki/Q420",
+          "display_name": "Biology",
+          "level": 0,
+          "score": 0.3689040243625641
+        },
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.33325356245040894
+        }
+      ],
+      "mesh": [],
+      "locations_count": 3,
+      "locations": [
+        {
+          "id": "doi:10.5802/jtnb.101",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.5802/jtnb.101",
+          "pdf_url": "https://jtnb.centre-mersenne.org/item/10.5802/jtnb.101.pdf",
+          "source": {
+            "id": "https://openalex.org/S2478343494",
+            "display_name": "Journal de Théorie des Nombres de Bordeaux",
+            "issn_l": "1246-7405",
+            "issn": [
+              "1246-7405",
+              "2118-8572"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310311479",
+            "host_organization_name": "Institut de Mathématiques de Bordeaux",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310311479"
+            ],
+            "host_organization_lineage_names": [
+              "Institut de Mathématiques de Bordeaux"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal de théorie des nombres de Bordeaux",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:centre-mersenne.org:JTNB_1993__5_2_411_0",
+          "is_oa": false,
+          "landing_page_url": "https://jtnb.centre-mersenne.org/item/JTNB_1993__5_2_411_0/",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4377196151",
+            "display_name": "Bordeaux Journal of Number Theory",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "Text"
+        },
+        {
+          "id": "pmh:oai:numdam.org:JTNB_1993__5_2_411_0",
+          "is_oa": false,
+          "landing_page_url": "https://www.numdam.org/item/JTNB_1993__5_2_411_0/",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306402264",
+            "display_name": "French digital mathematics library (Numdam)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I70900168",
+            "host_organization_name": "Université Savoie Mont Blanc",
+            "host_organization_lineage": [
+              "https://openalex.org/I70900168"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Text"
+        }
+      ],
+      "best_oa_location": {
+        "id": "doi:10.5802/jtnb.101",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.5802/jtnb.101",
+        "pdf_url": "https://jtnb.centre-mersenne.org/item/10.5802/jtnb.101.pdf",
+        "source": {
+          "id": "https://openalex.org/S2478343494",
+          "display_name": "Journal de Théorie des Nombres de Bordeaux",
+          "issn_l": "1246-7405",
+          "issn": [
+            "1246-7405",
+            "2118-8572"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310311479",
+          "host_organization_name": "Institut de Mathématiques de Bordeaux",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310311479"
+          ],
+          "host_organization_lineage_names": [
+            "Institut de Mathématiques de Bordeaux"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Journal de théorie des nombres de Bordeaux",
+        "raw_type": "journal-article"
+      },
+      "sustainable_development_goals": [],
+      "awards": [],
+      "funders": [],
+      "has_content": {
+        "pdf": true,
+        "grobid_xml": true
+      },
+      "content_urls": {
+        "pdf": "https://content.openalex.org/works/W2088772065.pdf",
+        "grobid_xml": "https://content.openalex.org/works/W2088772065.grobid-xml"
+      },
+      "referenced_works_count": 81,
+      "referenced_works": [
+        "https://openalex.org/W259398671",
+        "https://openalex.org/W593584913",
+        "https://openalex.org/W819102604",
+        "https://openalex.org/W843896412",
+        "https://openalex.org/W962143658",
+        "https://openalex.org/W968863983",
+        "https://openalex.org/W980964842",
+        "https://openalex.org/W1174560794",
+        "https://openalex.org/W1175511733",
+        "https://openalex.org/W1227947820",
+        "https://openalex.org/W1238823349",
+        "https://openalex.org/W1261085449",
+        "https://openalex.org/W1482242894",
+        "https://openalex.org/W1492697544",
+        "https://openalex.org/W1524756992",
+        "https://openalex.org/W1526504402",
+        "https://openalex.org/W1545060501",
+        "https://openalex.org/W1965156752",
+        "https://openalex.org/W1980528704",
+        "https://openalex.org/W1983678656",
+        "https://openalex.org/W1985196667",
+        "https://openalex.org/W1988310680",
+        "https://openalex.org/W1994803663",
+        "https://openalex.org/W1994968438",
+        "https://openalex.org/W1997891615",
+        "https://openalex.org/W2001818542",
+        "https://openalex.org/W2006523121",
+        "https://openalex.org/W2015796533",
+        "https://openalex.org/W2016455495",
+        "https://openalex.org/W2018314941",
+        "https://openalex.org/W2019416746",
+        "https://openalex.org/W2020789786",
+        "https://openalex.org/W2022919722",
+        "https://openalex.org/W2026835803",
+        "https://openalex.org/W2027093176",
+        "https://openalex.org/W2029994854",
+        "https://openalex.org/W2032786551",
+        "https://openalex.org/W2036623478",
+        "https://openalex.org/W2046217445",
+        "https://openalex.org/W2047005800",
+        "https://openalex.org/W2047877834",
+        "https://openalex.org/W2048102135",
+        "https://openalex.org/W2048436501",
+        "https://openalex.org/W2050387267",
+        "https://openalex.org/W2050732659",
+        "https://openalex.org/W2050921957",
+        "https://openalex.org/W2051831509",
+        "https://openalex.org/W2056089408",
+        "https://openalex.org/W2056371938",
+        "https://openalex.org/W2058826515",
+        "https://openalex.org/W2060773193",
+        "https://openalex.org/W2066124265",
+        "https://openalex.org/W2068484936",
+        "https://openalex.org/W2069546563",
+        "https://openalex.org/W2069898106",
+        "https://openalex.org/W2075140667",
+        "https://openalex.org/W2079631449",
+        "https://openalex.org/W2081299653",
+        "https://openalex.org/W2081397430",
+        "https://openalex.org/W2083780002",
+        "https://openalex.org/W2086274615",
+        "https://openalex.org/W2089894449",
+        "https://openalex.org/W2090337477",
+        "https://openalex.org/W2091704623",
+        "https://openalex.org/W2092182987",
+        "https://openalex.org/W2106160186",
+        "https://openalex.org/W2106281666",
+        "https://openalex.org/W2110956040",
+        "https://openalex.org/W2122422090",
+        "https://openalex.org/W2123355614",
+        "https://openalex.org/W2136069701",
+        "https://openalex.org/W2162383001",
+        "https://openalex.org/W2164807129",
+        "https://openalex.org/W2315682800",
+        "https://openalex.org/W2319385926",
+        "https://openalex.org/W2334668868",
+        "https://openalex.org/W3018112627",
+        "https://openalex.org/W4206668612",
+        "https://openalex.org/W4210687766",
+        "https://openalex.org/W4242668764",
+        "https://openalex.org/W4251565090"
+      ],
+      "related_works": [
+        "https://openalex.org/W2899084033",
+        "https://openalex.org/W2748952813",
+        "https://openalex.org/W4391375266",
+        "https://openalex.org/W2082860237",
+        "https://openalex.org/W2119695867",
+        "https://openalex.org/W2130076355",
+        "https://openalex.org/W1990804418",
+        "https://openalex.org/W1993764875",
+        "https://openalex.org/W2046158694",
+        "https://openalex.org/W2788277189"
+      ],
+      "abstract_inverted_index": {
+        "Integers": [
+          0
+        ],
+        "without": [
+          1
+        ],
+        "large": [
+          2
+        ],
+        "prime": [
+          3
+        ],
+        "factors": [
+          4
+        ]
+      },
+      "counts_by_year": [
+        {
+          "year": 2026,
+          "cited_by_count": 5
+        },
+        {
+          "year": 2025,
+          "cited_by_count": 8
+        },
+        {
+          "year": 2024,
+          "cited_by_count": 4
+        },
+        {
+          "year": 2023,
+          "cited_by_count": 8
+        },
+        {
+          "year": 2022,
+          "cited_by_count": 8
+        },
+        {
+          "year": 2021,
+          "cited_by_count": 9
+        },
+        {
+          "year": 2020,
+          "cited_by_count": 8
+        },
+        {
+          "year": 2019,
+          "cited_by_count": 41
+        },
+        {
+          "year": 2018,
+          "cited_by_count": 17
+        },
+        {
+          "year": 2017,
+          "cited_by_count": 11
+        },
+        {
+          "year": 2016,
+          "cited_by_count": 13
+        },
+        {
+          "year": 2015,
+          "cited_by_count": 10
+        },
+        {
+          "year": 2014,
+          "cited_by_count": 8
+        },
+        {
+          "year": 2013,
+          "cited_by_count": 14
+        },
+        {
+          "year": 2012,
+          "cited_by_count": 11
+        }
+      ],
+      "updated_date": "2026-09-12T09:15:50.089291",
+      "created_date": "2025-10-10T00:00:00"
+    },
+    {
+      "id": "https://openalex.org/W1994968438",
+      "doi": "https://doi.org/10.1090/s0002-9947-1986-0837811-1",
+      "title": "On integers free of large prime factors",
+      "display_name": "On integers free of large prime factors",
+      "relevance_score": 6.403465,
+      "publication_year": 1986,
+      "publication_date": "1986-01-01",
+      "ids": {
+        "openalex": "https://openalex.org/W1994968438",
+        "doi": "https://doi.org/10.1090/s0002-9947-1986-0837811-1",
+        "mag": "1994968438"
+      },
+      "language": "lv",
+      "primary_location": {
+        "id": "doi:10.1090/s0002-9947-1986-0837811-1",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1090/s0002-9947-1986-0837811-1",
+        "pdf_url": "https://www.ams.org/tran/1986-296-01/S0002-9947-1986-0837811-1/S0002-9947-1986-0837811-1.pdf",
+        "source": {
+          "id": "https://openalex.org/S60030702",
+          "display_name": "Transactions of the American Mathematical Society",
+          "issn_l": "0002-9947",
+          "issn": [
+            "0002-9947",
+            "1088-6850"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310315719",
+          "host_organization_name": "American Mathematical Society",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310315719"
+          ],
+          "host_organization_lineage_names": [
+            "American Mathematical Society"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Transactions of the American Mathematical Society",
+        "raw_type": "journal-article"
+      },
+      "type": "article",
+      "indexed_in": [
+        "crossref"
+      ],
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://www.ams.org/tran/1986-296-01/S0002-9947-1986-0837811-1/S0002-9947-1986-0837811-1.pdf",
+        "any_repository_has_fulltext": false
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5044835369",
+            "display_name": "Adolf Hildebrand",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Adolf Hildebrand",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5053988158",
+            "display_name": "Gérald Tenenbaum",
+            "orcid": "https://orcid.org/0000-0002-0478-3693"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Gérald Tenenbaum",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 0,
+      "institutions_distinct_count": 0,
+      "corresponding_author_ids": [],
+      "corresponding_institution_ids": [],
+      "apc_list": null,
+      "apc_paid": null,
+      "fwci": 3.863,
+      "has_fulltext": true,
+      "cited_by_count": 129,
+      "citation_normalized_percentile": {
+        "value": 0.9410385,
+        "is_in_top_1_percent": false,
+        "is_in_top_10_percent": true
+      },
+      "cited_by_percentile_year": {
+        "min": 93,
+        "max": 99
+      },
+      "biblio": {
+        "volume": "296",
+        "issue": "1",
+        "first_page": "265",
+        "last_page": "290"
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T11130",
+        "display_name": "Coding theory and cryptography",
+        "score": 0.9994999766349792,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1702",
+          "display_name": "Artificial Intelligence"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/17",
+          "display_name": "Computer Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T11130",
+          "display_name": "Coding theory and cryptography",
+          "score": 0.9994999766349792,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11166",
+          "display_name": "Analytic Number Theory Research",
+          "score": 0.9994999766349792,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2602",
+            "display_name": "Algebra and Number Theory"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10849",
+          "display_name": "Finite Group Theory Research",
+          "score": 0.9973999857902527,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2607",
+            "display_name": "Discrete Mathematics and Combinatorics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/26",
+            "display_name": "Mathematics"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/algorithm",
+          "display_name": "Algorithm",
+          "score": 0.6230754256248474
+        },
+        {
+          "id": "https://openalex.org/keywords/annotation",
+          "display_name": "Annotation",
+          "score": 0.47241154313087463
+        },
+        {
+          "id": "https://openalex.org/keywords/artificial-intelligence",
+          "display_name": "Artificial intelligence",
+          "score": 0.4455231726169586
+        },
+        {
+          "id": "https://openalex.org/keywords/type",
+          "display_name": "Type (biology)",
+          "score": 0.4188547730445862
+        },
+        {
+          "id": "https://openalex.org/keywords/computer-science",
+          "display_name": "Computer science",
+          "score": 0.3928908407688141
+        },
+        {
+          "id": "https://openalex.org/keywords/mathematics",
+          "display_name": "Mathematics",
+          "score": 0.3362801969051361
+        },
+        {
+          "id": "https://openalex.org/keywords/biology",
+          "display_name": "Biology",
+          "score": 0.08183196187019348
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C11413529",
+          "wikidata": "https://www.wikidata.org/wiki/Q8366",
+          "display_name": "Algorithm",
+          "level": 1,
+          "score": 0.6230754256248474
+        },
+        {
+          "id": "https://openalex.org/C2776321320",
+          "wikidata": "https://www.wikidata.org/wiki/Q857525",
+          "display_name": "Annotation",
+          "level": 2,
+          "score": 0.47241154313087463
+        },
+        {
+          "id": "https://openalex.org/C154945302",
+          "wikidata": "https://www.wikidata.org/wiki/Q11660",
+          "display_name": "Artificial intelligence",
+          "level": 1,
+          "score": 0.4455231726169586
+        },
+        {
+          "id": "https://openalex.org/C2777299769",
+          "wikidata": "https://www.wikidata.org/wiki/Q3707858",
+          "display_name": "Type (biology)",
+          "level": 2,
+          "score": 0.4188547730445862
+        },
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.3928908407688141
+        },
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.3362801969051361
+        },
+        {
+          "id": "https://openalex.org/C86803240",
+          "wikidata": "https://www.wikidata.org/wiki/Q420",
+          "display_name": "Biology",
+          "level": 0,
+          "score": 0.08183196187019348
+        },
+        {
+          "id": "https://openalex.org/C18903297",
+          "wikidata": "https://www.wikidata.org/wiki/Q7150",
+          "display_name": "Ecology",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "mesh": [],
+      "locations_count": 1,
+      "locations": [
+        {
+          "id": "doi:10.1090/s0002-9947-1986-0837811-1",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1090/s0002-9947-1986-0837811-1",
+          "pdf_url": "https://www.ams.org/tran/1986-296-01/S0002-9947-1986-0837811-1/S0002-9947-1986-0837811-1.pdf",
+          "source": {
+            "id": "https://openalex.org/S60030702",
+            "display_name": "Transactions of the American Mathematical Society",
+            "issn_l": "0002-9947",
+            "issn": [
+              "0002-9947",
+              "1088-6850"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310315719",
+            "host_organization_name": "American Mathematical Society",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310315719"
+            ],
+            "host_organization_lineage_names": [
+              "American Mathematical Society"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Transactions of the American Mathematical Society",
+          "raw_type": "journal-article"
+        }
+      ],
+      "best_oa_location": {
+        "id": "doi:10.1090/s0002-9947-1986-0837811-1",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1090/s0002-9947-1986-0837811-1",
+        "pdf_url": "https://www.ams.org/tran/1986-296-01/S0002-9947-1986-0837811-1/S0002-9947-1986-0837811-1.pdf",
+        "source": {
+          "id": "https://openalex.org/S60030702",
+          "display_name": "Transactions of the American Mathematical Society",
+          "issn_l": "0002-9947",
+          "issn": [
+            "0002-9947",
+            "1088-6850"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310315719",
+          "host_organization_name": "American Mathematical Society",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310315719"
+          ],
+          "host_organization_lineage_names": [
+            "American Mathematical Society"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Transactions of the American Mathematical Society",
+        "raw_type": "journal-article"
+      },
+      "sustainable_development_goals": [],
+      "awards": [],
+      "funders": [
+        {
+          "id": "https://openalex.org/F4320320879",
+          "display_name": "Deutsche Forschungsgemeinschaft",
+          "ror": "https://ror.org/018mejw64"
+        }
+      ],
+      "has_content": {
+        "pdf": true,
+        "grobid_xml": true
+      },
+      "content_urls": {
+        "pdf": "https://content.openalex.org/works/W1994968438.pdf",
+        "grobid_xml": "https://content.openalex.org/works/W1994968438.grobid-xml"
+      },
+      "referenced_works_count": 16,
+      "referenced_works": [
+        "https://openalex.org/W1965156752",
+        "https://openalex.org/W1997891615",
+        "https://openalex.org/W2006523121",
+        "https://openalex.org/W2013892149",
+        "https://openalex.org/W2048102135",
+        "https://openalex.org/W2106160186",
+        "https://openalex.org/W2123355614",
+        "https://openalex.org/W2128745083",
+        "https://openalex.org/W2159622301",
+        "https://openalex.org/W2477967187",
+        "https://openalex.org/W2597500246",
+        "https://openalex.org/W2742529738",
+        "https://openalex.org/W3009825533",
+        "https://openalex.org/W4206668612",
+        "https://openalex.org/W4210687766",
+        "https://openalex.org/W6721317910"
+      ],
+      "related_works": [
+        "https://openalex.org/W4391375266",
+        "https://openalex.org/W2361861616",
+        "https://openalex.org/W2263699433",
+        "https://openalex.org/W2377979023",
+        "https://openalex.org/W2218034408",
+        "https://openalex.org/W2392921965",
+        "https://openalex.org/W2358755282",
+        "https://openalex.org/W1979597421",
+        "https://openalex.org/W2007980826",
+        "https://openalex.org/W2625833328"
+      ],
+      "abstract_inverted_index": {
+        "The": [
+          0
+        ],
+        "number": [
+          1
+        ],
+        "Ψ": [
+          2,
+          105
+        ],
+        "(": [
+          3,
+          35,
+          58,
+          106,
+          131,
+          132
+        ],
+        "x": [
+          4,
+          13,
+          15,
+          38,
+          63,
+          107,
+          115,
+          120
+        ],
+        ",": [
+          5,
+          108
+        ],
+        "y": [
+          6,
+          22,
+          24,
+          33,
+          45,
+          53,
+          71,
+          109,
+          117,
+          122
+        ],
+        ")": [
+          7,
+          39,
+          64,
+          110
+        ],
+        "\\Psi": [
+          8,
+          111
+        ],
+        "(x,y)": [
+          9,
+          112
+        ],
+        "of": [
+          10,
+          18
+        ],
+        "integers": [
+          11
+        ],
+        "≤": [
+          12,
+          34
+        ],
+        "\\leq": [
+          14,
+          46
+        ],
+        "and": [
+          16,
+          52,
+          99
+        ],
+        "free": [
+          17
+        ],
+        "prime": [
+          19
+        ],
+        "factors": [
+          20
+        ],
+        ">": [
+          21,
+          23,
+          54,
+          72
+        ],
+        "has": [
+          25
+        ],
+        "been": [
+          26,
+          91
+        ],
+        "given": [
+          27
+        ],
+        "satisfactory": [
+          28
+        ],
+        "estimates": [
+          29,
+          89
+        ],
+        "in": [
+          30
+        ],
+        "the": [
+          31,
+          83
+        ],
+        "regions": [
+          32
+        ],
+        "log": [
+          36,
+          59,
+          61,
+          133
+        ],
+        "⁡": [
+          37,
+          56,
+          60,
+          62,
+          134
+        ],
+        "3": [
+          40,
+          67
+        ],
+        "/": [
+          41,
+          66
+        ],
+        "4": [
+          42
+        ],
+        "−": [
+          43
+        ],
+        "ε": [
+          44,
+          69
+        ],
+        "{(\\log": [
+          47,
+          75
+        ],
+        "x)^{3/4": [
+          48
+        ],
+        "-": [
+          49
+        ],
+        "\\varepsilon": [
+          50,
+          79
+        ],
+        "}}": [
+          51
+        ],
+        "exp": [
+          55
+        ],
+        "{": [
+          57
+        ],
+        "5": [
+          65
+        ],
+        "+": [
+          68,
+          78,
+          129
+        ],
+        "}": [
+          70
+        ],
+        "\\exp": [
+          73
+        ],
+        "\\{": [
+          74
+        ],
+        "\\log": [
+          76
+        ],
+        "x)^{5/3": [
+          77
+        ],
+        "}}\\}": [
+          80
+        ],
+        ".": [
+          81
+        ],
+        "In": [
+          82
+        ],
+        "intermediate": [
+          84
+        ],
+        "range,": [
+          85
+        ],
+        "only": [
+          86
+        ],
+        "very": [
+          87
+        ],
+        "crude": [
+          88
+        ],
+        "have": [
+          90
+        ],
+        "obtained": [
+          92
+        ],
+        "so": [
+          93
+        ],
+        "far.": [
+          94
+        ],
+        "We": [
+          95
+        ],
+        "close": [
+          96
+        ],
+        "this": [
+          97
+        ],
+        "\"gap\"": [
+          98
+        ],
+        "give": [
+          100
+        ],
+        "an": [
+          101
+        ],
+        "expression": [
+          102
+        ],
+        "which": [
+          103
+        ],
+        "approximates": [
+          104
+        ],
+        "uniformly": [
+          113
+        ],
+        "for": [
+          114
+        ],
+        "≥": [
+          116,
+          118
+        ],
+        "2": [
+          119,
+          124
+        ],
+        "\\geq": [
+          121,
+          123
+        ],
+        "within": [
+          125
+        ],
+        "a": [
+          126
+        ],
+        "factor": [
+          127
+        ],
+        "1": [
+          128
+        ],
+        "O": [
+          130
+        ]
+      },
+      "counts_by_year": [
+        {
+          "year": 2026,
+          "cited_by_count": 1
+        },
+        {
+          "year": 2025,
+          "cited_by_count": 4
+        },
+        {
+          "year": 2024,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2023,
+          "cited_by_count": 7
+        },
+        {
+          "year": 2022,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2021,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2020,
+          "cited_by_count": 6
+        },
+        {
+          "year": 2019,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2018,
+          "cited_by_count": 3
+        },
+        {
+          "year": 2017,
+          "cited_by_count": 7
+        },
+        {
+          "year": 2016,
+          "cited_by_count": 8
+        },
+        {
+          "year": 2015,
+          "cited_by_count": 5
+        },
+        {
+          "year": 2014,
+          "cited_by_count": 2
+        },
+        {
+          "year": 2013,
+          "cited_by_count": 4
+        },
+        {
+          "year": 2012,
+          "cited_by_count": 4
+        }
+      ],
+      "updated_date": "2026-09-07T09:17:50.787605",
+      "created_date": "2025-10-10T00:00:00"
+    }
+  ],
+  "group_by": []
+}

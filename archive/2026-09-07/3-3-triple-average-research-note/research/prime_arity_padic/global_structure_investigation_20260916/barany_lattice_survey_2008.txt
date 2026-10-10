@@ -1,0 +1,1688 @@
+    Random points and lattice points in convex bodies
+                                 Imre Bárány
+                           Rényi Institute of Mathematics
+                           Hungarian Academy of Sciences
+                         POBox 127, 1364 Budapest, Hungary
+                              e-mail: barany@renyi.hu
+                                          and
+                            Department of Mathematics
+                             University College London
+                          Gower Street, London WC1E 6BT
+                                        England
+
+                               November 14, 2007
+
+
+                                     Abstract
+                         d
+          Assume K ⊂ R is a convex body and X is a (large) finite subset of
+      K. How many convex polytopes are there whose vertices belong to X.
+      Is there a typical shape of such polytopes? How well the maximal such
+      polytope (which is actually the convex hull of X) approximates K? We
+      are interested in these questions mainly in two cases. The first is when X
+      is a random sample of n uniform, independent points from K. In this case
+      motivation comes from Sylvester’s famous four-point problem, and from
+      the theory of random polytopes. The second case is when X = K ∩ Zd
+      where Zd is the lattice of integer points in Rd and the questions come
+      from integer programming and geometry of numbers. Surprisingly (or not
+      so surprisingly), the answers in the two cases are rather similar.
+
+
+1    Sylvester’s four-point problem
+The study of random points in convex bodies started with an innocent looking
+question. The year was 1864. The place was London. The journal was the
+Educational Times. Problem 1941 came from J. J. Sylvester [60]. It read: Show
+that the chance of four points forming the apices of a reentrant quadrilateral
+is 1/4 if they be taken at random in an indefinite plane. Several answers came
+in. Most of them were different. In 1865 Sylvester [61] concluded that This
+problem does not admit of a determinate solution. The reason is, as we all
+know by now, in “at random in an indefinite plane” since there is no natural
+probability measure on it. Sylvester immediately modified the question. Let
+K be a convex body in the plane and choose four random, independent, and
+uniform points from K. What is the probability that they form the vertices of
+a reentrant quadrilateral, or, in recent terminology, that their convex hull is a
+triangle. Further, for what K is this probability the smallest and the largest.
+    This question has become known as Sylvester’s four-point problem and has
+proved to be extremely fertile. It took more than fifty years (and several er-
+roneous proofs) to find the answer. Blaschke showed in [26] and [27] that the
+
+                                          1
+probability in question is largest for a triangle and smallest for the disk (or any
+ellipse). His solution used the method of symmetrization and “shaking down”
+that have become standard tools since.
+    Sylvester’s question, and its subsequent solution, determined the direction
+of research for a long time. Many papers have been written starting with the
+setting: let Xn = {x1 , ..., xn } be a random, independent, uniform sample of n
+points from some fixed d-dimensional convex body K and let Kn denote the
+convex hull of Xn . Then Kn is a random polytope inscribed in K. Define, in
+the style of Sylvester’s question, p(K, n) as the probability that Xn is in convex
+position, that is, no xi lies in the convex hull of the others, or in other words,
+that Kn has exactly n vertices. In this setting, the four-point problem asks for
+the determination of (the complement of) p(K, 4). Several results have been
+achieved about p(K, n) for various convex bodies in Rd with various values of
+n. We return to them a little later.
+
+
+2    Rényi and Sulanke
+In 1963 a new question concerning random polytopes appeared in a much quoted
+paper by Rényi and Sulanke [53]. Apparently, Blaschke played a role at the
+origin of this new direction, almost fifty years after his solution of Sylvester’s
+four-point problem. Here is how Sulanke remembers it [59].
+    “My motivation for considering problems on geometric probabilities origi-
+nated in discussion with W. Blaschke on integral geometry: Express geometri-
+cally invariant properties of figures by their integral invariants. Alfréd Rényi’s
+idea was to pose problems on geometrical probabilities on the base of invariant
+measures considered in integral geometry. The probabilistic description of ran-
+dom figures, e.g. distributions, moments, asymptotic coefficients etc. should
+yield new integral geometric entities containing information about the geometry
+of the random figures. This general point of view has been the motivation of all
+my papers about geometric probabilities. We did not consider, and I did not
+know, Sylvester’s four-point problem.”
+    What Rényi and Sulanke observed is the following. For a fixed convex body
+K ⊂ Rd the random polytopes Kn get closer and closer to K as n gets larger
+and larger with high probability. So how does the random variable Vol (K \Kn )
+behave? Also, how do the polytopal properties of Kn , for instance the number
+of vertices, behave as n tends to infinity? They determined, asymptotically,
+the expectation of these random variables when K is a polygon and when K
+has smooth boundary see [53]. Their result was the starting point of, and the
+motivation for, hundreds of papers. Most of them are about expectations of
+various functionals associated with Kn . More recently there have been several
+breakthrough results concerning the distribution of these random variables, in
+particular central limit theorems and large deviations.
+
+
+3    Lattice polytopes
+In this third introductory section we just state two basic problems.
+
+
+                                         2
+    Integer points in convex bodies, in particular disks, balls, and ellipsoids,
+have been studied for a long time. The circle problem asks for the number of
+lattice points in the circle rB 2 , of radius r centred at the origin. In this paper
+we are interested in a different question. Namely, consider the integer convex
+hull, I(K) of a convex body K in Rd which is defined as the convex hull of
+K ∩ Zd . Motivation for the definition of I(K) comes from integer programming
+where one wants to maximize a linear function over all integer points in a fixed
+convex body K, or, what is the same, over the integer convex hull, I(K).
+    The integer convex hull is clearly a polytope, moreover, it is a lattice poly-
+tope meaning that all of its vertices belong to Zd . How many vertices, edges,
+facets does it have, for instance when K = rB d , and r is large? We will come
+back to this question later.
+    In a different direction, V I Arnold asked the following beautiful and in-
+spiring question [3]. How many different lattice polytopes are there? Infinitely
+many, of course. Refine the question then. Two lattice polytopes are said to
+be equivalent if one can be carried to the other by a lattice preserving affine
+transformation. This is an equivalence relation, and equivalent polytopes have
+the same volume. The refined question is this: How many equivalence classes
+are there in dimension d of volume at most W . The answer will be given in
+Section 14.
+    The present survey aims at explaining the recent developments on random
+polytopes, together with the asymptotic behaviour of the expectations. It will
+also cover old and new results around Sylvester’s question. We will see further
+that random polytopes and lattice polytopes behave quite similarly, although
+the proof methods in the two cases are different. As a rule, proofs are not given
+here, with some exceptions where I felt that a sketch can help the reader to un-
+derstand the underlying ideas better. In particular, I explain how the economic
+cap covering theorem can be used to estimate expectations and variances. It
+is not my intention to present here every result: there are too many of them
+anyway. I rather try to emphasize directions, new ideas, and basic results, and
+their consequences.
+
+
+4    Notation
+A convex body in Rd is a convex compact set with non-empty interior. We
+write K or Kd for the family of all convex bodies in Rd . The family of convex
+polytopes, to be denoted by P = P d , and the family of smooth convex bodies,
+to be denoted by C = C d will often be treated separately. We assume that each
+K ∈ C d has twice continuously differentiable boundary whose Gauss curvature
+is positive everywhere. We won’t indicate the dimension if there is no danger
+of ambiguity.
+    We write K1 , P1 and C1 for the subfamilies where the volume is equal to 1.
+This is often very convenient since for K ∈ K1 the probability measure and the
+Lebesgue measure coincide.
+    As usual, fj (P ) denotes the number of j-dimensional faces of a polytope
+P ∈ P d . We write Vol S for the volume of a set S ⊂ Rd . Also, affX stand
+
+
+                                         3
+for its affine hull, and convX or simply [X] for its convex hull, and bdS for its
+boundary.
+    As usual, we will write Eφ(Kn ) for the expectation of the random variable
+φ(Kn ), and Var φ(Kn ) for its variance. For instance, Ef0 (K, n) is the expec-
+tation of the number of vertices of Kn . Since Kn is very close to K with high
+probability (as n gets large), we are interested in the difference Vol (K \ Kn )
+which will be denoted by E(K, n).
+    On the technical side we will use the “big Oh” and “little oh” notation,
+together with Vinogradov’s very convenient  and  symbols. So f (n) 
+g(n) means that there are constants c1 and c2 such that f (n) ≤ c2 g(n) for all
+n ≥ c1 . These constant of course do not depend on n. Unless otherwise stated,
+they only depend on dimension. Sometimes we use f (n) ∼ g(n) meaning that
+f (n)  g(n)  f (n). Constants will be denoted by c, ci , bj , D, α, β. They
+usually depend on dimension and their value may vary from place to place.
+    To avoid complications with trivialities we assume throughout that the di-
+mension d is at least two.
+
+
+5     Asymptotic expectations
+Expectations of φ(Kn ), for certain functionals φ, can be computed with high
+precision when K ∈ Kd is smooth and when it is a polytope. The basic method
+for this appears already in Rényi, Sulanke [53]. We give a quick sketch in the
+case when φ is of the form
+                                                             X
+                                             φ(Kn ) =              φ(F ),
+                                                            F ∈F
+
+where F is the set of facets of the polytope Kn . So the method applies for
+instance when φ is fd−1 , or surface area. Since Kn is a simplicial polytope with
+probability one, each facet is of the form [xi1 . . . , xid ]. We write 1{A} for the
+indicator function of the event A. Then, assuming K ∈ K1 ,
+                          X              Z              Z
+    Eφ(Kn ) =                                     ...       1{[xi1 , . . . , xid ] ∈ F]} ×
+                    1≤i1 <...<id ≤n K                   K
+
+                    ×φ[xi1 , . . . , xid ])dx1 . . . dxn
+                          !Z
+                      n
+                                         Z
+               =                   ...           1{[x1 , . . . , xd ] ∈ F}φ([x1 , . . . , xd ])dx1 . . . dxn .
+                      d     K                K
+
+Write V = Vol C(x1 , . . . , xd ) for the volume of the smaller cap, C(x1 , . . . , xd ),
+cut off from K by H = aff{x1 , . . . , xd } (which is a hyperplane, almost surely).
+Since F = [x1 . . . , xd ] is a facet if and only if xd+1 , . . . , xn are all on one side of
+H, we have the following.
+                          !Z
+                      n
+                                         Z
+       Eφ(Kn ) =                   ...           [(1 − V )n−d + V n−d ]φ(F )dx1 . . . dxd .                (5.1)
+                      d        K             K
+
+    Next we use the Blaschke-Petkantschin [54] integral formula
+                                             !Z
+                                         n
+                   Eφ(Kn ) =                          [(1 − V )n−d + V n−d ]φ∗ (F )dH
+                                         d        G
+
+
+                                                            4
+where the integral is taken over the Grassmannian of all hyperplanes with dH
+denoting the corresponding measure, and where by Blaschke-Petkantschin
+                               Z           Z
+             ∗
+           φ (F ) = (d − 1)!         ...           φ(F )Vd−1 (F )dx1 . . . dxd
+                               K∩H         K∩H
+
+with the variables in the last integral coming from K ∩ H, and Vd−1 (F ) is the
+surface area of F .
+    Here V n−d ≤ 2−(n−d) which is very small. Moreover, (1 − V )n−d is small,
+again, unless V ≤ cn−1 log n. So the dominating part of the integral comes
+from hyperplanes H that are close to the boundary of K in the sense that they
+cut off a cap of small volume from K.
+    One can give precise estimates for the last integral in several special cases.
+For instance when φ = fd−1 (then φ(F ) = 1) the above formula can be directly
+evaluated for smooth convex bodies, using local Taylor expansion of bdK, see
+[53] for d = 2 and [70] for d ≥ 2. The result is that for K ∈ C1
+                                                   d−1
+                     Efd−1 (Kn ) = cd Ω(K)n d+1 (1 + o(1)),
+
+where Ω(K) is the affine surface area of K.
+    Rényi and Sulanke [53] used this method to determine Ef0 (Kn ) for convex
+polygons and smooth planar convex bodies. In the plane f0 (Kn ) = f1 (Kn ), and
+E(K, n) can be determined from Ef0 (Kn ) by Efron’s identity [34] stating that
+for every convex body K ∈ K1
+
+                           Ef0 (Kn ) = nE(K, n − 1).                             (5.2)
+
+    The technique also works in other cases as well. For small dimensions the
+f -vector is completely determined by fd−1 , and E(K, n) can be determined
+by Efron’s identity. Schneider and Wieacker [56] computed the expectation of
+the mean width, V1 (K) − EV1 (Kn ), when K ∈ C d using the above method.
+Wieacker [70] determined E(K, n) for the case when K = B d , the unit ball of
+Rd . But often the integrals are too difficult to handle, and a different approach
+is needed. We return to this question in Section 9.
+    The limitation of the integral geometric technique is that it can only apply
+when K is a polytope or has smooth boundary. In the next two sections we
+describe another method that works, with less precision though, for general
+convex bodies.
+
+
+6    Expectations and the floating body
+A cap of a convex body K ∈ Kd is simply K ∩H where H is a (closed) halfspace.
+Let Xn be a random sample of n uniform, independent points from K. A cap of
+volume 1/10n contains no point from Xn with high probability, while a cap of
+volume 10/n does contain a point from Xn with high probability. This suggest
+that Kn is close to what remains of K after deleting all caps of volume 1/n.
+For the precise formulation we need some definitions.
+
+
+
+                                               5
+   First we define the function v : K → R by
+
+           v(x) = min{Vol (K ∩ H) : x ∈ H, and H is a halfspace},
+
+The level sets of v are defined, as usual, via
+
+                        K(v ≥ t) = {x ∈ K : v(x) ≥ t}.
+
+The wet part of K with parameter t > 0 is
+
+                    K(t) = K(v ≤ t) = {x ∈ K: : v(x) ≤ t}.
+
+The name comes from the mental picture when K is a 3-dimensional convex
+body containing t units of water. We call K(v ≥ t) the floating body of K with
+parameter t > 0 as, in a similar picture, this is the part of K that floats above
+water. The floating body is the intersection of halfspaces so it is convex.
+   The above philosophy suggests the Kn is close to the floating body K(v ≥
+1/n). Even more importantly, K \ Kn is close to the wet part K(1/n). This is
+the content of the following theorem from [18].
+
+Theorem 6.1 For every convex body K ∈ K1 ,
+
+                    Vol K(1/n)  E(K, n)  Vol K(1/n).
+
+   We emphasize again that, here and later on, the constants applied by the 
+notation depend only on dimension. Theorem 6.1 turns out to be useful when
+considering the f -vector of Kn . Efron’s identity (5.2) and Theorem 6.1 give
+that order of magnitude of Ef0 (Kn ) behaves exactly as nVol K(1/n). This fact
+was extended to all fj in [8].
+
+Theorem 6.2 For every convex body K ∈ K1 , and for all j = 0, 1, . . . , d − 1
+
+                   nVol K(1/n)  Efj (Kn )  nVol K(1/n).
+
+    The strength of these two theorems lies in the fact that they hold for all
+convex bodies, not only for smooth ones or for polytopes. Note, further, that
+both Kn and K(1/n) are affine equivariant, which is just as well. Theorem 6.1
+says that in order to determine the order of magnitude of E(K, n) it suffices
+to determine the volume of the wet part which is not a random quantity. An
+analogous statement holds for Efj (Kn ). So the next question is the volume of
+the wet part Vol (K(t)). The following is known about it [18].
+
+Theorem 6.3 For every convex body K ∈ K1 , and for all positive t ≤ t0 (d) =
+(2d)−2d
+                         1 d−1
+                          
+                                                2
+                   t log        Vol K(t)  t d+1 .
+                         t
+
+
+
+
+                                        6
+    The estimate on the right hand side is essentially the affine isoperimetric
+inequality, and the best constant is known. The left hand side inequality is of
+the right order of magnitude when K is a polytope. It is conjectured that, in the
+left hand side inequality, the best constant appears when K is a simplex. What
+happens between these two special classes (P d and C d ) is not a mystery; it is
+the usual unpredictable behaviour. Informally stated, Vol K(t) approximates
+the upper bound t2/(d+1) and the lower bound t(log 1t )d−1 infinitely often, as
+t → 0, for a typical (in Baire category sense) convex body K.
+    Theorem 6.1 implies that for every convex body K ∈ K1 ,
+                        1                            2
+                          (log n)d−1  E(K, n)  n− d+1 .                     (6.3)
+                        n
+The right hand side inequality, which is due to Groemer [36], can be formulated
+more precisely. Among all convex bodies of volume one, E(K, n) is the largest
+for the Euclidean ball (or any other ellipse) of volume one. We will see in
+Section 9 that the quantity on the left (and right) hand side is the correct order
+of magnitude for P1 , the class of polytopes (and for C1 , the smooth convex
+bodies).
+    Theorem 6.1 extends to intrinsic volumes as well. But as intrinsic volumes
+are not invariant under affine transformations, we have to assume that K ∈ Kd
+contains a ball of radius r and is contained in a ball of radius R. Under these
+conditions the following holds (cf. [8]). For all j = 1, . . . , d
+
+  Vj (K) − Vj (K(v ≥ 1/n)  Vj (K) − EVj (Kn )  Vj (K) − Vj (K(v ≥ 1/n),
+
+where the implied constants depend on d, r, R. (Here Vj (K) denotes the jth
+intrinsic volume of K.) But the behaviour of Vj (K) − Vj (K(v ≥ t) is not known
+in general, so we do not have the analogs of Theorem 6.3 or the inequality (6.3).
+    The proof of Theorems 6.1 and 6.2 is simplified by the following
+
+Fact 6.4 nE(K, n − 1) = Ef0 (Kn )  Ef1 (Kn )  . . .  Efd−1 (Kn ).
+
+    Here the equality is just Efron’s identity (5.2). The subsequent inequal-
+ities are implied by the fact that Kn is simplicial with probability one, and
+for a simplicial polytope fj (Kn ) ≤ (j + 2)fj+1 (Kn ) when j = 0, 1, . . . , d − 2.
+These inequalities follow easily by estimating, in two ways, the number of pairs
+(Fj+1 , Fj ) where Fj is a j-dimensional face contained in Fj+1 which is a j + 1-
+dimensional face.
+    Fact 6.4 implies that, for the proof of Theorems 6.1 and 6.2, it suffices to
+prove two things:
+
+Lemma 6.5 Vol K(1/n)  E(K, n)).
+
+Lemma 6.6 Efd−1 (Kn )  nVol K(1/n).
+
+   Lemma 6.5 is very easy to prove. The minimal cap belonging to x ∈ K is a
+cap C(x) of K with x ∈ C(x) and Vol C(x) = v(x). Note that the minimal cap
+C(x) need not be unique, so our notation is a little ambiguous. Observe that
+
+                     / Kn ] ≥ Prob[C(x) ∩ Xn = ∅] = (1 − v(x))n ,
+              Prob[x ∈
+
+                                         7
+which implies that, for every t ∈ [0, 1]
+                               Z                              Z
+              E(K, n) =                    / Kn ]dx ≥
+                                    Prob[x ∈                       (1 − v(x))n dx
+                               ZK                              K
+
+                          ≥                  n
+                                       (1 − t) dx = (1 − t)n Vol K(t).
+                                K(t)
+
+Choosing here t = 1/n finishes the proof. (We mention that this method works
+in much more general setting as well.)
+    The proof of Lemma 6.6 is more difficult yet interesting and instructive, so
+I will give a sketch. It uses the so called economic cap covering theorem which
+is stated in the next section. Afterward we return to the proof of Lemma 6.6
+
+
+7    Economic cap coverings
+The economic cap covering theorem is from [18] and [8]. It says the wet part
+K(t) can be covered by caps of volume  t economically.
+
+Theorem 7.1 Given K ∈ K1 and a positive t < (2d)−2d , there exist caps
+                                                                 0 with C 0 ⊂ C such
+C1 , . . . , Cm and pairwise disjoint convex sets C10 , . . . , Cm       i     i
+that
+
+(i) ∪m  0           m
+     1 Ci ⊂ K(t) ⊂ ∪1 Ci
+
+(ii) Vol Ci  t, (i = 1, . . . , m), and Vol Ci0  t, (i = 1, . . . , m).
+
+(iii) every cap C of volume t is contained in some Ci .
+
+    Here (i) and (ii) just say that the Ci cover the wet part, but do not overcover
+it. These conditions show how many caps are needed in the economic covering:
+
+                           Vol K(t)/t  m  Vol K(t)/t.                             (7.4)
+
+   We will write K d for the set of ordered d-tuples (x1 , . . . , xd ) from K. Recall
+that such a d tuple defines, with probability 1, the smaller cap C(x1 , . . . , xd )
+cut off by the hyperplane H = aff{x1 , . . . , xd } from K. Its volume is V =
+Vol C(x1 , . . . , xd ). Condition (iii) of the economic cap covering theorem directly
+implies the following
+
+Corollary 7.2 If K ∈ K1 and t ≤ (2d)−2d , then
+                                                          m
+                                                          [
+                   {(x1 , . . . , xd ) ∈ K d : V ≤ t} ⊂       (Ci , . . . , Ci ).
+                                                          1
+
+where C1 , . . . , Cm are from Theorem 7.1.
+
+   The next corollary expresses a useful concavity property of the function
+t → Vol K(t). It says that, apart from the constant implied by the  notation,
+the dth root of Vol K(t) is a concave function. This will be sufficient for our
+purposes, that is, for the proof of Lemma 6.6.
+
+                                              8
+Corollary 7.3 If K ∈ K1 and t ≤ (2d)−2d , and λ ≥ 1, then
+
+                              Vol K(t)  λ−d Vol K(λt).
+
+    Theorem 6.1 is based on the idea that K \ Kn and the wet part K(1/n) are
+close to each other. The cap covering theorem can be used to prove that Kn
+contains the wet part K(c log n/n) with high probability.
+
+Theorem 7.4 For every d ≥ 2 every c > 1 there is c0 > 0 such that for every
+K ∈ K1 and for large enough n
+
+                         Prob K(c0 log n/n) ⊂ Kn ≥ n−c .
+                                                           
+
+
+  This useful fact is proved in [15]. Another and more general proof, using
+VC-dimension, was given by Van Vu [67].
+
+
+8    Proof of Lemma 6.6
+We are going to use (5.1) with φ = fd−1 in which case φ(F ) = 1 if F is a facet
+of Kn and 0 otherwise.
+                             !Z
+                         n
+                                         Z
+       Efd−1 (Kn ) =               ...       [(1 − V )n−d + V n−d ]dx1 . . . dxd ,   (8.5)
+                         d     K         K
+
+     We split the domain of integration into two parts: K ∗ is the subset of
+K d where the function V  is smaller than (c log n)/n, and K 0 is where V ≥
+(c log n)/n. The constant c will be chosen large but depending only on d.
+Clearly V ≤ 1/2. The integrand over K 0 is small:
+
+      (1 − V )n−d + V n−d ≤ 2(1 − V )n−d ≤ 2 exp{−(n − d)V }
+                                  ≤ 2 exp{−(n − d)(c log n)/n} = 2n−c(n−d)/n
+
+which is smaller than n−(d+1) if c is chosen large enough (depending only on
+d). Then the contribution of the integral on K 0 to Efd−1 (Kn ) is at most 1/n
+so it is very small since, trivially, Efd−1 (Kn ) is at least one.
+    Now let h be an integer with 2−h ≤ (c log n)/n. For each such h let Mh be
+the collection of caps {C1 , . . . , Cm(h) } forming the economic cap covering from
+Theorem 7.1 with t = 2−h .
+    Assume now that (x1 , . . . , xd ) ∈ K ∗ . The cap C(x1 , . . . , xd ) has volume V .
+We associate with (x1 , . . . , xd ) the maximal h such that, for some Ci ∈ Mh ,
+C(x1 , . . . , xd ) ⊂ Ci . Such a maximal h exists by (iii) of Theorem 7.1. It follows
+that
+                           V = Vol C(x1 , . . . , xd ) ≤ Vol Ci  2−h
+and, by the maximality of h,
+
+                          V = Vol C(x1 , . . . , xd ) ≥ 2−h−1
+
+since otherwise C(x1 , . . . , xd ) would be contained in a cap from Mh+1 .
+
+                                                9
+   For such an (x1 , . . . , xd ) we have
+
+(1 − V )n−d + V n−d ≤ 2(1 − V )n−d ≤ 2(1 − 2−h−1 )n−d ≤ 2 exp{−(n − d)2−h−1 }.
+
+   Instead of integrating over K ∗ , we integrate each (x1 , . . . , xd ) on its associ-
+ated Ci ∈ Mh . In formula (8.5) the integral on Ci ∈ Mh is bounded by
+
+         2 exp{−(n − d)2−h−1 }Vol (Ci )d  exp{−(n − d)2−h−1 }(2−h )d
+
+as all the xi come from Ci . Summing this for all Ci ∈ Mh and all h ≥ h0 where
+h0 = b(c log n)/nc we get that
+                                    ∞
+                                      !
+                                  n X
+                                           exp{−(n − d)2−h−1 }2−hd
+                                        X
+      Efd−1 (Kn ) 
+                                  d h C ∈M
+                                           0    i        h
+                                   ! ∞
+                                  n X
+                                              exp{−(n − d)2−h+1 }2−hd |Mh |
+                                  d       h0
+                                   ! ∞
+                                  n X
+                                              exp{−(n − d)2−h+1 }2−h(d−1) Vol K(2−h )
+                                  d       h0
+
+where the last inequality follows from (7.4).
+   The rest of the proof is a direct computation using properties of the cap
+covering. We sum first for h ≥ h1 where h1 is defined by 2−h1 ≤ 1/n < 2−h1 +1 .
+The sum from h1 to infinity is estimated via:
+              ∞            ∞
+                                exp{−(n − d)2−h+1 }2−h(d−1) Vol K(1/n)
+              X            X
+                   .. ≤
+              h1           h1
+                                                ∞
+                                                         2−h(d−1) ≤ n−(d−1) Vol K(1/n).
+                                                X
+                     ≤ Vol K(1/n)
+                                                    h1
+
+When h0 ≤ h < h1 we set h = h1 − k so k runs from 1 to k1 = log log n + log c.
+Corollary 7.3 shows that Vol K(2−h ) ≤ Vol K(2k /n)  2kd Vol K(1/n). Thus
+       1 −1
+      hX             k1
+                           exp{−(n − d)2−h1 +k−1 }2(−h1 +k)(d−1) 2kd Vol K(1/n)
+                     X
+              .. 
+       h0            k=1
+                                                         k1
+                         −(d−1)
+                                                         X
+                    n            Vol K(1/n)                   exp{−(n − d)2k /n}2k(d−1) 2kd
+                                                         k=1
+                         −(d−1)
+                    n            Vol K(1/n)
+
+where the last step is justified easily.
+Remark. This proof shows the power and usefulness of the economic cap
+covering theorem. It gives a new method for estimating integrals of the type
+(8.5): instead of integrating over all d-tuples from K, we split integration on
+suitably chosen caps from Mh . On each cap the integral can be estimated
+directly. The computation is then reduced to estimating an infinite sum which
+can be done by standard methods using properties of the cap covering.
+
+                                                          10
+9    Further expectations
+The integral geometric technique of Section 5 did not work for Ef0 (Kn ) or for
+E(K, n). Determining them had been an open problem for some time. Solution
+in the case when K ∈ C1 came from Bárány [9], and somewhat more generally
+from Schütt [57]. The cap covering technique was used in [9] to show that
+Kn behaves essentially independently in the vicinity of two points from bdK
+when n is large enough. The method is a combination of the integral geometric
+approach with this independence structure. The result is similar to Efd−1 (Kn ),
+only the constants differ. For all K ∈ C1
+                                             d−1
+                       Ef0 (Kn ) = c0 Ω(K)n d+1 (1 + o(1)),
+
+where Ω(K) is the affine surface area of K and c0 is a constant depending only
+on d. By Efron’s identity, the analogous result holds for E(K, n).
+    We write P instead of K when the mother body is a polytope, and write
+Pn instead of Kn for the corresponding random polytope. In the case of simple
+polytopes, Affentranger and Wieacker [1] extended the integral geometric ap-
+proach to the case when φ(F ) (F is a facet of Pn ) is of special form, namely,
+when φ(F ) = (w(F )Vd−1 (F ))q . Here w(F ) is the width of the cap cut off by
+aff(F ) from P , in the direction of the outer normal to F , and q is a positive
+integer. Using this result, the case of general, non-simple polytopes was solved
+by Bárány and Buchta [14]:
+
+Theorem 9.1 For a polytope P ∈ K1
+
+                                 T (P )        logd−1 n
+               E(P, n) =                                (1 + o(1)) .
+                           (d + 1)d−1 (d − 1)!    n
+
+     Here T (P ) is the number towers of P , where a tower of P is a chain F0 ⊂
+F1 ⊂ . . . ⊂ Fd−1 , where Fi is an i-dimensional face of P .
+     The main novelty in the proof of Theorem 9.1 is that most of the volume
+missed by Pn is concentrated in small simplices associated with the towers of
+P . Another feature of the proof is “independence of shape”: the missed volume
+near a fixed point of the boundary is almost independent of other parts of the
+boundary. This implies that what happens in one of those small simplices is
+essentially independent of what happens in another small simplex. Then the
+missed volume in each small simplex is the same and can be determined from
+the result of Affentranger and Wieacker [1].
+     The difference between the random polytopes Kn (coming from K ∈ C d )
+and Pn (coming from P ∈ P d ) is beautifully highlighted here. The vertices
+of Kn are distributed almost uniformly near the boundary of K, their density
+depends on the local curvature. The vertices of Pn are distributed in the small
+simplices. In both cases, the independence of shape phenomenon prevails.
+     Recently, Matthias Reitzner [49] found a way to extend the integral geo-
+metric method so that it becomes applicable in many more cases. To explain
+what the main novelty is, assume that the convex hull of the random points
+x1 , . . . , xk ∈ Xn determines a (k − 1)-face, F , of Kn . Let L be the orthogonal
+
+                                        11
+complement of F , and let Kn0 be the projection of Kn onto L. It is clear that
+F is a (k − 1) face of Kn if and only if the projection of F onto L is a vertex of
+Kn0 . This transforms the determination of Efk−1 (Kn ) into a lower dimensional
+problem, provided all positions of affF , together with the choice of k uniform,
+independent points in K∩affF are taken into account. The method leads, again,
+to Blaschke-Petkantschin type integral geometric formulae. After lengthy and
+nontrivial computations, these formulae can be evaluated in the case when K
+is smooth and when K is a simple polytope. (The extension to the non-simple
+case uses the independence structure and the small simplices from [14].) The
+outcome is that Efj (Kn ) is asymptotically equal to cj Ω(K)n(d−1)/(d+1) for con-
+vex bodies in C1 , and to bj T (P )(log n)d−1 for polytopes P ∈ P d , with constant
+depending on j and d.
+
+
+10     Variances
+Many papers have been devoted to determine the expectation of various func-
+tionals of Kn . Yet up to quite recently, very little has been known about the
+distribution of these functionals. A few notable exception will be mentioned in
+Section 11. Wieacker and Weil, in their survey article [69] in 1993 complain
+that the determination of the variance, for instance, is a major open problem.
+    The first result in this direction is due to Küfer [45]. He shows the up-
+per bound O(n−(d+3)/(d+1) ) for the variance of the missed volume when the
+mother body is the unit ball. He extends this result for spherically symmetric
+distributions with regularly varying tails.
+    The first general result concerning variances comes from a remarkable paper
+of M. Reitzner [50]. He has established an upper bound on the variance of the
+volume of Kn (which is the same as the variance of the missed volume) and on
+fj (Kn ) in the case of smooth convex bodies K:
+
+                       Var Vol Kn ≤ c(K)n−(d+3)/(d+1)
+                       Var fj (Kn ) ≤ c(K)n(d−1)/(d+1)
+
+where the constants c(K) depend on K and dimension only. These estimates
+are based on the jackknife inequality of Efron and Stein [35], which implies (we
+omit the details) that
+
+                 Var Vol Kn ≤ (n + 1)E(Vol Kn+1 − Vol Kn )2
+
+    On the next page I give a short sketch of the method. It starts, quite
+naturally, with a coupling argument since Kn+1 is just the convex hull of Kn
+and xn+1 , the last point from the random sample Xn+1 . For simpler notation
+we write y for xn+1 . Let F be the collection of those facets F of Kn for which y
+is not on the same side of the hyperplane affF as Kn . Clearly F = ∅ if y ∈ Kn .
+We write [n] for the set {1, . . . , n}. The difference Kn+1 \ Kn is the union of
+(pairwise internally disjoint) simplices [F, y] with F ∈ F. For a d-subset I of [n]
+let FI denote the convex hull of {xi : i ∈ I}. Then, with I denoting summation
+                                                         P
+
+
+
+
+                                        12
+over all d-element subsets of [n],
+                                           X
+         Vol Kn+1 − Vol Kn =                   Vol [F, y]
+                                       F ∈F
+                            X                                   X
+                        =        1{FI ∈ F}Vol [FI , y] ≤             1{FI ∈ F}V (FI ),
+                             I                                   I
+
+where V (FI ) denotes the volume of the cap C(FI ) containing y which is cut
+off by the hyperplane affFI . (This is well defined if FI ∈ F, and irrelevant
+otherwise.) Now
+                                     XX
+      (Vol Kn+1 − Vol Kn )2 =                  1{FI ∈ F}V (FI )1{FJ ∈ F}V (FJ )
+                                       I   J
+
+By symmetry we can assume V (FI ) ≥ V (FJ ) at the price of a factor 2. When
+integrating, we can assume, again by symmetry, that I = [d], I ∩ J = [k] and
+J = [k] ∪ {d + 1, . . . , 2d − k} and k ∈ {0, 1, . . . , d}. Write F = FI and G = FJ
+with these I and J. So we have
+                                       d
+                                                   !       !         !Z
+                                               n       d       n−d
+                                       X                                         Z
+                                 2
+ E(Vol Kn+1 − Vol Kn ) ≤ 2                                                 ...       1{F ∈ F} ×
+                                       k=0
+                                               d       k       d−k     K         K
+
+                     × V (F )1{G ∈ F}V (G)1{V (F ) ≥ V (G)}dx1 . . . dxn dy
+
+with the extra condition that y ∈ C(F )∩C(G). Consider now the above integral
+for a fixed k. Using Theorem 7.4 it is not hard to see that this integral is
+concentrated on the part where V (F ) ≤ (c log n)/n. Since F ∈ F, the variables
+x2d−k+1 , . . . , xn all lie in the complement of C(F ), their total contribution is at
+most (1 − V (F ))n−(2d−k) . This shows that the integral for a fixed k is at most
+     Z           Z
+           ...           (1 − V (F ))n−2d+k V (F )V (G)1{y ∈ C(F ) ∩ C(G)} ×
+       K         K
+                                                   c log n
+                      × 1{V (G) ≤ V (F ) ≤                 }dx1 . . . dx2d−k dy.
+                                                      n
+When K is smooth the last integral can be estimated using local approximation
+of K and integral geometric methods. This is what happens in [50]. But the
+cap covering technique, the one used in Section 8 works just as well. Moreover,
+it works not only for smooth convex bodies, but for polytopes as well. The
+outcome is that for a polytope K ∈ P1
+                                                       1
+                            Var Vol Kn ≤ c(K)             (log n)d−1                       (10.6)
+                                                       n2
+and the constant c(K) is proportional to the number of towers of K. The
+variance of fj (Kn ) can also be estimated analogously. In that case we have,
+with the same remark about c(K) as above,
+
+                             Var fj (Kn ) ≤ c(K)(log n)d−1 .
+
+These results are stated, without proof, in Bárány, Reitzner [22].
+
+
+                                               13
+    The upper bounds imply a strong law of large numbers for the corresponding
+functionals.
+    What about lower bounds for the variances? In [51] Reitzner gives a match-
+ing lower bound when K ∈ C1 :
+
+                     Var Vol Kn ≥ c(K)n−(d+3)/(d+1) ,
+                      Var fj (Kn ) ≥ c(K)n(d−1)/(d+1) .
+
+These lower bounds have been extended to every convex body K ∈ K1 in the
+following form:
+                                       1
+                       Var Vol Kn       Vol K(1/n),                      (10.7)
+                                       n
+                        Var fj (Kn )  Vol K(1/n).
+
+The proof is given in [22]. It is based on properly decomposing the variance
+(just like in [51]), and on the cap covering technique combined with a little
+convex geometry.
+    The last results suggest that in general
+                                    1
+                     Var Vol Kn ∼     Vol K(1/n), and
+                                    n
+                     Var fj (Kn ) ∼ Vol K(1/n).
+
+for all convex bodies in K1 , with the implied constants depending only on
+dimension. This is confirmed in the case when K is in P1 or in C1 by the
+previously given upper bounds. Also, it can be proved in the planar case with
+ad hoc methods.
+
+
+11    Central limit theorems
+The few exceptions where the variance had been known are connected to the
+few cases when the central limit theorem had been established. One of them is
+Groeneboom’s result [37] proving a central limit theorem (CLT from now on)
+in the following form. For a polygon P is the plane, the distribution of f0 (Pn )
+is close to normal. Namely, if P has r vertices, then
+
+                          f0 (Pn ) − 32 r log n
+                              q                   → N (0, 1)
+                                  10
+                                  27 r log n
+
+in distribution, where N (0, 1) is the standard normal distribution. Further,
+Cabo and Groeneboom [31] proved for a polygon P of area 1, in a version
+suggested by Buchta [30], that
+
+                       (1 − Vol Pn ) − 23 r logn n
+                              q                      → N (0, 1),
+                                  28 log n
+                                  27 r n2
+
+
+
+
+                                             14
+again in distribution. Groeneboom showed the central limit theorem for the
+case of the unit disk and f0 , with the variances evaluated numerically. Hsing
+[40] proved that, with K = B 2 the unit disk,
+                             (π − Vol Kn ) − c1 n−2/3
+                                     p                     → N (0, 1)
+                                         c2 n−5/3
+in distribution, again, with more or less explicit constants c1 and c2 . The
+asymptotic distribution of the Hausdorff distance between a planar convex body
+K and Kn has been determined with high precision by Bräker, Hsing, and
+Bingham [28].
+    A general central limit theorem was proved by Matthias Reitzner [51]. It
+applies in the case when K ∈ C1 , and it is about the Poisson random polytope
+Πn (and not the usual random polytope Kn ). The Poisson polytope is defined
+by Πn = [K ∩ X(n)] where X(n) is a Poisson process of intensity n. For an
+alternative definition let N be a random variable which is Poisson distributed
+with mean n. Then Km is equal to Πn |N = m. Reitzner proved the CLT for
+Vol Πn and fj (Πn ), a remarkable achievement, in the following form.
+
+Theorem 11.1 There is function ε(n), tending to zero as n → ∞, such that
+for every K ⊂ C1 ,
+                    Vol Πn − EVol Πn
+                                                      
+               Prob   √              ≤ x − Φ(x) ≤ c(K)ε(n),
+                        Var Vol Πn
+and for all j = 0, . . . , d − 1
+                                                      
+                         fj (Πn ) − Efj (Πn )
+               Prob         q                      ≤ x − Φ(x) ≤ c(K)ε(n),
+                                 Var fj (Πn )
+
+where c(K) is a constant depending only on K.
+
+    Here ε(n) = n−1/2+1/(d+1) (log n)c where c depends only on d.
+    The basic idea of the proof is to use a CLT with weak dependence (instead of
+the usual independence condition). This idea was actually suggested by Avram
+and Bertsimas [4], and the right CLT for this purpose is Rinott’s theorem [52]
+(or another one by Baldi and Rinott [5]) which is often the convenient form of
+C. Stein’s version of the CLT.
+    The weak dependence is given by the so-called dependency graph which is
+defined as follows: Let ζi , i ∈ W , be a finite collection of random variables.
+The graph G = (W, E) is said to be a dependency graph for ζi if for any pair
+of disjoint sets W1 , W2 ⊂ W such that no edge in E goes between W1 and W2 ,
+the sets of random variables {ζi : i ∈ W1 } and {ζi : i ∈ W2 } are independent.
+
+Theorem 11.2 (Rinott) Let ζi , i ∈ W be random variables having a depen-
+dency graph G. Set ζ = i∈W ζi and σ 2 (ζ) = Var ζ. Denote the maximal
+                         P
+
+degree of G by D and suppose that |ζi − Eζi | ≤ M almost surely. Then
+                                                                 1   3
+      ζ − Eζ                1 DM          |W | 2 D 2 M 2      |W | D2 M 3
+                        
+ Prob √       ≤ x − Φ(x) ≤ √         + 16                + 10             .
+        Var ζ                2π σ(ζ)         σ 2 (ζ)            σ 3 (ζ)
+
+                                                15
+    When using this theorem one has to construct the dependency graph, define
+the random variables ζi , and prove the necessary properties. Also, one needs a
+lower bound on Var ζ.
+    Here is a sketch of how the construction goes for the case of Vol Πn . Set
+T = (c log n)/n where c is a large constant, and take an economic cap covering of
+the wet part K(v ≤ T ), with covering caps C1 , . . . , Cm . Introduce the condition
+K(v ≥ T ) ⊂ Πn and denote it by A. (By Theorem 7.4, K(v ≥ T ) ⊂ Kn happens
+with very high probability. It is not hard to see that condition A holds with
+high probability as well.)
+    We prove first the CLT under condition A. Choose a subset Si ⊂ Ci ∩K(v ≤
+T ) so that the Si are pairwise internally disjoint and their union is K(v ≤ T ).
+This is clearly possible. The random variables are ζi = Vol (Si ∩ Πn ). The
+vertex set of the graph G is then [m]. In order to define the edges of G, let
+Li be the set of points x ∈ K(v ≤ T ) visible from Si within K(v ≤ T ). This
+means that x ∈ Li if there is a ∈ Si such that the segment [x, a] ⊂ K(v ≤ T ),
+or, what is the same, [x, a] ∩ K(v > T ) = ∅. Now two vertices i, j ∈ [m] form
+an edge in G if there is a point visible within K(v ≤ T ) from both Si and Sj ,
+that is, Li ∩ Lj 6= ∅. It is not hard to see that the maximal degree of G is
+bounded by a constant that depends only on d. (The proof is based on the fact
+that only a bounded number of caps can have a common point, which follows
+from K ∈ C d .) The next lemma shows that G is the independence graph with
+random variables ζi .
+
+Lemma 11.3 Assume condition A holds. Given disjoint subsets W1 , W2 of W
+with no edge between them, the random variables {ζi : i ∈ W1 } are independent
+of the random variables {ζj : j ∈ W2 }.
+
+     The explanation is simple. Under condition A the random variable ζi is
+determined by those facets of Πn that intersect Si . Thus each vertex b on such
+a facet is visible from an a ∈ Si within K(v ≤ T ). So all vertices that belong to
+a facet intersecting Si come from Li . If there is no edge between W1 and W2 ,
+then ∪{Li : i ∈ W1 } and ∪{Lj : j ∈ W2 } are disjoint, and so the corresponding
+variables are independent, due to a basic property of the Poisson process.
+     It is also clear that, under condition A, ζ = ζi = Vol Πn − Vol K(v ≥ T ).
+                                                  P
+
+The lower bound (10.7) on the variance Var Vol Kn carries over to that of
+πn showing that Var Vol Πn ≥ c(K)n−(d+3)/(d+1) . Also, Vol Si ≤ Vol Ci ≤
+(c log n)/n. Thus Rinott’s theorem applies, and a quick checking proves Theo-
+rem 11.1 under condition A.
+     The next task is to remove condition A. This can be done by the following
+transference lemma from [25], which has been used in an implicit form in [51]
+and in [68], and perhaps elsewhere as well.
+
+Lemma 11.4 Let ξn and ξn0 be two series of random variables with means µn
+and µ0n , variances σn2 and σ 0 2n , respectively. Assume that there are functions
+ε1 (n), ε2 (n), ε3 (n), ε4 (n), all tending to zero as n tends to infinity such that
+
+  (i) |µ0n − µn | ≤ ε1 (n)σn .
+
+
+                                        16
+ (ii) |σ 0 2n − σn2 | ≤ ε2 (n)σn2 .
+
+(iii) For every x, |Prob(ξn0 ≤ x) − Prob(ξn ≤ x)| ≤ ε3 (n).
+
+ (iv) For every x,
+                                        ξ 0 − µ0             
+                                           n         n
+                               Prob                      ≤ x − Φ(x) ≤ ε4 (n).
+                                               σn0
+
+    Then there is a positive constant C such that for every x,
+                              ξ − µ                               4
+                                n   n                               X
+                       Prob                    ≤ x − Φ(x) ≤ C             εi (n).
+                                      σn                            i=1
+
+    It is quite easy, though technical, to finish the proof of the CLT for Vol Πn .
+The proof for fj (Πn ) goes along very similar lines.
+    Next comes the CLT for Kn and one would like to use the transference
+lemma between Kn and Πn , or rather, between Vol Kn and Vol Πn . The difficult
+point is to prove condition (ii), that is, the corresponding variances are very
+close to each other. This was achieved by Van Vu in [68] using his tail estimates
+from [67]. Here is Van Vu’s remarkable central limit theorem.
+
+Theorem 11.5 There is function ε(n), tending to zero as n → ∞, such that
+for every K ⊂ C1 ,
+                           Vol Kn − EVol Kn
+                                                             
+                Prob         √              ≤ x − Φ(x) ≤ c(K)ε(n),
+                               Var Vol Kn
+and for all j = 0, . . . , d − 1
+                                                             
+                        f (K ) − Efj (Kn )
+                        j n
+               Prob          q                           ≤ x − Φ(x) ≤ c(K)ε(n),
+                               Var fj (Kn )
+
+where c(K) is a constant depending only on K.
+
+    Here ε(n) = n−1/(d+1)+o(1) .
+    The method has been extended to other cases as well, for instance when K
+is a polytope. The following CLT has been proved by Reitzner and myself [22].
+
+Theorem 11.6 There is function ε(n), tending to zero as n → ∞, such that
+for every polytope K ⊂ P1 ,
+                     Vol Kn − EVol Kn
+                                                             
+                Prob   √              ≤ x − Φ(x) ≤ c(K)ε(n),
+                         Var Vol Kn
+and for all j = 0, . . . , d − 1
+                                                             
+                        f (K ) − Efj (Kn )
+                        j n
+               Prob          q                           ≤ x − Φ(x) ≤ c(K)ε(n),
+                               Var fj (Kn )
+
+where c(K) is a constant depending only on K.
+
+                                                         17
+                                     d−1
+    Here εi (n) is of order (log n)− 2 +o(1) , and c(K) is constant times a power
+of the number of towers of K. I describe the proof in a nutshell. It uses the
+transference lemma several times. First, one works with Poisson polytopes Πn ,
+under the condition that Πn is sandwiched between the floating bodies K(v ≥ s)
+and K(v ≥ T ) where T = (α log log n)/n and s = 1/(n logβ n), where α and
+β are suitable constants depending only on dimension. Note that both s and
+T are very close to 1/n. The sandwiching happens with high probability. The
+vertex set of dependency graph G is defined similarly, using a cap covering of
+K(v ≤ T ) consisting of caps C1 , . . . , Cm , just Si is a subset of Ci ∩K(s ≤ v ≤ T ).
+A pair i, j ∈ [m] is an edge of G a point b ∈ K(s ≤ v ≤ T ) is visible from both
+Si and Sj within K(v ≤ T ). This time it is harder to give an upper bound on
+the maximal degree, D, of G.
+
+Theorem 11.7 D  T (K)4 (log log n)4(d−1) .
+
+    Of course, ζi = Vol (Πn ∩ K(v ≤ T ), and again ζ = Vol Πn − Vol K(v ≥ T ).
+The variance is known (see the previous section). All conditions of Rinott’s the-
+orem are satisfied. Its conclusion gives the CLT for Vol Πn under the condition
+of sandwiching. Removing this condition is technical and lengthy. The trans-
+ference lemma is applied again, this time between Vol Πn and Vol Kn , which
+is technical and exhausting but no serious difficulties. (The case of fj (Kn ) is
+worse.)
+    Finally we mention one of the geometric lemmas that is crucial for the proof.
+Given z ∈ K(v ≤ T ), define S(z, T ) as the set of points x ∈ K that see z within
+K(v ≤ T ), that is, the segment [z, x] is disjoint from K(v > T ). We need a
+bound on the volume of S(z, T ), assuming that K ∈ P1 .
+
+Lemma 11.8 If 0 < 2v(z) ≤ T ≤ 1/2, then
+
+                                                            T
+                                                             
+                      Vol S(z, T )  F (P ) T logd−1            .
+                                                           v(z)
+
+    Note that the inequality Vol S(z, T )  F (P ) T (log 1/T )d−1 follows imme-
+diately from the fact that S(z, T ) ⊂ P (v ≤ T ). The improvement from 1/T to
+T /v(z) (which is an improvement only if v(z) > T 2 ) is a significant step in the
+proof of Theorem 11.6.
+    One remark is in place here. Perhaps it is more natural to work with Poisson
+polytopes Πn than with ordinary random polytopes.
+
+
+12     Tail estimates
+Let Yn be a functional on the random polytope Kn , for instance Yn = Vol Kn .
+We have seen that its expectation can be determined with high precision, its
+variance can be estimated quite well, and Yn obeys the CLT near its expectation.
+The next target is to estimate the tail probabilities
+
+                               Prob(|Yn − EYn | ≥ T ).
+
+
+                                           18
+Of course, a precise and complete description of the tail probability would tell
+almost everything one may wish to know about Yn . But such a description is,
+in general, hopeless. Still, one can prove good estimates on these probabilities.
+For instance, the inequality
+                                      p
+                Prob(|Yn − EYn | ≥      λVar Yn ) ≤ c1 exp{−c2 λ}
+would say that Yn has exponential, or subgaussian tail. (Here c1 , c2 are posi-
+tive constants.) Such an inequality would have important consequences on the
+higher moments of Yn , or the concentration of Yn around its expectation, etc.
+    An inequality of exponential type has been proved by Van Vu in the break-
+through paper [67]. To present his results, we assume that K ∈ K1 , z ∈ K(v ≤
+t) with t ∈ (0, (2d)]−2d . Recall the definition from the previous section:
+                   S(z, t) = {x ∈ K : [x, z] ∩ K(v > t) = ∅}.
+So S(z, t) is the set of points, visible from z within K(v ≤ t). Also, S(z, t) is
+the union of all caps of volume t that contain z. Define next
+                           g(t) =     sup       Vol S(z, t).
+                                    z∈K(v≤t)
+
+   Note that for K ∈ C1 , g(t) ∼ t, while for a polytope K, g(t) ∼ t(log 1/t)d−1 .
+This follows since for a polytope, Vol S(z, t) is maximal when z is a vertex, and
+the union of S(z, t) over all vertices z of K contains K(v ≤ t). Set, finally,
+                        Ve = Ve (n, t) = 36ng 2 (t)Vol K(t),
+which is, as we will see soon, not far from the variance. Here is Van Vu’s
+exponential tail inequality.
+
+Theorem 12.1 Assume K ∈ K1 . Then there are positive constants α, c, t0
+such that the following holds. For every t ∈ ((α log n)/n, t0 ], and for every
+λ ∈ (0, nVol K(t)] we have
+                                     q         
+      Prob |Vol Kn − EVol Kn | ≥          λVe       ≤ 2 exp{−λ/4} + exp{−ctn}.
+
+     It is hard to appreciate the importance of this result at the first sight. We
+present some of its consequences. Set t = (α log n)/n and define with this value
+of t
+                         Ven = Ve (n, t) = Ve (n, (α log n)/n).
+
+Corollary 12.2 Assume K ∈ K1 . Then the kth moment, Mk , of Vol Kn sat-
+isfies
+                          Mk = O(Venk/2 ).
+In particular, for a polytope, Mk = O(n−2 (log n)3kd/2 ).
+
+    Note that for the variance (which is the second moment) this estimate is
+just a little weaker than the truth (10.6) and (10.7). Another consequence is the
+concentration of Vol Kn near its expectation which we present for the polytopal
+case.
+
+                                          19
+Corollary 12.3 Assume K ∈ K1 and f (n) = δ(n)n2 (log n)−3d−1/2 where δ(n)
+is a function tending to zero arbitrarily slowly. Then, almost surely,
+                                    Vol Kn
+                             lim           − 1 f (n) = 0.
+                            n→∞    EVol Kn
+   In the case when K ∈ C1 , Corollary 12.2 gives an estimate for the variance
+which is a power of a log n factor off the true variance. For this case, Van Vu
+proves a more precise version of Theorem 12.1.
+
+Theorem 12.4 Assume K ∈ C1 . Then
+                                 there are positive
+                                                    constants α, c such
+                                                            (d−1)(d+3)            d+3
+that the following holds. For every λ ∈ 0, αn (d+1)(3d+5) and with Ve = 4αn d+1
+we have
+                                  q       
+Prob |Vol Kn − EVol Kn | ≥           λVe       ≤ 2 exp{−λ/4} + exp{−cn(d−1)/(3d+5) }.
+
+    We state, rather informally, the two consequences of this theorem that are
+analogous to the two corollaries above. If K ∈ C1 , then the kth moment, Mk ,
+of Vol Kn satisfies                          
+                                                    k d+3
+                                   Mk = O n 2 d+1 .
+
+Note that this estimate gives the right order of magnitude for the variance. For
+the concentration of Vol Kn we have
+                        Vol Kn
+                lim            − 1 δ(n)n(d+3)/(d+1) (log n)−1/2 = 0
+               n→∞     EVol Kn
+for any function δ(n) tending to zero as n → ∞.
+    The proof of Theorem 12.1 is based on a divide and conquer martingale
+technique due to Van Vu [65] and Kim and Vu [43]. It is a strengthening of
+Azuma’s inequality, and it has proved very powerful in other cases as well (cf.
+[66], [43]). The method works for other functionals like fj (Kn ) although there
+are serious difficulties and new ideas are needed. Also, the proof of Theorem
+12.4 is not straightforward, several novel ideas are used including interesting
+geometric properties of the wet part and of S(z, t). The interested reader is
+advised to read Van Vu’s excellent paper [68].
+    Here is a large deviation theorem, due to Calka and Schreiber [32], which is
+similar to Theorem 2.11 from Van Vu’s paper [67]. It is about the number of
+vertices of Kn when the underlying body K = B d . Write Zn for f0 (Kn ) in this
+case. The result says that for every ε > 0
+                      1                                           d−1
+          lim inf         log (− log Prob{|Zn − EZn | > εEZn }) ≥        .
+          n→∞       log n                                         3d + 5
+    There is another approach to random polytopes, using Poisson approxima-
+tion and the theory of stochastic processes which is beyond the scope of this
+survey. The generic result of this approach can be summarized as follows: The
+random point measures induced by the vertices of the convex hull of a Pois-
+son sample from the unit ball, when properly rescaled and centred, converge to
+
+                                               20
+those of a mean zero Gaussian field. Such a result gives more than just, say, the
+central limit theorem for the number of vertices of the convex hull. However,
+it does not seem to cover other functionals like Vol Kn or fj (Kn ). For more
+information see for instance Penrose and Yukich [47] and the references there.
+
+
+13    The integer convex hull
+We return now to the question posed in Section 3. Recall that the integer
+convex hull, I(K), of a (large) convex body K ∈ Kd has been defined as
+
+                      I(K) = conv(K ∩ Zd ) = [K ∩ Zd ].
+
+Define Z d ⊂ P d as the family of lattice polytope (with positive volume). Thus
+I(K) ∈ Z d , if K is “large”. We are interested in the number of vertices,
+f0 (I(K)). For simplicity we consider the case K = rB d , r large. (Other smooth
+convex bodies behave very similarly.)
+    We start by quoting a beautiful theorem of G. E. Andrews [2] from 1963.
+Theorem 13.1 For all P ∈ Z d ,
+                                                      d−1
+                                   f0 (P )  (Vol P ) d+1 .
+
+    The proof is not easy. By now there are several other proofs available, by
+Konyagin and Sevastyanov [44], Schmidt [55], Bárány and Vershik [24], Bárány
+and Larman [19], and Reisner, Schütt and Werner [48]. All of them are based
+on different ideas and none of them is simple.
+    The following even more general statement was proved in [44] and [19]. For
+all P ∈ Z d                                    d−1
+                             T (P )  (Vol P ) d+1 .
+For simpler notation write Pr = I(rB d ). The result implies, of course, that
+
+                              fj (Pr ))  rd(d−1)/(d+1)
+
+It has been proved in [6] (case d = 2) and in [19] that
+
+                                  fj (Pr )  rd(d−1)/(d+1) .              (13.8)
+
+    The proof in [19] is based on estimating the volume missed by Pr , which is
+defined, as expected, as Mr = Vol rB d − Vol Pr .
+                        d−1
+Lemma 13.2 Mr  rd d+1 .
+
+    The proof of the Lemma relies the Flatness Theorem (cf [42], [41]) saying
+that the lattice width of a convex body K ∈ Kd with K ∩ Zd = ∅ is bounded
+by a number depending only on d. The proof of (13.8) is finished by invoking
+a result from the theory of approximation of convex bodies by polytopes. It is
+                                                                             2
+well known that a polytope with n vertices and inscribed in B d misses  n− d−1
+volume of B d . After suitable scaling we get
+                              2          Mr          d−1          2d
+                (f0 (Pr ))− d−1              d
+                                                 rd d+1 −d = r− d+1 ,
+                                       Vol rB
+
+                                             21
+directly implying (13.8).
+    The method works for fj (Pr ) as well (by suitably extending the approxima-
+tion result from vertices to j-dimensional faces), and gives
+                                              d−1
+                                fj (Pr )  rd d+1 .
+
+    The example Pr shows that the exponent in Andrews’ theorem is best pos-
+sible. Another, earlier example of the same type was given by V I Arnold in
+[3]. We explain it in the planar case, extending it to higher dimensions is left
+to the reader. Let P be the convex hull of the points (x, x2 ) where x ∈ Z and
+−(n − 1)/2 ≤ x ≤ (n − 1)/2 when n is odd, and −(n − 2)/2 ≤ x ≤ n/2 when
+n is even. Trivially, f0 (P ) = n. It is easy to check that the area of P is very
+close to n3 /12.
+                                      d−1
+     Actually, the result fj (Pr ) ∼ rd d+1 is what one would expect if random
+polytopes and the integer convex hull of convex bodies (of rB d in particular)
+behave similarly. For proper scaling we have to assume that n = Vol rB d ∼
+rd . The expected number of vertices of the random polytope Kn in rB d (or,
+                                                        d−1
+what is the same, in B d ) is of order n(d−1)/(d+1) ∼ rd d+1 . Note however, that
+while Ef0 (Kn ) is known asymptotically, only the order of magnitude of f0 (Pr )
+has been established. A little more is known in the planar case. Balog and
+Deshoullier [7] determined the limit, as R → ∞ of the average of r−2/3 f0 (Pr )
+on the interval r ∈ [R, R + H]. Here H slowly goes to infinity with R.
+    Motivation for considering the integer convex hull comes from the geometry
+of numbers, the circle problem, and from integer programming. In integer
+programming one wants to know that I(K) does not have too many vertices,
+assuming, say, that K is a rational polytope. This simply means that K is
+given by m inequalities with integral coefficients. The size of such an inequality
+is the number of bits necessary to encode it as a binary string. Then the size of
+the rational polytope is the sum of the sizes of the defining inequalities. Cook,
+Hartman, Kannan, and McDiarmid [33] showed that for a rational polytope
+K ∈ P d of size φ
+                          f0 (I(K)) ≤ 2md (12d2 φ)d−1 .
+Most likely, the inequality fj (I(K))  φd−1 holds for all j = 1, . . . , d − 1 as
+well (with the implied constant depend on d and m) but there is no proof in
+sight.
+    The above inequality for f0 (I(K)) is best possible, as shown by Bárány,
+Howe, and Lovász in [17]. The construction uses algebraic number theory. It
+shows further that the estimate fj (I(K))  φd−1 , for all j, is best possible, if
+true.
+    There is a further parallel between random polytopes and the integer convex
+hull, to be more precise, the randomized integer convex hull. Randomization
+is introduced here since the usual integer convex hull of an individual convex
+body may have few vertices. For instance, if Q is an aligned cube (or box)
+in Rd , then I(Q) always has 2d , while the integer convex hull of a randomly
+rotated copy of Q can have many more vertices. For randomization, the lattice
+Zd is replaced by L, a randomly translated and rotated copy of Zd , and we
+
+
+                                        22
+investigate the randomized integer convex hull
+
+                             IL (K) = conv(K ∩ L)
+
+for a fixed convex body K. More precisely, for a translation vector t ∈ [0, 1)d
+and a rotation ρ ∈ SO(d) around the origin, we set Lt,ρ = ρ(Zd + t), and define
+
+                      L = {Lt,ρ : t ∈ [0, 1)d , ρ ∈ SO(d)}.
+
+A natural probability measure on L is defined as the product of the Lebesgue
+measure on [0, 1)d and of the normalized Haar measure on SO(d). This measure
+is invariant under isometries of Rd .
+     If the convex body K is too flat, it may not contain a single lattice point.
+That’s why we need to assume that our convex body K is round. We say that
+K ∈ Kd is D-rounded if K contains a ball of radius r and is contained in a
+concentric ball of radius R and R/r ≤ D. It is clear that Vol I(K) > 0, and
+then I(K) ∈ Z d , if K ∈ K is D-rounded and has large enough volume. The
+next result is from Bárány, Matoušek [20].
+
+Theorem 13.3 Given d and D, there exist positive constant c0 , depending only
+on d and D, such that for all D-rounded K ∈ Kd with Vol K > c0 ,
+
+                 Vol K(v < 1)  Ef0 (IL (K))  Vol K(v < 1)
+
+where the implied constant depend only on d and D.
+
+   When comparing the randomized integer convex hull with a random poly-
+tope in K, the proper scaling is again Vol K = n. Under this convention, case
+j = 0 of Theorem 6.2 says that
+
+                  Vol K(v < 1)  Ef0 (Kn )  Vol K(v < 1)
+
+as n → ∞, with the implied constants depending only on d. This inequality
+and Theorem 13.3 show a strong analogy between random polytopes and the
+randomized integer convex hull. Most likely, Efj (IL (K)) behaves like Efj (Kn )
+for all j, but a proof looks hopeless for the time being.
+    We mention that the analogy, surprisingly, does not extend to the expected
+missed area, which is just EVol (K \ IL (K)). In the case when, say, Q ∈ K2
+is a square of (large) area A, the expected missed area of I(Q) is of order
+(log A)2 , while with the proper normalization n = A, E(Q, n) is only of order
+log A. Details can be found in [20]. When working on the expected missed
+area, we encountered (and solved) the following interesting question, a relative
+of Buffon’s needle problem. Given a convex body C ∈ K2 , determine the
+probability that L ∩ C is lattice point free when L ∈ L is a random lattice.
+
+
+14    Arnold’s question
+Recall that two convex lattice polytope, P, Q ∈ Z d are said to be equivalent,
+if there is a lattice-preserving affine transformation T : Rd → Rd such that
+
+                                       23
+T P = Q. Equivalent polytopes have the same volume. Let Nd (V ) denote the
+number of equivalence classes whose volume is at most V . In [3] Arnold asks
+for the determination of log Nd (V ). He proves that, in the planar case,
+
+                         V 1/3  log N2 (V )  V 1/3 log V
+
+as V goes to infinity. Arnold’s proof is based on the estimate in Theorem 13.1
+in the planar case (that he found independently of Andrews [2]), and on the
+square lemma. This lemma states that every convex lattice polygon of area V is
+contained in an aligned square of side length 36V . From this the upper bound
+follows easily.
+    Arnold’s question turned out to be fertile, and Konyagin and Sevastyanov
+[44] proved Theorem 13.1, again independently of Andrews [2]. They used it,
+together with an extension of the square lemma, to show that
+                          d−1                             d−1
+                        V d+1  log Nd (V )  V d+1 log V.
+
+The extra log factor was removed in [24] by A M Vershik and the present author.
+(In the planar case this had been done earlier in [21].)
+
+Theorem 14.1 When d ≥ 2 and V → ∞, then
+                               d−1                                d−1
+                           V d+1  log Nd (V )  V d+1 .
+
+    The proof is based on several ideas from number theory, convexity, and
+geometry of numbers. It uses the following extension of the square lemma.
+First, let Zd+ be the set of all a = (a1 , . . . , ad ) ∈ Zd where each ai > 0. Next,
+given z ∈ Zd+ , we define the box of a as
+
+                        Box(a) = {x ∈ Rd : 0 ≤ xi ≤ ai }.
+                  Q       Qd
+For simplicity set a =      1 ai . Here is the box lemma which replaces the square
+lemma in the proof.
+
+Lemma 14.2 For every P ∈ Z d there is an a ∈ Zd+ with a  Vol P such
+                                                                        Q
+
+that an equivalent copy of P is contained in Box(a). The implied constant
+depends only on d.
+
+    As the number of boxes with a  V is less than V d (actually, much less),
+                                     Q
+
+the next step in the proof of the upper bound in Theorem 14.1 is the following
+fact.
+
+Lemma 14.3 For every a ∈ Zd+ the number of convex lattice polytopes con-
+tained in Box(a) is at most
+                                                         
+                                         Y         d−1
+                                 exp cd (        a) d+1       ,
+
+where cd is a constant depending only on d.
+
+
+                                            24
+    The proof of this lemma is quite intricate, using ideas from generating func-
+tions, convex geometry, and geometry of numbers. It is too involved to be
+explained here.
+    The proof of the lower bound in Theorem 14.1 is easier. Consider P ∈ Z d
+                             d−1
+with n = f0 (P )  (Vol P ) d+1 , for instance Pr , the integer convex hull of rB d .
+Let X be the set of vertices of P . For each nonempty subset Y of X, convY
+is a convex lattice polytope in Rd , of volume at most Vol P . There are 2n − 1
+such polytopes. It is not hard to see that most of them are d-dimensional and
+very few of them are equivalent. This shows the lower bound in Theorem 14.1.
+    We remark that this argument can be turned around and used for the
+proof of Andrews’ Theorem 13.1. Suppose that P ∈ Z d and Vol P ≤ V . By
+Lemma 14.2 we can assume that P lies in some Box(a) with a  V . Again,
+                                                                  Q
+
+let X be the set of vertices of P . For each (nonempty) subset Y of X, convY is
+a convex polytope in Box(a). These polytopes are all distinct and their number
+is 2|X| − 1. By Lemma 14.3,
+                                                                           
+                                                  d−1                   d−1
+                 2|X| − 1 ≤ exp cd (                         exp c0d V d+1
+                                          Y
+                                              a) d+1
+
+                                                                                  d−1
+with a suitable constant c0d , implying, in turn, that |X| = f0 (P )  V d+1 .
+   Theorem 14.1 immediately raises the following problem. Decide whether
+                                            d−1
+                                   lim V − d+1 log Nd (V )
+                                   V →∞
+
+exists or not. Determine the limit if it exists. This problem looks hard. The
+answer is not known even in the planar case. Even if this problem is too hard,
+we may be able see to how many convex lattice polytopes there are in Box(a).
+The planar version of this question will be considered in the remainder of this
+section.
+    We set up the problem a little differently. Define the lattice Zt as 1t Z2 , t is
+large, so Zt is a shrunken copy of Z2 . Let K ∈ K2 be a convex body, and define
+P(K, t) as the family of all convex Zt -lattice polygons that are contained in K.
+How many such polygons are there, and what do they look like? This beautiful
+and inspiring question is due to A M Vershik.
+    It comes as a pleasant surprise that log |P(K, t)| can be determined quite
+precisely. The following result is from [11].
+
+Theorem 14.4 For every K ∈ K2
+                                                        s
+                            −2/3                              ζ(3 ∗
+                    lim t          log |P(K, t)| = 3 3             A (K).
+                    t→∞                                      4ζ(2)
+
+    Here A∗ (K) is the supremum (actually, maximum) of the affine perimeter
+that a convex body contained in K can have. See Blaschke [27], or Bárány [11]
+for the definition and properties of affine perimeter. It is shown in [11] that there
+is a unique convex body K0 ⊂ K whose affine perimeter equals A∗ (K). The
+correspondence K 7→ K0 gives a map K2 → K2 which is affinely equivariant,
+that is, for every nondegenerate affine transformation T , (T K)0 = T (K0 ). The
+
+                                              25
+unique K0 has interesting properties. For instance, it contains no line segments
+on its boundary, and its boundary is a parabola arc whenever it lies in the
+interior of K. See [11] and [12] for further properties of K0 .
+    The convex polygons in P(K, t) have a limit shape: almost all of them are
+very close to K0 . This is the content of the next theorem, where dist(X, Y )
+denotes the Hausdorff distance of X, Y ⊂ R2 .
+
+Theorem 14.5 For every K ∈ K2 and every ε > 0,
+
+                       |{P ∈ P(K, t) : dist(P, K0 ) < ε}|
+                   lim                                    = 1.
+                   t→∞            |P(K, t)|
+
+    This theorem was first proved in the case when K is the unit square. Then
+K0 is bounded by four parabola arcs, each touching consecutive edges of the
+unit square at their midpoints. This case was proved by Vershik [63] and Bárány
+[10]. Sinai [58] gave a probabilistic proof, together with a central limit theorem
+on the distribution of the convex Zt -lattice polygons lying in the vicinity of K0 .
+The case of general K ∈ K2 comes from [11].
+    More recently, Vershik and Zeitouni [64] established central limit theorems
+and large deviation results about how big a fraction of P(K, t) is close to K0 .
+
+
+15     Back to Sylvester
+Recall the definition from Section 15: for K ∈ K, p(K, n) denotes the proba-
+bility that Xn , a random sample of n independent, uniform points from K, is
+in convex position. Blaschke’s solution [26] to Sylvester’s four-point problem is
+that for every convex body K ∈ K2
+
+                      p(triangle, 4) ≤ p(K, n) ≤ p(disk, n).
+
+Of course, p(K, n) can be defined for convex bodies K ∈ Kd with d > 2 as well.
+Most of the known results are about the case when K = B d , the Euclidean
+unit ball: Hostinsky [38] determined p(B 3 , 5), later Kingman [39] calculated
+p(B d , d + 2). Miles [46] showed limd→∞ p(B d , d + 3) = 1. He conjectured and
+Buchta [29] showed limd→∞ p(B d , d + m) = 1 for every fixed m > 3. Bárány
+and Füredi [16] proved that p(B d , n) is close to one as long as n < d−1 2d/2 and
+close to zero for n > d2d/2 .
+    Returning to the planar case Valtr [62] showed in 1997 that
+
+                                             2n (3n − 3)!
+                         p(triangle, n) =                   ,
+                                            (n − 1)!3 (2n)!
+
+a surprisingly exact result.
+    Theorems 14.4 and 14.5 offer a new way to look at Sylvester’s four-point
+problem. We can determine the size of P(K, t) with high precision, and the
+typical shape of a polygon in it. So we may be able to do the same when the
+points are chosen randomly from K. This is indeed the case for K ∈ K2 . Even
+the probability p(K, n) can be determined [12]:
+
+
+                                        26
+Theorem 15.1 For every K ⊂ K12
+                                           q
+                                   lim n2 n p(n, K)
+                     2
+exists and equals e4 (A∗ (K))3 .
+
+    Here A∗ (K) is the same as in Theorem 14.4. Moreover, conditional on Xn
+being in convex position, the polygon [Xn ] is very close K0 , the unique convex
+subset of K having maximal affine perimeter.
+    The proof of Theorem 15.1 is based on various properties of K0 and an
+interesting probabilistic/geometric lemma. The setting is this. Let T be a
+triangle with two distinguished vertices a, b. Again, Xn is a random sample
+from T . We say that Xn forms a convex chain in T if the points of Xn together
+with a and b are in convex position. The lemma (from [62] and [12]) says that
+the probability that Xn forms a convex chain in T is equal to
+                                           2n
+                                                  ,
+                                       n!(n + 1)!
+
+a surprisingly exact result again.
+    Theorem 14.4 has its analog in the random case. Let Q(Xn ) be the random
+collection of all convex polygons spanned by the points of Xn , i.e., P ∈ Q(Xn )
+if and only if P = conv{xi1 , . . . , xik } for some k–tuple xi1 , . . . , xik ⊂ X that is
+in convex position (k ≥ 3). The expectation of |Q(Xn )| can be determined, cf
+[12]:
+
+Theorem 15.2 For each K ∈ K12 we have
+
+                     lim n−1/3 log E|Q(Xn )| = 3 · 2−2/3 A∗ (K).
+                    n→∞
+
+   Again, there is a limit shape to the elements of Q(Xn ): the overwhelming
+majority of the polygons in Q(Xn ) are very close to K0 . Also, a version of the
+central limit theorem can be proved in this case [23].
+   Something can be saved in higher dimensions. It is shown in [13] that for
+K ∈ K1d                              q 2
+                              c1 ≤ n d−1 n p(K, n) ≤ c2
+with positive constants c1 , c2 that depend on dimension only.
+
+
+16     Acknowledgment
+Part of this paper was written on a pleasant and fruitful visit of the author at the
+Institute for Advanced Study at the Hebrew University in Jerusalem. Thanks
+are due to excellent ambiance and working conditions there. I’m indebted
+to Matthias Reitzner for useful comments on an earlier version of this paper.
+Partial support from Hungarian National Foundation Grants T 062321 and T
+060427, and from the European Community Research project “Discrete and
+Convex Geometry” is also acknowledged.
+
+                                           27
+References
+ [1] Affentranger, F., Wieacker, J.A.: On the convex hull of uniform random
+     points in a simple d-polytope. Discrete Comp. Geom., 6 (1991), 291–305.
+
+ [2] Andrews, G.E.: A lower bound for the volumes of strictly convex bodies
+     with many boundary points. Trans. AMS, 106 (1993), 270–279.
+
+ [3] Arnol’d, V.I.: Statistics of integral convex polytopes. (in Russian) Funk.
+     Anal. Pril., 14, 1–3 (1980). English translation: Funct. Anal. Appl., 14
+     (1980), 79–84.
+
+ [4] Avram, F., Bertsimas, D.: On central limit theorems in geometrical prob-
+     ability. Ann. Appl. Probab. 3 (1993), 1033–1046.
+
+ [5] Baldi, P., Rinott, Y.: On normal approximations of distributions in terms
+     of dependency graphs. Ann. Probab. 17 (1989), 1646–1650.
+
+ [6] Balog, A., Bárány, I.: On the convex hull of the integer points in a disk,
+     in: Discrete and Computational Geometry (ed. J.E.Goodman, R. Pollack,
+     and W. Steiger), DIMACS Series no 6 (1991), 39–44.
+
+ [7] Balog, A., Deshouliers, J-M.: On some convex lattice polytopes. in: Num-
+     ber theory in progress, Vol. 2 (Zakopane-Kościelisko, 1997), 591–606, de
+     Gruyter, Berlin, 1999.
+
+ [8] Bárány, I.: Intrinsic volumes and f -vectors of random polytopes. Math.
+     Annalen, 285 (1989), 671–699.
+
+ [9] Bárány, I.: Random polytopes in smooth convex bodies. Mathematika,
+     39 (1992), 81–92.
+
+[10] Bárány, I.: The limit shape of convex lattice polygons, Discrete Comp.
+     Geom., 13 (1995), 270–295.
+
+[11] Bárány, I.: Affine perimeter and limit shape, J. reine angew. Math., 484
+     (1997), 71–84.
+
+[12] Bárány, I.: Sylvester’s question: the probability that n points are in
+     convex position. Annals of Prob., 27 (2000), 2020–2034.
+
+[13] Bárány, I.: A note on Sylvester’s four-point problem. Studia Math. Hung.,
+     38 (2001), 2020–2034.
+
+[14] Bárány, I., Buchta, Ch.: Random polytopes in a convex polytope, inde-
+     pendence of shape, and concentration of vertices. Math. Annalen, 297
+     (1993), 467–497.
+
+[15] Bárány, I., Dalla, L.: Few points to generate a random polytope, Mathe-
+     matika, 44 (1997), 325–331.
+
+[16] Bárány, I., Füredi, Z.: On the shape of the convex hull of random points,
+     Prob. Theory Rel. Fields, 77 (1988), 231–240.
+
+                                      28
+[17] Bárány, Howe, R., Lovász, L.: On integer points in polyhedra: a lower
+     bound. Combinatorica, 12 (1992), 135–142.
+
+[18] Bárány, I., Larman, D.G.: Convex bodies, economic cap coverings, ran-
+     dom polytopes. Mathematika, 35 (1988), 274–291.
+
+[19] Bárány, I., Larman, D.G.: The convex hull of the integer points in a large
+     ball. Math. Annalen, 312 (1998), 167–181.
+
+[20] Bárány, I., Matoušek, J.: The randomized integer hull. Discr. Comp.
+     Geom., 33 (2005), 3–25.
+
+[21] Bárány, I., Pach, J.: On the number of convex lattice polygons, Combi-
+     natorics, Probability, and Computation 1 (1992), 295–302.
+
+[22] Bárány, I., Reitzner, M.: Central limit theorems for random polytopes in
+     convex polytopes. manuscript (2007)
+
+[23] Bárány, I., Rote, G., Steiger, W., Zhang, C.: A central limit theorem for
+     random convex chains. Discrete Comp. Geom., 30 (2000), 35–50.
+
+[24] Bárány, I., Vershik, A. M.: On the number of convex lattice polytopes.
+     GAFA Journal, 12 (1992), 381–393.
+
+[25] Bárány, I., Vu, H.V.: Central limit theorems for gaussian polytopes. An-
+     nals of Prob., 35 (2007), 1593–1621.
+
+[26] Blaschke, W.: Über affine Geometrie XI: L¨’osung des “Vierpunkt-
+     problem” von Sylvester aus der Theorie der geometrischen Wahrschein-
+     lichkeiten. Leipziger Berichte, 69 (1917), 436–453.
+
+[27] Blaschke, W.: Affine Differentialgeometrie. Springer, Berlin, (1923).
+
+[28] Bräker, H., Hsing, T., Bingham, N.H.: On the Hausdorff distance be-
+     tween a convex set and the an interior random convex hull. Adv. in Appl.
+     Probab., 30 (1998), 295–316.
+
+[29] Buchta, C.: On a conjecture of R.E. Miles about the convex hull of ran-
+     dom points, Monatsh. Math., 102 (1986), 91–102.
+
+[30] Buchta, C.: An identity relating moments of functionals of convex hulls.
+     Discrete Comput. Geom. 33 (2005), 125–142.
+
+[31] Cabo, A. J., Groeneboom, P.: Limit theorems for functionals of convex
+     hulls. Probab. Theory Relat. Fields 100 (1994), 31–55.
+
+[32] Calka, P., Schreiber, T.: Large deviation probabilities for the number
+     of vertices of random polytopes in the ball, to appear in Ann. Probab.,
+     (2005).
+
+[33] Cook, W., Hartman, M., Kannan, R., McDiarmid, C.: On integer points
+     in polyhedra. Combinatorica, 12 (1992), 27–37.
+
+
+                                      29
+[34] Efron, B.: The convex hull of a random set of points. Biometrika, 52
+     (1965), 331–343.
+
+[35] Efron, B., Stein, C.: The jackknife estimate of variance. Ann. Statist. 9
+     (1981), 586–596.
+
+[36] Groemer, H.: On the mean value of the volume of a random polytope in
+     a convex set. Archiv Math., 25 (1997), 86–90.
+
+[37] Groeneboom, P.: Limit theorems for convex hulls. Probab. Theory Relat.
+     Fields 79 (1988), 327–368.
+
+[38] Hostinsky, B.: Sur les probabilités géométriques, Publ. Fac. Sci. Univ.
+     Brno (1925).
+
+[39] Kingman,J. F. C.: Random secants of a convex body, J. Appl. Probab.,
+     6 (1969), 660–672.
+
+[40] Hsing, T.: On the asymptotic distribution of the area outside a random
+     convex hull in a disk. Ann. Appl. Probab., 4 (1994), 478–493.
+
+[41] Kannan, R., Lovász, L.: Covering minima and lattice point free convex
+     bodies, Annals of Math., 128 (1988), 577–622.
+
+[42] Khintchin, A.: A quantitative formulation of Kronecker’s theory of ap-
+     proximation, Izv.Akad. Nauk SSSR, Ser. Mat., 12 (1948), 113–122 (in
+     Russian).
+
+[43] Kim, J.H., Vu, V.H.: Concentration of multivariate polynomials and its
+     applications, Combinatorica, 20 (2000), 417–434.
+
+[44] Konyagin, S.B., Sevastyanov, S.V.: Estimation of the number of vertices
+     of a convex integral polyhedron in terms of its volume. (in Russian) Funk.
+     Anal. Pril., 18 (1984, 13–15). English translation: Funct. Anal. Appl., 18
+     (1984), 11–13.
+
+[45] Küfer, K.-H.: On the approximation of the ball by random polytopes.
+     Adv. Applied Prob., 26 (1994), 876–892.
+
+[46] Miles, R. E., Isotropic random simplices, Adv. Appl. Prob., 3 (1971),
+     353–382.
+
+[47] Penrose, M. D., Yukich, J. E.: Normal approximation in geometric prob-
+     ability. Stein’s method and applications, 37–58, Lect. Notes Ser. Inst.
+     Math. Sci. Natl. Univ. Singap., 5, Singapore Univ. Press, Singapore, 2005.
+
+[48] Reisner, Sh., Schütt, C., Werner, E.: Dropping a vertex or a facet from a
+     polytope, Forum Math., 13 (2001), 359–378.
+
+[49] Reitzner, M.: The combinatorial structure of random polytopes. Adv.
+     Math. 191 (2005), 178–208.
+
+
+
+                                     30
+[50] Reitzner, M.: Random polytopes and the Efron-Stein jackknife inequality.
+     Ann. Probab., 31 (2003), 2136–2166.
+
+[51] Reitzner, M.: Central limit theorems for random polytopes. Probab. The-
+     ory Relat. Fields 133 (2005), 483–507.
+
+[52] Rinott, Y.: On normal approximation rates for certain sums of dependent
+     random variables. J. Comput. Appl. Math. 55 (1994), 135–143.
+
+[53] Rényi, A., Sulanke, R.: Über die konvexe Hülle von n zufällig gewählten
+     Punkten. Z. Wahrsch. Verw. Geb., 2 (1963), 75-84.
+
+[54] Santaló, L.A.: Integral geometry and geometric probability. Addison-
+     Wiley, Reading MA (1976).
+
+[55] Schmidt, W.: Integral points on surfaces and curves, Monatshefte Math.,
+     99 (1985), 45–82.
+
+[56] Schneider, R., Wieacker, J. A.: Random polytopes in a convex body. Z.
+     Wahrsch. Verw. Gebiete 52 (1980), 69–73.
+
+[57] Schütt, C.: Random polytopes and affine surface area. Math. Nachr., 170
+     (1994), 227–249.
+
+[58] Sinai, Ya. G.: Probabilistic approach to analyse the statistics of convex
+     polygonal curves, Funk. Anal. Appl. 28, 41–48 (1994) (in Russian). Eng-
+     lish translation: Funct. Anal. Appl., 28 (1994), 108–113.
+
+[59] Sulanke, R.: Letter to the author, 2004
+
+[60] Sylvester, J.J.: Question 1491. Educational Times, London, April (1864).
+
+[61] Sylvester, J.J.: Report of the British Association, 35 (1865), 8–9.
+
+[62] Valtr, P.: The probability that n random points in a triangle are in convex
+     position, Combinatorica, 16 (1996), 567–574.
+
+[63] Vershik, A. M.: The limit shape for convex lattice polygons and related
+     topics, Funk. Anal. Appl., 28, 16–25 (1994), (in Russian). English trans-
+     lation: Funct. Anal. Appl., 28 (1994), 13–20.
+
+[64] Vershik A. M., Zeitouni, O.: Large deviation in the geometry of convex
+     lattice polygons, Israel J. Math., 109 (1999), 13–27.
+
+[65] Vu, V.H.: On the concentration of multivariate polynomials with small
+     expectations. Random Struct. Alg., 16 (2000), 344–363.
+
+[66] Vu, V.H.: Concentration of non-Lipschitz functions and applications.
+     Random Struct. Alg., 20 (2002), 262–316.
+
+[67] Vu, V.H.: Sharp concentration of random polytopes. Geom. Funct. Anal.
+     15 (2005), 1284–1318.
+
+
+                                      31
+[68] Vu, V.H.: Central limit theorems for random polytopes in a smooth con-
+     vex set. Adv. Math. 207 (2006), 221–243.
+
+[69] W. Weil, J. A. Wieacker: Stochastic geometry. In: Gruber, P.M., Wills, J.
+     (eds.) Handbook of convex geometry, North-Holland, Amsterdam, 1391–
+     1438 (1993).
+
+[70] Wieacker, J.A.: Einige Probleme der polyedrische approximation. Diplo-
+     marbeit, Albert-Ludwigs-Universität, Freiburg im Breisgau, (1978)
+
+
+
+
+                                     32
+

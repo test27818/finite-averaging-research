@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "parameter": {
+    "p": 11,
+    "s": 3,
+    "n": 36
+  },
+  "equal_determinant": 407,
+  "root_parameter": -36,
+  "source_counts": [
+    4,
+    2,
+    5
+  ],
+  "old_output": [
+    2,
+    5,
+    1,
+    3
+  ],
+  "new_output": [
+    3,
+    0,
+    2,
+    6
+  ],
+  "output_move": [
+    1,
+    -5,
+    1,
+    3
+  ],
+  "signed_root_eight_atom_replays": 6,
+  "scalar_cycle_replays": 9,
+  "original_position_atoms": 132,
+  "general_row_difference_checks": 72,
+  "existing_cases_admitting_prescribed_move": 80,
+  "conservation_move_identities_checked": 149,
+  "deep_levels": [
+    10368,
+    34992
+  ],
+  "merged_deep_level": 1296,
+  "completed_terminal_interfaces": 48,
+  "auxiliary13_group_computation_used": false,
+  "special97_unit_used": false,
+  "finite_group_enumeration_used": false,
+  "unchanged_frozen_files": 256,
+  "local_links_checked": 95,
+  "seconds": 0.099,
+  "scope": "General equal-determinant quotient identity plus one fully replayed count repair. Deep-group inclusion and level gcd use the cited established Morris/Serre toolkit, not finite tests. No claim that the 162 root-pair certificates have been uniformly removed."
+}

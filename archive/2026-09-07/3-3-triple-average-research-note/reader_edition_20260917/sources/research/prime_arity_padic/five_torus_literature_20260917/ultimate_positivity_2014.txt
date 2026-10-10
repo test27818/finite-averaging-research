@@ -1,0 +1,589 @@
+                                             Ultimate Positivity is Decidable for Simple
+                                                   Linear Recurrence Sequences?
+
+                                                                  Joël Ouaknine and James Worrell
+
+                                                     Department of Computer Science, University of Oxford, UK
+arXiv:1309.1914v4 [cs.CC] 5 Apr 2017
+
+
+
+
+                                               Abstract. We consider the decidability and complexity of the Ultimate
+                                               Positivity Problem, which asks whether all but finitely many terms of
+                                               a given rational linear recurrence sequence (LRS) are positive. Using
+                                               lower bounds in Diophantine approximation concerning sums of S-units,
+                                               we show that for simple LRS (those whose characteristic polynomial
+                                               has no repeated roots) the Ultimate Positivity Problem is decidable in
+                                               polynomial space. If we restrict to simple LRS of a fixed order then
+                                               we obtain a polynomial-time decision procedure. As a complexity lower
+                                               bound we show that Ultimate Positivity for simple LRS is at least as hard
+                                               as the decision problem for the universal theory of the reals: a problem
+                                               that is known to lie between coNP and PSPACE.
+
+
+                                       1     Introduction
+                                       A linear recurrence sequence (LRS) is an infinite sequence u = hu0 , u1 , . . .i
+                                       of rational numbers satisfying a recurrence relation
+
+                                                             un+k = a1 un+k−1 + a2 un+k−2 + . . . + ak un                  (1)
+
+                                       for all n ≥ 0, where a1 , a2 , . . . , ak are fixed rational numbers with ak 6= 0. Such
+                                       a sequence is determined by its initial values u0 , . . . , uk−1 and the recurrence
+                                       relation. We say that the recurrence has characteristic polynomial
+
+                                                               f (x) = xk − a1 xk−1 − . . . − ak−1 x − ak .
+
+                                       The least k such that u satisfies a recurrence of the form (1) is called the order
+                                       of u. If the characteristic polynomial of this (unique) recurrence has no repeated
+                                       roots then we say that u is simple.
+                                           Given an LRS u there are polynomials p1 , . . . , pk ∈ C[x] such that
+
+                                                                    un = p1 (n)γ1n + . . . + pk (n)γkn ,
+
+                                       where γ1 , . . . , γk are the roots of the characteristic polynomial. Moreover u is
+                                       simple if and only if it admits such a representation in which each polynomial
+                                       pi is a constant. Simple LRS are a natural and widely studied subclass of LRS
+                                       whose analysis nevertheless remains extremely challenging [1,10,12,24].
+                                       ?
+                                           The full version of this paper is available as [23].
+   Motivated by questions in language theory and formal power series, Rozen-
+berg, Salomaa, and Soittola [27,29] highlight the following four decision problems
+concerning LRS. Given an LRS hun i∞  n=0 (represented by a linear recurrence and
+sequence of initial values):
+ 1. Does un = 0 for some n?
+ 2. Does un = 0 for infinitely many n?
+ 3. Is un ≥ 0 for all n?
+ 4. Is un ≥ 0 for all but finitely many n?
+    Linear recurrence sequences are ubiquitous in mathematics and computer
+science, and the above four problems (and assorted variants) arise in a variety
+of settings; see [25] for references. For example, an LRS modelling population
+size is biologically meaningful only if it never becomes negative.
+    Problem 1 is known as Skolem’s Problem, after the Skolem-Mahler-Lech
+Theorem [18,19,28], which characterises the set {n ∈ N : un = 0} of zeros of an
+LRS u as an ultimately periodic set. The proof of the Skolem-Mahler-Lech The-
+orem is non-effective, and the decidability of Skolem’s Problem is open. Blondel
+and Tsitsiklis [6] remark that “the present consensus among number theorists is
+that an algorithm [for Skolem’s Problem] should exist”. However, so far decid-
+ability is known only for LRS of order at most 4: a result due independently to
+Vereschagin [32] and Mignotte, Shorey, and Tijdeman [21]. At order 5 decidabil-
+ity is not known, even for simple LRS [22]. Decidability of Skolem’s Problem is
+also listed as an open problem and discussed at length by Tao [30, Section 3.9].
+The problem can furthermore be seen as a generalisation of the Orbit Problem,
+studied by Kannan and Lipton [16, Section 5].
+    In contrast to the situation with Skolem’s Problem, Problem 2—hitting zero
+infinitely often—was shown to be decidable for arbitrary LRS by Berstel and
+Mignotte [4].
+    Problems 3 and 4 are respectively known as the Positivity and Ultimate
+Positivity Problems. The problems are stated as open in [2,14,17], among oth-
+ers, while in [27] the authors assert that the problems are “generally conjectured
+[to be] decidable”. Decidability of Positivity entails decidability of Skolem’s Prob-
+lem via a straightforward algebraic transformation of LRS (which however does
+not preserve the order) [14].
+    Hitherto, all decidability results for Positivity and Ultimate Positivity have
+been for low-order sequences. The paper [25] gives a detailed account of these
+results, obtained over a period of time stretching back some 30 years, and proves
+decidability of both problems for sequences of order at most 5. It is moreover
+shown in [25] that obtaining decidability for either Positivity or Ultimate Pos-
+itivity at order 6 would necessarily entail major breakthroughs in Diophantine
+approximation.
+    The main result of this paper is that the Ultimate Positivity Problem for
+simple LRS of arbitrary order is decidable. The restriction to simple LRS allows
+us to circumvent the strong “mathematical hardness” result for sequences of
+order 6 alluded to above. However, our decision procedure is non-constructive:
+given an ultimately positive LRS hun i∞   n=0 , the procedure does not compute a
+threshold N such that un ≥ 0 for all n ≥ N . Indeed the ability to compute such
+a threshold N would immediately yield an algorithm for the Positivity Problem
+for simple LRS since the signs of u0 , . . . , uN −1 can be checked directly. In turn
+this would yield decidability of Skolem’s Problem for simple LRS. But Skolem’s
+Problem is open for simple LRS of order 5, while (as discussed below) Positivity
+for simple LRS is only known to be decidable up to order 9.
+    The non-constructive aspect of our results arises from our use of lower bounds
+in Diophantine approximation concerning sums of S-units. These bounds were
+proven in [11,31] using Schlickewei’s p-adic generalisation of Schmidt’s Subspace
+Theorem (itself a far-reaching generalisation of the Thue-Siegel-Roth Theorem),
+and therein applied to study the asymptotic growth of LRS in absolute value.
+By contrast, in [24] we use Baker’s Theorem on linear forms in logarithms to
+show decidability of Positivity for simple LRS of order at most 9. Unfortunately,
+while Baker’s Theorem yields effective Diophantine-approximation lower bounds,
+it appears only to be applicable to low-order LRS. In particular, the analytic
+and geometric arguments that are used in [24] to bring Baker’s Theorem to bear
+(and which give that work a substantially different flavour to the present paper)
+do not apply beyond order 9.
+    Relying on complexity bounds for the decision problem for first-order for-
+mulas over the field of real numbers, we show that our procedure for deciding
+Ultimate Positivity requires polynomial space in general and polynomial time for
+LRS of each fixed order. As a complexity lower bound, we give a polynomial-time
+reduction of the decision problem for the universal theory of the reals to both the
+Positivity and Ultimate Positivity Problems for simple LRS. The decision prob-
+lem for the universal theory of the reals is easily seen to be coNP-hard and, from
+the work of Canny [8], is contained in PSPACE. Thus the complexity of the
+Ultimate Positivity problem for simple LRS lies between coNP and PSPACE.
+Hitherto the best lower bound known for either Positivity or Ultimate Positivity
+was coNP-hardness [3].
+    Full proofs of all results can be found in the long version of this paper [23].
+
+
+2     Background
+Number Theory. A complex number α is algebraic if it is a root of a univariate
+polynomial with integer coefficients. The defining polynomial of α, denoted
+pα , is the unique integer polynomial of least degree, whose coefficients have no
+common factor, that has α as a root. The degree of α is the degree of pα , and
+the height of α is the maximum absolute value of the coefficients of pα . If pα is
+monic then we say that α is an algebraic integer.
+    For computational purposes an algebraic number α can be represented by a
+polynomial f that has α as a root, together with an approximation of α with
+rational real and imaginary parts of sufficient accuracy to distinguish α from the
+other roots of f [15]. We denote by ||α|| the length of this representation.1 It
+1
+    In general we denote by ||X|| the length of the binary representation of a given
+    object X.
+can be shown that ||α|| is polynomial in the degree and logarithm of the height
+of α. Given a univariate polynomial f , it is moreover known how to obtain
+representations of each of its roots in time polynomial in ||f ||.
+    A number field K is a finite-dimensional extension of Q. The set of algebraic
+integers in K forms a ring, denoted O. Given two ideals I, J in O, the product
+IJ is the ideal generated by the elements ab, where a ∈ I and b ∈ J. An ideal P
+of O is prime if ab ∈ P implies a ∈ P or b ∈ P . The fundamental theorem of
+ideal theory states that any non-zero ideal in O can be written as the product
+of prime ideals, and the representation is unique if the order of the prime ideals
+is ignored.
+    We will need the following classical result of Dirichlet [13].
+
+Theorem 2.1 (Dirichlet). Let P be the set of primes and Pa,b the set of primes
+congruent to a mod b, where gcd(a, b) = 1. Then
+
+                                   |Pa,b ∩ {1, . . . , n}|    1
+                             lim                           =      ,
+                            n→∞     |P ∩ {1, . . . , n}|     ϕ(b)
+
+where ϕ denotes Euler’s totient function.
+
+Linear Recurrence Sequences. Let u = hun i∞         n=0 be a sequence of rational num-
+bers satisfying the recurrence relation un+k = a1 un+k−1 + . . . + ak un . We rep-
+resent such an LRS as a 2k-tuple (a1 , . . . , ak , u0 , . . . , uk−1 ) of rational numbers
+(encoded in binary). Given an arbitrary representation of u, we can compute the
+coefficients of the unique minimal-order recurrence satisfied by u in polynomial
+time by straightforward linear algebra. Henceforth we will always assume that an
+LRS is presented in terms of its minimal-order recurrence. By the characteristic
+polynomial of an LRS we mean the characteristic polynomial of the minimal-
+order recurrence. The roots of this polynomial are called the characteristic
+roots. The characteristic roots of maximum modulus are said to be dominant.
+    It is well-known (see, e.g., [2, Thm. 2]) that if an LRS u has no real positive
+dominant characteristic root then there are infinitely many n such that un <
+0 and infinitely many n such that un > 0. Clearly such an LRS cannot be
+ultimately positive.
+    Since the characteristic polynomial of u has real coefficients, its set of roots
+can be written in the form {ρ1 , . . . , ρ` , γ1 , γ1 , . . . , γm , γm }, where each ρi ∈ R.
+If u is simple then there are non-zero real algebraic constants b1 , . . . , b` and
+complex algebraic constants c1 , . . . , cm such that, for all n ≥ 0,
+                                `
+                                X                m
+                                                 X
+                                      bi ρni +         cj γjn + cj γj n .
+                                                                       
+                         un =                                                              (2)
+                                i=1              j=1
+
+
+   Conversely, a sequence u that admits the representation (2) is a simple LRS
+over R, with characteristic roots among ρ1 , . . . , ρ` , γ1 , γ1 , . . . , γm , γm . Arbitrary
+LRS admit a more general “exponential-polynomial” representation in which the
+coefficients bi and cj are replaced by polynomials in n.
+    An LRS is said to be non-degenerate if it does not have two distinct char-
+acteristic roots whose quotient is a root of unity. A non-degenerate LRS is either
+identically zero or only has finitely many zeros. The study of arbitrary LRS can
+effectively be reduced to that of non-degenerate LRS using the following result
+from [10].
+
+Proposition
+          √
+              2.2. Let hun i∞
+                            n=0 be an LRS of order k over Q. There is a constant
+M =2   O(k log k)
+                  such that each subsequence huM n+l i∞
+                                                      n=0 is non-degenerate for
+0 ≤ l < M.
+
+    The constant M in Proposition 2.2 is the least common multiple of the orders
+of all roots of unity appearing as quotients of characteristic roots of u. This
+number can be computed in time polynomial in ||u|| since determining whether
+an algebraic number α is a root of unity (and computing the order of the root)
+can be done in polynomial time in ||α|| [15]. From the representation (2) we
+see that if the original LRS is simple with characteristic roots λ1 , . . . , λk , then
+each subsequence huM n+l i∞ n=0 is also simple, with characteristic roots among
+λM
+ 1  , . . . , λ M
+                k .
+    The following is a celebrated result on LRS [18,19,28].
+
+Theorem 2.3 (Skolem-Mahler-Lech). The set {n : un = 0} of zeros of an
+LRS u comprises a finite set together with a finite number of arithmetic pro-
+gressions. If u is non-degenerate and not identically zero, then its set of zeros is
+finite.
+
+   Suppose that u and v are LRS of orders k and l respectively, then the point-
+wise sum hun + vn i∞n=0 is an LRS of order at most k + l, and the pointwise
+product hun vn i∞
+                n=0 is an LRS of order at most kl. Given representations of u
+and v we can compute representations of the sum and product in polynomial
+time by straightforward linear algebra.
+
+First-Order Theory of the Reals. Let x = x1 , . . . , xm be a list of m real-valued
+variables, and let σ(x) be a Boolean combination of atomic predicates of the
+form g(x) ∼ 0, where each g(x) is a polynomial with integer coefficients in the
+variables x, and ∼ is either > or =. We consider the problem of deciding the
+truth over the field R of sentences ϕ in the form
+
+                               Q1 x1 . . . Qm xm σ(x) ,                            (3)
+
+where each Qi is one of the quantifiers ∃ or ∀. We write ||ϕ|| for the length of
+the syntactic representation of ϕ.
+     The collection of true sentences of the form (3) is called the first-order
+theory of the reals. Tarski famously showed that this theory admits quan-
+tifier elimination and is therefore decidable. In this paper we rely on decision
+procedures for two fragments of this theory. We use the result of Canny [8] that
+if each Qi is a universal quantifier, then the truth of ϕ can be decided in space
+polynomial in ||ϕ||. We also use the result of Renegar [26] that for each fixed
+M ∈ N, if the number of variables in ϕ is at most M , then the truth of ϕ can
+be determined in time polynomial in ||ϕ||.
+    Given a representation of an algebraic number α, as described in Section 2,
+both the real and imaginary parts of α are straightforwardly definable by quantifier-
+free formulas ϕ(x) of size polynomial in ||α||.
+
+
+3    Multiplicative Relations
+Throughout this section let λ = (λ1 , . . . , λs ) be a tuple of algebraic numbers,
+each of height at most H and degree at most d. Assume that each λi is repre-
+sented in the manner described in Section 2.
+   We define the group of multiplicative relations holding among the λi to be
+the subgroup L(λ) of Zs defined by
+
+                    L(λ) = {(v1 , . . . , vs ) ∈ Zs : λv11 . . . λvss = 1} .
+
+    Bounds on the complexity of computing a basis of L(λ), considered as a free
+abelian group, can be obtained from the following result of Masser [20] which
+gives an upper bound on the magnitude of the entries of the vectors in such a
+basis.
+
+Theorem 3.1 (Masser). The free abelian group L(λ) has a basis v 1 , . . . , v l ∈
+Zs for which
+                                                    2
+                    max      |v i,j | = (d log H)O(s ) .
+                          1≤i≤l, 1≤j≤s
+
+
+
+Corollary 3.2. A basis of L(λ) can be computed in space polynomial in ||λ||.
+If s and d are fixed, such a basis can be computed in time polynomial in ||λ||.
+
+Proof. Masser’s bound entails that there is a basis v 1 , . . . , v l whose total bit
+length is polynomial in s, log d and log log H, all of which are polynomial in
+||λ||. Moreover the membership problem “λv11 . . . λvss = 1?” for a potential basis
+vector v ∈ Zs is decidable in space polynomial in ||λ|| by reduction to the
+decision problem for existential sentences over the reals.
+    A set of vectors v 1 , . . . , v l in L(λ) is a basis if every vector v ∈ L(λ) whose
+entries satisfy the bound in Theorem 3.1 lies in the integer span of v 1 , . . . , v l . For
+each such vector v this can be checked by solving a system of linear equations
+over the integers. Thus we can compute a basis of L(λ) in space polynomial in
+||λ|| by brute-force search.
+    If s and d are fixed then the same brute-force search can be done in time
+polynomial in ||λ||, noting that the number of possible bases is polynomial in ||λ||
+and the membership problem “λv11 . . . λvss = 1?” is decidable in time polynomial
+in ||λ|| by reduction to the decision problem for existential sentences over the
+reals with a fixed number of variables.                                                   u
+                                                                                          t
+
+    The following is an easy consequence of Corollary 3.2.
+Corollary 3.3. Given M ∈ N, a basis of L(λM            M
+                                          1 , . . . , λs ) can be computed in
+space polynomial in ||M || and ||λ||.
+   Next we relate the group L(λ) to the orbit {(λn1 , . . . , λns ) | n ∈ N} of λ.
+Recall from [9] the following classical theorem of Kronecker on inhomogeneous
+Diophantine approximation.
+
+Theorem 3.4 (Kronecker). Let θ1 , . . . , θs and ψ1 , . . . , ψs be real numbers.
+Suppose moreover that for all integers u1 , . . . , us , if u1 θ1 + . . . + us θs ∈ Z then
+also u1 ψ1 + . . . + us ψs ∈ Z, i.e., all integer relations among the θi also hold
+among the ψi (modulo Z). Then for each ε > 0, there exist integers p1 , . . . , ps
+and a non-negative integer n such that |nθi − pi − ψi | ≤ ε.
+
+   Write T = {z ∈ C : |z| = 1} and consider the s-dimensional torus Ts as
+a group under coordinatewise multiplication. The following can be seen as a
+multiplicative formulation of Kronecker’s Theorem.
+
+Proposition 3.5. Let λ = (λ1 , . . . , λs ) ∈ Ts and consider the group L(λ) of
+multiplicative relations among the λi . Define a subgroup T (λ) of the torus Ts by
+
+           T (λ) = {(µ1 , . . . , µs ) ∈ Ts | µv11 . . . µvss = 1 for all v ∈ L(λ)} .
+
+Then the orbit S = {(λn1 , . . . , λns ) | n ∈ N} is a dense subset of T (λ).
+
+Proof. For j = 1, . . . , s, let θj ∈ R be such that λj = e2πiθj . Notice that multi-
+plicative relations λv11 . . . λvss = 1 are in one-to-one correspondence with additive
+relations θ1 v1 + . . . + θs vs ∈ Z. Let (µ1 , . . . , µs ) be an arbitrary element of T (λ),
+with µj = e2πiψj for some ψj ∈ R. Then the hypotheses of Theorem 3.4 apply to
+θ1 , . . . , θs and ψ1 , . . . , ψs . Thus given ε > 0, there exist n ≥ 0 and p1 , . . . , ps ∈ Z
+such that |nθj − pj − ψj | ≤ ε for j = 1, . . . , s. Whence for j = 1, . . . , s,
+
+         |λnj − µj | = |e2πi(nθj −pj ) − e2πiψj | ≤ |2π(nθj − pj − ψj )| ≤ 2πε .
+
+It follows that (µ1 , . . . , µs ) lies in the closure of S.                                   u
+                                                                                               t
+
+
+4    Algorithm for Ultimate Positivity
+Let K be a number field of degree d over Q. Recall that there are d distinct
+field monomorphisms σ1 , . . . , σd : K → C (see, e.g., [13]). Given a finite set S
+of prime ideals in the ring of integers O of K, we say that α ∈ O is an S-unit
+if the principal ideal (α) is a product of prime ideals in S. The following lower
+bound on the magnitude of sums of S-units, whose key ingredient is Schlickewei’s
+p-adic generalisation of Schmidt’s Subspace Theorem, was established in [11,31]
+to analyse the growth of LRS.
+Theorem 4.1 (Evertse, van der Poorten, Schlickewei). Let m be a positive
+integer and S a finite set of prime ideals in O. Then for every ε > 0 there exists
+a constant C, depending only on m, K, S, and ε with the following property:
+                                                               P
+for any set of S-units x1 , . . . , xm ∈ O such that              i∈I xi 6= 0 for all non-empty
+I ⊆ {1, . . . , m}, it holds that
+                                 |x1 + . . . + xm | ≥ CXY −ε ,                                (4)
+where X = max{|xi | : 1 ≤ i ≤ m}, Y = max{|σj (xi )| : 1 ≤ i ≤ m, 1 ≤ j ≤ d}.
+    We first consider how to decide Ultimate Positivity in the case of a non-
+degenerate simple LRS u. As explained in Section 2, we can assume without
+loss of generality that u has a positive real dominant root. Furthermore, by
+considering the LRS hk n+1 un i∞
+                               n=0 for a suitable integer k ≥ 1, we may assume
+that the characteristic roots and coefficients in the closed-form solution (2) are
+all algebraic integers.
+    Suppose that u has dominant characteristic roots ρ, γ1 , γ1 , . . . , γs , γs , where
+ρ is real and positive. Then we can write u in the form
+                 un = bρn + c1 γ1n + c1 γ1 n + . . . + cs γsn + cs γs n + r(n) ,              (5)
+                     n(1−ε)
+where r(n) = o(ρ              ) for some ε > 0. Now let λi = γi /ρ for i = 1, . . . , s. Then
+we can write
+                                un = ρn f (λn1 , . . . , λns ) + r(n) ,                       (6)
+             s
+where f : T → R is defined by f (z1 , . . . , zs ) = b + c1 z1 + c1 z1 + . . . + cs zs + cs zs .
+Proposition 4.2. The LRS hun i∞
+                              n=0 is ultimately positive if and only if f (z) ≥
+0 for all z ∈ T (λ).
+Proof. Consider the expression (5). Let K be the number field generated over Q
+by the characteristic roots of u and let S be the set of prime ideal divisors of the
+dominant characteristic roots ρ, γ1 , γ1 , . . . , γs , γs and the associated coefficients
+b, c1 , c1 , . . . , cs , cs . (These coefficients lie in K by straightforward linear algebra.)
+Then the term
+                         bρn + c1 γ1n + c1 γ1 n + . . . + cs γsn + cs γs n                    (7)
+is a sum of S-units.
+    Applying Theorem 4.1 to the sum of S-units in (7), we have X = C1 ρn
+for some constant C1 > 0 and Y = C2 ρn for some constant C2 > 0 (since an
+embedding of K into C maps characteristic roots to characteristic roots). The
+theorem tells us that for each ε > 0 there is a constant C > 0 such that
+                 |bρn + c1 γ1n + c1 γ1 n + . . . + cs γsn + cs γs n | ≥ Cρn(1−ε)
+for all but finitely many values of n. (Since u is non-degenerate, it follows from
+the Skolem-Mahler-Lech Theorem that each non-empty sub-sum of the left-hand
+side vanishes for finitely many n.)
+    Now choose ε > 0 such that r(n) = o(ρn(1−ε) ) in (5). Then for all sufficiently
+large n, un ≥ 0 if and only if bρn + c1 γ1n + c1 γ1 n + . . . + cs γsn + cs γs n > 0.
+Equivalently, looking at (6), for all sufficiently large n we have un ≥ 0 if and
+only if f (λn1 , . . . , λns ) ≥ 0. But the orbit {(λn1 , . . . , λns ) : n ∈ N} is a dense subset
+of T (λ) by Proposition 3.5. Thus un is ultimately positive if and only if f (z) ≥ 0
+for all z ∈ T (λ).                                                                              u
+                                                                                                t
+   We can now state and prove our main result.
+Theorem 4.3. The Ultimate Positivity Problem for simple LRS is decidable in
+polynomial space in general, and in polynomial time for LRS of fixed order.
+
+Proof. A decision procedure is given in the table below. Correctness follows from
+the fact that u is ultimately positive if and only if each of the non-degenerate
+subsequences v considered in Step 2 is ultimately positive. But ultimate posi-
+tivity of these subsequences is determined in Step 2.4 using Proposition 4.2. It
+remains to account for the complexity of each step.
+    As noted in Section 2, Step 1 requires time polynomial in ||u||.
+    For LRS of fixed order, there is an absolute bound on M in Step 2, while for
+LRS of arbitrary order, M is exponentially bounded in ||u|| by Proposition 2.2.
+We show that for each subsequence v, Steps 2.1–2.4 require polynomial time for
+fixed-order LRS and polynomial space in general.
+    Using iterated squaring, the coefficients bi and cj in the expression (8) for
+v are definable in terms of the characteristic roots of u and the corresponding
+coefficients in the closed-form expression for u by a polynomial-size first-order
+formula that uses only universal quantifiers. This accomplishes Step 2.1.
+    Combining Corollaries 3.2 and 3.3, Step 2.3 can be done in polynomial space
+for arbitrary LRS and polynomial time for LRS of fixed order.
+    Step 2.4 uses a decision procedure for universal sentences over the reals,
+having already noted that the coefficients bi and cj are first-order definable.
+By the results described in Section 2 this can be done in polynomial space for
+arbitrary LRS and polynomial time for LRS of fixed order.                       u
+                                                                                t
+
+
+
+Decision procedure for ultimate positivity of a simple LRS u
+
+ 1. Compute the characteristic roots {ρ1 , . . . , ρ` , γ1 , γ1 , . . . , γm , γm } of u.
+     Writing α ∼ β if α/β is a root of unity, let M = lcm{ord(α/β) :
+     α ∼ β are characteristic roots}. Moreover let {ρi : i ∈ I} ∪ {γj , γj : j ∈ J}
+     contain a unique representative from each equivalence class.
+ 2. For l = 0, . . . , M − 1, check ultimate positivity of the non-degenerate subse-
+     quence vn = uM n+l as follows:
+    2.1. Compute the coefficients bi and cj in the closed-form solution
+                                X Mn X  Mn                                   
+                          vn =      bi ρi +        cj γj + cj γj M n .                    (8)
+                                 i∈I            j∈J
+
+
+   2.2. If v 6≡ 0 and there is no dominant real characteristic root in (8) then v is
+        not ultimately positive.
+   2.3. Let ρ1 , γ1 , γ1 , . . . , γs , γs be dominant among the characteristic roots ap-
+        pearing in (8). Define λ1 = γ1 /ρ1 , . . . , λs = γs /ρ1 and compute a basis of
+        L(λM             M
+            1 , . . . , λs ).
+   2.4. Define f : Ts → R by f (z1 , . . . , zs ) = b1 + c1 z1 + c1 z1 + . . . + cs zs + cs zs .
+        Then v is ultimately positive if and only if f (z) ≥ 0 for all z ∈ T (λM ).
+    We note that a related proof strategy (passing from a finitely generated group
+to its closure and appealing to the theory of the reals) was used in [5] in the
+context of threshold problems for quantum automata.
+
+
+5    Complexity Lower Bound
+In this section we give reductions of the decision problem for universal sentences
+over the field of real numbers to the Positivity and Ultimate Positivity Problems
+respectively. The former problem is easily seen to be coNP-hard and, through
+the work of Canny [8], is known to be in PSPACE. Typically this PSPACE
+upper bound is stated for the complement problem: the decision problem for
+existential sentences over the field of reals.
+    It is known that the problem 4-FEAS of whether a degree-4 polynomial has a
+real root is polynomial-time equivalent to the decision problem for the existential
+theory of the reals [7]. Here we consider a related problem, 4-POS, which asks
+whether a degree-4 polynomial f (x1 , . . . , xn ) with rational coefficients satisfies
+f (x) ≥ 0 for all x ∈ [0, 1]n . Using the above-mentioned result on 4-FEAS in
+tandem with bounds on magnitude of definable numbers in the existential theory
+of the reals (see [23] for details) we can show:
+Theorem 5.1. There is a polynomial-time reduction of the decision problem for
+the universal theory of the reals to the problem 4-POS.
+     We now reduce 4-POS to the Positivity and Ultimate Positivity Problems.
+The first step of the reduction is to compute a collection of s multiplicatively
+independent algebraic numbers of absolute value 1.
+     By a classical result of Lagrange, a prime number is congruent to 1 modulo 4
+if and only if it can be written as the sum of two squares [13]. By Theorem 2.1,
+the class of such primes has asymptotic density 1/2 in the set of all primes, and
+therefore, by the Prime Number Theorem, asymptotic density 1/(2 log n) in the
+set of natural numbers. It follows that one can compute the first s such primes
+p1 , . . . , ps and their decomposition as sums of squares in time polynomial in s.
+                                                        a +ib
+Writing pj = a2j + b2j , where aj , bj ∈ Z, define λj = ajj −ibjj for j = 1, . . . , s. Then
+each λj is an algebraic number of degree 2 and absolute value 1.
+Proposition 5.2. λ1 , . . . , λs are multiplicatively independent.
+Proof. Recall that the ring of Gaussian integers Z(i) is a unique factorisation
+domain and that a + ib ∈ Z(i) is prime iff a2 + b2 is a rational prime [13]. Now
+λn1 1 . . . λns s = 1 if and only if
+
+             (a1 + ib1 )n1 . . . (as + ibs )ns = (a1 − ib1 )n1 . . . (as − ibs )ns
+
+But each factor aj + ibj and aj − ibj is prime by construction. Thus by unique
+factorisation we must have n1 = 0, . . . , ns = 0.                           u
+                                                                             t
+Theorem 5.3. There are polynomial-time reductions from 4-POS to the Posi-
+tivity and Ultimate Positivity Problems for LRS.
+Proof. Suppose we are given an instance of 4-POS, consisting of a polynomial
+f (x1 , . . . , xs ). Let λ1 , . . . , λs be multiplicatively independent algebraic numbers,
+constructed as in Proposition 5.2. For j = 1, . . . , s, the sequence hyj,n : n ∈ Ni
+                                         n
+defined by yj,n = 12 (λnj + λj ) satisfies a second-order linear recurrence yj,n+2 =
+(2aj /pj )yj,n+1 − yj,n with rational coefficients.
+    Recall, moreover, that given two simple LRS of respective orders l and m,
+their sum is a simple LRS of order at most l + m, their product is a simple LRS
+of order at most lm, and representations of both can be computed in polynomial
+time in the size of the input LRS. Thus the sequence u = hun : n ∈ Ni given by
+               2             2
+un = f (y1,n      , . . . , ys,n ) is a simple LRS over the rationals. Since f has degree at
+most 4, the order of u is at most 44 times the number of monomials in f and the
+recurrence satisfied by u can be computed in time polynomial in ||f ||. (Observe
+that if the degree of f were not fixed, then the above reasoning would yield an
+upper bound on the order of u that is exponential in the degree of f .)
+    From Propositions 3.5 and 5.2 it follows that the orbit {(λn1 , . . . , λns ) : n ∈ N}
+is dense in the torus Ts . Thus the set {(y1,n        2             2
+                                                         , . . . , ys,n ) : n ∈ N} is dense in [0, 1]s
+                                                                  s
+and f assumes a strictly negative value on [0, 1] if and only if un < 0 for some
+(equivalently infinitely many) n. This completes the reduction.                                     u
+                                                                                                    t
+
+
+6    Conclusion
+
+We have shown that the Ultimate Positivity Problem for simple LRS is decidable
+in polynomial space and as hard as the decision problem for universal sentences
+over the field of real numbers. A more careful accounting of the complexity
+of our decision procedure places it in coNP with an oracle for the universal
+theory of the reals. Thus a PSPACE-hardness result for Ultimate Positivity
+would have non-trivial consequences for the complexity of decision problems for
+first-order logic over the reals. On the other hand, the obstacle to improving
+the polynomial-space upper bound is the complexity of computing a basis of the
+group of multiplicative relations among the characteristic roots of the recurrence.
+
+
+References
+
+ 1. F. Amoroso and E. Viada. Small points on subvarieties of a torus. Duke Mathe-
+    matical Journal, 150(3), 2009.
+ 2. J. P. Bell and S. Gerhold. On the positivity set of a linear recurrence. Israel Jour.
+    Math., 57, 2007.
+ 3. P. Bell, J.-C. Delvenne, R. Jungers, and V. Blondel. The continuous Skolem-Pisot
+    problem. Theor. Comput. Sci., 411(40-42):3625–3634, 2010.
+ 4. J. Berstel and M. Mignotte. Deux propriétés décidables des suites récurrentes
+    linéaires. Bull. Soc. Math. France, 104, 1976.
+ 5. V. Blondel, E. Jeandel, P. Koiran, and N. Portier. Decidable and undecidable
+    problems about quantum automata. SIAM J. Comput., 34(6):1464–1473, 2005.
+ 6. V. Blondel and J. Tsitsiklis. A survey of computational complexity results in
+    systems and control. Automatica, 36(9):1249–1274, 2000.
+ 7. L. Blum, F. Cucker, M. Shub, and S. Smale. Complexity and real computation.
+    Springer-Verlag, 1997.
+ 8. J. Canny. Some algebraic and geometric computations in PSPACE. In Proceedings
+    of STOC’88, pages 460–467. ACM, 1988.
+ 9. J. Cassels. An introduction to Diophantine approximation. Camb. Univ. Pr., 1965.
+10. G. Everest, A. van der Poorten, I. Shparlinski, and T. Ward. Recurrence Sequences.
+    American Mathematical Society, 2003.
+11. J.-H. Evertse. On sums of S-units and linear recurrences. Compositio Mathematica,
+    53(2):225–244, 1984.
+12. J.-H. Evertse, H. P. Schlickewei, and W. M. Schmidt. Linear equations in variables
+    which lie in a multiplicative group. Ann. Math., 155(3), 2002.
+13. A. Fröhlich and M. Taylor. Algebraic Number Theory. Camb. Univ. Press, 1993.
+14. V. Halava, T. Harju, and M. Hirvensalo. Positivity of second order linear recurrent
+    sequences. Discrete Applied Mathematics, 154(3), 2006.
+15. V. Halava, T. Harju, M. Hirvensalo, and J. Karhumäki. Skolem’s problem – on
+    the border between decidability and undecidability. Technical Report 683, Turku
+    Centre for Computer Science, 2005.
+16. R. Kannan and R. J. Lipton. Polynomial-time algorithm for the orbit problem.
+    JACM, 33(4), 1986.
+17. V. Laohakosol and P. Tangsupphathawat. Positivity of third order linear recurrence
+    sequences. Discrete Applied Mathematics, 157(15), 2009.
+18. C. Lech. A note on recurring series. Ark. Mat., 2, 1953.
+19. K. Mahler. Eine arithmetische Eigenschaft der Taylor Koeffizienten rationaler
+    Funktionen. Proc. Akad. Wet. Amsterdam, 38, 1935.
+20. D. W. Masser. Linear relations on algebraic groups. In New Advances in Tran-
+    scendence Theory. Camb. Univ. Press, 1988.
+21. M. Mignotte, T. Shorey, and R. Tijdeman. The distance between terms of an
+    algebraic recurrence sequence. J. für die reine und angewandte Math., 349, 1984.
+22. J. Ouaknine and J. Worrell. Decision problems for linear recurrence sequences. In
+    Proceedings of RP’12, volume 7550 of LNCS. Springer, 2012.
+23. J. Ouaknine and J. Worrell. Ultimate Positivity is decidable for simple linear
+    recurrence sequences. CoRR, abs/1309.1914, 2013.
+24. J. Ouaknine and J. Worrell. On the Positivity Problem for simple linear recurrence
+    sequences. In Proceedings of ICALP’14, 2014. CoRR, abs/1309.1550.
+25. J. Ouaknine and J. Worrell. Positivity problems for low-order linear recurrence
+    sequences. In Proceedings of SODA’14. ACM-SIAM, 2014.
+26. J. Renegar. On the computational complexity and geometry of the first-order
+    theory of the reals. J. Symb. Comp., 1992.
+27. G. Rozenberg and A. Salomaa. Cornerstones of Undecidability. Prentice Hall,
+    1994.
+28. T. Skolem. Ein Verfahren zur Behandlung gewisser exponentialer Gleichungen. In
+    Comptes rendus du congrès des mathématiciens scandinaves, 1934.
+29. M. Soittola. On D0L synthesis problem. In A. Lindenmayer and G. Rozenberg,
+    editors, Automata, Languages, Development. North-Holland, 1976.
+30. T. Tao. Structure and randomness: pages from year one of a mathematical blog.
+    American Mathematical Society, 2008.
+31. A. van der Poorten and H. Schlickewei. The growth conditions for recurrence
+    sequences. Macquarie Math. Reports, (82-0041), 1982.
+32. N. K. Vereshchagin. The problem of appearance of a zero in a linear recurrence
+    sequence (in Russian). Mat. Zametki, 38(2), 1985.
+

@@ -1,0 +1,940 @@
+                                                 ON SPARSITY OF INTEGRAL POINTS IN ORBITS AND
+                                                 CORRESPONDENCES WITH BIG PULLBACKS UNDER
+                                                                   ITERATES
+
+                                                                                 JORGE MELLO
+
+
+
+
+                                                  Abstract. We prove new unconditional results of sparsity of integral points on
+arXiv:2501.04642v2 [math.NT] 11 Jan 2025
+
+
+
+
+                                                  orbits under many maps and correspondences in arbitrary dimensions, generalizing
+                                                  theorems of Yasufuku(2015) and others. The main ingredients are new diophantine
+                                                  approximation tools and recent constructions for correspondences due to Ingram
+                                                  (2011).
+
+
+                                                                               1. Introduction
+                                              Let φ : X → X be a self rational map on a projective variety defined over a number
+                                           field k and denote by φ(n) the n-iterate of φ. We investigate sparsity in the currently
+                                           very active field of study about the frequency of integral points lying in the forward
+                                           orbits
+                                                                       Oφ (P ) := {P, φ(P ), φ(2)(P ), ...}
+                                           with P ∈ X(k) in arithmetic dynamics, particularly in higher dimensions. In dimen-
+                                           sion 1, finiteness of algebraic integers in orbits of rational functions was proven in a
+                                           key breakthrough result of Silverman [17], who showed the only exceptions are maps
+                                           whose second iterate is a polynomial. This was made quantitative and extended to
+                                           "quasiintegral points" [8], to semigroup dynamics [16, 17], and also consistently de-
+                                           scribed over function fields in [2, 9, 15] recently, just to cite a few. As in the classical
+                                           cases of curves and abelian varieties, the main tools to show sparsity of integral points
+                                           have been mostly powerful diophantine approximation results like Roth’s theorem or
+                                           Schmidt’s subspace theorem, although in higher dimensions the problem is much
+                                           more complicated. Zariski non-density of integral points in varieties of general type
+                                           should be true according the Bombieri-Lang conjecture. This is also a consequence
+                                           of a deep diophantine approximation conjecture due to Vojta that generalizes Roth
+                                           and Schmidt, and also implies the ABC conjecture. Some of the first generalizations
+                                           of Silverman’s theorem to higher dimensions are conditional to Vojta’s conjecture, as
+                                           in the following nice sparsity theorem of Yasufuku on projective spaces
+                                           Theorem 1.1. (Yasufuku)[21] Let φ : PN → PN be a morphism defined over Q of
+                                           degree d ≥ 2 and D be a divisor of PN . Suppose there exists m > 0 such that the
+                                                                        (m)
+                                           normal-crossings subdivisor Dnc of the pullback (φ(m) )∗ (D) satisfies Vojta’s conjec-
+                                                           (m)
+                                           ture and deg Dnc > N + 1. Then, for any P ∈ PN (Q), the set Oφ (P ) ∩ PN (Z \ |D|)
+                                           is not Zariski dense.
+                                             The theorem holds more generally over a number field k and replacing integral
+                                           points with the set of (D, S)-integral points
+                                                                  (                                       )
+                                                                                X
+                                                                    P ∈ PN (k)|    λv (D, P ) ≤ ch(D, P )
+                                                                                   /
+                                                                                  v∈S
+                                                                                         1
+2                                      JORGE MELLO
+
+where S is a finite set of places of k, c is a positive constant and λv (D, .) is a Weil local
+height function and h(D, .) is a global Weil height that we recall further below. It
+also agrees with Silverman’s result in one variable. Other recent higher dimensional
+dynamical analogues of Siegel’s theorem for curves like the previous one can be found
+in recent works [3, 4, 14, 21, 22], either relying on the conjectures of Vojta, or on new
+generalizations of the Schmidt’s subspace theorem or an effective Runge-type result.
+Here, among other things we start using a new generalization of Schmidt’s subspace
+theorem due to He and Ru [7] to obtain an unconditional version of Yasufuku’s
+Theorem for projective varieties as follows
+Theorem 1.2. (See Theorem 5.1) Let X be a projective variety of dimension n, S
+be a finite set of places and φ be an endomorphism of X. Suppose there exist m ≥ 0,
+a nontrivial effective divisor D and A an ample divisor of X such that
+    (i) (φ(m) )∗ (D) = D1 + D2 + · · · + Dq + D ′ is a sum of effective divisors where
+        D1 , . . . , Dq are in l-subgeneral position
+                                             Pq       for some l ≥ n
+   (ii) There exists cj ∈ Q such that j=1 cj Dj − (l − n + 1)(n + 1)A is big and
+        A − cj Dj is Q-nef for all 1 ≤ j ≤ q
+Then there exists ǫ > 0 such that for all P ∈ X(k), the set
+                      (n)            X
+                      φ (P ) : n ∈ N,     λv (D, φ(n) (P ) ≤ ǫh(A, φ(n) (P ))
+                                     /
+                                    v∈S
+
+is not Zariski dense.
+                                                                        m
+   This theorem recovers and generalizes Yasufuku’s results when his D(nc)  is a union
+of lines and his theorem becomes unconditional due to Schmidt’s subspace theorem.
+Yasufuku’s theorem can be made quantitative with respect to bounding the largest
+number of iterations occurring in an integral iterate (even if we allow the base field
+to vary with bounded degree) and also uniform not depending on the initial point
+of the orbit. This was recently achieved by Yasufuku in [22] using new diophantine
+approximation ingredients. His uniformity result replacing points in a given number
+field with algebraic points of bounded degree provides a version of the univariate
+results of Gunther and Hindes [5] for PN . Similarly, we prove a non-quantitative
+algebraic points analogue result for projective varieties assuming bigness of some
+iterates’ pullbacks of a base divisor as suggested in [22, Remark 8]. For dynamics
+with one map, we state that below
+Theorem 1.3. (See Thm.’s 5.4 and 5.5) Let X be a projective variety of dimension
+n, S be a finite set of places, and φ be an endomorphism of X. Suppose there exist
+m, a nontrivial effective divisor D and A an ample divisor of X such that
+    (i) (φ(m) )∗ (D) = D1 + D2 + · · · + Dq + D ′ a sum of effective ample divisors,
+        D1 , . . . , Dq are in l-subgeneral position with l ≥ n,
+                                                         D
+   (ii) There exist integers di > 0 such that qj=1 djj − C(l, n, δ)A is big for all i and
+                                                   P
+
+        Dj ≡ dj A for all j where C(l, n, δ) is a positive constant given in [12].
+Then there exists ǫ > 0 such that the set
+    (n)                                    X X
+     φ (P ) : n ∈ N≥m , [k(P ) : k] ≤ δ,                λw (D, φ(n) (P ) ≤ ǫh(A, φ(n) (P )
+                                           /
+                                          v∈S     w|v
+                                                w∈Mk(P )
+
+is not Zariski dense. Moreover, if X = P2 , the Dj ’s are lines in general position and
+A ∼ OP2 (1), then condition (ii) can be reduced to q > 15/2.
+      SPARSITY FOR QUASIINTEGRAL POINTS IN ORBITS AND CORRESPONDENCES                         3
+
+   Both theorems 1.2 and 1.3 are first proven and stated in the more general context
+of semigroup dynamics generated by finitely many maps(non-commuting in general).
+   Lastly, we obtain the first versions of these results in the context of correspon-
+dences, which generalizes the scenario of deterministic dynamical systems. By C be
+a correspondence on X we mean a subvariety C ⊂ X × X such that the coordinate
+projections are both finite and surjective. We think of the points X(k) as a set of
+vertices, with the points C(k) defining directed edges between those vertices, which
+induces a graph whose union of paths generalizes the union of orbits in a classical
+dynamical system. In this context, we prove analogous sparsity results for similar
+generalized integrality sets using constructions on correspondences that were made
+by Ingram [10] when there are divisors with large Correspondence Iterate Pullbacks
+(CIP). This is a concept that naturally generalizes pullbacks in dynamical systems
+and that we define in Section 4. In particular, for projective spaces, we obtain
+Theorem 1.4. (See Theorem 5.9) Let C ⊂ PN ×PN be a subvariety (correspondence)
+of PN defined over k, S finite set of places of k. Let P be the scheme of paths
+associated to C, with associated maps π : P → PN and σ : P → P as it is described
+in Section 4. Suppose that there exist m ∈ N>0 and a nontrivial effective divisor D
+defined over k that has an m-th iterate (CIP) D (m) with respect to C such that
+    (i) D (m) = D1 + ... + Dq + D (rest) is a sum of effective ample divisors where
+         P1q, ..., Dq are in l-general position for some l ≥ n.
+         D
+   (ii)     j=1 deg Dj > C(l, n, δ)
+Then for all sufficiently small ǫ, the set
+                                                              X
+{π(σ (n) (P )) : P ∈ P, [k(π(σ (n) (P ))) : k] ≤ δ, n ∈ N≥m ,   λw (D, π(σ (n) (P ))) ≤ ǫh(π(σ n (P )))}
+                                                                /
+                                                               v∈S
+                                                               w|v
+                                                             w∈Mk(P )
+
+is not Zariski dense.
+   Again, when N = 2 and the Dj ’s are lines in general position, we can replace
+C(l, n, δ) with the sharp 15/2 due to Levin[13], and the Zariski closed set containing
+the integrality set is a union of lines plus a finite set.
+   As another byproduct, we obtain the following novel univariate finiteness statement
+for integers in correspondences which in the particular setting of dynamical systems
+( when C is the graph of a rational function) agrees with the theorems of Silverman
+and Gunther-Hindes, holding for correspondences having an "iterate" with at least 3
+poles,
+Theorem 1.5. (See Corollary 5.10) Let C ⊂ P1 × P1 be a correspondence of P1
+defined over a number field k. Let P, π : P → P1 and σ : P → P as in Thm.
+1.4. Suppose that the divisor at infinity (∞) has an m-th iterate (CIP) D (m) that is
+effective and whose support has more than C(1, 1, δ) points.
+   Then
+{π(σ (n) (P )) : P ∈ P, [k(π(σ (n) (P ))) : k] ≤ δ, n ∈ N≥m , π(σ (n) (P )) is an algebraic integer}
+is finite.
+   In particular, the subset of set above formed by the points defined over k (δ = 1) is
+finite when when we replace C(1, 1, δ) with 2.
+  The theorem above is also true for S-integers with S a finite set of places.
+4                                          JORGE MELLO
+
+  In Section 2 we discuss some preliminaries on heights and Section 4 contains the
+needed background on correspondences. The diophantine approximation tools are
+stated in Section 4, and the main results are proven in Sections 4,5 and 6, for nef
+divisors and pullbacks using He and Ru’s theorem, algebraic points and correspon-
+dences respectively.
+
+                            2. Preliminaries on heights
+  Let k be a number field, and let Mk be the set of places. For the unique archimedean
+place of MQ , we use the usual absolute value on R as the normalized one. For the non-
+archimedean place of MQ corresponding to the prime p, we normalize the absolute
+                                                   1
+value by defining the absolute value of p to be . We then normalize absolute value
+                                                   p
+                                                                   v :Qv ]
+corresponding to each place v ∈ Mk by defining |x|v to be the [k[k:Q]      -th power of the
+absolute value in v whose restriction to Q is a normalized absolute value on Q. We
+then define a Weil (global) height on the projective space PN by
+                                                 X
+                         h([a0 : · · · : aN ]) =    log max |ai |v
+                                                                  i
+                                                    v∈Mk
+
+for [a0 : · · · : aN ] ∈ PN (k). This becomes a well-defined function on PN (Q). For
+a nontrivial effective divisor D on PN defined over k, we choose a homogeneous
+polynomial F of degree d with coefficients in the ring Ok of integers of k so that D
+is defined by F , and we define a local height function for each v ∈ Mk by
+                                                           (max |ai |v )d
+                      λv (D, [a0 : · · · : aN ]) = log                           .
+                                                         |F (a0 , . . . , aN )|v
+This is a well-defined function on (X \|D|)(k). For a general divisor D on a projective
+variety X, we first write D as a difference of two very ample Cartier divisors D1 and
+D2 , where Di = ϕ∗ (H) for some closed immersion ϕi : X −→ PNi and Hi is a
+hyperplane in PNi . We then define Weil height to be
+                            h(D, P ) = h(ϕ1 (P )) − h(ϕ2 (P )).
+Moreover, letting si,1 , . . . , si,ℓi be a basis of global sections of the line bundle L(Di )
+and choosing one rational section s of L(D), we can define local height to be
+                λv (D, P ) = max min log s1,m ⊗ (s2,ℓ ⊗ s)−1 (P ) v ,
+                                                                      
+                                 m     ℓ
+
+where we evaluate at P via the isomorphism L(D1 ) ⊗ (L(D2 ) ⊗ L(D))−1 ∼      = OX . This
+notion is well-defined in the sense that if we choose different parameters for the ample
+divisors or the global/rational sections, the two local height functions agree on all
+but finitely many places and even at those finitely many places, their difference is a
+bounded function. The local and Weil height are functorial with respect to pullbacks,
+namely,
+    h(ϕ∗ D, P ) = h(D, ϕ(P )) + O(1)          and          λv (ϕ∗ D, P ) = λv (D, ϕ(P )) + O(1)
+whenever ϕ is a morphism of algebraic varieties, where equality is interpreted to mean
+agreement up to a bounded function (or up to bounded functions in just finitely many
+places).
+      SPARSITY FOR QUASIINTEGRAL POINTS IN ORBITS AND CORRESPONDENCES                       5
+
+  When D and E are divisors of X, the following additive properties also hold for
+every P ∈ X(k) where the functions are defined
+h(D+E, P ) = h(D, P )+h(E, P )+O(1)              and    λv (D+E, P ) = λv (D, P )+λv (E, P )+O(1)
+Also, if D is effective, then
+                       h(D, P ) ≥ O(1)       and       λv (D, P ) ≥ O(1)
+for all P ∈ (X \ |D|)(k).
+   Moreover, it follows from the definitions that
+                                       X
+(2.1)                      h(D, P ) =      λv (D, P ) + O(1)
+                                          v∈Mk
+
+for all P ∈ (X \ |D|)(k)
+
+                   3. Tools from diophantine approximation
+  Here we state the diophantine approximation results we will use. First, the fol-
+lowing recent by He and Ru. For the definitions of general position and subgeneral
+position, see [7, 13]
+Lemma 3.1. Let X be a projective variety of dimension n defined over a number
+field k . Let S be a finite set of places of k. Let D1 , ..., Dq be effective Cartier divisors
+on X, defined over k, in l-subgeneral position for l ≥ n. Let A be an ample Cartier
+divisor on X and let ci be rational numbers such that A − ci Di is a nef Q-divisor for
+all i. Let ǫ > 0. Then there exists a proper Zariski-closed subset Z ⊂ Xsuch that for
+all points P ∈ X(k) \ Z,
+                  q
+                 XX
+                           ci λv (Di , P ) < [(l − n + 1)(n + 1) + ǫ]h(A, P ).
+                 v∈S i=1
+
+Proof. This is a direct consequence of [7, Corollary of the Main Theorem(pg. 140)]
+applied with Y1 = D1 , ..., Yq = Dq and of the fact that if D is an effective Cartier
+divisor, then the Seshadri constants therein simplify to
+                        ǫD (A) = sup{γ ∈ Q≥0 |A − γD is Q-nef}
+(see the discussion in [6, Page 126])                                                      
+  The next one is a new Schmidt subspace type of theorem for algebraic points. The
+symbol ≡ denotes numerical equivalence of divisors.
+Lemma 3.2. Let X be a projective variety of dimension n defined over a number
+field k . Let S be a finite set of places of k and D1 , ..., Dq be effective ample Cartier
+divisors on X, defined over k, in m-subgeneral position with m ≥ n. Let A be an
+ample Cartier divisor on X and let di be positive integers such that di A ≡ Di for all
+i and for all v ∈ S. Let ǫ > 0 and δ ∈ N≥1 . Then
+                   q
+              X X X   λw (Di , P )
+                                   < [C(m, n, δ) + ǫ]h(A, P ) + O(1)
+              v∈S i=1
+                          di
+                    w|v
+                  w∈Mk(P )
+                                S
+holds for all points P ∈ X(k) \ i Supp Di satisfying [k(P ) : k] ≤ δ, where C(m, n, δ)
+is a positive constant given in [12, Page 229].
+6                                     JORGE MELLO
+
+Proof. This is [12, Theorem 2], which improves the bound on [13, Theorem 5.2]
+together with [20, Lemma 3.4].                                             
+  When X is P2 and the Dj ’s are lines in general position, C(m, n, δ) to 15/2 can be
+improved as follows
+Lemma 3.3. [13, Theorem 1.5] Let S be a finite set of places of a number field
+k let L1 , ..., Lq ⊂ P2 be lines over k, in general position. Let ǫ > 0. There there
+exists a finite union of lines Z ⊂ X such that for all points P ∈ P2 (k) \ Z satisfying
+[k(P ) : k] ≤ 2 we have
+                                   q                        
+                       X X X                           15
+                                      λw (Li , P ) <      + ǫ h(P ).
+                       v∈S        i=1
+                                                        2
+                           w|v
+                         w∈Mk(P )
+
+
+                     4. Preliminaries on correspondences
+   Let X be an algebraic variety defined over some field k, and let C be a correspon-
+dence on X, by which we mean a subvariety C ⊂ X × X such that the coordinate
+projections are both finite and surjective.
+   We think of the points X(k) as a set of vertices, with the points C(k) defining
+directed edges between those vertices. There is a path space π : P → X parametrizing
+paths through the aforementioned directed graph, with initial vertex indicated by π,
+as well as a shift map σ : P → P which corresponds to stepping forward once along
+the path (or, equivalently, forgetting the first vertex of a path). This is described in
+the first lemma below.
+   Let x, y : C → X be the coordinate projections. We will say that this correspon-
+dence is polarized if and only if there exists an ample Cartier divisor L ∈ Div(X) ⊗ R
+and a real number α > 1 such that y ∗ L is linearly equivalent to αx∗ L. It is easy
+to check that in the case where C is the graph of a morphism f : X → X, the
+correspondence is polarized just in case the algebraic dynamical system is polarized
+in the usual sense.
+Lemma 4.1. [10, Theorem 2.1] Let X be a separated, integral S-scheme of finite
+type and let C be a correspondence in the S-scheme X (a subscheme of X ×S X such
+that the two projections are finite and surjective). Then there is a separated, integral,
+S-scheme P, surjective morphisms π : P → X, ǫ : P → C and a finite surjective
+morphism σ : P → P such that π = x ◦ ǫ and π ◦ σ = y ◦ ǫ.
+  Now, we define a generalization of a pullback of an iterated map for the context of
+correspondences that will allow us to generalize integrality results to this setting.
+Definition 4.2. Let D be a divisor of X and C a correspondence on X with co-
+ordinate projections x, y : C → X. We say that a divisor D (n) of X is an n-th
+Correspondence Iterate Pullback (CIP) of D with respect to C if there are divisors
+L1 , ..., Ln−1 of X such that, making L0 = D and Ln = D (n) , we have
+                           y ∗ Li−1 = x∗ Li for all i = 1, ..., n.
+   For our results, we will generally assume that an effective divisor D of X has an m-
+th (CIP) D (m) with respect to a correspondence C such that D (m) = D1 +...+Dq +D ′
+is a sum of effective divisors where D1 , ..., Dq are in subgeneral position.
+        SPARSITY FOR QUASIINTEGRAL POINTS IN ORBITS AND CORRESPONDENCES                    7
+
+                                        5. Proofs and results
+5.1. Sparsity of integral points in orbits. Here we present some new results in
+light of the new diophantine approximation result of He and Ru.
+   Moreover, we prove results in semigroup dynamics. Namely, for φ1 , ..., φℓ : X → X
+not necessarily commuting, we consider F :=< φ1 , ..., φℓ > the semigroup generated
+by φ1 , ..., φℓ with the composition of functions as its operation.
+Theorem 5.1. Let X be a projective variety of dimension n, S be a finite set of
+places, φ1 , . . . , φℓ be endomorphisms of X, and F = hφ1 , . . . , φℓ i all def. over a
+number field k. Suppose there exist ψ1 , . . . , ψm ∈ F , a nontrivial effective divisor D
+and A an ample divisor of X such that
+    (i) ψi∗ (D) = Di1 + Di2 + · · · + Di,qi + Di′ is a sum of effective divisors, where
+                                               P position
+        Di1 , . . . , Di,qi are in li -subgeneral          for some li ≥ n
+   (ii) There exist cij ∈ Q such that qj=1        i
+                                                    cij Dij − (li − n + 1)(n + 1)A is big and
+        A − cij Dij is Q-nef for all i, j.
+             [m
+  (iii) F \ (ψi ◦ F ) is finite.
+             i=1
+Then there exists ǫ > 0 such that for all P ∈ X(k), the set
+                                   X
+(5.1)               φ(P ) : φ ∈ F ,   λv (D, φ(P )) ≤ ǫh(A, φ(P ))
+                                               /
+                                              v∈S
+
+is not Zariski dense.
+Proof. Suppose that φ(P ) is in the set (5.1). By condition the (ii), we can suppose
+that φ = ψi ◦ η for some η ∈ F and 1 ≤ i ≤ m. By functoriality of heights,
+              X                                      X
+                  λv (D, φ(P )) ∼ h(D, ψi (η(P ))) −   λv (D, ψi (η(P )))
+                   v∈S
+                    /                                              v∈S
+                                                    X
+                         ∼ h(ψi∗ (D), η(P )) −            λv (ψi∗ (D), η(P ))
+                                                    v∈S
+(5.2)                        X
+                         ∼         λv (ψi∗ (D), η(P ))
+                              /
+                             v∈S
+                              qi
+                             XX
+                         ≥             λv (Dij , η(P ))
+                             j=1 v∈S
+                                  /
+
+where we use ∼ to indicate that the difference of both sides is Pa bounded function on
+Zariski-dense subset of X(k). On the other hand, since Li := qj=1   i
+                                                                      cij Dij − (li − n +
+1)(n + 1)A is big, there exists a proper Zariski-closed set Zi′ and a positive constant
+c′i such that
+(5.3)                                      h(Li , Q) ≥ c′i h(A, Q)
+          / Zi′ . In addition, because of ampleness and
+for all Q ∈
+(5.4)                                   h(A, ψi (Q)) ∼ h(ψi∗ (A), Q)
+for all Q (functoriality), there exists c′′i ≥ 1 not depending on P such that
+(5.5)                                h(A, ψi (η(P ))) ≤ c′′i h(A, η(P )).
+8                                              JORGE MELLO
+
+Therefore, applying the above with Q = η(P ), combining with 5.3, 5.4, 5.18, and the
+condition in 5.1, we obtain
+                                      qi
+                                      X  X
+    h(−(li − n + 1)(n + 1)A, η(P )) +        λv (cij Dij , η(P ))
+                                                         j=1 v∈S
+                                                    qi                              qi
+                                                                            !
+                                                   X                                X  X
+        ∼ h −(li − n + 1)(n + 1)A +                       cij Dij , η(P )       −             λv (cij Dij , η(P ))
+                                                   j=1                              j=1 v∈S
+                                                                                         /
+                                      X
+        ≥ c′i h(A, η(P )) −    max cij    λv (D, φ(P ))
+                                  j
+                                               /
+                                              v∈S
+                                              
+        ≥ c′i h(A, η(P )) − ǫ ·       max cij h(A, φ(P ))
+                                       j
+
+        ≥ c′i h(A, η(P )) − ǫ max c′′i cij h(A, η(P )).
+                               j
+
+Therefore, whenever
+                                                   ′          
+                                                   ci
+(5.6)                                      ǫ < min ′′ min 1/cij ,
+                                                i  ci j
+Lemma 3.1 applied m times to each system of divisors {Dij }j=0,...,qi implies that
+there exists a union Z1 of varieties such that η(P ) ∈ Z1′ , or it belongs to a set Z2 of
+bounded height. Therefore, this argument shows that if φ(P ) is in the set 5.1, then
+φ(P ) = ψi (η(P )) ∈ ψi (Zi′ ) ∪ ψi (Z1 ) ∪ ψi (Z2 ), which concludes the proof.       
+Corollary 5.2. Let X be a projective variety of dimension n, S be a finite set of
+places, φ1 , . . . , φℓ be endomorphisms of X, and F = hφ1 , . . . , φℓ i all def. over a
+number field k. Suppose there exist ψ1 , . . . , ψm ∈ F , a nontrivial effective divisor D
+and A an ample divisor of X such that
+    (i) ψi∗ (D) = Di1 +Di2 +· · ·+Di,qi +Di′ is a sum of effective divisors, Di1 , . . . , Di,qi
+        Pqi in Dliij-subgeneral position for some li ≥ n,
+        are
+    (i)     j=1 dij − (li − n + 1)(n + 1)A is big for all i and Dij ≡ dij A where dij are
+        positive integers for all i, j.
+              [m
+  (iii) F \ (ψi ◦ F ) is finite.
+               i=1
+Then there exists ǫ > 0 such that for all P ∈ X(k), the set:
+                                   X
+                    φ(P ) : φ ∈ F ,   λv (D, φ(P )) ≤ ǫh(A, φ(P ))
+                                               /
+                                              v∈S
+
+is not Zariski dense
+Proof. This is a consequence of the previous theorem applied with cij = 1/dij .                                      
+Corollary 5.3. Let X be a projective variety of dimension n, S be a finite set of
+places and φ be an endomorphism of X all def. over a number k. Suppose there exist
+m ≥ 0, a nontrivial effective divisor D and A an ample divisor of X such that
+    (i) (φ(m) )∗ (D) = D1 +D2 +· · ·+Dq +D ′ is a sum of effective divisors, D1 , . . . , Dq
+        Pq in Dl-subgeneral
+        are                 position for some l ≥ n,
+                  j
+   (ii)    j=1 dj − (l − n + 1)(n + 1)A is big and Dj ≡ dj A where dj are positive
+        integers for all j.
+        SPARSITY FOR QUASIINTEGRAL POINTS IN ORBITS AND CORRESPONDENCES                         9
+
+Then there exists ǫ such that for all P ∈ X(k), the set
+                 (n)             X
+                 φ (P ) : n ∈ N,       λv (D, φ(n) (P ) ≤ ǫh(A, φ(n) (P )
+                                              /
+                                             v∈S
+
+is not Zariski dense.
+5.2. Algebraic points of bounded degree in orbits. Here we prove some new
+statements on sparsity of integral points of bounded degree in orbits, that are also
+uniform in the sense that they don’t depend of the initial orbit points.
+Theorem 5.4. Let X be a projective variety of dimension n, S be a finite set of
+places, φ1 , . . . , φℓ be endomorphisms of X, and F = hφ1 , . . . , φℓ i all def. over a
+number k. Suppose there exist ψ1 , . . . , ψm ∈ F , a nontrivial effective divisor D and
+A an ample divisor of X such that
+    (i) ψi∗ (D) = Di1 + · · · + Di,qi + Di′ is a sum of effective ample divisors, where
+        Di1 , . . . , Di,qi are in li -subgeneral position with li ≥ n
+        Pqi Dij
+   (ii)     j=1 dij − C(li , n, δ)A is big and Dij ≡ dij A where dij are positive integers
+        for all i, j.
+Then there exists ǫ > 0 such that the set
+(5.7)
+                                                                                          
+  
+                     m
+                                                                                           
+                                                                                           
+                    [                             X X                                     
+     φ(P ) : φ ∈ (ψi ◦ F ), [k(P ) : k] ≤ δ,                  λw (D, φ(P )) ≤ ǫh(A, φ(P ))
+                                                                                          
+  
+                    i=1                            /
+                                                   v∈S   w|v                               
+                                                                                           
+                                                               w∈Mk(P )
+
+is not Zariski dense.
+Proof. The proof follows the lines of the proof of Theorem 5.1, adapted to points in
+extensions of bounded degree. Suppose that φ(P ) is in the set (5.7). Then φ = ψi ◦ η
+for some η ∈ F and 1 ≤ i ≤ m. By functoriality of heights,
+         X X                                           X X
+                    λv (D, φ(P )) ∼ h(D, ψi (η(P ))) −           λv (D, ψi (η(P )))
+           v∈S
+            /      w|v                                                    v∈S     w|v
+                 w∈Mk(P )                                                       w∈Mk(P )
+                                                        X X
+                            ∼ h(ψi∗ (D), η(P )) −                         λv (ψi∗ (D), η(P ))
+                                                         v∈S     w|v
+                                                               w∈Mk(P )
+(5.8)                           X X
+                            ∼                    λv (ψi∗ (D), η(P ))
+                                 /
+                                v∈S     w|v
+                                      w∈Mk(P )
+                                qi
+                                X  X X
+                            ≥                        λv (Dij , η(P )).
+                                j=1 v∈S
+                                     /      w|v
+                                          w∈Mk(P )
+                                 P i Dij
+On the other hand, since Li := qj=1     dij
+                                            − C(li , n, δ)A is big, there exists a proper
+                    ′
+Zariski-closed set Zi and a positive constant c′i such that
+(5.9)                                      h(Li , Q) ≥ c′i h(A, Q)
+          / Zi . In addition, because of ampleness and
+for all Q ∈
+(5.10)                                  h(A, ψi (Q)) ∼ h(ψi∗ (A), Q)
+10                                              JORGE MELLO
+
+for all Q (functoriality), there exists c′′i ≥ 1 such that
+(5.11)                             h(A, ψi (η(P ))) ≤ c′′i h(A, η(P ))
+for all P . Therefore, applying the above with Q = η(P ), combining with (5.9), (5.10),
+(5.11) and the condition in (5.7), we obtain
+                                    qi                          
+                                   X   X X           Dij
+        h(−C(li , n, δ)A, η(P )) +              λw       , η(P )
+                                   j=0 v∈S
+                                                     dij
+                                                        w|v
+                                                      w∈Mk(P )
+                                        qi                            qi
+                                                              !                                                   
+                                        X  Dij                        X  X X                         Dij
+         ∼ h −C(li , n, δ)A +                       , η(P )       −                         λw           , η(P )
+                                        j=0
+                                              dij                     j=0 v∈S
+                                                                                                     dij
+                                                                           /       w|v
+                                                                                 w∈Mk(P )
+                                         X X
+         ≥ c′i h(A, η(P )) −    max 1/dij      λw (D, φ(P ))
+                                    j
+                                                       /
+                                                      v∈S     w|v
+                                                            w∈Mk(P )
+                                                     
+         ≥ c′i h(A, η(P )) − ǫ ·        max 1/dij h(A, φ(P ))
+                                         j
+
+                                         c′′i
+         ≥ c′i h(A, η(P )) − ǫ max            h(A, η(P )).
+                                   j     dij
+Therefore, whenever
+                                                 ′        
+                                                 ci
+(5.12)                                   ǫ < min ′′ min dij ,
+                                              i  ci j
+Lemma 3.2 applied m times to each system of divisors {Dij }j=1,...,qi implies that
+there exists a union Z1 of varieties such that η(P ) ∈ Z1 , or it belongs to a set Z2
+of bounded height. Therefore, this argument shows that if φ(P ) is in the set (5.7),
+φ(P ) = ψi (η(P )) ∈ ψi (Zi′ ) ∪ ψi (Z1 ) ∪ ψi (Z2 ), which concludes the proof.   
+Theorem 5.5. Let φ1 , . . . , φℓ be endomorphisms of P2 , and F = hφ1 , . . . , φℓ i all def.
+over a number k with a finite set of places S. Suppose there exist ψ1 , . . . , ψm ∈ F
+and a nontrivial effective divisor D such that
+   (i) ψi∗ (D) = Li1 + Li1 + · · · + Li,qi + Di′ a sum of effective divisors, Li1 , . . . , Li,qi
+       are lines in general position, and qi > 15/2 for all i.
+Then there exists ǫ > 0 such that the set
+                                                                                        
+                                                                                        
+   
+                [m                            X X                                       
+                                                                                         
+     φ(P ) : φ ∈ (ψi ◦ F ), [k(P ) : k] ≤ 2,              λw (D, φ(P )) ≤ ǫh(φ(P ))
+                                                                                        
+   
+                i=1                             /
+                                               v∈S   w|v                                 
+                                                                                         
+                                                                      w∈Mk(P )
+
+is not Zariski dense (here, h is the standard logarithmic height on P2 ).
+Proof. We can prove this similarly as in the proof of the previous theorem, adapting
+accordingly. In fact, we consider X = P2 , Dij = Lij to be lines in general position,
+and A ∼ OP2 (1) a hyperplane divisor representing a generator of the Picard group
+of P2 , whose associated Weil height is the usual naive logarithmic height h of P2 in
+the statement of the Theorem 5.4. In this case, the condition (ii) fromPThm. 5.4
+is satisfied with dij = 1 and qi > 15/2, which is equivalent to having qj=1  i
+                                                                                Lij −
+(15/2)OP2 (1) big. With these data, the proof follows the same steps of the proof of
+      SPARSITY FOR QUASIINTEGRAL POINTS IN ORBITS AND CORRESPONDENCES                           11
+
+Thm. 5.4 but replacing each C(li , n, δ) with 15/2 and using Lemm 3.3 instead of
+Lemma 3.2.                                                                    
+Corollary 5.6. Let φ be an endomorphism of P2 both def. over a number k. Suppose
+there exist m ≥ 0 and a nontrivial effective divisor D such that
+    (i) (φ(m) )∗ (D) = L1 + L2 + · · · + Lq + D ′ a sum of effective divisors, L1 , . . . , Lq
+        are lines in general position, and q > 15/2
+Then there exists ǫ such that the set
+     (n)                                 X X
+      φ (P ) : n ∈ N≥m , [k(P ) : k] ≤ 2,            λw (D, φ(n) (P )) ≤ ǫh(φ(n) (P ))
+                                              /
+                                             v∈S     w|v
+                                                   w∈Mk(P )
+
+is not Zariski dense.
+5.3. Generalization to Correspondences. We state results about integral points
+in correspondences now which apply under more general conditions satisfied by some
+correspondence iterate pullbacks(CIP) (see definition 4.2), first over a number field.
+Theorem 5.7. Let X be a smooth projective variety of dimension n defined over
+a number field k, A an ample divisor of X, S be a finite set of places of k, and
+C ⊂ X × X be a subvariety (correspondence) of X defined over k. Let P be the
+scheme of paths associated to C, with associated maps π : P → X and σ : P → P as
+it is described in Section 4.
+   Suppose that there exist m ∈ N>0 and a nontrivial effective divisor D of X defined
+over k such that
+     (i) D has an m-th iterate (CIP) D (m) = D1 + ... + Dq + D (rest) w.r.t. C that is
+         a sum of effective ample divisors where D1 , ..., Dq are in l-subgeneral position
+         for some l ≥ n.
+    (ii) There exists cj ∈ Q such that qj=1 cj Dj − (l − n + 1)(n + 1)A is big and
+                                          P
+         A − cj Dj is Q-nef for all 1 ≤ j ≤ q
+Then for all sufficiently small ǫ, the set
+(5.13)                                     X
+    π(σ (n) (P )) ∈ X(k), P ∈ P, n ∈ N≥m ,    λv (D, π(σ (n) (P ))) ≤ ǫh(A, π(σ (n) (P )))
+  
+
+                                               /
+                                              v∈S
+
+is not Zariski dense in X.
+Proof. Suppose π(σ (n) (P )) belongs to the set (5.13). We can suppose n ≥ m. The
+hypothesis (i) means that there exist divisors L0 , ..., Lm of X, with D = L0 and
+Lm = D (m) such that y ∗ Li−1 = x∗ Li for each i = 1, ..., m. Due to functoriality of
+heights and Lemma 4.1, this implies for every place v of k that
+
+λv (D, π(σ (n) (Q))) = λv (D, y(ǫ(Q))) ∼ λv (y ∗ D, ǫ(σ (n−1) Q)) = λv (x∗ L1 , ǫ(σ (n−1) Q))
+
+∼ λv (L1 , x(ǫ(σ (n−1) Q))) = λv (L1 , π(σ (n−1) Q)).
+
+Repeating the argument, we obtain
+λv (D, π(σ (n) (Q))) ∼ λv (L1 , π(σ (n−1) (Q))) ∼ λv (L2 , π(σ (n−2) (Q))) ∼ ... ∼ λv (Lm , π(σ (n−m) (Q))).
+By functoriality and Lemma 4.1 the same holds if we replace λv (D, .) with h(D, .)
+12                                                   JORGE MELLO
+
+     By functoriality of heights again,
+              X                                                  X
+                   λv (D, π(σ (n) (P ))) ∼ h(D, π(σ (n) (P ))) −   λv (D, π(σ (n) (P )))
+                v∈S
+                 /                                                                     v∈S
+                                                                X
+                      ∼ h(Lm , π(σ (n−m) (P ))) −                       λv (Lm , π(σ (n−m) (P )))
+                                                                 v∈S
+(5.14)                    X
+                                         (m)           (n−m)
+                      ∼          λv (D         , π(σ           (P )))
+                            /
+                           v∈S
+                            q
+                          XX
+                      ≥              λv (Dj , π(σ (n−m) (P )))
+                           j=1 v∈S
+                                /
+
+In addition, because of the ampleness of x∗ A and Lemma 4.1, there exists a constant
+c ≥ 1 not depending on Q such that
+
+h(A, π(σ (m) (Q))) ∼ h(y ∗ (A), ǫ(σ (m−1) (Q))) ≤ ch(x∗ (A), ǫ(σ (m−1) (Q))) = ch(A, π(σ (m−1) (Q)))
+
+for all Q (functoriality). Doing this m times yields the existence of a positive constant
+C such that
+(5.15)                             h(A, π(σ (m) (Q))) ≤ Ch(A, π(Q)).
+                      Pq                                                                                             ′
+Also, since L =          j=1 cj Dj − (l − n + 1)(n + 1)A is big, there exists a constant c                               >0
+such that
+                                h(A, Q) ≤ c′ h(L, Q)
+for all Q ∈ X outside a proper Zariski-closed set Z1′ .
+   Applying all of the above with Q = σ (n−m) (P ) and the condition in (5.13), we
+obtain
+                                           q
+                                           X  X
+h(−(l − n + 1)(n + 1)A, π(σ (n−m) (P ))) +        λv (cj Dj , π(σ (n−m) (P )))
+                                                                j=1 v∈S
+                                                q                                          q
+                                                                                   !
+                                               X                                           X X
+                                                                   (n−m)
+∼ h −(l − n + 1)(n + 1)A +                           cj Dj , π(σ           (P ))       −             λv (cj Dj , π(σ (n−m) (P )))
+                                               j=1                                         j=1 v∈S
+                                                                                                /
+                                               q                                                      q
+                                                                                   !                X
+                                               X                                                        X
+                                                                   (n−m)
+≥ h −(l − n + 1)(n + 1)A +                           cj Dj , π(σ           (P ))       − max cj                   λv (Lm , π(σ (n−m) (P )))
+                                                                                               j
+                                               j=1                                                      j=1 v∈S
+                                                                                                             /
+                                  X
+   ′         (n−m)
+≥ c h(A, π(σ       (P ))) − max cj    λv (D, π(σ (n) (P )))
+                                           j
+                                                         /
+                                                        v∈S
+                                                       
+      ′          (n−m)
+≥ c h(A, π(σ             (P ))) − ǫ · max cj h(A, π(σ (n) (P )))
+                                                j
+
+≥ c′ h(A, π(σ (n−m) (P ))) − ǫ max Ccj h(A, π(σ (n−m) (P ))).
+                                          j
+
+   Therefore, whenever ǫ is small enough so that c′ − ǫC maxj cj > 0, Lemma 3.1
+applied to the set of divisors {Dj }j≤q implies that there exists a proper Zariski-closed
+set Z1 such that either π(σ (n−m) (P )) ∈ Z1 or π(σ (m) (P )) ∈ Z2 a set of bounded
+height. This argument shows that if π(σ (n) (P )) is in the set (5.13), then π(σ (n) (P ))
+is in
+              π(σ (m) (π −1 (Z1′ ))) ∪ π(σ (m) (π −1 (Z2 ))) ∪ π(σ (m) (π −1 (Z1 )))
+      SPARSITY FOR QUASIINTEGRAL POINTS IN ORBITS AND CORRESPONDENCES                      13
+
+.                                                                                          
+  Similar to the deduction of Corollary 5.2, the hypothesis of the previous theorem
+are satisfied in the next statement, with cj = 1/dj .
+Corollary 5.8. Let X be a smooth projective variety of dimension n defined over
+a number field k, A an ample divisor of X, S be a finite set of places of k, and
+C ⊂ X × X be a subvariety (correspondence) of X defined over k, with σ and π as
+before.
+   Suppose that there exist m ∈ N>0 and a nontrivial effective divisor D of X defined
+over k such that
+     (i) D has an m-th (CIP) D (m) = D1 + ... + Dq + D (rest) w.r.t. C that is a sum of
+         effective divisors where D1 , ..., Dq are in l-subgeneral position for some l ≥ n.
+         Pq Dj
+    (ii)    j=1 dj − (l − n + 1)(n + 1)A is big and Dj ≡ dj A where dj are positive
+         integers for all j.
+Then for all sufficiently small ǫ, the set
+(5.16)                                       X
+   π(σ (n) (P )) ∈ X(k), P ∈ P, n ∈ N≥m ,        λv (D, π(σ (n) (P ))) ≤ ǫh(A, π(σ (n) (P )))
+  
+
+                                            /
+                                           v∈S
+
+is not Zariski dense in X.
+  Now, we also deduce a type of uniform result for points of correspondences that
+are quasiintegral and have bounded degree.
+Theorem 5.9. Let X be a smooth projective variety of dimension n defined over
+a number field k, A an ample divisor of X, S be a finite set of places of k, and
+C ⊂ X × X be a subvariety (correspondence) of X defined over k , with σ and π as
+before.
+  Suppose that there exist m ∈ N>0 and a nontrivial effective divisor D of X defined
+over k such that
+    (i) D has an m-th iterate (CIP) D (m) = D1 + ... + Dq + D (rest) w.r.t. C that is
+         a sum of effective ample divisors where D1 , ..., Dq are in l-subgeneral position
+         for some l ≥ n.
+                                                        D
+   (ii) There exist integers di > 0 such that qj=1 djj −C(l, n, δ)A is big and Dj ≡ dj A
+                                                  P
+
+         for all j
+Then for all sufficiently small ǫ, the set
+                                                           X
+{π(σ (n) (P )) : P ∈ P, [k(π(σ (n) (P ))) : k] ≤ δ, n ≥ m,      λw (D, π(σ (n) (P ))) ≤ ǫh(A, π(σ (n) (P )))}
+                                                            /
+                                                           v∈S
+                                                           w|v
+                                                         w∈Mk(P )
+
+is not Zariski dense in X.
+Proof. We adapt the proof of Theorem 5.7 to encompass points of bounded degree.
+Suppose π(σ n (P )) belongs to the set above with n ≥ m. The hypothesis (i) means
+that there exist divisors L0 , ..., Lm of X, with D = L0 and Lm = D (m) such that
+y ∗ Li−1 = x∗ Li for each i = 1, ..., m. Due to functoriality of heights and Lemma 4.1,
+we have as is the proof of Thm. 5.7 that
+                      λw (D, π(σ (n) (Q))) ∼ λw (Lm , π(σ (n−m) (Q)))
+14                                               JORGE MELLO
+
+for every place of a field extension of k where the points are defined. The same holds
+if we replace λv (D, .) with h(D, .)
+   This, similarly as before, will imply that
+            X X                                 X X
+                        λw (D, π(σ (n) (P ))) ∼         λw (D (m) , π(σ (n−m) (P )))
+            /
+           v∈S     w|v                                        /
+                                                             v∈S       w|v
+                 w∈Mk(P )                                            w∈Mk(P )
+(5.17)                                                       q X X
+                                                             X
+                                                         ≥                           λw (Dj , π(σ (n−m) (P )))
+                                                             j=1 v∈S
+                                                                  /         w|v
+                                                                          w∈Mk(P )
+
+In addition, because of the ampleness of x∗ A and Lemma 4.1, there exists a positive
+constant C such that
+(5.18)                             h(A, π(σ (m) (Q))) ≤ Ch(A, π(Q)).
+                  Pq         Dj
+Also, since L =        j=1      − C(l, n, δ)A is big, there exists a constant c′ > 0 such that
+                             dj
+                                            h(A, Q) ≤ c′ h(L, Q)
+for all Q ∈ X outside a proper Zariski-closed set Z1′ .
+   Applying all of the above with Q = σ (n−m) (P ) and the condition in (5.13), and
+making cj = 1/dj we obtain we obtain
+                                            q
+                                            X X X
+                       (n−m)
+h(−C(l, n, δ)A, π(σ            (P ))) +                              λw (cj Dj , π(σ (n−m) (P )))
+                                            j=1 v∈S        w|v
+                                                         w∈Mk(P )
+                             q                                           q
+                                                                 !
+                             X                                           X X X
+                                                 (n−m)
+∼ h −C(l, n, δ)A +                 cj Dj , π(σ           (P ))       −                        λw (cj Dj , π(σ (n−m) (P )))
+                             j=1                                         j=1 v∈S
+                                                                              /      w|v
+                                                                                   w∈Mk(P )
+                             q                                                 q
+                                                                 !           X
+                             X                                                   X X
+                                                 (n−m)
+≥ h −C(l, n, δ)A +                 cj Dj , π(σ           (P ))       − max cj        λw (Lm , π(σ (n−m) (P )))
+                                                                            j
+                             j=1                                                       j=1 v∈S
+                                                                                            /      w|v
+                                                                                                 w∈Mk(P )
+                                      X X
+     ′         (n−m)
+≥ c h(A, π(σ           (P ))) − max cj      λw (D, π(σ (n) (P )))
+                                        j
+                                                    /
+                                                   v∈S     w|v
+                                                         w∈Mk(P )
+                                                  
+     ′         (n−m)
+≥ c h(A, π(σ           (P ))) − ǫ · max cj h(A, π(σ (n) (P )))
+                                            j
+     ′         (n−m)
+≥ c h(A, π(σ           (P ))) − ǫ max Ccj h(A, π(σ (n−m) (P ))).
+                                       j
+
+   Therefore, whenever ǫ is small enough so that c′ − ǫC maxj cj > 0, Lemma 3.2
+applied to the set of divisors {Dj }j≤q implies that there exists a proper Zariski-closed
+set Z1 such that either π(σ (n−m) (P )) ∈ Z1 or π(σ (m) (P )) ∈ Z2 a set of bounded
+height. This argument shows that if π(σ (n) (P )) is in the set (5.13), then π(σ (n) (P ))
+is in
+              π(σ (m) (π −1 (Z1′ ))) ∪ π(σ (m) (π −1 (Z2 ))) ∪ π(σ (m) (π −1 (Z1 )))
+.
+                                                                                        
+      SPARSITY FOR QUASIINTEGRAL POINTS IN ORBITS AND CORRESPONDENCES                              15
+
+  Proof of Theorem 1.4: We can prove this similarly as in the proof of the previous
+theorem, adapting accordingly. In fact, we consider X = PN , Dj = Lj to be lines in
+general position, and A ∼ OPN (1) a hyperplane divisor representing a generator of
+the Picard group of PN , whose associated Weil height is the usual naive logarithmic
+height h of PN in the statement of the Theorem 5.9. In this case, the conditions (iii)
+and (iv) from Thm. 5.9 are satisfied with dj = 1 and q > C(l, n, δ).With these data,
+the proof follows the same steps of the proof of Thm. 5.9.
+  Note again that if N = 2, we can repeat the previous proof with the sharper bound
+15/2 in place of C(l, n, δ), using Lemma 3.3 instead of Lemma 3.2.
+  Finally, if we apply both Corollary 5.8 and Theorem 5.9 with X = P1 we obtain
+the following
+Corollary 5.10. Let C ⊂ P1 × P1 be a correspondence of P1 defined over k. Let P,
+π and σ as before. Let D be an effective divisor of P1 and suppose that D has an
+m-th iterate (CIP) w.r.t. C D (m) = D1 + ... + Dq + D (rest) that is a sum of effective
+divisors where D1 , ..., Dq are in general position and q > C(1, 1, δ) .
+  Then for all sufficiently small ǫ, the set
+                                                              X
+{π(σ (n) (P )) : P ∈ P, [k(π(σ (n) (P ))) : k] ≤ δ, n ∈ N≥m ,   λw (D, π(σ (n) (P ))) ≤ ǫh(π(σ n (P )))}
+                                                                    /
+                                                                   v∈S
+                                                                   w|v
+                                                                 w∈Mk(P )
+
+is finite. In particular, the subset of set above formed by the points defined over k
+(δ = 1) is finite when when q > 2.
+
+                                          References
+ [1] A. Bérczes, A. Ostafe, I. E. Shparlinski, J. Silverman: Multiplicative dependence among iterated
+     values of rational functions modulo finitely generated groups, Int. Math. Res. Not. ( to appear).
+
+ [2] A. Carney, W. Hindes, T. Tucker: Isotriviality, integral points, and primitive primes in orbits
+     in characteristic p, Algebra & Number Theory 17(9), 1573-1594 (2023).
+
+ [3] P. Corvaja, V. Sookdeo, T. Tucker, U. Zannier : Integral points in two-parameter orbits, Journal
+     fĂźr die reine und angewandte Mathematik , vol. 2015, no. 706, 2015, pp. 19-33.
+
+ [4] N. Grieve, C. Noytaptim : On non-Zariski density of (D,S)-integral points in forward orbits
+     and the Subspace Theorem,Journal of Number Theory 265 (2024) 36-47 .
+
+ [5] J. Gunther, W. Hindes : Integral points of bounded degree on the projective line and in dynamical
+     orbits, Proc. Amer. Math. Soc. 145 (2017), no. 12, 5087-5096. .
+
+ [6] G. Heier, A. Levin: A generalized Schmidt subspace theorem for closed subschemes, American
+     Journal of Mathematics, (2017).
+
+ [7] Y. He, M. Ru: A generalized subspace theorem for closed subschemes in subgeneral position,
+     Journal of Number Theory, 229 (2021), 125-141.
+
+ [8] L.-C. Hsia, J. Silverman: A quantitative estimate for quasiintegral points in orbits, Paciﬁc J.
+     Math., 249 (2011), 321-342.
+16                                        JORGE MELLO
+
+ [9] H.-L. Huang, C.-L. Sun, J. Wang: Integral orbits over function fields, Int. J. Number Theory
+     10(8), 2187-2204 (2014)
+
+[10] P. Ingram: Canonical heights for correspondences, Paciﬁc J. Math., 249 (2011), 321-342.
+
+[11] S. Kawaguchi: Canonical heights, invariant currents, and dynamical systems of morphisms
+     associated with line bundles, J. reine angew. Math. 597 (2006), 135-173
+
+[12] G. Le: A Wirsing-type theorem for numerically equivalent divisors , Kodai Math. J., 46 (2023),
+     228-241
+
+[13] A. Levin: On the Schmidt subspace theorem for algebraic points, Duke Math. J., 163 (2014),
+     2841-2885.
+
+[14] Y. Matsuzawa: Growth of local height functions along orbits of self-morphisms on projective
+     varieties, Int. Math. Res. Not. IMRN (2023), no. 4, 3533-3575.
+
+[15] J. Mello: On effective ǫ-integrality in orbits of rational maps over function fields and multi-
+     plicative dependence, European Journal of Mathematics 9, 112 (2023).
+
+[16] J. Mello: On quantitative estimates for quasiintegral points in orbits of semigroups of rational
+     maps, New York J. Math. 25 (2019), 1091-1111.
+
+[17] J. Silverman: Integer points, Diophantine approximation, and iteration of rational maps, Duke
+     Math. J., 71 (1993), 793-829.
+
+[18] J. Silverman: The arithmetic of dynamical systems, Springer-Verlag, New York, 2007
+
+[19] J. Silverman: The theory of height functions, Arithmetic geometry, Springer (1986), 151-166.
+
+[20] M. Ru, J. Wang: A subspace theorem for subvarieties, Algebra & Number Theory , 11 (2017),
+     2323-2337.
+
+[21] Y. Yasufuku: Integral points and relative sizes of coordinates of orbits in PN , Math. Z. 279
+     (2015), no. 3-4, 1121-1141.
+
+[22] Y. Yasufuku: Uniform bounds for integral points in orbits on projective varieties, Math. Proc.
+     Cambridge Philos. Soc. (to appear).
+
+
+ Oakland University. mailing adress:
+Mathematics and Science Center Michigan.
+ Email address: jorgedemellojr@oakland.edu
+

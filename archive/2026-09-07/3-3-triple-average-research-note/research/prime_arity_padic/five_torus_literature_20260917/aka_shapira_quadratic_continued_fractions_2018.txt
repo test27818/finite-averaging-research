@@ -1,0 +1,2512 @@
+                                            ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED
+                                                             QUADRATIC FIELD
+arXiv:1201.1280v2 [math.DS] 21 Feb 2013
+
+
+
+
+                                                                            MENNY AKA AND URI SHAPIRA
+
+                                                 Abstract. We prove that the statistics of the period of the continued fraction expansion
+                                                 of certain sequences of quadratic irrationals from a fixed quadratic field approach the
+                                                 ‘normal’ statistics given by the Gauss-Kuzmin measure. As a by-product, the growth
+                                                 rate of the period is analyzed and, for example, it is shown that for a fixed integer k and
+                                                 a quadratic irrational α, the length of the period of the continued fraction expansion of
+                                                                             1
+                                                 k n α equals ck n +o(k (1− 16 )n ) for some positive constant c. This improves results of Cohn,
+                                                 Lagarias, and Grisel, and settles a conjecture of Hickerson. The results are derived from
+                                                 the main theorem of the paper, which establishes an equidistribution result regarding
+                                                 single periodic geodesics along certain paths in the Hecke graph. The results are effective
+                                                 and give rates of convergence and the main tools are spectral gap (effective decay of
+                                                 matrix coefficients) and dynamical analysis on S-arithmetic homogeneous spaces.
+
+
+
+
+                                                                                      1. Introduction
+                                          1.1. Continued fractions. The elementary theory of continued fractions starts by as-
+                                          signing to each real number x ∈ [0, 1]rQ an infinite sequence of positive integers12 referred
+                                          to as the continued fraction expansion of x (abbreviated hereafter by c.f.e). Namely, to
+                                          each number x corresponds a sequence an = an (x), n = 1, 2 . . . which is characterized by
+                                          the requirement x = limn→∞ a + 1 1 . We refer to the numbers an (x) as the digits of the
+                                                                              1
+                                                                                  ···+ a1
+                                                                                        n
+                                          c.f.e of x. When x is understood we usually write ai for the i’th digit of the c.f.e of x.
+                                             Given a number x, it is natural to ask for information regarding the statistical properties
+                                          of its c.f.e; that is, for any finite sequence of natural numbers w = (w1 , . . . , wk ) (referred
+                                          to hereafter as a pattern) one is interested in the asymptotic frequency of appearance of
+                                          the pattern w in the c.f.e of x, or in other words in the existence and the value of the
+                                          limit
+                                                                              1
+                                                             D(x, w) = lim # {1 ≤ n ≤ N : w = (an+1 , . . . , an+k )} .                (1.1)
+                                                                           N N
+
+                                          We claim that for Lebesgue almost any x the limit in (1.1) exists and equals some explicit
+                                          integral (depending only on the pattern w).
+
+                                            1We shall completely ignore the rational numbers, which correspond to finite sequences as well as real
+                                          numbers outside the unit interval, for which an additional integer digit a0 is needed.
+                                            2
+                                              This correspondence is in fact a homeomorphism when NN is considered with the product topology.
+                                                                                               1
+2                                MENNY AKA AND URI SHAPIRA
+
+  To see this, note that the c.f.e correspondence x ↔ {an (x)} fits in the commutative
+diagram
+                                            σ
+                                   NN            / NN                            (1.2)
+
+                                                             
+                                                 S
+                                    [0, 1] r Q       / [0, 1] r Q ,
+
+where S(x) = { x1 } = x1 − ⌊ x1 ⌋ is the so-called Gauss map and σ is the shift map
+σ(a1 , a2 , . . . ) = (a2 , a3 , . . . ). It is well known that S preserves the Gauss-Kuzmin measure
+on the unit interval which is given by
+                                                                Z
+                                                      def   1        1
+                                           νGauss (A) =                  dx.                   (1.3)
+                                                          log(2) A 1 + x
+The map S is ergodic with respect to νGauss which implies by the pointwise ergodic theorem
+(see for example [EW11, §2.6,§9.6]) that for νGauss (or equivalently Lebesgue) almost any
+x and any pattern w = (w1 , . . . , wk ), the frequency D(x, w) defined in (1.1) exists. More
+precisely, if we let
+                        Iw = {x ∈ [0, 1] r Q : w = (a1 (x), . . . , ak (x))}                  (1.4)
+denote the interval consisting of those points for which the c.f.e starts with the pattern w,
+then the pointwise ergodic theorem tells us that the ergodic averages of the characteristic
+function of Iw converge almost surely to νGauss (Iw ); that is
+                                          N −1
+                                  1 X
+                              lim       χIw (S i (x)) = νGauss (Iw ),                         (1.5)
+                             N →∞ N
+                                    i=0
+for νGauss -almost any x. As the set of possible patterns is countable we conclude that for
+Lebesgue almost any x (1.5) holds for any pattern w. It is straightforward to check using
+the commutation in (1.2) that the limit in (1.5) is equal to the limit in (1.1).
+1.2. Quadratic irrationals. Let
+                                    def
+                                QI = {α ∈ R : [Q(α) : Q] = 2}
+be the set of real quadratic irrationals. By Lagrange’s Theorem (see for example [EW11,
+§3.3]) QI is characterized as the set of x ∈ R for which the c.f.e is eventually periodic.
+For quadratic irrationals (which clearly form a Lebesgue-null set) it is clear that the limit
+in (1.1) always exists and is different from the almost sure value of the frequency.
+   In this paper we investigate the behavior of D(x, w) where x varies in some fixed
+quadratic field. We make the convention to consider x mod 1 instead of x. This influences
+only the 0’th digit in the classical discussion on continued fractions and does not effect
+any statistical property of the c.f.e. As will become clear shortly, our approach manages
+to deal with sequences {xn } whose elements are arithmetically related in a way that
+“involves only finitely many primes”.
+   Before preparing the grounds for more general statements we state Theorem 1.2 which
+demonstrates the flavor of our results regarding continued fractions. To the best of our
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                   3
+
+knowledge, all the results in the literature regarding the evolution of the period of the
+c.f.e of quadratics involve averaging. In this respect, the results we present are of a new
+kind.
+Notation 1.1. Throughout this paper we use the notation ≪ in the following manner:
+Given two quantities A, B depending on some set of parameters P , we denote A ≪ B if
+there exists some absolute constant c > 0 (independent of any varying parameter) such
+that A ≤ cB. Given a subset P ′ of the parameter set P , we denote A ≪P ′ B if there exists
+a constant cP ′ > 0, depending possibly on the parameters in P ′ , such that A ≤ cP ′ B.
+  We denote by |Iw | the length of the interval Iw defined in (1.4). For α ∈ QI we denote
+by |Pα | the length of the period of the c.f.e of α. The following Theorem follows from
+Corollary 2.10 and Theorem 2.12 as explained in Remark 2.14.
+Theorem 1.2. Let α ∈ QI, k ∈ N be given. Then, for any finite pattern of natural
+numbers w = (w1 , . . . , wk ) we have that D(k n α, w) → νGauss (Iw ) as n → ∞. Moreover,
+there exists a constant cα,k such that for any n ∈ N the following holds
+                                                                          n
+                        |D(k n α, w) − νGauss (Iw )| ≪α,k |Iw |−1 k − 32 ;             (1.6)
+                                                               1
+                        |Pkn α | = cα,k k n + Oα,k (1)k   (1− 16 )n
+                                                                      .                (1.7)
+1.3. Structure of the paper. The results presented in this paper are split into two;
+results regarding the distribution of closed geodesics and results regarding continued frac-
+tions. The gist of the paper is concerned with the distribution of certain closed geodesics
+in (the unit tangent bundle of) the modular surface and the results regarding continued
+fractions are translations of our results about geodesics utilizing the connection between
+the two. Although this connection is considered well understood, we believe that some of
+the results we present that allow this translation are new and may find further applications
+(e.g. Theorem 8.8).
+   Although the statements of our main results (Theorems 4.8, 8.9, 8.10) require quite a bit
+of preparation, some of their consequences are fairly easy to state (e.g. Theorem 1.2), and
+will hopefully motivate the reader traversing through the necessary preparations needed
+for the statements and proofs of the more general results.
+   In §2 we begin fixing the notation, state Theorems 2.8, 2.12 which deal with continued
+fractions, and present some examples and open problems. In §3 we fix further notation.
+In §4 we discuss the notions of S-Hecke graphs and generalized branches which play a
+key role in the statement of the main Theorem 4.8. In §5 we discuss the relationship of
+Theorem 4.8 to existing results and state Lemma 5.1. This Lemma explains to some extent
+the phenomenon behind our results but is only used in the proof of growth statements
+such as (1.7) and is not needed for the proof of statements such as (1.6). In §6 we prove
+our main result, Theorem 4.8, where the main tool in the argument is the decay of matrix
+coefficients. In §7 we give an elementary proof of Lemma 5.1. In §8 we prove our main
+results regarding continued fractions, Theorems 8.9, 8.10, and deduce Theorems 2.8, 2.12
+which are stated in §2. Theorems 8.9, 8.10 are the translation to the language of continued
+fractions of Theorem 4.8 and Lemma 5.1. The technical tool we develop in order for this
+4                               MENNY AKA AND URI SHAPIRA
+
+translation to carry through is Theorem 8.8 which allows us to translate statements with
+an error term from the world of closed geodesics to the continued fractions world. Finally,
+in sections §9,10 we prove Theorem 8.8 elaborating on the classical connection between
+the geodesic flow and continued fractions.
+
+                         2. Some results and open problems
+2.1. Early preliminaries.
+Definition 2.1. Given a commutative unital ring R we let
+                          def 
+                  GL2 (R) = ( ac db ) ∈ Mat2×2 (R) : ad − bc ∈ R×
+                                        def
+and PGL2 (R) = GL2 (R)/Z, where Z = {( a0 a0 ) ∈ GL2 (R)} is the center of GL2 (R). When
+R1 ֒→ R2 , we have a natural embedding of PGL2 (R1 ) ֒→ PGL2 (R2 ). We usually abuse
+notation and treat the elements of PGL2 (R) as matrices rather than equivalence classes
+of matrices.
+ Recall that PGL2 (R) acts on the real line by Möbius transformations; for g = ( ac db ) ∈
+                       def ax+b
+PGL2 (R) and x ∈ R, gx = cx+d   . Recall the following basic result [RS92, Theorem 2]
+Theorem 2.2. For any x ∈ R the orbit of x under PGL2 (Z) is exactly the set of
+numbers having c.f.e with the same tail as the c.f.e of x. Equivalently, PGL2 (Z)x =
+{y ∈ R : ∃m, n > 0 ∀i ≥ 0 an+i (y) = am+i (x)} .
+   As the c.f.e of α ∈ QI is eventually periodic, it follows from (1.2) that the orbit {S n α}n∈N
+of α under the Gauss map is eventually periodic.
+Definition 2.3. Let α ∈ QI. We denote by Pα the period of α mod 1 under the Gauss
+                  def
+map; that is, Pα = {x1 , . . . , xℓ } ⊂ [0, 1] where for some n ≥ 0, S n (α mod 1) = x1 and,
+S(xi ) = xi+1 for all i < ℓ and S(xℓ ) = x1 . We denote by να the normalized counting
+measure on [0, 1] supported on the period Pα .
+   Let ι : R → PGL2 (Z)\R be the quotient map to the ‘set of orbits’. By Theorem 2.2,
+for any α ∈ QI we have that
+                             For any β ∈ ι(α), Pα = Pβ , να = νβ .                          (2.1)
+We sometimes write νι(α) , Pι(α) when we wish to stress this fact.
+Lemma 2.4. Let α ∈ QI, for any pattern w, the frequency of appearance D(α, w) of the
+                                                α ∩Iw |
+pattern w in the c.f.e of α equals να (Iω ) = |P|P α|
+                                                        .
+
+Proof. Let (a1 , . . . ak ) be the period of the c.f.e of α. By (1.2), Pα = {x1 , . . . xk } where
+xi ∈ [0, 1] is the number whose c.f.e is given by the infinite concatenation of the pat-
+tern (ai , . . . ak , a1 , . . . ai−1 ). The statement of the Lemma now follows easily from (1.1)
+and (1.4).                                                                                      
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                    5
+
+                                                                               def
+                                                         by OS = Z [p−1 : p ∈ S] the ring
+Definition 2.5. Given a finite set ofnprimes S we denote o
+                                  def    Q
+of S-integers. We denote by OS× = ± p∈S pnp : np ∈ Z the group of S-units; that is,
+the group of invertible elements in OS .
+  There is a natural embedding OS× ֒→ PGL2 (OS ) given by q 7→ diag (q, 1). We denote
+by γq = diag (q, 1) the image of q under this embedding. Note that qα = γq α.
+Definition 2.6. For γ ∈ PGL2 (Q) let ( ac db ) ∈ Mat2×2 (Z) be the unique representative
+                                                                  def
+of γ with co-prime entries. We define the height of γ to be ht(γ) = |det ( ac db )| . Given a
+                         Qℓ ei
+rational number q = ± 1 pi , where the pi ’s are distinct primes and ei ∈ Z, we define
+                            def        Q |e |
+the height of q to be ht(q) = ht(γq ) = ℓ1 pi i .
+   For γ ∈ PGL2 (Q), ht(γ) measures how far γ is from PGL2 (Z). As the PGL2 (Z) action
+does not change the period, it is natural to expect that a statement regarding the evolution
+of νγα will depend on ht(γ). This is indeed the case as will be seen shortly.
+2.2. Results. Our results are concerned with the convergence νγα → νGauss and the
+growth of the length of the period |Pγα | as ht(γ) → ∞ and γ ∈ PGL2 (OS ) for a fixed
+finite set of primes S and α ∈ QI. We give estimates on error terms and so refer to our
+                                                                   25
+results as effective. In these estimates there appears an exponent 64 ≤ δ0 ≤ 12 whose exact
+value is not known (although according to the Ramanujan conjecture δ0 = 21 ). The bigger
+it is the stronger the statements are and the best known lower bound for it to this date
+         25
+is δ0 ≥ 64  ; a bound given by Kim and Sarnak in the appendix of [Kim03]3.
+   Naturally, our results involve comparison of integrals with respect to measures which
+are mutually singular, and in order to make sense of an error term we need to restrict our
+attention to integrals of functions with some controlled behavior. This is usually done by
+looking at smooth functions and considering Sobolev norms. We choose to work with the
+more primitive notion of Lipschitz functions.
+Definition 2.7. Let (X, d) be a metric space. For any κ > 0 we denote by Lipκ (X) the
+space of Lipschitz functions f : X → C with κ as a Lipschitz constant. We sometimes
+refer to such functions as κ-Lipschitz.
+  The following Theorem is deduced from Theorem 8.9 in §8.
+Theorem 2.8. Let S be a finite set of primes, α ∈ QI.
+  (1) If {qn } ⊂ OS× is a sequence such that ht(qn ) → ∞ then νqn α → νGauss . More
+      precisely, given ǫ > 0, q ∈ OS× , and f ∈ Lipκ ([0, 1]) the following estimate holds
+               Z 1             Z 1
+                                                                         δ0
+                   f dνGauss −     f dνqα ≪α,S,ǫ max {kf k∞ , κ} ht(q)− 6 +ǫ .         (2.2)
+                  0                0
+
+   (2) Assume that all the primes in S do not split in the extension Q(α) of Q. Then, if
+       {γn } ⊂ PGL2 (OS ) is a sequence such that ht(γn ) → ∞ then νγn α → νGauss . More
+  3This parameter relates to the representation theory of GL
+                                                               2 (see §6.3).
+6                                     MENNY AKA AND URI SHAPIRA
+
+          precisely, given ǫ > 0, γ ∈ PGL2 (OS ), and f ∈ Lipκ ([0, 1]) the following estimate
+          holds
+                  Z 1             Z 1
+                                                                             δ0
+                      f dνGauss −     f dνγα ≪ι(α),S,ǫ max {kf k∞ , κ} ht(γ)− 6 +ǫ ,      (2.3)
+                     0                 0
+     (3) If one of the primes in S splits in the extension Q(α) of Q, then there exists
+         sequences qn ∈ OS× , γn ∈ PGL2 (Z)) with ht(qn ) → ∞ such that νqn γn α does not
+         converge to νGauss and in particular, the implicit constant in (2.2) cannot be taken
+         to be uniform on the orbit ι(α) in contrast with (2.3)4.
+Remark 2.9.       (1) Under the assumption that no prime in S splits in Q(α), (2.2)
+      follows from (2.3) by choosing γ = γq .
+  (2) It is an exercise to show that any γ ∈ PGL2 (OS ) can be written as a product
+      γ = γ1 γq γ2 , where γi ∈ PGL2 (Z) and q ∈ OS× (see the proof of Corollary 4.2).
+      It now follows from (2.1) that νγα = νqβ where β = γ2 α, and so although it
+      seems more restrictive at first glance, instead of studying the evolution of νγα as
+      γ ∈ PGL2 (OS ), it is enough to consider the evolution of νqβ as q ∈ OS× , β ∈ ι(α).
+   When we use Theorem 2.8 to try and estimate the frequency of a pattern in the period
+of the c.f.e of γα we obtain the following
+Corollary 2.10. Let S be a finite set of primes and α ∈ QI. For any finite pattern
+w = (w1 . . . wk ) of digits, and any q ∈ OS
+                                                                                δ0
+                           |D(qα, w) − νGauss (Iw )| ≪α,S,ǫ |Iw |−1 ht(q)− 12 +ǫ .        (2.4)
+Moreover, if all the primes in S do not split in the extension Q(α) of Q, then for any
+γ ∈ PGL2 (OS )
+                                                                                    δ0
+                          |D(γα, w) − νGauss (Iw )| ≪ι(α),S,ǫ |Iw |−1 ht(γ)− 12 +ǫ .      (2.5)
+Proof. By Lemma 2.4, D(β, w) = νι(β) (Iw ) for any β ∈ QI. The exponent in (2.2) (resp.
+(2.3)) is cut in half in (2.4) (resp. (2.5)) as a result of the fact that χIw is not Lipschitz
+and one needs to use an approximation of it in order to apply Theorem 2.8. We leave the
+details to the reader.                                                                      
+   Theorem 2.8 raises a natural question: Is it true that νqn α → νGauss for any sequence
+of rationals qn with ht(qn ) → ∞? The following example which was essentially commu-
+nicated to us by A. Ubis shows that the answer is negative and so the assumption that
+qn ∈ OS for a fixed finite set of primes S is crucial.
+Example 2.11. Let D be a fundamental discriminant such that the negative Pell equation
+x2 − Dy 2 = −1 has an integer solution (see [Lag80],[FK10] for example). A solution
+                                                         def          √                  √
+x = k1 , y = n1 to the equation corresponds to a unit
+                                                   √  ǫ1 =   k 1 + n1   D in the ring Z(   D)
+                                         j
+of norm −1 and in turn, the odd powers ǫ1 = kj +nj D give rise to infinitely many further
+solutions of the negative Pell equation. For odd j let αj solve the equation x = 2kj + x1 .
+    4In fact, it is possible to choose q
+                                       n so that νqn γn α is a constant sequence.
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                   7
+
+That is, the c.f.e of αj is purely periodic with period of length 1 of digit 2kj (note that
+here we abuse the notation introduced above and we do record q   the 0 digit). Solving for x
+in the above equation we see that αj could be chosen to be kj + kj2 + 1. As (kj , nj ) solve
+                                                     √
+the negative Pell equation for D we get αj = kj + nj D which shows that the measures
+νnj √D are not converging to the Gauss-Kuzmin measure and in fact are atomic measures
+supported on single points.
+   In §8 we prove Theorem 8.10 which discusses the length of the period of the c.f.e of γα,
+where α ∈ QI is fixed and γ ∈ PGL2 (OS ) varies. We state below Theorem 2.12 which
+is an adaptation of Theorem 8.10 that uses only the terminology presented so far. It is
+deduced from Theorem 8.10 in §8. Theorem 2.12 solves a conjecture of Hickerson [Hic73]
+and strengthens [Coh77, Theorem 3]. Note that by the argument in Lemma 2.4, for any
+α ∈ QI, |Pα | is the length of the period of the c.f.e of α.
+   In the Appendix of [Lag80], using the methods of Dirichlet [Dir56], Lagarias shows
+that, under some restrictive assumptions on α, one has that for any integer k there
+                                      n
+exists a constant C for which, C kn < |Pkn α |. Under some restrictive assumptions on
+α, Grisel [Gri98] proved a stronger estimate of the form C1 k n ≤ |Pkn α | ≤ C2 k n . The
+following Theorem strengthens these results in several respects.
+Theorem 2.12. Let S be a finite set of primes. There exists a positive function c(α, γ)
+on the set QI × PGL2 (OS ) satisfying the following: For any α ∈ QI,
+   (1) (a) For any ǫ > 0, and q ∈ OS×
+                                                                       δ0
+                      |Pqα | = c(α, γq ) ht(γq ) + Oα,S,ǫ(1) ht(γq )1− 6 +ǫ .          (2.6)
+            Moreover, if all the primes in S do not split in the quadratic field Q(α), then
+            for any ǫ > 0, γ ∈ PGL2 (OS )
+                                                                       δ0
+                      |Pγα | = c(α, γ) ht(γ) + Oι(α),S,ǫ (1) ht(γ)1− 6 +ǫ .            (2.7)
+        (b) The
+              function c attains   only finitely many values on OS× ; that is,
+               c(α, γq ) : q ∈ OS× < ∞.
+                        (n) (n)       (n)                      (n) (n+1)
+        (c) If qn = ℓ1 /ℓ2 , where ℓi ∈ OS× ∩ N satisfies ℓi |ℓi         for i = 1, 2, then
+            c(α, γqn ) stabilizes.
+   (2) sup {c(α, γ) : γ ∈ PGL2 (OS )} ≪ι(α),S 1.
+   (3) All the primes in S do not split in the quadratic field Q(α) if and only if
+                             inf {c(α, γ) : γ ∈ PGL2 (OS )} > 0.                       (2.8)
+  As an immediate corollary we have for example the following
+Corollary 2.13. For any α ∈ QI and any positive integer k, limn |Pkknnα | exists and is a
+positive real number.
+Remark 2.14. The first part of Theorem 1.2 is obtained from Corollary 2.10 by taking
+                                       25                     1            δ0          1
+q = k n , the Kim-Sarnak exponent δ0 = 64 , and choosing ǫ = 768 so that − 12 + ǫ = − 32 .
+The second part of Theorem 1.2 is obtained similarly from Theorem 2.12(1a).
+8                               MENNY AKA AND URI SHAPIRA
+
+2.3. References to existing results. Although the question of the evolution of the
+c.f.e along arithmetically defined sequences in a fixed quadratic field is extremely nat-
+ural, we did not find too many relevant papers to cite. Some earlier works studying
+the statistics of the period ‘in average’ (and also not in a fixed field), were initiated by
+Arnold (see [Arn08],[Arn07],[Ler10] and the references therein). See also [Pol86]. Other
+works, mostly related to the length of the period, which the reader might find related,
+may be found for example in many of the papers of Golubeva (such as [Gol02]) and
+in [Gri98],[BL05][MF93],[CZ04],[Coh77],[Hic73],[Kei]. Standing out in this context is the
+recent paper of McMullen which provides examples of sequences of quadratic irrationals
+in a fixed quadratic field with uniformly bounded c.f.e digits [McM09]. We suspect that it
+should be very interesting to compare in detail how McMullen’s results fit together with
+the results of the present paper.
+   As for results regarding periodic geodesics the situation is completely different and we
+will not attempt to summarize the relevant results that appeared in the literature. We
+comment though, that as will be explained in §5, our main Theorem 4.8 is closely related
+to the work of Benoist and Oh [BO07].
+
+2.4. Some open problems. We list below a few questions which emerge from our dis-
+cussion and remain unsolved. Each of the problems below have a corresponding problem
+stated in terms of periodic geodesics on the modular surface.
+    (1) Give satisfactory sufficient conditions on a sequence of rationals qn to ensure that
+        for a quadratic irrational α, the sequence of measures νqn α equidistribute to the
+        Gauss-Kuzmin measure ν. It might be interesting to replace the quantifiers and
+        allow the conditions to depend on α.
+    (2) Is it true that for a quadratic irrational α which is not a unit in the ring of integers
+        of Q(α), the sequence of measures ναn always equidistribute to the Gauss-Kuzmin
+        measure along the subsequence of n’s for√which αn is irrational (see [CZ04]). Note
+        that our results deal with the case α = d.
+    (3) Let pn be an enumeration of the primes. Are there any quadratic irrationals α for
+        which νpn α equidistribute to the Gauss-Kuzmin measure.
+    (4) Is it true that for any quadratic irrational α there exist a sequence of distinct
+        primes pn so that νpn α equidistribute to the Gauss-Kuzmin measure.
+
+2.5. Acknowledgments. We benefited from numerous stimulating conversations with
+Manfred Einsiedler, Elon Lindenstraus and various other people which we try to name
+below. We would like to express our gratitude and appreciation to them for the generosity
+in which they exchange valuable ideas and create an ‘open source’ healthy environment
+in the community doing Homogeneous Dynamics. Thanks are also due to Yann Bugeaud,
+Étienne Fouvry, Tsachik Gelander, Alex Gorodnik, Chen Meiri, Philippe Michel, Shahar
+Mozes, Hee Oh, Peter Sarnak, Adrian Ubis, Akshay Venkatesh, and Barak Weiss.
+   Both Authors enjoyed the warm hospitality of the Centre Interfacultaire Bernoulli and
+the GANT semester held there.
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                       9
+
+   M.A acknowledges the support of the Advanced research Grant 226135 from the Euro-
+pean Research Council, the ISEF foundation, the Ilan and Asaf Ramon memorial founda-
+tion, and the Hoffman Leadership and Responsibility fellowship program at the Hebrew
+University of Jerusalem.
+   U.S acknowledges the support of the Advanced research Grant 228304 from the Euro-
+pean Research Council.
+
+                                         3. Preliminaries
+   In this section we fix the notation that we will use in §4–§8. In §9,10 our notation will
+slightly vary as will be explained at the beginning of §9.
+   For a prime p we let Qp denote the field of p-adic numbers and let Zp be the ring of
+                                                            def
+p-adic integers. We sometimes denote Q∞ = R. Let P = {p ∈ N : p is a prime}. Given
+                                              ∗
+S ⊂ P we denote S ∗ = S ∪ {∞}. The set P will be referred to as the set of places of Q
+– the primes being the finite places.
+       S ⊂ P∗ be
+   Let Q         Q given. Throughout Sf = S r {∞}. We denote by QS , ZS the product
+rings v∈S Qv , v∈S Zv respectively (the latter makes sense only when ∞ ∈       / S). Let G
+denote the algebraic group PGL2 . We denote GS = G(QS ). We denote an element g ∈ GS
+by a sequence g = (gv )v∈S where gv is a 2 × 2 matrix over Qv . Keep in mind the slight
+abuse of notation arising from the fact that gv is in fact an equivalence class of matrices.
+If ∞ ∈ S we usually abbreviate and write g = (g∞ , gf ) where gf denotes the tuple of the
+components corresponding to the finite places in S. The identity elements in the various
+groups are denoted by e with the corresponding subscript. Thus for example eS = (ev )v∈S
+and if ∞ ∈ S, eS = (e∞ , ef ).
+                                                        def
+   Hereafter
+       Q      S ⊂ P. We may view the group ΓS = G(OS ) as a subgroup of GS ∗ =
+G∞ × v∈S Gv (embedded diagonally). When S = ∅, OS = Z and we denote ΓS = G(Z)
+by Γ∞ . It is well known that ΓS is a lattice in GS ∗ . We set
+                                   def              def
+                               XS = ΓS \GS ∗ , X∞ = Γ∞ \G∞ .
+The gist of our discussion will be concerned with these homogeneous spaces. We denote by
+mS (resp. m∞ ) the GS ∗ -invariant (resp. G∞ -invariant) probability measure on XS (resp.
+                                                                            def
+X∞ ). The real quotient X∞ is a factor of XS in a natural way: Let K∞ = PO2 (R) denote
+the maximal compact subgroup of G∞ . For a finite place p ∈ P we let Kp = G(Zp ). We
+              def Q
+then let KS = v∈S Kv . As we will explain shortly, the double coset space XS /KS =
+ΓS \GS ∗ /KS is naturally identified with X∞ . We denote by π : XS → X∞ the natural
+projection. This identification relies on two facts (i) GS = ΓS KS , and (ii) Γ∞ = ΓS ∩ KS .
+Relying on these facts the identification is as follows: Given a double coset ΓS (g∞ , gf )KS ,
+by (i) we may assume without loss of generlity that gf = ef and identify this double coset
+with Γ∞ g∞ ∈ X∞ . The reader will easily check that (ii) implies that this map is indeed
+well defined and bijective. We leave the verification of conditions (i),(ii) to the reader ((ii)
+is straightforward and an argument similar to that giving (i) may be extracted from the
+proof of Lemma 6.9 for example).
+10                              MENNY AKA AND URI SHAPIRA
+
+Remark 3.1. In practice, given x = ΓS (g∞ , gf ) ∈ XS with representative (g∞ , gf ) such
+that gf ∈ KS , the projection π(x) is Γ∞ g∞ . In other words, π −1 (Γ∞ g∞ ) = {ΓS (g∞ , gf ) : gf ∈ KS }.
+Another useful observation to keep in mind here is that two points x1 = ΓS (g∞ , gf ), x2 =
+ΓS (g∞ , hf ) are in the same fiber (that is π(x1 ) = π(x2 )) if and only if the quotient gf−1 hf
+belongs to KS .
+   The group GS ∗ (and all its subgroups) act on XS by right translation. In particular,
+if T ⊂ S ∗ , we may view GT (and its subgroups) as a subgroup of GS ∗ and thus it acts
+on XS . Note that π : XS → X∞ intertwines the G∞ -actions. Of particular interest to us
+                                                      def
+will be the action of the real diagonal group A∞ = {diag (et , 1) : t ∈ R}, the elements of
+which we often write as a∞ (t) = diag (et , 1).
+   We say that an orbit xL of a closed subgroup L < GS ∗ through a point x ∈ XS is
+periodic if it supports an L-invariant probability measure. Such a measure is unique and
+we refer to it as the Haar measure on the periodic orbit. Compact orbits are always
+periodic. Given a measure µ on XS and g ∈ GS ∗ we let g∗ µ denote the pushed forward
+measure by right translation by g. This notation is a bit awkward as (gh)∗ µ = h∗ (g∗ µ).
+This will not bother us as we will only use commutative subgroups to push measures.
+   For v ∈ P∗ , the Lie algebra of Gv will be denoted by gv and is naturally identified with
+the space of traceless 2 × 2 matrices over Qv . Similarly to the notation introduced above
+we will denote by gS ∗ = g∞ ⊕v∈S gv the Lie algebra of GS ∗ . A basic fact that we will use
+           Qis finite and L < GS is a closed subgroup then L contains an open product
+is that if S
+subgroup v∈S Lv which allows us to speak of the Lie algebra of L which will be denoted
+Lie (L). The exponential map expv : gv → Gv is defined for any place v by the usual
+power series and in fact, is only well defined for finite places on a certain neighborhood
+of 0. We denote its inverse by logv (it is defined on a small enough neighborhood of ev )
+and use the obvious notation expS , expS ∗ , logS , logS ∗ to denote the corresponding product
+maps from the corresponding product domains in gS , gS ∗ , GS , GS ∗ respectively.
+   Given an element g ∈ GS ∗ and an element u (either of GS ∗ or of gS ∗ ), we denote
+                                            def
+                                         ug = g −1 ug.
+If g is semisimple we denote by (gS ∗ )wsg the weak stable subalgebra of gS ∗ . It is defined as
+the direct sum of the eigenspaces (of the operator u 7→ ug ) of modulus ≤ 1 or equivalently
+                               n             (gn )                        o
+                   (gS ∗ )ws
+                          g  =   u ∈ gS ∗ :  u      n>0
+                                                        is bounded in gS ∗   .
+   For each place v we equip Gv , gv with metrics in the following way: For v = ∞ we
+start with an inner product on g∞ which is right K∞ -invariant and use left transla-
+tion to make it into a left invariant Riemanian metric on G∞ which is also right K∞ -
+invariant. This Riemannian metric induces left G∞ -invariant, bi-K∞ -invariant metric
+on G∞ . For a finite place v, we start with a bi-Kv -invariant metric dKv on Kv (such
+that Kv equals the closed unit ball around ev ) and make it into a left invariant met-
+ric on Gv (which is also right Kv -invariant) by setting dGv (g1 , g2 ) = 2 if g1−1 g2 ∈
+                                                                                       / Kv
+and dGv (g1 , g2 ) = dKv (g1−1g2 , ev ) otherwise. On the Lie algebra gv we take the metric
+given by dgv (u, w) = max |uij − wij |v : 1 ≤ i, j ≤ 2 where the indices i, j stand for the
+       ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                         11
+
+entries of the corresponding matrix. We usually denote the distance from 0 ∈ gv by
+      def
+kuk = dgv (u, 0) and refer to it as the norm of u. We define the metrics dGS ∗ , dgS ∗ on
+GS ∗ , gS ∗ respectively by taking the maximum of the metrics defined above over the places
+in S ∗ . The metric dGS ∗ induces a right-K∞ × KS -invariant metric on XS by setting
+dXS (ΓS g1 , ΓS g2 ) = inf γ∈ΓS dGS ∗ (γg1 , g2 ).
+  In a metric space (X, dX ) we denote BrX (x) the open ball of radius r around x. In case
+the space is a group, we denote by BrX the corresponding ball around the trivial element.
+
+                    4. The S-Hecke graph and the main theorem
+   Throughout this section we use the notation introduced in §3. We fix a finite set of
+finite places S ⊂ P. The space X∞ can be thought of as the moduli space of equivalence
+classes of 2-dimensional lattices in the plane R2 up to homothety. We will refer below to
+a point x ∈ X∞ as a class; here, the class Γ∞ g is composed of the lattice spanned by the
+rows of the matrix g (which is well defined up to scaling) and all its homotheties.
+   Our first aim is to state Theorem 4.8. Briefly, we will fix a class x with periodic A∞ -
+orbit and consider a class x′ on the S-Hecke graph (soon to be defined) through x and
+prove an effective equidistribution statement regarding the periodic orbit x′ A∞ as x′ drifts
+away from x in the graph.
+
+4.1. Hecke friends. Given a class x ∈ X∞ , we say that a class x′ is a Hecke friend of
+x if one can choose lattices Λx ∈ x, Λx′ ∈ x′ such that Λx′ < Λx . After fixing the lattice
+Λx there is a unique choice of Λx′ ∈ x′ such that Λx′ < Λx is primitive; that is, such
+that the index [Λx : Λx′ ] is minimal. We denote this minimal index by ind(x, x′ ). We say
+that x′ is an S-Hecke friend of x if ind(x, x′ ) ∈ OS× . It is elementary to check that the
+S-Hecke friendship relation is an equivalence relation and that furthermore, if x, x′ are
+Hecke friends then ind(x, x′ ) = ind(x′ , x).
+
+4.2. The graph. For a class x ∈ X∞ we define
+                         GS (x) = {x′ ∈ X∞ : x, x′ are S-Hecke friends}                        (4.1)
+The set GS (x) has the structure of a graph5: We join x1 , x2 ∈ GS (x) with an edge if there
+exists Λi ∈ xi such that Λ1 is a sublattice of Λ2 of index p for some p ∈ S (note that as p is
+prime this forces Λ1 to be a primitive sublattice of Λ2 ). In this case we declare the length
+of this edge to be log(p). This induces a distance function on the graph which we denote
+dG (·, ·) for which dG (x1 , x2 ) = log(ind(x1 , x2 )). We will refer to x as the root of GS (x) and
+call GS (x) the S-Hecke graph through x. Note that {ind(x, x′ ) : x′ ∈ GS (x)} = OS× ∩ N.
+We refer to numbers in OS× ∩ N as admissible radii and denote for h ∈ OS× ∩ N by
+        def
+Sh (x) = {x′ ∈ GS (x) : ind(x, x′ ) = h} the sphere of radius h around the root x.
+
+  5When S contains only one prime, this is the well known p-Hecke tree through x.    In general, this
+graph is the product of the various p-Hecke trees for p ∈ S.
+12                                 MENNY AKA AND URI SHAPIRA
+
+4.3. The sphere. For q ∈ OS× let us define
+                              def                                   
+                       af (q) = e∞ , 10 0q , . . . ,           1 0
+                                                               0 q        ∈ GS .           (4.2)
+Given x ∈ X∞ we wish to have a convenient algebraic description of the classes on
+the sphere Sh (x) for admissible radii h. We obtain this description using the extension
+π : XS → X∞ in the following way: Lemma 4.1 below shows that the various points on
+Sh (x) are obtained by choosing a lift y ∈ π −1 (x) of x, and projecting yaf (h) via π back
+to X∞ .
+Lemma 4.1. For x = Γ∞ g ∈ X∞ and h an admissible radius we have
+                              Sh (x) = π ({ΓS (g, γ) : γ ∈ Γ∞ } af (h))                    (4.3)
+                                                        
+                                     = π π −1 (x)af (h) .
+Proof. Recall that the elementary divisors theorem attaches to any pair of lattices Λ1 <
+Λ2 in the plane, a pair of integers d1 , d2 which are characterized by the following two
+properties: (1) the divisibility d2 |d1 holds, (2) there exists a basis v1 , v2 of Λ2 such that
+d1 v1 , d2v2 forms a basis of Λ1 . Note that Λ1 is a primitive sublattice of Λ2 if and only if
+the second divisor satisfies d2 = 1. We conclude from here that given a class x = Γ∞ g,
+then a class x′ lies on the sphere Sh (x) if and only if there exists a lattice Λx′ ∈ x′ which
+is a sublattice of the lattice Λx ∈ x spanned by the rows of g such that the elementary
+divisors are d1 = h, d2 = 1. In other words we have the equality
+                              Sh (x) = {Γ∞ diag (h, 1) γg : γ ∈ Γ∞ } .                     (4.4)
+The following identity is crucial for us. It shows how the lattice ΓS causes the desired
+interaction between the real and p-adic components in the extension XS of X∞ :
+     Γ∞ diag (h, 1) γg = π (ΓS (diag (h, 1) γg, ef ))                                      (4.5)
+                                                                            
+                                                                                            
+                       = π ΓS γ −1 diag (1, h)(diag (h, 1) γg, ef ) = π ΓS (g, γ −1)af (h) .
+                               |      {z      }
+                                       ∈ΓS
+
+From equations (4.4),(4.5) we immediately conclude that
+                               Sh = π ({ΓS (g, γ) : γ ∈ Γ∞ } af (h)) ,
+which is the first equality in (4.3). Using the first equality, the second equality follows
+once we show that for any given ω ∈ KS there exist γ ∈ Γ∞ such that π(ΓS (g, γ)af (h)) =
+π(ΓS (g, ω)af (h)). A short calculation using Remark 3.1 shows that this happens precisely
+when
+                                  γ −1 ω ∈ af (h)KS af (h)−1 .                        (4.6)
+Thus, let ω = (ωp )p∈Sf ∈ KS be given and write ωp = θp · diag (1, det(ωp )) , with θp ∈
+SL2 (Zp ). Let Unp < SL2 (Zp ) be the subgroup consisting of elements congruent to the
+identity modulo pn . By the strong approximation Theorem for SL2 (see[PR94, §7.4]), for
+any n ∈ N there exist γn ∈ Γ∞ such that for all p ∈ Sf
+                                             γn−1 θp ∈ Unp .
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                    13
+
+
+   Q that there exist N = N(h) ∈ N such that for all n > N we have that the image
+Note
+of p∈S Unp in GS lies in af (h)KS af (h)−1 . As af (h)KS af (h)−1 is a group that contains
+                                         Q
+(diag (1, det(ωp )))p∈Sf we conclude that p∈Sf Unp · diag (1, det(ωp )) ⊂ af (h)KS af (h)−1 .
+Therefore any γn with n > N will satisfy equation (4.6). This concludes the proof of the
+Lemma.
+                                                                                          
+Corollary 4.2. For x = Γ∞ g ∈ X∞ and h an admissible radius another description of
+the sphere is given by
+                        Sh = {Γ∞ γg : γ ∈ ΓS , ht(γ) = h} .
+Proof. Similarly to the proof of Lemma 4.1 one can show that any element γ ∈ ΓS can
+be written as a product γ = γ1 diag (h, 1) γ2 , where γi ∈ Γ∞ and h ∈ OS× ∩ N. This
+implies first that ht(γ) = h and moreover, together with (4.4) we obtain that Sh =
+{Γ∞ γg : γ ∈ ΓS , ht(γ) = h} as desired.                                          
+Definition 4.3. Let x ∈ X∞ be given. Let gx ∈ G∞ be a choice of a representative for x
+so that x = Γ∞ gx . For any choice ω ∈ KS we define the generalized branch Lgx ,ω ⊂ GS (x)
+to be the set
+                Lgx ,ω = π ({ΓS (gx , ω)af (h) : h is an admissible radius}) .          (4.7)
+When ω is a rational element (i.e. for any p ∈ S the p’th component ωp of ω satisfies
+ωp ∈ Kp ∩ PGL2 (Q)) we call the generalized branch Lgx ,ω a rational generalized branch.
+   The reader should think of the generalized branches as prescribed ways to go to infinity
+in the graph GS (x). When S is composed of a single prime the generalized branches are
+exactly the branches on the Hecke tree that start from the root x.
+Remark 4.4. We wish point out a few things regarding the definition of generalized
+branches and fix some notation that will be used in the sequel. Let x = Γ∞ gx ∈ X∞ be
+given.
+    (1) For any ω ∈ KS and any admissible radius h we denote yω,h = ΓS (gx , ω)af (h) ∈
+        XS , xω,h = π(yω,h ) ∈ X∞ . With this notation the generalized branch Lgx ,ω inter-
+        sects the sphere Sh (x) in a single point, namely
+                                  {xω,h } = Lgx ,ω ∩ Sh (x).                            (4.8)
+       When the generalized branch is fixed (that is when ω is fixed) we sometimes denote
+       xh = xω,h . We stress here the dependency on the representative gx of x. Note that
+       we do not recall this dependency in the notation xω,h , yω,h .
+   (2) Two generalized branches Lgx ,ω1 , Lgx ,ω2 intersect the sphere Sh (x) at the same
+       point, that is, xω1 ,h = xω2 ,h , if and only if the points yωi,h lie in the same fiber
+       of π. This is in turn equivalent to saying that the conjugation (ω2−1ω1 )af (h) lies
+       in KS (see Remark 3.1). This happens if and only if the lower left coordinate of
+       each of the components of ω2−1 ω1 is divisible by h in the corresponding ring Zp . In
+       particular, it follows that it is divisible by any integer that divides h which means
+14                                   MENNY AKA AND URI SHAPIRA
+
+          by the same reasoning, that the two branches intersect all the spheres Sh′ at the
+          same points, for any choice of admissible radius h′ dividing h. Moreover, it follows
+          from here that given ω1 , ω2 ∈ KS , the two generalized branches Lgx ,ωi are identical
+          if and only if the quotient ω2−1ω1 is an upper triangular element of KS .
+      (3) From the above it follows that the collection of generalized branches may be identi-
+          fied with the quotient KS /B, where B < KS denotes the group of upper triangular
+          elements (this identification depends of course on the choice of the representative
+          gx ).
+      (4) If we replace gx by another representative γgx for γ ∈ Γ∞ , then it readily follows
+          that for any ω ∈ KS , Lγgx ,ω = Lgx ,γ −1 ω . In particular, the notion of rationality of
+          a generalized branch is well defined.
+4.4. Periodic A∞ -orbits.
+Definition 4.5. Let x ∈ X∞ be a class with a periodic A∞ -orbit and let gx ∈ G∞ be a
+representative, so that x = Γ∞ gx . We denote by
+   (1) tx the length of the period, i.e. the minimal positive t for which xa∞ (t) = x;
+   (2) µx the unique A∞ -invariant probability measure supported on xA∞ ;
+   (3) γx the unique element of Γ∞ solving the equation γx−1 gx = gx a(tx );
+   (4) Fx the quadratic extension of Q that is generated by the eigenvalues of γx .
+Note that γx depends on the choice of the representative gx and thus is only well defined
+up to conjugation in Γ∞ . The quadratic field Fx on the other hand, only depends on this
+conjugacy class and so is well defined.
+  Let x ∈ X∞ be a class with a periodic A∞ -orbit. It is straightforward to argue that
+any x′ ∈ GS (x) has a periodic orbit as well. We are interested in understanding the way
+the orbit x′ A∞ is distributed in X∞ as dG (x, x′ ) goes to ∞.
+Remark 4.6. It turns out that the answer to this question has to do with the question
+of whether or not the primes p ∈ S split in the quadratic extension Fx of Q. Let γ ∈ Γ∞
+be a matrix such that the roots of its characteristic polynomial generate Fx . Recall that
+a prime p splits in Fx if and only if γ is diagonalizable over Qp . A short exercise in linear
+algebra shows that γ ∈ Γ∞ is diagonalizable over Qp if and only if it can be triangulized
+over Zp .
+Definition 4.7. Let x be a class with a periodic A∞ -orbit, gx a representative so that
+x = Γ∞ gx , and ω ∈ KS .
+   (1) We say that the generalized branch Lgx ,ω is degenerate (for S) if there exists p ∈ Sf
+       such that ωp−1 γxn ωp is upper triangular for some positive integer n (here ωp is the
+       p’th component of ω ∈ KS ).6
+   (2) We say that the class x is split (for S) if there exists p ∈ S which splits over
+       Fx . By Remark 4.6, this is equivalent to the existence of a degenerate generalized
+       branch.
+     6This is equivalent to saying that the Lie algebra of the closure of the group generated by γ ω in G
+                                                                                                  x     p is
+upper triangular.
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                     15
+
+  We are now ready to state our main theorem.
+Theorem 4.8. Let x = Γ∞ gx ∈ X∞ be such that xA∞ is periodic.
+  (1) Let L = Lgx ,ω be a non-degenerate generalized branch of the graph GS (x) and h an
+      admissible radius, then for any ϕ0 ∈ Lipκ (X∞ ) ∩ L2 (X∞ , m∞ ) and any ǫ > 0 the
+      following holds
+              Z              Z
+                                                                      δ0
+                   ϕ0 dµxh −     ϕ0 dm∞ ≪x,S,L,ǫ max {kϕ0 k2 , κ} h− 2 +ǫ .         (4.9)
+                 X∞             X∞
+
+   (2) If x is non-split (i.e. all generalized branches are non-degenerate), the implicit
+       constant in (4.9) may be chosen to be independent of the generalized branch and
+       we have uniform rate of equidistribution along the full graph.
+   (3) If x is split and Lgx ,ω is a degenerate generalized branch, then there is a sequence of
+       admissible radii hn → ∞ such that for the sequence of classes xhn , the lengths txhn
+       of the orbits xhn A∞ are bounded and in particular, the orbits do not equidistribute.
+   (4) Rational generalized branches are always non-degenerate and so (4.9) holds auto-
+       matically.
+   (5) Nonetheless, in case x is split, the implicit constants in (4.9) cannot be taken to
+       be uniform for the rational generalized branches.
+
+                         5. Relations to other arguments
+   Before turning to the proof of Theorem 4.8 we wish to make some comments that will
+clarify its relation to arguments giving equidistribution of collections of periodic orbits.
+The result of Benoist and Oh [BO07, Theorem 1.1] imply that given a class x with a
+periodic A∞ -orbit, then the collection of orbits {x′ A∞ : x′ ∈ Sh (x)} (counted without
+multiplicities) is becoming equidistributed as h → ∞.
+   Ignoring the effectivity of Theorem 4.8 and just interpreting it as saying that µx′ → m∞
+as x′ drifts away from the root x along a non-degenerate generalized branch, it seems
+tempting to think that it is considerably stronger than the result of Benoist and Oh, as it
+deals with the equidistribution of single orbits as opposed to the equidistribution of the
+full collection. We will show in §5.1 below that this (non-effective) equidistribution in fact
+follows quite elementarily from the work of Benoist and Oh. Nonetheless, the argument
+we give for Theorem 4.8 is independent of [BO07] and as far as we know the effective
+statements in Theorem 4.8 do not follow easily from known results.
+
+5.1. Total vs. individual growth. Let x ∈ X∞ be a class with a periodic A∞ -orbit and
+consider the union of the periodic orbits x′ A∞ for x′ ∈ Sh (x) (where h is an admissible
+                                                                             def P
+radius). We denote the total length of this union by tx (h); that is, tx (h) =     tx′ where
+the sum is taken over a set of representatives of the classes on the sphere giving rise
+to different orbits. The following Lemma shows that the growth rate of the length of
+individual periodic orbits along a non-degenerate generalized branch is the same as the
+growth rate of the total length. Although we only use this Lemma in the course of the
+16                             MENNY AKA AND URI SHAPIRA
+
+proofs regarding the growth rate of the periods (cf. Theorems 2.12 and 8.10) it explains a
+phenomenon that to some extent stands behind all of our results. Its proof is given in §7.
+Lemma 5.1. Let x ∈ X∞ be a class with a periodic A∞ -orbit. For any generalized branch
+                        def
+L of GS (x), let cL (h) = txh / h, where xh is the class in Sh ∩ L.
+   (1) The total length tx (h) satisfies h ≪x,S tx (h) ≪x,S h.
+   (2) If L is a non-degenerate generalized branch then cL (h) attains only finitely many
+       values and moreover, if hn is a divisibility sequence of admissible radii (that is
+       hn | hn+1 ), then cL (hn ) stabilizes.
+   (3) The class x is non-split for S if and only if
+                            
+                      inf cL (h) : L non-degenerate, h ∈ OS× ∩ N > 0.                (5.1)
+   The first two parts of Lemma 5.1 show that if L is a non-degenerate generalized branch,
+then a single orbit xh A∞ through the class xh ∈ L ∩ Sh (x) actually occupies a posi-
+tive proportion (bounded below by a constant independent of h) of the full collection
+{x′ A∞ : x′ ∈ Sh (x)}. Relying on [BO07] we may argue the non-effective version of The-
+orem 4.8 (that is, that µxh → m∞ as h → ∞) in the following way: Let hi → ∞ be a
+sequence of admissible radii such that µxhi converges to say µ∞ (which is an A∞ -invariant
+measure). We need to argue that µ∞ = m∞ . Let ηh be the natural A∞ -invariant probabil-
+ity measure supported on the collection of periodic orbits {x′ A∞ : x′ ∈ Sh (x)}. By [BO07]
+ηh → m∞ . By the first two parts of Lemma 5.1 we can write ηhi as a convex combination
+of A∞ -invariant probability measures in the following way: ηhi = c′hi µxhi + (1 − c′hi )νhi ,
+where the constants c′hi are bounded below by some constant c′ independent of hi . Tak-
+ing i to ∞ (along an appropriate subsequences if necessary) we deduce that in the limit
+m∞ = c′∞ µ∞ + (1 − c′∞ )ν∞ for some positive constant c′∞ ≤ 1. By the ergodicity of m∞
+with respect to the A∞ -action we deduce that the limit µ∞ that appears in the above
+convex combination with positive weight, must be equal to m∞ . This establishes the
+desired convergence.
+
+                               6. Proof of Theorem 4.8.
+   Throughout this section we fix x ∈ X∞ to be a class with a periodic A∞ -orbit and
+a representative gx ∈ G∞ such that x = Γ∞ gx . Using the notation of Definition 4.5, it
+follows that there exists γx ∈ Γ∞ such that
+                                      γx gx a∞ (tx ) = gx .                              (6.1)
+We briefly discuss the relations between the various parts of Theorem 4.8. As the eigenvec-
+tors of γx are irrational (and not roots of unity) it follows that γx (or any of its powers) is
+not triangulizable over Q and so all the rational generalized branches are non-degenerate.
+This establishes part (4) of the theorem. Part (5) of the theorem follows from part (3)
+because of (4.3) which shows that any class on the S-Hecke graph GS (x) lies on a rational
+generalized branch; the sequence xhn produced by part (3) may be viewed as a sequence of
+classes lying on (varying) rational generalized branches, showing that a uniform implicit
+constant for all rational generalized branches in (4.9) is impossible.
+       ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                           17
+
+  We begin with the necessary preparations for the arguments yielding parts (1),(2),
+and (3). We will see below that part (3) is a simple observation once the stage is set
+correctly and so the main bulk of the theorem lies in establishing parts (1) and (2).
+  After fixing gx we fix a generalized branch in GS (x); that is, we fix an element ω ∈ KS
+and set Lω = Lgx ,ω . Although ω is fixed, the reader should bear in mind that at some
+point we will vary the choice of ω in order to change the generalized branch.
+
+6.1. The lift of a closed loop. The following construction is fundamental to our argu-
+ment. Let yω ∈ XS be defined by yω = ΓS (gx , ω). Consider the orbit yω A∞ ⊂ XS and
+note that
+                       π(yω ) = x, xA∞ = π(yω A∞ ) = π(yω A∞ ),                  (6.2)
+where the rightmost equality follows from the fact that xA∞ is compact and the continuity
+of the projection π.
+   We now analyze the closure yω A∞ . Each t ∈ R can be written in a unique way in the
+form t = s + ℓtx for some s ∈ [0, tx ) and ℓ ∈ Z. It follows from (6.1) that
+      yω a∞ (t) = ΓS (gx aℓ∞ (tx )a∞ (s), ω) = ΓS (gx a∞ (s), γxℓ ω) = yω (a∞ (s), ω −1γxℓ ω).   (6.3)
+If we denote for an element γ in a group H by hγiH the cyclic group generated by γ in
+H, then it follows from (6.3) that
+                                  yω A∞ = yω (A∞ × hω −1 γx ωiGS ).                              (6.4)
+Let
+                                 Hω = ω −1 hγx iGS ω = hω −1γx ωiGS .                            (6.5)
+Clearly, Hω is a compact subgroup of KS . We let
+                                           Lω = A∞ × Hω .                                        (6.6)
+Lemma 6.1. The orbit yω Lω is compact and
+                                            yω A∞ = yω Lω .                                      (6.7)
+Proof. We first establish (6.7). The inclusion ⊃ follows readily from (6.4). For the reverse
+inclusion, let tn ∈ R be such that yω a∞ (tn ) →n→∞ y ∈ yω A∞ . Let sn ∈ [0, tx ), ℓn ∈ Z be
+as defined before (6.3); that is tn = sn + ℓn . By compactness we may assume without loss
+of generality (after passing to a subsequence if necessary) that sn → s and ω −1γxℓn ω → h.
+We conclude from (6.3) that
+            y = lim yω a∞ (tn ) = lim yω (a∞ (sn ), ω −1γxℓn ω) = yω (a∞ (s), h) ∈ yω Lω .       (6.8)
+The fact that the orbit yω Lω is compact now follows from the fact that it is a closed set
+contained in π −1 (xA∞ ) which is compact by the properness of π.                       
+Remark 6.2. The above proof actually establishes a bit more: We have shown that in
+fact,
+              yω A∞ = yω Lω = {yω (a∞ (t), h) : t ∈ [0, tx ), h ∈ Hω } .     (6.9)
+18                              MENNY AKA AND URI SHAPIRA
+
+Definition 6.3. Let ηω denote the Lω -invariant probability measure supported on the
+compact (and hence periodic) orbit yω Lω . For an admissible radius h let
+                                           a (h)                      a (h)
+                       yω,h = yω af (h), Lωf       = Lω,h , Hω,h = Hωf        ,
+and note the identity yω Lω af (h) = yω,hLω,h = yω,h (A∞ × Hω,h ). We denote the unique
+Lω,h -invariant probability measure supported on the periodic orbit yω,hLω,h by ηω,h . It
+follows that (af (h))∗ ηω = ηω,h . Note that the notation yω,h is consistent with the one
+introduced in Remark 4.4(1).
+Lemma 6.4. Let h be an admissible radius and xω,h ∈ Lω ∩ Sh (x). Then, the pushed orbit
+yω Lω af (h) = yω,h Lω,h projects to the periodic orbit xω,h A∞ and furthermore, the measure
+ηω,h supported on it projects to µxω,h ; i.e. π∗ ηω,h = µxω,h .
+   Lemma 6.4 puts us in a desirable situation from the dynamical point of view; instead
+of studying the orbits x′ A∞ in the space X∞ as x′ drifts away from x on a generalized
+branch (the connection between which is not clear apriori), we will study the images of
+the fixed orbit yω Lω under the action of af (h) for admissible radii h, which share a clear
+algebraic (and geometric) relation. This relation is the reason we needed to introduce the
+S-arithmetic extension XS .
+Proof. The fact that xω,h = π(yω,h) follows from Definition 6.3 and Remark 4.4(1). We
+have that
+                  π(yω,h Lω,h ) = π(yω Lω af (h)) = π(yω A∞ af (h))                   (6.10)
+                                = π(yω af (h)A∞ ) = π(yω,h )A∞ = xω,h A∞ ,
+where the first equality from the left follows from Definition 6.3, the second, from Lemma 6.1
+and that fact that af (h) acts on XS by a homeomorphism, the third, from the commu-
+tation of A∞ and af (h) and from the continuity of π, the fourth, from the fact that π
+intertwines the A∞ -actions on XS , X∞ , and finally the fifth equality follows from the fact
+that the orbit xω,h A∞ is compact.
+   As A∞ < Lω,h , ηω,h is A∞ -invariant. As a consequence, the projection π∗ ηω,h is an A∞ -
+invariant probability measure supported on xω,h A∞ . As µxω,h is the unique such measure,
+we conclude that π∗ ηω,h = µxω,h as desired.                                               
+Remark 6.5. It follows from (6.9) and the definition of yω,h , Hω,h that
+                     yω,hLω,h = {yω,h (a∞ (t), h) : t ∈ [0, tx ), h ∈ Hω,h } .
+By (6.10) the following equality follows:
+                   xω,h A∞ = π ({yω,h (a∞ (t), h) : t ∈ [0, tx ), h ∈ Hω,h }) .       (6.11)
+The meaning of the above equation is that the only reason for the orbit xω,h A∞ to become
+long is that the group Hω,h stretches and ‘sticks out’ of KS . This is illustrated in the
+following proof.
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                      19
+
+Proof of part (3) of Theorem 4.8. For an admissible radius h and p ∈ S denote by (Hω,h )p
+the projection of the group Hω,h on its p-th component. Note that by definition, (Hω,h )p =
+           −1
+diag 1, h      (Hω )p diag (1, h).
+   Assume that the generalized branch Lω is degenerate. It follows that there exists p ∈ S
+for which some power of the p-th component (ω −1γx ω)p is upper triangular. Let d be the
+minimal positive integer for which (ω −1 γxd ω)p is upper triangular. We conclude from (6.5)
+that (Hω )p contains an index d subgroup that consists of upper triangular elements only.
+Choose hn = pn and note that because of the above (Hω,hn )p ∩ Kp is of index at most d
+in (Hω,hn )p . Moreover, note that as p is a unit in Zp′ for any prime p′ 6= p, we have that
+(Hω,hn )p′ < Kp′ . It follows that along the chosen sequence hn we have that Hω,hn ∩ KS
+has at most index d in Hω,hn . Let hi ∈ Hω,hn , i = 1 . . . d′ , d′ ≤ d, be representatives of
+the cosets of Hω,hn ∩ KS and denote yi = yω,hn hi , i = 1 . . . d′ and xi = π(yi ). We can
+rewrite (6.11) as
+                             ′                                                       
+                               d
+             xω,hn A∞ = π ∪i=1 {yω,hn (a∞ (t), hi h) : t ∈ [0, tx ), h ∈ Hω,hn ∩ KS }
+                             ′                                                   
+                       = π ∪di=1 {yi (a∞ (t), h) : t ∈ [0, tx ), h ∈ Hω,hn ∩ KS }
+                          ′
+                     = ∪di=1 {xi a∞ (t) : t ∈ [0, tx )} ,                                (6.12)
+and so we conclude that txω,hn ≤ d′ tx which finishes the proof.                              
+  In order to finish the proof of Theorem 4.8 we are left to argue parts (1),(2). As said
+before, these are the main parts of the theorem.
+6.2. Strategy of the proof of Theorem 4.8(1),(2). In the notation of Lemma 6.4,
+because π∗ ηω,h = µxω,h , the validity of (4.9) is equivalent to saying that given ϕ ∈
+Lipκ (XS )∩L2 (XS , mS ) which is KS -invariant (i.e. is of the form ϕ0 ◦π for ϕ0 ∈ Lipκ (X∞ )∩
+L2 (X∞ , m∞ ))
+                  Z            Z
+                                                                         δ0
+                     ϕdηω,h − ϕdmS ≪x,Sf ,Lω ,ǫ max {κ, kϕk2 } h− 2 +ǫ .                  (6.13)
+
+The argument giving this ‘effective equidistribution’ is a combination of an argument
+which we will refer to as the mixing trick and spectral gap (or effective decay of matrix
+coefficients). As far as we know the mixing trick originates from Margulis’ thesis [Mar04].
+We briefly describe its heuristics: One slightly thickens the initial orbit yω Lω to an open
+set T ⊂ XS in directions which are (weakly) contracted by the action of af (h). The
+set T will be called below a tube around the orbit yω Lω . Let mT denote the normalized
+restriction of mS to T . The pushed measure (af (h))∗ mT is the normalized restriction of
+mS to the pushed tube T af (h), which is a tube around the orbit yω,h Lω,h . Because the
+thickening used to construct T is taken in directions which are (weakly) contracted by
+af (h), the size of the thickening giving the tube T af (h) is even smaller than the size of
+the initial thickening. Hence, there shouldn’t be much of a difference between integrating
+against the measure ηω,h and integrating against (af (h))∗ mT . The fact that the action of
+af (h) is mixing on (XS , mS ) means that the pushed measure (af (h))∗ mT is ‘close’ to mS
+20                                MENNY AKA AND URI SHAPIRA
+
+(here, the effective mixing Theorem 6.6 will allow us to pin down the meaning of ‘close’
+in a precise way). Combining these things together will give us the desired estimate given
+in (6.13).
+   In order to make this strategy into a rigorous proof we discuss in the next two subsec-
+tions in detail the construction of tubes and decay of matrix coefficients.
+6.3. Effective mixing. Let H = L2 (XS , mS ). Our goal in this section is to prove the
+following:
+Theorem 6.6. Let h be an admissible radius and w1 , w2 ∈ H be vectors with  Q the following
+properties: w1 is KS -fixed and w2 is stabilized by a product subgroup K ∗ = v∈S Kv∗ < KS
+of index d in KS . Then for any ǫ > 0,
+                                                                          1
+                   |hw1 , af (h)w2 i − hw1 , 1ih1, w2i| ≪ǫ kw1 k kw2 k d 2 h−δ0 +ǫ ,             (6.14)
+   The meaning of the exponent δ0 that appears in (6.14) will be explicated shortly. Before
+turning to the proof of the above theorem, we need to discuss three lemmas. For v ∈ S
+let Hv denote the orthocomplement of the Gv -invariant functions in H. The following
+is [Ven10, Lemma 9.1]. It is the key input in the proof of Theorem 6.6.
+Lemma 6.7. Let w1 , w2 ∈ Hv (v ∈ S) be two vectors which are stabilized respectively by
+finite index subgroups K (1) , K (2) of Kv , let di = [Kv , K (i) ], and av (t) = diag (1, t) , t ∈ Q×v.
+Then the following holds
+                                                     1 1                      −δ0 +ǫ
+                 |hw1 , av (t)w2 i| ≪ǫ kw1 k kw2 k d12 d22 max |t|v , t−1 v           .           (6.15)
+   The exponent δ0 comes from the following discussion. Let ρv be the unitary repre-
+sentation of Gv on Hv . Let σ0 be the smallest number so that no complementary series
+representations of parameter ≥ σ0 is weakly contained in ρv . Here we follow [Ven10] and
+parametrize the complementary series representations by the parameter σ ∈ (0, 21 ); so
+σ0 = 0 corresponds to ρv being tempered (the Ramanujan conjecture) and σ0 = 21 corre-
+sponds to ρv having no almost invariant vectors. The best bound known today towards
+Ramanujan is given by Kim and Sarnak in the appendix of [Kim03] and establishes the
+                7
+bound σ0 ≤ 64     . The exponent δ0 that appears in Lemma 6.7 and that appears in our
+results is defined by
+                                                1
+                                        δ0 = − σ0 ,                                  (6.16)
+                                                2
+so the Kim-Sarnak bound reads as δ0 ≥ 25   64
+                                              .
+   Lemma 6.7 is stated for one place v ∈ S but in Theorem 6.6 we wish to take advantage
+of the various places h is supported on. In order to do this, we will need to use Lemma 6.7
+iteratively and the following abstract lemma in Hilbert space theory allows us to do so.
+Lemma 6.8. Let G = G1 × G2 be a group acting unitarily on a Hilbert space H. Let
+Ki < Gi be subgroups, gi ∈ Gi be two given elements, and F (gi ) two positive numbers
+satisfying the following statement: For each i, if v, w ∈ H are Ki -fixed vectors, then
+                                     hgi v, wi ≤ kvk kwk F (gi ).
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                        21
+
+Then for any v, w ∈ H which are K1 × K2 -fixed we have that
+                               hg1 g2 v, wi ≤ kvk kwk F (g1 )F (g2).
+Proof. Let us denote for i = 1, 2 Vi = {v ∈ H : v is Ki -fixed} and U = V1 ∩ V2 . Let Vi′
+denote the orthocomplement of U in Vi and denote for a subspace W of H by PW the
+orthogonal projection on W . We first note that V1 , V2 are K2 , K1 -invariant respectively
+(because K1 , K2 commute) and so the projections PV1 , PV2 commute with the actions of
+K2 , K1 respectively. It follows from here that given v1 ∈ V1 , say, the projection PV2 (v1 ) is
+fixed by both K1 and K2 i.e. PV2 (v1 ) ∈ U. This proves that V1′ is orthogonal to V2 or in
+a more symmetric manner, V1′ is orthogonal to V2′ .
+   Let now v, w be two K1 × K2 -fixed vectors. As g1 v is K2 -fixed, i.e. g1 v ∈ V2 , we may
+write g1 v = PU (g1 v) + PV2′ (g1 v) and similarly g2 w = PU (g2 w) + PV1′ (g2 w). It follows that
+                 hg1 v, g2 wi = hPU (g1 v) + PV2′ (g1 v), PU (g2 w) + PV1′ (g2 w)i
+                             = hPU (g1 v), PU (g2 w)i ≤ kPU (g1 v)k kPU (g2 w)k .          (6.17)
+               (g1 v)
+Let ṽ = kPPUU (g 1 v)k
+                        . Then ṽ is K2 -fixed and so by the assumption of the lemma we conclude
+that
+                                    kPU (g1 v)k = hg1 v, ṽi ≤ kvk F (g1 ).
+Similarly, kPU (g2 w)k ≤ kwk F (g2 ). Plugging this into (6.17) yields
+                              hg1 v, g2wi ≤ kvk kwk F1 (g1 )F2 (g2 ),
+which is equivalent to the desired statement up to replacing g2 by its inverse (note that
+the assumption on gi implies the corresponding assumption on gi−1).                    
+  The final ingredient needed for the proof of Theorem 6.6 is the following
+Lemma 6.9. For each place v ∈ S the group generated by Gv and KS acts ergodically
+on XS , that is, {w ∈ H : w is both Gv , KS -fixed} is the one dimensional space of constant
+functions.
+                                                          Q
+Proof. Recall that S ∗ = S ∪ {∞} . Let YS = SL2 (OS )\ v∈S ∗ SL(Qv ). The strong approx-
+    Q property for SL2 implies that for any v ∈ S the lattice SL2 (OS ) embeds densely
+imation
+in v′ ∈S ∗ r{v} SL2 (Qv′ ). This is equivalent to saying that SL2 (Qv ) acts minimally on YS
+(i.e. that any orbit is dense). In turn, this implies that SL2 (Qv ) acts ergodically on YS
+(by the duality trick for example). Now, consider the natural map ψ : SL2 → PGL2 . This
+map induces a map from YS to XS (which we also denote by ψ) which intertwines the
+actions of SL2 (Qv ) and ψ(SL2 (Qv )) < Gv on these spaces respectively. It follows that the
+action of ψ(SL2 (Qv )) on ψ(YS ) is ergodic.
+   Let w ∈ H be a function on XS which is both Gv and KS -invariant. Its restriction to
+ψ(YS ) is constant by the ergodicity proved above. It follows that in order to show that w
+is constant it is enough to show that the translates of ψ(YS ) by KS cover  Q XS . We briefly
+sketch the argument:QThere is a natural ‘determinant map’ det : GS ∗ → v∈S ∗ Qv /(Q××      2
+                                                                                         v) .
+Let us denote ∆ = v∈S ∗ Q×            × 2        ′
+                                v /(Qv ) and ∆ = det(ΓS ) < ∆. It follows that there is a
+well defined map det f : ΓS \GS ∗ = XS → ∆′ \∆. We leave it to the reader to show that the
+22                                   MENNY AKA AND URI SHAPIRA
+
+                                                                             f Since det
+space ψ(YS ) is characterized as the preimage of the identity coset ∆′ under det.
+                  ′
+takes KS onto ∆ \∆, we conclude that indeed, translates of ψ(YS ) under KS cover XS as
+desired.                                                                              
+
+Proof of Theorem 6.6. Let H = L2 (XS , mS ) and for v ∈ S let Hv be the orthocomplement
+to the Gv -fixed vectors. Let H0 = ∩v∈S Hv and let w1 , w2 ∈ H be as in the statement of
+the theorem. Write
+                                        wi = PH0 (wi ) + PH⊥0 (wi ),
+
+and note that the decomposition H = H0 + H0⊥ is GS -invariant. It follows that
+                                                     
+      haf (h)w1 , w2i = haf (h) PH0 (w1 ) + PH⊥0 (w1 ) , PH0 (w2 ) + PH⊥0 (w2 )i
+                           = haf (h)PH0 (w1 ), PH0 (w2 )i + haf (h)PH⊥0 (w1 ), PH⊥0 (w2 )i .                 (6.18)
+                             |           {z             } |              {z              }
+                                          (∗)                             (∗∗)
+
+                                                                 ⊥
+ ⊥us first argue that (∗∗) = hw1 , 1ih1, w2i. The space H0 is the space generated by
+Let
+ Hv v∈S . This implies that the vector PH⊥0 (w1 ) is in the span of the vectors PH⊥v (w1 )
+as v runs through S. For each v ∈ S the vector PH⊥v (w1 ) is both Gv and KS -fixed
+and so by Lemma 6.9 this implies that PH⊥v (w1 ) ∈ Hc , where Hc denotes here the 1-
+dimensional space of constant functions. We conclude that PH⊥0 (w1 ) ∈ Hc , or in other
+words, PH⊥0 (w1 ) = PHc (w1 ) = hw1 , 1i. Using this we see that
+
+                           (∗∗) = hhw1, 1i, PH⊥0 (w2 )i = hw1 , 1ih1, PH⊥0 (w2 )i.                           (6.19)
+
+In turn, hPH⊥0 (w2 ), 1i is the orthogonal projection of PH⊥0 (w2 ) on Hc , but as Hc ⊂ H0⊥ , this
+projection equals hw2 , 1i. We conclude from (6.19) that (∗∗) = hw1 , 1ih1, w2i as claimed.
+   We now analyze (∗) in (6.18). Because the decomposition H = H0 + H0⊥ is GS -invariant
+the vectors PH0 (w1 ), PH0 (w2 ) are fixed under KS , K ∗ respectively (where K ∗ is as in the
+statement of the theorem). Order the primes in S in some way p1 . . . pk and denote
+                                           Q
+dpi = [Kpi : Kp∗i ], so d = [KS : K ∗ ] = ki=1 dpi . We leave it to the reader to prove by a
+simple induction, using Lemmas 6.7, 6.8 that for j = 1, . . . , k
+         j                                                               j              k
+         Y                                                               Y         1    Y
+     h         api (h)PH0 (w1 ), PH0 (w2 )i ≪ǫ kPH0 (w1 )k kPH0 (w1 )k         d   2
+                                                                                   pj         |h|−δ
+                                                                                                 pi
+                                                                                                    0 +ǫ
+                                                                                                         .   (6.20)
+         i=1                                                             i=1            i=1
+
+In particular, for j = k we obtain
+                                                                               1
+                       (∗) = haf (h)PH0 (w1 ), PH0 (w2 )i ≪ǫ kw1 k kw2 k d 2 h−δ0 +ǫ .                       (6.21)
+
+Equations (6.21),(6.18) and the analysis carried above for (∗∗) now imply the validity of
+the theorem.                                                                           
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                   23
+
+6.4. Tubes. As explained in §6.2, we start with a KS -invariant ‘test function’ ϕ and
+we need to thicken the orbit yω Lω to a tube T and then apply (6.14) to the vectors
+w1 = ϕ, w2 = χT . In order for the use of (6.14) to be meaningful we need to control
+d which is the index of the stabilizer of the tube in KS . Also, the ‘width’ of the tube
+(i.e. the size of the thickening of the orbit) should be very small (at least in the real
+component) in order for the heuristics of §6.2 to take effect. This will hopefully motivate
+the constructions in this subsection.
+Definition 6.10. Let yL ⊂ XS be a compact orbit of a closed subgroup L < GS ∗ . Let
+V = ⊕v∈S ∗ Vv be a linear complement to Lie(L) in gS ∗ . Let U ⊂ V be a small enough
+open neighborhood of 0 so that the map yL × U → XS defined by (z, u) 7→ z expS ∗ (u) is
+a homeomorphism onto its image and its image is open in XS . The set
+                            TU (yL) = {z expS ∗ (u) : z ∈ yL, u ∈ U}
+is called a tube around the orbit yL of width U. We often denote the tube simply by T .
+The width U and the tube T are said to come from V .
+   A tube TU (yL) gives us a coordinate system; a point of T can be written uniquely as
+z expS ∗ u. We refer to z as the orbit coordinate and to u as the width coordinate. We shall
+need a few lemmas about tubes which we now turn to describe.
+6.4.1. Measures on tubes. Given a tube T = TU (yL) around the compact orbit yL coming
+from V , one could construct the following two natural probability measures supported on
+T . The first is the normalized Haar measure mS1(T ) mS |T which we will denote by mT .
+The second is the (pushforward of) the product measure η × mU on yL × U ≃ T , where η
+is the unique L-invariant probability measure on the orbit yL and mU is the normalized
+restriction of the Haar measure on V to U (that is mU = mV1(U ) mV |U ). We shall need to
+understand to some extent the connection between these two measures.
+Lemma 6.11. The measure mT is absolutely continuous with respect to η×mU . Moreover,
+if we denote by F (z, u) the Radon-Nikodym
+                                 R         derivative; that is dmT = F (z, u)dη(z)dmU (u),
+then for η-almost any z ∈ yL, U F (z, u)dmU (u) = 1.
+
+                                                   R by the reader. As for the claim about
+Proof. The absolute continuity is left to be verified
+the density F , we argue as follows.
+                               R      Let ϕ(z)  =   U
+                                                      F (z, u)dmU (u). We will show that ϕ is
+constant η-almost surely. As yL ϕ(z)dη(z) = mT (T ) = 1 this constant must be equal to
+one.
+   Choose a fundamental domain E in L for the orbit yL and identify it with the orbit. Note
+that with this identification η is just the restriction to E of a Haar measure7 on L scaled
+so that η(E) = 1. Assume to get a contradiction that ϕ is not constant η-almost surely. It
+follows that there are constants c2 < c1 so that the sets E1 = {h ∈ E : ϕ(yh) > c1 } , E2 =
+{h ∈ E : ϕ(yh) < c2 } are of positive η-measure. There exists h0 ∈ L so that η(E1 ∩
+h−1                                         −1
+  0 E2 ) > 0 and so if we let Ẽ1 = E1 ∩ h0 E2 and Ẽ2 = h0 Ẽ1 , then Ẽi ⊂ E are both of
+
+  7Note that L must be unimodular, hence this measure is both left and right invariant.
+24                             MENNY AKA AND URI SHAPIRA
+
+(the same) positive η-measure and differ from one another by left translation by h0 . The
+following calculation derives the desired contradiction:
+                    Z
+       c1 η(Ẽ1 ) ≤   ϕ(z)dη(z)
+                   Ẽ1
+
+               = mS (Ẽ1 expS ∗ (U)) = mS (h0 Ẽ1 expS ∗ (U)) = mS (Ẽ2 expS ∗ (U))   (6.22)
+                 Z
+               =     ϕ(z)dη(z) ≤ c2 η(Ẽ2 ) = c2 η(Ẽ1 ).
+                   Ẽ2
+                                                                                           
+  Our aim now is to define the relevant family of tubes around the orbit yω Lω that will
+be of use to us. The first stage is to choose the correct linear complement from which the
+tubes will come.
+6.4.2. Choosing the linear complement. When we come to argue the validity of Theo-
+rem 4.8(1),(2) for a given admissible radius h, we may assume without loss of generality
+that S is the smallest set of primes for which h ∈ OS× . Hence, without loss of generality
+we may (and will) assume that h is divisible by all the primes in S. We refer to such a
+radius h as having full support. The assumption that an admissible radius has full support
+is equivalent to the fact that the weak stable algebra of af (h) attains the form
+                                                             
+                                 ws                  ∗ ∗
+                          (gS ∗ )af (h) = g∞ ⊕p∈S          ∈ gp .                    (6.23)
+                                                     0 ∗
+Definition 6.12. Let V = ⊕v∈S ∗ Vv be defined as follows
+                                                              
+                     0 ∗                                   ∗ ∗
+           V∞ =            ∈ g∞ ; For p ∈ S, Vp =                ∈ gp .
+                     ∗ 0                                   0 ∗
+Lemma 6.13. If the generalized branch Lω is non-degenerate then the subspace V ⊂
+gS ∗ from Definition 6.12 is indeed a linear complement of Lie(Lω ) which is contained in
+(gS ∗ )ws
+       af (h) for any admissible radius h of full support.
+
+Proof. The fact that V ⊂ (gS ∗ )ws
+                                af (h) follows from the discussion preceding Definition 6.12.
+Recall that Lω = A∞ × Hω where Hω = ω −1 hγx iGS ω (see (6.5),(6.6)). Writing Lie(Lω ) =
+⊕S ∗ lv we see that V∞ indeed complements l∞ . Let T be the algebraic subgroup of G
+                                                                 is a one dimensional torus
+defined as the Zariski closure of the group generated by γx . It Q
+                                                          −1
+and Hω is a compact open subgroup of the conjugation ω T( v∈S Zv )ω. It follows that
+for any v ∈ S the dimension of lv is 1 and so in order to argue that it complements Vv
+we only need to argue that the inclusion lv ⊂ Vv does not hold. Such an inclusion would
+imply that there is a neighborhood of the identity in Hω that consists of upper triangular
+matrices, which in turn would imply that a certain power of ω −1γx ω is upper triangular,
+contradicting the assumption that the generalized branch is non-degenerate.              
+  Henceforth, when speaking about a linear complement V to Lie(Lω ), we shall refer only
+to the subspace from Definition 6.12.
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                       25
+
+Remark 6.14. Because of the inclusion V ⊂ (gS ∗ )ws   af (h) (for any admissible radius h of full
+support), we conclude that if U0 ⊂ V is a small enough ball around zero, the conjugation
+  a (h)
+U0 f will be contained in the domain of expS ∗ . This implies that for any U ⊂ U0 the
+identity (expS ∗ U)af (h) = expS ∗ U af (h) holds. It follows that if T is a tube of width U
+coming from V around yω Lω , then if the width U is chosen within U0 , the pushed tube
+T af (h) satisfies
+                                                                            
+                   T af (h) = yω Lω expS (U)af (h) = yω,h Lω,h expS U af (h) .            (6.24)
+
+That is, T af (h) is a tube of width U af (h) around the compact orbit yω,h Lω,h . Below, we
+will make the implicit assumption that all the widths considered are contained in the ball
+U0 .
+6.4.3. The tubes Tωδ . As explained above, we will need to construct tubes with shrinking
+real width component and with control on the subgroup of KS that stabilizes them.
+After describing this family of tubes we state a few lemmas that describe their relevant
+properties. The proofs of these lemmas will be postponed till after concluding the proof
+of Theorem 4.8.
+   Let us denote by B̃ a compact open subgroup of the group of upperr triangular elements
+in KS that lies in the domain of logS and for which Remark 6.14 applies (that is, all
+conjugations B̃ af (h) are in the domain of logS for admissible radii h of full support).
+For δ > 0 let BδV∞ be the ball of radius δ around 0 in the ∞-component of the linear
+complement V from Definition 6.12.
+                                                                        Q
+Lemma 6.15. There exists δ̂ > 0 and an open compact subgroup B = S Bp of B̃, such
+that for all δ < δ̂, if we let U δ = BδV∞ × logS (B), then for any ω ∈ KS such that the
+generalized branch Lω is non-degenerate, the set Tωδ = yω Lω expS (U δ ) is a tube around
+yω Lω ; that is, the map yω Lω × U δ → Tωδ is a homeomorphism and the set Tωδ ⊂ XS is
+open. Furthermore, the choice of B, δ̂ depends only on the original class x and the set of
+places S at hand. In particular, they are independent of ω.
+Lemma 6.16. Let B, δ̂ be as in Lemma 6.15 and let ω ∈ KS be such that the generalized
+branch Lω is non-degenerate.
+                                                               Q
+   (1) There exists an open compact product subgroup K ∗ = S Kv∗ < KS which stabilizes
+       the tube Tωδ for any δ < δ̂; that is Tωδ k = Tωδ for any k ∈ K ∗ , δ < δ̂. Moreover, if
+       x is non-split, we may choose K ∗ to be independent of ω.
+   (2) The measures mS (Tωδ ) satisfy mS (Tωδ ) ≫x,S,Lω δ 2 . If x is non-split, the implicit
+       constant may be chosen to be independent of the generalized branch.
+6.5. Concluding the main part of the proof.
+Proof of parts(1),(2) of Theorem 4.8. We follow the strategy presented in §6.2 and use
+freely all the notation introduced so far. Let h be an admissible radius and assume
+without loss of generality that it is of full support. Let ϕ0 ∈ Lipκ (X∞ ) ∩ L2 (X∞ , m∞ ).
+26                                   MENNY AKA AND URI SHAPIRA
+                                                  R              R
+We let ϕ = ϕ0 ◦ π be the lift of ϕ0 to XS . As X∞ ϕ0 dm∞ = XS ϕdmS , we see by
+Lemma 6.4 that part (1) of the theorem will follow once we prove
+               Z             Z
+                                                                   δ0
+                   ϕdηω,h −      ϕdmS ≪x,S,Lω ,ǫ max {kϕk2 , κ} h− 2 +ǫ . (6.25)
+                       XS                XS
+
+Part (2) will follow once we establish that in the non-split case, the implicit constant
+in (6.25) may be chosen independent of the generalized branch. Let V < gS ∗ be the linear
+complement from Definition 6.12. We apply Lemma 6.16 and use the notation introduced
+there to obtain a family of tubes Tωδ around yω Lω coming from V .
+                δ
+   We denote Tω,h  the (pushed) tube Tωδ af (h) around the orbit yω,h Lω,h , and mTω,h
+                                                                                   δ   the
+                                   δ
+normalized restriction of mS to Tω,h . The width of8 Tω,h
+                                                       δ
+                                                          is U δ,h = (U δ )af (h) , where U δ is
+as in Lemma 6.15 (see Remark 6.14). We have
+   Z             Z
+        ϕdηω,h −     ϕdmS ≤                                                              (6.26)
+     XS           XS
+                              Z              Z               Z                   Z
+                                    ϕdηω,h −     ϕdmTω,h
+                                                      δ   +        ϕdmTω,h
+                                                                         δ   −        ϕdmS .
+                                XS            XS               XS                  XS
+                             |             {z            } |               {z              }
+                                                   (∗)                              (∗∗)
+
+                                    δ
+To estimate (∗) we define ϕ̃δ,h : Tω,h → C by ϕ̃δ,h (z expS ∗ u) = ϕ(z) for z ∈ yω,hLω,h , u ∈
+U δ,h and extend it to be zero outside the tube Tω,h   δ
+                                                           to obtain a function on XS . By
+Lemma 6.11 it follows that
+      Z                 Z       Z                                        Z
+         ϕ̃δ,h dmTω,h
+                  δ   =               ϕ(z)F (z, u)dmU δ,h (u)dηω,h (z) =    ϕdηω,h     (6.27)
+         XS                  yω,h Lω,h   U δ,h                                    XS
+
+We therefore have the following estimate for (∗)
+                    Z                  Z
+             (∗) =       ϕ̃δ,hdmTω,h
+                                 δ   −     ϕdmTω,h
+                                                 δ
+                     XS                 XS
+                        
+                 ≤ max |ϕ(y expS ∗ (w)) − ϕ(y)| : y ∈ yω,h Lω,h , w ∈ U δ,h .              (6.28)
+Note that if we write w ∈ U δ,h as (w∞ , wf ), then for any y ∈ yω,h Lω,h , ϕ(y expS ∗ (w)) =
+ϕ0 (π(y) exp∞ (w∞ )) by the KS -invariance of ϕ. As the maps induced by the actions of
+elements of the form exp∞ (w∞ ), kw∞ k < 1 are all Lipschitz with some uniform Lipschitz
+constant c1 , the distance between π(y) and π(y) exp∞ (w∞ ) is ≤ c1 δ and so by the Lipschitz
+assumption of ϕ0 we obtain
+                                         (∗) ≤ c1 κδ.                                   (6.29)
+We now estimate (∗∗). Let H = L2 (XS , mS ) and denote
+                                                            1
+                                         w1 = ϕ, w2 =             χ δ.
+                                                         mS (Tωδ ) Tω
+     8The reader should not confuse the superscript δ with our notation for conjugation.
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                     27
+
+In order to appeal to Theorem 6.6 we observe that w1 is KS -fixed and w2 is K ∗ -fixed,
+where K ∗ is as in Lemma 6.16. By Lemma 6.16 the index d = [KS : K ∗ ] depends only on
+x, S, and Lω and in the non-split case could be bounded by a number independent of the
+                                                                                          1
+generalized branch. As for the norms, kw1 k = kϕk, and for w2 we have kw2 k = mS (Tωδ )− 2 .
+By Lemma 6.16 we have that mS (Tωδ ) ≫x,S,Lω δ 2 and so kw2 k ≪x,S,Lω δ −1 . Furthermore, in
+the non-split case, the implicit constant can be taken to be independent of the generalized
+branch.
+   It now follows from Theorem 6.6 that
+                                                               Z
+                                       −1        1
+                     (∗∗) = hϕ, af (h)                 χ δ i−         ϕdmS           (6.30)
+                                             mS (Tωδ ) Tω          XS
+                          = |haf (h)w1 , w2 i − hw1 , 1ih1, w2i|
+                          ≪x,S,Lω ,ǫ kϕk2 δ −1 h−δ0 +ǫ ,
+and that in the non-split case the implicit constant can be taken independent of the
+                                                                              1
+generalized branch. Combining (6.26),(6.29),(6.30), and choosing δ = c h 2 (−δ0 +ǫ) (the
+meaning of c will become clear in a moment) we obtain (6.25) as desired (with ǫ replaced
+by 2ǫ ). Here the constant c is chosen to protect us from the possible finitely many h’s
+                           1
+for which the inequality h 2 (−δ0 +ǫ) < δ̂ does not hold (δ̂ as in Lemma 6.15). Note that
+indeed, the constant c depends only on δ̂, S, and ǫ. By Lemma 6.15 we see that it actually
+depends on x, S, and ǫ. This concludes the proof of Theorem 4.8.                        
+6.6. Proofs of Lemmas 6.15,6.16. We shall need the following auxiliary lemma which
+we leave without proof
+Lemma 6.17. There exists a neighborhood of the identity W ⊂ GS ∗ , depending only on
+the class x, such that for any ω ∈ KS and any g ∈ W , if yω Lω g ∩ yω Lω 6= ∅ then g ∈ Lω .
+Proof of Lemma 6.15. The first restriction we impose on δ̂ is that it will be small enough
+                                                                              Lie(A∞ )
+so that in the real component, the map (s, u) 7→ exp∞ (s)·exp∞ (u) from Bδ̂            ×Bδ̂V∞ →
+                                                                   Q
+G∞ is a homeomorphism onto its open image. Choose B = S Bp to be any product
+compact open subgroup of B̃ and define U δ as in the statement of the Lemma. At this
+stage we observe that for any δ < δ̂ the map Lω × U δ → GS ∗ given by (g, u) 7→ g expS ∗ (u)
+has an open image. To see this, note that the image is a product of open sets in each
+component: In the real component the image equals A∞ · exp∞ BδV∞ which is open by the
+choice of δ̂, while for any finite place p ∈ S, the p’th component of the image is (Hω )p · Bp
+which is seen to be open in the following way: Because of the fact that Vp = Lie(Bp )
+is a linear complement to Lie((Hω )p ), the product (Hω )p · Bp clearly contains an open
+neighborhood of the identity in Gp . It now follows from the fact that both (Hω )p , Bp are
+groups, that their product is actually an open set.
+   The above establishes in particular, that the set Tωδ = yω Lω expS ∗ (U δ ) ⊂ XS is open.
+It follows that in order to conclude that Tωδ is indeed a tube around yω Lω , we only need
+to argue the injectivity of the map (z, u) 7→ z expS ∗ (u) from yω Lω × U δ to XS . We denote
+this map by ψω .
+28                                MENNY AKA AND URI SHAPIRA
+
+
+ The second2condition which we impose on δ̂ and on the choice of B is that the product
+ exp∞ (Bδ̂V∞ ) · B 2 ⊂ W , where W is as in Lemma 6.17. Assuming the injectivity of ψω
+                            (i)
+fails, we obtain elements u∞ ∈ BδV∞ , bi ∈ B, i = 1, 2 and a non-trivial intersection of the
+form
+                         yω Lω exp∞ (u(1)                   (2)
+                                       ∞ )b1 ∩ yω Lω exp∞ (u∞ )b2 .
+                                         (2)          (1)
+This shows that yω Lω ∩ yω Lω exp∞ (u∞ ) exp∞ (−u∞ )b2 b−1    1 6= ∅. It now follows from
+                                                           (2)         (1)
+our choice of δ̂ and B (by Lemma 6.17) that exp∞ (u∞ ) exp∞ (−u∞ ) ∈ A∞ and that
+b2 b−1
+    1 ∈ Hω . As B is a group which intersects Hω trivially (this is our assumption that
+the generalized branch Lω is nondegenerte), we conclude that b1 = b2 . Furthermore, from
+the fact that Lie (A∞ ) ⊕ V∞ = g∞ , it is straightforward to deduce that if δ̂ is chosen small
+                                     (2)           (1)                       (1)     (2)
+enough, then the inclusion exp∞ (u∞ ) exp∞ (−u∞ ) ∈ A∞ implies that u∞ = u∞ . This
+establishes the injectivity of ψω as desired.                                               
+Proof of Lemma 6.16. We first argue the validity of part (1). As pointed out in the proof
+of Lemma 6.15 above, if ω is such that Lω is non-degenerate, then the set Hω · B ⊂ GS is
+open (here B is as in Lemma 6.15). Moreover, as B is compact, there existQa neighborhood
+of the identity in GS , and in particular, a compact open subgroup K ∗ = S Kp∗ , with the
+property that for any k ∈ K ∗ we have Bk ⊂ Hω B. We now claim that for any tube Tωδ
+as in Lemma 6.15 we have Tωδ k = Tωδ . To argue the inclusion ⊂ we note the following
+     Tωδ k = yω Lω exp∞ (BδV∞ )Bk ⊂ yω Lω exp∞ (BδV∞ )Hω B = yω Lω exp∞ (BδV∞ )B = Tωδ .
+The opposite inclusion follows by switching k with k −1 .
+   If x is non-spilt, it is not hard to see that the intersection ∩ω∈KS (Hω · B) contains an
+open neighborhood around eS . It then readily follows that this intersection contains an
+open neighborhood of B. We conclude similarly to the argument presented above that
+the group K ∗ may be chosen to work for all the ω’s simultaneously.
+   We briefly argue part (2) of the lemma. For each relevant ω, it is not hard to see that
+the volume of the tube mS (Tωδ ) satisfies c1 mV∞ (BδV∞ ) ≤ mS (Tωδ ) ≤ c2 mV∞ (BδV∞ ), where
+the constants c1 , c2 are determined by the volume of the orbit yω Lω and the position of
+the linear space V , from which the width is coming, with respect to Lie(Lω ). As the
+2-dimensional volume mV∞ (BδV∞ ) is proportional to δ 2 , the claim regarding a single ω
+follows. In the non-split case, as the Lie algebras Lie(Lω ) are uniformly transverse to V ,
+the constant c1 above can be taken to be uniform for all ω which finishes the proof. 
+
+                                  7. Proof of Lemma 5.1
+                                                                             def
+  Let S be a finite set of primes. For an element δ ∈ GS we denote Σδ = hδiGS and we
+say that δ is of compact type if Σδ is a compact group.
+Definition 7.1. Let δ ∈ GS be an element of compact type. Let us denote for any admis-
+sible radius h by kh (δ) the minimal positive integer k for which δ k belongs to the compact
+open subgroup af (h)KS af (h−1 ). Equivalently, kh (δ) = [Σδ : Σδ ∩ af (h)KS af (h)−1 ].
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                            29
+
+Lemma 7.2. Let δ ∈ GS be an element of compact type such that no power of δ has
+                                                         def
+an upper triangular component. Then, the ratio eh (δ) = khh(δ) attains only finitely many
+values and furthermore, if hn is a divisibility sequence (i.e. hn | hn+1 ), then the sequence
+ehn (δ) stabilizes.
+Proof. The strategy is to reduce to the case where S consists of a single prime p and
+δ ∈ Kp satisfies a certain congruence assumption. In this case the description of kh (δ)
+becomes explicit and simple.
+Step 1 - Reduction to one    Q prime.        Let us denote for an admissible radius h by np (h)
+                                     np (h)
+the integers satisfying h = p∈S p           . We have the equality
+                                              Y
+                       af (h)KS af (h−1 ) =       ap (pnp (h) )Kp ap (p−np (h) ),
+                                               p∈S
+                                                           
+and so, if we denote δ = (δp )p∈S , then kh (δ) = lcm kpnp (h) (δp ) : p ∈ S . From here it
+follows that the statement of the Lemma for a general finite set of primes S follows from
+the corresponding statement for a single prime. Therefore, henceforth we assume that
+S consists of a single prime p and our objective is to show that the sequence kpn (δ)/pn
+                                           def
+stabilizes. For simplicity we denote Kp,n = af (pn )Kp af (p−n ).
+Step 2 - Replacing δ by a power. We wish to prove that for any ℓ > 0 the statement
+of the Lemma for δ is equivalent to the statement of the Lemma for δ ℓ . We first prove
+that ∩n (Σδ ∩ Kp,n ) = {e}. To see this, note that as
+                                   n                          o
+                                        a p−n b       a b
+                            Kp,n =     pn c d     : ( c d ) ∈ Kp ,                    (7.1)
+
+we see that ∩n Kp,n ⊂ {( ∗0 ∗∗ )}, and so if the intersection ∩n (Σδ ∩ Kp,n ) was non-trivial,
+then it would imply that Σδ contains a non-trivial upper triangular element, which in turn
+would imply that its (one-dimensional) Lie algebra is upper triangular. This is equivalent
+to saying that a power of δ is upper triangular, which contradicts our assumption on δ.
+  We conclude that for any ℓ > 0, as Σδℓ < Σδ is an open subgroup, for n large enough
+we have that Σδ ∩ Kp,n = Σδℓ ∩ Kp,n . This implies that for n large enough
+    kpn (δ) = [Σδ : Σδℓ ∩ Kp,n ] = [Σδ : Σδℓ ] · [Σδℓ : Σδℓ ∩ Kp,n ] = [Σδ : Σδℓ ] kpn (δ ℓ ),   (7.2)
+and so, in particular, the sequence kpn (δ)/pn stabilizes if and only if the sequence kpn (δ ℓ )/pn
+does, as desired.
+Step 3 - Concluding the proof. By Step 2 we may assume (by replacing δ by a suitable
+power of δ if necessary), that δ belongs the (open) subgroup of Kp consisting of elements
+congruent to the identity modulo p2 (or said differently, to the kernel of the natural
+                                           2                  def
+homomorphism n from Kp onto PGL2o(Z/p Z)). Denote Bn = Kp ∩Kp,n . A direct calculation
+shows Bn = ( ac db ) ∈ Kp : pcn ∈ Zp . Under the above assumption we have that kpn (δ) is
+the order of (the image of) δ in the finite cyclic quotient Σδ /(Σδ ∩ Bn ). Furthermore, as
+                                                                      def
+Bn+1 < Bn , the divisibility relation kpn (δ)|kpn+1 (δ) holds. Let n0 = max {n > 0 : δ ∈ Bn }.
+30                               MENNY AKA AND URI SHAPIRA
+
+Our assumption that δ is not upper triangular implies that n0 is well defined. The proof
+of the Lemma will be concluded once we establish the following
+                                                                         n−n
+Claim: For any n ≥ n0 we have kpn (δ) = pn−n0 and moreover, δ p 0 ∈ Bn r Bn+1 .
+   We prove this claim by induction on n. For n = n0 the validity of the claim follows from
+the choice of n0 . Let us assume it holds for n. As mentioned above, the divisibility relation
+kpn (δ)|kpn+1 (δ) holds. Moreover, from our inductive hypothesis saying that δ kpn (δ) ∈   / Bn+1
+                                                                                       n−n0
+we know that this divisibility relation is strict. It follows that kp (δ) = j0 p
+                                                                          n+1               where
+                                                  n−n
+j0 is the minimal positive integer j so that δ jp 0 ∈ Bn+1 , or said differently, such that
+                                       n−n
+the bottom left coordinate of δ jp 0 is divisible by pn+1 in Zp . We will be finished once
+we show two things:
+    (1) First, that j0 = p and so kpn+1 (δ) = pn+1−n0 ,
+                                                              n+1−n0
+    (2) and second, that the bottom left coordinate of δ p           is not divisible by pn+2 and
+              kpn+1 (δ)
+         so δ           ∈ Bn+1 r Bn+2 which completes the inductive step.
+                                              
+                            jpn−n0 def   aj bj
+Consider the sequence δ            = cj dj , j = 1, 2, . . . and note the recursive relation
+                                       cj+1 = c1 aj + cj d1 .                                (7.3)
+                                                                                          pn−n0
+We expand c1 to a power series in Zp and use the inductive assumption that δ                     ∈
+Bn r Bn+1 and write
+                                  c1 = m1 pn + m2 pn+1 + upn+2,                               (7.4)
+where m1 ∈ {1, 2, . . . , p − 1}, m2 ∈ {0, 1, . . . , p − 1}, u ∈ Zp . We claim that for any 1 ≤ j
+we have
+                       cj = jm1 pn + jm2 pn+1 + uj pn+2 where uj ∈ Zp .                       (7.5)
+The validity of (1),(2) follows at once from (7.5) and the fact that m1 ∈ {1, 2, . . . p − 1}.
+We prove the validity of (7.5) by induction on j. For j = 1, this is exactly (7.4). Now
+assume it holds for j and write (using the congruence assumption on δ)
+                           aj = 1 + p2 A, dj = 1 + p2 D, A, D ∈ Zp .
+Plugging this and (7.4),(7.5) into the recursive relation (7.3) we see that indeed
+                      cj+1 = (j + 1)m1 pn + (j + 1)m2 pn+1 + pn+2 (. . . )
+as desired. This completes the proof of the Claim and by that concludes the proof of the
+Lemma.                                                                                
+Remark 7.3. It will be useful later on to note the following: A careful look at the
+argument giving Lemma 7.2 shows that for a fixed δ ∈ GS of compact type, we have that
+there exists a positive constant c such that c ≤ eh (δ) for any admissible radius h, where
+c depends only on two things:
+   (1) The power k0 which we need to raise δ to so that each component (δ)kp0 will be in
+                                                 2
+       Kp and congruent to the identity mod  Q p . np
+   (2) The maximal admissible radius h = p∈S p for which for any p ∈ S, (δ)kp0 ∈ Bnp
+       (this h measures how close δ k0 is to being upper triangular).
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                     31
+
+  Before turning to the proof of Lemma 5.1 we make yet another remark which will be
+used in the course of its proof.
+Remark 7.4. Given a class x ∈X∞ witha periodic A∞ -orbit and a representative Λx ∈ x,
+                                 tx     tx
+then the matrix a∞ (tx ) = diag e 2 , e− 2 stabilizes the lattice Λx (that is, as a subset of
+R2 , Λx = Λx a∞ (tx )). As Λx is a lattice, it follows that a∞ (tx ) is conjugate to an integer
+                                    tx
+matrix and so its eigenvalues e± 2 , are algebraic integers of degree 2. The quadratic
+extension Fx from Definition 4.5 is the one generated by them. As these eigenvalues are
+positive Galois conjugates whose product is equal to 1, we conclude furthermore that they
+belong to the group of totally positive units in the ring of integers of Fx (i.e. units all of
+whose embeddings into the reals are positive). As such, by Dirichlet’s unit theorem, they
+are integer powers of the fundamental unit of this field. In fact, we shall slightly abuse the
+classical terminology and use the term fundamental unit to refer to the unit in the ring of
+integers which is of absolute value > 1 and which generates the group of totally positive
+                                         t0
+units. If the fundamental unit is ǫ = e 2 , then the reader will easily verify that the image
+Λx a∞ (t0 ) is contained in the Q-span of Λx . This shows that if we write x = Γ∞ gx , then
+there is a rational matrix δx which solves δx gx = gx a∞ (t0 ) and in fact, tx = kt0 where k
+is the minimal positive integer such that δxk is an integer matrix.
+Proof of Lemma 5.1. (1). A short counting argument shows that the cardinality of the
+sphere Sh (x) is proportional to h (were the proportionality constant depends on S). For
+each x′ on the sphere, let sx′ be the minimal positive                          ′
+                                                       P number such that x a∞ (s) returns
+to the sphere. The total length is then tx (h) = x′ ∈Sh (x) sx′ . We will show below that
+for any x′ ∈ Sh (x) sx′ ≤ tx . This will establish the inequality th (x) ≪x,S h which is
+half of of the statement in part (1) of the Lemma. The other half, namely the inequality
+h ≪x,S tx (h), actually follows from part (2) of the Lemma.
+    Let x′ ∈ Sh (x) be given. By Lemma 4.1 we see that there exists y ∈ π −1 (x) such that
+  ′
+x = π(yaf (h)). As π intertwines the A∞ -actions on XS , X∞ we see that x = xa∞ (tx ) =
+π(ya∞ (tx )) and so if we let ỹ = ya∞ (tx ) then ỹ ∈ π −1 (x) and again by Lemma 4.1 we have
+that x′′ = π(ỹaf (h)) ∈ Sh (x). The following calculation then shows that indeed sx′ ≤ tx
+as was claimed:
+       x′ a∞ (tx ) = π(yaf (h)a∞ (tx )) = π(ya∞ (tx )af (h)) = π(ỹaf (h)) = x′′ ∈ Sh (x).
+   (2). Let L = Lgx ,ω be a non-degenerate generalized branch of GS (x) (here x = Γ∞ gx and
+                                     t0
+ω ∈ KS ). Let t0 > 0 be such that e 2 is the fundamental unit of Fx as in Remark 7.4. In
+the notation of the same remark, let δx be the rational matrix satisfying δx gx = gx a∞ (t0 ).
+We replace the set of places S by a bigger set if necessary S, e so that δx ∈ Γ e. We then
+                                                                                S
+consider the bigger graph GSe(x) which contains the original graph and we further consider
+its following generalized branch: Write Se = S ∪ T and define ω   e ∈ KSe to be identical to
+ω in the components corresponding to the primes in S and equal the identity in the
+components corresponding to primes in T . We then define Le to be the generalized branch
+Lgx ,eω of GSe(x). Note that because of the way we defined ωe , the generalized branch Le is
+non-degenerate as well.
+32                                 MENNY AKA AND URI SHAPIRA
+
+   Denote as before by xh the class in Le ∩ Sh (x). We are interested in analyzing the length
+txh of the orbit xh A∞ . By Remark 7.4, there exists a positive integer b kh satisfying
+
+                                              txh = b
+                                                    kh t0 .                                         (7.6)
+
+In fact, for later purposes, note that in our discussion x and the representative gx are
+fixed but we will play with the branch later on, i.e. with the choice of ω           e (which in our
+setting is defined by ω), and so we should actually record the dependency in ω                 e in our
+notation and denote b         ω ). The function kh (·) from Definition 7.1 and b
+                          kh (e                                                      kh (·) are closely
+related as will be seen below.
+   The number b       ω ) is by definition the minimal positive integer such that xh a∞ (kt0 ) =
+                  kh (e
+xh or, if we prefer working in the extension XSe, it is the minimal positive integer so
+              e )af (h)a∞ (kt0 ) returns to the fiber π −1 (xh ). Because of the identity δx gx =
+that ΓSe(gx , ω
+gx a∞ (t0 ) and the fact that δx ∈ ΓSe we see that ΓSe(gx , ωe )af (h)a∞ (kt0 ) = ΓSe(gx , δx−k ω
+                                                                                                e af (h)),
+and so this point lies in the same fiber as ΓSe(gx , ω   e af (h)) (i.e. above xh ) if and only if the
+                −1
+quotient af (h )e     −1 k
+                    ω δx ω e af (h) belongs to KSe (see Remark 3.1). That is, b         ω ) is the min-
+                                                                                    kh (e
+imal positive integer k for which the (e            e )k ∈ af (h)KSeaf (h−1 ). This establishes the
+                                             ω −1δx ω
+equality
+                                           kh (δxωe ) = b   ω ).
+                                                        kh (e
+The validity of part (2) of the Lemma now follows immediately from Lemma 7.2 and (7.6)
+which together imply cLgx ,ω (h) = t0 eh (δxωe ).
+  (3). Assume first that x is non-split with respect to S. As noted in Remark 7.3 the
+lower bound for the function h 7→ eh (δxωe ), which gives us the lower bounds for the functions
+cLgx ,ω (h), depends only on two things:
+     (1) The smallest power k0 for which δx belongs to the subgroup of KSe consisting of
+         elements congruent to the identity modulo p2 in each component (note that we
+         may ignore the conjugation by ω  e as this is a normal subgroup of KSe).
+     (2) The p-adic norms |cp |p , where cp is the left bottom coordinate of the p-component
+             ω −1δx ω
+         of (e                      e
+                    e )k0 where p ∈ S.
+It is clear that k0 depends only on x and the original set of primes S and does not vary
+with ω (i.e. with the generalized branch). Also, for primes p ∈ S, the p-adic norm |cp |p
+is bounded from below as ω ranges over KS because x is non split. Finally, for the
+primes p ∈ Se r S, as the p’th component of ω     e equals the identity, the p’th component of
+   −1      k0
+ ω δx ω
+(e      e ) is independent of ω. We conclude that
+                      
+                   inf cLgx ,ω (h) : ω ∈ KS , h is an admissible radius > 0
+
+as desired. We leave it as an exercise to the reader to show that in the split case this
+infimum equals zero.
+                                                                                      
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                     33
+
+                      8. Applications to continued fractions
+  In this section we present the necessary terminology and results that will allow us
+to state and prove our main theorems regarding continued fractions and deduce Theo-
+rems 2.8,2.12.
+8.1. The A∞ -orbit attached to α ∈ QI.
+Definition 8.1. For α ∈ QI, let α′ denote its Galois conjugate and let
+                                                        
+                 def  α α′            ′         def  α −α′
+              gα =            if α > α , and gα =             otherwise.                 (8.1)
+                       1 1                            1 −1
+                     def
+Furthermore, let xα = Γ∞ gα ∈ X∞ .
+Lemma 8.2. Let α ∈ QI. Then, the orbit xα A∞ ⊂ X∞ is periodic.
+Proof. Consider the Z-module Λα = spanZ {1, α} in the field Q(α). There exists a unit
+ω in the ring of integers which stabilizes Λα and furthermore by replacing ω by ω 2 if
+necessary we may assume that both ω and its Galois conjugate ω ′ are positive. Note that
+the diagonal matrix diag (ω, ω ′) is an element of A∞ . Let γ = ( nk mℓ ) ∈ GL2 (Z) be the
+matrix describing the passage from the basis {1, α} to the basis {ω, ωα} of Λα . That is
+                                                    
+                                 n m        α        ωα
+                                                 =         .                         (8.2)
+                                 k ℓ        1        ω
+The reader will easily verify now that (8.2) implies that γgα = gα diag (ω, ω ′) or in other
+words that in the space X∞ the orbit xα A∞ is periodic as desired.                        
+Definition 8.3. Given α ∈ QI, in the spirit of Definition 4.5, we denote tα = txα ,
+µα = µxα , and γα = γxα , where γxα is defined using the representative gα of xα .
+  Fix a finite set of primes S. For α ∈ QI consider the S-Hecke graph GS (xα ) and recall
+that by Corollary 4.2, for γ ∈ ΓS with ht(γ) = h we have that the class Γ∞ γgα lies on the
+sphere Sh (xα ).
+Definition 8.4. Let ω ∈ KS
+  (1) We say that γ ∈ ΓS lies on the generalized branch Lgα,ω if Γ∞ γgα ∈ Lgα ,ω and
+      denote this by γ ∈ [ω]br . As will be explained shortly in Remrak 8.5, the question
+      of whether or not γ ∈ [ω]br is indeed independent of α as suggested by the notation.
+  (2) Similarly to the notation introduced in Remark (4.4)(1), we denote by xα,ω,h the
+      class in Lgα,ω ∩ Sh .
+Remark 8.5. With the above notation, for γ ∈ ΓS with ht(γ) = h we have that γ ∈ [ω]br
+if and only if xα,ω,h = Γ∞ γgα . As mentioned in the proof of Corollary 4.2, an element
+γ ∈ ΓS can be written as γ = γ1 diag (h, 1) γ2 with γi ∈ Γ∞ and h = ht(γ). It follows
+that for ω ∈ KS we have that γ ∈ [ω]br if and only if π(ΓS (gα , γ −1 ) = π(ΓS (gα , ω)af (h)).
+The latter happens, by Remark 3.1, exactly when γωaf (h) belongs to KS , or equivalently,
+when the lower left coordinate of γ2 is divisible by h in each Zp for p ∈ S.
+34                               MENNY AKA AND URI SHAPIRA
+
+  The following Lemma relates the orbit {γα : γ ∈ ΓS } ⊂ R and the periodic A∞ -orbits
+through points of GS (xα ).
+Lemma 8.6. Let S be a finite set of primes, α ∈ QI, ω ∈ KS , and γ ∈ [ω]br , with
+ht(γ) = h. Denote by θ ∈ Γ∞ the element θ = diag (1, −1). Then, one of the following
+two relations holds: Either µxα,ω,h = µγα , or µxα,ω,h = θ∗ µγα .
+Proof. Write γ = ( ac db ) and recall that the matrix gα in Definition 8.1 has one of the forms
+            ′                 ′
+gα = ( α1 α1 ) or gα = ( α1 α1 ) θ. The equation
+                                                    1              
+                                  α α′       γα (γα)′     cα+d
+                                                                   0
+                             γ           =                         1      ,                     (8.3)
+                                  1 1         1   1         0    cα′ +d
+
+                                                           (γα)′
+                                                                                γα (γα)′
+                                                                                          
+together with the fact that gγα has either the form γα  1    1
+                                                                   or   the form  1   1
+                                                                                            θ, imply
+that the two points xα,ω,h = Γ∞ γgα , xγα = Γ∞ gγα are on the same orbit under the group
+generated by A∞ and θ in G∞ . This group contains A∞ as a subgroup of index 2 and so
+either the two points are on the same A∞ -orbit or otherwise, their A∞ -orbits are related
+by the action of θ. The translation of the latter statement to the A∞ -invariant probability
+measures that are supported on these orbits is exactly the statement sought.                       
+   The following Theorem relates the measures µα from Definition 8.3 to the measures
+να from Definition 2.3 and will allow us to translate equidistribution results for geodesic
+loops to statements about periods of c.f.e while controlling error terms. We will use the
+following terminology
+Definition 8.7. For α ∈ QI, we denote
+                                n
+                            def   1 if the size |Pα | is even,
+                         jα =
+                                  2 if the size |Pα | is odd.
+Theorem 8.8. Let α ∈ QI. There Rexists an absolute
+                                              R       constant T0 > 1 so that if we assume
+that for some T > T0 the estimate f dµα − f dm∞ ≤ max {kf k2 , κ} T −1 holds for any
+f ∈ Lipκ (X∞ ) ∩ L2 (X∞ , m∞ ), then the following two statements hold
+   (1) For any f ∈ Lipκ ([0, 1]), and any ǫ > 0
+                    Z 1         Z 1
+                                                                     1
+                        f dνα −     f dνGauss ≪ǫ max {kf k∞ , κ} T − 3 +ǫ .
+                       0            0
+
+                                                              |Pα |                   1
+     (2) There exists an absolute constant c0 such that        tα
+                                                                    − jα1c0   ≪ǫ T − 3 +ǫ .
+
+Below we will use Theorem 8.8 while postponing its proof to §9.
+
+8.2. Main Theorems regarding continued fractions. The following is the analogue
+of Theorem 4.8 in the language of continued fractions. We prove it and then deduce
+Theorem 2.8.
+Theorem 8.9. Let S be a finite set of primes and α ∈ QI.
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                       35
+
+   (1) Let ω ∈ KS be such that the generalized branch Lgα,ω is non-degenerate. Then for
+       any γ ∈ [ω]br , any ǫ > 0, and any f ∈ Lipκ ([0, 1]) the following estimate holds
+             Z 1             Z 1
+                                                                           δ0
+                 f dνGauss −     f dνγα ≪Lgα,ω ,S,ǫ max {kf k∞ , κ} ht(γ)− 6 +ǫ ,      (8.4)
+                   0                0
+
+   (2) If all the primes in S do not split in the quadratic extension Q(α), then the implicit
+       constant in (8.4) may be taken to be independent of the generalized branch.
+   (3) On the other hand, if there exists ω ∈ KS such that the generalized branch Lgα,ω
+       is degenerate, then there exists a sequence γn ∈ [ω]br such that ht(γn ) → ∞ and
+       the cardinality of the periods Pγn α is bounded. In particular, νγn α 9 νGauss .
+   (4) Rational generalized branches are always non-degenerate.
+   (5) Nevertheless, in case xα is split, then one cannot take the implicit constant in (8.4)
+       to be uniform along the rational generalized branches.
+Proof. (1). Let γ ∈ [ω]br and ǫ > 0 be given and denote h = ht(γ). By the corresponding
+part of Theorem 4.8 we know that for the class xα,ω,h ∈ Lgα,ω ∩Sh (xα ), the measure µxα,ω,h
+satisfies the estimate
+                   Z            Z
+                                                                       δ0
+                     f dµα,ω,h − f dm∞ ≪Lgα ,ω ,S,ǫ max {κ, kf k2 } h− 2 +ǫ ,         (8.5)
+
+for any f ∈ Lipκ (X∞ ) ∩ L2 (X∞ , m∞ ). By Lemma 8.6 we know that either µγα = µxα,ω,h or
+θ∗ µγα = µxα,ω,h . Assume that the first possibility holds. We now apply Theorem 8.8 with
+              δ0
+T −1 = C h− 2 +ǫ where C is the implicit constant in (8.5) and obtain the desired (8.4).
+One remark is in order here: For finitely many heights h it might happen that this choice
+of T is not valid as T needs to exceed the absolute constant T0 from Theorem 8.8. We
+overcome this problem by choosing the implicit constant in (8.4) to be big enough so that
+this inequality will hold for these finitely many cases as well.
+   Assume now that when we apply Lemma 8.6 we obtain that θ∗ µγα = µxα,ω,h . As θ
+acts as an isometry of X∞ we have that (8.5) implies the same estimate for µγα replacing
+µxα,ω,h and the argument concludes as before.
+   The argument giving part (2) of the Theorem is identical to the one giving part (1) of
+the Theorem but uses as an input the corresponding part of Theorem 4.8.
+   For part (3) of the Theorem follows from Theorem 4.8(3) because of the following
+general fact9: For β ∈ QI |Pβ | ≪ tβ .
+   Part (4) of the Theorem is included in Theorem 4.8 and finally, part (5) of the Theorem
+follows from part (3) of the Theorem in the same way that the corresponding implication
+of Theorem 4.8 was proved in the beginning of §6.                                        
+Proof of Theorem 2.8. (1). Note that for q ∈ OS if we define γq = diag (q, 1) then γq α =
+qα. Define Ω ⊂ KS as follows
+                         def
+                       Ω = {ω = (ωp )p∈S ∈ KS : ωp = ( 10 01 ) or ωp = ( 01 10 )} .         (8.6)
+  9This fact will become clear in §9, in fact |P | ≤ tβ , where ǫ
+                                                β    ǫ0             0 is as in Lemma 9.3.
+36                              MENNY AKA AND URI SHAPIRA
+
+Then, we leave it as an exercise to the reader to verify (using Remark 8.5), that in
+the notation of Definition 8.4, for any q ∈ OS , γq ∈ [ω]br for some ω ∈ Ω. As by
+Theorem 8.9(4) the finitely many rational generalized branches Lgα ,ω , ω ∈ Ω are all non-
+degenerate we conclude from Theorem 8.9(1) that the estimate (2.2) indeed holds.
+   (2). Given γ ∈ ΓS choose ω ∈ KS such that γ ∈ [ω]br . The estimate (2.3) holds with
+implicit constant depending only on α, S, ǫ but not on the the generalized branch. If we
+replace γ by γγ0 for some choice of γ0 ∈ Γ∞ we change the generalized branch but this
+does not effect the right hand side of (8.4) by Theorem 8.9(2). We conclude that the
+implicit constant does not depend on α but only on the orbit ι(α). This gives us the
+desired estimate (2.3).
+   (3). Let δn ∈ ΓS be a sequence such that νδn α does not converge to νGauss , as in part (3)
+of Theorem 8.9. Write δn = γn′ diag (qn , 1) γn , where γn , γn′ ∈ Γ∞ . By (2.1), νδn α = νqn γn α
+and so the sequences qn , γn satisfy the statement.                                            
+
+  The following Theorem is the most general statement we could extract from our analysis
+regarding the growth of the period. We prove it and then deduce Theorem 2.12.
+
+Theorem 8.10. Let S be a finite set of primes. There exists a positive function c(α, ω, h)
+on the set QI ×KS × (OS× ∩ N) satisfying the following: For any α ∈ QI
+     (1) If the generalized brach Lgα ,ω is non-degenerate then
+          (a) For any ǫ > 0, for any γ ∈ [ω]br with ht(γ) = h we have
+                                                                  δ0
+                           |Pγα | = c(α, ω, h) h +Oα,ω,S,ǫ(1) h1− 6 +ǫ .                    (8.7)
+
+               Moreover, if all the primes in S do not split in Q(α) then the the function
+               Oα,ω,S,ǫ(1) in (8.7) is in fact Oι(α),S,ǫ (1).
+                                    only finitely many values along the branch correspond-
+          (b) The function c attains
+               ing to ω; that is, c(α, ω, h) : h ∈ OS× ∩ N < ∞.
+          (c) If hn ∈ OS× ∩ N satisfies hn | hn+1 , then c(α, ω, hn ) stabilizes.
+     (2) sup c(α, ω, h) : ω ∈ KS , h ∈ OS× ∩ N ≪ι(α),S 1.
+     (3) All the primes in S do not split in the quadratic extension Q(α) if and only if
+         inf c(α, ω, h) : ω ∈ KS , h ∈ OS× ∩ N > 0.
+                                                                                def
+Proof of Theorem 8.10. Fix α ∈ QI and let xα = Γ∞ gα . Define c(α, ω, h) = jα1c0 cLgα ,ω (h),
+where cLgα ,ω (·) is defined in Lemma 5.1 by the equation txα,ω,h = cLgα ,ω (h) h and c0 , jα are
+as in Theorem 8.8.
+  Parts (1b),(1c),(2),(3) of the Theorem follow directly from Lemma 5.1. We now prove
+part (1a) in a similar manner to the argument for Theorem 8.9(1) given above. For
+any ǫ > 0, h ∈ OS× ∩ N we have by Theorem 4.8 that the measure µxα,ω,h satisfies the
+estimate (8.5). For any γ ∈ [ω]br with ht(γ) = h we have by Lemma 8.6 that the measure
+µγα is equal either to µxα,ω,h or to θ∗ µxα,ω,h . In any case, as θ is an isometry of X∞ , the
+                                                                                   δ0
+measure µγα satisfies (8.5) as well. Applying Theorem 8.8 with T −1 = C h− 2 +ǫ , where C
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                     37
+
+is the implicit constant in (8.5), we obtain
+                                |Pγα |    1               δ0
+                                       −       ≪α,ω,S,ǫ h− 6 +ǫ .                        (8.8)
+                                 tγα     jα c0
+Note though that we may apply Theorem 8.8 only when T > T0 and so we choose the
+implicit constant in (8.8) to be big enough to handle the finitely many h’s for which
+T ≤ T0 .
+  By Lemma 8.6 we have that txα,ω,h = tγα and so by the definition of c(α, ω, h) we
+obtain that tγα = jα c0 c(α, ω, h) h. Substituting this in (8.8) and recalling that by part (2)
+of the Theorem – that was already established above – c(α, ω, h) ≪α,S 1, we obtain
+                                     δ0
+|Pγα | = c(α, ω, h) h +Oα,ω,S,ǫ(1) h1− 6 +ǫ as desired. The last statement regarding the big
+O in the non-split case follows from the fact that in this case the implicit constant C
+from (8.5) may be chosen independent of ω.                                                
+
+Proof of Theorem 2.12. For any α ∈ QI and γ ∈ ΓS , let h = ht(γ) and choose ω ∈ KS
+                                  def
+so that γ ∈ [ω]br . Let c̃(α, γ) = c(α, ω, h) where c(α, ω, h) is the function appearing in
+Theorem 8.10. Note that although the choice of ω is not unique, the value c̃(α, γ) is well
+defined. We prove that c̃(·, ·) satisfies the conclusions of the theorem where the change of
+notation is in order to avoid confusion.
+   Parts (2),(3) of the theorem follow directly from the corresponding part of Theo-
+rem 8.10. Part (1a) of the theorem follows from the corresponding part of Theorem 8.10
+with the additional remark that for any q ∈ OS× , γq ∈ [ω]br for some ω ∈ Ω, where Ω
+is as in (8.6). The finiteness of Ω implies that the big O in (2.6) is independent of the
+generalized branch (as opposed to the big O in (8.7)). For the same reason, part (1b)
+of the theorem follows from the corresponding part of Theorem 8.10. Finally, part (1c)
+of the theorem also follows from the corresponding part of Theorem 8.10 where here we
+                                 (1) (2)
+need to remark that if qn = ℓn /ℓn is a sequence as in part (1c) of the theorem, then
+γqn ∈ [ω]br for a fixed choice of ω ∈ Ω                                                   
+
+
+                               9. Proof of Theorem 8.8
+   The proof of Theorem 8.8 utilizes and expands on the tight connection between the
+geodesic flow and the Gauss map. This connection was discovered by Artin [Art82], who
+used the flexibility of continued fractions to construct dense geodesics. As we will need to
+use technical aspects of this connection, we choose to give below a brief – essentially self
+contained – treatment which allows us to introduce the language and notation needed in
+the proof of Theorem 8.8. We follow closely the notation and exposition of [EW11, §9.6]
+(see also [Ser85]).
+   Our notation henceforth will differ slightly from the notation used in previous sections.
+We elaborate about these changes: Note that the natural map PSL2 → PGL2 induces
+an isomorphism between the quotients PSL2 (Z)\ PSL2 (R) and PGL2 (Z)\ PGL2 (R). Due
+to the geometric nature of the arguments below, it would be easier for us to work with
+38                             MENNY AKA AND URI SHAPIRA
+
+             def                def                   def
+the space X = Γ\G, where G = PSL2 (R) and Γ = PSL2 (Z) rather than with the quo-
+tient of PGL2 (R). As before, we shall abuse notation and treat elements of G as matri-
+ces rather than equivalence classes of such. The group G acts on the upper half plane
+   def
+H = {z = x + iy : y > 0} by Möbius transformations and this action preserves the hyper-
+                     2     2
+bolic metric ds2 = dx y+dy
+                        2    and so induces an action of G on the unit tangent bundle T 1 H.
+The action of G on T 1 H is free and transitive hence allows us to identify G with T 1 H once
+we choose a base point. We make the usual choice of the base point to be the tangent
+vector pointing upwards through i ∈ H. With this identification the geodesic flow on
+G = T 1 H corresponds to the action from the right of the positive diagonal subgroup
+                                                     
+                       A = {a(t)} = diag et/2 , e−t/2 : t ∈ R < G.
+Remark 9.1. The reason we chose to work with PGL2 rather than PSL2 to begin with
+is as follows: We were trying to analyze the c.f.e of numbers of the formqα and therefore
+                                                            −1
+used the fundamental conjugation relation 0q 01 ( 10 α1 ) q 0 10 = 10 qα  1 . Working with
+                                                                      −1
+PSL2 would have forced us to use conjugation by say diag (q, q ) which would have
+produced results regarding q 2 α.
+9.1. Cross-sections. We now wish to introduce the notion of a cross-section. We are
+being rather restrictive below as we only want to discuss a specific example hence we see no
+use in greater generality. Given a Borel measurable set C ⊂ X, we let rC : C → R≥0 ∪{∞}
+be defined by rC (x) = inf {t > 0 : xa(t) ∈ C} . The function rC is called the return time
+function to C. The set C is called a cross-section for a(t) if the return time functions for
+positive and negative times are bounded from below by some fixed positive number and the
+map (x, t) 7→ xa(t) from {(x, t) : x ∈ C, 0 ≤ t < rC (x)} → X is a measurable isomorphism
+onto its image in X. The first return map TC is defined to be TC (x) = xa(rC (x)), where
+this makes sense; i.e. for x belonging to {x ∈ C : rC (x) < ∞}. In fact, we will be interested
+only in points which return infinitely often in the future and past to C, thus we define
+the domain of the first return map to be
+              DomTC = {x ∈ C : there are infinitely many                                 (9.1)
+                                      positive and negative t’s with xa(t) ∈ C}.
+Note that TC : DomTC → DomTC is invertible.
+  We now wish to define the relevant cross-section for the geodesic flow in X. An element
+g ∈ G represented by a matrix ( ac db ) corresponds to a tangent vector of unit length to the
+upper half plane. It then defines a geodesic in H which hits the boundary of H in two
+points. We denote the endpoint and startpoint of the geodesic it defines by e+ (g), e− (g)
+respectively. Clearly we have e+ (g) = ac , e− (g) = db , where we allow ∞ as a possible value.
+Any element g ∈ G has a unique decomposition (the Iwasawa decomposition) of the form
+                                           s/2                            
+                                  1 t          e    0            cos θ − sin θ
+              g = n(t)a(s)kθ =                                                   ,        (9.2)
+                                  0 1          0    e−s/2        sin θ cos θ
+where t, s ∈ R, and θ ∈ [0, π). The notation n(t), a(s), kθ should be understood from (9.2).
+An element g having the above decomposition corresponds to the tangent vector to the
+       ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                          39
+
+point t + ies ∈ H of angel 2θ in the clockwise direction from the vector pointing upwards.
+Consider the following sets:
+                     C + = {g = a(s)kθ ∈ G : e+ (g) ∈ (0, 1), e− (g) < −1} ;
+                     C − = {g = a(s)kθ ∈ G : e+ (g) ∈ (−1, 0), e− (g) > 1} ;                    (9.3)
+                             +     −
+                      C =C ∪C .
+The set C consists of those tangent vectors whose base-point lies on the imaginary axis
+with some restriction on the angle θ related to the height es of the base point. It should
+be clear from the geometric picture described above that the range of ‘allowed angles’ for
+such a tangent vector, say in C + , is a subinterval of ( π4 , π2 ) with π2 being its right-end-point.
+In §10 we will workout these intervals exactly. Let π : G → X be the quotient map. We
+denote the sets π(C), π(C + ), π(C − ) by C, C + , C − respectively. The following lemma is
+proved in [EW11, §9.6].
+Lemma 9.2. The following hold
+  (1) The set C injects into X under π; that is, for each x ∈ C corresponds a unique
+      g ∈ C with π(g) = x.
+  (2) The set C is a cross-section for the geodesic flow on X.
+  (3) The domain of TC corresponds to those g ∈ C for which both e+ (g), e− (g) are
+      irrational.
+  (4) For g ∈ C + , if TC (π(g)) is defined, then TC (π(g)) ∈ C − . An analogue statement
+      with + replaced by − holds.
+  It will be convenient for us to introduce a ‘thickening’ of the cross-section C which will
+denoted by B. The following lemma is left to be verified by the reader.
+Lemma 9.3. There exists a constant ǫ0 > 0 (which will be fixed throughout) such that
+the following statements hold
+   (1) The the map (g, t) 7→ ga(t) from C × (0, ǫ0 ) to the set
+                                   def
+                                 B = {ga(t) : g ∈ C, t ∈ (0, ǫ0 )}                              (9.4)
+       is one to one and onto, and the set B is open in G.
+              def
+   (2) Let B = π(B). The restriction π : B → B is one to one and onto and the set
+       B ⊂ X is open.
+  The constant ǫ0 introduced in the above lemma is a lower bound for the return time
+function, rC , to the cross-section C. The importance of part (2) of the above lemma is
+that it gives us a well defined way of lifting points in X near the cross-section to the group
+G in which it is more convenient to work. The combination of parts (1) and (2) gives
+us natural coordinates on B; any point x ∈ B can be written uniquely as xC a(t) where
+xC ∈ C and t ∈ (0, ǫ0 ).
+  In our discussion we will encounter certain measures on the cross-section C which are
+invariant under the first return map and we will need a procedure to construct from them
+40                                    MENNY AKA AND URI SHAPIRA
+
+measures on the ambient space X which are invariant under the geodesic flow; that is,
+under the action of the group A.
+Definition 9.4. Let µ̃ be a probability measure on C. We define the suspension of µ̃ to
+be the measure σµ̃ on X which is given by the following rule of integration: For f ∈ Cc (X)
+                       Z                 Z Z rC (x)
+                         f (x)dσµ̃ (x) =            f (xa(t))dtdµ̃(x).                (9.5)
+                               X                    C   0
+
+Lemma 9.5. If µ̃(DomTC ) = 1 Rand µ̃ is TC -invariant, then the suspension σµ̃ is A-
+invariant. Furthermore, σµ̃ (X) = C rC dµ̃.
+Proof. This is follows from [EW11, Lemma 9.23] taking into account that TC is invertible
+on DomTC .                                                                            
+Definition 9.6. Given a function f : C → C, we denote by fb : X → C the following
+function
+                        
+                 b        f (xC ) if x ∈ B has coordinates (xC , t),
+                f (x) =
+                          0            /B
+                                  if x ∈
+  Note that with the above definition, given a measure µ̃ on C and a function f : C → C,
+equation (9.5) translates to the following useful formula which will be used frequently
+below                             Z               Z
+                                      fbdσµ̃ = ǫ0   f dµ̃.                          (9.6)
+                                             X                C
+
+9.2. The Gauss map. Let I = (0, 1) and S : I → I be the Gauss map; i.e. the map
+defined by the formula S(y) = y1 − ⌊ y1 ⌋. Note that strictly speaking S(y) is not in I for
+points of the form y = m1 . The reader will easily verify that S n (y) is well defined for all
+positive n if and only if y is irrational. This slight inconvenience will not bother us as
+we will only apply the Gauss map to irrational points. Let Iirr = I r Q. Consider the
+following subsets of R2 :
+                                             
+                                           1
+           D = (y, z) : y ∈ I, 0 < z <           , Dirr = {(y, z) ∈ D : y ∈ Iirr } .    (9.7)
+                                          1+y
+Let S̄ : D → D be the map given by S̄(y, z) = (S(y), y(1 − yz)) and note similarly that
+strictly speaking, in order to iterate S̄ as many times as we wish we need to restrict to
+points in Dirr. Recall (see for example [EW11, §3.4]) that the normalized restriction of the
+Lebesgue measure on R2 to D, which we denote here by λ, is an S̄-invariant probability
+measure. This is the so called invertible10 extension of the Gauss map as when one projects
+on the first coordinates, one recovers the Gauss map and the Gauss-Kuzmin measure νGauss
+introduced in the introduction. That is if p : D → I denotes the projection on the first
+coordinate, then
+                                         p∗ λ = νGauss .                               (9.8)
+     10The term ‘invertible’ refers to the fact that when restricted to a subset of D, S̄ is indeed invertible.
+This subset is obtained by neglecting a certain set of Lebesgue measure zero (see [EW11, Prop. 3.15]).
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                    41
+
+9.3. Relation to the Gauss map. Consider the maps τ+ : C + → D, τ− : C − → D
+defined by the following formulas: For x = π(g) ∈ C, where g = ( ac db ) ∈ C :
+                                                       1             a
+                For g ∈ C + , τ+ (x) = (e+ (g),                 ) = ( , cd),            (9.9)
+                                                e+ (g) − e− (g)      c
+                                                          1                a
+                For g ∈ C − , τ− (x) = (−e+ (g),                   ) = (− , −cd).
+                                                  −e+ (g) + e− (g)         c
+We let τ : C → D be the union of τ+ and τ− . The formulas in (9.9) can be stated
+geometrically as follows: For a tangent vector g ∈ C and x = π(g), τ (x) = (y, z) ∈ D,
+where y is the absolute value of the end point of the semicircle corresponding to g and
+z −1 is the diameter of it. For any endpoint y ∈ (0, 1) (resp. y ∈ (−1, 0)) and any diameter
+z −1 > 1, we can attach a well defined semicircle in H which corresponds to a unique point
+in C + (resp. C − ). This shows that τ is one to one and onto (and in fact, a homeomorphism)
+from C + (resp. C − ) to D which is the area below the graph of the function y 7→ (1 + y)−1.
+The following basic lemma is proved in [EW11, §9.6]. It establishes the link between the
+geodesic flow and the Gauss map.
+Lemma 9.7. The following diagram commutes (for points x ∈ C for which TC (x) is
+defined)
+                                                TC
+                                         C           /C
+
+                                        τ                  τ
+                                                      
+                                         D           / D.
+                                                S̄
+
+  Note that τ : C → D is ‘almost’ an isomorphism (it is two to one), and so the above
+lemma basically says that any dynamical question about the system S̄ : D → D can
+be pulled to a corresponding question on TC : C → C. In our case the dynamical
+question is that of equidistribution of certain S̄-invariant measures. Using the suspension
+construction we will see that the equidistribution questions for the dynamical system
+TC : C → C translate to equidistribution questions of certain A-invariant measures on X.
+  We will be interested in two types of measures on the cross-section C defined above.
+The first is the following version of the Lebesgue measure: We use τ+ (resp. τ− ) to pull
+the (normalized restriction of) Lebesgue measure λ from D to C + (resp. C − ) and denote
+the resulting measure by λ̃+ (resp. λ̃− ). Further denote λ̃ = 21 λ̃+ + 12 λ̃− . Clearly λ̃ is
+TC -invariant and τ∗ (λ̃) = λ.
+  The second type of measures on C are those coming from quadratic irrationals. We
+recall Definitions 8.1, 8.3. Let α ∈ QI and let gα be as in (8.1). We chose to define
+gα as we did so as to ensure that its determinant is positive and hence it corresponds
+naturally to an element of G with endpoint α. Let xα ∈ X be the corresponding point
+                    1
+(that is xα = π( √det    g )) and µα the A-invariant probability measure supported on the
+                      gα α
+periodic orbit xα A = {xα a(t) : t ∈ [0, tα )}, where tα is the length of the orbit. We claim
+that the intersection C ∩ xα A is a non-empty finite set contained in DomTC . In fact, any
+geodesic in the upper half plane that corresponds to a semi-circle, projects to a set in X
+42                             MENNY AKA AND URI SHAPIRA
+
+that intersects C non-trivially. By Lemma 9.2(3), if the end points of the geodesic are
+irrational, the intersection is in DomTC . Finally, the finiteness follows from the fact that
+C is a cross-section together with the fact that the orbit xα A is of finite length.
+   Let us denote by µ̃α the normalized counting measure on C∩xα A. Clearly µ̃α is invariant
+under the first return map TC . Let us denote the G-invariant probability measure on X
+by mX . The following lemma links between the measures mX , µα and the suspensions σλ̃ ,
+σµ̃α given in Definition 9.4.
+Lemma 9.8. Let α ∈ QI. The suspensions σλ̃ , σµ̃α of the probability measures λ̃, µ̃α are
+proportional to mX , µα respectively.
+Proof. The fact that σλ̃ is proportional to the Haar measure mX is proved in [EW11,
+p. 325-326]. The outline of the proof is as follows: By Lemma 9.5, σλ̃ is A-invariant.
+One shows that it is absolutely continuous with respect to mX and deduces the result
+from the ergodicity of mX with respect to the A-action. Regarding σµ̃α , note that it is
+clearly a measure that is supported on the orbit xα A and it is A-invariant by Lemma 9.5.
+The assertion now follows from the uniqueness (up to proportionality) of an A-invariant
+measure on the periodic orbit xα A.                                                    
+Definition 9.9. Let c0 be the absolute constant satisfying σλ̃ = c0 mX . Similarly, for any
+α ∈ QI let cα be the constant satisfying σµ̃α = cα µα .
+  The following lemma is the last bit of information we need in order to translate the
+statement of Theorem 8.8 to the cross-section.
+Lemma 9.10. Let p : D → I be the projection on the first coordinate. Then
+                                    (p ◦ τ )∗ (λ̃) = νGauss ,                           (9.10)
+                                    (p ◦ τ )∗ (µ̃α ) = να .
+Proof. The first equality in (9.10) follows from the fact that τ∗ (λ̃) = λ (which is basically
+the definition of λ̃) and the observation p∗ (λ) = ν which was pointed out in (9.8). We
+argue the second equality: By Lemma 9.7 the measure τ∗ (µ̃) is S̄-invariant. By the above
+discussion it is finitely supported. Since xα A is a loop, the first return map TC acts
+transitively on the support of µ̃ and so the support of τ∗ (µ̃) consists of a single S̄ orbit.
+This implies that (p ◦ τ )∗ (µ̃) is supported on a single periodic orbit of the Gauss map
+S. Denote this period by Pα′ . We need to argue why Pα = Pα′ , which is equivalent to
+Pα ∩ Pα′ 6= ∅.
+    Consider the matrix gα defined in (8.1). The tangent vector corresponding to gα defines
+a geodesic in T 1 H which is a semicircle with endpoint e+ (gα ) = α. At some point along
+this geodesic we find a point g which projects to C + under π. Let x = π(g) ∈ C + and
+g ′ ∈ C + the corresponding point in C + . Clearly x is in the support of µ̃α and hence the
+endpoint e+ (g ′ ) = p ◦ τ (x) is a point of Pα′ . As π(g) = x = π(g ′) we deduce that there
+exists γ ∈ Γ such that γg = g ′. Therefore the semicircle corresponding to g and to g ′
+are related by the action of γ as a Möbius transformation. It follows that the endpoints
+α, e+ (g ′ ) are related by the action of γ as well. By Theorem 2.2 this action can effect only
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                        43
+
+finitely many digits of the c.f.e of α and we conclude that the periods of the c.f.e of α and
+of e+ (g ′ ) must be the same (up to a possible cyclic rotation) which finishes the proof. 
+  Finally, in light of (9.10), Theorem 8.8 will follow if we prove the following
+Theorem 9.11. Let α ∈ QI. There exists anR absoluteRconstant T0 > 1 so that if we
+assume that for some T > T0 the estimate          f dµα − f dmX ≤ max {kf k2 , κ} T −1
+holds for any f ∈ Lipκ (X) ∩ L2 (X, mX ), then the following two statements hold
+   (1) For any f ∈ Lipκ (D), and any ǫ > 0
+                  Z               Z
+                                                                     1
+                     f ◦ τ dµ̃α −   f ◦ τ dλ̃ ≪ǫ max {kf k∞ , κ} T − 3 +ǫ .      (9.11)
+                      C               C
+                                                           |Pα |                    1
+   (2) The constant c0 from Definition 9.9 satisfies        tα
+                                                                 − jα1c0   ≪ǫ T − 3 +ǫ .
+  The argument yielding Theorem 9.11 is slightly technical because of the following issue:
+We start with a κ-Lipschitz function f : D → C and construct from it the function
+f[◦ τ : X → C as in Definition 9.6. As we wish to appeal to Theorem 4.8 we need to
+remedy f[ ◦ τ to be Lipschitz in a way that will allow us to control its Lipschitz constant.
+In order to achieve this we shall need the following technical lemma which is proved in
+§10.
+Lemma 9.12. For any M > 1 and 0 < ρ < 1 there exist a function ϕ = ϕρ,M : X → [0, 1]
+with the following properties
+                            −1
+                 R ϕ is ρ -Lipschitz.
+   (1) The function
+   (2) We have X 1 − ϕdmX ≪ M −1 + ρ log M.
+   (3) Given f : D → C a κ-Lipschitz function, the product f[
+                                                            ◦ τ · ϕ : X → C is Lipschitz
+                                                  −1
+       with Lipschitz constant ≪ max {kf k∞ , κ} ρ M.
+Proof of Theorem 9.11. (1). Let T > 1 and ǫ > 0 be fixed. Under the assumption in the
+statement of the Theorem we need to argue the validity of (9.11). Let f ∈ Lipκ (D) be
+given. Let c0 , cα be as in Definition 9.9. Using (9.6) we have the following estimate:
+   Z                Z                    Z                   Z
+                                     cα                  c
+                                            f[                  f[
+                                                           0
+       f ◦ τ dµ̃α −     f ◦ τ dλ̃ =            ◦ τ dµα −           ◦ τ dmX                   (9.12)
+     C                C               ǫ0 X               ǫ0 X
+                                                                   Z               Z
+                                                      −1
+                                  ≤ |cα − c0 | kf k∞ ǫ0 + c0 ǫ0−1       [
+                                                                       f ◦ τ dµα −    f[
+                                                                                       ◦ τ dmX .
+                                    | {z }                           X              X
+                                        (∗)                       |              {z            }
+                                                                                 (∗∗)
+
+We first estimate the expression (∗∗) in (9.12). Given M > 1, 0 < ρ < 1 we let ϕ = ϕρ,M
+be as in Lemma 9.12 and denote ψ = 1 − ϕ.
+           Z                       Z
+  (∗∗) =      [
+              f ◦ τ · (ϕ + ψ)dµα −     f[◦ τ · (ϕ + ψ)dmX                         (9.13)
+            X                        X
+           Z                 Z                     Z                 Z
+        ≤     [
+              f ◦ τ · ϕdµα −    [
+                                f ◦ τ · ϕdmX +        [
+                                                      f ◦ τ · ψdµα +   f[
+                                                                        ◦ τ · ψdmX .
+             X                   X                     X                        X
+44                             MENNY AKA AND URI SHAPIRA
+
+We will estimate each of the three summands in the right hand side of the inequality (9.13).
+By Lemma 9.12(2) we have
+              Z                        Z
+                  [
+                 f ◦ τ · ψdmX ≤ kf k∞     ψdmX ≪ kf k∞ (M −1 + ρ log M).              (9.14)
+               X                               X
+
+Next, note that by Lemma 9.12(1) ψ is ρ−1 -Lipschitz and so our assumption together
+with the estimate (9.14) yields
+               Z                        Z
+                   [
+                   f ◦ τ · ψdµα ≤ kf k∞    ψdµα
+                 X                       X
+                                        Z                             
+                                                         −1        −1
+                                ≤ kf k∞      ψdmX + max 1, ρ      T
+                                           X
+                                                                 
+                                ≪ kf k∞ M −1 + ρ log M + ρ−1 T −1 .          (9.15)
+
+Finally, by Lemma 9.12(3) our assumption applies to the Lipschitz function f[
+                                                                            ◦ τ · ϕ and
+we conclude the following
+             Z                Z
+               [
+               f ◦ τ · ϕdµα −    f[
+                                  ◦ τ · ϕdmX ≤ max {kf k∞ , κ} ρ−1 MT −1 .        (9.16)
+              X                  X
+                                           1       ǫ
+We now make the choice M = ρ−1 = T 3 − 2 and combine estimates (9.14), (9.15), (9.16)
+into (9.13) to obtain
+                                                     1
+                         (∗∗) ≪ǫ max {kf k∞ , κ} T − 3 +ǫ ,                    (9.17)
+                                                         1
+where in the above estimate we used ρ log M ≪ǫ T − 3 +ǫ .
+   In order to finish we need to further estimate (∗) in (9.12). To obtain this estimation
+from the above we take f : D → C to be identically 1 and note that in this case f[◦ τ = χB
+and so using (9.6) we have
+              Z               Z
+                   [                                                ǫ0    ǫ0
+                  f ◦ τ dµα −    f[◦ τ dmX = |µα (B) − mX (B)| =       −     .       (9.18)
+                X              X                                    cα c0
+The left hand side of (9.18) is (∗∗) for this choice of f and so by (9.17) we obtain
+                                                        1
+                                     c−1   −1
+                                      α − c0  ≪ǫ T − 3 +ǫ .                            (9.19)
+We choose the absolute constant T0 so that the inequality (9.19) (applied say with T = T0
+                                 −1
+and ǫ = 16 ) implies that c−1
+                           α > c0 /2 and so is bounded away from 0 by an absolute
+constant. As the derivative of the function x 7→ x−1 is bounded for x’s bounded away
+from 0, we conclude from (9.19) that
+                                                             1
+                                 (∗) = |cα − c0 | ≪ǫ T − 3 +ǫ .                        (9.20)
+  Plugging this estimation of (∗) together with (9.17) to (9.12) we obtain the desired
+inequality (9.11).
+  (2). Let Peα denote the support of µ̃α . It follows from (9.10) that p ◦ τ (Peα ) = Pα . We
+will show below in Lemma 9.13 that the map p ◦ τ : Peα → Pα is jα to 1 (that is, two to
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                     45
+
+one if |Pα | is odd or one to one if it is even), and so the inequality sought will follow once
+             e               1
+we show |Ptαα | − c10 ≪ǫ T − 3 +ǫ .
+   Recall that by (9.18) µα (B) = cǫα0 . On the other hand, the geodesic xα A which is of
+length tα penetrates B exactly |Peα | times and stays in B along a time interval of length ǫ0
+                                e                             |Peα |
+each time and so µα (B) = |Pαtα|·ǫ0 . It follows that c−1
+                                                       α = tα and we conclude from (9.19)
+                         |Peα |                 1
+the desired inequality     tα
+                                − c10   ≪ǫ T − 3 +ǫ .
+                                                                                             
+Lemma 9.13. For any α ∈ QI the map p ◦ τ : Peα → Pα is jα to 1.
+Proof. In what follows we do not always distinguish between the cross-section C and the
+subset C ⊂ G used to define it. We first observe that if a semicircle in the upper half
+plane that corresponds to the geodesic {ga(t)} projects under π to a periodic geodesic
+then e− (g), e+ (g) ∈ R are quadratic irrationals that are Galois conjugates of each other.
+This implies in particular, that if we denote the lift of Peα from C to C by P      eα and by
+Pe = C ∩ Peα , then p ◦ τ is injective when viewed as a map from either P
+  ±      ±                                                                    e or from P
+                                                                               +           e− .
+This follows from the fact that τ : C ± → D is one to one and onto and that according to
+the observation made above, the first coordinate p ◦ τ (g) determines the second one as it
+is the reciprocal of the diameter of the corresponding semicircle.
+   This shows that the pre-image of a point in Pα is of size 1 or 2. Choose β ∈ Pα and a
+pre-image of it g ∈ Peα . We Apply Lemma 9.7 and follow the orbits S i (β) i = 0, 1, . . . and
+            i
+the orbit TC (π(g)) above it. If |Pα | is odd, then Lemma 9.2(4) tells us that when the orbit
+in the unit interval closes up, the orbit in the cross-section cannot close up (as it switched
+from C + to C − or vice versa), and therefore we see that each of P e± projects onto Pα and
+so the map is 2 to 1. Similarly, in case |Pα | is even, when the orbit in the unit interval
+closes up Lemma 9.2(4) tells us that the orbit in the cross-section must return to the the
+same set C + or C − that π(g) belongs to and therefore it must close up by the injectivity
+which was observed at the beginning. It follows that one of the sets P     e± is empty while
+the other one projects onto Pα , and so the map is 1 to 1.                                   
+
+                  10. Construction of ϕ - Proof of Lemma 9.12
+10.1. Motivation. We start with a function f : D → C which is κ-Lipschitz and we
+consider the function f˜ : X → C given by f˜ = f[ ◦ τ . The points of discontinuity of f˜ are
+contained in ∂B. We wish to find an approximation of f˜ which is not only continuous
+but for which we will have clear control on its Lipschitz constant. To achieve this, we
+construct an auxiliary function ϕ which vanishes in an ǫ-thickening of ∂B and is equal
+to 1 outside a 2ǫ-thickening of ∂B. This will clearly make f˜ · ϕ continuous, but in order
+to control its Lipschitz constant we will have to make ϕ vanish ‘high in the cusp’ where
+the differential of τ explodes (see Lemma 10.7 below). Along the construction we need to
+pay attention
+       R       to two more quantities which we should control: The Lipschitz constant of
+ϕ and ψ, where ψ = 1 − ϕ. These clearly fight one against the other; in order to make
+46                                  MENNY AKA AND URI SHAPIRA
+R
+  ψ small we wish to take ǫ (which control the above thickening) to be small which makes
+the Lipschitz constant of ϕ large.
+  Below, in §10.2-10.5, we discuss a somewhat eclectic collection of observations that we
+will use in order to carry out the arguments in §10.6 with little interruption.
+
+
+10.2. General metric observations. Let (Y, d) be a metric space. For a subset F ⊂ Y
+we denote
+                                    (F )ǫ = {y ∈ Y : d(y, F ) ≤ ǫ} ;
+
+that is, the set of all points of distance ≤ ǫ from F . The following general construction
+allows us to build Lipschitz functions in abundance. The proof is left to the reader.
+
+Lemma 10.1 (Fundamental construction). Let (Y, d) be a metric space and F ⊂ Y a
+subset. For ǫ > 0 define ϕǫ,F : Y → [0, 1] by ϕǫ,F (y) = min {1, ǫ−1 d(y, F )}. Then ϕǫ,F
+attains the constant values 0 on F and 1 on Y r (F )ǫ . Furthermore, ϕǫ,F is ǫ−1 -Lipschitz.
+
+     We now make two remarks regarding Lipschitz constants:
+
+Remark 10.2. Consider two functions, f : Y → C and ϕ : Y → [0, 1], on a metric space
+(Y, d) and assume that they are κf , κϕ -Lipschitz respectively with κϕ ≥ 1. Then, for any
+x, y ∈ Y we have
+
+               |f · ϕ(x) − f · ϕ(y)| ≤ |f (x) − f (y)| ϕ(x) + |f (y)| |ϕ(x) − ϕ(y)|
+                                       ≤ 2 max {κf , kf k∞ } κϕ d(x, y),
+
+that is f · ϕ has Lipschitz constant ≪ max {κf , kf k∞ } κϕ .
+
+Remark 10.3. Let f : Y → C be a continuous function on a metric space (Y, d) in which
+between any two points x, y there exists a path whose length equals d(x, y). Suppose
+there is an open cover {Ui } of supp(f ) such that for each i the restriction f : Ui → C is
+κ-Lipschitz. Then we claim that f is κ-Lipschitz as a function on Y . To see this, take two
+points x, y ∈ Y and connect them by a path γ whose length is d(x, y). As f is assumed to
+be continuous we can turn the open cover {Ui } of the support of f to an open cover of Y
+by joining in the open set U0 = Y r supp(f ). Clearly f is κ-Lipschitz on U0 as well. Now
+let ǫ > 0 be a Lebesgue number for the induced open cover of the  Ppath    γ. Choose points
+                                                                     n
+x = x0 , x1 . . . xn = y on γ in a monotone way (so that d(x, y) = 1 d(xi , xi−1 )) and such
+that the distance between xi to xi−1 is less than ǫ. It follows that for each 1 ≤ i ≤ n
+there exists an open set from the cover Uji such that xi−1 , xi ∈ Uji . As f is assumed to
+be κ-Lipschitz on Uji , we conclude that
+                                n
+                                X                              n
+                                                               X
+            |f (x) − f (y)| ≤        |f (xi ) − f (xi−1 )| ≤       κ d(xi , xi−1 ) = κ d(x, y).
+                                1                              1
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                        47
+
+10.3. Coordinates. We wish to define a convenient coordinate system which will allow
+us to carry out the relevant computations. Recall the open subsets B, B of of X, G
+respectively that were defined in Lemma 9.3. We define similarly to (9.3)
+                                  
+                            B+ = ga(t) : g ∈ C + , t ∈ (0, ǫ0 )               (10.1)
+                             −
+                                              +
+                            B = ga(t) : g ∈ C , t ∈ (0, ǫ0 ) .
+A point g ∈ B can be written uniquely in the form a(s)kθ a(t) where s ∈ R, t ∈ (0, ǫ0 ) and
+the angle θ ∈ [0, π) has some restrictions on it, arising from the requirements about the
+endpoints of the semicircle corresponding to g. We shall refer to (s, θ, t) as the coordinates
+of the point g ∈ B or of the corresponding point π(g) ∈ B.
+   As the action of a(t) from the right does not effect the endpoints, the restrictions on the
+θ-coordinate are a function of s alone. We workout these restrictions for, say, g ∈ B+ : We
+already observed (after (9.3)) that θ ∈ ( π4 , π2 ) (in order to ensure that e+ (g) ∈ (0, 1)). It
+is easy to see from the definition of the start and end points that for s ∈ R, a(s)kθ ∈ C + ,
+where θ ∈ [0, π), if and only if es cot θ ∈ (0, 1) and −es tan θ < −1. This is equivalent to
+saying tan θ ∈ (min {es , e−s } , ∞). We choose an inverse tan−1 : R → (0, π2 ) and conclude
+that for a given s, the range of allowed angles for points g ∈ B+ with coordinates (s, θ, t),
+is an interval Is+ which is defined by
+                               π                                              π
+               Is+ = (θmin (s), ), where θmin (s) = tan−1 (min es , e−s ) > .              (10.2)
+                               2                                               4
+Let us denote
+                             
+                      E + = (s, θ, t) ∈ R3 : s ∈ R, t ∈ (0, ǫ0 ), θ ∈ Is+ ,                (10.3)
+and define similarly E − and E = E + ∪ E − . Let ξ : R3 → G be the function
+                                     ξ(s, θ, t) = a(s)kθ a(t).                             (10.4)
+Clearly, we have ξ(E) = B, ξ(E + ) = B+ , and ξ(E − ) = B− .
+Lemma 10.4. There is an absolute constant c such that for any ǫ > 0, an ǫ-ball in E is
+mapped by ξ into a ball of radius cǫ in B.
+   In the course of the proof of Lemma 10.4 we will use the following elementary observa-
+tion
+Lemma 10.5. Let h(t) be a one parameter subgroup of G. Then for any g ∈ G,
+dG (g, gh(t)) ≤ ||ḣ(0)||t, where ||ḣ(0)|| is the norm of the derivative of h(t) at the identity.
+Proof. We link any two points gi = ξ(si , θi , ti ) ∈ B, i = 1, 2 by the path which changes lin-
+early the s-coordinate first, then the θ-coordinate, and finally the t-coordinate. Each such
+change corresponds to the action from the right by a one-parameter subgroup h(t) as in
+Lemma 10.5. The change in the s-coordinate corresponds to h(s) = a(−t1 )k−θ1 a(s)kθ1 a(t1 ),
+the change in the θ-coordinate corresponds to h(θ) = a(−t1 )kθ a(t1 ), and finally, the change
+in the t-coordinate corresponds to h(t) = a(t). As the family of one-parameter subgroups
+that are involved in this process are conjugations of a(t) and kθ , where the conjugating
+48                              MENNY AKA AND URI SHAPIRA
+
+element is varying in a compact set, we conclude that the norm of the derivative at the
+identity ḣ(0) is ≪ 1 for some absolute implicit constant. Lemma 10.5 implies then that
+                       dG (g1 , g2 ) ≪ |s1 − s2 | + |θ1 − θ2 | + |t1 − t2 | ,
+which establishes the claim.                                                               
+10.4. Height. The map τ defined in (9.9) was considered so far as a map from the cross-
+section C. As we wish to use differentiation it will be more convenient to extend it to a
+map τ : B → D in the following way: Given a point x ∈ B it can be written uniquely
+as xC a(t) where xC ∈ C and t ∈ (0, ǫ0 ). We define τ (x) = τ (xC ); that is, we view τ as a
+function on B which is constant along the direction of the geodesic flow.
+   As will be seen shortly, the norm of the differential of τ : B → D is not bounded
+and so, in order to be able to control the Lipschitz constant of the function appearing
+in Lemma 9.12(3) we need to force its support to be contained in a domain in which we
+have some control on kd τ k.
+   Recall the Iwasawa decomposition (9.2). Let F denote the usual fundamental domain
+of Γ in G, that is,
+                                                                  
+                                                   1 2     2s
+                     F = n(t)a(s)kθ ∈ G : |t| < , t + e > 1 ,                         (10.5)
+                                                   2
+                                                                  
+                                                   1 2     2s
+                     F = n(t)a(s)kθ ∈ G : |t| ≤ , t + e ≥ 1
+                                                   2
+We define the height function ht : G → R to be ht(g) = es if g = n(t)a(s)kθ . This is indeed
+the imaginary coordinate of the base-point of the tangent vector to H corresponding to
+g. This function respects the identifications induced by Γ on the boundary of F and so
+descends to a function (which we continue to denote ht(·)) on X. For any M > 1 we let
+                                                    
+              HM = g ∈ F : ht(g) ≥ M , KM = g ∈ F : ht(g) < M ;                        (10.6)
+              HM = {x ∈ X : ht(x) ≥ M} ,           KM = {x ∈ X : ht(x) < M} .
+Remark 10.6. It is well known that mX (HM ) = mG (HM ) = M −1 , which is an identity
+that will be needed later (need to add reference).
+10.5. Estimating norms of differentials.
+Lemma 10.7. The differentials of τ : B → D and ht : X → R at a point y satisfy
+kdy τ k ≪ ht(y), kdy (ht)k ≪ ht(y).
+Proof. We calculate for example kdy τ k for y ∈ B + (here B + = π(B+ )). Let N, H, and W
+denote the respective derivatives at time t = 0 of the one parameter subgroups n(s), a(t),
+and kθ which appear in (9.2);
+                                                                
+                          0 1               1 0                0   1
+                 N=              , H=                , W =              .
+                          0 0               0 −1               −1 0
+                                                                                
+Let g ∈ B+ be such that y = π(g) and write g = ( ac db ) so that τ (y) = ac , cd as given
+in (9.9). The tangent space Ty (X) is identified (as an inner product space) with Tg (G)
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                    49
+
+which is in turn identified with the Lie algebra g = sl2 (R) via the map sending a matrix
+V ∈ g to gV ; here we make a choice of an inner product on g which induces the left-
+invariant Riemannnian metric on G and hence on the quotient X. Thus, we will obtain
+an upper bound for the norm of dy τ if we calculate an upper bound for the norms in R2
+of the vectors dy τ (gV ) for V = N, H, W (where here we abuse notation and think of dy τ
+as a map from Tg (G) to R2 ).
+   We may think of the above 2 × 2 matrices as vectors in R4 (where the first row corre-
+sponds to the first two coordinates) and then we get that dy τ is given by the matrix
+                                         1        a
+                                                         
+                                          c
+                                             0  − c 2 0
+                                 dy τ =                    .
+                                          0 0 d c
+A short calculation shows that
+                                                                     
+                         0                   0                     c−2
+          dy τ (gN) =         , dy τ (gH) =     , dy τ (gW ) =              .
+                        c2                   0                   c2 − d 2
+We conclude that kdy τ k ≪ max {c2 , c−2 , d2 }, where the implicit constant comes from the
+fact that we did not specify an inner product on g. Writing g in its (s, θ, t)-coordinates
+g = a(s)kθ a(t) we calculate c, d and conclude that as |t| ≤ ǫ0 , kdy τ k ≪ e|s| . Remark 10.9
+now gives kdy τ k ≪ ht(y) as desired.
+   We briefly describe the estimate for dy (ht). Let g ∈ F be such that y = π(g). Assume
+for a start that the Iwasawa decomposition of g is given by g = n(t)a(s). Then the
+derivative in the directions of W and N are trivial (because the actions from the right
+of the one parameter groups kθ , u(t) do not change the height). The derivative in the
+direction of H is es which equals ht(y). It follows that for such points kdy (ht)k ≪
+ht(y). Now for the general case, let g = n(t)a(s)kθ ∈ F be the Iwasawa decomposition
+and consider the composition G → G → R given by first acting on the right by k−θ
+and then applying ht. As ht is invariant under the action from the right by k−θ , this
+composition equals ht. Its differential at y equals by the chain rule to the composition of
+the differential of right multiplication by k−θ at the point y and the differential of ht at
+the point y ′ = π(g ′), where g ′ = n(t)a(s). As right multiplication by k−θ is an isometry
+the first differential has norm 1 (here we use the fact that the left invariant Riemannian
+metric we chose on G is also right {kθ }-invariant). We evaluated the norm of the second
+differential before and we conclude that the composition satisfies the desired estimate. 
+Remark 10.8. As the differential of ht : X → R is ≪ M on KM . It follows that it
+is Lipschitz there with a Lipschitz constant ≪ M (see Remark 10.10). We conclude
+that there exists some absolute constant ℓ (which is the implicit constant in the estimate
+kdy (ht)k ≪ ht(y)), such that the following two statements hold
+    (1) For any 0 < ǫ < 1, (HM )ǫ ⊂ H M .
+                                         ℓ
+    (2) For any 0 < ǫ < 1, (KM )ǫ ⊂ KℓM .
+To see (1) for example, note that if this was false, then we could find x ∈ K M the distance
+                                                                              ℓ
+of which from HM is ≤ 1. We conclude that there must be a point x′ such that ht(x′ ) = M
+and dX (x, x′ ) ≤ 1. This of course contradicts the fact that ht is M-Lipschitz on KM .
+50                              MENNY AKA AND URI SHAPIRA
+
+Remark 10.9. We wish to comment on the height of a point y = π(g) ∈ B, where g ∈ B
+has coordinates (s, θ, t). By Lemma 10.5, if we let g ′ ∈ C be the point with coordinates
+(s, θ, 0), then dG (g, g ′) ≪ ǫ0 (here we take h(t) = a(t) to ‘cancel’ the t-coordinate in at
+most ǫ0 time). The height of g ′ is by definition ht(g ′) = e|s| (the reason for the absolute
+value is that g ′ might be in the lower fundamental domain k π2 F ). We conclude from
+parts (1),(2) of Remark 10.8 that
+                             |s| − log ℓ ≤ log(ht(g)) ≤ |s| + log ℓ.
+10.6. The argument.
+
+Proof of Lemma 9.12. Fix M > 1 and 0 < ǫ < 1 (below ǫ replaces the number ρ in the
+statement of Lemma 9.12). Let F ⊂ X be defined by
+                                      F = (∂B)ǫ ∪ HM .                                (10.7)
+Define ϕǫ,F : X → [0, 1] as in Lemma 10.1. To ease the notation we simply denote it
+by ϕ bearing in mind the dependencies on ǫ, M. Lemma 10.1 implies the assertion in
+Lemma 9.12(1). Let ψ = 1 − ϕ. As ϕ attains the value 1 on X r (F )ǫ we have that
+ψ ≤ χ(F )ǫ . Furthermore, by Remark 10.8(1) and from the definitions we see that
+                     (F )ǫ ⊂ (∂B)2ǫ ∪ (HM )ǫ ⊂ ((∂B)2ǫ ∩ KM ) ∪ H M .
+                                                                           ℓ
+
+
+It follows that       Z
+                           ψdmX ≤ mX (((∂B)2ǫ ∩ KM )) + mX (H M ).
+                                                                       ℓ
+                       X
+
+Hence, by Remark 10.6, Lemma 9.12(2) will follow once we show that the following
+estimate holds for all M > 1
+                               mX (((∂B)2ǫ ∩ KM )) ≪ ǫ log M.                         (10.8)
+
+In order to establish (10.8) we argue as follows: We first want to pull the calculation to
+G and then to R3 . It is clear that π(∂B ∩ KM ) = ∂B ∩ KM and as π can only decrease
+distances (that is π is 1-Lipschitz), we must have π((∂B)2ǫ ∩ KM ) ⊃ (∂B)2ǫ ∩ KM . By the
+definition of the measure mX it follows that
+                           mX ((∂B)2ǫ ∩ KM ) ≤ mG ((∂B)2ǫ ∩ KM ).                     (10.9)
+Hence, we are reduced to estimate mG ((∂B)2ǫ ∩KM ). We will workout below the estimation
+for mG ((∂B+ )2ǫ ∩ KM ) only. Let Nǫ (L) denote the number of ǫ-balls needed to cover a
+set L. Clearly,
+                            N3ǫ ((∂B+ )2ǫ ∩ KM ) ≤ Nǫ (∂B ∩ KM ).
+We know that a ball of radius ǫ in G has volume ≪ ǫ3 and so we deduce that
+                           mG ((∂B+ )2ǫ ∩ KM ) ≪ ǫ3 Nǫ (∂B+ ∩ KM ).                  (10.10)
+      ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                      51
+
+                                          +
+Consider the following four subsets of E ⊂ R3 which are mapped by ξ onto the boundary
+∂B
+                      Q1 = {(s, θ, t) : s ∈ R, t ∈ (0, ǫ0 ), θ = θmin (s)} ;
+                           n                                      πo
+                      Q2 = (s, θ, t) : s ∈ R, t ∈ (0, ǫ0 ), θ =       ;
+                                                                 2
+                      Q3 = (s, θ, t) : s ∈ R, θ ∈ Is+ , t = 0 ;
+                           
+                      Q4 = (s, θ, t) : s ∈ R, θ ∈ Is+ , t = ǫ0 .
+Let Q = ∪4i=1 Qi . A point in B ∩ KM with coordinates (s, θ, t) must satisfy |s| ≤ log M +
+log ℓ as explained in Remark 10.9. Hence, we conclude by Lemma 10.4 that
+               Nǫ (∂B+ ∩ KM ) ≪ Nc−1 ǫ (Q ∩ {(s, θ, t) : |s| ≤ log M + log ℓ}).         (10.11)
+This reduces the problem to a Euclidean one: For each 1 ≤ i ≤ 4 the surface
+                             Qi ∩ {(s, θ, t) : |s| ≤ log M + log 2}
+is a graph of a function from a domain in R2 to R. The variables vary in a range that is of
+bounded length in one direction and of length 2(log M + log ℓ) in the other. As all these
+functions have derivatives which are uniformly bounded (in fact, all of them are constant
+apart from the function (s, t) 7→ θmin (s) corresponding to Q1 , see (10.2)), we deduce that
+                                                                      log M
+                    Nc−1 ǫ (Q ∩ {(s, θ, t) : |s| ≤ log M + log ℓ}) ≪        .          (10.12)
+                                                                        ǫ2
+Combining (10.12),(10.11),(10.10), and (10.9) gives (10.8), which as explained above con-
+cludes the proof of Lemma 9.12(2). We turn now to the proof of Lemma 9.12(3).
+   Let f : D → C be κ-Lipschitz and denote f˜ = f[       ◦ τ . The support of the product f˜ · ϕ
+is contained in the intersection of the supports of f˜ and ϕ. By definition of the b operator,
+the support of f˜ is contained in B. By definition of ϕ its support is contained in the
+intersection {x ∈ X : dX (x, ∂B) ≥ ǫ} ∩ K M . It follows that
+                       supp(f˜ · ϕ) ⊂ {x ∈ B : dX (x, ∂B) ≥ ǫ} ∩ K M .                 (10.13)
+As the points of discontinuity of f˜ are contained in ∂B we conclude that f˜ · ϕ : X → C
+is continuous. In order to estimate its Lipschitz constant we wish to appeal to Re-
+mark 10.3. Cover the open set B ∩ K2M by open balls Ui ⊂ B ∩ K2M . Note that each
+Ui is contained in either B+ or B− . Consider the open cover {Ui } of supp(f˜ · ϕ), where
+Ui = π(Ui ). By Remark 10.3, Lemma 9.12(3) will follow once we prove that f˜· ϕ : Ui → C
+is max {κ, kf k∞ } ǫ−1 M-Lipschitz. As ϕ is ǫ−1 -Lipschitz we see that by Remark 10.2 it is
+enough to argue that for each i, f˜ : Ui → C is Lipschitz with Lipschitz constant ≪ κM.
+As Ui ⊂ K2M we know by Lemma 10.7 that the norm of the differential of τ is ≪ M
+on Ui . It follows that the Lipschitz constant of the composition f˜ = f ◦ τ is ≪ κM as
+desired.                                                                                 
+Remark 10.10. We remark here about a slight inaccuracy in the arguments presented
+above and how to remedy it: Let M, N be two Riemannian manifolds and f : U → N a
+52                                   MENNY AKA AND URI SHAPIRA
+
+smooth map from an open set U ⊂ M. Assume the differential of f has norm bounded
+by some constant κ on U. We used above (in two places) the conclusion that f must be
+κ-Lipschitz. Strictly speaking, this shows indeed that f is κ-Lipschitz, but with respect
+to the metric induced from the restriction of the Riemannian metric from M to U. This
+need not be the restricted metric on U in which we are interested. In order to remedy
+this, one needs to prove that the following property holds: There exists some absolute
+constant c such that given any two points in x, y ∈ U one is able to find a path connecting
+them inside U of length ≤ c d(x, y) (here d is the metric of the ambient space containing
+U).
+  Once this property is established, the conclusion is that f has Lipschitz constant ≪
+κ. The above property clearly holds in any Euclidean ball. Using the fact that the
+exponential map from the Lie algebra to G is bi-Lipschitz when restricted to a small
+enough neighborhood of zero, we see that any image of a small enough Euclidean ball
+around zero is an open neighborhood of the identity in G which satisfies the desired
+property. Using left translations (which are isometries of G) we see that each point of G
+has a basis of neighborhoods satisfying the above properties. Regarding the argument in
+the very end of the proof of Lemma 9.12, we should simply define the sets Ui to be such
+neighborhoods instead open balls. Regarding the use of this in Remark 10.8, we leave the
+details to the reader.
+
+
+                                              References
+ [Arn07] V. I. Arnol′ d, Continued fractions of square roots of rational numbers and their statistics,
+          Uspekhi Mat. Nauk 62 (2007), no. 5(377), 3–14. MR2373750 (2008m:11155)
+ [Arn08] V. I. Arnol′ d, Statistics of the periods of continued fractions for quadratic irrationals, Izv. Ross.
+          Akad. Nauk Ser. Mat. 72 (2008), no. 1, 3–38. MR2394969 (2009e:11014)
+  [Art82] E. Artin, Collected papers, Springer-Verlag, New York, 1982. Edited by Serge Lang and John
+          T. Tate, Reprint of the 1965 original. MR671416 (83j:01083)                             √
+   [BL05] Y. Bugeaud and F. Luca, On the period of the continued fraction expansion of 22n+1 + 1,
+          Indag. Math. (N.S.) 16 (2005), no. 1, 21–35. MR2138048 (2006e:11015)
+  [BO07] Y. Benoist and H. Oh, Equidistribution of rational matrices in their conjugacy classes, Geom.
+          Funct. Anal. 17 (2007), no. 1, 1–32. MR2306651 (2008m:11068)
+ [Coh77] J. H. E. Cohn, The length of the period of the simple continued fraction of d1/2 , Pacific J. Math.
+          71 (1977), no. 1, 21–32. MR0457335 (56 #15543)
+   [CZ04] P. Corvaja and U. Zannier, On the rational approximations to the powers of an algebraic number:
+          solution of two problems of Mahler and Mendès France, Acta Math. 193 (2004), no. 2, 175–191.
+          MR2134865 (2005m:11131)
+  [Dir56] P. G. L. Dirichlet, Une propriet e des formes quadratiques a determinant positif, J. Math. Pures
+          Appl. (1856), 76–79.
+ [EW11] M. Einsiedler and T. Ward, Ergodic theory with a view towards number theory, Graduate Texts
+          in Mathematics, vol. 259, Springer-Verlag London Ltd., London, 2011. MR2723325
+  [FK10] É. Fouvry and J. Klüners, On the negative Pell equation, Ann. of Math. (2) 172 (2010), no. 3,
+          2035–2104. MR2726105 (2011h:11122)
+  [Gol02] E. P. Golubeva, On the class numbers of indefinite binary quadratic forms of discriminant dp2 ,
+          Zap. Nauchn. Sem. S.-Peterburg. Otdel. Mat. Inst. Steklov. (POMI) 286 (2002), no. Anal. Teor.
+          Chisel i Teor. Funkts. 18, 40–47, 227–228. MR1937366 (2003j:11040)
+       ON THE EVOLUTION OF CONTINUED FRACTIONS IN A FIXED QUADRATIC FIELD                                    53
+
+   [Gri98] G. Grisel, Length of continued fractions in principal quadratic fields, Acta Arith. 85 (1998),
+            no. 1, 35–49. MR1623357 (99g:11015)                                           √
+   [Hic73] D. R. Hickerson, Length of period simple continued fraction expansion of d, Pacific J. Math.
+            46 (1973), 429–432. MR0321881 (48 #246)                     √
+      [Kei] M. Keith, On the continued fraction expansion of              22n+1 . Unpublished, available on
+            http://www.numbertheory.org/pdfs/period.pdf.
+ [Kim03] H. H. Kim, Functoriality for the exterior square of GL4 and the symmetric fourth of GL2 ,
+            J. Amer. Math. Soc. 16 (2003), no. 1, 139–183 (electronic). With appendix 1 by Dinakar
+            Ramakrishnan and appendix 2 by Kim and Peter Sarnak. MR1937203 (2003k:11083)
+  [Lag80] J. C. Lagarias, On the computational complexity of determining the solvability or unsolvability of
+            the equation X 2 − DY 2 = −1, Trans. Amer. Math. Soc. 260 (1980), no. 2, 485–508. MR574794
+            (81g:10029)
+   [Ler10] E. Y. Lerner, About statistics of periods of continued fractions of quadratic irrationalities, Funct.
+            Anal. Other Math. 3 (2010), no. 1, 75–83. MR2734562
+ [Mar04] G. A. Margulis, On some aspects of the theory of Anosov systems, Springer Monographs in
+            Mathematics, Springer-Verlag, Berlin, 2004. With a survey by Richard Sharp: Periodic or-
+            bits of hyperbolic flows, Translated from the Russian by Valentina Vladimirovna Szulikowska.
+            MR2035655 (2004m:37049)
+[McM09] C. T. McMullen, Uniformly Diophantine numbers in a fixed real quadratic field, Compos. Math.
+            145 (2009), no. 4, 827–844. MR2521246 (2010h:11114)
+  [MF93] M. Mendès France, Remarks and problems on finite and periodic continued fractions, Enseign.
+            Math. (2) 39 (1993), no. 3-4, 249–257. MR1252067 (94i:11045)
+   [Pol86] M. Pollicott, Distribution of closed geodesics on the modular surface and quadratic irrationals,
+            Bull. Soc. Math. France 114 (1986), no. 4, 431–446. MR882589 (88j:58102)
+   [PR94] V. Platonov and A. Rapinchuk, Algebraic groups and number theory, Pure and Applied Math-
+            ematics, vol. 139, Academic Press Inc., Boston, MA, 1994. Translated from the 1991 Russian
+            original by Rachel Rowen. MR1278263 (95b:11039)
+    [RS92] A. M. Rockett and P. Szüsz, Continued fractions, World Scientific Publishing Co. Inc., River
+            Edge, NJ, 1992. MR1188878 (93m:11060)
+   [Ser85] C. Series, The modular surface and continued fractions, J. London Math. Soc. (2) 31 (1985),
+            no. 1, 69–80. MR810563 (87c:58094)
+  [Ven10] A. Venkatesh, Sparse equidistribution problems, period bounds and subconvexity, Ann. of Math.
+            (2) 172 (2010), no. 2, 989–1094. MR2680486
+

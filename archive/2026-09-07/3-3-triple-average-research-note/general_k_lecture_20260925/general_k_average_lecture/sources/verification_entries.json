@@ -1,0 +1,904 @@
+{
+  "scope": "Original verification entries matched by the thirty curated documents; not rerun by assembly.",
+  "verifications": [
+    {
+      "id": "large-prime-high-odd-power-reflections",
+      "claim": "For integers p>=5,s>=(p-1)(p-2), the k=p*s^2,r=p*s singleton core has two uniform three-atom trace-zero returns retaining old u or old v. Their squares are nonzero scalars and lambda=k^6 modn, so both have genuine positive projective inverses and preserve legality. This includes prime odd exponents>=5 but does not establish core termination.",
+      "claim_status": "proved-positive-reflection-resources-only-roots-and-cubic-boundary-open",
+      "evidence_level": "symbolic-check",
+      "documents": [
+        "outputs/general_arity/large_prime_high_odd_power_three_step_reflections.md"
+      ],
+      "scripts": [
+        "work/verify_large_prime_odd_power_reflections.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_large_prime_odd_power_reflections.py"
+          ],
+          "expected_markers": [
+            "large-prime high-odd-exponent three-atom reflections: PASS 54",
+            "large-prime high-odd-exponent literal cycles: PASS 4",
+            "scope: reversible core resources only; roots and full reachability not proved"
+          ]
+        }
+      ],
+      "evidence_scope": "Written formulas prove the full count capacities, trace-zero identities and lambda modn.54 finite parameter checks and4 literal two-basis scalar cycles audit the implementation. No word search is used in the verifier.",
+      "does_not_establish": "Does not prove roots, deep congruence, full input termination, the prime cubic case, or any new complete dimension or threshold.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library and exact original-position Ledger/matrix primitives"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "two-three-odd-power-critical",
+      "claim": "Under Dirichlet GRH, every k=m*s^2,n=k+m*s+1 with m in{2,3},s>=2 has the complete G=1 criterion. This proves all2/3 odd-exponent critical points; combined with the square family, all powers of2 and3 reach their conjectured first critical dimension.",
+      "claim_status": "proved-two-three-square-multiple-dimensions-and-odd-power-critical-points-under-GRH",
+      "evidence_level": "theorem-certificate",
+      "documents": [
+        "outputs/general_arity/two_three_odd_power_critical_grh_completion.md"
+      ],
+      "scripts": [
+        "work/verify_two_three_odd_prime_power_critical.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_two_three_odd_prime_power_critical.py"
+          ],
+          "expected_markers": [
+            "two-three odd-power uniform controller and entry identities: PASS 24",
+            "two-three odd-power literal cyclic and multiplier returns: PASS 32",
+            "two-three odd-power forced singleton-entry replay: PASS 2",
+            "two-three odd-power complete finite small-unit certificates: PASS 11",
+            "two-three square-multiple full finite small-unit certificates: PASS 508",
+            "two-three odd-prime-power critical completion interfaces: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "Exact C^4/C^6 cycles, the uniform two-step identity M_d=C^2*Delta(d), inverse sandwiches and complete root groups are proved by formulas. Full input entry uses a three-singleton commutator with no failing prime. The complete508-case unit certificates cover2<=s<256; GRH covers all larger s. Checks also replay32 physical returns and2 forced entry paths.",
+      "does_not_establish": "Does not prove optimal final N, general p>=5 odd-power critical points, or all mixed arities. Some mixed square multiples are solved at a dimension above their conjectured first threshold.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library and existing exact Fraction/Ledger primitives",
+        "Explicitly cited original-position entry, root and terminal lemmas; Dirichlet GRH, Morris/Serre and finite-ring inverses"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "even-arity-all-endpoints",
+      "claim": "Every even arity k>=2 has the full G=1 criterion in dimension2k+1. Together with the established odd-arity endpoint theorem, all integer arities now have the2k+1 endpoint. Uses the old even seed plus a uniform inverse sandwich, full dyadic roots and small balanced unit representatives.",
+      "claim_status": "proved-all-even-arity-endpoints-with-stated-Morris-Serre-dependencies",
+      "evidence_level": "symbolic-check",
+      "documents": [
+        "outputs/general_arity/even_arity_all_endpoints_completion.md"
+      ],
+      "scripts": [
+        "work/verify_even_arity_endpoint_uniform.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_even_arity_endpoint_uniform.py"
+          ],
+          "expected_markers": [
+            "even-arity uniform endpoint roots and inverse formulas: PASS 199",
+            "even-arity literal full-system scalar cycles: PASS 26",
+            "even-arity all-parameter endpoint interfaces: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "Written proof covers both parity classes of k/2, actual scalar cycles, positive inverse activation, root groups, all units mod2k+1, full input entry and precise terminal.199 arity checks and26 literal cycles audit formulas; they do not replace all-arity quantifiers.",
+      "does_not_establish": "Does not prove N(k)<=2k+1 or the conjectured composite first critical threshold. No uniform path complexity or shortest solution claim.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library and existing exact Fraction/Ledger primitives",
+        "Explicitly cited original-position entry, root and terminal lemmas; Morris/Serre where specified in the proof"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "ten-sixteen-dyadic-network-family",
+      "claim": "For b>=1,k=2(4^b-1)/3,n=4^b, a fixed2b+2-step original-position k-average network averages every real input. In particular ten-average16 positions admits a six-step network and M(10)=16, while H(10)=17 was already proved.",
+      "claim_status": "proved-fixed-network-family-and-ten-average-sixteen-first-success",
+      "evidence_level": "theorem-certificate",
+      "documents": [
+        "outputs/general_arity/ten_average_sixteen_and_dyadic_network_family.md"
+      ],
+      "scripts": [
+        "work/verify_dyadic_three_block_fixed_network.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_dyadic_three_block_fixed_network.py"
+          ],
+          "expected_markers": [
+            "dyadic three-block fixed networks exact basis: PASS 84",
+            "dyadic three-block general recurrence: PASS 40",
+            "ten-average sixteen-position universal six-step network: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "The three equal-block recurrence has a closed rational formula matching global mean at step2b-1, followed by a global-sum cleanup.84 exact basis columns for4,16,64 positions certify the fixed networks;40 recurrence instances check the written identity. No word search.",
+      "does_not_establish": "Does not prove six steps optimal, N(10)=16, or that every network-family dimension is the minimal threshold for its arity.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library and existing exact Fraction/Ledger primitives",
+        "Explicitly cited original-position entry, root and terminal lemmas; Morris/Serre where specified in the proof"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "odd-composite-coprime-middle-band",
+      "claim": "For odd integers k,r with1<=r<k and gcd(k,r)=1, dimension2k+r has the complete G=1 criterion. For every odd prime power k=p^a, all odd2k<n<3k satisfy the complete p-supported G criterion, including shared p factors, by exact nonuniform-block-mean transfer.",
+      "claim_status": "proved-odd-composite-coprime-band-and-all-odd-prime-power-odd-middle-dimensions",
+      "evidence_level": "symbolic-check",
+      "documents": [
+        "outputs/general_arity/odd_composite_coprime_middle_band_completion.md"
+      ],
+      "scripts": [
+        "work/verify_odd_composite_coprime_band.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_odd_composite_coprime_band.py"
+          ],
+          "expected_markers": [
+            "odd-composite coprime-band exact algebra and terminal interfaces: PASS 144 114",
+            "odd-prime-power band divisor reduction identities: PASS 9894",
+            "odd-composite coprime-band extension interfaces: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "The proof reviews each use of primality in the old odd-band argument and replaces it with actual coprimality and short-sieve capacity.144 composite systems,114 literal returns and432 terminal transports verify formulas;9894 divisor reductions verify prime-power arithmetic. Full entry and conditional equal-block simulation are supplied by written proofs.",
+      "does_not_establish": "Does not solve even dimensions, all mixed-arity noncoprime bands, general odd-power critical points or final thresholds.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library and existing exact Fraction/Ledger primitives",
+        "Explicitly cited original-position entry, root and terminal lemmas; Morris/Serre where specified in the proof"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "ht-literature-interfaces",
+      "claim": "For n=t^2+t+1, H_t is full for every sufficiently large t by Pollack2017 Theorem1.1 (or2.7), and for every t with prime n by a pigeonhole ratio lemma. Exact finite certificates cover all2<=t<1000. With the explicitly cited GRH bound n_chi<=3(log n)^2, these finite certificates give the all-t statement CONDITIONALLY on GRH. Unconditional all-t fullness and final square-arity thresholds remain open in the project.",
+      "claim_status": "proved-eventual-and-prime-modulus-Ht-plus-finite-range-all-t-only-under-GRH",
+      "evidence_level": "theorem-certificate",
+      "documents": [
+        "outputs/general_arity/ht_literature_and_eventual_square_completion_20260915.md"
+      ],
+      "scripts": [
+        "work/verify_ht_literature_interfaces.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_ht_literature_interfaces.py"
+          ],
+          "expected_markers": [
+            "Ht finite abelian quotient certificates t2..999: PASS 998 188",
+            "Ht literature hypothesis and prime-ratio boundary checks: PASS",
+            "Ht literature interfaces: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "The finite checker uses CRT cyclic factors and full rank in G/G^ell for every prime ell in the group order, saving actual small-generator witnesses; it does not enumerate whole groups or characters.188 prime moduli use the written pigeonhole proof and810 composite parameters use exact quotient ranks. The reported unconditional eventual result is a written application of the directly read Pollack2017 theorem, not established by the checker. The GRH corollary uses the Bach bound as explicitly stated in the directly read Martin-Pollack2013 published paper; Bach original text was not obtained.",
+      "does_not_establish": "Does not prove unconditional H_t fullness for all t, give a numerical unconditional cutoff that joins the finite range, establish N(t^2)=t^2+t+1, or settle arbitrary composite arity. The2025 explicit Burgess paper is a preprint and its large thresholds and primitive/cubefree conditions were not silently discarded. Search absence does not prove the exact H_t statement is unpublished or open in the literature.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library; elementary finite abelian group structure and prime-power primitive-root order checks",
+        "Pollack2017 Bounds for the first several prime character nonresidues, Theorem1.1/2.7, author PDF read",
+        "Bach1990 Theorem3 bound cited explicitly by Martin-Pollack2013, for the GRH-conditional corollary only",
+        "Previously completed square-core entry and U(R_t),L(nR_t),Gamma1 interface, with their stated Morris/Serre dependencies"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "square-core-entry-review",
+      "claim": "For every integer t>=2, every legal input with q=t^2,n=t^2+t+1 enters the legal full-system (q,t,1) core. The one-block/three-singleton commutator only fails at the possible prime3, whose witness is retained in the chosen target role. All one-step zero-sum terminal y-scales belong to the subgroup H_t generated by -1 and safe integers<=t; H_t fullness remains open in general.",
+      "claim_status": "proved-all-square-core-entry-and-terminal-scale-restriction-uniform-H_t-fullness-open",
+      "evidence_level": "symbolic-check",
+      "documents": [
+        "outputs/general_arity/general_k_plan_review_and_square_entry_20260915.md",
+        "outputs/general_arity/general_k_review_response_20260915.md",
+        "outputs/general_arity/general_k_averaging_proof_plan_20260915.md"
+      ],
+      "scripts": [
+        "work/verify_square_core_entry_review_20260915.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_square_core_entry_review_20260915.py"
+          ],
+          "expected_markers": [
+            "square entry literal exact paths: PASS 10 3 404",
+            "finite unit-image diagnostic t=2..200: 0 failures []",
+            "square entry and terminal-class review checks: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "The written entry proof applies to all t, using omega(n)<=t, the finite-ring positive commutator, gcd(t^2-1,n)=gcd(t+2,3), CRT witness transfer and a literal final fold. The independent script imports no project implementation and replays10 paths with404 atoms, including3 actual witness-transfer stages. Its199 finite H_t computations are diagnostics only. The complete one-step terminal restriction is proved by the two count formulas in the document.",
+      "does_not_establish": "Does not prove H_t equals the unit group for all t, all square-arity critical dimensions, optimal composite thresholds or word complexity. Does not supply an external Burgess-type theorem. Entry alone does not imply core termination.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library, exact Fraction replay",
+        "Previously proved one-block three-singleton commutator; finite-ring positive powers and CRT",
+        "Root/Gamma1 infrastructure is used only in the stated conditional consequence of H_t fullness"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "square-arity-controller-nine-thirteen",
+      "claim": "For every integer t>=2, the (t^2,t,1) core has uniform positive scalar cycles and Gamma((t-1)^2*(t^2+t+1)^3,Z[1/t]) control. An odd-t sandwich or the even-t safe inverse lemma inverts the physical multiplier2. The NEW commutator with Sigma gives U(1/2), hence U(R),L(nR) for ALL t, R=Z[1/(2t)],n=t^2+t+1. At t=3 the all-input nine-average criterion in dimension13 follows, proving M(9)=H(9)=13.",
+      "claim_status": "proved-uniform-square-core-resources-and-nine-average-thirteen-with-stated-Morris-Serre-dependencies",
+      "evidence_level": "symbolic-check",
+      "documents": [
+        "outputs/general_arity/square_arity_uniform_controller_and_nine_thirteen.md",
+        "outputs/general_arity/averaging_proof_strategy_and_composite_frontier_20260915.md"
+      ],
+      "scripts": [
+        "work/verify_square_arity_controller_and_nine_thirteen.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_square_arity_controller_and_nine_thirteen.py"
+          ],
+          "expected_markers": [
+            "square-arity uniform positive cycles and dyadic inverse: PASS 200",
+            "square-arity all-parameter full upper and n-lower roots: PASS 200",
+            "square-arity literal original-position cycles and returns: PASS 72",
+            "nine-average13 exact entry and terminal interfaces: PASS 100 152",
+            "nine-average thirteen-position full criterion interfaces: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "Written count and Cayley-Hamilton identities prove uniform cycles for all integer t, including genuine inverses of the three macros. The explicit integral SL2 sandwich proves the dyadic inverse without assuming2 already inverted. Exact checks cover200 parameters,72 literal original-position cycles/returns,100 all-input-entry instances and152 Bezout/Gamma1 interfaces. The finite mod13 unit claim follows from the explicitly proved order12 of2. General input and group quantifiers are supplied by the written proof.",
+      "does_not_establish": "Does not establish N(9)=13, all square-arity critical endpoints, the composite optimal-threshold conjecture, high-efficiency word extraction, or an executable full projective-plane group action. It does not replace the stated Morris/Serre dependencies.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library and existing exact matrix/Ledger primitives",
+        "Morris2007 Theorem6.1(2), Serre strong CSP, deep congruence and safe inverse lemmas",
+        "Existing Gamma1 generation lemma and composite prime-power lower bound"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "prime-factor-block-mean-transfer",
+      "claim": "For p|q prime and q/p|n, absorb all other allowed prime powers into equal block size c. If the quotient m=n/c is p, or m>=N(p), exact block-mean simulation gives the full q-averaging criterion. Initial blocks need not be constant; a final covering pass eliminates internal differences. In particular every q>=2 and every n=kq with k>=3 satisfy the complete rad(G)|q criterion.",
+      "claim_status": "proved-prime-factor-transfer-and-all-higher-multiples-using-completed-prime-theorem",
+      "evidence_level": "symbolic-check",
+      "documents": [
+        "outputs/general_arity/averaging_proof_strategy_and_composite_frontier_20260915.md"
+      ],
+      "scripts": [
+        "work/verify_prime_factor_block_mean_transfer.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_prime_factor_block_mean_transfer.py"
+          ],
+          "expected_markers": [
+            "prime-factor nonuniform block-mean simulation and cleanup: PASS 34",
+            "prime-factor all higher multiples arithmetic: PASS 3582",
+            "prime-factor transfer theorem interfaces: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "The proof uses simultaneously good equal-block partitions and exact semiconjugacy of block means through a fixed q-average network on pc positions. It separately proves the final within-block cleanup. Tests replay34 initially nonconstant-block simulations and3582 finite parameter instances; the arbitrary-q,k quantifiers follow from the written prime-factor argument, not those tests.",
+      "does_not_establish": "Does not imply N(q)<=3q, cover nondivisible dimensions, settle odd-q dimension2q, or prove the optimal composite threshold. It does not simulate a smaller-arity averaging matrix on the full original space.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Completed prime-arity theorem, including N(2)=4",
+        "Existing simultaneous good-partition lemma and fixed tensor averaging networks",
+        "Python standard library and existing independent Fraction replay"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "ten-twelve-seventeen-complete",
+      "claim": "At n=17, both ten-averaging and twelve-averaging have the complete nonautomatic G criterion G=1. Two-step entries reach weighted cores (10,6,1) and (12,4,1), so G=gcd(y,17). Explicit return templates give positive inverses, Sigma and dyadic roots; ten-averaging additionally activates Delta(5), twelve-averaging Delta(3). Both complete Gamma_0(17) Schreier covers compile and Bezout reaches a terminal. Thus H(10)=H(12)=17.",
+      "claim_status": "proved-ten-and-twelve-average-seventeen-full-G-criterion",
+      "evidence_level": "theorem-certificate",
+      "documents": [
+        "outputs/general_arity/ten_twelve_average_seventeen_complete.md",
+        "outputs/general_arity/composite_critical_scale_and_conjecture.md"
+      ],
+      "scripts": [
+        "work/verify_ten_twelve_average_seventeen.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_ten_twelve_average_seventeen.py"
+          ],
+          "expected_markers": [
+            "old B automatic-G arities through200: PASS 17",
+            "arity 10 n17 physical macros and full Gamma0(17): PASS 12 288 54",
+            "arity 10 n17 large-coordinate entry and transport: PASS 60",
+            "arity 10 n17 literal full paths: PASS 3 35",
+            "arity 12 n17 physical macros and full Gamma0(17): PASS 10 288 54",
+            "arity 12 n17 large-coordinate entry and transport: PASS 60",
+            "arity 12 n17 literal full paths: PASS 3 131",
+            "ten and twelve averaging seventeen-position G criteria: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "Universal entry, macro identities, local units, complete mod17 Schreier covers and Bezout terminal are given in the report. The verifier checks17 automatic-B points throughq<=200,12 and10 macro basis replays,288 primitive mod17 rows and54 loops for each arity,60 large-coordinate entries for each, and three fully expanded original-position paths per arity. Paths are exact Fraction replays; random path samples are filtered for compiled expansion below5000 atoms only to keep verification finite.",
+      "does_not_establish": "Does not prove n16, N(10)=17, N(12)=17, all larger dimensions, nine-averaging n13, shortest paths, one-extra-digit precision, or a uniform polynomial expanded word bound. The automatic-B table only identifies dimensions where G cannot screen inputs.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library",
+        "Existing positive odd-arity macro DAG",
+        "Gamma_0(17) Schreier generation",
+        "Integer Euclid and Bezout",
+        "Explicit (q,16-q,1) return templates"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "composite-endpoint-transfer",
+      "claim": "A reusable CRT/Schreier pivot certificate proves Gamma_0(n) containment in the already physically realized endpoint root group for36 listed composite levels n=2p+1 with odd p. Complete independent checking covers32112 loops. At all36 listed levels, the finite CRT group certificate combines with the two-to-four-prime entry theorems to prove G=1 iff reachable for all inputs. The list includes every two-prime n<=219 congruent3 mod4 and eight three/four-prime levels. Together with the existing prime-power theorem, all odd p from3 through109 have a complete endpoint criterion. This is a finite level family, not an arbitrary-level theorem.",
+      "claim_status": "proved-finite-composite-endpoint-family-full-input",
+      "evidence_level": "theorem-certificate",
+      "documents": [
+        "outputs/general_arity/composite_endpoint_crt_transfer.md",
+        "outputs/prime_arity/examples/seven_average_fifteen_complete.md"
+      ],
+      "scripts": [
+        "work/verify_composite_endpoint_transfer.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_composite_endpoint_transfer.py"
+          ],
+          "expected_markers": [
+            "composite CRT finite certificates complete loops: PASS 36 32112",
+            "composite positive loop DAGs and physical basis leaves: PASS 960 98",
+            "composite two-prime general and forced entries: PASS 168 84",
+            "composite full-input levels and core-only levels: PASS 28 8",
+            "composite literal positive controller paths: PASS 5 596",
+            "composite endpoint transfer certificates: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "The verifier treats the certificate matrices and pivot choices as untrusted, verifies full CRT label cardinality and distinctness, every representative determinant, every source/generator transition, the n-multiple lower entry, allowed-unit factorization and exact Gauss identities. It does not import the builder or pivot search.960 loops at n35,39,63,75 are compiled into positive DAGs and98 macro basis instances are physically replayed.168 general and84 forced two-prime entries are checked, plus5 fully expanded controller words with deliberately chosen kernel inputs. The report proves the certificate-to-group-to-input theorem and cites the existing all-odd-arity positive root realization.",
+      "does_not_establish": "Does not prove arbitrary composite level containment, that the fixed short shear menu always succeeds, arbitrary-level entry beyond the proved finite two-to-four-prime theorem, final thresholds N(p)=2p+1, minimal endpoints for odd composite averaging arities, shortest paths, or polynomial expanded word length. The36 listed levels are not all n<=1155. A failed pivot search would not disprove the underlying group containment or reachability.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library",
+        "composite_endpoint_pivot_certificates.json",
+        "Uniform positive odd-arity endpoint controller",
+        "General two-prime entry theorem",
+        "CRT projective-line cardinality and Schreier generation",
+        "Existing prime-power endpoint theorem for the finite p<=109 corollary"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "seven-average-fifteen-complete",
+      "claim": "Seven-averaging on fifteen original positions has the complete G=1 criterion, establishing the nonautomatic arithmetic edge H(7)=15. For n=2p+1 with at most two distinct prime divisors, any legal input enters a legal double-p block in at most three physical averages: a single block-singleton exchange combines complementary local witnesses. At p7,n15 the existing positive seed over Z[1/2] compiles all72 Schreier loops of the complete24-coset CRT projective line;62 use an upper pivot,8 a lower pivot,2 a half-integer row shear. Hence Gamma_0(15) acts positively, and Bezout plus the physical terminal solve every legal parameter.",
+      "claim_status": "proved-seven-average-fifteen-full-G-criterion",
+      "evidence_level": "theorem-certificate",
+      "documents": [
+        "outputs/prime_arity/examples/seven_average_fifteen_complete.md",
+        "outputs/general_arity/composite_critical_scale_and_conjecture.md"
+      ],
+      "scripts": [
+        "work/verify_seven_average_fifteen_complete.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_seven_average_fifteen_complete.py"
+          ],
+          "expected_markers": [
+            "seven-average n15 complete CRT cosets and positive pivots: PASS 192 72 62 8 2 10",
+            "seven-average n15 two-prime entry logic and large inputs: PASS 1800 160 72",
+            "seven-average n15 literal full paths and excluded G: PASS 7 7746 3",
+            "seven-average fifteen-position full G criterion: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "The report proves the general at-most-two-prime entry, lists all exceptional pivot loops, invokes complete Schreier generation and gives unrestricted Bezout transport and a four-atom terminal. Exact checks cover192 primitive mod15 rows,72 loops,10 physical macro basis replays,1800 complementary-type and safety checks,160 large-integer entries,72 forced three-step labelled entries,7 complete independently Fraction-replayed paths including an integer-frozen input and a forced-entry example, plus three excluded G classes. No seed search, new unexplained macro, or localization at7,11,17 is required; the existing dyadic positive resources suffice.",
+      "does_not_establish": "Does not prove N(7)=15, all n>=15 for seven-averaging, p-average endpoints with arbitrary multiprime level, a general three-or-more-prime entry, shortest paths, a uniform polynomial expanded word bound, or a one-extra-digit precision theorem. The general two-prime lemma only establishes entry; group coverage at other levels remains separate. Large-coordinate tests do not expand all corresponding long words.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library",
+        "Previously proved uniform odd-arity positive endpoint controller",
+        "Dyadic Gauss and Euclid compiler",
+        "CRT projective line and standard Schreier generation",
+        "Critical lower-edge counterexamples for H minimality"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "six-average-ten-complete",
+      "claim": "Six-averaging on ten original positions has the genuine full criterion: primitive centered G is1 or2 iff reachable; G5 and10 are impossible. A two-atom entry reaches the (6,3,1) core with5 not dividing y. Three actual periods R^4=-I/324, (AR)^2=I/36 and (RAC)^2=I/216 make the four explicit macros reversible projectively. A physically realized Sigma gives dyadic upper roots; the commutator D F D^-1 F^-1=L(-5/3) gives L(5), and all18 loops of the six-coset Gamma_0(5) cover compile. Bezout and one final six-average finish. Hence H(6)=10 under the nonautomatic-G definition, without asserting an eventual threshold.",
+      "claim_status": "proved-six-average-ten-full-nonautomatic-G-criterion",
+      "evidence_level": "theorem-certificate",
+      "documents": [
+        "outputs/general_arity/examples/six_average_ten_complete.md",
+        "outputs/general_arity/composite_critical_scale_and_conjecture.md"
+      ],
+      "scripts": [
+        "work/verify_six_average_ten_complete.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_six_average_ten_complete.py"
+          ],
+          "expected_markers": [
+            "six-average n10 actual periods and complete Gamma0(5): PASS 8 24 18",
+            "six-average n10 complete residue entries and both legal G classes: PASS 196 60 60",
+            "six-average n10 literal full paths and excluded classes: PASS 6 1931 2",
+            "six-average ten-position full G criterion: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "The universal entry, actual-scale cycles, physical inverse implementation, root commutator, complete Schreier decomposition and Bezout terminal are proved in the report. Exact checks audit four macros on two basis inputs, all24 primitive mod5 rows and18 loops,196 complete residue multiplicity patterns,60 large-integer entries for each ofG1/G2, six full independently Fraction-replayed original-input paths, and explicit G5/G10 obstructions. The verifier uses only the four displayed physical macros and never imports the bounded discovery table. Unequal blocks are not freely swapped.",
+      "does_not_establish": "Does not prove all n>=9 or n>=10 for six-averaging, N(6)=9 or10, the six-average n11 case, exact shortest paths, a uniform polynomial expanded word bound, or a one-additional-digit precision theorem. The no-short-period diagnostic for the old three-letter alphabet is not a nonexistence proof.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library",
+        "Existing positive macro expression DAG",
+        "Dyadic Gauss and integer Euclid compiler",
+        "Standard Schreier generation",
+        "Existing low-dimensional six-average counterexamples for minimal H"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "composite-critical-scale",
+      "claim": "For arbitrary arity q, let S(q)=max p^ceil(v_p(q)/2) over primes dividing q. Every q<n<q+S(q) has a G1 counterexample, and n=q+S(q) also does unless n has only prime factors dividing q. Consequently the explicit lower edge B(q)=q+S(q)+indicator(rad(q+S(q)) not dividing q) bounds both the first post-q success M(q) and eventual threshold N(q). A uniform four-step network for q=kr with k+1 dividing r averages n=q+r, including q=m(m-1), n=m^2. If m or m-1 is prime, this matches the lower edge and proves M(m(m-1))=m^2. M=N=B remains a conjecture, not a consequence of these examples.",
+      "claim_status": "proved-critical-lower-edge-and-infinite-first-success-family",
+      "evidence_level": "symbolic-check",
+      "documents": [
+        "outputs/general_arity/composite_critical_scale_and_conjecture.md"
+      ],
+      "scripts": [
+        "work/verify_composite_critical_scale.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_composite_critical_scale.py"
+          ],
+          "expected_markers": [
+            "composite critical prime-power trap transitions: PASS 25865 368",
+            "composite critical lower-edge arithmetic: PASS 199",
+            "composite critical universal four-step networks: PASS 14",
+            "composite prime-power critical scale and square networks: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "Universal proofs use a p-adic gap h=a-(ceil(a/2)-1), complete k<s preservation, the k=s boundary exit with G=q/s+1, and an explicit four-layer linear identity. The program audits25865 compressed original-atom transitions,368 boundary exits,199 lower-edge arithmetic instances and14 full network matrices. The q+1 G1 counterexample uses the existing exact q+1 criterion. New exact first-success cases include q12/n16,q20/n25,q30/n36,q42/n49,q56/n64 and the infinite consecutive-product family when one factor is prime.",
+      "does_not_establish": "Does not prove M(q)=B(q) outside the specifically matched constructions, prove N(q)=M(q), solve six-averaging n10, nine-averaging n13 or ten-averaging n16, or infer reachability merely because the boundary exit G is supported. Fixed-word four-step optimality does not imply four steps are necessary for every individual input. The lower edge applies after excluding trivial n=q.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library",
+        "Elementary p-adic valuation laws",
+        "Existing exact q+1 criterion",
+        "Original-position uniform matrix construction"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "eight-average-thirteen-complete",
+      "claim": "Eight-averaging on thirteen original positions has the full G=1 criterion. A two-atom entry reaches the (8,4,1) core. Actual matrices satisfy C^4=-I/64 and (A^2 C^2)^3=I/4096, giving positive inverses and a physically realized Sigma. Dyadic roots and signed powers-of2 representatives modulo13 compile all42 loops of a14-coset Gamma_0(13) cover. Bezout and a one-atom terminal finish. Combined with the new prime-power gap obstruction through n12, this proves M(8)=13, not N(8)=13.",
+      "claim_status": "proved-eight-average-first-success-thirteen",
+      "evidence_level": "theorem-certificate",
+      "documents": [
+        "outputs/general_arity/composite_critical_scale_and_conjecture.md"
+      ],
+      "scripts": [
+        "work/verify_eight_average_thirteen_complete.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_eight_average_thirteen_complete.py"
+          ],
+          "expected_markers": [
+            "eight-average n13 actual periods and complete Schreier cover: PASS 6 168 42",
+            "eight-average n13 large-integer entry and Bezout: PASS 120",
+            "eight-average n13 literal full paths: PASS 5 3577",
+            "eight-average thirteen-position complete criterion: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "Exact actual-scale period identities, all three physical atoms on two basis parameters, all168 primitive mod13 rows and42 Schreier loops,120 large-integer entries and five full original-input Fraction paths. Every nonidentity expression leaf is one eight-average; no free unequal-block swap is used. The short period was discovered by a separate bounded matrix diagnostic, then replaced by the displayed exact identity in the proof. This verifier never runs discovery.",
+      "does_not_establish": "Does not prove eventual N(8)=13, all n>=13 for eight-averaging, the nine-average n13 criterion, arbitrary prime-power sufficiency at the proposed lower edge, shortest paths or a polynomial expanded word bound. Large-integer tests check entry and Bezout without expanding all long paths.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library",
+        "Existing positive expression DAG and dyadic Gauss compiler",
+        "Standard Schreier generation",
+        "Integer Euclid and Bezout",
+        "Composite prime-power gap obstruction"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "six-average-nine-fixed-network",
+      "claim": "Every nine-position input reaches its mean with the same four original-position six-averaging operations. Thus the rad(G)|6 criterion holds at n9 and is automatic since G divides9. Four operations are optimal among fixed words that work for every input: after any two operations no matrix row equals the global uniform row, and a third operation leaves three rows unchanged.",
+      "claim_status": "proved-six-average-nine-universal-network",
+      "evidence_level": "theorem-certificate",
+      "documents": [
+        "outputs/general_arity/examples/six_average_nine_fixed_network.md",
+        "outputs/general_arity/composite_arity_four_six_transfer.md"
+      ],
+      "scripts": [
+        "work/verify_six_average_nine_fixed_network.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_six_average_nine_fixed_network.py"
+          ],
+          "expected_markers": [
+            "six-average n9 fixed network exact basis: PASS 9",
+            "six-average n9 three-step fixed-network exclusion: PASS 756",
+            "six-average n9 original rational samples: PASS 160",
+            "six-average nine-position universal four-step network: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "An independent standard-library-only verifier replays the explicit word on all9 standard bases, confirms every row after each of84 possible second operations is nonuniform, and replays160 rational inputs. The report proves both the fixed J9/9 identity and the universal three-step exclusion. This is a separate audit of the previously known network, with a new fixed-word optimality proof.",
+      "does_not_establish": "Does not show every individual input needs four steps, solve six-averaging n10,11 or other unresolved dimensions, establish N(6)=9, or provide an endpoint-to-all-larger-dimensions propagation theorem.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library",
+        "Exact projection matrices"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "four-average-seven-complete",
+      "claim": "Four-averaging on seven original positions has the complete G=1 criterion. A two-step original-position entry reaches the (4,2,1) weighted core. Three explicit one-average macros have actual identities C^3=I/8, (CA)^2=I/8 and C^2B=Sigma/8, so even the unequal-block Sigma action is compiled from real averages. Dyadic upper and7-multiple lower roots and signed-power-of2 Schreier representatives give Gamma_0(7) containment, Bezout transport and a one-average terminal. This settles the seven-position case, not the global threshold.",
+      "claim_status": "proved-four-average-seven-position-criterion",
+      "evidence_level": "theorem-certificate",
+      "documents": [
+        "outputs/general_arity/examples/four_average_seven_complete.md"
+      ],
+      "scripts": [
+        "work/verify_four_average_seven_complete.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_four_average_seven_complete.py"
+          ],
+          "expected_markers": [
+            "four-average n7 physical periods and dyadic Schreier cover: PASS 6 48 24",
+            "four-average n7 exact-entry residue and large-integer audits: PASS 16806 80",
+            "four-average n7 literal full paths: PASS 12 527",
+            "four-average seven-position complete criterion: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "Universal two-atom core entry, exact-scale macro identities, physical positive inverses, complete finite-field Schreier cover, Bezout transport and one-atom terminal are proved in the report. Exact checks cover six basis macro replays,48 primitive rows,24 loops,16806 residue entries,80 large integer entries and12 complete independently Fraction-replayed labelled paths. No free swap of the unequal blocks is allowed; every nonidentity leaf is one of A,B,C. Signed powers of2 replace centered residues so all Gauss pivots are dyadic units.",
+      "does_not_establish": "Does not solve four-averaging n11,13,15, prove N(4)=7, give endpoint-to-interval propagation, exact shortest paths, a uniform polynomial expanded word bound, or a fixed one-additional-digit precision bound. The n6 counterexample and n7 theorem bound the candidate endpoint but do not solve higher dimensions.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library",
+        "Existing positive macro DAG",
+        "Gamma_0(7) Schreier generation",
+        "Integer Euclid and Bezout",
+        "Four-average n6 counterexample"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "arbitrary-arity-linear-threshold",
+      "claim": "For every integer arity q>=3, n>=4q-1+d_q(n), where d_q(n) counts primes dividing n but not q, implies the full rad(G)|q reachability criterion on original positions. Nonunit differences supply an exact two-value mixture using q/gcd(delta,q) copies; the sole even-arity midpoint collision is handled by ordered unit anchors or an opposite-value terminal. General EGZ, protected double-heavy closure, and integer energy give one additional q-adic digit for integral zero-sum inputs. N(6)<=24; separate n7 and n9 controllers settle those dimensions, while the global thresholds remain open. For q=4 or6, q zero coordinates trigger full consensus at every n>=q.",
+      "claim_status": "proved-all-integer-arities-linear-threshold",
+      "evidence_level": "symbolic-check",
+      "documents": [
+        "outputs/general_arity/arbitrary_arity_linear_threshold.md"
+      ],
+      "scripts": [
+        "work/verify_arbitrary_arity_linear_threshold.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_arbitrary_arity_linear_threshold.py"
+          ],
+          "expected_markers": [
+            "all-arity nonunit and midpoint classification: PASS 987 172",
+            "all-arity uniform threshold capacities: PASS 3040",
+            "composite EGZ residue multisets: PASS 4488",
+            "all-arity large-integer closure and initialization: PASS 2804 39",
+            "composite zero-trigger original-position paths: PASS 24",
+            "all-arity original-position full paths: PASS 70 94",
+            "arbitrary-arity linear threshold: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "Universal statements are proved in the document by a complete unit/nonunit split, midpoint classification, composite EGZ induction, coefficient packing and integer energy. The program checks987 mixture identities,172 midpoint samples,3040 capacities,4488 complete residue multisets at q4/6,2804 large-integer local states,39 initializations,70 fully replayed random-input paths and24 zero-trigger tails. All15 implemented branches are exercised. Original Fraction replay checks labels, total consensus and denominator dividing q for primitive zero-sum input, without trusting normalized solver states. Existing prime helpers are reused only with an explicit corrected protected-prime table, never via their primality-gated solver.",
+      "does_not_establish": "Does not determine exact N(q), resolve the remaining small-dimension critical cases, prove shortest-path bounds, or give a uniform variable-n bit-length polynomial word-length theorem. The energy bound is numerical-height based. The zero-trigger theorem is conditional on already having q zero coordinates. No unverified clique-gossiping abstract or arithmetic macro implementation is assumed.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library",
+        "Node.js for zero-trigger tails",
+        "Explicit all-arity proofs in report",
+        "Prior prime initialization and coefficient-packing helpers with arity-independent formulas",
+        "Composite half-block transfer for zero-trigger tails"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "four-average-nine-complete",
+      "claim": "Four-averaging on nine original positions has the complete G=1 criterion. The explicit (T2 Sigma)^2=-2I period and affine inverse pairing provide U(Z[1/2]), L(9 Z[1/2]) and dyadic diagonal units. All36 loops of the complete12-coset Gamma_0(9) transversal have dyadic Gauss pivots, so every integer Gamma_0(9) transport compiles to positive original-position macros. An entry of two four-averaging operations and Bezout transport reach a terminal of three four-averaging operations.",
+      "claim_status": "proved-four-average-nine-position-criterion",
+      "evidence_level": "theorem-certificate",
+      "documents": [
+        "outputs/general_arity/examples/four_average_nine_complete.md"
+      ],
+      "scripts": [
+        "work/verify_four_average_nine_complete.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_four_average_nine_complete.py"
+          ],
+          "expected_markers": [
+            "four-average n9 positive seeds and complete Schreier cover: PASS 36 72 8",
+            "four-average n9 universal-entry finite audits: PASS 144 50",
+            "four-average n9 literal full consensus paths: PASS 6 621",
+            "four-average nine-position complete criterion: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "The period and inverse pairing, complete Schreier decomposition, unrestricted primitive-parameter Bezout transport and physical terminal are proved in the document. Exact finite certificates check36 loops, all72 primitive mod9 rows, every generated atom on two basis inputs,144 residue/singleton entries,50 large-coordinate transports and6 complete independently replayed original-input paths. All group inverses are stored as acyclic positive expressions, no seed or averaging-word search. The general even-arity involution formula is also checked at31 even arities; full root coverage is claimed only for q4,n9.",
+      "does_not_establish": "Does not prove the four-averaging n7,11,13,15 criteria, a full controller for every even arity, exact group equality, shortest paths, a uniform polynomial expanded word bound, or a one-additional-digit precision bound for the n9 arithmetic algorithm. Algebraic coset representatives themselves are not assumed physically executable; only their compiled loops are.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library",
+        "Existing positive expression DAG and exact physical macro ledger",
+        "Two-chart projective line and standard Schreier generation theorem",
+        "Integer Euclid and Bezout"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "composite-four-six-transfer",
+      "claim": "For even arity q with q/2 dividing n, set c=2^(v2(q)-1) times the product of ell^v_ell(n) over odd ell dividing q, and M=n/c. If M=2 or M>=4, the full rad(G)|q criterion holds by simultaneous good partition, overlapping half-block entry, and exact binary averaging on c-fold original-position copies. This includes every q-multiple dimension, all even n>=8 for four-averaging (also n=4), and, with an explicit nine-position network, every n>=6 divisible by3 for six-averaging. Four-averaging n6 and six-averaging n8 have explicit G1 counterexamples proved by valuation invariants.",
+      "claim_status": "proved-composite-infinite-families-and-counterexamples",
+      "evidence_level": "symbolic-check",
+      "documents": [
+        "outputs/general_arity/composite_arity_four_six_transfer.md"
+      ],
+      "scripts": [
+        "work/verify_composite_arity_transfer.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_composite_arity_transfer.py"
+          ],
+          "expected_markers": [
+            "composite fixed tensor networks and duplicate lifts: PASS 533 35",
+            "composite G1 counterexample invariant transitions: PASS 30915 1500",
+            "composite simultaneous repairs and literal full paths: PASS 169 336",
+            "composite even-arity transfer and local obstructions: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "Universal proofs and exact invocation conditions are in the report. Finite independent Fraction checks cover533 standard-basis fixed-network replays,35 duplicate macros,32415 complete local successor checks at sampled valuation-trap states,169 separate partition repairs, and336 complete original-input labelled paths. Binary HTML paths are independently replayed before compilation, and the final verifier trusts only original inputs and indices without normalization. General q=4,6,8,10,12 half-block instances and forced multi-prime bad partitions are included. The explicit six-on-nine four-step word gives J9/9 despite6 not dividing9, so the report flags the earlier literature abstract as inapplicable without verified hypotheses.",
+      "does_not_establish": "Does not solve odd dimensions for four-averaging, dimensions not divisible by3 for six-averaging, residual quotient M=1 or3 in general, a final all-dimensions threshold, fixed-network classification, or shortest paths. The bounded binary HTML generator is not a proof of its unrestricted running time. Finite trap checks do not replace the infinite invariant proof. No unverified Clique Gossiping abstract theorem is used.",
+      "runtime_class": "short",
+      "dependencies": [
+        "Python standard library",
+        "Node.js",
+        "Existing binary averaging criterion",
+        "Existing simultaneous good-partition lemma",
+        "2-average-solver.html via compare_pair_triple_solvers.BinarySolver"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "inverse-zero-sum-transfer",
+      "claim": "The 2022 inverse weighted zero-sum theorem yields an O(p)-modular-operation labelled-copy witness of total size less than p. Two opposite colliding averages restore both heavy values when their light selections are disjoint and appropriate witnesses remain. For legal five-averaging fourteen-position (5,5,2,2) kernels with distinct heavy residues modulo5, all nonconstant light-residue and anchor-congruent branches admit safe integer double-heavy closure. The remaining constant-light residue branch has no such one-step closure. An explicit two-parameter family at n=2p+4 reaches p zeros in two averages and finishes in at most seven for every odd p>=5.",
+      "claim_status": "proved-local-inverse-transfer-and-uniform-seven-step-family",
+      "evidence_level": "symbolic-check",
+      "documents": [
+        "outputs/general_arity/inverse_zero_sum_averaging_progress.md"
+      ],
+      "scripts": [
+        "work/verify_inverse_zero_sum_transfer.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_inverse_zero_sum_transfer.py"
+          ],
+          "expected_markers": [
+            "inverse zero-sum exact unordered residue witnesses: PASS 3102",
+            "inverse zero-sum arbitrary-copy linear witnesses: PASS 1095",
+            "fourteen paired-kernel exact safe closure: PASS 3192",
+            "two colliding averages restore both heavy values: PASS 5",
+            "two-p-plus-four two-parameter literal terminal paths: PASS 117 7",
+            "inverse zero-sum transfer: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "Small residue multisets are exhausted only to audit the separately proved inverse lemma; the witness itself scans O(p) compact prefix nodes. Exact fourteen-position tests include every stated branch, dedicated collision and parity cases, and large integers. Opposite-collision restoration and the seven-step family use literal labelled Fraction replay. Universal formulas, safe-case exhaustion and position capacities are proved in the document; no averaging-word discovery search is run.",
+      "does_not_establish": "Does not solve arbitrary fourteen-position inputs, the entire (5,5,2,2) kernel, arbitrary n=2p+4 inputs, the full middle-dimensional interval, or an improved uniform threshold. It does not assert that disjoint opposite collisions always exist, that the seven-step family has no one-step zero for every p, or that seven is an optimal path length. The O(p) witness bound counts modular operations, not input-bit-independent running time.",
+      "runtime_class": "instant",
+      "dependencies": [
+        "Python standard library",
+        "Explicit zero-containing2p+1 tail via prime-arity-zero-trigger-bridge helpers",
+        "Adhikari, Hegde, Molla, Sarkar, Integers22 (2022), A7, Theorem1, with its prime-case constructive proof reproduced in the document"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "stabilization-theorem",
+      "claim": "For arbitrary n, stable reachability after a common power-of-3 replication is equivalent to G(X) being a power of 3.",
+      "claim_status": "proved",
+      "evidence_level": "finite-sanity",
+      "documents": [
+        "outputs/triple_average/history/triple_average_stabilization_theorem.md",
+        "outputs/triple_average/history/triple_average_research_corrections.md"
+      ],
+      "scripts": [
+        "work/verify_stabilized_averaging.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_stabilized_averaging.py"
+          ],
+          "expected_markers": [
+            "stabilized matrix checks: 2288 PASS",
+            "tripled five- and six-point counterexamples: 10 operations each PASS",
+            "two-value criterion and correction checks: PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "Deterministic exact checks of the construction on 2,288 sampled inputs, an explicit five-point transport matrix, lower-bound exclusions, and correction examples.",
+      "does_not_establish": "The arbitrary-n theorem rests on the document's general construction; finite samples alone are not its proof and do not imply copy elimination in the original dimension.",
+      "runtime_class": "short",
+      "observed_runtime_seconds": 1.4,
+      "dependencies": [
+        "Python standard library"
+      ],
+      "profiles": [
+        "smoke",
+        "core",
+        "full"
+      ]
+    },
+    {
+      "id": "power-partition-compression",
+      "claim": "Every legal input can be compressed by real averaging networks to an O(log n)-rank kernel with power-of-3 block weights while preserving legality.",
+      "claim_status": "proved",
+      "evidence_level": "finite-sanity",
+      "documents": [
+        "outputs/triple_average/history/triple_average_power_partition_reduction.md"
+      ],
+      "scripts": [
+        "work/verify_power_partition_compression.py"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "python",
+            "work/verify_power_partition_compression.py"
+          ],
+          "expected_markers": [
+            "unequal-weight dangerous-edge patterns 3542820 PASS",
+            "power-block partitions and real network samples 2310 PASS"
+          ]
+        }
+      ],
+      "evidence_scope": "Exact enumeration of 3,542,820 bounded dangerous-edge residue patterns plus 2,310 deterministic random end-to-end partition and network samples.",
+      "does_not_establish": "The unbounded combinatorial theorem is proved in the document. The script also does not prove reachability inside the resulting logarithmic-rank kernel.",
+      "runtime_class": "medium",
+      "observed_runtime_seconds": 18.8,
+      "dependencies": [
+        "Python standard library"
+      ],
+      "profiles": [
+        "core",
+        "full"
+      ]
+    }
+  ]
+}

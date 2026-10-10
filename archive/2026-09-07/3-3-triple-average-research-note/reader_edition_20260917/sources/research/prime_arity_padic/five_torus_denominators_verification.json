@@ -1,0 +1,112 @@
+{
+  "primitive_legal_pairs": 3026,
+  "adjacent_denominator_edges": 6052,
+  "exact_predecessor_denominator_and_local_choice": 3026,
+  "sibling_gcd_identity_checks": 3026,
+  "exact_integer_conic_updates": 6052,
+  "unrestricted_torus_edges": 3930,
+  "same_divisor_counterexample": "alpha1=epsilon^4 alpha0, D=11",
+  "arbitrarily_close_family_checks": [
+    {
+      "seed": [
+        1,
+        -1
+      ],
+      "word_length": 0,
+      "m": 1,
+      "height_bits": 9,
+      "same_minimal_denominator": 1
+    },
+    {
+      "seed": [
+        1,
+        -1
+      ],
+      "word_length": 0,
+      "m": 2,
+      "height_bits": 25,
+      "same_minimal_denominator": 1
+    },
+    {
+      "seed": [
+        3,
+        2
+      ],
+      "word_length": 1,
+      "m": 2,
+      "height_bits": 27,
+      "same_minimal_denominator": 11
+    },
+    {
+      "seed": [
+        3,
+        2
+      ],
+      "word_length": 1,
+      "m": 3,
+      "height_bits": 77,
+      "same_minimal_denominator": 11
+    },
+    {
+      "seed": [
+        9,
+        1
+      ],
+      "word_length": 2,
+      "m": 3,
+      "height_bits": 79,
+      "same_minimal_denominator": 29
+    },
+    {
+      "seed": [
+        9,
+        1
+      ],
+      "word_length": 2,
+      "m": 4,
+      "height_bits": 229,
+      "same_minimal_denominator": 29
+    },
+    {
+      "seed": [
+        11,
+        24
+      ],
+      "word_length": 4,
+      "m": 5,
+      "height_bits": 679,
+      "same_minimal_denominator": 509
+    },
+    {
+      "seed": [
+        11,
+        24
+      ],
+      "word_length": 4,
+      "m": 6,
+      "height_bits": 2029,
+      "same_minimal_denominator": 509
+    },
+    {
+      "seed": [
+        139,
+        261
+      ],
+      "word_length": 8,
+      "m": 9,
+      "height_bits": 54667,
+      "same_minimal_denominator": 68279
+    },
+    {
+      "seed": [
+        139,
+        261
+      ],
+      "word_length": 8,
+      "m": 10,
+      "height_bits": 163985,
+      "same_minimal_denominator": 68279
+    }
+  ],
+  "scope": "No claim that a fixed denominator has finitely many solvable points; no complete static criterion."
+}

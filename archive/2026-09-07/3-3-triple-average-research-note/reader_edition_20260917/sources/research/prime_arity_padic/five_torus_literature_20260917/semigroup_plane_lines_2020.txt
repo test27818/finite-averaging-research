@@ -1,0 +1,452 @@
+                                                   ON INTERSECTIONS OF POLYNOMIAL
+                                                 SEMIGROUPS ORBITS WITH PLANE LINES
+arXiv:1907.03934v1 [math.NT] 9 Jul 2019
+
+
+
+
+                                                                         JORGE MELLO
+
+                                                 Abstract. We study intersections of orbits in polynomial semi-
+                                                 group dynamics with lines on the affine plane over a number field,
+                                                 extending previous work of D. Ghioca, T. Tucker, M. Zieve (2008).
+
+
+
+                                                                      1. Introduction
+                                            One of the most studied topics in complex dynamics is the research
+                                          on orbits of polynomial maps. For a complex number x and polyno-
+                                          mials F = {f1 , ..., fk } ⊂ C[X], one is very interested in understanding
+                                          the orbit
+                                                    OF (x) = {fi1 (fi2 (...(fin (x))...)) : n ∈ N, ij = 1, ..., k}
+                                          and
+                                                               Fn = {fi1 ◦ · · · ◦ fin : ij = 1, ..., k}.
+                                            Considering orbits with k = 1, D. Ghioca, T. Tucker, M. Zieve [7]
+                                          proved the following
+                                            Let x0 , y0 ∈ C and f, g ∈ C[X] with deg(f ) = deg(g) > 1. If
+                                          Of (x0 ) ∩ Og (y0 ) is infinite, then f and g have a common iterate.
+                                            Such result provided the first non-monomial cases of the so-called
+                                          dynamical Mordell-Lang Conjecture proposed by Ghioca and Tucker
+                                          and stated below.
+
+                                          Dynamical Mordell-Lang Conjecture. Let f1 , ..., fk be polynomials
+                                          in C[X], and let V be a subvariety of the affine space Ak which contains
+                                          no positive dimensional subvariety that is periodic under the action of
+                                          (f1 , ..., fk ) on Ak . Then V (C) has finite intersection with each orbit of
+                                          (f1 , ..., fk ) on Ak .
+
+                                          For an overview and a more detailed view in the history of the above
+                                          conjecture, we refer to [1].
+                                             The results of [7] were also extended by the same authors to func-
+                                          tion fields in the same paper, and to cases where the degrees of the
+                                          polynomials are distinct in [9], in which they also generalised results to
+                                          cases of a line in a higher dimensional space intersecting a product of
+                                                                                 1
+2                                JORGE MELLO
+
+multiple orbits defined by one map. As a corollary (Corollary 1.5, [9])
+they obtained information about the intersection of a higher dimen-
+sional line with an orbit defined by a semigroup of polynomial maps
+that have all but one of its coordinates as the identity. R. Benedetto,
+D. Ghioca, P. Kurlberg and T. Tucker [3] studied cases of intersection
+of orbits of rational functions with curves under some natural condi-
+tions, and in [4] the same authors proved that if the conjecture does
+not hold in the context of endomorphisms of varieties, then the set of
+iterates landing on a referred subvariety forms a set of density zero.
+For a discussion with an effective viewpoint and monomial maps, see
+[12], and for the context of finite fields, some analysis is made in [13].
+On [14], intersection of orbits and the Mordell-Lang problem is studied
+on the disk, with non-polynomial mappings.
+   In this paper, we study the extension of the results of [7] to polyno-
+mial semigroup cases with k ≥ 1 over number fields under some natural
+conditions. Namely, for sequences Φ = (φij )∞           j=1 of pairs of univariate
+polynomials in a finite set F whose coherent orbit
+     OΦc (x, y) = {(x, y), φi1 (x, y), φi1 (φi2 (x, y)), φi1 (φi2 (φi3 (x, y)), ...}
+intersects the diagonal plane line ∆ on infinitely many points.
+   Among other results, we prove the following:
+Theorem 1.1. Let x0 , y0 ∈ K, and let F = {φ1 , ..., φs } ⊂ K[X]×K[X]
+be a finite set of pairs of polynomials which are not gotten from mono-
+mials by composing with linears on both sides, with φi = (fi , gi ) and
+deg fi = deg gi > 1 for each i. Suppose that #(OF (x0 , y0 ) ∩ ∆) =
+∞. If the orbit OF (x0 , y0 ) satisfies that there exists a sequence Φ
+of terms in F with #OΦc (x, y) ∩ ∆ = ∞, or otherwise is such that
+#(OF (x0 , y0 ) ∩ ∆) = ∞ and the maps of F commute with each other,
+then there exist k ∈ N, and φ = (f, g) ∈ Fk such that f = g.
+  In Section 2 we recall properties of height functions, in Section 3 we
+gather very important needed results about polynomial equations and
+decompositions, and our main result is proved in Section 4. Further
+applications of the result and methods are given in Section 5.
+
+               2. Preliminaries on height functions
+  Througout the paper, K is assumed to be a fixed number field. We
+consider F = {φ1 , ..., φs } ⊂ K[X] × K[X] to be a finite set of pairs of
+polynomials, with φi = (fi , gi ). Let x, y ∈ K, and let
+          OF (x, y) = {φin ◦ ... ◦ φi1 (x, y)|n ∈ N, ij = 1, ..., s}
+denote the forward orbit of P under F .
+           ON INTERSECTIONS OF SEMIGROUP ORBITS WITH LINES                               3
+                              Q
+  We set J = {1, ..., s}, W = ∞                            ∞
+                                i=1 J, and let Φw := (φwj )j=1 to be a
+sequence of polynomials from F for w = (wj )∞
+                                            j=1 ∈ W . In this situation
+        (n)                       (0)
+we let Φw = φwn ◦ ... ◦ φw1 with Φw =Id, and also
+                                            (n)
+                                Fn := {Φw |w ∈ W }.
+                                                                                 Q∞
+  Precisely, we consider polynomials sequences Φ = (φij )∞
+                                                         j=1 ∈                     i=1 F
+and x, y ∈ K, denoting
+                       Φ(n) (x, y) := φin (φin−1 (...(φi1 (x, y))).
+  The set
+
+{(x, y), Φ(1) (x, y), Φ(2) (x, y), Φ(3) (x, y), ...}
+
+= {(x, y), φi1 (x, y), φi2 (φi1 (x, y)), φi3 (φi2 (φi1 (x, y)), ...}
+
+is called the forward orbit of (x, y) under Φ, denoted by OΦ (x, y).
+   The point (x, y) is said to be Φ-preperiodic if OΦ (x, y) is finite.
+   For a x, y ∈ K, the F -orbit of (x, y) is defined as
+                               [
+                                              (n)
+     OF (x, y) = {φ(x, y)|φ ∈      Fn } = {Φw     (x, y)|n ≥ 0, w ∈ W }
+                                      n≥1
+                                                      [
+                                                  =         OΦw (x, y).
+                                                      w∈W
+
+The point (x, y) is called preperiodic for F if OF (x, y) is finite.
+  We let S be the shift map which sends Ψ = (ψi )∞   i=1 to
+                                  S(Ψ) = (ψi+1 )∞
+                                                i=1 .
+  We also define the coherent orbit of a point (x, y) under a sequence
+Φ = (φij )∞
+          j=1 to be the set
+      OΦc (x, y) = {(x, y), φi1 (x, y), φi1 (φi2 (x, y)), φi1 (φi2 (φi3 (x, y)), ...}.
+   We let ∆ denote the diagonal line {(x, x)|x ∈ K} in the affine plane
+  2
+A (K).
+   In order to deal with pairs of polynomials with distinct degrees, we
+recall known results about certain canonical heights.
+   Recall that for x ∈ Q, the naive logarithmic height is given by
+                       P       [Kv : Qv ]
+               h(x) = v∈MK                log(max{1, |x|v },
+                                [K : Q]
+where MK is the set of places of K, MK∞ is the set of archimedean
+(infinite) places of K, MK0 is the set of nonarchimedean (finite) places
+of K, and for each v ∈ MK , |.|v denotes the corresponding absolute
+value on K whose restriction to Q gives the usual v-adic absolute value
+4                               JORGE MELLO
+
+on Q. Also, we write Kv for the completion of K with respect to |.|,
+and we let Cv denote the completion of an algebraic closure of Kv .
+   Considering the affine plane over a field L to be A2 (L) = L × L,
+there is a way to construct height functions associated with sequences
+of polynomials.
+Lemma 2.1. (Theorem 2.3, 10]) There is a unique way to attach to
+each sequence Φ = (φi )∞  i=1 , with deg φi ≥ 2 as above, a canonical height
+function
+                                ĥΦ : A2 (K̄) → R
+such that
+  (i) supx∈X(K̄) |ĥΦ (x) − h(x)| ≤ O(1).
+  (ii) ĥS(Φ) ◦ φ1 = (deg φ1 )ĥΦ . In particular,
+              ĥS n (Φ) ◦ φn ◦ ... ◦ φ1 = (deg φn )...(deg φ1 )ĥΦ .
+    (iii) ĥΦ (x) ≥ 0 for all x.
+    (iv) ĥΦ = 0 if and only if x is Φ-preperiodic.
+    We call ĥΦ a canonical height function (normalized) for Φ.
+   Considering conditions asPabove, namely, a number2 field K, and
+H = {φ1 , ...φk } now with i deg gi > k, the uple (A (K), g1, ..., gk )
+becomes a particular case of what we call a dynamical eigensystem
+of degree deg φ1 + ... + deg φk . For such, Kawaguchi also proved the
+following:
+Lemma 2.2. (Theorem 1.2.1, [11]) There exists the canonical height
+function
+                                ĥH : A2 (K̄) → R
+for (X, φ1 , ..., φk ) characterized by the following two properties :
+(i) ĥH = hH + O(1);
+     P
+(ii) kj=1 ĥH ◦ gj = (deg g1 + ... + deg gk )ĥH .
+    The result below is also well known.
+Lemma 2.3. (Lemma 5.4, [7]) If l ∈ K[X] is linear, then there exists
+cl > 0 such that |h(l(x)) − h(x)| ≤ cl for all x ∈ K.
+
+          3. Some results on polynomial composition
+   The result stated below is a strong fact concerning equations of the
+form F (X) = G(Y ) with infinitely many integral solutions.
+Lemma 3.1. (Corollary 2.2, [7]) Let K be a number field, S a finite
+set of nonarchimedean places of K, and F, G ∈ K[X] with deg(F ) =
+        ON INTERSECTIONS OF SEMIGROUP ORBITS WITH LINES                  5
+
+deg(G) > 1. Suppose F (X) = G(Y ) has infinitely many solutions in
+the ring of S-integers of K. Then F = E ◦ H ◦ a and G = E ◦ c ◦ H ◦ b
+for some E, a, b, c ∈ K[X] with a, b and c linears, and H ∈ K[X].
+Moreover, for fixed K, there are only finitely many possibilities for H.
+
+  The next surprising result that we state shows a certain rigidity on
+polynomial decomposition.
+
+Lemma 3.2. (Lemma 2.3, [7]) (Rigidity) Let K be a field of charac-
+teristic zero. If A, B, C, D ∈ K[X] − K satisfy A ◦ B = C ◦ D and
+deg(B) = deg(D), then there is a linear l ∈ K[X] such that A = C ◦l−1
+and B = l ◦ D.
+
+   Finally, we show, under some conditions, when polynomials from a
+finite set can be gotten from the same set through composition with
+linears.
+
+Lemma 3.3. Let K be a field of characteristic zero, and suppose
+{F1 , ..., Fh } ⊂ K[X] is a finite set of polynomials of degree d > 1 with
+the property that u ◦ Fi ◦ v is not a monomial whenever u, v ∈ K[X] are
+linear for each i. Then the equations a ◦ Fi = Fj ◦ b have only finitely
+many solutions in linear polynomials a, b ∈ K[X] for each 1 ≤ i, j ≤ h.
+
+Proof. Suppose a ◦ F1 = F2 ◦ b, we denote the coefficients of X d and
+X d−1 in F1 by θd and θd−1 , and in F2 by τd and τd−1 . We put β1 =
+−θd−1 /dθd , α1 = −F1 (β1 ) and β2 = −τd−1 /dτd , α2 = −F2 (β2 ) and see
+that F̂i := αi + Fi (X + βi )(i = 1, 2) have no terms of degree d − 1
+and 0. Putting â := α2 + a(x − α1 ) and b̂ := β2 + b(X + β1 ), we have
+that â ◦ F̂1 = F̂2 ◦ b̂, and both have no term of degree d − 1. Hence
+b̂ cannot have a term of degree 0, neither F̂2 ◦ b̂ nor â. Hence we can
+make â = δX and b̂ = γX, which implies that δ F̂1 (X) = F̂2 (γX).
+                     P              P                          ui
+Writing F̂1 (X) = i ui X i , F̂2 = i vi X i , we have γ i = δ for each
+                                                               vi
+non zero i term. As F̂1 , F̂2 have at least two terms of distinct degrees,
+                                       ui vj
+let us say i > j, we have δ i−j =            and there are finitely many
+                                       uj vi
+                                                              vr
+possibilities for δ. Since by our construction a = −α2 + γ r (X + α1 )
+                                                              ur
+and b = β2 + γ(X − β1 ), there are only finitely many possilities for
+a and b. Making the same procedure for any pair (Fi , Fj ) yields the
+desired result.                                                         
+6                                 JORGE MELLO
+
+                        4. Proof of Theorem 1.1
+Proof. We start by letting S to be a finite set of nonarchimedean places
+of K such that the ring of S-integers OS contains x0 , y0 and every  S coef-
+ficient of φ1 , ..., φs . Then OS2 contains φ(x0 , y0 ) for every φ ∈ n≥1 Fn .
+   By hypothesis we can firstly suppose #(OF (x0 , y0 ) ∩ ∆) = ∞ with
+#(OΦc (x0 , y0 ) ∩ ∆) = ∞ for some sequence Φ = (F, G) = (φij )∞       j=1 =
+              ∞                                               c
+((fij , gij ))j=1 of terms belonging to F , so that #OF (x0 ) = ∞ and
+     c
+#OG    (y0 ) = ∞ . Let (nj )j∈N be such that
+                  φi1 ◦ ... ◦ φinj (x0 , y0 ) ∈ ∆ for each j ∈ N.
+   By the pigeonhole principle, there exists a t1 ∈ {1, ..., s} such that for
+infinitely many j, we have that φinj = φt1 , so that φi1 ◦...◦φinj (x0 , y0 ) =
+φi1 ◦ ... ◦ φt1 (x0 , y0) ∈ ∆. Again, for the same reason, there must exist
+a φt2 ∈ F such that φinj = φt1 , φinj −1 = φt2 , and φi1 ◦ ... ◦ φinj (x0 , y0 ) =
+φi1 ◦ ... ◦ φt2 ◦ φt1 (x0 , y0 ) ∈ ∆ for infinitely many j. Obtaining tn
+inductively in this way, we can consider the sequence Φ′ = (F ′ , G′ ) =
+(φ′k )∞               ∞
+      k=1 := (φtk )k=1 , which by its construction satisfies that for every
+k ∈ N, the equation F ′ (k) (X) = G′ (k) (Y ) has infinitely many solutions
+in OS × OS . By Lemma 3.1, for each k we have F ′ (k) = Ek ◦ Hk ◦ ak and
+G′ (k) = Ek ◦ ck ◦ Hk ◦ bk with Ek ∈ K[X], linears ak , bk , ck ∈ K[X], and
+some Hk ∈ K[X] which comes from a finite set of polynomials. Thus
+Hk = Hl for some k < l.
+   If we write F ′ (l) = F̃ ◦ F ′ (k) and G′ (l) = G̃ ◦ G′ (k) with (F̃ , G̃) ∈ Fl−k ,
+we have
+           F̃ ◦ Ek ◦ Hk ◦ ak = F ′ (l) = El ◦ Hk ◦ al and
+
+              G̃ ◦ Ek ◦ ck ◦ Hk ◦ bk = G′ (l) = El ◦ cl ◦ Hk ◦ bl .
+By Lemma 3.2, there are linears u, v ∈ K[X] such that
+         Hk ◦ ak = u ◦ Hk ◦ al and ck ◦ Hk ◦ bk = v ◦ cl ◦ Hk ◦ bl .
+Thus,
+                        F̃ ◦ Ek ◦ u = El = G̃ ◦ Ek ◦ v,
+and by Lemma 3.2, it follows that F̃ = G̃◦l1 for some l1 ∈ K[X] linear.
+  Again from the pigeonhole principle, there exists some integer k0 so
+that for infinitely many ℓ > k0 , we have that
+                                     Hk 0 = Hℓ
+So, for these infinitely many ℓ, we have that there exists some linear
+polynomial aℓ such that
+         ON INTERSECTIONS OF SEMIGROUP ORBITS WITH LINES                           7
+
+                         φ′ℓ ◦ · · · φ′k0 +1 := (Fk0 ,ℓ , Gk0 ,ℓ )
+  satisfies
+                                 Fk0 ,ℓ = Gk0 ,ℓ ◦ aℓ .
+
+                                            S N ⊂ N and an infinite
+  Inductively, we obtain in this way an infinite
+                            ∞
+sequence Ψ = (F, G) = (ψi )i=1 of terms in n≥1 Fn satisfying
+                         F(n) = G(n) ◦ ln , with n ∈ N .
+By Lemma 3.2, this means that un ◦ fij = gij ◦ ln for some 1 ≤ ij ≤ s
+and un linear.
+  Since {ln |n ∈ N } is finite by Lemma 3.3, there exist N > n such that
+lN = ln . Then, denoting F(N ) = FN −n ◦ F(n) and G(N ) = GN −n ◦ G(n)
+where FN −n , GN −n ∈ Fm for some m, we have
+
+F(N ) = G(N ) ◦ lN = GN −n ◦ G(n) ◦ ln = FN −n ◦ F(n) = FN −n ◦ G(n) ◦ ln ,
+
+and thus
+                                   FN −n = GN −n
+as we wanted to show.
+   If otherwise, we suppose that #(OF (x0 , y0) ∩ ∆) = ∞ and the maps
+of F commute, we take t1 such that φ(x0 , y0 ) = (φt1 ◦...)(x0 , y0 ) ∈ ∆ for
+infinitely many φ if the semigroup generated by F , so that, ft1 (X) =
+gt1 (Y ) has infinitely many solutions in OS ×OS . Then we choose t2 such
+that φ = (φt1 ◦ φt2 ◦ ...)(x0 , y0 ) = (φt2 ◦ φt1 ◦ ...)(x0 , y0 ) ∈ ∆ for infinitely
+many φ ∈ ∪n≥0 Fn (commutativity), so that (ft2 ◦ft1 )(X) = (gt2 ◦gt1 )(Y )
+has infinitely many solutions in OS × OS . In this way we build a
+sequence Φ′ = (F ′ , G′ ) = (φtn )n∈N such that F ′ (k) (X) = G′ (k) (Y ) has
+infinitely many solutions in OS × OS for each k ∈ N. Then one can
+proceed as in the first case to achieve the desired conclusion.                    
+  It turns out that this result is actually true for orbits which intersect
+an arbitrary line at infinitely many points.
+Corollary 4.1. Under the conditions of Theorem 1.1, with L : X =
+l(Y ) ( l linear over K) in place of ∆, there must exist k ∈ N, and
+φ = (f, g) ∈ Fk such that f = l ◦ g.
+Proof. Suppose #(OF (x0 , y0 ) ∩ L) = ∞. Then defining a new system
+                F l := {(f1 , l ◦ g1 ◦ l−1 ), ..., (fs , l ◦ gs ◦ l−1 )},
+we have that #(OF l (x0 , l(y0 ))∩∆) = ∞ with the conditions of Theorem
+1.1, from where the result follows.                                   
+8                                JORGE MELLO
+
+                        5. Further applications
+  The two next corollaries are straight-forward consequences of Theo-
+rem 1.1.
+Corollary 5.1. Let x0 , y0 ∈ K, and let F = {φ1 , ..., φs } ⊂ K[X] ×
+K[X] be a set of pairs of polynomials which are not gotten from mono-
+mials by composing with linears on both sides, with φi = (fi , gi ) and
+deg fi = deg gi > 1 for each i. If #(O{f1 ,...,fs} (x0 ) ∩ O{g1 ,...,gs} (y0 )) = ∞
+such that for some sequence Φ of terms in {f1 , ..., fs } × {g1 , ..., gs } we
+have
+                             OΦc (x0 , y0 ) ∩ ∆ = ∞.
+Then there exists k ∈ N, and φ = (f, g) ∈ Fk such that f = g.
+Proof. Here we are under the conditions of Theorem 1.1, from where
+the result follows.                                             
+Corollary 5.2. Let x0 ∈ K, and let F = {f1 , ..., fs } ⊂ K[X] be a set
+of polynomials which are not gotten from monomials by composing with
+linears on both sides, with deg f1 = deg f2 = ... = deg fs > 1. Suppose
+there are two sequences (trajectories) Φ and Ψ in the semigroup gen-
+erated by F satisfying the following
+              c
+“OΦc (x0 ) ∩ OΨ (x0 ) = ∞, or otherwise #(OΦ (x0 ) ∩ OΨ (x0 )) = ∞ and
+the elements of F commute“.
+
+Then Φ and Ψ have two “words” in common, namely there exist m, k ∈
+N such that
+                            S m (Φ)(k) = S m (Ψ)(k) .
+
+Proof. We apply the proof of Theorem 1.1 for F and G = F with
+(x0 , x0 ).                                                
+Remark 5.3. In a similar way as in the proof of Corollary 4.1, it can
+be seen that Corollary 5.1 and Corollary 5.2 can be extended with ∆
+being replaced by an arbitrary plane line L : X = l(Y ) and the set
+{Φ(nj ) (x0 ) = Ψ(nj ) (x0 )|n1 < n2 < ...} by {Φ(nj ) (x0 ) = l(Ψ(nj ) (x0 ))|n1 <
+n2 < ...} respectively, implying the more general conclusions f = l ◦ g
+and S m (Φ)(k) = l ◦ S m (Ψ)(k) respectively.
+  Finally we obtain informations in some cases of polynomial semi-
+group orbits with polynomials with distinct degrees, for which the the-
+ory of canonical heights is useful.
+         ON INTERSECTIONS OF SEMIGROUP ORBITS WITH LINES                     9
+
+Proposition 5.4. Let x0 , y0 ∈ K, and let F = {φ1 , ..., φs } ⊂ K[X] ×
+K[X] be a set of pairs of polynomialsof degree at least 2, and Φ = (F, G)
+be a sequence of terms in F such that deg(G(n) ) = o(deg(F (n) )). Then
+                         #(OΦ (x0 , y0) ∩ ∆) < ∞.
+In particular, if deg fi > deg gi for each i = 1, ..., s, then every se-
+quence( trajectory) of F intersects ∆ in only finitely many points.
+
+Proof. If x0 or y0 is preperiodic for F or G respectively, then the result
+is true. Otherwise Lemma 2.1 says that ĥF (x0 ) > 0, so that there is a
+δ > 0 such that every k big enough satisfies
+
+                         h(F (k) (x0 )) > deg(F (k) )δ.
+
+Also, there exist ǫ > 0 such that
+
+                         h(G(k) (y0 )) < deg(G(k) )ǫ,
+
+and by the hypothesis we know that deg(F (k) )δ > deg(G(k) )ǫ for every
+k large enough. Therefore, h(F (k) (x0 )) > h(G(k) (y0 )) and F (k) (x0 ) 6=
+G(k) (y0 ) for every k large as wanted.                                   
+
+   The result above shows in particular that if #(OΦ (x0 , y0) ∩ ∆) = ∞,
+                                  deg(G(k) )           deg(F (k) )
+then it cannot be true that limn              or lim n             is equal
+                                  deg(F (k) )          deg(G(k) )
+to zero, so that the distance between the canonical heights of x0 and
+y0 associated with F and G respectively cannot be increasingly large.
+   Related with Proposition 5.4 and considering the difference between
+the degree sum of the coordinates in the sequence, we have that if the
+n-iterates of a point under the semigroup are all contained in ∆ for
+infinitely many n, then the sum of the degrees of the polynomials in
+the first coordinate of the generator set is equal to such sum for the
+second coordinate polynomials, as it follows below.
+
+Proposition 5.5. Let x0 , y0 ∈ K, and let F = {φ1 , ..., φs }P    ⊂ K[X] ×
+K[X]
+P      be a set of pairs of polynomials φi = (fi , gi ) such that i deg fi >
+   i deg gi > s. Suppose that x0 and y0 are not preperiodic for {f1 , ..., fs }
+and {g1 , ..., gs } respectively. Then {φ(x0 , y0 )|φ ∈ Fn } 6⊂ ∆ for all but
+finitely many numbers n.
+
+Proof. Using Lemma 2.2 and the hypothesis, we proceed similarly as
+in the previous proof, so that for some positive numbers δ and ǫ, we
+10                                JORGE MELLO
+
+have that
+                        X                       X
+                               h(f (x0 )) = (       deg fi )k δ
+                       f ∈Fk                    i
+                                                X
+                                         >(         deg gi )k ǫ
+                                                i
+                                             X
+                                         >          h(g(y0))
+                                             g∈Fk
+
+for every k large enough, from where the result follows.                       
+  Acknowledgements: I am very grateful to Alina Ostafe, John
+Roberts and Igor Shparlinski for their much helpful suggestions and
+comments. I also thank Professor Dragos Ghioca for valuable com-
+ments, discussions and suggestions. I am very thankful to ARC Dis-
+covery Grant DP180100201 and UNSW for supporting me in this work.
+
+                                  References
+ [1] J. P. Bell, D. Ghioca, and T. J. Tucker: The dynamical Mordell-Lang conjec-
+     ture, volume 210 of Mathematical Surveys and Monographs. American Math-
+     ematical Society, Providence, RI, 2016, xiv+280 pp .
+ [2] J. P. Bell, D. Ghioca, and T. J. Tucker: The dynamical Mordell-Lang problem
+     for noetherian spaces, Funct. Approx. Comment. Math. 53 (2015), no. 2, 313-
+     328.
+ [3] R. Benedetto, D. Ghioca, P. Kurlberg and T. Tucker: A case of the dynamical
+     Mordell-Lang conjecture, Math. Ann., 352 (2012), 1-26.
+ [4] R. Benedetto, D. Ghioca, P. Kurlberg and T. Tucker: A gap principle for
+     dynamics, Compos. Math. 146 (2010), no. 4, 1056-1072.
+ [5] C. D’Andrea, A. Ostafe, I. E. Shparlinski and M. Sombra: Reductions modulo
+     primes of systems of polynomial equations and algebraic dynamical systems,
+     Trans. Amer. Math. Soc. 371 (2019), 1169-1198
+ [6] D. Ghioca, K. D. Nguyen: The orbit intersection problem for linear spaces and
+     semiabelian varieties, Math. Res. Lett. 24 (2017), no. 5, 1263-1283.
+ [7] D. Ghioca, T. Tucker, M. Zieve: Intersections of polynomial orbits, and a
+     dynamical Mordell- Lang conjecture, Invent. Math. 171, 463-483 (2008)
+ [8] D. Ghioca, T. Tucker, M. Zieve: The Mordell-Lang question for endomor-
+     phisms of semiabelian varieties, J. Thor. Nombres Bordeaux 23 (2011), no. 3,
+     645-666.
+ [9] D. Ghioca, T. Tucker, M. Zieve: Linear relations between polynomial orbits,
+     Duke Math. J. 161 (2012), 1379-1410.
+[10] S. Kawaguchi: Canonical heights for random iterations in certain varieties,
+     Int. Math. Res. Not., Article ID rnm023, 2007
+[11] S. Kawaguchi: Canonical heights, invariant currents, and dynamical systems
+     of morphisms associated with line bundles, J. reine angew. Math. 597 (2006),
+     135-173
+[12] A. Ostafe and M. Sha: On the quantitative dynamical Mordell-Lang conjecture,
+     J. Number Theory 156 (2015), 161-182.
+         ON INTERSECTIONS OF SEMIGROUP ORBITS WITH LINES                        11
+
+[13] A. Ostafe and I. E. Shparlinski: Orbits of algebraic dynamical systems in sub-
+     groups and subfields, Number Theory - Diophantine Problems, Uniform Dis-
+     tribution and Applications (pp.347-368)
+[14] M. X. Wang: A dynamical Mordell-Lang property on the disk, Trans. Amer.
+     Math. Soc. 369 (2017), no. 3, 2183-2204.
+
+  University of New South Wales. mailing adress:
+School of Mathematics and Statistics UNSW Sydney NSW, 2052 Aus-
+tralia.
+  E-mail address: j.mello@unsw.edu.au
+

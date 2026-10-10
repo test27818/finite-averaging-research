@@ -1,0 +1,118 @@
+\section{临界带的共同终端与返回构造}\label{sec:controllers}
+对核心\eqref{eq:core}，使用列 $(z,y)^T$，其中 $y=a+pz$。终端列取为
+\begin{equation}\label{eq:terminal}
+t_j=(1,p^2-nj)^T,\qquad
+\max(0,\lceil(p-1-r)/2\rceil)\le j\le(p-1)/2.
+\end{equation}
+其零和 $p$ 元组含 $j+1$ 份第一块、$j$ 份第二块及 $p-1-2j$ 份载体。
+
+\begin{lemma}\label{lem:small-units}
+设 $p\ge5$、$2p<n<4p$、$\gcd(p,n)=1$。$-1$ 和所有 $1\le b\le p$、$\gcd(b,n)=1$ 的类生成 $(\Z/n\Z)^\times$。若 $n$ 偶，还存在安全奇数 $b\le p$ 满足 $b\equiv3$ 或 $5\pmod8$。
+\end{lemma}
+\begin{proof}
+记第一项的生成群为 $H$。$n$ 奇时，若 $H$ 不满，取最小正缺失单位 $p<a<n/2$。$a<n/3$ 时取 $4a-n$，$a>n/3$ 时取 $n-2a$，均为更小的正缺失单位，矛盾。
+若 $n=2m$、$m$ 奇，选奇数 $b=(m\pm1)/2\le p$，则 $H$ 模 $m$ 包含 $2$ 及其逆。每个模 $m$ 单位的平衡代表绝对值小于 $p$，除尽 $2$ 因子后即是已知奇单位。
+若 $4\mid n$，单位在 $(0,n/2)$ 中由 $a\mapsto n/2-a$ 配对，所以 $(0,n/4)$ 恰有 $\varphi(n)/4$ 个单位。它们及负数已属于 $H$，再加 $\pm p$，得到 $|H|>\varphi(n)/2$。
+
+第二项先检查 $3,5,11,13$。$p=5,7$ 时若 $3,5$ 都不安全，则 $30\mid n<4p$，矛盾；$p=11$ 时同理由 $165\mid n$ 排除。若 $p\ge13$ 且四者均不安全，记 $n$ 的不同奇素因子数为 $d\ge4$，$\rho=\prod_{\ell\mid n,\ell\text{奇}}(1-1/\ell)$。等差列 $3+8t\le p$ 的项数 $L\ge(p-4)/8$，容斥给安全项数至少 $L\rho-2^d$。而
+\[
+L\rho>n\rho/32-1/2\ge60\cdot6^{d-4}-1/2>2^d.
+\]
+这里 $n\rho\ge1920\cdot6^{d-4}$，由四个指定素因子及其余奇素因子得到。
+\end{proof}
+
+\begin{theorem}\label{thm:terminal}
+在\eqref{eq:core}上，令 $h=\delta n$、$q=h^2$，其中 $\delta=1$（$n$ 奇）或 $\delta\in\{2,4\}$（$n$ 偶）。假设：
+\begin{enumerate}
+\item $L(h\Z)$ 和 $\Gamma(q,\Z)$ 可实现；
+\item 若干条目本原的整数满秩返回，其行列式与 $q$ 互素，模 $q$ 保持合法域，且有限内容群包含 $V\equiv U(-p^{-2})\pmod n$；
+\item $n$ 奇时该群包含标量 $2I$；$n$ 偶时\eqref{eq:terminal}的 $j$ 区间含 $\delta$ 个连续整数。
+\end{enumerate}
+则全部合法核心可归零。$p=3,n=7$ 时同样成立。
+\end{theorem}
+\begin{proof}
+保留载体，两个 $p$ 块互补混合给 $(a,z)$ 坐标中的
+\[
+p^{-1}P_b,\qquad P_b=\begin{pmatrix}b&r(p-b)/2\\0&p\end{pmatrix},
+\quad b\text{ 奇},\quad1\le b\le p.
+\]
+当 $\gcd(b,n)=1$ 时，$P_b$ 的行列式与 $q$ 互素，且 $y'\equiv by\pmod n$。$b<p$ 时条目本原，故推论\ref{cor:finite-group}提供 $p,b$ 的素因子标量；$P_1$ 已提供 $p$。结合假设中的 $2I$ 及引理\ref{lem:small-units}，有限标量模 $n$ 满射。
+对当前列，取 $k\equiv p^2zy^{-1}-1\pmod n$，用 $V^k$ 后再乘一个可用有限标量，得到 $(z,y)\equiv(1,p^2)\pmod n$。
+
+$n$ 偶时写 $n=2^a m$、$m$ 奇，令 $B=2^{2v_2(h)}$。有限群中的 $P_bP_1^{-1}$ 及标量给
+\begin{equation}\label{eq:split}
+D_b=\begin{pmatrix}b^{-1}&0\\n(b^{-1}-1)/2&1\end{pmatrix}.
+\end{equation}
+引理\ref{lem:small-units}选出 $b\equiv3,5\pmod8$，因 $v_2(b^2-1)=3$，$-1,b$ 生成每个有限二进单位群。用\eqref{eq:split}及 $D_{-1}$ 使 $z=1\pmod B$，同时保持 $y\pmod n$。$V\bmod2$ 为上幺幂，逐次平方给 $V^B\equiv I\pmod B$；使用 $V$ 的 $B$ 倍次数恢复模 $m$ 的首坐标。于是 $z=1\pmod h$。
+按 $y$ 选 $j\bmod\delta$，使当前列与 $t_j$ 模 $h$ 相同。置 $E=E_{21}$、$X=VEV^{-1}$，则模 $n$
+\[
+Et_j=(0,1)^T,\qquad Xt_j=(-2/p^2,2)^T.
+\]
+两列的行列式 $2/p^2$ 是模 $m$ 单位。用 $L(hk)$ 及其有限 $V$ 共轭，解一次二维线性同余，将两坐标修正到 $t_j\pmod{m^2}$；参数用 CRT 保持模 $B$。随后一次 $L(hk)$ 修正第二坐标模 $B$，并取 $k\equiv0\pmod m$。最终列与 $t_j$ 模 $q$ 相同。
+每条有限内容分支由引理\ref{lem:content}提升，最后用引理\ref{lem:fiber}精确送到 $t_j$。平均其零和组，再用引理\ref{lem:zero-tail}收尾。$p=3,n=7$ 时，模 $7$ 的单位由 $-1,2$ 生成，其余步骤相同，收尾用引理\ref{lem:zero-base}。
+\end{proof}
+
+\begin{proposition}\label{prop:odd}
+若 $p\ge3$ 为奇素数、$1\le r<p$ 为奇数，则全部合法 $K_{p,r}$ 可归零。
+\end{proposition}
+\begin{proof}
+采用 $u=z,v=a-rz/2$。写 $p-r=4k+2\epsilon$，$\epsilon\in\{0,1\}$。取 $\alpha_0=-r,\alpha_1=4-r$。第一步从 $A,B$ 各取 $(p+\alpha)/2,(p-\alpha)/2$ 份，产生 $p$ 份 $D$，保留 $r$ 份作载体；第二步按
+\[
+(x,y,c,v_D)=\left(\frac{p+2r-\alpha-2\epsilon}{4},\frac{p+\alpha-2\epsilon}{4},\epsilon,\frac{p-r}{2}\right)
+\]
+选择输出，第三步平均其 $p$ 元补集。两组输出分别为 $(r+k,k,\epsilon,2k+\epsilon)$ 和 $(r+k-1,k+1,\epsilon,2k+\epsilon)$；剩余库存分别为 $(r+2k+\epsilon,2k+\epsilon,r,4k+2\epsilon)$ 和 $(r+2k+\epsilon-2,2k+\epsilon+2,r,4k+2\epsilon)$。唯一紧的条件是 $k+\epsilon\ge1$，由 $p-r>0$ 保证。
+返回的实际尺度为 $p^{-2}$，矩阵为
+\[
+J_\alpha=\begin{pmatrix}-rp/2&-\alpha\\pn(r-2\epsilon)/4&rp/2\end{pmatrix},
+\quad J_\alpha^2=pF_\alpha I,quad F_\alpha=\frac{pr^2-n(r-2\epsilon)\alpha}{4}.
+\]
+平方标量模 $n$ 为 $p^4$，故非零且安全。令 $c_\epsilon=r$（$\epsilon=0$）或 $1$（$\epsilon=1$），$f_i=F_{\alpha_i}/c_\epsilon$。若 $\epsilon=0$，则 $f_0=r(3p+r)/4,f_1=f_0-n$；若 $\epsilon=1$，则 $f_0=r[pr+n(r-2)]/4,f_1=f_0-n(r-2)$。这给出
+\[
+\gcd(f_0,f_1)=\gcd(f_0f_1,n)=1,\qquad r\mid f_0,
+\]
+且二者奇偶相反。第二种情形的互素性由模 $n$、模 $r-2$ 的等式 $4f_0\equiv pr^2$ 得出。
+在 $R=\Z[1/|f_0f_1|]$ 中，$2,r$ 为单位，故 $R$ 的单位无限。令 $S=\diag(1,-1)$，则
+\begin{gather*}
+T=J_{\alpha_1}J_{\alpha_0}^{-1}
+=\begin{pmatrix}f_1/f_0&-2r/(c_\epsilon f_0)\\0&1\end{pmatrix},\\
+[S,T]=U\left(\frac{4r}{c_\epsilon f_0}\right).
+\end{gather*}
+根参数为 $R$ 单位，引理\ref{lem:localize}给 $U(R)$。
+保留 $r$ 份旧 $B$，平均两组
+\[
+(A^{(p+r)/2},B^{(p-r)/2}),\qquad
+(A^{(p-r)/2},B^{(p-r)/2},C^r),
+\]
+得到
+\[
+K=\begin{pmatrix}-r/2&1\\rn/4&r/2\end{pmatrix},\quad K^2=r(p+r)I/2.
+\]
+若 $H=KU(2/r)$，则 $[S,H]=L(n)$。置 $P=\left(\begin{smallmatrix}1&-2\\0&n\end{smallmatrix}\right)$，有
+\[
+P^{-1}U(t)P=U(nt),\quad
+P^{-1}KU(8(p+r)t/r)K^{-1}P=L(nt).
+\]
+引理\ref{lem:deep}先给 $\Gamma(n^3,R)$。对 $t\in R$ 选整数 $k\equiv t\pmod{n^2R}$，分解 $L(nt)=L(nk)L(n(t-k))$，得到 $L(nR)$，再得 $\Gamma(n^2,R)$。
+换到 $(z,y)$ 的矩阵 $C=\left(\begin{smallmatrix}1&0\\n/2&1\end{smallmatrix}\right)$。选 $4\mid k$ 且 $k\equiv-p^{-2}\pmod n$，则 $CU(k)C^{-1}$ 整数且满足定理\ref{thm:terminal}的方向条件。至少一个整数反射的行列式为偶数，而条目公因子为奇数（其左下项 $-\alpha_i$ 奇）；引理\ref{lem:content}提供有限标量 $2I$。定理\ref{thm:terminal}完成证明。
+\end{proof}
+
+\begin{proposition}\label{prop:r2}
+若 $p\ge5$，全部合法 $K_{p,2}$ 可归零。
+\end{proposition}
+\begin{proof}
+引理\ref{lem:two-carrier}给出 $U(\Z[1/p])$ 和一个明确整数深核。其两次 CRT 数字返回使第二坐标等于 $\pm1$ 模该深核层，再由引理\ref{lem:fiber}精确送入相反值终端。
+\end{proof}
+
+\begin{proposition}\label{prop:even}
+若 $p\ge5$、$2<r<p$ 为偶数，则全部合法 $K_{p,r}$ 可归零。
+\end{proposition}
+\begin{proof}
+$4\le r\le p-3$ 使用引理\ref{lem:even-core}；$r=p-1$ 使用引理\ref{lem:upper-boundary}。两引理的根、局部化环和终端均在附录\ref{app:lower}给出。
+\end{proof}
+
+\begin{proposition}\label{prop:upper}
+若 $p\ge11$、$3p<n<4p$，全部合法输入可归零。
+\end{proposition}
+\begin{proof}
+$p\ge83$ 时，由引理\ref{lem:upper-supply}得到定理\ref{thm:terminal}的资源。$11\le p<83$ 且 $n=3p+s$、$s\le9$ 时用引理\ref{lem:small-supply}；其余小参数由引理\ref{lem:upper-small}处理。三者都接命题\ref{prop:entry}的入口及引理\ref{lem:zero-tail}的收尾。
+\end{proof}

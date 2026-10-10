@@ -1,0 +1,64 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Polynomial bound for the number of mixing operations}
+%\label{sec: polynomial proof}
+%\input{6_polynomial_proof.tex}
+
+Let $C\ingroundset\integers$ with $\average(C)\in\integers$ and 
+$\nofdroplets{C}=n \ge 4$ be a configuration that satisfies Condition~$\MixCond$.
+The existence of a perfect-mixing graph for $C$ was established in 
+Section~\ref{sec: sufficiency of condition mc}. This graph, however, might be very
+large -- it can be shown that if arbitrary droplets are mixed at each step then
+it might take an exponential number of steps for the process to converge.
+In this section we prove Theorem~\ref{thm: miscibility characterization}(b),
+namely that $C$ can be perfectly mixed
+with precision at most $1$ and in a polynomial number of mixing operations. 
+The essence of the proof is
+to show that in the construction in  Section~\ref{sec: sufficiency of condition mc}
+it is possible to choose a mixing operation at each step so that the overall
+number of steps will be polynomial in the input size.
+We assume here that the reader is familiar with the results from  Section~\ref{sec: sufficiency of condition mc};
+in fact, some of the lemmas or observations from that section may be used here occasionally
+without an explicit reference.
+
+It is sufficient to show that configuration $E$, constructed from $C$ 
+in Section~\ref{subsec: proof for n greater-equal than 7}, 
+is perfectly mixable with precision $0$ in a polynomial number of mixing operations.
+(As described in Section~\ref{subsec: proof for n greater-equal than 7},
+constructing such $E$ from $C$ requires only two mixing operations. Recall that this
+construction also involves a linear mapping, but this mapping does not change the
+constructed mixing graph.)
+For this reason we will assume in this section that $E$ is the initial configuration.
+
+Recall that $\potential(E)=\sum_{e\in E}(e-\hatmu)^2$, where
+$\hatmu =  \average(E)\in\integers$. We use $\potential(E)$ to measure the progress of
+the mixing process, ultimately showing that $\potential(E)$
+can be decreased down to $0$ after a number of steps that is polynomial in  
+the initial value of $\log\potential(E)$, and thus also in $s(E)$, the size of $E$.
+(What we actually show is that after the mixing process we achieve $\potential(E)\leq 1$. 
+Since $E\cup \braced{\hatmu} \subseteq \integers$, this implies that in fact $\potential(E)=0$.)
+
+The general idea is to always mix two concentrations whose difference 
+is large enough, so that after a polynomial number of mixing operations,
+$\potential(E)$ decreases at least by a factor of $\half$. This is sufficient to 
+establish a polynomial bound for the whole process.  Of course, the  pair of
+concentrations that we mix must either preserve the corresponding invariant
+or produce a near-final configuration.
+When $n$ is a power of $2$, it is relatively
+simple to identify good pairs to mix (see Section~\ref{sec: polynomial - near final}), 
+because then we only need to ensure that the 
+concentrations mixed at each step have the same parity. This also easily
+extends to near-final configurations.
+For arbitrary configurations $E$ (that satisfy the appropriate invariant), however,
+identifying such good pairs to mix is more challenging (see 
+Sections~\ref{sec: an exponential bound} and~\ref{sec: polynomial - arbitrary n}).
+
+In the following sub-sections, we will present some auxiliary mixing sequences 
+that will be later combined to construct a polynomial-length mixing sequence for $E$.
+To streamline the arguments, we will focus on estimating the length of these sequences;
+that these mixing sequences can actually be computed in polynomial time will be implicit 
+in their construction. We will return to the time complexity analysis
+in Section~\ref{sec: polynomial running time}.
+
+
+

@@ -1,0 +1,55 @@
+{
+  "bounded_run_certificates": [
+    {
+      "runs": 1,
+      "grid_cutoff": 1,
+      "grid_points": 2,
+      "grid_minimum": "45/16",
+      "tail_error": "23/9",
+      "positive_lower_bound": "37/144",
+      "D1_maximum_word_length": 1,
+      "all_words_through_proved_bound_one_orientation": 1,
+      "D1_hits_one_orientation": []
+    },
+    {
+      "runs": 2,
+      "grid_cutoff": 8,
+      "grid_points": 81,
+      "grid_minimum": "355/59049",
+      "tail_error": "46/19683",
+      "positive_lower_bound": "217/59049",
+      "D1_maximum_word_length": 3,
+      "all_words_through_proved_bound_one_orientation": 3,
+      "D1_hits_one_orientation": [
+        {
+          "exponents": [
+            1,
+            1
+          ],
+          "pair": [
+            -6,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "runs": 3,
+      "grid_cutoff": 13,
+      "grid_points": 2744,
+      "grid_minimum": "205/4782969",
+      "tail_error": "23/1594323",
+      "positive_lower_bound": "136/4782969",
+      "D1_maximum_word_length": 5,
+      "all_words_through_proved_bound_one_orientation": 10,
+      "D1_hits_one_orientation": []
+    }
+  ],
+  "clique_paper_crosscheck": {
+    "steps": 4,
+    "entries_checked": 81,
+    "result": "J9/9",
+    "scope": "Contradicts the m|n necessity in arXiv:1706.02540v1; final journal version not audited."
+  },
+  "scope": "All word lengths covered for at most 3 runs; arbitrary run count and full D1 classification remain open."
+}

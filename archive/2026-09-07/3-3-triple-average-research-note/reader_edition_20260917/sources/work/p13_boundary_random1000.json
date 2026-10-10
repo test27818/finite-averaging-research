@@ -1,0 +1,43 @@
+{
+  "exact_n26": [
+    {
+      "p": 13,
+      "n": 26,
+      "bound": 1,
+      "states": 12,
+      "solvable": 12,
+      "unsolvable": 0,
+      "ratio": 0.0,
+      "distance_distribution": {
+        "1": 6,
+        "2": 6
+      },
+      "examples": [],
+      "seconds": 0.004286799929104745,
+      "sampling_model": "sorted primitive zero-sum states in [-bound,bound], conditioned on G=1"
+    }
+  ],
+  "random_n27": [
+    {
+      "p": 13,
+      "n": 27,
+      "bound": 1000,
+      "samples": 100,
+      "accepted": 100,
+      "rejected": 0,
+      "solved": 100,
+      "unknown": 0,
+      "solved_ratio": 1.0,
+      "certificate_modes": {
+        "initial_zero": 2,
+        "initial_zero_sum_subset": 98
+      },
+      "path_lengths": {
+        "5": 2,
+        "6": 98
+      },
+      "seconds": 3.2068415000103414,
+      "sampling_model": "27 independent uniform integers in [-bound,bound], final coordinate closes zero sum, primitive-normalized, conditioned on G=1"
+    }
+  ]
+}

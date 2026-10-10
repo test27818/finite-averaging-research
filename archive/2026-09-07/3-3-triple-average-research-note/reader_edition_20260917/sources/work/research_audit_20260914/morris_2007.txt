@@ -1,0 +1,2111 @@
+                   New York Journal of Mathematics
+                             New York J. Math. 13 (2007) 383–421.
+
+
+
+
+             Bounded generation of SL(n, A)
+        (after D. Carter, G. Keller, and E. Paige)
+
+                                 Dave Witte Morris
+
+         Abstract. We present unpublished work of D. Carter, G. Keller, and E. Paige
+         on bounded generation in special linear groups. Let n be a positive integer,
+         and let A = O be the ring of integers of an algebraic number field K (or, more
+         generally, let A be a localization OS −1 ). If n = 2, assume that A has infinitely
+         many units.
+             We show there is a finite-index subgroup H of SL(n, A), such that every
+         matrix in H is a product of a bounded number of elementary matrices. We
+         also show that if T ∈ SL(n, A), and T is not a scalar matrix, then there is a
+         finite-index, normal subgroup N of SL(n, A), such that every element of N is
+         a product of a bounded number of conjugates of T .
+             For n ≥ 3, these results remain valid when SL(n, A) is replaced by any of
+         its subgroups of finite index.
+
+
+
+                                           Contents
+   1. Introduction                                                                             384
+   2. Preliminaries                                                                            387
+          §2A. Notation                                                                        387
+          §2B. The Compactness Theorem of ﬁrst-order logic                                     388
+          §2C. Stable range condition SRm                                                      389
+          §2D. Mennicke symbols                                                                390
+          §2E. Nonstandard analysis                                                            394
+          §2F. Two results from number theory                                                  395
+   3. First-order properties and bounded generation when n ≥ 3                                 396
+          §3A. Few generators property Gen(t, r)                                               397
+          §3B. Exponent property Exp(t, )                                                     398
+          §3C. Bounding the order of the universal Mennicke group                              401
+          §3D. Bounded generation in SL(n, A) for n ≥ 3                                        403
+
+   Received June 16, 2006. Revised September 14, 2007.
+   Mathematics Subject Classification. 20H05; 11F06, 19B37.
+   Key words and phrases. Bounded generation, finite width, special linear group, elementary
+matrix, stable range, Mennicke symbol, nonstandard analysis.
+   Partially supported by a grant from the National Sciences and Engineering Research Council
+of Canada.
+
+                                                                                   ISSN 1076-9803/07
+
+                                               383
+384                             Dave Witte Morris
+
+  4. Additional ﬁrst-order properties of number rings                                 404
+          §4A. Unit property Unit(r, x)                                               404
+          §4B. Conjugation property Conj(z)                                           405
+  5. Bounded generation in SL(2, A)                                                   407
+          §5A. Preliminaries                                                          408
+          §5B. A suﬃcient condition for a Mennicke symbol                             409
+          §5C. Finiteness of SL(2, A; q)/ E (2, A; q)                                412
+          §5D. Bounded generation in SL(2, BS −1 )                                    416
+  6. Bounded generation of normal subgroups                                           416
+          §6A. Part 1 of Theorem 6.1                                                  417
+          §6B. Part 2 of Theorem 6.1                                                  418
+  References                                                                          420
+
+
+1. Introduction
+   This paper presents unpublished work of David Carter, Gordon Keller, and Eu-
+gene Paige [CKP] — they should be given full credit for the results and the methods
+of proof that appear here (but the current author is responsible for errors and other
+defects in this manuscript). Much of this work is at least 20 years old (note that it
+is mentioned in [DV, p. 152 and bibliography]), but it has never been superseded.
+   If a set X generates a group G, then every element of G can be written as a
+word in X ∪ X −1 . We are interested in cases where the length of the word can be
+bounded, independent of the particular element of G.
+(1.1) Deﬁnition. A subset X of a group G boundedly generates G if there is
+a positive integer r, such that every element of G can be written as a word of
+length ≤ r in X ∪ X −1 . That is, for each g ∈ G, there is a sequence x1 , x2 , . . . , x
+of elements of X ∪ X −1 , with  ≤ r, such that g = x1 x2 · · · x .
+   A well-known paper of D. Carter and G. Keller [CK1] proves that if B is the
+ring of integers of a number ﬁeld K, and n ≥ 3, then the set of elementary matrices
+Ei,j (b) boundedly generates SL(n, B). One of the two main results of [CKP] is the
+following theorem that generalizes this to the case n = 2, under an additional (nec-
+essary) condition on B. (For the proof, see Corollary 3.13(1) and Theorem 5.26.)
+(1.2) Theorem (Carter–Keller–Paige [CKP, (2.4) and (3.19)]). Suppose:
+     • B is the ring of integers of an algebraic number ﬁeld K (or, more generally,
+       B is any order in the integers of K),
+     • n is a positive integer,
+     • E(n, B) is the subgroup of SL(n, B) generated by the elementary matrices,
+       and
+     • either n ≥ 3, or B has inﬁnitely many units.
+Then the elementary matrices boundedly generate E(n, B).
+   More precisely, there is a positive integer r = r(n, k), depending only on n and
+the degree k of K over Q, such that:
+   (1) Every
+             matrix in E(n,B) is a product of ≤ r elementary matrices.
+   (2) # SL(n, B)/ E(n, B) ≤ r.
+                              Bounded generation                                   385
+
+(1.3) Remark. If B is (an order in) the ring of integers of a number ﬁeld K,
+and B has only ﬁnitely many units, then K must be either Q or an imaginary
+quadratic extension of Q. In this case, the elementary matrices do not boundedly
+generate SL(2, B) [Ta1, Cor. of Prop. 8, p. 126]. (This follows from the fact [GS]
+that some ﬁnite-index subgroup of SL(2, B) has a nonabelian free quotient.) Thus,
+our assumption that n ≥ 3 in this case is a necessary one.
+  The following result is of interest even when X consists of only a single matrix X.
+(6.1 ) Theorem (Carter–Keller–Paige [CKP, (2.7) and (3.21)]). Let:
+      • B and n be as in Theorem 1.2,
+      • X be any subset of SL(n, B) that does not consist entirely of scalar matrices,
+        and                           
+                            X ∈ X,
+                −1
+      • X = T XT                        .
+                          T ∈ SL(n, B)
+Then X  boundedly generates a ﬁnite-index normal subgroup of SL(n, B).
+(1.4) Remark.
+   (1) In the situation of Theorem 6.1 , let X   be the subgroup generated by X  .
+       It is obvious that X  is a normal subgroup of SL(n, B), and it is well-known
+       that this implies that X  has ﬁnite index in SL(n, B) (cf. 6.4, 6.5, and 6.11).
+   (2) The conclusion of Theorem 6.1 states that there is a positive integer r, such
+       that every element of X  is a product of ≤ r elements of X  (and their
+       inverses). Unlike in (1.2), we do not prove that the bound r can be chosen
+       to depend on only n and k. See Remark 6.2 for a discussion of this issue.
+   (3) We prove Thms. 1.2 and 6.1 in a more general form that allows B to be
+       replaced with any localization BS −1 . It is stated in [CKP] (without proof)
+       that the same conclusions hold if B is replaced by an arbitrary subring A of
+       any number ﬁeld (with the restriction that A is required to have inﬁnitely
+       many units if n = 2). It would be of interest to establish this generalization.
+   (4) If Γ is any subgroup of ﬁnite index in SL(n, B), then Theorem 6.1(2) is a
+       generalization of Theorem 1.2 that applies with Γ in the place of SL(n, B).
+       For n ≥ 3, Corollary 6.13 is a generalization of Theorem 6.1 that applies
+       with Γ in the place of SL(n, B).
+   Let us brieﬂy outline the proof of Theorem 1.2. (A similar approach applies
+to Theorem 6.1 .) For n and B as in the statement of the theorem, it is known
+that the subgroup E(n, B) generated by the elementary matrices has ﬁnite index
+in SL(n, B) [BMS, Se, Va]. Theorem 1.2 is obtained by axiomatizing this proof:
+   (1) Certain ring-theoretic axioms are deﬁned (for n ≥ 3, the axioms are called
+       SR1 12 , Gen(t, r), and Exp(t, ), where the parameters t, r, and  are positive
+       integers).
+   (2) It is shown that the ring B satisﬁes these axioms (for appropriate choices of
+       the parameters).
+   (3) It is shown that if A is any integral domain satisfying these axioms, then
+       E(n, A) is a ﬁnite-index subgroup of SL(n, A).
+The desired conclusion is then immediate from the following simple consequence of
+the Compactness Theorem of ﬁrst-order logic (see §2B):
+386                            Dave Witte Morris
+
+(1.5) Proposition. Let
+      • n be a positive integer, and
+      • T be a set of ﬁrst-order axioms in the language of ring theory.
+Suppose that, for every commutative ring A satisfying the axioms in T , the subgroup
+E(n, A) generated by the elementary matrices has ﬁnite index in SL(n, A). Then,
+for all such A, the elementary matrices boundedly generate E(n, A).
+   More precisely, there is a positive integer r = r(n, T ), such that, for all A as
+above, every matrix in E(n, A) is a product of ≤ r elementary matrices.
+(1.6) Example. It is a basic fact of linear algebra that if F is any ﬁeld, then every
+element of SL(n, F ) is a product of elementary matrices. This yields the conclusion
+that E(n, F ) = SL(n, F ). Since ﬁelds are precisely the commutative rings satisfying
+the additional axiom (∀x)(∃y)(x = 0 → xy = 1), then Proposition 1.5 implies
+that each element of SL(n, F ) is the product of a bounded number of elementary
+matrices. (Furthermore, a bound on the number of elementary matrices can be
+found that depends only on n, and is universal for all ﬁelds.) In the case of ﬁelds,
+this can easily be proved directly, by counting the elementary matrices used in
+a proof that E(n, F ) = SL(n, F ), but the point is that this additional work is
+not necessary — bounded generation is an automatic consequence of the fact that
+E(n, A) is a ﬁnite-index subgroup.
+   Because we obtain bounded generation from the Compactness Theorem (as in
+(1.5)), the conclusions in this paper do not provide any explicit bounds on the
+number of matrices needed. It should be possible to obtain an explicit formula by
+carefully tracing through the arguments in this paper and in the results that are
+quoted from other sources, but this would be nontrivial (and would make the proofs
+messier). The applications we have in mind do not require this.
+(1.7) Remark. Assuming a certain strengthening of the Riemann Hypothesis,
+Cooke and Weinberger [CW] proved a stronger version of Theorem 1.2 that in-
+cludes an explicit estimate on the integer r (depending only on n, not on k), under
+the assumption that B is the full ring of integers, not an order. For n ≥ 3, the
+above-mentioned work of D. Carter and G. Keller [CK1, CK2] removed the re-
+liance on unproved hypotheses, but obtained a weaker bound that depends on the
+discriminant of the number ﬁeld. For n = 2, B. Liehl [Li] proved bounded gen-
+eration (without explicit bounds), but required some assumptions on the number
+ﬁeld K. More recently, for a localization BS with S a suﬃciently large set of primes,
+D. Loukanidis and V. K. Murty [LM, Mu] obtained explicit bounds for SL(n, BS )
+that depend only on n and k, not the discriminant.
+   There is also interesting literature on bounded generation of other (arithmetic)
+groups, e.g., [AM, Bar, DV, ER1, ER2, LM, Mu, Ra, Sh, SS, Ta1, Ta2, vdK, Za].
+
+Acknowledgments. This paper was written during a visit to the University of
+Auckland. I would like to thank the Department of Mathematics of that institution
+for its hospitality. I would also like to thank Jason Manning, Lucy Lifschitz, and
+Alex Lubotzky for bringing the preprint [CKP] to my attention, and an anonymous
+referee for reading the manuscript carefully and providing numerous corrections
+and helpful comments.
+                              Bounded generation                                 387
+
+2. Preliminaries
+(2.1) Assumption. All rings are assumed to have 1, and any subring is assumed
+to contain the multiplicative identity element of the base ring. (This is taken to be
+part of the deﬁnition of a ring or subring.)
+
+§2A. Notation.
+(2.2) Deﬁnition. Let B be an integral domain.
+   (1) A subset S of B is multiplicative if S is closed under multiplication, and
+       0∈ / S.
+   (2) If S is a multiplicative subset of B, then
+                                                      
+                               −1      b 
+                            BS =            b ∈ B, s ∈ S .
+                                       s
+       This is a subring of the quotient ﬁeld of B.
+   As usual, we use X  to denote the subgroup generated by a subset X of a
+group G. In order to conveniently discuss bounded generation, we augment this
+notation with a subscript, as follows.
+(2.3) Deﬁnition. For any subset X of a group G, and any nonnegative integer r,
+we deﬁne X r , inductively, by:
+     • X 0 = {1} (theidentity element of G).
+     • X r+1 = X r · X ∪ X −1 ∪ {1} .
+That is, X r is the set of elements of G that can be written as a word of length
+≤ r in X ∪ X −1 . Thus, X boundedly generates G if and only if we have X r = G,
+for some positive integer r.
+(2.4) Notation. Let A be a commutative ring, q be an ideal of A, and n be a
+positive integer.
+   (1) In×n denotes the n × n identity matrix.
+   (2) SL(n, A; q) = { T ∈ SL(n, A) | T ≡ In×n mod q }.
+   (3) For a ∈ A, and 1 ≤ i, j ≤ n with i = j, we use Ei,j (a) to denote the n × n
+       elementary matrix, such that the only nonzero entry of Ei,j (a) − In×n is the
+       (i, j) entry, which is a. (We may use Ei,j to denote Ei,j (1).)
+                     ⎧                      ⎫
+                     ⎨             a ∈ q,   ⎬
+                               
+   (4) LU(n, q) = Ei,j (a)  1 ≤ i, j ≤ n, . In other words, LU(n, A) is the set
+                     ⎩                      ⎭
+                                    i=j
+       of all n × n elementary matrices, and LU(n, q) = LU(n, A) ∩ SL(n, A; q).
+   (5) E(n, q) = LU(n, q). Thus, E(n, A) is the subgroup of SL(n, A) generated
+       by the elementary matrices.
+   (6) LU (n, A; q) is the set of E(n, A)-conjugates of elements of LU(n, q).
+   (7) E (n, A; q) = LU (n, A; q). Thus, E (n, A; q) is the smallest normal sub-
+       group of E(n, A) that contains LU(n, q).
+388                           Dave Witte Morris
+                ⎧                                      ⎫
+                ⎨                (a, b) ≡ (1, 0) mod q ⎬
+                                
+  (8) W (q) = (a, b) ∈ A × A             and            . Note that (a, b) ∈ W (q)
+               ⎩                                       ⎭
+                                      aA + bA = A
+                                                             
+                                                         a b
+      if and only if there exist c, d ∈ A, such that            ∈ SL(n, A; q) [Ba2,
+                                                         c d
+      Prop. 1.2(a), p. 283].
+  (9) U(q) is the group of units of A/q.
+  Note that E(n, A) is boundedly generated by elementary matrices if and only if
+E(n, A) = LU(n, A)r , for some positive integer r.
+(2.5) Remark. The subgroup E (n, A; q) is usually denoted E(n, A; q) in the lit-
+erature, but we include the superscript “” to emphasize that this subgroup is
+normalized by E(n, A), and thereby reduce the likelihood of confusion with E(n, q).
+(2.6) Notation. Suppose K is an algebraic number ﬁeld. We use N = NK/Q to
+denote the norm map from K to Q.
+
+§2B. The Compactness Theorem of ﬁrst-order logic. The well-known Gödel
+Completeness Theorem states that if a theory in ﬁrst-order logic is consistent (that
+is, if it does not lead to a contradiction of the form ϕ ∧ ¬ϕ), then the theory has a
+model. Because any proof must have ﬁnite length, it can quote only ﬁnitely many
+axioms of the theory. This reasoning leads to the following fundamental theorem,
+which can be found in introductory texts on ﬁrst-order logic.
+(2.7) Theorem (Compactness Theorem). Suppose T is any set of ﬁrst-order sen-
+tences (with no free variables) in some ﬁrst-order language L. If T does not have
+a model, then some ﬁnite subset T0 of T does not have a model.
+(2.8) Corollary. Fix a positive integer n, and let L be a ﬁrst-order language that
+contains:
+      • the language of rings (+, ×, 0, 1),
+      • n2 variables xij for 1 ≤ i, j ≤ n,
+      • two n2 -ary relation symbols X(xij ) and H(xij ), and
+      • any number (perhaps inﬁnite) of other variables, constant symbols, and re-
+        lation symbols.
+Suppose T is a set of sentences in the language L, such that, for every model
+                                                         
+                             A, (+, ×, 0, 1, X, H, . . . )
+of the theory T ,
+      • the universe A is a commutative ring (under the binary operations + and ×),
+        and
+      • letting
+                                                                       
+                           aij ∈ A,                              aij ∈ A,
+                    n
+       XA = (aij )i,j=1                                   n
+                                        and HA = (aij )i,j=1                ,
+                             X(aij )                                H(aij )
+        we have:
+         ◦ HA is a subgroup of SL(n, A), and
+         ◦ XA generates a subgroup of ﬁnite index in HA .
+                              Bounded generation                                 389
+                                
+Then, for every model A, . . . of T , the set XA boundedly generates a subgroup
+of ﬁnite index in HA .
+   More precisely, there is a positive integer r = r(n, L, T ), such that, for every
+model (A, . . . ) of T , XA r is a subgroup of HA , and the index of this subgroup
+is ≤ r.
+Proof. This is a standard argument, so we provide only an informal sketch.
+   • Let L+ be obtained from L by adding constant symbols to represent inﬁnitely
+      many matrices C1 , C2 , C3 , . . . . (Each matrix requires n2 constant symbols
+      ci,j .)
+   • Let T + be obtained from T by adding ﬁrst-order sentences specifying, for
+      all i, j, r ∈ N+ , with i = j, that
+         ◦ Ci ∈ HA , and
+         ◦ Ci−1 Cj ∈ / XA r−1 .
+Since XA generates a subgroup of ﬁnite index in HA , we know that T + is not
+consistent. From the Compactness Theorem, we conclude, for some r, that it is
+impossible to ﬁnd C1 , C2 , . . . , Cr ∈ HA , such that Ci−1 Cj ∈
+                                                                / XA r−1 for i = j.
+This implies the index of XA  is less than r. Also, we must have XA r2 = XA 
+(otherwise, we could choose Ci ∈ XA ir  XA ir−1 ).                            
+Proof of Proposition 1.5. This is a standard compactness argument, so we pro-
+vide only a sketch. Let T  consist of:
+    • the axioms in T ,
+    • the axioms of commutative rings,
+    • a collection of sentences that guarantees XA = LU(n, A), and
+    • a collection of sentences that guarantees HA = SL(n, A).
+Then the desired conclusion is immediate from Corollary 2.8.               
+
+§2C. Stable range condition SRm . We recall the stable range condition SRm of
+Bass. (We use the indexing of [HOM], not that of [Ba2].) For convenience, we
+also introduce a condition SR1 12 that is intermediate between SR1 and SR2 . In our
+applications, the parameter m will always be either 1 or 1 21 or 2.
+(2.9) Deﬁnition ([Ba2, Defn. 3.1, p. 231], [HOM, p. 142], cf. [Ba1, §4]). Fix a
+positive integer m. We say that a commutative ring A satisﬁes the stable range
+condition SRm if, for all a0 , a1 , . . . , ar ∈ A, such that:
+     • r ≥ m and
+     • a0 A + a1 A + · · · + ar A = A,
+there exist a1 , a2 , . . . , ar ∈ A, such that:
+     • ai ≡ ai mod a0 A, for 1 ≤ i ≤ r, and
+     • a1 A + · · · + ar A = A.
+   The condition SRm can obviously be represented by a list of inﬁnitely many
+ﬁrst-order statements, one for each integer r ≥ m. It is interesting (though not
+necessary) to note that the single case r = m implies all the others [HOM, (4.1.7),
+p. 143], so a single statement suﬃces.
+(2.10) Deﬁnition. We say a commutative ring A satisﬁes SR1 12 if A/q satisﬁes
+SR1 , for every nonzero ideal q of A.
+390                             Dave Witte Morris
+
+  It is easy to see that SR1 ⇒ SR1 12 ⇒ SR2 .
+
+(2.11) Remark. If A satisﬁes SRm (for some m), and q is any ideal of A, then
+A/q also satisﬁes SRm [Ba1, Lem. 4.1]. Hence, A satisﬁes SR1 12 if and only if A/qA
+satisﬁes SR1 , for every nonzero q ∈ A. This implies that SR1 12 can be expressed in
+terms of ﬁrst-order sentences.
+
+(2.12) Notation. As is usual in this paper,
+      • K is an algebraic number ﬁeld,
+      • O is the ring of integers of K,
+      • B is an order in O, and
+      • S is a multiplicative subset of B.
+
+  The following result is well-known.
+
+(2.13) Lemma. BS −1 satisﬁes SR1 12 .
+
+Proof. Let q be any nonzero ideal of BS −1 . Since the quotient ring BS −1 /q is
+ﬁnite, it is semilocal. So it is easy to see that it satisﬁes SR1 [Ba2, Prop. 2.8]. 
+
+  The following fundamental result of Bass is the reason for our interest in SRm .
+
+(2.14) Theorem (Bass [Ba1, §4]). Let:
+      • A be a commutative ring,
+      • m be a positive integer, such that A satisﬁes the stable range condition SRm ,
+      • n > m, and
+      • q be an ideal of A.
+Then:
+  (1) SL(n, A; q) = SL(m, A; q) E (n, A; q).
+  (2) E (n, A; q) is a normal subgroup of SL(n, A).
+  (3) If n ≥ 3, then E(n, A), SL(n, A; q) = E (n, A; q).
+
+  Applying the case m = 1 of 2.14(1) to the quotient ring A/q yields the following
+conclusion:
+
+(2.15) Corollary. Let:
+      • A be a commutative ring,
+      • n be a positive integer, and
+      • q and q be nonzero ideals of A, such that q ⊆ q.
+If A/q satisﬁes SR1 , then SL(n, A; q) = SL(n, A; q ) E (n, A; q).
+
+§2D. Mennicke symbols. We recall the deﬁnition and basic properties of Men-
+nicke symbols, including their important role in the study of the quotient group
+SL(n, A; q)/ E (n, A; q).
+
+(2.16) Deﬁnition [BMS, Defn. 2.5]. Suppose A is a commutative ring and q is an
+ideal in A. Recall that W (q) was deﬁned in 2.4(8).
+                             Bounded generation                                391
+                                                
+  (1) A Mennicke symbol is a function (a, b) → ab from W (q) to a group C, such
+      that:
+                           
+              b + ta      b
+(MS1a)                  =            whenever (a, b) ∈ W (q) and t ∈ q;
+                 a        a
+                           
+                 b        b
+(MS1b)                  =            whenever (a, b) ∈ W (q) and t ∈ A; and
+              a + tb      a
+                              
+            b1     b2     b1 b2
+(MS2a)                  =            whenever (a, b1 ), (a, b2 ) ∈ W (q).
+            a      a        a
+  (2) It is easy to see that, for some group C(q) (called the universal Mennicke
+      group), there is a universal Mennicke symbol
+                                
+                                       : W (q) → C(q),
+                                     q
+                                           
+      such that any Mennicke symbol            : W (q) → C, for any group C, can be
+                                
+      obtained by composing            with a unique homomorphism from C(q) to C.
+                                  q
+        The universal Mennicke symbol and the universal Mennicke group are unique
+        up to isomorphism.
+   The following classical theorem introduces Mennicke symbols into the study of
+E (n, A; q).
+(2.17) Notation. For convenience, when T ∈ SL(2, A; q), we use T to denote
+the image of T under the usual embedding of SL(2, A; q) in the top left corner of
+SL(n, A; q).
+(2.18) Theorem [BMS, Thm. 5.4 and Lem. 5.5], [Ba2, Prop. 1.2(b), p. 283 and
+Thm. 2.1(b), p. 293]. Let:
+     • A be a commutative ring,
+     • q be an ideal of A,
+     • N be a normal subgroup of SL(n, A; q), for some n ≥ 2, and
+     • C = SL(n, A; q)/N ,
+                                                              
+such that N contains both E (n, A; q) and E(n, A), SL(n, A; q) . Then:
+                  
+   (1) The map ab : W (q) → C, deﬁned by
+                     q
+                                                 
+                                       b     a b
+                           (a, b) →       =        N,
+                                       a q   ∗ ∗
+      is
+       well-deﬁned.
+  (2)       satisﬁes (MS1a) and (MS1b).
+          q                       
+  (3) (Mennicke) If n ≥ 3, then      also satisﬁes (MS2a), so it is a Mennicke
+                                      q
+        symbol.
+   Under the assumption that A is a Dedekind ring, Bass, Milnor, and Serre [BMS,
+§2] proved several basic properties of Mennicke symbols; these results appear in
+[Ba2] with the slightly weaker hypothesis that A is a Noetherian ring of dimension
+≤ 1. For our applications, it is important to observe that the arguments of [Ba2]
+392                            Dave Witte Morris
+
+require only the assumption that A/q satisﬁes the stable range condition SR1 , for
+every nonzero ideal q of A.
+(2.19) Lemma (cf. [BMS, §2], [Ba2, §6.1]). Suppose:
+     • A is an integral domain that satisﬁes SR1 12 ,
+     • q is an ideal in A, and
+     •        : W (q) → C is a Mennicke symbol.
+Then:  
+  (1) 0 1 = 1 (the identity element of C).
+                                          
+  (2) If (a, b) ∈ W (q), then ab = b(1 a− a) .
+                                is a unit u ∈ A, such that either a ≡ u mod bA
+  (3) If (a, b) ∈ W (q), and there
+      or b ≡ u mod aA, then ab = 1.
+  (4) If (a, b) ∈ W (q), and q is anynonzero ideal contained in q, then there exists
+                                      b    b
+      (a , b ) ∈ W (q ), such that   =  .
+                                      a    a 
+  (5) The image of the Mennicke symbol           is an abelian subgroup of C.
+  (6) (Lam) If q is principal, then
+                                    
+                  b     b         b
+(MS2b)                      =           whenever (a1 , b), (a2 , b) ∈ W (q).
+                 a1    a2       a1 a2
+
+   The following result provides a converse to Lemma 2.19(6). It will be used in
+the proof of Lemma 5.10.
+(2.20) Lemma. Suppose:
+     • A is a commutative ring,
+     • q is an ideal in A,
+     • C
+        is a group, and
+     •      : W (q) → C satisﬁes (MS1a) and (MS1b).
+Then:                                       
+  (1) (Lam [Ba2, Prop. 1.7(a), p. 289]) If     satisﬁes (MS2b), then it also sat-
+           (MS2a), so it is a Mennicke symbol.
+       isﬁes                                  
+   (2) If      satisﬁes (MS2b) whenever ab2 = 1, then it satisﬁes (MS2a) when-
+              
+       ever ba2 = 1.
+                       
+Proof. (1) Given ba1 , ba2 ∈ W (q), let q = 1 − a ∈ q. Note that, for any b ∈ q,
+we have
+                                 
+                       bq n     b
+(2.21)                        =     for every positive integer n
+                        a       a
+(because the proof of 2.19(2) does not appeal to (MS2a)). Also, because
+                                                           
+                bq 2      bq 2 − q(1 + bq)       −q        −q
+                       =                     =          =        = 1,
+              1 + bq           1 + bq          1 + bq      1
+                                       Bounded generation                         393
+
+we have
+                                                                       
+               bq 2         bq 2          bq 2      bq 2             bq 2
+(2.22)                    =                  =                 =
+                a            a          1 + bq   a(1 + bq)         a + abq
+                                                                
+                                  bq 2                  bq 2
+                          =                  =
+                            a + abq − bq 2       a + bq(a − q)
+                                  2
+                                              2
+                                                                           
+                               bq            bq − q(a + bq)           − aq
+                          =              =                       =            .
+                            a + bq(1)             a + bq             a + bq
+Applying, in order, (2.21) to both factors, (2.22) to both factors, (MS2b), (MS1b),
+deﬁnition of q, (MS1b), (2.22), and (2.21), yields
+                                                                         
+                 b1   b2       b1 q 2     b2 q 2           − aq        − aq
+                           =                       =
+                 a     a         a          a            a + b1 q    a + b2 q
+                                                                             
+                                         − aq                       − aq
+                           =                               = 2
+                               (a + b1 q)(a + b2 q)             a + b1 b2 q 2
+                                                                           
+                                         − aq                      − aq
+                           =                               =
+                               a(1 − q) + b1 b2 q 2           a + b1 b2 q 2
+                                                      
+                               b1 b2 q 3         b1 b2
+                           =               =             .
+                                  a                a
+  (2) The condition (MS2b) was applied only twice in the proof of (1).
+                                                           
+                                                      bq 2
+    • In the ﬁrst application, the second factor is 1 + bq = 1.
+                                                                
+                                                          − aq
+    • In the other application, the second factor is a + b q = ba2 , which is
+                                                             2
+      assumed to be 1.
+Therefore, exactly the same calculations apply.                            
+
+   The following useful result is stated with a slightly weaker hypothesis in [Ba2]:
+                                                        
+(2.23) Proposition [Ba2, Thm. VI.2.1a, p. 293]. If         satisﬁes (MS2a) whenever
+ 
+ b2 = 1, then it is a Mennicke symbol.
+  a
+   Combining this with Lemma 2.20(2) yields the following conclusion:
+                                                
+(2.24) Corollary. If     satisﬁes (MS2b) whenever ab2 = 1, then it is a Mennicke
+symbol.
+   We conclude this discussion with two additional properties of Mennicke symbols.
+                                 
+(2.25) Lemma. Let A, q, and         be as in Lemma 2.19.
+                                     −1  
+           a b
+   (1) If        ∈ SL(2, A; q), then ab     = ac .
+           c d
+   (2) Suppose q = qA is principal, and a, b, c, d, f , and g are elements of A, such
+       that                                 
+                 a b                    a b
+                        and f I2×2 + g          are in SL(2, A; qA).
+                 c d                    c d
+394                            Dave Witte Morris
+
+        Then                             2              2
+                                  bg               b
+                                              =               .
+                                f + ga          f + ga
+Proof. (1) We have
+                                   
+          b   c     bc      bc(1 − a)
+                  =      =
+          a   a     a           a
+                                                                  
+                    (bc − ad)(1 − a)              − (1 − a)     a−1
+                  =                    =                      =       = 1.
+                           a                          a          1
+  (2) Note that, by assumption, a, d, and f + ga are all congruent to 1 modulo
+qA. Also, working modulo gqA, we have
+      (f + ga)2 ≡ (f + g)2                       (since a ≡ 1 mod qA)
+                   2                 2
+               ≡ f + (a + d)f g + g              (since a + d ≡ 1 + 1 = 2 mod qA)
+                                    
+                                 a b
+               = det f I2×2 + g
+                                 c d
+               = 1.
+Therefore
+            2             
+        bg           bg
+               =                                    (by MS2b, see 2.19(6))
+     f + ga      (f + ga)2
+                                      
+                     bg          q
+               =                                    (since (f + ga)2 ≡ 1 mod qA)
+                 (f + ga)2   (f + ga)2
+                                      
+                      b         gq
+               =                                    (by MS2a)
+                 (f + ga)2   (f + ga)2
+                        2
+                    b                               (by MS2b and because
+               =
+                 f + ga                                 (f + ga)2 ≡ 1 mod gqA).
+                                                                                      
+
+§2E. Nonstandard analysis.
+(2.26) Remark. Many of the results and proofs in §5 use the theory of nonstandard
+analysis, in the language and notation of [SL]. This enables us to express some of
+the arguments in a form that is less complicated and more intuitive. In particular,
+it is usually possible to eliminate phrases of the form “for every ideal q, there exists
+an ideal q ,” because the nonstandard ideal Q (see Deﬁnition 5.2) can be used as q
+for any choice of the ideal q of A. (Thus, Q plays a role analogous to the set of
+inﬁnitesimal numbers in the nonstandard approach to Calculus.)
+    As an aid to those who prefer classical proofs, Remark 5.1 provides classical
+reformulations of the nonstandard results. It is not diﬃcult to prove these versions,
+by using the nonstandard proofs as detailed hints. Doing so yields a proof of
+Theorem 5.26 without reference to nonstandard analysis.
+    The unpublished manuscript [CKP] uses nonstandard models much more exten-
+sively than we do here, in place of the Compactness Theorem (2.7), for example
+(cf. 2.29). We have employed them only where they have the most eﬀect.
+                               Bounded generation                                395
+
+(2.27) Notation (cf. [SL]).
+     • For a given ring A, we use ∗A to denote a (polysaturated) nonstandard model
+       of A.
+     • If X is an entity (such as an ideal, or other subset) that is associated to A,
+       we use ∗X to denote the corresponding standard entity of ∗A.
+     • For an element a of A, we usually use a (instead of ∗a) to denote the corre-
+       sponding element of ∗A.
+   Recall that the ∗-transform of a ﬁrst-order sentence is obtained by replacing each
+constant symbol X with ∗X [SL, Defn. 3.4.2, p. 27]. For example, the ∗-transform
+of ∀a ∈ A, ∃b ∈ B, (a = b2 ) is ∀a ∈ ∗A, ∃b ∈ ∗B, (a = b2 ).
+(2.28) Leibniz’ Principle [SL, (3.4.3), p. 28]. A ﬁrst-order sentence with all quan-
+tiﬁers bounded is true in A if and only if its ∗-transform is true in ∗A.
+  The following result of nonstandard analysis could be used in place of the Com-
+pactness Theorem (2.7) in our arguments.
+(2.29) Lemma [CKP, (2.1)]. Suppose G is a group and X is a subset of G. The
+following are equivalent:
+   (1) X boundedly generates X .
+                ∗
+   (2) ∗X  = X .
+        ∗                         ∗
+   (3)  X  is of ﬁnite index in X .
+                                                  ∗
+   (4) There exists a ∗-ﬁnite subset Ω of ∗G with X  ⊆ ∗X  Ω.
+Proof. (1) ⇒ (2) If X boundedly generates X , then there exists a positive inte-
+ger r, such that X  = X r . Then
+                           ∗       ∗
+                            X  = X r = ∗X r ⊆ ∗X  .
+  (2) ⇒ (3) ⇒ (4) Obvious.
+  (4) ⇒ (1) Let Ω = Ω ∩ ∗X . Since Ω is ∗-ﬁnite, there exists ω ∈ ∗N, such
+           ∗                                               ∗
+that Ω ⊆ X ω . For any inﬁnite τ ∈ ∗N, we have  ∗X  ⊆ X τ . Therefore, letting
+                                        ∗                ∗      ∗
+r = ω + τ , we have “There exists r ∈ N, such that X  = X r ”. By Leibniz’
+Principle, “There exists r ∈ N, such that X  = X r .”                           
+
+§2F. Two results from number theory. Our proofs rely on two nontrivial the-
+orems of number theory. The ﬁrst of these is a version of Dirichlet’s Theorem on
+primes in arithmetic progressions. It is a basic ingredient in our arguments (cf. few
+generators property (3.2)). The second theorem is used only to establish the claim
+in the proof of Lemma 4.6.
+(2.30) Theorem [BMS, (A.11), p. 84]. Let:
+     • O be the ring of integers of an algebraic number ﬁeld K, and
+     • N : K → Q be the norm map.
+For all nonzero a, b ∈ O, such that aO + bO = O, there exist inﬁnitely many
+h ∈ a + bO, such that:
+   (1) hO is a maximal ideal of O, and
+   (2) N(h) is positive.
+(2.31) Remark. The fact that N(h) can be assumed to be positive is not essen-
+tial to any of the arguments in this paper. However, it simpliﬁes the proof of
+396                             Dave Witte Morris
+
+Lemma 3.8(2), by eliminating the need to consider absolute values. (Also, if N(h)
+were not assumed to be positive, then a factor of 2 would be lost, so (16k)! would
+replace (8k)! in the conclusion, but that would have no impact on the main results.)
+
+(2.32) Theorem [Os, p. 57]. Let r and m be any positive integers, such that
+gcd(r, m) = 1. Then there exists M ∈ Z, such that if t is an integer greater
+than M , and t ≡ 3r mod m, then t = p1 + p2 + p3 , where each pi is a rational prime
+that is congruent to r modulo m.
+
+  We do not need the full strength of Theorem 2.32, but only the following conse-
+quence:
+
+(2.33) Corollary. Let r and m be any positive integers, with gcd(r, m) = 1. If
+t ∈ mZ, then t can be written in the form
+
+                           t = p1 + p2 + p3 − p4 − p5 − p6 ,
+
+where each pi is a rational prime that is congruent to r modulo m.
+
+   In fact, the arguments could be carried through with a weaker result that uses
+more than 6 primes: if we assume only that every t ∈ mZ can be written in the
+form
+                  t = p1 + p2 + · · · + pc − pc+1 − pc+2 − · · · − p2c ,
+then the only diﬀerence would be that the constant 7k in the conclusion of Lem-
+ma 4.6 would be replaced with (2c + 1)k. This would have no eﬀect at all on the
+main results.
+
+
+3. First-order properties and bounded generation when
+   n≥3
+   In §3A and §3B, we deﬁne certain ﬁrst-order properties that any particular ring
+may or may not have. They are denoted Gen(t, r), and Exp(t, ), for positive integers
+t, r, and . (In order to apply the Compactness Theorem (2.7), it is crucial that,
+for ﬁxed values of the parameters t, r, and , these properties can be expressed by
+ﬁrst-order sentences.) We also show that the number rings BS −1 of interest to us
+satisfy these properties for appropriate choices of the parameters (see 3.5 and 3.9).
+In §3C, we show that these properties (together with the stable range condition
+SR1 12 ) imply that the order of the universal Mennicke group is bounded (see 3.11).
+Finally, in §3D, we establish that if n ≥ 3, then the elementary matrices boundedly
+generate a ﬁnite-index subgroup of SL(n, BS −1 ) (see 3.13(1)).
+
+(3.1) Notation. Throughout this section,
+      • K is an algebraic number ﬁeld,
+      • k is the degree of K over Q,
+      • O is the ring of integers of K,
+      • B is an order in O,
+      • S is a subset of B  {0} that is closed under multiplication, and
+      • N : K → Q is the norm map.
+                               Bounded generation                                    397
+
+§3A. Few generators property Gen(t, r). We write down a simple ﬁrst-order
+consequence of Dirichlet’s Theorem (2.30) on primes in arithmetic progressions. It
+will be used to bound the number of generators of the universal Mennicke group
+(see Step 2 of the proof of Theorem 3.11). In addition, the special case Gen(2, 1)
+also plays a key role in the proof of Proposition 5.7.
+(3.2) Deﬁnition [CKP, (1.2)]. For ﬁxed positive integers t and r, a commutative
+ring A is said to satisfy Gen(t, r) if and only if: for all a, b ∈ A, such that aA + bA =
+A, there exists h ∈ a + bA, such that
+                      
+                    U hA
+                      t can be generated by r or less elements.
+                   U hA
+(Recall that U(hA) denotes the group of units in A/hA.)
+(3.3) Lemma. If b ∈ B and s ∈ S, with b = 0, then:
+   (1) B ⊆ bBS −1 + sB.
+   (2) B + bBS −1 = BS −1 .
+   (3) The natural homomorphism from B to BS −1 /bBS −1 is surjective.
+Proof. (1) Because B/bB is ﬁnite, and {sn B} is a decreasing sequence of ideals,
+there exists n ∈ Z+ , such that bB + sn B = bB + sn+1 B. Hence sn ∈ bB + sn+1 B,
+so
+               1 ∈ s−n (bB + sn+1 B) = s−n bB + sB ⊆ bBS −1 + sB.
+  (2) For any s0 ∈ S, we know, from (1), that 1 ∈ bBS −1 + s0 B. Therefore
+1/s0 ∈ bBS −1 + B.
+  (3) This is immediate from (2).                                       
+(3.4) Proposition [CKP, (4.1)]. Let:
+     • a ∈ BS −1 and b ∈ B, such that b = 0 and aBS −1 + bBS −1 = BS −1 , and
+     • γ be any nonzero element of O, such that γO ⊂ B.
+Then:
+   (1) There exists a0 ≡ a mod bBS −1 , such that a0 B + bγ 2 B = B.
+   (2) For any a in O with a ≡ a0 mod bγ 2 O,
+       (a) the natural homomorphism BS −1 → OS −1 /a OS −1 is surjective, and
+           has kernel a BS −1 ,
+       (b) BS −1 /a BS −1 is isomorphic to a quotient of O/a O, and
+       (c) a ∈ B.
+Proof. (1) From 3.3(3), the natural homomorphism B → BS −1 /bBS −1 is sur-
+jective, so we may choose a1 ∈ B with a1 ≡ a mod bBS −1 . Since a is a unit in
+BS −1 /bBS −1 , then a1 is a unit in B/(B ∩ bBS −1 ); thus, there exist x ∈ B and
+y ∈ B ∩ bBS −1 , such that a1 x + y = 1. Since B/bγ 2 B is semilocal (indeed, it
+is ﬁnite), there exists a0 ∈ a1 + yB, such that a0 is a unit in B/bγ 2 B. Then
+a0 ≡ a1 ≡ a mod bBS −1 and a0 B + bγ 2 B = B.
+   (2c) We have a ∈ a0 + bγ 2 O ⊆ B + bγB = B.
+   (2a) Let ϕ : BS −1 → OS −1 /a OS −1 be the natural homomorphism. Because
+   2
+bγ O ⊆ bγB, we have
+             a B + γB ⊇ a B + bγB = a0 B + bγB ⊇ a0 B + bγ 2 B = B.
+398                           Dave Witte Morris
+
+Therefore
+                              a BS −1 + γBS −1 = BS −1 .
+Hence a OS −1 + γOS −1 = OS −1 (which implies a OS −1 + BS −1 = OS −1 — that
+is, ϕ is surjective). In other words, a is relatively prime to γ, so
+                     a OS −1 ∩ γOS −1 = a γOS −1 ⊆ a BS −1 .
+The kernel of ϕ is
+                 a OS −1 ∩ BS −1 = a OS −1 ∩ (a BS −1 + γBS −1 )
+                                  = a BS −1 + (a OS −1 ∩ γBS −1 )
+                                  ⊆ a BS −1 + (a OS −1 ∩ γOS −1 )
+                                  = a BS −1 .
+  (2b) From (2a), we see that BS −1 /a BS −1 ∼     = OS −1 /a OS −1 . On the other
+                                                −1
+hand, the natural homomorphism O → OS /a OS −1 is surjective (see 3.3(3))
+and has a O in its kernel, so OS −1 /a OS −1 is isomorphic to a quotient of O/a O.
+The desired conclusion follows.                                                    
+(3.5) Corollary (cf. [CKP, (4.4)]). BS −1 satisﬁes Gen(t, 1), for every positive
+integer t.
+Proof. Proposition 3.4(1) yields a0 ≡ a mod bBS −1 , such that a0 B + bγ 2 B = B.
+Then a0 O + bγ 2 O = O, so Dirichlet’s Theorem (2.30) yields h ∈ a0 + bγ 2 O, such
+that hO is a maximal ideal. Therefore O/hO is a ﬁnite ﬁeld.
+  From 3.4(2b), we know that BS −1 /hBS −1 is isomorphic to a quotient of O/hO;
+thus, BS −1 /hBS −1 is either trivial or a ﬁnite ﬁeld. In either case, the group of
+                                                   t
+units is cyclic, so the quotient U hBS −1 /U hBS −1 is also cyclic.              
+
+§3B. Exponent property Exp(t, ). We now introduce a rather technical prop-
+erty that is used to bound the exponent of the universal Mennicke group (see Step 1
+of the proof of Theorem 3.11). Theorem 3.9 shows that this property holds in num-
+ber rings BS −1 .
+(3.6) Deﬁnition [CKP, (1.3)]. Let t be a nonnegative integer and let  be a pos-
+itive integer. A commutative ring A is said to satisfy Exp(t, ) if and only if for
+every q in A with q = 0 and every (a, b) ∈ W (qA), there exists a , c, d ∈ A and
+ui , fi , gi , bi , di ∈ A for 1 ≤ i ≤ , such that:
+    (1) a ≡ a mod bA.
+             a b
+    (2)                    is in SL(2, A; qA).
+              c d
+                         
+             a bi
+    (3)                     is in SL(2, A; qA) for 1 ≤ i ≤ .
+              c di                
+                            a bi
+    (4) fi I + gi                    is in SL(2, A; qA) for 1 ≤ i ≤ .
+                             c di
+    (5) (f1 + g1 a )2 (f2 + g2 a )2 · · · (f + g a )2 ≡ (a )t mod cA.
+    (6) ui is a unit in A and fi + gi a ≡ ui mod bi A for 1 ≤ i ≤ .
+                              Bounded generation                                   399
+
+(3.7) Remark. Assume t is even, and let A be an arbitrary commutative ring.
+   (1) It is easy to satisfy all of the conditions of Deﬁnition 3.6 except the require-
+       ment that u1 is a unit: simply choose f1 , g1 ∈ A, such that
+                                  t/2                     
+                             a b                       a b
+                                       = f1 I2×2 + g1        ,
+                             c d                       c d
+      and let fi = 1 and gi = 0 for i > 1.
+  (2) If a = 0, then it is easy to satisfy all the conditions of Deﬁnition 3.6: choose
+      fi , gi as in (1), and, because bi = b is a unit, we may let ui = 1 for all i.
+  (3) If b = 0, then it is easy to satisfy all the conditions of Deﬁnition 3.6. This is
+      because a must be a unit in this case, so we may let u1 = at/2 (and ui = 1
+      for i > 1).
+  Recall that k is the degree of K over Q (see 3.1).
+(3.8) Lemma [CKP, (4.3)].
+   (1) For any rational prime p and positive integer r, let Npr be the homomorphism
+       from U(pr O) to U(pr Z) induced by the norm map N : K → Q. If pr > 8k,
+       then the image of Npr has more than 2 elements.
+   (2) If f, g ∈ BS −1 with f BS −1 + gBS −1 = BS −1 , then, for any positive in-
+       teger n and any nonzero h ∈ BS −1 , there exists f  ≡ f mod gBS −1 , such
+       that:                   
+       (a) gcd e(f  BS −1
+                         ), n                                      −1
+                                 is a divisor of (8k)!, where e(f BS ) is the expo-
+                              −1
+            nent of U f BS        .
+       (b) f  BS −1 + hBS −1 = BS −1 .
+Proof. (1) It is well-known that U(pr Z) has a cyclic subgroup of order (p − 1)pr−1
+if p is odd, or of order pr−2 if p = 2. Thus, in any case, U(pr Z) has a cyclic
+subgroup C of order ≥ pr /4 > 2k. For c ∈ Z and, in particular, for c ∈ C, we have
+N(c) = ck . Therefore
+                                               #C          2k
+              # Npr U(pr O) ≥ # Npr (C) ≥               >     = 2.
+                                              gcd k, #C       k
+   (2) We may assume h = n, by replacing n with n | N(hs)|, for some s ∈ S with
+hs ∈ B. We consider two cases.
+Case 1. Assume BS −1 = O. Choose f0 ≡ f mod gO, such that f0 O + (8k)! ngO =
+O.
+   Let P be the set of rational prime divisors of n. We may assume (by replacing n
+with the product N(g) n) that P contains every prime divisor of N(g). For each p
+in P , let
+                r(p) be the largest integer such that pr(p) divides (8k)!.
+From (1), we know that the image of Npr(p)+1 has more than 2 elements. Therefore,
+Npr(p)+1 (f0 ) (or any other element of the image) can be written as a product of
+two elements of the image, neither of which is trivial. This implies that there exist
+x(p), y(p) ∈ O, such that:
+     • x(p) y(p) ≡  f0 mod
+                                O and
+                             pr(p)+1
+     • neither N x(p) nor N y(p) is is congruent to 1 modulo pr(p)+1 .
+Now, by Dirichlet’s Theorem (2.30) and the Chinese Remainder Theorem, pick
+400                            Dave Witte Morris
+
+    • f1 ∈ O, such that
+          ◦ f1 ≡ x(p) mod pr(p)+1 O, for each p in P ,
+          ◦ f1 O is maximal,
+          ◦ n∈  / f1 O, and
+          ◦ N(f1 ) > 0; and
+    • f2 ∈ O, such that                       
+                                
+          ◦ f1 f2 ≡ f0 mod        p∈P p r(p)+1
+                                                 g O,
+          ◦ f2 O is maximal,
+          ◦ f1 O + f2 O = O, and
+          ◦ N(f2 ) > 0.
+Set f  = f1 f2 , so f  ≡ f0 ≡ f mod gO.
+  The Chinese Remainder Theorem implies that U(f1 f2 O) ∼     = U(f1 O) × U(f1 O).
+Also, since fj O is maximal, for j = 1, 2, we know that U(fj O) is cyclic of order
+               #U(fj O) = #(O/fj O) − 1 = # N(fj ) − 1 = N(fj ) − 1.
+Therefore
+                                                                            
+      e(f  O) = e(f1 f2 O) = lcm e(f1 O), e(f1 O) = lcm N(f1 ) − 1, N(f2 ) − 1 .
+For each p in P , we have
+                    f1 f2 ≡ f0 ≡ x(p) y(p) ≡ f1 y(p) mod pr(p)+1 O,
+so f2 ≡ y(p) mod pr(p)+1 O. Thus, our selection of x(p) and y(p) guarantees that
+                               
+               gcd N(fj ) − 1, n is a divisor of (8k)! for j = 1, 2.
+Therefore
+                                                                  
+            gcd e(f  O), n = lcm gcd N(f1 ) − 1, n , gcd N(f2 ) − 1, n
+is a divisor of (8k)!.
+Case 2. The general case. We may assume g ∈ B, by replacing g with sg, for some
+appropriate s ∈ S. (Note that, since elements of S are units in BS −1 , we have
+sgBS −1 = gBS −1 .) Let γ be a nonzero element of O, such that γO ⊆ B. By
+3.4(1), there exists f0 ∈ B, such that f0 ≡ f mod gBS −1 and f0 B + gnγ 2 B = B.
+From Case 1, we get f  ≡ f0 mod gnγ 2 O, such that
+                                       
+                         gcd e(f  O), n is a divisor of (8k)!.
+                                        
+From 3.4(2b), we see that U f  BS −1 is isomorphic to a quotient of U(f  O), so
+(2a) holds. Also, we have f  ≡ f0 ≡ f mod gBS −1 and
+      f  BS −1 + nBS −1 ⊇ f  BS −1 + gnγ 2 OS −1 = f0 BS −1 + gnγ 2 OS −1
+                      ⊇ f0 BS −1 + gnγ 2 BS −1 = BS −1 .                            
+                                                             
+(3.9) Theorem (cf. [CKP, (4.5)]). BS −1 satisﬁes Exp 2(8k)!, 2 .
+Proof. Let:
+   • q be any element of BS −1 with q = 0,
+                                       −1
+   • (a, b) be any element of W (qBS     ) with a = 0 and b = 0 (see 3.7(2,3)),
+                               a  b
+   • c, d ∈ BS −1 , such that         ∈ SL(2, BS −1 ; qBS −1 ),
+                               c d
+   • a = a, b1 = b, d1 = d,
+                                   Bounded generation                                   401
+
+    • ui = 1 for i = 1, 2,
+    • b0 = b/q ∈ BS −1 ,
+    • α1 be the exponent of a modulo bBS −1 ,
+    • b ≡ b0 mod aBS −1 , such that (see 3.8(2)):
+          ◦ the exponent α2 = e(b BS −1 ) has the property that gcd(α1 , α2 ) is a
+            divisor of (8k)!, and
+          ◦ b BS −1 + qBS −1 = BS −1 ,
+    • b2 = b q,                      
+                −1             a b2
+    • d2 ∈ BS , such that                ∈ SL(2, BS −1 ; qBS −1 ), that is,
+                                 c d2
+                                   (b2 − b)c        q(b − b0 )c
+                           d2 = d +           = d+                ,
+                                        a                 a
+    • t1 , t2 ∈ Z, such that α1 t1 + α2 t2 = (8k)!, and
+    • fi , gi ∈ BS −1 (for i = 1, 2) be deﬁned by
+                                α t                         
+                           a b 11                       a b
+                                        = f1 I2×2 + g1          ,
+                           c d                          c d
+                                α t                           
+                          a b2 2 2                     a b2
+                                        = f  I
+                                            2 2×2 + g 2           .
+                          c d2                         c d2
+Now, by multiplying matrices modulo cBS −1 , we see that
+             a2(8k)! = (aα1 t1 )2 (aα2 t2 )2 ≡ (f1 + g1 a)2 (f2 + g2 a)2 mod cBS −1 .
+Similarly,
+                          f1 + g1 a ≡ aα1 t1 ≡ 1 = u1 mod bBS −1 .
+Finally, because
+    • f2 + g2 a ≡ aα2 t2 mod b2 BS −1 (by a similar calculation),
+    • aα2 t2 ≡ 1t2 = 1 mod b BS −1 (by deﬁnition of α2 ),
+    • aα2 t2 ≡ 1α2 t2 = 1 mod qBS −1 (since (a, b) ∈ W (qBS −1 )), and
+    • b2 = b q with b relatively prime to q,
+we conclude that
+                          f2 + g2 a ≡ aα2 t2 ≡ 1 = u2 mod b2 BS −1 .                    
+(3.10) Remark. The function 2(8k)! in the conclusion of Theorem 3.9 is much
+larger than necessary, but reducing the order of magnitude would not yield any
+improvement in the main results — all that matters is that the function depends
+only on k. However, it would be of interest to replace 2(8k)! with a function that
+is bounded on an inﬁnite subset of N. For example, perhaps there is a constant t
+(independent of k), such that BS −1 satisﬁes Exp(t, 2) whenever k is odd. If so,
+then the bound r in Theorem 1.2 could be chosen to depend only on n, when k is
+odd and n ≥ 3.
+
+§3C. Bounding the order of the universal Mennicke group. The properties
+Gen(t, r) and Exp(t, ) were speciﬁcally designed to be be what is needed in the
+proof of the following theorem.
+402                             Dave Witte Morris
+
+(3.11) Theorem [CKP, (1.8)]. Let:
+      • t, r, and  be positive integers,
+      • A be an integral domain satisfying SR1 12 , Gen(t, r), and Exp(t, ), and
+      • q be an ideal in A.
+Then the universal Mennicke group C(q) is ﬁnite, and its order is bounded by tr .
+Proof. To bound the order of the abelian group C(q), it suﬃces to bound both
+the exponent and the number of generators needed. We assume q = 0 (because
+the desired conclusion is obvious otherwise). Note that, for any nonzero q ∈ q,
+the natural homomorphism C(qA) → C(q) is surjective (see 2.19(4)), so we may
+assume q = qA is principal.
+
+                            exponent of C(q) is a divisor of t. (I.e., if z is in
+Step 1. (cf. [Li, (2.4)]) The
+C(q), then z = 1.) Let ab
+            t
+                                   be an arbitrary element of C(qA). Because, by
+                                 qA
+assumption, A satisﬁes the exponent property Exp(t, ), there exist a , c, d ∈ A
+and ui , fi , gi , bi , di ∈ A (for 1 ≤ i ≤ ) satisfying the conditions of (3.6). Apply-
+ing, in order, 3.6(1)+(MS1b), 2.25(1), (MS2b)+3.6(5), 2.25(2), 2.25(1), 2.25(2),
+3.6(6)+(MS1b), and 2.19(3), we have
+                    −t  −t  t                        2
+                      b           b         c                 c
+                      a qA = a qA = a qA =              fi + gi a qA
+                                                 i
+                                    2              −2
+                              cgi                 bi gi
+                       =   fi + gi a qA =    fi + gi a qA
+                         i                 i
+                                    −2   −2 
+                               bi            bi
+                       =                 =    ui qA =         1−2 = 1.
+                           fi + gi a qA
+                          i                      i              i
+
+
+Step 2. C(q) can be generated by r or less elements. Because of Step 1, it suﬃces
+to show, for each prime divisor p of t, that the rank of C(q)/C(q)p is ≤ r.
+                
+     • Let abii            ∈ C(qA), for 1 ≤ i ≤ r + 1.
+                        qA
+     • By repeated application of SR1 12 , we can inductively construct a sequence
+       a1 , . . . , ar+1 of elements of A, such that:
+          ◦ ai ≡ ai mod bi A, for 1 ≤ i ≤ r + 1, and
+          ◦ ai A + aj A = A for 1 ≤ i < j ≤ r + 1.
+     • By the Chinese Remainder Theorem, choose y ∈ A with:
+          ◦ y ≡ 1 mod qA and
+          ◦ y ≡ bi mod ai A for 1 ≤ i ≤ r + 1.
+     • Now yA + a1 a2 · · · ar+1 qA = A, so Gen(t, r) implies that there exists
+         h ≡ y mod a1 a2 · · · ar+1 qA, such that U(hA) /U(hA) has rank ≤ r.
+                                                                    p
+
+
+      • Hence, there exists α ∈ A and integers e1 , e2 , . . . , er+1 , with ei ≡ 0 mod p
+        for some i, such that
+                                r+1
+                                
+                                   (ai )ei ≡ αp mod hA.
+                                i=1
+                                 Bounded generation                                                   403
+
+    • Since h ≡ y ≡ 1 mod qA, we have hA + qA = A. Therefore, we can choose
+      β ∈ A with
+                       β ≡ α mod hA            and     β ≡ 1 mod qA.
+We have β ≡ α mod hA and β ≡ 1 mod qA. Hence
+           p     p                 p
+
+                                        r+1
+                                        
+                                 βp ≡         (ai )ei mod hqA.
+                                        i=1
+Now, since h ≡ y ≡ bi mod ai A, we have
+                                                                          
+            bi        bi          bi      q                  bi q                 hq
+            ai qA = ai       = a
+                                   i      a 
+                                            i qA
+                                                 =           ai              =   ai             .
+                            qA            qA                             qA                  qA
+Hence
+                      
+                     r+1             hq ei
+                                      r+1                           
+                             bi ei =                =  
+                                                            hq
+                             ai qA          ai           t+1  ei
+                                                          i=1 (ai )
+                        i=1           i=1       qA                     qA
+                                               p
+                                        hq          hq
+                                    = βp        = β        ∈ C(qA)p .
+                                            qA         qA
+                         
+Since ab11     , . . . , abr+1
+                           r+1
+                                   are arbitrary elements of C(qA), and some ei is non-
+           qA            qA
+zero modulo p, we conclude that the rank of C(qA)/C(qA)p is ≤ r.                                       
+§3D. Bounded generation in SL(n, A) for n ≥ 3. The preceding results enable
+us to establish Theorem 1.2 in the case where n ≥ 3 (see 3.13(1)).
+(3.12) Theorem. Let:
+     • n ≥ 3,
+     • t, r, and  be positive integers,
+     • A be an integral domain satisfying SR1 12 , Gen(t, r), and Exp(t, ), and
+     • q be an ideal in A.
+Then SL(n, A; q)/ E (n, A; q) is ﬁnite, and its order is bounded by tr .
+Proof. By combining Thms. 2.14 and 2.18 (with m = 2 and N = E (n, A; q)),
+we see that SL(n, A; q)/ E (n, A; q) is isomorphic to a quotient of the universal
+Mennicke group C(q). From Theorem 3.11, we know that #C(q) ≤ tr , so the
+desired conclusion is immediate.                                                
+  Applying the Compactness Theorem (see 2.8) to this ﬁniteness result yields
+bounded generation. In the particular case of number rings, we obtain the following
+conclusions.
+(3.13) Corollary (cf. [CKP, (2.4)]). Let:
+     • n be a positive integer ≥ 3,
+     • K be an algebraic number ﬁeld,
+     • k be the degree of K over Q,
+     • B be an order in K,
+     • S be a multiplicative subset of B, and
+     • q be an ideal in BS −1 .
+Then:
+   (1) LU(n, BS −1 ) boundedly generates E(n, BS −1 ).
+404                            Dave Witte Morris
+
+  (2) LU (n, BS −1 ; q) boundedly generates E (n, BS −1 ; q).
+More precisely, there is a positive integer r, depending only on k and n, such that
+                                                         
+      LU(n, BS −1 ) r = E(n, BS −1 ) and LU (n, BS −1 ; q) r = E (n, BS −1 ; q).
+   A generalization of 3.13(2) that applies to all normal subgroups, not merely the
+one subgroup E (n, BS −1 ; q), can be found in §6. It is proved by combining this
+result (and an analogous result for the case n = 2) with the Sandwich Condition
+(6.4).
+
+4. Additional first-order properties of number rings
+   We deﬁne two properties (Unit(r, x) and Conj(z)), and show they are satisﬁed by
+number rings BS −1 that have inﬁnitely many units (see 4.4 and 4.6). As in §3, it
+is crucial that these properties can be expressed by ﬁrst-order sentences (for ﬁxed
+values of the parameters r, x, and z).
+(4.1) Notation. Throughout this section,
+     • K is an algebraic number ﬁeld,
+     • k is the degree of K over Q,
+     • O is the ring of integers of K,
+     • B is an order in O, and
+     • S is a multiplicative subset of B.
+§4A. Unit property Unit(r, x).
+                                                                        
+                                                        u            0
+(4.2) Notation. If u is a unit in a ring A, then H(u) =                   .
+                                                        0           u−1
+(4.3) Deﬁnition (cf. [CKP, (3.1)]). Let r and x be positive integers. A commutative
+ring A satisﬁes the unit property Unit(r, x) if and only if:
+   (1) For each nonzero q ∈ A, there exists a unit u in A, such that u ≡ 1 mod qA
+       and u4 = 1.
+   (2) There exists a unit u0 in A with u20 = 1, such that whenever
+         • q is an ideal in A with ≤ r generators, and
+         • T ∈ SL(2, A; q),
+       there exist E1 , E2 , . . . , Ex ∈ LU(2, q), such that
+                        H(u0 )−1 T H(u0 ) = E1 T E2 E3 · · · Ex .
+(4.4) Lemma [CKP, (4.6)]. If BS −1 has inﬁnitely many units, then BS −1 satisﬁes
+the unit property Unit(r, 5), for any r.
+Proof. Let q be any nonzero element of BS −1 . Since, by assumption, BS −1 has
+inﬁnitely many units, there is a unit u in BS −1 that is not a root of unity. Some
+power of u satisﬁes the requirements of 4.3(1).                    
+                (8k)!                        −1               a b
+   Let u0 = u         , q be any ideal of BS , and T =                be any element of
+                                                              c d
+SL(2, A; q). We may assume q = 0, for otherwise T = I2×2 , so the conclusion of
+4.3(2) is trivially true.
+     • By 3.8(2a), there exists a ≡ a mod b2 BS −1 , such that
+                                               
+                    gcd e(aBS −1 ), e(a BS −1 ) is a divisor of (8k)!,
+                                                               
+       where e(aBS −1 ) denotes the exponent of U aBS −1 .
+                                              Bounded generation                                                             405
+
+   • Choose z ∈ BS −1 , such that a = a + zb2 .
+   • Choose t, t ∈ BS −1 , such that t e(aBS −1 ) + t e(a BS −1 ) = (8k)!.
+                   −1                               −1
+   • Let u2t e(aBS ) = ax + 1 and u−2t e(aBS ) = ay + 1.
+We have
+                                                                            −1
+                                                                                  
+           −t e(aBS −1 )        t e(aBS −1 )            a          u−2t e(aBS ) b
+       H(u               )T H(u              ) = 2t e(aBS −1 )
+                                                  u            c          d
+                                                                         
+                                                      a        (ay + 1)b
+                                               =
+                                                  (ax + 1)c         d
+                                                                         
+                                                   1 0 a b 1 yb
+                                               =
+                                                  xc 1 c d 0 1
+                                                                 = E2,1 (∗) T E1,2 (∗).
+                                                       
+             1 0     a                           b
+Letting T = T       =                                , the same calculation shows that
+              zb 1    ∗                            d
+                                   −1                            −1
+              H(u−t e(a BS                )
+                                              )T  H(ut e(a BS            )
+                                                                              ) = E2,1 (∗) T  E1,2 (∗).
+Therefore
+         H(u0 )−1 T H(u0 )
+                                            −1                                             −1
+               = H(u−t e(a BS                      )
+                                                       ) E2,1 (∗) T E1,2 (∗) H(ut e(a BS            )
+                                                                                                        )
+                                            −1                                                              −1
+               = H(u−t e(a BS                      )
+                                                       ) E2,1 (∗) T  E2,1 (∗) E1,2 (∗) H(ut e(a BS                  )
+                                                                                                                         )
+                                 
+               = E2,1 (∗) T E1,2 (∗) E2,1 (∗) E1,2 (∗)
+               = E2,1 (∗) T E2,1 (∗) E1,2 (∗) E2,1 (∗) E1,2 (∗),
+with each of the elementary matrices in LU(2, q). Hence, 4.3(2) is satisﬁed with
+x = 5.                                                                        
+
+§4B. Conjugation property Conj(z). The following property will be used to con-
+trol the image of the other elementary matrices under conjugation by E1,2 (see 5.17).
+(4.5) Deﬁnition. Let z be a positive integer, and let A be a commutative ring.
+     • For ideal q of A, let
+                       ⎧                                      ⎫
+                       ⎨      there exists z ≡ ±1 mod q, and ⎬
+                             
+                Mq = y ∈ q  units u1 , u2 in A, such that      .
+                       ⎩                                      ⎭
+                                        1 + yzu21 = u22
+     • The ring A is said to satisfy Conj(z) if, for every nonzero q ∈ A, there is a
+       nonzero q  ∈ A, such that every element of q  A is a sum of ≤ z elements
+       of MqA .
+   Most of the proof of the following theorem appears in [Va, p. 327] and [Li,
+pp. 519–521], but [CKP] modiﬁed the argument to avoid Liehl’s assumption that
+the prime p splits completely in K. This eliminates the need to place restrictions
+on K (as in [Li]).
+(4.6) Theorem (cf. [CKP, (4.7)]). If BS −1 has inﬁnitely many units, then BS −1
+satisﬁes Conj(7k).
+406                                    Dave Witte Morris
+
+Proof. For convenience, let us use [j]MqA to denote the set of elements of BS −1
+that are a sum of j elements of MqA .
+Claim. It suﬃces to ﬁnd
+      • nonzero q  , q  ∈ A,
+      • positive integers r, m, with gcd(r, m) = 1, and
+      • a ﬁnite subset D of B, such that #D ≤ k + 1, and the Z-span of D contains
+        q  B,
+such that pdq  ∈ MqA , for
+         • every rational prime p that is congruent to r modulo m, and
+         • every d ∈ D.
+We show that if there exist such q  , q  , r, m, and D, then the principal ideal
+q  q  mBS −1 is contained in [7k]MqA . To this end, let b be any nonzero element
+                                                                
+of B and s ∈ S. By assumption on D, we may write q  b = k+1     i=1 bi di with bi ∈ Z
+and di ∈ D. For each i,
+      • bi m is a signed sum of 6 rational primes that are congruent to r modulo m
+        (see 2.33),
+      • pdi q  ∈ MqA, for each of these primes p, and
+      • −MqA = MqA (because z can be replaced by −z),
+so bi mdi q  ∈ [6]MqA . Hence
+                                 
+                                 k+1
+                  q  bmq  =         bi mdi q  ∈ [6(k + 1)]MqA ⊆ [7k]MqA .
+                                 i=1
+
+Since it is clear from the deﬁnition that MqA is closed under multiplication by s−2
+(this is the reason for including the unit u1 ), we see that q  mq  (b/s2 ) ∈ [7k]MqA .
+Since b/s2 is an arbitrary element of BS −1 , we conclude that q  mq  BS −1 ⊆
+[7k]MqA , as desired.
+   This completes the proof of the claim.                                              
+   We now ﬁnd q  , q  , r, m, and D as described in the Claim. We begin by
+establishing notation.
+      • To prove the result for a particular value of q, it suﬃces to prove it for some
+        nonzero multiple of q. Therefore, we may assume q is a rational integer, such
+        that:
+           ◦ the exponent e of U(qZ) is divisible by k!,
+           ◦ qO ⊆ B, and
+           ◦ the discriminant of K divides q.
+      • Furthermore, we may assume there exists t ∈ Z, such that te − 1 ≡ aq mod
+        q 2 Z, with gcd(a, q) = 1. (To achieve, this, let q = pe11 pe22 · · · pel l be the prime
+        factorization. By carefully enlarging q, we may assume, for i = j,that peii
+        does not divide φ(pj j ). Choose t so that, for each i, its image in U pei i +2 Z
+                              e
+
+        is an element
+                       of maximal order.)
+      • Let D = te−1 (a + qd0 )  d0 ∈ D0 ∪ {0} , where D0 is some basis for B as
+                         that #D ≤ k + 1, and the Z-span of D contains t qB.)
+        a Z-module. (Note                                                                e−1
+
+      • Let b = t a d0 ∈D0 (a + qd0 ). (Note that every element of D is a divisor
+                   e−1
+
+        of b, and b is relatively prime to q.)
+                               Bounded generation                                  407
+
+    • Because BS −1 has inﬁnitely many units, there is some unit u that is not
+       a root of unity. Multiplying by an element of S, we may assume u ∈ B.
+       Furthermore, by replacing u with an appropriate power, we may assume
+       that u ≡ 1 mod q 2 bB (and u2 = 1).
+    • Let y = u2 − 1 ∈ q 2 bB, so N(y) ∈ (q 2 bB) ∩ Z.
+    • Let q  = qy(1 + y)−1 = qy/u2 ∈ BS −1 .
+    • Write N(y) = n0 n1 , where gcd(q, n0 ) = 1, and any (rational) prime dividing
+       n1 divides q.
+    • Let r be a rational integer with:
+         ◦ r ≡ t mod q 2 and
+         ◦ r ≡ 1 mod n0 .
+  Let d be any element of D, and let p be any rational prime that is congruent to r,
+modulo N(y). We will show that pdq  ∈ MqA , which, by the Claim, completes the
+proof.
+                 e
+    • Since y p −1 ≡ 0 mod dq 2 BS −1 , and p ≡ r mod q 2 dBS −1 , and td = te (a +
+       qd0 ) ≡ a mod qBS −1 , we have
+               e
+         ◦ y p −1 + pe − pdq − 1 ≡ 0 + re − 0 − 1 ≡ 0 + 1e − 0 − 1 = 0 mod dBS −1 ,
+            and
+               e
+         ◦ y p −1 + pe − pdq − 1 ≡ 0 + (te − 1) − tdq ≡ 0 + aq − aq = 0 mod q 2 BS −1 ,
+             e
+       so y p −1 + pe − pdq − 1 ≡ 0 mod dq 2 BS −1 . Therefore
+                                      e
+                                  y p + pe y − pdqy − y
+      is divisible by dq 2 y. Since k! divides e (and because p, being relatively
+                                                                             e
+      prime to q, does not divide the discriminant of K), we know that y p ≡
+      y mod pBS −1 , so the displayed expression is also divisible by p.
+                   e
+    • Therefore y p + pe y ≡ pdqy + y mod pdq 2 yBS −1 .
+                     e                 e
+    • Hence (1 + y)p ≡ 1 + pe y + y p ≡ 1 + y + pdqy mod pdq 2 yBS −1 .
+    • Thus (recalling that q  = qy(1 + y)−1 ), we have
+                              e
+                      (1 + y)p −1 ≡ 1 + pdq  mod pdqq  BS −1 ,
+                                  e
+      so we may write (1 + y)p −1 = 1 + pdq  z with z ≡ 1 mod qBS −1 .
+                    e        e
+    • Since (1 + y)p −1 = (up −1 )2 is the square of a unit, we conclude that pdq  ∈
+      MqA (taking u1 = 1).
+By the Claim, this completes the proof.                                              
+
+5. Bounded generation in SL(2, A)
+  In this section, we establish Theorem 1.2 in the case where n = 2 (see 5.26(1)).
+This complements Theorem 3.13(1), which dealt with the case where n ≥ 3.
+(5.1) Remark (nonstandard analysis). In this section, we frequently use the theory
+of nonstandard analysis (cf. §2E). As an aid to the reader who wishes to construct
+a classical proof, we point out that:
+     • Corollary 5.20 is simply a restatement of Lemma 5.19 in nonstandard terms.
+     • Lemma 5.4 is a technical result that should be omitted from a classical
+       presentation of this material.
+     • Proposition 5.21 asserts the existence of an ideal q of A, such that
+                          [SL(2, K), SL(2, A; q )] ⊆ E(2, q).
+408                            Dave Witte Morris
+
+                                                                                    
+      • Lemma 5.24 states, for any nonzero y∈ A, that there is a nonzero ideal q
+                                        2
+        of A, such that q ⊆ q, and bya     = ab for all (a, b) ∈ W (q ).
+                                             q   q
+
+(5.2) Notation. Let
+                                     !            !
+                             Q=          ∗
+                                         q =        q ∗A.
+                                   q is an       q∈A
+                                 ideal in A
+This is an (external) ideal of ∗A.
+
+§5A. Preliminaries.
+(5.3) Deﬁnition (cf. [Va]). If q is an ideal in a commutative ring A, then
+                                                                  
+                               a b                  a, d ≡ 1 mod q2
+            SSL(2, A; q) =             ∈ SL(2, A)                    .
+                               c d                    b, c ≡ 0 mod q
+This is a subgroup of SL(2, A; q) that contains E(2, q) and SL(2, A; q2 ).
+(5.4) Lemma. The ideal Q is nonzero, and we have Q2 = Q. Therefore,
+                             SSL(2, A; Q) = SL(2, A; Q).
+Proof. If F is any ﬁnite set of nonzero elements of A, then (because A is an integral
+domain) there is some nonzero y ∈ A, such that y is a multiple of every element
+of F . Since ∗A is assumed to be polysaturated, this implies that there is some
+nonzero z ∈ ∗A, such that z is a multiple of every element of A. Then z ∈ Q, so
+Q = {0}.
+   Now, for any ﬁxed element z of Q, consider the internal binary relation Rz ⊆
+∗
+A × ∗A given by
+                      Rz = { (x, y) | y ∈ ∗Ax and z ∈ ∗Ay 2 }.
+Since z ∈ Q, it is easy to see that if F is any ﬁnite set of nonzero elements of A,
+then there is a nonzero element y of A, such that (x, y) ∈ Rz for all x ∈ F . By
+polysaturation, there is some nonzero y0 ∈ ∗A, such that (x, y0 ) ∈ Rz for every
+nonzero x ∈ A. Therefore y0 ∈ Q and z ∈ ∗Ay02 ⊆ Q2 . Since z is an arbitrary
+element of Q, we conclude that Q2 = Q.                                           
+(5.5) Lemma (Vaserstein [Va]). Let A be a commutative ring and u be a unit in A.
+   (1) Suppose u ≡ 1 mod q 2 A for some q in A. Then u = 1 + xy with x, y in qA,
+       and we have
+                                                            
+                           1 x 1 0 1 −u−1 x            1     0
+                  H(u) =                                         .
+                           0 1 y 1 0           1      −uy 1
+                                       
+        1 1          1 1 − u−2 1 −1
+   (2)         H(u)                        = H(u).
+        0 1          0      1      0 1                    
+                                     1 0             1   0
+   (3) For x in A, we have H(u)−1          H(u) =           .
+                                     x 1            xu2 1
+   (4) For y, z ∈ A, set
+                                                           
+                              1 z − 1 1 1 1 0 1 −1
+                  M (y, z) =                                    .
+                              0    1     0 1 y 1 0 1
+                                  Bounded generation                              409
+
+        Suppose u2 − 1 is in (1 + yz)A, and (1 + yz)w = u2 − 1. Set c = w(1 − z + yz).
+        Then
+                                                                    
+                                  1 c                         1    0
+               M (y, z)H(u)−1           M (y, z)−1 H(u) =              .
+                                  0 1                      −wy 1
+   An argument similar to the proof of Corollary 2.15 establishes the following
+result.
+(5.6) Lemma (Vaserstein’s Lemma 1, cf. [Va, Lem. 1]). Let:
+     • A be a commutative ring, and
+     • q and q be nonzero ideals of A, such that q ⊆ q2 .
+If A/q satisﬁes SR1 , then SSL(2, A; q) = SL(2, A; q ) E(2, q).
+Proof. By modding out q , we may assume that A satisﬁes SR1 , and we wish to
+show that E(2, q) = SSL(2, A; q). It suﬃces to show that if a, b ∈ A, with
+   (1) a ≡ 1 mod q2 ,
+   (2) b ∈ q, and
+   (3) aA + bA = A,
+then there exists E ∈ E(2, q), such that (a, b)E = (1, 0).
+   Since a ≡ 1 mod q, and aA + bA = A, we know that aA + bq = A; so SR1 implies
+that there exists q ∈ q, such that a + bq is a unit. Thus, by replacing (a, b) with
+(a, b)E2,1 (q), we may assume
+                                     a is a unit.
+Then, by replacing (a, b) with (a, b)E1,2 (−a−1 b), we may assume
+                                           b = 0.
+Write
+                             1 − a = x1 y1 + · · · + xr yr
+with x, y ∈ q, and r minimal. The remainder of the proof is by induction
+                                                                     on r.
+   Base case. Assume a = 1 + xy with x, y ∈ q. Applying E1,2 a−1 x , E1,2 (−y),
+and E1,2 (−x) sequentially, we have
+                              (a, 0) → (a, x) → (1, x) → (1, 0).
+                         
+  Induction step. Let q = x1 y1 A + · · · + xr−1 yr−1 A. Now
+                      1 − a = x1 y1 + · · · + xr yr ≡ xr yr mod q ,
+so, by applying the base case to the ring A/q , we know there is some E ∈ E(2, q),
+such that (a, 0)E ≡ (1, 0) mod q . We may also assume, by the argument above,
+that (a, 0)E = (u, 0), for some unit u (because the transformations will not change
+the congruence class of (a, 0)E modulo q ). By the induction hypothesis, then there
+exists E  ∈ E(2, q), such that (a, 0)EE  = (1, 0).                               
+§5B. A suﬃcient condition for a Mennicke symbol. Because Mennicke’s
+Theorem 2.18(3) does not apply when n = 2, we prove the following result that
+yields a Mennicke symbol.
+(5.7) Proposition. Suppose:
+     • A is an integral domain,
+     • q is an ideal of A, and
+     • N is a normal subgroup of SL(2, A; q),
+410                                 Dave Witte Morris
+
+such that:
+    • A satisﬁes SR1 12 and Gen(2, 1),
+                          
+    • E(2, A), SL(2, A; q) ⊆ N ,
+    • E (2, A; q) ⊆ N ,
+    • C = SL(2, A; q)/N ,                        
+                                         a b
+    •                                  b
+            : W (q) → C is deﬁned by a =           N , and
+                                             ∗ ∗
+       ∗             
+    •    by 2 = ∗ b for all (a, b) ∈ W (Q) and all nonzero y ∈ A.
+          a          a
+       
+Then       is a well-deﬁned Mennicke symbol.
+                                                                 
+(5.8) Remark. From Theorem 2.18, we know that                         is well-deﬁned, and satisﬁes
+(MS1a) and (MS1b). The problem is to establish (MS2a).
+
+  We begin with a useful calculation.
+
+(5.9) Lemma
+              (cf. [Va, Case 1, p. 331]). Let (a1 , b), (a2 , b) ∈ W (q), and suppose
+ a2 b
+         ∈ SL(2, A; q). Then
+  c d
+                                         −1                        
+                          b           b               a2 b(1 − a1 )
+                                                =                      .
+                        a1 a2        a2             1 + a2 d(a1 − 1)
+Proof. Because bc = a2 d − 1, we have
+                             −1                                     
+            a1 a2 b a2 b             a a               b       d    −b
+                                  = 1 2
+             ∗     ∗ c d              ∗                ∗       −c   a2
+                                                                               
+                                            a a d − bc −a1 a2 b + ba2
+                                          = 1 2
+                                                ∗            ∗
+                                                                          
+                                            1 + a2 d(a1 − 1) a2 b(1 − a1 )
+                                          =                                 .                   
+                                                    ∗              ∗
+
+   Let us show that it suﬃces to consider principal ideals.
+                                                         
+(5.10) Lemma [CKP, (3.13)]. Suppose A, q, N , C, and        are as in the statement
+                                           
+of Proposition 5.7. If the restriction of     to W (qA) is a Mennicke symbol, for
+                            
+every nonzero q ∈ q, then       is a Mennicke symbol.
+
+Proof. By (5.8) and Lam’s Theorem 2.20(1), we need only establish (MS2b). Given
+
+                                    (a1 , b), (a2 , b) ∈ W (q),
+
+we know, by assumption, that
+                                          
+(5.11)        the restriction of              to W (qA) is a Mennicke symbol
+                                     Bounded generation                                    411
+
+we have
+                     −1                      
+       b          b              a2 b(1 − a1 )
+                            =                                           (5.9)
+     a1 a2       a2           1 + a2 d(a1 − 1)
+                                                                   
+                                 a2 b(1 − a1 )          1 − a1
+                            =                                           (2nd is trivial)
+                              1 + a2 d(a1 − 1)     1 + a2 d(a1 − 1)
+                                             2
+                                               
+                                a2 b(1 − a1 )
+                            =                                           (5.11)
+                              1 + a2 d(a1 − 1)
+                                                                   
+                                 a2 (1 − a1 )         b(1 − a1 )
+                            =                                           (5.11)
+                              1 + a2 d(a1 − 1)     1 + a2 d(a1 − 1)
+                                                       
+                                        b(1 − a1 )
+                            =1·                                         (MS1b)
+                                  1 + (1 + bc)(a1 − 1)
+                                               
+                                  b(1 − a1 )
+                            =
+                              a1 + bc(a1 − 1)
+                                         
+                              b(1 − a1 )
+                            =                                           (MS1b)
+                                  a1
+                                 
+                               b
+                            =                                           (MS1a).
+                              a1
+
+                                                                                            
+
+
+Proof of Proposition 5.7. By Lemma 5.10, we may assume q = qA is principal.
+Also,       it suﬃces to show that if (a1 , bq), (a2 , bq) ∈ W (q), and either
+  by (2.24),
+ bq = 1 or bq = 1, then
+ a1         a2
+                                                               
+                                       bq       bq          bq
+(5.12)                                                   =         .
+                                       a1       a2         a1 a2
+                                  
+Note that the elements   bq and bq commute with each other (because one
+                         a1         a2
+of them is trivial). Thus, there is no harm in interchanging
+                                                               a1 with a2 if it is
+convenient. (That is why we do not assume it is abq2 that is trivial; it is better to
+allow ourselves some ﬂexibility.)
+
+Case 1. Assume that either a1 or a2 is a square modulo bqA. Because there
+is no harm in interchanging a1 with a2 , we may assume it is a2 that is a square
+modulo bqA.
+   Applying (MS1a) and (MS1b) allows us to make some simplifying assumptions:
+    • By adding a multiple of bq to a2 , we may assume a2 = y 2 , for some y in A.
+    • By adding a multiple of a1 a2 to b, we may assume b ∗A + Q = ∗A (because
+      ∗
+      A/Q satisﬁes SR1 ).
+    • By adding a multiple of bq to a1 , we may assume a1 ≡ 1 mod Q. (To see this,
+      let t ∈ ∗A, such that tb ≡ 1 mod Q, and then replace a1 with a1 + (1 − a1)tb.)
+412                                   Dave Witte Morris
+
+We have
+                      −1                      
+       bq         bq             a2 bq(1 − a1 )
+                             =                      (5.9)
+      a1 a2       a2           1 + a2 d(a1 − 1)
+                                                
+                                  bq(1 − a1 )
+                             =                      (by assumption, since 1 − a1 ∈ Q)
+                               1 + a2 d(a1 − 1)
+                                           
+                               bq(1 − a1 )
+                             =                      (a2 d = 1 + bqc ≡ 1 mod bq)
+                                    a1
+                                  
+                               bq
+                             =                      (2.19(2)).
+                               a1
+
+Case 2. The general case. Because there is no harm in interchanging a1 with a2 ,
+                       bq
+we may assume it is a2 that is equal to 1.
+                          q
+              −1 0
+   Let T =            . It is not diﬃcult to see that the hypotheses of the propo-
+               0 1
+sition are satisﬁed with T −1 N T in the place of N (because conjugation by T
+is an automorphism that ﬁxes E(2, A), SL(2, A; q), and E (2, A; q), and because
+(a, −b) ∈ W (Q) for all (a, b) ∈ W (Q).) Therefore, the hypotheses are also satisﬁed
+with (T −1 N T ) ∩ N in the place of N , so we may assume that T normalizes N .
+Then conjugation by T induces an automorphism of C, so
+                                                             
+                    bq            −1       −1 bq          − bq
+                         = 1 = T 1T = T              T =         .
+                    a2                          a2         a2
+   Adding a multiple of a1 a2 to b does not change any of the terms in (5.12), so,
+                                                                     2
+since Gen(2, 1) holds
+                      in A, we may assume that U(bA) /U(bA) is cyclic.
+         a −bq
+   Let 2             ∈ SL(2, A; q). Then, by assumption and by the formula for the
+          c    d
+inverse of a 2 × 2 matrix, we have
+                                 −1           −1          
+                              bq          − bq           bq
+                                     =              =          .
+                              a2 q         a2 q          d q
+                                                                      
+   If either a1 or a2 is a square mod bqA, then a    bq      bq = bq         by Case 1.
+                                                       1    a 2      a  a
+                                                                       1 2
+   If not, then a1 a2 is a square mod bqA, so, appealing to Case 1 again, we have
+                            −1                                        
+                 bq       bq          bq       bq           bq          bq
+                                 =                   =              =
+                a1 a2 q a2 q         a1 a2 q d q          a1 a2 d q     a1 q
+(because a2 d ≡ a2 d + bqc = 1 mod bq).                                                 
+
+§5C. Finiteness of SL(2, A; q)/ E (2, A; q). We now prove the following theorem.
+(5.13) Theorem (cf. [CKP, (3.19)]). Suppose:
+     • r, x, , t, and z are positive integers,
+     • A is an integral domain satisfying:
+          ◦ the stable range condition SR1 12 ,
+          ◦ the few generators properties Gen(2, 1) and Gen(t, r),
+          ◦ the exponent property Exp(t, ),
+          ◦ the unit property Unit(1, x), and
+                             Bounded generation                                 413
+
+        ◦ the conjugation property Conj(z), and
+    • q is any nonzero ideal in A.
+Then SL(2, A; q)/ E (2, A; q) is ﬁnite.
+(5.14) Remark. The proof will show that the order of the quotient group is
+bounded by tr .
+(5.15) Assumption. Throughout §5C, r, x, , t, z, A, and q are as in the statement
+of Theorem 5.13.
+(5.16) Notation. For (a, b) ∈ W (q), we set
+                            
+                b      a b 
+                    =          E (2, A; q) ∈ SL(2, A; q)/ E (2, A; q).
+                a q     ∗ ∗
+                                           
+   The key to the proof is showing that        is a well-deﬁned Mennicke symbol.
+                                               q
+For this, we use Proposition 5.7, so it suﬃces to show that
+                                              
+                           E(2, A), SL(2, A; q) ⊆ E (2, A; q)
+          ∗           ∗   
+             by 2        b
+and that            =         for all (a, b) ∈ W (Q) and all nonzero y ∈ A. These
+              a q        a q
+assertions are established in (5.23) and (5.24), respectively.
+   Combining Vaserstein’s identity 5.5(4) with the conjugation property Conj(z)
+yields the following lemma.
+(5.17) Lemma. There is a nonzero ideal q of A, such that
+                         −1
+                        E1,2 LU(2, q ) E1,2 ⊆ LU(2, q)50z .
+Proof ([Va, Lem. 4], [CKP, (4.7)]). Fix some nonzero q ∈ q. For convenience, let
+                           LU# = E1,2 LU(2, A; qA)E1,2
+                                                   −1
+
+and
+                       #                       −1
+                      E2,1 (a) = E1,2 E2,1 (a)E1,2 , for a ∈ A.
+From the unit property 4.3(1), there is a unit u in A, such that u2 = 1. Since A
+satisﬁes Conj(z) (and E1,2 normalizes {E1,2 (∗)}),
+                                         "        #
+       it suﬃces to show E2,1 −(u2 − 1)y ∈ LU# , for every y ∈ MqA .
+                                                       50
+  From 5.5(2) and 5.5(3), we see, for any unit v, that
+                                                               "   #
+                     #                       #
+             H(v)−1 E2,1 (∗)H(v) = E1,2 (∗) E2,1 (∗) E1,2 (∗) ∈ LU# .
+                                                                       3
+Since H(v) normalizes {E1,2 (∗)}, this implies that
+                          "       #          "      #
+(5.18)            H(v)−1 LU# H(v) ⊆ LU#               for all j.
+                                     j                3j
+   Because y ∈ MqA , we have y ∈ qA, and there exist z ≡ ±1 mod qA and units
+u1 and u2 , such that 1 + yzu21 = u22 . By replacing y with −y if necessary, let us
+assume z ≡ 1 mod qA. It is obvious that u2 − 1 is a multiple of 1 + yzu21 (since
+everything is a multiple of any unit). In the notation of 5.5(4), with y  = yu21 in
+the role of y, we have
+                            "   #                           "     #
+               M (y  , z) ∈ LU# and E1,2 (c)M (y  , z)−1 ∈ LU# ,
+                                 2                                 3
+414                             Dave Witte Morris
+
+so                                    "    #           "   #
+                       E2,1 (−wy  ) ∈ LU#            = LU# .
+                                              2+3×3              11
+Since
+                                    (u2 − 1)yu21    (u2 − 1)yu21
+                        −wy  = −            2   =−              ,
+                                     1 + yzu1           u22
+conjugating by H(u2 /u1 ) yields the conclusion that
+                              
+              E2,1 −(u2 − 1)y = H(u2 /u1 )−1 E2,1 (−wy  ) H(u2 /u1 )
+                                   "     #       "   #
+                                 ∈ LU#         ⊆ LU# ,
+                                              3×11          50
+
+as desired.                                                                          
+
+(5.19) Corollary [CKP, (3.3)]. For each element T of GL(2, K), there is a nonzero
+ideal q of A, such that T −1 LU(2, q ) T ⊆ LU(2, q)(50z)2 .
+
+                          K) is a product involving only diagonal matrices, the
+Proof. Any matrix in GL(2,
+                     0 1
+permutation matrix        , and the elementary matrix E1,2 , with the elementary
+                     1 0
+matrix appearing no more than twice. (This is a consequence of the “Bruhat
+decomposition.”)
+                                       
+                                  a 0
+  (1) For a diagonal matrix T =          , we have
+                                  0 b
+                       T −1 LU(2, a−1 bq ∩ b−1 aq ∩ A) T ⊆ LU(2, q).
+                                                           
+                                                       0 1
+     (2) Conjugation by the permutation matrix               interchanges E1,2 (∗) with
+                                                       1 0
+         E2,1 (∗), so LU(2, q) is invariant.
+     (3) For E1,2 , see (5.17).
+                                                                                     
+
+  Lemma 5.19 can be restated very cleanly in the terminology of nonstandard
+analysis:
+(5.20) Corollary [CKP, (3.6)]. GL(2, K) normalizes E(2, Q).
+Proof. For any T ∈ GL(2, K), Lemma 5.19 implies that
+                          T −1 LU(2, Q) T ⊆ LU(2, ∗q)(50z)2 .
+Since q is an arbitrary ideal of A, we conclude, from polysaturation, that
+                     T −1 LU(2, Q) T ⊆ LU(2, Q)(50z)2 ⊆ E(2, Q),
+as desired.                                                                          
+
+   Hence, the action of GL(2, K) on SL(2, ∗A; Q) induces an action on the coset
+space SL(2, ∗A; Q)/ E(2, Q). It can be shown that this is a trivial action of GL(2, K)
+(see 5.25), but we now establish this only for SL(2, K).
+(5.21) Proposition [CKP, (3.7)]. [SL(2, K), SL(2, ∗A; Q)] ⊆ E(2, Q).
+                                 Bounded generation                                       415
+
+Proof. Let T be an arbitrary element of SL(2, ∗A; Q). Applying (5.19), with ∗A in
+the role of A, yields a nonzero ideal Q ⊆ Q, such that
+(5.22)                           T −1 E(2, Q ) T ⊆ E(2, Q).
+We may assume Q is principal, by passing to a smaller ideal. We may write T =
+XE, with X ∈ SL(2, ∗A; Q ) and E ∈ E(2, Q) (by Vaserstein’s Lemma 1 (5.6) and
+the fact that SL(2, ∗A; Q) = SSL(2, ∗A; Q) (see 5.4)). Let u0 be a unit in A satisfying
+the unit property 4.3(2) (with r = 1), so there exist E1 , . . . , Ex ∈ LU(2, Q ), such
+that
+           H(u0 )−1 XH(u0 ) = E1 XE2 · · · Ex ∈ E1 T E(2, Q) = T E(2, Q).
+Then
+                                                                 
+      H(u0 )−1 T H(u0 ) = H(u0 )−1 XH(u0 ) H(u0 )−1 EH(u0 ) ∈ T E(2, Q).
+Hence, H(u0 ) is in the kernel of the action on SL(2, ∗A; Q)/ E(2, Q). Since SL(2, K)
+is the smallest normal subgroup of GL(2, K) containing H(u0 ), this implies that
+all of SL(2, K) is in the kernel.                                                   
+(5.23) Corollary [CKP, (3.10)]. We have:
+                           
+   (1) E(2, A), SL(2, A; q) ⊆ E (2, A; q).
+   (2) E (2, A; q) is normal in SL(2, A; q).
+Proof. (1) We have SL(2, ∗A; ∗q) = E (2, ∗A; ∗q) SL(2, ∗A; Q) (see 2.15). For T ∈
+E(2, A), we have
+    [T, ∗ SL(2, A; q)] ⊆ [E(2, A), SL(2, ∗A; ∗q)]
+                      = [E(2, A), E (2, ∗A; ∗q)][E(2, A), SL(2, ∗A; Q)]
+                      ⊆ E (2, ∗A; ∗q)] E(2, Q)                               (by 5.21)
+                                 ∗   ∗
+                      = E (2, A; q)
+                             
+
+                         ∗
+                      ⊆ E (2, A; q).
+By Leibniz’ Principle, then [T, SL(2, A; q)] ⊆ E (2, A; q). This completes the proof
+of the ﬁrst half of the corollary.
+   (2) Since E (2, A; q) ⊆ E(2, A), part (1) implies
+                        [E (2, A; q), SL(2, A; q)] ⊆ E (2, A; q),
+so E (2, A; q) is normal.                                                                 
+(5.24) Corollary [CKP, (3.11)]. If y is a nonzero element of A, and (a, b) ∈ W (Q),
+then                                          
+                                 by 2        b
+                                         =        .
+                                  a Q        a Q
+Proof. Because E(2, Q) ⊆ E (2, ∗A; Q), we see, from (5.21), that
+                        [SL(2, K), SL(2, ∗A; Q)] ⊆ E (2, ∗A; Q).
+Therefore                                                             
+                   by 2     a by 2       y   0   a b y −1             0
+                          ≡          =
+                    a Q     ∗ ∗          0 y −1 ∗ ∗        0          y
+                                        
+                            a b        b
+                          ≡       ≡        mod E (2, ∗A; Q).                              
+                            ∗ ∗        a Q
+416                              Dave Witte Morris
+
+Proof of Theorem 5.13. We have:
+                          
+    • E(2, A), SL(2, A; q) ⊆ E (2, A; q) (see 5.23) and
+      ∗            
+    •   by 2 = ∗ b for all (a, b) ∈ W (Q) and all nonzero y ∈ A (see 5.24),
+         a          a q
+               q
+                                 
+so Proposition 5.7 implies that     is a well-deﬁned Mennicke symbol. Therefore,
+                                      q
+its range SL(2, A; q)/ E (2, A; q) is isomorphic to a quotient of the universal Men-
+nicke group C(q), so the desired conclusion is immediate from Theorem 3.11. 
+                                                                         
+                                              y −1 0
+(5.25) Remark [CKP, (3.18)]. For T =                    , the fact that        is a Mennicke
+                                                0    1                       Q
+symbol (cf. proof of Theorem 5.13) implies
+                                                                      
+         −1 b           by          by(1 − a)            b      y(1 − a)
+       T         T =           =                    =
+            a Q          a Q              a       Q      a Q        a      Q
+                                                                              
+                        b               a − 1               b                    b
+                    =           T −1              T =            (T −1 1 T ) =       ,
+                        a Q               a     Q           a Q                  a Q
+so T acts trivially on SL(2, ∗A; Q)/ E(2, Q). Combining this with (5.21) yields the
+conclusion that all of GL(2, K) acts trivially.
+
+§5D. Bounded generation in SL(2, BS −1 ). We now deduce Theorem 1.2 under
+the assumption that n = 2. (See Theorem 3.13 for the case n ≥ 3.)
+(5.26) Theorem (cf. [CKP, (3.19)]). Let:
+     • K be an algebraic number ﬁeld,
+     • k be the degree of K over Q,
+     • B be an order in K,
+     • S be a multiplicative subset of B, and
+     • q be an ideal in BS −1 .
+If BS −1 has inﬁnitely many units, then:
+   (1) LU(2, BS −1 ) boundedly generates E(2, BS −1 ).
+   (2) The set LU (2, BS −1 ; q) boundedly generates E (2, BS −1 ; q).
+More precisely, there is a positive integer r, depending only on n and k, such that
+                                                       
+       LU(2, BS −1 ) r = E(2, BS −1 ) and LU (2, BS −1 ) r = E (2, BS −1 ; q).
+  To establish the above result, note that Theorem 5.13 applies to the above sit-
+uation (by 3.5, 3.9, 4.4, and 4.6), so the desired conclusion follows from the Com-
+pactness Theorem (see 2.8).
+
+6. Bounded generation of normal subgroups
+(6.1) Theorem (cf. [CKP, (2.7) and (3.21)]). Let:
+     • n be a positive integer,
+     • K be an algebraic number ﬁeld,
+     • k be the degree of K over Q,
+     • B be an order in K, and
+     • S be a multiplicative subset of B.
+Assume that either n ≥ 3 or BS −1 has inﬁnitely many units.
+                                Bounded generation                                      417
+
+   (1) If X  is any subset of SL(n, BS −1 ), such that g −1 X  g = X  , for every
+       g ∈ E(n, BS −1 ) (and X  does not consist entirely of scalar matrices), then
+       X  boundedly generates a ﬁnite-index subgroup of SL(n, BS −1 ).
+   (2) For any ﬁnite-index subgroup Γ of SL(n, BS −1 ), the set LU(n, BS −1 ) ∩ Γ
+       of elementary matrices in Γ boundedly generates a subgroup of ﬁnite index
+       in Γ.
+(6.2) Remark. In the situation of part (1) of the above theorem, we have X  r =
+X  , for some r that depends on k, n, #(A/q), and the minimal number of gen-
+erators of q, where q = q(X  ) is a certain ideal deﬁned in the statement of Propo-
+sition 6.7 below. (The minimal number of generators of q is certainly ﬁnite, since
+BS −1 is Noetherian. In the situation of Theorem 6.1 of the introduction, the
+minimal number of generators of q(X  ) is bounded by n2 · #X .)
+(6.3) Remark. We will use the Compactness Theorem to establish Theorem 6.1,
+but a more straightforward proof can be obtained by applying nonstandard anal-
+ysis. All of the cases are very similar, so let us describe only the proof of 6.1(1)
+                                                                   ∗
+when n ≥ 3. There is some nonzero (principal) ideal q of BS −1 , such that ∗X  
+contains E (n, A; q ) (see Theorem 6.4 below). From Theorem 3.12, we know that
+SL(n, ∗A; q )/ E (n, ∗A; q ) is ﬁnite. Furthermore, since SL(n, A)/ SL(n, A; q) is ﬁnite,
+for every nonzero ideal q of A, Leibniz’ Principle implies that SL(n, ∗A)/ SL(n, ∗A; q )
+is ∗-ﬁnite. Therefore, the coset space SL(n, ∗A)/ E (n, ∗A; q ) is ∗-ﬁnite, which means
+there is a ∗-ﬁnite set Ω, such that E (n, ∗A; q )Ω = SL(n, ∗A). Then
+                     ∗
+                     X   ⊆ SL(n, ∗A) = E (n, ∗A; q )Ω ⊆ ∗X   Ω,
+so the desired bounded generation follows from (4 ⇒ 1) of Proposition 2.29.
+
+§6A. Part 1 of Theorem 6.1. When n ≥ 3, the proof of 6.1(1) is based on the
+following description of normal subgroups of SL(n, A).
+(6.4) Theorem (Sandwich Condition [Ba1, Thm. 4.2e], [HOM, 4.2.9, p. 155]).
+Suppose:
+     • A is a commutative ring that satisﬁes the stable range condition SR2 ,
+     • n ≥ 3, and
+     • N is a subgroup of SL(n, A) that is normalized by E(n, A).
+Then there is an ideal q of A, such that:
+   (1) N contains E (n, A; q).
+   (2) Each element of N is congruent to a scalar matrix, modulo q.
+   As a replacement for the Sandwich Condition when n = 2, we have the following
+elementary observation, essentially due to Serre.
+(6.5) Lemma ([CoK, Lem. 1.3], cf. [Se, pp. 492–493]). Suppose:
+     • A is a commutative ring,
+     • N is a subgroup of SL(2, A) that is normalized by E(2, A),
+        a b
+     •          is any element of N , and
+        c d
+     • u is a unit in A, such that u2 ≡ 1 mod cA.
+                         
+Then E 2, A; (u4 − 1)A ⊆ N .
+418                             Dave Witte Morris
+
+   Now 6.1(1) is obtained by applying the Compactness Theorem (see 2.8) to the
+following proposition.
+(6.6) Deﬁnition. The level ideal of a subset X of SL(n, A) is the smallest ideal q of
+SL(n, A), such that the image of X in SL(n, A; q) consists entirely of scalar matrices.
+(6.7) Proposition. Suppose:
+     • j, m, r, , r, z are positive integers.
+     • A is an integral domain satisfying SR1 12 , Gen(2, 1), Gen(2t, r), and Exp(2t, ).
+     • X  is any (nonempty) subset of SL(n, A), such that g −1 X  g = X  , for every
+       g ∈ E(n, A) (and X does not consist entirely of scalar matrices).
+     • If n ≥ 3, then:
+          ◦ q is the level ideal of X  .
+          ◦ There is a j-element subset X0 of X  , such that q is the level ideal of X0 .
+     • If n = 2, then:
+          ◦ A satisﬁes     Unit(r, x) and Conj(z).
+              a b
+          ◦             ∈ X .
+               c d
+          ◦ u is a unit in A, such that u2 ≡ 1 mod cA.
+          ◦ q = (u4 − 1)A.
+     • #(A/q) ≤ m.
+Then X  generates a ﬁnite-index subgroup of SL(n, A).
+Proof. Since X   is obviously normalized by E(n, A), we know, from (6.4) or
+(6.5), that X   contains E (n, A; q). Thus,
+              SL(n, A)    SL(n, A)                    SL(n, A; q)
+          #            ≤#           ≤ #SL(n, A/q) · #           < ∞,
+               X 
+                        E (n, A; q)                  E (n, A; q)
+by (3.12) or (5.13).                                                                
+§6B. Part 2 of Theorem 6.1. In preparation for the proof of 6.1(2), we establish
+some preliminary results. (We need only the corollary that follows.) The following
+theorem is only a special case of a result that is valid for all Chevalley groups, not
+only SL(n, A).
+(6.8) Theorem (Tits [Ti, Prop. 2]). If n ≥ 3 and q is any ideal of any commutative
+ring A, then E (n, A; q2 ) ⊆ E(n, q).
+  See Deﬁnition 5.3 for the deﬁnition of SSL(2, A; q).
+(6.9) Lemma [CKP, (3.8) and (3.20)]. Suppose:
+     • A is as in the statement of Theorem 5.13, and
+     • q is a nonzero ideal in A.
+Then:
+   (1) E(2, q) is a normal subgroup of SSL(2, A; q).
+   (2) If A/q2 is ﬁnite, then E(2, q) contains E (2, A; q ), for some nonzero ideal q .
+Proof. We use nonstandard analysis. (See Notation 5.2 for the deﬁnition of the
+ideal Q.)
+   (1) Let T ∈ SSL(2, A; q) and E1 ∈ LU(2, q). By Vaserstein’s Lemma 1 (5.6), we
+may write T = XE with X ∈ SSL(2, ∗A; Q) and E ∈ E(2, ∗q). Then
+                     [T, E1 ] = [XE, E1 ] = E −1 [X, E1 ]E1−1 EE1 .
+                                 Bounded generation                                  419
+
+It is obvious that E1 , E ∈ E(2, ∗q), and, by (5.21), we have
+                               [X, E1 ] ∈ E(2, Q) ⊆ E(2, ∗q).
+Hence
+                               [T, E1 ] ∈ E(2, ∗q) ⊆ ∗E(2, q).
+By Leibniz’ Principle, [T, E1 ] ∈ E(2, q).
+   (2) Let w1 , . . . , wr be coset representatives for SL(2, A; q2 ) in SL(2, A). For
+each i, we have LU(2, qi A) ⊆ wi−1 E(2, q)wi , for some nonzero qi (see 5.19), so
+                     !
+                     r
+                        −1         
+               H=       wi E(2, q)wi contains LU(2, q1 q2 · · · qr A).
+                     i=1
+
+From (1) (and because SL(2, A; q2 ) ⊆ SSL(2, A; q)), we see that H is the inter-
+section of all of the conjugates of E(2, q), so H is normal. Therefore H contains
+E (2, A; q1 q2 · · · qr A).                                                   
+(6.10) Corollary. Assume the situation of Theorem 6.1. If q is any nonzero ideal
+of BS −1 , then there exist a nonzero ideal q of BS −1 and a positive integer r, such
+that E (n, BS −1 ; q ) ⊆ LU(n, q)r .
+Proof (sketch). We apply a compactness argument to Lemma 6.9(2) (if n = 2) or
+Theorem 6.8 (if n ≥ 3). These results show (under appropriate hypotheses) that
+there is an ideal q of A, such that
+                           E (n, A; q ) ⊆ E(n, q) = LU(n, q) .
+By bounded generation of E (n, A; q ) and E(n, A) (cf. 3.13 and 5.26), there is some
+positive integer r0 , such that
+                               $                                  &
+                                       %
+                                                  −1          
+               E (n, A; q ) =
+                 
+                                                  E LU(n, q )E         .
+                                 E ∈ LU(n, A)r0                   r0
+
+
+Thus, the desired result is a consequence of the Compactness Theorem (2.7).            
+Proof of Theorem 6.1(2). Because Γ has ﬁnite index, there is some nonzero
+ideal q of BS −1 , such that E (n, BS −1 ; q) ⊂ Γ. From Theorem 5.13 (if n = 2)
+or Theorem 3.12 (if n ≥ 3), and the fact that SL(n, BS −1 )/ SL(n, BS −1 ; q) is ﬁ-
+nite, we see that
+(6.11)         E (n, BS −1 ; q) is a subgroup of ﬁnite index in SL(n, BS −1 ).
+Thus, we may assume Γ = E (n, BS −1 ; q), so
+                              LU(n, BS −1 ) ∩ Γ = LU(n, q).
+We have E (n, BS −1 ; q ) ⊆ LU(n, q)r , for some nonzero ideal q of BS −1 and some
+positive integer r (see 6.10). Since E (n, BS −1 ; q ) has ﬁnite index in SL(n, BS −1 )
+(see 6.11), this implies LU(n, q) = LU(n, q)r , for some positive integer r .   
+   For n ≥ 3, the bounded generation of normal subgroups also remains valid when
+the group SL(n, BS −1 ) is replaced by a subgroup of ﬁnite index (see 6.13).
+(6.12) Theorem (Bak [Bak, Cor. 1.2]). Let:
+     • n ≥ 3,
+     • A be a commutative ring satisfying the stable range condition SR2 ,
+420                               Dave Witte Morris
+
+     • q be a nonzero ideal of A, and
+     • N be a noncentral subgroup of SL(n, A).
+If N is normalized by E (n, A; q), then N contains E (n, A; q ), for some nonzero
+ideal q of A.
+(6.13) Corollary. Let:
+     • n ≥ 3,
+     • K, k, B, and S be as in Theorem 6.1,
+     • Γ be any subgroup of ﬁnite index in SL(n, BS −1 ), and
+     • X  be is any subset of Γ, such that g −1 X  g = X  , for every g ∈ Γ (and X 
+       does not consist entirely of scalar matrices).
+Then X  boundedly generates a ﬁnite-index subgroup of Γ.
+Proof. Applying a compactness argument (as in the proof of Corollary 6.10) to
+the theorem yields the conclusion that there exist a nonzero ideal q of BS −1 and
+a positive integer r, such that E (n, BS −1 ; q ) ⊆ X  r . The proof is completed by
+arguing as in the ﬁnal paragraph of the proof of Theorem 6.1(2), with X  in the
+place of LU(n, q).                                                                      
+
+References
+[AM]    Adian, S. I.; Mennicke, J. On bounded generation of SLn (Z). Internat. J. Algebra
+        Comput. 2 (1992), no. 4, 357–365. MR1189668 (93m:20064), Zbl 0794.20061.
+[Bak]   Bak, Anthony. Subgroups of the general linear group normalized by relative elementary
+        groups. Algebraic K-Theory, PartII (Oberwolfach, 1980), 1–22, Lecture Notes in Math.,
+        967, Springer, New York, 1982. MR0689387 (84f:20049), Zbl 0536.20030.
+[Bar]   Bardakov, V. G. On the decomposition of automorphisms of free modules into simple
+        factors. Izv. Ross. Akad. Nauk Ser. Mat. 59 (1995), no. 2, 109–128; translation in Izv.
+        Math. 59 (1995) 333–351. MR1337161 (96f:20067), Zbl 0896.20031.
+[Ba1]   Bass, H. K-theory and stable algebra. Inst. Hautes Études Sci. Publ. Math. 22 (1964)
+        5–60. MR0174604 (30 #4805), Zbl 0248.18025.
+[Ba2]   Bass, Hyman. Algebraic K-theory. Benjamin, New York, 1968. MR0249491 (40 #2736),
+        Zbl 0174.30302.
+[BMS]   Bass, H.; Milnor, John W.; Serre, Jean-Pierre Solution of the congruence subgroup
+        problem for SLn (n ≥ 3) and Sp2n (n ≥ 2), Inst. Hautes Études Sci. Publ. Math. 33
+        (1967) 59–137. MR0244257 (39 #5574), Zbl 0174.05203.
+[CK1]   Carter, David; Keller, Gordon. Bounded elementary generation of SLn (O) Amer. J.
+        Math. 105 (1983) 673–687. MR0704220 (85f:11083), Zbl 0525.20029.
+[CK2]   Carter, David; Keller, Gordon. Elementary expressions for unimodular matrices.
+        Comm. Algebra 12 (1984) 379–389. MR0737253 (86a:11023), Zbl 0572.20030.
+[CKP]   Carter, David; Keller, Gordon; Paige, Eugene. Bounded expressions in SL(n, A).
+        Unpublished.
+[CW]    Cooke, George; Weinberger, Peter J. On the construction of division chains in
+        algebraic number rings, with applications to SL2 . Comm. Algebra 3 (1975) 481–524.
+        MR0387251 (52 #8094), Zbl 0315.12001.
+[CoK]   Costa, Douglas L.; Keller, Gordon E. On the normal subgroups of SL(2, A). J. Pure
+        Appl. Algebra 53 (1988) 201–226. MR0961360 (89h:20069), Zbl 0654.20051.
+[DV]    Dennis, R. K.; Vaserstein, L. N. On a question of M. Newman on the number of
+        commutators. J. Algebra 118 (1988) 150–161. MR0961333 (89k:20062), Zbl 0649.20048.
+[ER1]   Erovenko, Igor V.; Rapinchuk, Andrei S. Bounded generation of some S-arithmetic
+        orthogonal groups. C. R. Acad. Sci. Paris Sér. I Math. 333 (2001), no. 5, 395–398.
+        MR1859225 (2002g:20083), Zbl 1010.20033.
+[ER2]   Erovenko, Igor V.; Rapinchuk, Andrei S. Bounded generation of S-arithmetic sub-
+        groups of isotropic orthogonal groups over number fields. Preprint, 2005.
+                                 Bounded generation                                       421
+
+[GS]  Grunewald, Fritz J.; Schwermer, Joachim. Free nonabelian quotients of SL2 over
+      orders of imaginary quadratic numberfields. J. Algebra 69 (1981) 298–304. MR0617080
+      (82i:10027), Zbl 0461.20026.
+[HOM] Hahn, Alexander J.; O’Meara, O. Timothy. The classical groups and K-theory.
+      With a foreword by J. Dieudonné. Grundlehren der Mathematischen Wissenschaften, 291.
+      Springer, New York, 1989. MR1007302 (90i:20002), Zbl 0683.20033.
+[Li]  Liehl, Bernhard. Beschränkte Wortlänge in SL2 . Math. Z. 186 (1984) 509–524.
+      MR0744962 (86b:11034), Zbl 0523.20028.
+[LM] Loukanidis, D.; Murty, V. K. Bounded generation for SLn (n ≥ 2) and Spn (n ≥ 1).
+      Preprint.
+[Mu]  Murty, V. Kumar. Bounded and finite generation of arithmetic groups. Number theory
+      (Halifax, NS, 1994), 249–261, CMS Conf. Proc., 15, Amer. Math. Soc., Providence, RI,
+      1995. MR1353937 (96g:11039), Zbl 0851.11026.
+[Os]  Ostmann, Hans-Heinrich. Additive Zahlentheorie. 2. Spezielle Zahlenmengen. Ergeb-
+      nisse der Mathematik und ihrer Grenzgebiete, 11. Springer, Berlin, 1956. MR0268112 (42
+      #3011), Zbl 0072.03102.
+[Ra]  Rapinchuk, A. S. The congruence subgroup problem for arithmetic groups of bounded
+      generation (Russian). Dokl. Akad. Nauk SSSR 314 (1990) 1327–1331; translation in Soviet
+      Math. Dokl. 42 (1991), no. 2, 664–668. MR1088588 (92b:20053).
+[Se]  Serre, Jean-Pierre. Le problème des groupes de congruence pour SL2 . Ann. of Math.
+      (2) 92 (1970) 489–527. MR0272790 (42 #7671).
+[Sh]  Shalom, Yehuda. Bounded generation and Kazhdan’s property (T ). Inst. Hautes Études
+      Sci. Publ. Math. 90 (1999) 145–168. MR1813225 (2001m:22030), Zbl 0980.22017.
+[SS]  Sivatski, A. S.; Stepanov, A. V. On the word length of commutators in GLn (R). K-
+      Theory 17 (1999) 295–302. MR1706109 (2001b:20081), Zbl 0935.20037.
+[SV]  Stepanov, Alexei; Vavilov, Nikolai. Decomposition of transvections: a theme with
+      variations. K-Theory 19 (2000) 109–153. MR1740757 (2000m:20076), Zbl 0944.20031.
+[SL]  Stroyan, K. D.; Luxemburg, W. A. J. Introduction to the theory of infinitesimals. Pure
+      and Applied Mathematics, No. 72. Academic Press, New York, 1976. MR0491163 (58
+      #10429), Zbl 0336.26002.
+[Ta1] Tavgen’, O. I. Bounded generation of Chevalley groups over rings of algebraic S-integers
+      (Russian). Izv. Akad. Nauk SSSR Ser. Mat. 54 (1990), no. 1, 97–122, 221–222; translation
+      in Math. USSR-Izv. 36 (1991), no. 1, 101–128. MR1044049 (91e:20036), Zbl 0709.20024.
+[Ta2] Tavgen’, O. I. Finite width of arithmetic subgroups of Chevalley groups of rank ≥ 2
+      (Russian). Dokl. Akad. Nauk SSSR 310 (1990), no. 4, 802–806; translation in Soviet
+      Math. Dokl. 41 (1990), no. 1, 136–140. MR1047534 (91h:11029), Zbl 0716.20026.
+[Ti]  Tits, Jacques. Systèmes générateurs de groupes de congruence. C. R. Acad. Sci. Paris,
+      Sér. A 283 (1976) 693–695. MR0424966
+                                        `     ´ (54 #12924), Zbl 0408.20028.
+[vdK] van der Kallen, Wilberd. SL3 C[X] does not have bounded word length. Algebraic
+      K-Theory, Part I (Oberwolfach, 1980), 357–361, Lecture Notes in Math., 966, Springer,
+      New York, 1982. MR0689383 (84b:20037), Zbl 0935.20501.
+[Va]  Vaseršteı̆n, L. N. On the group SL2 over Dedekind rings of arithmetic type (Russian).
+      Mat. Sb. (N.S.) 89(131) (1972), 313–322, 351; translation in Math. USSR Sb. 18 (1972),
+      321–332. MR0435293 (55 #8253), Zbl 0359.20027.
+[Za]  Zakir’yanov, K. Kh. Symplectic groups over rings of algebraic integers have finite width
+      over the elementary matrices. Algebra i Logika 24 (1985) 667–673, 748; translation in
+      Algebra Logic 24 (1985) 436-440. MR0853775 (87j:20077), Zbl 0603.20043.
+
+Department of Mathematics and Computer Science, University of Lethbridge, Leth-
+bridge, Alberta T1K 3M4, Canada
+Dave.Morris@uleth.ca http://people.uleth.ca/˜dave.morris/
+
+This paper is available via http://nyjm.albany.edu/j/2007/13-17.html.
+

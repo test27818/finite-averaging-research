@@ -1,0 +1,1620 @@
+                                                   P -ADIC PATH SET FRACTALS AND ARITHMETIC
+arXiv:1210.2478v4 [math.MG] 13 Dec 2013
+
+
+
+
+                                                               WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+                                                   Abstract. This paper considers a class of closed subsets of the p-adic integers
+                                                   Zp obtained by graph-directed constructions analogous to that of Mauldin and
+                                                   Williams over the real numbers. These sets are characterized as the collection
+                                                   of those p-adic integers whose points have p-adic expansions describable by
+                                                   paths in the graph of a ﬁnite automaton issuing from a distinguished initial
+                                                   vertex. This paper shows that this class of sets is closed under the arithmetic
+                                                   operations of addition and multiplication by p-integral rational numbers. In
+                                                   addition the Minkowski sum (under p-adic addition) of two sets in this class is
+                                                   shown to be a set in this class. These results represent purely p-adic phenomena
+                                                   in that analogous closure properties do not hold over the real numbers. We
+                                                   also show the existence of computable formulas for the Hausdorﬀ dimensions
+                                                   of such sets.
+
+
+
+
+                                                                               1. Introduction
+                                             This paper studies a distinguished collection C(Zp ) of closed subsets of the p-adic
+                                          integers Zp , whose members Y are specified as sets of p-adic integers whose p-adic
+                                          expansions are given by infinite labeled paths starting from a fixed initial state of a
+                                          a finite automaton, with edge labels specifying p-adic digits. We term such sets p-
+                                          adic path set fractals, because they generally have non-integer Hausdorff dimension,
+                                          and because they may be constructed geometrically in a fashion analogous to that
+                                          of the (real-valued) geometric graph-directed fractals of Mauldin and Williams [27],
+                                          [28], as explained in Section 2.
+                                             The set of edge-labeled infinite paths in the graph of an automaton which start
+                                          from a fixed state can be studied abstractly in terms of one-sided symbolic dy-
+                                          namics, as we consider elsewhere ([2]). Each such set defines a subset XG (v) of
+                                          the symbol space AN , where A is a finite symbol alphabet, which is specified by
+                                          a presentation (G, v), in which G is a labeled directed graph with edges labeled
+                                          by elements of A, and v is a marked initial vertex of G. We call XG (v) an (ab-
+                                          stract) path set. Path sets are closed subsets of the compact set AN endowed with
+                                          the product topology, but they are generally not invariant under the (one-sided)
+                                          shift σ : AN → AN given by σ(α0 , α1 , α2 , · · · ) = (α1 , α2 , α3 , · · · ). The collection
+                                          of path sets is closed under set union and set intersection, but is not closed under
+                                          complementation inside the symbol space AN .
+                                             A p-adic path set fractal Y is the image of an abstract path set embedded as a
+                                          geometric object inside a p-adic space Zp , using the symbol sequence to obtain the
+                                          p-adic digit labeling. More precisely, Y = fp (XG (v)) ⊂ Zp where fp : AN → Zp is a
+
+                                             Date: November 10, 2013.
+                                             2010 Mathematics Subject Classification. Primary: 11K55, Secondary: 11S82, 28A80, 37B10.
+                                             Key words and phrases. p-adic arithmetic, ﬁnite automata, graph-directed systems, Hausdoﬀ
+                                          dimension.
+                                             Work of the second author was partially supported by NSF grant DMS-1101373.
+                                                                                          1
+2                      WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+(continuous) map that sends a symbol sequence to a set of p-adic digits, using a digit
+assignment map f¯p : A → {0, 1, ..., p− 1}. The digit assignment map f¯p need not be
+one-to-one, consequently a given abstract path set XG (v) has embeddings into each
+Zp for every prime p, moreover it typically has different embeddings into a fixed Zp ,
+giving rise to different p-adic path set fractals. In the reverse direction any given
+p-adic path set fractal can be obtained as the image of different abstract path sets
+using different digit assignment maps. However any p-adic path set fractal Y can
+always be obtained by a one-to-one embedding from a suitably chosen path set on
+the fixed alphabet A = {0, 1, ..., p − 1}, see Proposition 2.9 below. We call the data
+(f¯p , G, v) a presentation of the p-adic path set fractal, and write Y := (f¯p , G, v).
+    The initial part of this paper gives a formula for the Hausdorff dimension of such
+a set Y in terms of the spectral radius of the adjacency matrix of an underlying
+automaton of a suitable presentation of Y , described in Section 3. The Hausdorff
+dimension of Y = fp (XG (v)) depends on the underlying path set XG (v), the value
+of p, and on the digit assignment map fp . We obtain the formula by relating
+the p-adic constructions of this paper to the real number constructions of Mauldin
+and William, which permit carrying over their formulas for Hausdorff dimension of
+(real) graph-directed fractals to the p-adic case.
+    The main object of this paper is to show that the collection of p-adic path set
+fractals C(Zp ) is closed under the following operations using p-adic arithmetic:
+      (1) p-adic addition of a rational number r ∈ Q∩Zp ; such r are called p-integral.
+      (2) p-adic multiplication by a p-integral rational number r;
+      (3) set-valued addition (Minkowski sum) of two p-adic path sets, using p-adic
+           addition.
+These closure results represent purely p-adic phenomena in the sense that analogous
+closure results for applying real arithmetic operations1 fail to hold for Mauldin-
+Williams graph-directed fractals over the real numbers. We show that the finite
+automata describing the new sets given by these operations are effectively com-
+putable; these new automata depend on the input automata and on the value of p
+in a complicated way having a number-theoretic flavor.
+1.1. Results. As a preliminary to p-adic results, in Section 2 we review the Mauldin-
+Williams construction of graph-directed fractals over the real numbers. We then
+formulate an alternate definition of p-adic path set fractals, defining them geomet-
+rically as sets given by a solution of a set-valued functional equation using p-adic
+contracting maps (Theorem 2.6 and Definition 2.7). That is, they are characterized
+as a set-valued fixed point of a p-adic graph-directed fractal construction. Then we
+establish the equivalence of this geometric definition to the symbolic dynamics defi-
+nition given above, in terms of p-adic expansions describable by a finite automaton,
+i.e. the image of a path set in Zp under a digit assignment map. (Theorem 2.10).
+    To state results, we need some additional terminology on presentations.
+     (1) A presentation Y := (f¯p , G, v) of a p-adic path set fractal is injective if the
+         digit assignment map f¯p is one to one.
+     (2) A path set presentation (G, v) is right-resolving if the directed graph under-
+         lying G has the property that at each vertex of the graph, all exiting edges
+         have different labels.
+   1That is, for addition to and multiplication of a set by rational numbers, or for the Minkowski
+sum of two sets.
+                    P -ADIC PATH SET FRACTALS AND ARITHMETIC                           3
+
+
+    (3) A path set presentation (G, v) is reachable if every vertex in G can be reached
+         by a directed path from v.
+All p-adic path set fractals Y have presentations that are injective, right-resolving
+and reachable, see Proposition 2.9. We call any such presentation a standard pre-
+sentation. In a standard presentation one may always choose to relabel the symbol
+alphabet A = {0, 1, 2, ..., p − 1}, and choose the digit assignment map to be the
+identity map.
+   Our first result concerns the Hausdorff dimension dH (Y ) of a p-adic path set
+fractal Y = fp (XG (v)). We show that dH (Y ) is directly computable from a suitable
+presentation of Y as a p-adic path set fractal, and is of an expected form.
+Theorem 1.1. (Hausdorff dimension) Let Y belong to C(Zp ) and let Y := (f¯p , G, v0 )
+be any standard presentation. Then its Hausdorff dimension dH (Y ) is given by
+                                                   log σ(A(G))
+                        dH (Y ) = logp σ(A(G)) =               ,
+                                                       log p
+where σ(A) denotes the spectral radius of the adjacency matrix A = A(G) := [ai,j ],
+of G, in which ai,j counts the number of directed edges from vertex i to vertex j of
+the underlying directed graph of G.
+   This result is proved in Section 3, where it is deduced from a result relating
+these sets to real number graph-directed fractals (Theorem 3.1), where a similar
+Hausdorff dimension formula has long been known. We use the fact that Hausdorff
+dimension is preserved under the map taking a p-adic expansion of a p-adic integer
+to the base p radix expansion of a real number. We show that the image of the
+p-adic objects studied here are construction sub-objects of particular real number
+constructions of Mauldin and Williams.
+   The main results of this paper concern p-adic arithmetic operations applied to
+p-adic path set fractals. We begin with addition of p-adic rationals.
+Theorem 1.2. (Closure under rational addition) Let Y belong to C(Zp ). Then for
+any p-integral rational number r ∈ Q ∩ Zp , the additively shifted set
+                               Y + r := {y + r : y ∈ Y }
+has Y + r ∈ C(Zp ).
+   The proof of this result is constructive and shows that given a standard pre-
+sentation Y := (īp , G, v) one can directly compute from it a standard presentation
+Y + r := (īp , G ′ , v ′ ). The new presentation depends on both r ∈ Q and the value of
+p.
+   Theorem 1.2 also follows as a special case of the following result.
+Theorem 1.3. (Closure under Minkowski sum) Let Y1 , Y2 ∈ C(Zp ) be two p-adic
+path set fractals in Zp . Then their Minkowski sum-set
+                        Y1 + Y2 := {y1 + y2 : y1 ∈ Y1 , y2 ∈ Y2 }
+has Y1 + Y2 ∈ C(Zp ).
+   The proof of this result is constructive and shows that given standard presen-
+tations for Y1 := (īp , G1 , v1 ) and Y2 = (īp , G2 , v2 ) one can directly construct a
+(not necessarily standard) presentation Y1 + Y2 = (īp , G3 , v3 ). In the given con-
+struction the underlying path set presentation (G3 , v3 ) produced is not necessarily
+4                   WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+right-resolving. However there exist standard algorithms to convert any given path
+set presentation to one that is right-resolving, see [2, Theorem 3.2].
+   The statement of Theorem 1.2 can be recovered from Theorem 1.3 as the spe-
+cial case that the set Y2 is a one-element set, using the easy observation that the
+only path sets in Zp consisting of a single element are those where this element is a
+rational r ∈ Q ∩ Zp (Theorem 2.11). However the presentation obtained by the con-
+struction of Theorem 1.3 is not necessarily right-resolving, while the construction
+given in the proof of Theorem 1.2 is right-resolving.
+   We next consider multiplication by p-adic rationals.
+Theorem 1.4. (Closure under rational multiplication) Let Y belong to C(Zp ).
+Then for any rational number r ∈ Q ∩ Zp , the dilated set
+                                  rY := {ry : y ∈ Y }
+has rY ∈ C(Zp ).
+   We prove this result in Section 5. This proof is constructive in the same sense as
+Theorem 1.1; given a standard presentation for Y there is (in principle) an algorithm
+to find a standard presentation for rY . Theorem 1.4 is obtained by concatenation
+of constructions for several special cases, as follows.
+     (1) r = M is a positive integer with gcd(p, M ) = 1. A positive integer has an
+         infinite p-adic expansion with a finite pre-period and a periodic part with
+         all digits 0.
+               1
+     (2) r = M    is the inverse of a positive integer M with gcd(p, M ) = 1;
+     (3) r = −1. Note that −1 has a purely periodic nonterminating p-adic expan-
+         sion of period 1:
+                           X∞
+                     −1 =      (p − 1)pk = (· · · , p − 1, p − 1, p − 1)p .
+                        k=0
+
+    (4) r = pk , for k ≥ 1.
+   Finally we note that, at the level of symbolic dynamics, the arithmetic operations
+are not compatible with the one-sided shift operation. That is, if Y is a p-adic path
+set which is invariant under the one-sided shift σp : Zp → Zp defined by
+                                  X∞            ∞
+                                                X
+                              σp (   αj pj ) :=   αj+1 pj ,
+                                 j=0           j=0
+
+then in general the sets Y + r, rY (for p-integral rational r) will not be invariant
+under the one-sided shift σp .
+1.2. Extensions and generalizations. In Theorem 1.1 we give a formulas for
+Hausdorff dimension of the resulting p-adic path set fractals in terms of the spectral
+radius of a nonnegative integer matrix specifying the graph of the underlying path
+set. This formula might initially appear unnecessary in the context of the p-adic
+arithmetic operations studied, because given any set X ⊂ Zp and any nonzero
+α ∈ Zp , rational or not, the sets X, X + α and αX all have the same Hausdorff
+dimension. This fact follows since both sets X +α and αX are images of X under bi-
+Lipschitz mappings in the p-adic metric. In this context, the usefulness of Theorem
+1.1 lies rather in the opposite direction: using it, the known equality of Hausdorff
+dimensions yields the equality of the spectral radii of two quite different appearing
+nonnegative matrices, usually of different sizes.
+                   P -ADIC PATH SET FRACTALS AND ARITHMETIC                           5
+
+
+   It is of interest that the constructions of this paper will, when given a fixed set X
+as input, by varying r yield infinite classes of nonnegative integer matrices having a
+fixed spectral radius. This spectral radius always equals the largest real eigenvalue,
+which is a particular type of real algebraic integer called a weak Perron number.
+Here a weak Perron number is a (positive real) n-th root of a Perron number for
+some n ≥ 1, cf. Lind [21], [22]. A Perron number is a real algebraic integer β > 1,
+all of whose algebraic conjugates β σ are smaller in modulus, i.e. |β σ | < β. Such
+classes of matrices may be worth further study in connection with number theoretic
+problems, see Section 7.
+   The constructions of this paper can be combined with other operations which
+preserve the property of being a p-adic path set fractal but which do change the
+Hausdorff dimension. For example, path sets are closed under set union and set
+intersection ([2, Theorem 1.2]), with the new path set presentations being effectively
+computable from the given ones. Set union changes the Hausdorff dimension in a
+predictable way, with the new set having dimension equal to the maximum of the
+two dimensions, however set intersection changes Hausdorff dimension in seemingly
+unpredictable ways. Given presentations of p-adic path set fractals Y1 and Y2 one
+can, in principle, compute the Hausdorff dimensionTof intersections ofTadditive and
+multiplicative translates of these sets, such as Y1 (Y2 + r) and Y1 (rY2 ). This
+study was undertaken to answer questions of this kind that arose in connection with
+a problem of Erdős, see Erdős [12], and papers [19], [3] of the authors. Computed
+examples in [3] illustrate that the Hausdorff dimensions of sets Y ∩ (Y + r) and
+Y ∩rY vary with r, and the dependence on r of these Hausdorff dimensions appears
+to be extremely complicated, with interesting structure.
+   The class C(Zp ) of p-adic path set fractals are closed under another operation:
+decimation, i.e. extracting a fixed arithmetic progression of their p-adic digits. We
+set
+                 ψj,m (α0 , α1 , α2 , · · · ) = (αj , αj+m , αj+2m , αj+3m , · · · ).
+and the define the (j, m)-decimated set
+                            ψj,m (Y ) = {ψj,m (x) : x ∈ Y },
+The fact that ψj,m (Y ) set belongs to C(Zp ) if Y does follows at the path set level
+from [2, Theorem 1.5], which shows that a presentation of ψj,m (Y ) is effectively
+computable given a standard presentation of Y . Study of the effect of decimation
+operations on Hausdorff dimension of the images seems an interesting topic for
+further research.
+   There are a number of directions for further generalization. The methods of this
+paper apply to arithmetic operations applied to the g-adic numbersQfor arbitrary g ≥
+2, as defined by Mahler [25]. As a topological space one has Zg = p|g Zp . However
+when g contains prime powers one would use a g-adic expansion corresponding to
+the alphabet A = {0, 1, · · · , g − 1}.
+   A second generalization is to allow sets in the p-adic numbers Qp , in which
+case addition or multiplication of arbitrary rational numbers would be permitted.
+One may also generalize the notion of p-adic path sets to higher dimensions, which
+would correspond to (Zp )d . In this case one may investigate various relaxations of
+the overlap conditions imposed in the Mauldin-Williams construction. In the real
+number analogue Rn results have been obtained by Ngai and Wang [30] and Das
+and Ngai [9].
+6                       WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+1.3. Contents of the paper. Section 2 recalls Mauldin-Williams constructions,
+gives two equivalent characterizations of p-adic path set fractals, and determines all
+Y ∈ C(Zp ) that contain exactly one element. Section 3 gives formulas for Hausdoff
+dimension of path set fractals. Section 4 proves results on addition of rational
+numbers to p-adic path set fractals, and on set-valued addition of two p-adic path
+set fractals. Section 5 proves results on multiplication of p-adic path set fractals
+by rational numbers. Section 6 presents examples illustrating the results. Section
+7 makes concluding remarks about how the constructions of this paper relate to
+integer matices.
+Acknowledgments. The authors thank the reviewer for helpful comments. W.
+Abram acknowledges the support of an NSF Graduate Research Fellowship.
+
+         2. Relation to Geometric Graph-Directed Constructions
+   We first describe the Mauldin-Williams geometric graph-directed construction
+in the real number case. Then we formulate a (restricted) p-adic analogue to it,
+and show that all p-adic path set fractals are obtained by such a construction,
+and conversely. The final subsection characterizes those p-adic path set fractals
+containing exactly one element.
+2.1. Mauldin-Williams graph-directed constructions. In the 1980’s Mauldin
+and Williams [28] introduced general graph-directed constructions of fractal sets
+over the real numbers, and computed their Hausdorff dimensions, see also Edgar
+[10, Chap. 4]. We follow the notation established in Mauldin and Williams [28].
+Definition 2.1. A geometric graph-directed construction in Rm consists of:
+ (G1) a finite sequence of nonoverlapping2 , compact subsets J1 , . . . , Jn of Rm ,
+       such that each Ji has a nonempty interior,
+ (G2) a directed graph G with vertex set consisting of the integers 1, . . . , n, such
+       that for each pair (i, j) there is at most one directed edge from i to j.
+       Additionally, this graph must have the following properties:
+        (a) For each vertex i, there must be at least one exit edge, i.e. some j
+            such that (i, j) ∈ G,
+        (b) The underlying undirected graph must be connected.
+ (G3) For each graph edge (i, j) there is assigned a similarity map Ti,j : Rm → Rm ,
+       with similarity ratio ti,j such that:
+        (a) for each i, {Ti,j (Jj )|(i, j) ∈ G} is a nonoverlapping family and
+                                    [
+                            Ji ⊇ {Ti,j (Jj )|(i, j) ∈ G}                          (2.1)
+          (b) if the path component of G rooted at the vertex i1 is a cycle: [i1 , . . . , iq , iq+1 =
+              i1 ], then these satisfy the contraction condition
+                                        q
+                                        Y
+                                             tik ,ik+1 < 1.                              (2.2)
+                                       k=1
+   Note that in this construction the similarity maps Ti,j will be applied to map
+sets in the reverse direction to that of the edges of G.
+   Now for each i let K(Ji ) denote the space of compact subsets of Ji , with the
+Hausdorff metric, ρH . Mauldin and Williams prove the following:
+    2Sets J and J overlap if their intersection has a nonempty interior.
+           1     2
+                   P -ADIC PATH SET FRACTALS AND ARITHMETIC                           7
+
+
+Proposition 2.2. For each geometric graph-directed Qn     construction, there exists a
+unique vector of compact sets, (K1 , . . . , Kn ) ∈ i=1 K(Jj ) such that for each i,
+                                [
+                          Ki = {Ti,j (Kj )|(i, j) ∈ G}.                           (2.3)
+
+Proof. This is proved by Mauldin-Williams ([28, Theorem 1, p. 812]), using the
+results of Hutchinson [16]. Note that the maps Ti,j act in the reverse direction to
+that of the edges of G.                                                          
+  The construction object K is then defined by
+                                        n
+                                        [
+                                  K=      Ki .                                    (2.4)
+                                           i=1
+The individual Kj are the construction sub-objects.
+  Our definition of p-adic path sets will correspond to all possible construction
+sub-objects Kv in the Mauldin-Williams construction.
+  Associated to the graph G is an n × n construction matrix A = A(G) (with
+n = |V (G)|) given by
+                              A = A(G) := [ti,j ]1≤i,j≤n ,                  (2.5)
+                                           / G. Now for β > 0, set
+where ti,j is defined to be zero if (i, j) ∈
+                                Aβ = [(ti,j )β ]1≤i,j≤n ,
+and let
+                           Φ(β) := Spectral radius of Aβ .
+This is the largest non-negative eigenvalue of Aβ , by the Perron-Frobenius theorem.
+Mauldin and Williams [27, Theorem 2] observe that for each construction matrix,
+one has
+     (1) Φ(0) ≥ 1,
+     (2) Φ(β) is a continuous, strictly decreasing function of β ≥ 0
+     (3) limβ→∞ Φ(β) = 0.
+It follows that there is a unique value α ≥ 0 such that Φ(α) = 1. They term this
+value the matrix dimension of the matrix A = AG .
+    Mauldin and Williams determine the Hausdorff dimension of the construction
+object K and also of its individual sub-objects Kj . For the construction object K
+it is given as follows.
+Proposition 2.3. For each geometric graph-directed construction, the Hausdorff
+dimension of K, the construction object, is α, where α is the matrix dimension
+of the construction matrix A(G) = [ti,j ]1≤i,j≤n , with n = |V (G)|. That is, it is
+the unique value α ≥ 0 such that the spectral radius σ(Aα ) = 1, where Aβ :=
+[(ti,j )β ]1≤i,j≤n for β > 0.
+Proof. This is Theorem 3 of Mauldin and Williams [28].                               
+   Hausdorff dimension formulas for construction sub-objects Kv involve the strongly
+connected components of the directed graph G, and use matrices which are square
+submatrices of A(G), extracting specified rows and corresponding columns. A
+strongly connected component of a directed graph G is a maximal subgraph that is
+strongly connected (i.e. each vertex in the component is reachable from each other
+vertex in it by a directed path.) We let SC(G) denote the set of strongly connected
+components of the connected graph G. There is a natural partial ordering on SC(G)
+8                    WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+which sets H1  H2 provided there is a directed path in G from a vertex in H1 to
+one in H2 . We let αH denote the matrix dimension of the square submatrix AH of
+the construction matrix AG corresponding to the strongly connected component H
+of G.
+Proposition 2.4. For each geometric graph-directed construction, the following
+hold.
+   (1) The Hausdorff dimension of K, the construction object, is α, where
+                             α = max{αH |H ∈ SC(G)}.
+Furthermore the set K has positive σ-finite Hα measure.
+  (2) The Hausdorff dimension of each construction sub-object Kj is αj , where
+                               αj := max{αH |H ∈ Cj },
+where Cj is the set of strongly connected components of G reachable from vertex
+j. The sub-object Kj has positive σ-finite αj -dimensional Hausdorff measure. This
+measure is finite if and only if {H ∈ Cj |αH = αj } consists of (pairwise) incompa-
+rable elements in the partial order  on SC(G).
+Proof. This statement combines Theorems 4 and 5 of Mauldin-Williams ([28, p.
+814, p. 824]).                                                            
+2.2. p-adic graph-directed constructions. We formulate a p-adic variant of the
+Mauldin-Williams construction inside the compact set Zp as follows.
+Definition 2.5. A (restricted) p-adic graph-directed construction on the p-adic
+integers Zp consists of
+   (P1) a finite sequence of (identical) initial sets Ji = Zp , for 1 ≤ i ≤ n; these sets
+        overlap.
+   (P2) a finite directed labeled graph G = (G, V, E) with vertex set V consisting
+        of the integers 1, 2..., n, with E ⊂ V × V × A, with each labeled edge
+        assigned data (i(e), f (e), je ) in which i(e), f (e) ∈ V denote the initial and
+        final vertices of the directed edge, and the label je ∈ A = {0, 1, ..., p − 1}
+        is drawn from the usual alphabet of p-adic digits. No two edges have the
+        same data (i, f, j). Each vertex of the underlying directed graph G has at
+        least one exit edge.
+   (P3) to the label je is associated a p-adic similarity map φ : Zp → Zp given by
+                                   φe (y) = py + je .
+        This is a contractive mapping in the p-adic metric.
+Note that in this construction the similarity maps φe in (P3) will be applied to sets
+in the direction reverse to that assigned to the directed graph edge e of G, compare
+(2.6) below.
+   This definition differs from the Mauldin-Williams real number graph-directed
+construction in several ways. Firstly, in condition (P1) it starts with initial sets Ji
+that have overlaps, which is forbidden in (G1) of the Mauldin-Williams construc-
+tion. Secondly, in condition (P2) the underlying directed graph G (ignoring labels)
+is permitted to have loops (i(e) = t(e)) and multiple edges (having same i(e), v(e)),
+which are forbidden in (G2). (Mauldin-Williams forbid these conditions in order to
+handle maps having different contraction rations ti,j on different edges.) Thirdly,
+condition (P3) requires that all contraction ratios ti,j be equal, which is a narrower
+                   P -ADIC PATH SET FRACTALS AND ARITHMETIC                           9
+
+
+condition than the Mauldin-Williams condition (G3). Furthermore Condition (P3)
+implies that analogues of conditions (G3) (a), (b) automatically hold, aside from
+the non-overlapping condition:
+    (a) The initial sets Jj = Zp satisfy the condition
+               [
+         Jj ⊇ {φe (Jf (e) ) : e = (i(e), f (e)) has initial vertex i(e) = j}.
+
+   (b) Each map φe is has p-adic contraction ratio te := |p|p = p1 < 1. Thus for
+       [e1 , ..., eq , eq+1 = e1 ] a directed cycle of edges in G, the contracting cycle
+       condition holds:
+                                      Yq
+                                         tI(ej ),f (ej ) < 1,
+                                  j=1
+
+  The following result gives existence and uniqueness for the p-adic construction.
+
+Theorem 2.6. (p-adic Geometric Graph-Directed Construction) Let G = (G, V, E)
+be a connected labeled graph with vertices V = {1, 2, ..., n}, and with edge label
+alphabet A = {0, 1, 2, ..., p − 1}. Then there exist unique nonempty compact sets
+{Ki : i ∈ V }, each contained in Zp , that satisfy the set-valued functional relations,
+for each vertex i ∈ V ,
+                                       [
+                               Ki =          φe (Kf (e) ).                        (2.6)
+                                      {e:i(e)=i}
+
+Proof. This existence and uniqueness of the compact set-valued fixed point (2.6)
+follow from Hutchinson [16, Theorem 3.1]. The Hutchison proof establishes that
+the Ki are obtained by the following iterative process. We start with initial sets
+  (0)
+Ki = Zp , and iteratively define, for each vertex i ∈ V ,
+                           (k+1)                    (k)
+                                        [
+                         Ki       :=          φe (Kf (e) ),
+                                        {e:i(e)=i}
+
+We obtain a sequence of closed sets
+                               (0)       (1)       (2)
+                             Ki      ⊇ Ki      ⊇ Ki      ⊃ ··· ,
+
+and these converge downwards to the compact sets Ki , as n → ∞.                       
+
+Definition 2.7. Any set Y := Ki for some sub-object Ki ⊆ Zp in a (restricted)
+p-adic graph directed system is called a geometric p-adic path set fractal. We denote
+the set of all such Y ⊆ Zp as CG (Zp ).
+
+   In Theorem 2.10 below we will show that this definition gives exactly the same
+class of sets as those defined in the introduction, i.e. CG (Zp ) = C(Zp ).
+   Many different construction pairs (G, v) can produce the same geometric p-adic
+path set fractal Y . One can use this freedom to make good choices for G. For ex-
+ample, one may require G to be right-resolving, and in addition to have at most one
+directed edge between any directed pair of vertices, see the proof of Theorem 3.1(1)
+in Section 3.
+10                    WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+2.3. Path sets and p-adic path set fractals. We now show that geometric p-
+adic path set fractals in Section 2.2 comprise exactly the same sets as the images
+in Zp of abstract path sets under a symbol labeling. We recall a formal definition
+of path set given in [2]. Let AN be the full one-sided shift space on A. A pointed
+graph over an alphabet A consists of a pair (G, v), where G = (G, E) is a finite
+edge-labeled directed graph G, with labeled edges E ⊂ E × A having labels drawn
+from an alphabet A, and v a vertex of G. We let V (G) and E(G) denote the set
+of vertices and directed edges of G, respectively. Following [2] we make a basic
+definition.
+Definition 2.8. For a pointed graph (G, v) its associated (abstract) path set (or
+pointed follower set) P = XG (v) ⊂ AN is the set of all infinite one-sided symbol
+sequences giving the successive labels of all one-sided infinite walks in G issuing
+from the distinguished vertex v. Many different (G, v) may give the same path set
+P, and we call any such (G, v) a presentation of P.
+    Recall that the class C(Zp ) of p-adic path set fractals consists of images fP (P) =
+fp (XG (v)) of a path set P under a digit assignment map f¯p , sending a path address
+to a p-adic expansion. We show that the class C(Zp ) agrees with the geometric class
+CG (Zp ) given by the geometric Mauldin-Williams construction. For this purpose it
+is helpful to know that every element of C(Zp ) has presentation Y := (f¯p , G, v) of
+the special form called a standard presentation in Section 1.1.
+Proposition 2.9. (Standard presentation)
+   (1) Every path set P = XG (v) on an alphabet A has a presentation (G, v) that is
+right-resolving and reachable.
+   (2) Every p-adic path set fractal Y in C(Zp ) has a presentation Y = (f¯p , G, v)
+that is injective, right-resolving and reachable; that is, a standard presentation.
+Furthermore one may specify that the presentation alphabet is A = {0, 1, ..., p − 1}
+with the identity digit assignment map īp .
+Proof. (1) Any path set X on any alphabet A has a right-resolving, reachable pre-
+sentation P = (G, v) on this alphabet, with X = XG (v), by a standard construction,
+see [2, Theorem 3.2].
+   (2) By hypothesis Y ∈ C(Zp ) comes with a presentation Y = fp (XG ′ (v ′ )), on
+an alphabet A′ . Using the digit assignment map f¯p : A′ → {0, 1, ..., p − 1}, we
+may relabel the underlying edges of the graph of G ′ by the image labels in A =
+{0, 1, .., p − 1}, obtaining a labeled directed graph G ′′ with Y = ip (XG ′′ (v ′ )). By (1)
+the path set XG ′′ (v) has another presentation XG (v), in which the new graph G is
+right-resolving and reachable, and uses the same label alphabet A. By inspection
+Y := (īp , G, v ′ ) is still a presentation of Y , and it is injective, right-resolving and
+reachable.                                                                                 
+   Note the one-sided shift space AN , for A = {0, 1, ..., p − 1}, topologized with the
+product topology, is homeomorphic to Zp with its usual p-adic topology, where one
+identifies a symbol sequence α0 α1 α2 · · · ∈ AN with the p-adic expansion
+                             ∞
+                             X
+                        x=      αj pj = (· · · α2 α1 α0 )p ∈ Zp .
+                               j=0
+
+This is exactly the map ip underlying the standard presentation Y = (īp , G, v) of a
+p-adic path set fractal above.
+                    P -ADIC PATH SET FRACTALS AND ARITHMETIC                           11
+
+
+   Now we relate the class C(Zp ) to the geometric class CG (Zp ). To this end we
+note that attached to any labeled directed graph G = (G, V, E) on alphabet A =
+{0, 1, ..., p − 1} there is associated a (restricted) p-adic graph-directed construction,
+(as in Section 2.2) based on the same graph data G = (G, V, E) where the edge label
+j ∈ A is now assigned the map φj (x) = px + j.
+Theorem 2.10. There holds CG (Zp ) = C(Zp ). Specifically:
+   (1) Let Kv ∈ CG (Zp ) be a construction sub-object of a (restricted) p-adic graph
+directed construction with data G = (G, V, E) using edge maps φe = px + je with
+0 ≤ je ≤ p − 1, associated to vertex v of G. Create a path set from the same
+data G(G, V, E), interpreting the edge labels je ∈ A = {0, 1, ..., p − 1}, and let
+Y := ip (XG (v)) be the p-adic path set fractal with presentation Y := (īp , G, v).
+Then Y = Kv . It follows that CG (Zp ) ⊂ C(Zp ).
+   (2) Let Y ∈ C(Zp ) be any p-adic path set fractal. Then it has a standard pre-
+sentation Y = (īp , G, v) with a labeled directed graph G = (G, V, E), having the
+additional property that all vertices of the graph G have at least one exit edge. By
+(1) there is an associated (restricted) p-adic graph directed construction having a
+sub-object Kv , with Y = Kv . Thus C(Zp ) ⊂ CG (Zp ).
+Proof. (1) The correspondence between Kv and Yv proceeds by relating paths to the
+address labels of points in the graph-directed fractal, compare Edgar [10, Section
+                                          (k)
+4.3]. We study the set-valued iteration Ki given in Theorem 2.6 for the geometric
+p-adic path set fractal determined by G = (G, V, E). We prove by induction on k ≥ 0
+that for all vertices i
+                    (k)
+                          [                                           
+                  Ki :=       (α0 + α1 p + · · · + αk−1 pk−1 ) + pk Zp
+
+where the set union is taken over label sequences (α0 , ..., αk−1 ) of legal walks in the
+directed graph G of length k starting from vertex i. (The edge leaving the initial
+vertex i has label α0 .) The hypothesis that an exit edge exists from each vertex
+guarantees that all paths extend one step. The base case k = 0 holds since all
+  (0)                                          (k+1)
+Ki = Zp . For the induction step, we have Ki         is comprised of sets
+                                              k−1
+                              (k)
+                                              X
+                        φe (Kf (e) ) = je +         αi pi+1 + pk+1 Zp
+                                              i=0
+
+where (α0 , ..., αk−1 ) are labels from a directed walk in G starting from vertex f (e).
+But now (je , α0 , ..., αk−1 ) are vertices of a directed walk of length k + 1 starting
+from vertex i, and all such walks are enumerated this way. This completes the
+induction step. Letting k → ∞, for each vertex i these sets decrease to Ki , which
+is now identified with all infinite walks in G starting from vertex i. Choosing i to
+be the original marked vertex, we obtain Ki = īp (XG (v)) = Yv , as asserted.
+     (2) Given a p-adic path set fractal Y we take a standard form presentation Y =
+(īp , G ′ , v). We now prune the graph G ′ to remove any vertices with no exit edges,
+since such vertices contribute no infinite paths to the path set P = XG (v), and leave
+Y unchanged. The new graph may still have vertices with no exit edges, but by
+repeating this operation a finite number of times, we will arrive at a presentation
+Y = (īp , G, v) in which all vertices have at least one exit edge. The right-resolving
+and reachability properties are unaffected, so the new presentation is still standard.
+The construction of part (1) now applies to give the result.                          
+12                  WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+   It is known that the class of path sets on a fixed alphabet is closed under finite
+unions and intersections ( [2, Theorem 1.1]). Theorem 2.10 implies that the collec-
+tion of p-adic path set fractals C(Zp ) is closed under set union and intersection as
+well.
+2.4. One element p-adic path set fractals. We characterize path sets consisting
+of a single element.
+Theorem 2.11. (Single element p-adic path set fractals) The p-adic path set frac-
+tals Y ∈ C(Zp ) that consist of a single element are exactly those Y = {r} for which
+r is a p-integral rational number, i.e. r ∈ Q ∩ Zp .
+Remark 2.12. This simple result supplies a dynamical characterization of the p-
+integral rational numbers r inside Zp .
+Proof. Given a p-adic path set fractal Y , assume it is given with a standard pre-
+sentation (īp , G, v0 ). Using the pruning construction used in proving Theorem 2.10
+we may without loss of generality assume each vertex in G has at least one exit
+edge. Such a presentation has an underlying path set XG (v0 ) consisting of a single
+infinite path if and only if there is exactly one exit edge from each vertex, and if
+the path is eventually periodic. The latter forces any element r to be a rational
+number in Zp . Conversely, we may easily construct a path set consisting of a single
+element giving the p-adic expansion of r.                                          
+
+            3. Hausdorff Dimension of p-adic path set fractals
+   We obtain a formula for the Hausdorff dimension of a p-adic path set fractal Y ,
+computable from a standard form presentation of Y . The formula is based on a
+Hausdorff dimension relation between p-adic path set fractals and graph-directed
+constructions on the real numbers.
+   To state the result, we note that the adjacency matrix A = A(G) of a directed
+graph G is a non-negative integer matrix whose rows and columns are numbered
+by the vertices of G (in the same order) with entry Aij counting the number of
+directed edges outgoing from vertex i and incoming to vertex j.
+Theorem 3.1. (Hausdorff dimension formula) Let Y belong to C(Zp ), and suppose
+that Y := (f¯p , G, v) is a standard form presentation P
+                                                       of Y .
+                                                         ∞
+   (1) The map ιp : Zp → [0, 1] ⊂ R sending α = k=0 αk pk ∈ Zp to the corre-
+sponding real number with base p radix expansion
+                                              ∞
+                                              X  αk
+                                    ιp (α) :=
+                                                pk+1
+                                            k=0
+is a continuous map. Under this map the image set K0 := ιp (Y ) ⊂ [0, 1] is a
+construction sub-object of a Mauldin-Williams graph-directed fractal whose edge
+similarity maps are all contracting similarity maps of R with contraction ratio 1/p.
+   (2) The Hausdorff dimensions of these sets are related by
+                                   dH (Y ) = dH (K0 ).
+     (3) The Hausdorff dimension
+                            dH (Y ) = dH (K0 ) = logp α,                        (3.1)
+where α = σ(A(G)) is the spectral radius of the adjacency matrix A = A(G) of the
+underlying directed graph G of G.
+                   P -ADIC PATH SET FRACTALS AND ARITHMETIC                          13
+
+
+Remark 3.2. (1) In Theorem 1.9 of [2] the topological entropy of a path set X =
+XG (v), with a right-resolving reachable presentation is given by
+                               htop (X) = log σ(A(G)),
+where σ(A(G)) is the spectral radius as above. We deduce that for any p-adic path
+set fractal Y constructed from X by an injective presentation Y := (f¯p , G, v) , its
+Hausdorff dimension is
+                                               htop (X)
+                                    dH (Y ) =           .
+                                                 log p
+This extends to path sets a result that is well known in the shift-invariant case
+(Furstenberg [14, Proposition III.1]).
+    (2) The standard presentation assumption for Y above is needed to guarantee
+equality of the Hausdorff dimension with logp α. For a general presentation Y :=
+(f¯p , G, v0 ) of X the adjacency matrix counts the growth rate of number of paths,
+which upper bounds the number of distinct sequences of path labels. That is, one
+always has
+                                    htop (XG (v))
+                          dH (Y ) ≤                ≤ logp σ(A(G)).
+                                         logp
+    (3) The allowed values σ(A(G)) that may occur above are exactly the class of
+positive real algebraic integers called Perron numbers, introduced by Lind [21].
+Proof. (1) The map ιp : Zp → [0, 1] is surjective and one-to-one away from a
+countable set. It is continuous because the p-adic topology is strictly finer than the
+comparable topology on base p expansions of real numbers.
+   We are given a standard presentation of Y = (īp , G, v), where without loss of
+generality the alphabet A = {0, 1, ..., p − 1}. The graph G is right-resolving and
+reachable, but this will not be sufficient to obtain a Mauldin-Williams construction
+for the image of XG (v) preserving symbol sequences. We need a standard presenta-
+tion with extra properties. We call a presentation right-separating if the underlying
+directed graph G of G has no multiple edges.
+   Claim. There exists a presentation Y = (īp , G, v) in which G is both right-
+resolving and right-separating.
+   To show the claim, given a right-resolving presentation (G ′ , v ′ ), we show it may
+be converted to a right-separating presentation by making use of a vertex-splitting
+construction, as follows. Suppose that a vertex v of G ′ has k ≥ 2 labeled edges from
+a vertex w, which necessarily has distinct labels. We create a new labeled graph G ′′
+that retains all vertices of G except v and replaces v by k vertices v (i) , 1 ≤ i ≤ k.
+   Case 1. w 6= v.
+   In this case we assign a single new labeled edge from w to each v (i) such that
+as i varies, the corresponding edge labels exhaust the k labels of edges from w to
+v. The exit edges assigned each v (i) each duplicate the exit edges from v, both in
+multiplicity and in labels, with self-loops of v corresponding to self-loops of v (i) .
+The entering edges to v (1) will all be the same in multiplicity and in labels as for v,
+while for v (i) with i ≥ 2 there will be no entering edges from the rest of the graph,
+with the exception of self-loops, assigned as above. Finally all edges between any
+two vertices distinct from the v (i) will be the same as in the original graph.
+   Case 2. w = v
+   In this case v has k self-loops, which have distinct labels since the right-resolving
+property is assumed. We may identify the k loop labels with {1, 2, ..., k} in some
+14                     WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+fixed fashion, and then assign a directed edge from v (i) to v (j) with edge label
+corresponding to i + j (mod k), for 1 ≤ i, j ≤ k. The other exit edges assigned
+each v (i) will duplicate the exit edges of v, in multiplicity and labels (excluding
+self-loops). The entering edges of v (1) will be the same in multiplicity and labels as
+for v (excluding self-loops). All other v (i) have no entering edges coming from any
+other vertices of the original graph v ′ 6= v.
+     Now that G ′′ is constructed, we assert that the path sets from all states (G ′′ , w′ )
+for w′ 6= v (i) agree with those of (G ′ , w′ ), while all path sets (G ′′ , v (i) ) agree iden-
+tically with that of (G ′ , v). This assertion may be established by viewing G ′ as a
+covering of G which preserves edge labels, which has the k vertices v (i) lying above
+vertex v, and all other vertices agreeing. One may check that each edge in G ′ from
+a given initial vertex v ′ lifts uniquely to a suitable vertex and edge above it in G ′′
+(here v ′ = w is the only interesting case), except that self-loops from v lift to a
+self-loop for any initial vertex v (i) . After the first step, any path lifts uniquely to
+G ′′ . Conversely any labeled path in the lifted graph projects to an allowable labeled
+path in G ′ . The assertion follows.
+     This construction has the feature that the new graph G ′′ is still right-resolving.
+In consequence the construction may be repeated. In doing so, we must eventually
+arrive at a right-resolving presentation that is also right-separating. To see this,
+assign to each vertex an integer invariant that is the product of the multiplicities
+of all entering edges. When a vertex is split, this invariant decreases for all of the k
+descendants v (i) , and remains the same for all other vertices of the graph. By the
+well-ordering of N, the splitting procedure will eventually halt at a right-separating
+presentation. This establishes the claim.
+   We have now obtained a standard presentation that is also a right-separating
+presentation (īp , G, v) of Y . By pruning vertices with no exit edges (repeating the
+operation finitely many times, as necessary), we may obtain such a presentation
+in which additionally each vertex has at least one exit edge. Associated to G are
+|V (G)| path sets XG (w), w ∈ V (G), and corresponding Yw := ip (XG (w)) ∈ C(Zp ).
+   We now proceed to map these sets to real image sets which are corresponding
+graph-directed constructions. For convenience we re-number the vertices of G, 0 ≤
+i ≤ n, where n = |V (G)| − 1, with vertex 0 corresponding to the original v. We
+map the individual sets Yj under the map ιp + 2j to the image sets
+                             Kj := ιp (Yj ) + 2j ⊂ [2j, 2j + 1].
+The integer shifts by 2j make all sets Kj disjoint in R; Thus K0 = ι(Y ).
+   We show below that the sets (K0 , K1 , · · · , Kn ) are the complete set of construc-
+tion sub-objects of a particular Mauldin-Williams graph-directed construction. The
+integer shifts made above enforce the non-overlapping condition needed in that con-
+struction.
+   We set up a Mauldin-Williams geometric graph-directed construction in R, which
+has construction object K contained in the compact set [0, 2n], for which the sets
+(K0 , K1 , ..., Kn ) will form the construction sub-objects. The initial sets will be
+Jj = [2j, 2j + 1] for 0 ≤ j ≤ n; they satisfy the non-overlapping property (G1).
+It uses the same directed graph G as that of G. The graph G has all the correct
+properties (G2) to be a graph in the Mauldin-Williams construction: it is connected,
+has at most one directed edge between any ordered pair of vertices (by the right-
+separating property), and each vertex has at least one exit edge. To each directed
+                    P -ADIC PATH SET FRACTALS AND ARITHMETIC                          15
+
+
+labeled edge e = [i1 , i2 ] of G with label je and map φe we associate the real-valued
+map
+                                            1               
+                    Te (x) = Ti1 ,i2 (x) :=    (x − 2i2 ) + j + 2i1 .
+                                            p
+This map is a similarity with contraction ratio 1/p, and note that
+                                   Ti1 ,i2 (Ji2 ) ⊂ Ji1 .                          (3.2)
+Now condition (G3)(a), that the sets {Ti,j (Jj ) : e = (i, j)} are non-overlapping for
+each i, holds as a consequence of the right-resolving property of G. The second
+condition                      [
+                          Ji ⊇ {Ti,j (Jj )|(i, j) ∈ G∗ }
+follows from (3.2). Finally condition (G3)(b) holds since every map Te (x) is a strict
+contraction.
+   By the basic theorem of Hutchinson [16, Theorem 3.1], this construction has
+a unique compact attractor K consisting of a collection of disjoint compact sub-
+objects {Kj : 0 ≤ j ≤ n}, and it remains to verify that
+                                       K0 = ιp (Y ).
+The sets Kj are obtained by the Mauldin-Williams (iterative) geometric graph-
+directed construction using [28, Theorem 1], starting with the (disjoint) initial sets
+                                                        (k)
+Jj := [2j, 2j + 1]. After m-iterations, we have sets Jj which for fixed j form
+nested sequences of compact sets, each having nonempty interior. We then obtain
+                          T (k)
+the limit objects Kj := k Jj . The Mauldin-Williams construction object is
+K = ∪0≤j≤n Kj . One can prove by induction on k that
+                 (k)
+                            [  α0    α1          αk−1      1     
+                Ji = 2j +           + 2 + · · · + k + k [0, 1] .
+                                  p   p             p     p
+where the set union runs over all symbol sequences of length k on the labeled
+directed graph G starting from vertex i. From this construction one sees that
+K0 = ιp (Y ) since K0 ⊂ [0, 1] and the underlying symbol sequences of Y and of K0
+agree. Moreover one sees that Kj ⊂ [2j, 2j + 1] and all the construction sub-objects
+satisfy Kj = (ιp )(Yj ) + 2j, 0 ≤ j ≤ n.
+   (2) The definition of p-adic Hausdorff dimension is quite similar to Hausdorff
+dimension for real numbers on the interval [0, 1], cf. Abercrombie [1]. An ǫ-covering
+of Y ⊂ Zp is a covering of Y by a countable collection of p-adic open balls all having
+diameter at most ǫ. and considers the quantities
+                                                               
+                      mβ (Y ) := lim     inf (Vol(B(xi , ǫi )))β ,
+                                 ǫ→0    ǫ−cover
+
+in which the data {(xi , ǫi ) : i ≥ 1} describes the covering, specifying center xi and
+radius ǫi of p-adic disks, with all 0 < ǫi ≤ ǫ, and Vol(S) denotes the usual p-adic
+measure of S ⊂ Zp . There is a cutoff value β0 such that mβ (Y ) = ∞ for β > β0 and
+mβ (Y ) = 0 for β < β0 ; this is the Hausdorff dimension of Y . We use the following
+basic fact, following [19, Section 3.2 ].
+     Claim. The mapping ιp : Zp → [0, 1] which sends a p-adic number λ =
+(· · · α2 α1 α0 )p to the real number with base p expansion .α0 α1 α2 · · · is continuous
+and one-to-one off a countable set. This mapping preserves Hausdorff dimension,
+i.e dH (Y ) = dH (ιp (Y )).
+16                    WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+   To verify the claim, note that one can expand each set in a p-adic covering of a
+set Y to a closed-open disk
+                       B(m, pj ) = {x ∈ Zp : x ≡ m (mod pj )}
+(which has diameter p1j ), with at most a factor of p increase in diameter, and
+similarly one can inflate any real covering to a covering with ternary intervals
+[ pmj , m+1
+         pj ] with at most a factor of p increase in diameter. But these special intervals
+are assigned the same diameter under their respective metrics, and this can be used
+to show the Hausdorff dimensions of Y and ι(Y ) coincide. (The Hausdorff measures
+of the resulting sets is not proved to coincide by this argument.)
+     The truth of the claim immediately yields dH (K0 ) ≡ dH (ι(Y )) = dH (Y ), as
+asserted.
+     (3) We are given a standard presentation Y = (īp , G, v0 ) of the p-adic path set
+fractal Y .
+     Assume first that this presentation is right-separating. In that case we can
+directly apply the formulas of Mauldin-Williams to the construction made in (1).
+The set Kv0 is connected by directed paths to every vertex of the graph G, so that
+the vertex set C1 = SC(G) consists of all strongly connected components of G. By
+Proposition 2.4 the Hausdorff dimension S      of the sub-object Kv0 is then the same as
+that of the full construction object K = v Kv .
+     The Hausdorff dimension of the full object K can now be computed using Propo-
+sition 2.3. In our case all nonzero maps for G are similarities with constant ratio
+1/p, which yields the formula for the scaled construction matrix
+                                                      1
+                              Aβ = [tβi,j ]1≤i,j≤n = ( )β AG ,
+                                                      p
+in which AG is the adjacency matrix of the directed graph G, given by
+                                    AG = [mi,j ]1≤i,j≤n
+where mi,j counts the number of directed edges from vertex v to vertex w. Now set
+                             Φ(β) := Spectral radius of Aβ ,
+and the special form of Aβ yields
+                                      Φ(β) = λ0 p−β ,
+in which λ0 is the spectral radius σ(AG ). By Proposition 2.3 the full construction
+object has Hausdorff dimension
+                                        dH (K) = α
+where Φ(α) = 1. This requires
+                                α = logp λ0 = logp σ(AG ),
+the desired formula.
+   It remains to treat the general case, in which the intial standard presentation
+Y = (īp , G, v0 ) is not necessarily right-separating. We show that the formula for
+Hausdorff dimension continues to hold. To handle this case, we study the effect of
+the state-splitting construction introduced earlier to convert a right-resolving pre-
+sentation (G ′ , v ′ ) of a path set to a presentation (G, v0 ) that is also right-separating.
+                     P -ADIC PATH SET FRACTALS AND ARITHMETIC                          17
+
+
+It suffices to show that every step of this procedure yielding a graph (G ′′ , v ′ ) pre-
+serves the value of the spectral radius (Perron eigenvalue) of the associated non-
+negative integer matrix AG ′′ . If this is shown, then the already proved formula for
+the Hausdorff dimension for the p-adic path set associated to (G, v0 ) will carry over
+to that for (G ′ , v ′ ).
+   To check that the spectral radius is preserved under this operation, we use the
+known fact that the spectral radius of a nonnegative matrix A is given by
+                                 σ(A) = lim (Nk (A))1/k ,
+                                             k→∞
+                       T   k
+in which Nk (A) = e A e, where e = [1, 1, .., 1]T is a column vector. Here Nk (A)
+counts the number of directed paths of length k between all pairs of vertices of A.
+(The existence of the limit is part of the assertion.) We use the fact that G ′′ is a
+covering of G ′ and that all (labeled) paths of G ′ lift uniquely to paths of G ′′ , with
+the exception of paths that have starting vertex v, which have s distinct lifts, where
+s was the number of vertices of G that were split. From this we conclude that
+                           Nk (AG′ ) ≤ Nk (AG′′ ) ≤ sNk (AG′ ).
+Since s is constant, we conclude that
+               σ(A(G′ )) ≤ σ(AG′′ ) ≤ lim s1/k Nk (AG′ )1/k = σ(AG′ ),
+                                             k→∞
+
+giving the result.                                                                     
+Proof of Theorem 1.1. This result is immediate from Theorem 3.1, combining (2)
+and (3).                                                                    
+
+                     4. p-adic addition and path set fractals
+   We analyze the effect on p-adic path set fractals of addition of p-integral rational
+numbers r ∈ Q, viewing Q as a subfield of Qp . We describe algorithms which when
+given a presentation (G, v0 ) of a path set Y , will produce a presentation of Y + r.
+4.1. Sum of a path set and a p-integral rational number. Theorem 1.2 is
+an immediate corollary of the following stronger result. Recall that a p-integral
+rational number r is any r ∈ Q ∩ Zp .
+Theorem 4.1. Let Y belong to C(Zp ), and suppose it has a standard presentation
+Y := (īp , G, v0 ) having V vertices. Suppose also that r is a p-integral rational
+number, which has a p-adic expansion with pre-periodic part of length Q0 and a
+                                                            ′
+periodic part of period Q. Then the additively shifted set Y := Y + r ∈ C(Zp ), and
+it has a right-resolving presentation having at most 2p(Q0 + Q)V vertices.
+Proof. We give an explicit construction of a presentation for Y + r which certifies
+it is a p-adic path set fractal, starting from a given standard presentation.
+    Suppose first that we are in the special case where r has a purely periodic p-adic
+expansion (· · · c2 c1 c0 )p , of period Q, with cj+Q = cj , and write
+                                ∞
+                                X                Q−1
+                                                 X                ∞
+                                                                 X
+                                      cj p j =         cj p j       pkQ .
+                                                                       
+                           r=
+                                j=0              j=0             k=0
+
+  We aim to construct a standard presentation Y ′ = (īp , G ′ , w0 ) and show that
+ ′
+Y = Y + r. (At the level of symbols we may identify Y ′ with the underlying path
+18                    WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+set P ′ = (G ′ , w0 ) since the identity map matches them.) The vertex states of G ′
+will be labeled w = (v, f, e, a), in which:
+       (i) v denotes a vertex of G;
+      (ii) f denotes a place-marker in the periodic portion of the p-adic expansion of
+           r, and saisfies 0 ≤ f ≤ Q − 1;
+     (iii) e keeps track of the current amount of carry-digit information not yet in-
+           corporated in the sum-set p-adic expansion,
+     (iv) a with 0 ≤ a ≤ p − 1 denotes an edge label value.
+The initial vertex will be w0 = (v0 , 0, 0, 0). We will establish the upper bound e ≤ 2
+on the maximum size of a carry-digit in the analysis below.
+    The exit edges of G ′ map a vertex w to w′ = (v ′ , f ′ , e′ , a′ ) in which there is a
+directed labeled edge (v, v ′ ) ∈ G, with label ℓ1 satisfying ℓ1 = a′ , and the value
+                                          ′                                       ′
+f ′ ≡ f + 1 (mod Q). The edge label ℓ assigned to this edge will be 0 ≤ ℓ ≤ p − 1
+with
+                                 ′
+                                ℓ ≡ e + ℓ1 + cf (mod p),                              (4.1)
+and the value e′ is required to satisfy
+                                       1                ′
+                                e′ =     e + ℓ1 + cf − ℓ ).                          (4.2)
+                                       p
+Finally we define the graph G ′ to consist of all states reachable from the initial
+vertex w0 , and all edges constructed between these states.
+   We first show that all reachable vertices satisfy the carry-digit bound e ≤ 2; this
+shows that the graph G ′ is finite and also bounds its size. The carry-digit bound
+is proved by induction on the number of steps n along a directed path. The base
+case n = 0 has e = 0. For the induction step, using the rule above
+                   1                ′     1
+              e′ = e + ℓ1 + cf − ℓ ) ≤ 2 + (p − 1) + (p − 1) ≤ 2,
+                                                                  
+                   p                      p
+completing the induction step. We conclude in this case that G ′ has at most 2p(Q −
+1)V vertices.
+   We next show that the presentation Y ′ = (īp , G ′ , w0 ) is a standard presentation.
+We first check that G ′ is right-resolving. To see this, note that the exit edges from
+a vertex w correspond to exit edges from vertex v in the right-resolving graph G,
+                                                                                  ′
+whence any two edges have different values of ℓ1 . Now the exit edge label ℓ is an
+invertible linear function of ℓ1 by (4.4), since the values e and cf are fixed by w,
+so all exit edges have distinct labels, as asserted. This graph G ′ is reachable from
+vertex w0 by construction, so we have a standard presentation.
+   We next observe that a lifted path in G ′ uniquely determines the path in G it
+lies over. This follows since the path label value ℓ1 is uniquely recoverable from
+                 ′
+the path label ℓ and the vertex data on G, using (4.5), since e′ is known and cf is
+known from the vertex label f . The underlying path on G determines the quantity
+                                       n−1
+                                       X
+                                yn =         ak pk , i = 1, 2,
+                                       k=0
+
+corresponding to the initial part of the p-adic expansion of a value y ∈ Y being
+determined by the G-path. (The values ak are the successive labels ℓ1 along the
+G-path.) Conversely, each path in G with initial vertex v0 lifts to a unique path
+                      P -ADIC PATH SET FRACTALS AND ARITHMETIC                               19
+
+
+in G ′ with initial vertex w0 . Given a vertex w, a labeled edge (v, v ′ ) with label ℓ1
+determines the values a′ = ℓ1 and e′ a unique vertex w′ that w connects to.
+    We now show that for an infinite path in G determining y ∈ Y , the labels of
+the lifted path in G ′ suffice to compute the associated value y ′ ∈ Y ′ . We prove
+this by induction on n, for the n-step initial path. The successive edge labels
+  ′
+{ℓi : 0 ≤ i ≤ n − 1} of the lifted path in G ′ with the end vertex data e′ = en
+determine the quantity
+                                       n−1
+                                  ′    X ′
+                                 yn :=     ℓ k pk + e n pn .
+                                              k=0
+We establish by induction on n that
+                                        ′
+                                      yn−1 = yn−1 + rn−1 ,                                (4.3)
+in which
+                                                    m−1
+                                                    X
+                                            rm :=         ck p k ,
+                                                    j=0
+is a truncated version of the p-adic expansion of r. The base case n = 1 is clear.
+By the induction hypothesis,
+            yn + rn     =     (yn−1 + rn−1 ) + an−1 pn−1 + cn−1 pn−1
+                               n−2
+                                X ′
+                                   ℓk pk + en−1 pn−1 + an−1 pn−1 + cn−1 pn−1
+                                                    
+                        =
+                               k=0
+                               n−1
+                               X       ′
+                                     ℓ k pk + e n pn ,
+                                           
+                        =
+                               k=0
+
+the last equality holding by virtue of (4.5), using cf = cn−1 and ℓ1 = an . This
+completes the induction step, proving (4.3).
+   Now the lifted path data yields the p-adic limit
+                        n−1
+                        X      ′
+                  lim         ℓk pk = lim (yn + rn ) − lim en pn = y + r.
+                 n→∞                   n→∞                       n→∞
+                        k=0
+
+We conclude that the lifted path of G ′ corresponding to y ∈ Y determines the point
+y ′ := y + r ∈ Y ′ . It follows that Y ′ = Y + r, as asserted. This completes the
+argument in the case that r has a purely periodic p-adic expansion.
+    It remains to treat the general case where r has a preperiodic part, say length
+Q0 . We must extend the construction above and upper bound the number of states
+in the constructed presentation (G, w). The extension is routine: we add extra
+vertices w := (v, dj , e, a) to G, in which v denotes a vertex of G, dj marks the
+j-th preperiodic digit of r, 1 ≤ j ≤ Q0 . The exit edges of G ′ map a vertex to
+w′ = (v ′ , dj+1 , e′ , a′ ) in which there is a directed labeled edge (v, v ′ ) ∈ G, with label
+                                               ′
+ℓ1 satisfying ℓ1 = a′ . The edge label ℓ assigned to this edge will be 0 ≤ ℓ ≤ p − 1
+with
+                                      ′
+                                     ℓ ≡ e + ℓ1 + dj (mod p),                              (4.4)
+and the value e′ is required to satisfy
+                                            1                ′
+                                   e′ =       e + ℓ1 + dj − ℓ ).                          (4.5)
+                                            p
+20                     WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+The final preperiodic digit exit edges go to vertices w := (v ′ , f0 , e′ , a′ ) in the earlier
+set.
+   It is straightforward to check that the underlying labeled graph has the right-
+resolving property. Next one must check this extension preserves the lifting property
+of paths, we omit the details.
+   Finally we must upper bound the total number of vertices in the graph (G, w).
+One finds that the preperiodic part contributes at most 2Q0 V p vertices, and the
+periodic part contributes at most 2QV p vertices.                                            
+Remark 4.2. The key features in this proof are: (i) the p-adic carry digits propagate
+to higher powers of p and do not disturb earlier p-adic digits; (ii) the size of the
+carry digits is bounded above. Property (i) fails in real number arithmetic, and
+there is no real number analogue of this result.
+4.2. Minkowski sum of two p-adic path sets. We show that the Minkowski
+sum of two p-adic path set fractals is itself a path set, establishing Theorem 1.3.
+This proof is constructive, but it no longer produces a right-resolving presentation.
+Proof of Theorem 1.3. We suppose that Y1 := (īp , G1 , v1 ) and Y2 := (īp , G2 , v2 )
+come with standard presentations. We use these presentations to directly construct
+a presentation Y ′ := (īp , G1,2 , w0 ), which is not necessarily standard, and show that
+Y ′ = Y1 + Y2 , the Minkowski sum, certifying membership in C(Zp ).
+    To begin the construction, G1,2 will have vertices labeled w := (vj,1 , vk,2 , e, a)
+where vj,1 ∈ V (G1 ), vk,2 ∈ V (G2 ), and e ≥ 0 is an integer encoding carry-digit
+                                                                                 +
+information, and 0 ≤ a ≤ p − 1 specifies an allowed edge entry label in G1,2       .
+                                                                      ′
+    The exit edges from a given vertex w go to a new vertex w = (vj ′ ,1 , vk′ ,2 , e′ , a′ )
+in which
+    (a) there is a directed edge of G1 from vj,1 to vj ′ ,1 having label ℓ1 satisfying
+ℓ 1 = a′ ;
+    (b) a directed edge of G2 from vk,2 to vk′ ,2 with label ℓ2 , and
+    (c) the constructed edge is assigned the label ℓ, 0 ≤ ℓ ≤ p − 1, determined by
+                        ℓ ≡ e + ℓ1 + ℓ2 (mod p), 0 ≤ ℓ ≤ p − 1
+     (d) the new carry-digit is
+                                      1
+                               e′ =     e + ℓ1 + ℓ2 − ℓ) ≥ 0.
+                                      p
+   The initial pointed vertex of the graph G1,2 is w0 := (v0,1 , v0,2 , 0, 0). We now
+define G1,2 to consist of all vertices above reachable from w0 by some directed
+path. We show this is a finite graph by establishing that that the “carry-digit” in
+any reachable vertex satisfies e ≤ 2. This follows by induction on the length of the
+path. The base case is n = 0 where e = 0. For the induction step, we upper bound
+the new value of e via
+                   1                     1
+              e′ = e + ℓ1 + ℓ2 − ℓ) ≤ 2 + (p − 1) + (p − 1) ≤ 2,
+                                                                  
+                   p                     p
+completing the induction step. We then insert all edges between these vertices
+produced in the construction above.
+                 ′
+   To see that Y1 = Y1 + Y2 , we prove by induction on n ≥ 0 that being at a vertex
+w at step n, having gotten a specified series of edge labels, following a given lifted
+path implies that:
+                    P -ADIC PATH SET FRACTALS AND ARITHMETIC                          21
+
+
+      (1) the steps and vertices of the lifted path have sufficient information to re-
+          construct two paths of input y1 and y2 producing that path;
+      (2) the first n p-adic digit symbols of y1 + y2 have been correctly computed by
+          symbols of the steps of the path so far, namely that if
+                                       n−1
+                                       X
+                              yi,n =         ak,i pk , i = 1, 2,
+                                       k=0
+
+          then
+                                               n−1
+                                               X
+                             y1,n + y2,n =           bk pk + epn ,
+                                               k=0
+          where e = en is the current carry-digit, and the bi are the edge labels
+                                        +
+          produced so far in the graph G1,2 .
+   Suppose that the next directed edge moves to a vertex w′ = wn+1 , with data
+  ′
+(e , a′ ). Then we have a′ = ℓ1 = an,1 and
+                          1                 1
+                     e′ = ℓ1 + ℓ2 − ℓ + e = a + ℓ2 − ℓ + e
+                                                           
+                          p                  p
+Since e, a, ℓ are known, this equation uniquely determines the label ℓ2 = an,2 . Since
+both G1 and G2 are right-resolving, the edges (j, j ′ ) and (k, k ′ ) with the labels
+an1 , an,2 are legal steps which uniquely determine the edges updating y1,n , y2,n to
+y1,n+1 , y2,n+1 . Now the definition of edge labels in G1,2 assigns the label bn := ℓ to
+the edge of G1,2 and e′ = en+1 in
+                                                 n
+                                                 X
+                          y1,n+1 + y2,n+1 =            b k pk + e ′ pn ,
+                                                 k=0
+
+completing the induction step.                                                        
+                                               +
+Remark 4.3. The presentation Y1 + Y2 = (īp , G1,2 , w0 ) in this construction is gener-
+ally far from right-resolving. This occurs because some values y = y1 + y2 ∈ Y1 + Y2
+may have more than one representation (y1 , y2 ). This construction produces a sep-
+arate path for each pair (y1 , y2 ), so more than one path can yield the same sequence
+of labels.
+
+                 5. p-adic multiplication and path set fractals
+5.1. Multiplication by p-integral rational numbers. We give constructive
+proof for multiplication by rational numbers of specific types.
+Theorem 5.1. Let Y belong to C(Zp ) and suppose it has a standard presentation
+(īp , G, v0 ) having V vertices. Let M ≥ 2 be a positive integer with gcd(p, M ) = 1.
+                                                          ′
+     (1) For r = M the multiplicatively shifted set Y := M Y ∈ C(Zp ). It has a
+right-resolving presentation having at most (M + 1)V vertices.
+                                                          ′
+                      1                                          1
+     (2) For r = M      the multiplicatively shifted set Y := M    Y ∈ C(Zp ). It has a
+right-resolving presentation having at most (M + 1)V vertices.
+                                                            ′
+     (3) For r = −1 the multiplicatively shifted set Y := −Y ∈ C(Zp ). It has a
+right-resolving presentation having at most 2V vertices.
+                                                               ′
+     (4) For r = pk , k ≥ 0, the multiplicatively shifted set Y := pk Y ∈ C(Zp ). It has
+a right-resolving presentation having at most k + V vertices.
+22                    WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+Proof. We are given Y ∈ C(Zp ), with a standard presentation Y = (īp , G, v0 ), in
+which G has V vertices. For each given r we give an explicit construction of a
+standard presentation Y ′ := (īp , G ′ , w0 ) and establish that Y ′ = rY in each case.
+The constructions in cases (1)-(3) are similar.
+    (1) Here r = M with p ∤ M , and we construct a presentation Y ′ of a p-adic path
+set fractal and show Y ′ = M Y . We start with an (infinite) graph G ′′ whose vertices
+will be pairs w = (v, e), in which v is a vertex of G, and e ≥ 0 is a carry-digit.
+The initial vertex is w0 := (v0 , 0). The exit edges from a vertex w to a vertex
+  ′
+w = (v ′ , e′ ) will occur only if there is at least one edge from v to v ′ . Given such
+an edge of G with label ℓ, we assign a corresponding edge of G ′ with label ℓ′ given
+by
+                        ℓ′ = M ℓ + e (mod p), 0 ≤ ℓ′ ≤ p − 1,                        (5.1)
+which is well-defined since (p, M ) = 1. We require that the new carry digit be
+                                         1
+                                 e′ :=     e + M ℓ − ℓ′ .
+                                                       
+                                                                                     (5.2)
+                                         p
+   We define (G ′ , w0 ) to the graph obtained taking all vertices reachable from w0
+in the above construction. We prove that all reachable vertices have carry-digit
+0 ≤ e ≤ M by induction on the number of steps n on a minimal path to such a
+vertex. The base case n = 0 is true, since e = 0, and the induction step follows by
+observing from (5.2) that
+                                    1
+                             e′ ≤
+                                                   
+                                      M + M (p − 1) ≤ M.
+                                    p
+We conclude that the graph G ′ has at most (M + 1)V vertices.
+    We now set Y ′ = (īp , G ′ , w0 ), and first show this presentation is standard. We
+first claim that G ′ is right-resolving. We argue by contradiction. If not, there
+would be two exit edges of some vertex w = (v, e) of G having the same value of
+ℓ′ . But then by (5.1) the underlying edges of (G, v0 ) would have the same value of
+ℓ, contradicting the right-resolving property of (G, v0 ). By construction (G ′ , w0 ) is
+reachable, hence this presentation of Y ′ is standard.
+                                   ′
+     It remains to show that Y = M Y . Consider an infinite path in G, with image
+                                             ∞
+                                             X
+                                    y∞ =           ℓj pj ∈ Y.
+                                             j=0
+
+We assert the corresponding output path
+                                             ∞
+                                             X
+                                     ′           ′
+                                    y∞ =       ℓ j pj ∈ Y ′
+                                             j=1
+
+has
+                                         ′    1
+                                         y∞ =   y∞ .
+                                             M
+We verify this by induction on the length of a finite path approximating y∞ . Let
+v0 , v1 , ..., vn be states on a path in sG with edge labels ℓ0 , ℓ1 , ℓn−1 . Associated to
+this path is
+                            yn = ℓ0 + ℓ1 p + · · · + ℓn−1 pn−1 .
+                    P -ADIC PATH SET FRACTALS AND ARITHMETIC                           23
+
+
+By construction we obtain
+                                                  n−1
+                                            ′     X      ′
+                                           yn =         ℓ j pj .
+                                                  j=0
+Now we prove by induction on n ≥ 1 that
+                                       ′
+                                   y n = M y n + e n pn
+where en = e′ , where e′ is the carry value at the final vertex vn . The base case
+n = 1 is clear, and for the induction step (en = e, en+1 = e′ ) we get, using (5.2),
+                                       ′                       ′
+         M yn+1 = M yn + ℓn pn = yn + (en + M ℓn )pn = yn + en+1 pn+1
+                                  
+
+                                                                   ′
+Now we use |en pn |p → 0 as n → ∞, whence M y∞ = y∞ , establishing the result.
+                                                                                ′
+                     1
+   (2) Here r = M      with p ∤ M , and we construct a presentation Y = (īp , G , w0 ) of
+ 1
+M Y . We start with a (infinite) graph GM , whose vertices will be pairs w = (v, e),
+in which v is a vertex of G, and e ≥ 0 is a carry digit, initially unbounded. The
+initial vertex is w0 := (v0 , 0). The exit edges from a vertex w = (v, e) to a vertex
+w = (v ′ , e′ ) will occur only if there is at least one edge in G from v to v ′ . Given
+such an edge of G with label ℓ, we assign a corresponding edge of G ′ with label ℓ′
+given by
+                          M ℓ′ = ℓ − e (mod p), 0 ≤ ℓ′ ≤ p − 1,                     (5.3)
+which is well-defined since (p, M ) = 1. We require that the new carry digit be
+                                     1
+                                e′ := e + M ℓ′ − ℓ .
+                                                   
+                                                                               (5.4)
+                                     p
+   We now define (G ′ , w0 ) to be the graph obtained by including only the vertices
+reachable from w0 in the above construction. We now show all reachable vertices
+have carry-digit 0 ≤ e ≤ M , by induction on the number of steps n on a minimal
+path to such a vertex. The base case n = 0 holds since e = 0, and the induction
+step follows by observing from (5.4) that
+                                  1
+                             e′ ≤ M + M (p − 1) ≤ M.
+                                                  
+                                  p
+We conclude that the graph G ′ has at most (M + 1)V vertices.
+   We now define the p-adic path set fractal Y ′ := (īp , G ′ , w0 ), and first show this
+presentation is standard. To show G ′ is right-resolving, we argue by contradiction.
+If not, there would be two exit edges of some vertex w = (v, e) of G having the
+same value of ℓ′ . But then by (5.3) the underlying edges of (G, v0 ) would have the
+same value of ℓ, contradicting the right-resolving property of (G, v0 ). It is reachable
+by construction, so it is a standard presentation.
+                                       1
+   It remains to establish that Y ′ = M  Y , still supposing (p, M ) = 1. Consider an
+infinite path in G, with image
+                                                ∞
+                                                X
+                                  y∞ =                ℓj pj ∈ Y.
+                                                j=0
+
+We assert the corresponding output path
+                                                ∞
+                                                X
+                                   ′                ′
+                                  y∞ =            ℓ j pj ∈ Y ′
+                                                j=1
+24                    WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+has
+                                           ′    1
+                                       y∞ =          y∞ .
+                                               M
+We verify this by induction on the length of a path starting from the initial vertex.
+Let v0 , v1 , ..., vn be vertices on a path in G with edge labels ℓ0 , ℓ1 , ℓn−1 . Associated
+to this path is
+                               yn = ℓ0 + ℓ1 p + · · · + ℓn−1 pn−1 .
+By construction we obtain
+                                               n−1
+                                       ′       X      ′
+                                      yn =           ℓ j pj .
+                                               j=0
+
+Now we prove by induction that
+                                           ′
+                                    M y n = y n + e n pn
+where en = e′ is the carry value at the final vertex vn . For the induction step
+(en = e, en+1 = e′ )) we get, using (5.4)
+            ′           ′     ′                  ′
+        M yn+1 = M yn + ℓn pn = yn + (en + M ℓn )pn = yn+1 + en+1 pn+1
+                                 
+
+                                                                ′
+Now we use |en pn |p → 0 as n → ∞, whence M y∞ = y∞ establishing the result.
+   (3) Given a standard presentation of Y := (īp , G, v0 ), we construct a standard
+presentation Y ′ := (īp , G ′′ , w0 ) which has Y ′ := −Y , as follows.
+   The vertices of G ′ will be pairs w = (v, e), in which v is a vertex of G, and e is a
+carry digit, which may take values 0 or −1. The initial vertex will be w0 := (v0 , 0).
+                                                      ′
+The exit edges from a vertex w to a vertex w = (v ′ , e′ ) will occur only if there is
+                                        ′
+at least one edge in G from v to v . Given such an edge of G with label ℓ, we assign
+to it a corresponding edge of G ′ from w to w′ with label ℓ′ given by
+                         ℓ′ = −ℓ + e (mod p), 0 ≤ ℓ′ ≤ p − 1,                          (5.5)
+If the current vertex has e = 0 and ℓ = 0, then the new vertex has ℓ′ = 0 and is
+assigned carry digit e′ = 0. If either e = −1 or if e = 0 and ℓ > 0, then the new
+carry digit e′ = −1. Once a path in G ′ reaches a vertex with carry digit e′ = −1,
+all subsequent vertices reached have carry digit −1. Note that when e = −1 we
+have −p ≤ −ℓ − 1 ≤ −1 and ℓ′ = p − ℓ − 1.
+   We now let G ′ denote the part of the graph above reachable from the initial
+vertex w0 . This graph has at most 2V vertices. We then insert all edges between
+reachable vertices produced in the construction above.
+   We now set Y ′ := (īp , G ′ , w0 ), and as before check that this is a standard presen-
+tation. We claim that G ′ is right-resolving. This is clear since the label ℓ′ on exit
+edges from a vertex w are in one-one correspondence with labels on exit edges in G
+from the associated vertex v, via (5.5). The graph G ′ is reachable by construction.
+                                                          Pn−1
+   It remains to show that Y ′ = −Y . We let yn = j=0           ℓj pj and
+                                               n−1
+                                       ′       X
+                                      yn =           ℓ j pj .
+                                               j=0
+           ′
+We have yn = yn = 0 as long as the carry digit e = 0. Let ℓr − 1 be the first nonzero
+digit on the path, where the carry digit switches to −1. From then on switches to
+                     P -ADIC PATH SET FRACTALS AND ARITHMETIC                         25
+
+
+e = −1, we have
+                                        n−1
+                                        X
+                 ′
+               yn = (p − ℓr−1 )pr−1 +         (p − ℓj − 1)pj = −yn + pn .
+                                        j=r
+                             ′
+Letting n → ∞ we obtain y∞ = −y∞ , establishing the result.
+   (4) Let r = pk with n ≥ 1. For k ≥ 0 the set pk Y consists of modifying all symbol
+sequences in Y by adding k initial zeros. A standard presentation Y ′ = (īp , G ′ , w)
+for this set is easily obtained. Let G ′ consist of G with the addition of k new vertices
+wj (0 ≤ j ≤ k − 1). Each of the new vertices has a single exit edge from wj to
+wj+1 assigned label 0, for 0 ≤ j ≤ k − 2, and a similar exit edge labeled 0 from
+wk−1 to v0 . The start vertex of G ′ is w0 , and G ′ has k + V vertices.               
+Remark 5.2. Theorem 5.1 excluded the case “multiplication by pk with k < 0, since
+these maps do not have range in Zp .
+5.2. Proof of Theorem 1.4. Theorem 1.4 follows immediately from Theorem 5.1.
+Proof of Theorem 1.4. Let r be a p-integral rational number, i.e. ordp (r) ≥ 0. We
+                          M1
+may factor r = (−1)a pk M   2
+                              , in which a ∈ {0, 1}, k ≥ 0 and gcd(p, M1 M2 ) = 1.
+Now we successively apply the constructions in Theorem 5.1 to multiply Y by M11 ,
+next multiply the resulting set by M2 , next multiply the resulting set by (−1)a ,
+and finally multiply the resulting set by pk .                                   
+
+                                     6. Examples
+  In the following examples, we let Σp (D) denote the p-adic integer Cantor set
+consisting of all p-adic integers whose digits are drawn from a given set
+D ⊆ {0, 1, · · · , p − 1}. All Σp (D) ∈ C(Zp ), and have Hausdorff dimensions
+
+                                                       log |D|
+                           dH (Σp (D)) = logp |D| =            .
+                                                        log p
+Example 6.1. This example concerns adding a p-integral rational number r to the
+3-adic Cantor set Y01 := Σ3 ({0, 1}), whose 3-adic expansions omit the digit 2. It
+has a right-resolving presentation as a 3-adic path set by the pointed labeled graph
+(G, 0) pictured in Figure 1.
+
+
+
+
+                                 0         0            1
+
+
+
+
+                     Figure 1. Presentation (G, 0) of Σ3 ({0, 1}).
+
+
+  This graph has adjacency matrix
+26                  WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+
+                                               
+                                     A= 2 ,
+whose Perron-Frobenius eigenvalue is 2, hence the Cantor set Σ3 ({0, 1}) has Haus-
+dorff dimension dH (Σ3 ({0, 1})) = log3 2, as stated above.
+   Now we consider the effect of additively shifting by r = 2. The construction
+of Section 4.1 applied to the presentation above yields the p-adic path set fractal
+presentation of Y01 + 2 = Σ3 ({0, 1}) + 2, given in Figure 2, denoted
+                              Y01 + 2 = i3 (XG ′ (0200)).
+                                                            0
+
+
+
+                                             2
+                         0200                            0000
+
+
+                                         1
+                             0                       0          1
+
+
+                                             2
+                         0011                            0001
+
+
+
+                                                     1
+                                                 ′
+                   Figure 2. Presentation (G , 0200) of Y01 + 2.
+
+
+  Under one ordering of the vertices of G ′ , the adjacency matrix of the underlying
+(undirected) graph of G ′ is
+                                                    
+                                     0 1 1 0
+                                   0 0 1 1 
+                             A′ = 
+                                   0 0 1 1 .
+                                                     
+
+                                     0 0 1 1
+The eigenvalues of A′ are 2 and 0 (multiplicity 3), so we see the Perron eigenvalue
+is 2. Thus the Hausdorff dimension is
+                                          log 3
+                          dH (Y01 + 2) =        = dH (Y01 )
+                                          log 2
+Here Y01 + α for any α ∈ Z3 must have the same Hausdorff dimension, because
+they are bi-Lipschitz equivalent, hence their adjacency matrices must have the
+same Perron eigenvalue. Note that only a countable set of values of α can give
+Y01 + α ∈ C(Z3 ), since C(Z3 ) is a countable set.
+Example 6.2. We consider the effect of set addition on 5-adic Cantor sets Σ5 (D)
+for certain subsets of digits D. For all sets of two digits, we have dH (Σ5 ({a, b}) =
+log5 2. Set
+                   Yi,j := Σ5 ({0, i}) + Σ5 ({0, j}), for 1 ≤ i, j ≤ 4.
+                   P -ADIC PATH SET FRACTALS AND ARITHMETIC                        27
+
+
+One can show that
+                                log5 3 ≤ dH (Xi,j ) ≤ log5 4.                   (6.1)
+We find by inspection that the sums of certain Cantor sets are themselves Cantor
+sets:
+                    Y1,1 := Σ5 ({0, 1}) + Σ5 ({0, 1}) = Σ5 ({0, 1, 2})
+                   Y1,2 = Σ5 ({0, 1}) + Σ5 ({0, 2}) = Σ5 ({0, 1, 2, 3})
+   These examples have Hausdorff dimensions dH (Y1,1 ) = log5 3 and dH (Y1,2 ) =
+log5 4, respectively, and they show that the bounds in (6.1) are sharp. Much more
+interesting are the sets Y2,3 and Y1,4 , which are not Cantor sets; here the p-adic
+carry operations occuring during addition in the set sum destroy the Cantor set
+property. To compute their Hausdorff dimension, we first find p-adic path set
+presentations for them by the construction of Theorem 1.3. These presentations
+are not right-resolving, but we then apply the subset construction method in [2,
+Section 2] to obtain a right-resolving presentation. We omit the details, noting only
+that for Y1,4 we find the resulting graph has five vertices and adjacency matrix
+                                                          
+                                          1 1 1 0 0
+                                       1 1 1 0 0 
+                                                          
+                             A14 =    1 1 0 1 1 .
+                                                           
+                                       1 1 0 1 1 
+                                          1 1 0 1 1
+                              √
+Its Perron eigenvalue is 2 + 2. Computing its Hausdorff dimension by the formula
+of Theorem 3.1, we obtain
+                                             √
+                       dH (Y1,4 ) = log5 (2 + 2) ≈ log5 (3.41412).
+A similar construction for Y2,3 leads to
+                                                √
+                       dH (Y2,3 ) = log5 (2 +    3) ≈ log5 (3.73205).
+Example 6.3. We consider on the effect on the 3-adic Cantor set Y01 := Σ3 ({0, 1})
+of a multiplicative translation by r = 14 . The set 14 Y01 has a presentation (H, 00)
+obtained from that of Σ3 ({0, 1}) given by (G, 0), using the construction given in
+Section 5.1. This presentation is shown in Figure 3.
+                   0
+                                               1
+                            00                              01
+                                               0
+
+                                                              2
+                                           0
+                                               2
+                            02                              03
+                                               1
+                  1
+                 Figure 3. Presentation (H, 00) of 14 Σ3 ({0, 1}).
+28                    WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+     The adjacency matrix B of the underlying graph of H is
+                                                 
+                                     1 1 0 0
+                                    1 0 0 1 
+                             B=    0 0 1 1 .
+                                                  
+
+                                     1 0 1 0
+This matrix has Perron eigenvalue 2, and it has three other smaller nonzero eigen-
+values, one real and two conjugate complex. Using the formula in Theorem 3.1(3)
+we obtain dH ( 14 Y01 ) = log3 2.
+Example 6.4. In this example we consider the effect of intersecting multiplicatively
+translated Cantor sets taken from Example 6.3. Let
+                          1                        1
+                    Y := Y01 ∩ Y01 = Σ3 ({0, 1}) ∩ Σ3 ({0, 1}).
+                          4                        4
+We obtain by the method of [2, Section 4] applied to the presentations above the
+presentation of (H′ , 000) shown in Figure 4, where H′ is the label product H′ =
+G ⋆ H, as defined in [2, Section 4].
+
+
+                                            1
+                  0         000                          001
+                                            0
+
+            Figure 4. Presentation (H′ , 000) of Σ3 ({0, 1}) ∩ 41 Σ3 ({0, 1}).
+
+
+     The adjacency matrix of the underlying graph of H′ is
+                                              
+                                          1 1
+                                  B′ =           ,
+                                          1 0
+                                  √
+whose Perron eigenvalue is 1+2 5 . We conclude that
+                                                                    √ !
+                                         1                       1+ 5
+              dH (Y ) = dH (Σ3 ({0, 1}) ∩ Σ3 ({0, 1})) = log3           .
+                                         4                         2
+Remark 6.5. In [3] we will study intersections of multiplicative translates of 3-adic
+Cantor sets in much more detail.
+
+                              7. Concluding Remarks
+   The constructions of this paper may prove interesting from the viewpoint of
+nonnegative integer matrices and their eigenvalues. By Theorem 1.1 the Hausdorff
+dimension is given by the base p logarithm of the spectral radius of the underlying
+adjacency matrix of a standard path set presentation graph, which is a nonnegative
+integer matrix. As noted in Section 1.2, for nonzero r ∈ Q∩Zp the maps X 7→ X +r
+and X 7→ rX preserve Hausdorff dimension. On the level of path set presentations
+these constructions therefore produce infinitely many different integer matrices, of
+varying dimensions, all having the same spectral radius, plus various eigenvalues of
+smaller modulus whose cardinality and size will change under these operations. The
+allowed dimension of these matrices as the parameter r varies will be unbounded.
+                      P -ADIC PATH SET FRACTALS AND ARITHMETIC                                 29
+
+
+   The spectral radius of a nonnegative matrix is always attained by a nonnegative
+real eigenvalue, according to the Perron-Frobenius theory. In the special case of
+nonnegative integer matrices A this maximal eigenvalue is a real algebraic integer
+β, and if A is not nilpotent, then β ≥ 1. It is termed the Perron eigenvalue in
+Lind and Marcus [23, Definition 4.4.2]. This eigenvalue is necessarily a weak Perron
+number, which is defined to be any positive n-th root of some Perron number ([22])
+for some n ≥ 1; a Perron number is any real algebraic integer β ≥ 1 which is strictly
+larger in absolute value than all of its conjugates. Lind [21, Theorem 1] showed
+that the Perron eigenvalue of any aperiodic nonnegative integer matrix is a Perron
+number, and that conversely every Perron number occurs as the Perron eigenvalue of
+some aperiodic nonnegative integer matrix. More generally the Perron eigenvalue
+of any non-nilpotent nonnegative integer matrix is a weak Perron number, and
+conversely every weak Perron number occurs as the Perron eigenvalue of at least
+one such matrix. Perron numbers appear as the topological entropies of Axiom A
+diffeomorphisms via a result of Bowen [7], see [21, p. 288].
+   The constructions in this paper could be of interest in investigating and produc-
+ing examples of graphs with a fixed Perron eigenvalue, particularly in case where
+this eigenvalue is very close to 1. In order to produce nonnegative matrices that
+have a given Perron number β as spectral radius, it is sometimes necessary to take
+a nonnegative matrix of dimension strictly larger than the degree of the minimal
+polynomial of θ, see an example given in Lind [20], [21, Section 3]. In such cases
+the characteristic polynomial of this matrix must contain extraneous eigenvalues.
+The constructions of this paper offer a method to generate interesting examples of
+this kind. Such graph constructions might also conceivably be useful in investigat-
+ing conjectures on the smallest Perron number of each degree, a topic studied in
+Boyd [8] and Wu [32]. A more speculative direction would be relating the structure
+of such graphs in connection with Lehmer’s conjecture on the Mahler measure of
+irreducible polynomials.
+
+                                         References
+[1] A. G. Abercrombie, The Hausdorff dimension of some exceptional sets of p-adic integer ma-
+    trices, J. Number Theory 53 (1995), 311–341.
+[2] W. Abram and J. C. Lagarias, Path sets in one-sided symbolic dynamics, eprint
+    arXiv:1207.5004, v5
+[3] W. Abram and J. C. Lagarias, Intersections of multiplicative translates of 3-adic Cantor sets,
+    eprint arXiv:1308.3133.
+[4] R.L. Adler and B. Marcus, Topological entropy and equivalence of dynamical systems, Mem-
+    oirs of the American Mathematical Society, Volume 20, No. 219, AMS: Providence, RI 1979.
+[5] J.-C. Ban, W-G. Hu and S-S. Lin, Pattern generation problems arising in multiplicative integer
+    systems. eprint arXiv1207.7154
+[6] A. S. Besicovitch, On linear sets of points of fractional dimension, Math. Annalen 101 (1929),
+    161-193.
+[7] R. Bowen, Topological entropy and Axiom A, Proc. Symp. Pure Math., 14, Amer. Math. Soc.:
+    Providence 1970, pp. 23-41.
+[8] D. W. Boyd, The maximal modulus of an algebraic integer, Math. Comp. 45 (1985), No. 171,
+    243–249; Supplement S17–S20.
+[9] M. Das, Sze-Man Ngai, Graph-directed iterated function systems with overlaps, Indiana Univ.
+    Math. J. 53 (2004), no. 1, 109–134.
+[10] G. Edgar, Measure, topology and fractal geometry, Second Edition Springer-Verlag: New
+    York 2008.
+[11] G. E. Edgar and J. Golds, A fractal dimension estimate for a graph-directed IFS of non-
+    similarities, Indiana Univ. Math. J. 48 (1999), no. 2, 429–447.
+30                      WILLIAM ABRAM AND JEFFREY C. LAGARIAS
+
+
+[12] P. Erdős, Some unconventional problems in number theory, Math. Mag. 52 (1979), 67-70.
+[13] K. J. Falconer, The Geometry of Fractal Sets, Cambridge Tracts in Mathematics, No. 85,
+    Cambridge Univ. Press: Cambridge 1985.
+[14] H. Furstenberg, Disjointness in ergodic theory, minimal sets, and a problem in Diophantine
+    approximation, Math. Systems Theory 1 (1967), 1–49.
+[15] F. Hausdorﬀ, Dimension und áusseres Mass, Math. Ann. 79 (1919), 157–179.
+[16] J. E. Hutchinson, Fractals and self similarity, Indiana Univ. Math. Journal 30 (1981), 713–
+    747.
+[17] A. Katok and B. Hasselblatt, Introduction to the Modern Theory of Dynamical Systems
+    (Cambridge University Press, New York, 1995).
+[18] R. Kenyon, Y. Peres and B. Solomyak, Hausdroff dimension for fractals invariant under the
+    multiplicative integers, Ergod. Th. Dyn. Sys. 32 (2012), No. 5, 1567–1584.
+[19] J.C. Lagarias, Ternary expansions of powers of 2, J. London Math. Soc.(2) 79 (2009), 562-
+    588.
+[20] D. Lind, Entropies and factorization of topological Markov shifts, Bull. Amer. Math. Soc. 9
+    (1983), no. 2, 219–222.
+[21] D. Lind, The entropies of topological Markov shifts and a related class of algebraic integers,
+    Ergod. Th. Dyn. Sys. 4 (1984), no. 2, 283–300.
+[22] D. Lind, Entropies of automorphisms of a topological Markov shift, Proc. Amer. Math. Soc.
+    99 (1987), no. 3, 589–595.
+[23] D. Lind and B. Marcus, An Introduction to Symbolic Dynamics and Coding, (Cambridge
+    University Press, New York, 1995).
+[24] E. Lomnicki and S. M. Ulam, Sur la théorie de la mesure dans les espaces combinatoires et
+    son application au calcul des probabilités I. Variables indépendantes, Fund. Math. 23 (1934),
+    237–278.
+[25] K. Mahler, Lectures on diophantine approximations, Part I. g-adic numbers and Roth’s
+    theorem, Prepared from notes of R. P. Bambah, University of Notre Dame Press, Notre Dame
+    IN 1961.
+[26] R. D. Mauldin and M. Urbański, Graph directed Markov systems. Geometry and dynamics
+    of limit sets, Cambridge Tracts in Mathematics No. 148, Cambridge Univ. Press: Cambridge
+    2003.
+[27] R. D. Mauldin and S. C. Williams, On the Hausdorff dimension of some graphs, Trans. Amer.
+    Math. Soc. 298 (1986), no. 2, 793–803.
+[28] R.D. Mauldin and S.C. Williams, Hausdorff Dimension of Graph Directed Constructions,
+    Transactions of the American Mathematical Society, 309, No. 2 (1988) , 811-829.
+[29] S.-M. Ngai, Fei Wang and Xinhan Dong, Graph-directed iterated function systems satisfying
+    the generalized finite type condition, Nonlinearity 23 (2010), 2333–2350.
+[30] Sze-Man Ngai and Y. Wang, Hausdorff dimension of self-similar sets with overlaps, J. London
+    Math. Soc. 63 (2001), no. 3, 655–672.
+[31] Y. Peres, J. Schmeling, S. Seuret, B. Solomyak, Dimensions of some fractals defined via
+    semigroup generated by 2 and 3, eprint: arXiv:1206.4742.
+[32] Qiang Wu, The smallest Perron numbers, Math. Comp. 79 (2010), 2387–2394.
+

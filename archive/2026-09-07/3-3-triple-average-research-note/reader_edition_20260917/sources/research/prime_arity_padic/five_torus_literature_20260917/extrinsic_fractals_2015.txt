@@ -1,0 +1,884 @@
+                                          EXTRINSIC DIOPHANTINE APPROXIMATION ON MANIFOLDS AND FRACTALS
+
+                                                                                 LIOR FISHMAN AND DAVID SIMMONS
+
+
+                                                  Abstract. Fix d ∈ N, and let S ⊆ Rd be either a real-analytic manifold or the limit set of an iterated
+arXiv:1406.0785v3 [math.NT] 10 Jan 2015
+
+
+
+
+                                                  function system (for example, S could be the Cantor set or the von Koch snowflake). An extrinsic
+                                                  Diophantine approximation to a point x ∈ S is a rational point p/q close to x which lies outside of
+                                                  S. These approximations correspond to a question asked by K. Mahler (’84) regarding the Cantor set.
+                                                  Our main result is an extrinsic analogue of Dirichlet’s theorem. Specifically, we prove that if S does not
+                                                  contain a line segment, then for every x ∈ S \ Qd , there exists C > 0 such that infinitely many vectors
+                                                  p/q ∈ Qd \ S satisfy kx − p/qk < C/q (d+1)/d . As this formula agrees with Dirichlet’s theorem in Rd up
+                                                  to a multiplicative constant, one concludes that the set of rational approximants to points in S which lie
+                                                  outside of S is large. Furthermore, we deduce extrinsic analogues of the Jarnı́k–Schmidt and Khinchin
+                                                  theorems from known results.
+
+
+
+
+                                                                                            1. Introduction
+                                             Fix d ∈ N and a set S ⊆ Rd . One may divide the set of rational points into two disjoint classes: the class
+                                          of rational points which lie on S, and the class of rational points which lie outside of S. Approximating
+                                          points in S by rational points in S is called intrinsic approximation, while approximating points in S by
+                                          rational points outside of S is called extrinsic approximation. More well-studied is the case where the
+                                          approximations may come from either inside or outside S; in this case the approximations will be called
+                                          ambient.
+                                             We shall be particularly interested in two classes of sets: S may be either the limit set of an iterated
+                                          function system or a real-analytic manifold. Of particular prominence is the Cantor set,1 of which K. Mahler
+                                          [17] asked: “How close can irrational elements of Cantor’s set be approximated by rational numbers (a) In
+                                          Cantor’s set, and (b) By rational numbers not in Cantor’s set?” In our terminology, Mahler is asking about
+                                          intrinsic and extrinsic approximation on the Cantor set, respectively. For both the limit sets of iterated
+                                          function systems and for manifolds, there is already literature on both intrinsic and ambient approximation;
+                                          see for example [1, 4, 11, 12] and the references therein. By contrast, extrinsic approximation on algebraic
+                                          varieties has been studied only briefly, in [8, Lemma 1], [9, Lemma 4.1.1], and [6, Lemma 1]. Each of these
+                                          papers proved a lemma which stated that extrinsic rational approximations to points on algebraic varieties
+                                          cannot be too close to the points they approximate.
+                                             In this paper, we analyze the theory of extrinsic approximation in more detail. Our main result (The-
+                                          orem 1.1) is an extrinsic analogue of Dirichlet’s theorem. We also describe results concerning extrinsic
+                                          approximation which may be deduced from their intrinsic and ambient counterparts, namely analogues of
+                                          the Jarnı́k–Schmidt theorem and Khinchin’s theorem.
+                                             Convention 1. The symbols ., &, and ≍ will denote multiplicative asymptotics. For example, A .K B
+                                          means that there exists a constant C > 0 (the implied constant ), depending only on K, such that A ≤ CB.
+                                          In general, dependence of the implied constant(s) on universal objects such as the set S will be omitted
+                                          from the notation.
+                                             Acknowledgements. The first-named author was supported in part by the Simons Foundation grant
+                                          #245708. The authors thank Barak Weiss for helpful suggestions.
+
+
+                                            2010 Mathematics Subject Classification. 11J13, 11H06, 28A80.
+                                            Key words and phrases. Diophantine approximation, fractals, iterated function systems.
+                                            1In this paper, the phrase “Cantor set” always refers to the ternary Cantor set.
+
+                                                                                                      1
+2                                           LIOR FISHMAN AND DAVID SIMMONS
+
+
+1.1. An extrinsic analogue of Dirichlet’s theorem. Our main theorem is as follows:
+Theorem 1.1. Fix d ∈ N, and let S ⊆ Rd be either
+    (1) the limit set of an iterated function system 2 (cf. Definition 2.10), or
+    (2) a real-analytic manifold,
+and suppose that S does not contain a line segment. Then for all x ∈ S \ Qd , there exists C = Cx > 0 such
+that infinitely many p/q ∈ Qd \ S satisfy
+                                                             p    C
+(1.1)                                                   x−     ≤ 1+1/d ·
+                                                             q  q
+Here and elsewhere k · k denotes the max norm. Moreover, the function x 7→ Cx is bounded on compact
+sets.
+   We recall that (the corollary of) Dirichlet’s theorem in Rd states that for all x ∈ Rd \ Qd , there exist
+infinitely many p/q ∈ Qd satisfying (1.1) with C = 1. Thus Theorem 1.1 says that if S is as above, then
+for each x ∈ S \ Qd there are enough extrinsic approximations to x to re-prove Dirichlet’s theorem, if one is
+content with a constant multiplicative error term.3 This can be contrasted with the situation for intrinsic
+approximation, where the best theorem that one can prove using intrinsic rationals is much worse than
+Dirichlet’s theorem [11, Theorem 4.3].
+   As a concrete application of Theorem 1.1, we consider the case where S is the Cantor set, thus giving
+an answer to the second of Mahler’s questions mentioned above. Since the Cantor set is compact and does
+not contain a line segment, the following is an immediate corollary of Theorem 1.1:
+Corollary 1.2. Let K denote the Cantor set. There exists C > 0 such that for each x ∈ K \ Q, there exist
+infinitely many p/q ∈ Q \ K satisfying
+                                                                p   C
+(1.2)                                                     x−      ≤ 2·
+                                                                q  q
+Remark. The hypotheses of Theorem 1.1 can be weakened. Recall that for ε > 0, a subset S of a
+metric space X is said to be ε-porous relative to X if for every ball B(x, r) ⊆ X, there exists a ball
+B(y, εr) ⊆ B(x, r) which is disjoint from S. Using this definition, Theorem 1.1 can be generalized as
+follows:
+Theorem 1.3. Fix d ∈ N, and let K ⊆ Rd be a compact set whose intersection with every line L ⊆ Rd
+is ε-porous relative to L, for some ε > 0 independent of L. Then there exists C > 0 such that for all
+x ∈ K \ Qd , there are infinitely many p/q ∈ Qd \ K satisfying (1.1).
+   Theorem 1.3 is readily seen to be equivalent to Corollary 2.7 below. The deduction of Theorem 1.1 from
+Corollary 2.7 (or equivalently from Theorem 1.3) is given in Section 3.
+   We remark that the condition on K is satisfied whenever K is the support of an Ahlfors regular measure
+of dimension strictly less than 1.4 Moreover, if d = 1 the condition just reduces to K itself being porous, a
+fairly weak geometric condition (for example it is closed under quasiconformal maps).
+1.2. The line segment hypothesis. A key hypothesis of Theorem 1.1 is that the set S does not contain
+a line segment. This hypothesis is not at all automatic; there exist examples of both manifolds and fractals
+which contain line segments. In the case of fractals, the Sierpinski triangle and the Sierpinski carpet are
+two examples of well-known fractals each of which contains a line segment. In the case of manifolds, there
+are numerous examples in R3 of so-called “ruled surfaces” which are in fact the union of lines.
+    In light of the above facts, one might ask whether the line segment hypothesis can be removed. However,
+it is necessary for the following simple reason:
+    2In this paper all iterated function systems are finite and consist of similarities.
+    3An analogue of Dirichlet’s theorem for which the function x 7→ C
+                                                                       x is unbounded was already considered in [11, Theorem
+8.1]. In the present case the situation is somewhat better, since the function x 7→ Cx is bounded on compact sets.
+    4A measure µ on a metric space X is said to be Ahlfors regular of exponent δ if there exists C > 0 such that for all
+x ∈ Supp(µ) and 0 < r ≤ 1, (1/C)r δ ≤ µ(B(x, r)) ≤ Cr δ .
+                   EXTRINSIC DIOPHANTINE APPROXIMATION ON MANIFOLDS AND FRACTALS                                           3
+
+
+Observation 1.4. If S contains a rational line segment L, then the conclusion of Theorem 1.1 cannot
+hold.
+Proof. Fix x ∈ L \ Qd ⊆ S \ Qd . Then for all p/q ∈ Qd \ S ⊆ Qd \ L,
+                                                          
+                                             p        p         1
+                                        x−      ≥d      , L &L ·
+                                             q        q          q
+For q sufficiently large, this contradicts (1.1).                                                                         
+In particular, the Sierpinski triangle and the Sierpinski carpet mentioned above each contain the interval
+[0, 1] viewed as a subset of the x-axis, which is a rational line segment. Thus they cannot satisfy the
+conclusion of Theorem 1.1.
+    It is therefore a relevant question which manifolds and fractals contain a line segment, and which do not.
+In the case of manifolds, the condition can be translated into a differential condition, which we implicitly
+do in the proof of Claim 3.1 (cf. Remark 3.3). In the case of fractals, the condition is somewhat harder
+to check directly. On the other hand, many fractals are totally disconnected; no such fractal can contain
+a line segment. To give an example of how one can check that a fractal Λ does not contain a line segment
+in a case where Λ is not totally disconnected, we demonstrate the following:
+Proposition 1.5. The von Koch snowflake curve does not contain a line segment.
+   It seems likely that the techniques used in the proof of Proposition 1.5 can be generalized, but it is not
+clear what the statement of the generalization should be.
+   Overview. Sections 2-3 are devoted to the proof of Theorem 1.1, with Section 2 containing preliminaries
+and Section 3 containing the body of the proof. Section 4 contains the proof of Proposition 1.5. In Section
+5, we describe some results regarding extrinsic Diophantine approximation which are corollaries of known
+theorems, and give some open problems.
+
+                         2. Sketch of a proof of Corollary 1.2; Preliminaries
+   Before presenting the proofs of Theorem 1.1, we sketch a short proof of Corollary 1.2 which uses the
+theory of continued fractions. This proof contains the basic idea of the more general proof, but it has
+the advantage of being more intuitive to someone familiar with the theory of continued fractions. After
+sketching the proof of Corollary 1.2, we begin the preliminaries for the proof of Theorem 1.1, using the
+sketch as motivation.
+2.1. Sketch of a proof of Corollary 1.2. We recall some elements of the theory of continued fractions
+(e.g. [16]). As a matter of notation, given a1 , . . . ∈ N we let
+                                                                             1
+                                            [0; a1 , . . . , an ] =
+                                                                                   1
+                                                                      a1 +
+                                                                             .. 1
+                                                                                  .+
+                                                                               an
+and let [0; a1 , . . .] = limn→∞ [0; a1 , . . . , an ]. Any x ∈ (0, 1) \ Q can be represented uniquely as x = [0; a1 , . . .]
+for some sequence (an )∞           N
+                             1 ∈ N . The rationals pn /qn = [0; a1 , . . . , an ] are called the convergents of x. We
+have the following (see e.g. [16, (30) and Theorem 19]):
+                                p   1   p                                                   p   1
+(2.1)                     x−      < 2 ⇒   is a convergent of x ⇒                       x−     < 2·
+                                q  2q   q                                                   q  q
+Now let K denote the Cantor set, and suppose x ∈ K \ Q. If all but finitely many convergents of x lie
+in the Cantor set, then (2.1) shows that Corollary 1.2 cannot be true with C = 1/2; if infinitely many
+convergents of x lie outside of the Cantor set, then (2.1) shows that the conclusion of Corollary 1.2 holds
+with C = 1. However, the question of whether infinitely many convergents of x must lie outside the Cantor
+set is a difficult question, which we do not attempt to address here. Instead, we adopt the more modest
+approach of looking beyond the set of convergents; we are content to raise the value of C if necessary.
+4                                       LIOR FISHMAN AND DAVID SIMMONS
+
+
+Sketch of the proof of Corollary 1.2. (For a rigorous proof of Corollary 1.2, see Section 3.) Let K denote
+the Cantor set, and suppose x = [0; a1 , . . .] ∈ K \ Q. Fix n ∈ N, and for each b ∈ N let
+                                             pn,b
+                                                  = [0; a1 , . . . , an−1 , b].
+                                             qn,b
+Then pn,an /qn,an = pn /qn , but otherwise pn,b /qn,b is not a convergent of x. Now fix N ∈ N, and consider
+                                 an +N
+the finite sequence (pn,b /qn,b )b=a n
+                                       . It can be shown that
+      (i) qn,b ≍N qn for b = an , . . . , an + N , and that
+                                    an +N
+     (ii) the sequence (pn,b /qn,b )b=a   n
+                                             is roughly an arithmetic progression of increment 1/qn2 .
+(The notion of a “roughly arithmetic progression” will be made precise in Definition 2.5.) In particular,
+for each b = an , . . . , an + N ,
+                                           pn,b    |an − b| + 1
+                                       x−        .              ,
+                                            qn,b         qn2
+and so
+                                                       pn,b     1
+                                                 x−         .N 2 ·
+                                                       qn,b    qn,b
+Let CN be the implied constant. If we assume for a contradiction that (1.2) holds for only finitely many
+p/q, then there exists n such that for all b = an , . . . , an + N , we have pn,b /qn,b ∈ K. It follows that K
+contains arbitrarily large roughly arithmetic progressions.
+    On the other hand, it is easily seen that K does not contain any arithmetic progression of length five.
+(If such a progression existed, then the largest such progression would need to contain points from both
+[0, 1/3] and [2/3, 1], so its increment would need to be at least 1/3.) A similar argument shows that there
+exists N for which K does not contain any roughly arithmetic progressions of length N (cf. Proposition
+2.6 below). This is a contradiction.                                                                         
+
+2.2. Good pairs of rational approximations. In higher dimensions, we cannot use the theory of con-
+tinued fractions, but we will still produce a sequence of roughly arithmetic progressions which consist of
+good rational approximations to the desired point. To see how this generalization will work, note that we
+can write (see e.g. [16, Theorem 1])
+                                               pn,b   pn−2 + bpn−1
+                                                    =              ·
+                                               qn,b   qn−2 + bqn−1
+                             
+In particular, (pn,b , qn,b ) b∈N is a true arithmetic progression in Z2 , whose initial value (pn−2 , qn−2 ) and
+increment (pn−1 , qn−1 ) both represent good rational approximations to x. In higher dimensions, we will use
+the same principle, taking an arithmetic progression in Zd+1 and projectivizing to get a roughly arithmetic
+progression in Qd .
+   The initial value and increment of our progression must both be good approximations, but they will
+not be chosen independently; they should be roughly “on the same order of magnitude”. We make this
+rigorous in the following lemma:
+
+Lemma 2.1. Fix x ∈ Rd \ Qd . Then for every Q > 0, there exists a pair (r0 , r∞ ) ∈ (Zd+1 )2 such that
+      (i) r0 , r∞ are linearly independent;
+     (ii) If we write ri = (pi , qi ) (i = 0, ∞), then 0 ≤ q∞ ≤ q0 and
+                                                                     1
+(2.2)                                            kqi x − pi k ≤     1/d
+                                                                          ;
+                                                                   q0
+and such that q0 ≥ Q.
+
+    We will call a pair (r0 , r∞ ) satisfying (i) and (ii) a good pair for x.
+                  EXTRINSIC DIOPHANTINE APPROXIMATION ON MANIFOLDS AND FRACTALS                                5
+
+
+Proof of Lemma 2.1. Interpret x as a column vector and let
+                                                       
+                                                 Id −x
+                                        Tx :=
+                                                 0   1
+                                                t/d       
+                                                 e Id    0
+                                         gt :=               .
+                                                   0   e−t
+Here Id denotes the d × d identity matrix.
+                                      → ∞ such that for each k ∈ N,
+Claim 2.2. There exists a sequence tk −
+                                              k
+
+                                                  λ2 (gtk ◦ Tx (Zd+1 )) ≤ 1,
+where λ2 is the second successive Minkowski minimum 5 (with respect to the max norm).
+Proof. By contradiction, suppose that there exists t0 > 0 such that for all t > t0 we have λ2 (gt ◦Tx(Zd+1 )) >
+1, and let U = (t0 , ∞).
+   Let Zd+1
+         pr  denote the set of primitive vectors of Zd+1 . For each r ∈ Zd+1
+                                                                          pr   let
+                                          Ur = {t ∈ U : kgt ◦ Tx (r)k < 1}.
+We claim that the collection of sets (Ur )r∈Zd+1
+                                             pr
+                                                  is a disjoint open cover of U . Indeed, if t ∈ Ur1 ∩ Ur2 for
+some r1 , r2 ∈ Zpr for which Ur1 6= Ur2 , then we would have λ2 (gt ◦ Tx (Zd+1 )) < 1, contradicting our
+                d+1
+
+hypothesis. On the other hand, for any t ∈ U , we have by Minkowski’s second theorem
+                                                   1                             1
+                 λ1 (gt ◦ Tx (Zd+1 )) ≤ Qd+1                       ≤                         < 1,
+                                             λ
+                                         i=2 i t(g  ◦ T x (Zd+1 ))   λ2 (g t ◦ T x (Zd+1 ))d
+and so there exists r ∈ Zd+1
+                         pr   such that kgt ◦ Tx (r)k < 1, i.e. t ∈ Ur .
+   Since U is a connected set, it follows that U = Ur for some r ∈ Zd+1  pr . Then kgt ◦ Tx (r)k is bounded as t
+tends to infinity. Thus Tx (r) ∈ Red+1 , i.e. x = p/q where r = (p, q), contradicting that x ∈   / Qd .       ⊳
+   Now fix k ∈ N and let t = tk . Since λ2 (gt ◦Tx (Zd+1 )) ≤ 1, there exist r0 , r∞ ∈ Zd+1 linearly independent
+such that
+                                         kgt ◦ Tx (ri )k ≤ 1, i = 0, ∞.
+Writing this out in terms of coordinates yields
+                                       ket/d (pi − qi x)k ≤ 1 and |e−t qi | ≤ 1,
+or equivalently
+(2.3)                                     kqi x − pi k ≤ e−t/d and |qi | ≤ et .
+By replacing ri by −ri if necessary, we may assume qi ≥ 0 for i = 0, ∞; by swapping r0 and r∞ if necessary
+we may assume q∞ ≤ q0 . After these reductions, (2.3) implies (2.2), which demonstrates that the pair
+(r0 , r∞ ) is good for x. Finally, we observe that as k → ∞ we have q0 → ∞, because otherwise (2.3) would
+imply that x ∈ Qd . Thus for any given Q > 0, we can construct a good pair for which q0 ≥ Q.            
+   Suppose that (r0 , r∞ ) is a good pair for x. We now create an arithmetic progression in Zd+1 using r0
+as the initial value and r∞ as the increment. For each i ∈ Z let
+(2.4)                                                  ri = r0 + ir∞
+and write
+                                                ri = (pi , qi ).
+Then {ri : i ∈ Z} is an arithmetic progression in Zd+1 .
+   Our key claim is that every rational pi /qi represents a good approximation to x in the sense of (1.1),
+with C depending only on i and not on x.
+  5See e.g. [18, §IV.1] for an exposition of Minkowski’s theory of successive minima.
+6                                       LIOR FISHMAN AND DAVID SIMMONS
+
+
+Claim 2.3. For i ∈ N,
+                                                                   1+1/d
+                                                pi            1+i
+(2.5)                                        x−       ≤                      ·
+                                                qi             qi
+Proof.
+                    kqi x − pi k = k(q0 x − p0 ) + i(q∞ x − p∞ )k
+                                   1+i
+                                 ≤ 1/d                                              (by (2.2))
+                                    q0
+                             qi = q0 + iq∞ ≤ (1 + i)q0
+and rearranging gives the desired result.                                                                       
+    We remark that for N ∈ N fixed, if we let CN = (1 + N )1+1/d , then (2.5) implies (1.1) for i = 0, . . . , N .
+
+2.3. Roughly arithmetic progressions. We would now like to make rigorous in what sense the sequence
+(pi /qi )∞
+         0 described above is a roughly arithmetic progression. We begin with the following observation:
+
+Observation 2.4. For each i ∈ Z, pi /qi is on the line spanned by p0 /q0 and p∞ /q∞ .
+Proof. The line spanned by p0 /q0 and p∞ /q∞ is the projectivization of the two-dimensional subspace of
+Rd+1 spanned by r0 and r∞ .                                                                          
+    Thus, it will not be too restrictive for us to require roughly arithmetic progressions to be subsets of
+lines.
+    Let L be a line in Rd , and let L0 be its linear part, i.e. L0 = L − x where x ∈ L is any point. One
+way of defining arithmetic progressions on L is to say that a sequence (xi )N 0 is an arithmetic progression
+if there exists a vector v ∈ L0 (the increment ) such that for all 0 ≤ i < j ≤ N ,
+(2.6)                                           xj − xi = (j − i)v.
+To define a roughly arithmetic progression, we will relax the condition (2.6). Specifically, we have the
+following:
+Definition 2.5. Fix C > 0. A sequence (xi )N   0 in L is a C-roughly arithmetic progression if there exists
+v ∈ L0 \ {0} such that for all 0 ≤ i < j ≤ N ,
+                                          1           xj − xi
+(2.7)                                       (j − i) ≤         ≤ C(j − i).
+                                          C              v
+                       xj −xi
+Here the expression       v     denotes the unique value c ∈ R for which xj − xi = cv.
+   In fact, the sequence (pi /qi )∞
+                                  0 is not a roughly arithmetic progression in this sense, since kpj /qj −
+pi /qi k → 0 as i, j → ∞. However, we will now prove that sufficiently long subsequences of the sequence
+(pi /qi )∞
+         0 are roughly arithmetic.
+
+Proposition 2.6. Fix p0 /q0 , p∞ /q∞ ∈ Qd , and for each i ∈ N let pi = p0 + ip∞ and qi = q0 + iq∞ . Then
+for each N ∈ N, (pi /qi )2N
+                         N is a 2-roughly arithmetic progression.
+
+Proof. We observed above (Observation 2.4) that the sequence (pi /qi )2N
+                                                                      N is collinear. Fix N ≤ i < j ≤ 2N .
+Then
+                    pj   pi    1                  
+                       −    =        qi pj − qj pi
+                    qj   qi   qi qj
+                               1                                                    
+                            =        (q0 + iq∞ )(p0 + jp∞ ) − (q0 + jq∞ )(p0 + ip∞ )
+                              qi qj
+                               1                        
+                            =       (j − i) q0 p∞ − q∞ p0 .
+                              qi qj
+                 EXTRINSIC DIOPHANTINE APPROXIMATION ON MANIFOLDS AND FRACTALS                                7
+
+
+So let
+                                                  q0 p∞ − q∞ p0
+                                             v=                 ,
+                                                      qN q2N
+so that
+                                              pj   pi
+                                              qj − qi       qN q2N
+                                                        =          ·
+                                                 v           qi qj
+The proposition follows on noting that
+                                  q2N = q0 + 2N q∞ ≤ 2q0 + 2N q∞ = 2qN .
+                                                                                                             
+
+  Proposition 2.6 allows us to prove a preliminary version of Theorem 1.1:
+Corollary 2.7. Fix d ∈ N and a set S ⊆ Rd . Suppose that for some N , S contains no 2-roughly arithmetic
+progression of length N . Then there exists C > 0 such that for all x ∈ S \ Qd , there exist infinitely many
+p/q ∈ Qd \ S satisfying
+                                                     p    C
+(1.1)                                         x−       ≤ 1+1/d ·
+                                                     q  q
+  In other words, if S contains no 2-roughly arithmetic progression of length N , then S satisfies the
+conclusion of Theorem 1.1 with C independent of x.
+
+Proof. Let C = CN = (1 + N )1+1/d , and fix x ∈ S \ Qd .
+   Fix a pair (r0 , r∞ ) which is good for x, and for each i ∈ N, let ri = (pi , qi ) be defined by (2.4).
+By Proposition 2.4, the sequence (pi /qi )2N
+                                           N is a 2-roughly arithmetic progression, so by hypothesis, this
+sequence contains a point which is not in S, say pi /qi ∈ / S. By Claim 2.3, (1.1) is satisfied for pi /qi . To
+summarize, for each good pair (r0 , r∞ ), there is a rational pi /qi ∈ Qd \ S satisfying (1.1) with qi ≥ q0 .
+   By Lemma 2.1, for each Q > 0 there is a good pair satisfying q0 ≥ Q. Thus by the above argument, there
+exists p/q ∈ Qd \ S satisfying (1.1) such that q ≥ Q. Thus there are infinitely many rationals p/q ∈ Qd \ S
+satisfying (1.1).                                                                                             
+
+   Corollary 2.7 says that in order to prove the extrinsic analogue for points in a fractal or manifold, it is
+enough to demonstrate a uniform bound on the length of a 2-roughly arithmetic progression contained in
+that set. Intuitively, the reason for this should be that S contains no line segment by assumption. (If S did
+contain a line segment, then it would automatically contain arbitrarily long arithmetic progressions, which
+would in particular be C-roughly arithmetic for every C ≥ 1.) So it will be useful to know that in certain
+cases, the limit of roughly arithmetic progressions is a line segment. To make this rigorous, we recall the
+definition of the Hausdorff metric on the space of compact subsets of a metric space X.
+Definition 2.8. Let K∗ (X) denote the set of nonempty compact subsets of X. The Hausdorff distance
+between two sets K1 , K2 ∈ K∗ (X) is the number
+                                                                          
+                          dH (K1 , K2 ) := max max d(x, K2 ), max d(x, K1 ) .
+                                                     x∈K1              x∈K2
+
+  For background on the Hausdorff metric, see [15, §4.F]. The topology induced on K∗ (X) by the Hausdorff
+metric is called the Vietoris topology (cf. [15, Exercise 4.21]).
+  We may now prove the following lemma:
+Lemma 2.9. Fix C > 0. For each N , suppose that KN ⊆ R is a C-roughly arithmetic progression of
+length (N + 1), whose left and right endpoints are equal to 0 and 1, respectively. Then
+                                                KN −→ [0, 1]
+                                                        N
+
+in the Vietoris topology.
+8                                      LIOR FISHMAN AND DAVID SIMMONS
+
+
+Proof. Write KN = (xN,i )N
+                         i=0 . Then (2.7) reads:
+
+                                        j−i   xN,j − xN,i
+                                            ≤             ≤ C(j − i).
+                                         C        vN
+Plugging in i = 0, j = N shows that 0 < vN ≤ C/N . Then, plugging in j = i+1 shows that xN,i+1 −xN,i ≤
+C 2 /N for all i = 0, . . . , N − 1. It follows that [0, 1] \ KN cannot contain any interval of length greater than
+C 2 /N . In particular,
+                                       d(x, KN ) ≤ C 2 /(2N ) ∀x ∈ [0, 1].
+Since KN ⊆ [0, 1], this implies that dH (KN , [0, 1]) ≤ C 2 /(2N ). Since C 2 /(2N ) → 0 as N → ∞, this
+completes the proof.                                                                                 
+
+2.4. Iterated function systems. We now recall the notion of an iterated function system (IFS); for a
+detailed exposition see [10, §9]. We will only consider the case of a finite IFS generated by similarities.
+Definition 2.10. Fix d ∈ N, and let E be a finite set. An iterated function system (IFS ) on Rd is a
+collection (ua )a∈E of contracting similarities ua : Rd → Rd satisfying the open set condition: there exists
+an open set W ⊆ Rd such that the collection (ua (W ))a∈E is a disjoint collection of subsets of W (see [14]
+for a thorough discussion). The limit set of the IFS is the image of the coding map π : E N → Rd defined
+by
+                                         π(ω) = lim uω1 ◦ · · · ◦ uωn (0).
+                                                 n→∞
+
+Remark 2.11. By intersecting with a ball centered at 0 of sufficiently large radius, we may without loss
+of generality assume that the open set W is bounded.
+                                                  S
+   Let us now introduce some notation. Let E ∗ = n≥0 E n . For ω ∈ E ∗ , let |ω| denote the length of ω,
+and let
+                                              uω = uω1 ◦ · · · ◦ uω|ω| ,
+with the convention that u∅ is the identity map.
+   Although we believe the following lemma is well-known to experts, we include its proof for completeness.
+Lemma 2.12. Let (ua )a∈E be an IFS, and let Λ denote the limit set of (ua )a∈E . There exists a constant
+M ∈ N such that for every set S ⊆ Λ, there exists a collection A ⊆ E ∗ of cardinality at most M with the
+following properties:
+              S
+      (i) S ⊆ ω∈A uω (Λ).
+     (ii) For all ω ∈ A,
+(2.8)                                           ku′ω k ≤ diam(S),
+        where ku′ω k denotes the contraction ratio of the similarity uω .
+
+Proof. Let A  e be the set of all words ω ∈ E ∗ which satisfy (2.8) but for which no proper initial segment
+satisfies (2.8), and let A = {ω ∈ A  e : uω (Λ) ∩ S 6= }. Then (i) and (ii) are satisfied. To complete the
+proof, we must show that #(A) is bounded independent of S.
+   If  ∈ A, then #(A) = 1. Thus we may assume  ∈      / A. Fix ω ∈ A. The minimality of ω impiles that
+                                            ku′ω↿[1,|ω|−1]k > diam(S),
+
+where ↿ denotes restriction. In particular, letting γ = mina∈E ku′a k > 0, we have
+                                  ku′ω k = ku′ω|ω| k · ku′ω↿[1,|ω|−1]k > γ diam(S).
+
+Moreover, if x ∈ S then
+                 uω (W ) ⊆ B(x, diam(S) + diam(uω (W ))) ⊆ B(x, diam(S)(1 + diam(W ))).
+                 EXTRINSIC DIOPHANTINE APPROXIMATION ON MANIFOLDS AND FRACTALS                                9
+
+
+Since no word in A is an initial segment of another word in A, the open set condition implies that the
+collection (uω (W ))ω∈A is disjoint. Letting λ denote Lebesgue measure, we have
+                                                             X
+             diam(S)d ≍ λ(B(x, diam(S)(1 + diam(W )))) ≥        λ(uω (W ))
+                                                                   ω∈A
+                                                                   X                       X
+                                                               =         ku′ω kd λ(W ) ≍         diam(S)d .
+                                                                   ω∈A                     ω∈A
+                                 d
+Dividing both sides by diam(S) , we see that #(A) is bounded from above independent of S.                     
+
+            3. Proof of Theorem 1.1 (Extrinsic analogue of Dirichlet’s theorem)
+Proof of Theorem 1.1, case (1). Suppose that S is the limit set of the IFS (ua )a∈E , and write Λ = S.
+By Corollary 2.7, to complete the proof it suffices to show that there exists N such that Λ contains no
+2-roughly arithmetic progression of length N .
+    By contradiction, suppose that Λ contains arbitrarily long 2-roughly arithmetic progressions. For each
+N , let PN = (xi )N                                                                                d
+                  0 be a 2-roughly arithmetic progression of length (N + 1), and let γN : R → R be an
+                                                                               −1
+affine transformation such that γN (0) = x0 and γN (1) = xN . Then KN := γN (PN ) is also a 2-roughly
+arithmetic progression; moreover, the left and right endpoints of KN are 0 and 1, respectively.
+    Let M ∈ N be as in Lemma 2.12. Then by Lemma 2.12, for each N ∈ N there is a collection AN ⊆ E ∗
+of cardinality at most M such that
+                                                    [
+(3.1)                                        PN ⊆        uω (Λ)
+                                                     ω∈AN
+
+and
+(3.2)                                                       ′
+                                     ku′ω k ≤ diam(PN ) = kγN k ∀ω ∈ AN .
+Enumerate the elements of AN by ω (N,1), . . . , ω (N,MN ) with MN ≤ M . For each j = 1, . . . , M let
+                                     KN,j = {x ∈ KN : γN (x) ∈ uω(N,j) (Λ)}
+if j ≤ MN , and KN,j =  otherwise. By (3.1),
+                                                       M
+                                                       [
+                                                KN =         KN,j .
+                                                       j=1
+
+By the compactness of K∗ ([0, 1]) under the Vietoris topology [15, Theorem 4.26], there exists an increasing
+sequence (Nk )∞                                                              ∞
+               1 such that for each j = 1, . . . , M , the sequence (KNk ,j )k=1 converges to a set K∞,j ∈
+  ∗
+K ([0, 1]). Since the finite union operation is continuous in the Vietoris topology [15, Exercise 4.29(iv)],
+by Lemma 2.9 we have
+                                       [M
+                                           K∞,j = lim KN = [0, 1].
+                                                     N →∞
+                                         j=1
+Now by elementary topology, the union of nowhere dense sets is nowhere dense, and so there exists j =
+1, . . . , M such that the set K∞,j contains a nontrivial interval [a, b] ⊆ [0, 1]. For each N ∈ N, define
+hN : [0, 1] → Rd by
+                                             hN = u−1
+                                                    ω (N,j)
+                                                            ◦ γN .
+By the definition of KN,j , we have hN (KN,j ) ⊆ Λ. On the other hand, by (3.2) we have
+                                                  kh′N k ≥ 1.
+Since hN (0) and hN (1) are in the bounded set Λ, kh′N k is bounded independent of N . Let (Nk )∞    1 be an
+increasing sequence which is a subsequence of the previously chosen sequence and for which the sequence of
+affine functions hNk converges locally uniformly to a non-constant affine function h : [0, 1] → Rd . The map
+(h, K) 7→ h(K) is continuous from (locally uniform topology × Vietoris topology) to the Vietoris topology
+[19, (16.11)]; thus
+                                                        → h(K∞,j ).
+                                          hNk (KNk ,j ) −
+                                                        k
+10                                             LIOR FISHMAN AND DAVID SIMMONS
+
+
+But hNk (KNk ,j ) ⊆ Λ by construction, so h(K∞,j ) ⊆ Λ by [15, Exercise 4.29(ii)]. Since K∞,j ⊇ [a, b], we
+have
+                                               Λ ⊇ h([a, b]),
+i.e. Λ contains a line segment, contradicting our hypothesis.                                            
+Proof of Theorem 1.1, case (2). Write M = S. The first step of the proof is to show that since M does not
+contain a line segment, the cardinality of its intersection with any short enough line segment is bounded
+from above. Rigorously:
+Claim 3.1. For each x ∈ M , there exist a neighborhood U of x and an integer N ∈ N such that for every
+line L,
+                                            #(U ∩ L) ≤ N.
+Proof. By the implicit function theorem, if U ⊆ Rd is a sufficiently T  small neighborhood of x, then there
+                                                                         s
+exist real-analytic functions f1 , . . . , fs : U → R such that M ∩ U = i=1 fi−1 (0), where s = d − dim(M ).
+By contradiction, for each N ∈ N large enough so that B(x, 1/N ) ⊆ U , choose a line LN so that
+                                                #(M ∩ B(x, 1/N ) ∩ LN ) > N.
+                                                                     ′
+Parameterize LN by an affine transformation γN : R → Rd satisfying kγN k = 1. Since the unit sphere
+  d−1
+S                                                ∞
+      is compact, we may choose a sequence (Nk )1 and a vector v ∈ S d−1 so that γN  ′
+                                                                                       k
+                                                                                         → v. Let
+                                                                                         −
+                                                                                                           k
+              −1
+(aN , bN ) = γN  (B(x, 1/N )).
+  Fix i = 1, . . . , s and N ∈ N. Then fi ◦ γN has at least N zeros on (aN , bN ), since each point in
+M ∩ B(x, 1/N ) ∩ LN corresponds to a joint zero of f1 , . . . , fs on (aN , bN ).
+Claim 3.2. For each j ≤ N , (fi ◦ γn )(j) has at least (N − j) zeros on (aN , bN ).
+Proof. Suppose the claim is true for j < N , and let aN < c1 < . . . < cN −j < bn be zeros of (fi ◦ γn )(j) .
+By the mean value theorem, for each k = 1, . . . , N − (j + 1) there exists c′k ∈ (ck , ck+1 ) which is a zero of
+(fi ◦ γn )(j+1) . This completes the inductive step.                                                           ⊳
+     Now fix j < N , and let cN,j ∈ (aN , bN ) be a zero of (fi ◦ γN )(j) . We observe that by the chain rule,
+                                                                 (j)
+                               0 = (fi ◦ γN )(j) (cN,j ) = fi                        ′
+                                                                       ◦ γN (cN,j )[γN            ′
+                                                                                       , . . . , γN ].
+                              ′
+Here there are j copies of γN   . Note that we have used the fact that γN is affine to eliminate all terms
+                                                                        ′
+involving a second order or higher derivative of γN , and to interpret γN as a vector rather than as a function
+whose output is a vector. Since γN (cN,j ) ∈ B(x, 1/N ), we have by Taylor’s theorem
+                               (j)   ′            ′                                        (j+1)
+(3.3)                       |fi (x)[γN , . . . , γN ]| ≤ (1/N )j+1             sup      kfi        (y)k.
+                                                                          y∈B(x,1/N )
+                          ′
+On the other hand, since γN k
+                              → v we have
+                              −
+                                     k
+                                          (j)    ′              ′        (j)
+                                         fi (x)[γN k
+                                                     , . . . , γN  → fi (x)[v, . . . , v],
+                                                                  ]−
+                                                                  k
+which together with (3.3) implies that
+                                         (j)
+(3.4)                                fi (x)[v, . . . , v] = 0 ∀i = 1, . . . , s ∀j ∈ N.
+Since f1 , . . . , fs are real-analytic, (3.4) implies that
+                              fi (x + tv) = 0 ∀i = 1, . . . , s ∀t ∈ R sufficiently small.
+Reinterpreting this statement in terms of the manifold M , we see that for sufficiently small ε > 0, the line
+segment x + [−ε, ε]v is contained in M . This contradicts our hypothesis.                                  ⊳
+Remark 3.3. In the above proof, and for the remainder of the proof of Theorem 1.1, the only step where
+we need M to be real-analytic is the step where we use (3.4) to deduce the existence of a line segment
+contained in M . If M is assumed to be C ∞ and if we assume that (3.4) does not hold for any pair (x, v),
+then the conclusion of Theorem 1.1 holds.
+                 EXTRINSIC DIOPHANTINE APPROXIMATION ON MANIFOLDS AND FRACTALS                             11
+
+
+   We now claim that for any compact set K ⊆ M , the conclusion of Theorem 1.1 holds, with the constant
+Cx depending only on K. Indeed, fix such a K, let V ⊆ M be a neighborhood of K which is relatively
+                       e = V . We use the compactness of K
+compact in M , and let K                                 e to change the local principle of Claim 3.1 to
+a global one:
+Claim 3.4. There exists N ∈ N such that for every line L,
+                                                   e ∩ L) < N.
+                                                 #(K
+
+Proof. For each x ∈ M , let Ux and Nx be as in Claim 3.1. Then (Ux )x∈K               e            k
+                                                                      e is a cover of K; let (Uxi )i=1 be
+                                               Pk
+a finite subcover. The corollary holds with N = i=1 Nxi + 1.                                           ⊳
+
+   Thus K                                                                          e contains no 2-roughly
+          e contains no collinear N -tuples of distinct points, and in particular, K
+arithmetic progressions of length N . So by Corollary 2.7, there exists C > 0 such that for all x ∈ K \ Qd ,
+                                                                                                   e relative
+                                       e satisfying (1.1). Since K is contained in the interior of K
+there exist infinitely many p/q ∈ Qd \ K
+                                                                             e
+to M , only finitely many of these rational points can satisfy p/q ∈ M \ K. Thus there infinitely many
+p/q ∈ Qd \ M satisfying (1.1).                                                                             
+
+    4. Proof of Proposition 1.5 (The von Koch curve does not contain a line segment)
+  Recall (cf. [14, §3.3(2)]) that the von Koch snowflake curve is the limit set of the IFS on R2 ≡ C
+generated by the similarities
+                                               1
+                                      u1 (z) =   z
+                                               3
+                                               1         1
+                                      u2 (z) = eπi/3 z +
+                                               3         3
+                                               1           1 1
+                                      u3 (z) = e−πi/3 z + + e2πi/3
+                                               3           3 3
+                                               1    2
+                                      u4 (z) = z + .
+                                               3    3
+This IFS satisfies the open set condition with respect to the equilateral triangle W whose vertices are 0, 1,
+and eπi/3 (cf. Figure 1). Denote the von Koch curve by Λ.
+  Convention. In this proof, line segments are not considered to contain their endpoints.
+  By contradiction, suppose that the von Koch curve contains a line segment L ⊆ Λ. Without loss of
+generality, suppose that
+                                                   S
+    (i) The number of endpoints of L contained in a ∂(ua (W )) is maximal among line segments contained
+        in Λ.
+   (ii) The length of L is maximal given (i).
+We observe that L cannot be contained in ua (W ) for any a ∈ E; otherwise u−1         S be a line segment
+                                                                              a (L) would
+longer than
+         S    L but  also satisfying
+                           S         (i). Since L is connected,  it follows that L  \  a ua (W ) 6= . Fix
+x ∈ L \ a ua (W ) ⊆ L ∩ a ∂(ua (W )). Then L \ {x}Sis the union of two line segments L1 and L2 . Let
+n denote the number of endpoints of L contained in S     a ∂(ua (W )); we claim that n = 2. Indeed, if not,
+then either L1 or L2 has (n + 1) endpoints contained in a ∂(ua (W )). (If n = 0, both L1 and L2 have this
+property; if n = 1, only one of them does.)
+   To summarize:
+              S     both endpoints x1 , x2 of the line segment L described by conditions (i) and (ii) are
+contained in a ∂(ua (W )); moreover, L is not contained in ua (W ) for any a. Let L1 , . . . , L9 be as in
+                  S                S9
+Figure 1, so that a ∂(ua (W )) = 1 Li . We now consider separately:
+Case 1: x1 , x2 are contained in the same line segment Li for some i. In this case, we observe that since the
+        intersection of Λ with the x-axis is precisely the Cantor set, the intersection of Λ with these line
+        segments will be the union of finitely many images of the Cantor set under similarities. Since such
+        a union cannot contain a line segment, this is a contradiction.
+12                                     LIOR FISHMAN AND DAVID SIMMONS
+
+                                                        eπi/3
+
+
+
+
+                                                        L1
+                                                             z0
+
+                                      L4           L2             L6             L8
+                                            L3                         L7
+
+
+                                  0        L5                               L9        1
+
+
+
+           Figure 1. The open set and its first-level iterates for the von Koch snowflake curve.
+
+Case 2: x1 , x2 lie on opposite sides of the line L10 = {Re[z] = 1/2}. In this case, we observe that Λ ∩ L10
+        is a singleton {z0 }, where z0 = 13 + 13 e2πi/3 as in Figure 1. Since L is connected, we must have
+        z0 ∈ L. But since no point in Λ has imaginary part greater than the imaginary part of z0 , the line
+        L must be horizontal. Thus L ⊆ L1 , and we are reduced to the first case.
+Case 3: x1 , x2 are contained in different line segments, and lie on the same side of L10 . In this case,
+        without loss of generality we may assume that x1 , x2 lie on the left hand side of L10 . Now if
+        {x1 , x2 } ⊆ L1 ∪ L2 ∪ L3 or {x1 , x2 } ⊆ L3 ∪ L4 ∪ L5 , then we would have L ⊆ u1 (W ) or L ⊆ u2 (W ),
+        respectively. Either is a contradiction, so {x1 , x2 } * L1 ∪ L2 ∪ L3 and {x1 , x2 } * L3 ∪ L4 ∪ L5 .
+        It follows (after possibly swapping x1 and x2 ) that x1 ∈ L1 ∩ L2 \ L3 and x2 ∈ L4 ∪ L5 \ L3 . In
+        particular, we see that L can be written as a union L = L1 ∪ {y} ∪ L2 , where La ⊆ ua (W ) and
+        y ∈ L3 . Now for one of a = 1, 2, the length of La is at least half of the length of L. But then
+        ua−1 (La ) is longer than L, contradicting (ii).
+
+                                 5. Metrical extrinsic approximation
+   Theorem 1.1 gives an analogue of Dirichlet’s theorem in the setting of extrinsic approximation. It is
+reasonable to ask whether analogues of the other classical theorems of Diophantine approximation, namely
+the Jarnı́k–Schmidt, Khinchin, and Jarnı́k–Besicovitch theorems (see e.g. [18, Theorem III.2A] and [7,
+Theorems 1.10 and 5.2]), also hold. In the case of the Jarnı́k–Schmidt theorem, an extrinsic version can be
+deduced immediately from the ambient version, and in the case of Khinchin’s theorem, an extrinsic version
+can be deduced from the ambient version together with a statement regarding intrinsic approximation
+which was proven in [11]. Finally, the Jarnı́k–Besicovitch theorem is more subtle, and does not admit an
+extrinsic analogue with the same level of generality. We comment on this phenomenon in §5.3 below.
+5.1. An analogue of the Jarnı́k–Schimidt theorem. The analogue of the Jarnı́k–Schmidt theorem
+for ambient approximation on fractals and manifolds is the following:
+Theorem 5.1 ([4, Theorem 1.1] (cf. [5, Proposition 3.1]) for fractals, [2, Theorem 1] for manifolds). Fix
+d ∈ N, and let S ⊆ Rd be either
+    (1) the limit set of an iterated function system, or
+    (2) a real-analytic manifold.
+Assume that S is not contained in any proper affine subspace of Rd . If
+                 BAd = {x ∈ Rd : ∃C > 0 for which (1.1) does not hold for any p/q ∈ Qd },
+then BAd ∩ S has full Hausdorff dimension in S.
+                    EXTRINSIC DIOPHANTINE APPROXIMATION ON MANIFOLDS AND FRACTALS                                    13
+
+
+   The set BAd is called the set of badly approximable vectors.
+   We now claim that Theorem 5.1 also implies an extrinsic analogue of the Jarnı́k–Schmidt theorem.
+Indeed, the extrinsic analogue of BAd ∩ S is the set
+                BAext := {x ∈ S : ∃C > 0 for which (1.1) does not hold for any p/q ∈ Qd \ S},
+and it is a superset of BAd ∩ S. So since BAd ∩ S has full Hausdorff dimension in S, so does BAext . This
+statement is what we refer to as the extrinsic analogue of the Jarnı́k–Schmidt theorem.
+Remark 5.2. The extrinsic analogue of the Jarnı́k–Schmidt theorem can be viewed as demonstrating the
+optimality of Theorem 1.1. Indeed, it demonstrates that for any function ψ : N → (0, ∞) which decays
+faster than q 7→ q −(d+1)/d , the statement which results from replacing the right hand side of (1.1) by Cψ(q)
+in Theorem 1.1 cannot be true. See [13] for a detailed discussion of such considerations.
+5.2. An analogue of Khinchin’s theorem. When considering analogues of Khinchin’s theorem, we
+consider only the case of manifolds. The case of fractals is more difficult, since the ambient analogue is not
+known; moreover, even if it were known, not enough is known about the intrinsic approximation theory of
+fractals to deduce an extrinsic version from a hypothetical ambient version.
+   The analogue of Khinchin’s theorem for ambient approximation on manifolds is the following:
+Theorem 5.3 ([1, Theorem 2.3]). Fix d ≥ 2, and let M be a real-analytic submanifold of Rd which is
+not contained in any proper affine subspace of Rd . Let λM denote Lebesgue measure on M . Then for any
+decreasing function ψ : N → R+ , if the series
+                                                X
+(5.1)                                                ψ(q)d
+                                                         q∈N
+
+diverges,6 then the set                                                                 
+                                                                              p   ψ(q)
+                                 Wψ :=     x ∈ M : ∃∞ p/q ∈ Qd           x−     <
+                                                                              q    q
+has full λM -measure.
+   The set Wψ is called the the set of ψ-approximable points. Analogously, we define the set of ψ-
+intrinsically approximable and ψ-extrinsically approximable points
+                                                                           
+                                                                   p   ψ(q)
+                         Wψint := x ∈ M : ∃∞ p/q ∈ Qd ∩ M x −        <
+                                                                   q     q
+                                                                           
+                                                                   p   ψ(q)
+                         Wψext := x ∈ M : ∃∞ p/q ∈ Qd \ M x −        <        .
+                                                                   q    q
+Obviously, Wψ = Wψint ∪ Wψext . In particular, if Wψ has full λM -measure but Wψint has zero λM -measure,
+then Wψext has full λM -measure. On the other hand, we have the following:
+Theorem 5.4 (Corollary of [11, Theorem 5.5]). Let M and ψ be as in Theorem 5.3, and suppose that
+there exist C, ε > 0 such that
+                                                             C
+(5.2)                                              ψ(q) ≤       ∀q ∈ N.
+                                                             qε
+Then the set Wψint has zero λM -measure.
+   Combining Theorems 5.3 and 5.4, we have the following:
+Theorem 5.5. Let M and ψ be as in Theorem 5.3. Suppose that (5.1) diverges, and also that there exist
+C, ε > 0 such that (5.2) holds. Then Wψext has full λM -measure.
+
+   6One may also ask about the converse direction, namely whether the convergence of (5.1) implies that W       has zero
+                                                                                                            ψ
+λM -measure. This is known in some cases; we refer to [1] for details.
+14                                    LIOR FISHMAN AND DAVID SIMMONS
+
+
+Remark 5.6. In this context, the condition (5.2) is quite reasonable. Indeed, by Theorem 1.1, we have
+                                                [
+                                                       ext
+(5.3)                                     M=         WCψ  1/d
+                                                              ,
+                                                      C>0
+                   −c
+where ψc (q) := q . Intuitively, this means that the question about the Lebesgue measure of Wψext mostly
+makes sense if ψ decays faster than ψ1/d ; if ψ decays more slowly than ψ1/d , then (5.3) implies that
+Wψext = M , and so clearly Wψext has full measure in this case.
+5.3. Remarks on the Jarnı́k–Besicovitch theorem. One may ask whether the above techniques can
+be used to prove an extrinsic analogue of the Jarnı́k–Besicovitch theorem. Again, we consider only the case
+of manifolds. An analogue of the Jarnı́k–Besicovitch theorem for ambient approximation on manifolds is
+proven in [1, Theorem 2.5]; we omit the statement for conciseness, although we remark that it only applies
+to functions ψ which decay more slowly than a fixed function ψ0 . However, it seems that not enough is
+known about intrinsic approximation on manifolds to deduce an extrinsic corollary.
+   To get an idea of what an extrinsic analogue of the Jarnı́k–Besicovitch theorem should look like, we will
+comment on a well-known example. Let dimH (S) denote the Hausdorff dimension of the set S.
+Theorem 5.7 ([3, Corollary 2] and [8, Theorem 1]). Let M be the unit circle in R2 . Fix c > 1/2, and let
+ψc (q) = q −c . Then
+                                                  (
+                                                    2−c
+                                                         c≤1
+(5.4)                               dimH (Wψc ) = 1+c1
+                                                               .
+                                                    1+c  c≥1
+
+   In fact, the “phase transition” which occurs here at c = 1 is due to a difference between intrinsic and
+extrinsic approximation. Specifically, we have the following:
+Theorem 5.8. Let M be the unit circle in R2 . Fix c > 0, and let ψc (q) = q −c . Then
+                                                                1
+(5.5)                                         dimH (Wψint )=
+                                                       c
+                                                               1+c
+while
+                                                      
+                                                      
+                                                      1       c ≤ 1/2
+(5.6)                                dimH (Wψext )=     2−c
+                                                               1/2 ≤ c < 1 .
+                                              c
+                                                       1+c
+                                                      
+                                                          0    c>1
+
+Proof. (5.5) is proven for example in [11, Theorem 2.13]. When c < 1, (5.6) follows immediately from (5.4)
+and (5.5), since dimH (Wψc ) = max(dimH (Wψintc
+                                                ), dimH (Wψext
+                                                            c
+                                                               )). Finally, if c > 1 then (5.6) is a consequence
+of [8, Lemma 1].                                                                                              
+
+   In particular, from the above example we see that the Hausdorff dimensions of Wψc and Wψextc
+                                                                                                 do not
+agree if c is large enough. Thus for these values of c, an extrinsic analogue of the Jarnı́k–Besicovitch
+theorem could not be deduced directly from an ambient analogue.
+
+5.4. Open questions.
+Open Question 5.9. What is the correct generalization of Proposition 1.5? More precisely, find a class
+of iterated function systems with the following properties:
+       (i) It’s easy to check whether or not any given IFS is in the class.
+      (ii) The von Koch snowflake is in the class.
+     (iii) No member of the class contains a line segment.
+Open Question 5.10. Find an extrinsic analogue of the Jarnı́k–Besicovitch theorem for some class of
+manifolds or fractals.
+                   EXTRINSIC DIOPHANTINE APPROXIMATION ON MANIFOLDS AND FRACTALS                                      15
+
+
+                                                    References
+ 1. V. V. Beresnevich, Rational points near manifolds and metric Diophantine approximation, Ann. of Math. (2) 175 (2012),
+    no. 1, 187–235.
+ 2.         , Badly approximable points on manifolds, http://arxiv.org/abs/1304.0571, preprint 2013.
+ 3. V. V. Beresnevich, D. Dickinson, and S. L. Velani, Diophantine approximation on planar curves and the distribution of
+    rational points, With an Appendix II by R. C. Vaughan, Ann. of Math. (2) 166 (2007), no. 2, 367–426.
+ 4. R. Broderick, L. Fishman, D. Y. Kleinbock, A. Reich, and B. Weiss, The set of badly approximable vectors is strongly
+    C 1 incompressible, Math. Proc. Cambridge Philos. Soc. 153 (2012), 319–339.
+ 5. R. Broderick, L. Fishman, and D. S. Simmons, Badly approximable systems of affine forms and incompressibility on
+    fractals, J. Number Theory 133 (2013), no. 7, 2186–2205.
+ 6. N. Budarina, D. Dickinson, and J. Levesley, Simultaneous Diophantine approximation on polynomial curves, Mathematika
+    56 (2010), no. 1, 77–85.
+ 7. Y. Bugeaud, Approximation by algebraic numbers, Cambridge Tracts in Mathematics, vol. 160, Cambridge University
+    Press, Cambridge, 2004.
+ 8. D. Dickinson and M. M. Dodson, Simultaneous Diophantine approximation on the circle and Hausdorff dimension, Math.
+    Proc. Cambridge Philos. Soc. 130 (2001), no. 3, 515–522.
+ 9. C. Druţu, Diophantine approximation on rational quadrics, Math. Ann. 333 (2005), no. 2, 405–469.
+10. K. J. Falconer, Fractal geometry: Mathematical foundations and applications., John Wiley & Sons, Ltd., Chichester,
+    1990.
+11. L. Fishman, D. Y. Kleinbock, K. Merrill, and D. S. Simmons, Intrinsic Diophantine approximation on manifolds,
+    http://arxiv.org/abs/1405.7650, preprint 2014.
+12. L. Fishman and D. S. Simmons, Intrinsic approximation for fractals defined by rational iterated function systems -
+    Mahler’s research suggestion, Proc. Lond. Math. Soc. (3) 109 (2014), no. 1, 189–212.
+13. L. Fishman,       D. S. Simmons,         and M. Urbański,        Diophantine approximation in Banach spaces,
+    http://arxiv.org/abs/1302.2275, preprint 2013, to appear in J. Théor. Nombres Bordeaux.
+14. J. E. Hutchinson, Fractals and self-similarity, Indiana Univ. Math. J. 30 (1981), no. 5, 713–747.
+15. A. S. Kechris, Classical descriptive set theory, Graduate Texts in Mathematics, vol. 156, Springer-Verlag, New York,
+    1995.
+16. A. Y. Khinchin, Continued fractions, The University of Chicago Press, Chicago, Ill.-London, 1964.
+17. K. Mahler, Some suggestions for further research, Bull. Aust. Math. Soc. 29 (1984), 101–108.
+18. W. M. Schmidt, Diophantine approximation, Lecture Notes in Mathematics, vol. 785, Springer-Verlag, Berlin, 1980.
+19. D. S. Simmons, Random iteration of rational functions, Ph.D. thesis, University of North Texas, 2012, available in
+    shortened form at http://arxiv.org/abs/1303.2705.
+
+  University of North Texas, Department of Mathematics, 1155 Union Circle #311430, Denton, TX 76203-5017,
+USA
+  E-mail address: lior.fishman@unt.edu
+
+   Ohio State University, Department of Mathematics, 231 W. 18th Avenue, Columbus, OH 43210-1174, USA
+   E-mail address: simmons.465@osu.edu
+   URL: https://sites.google.com/site/davidsimmonsmath/
+

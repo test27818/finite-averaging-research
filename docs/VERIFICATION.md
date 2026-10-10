@@ -2,6 +2,10 @@
 
 [中文首页](../README.zh-CN.md) · [English](../README.md) · [证明路线 / Proof guide](PROOF_GUIDE.md)
 
+**2026-10-11同步核对：** 5115个源文件逐字节归档；知识目录检查覆盖65张结论卡及其来源，原185项核验索引继续保留。本次未重跑完整数学review。后续研究的脚本入口见[知识核验说明](../archive/2026-09-07/3-3-triple-average-research-note/knowledge/VERIFICATION.md)，同步清单见[记录](../catalog/SYNC_2026-10-11.json)。
+
+**Sync verification, 2026-10-11:** source bytes, navigation, the 65-claim knowledge catalog and the registered check index are checked. The full mathematical review was not rerun; earlier reports below retain their original scope and date.
+
 ## 三种不同的检查 / Three different checks
 
 | 检查 / Check | 能说明 / Establishes | 不能说明 / Does not establish |
@@ -77,7 +81,7 @@ Direct historical runs may rewrite their result JSON. Use the temporary-copy ent
 
 ## 文件及证据定位 / Locating evidence
 
-- [FILES.json](../catalog/FILES.json)：1905个归档文件、来源、字节数和SHA-256 / all archived source files.
+- [FILES.json](../catalog/FILES.json)：5115个归档文件、来源、字节数和SHA-256 / all archived source files.
 - [CHECKS.md](../catalog/CHECKS.md)：185个注册条目的正文、脚本、范围和排除声明 / claim-to-evidence map.
 - [proof_map.json](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/proof_map.json)：主证明依赖导航图，不是自动提取的形式化证明 / navigation dependency graph, not a formal proof object.
 - [外部定理审核](../archive/2026-09-07/3-3-triple-average-research-note/outputs/prime_arity/audits/prime_arity_lower_band_external_theorems_audit_20260915.md)：引用名称、前提和原文访问边界 / external assumptions and source access.
@@ -86,6 +90,6 @@ Direct historical runs may rewrite their result JSON. Use the temporary-copy ent
 
 ## 目录清晰程度的边界 / Navigation limitations
 
-主题入口、双语指南、全部文件索引和生成的检查索引均作路径检查；归档内旧文逐字节保留，其中部分绝对路径、旧迁移链接和历史状态仍需结合当前入口理解。详见[来源与移植](../PROVENANCE.md)。不能据新增导航检查宣称1905个历史文件中的每条链接都已修复。
+主题入口、双语指南、全部文件索引和生成的检查索引均作路径检查；归档内旧文逐字节保留，其中部分绝对路径、旧迁移链接和历史状态仍需结合当前入口理解。详见[来源与移植](../PROVENANCE.md)。不能据新增导航检查宣称5115个历史文件中的每条链接都已修复。
 
-The new navigation is checked. Archived documents remain byte-identical, including some historical absolute paths, migrated links and outdated status statements. The new checks do not claim to repair every link inside all 1,905 historical files.
+The new navigation is checked. Archived documents remain byte-identical, including some historical absolute paths, migrated links and outdated status statements. The new checks do not claim to repair every link inside all 5,115 archived source files.

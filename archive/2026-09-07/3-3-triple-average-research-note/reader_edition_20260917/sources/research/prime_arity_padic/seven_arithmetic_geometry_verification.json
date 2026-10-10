@@ -1,0 +1,56 @@
+{
+  "norm_cusps": {
+    "primitive_core_and_cusp_checks": 3072,
+    "legal": 2654,
+    "obstructed": 418,
+    "cusp_widths": {
+      "zero": 7,
+      "infinity": 1
+    }
+  },
+  "physical_paths": {
+    "literal_core_paths": 17,
+    "safe_two_average_entries": 13,
+    "maximum_atomic_steps": 2438,
+    "all_final_states_zero": true
+  },
+  "theta": {
+    "theta_coefficients": 1200,
+    "primitive_representation_coefficients": 1200,
+    "scope": "Identities proved generally via Euclidean norm and ideal factorization; finite checks detect errors."
+  },
+  "localized_group": {
+    "localized_first_column_reductions": 75,
+    "scope": "R-point inclusion proved in text; samples check fractional scale bookkeeping."
+  },
+  "padic_coverage": {
+    "full_local_cover": [
+      {
+        "precision": 1,
+        "all_projective_classes": 4
+      },
+      {
+        "precision": 2,
+        "all_projective_classes": 12
+      },
+      {
+        "precision": 3,
+        "all_projective_classes": 36
+      },
+      {
+        "precision": 4,
+        "all_projective_classes": 108
+      },
+      {
+        "precision": 5,
+        "all_projective_classes": 324
+      },
+      {
+        "precision": 6,
+        "all_projective_classes": 972
+      }
+    ],
+    "five_failure_plus_two_zeros_steps": 4
+  },
+  "scope": "Seven-entry geometric synthesis; no new general-dimension theorem claimed."
+}

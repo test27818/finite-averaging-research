@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "formula_parameter_cases": 147394,
+  "capacity_charts": {
+    "one_source_balanced": 22636,
+    "carrier_margin": 87163,
+    "small_offset_existing_formula": 1314,
+    "balanced_source": 36281
+  },
+  "exact_group_interfaces": 70,
+  "column_transports": 420,
+  "literal_source_return_atoms": 2736,
+  "unit_lemma_checks": 796472,
+  "large_integer_boundary_checks": 55,
+  "cutoff_examples": [
+    {
+      "p": 1009,
+      "r0": 28
+    },
+    {
+      "p": 10007,
+      "r0": 56
+    },
+    {
+      "p": 1000003,
+      "r0": 252
+    },
+    {
+      "p": 1000000007,
+      "r0": 2520
+    },
+    {
+      "p": 2305843009213693951,
+      "r0": 3329024
+    }
+  ],
+  "frozen_files": 256,
+  "local_links": 248,
+  "seconds": 8.319,
+  "scope": "Closed counts and complete finite terminal interface; no word search. Infinite group containment and existing entry/tail proofs are retained dependencies."
+}

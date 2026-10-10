@@ -1,0 +1,476 @@
+                                           ON THE MIXED LITTLEWOOD CONJECTURE AND
+                                           CONTINUED FRACTIONS IN QUADRATIC FIELDS
+arXiv:1409.3439v1 [math.NT] 11 Sep 2014
+
+
+
+
+                                                          PALOMA BENGOECHEA, EVGENIY ZORIN
+
+                                                 Abstract. We show how a recent result by Aka and Shapira on
+                                                 the evolution of continued fractions in a fixed quadratic field im-
+                                                 plies the classic result of de Mathan and Teullié on the Mixed
+                                                 Littlewood Conjecture.
+
+
+
+                                                                       1. Introduction
+                                            A famous open problem in the field of Diophantine approximation is
+                                          the Littlewood Conjecture which claims that, for every pair (α, β) of
+                                          real numbers, we have
+                                          (1)                        inf q · kqαk · kqβk = 0,
+                                                                     q≥1
+
+                                          where k · k denotes the distance to the nearest integer. The first signif-
+                                          icant contribution to this question is due to Cassels and Swinnerton-
+                                          Dyer [6] who proved that (1) is satisfied when α and β belong to the
+                                          same cubic field. This result was sharpened by Peck [14] who showed
+                                          that if 1, α, β form a basis of a cubic field, then
+                                                             lim inf q · log q · kqαk · kqβk < ∞.
+                                                               q→∞
+
+                                          Further examples of pairs (α, β) satisfying (1) are given in [1] and [8].
+                                          Despite some recent progress on the Hausdorff dimension of the set of
+                                          counterexamples [15], [10], the Littlewood Conjecture remains an open
+                                          problem.
+                                             In 2004, de Mathan and Teullié [9] proposed a variant of the Lit-
+                                          tlewood Conjecture, called Mixed Littlewood Conjecture, in which
+                                          the quantity kqβk is replaced by a pseudo-absolute value |q|D . A
+                                          pseudo-absolute sequence D is an increasing sequence of positive in-
+                                          tegers D = (un )n∈N with u1 = 1 and un |un+1 for all n. The pseudo-
+                                          absolute value |q|D is then defined by
+                                                                 |q|D = inf {1/un : q ∈ un Z} .
+                                          2010 Mathematics Subject Classification. 11J13,11J61,11J68.
+                                          Key words and phrases. Littlewood Conjecture, Simultaneous diophantine approx-
+                                          imation.
+                                                                                 1
+2               PALOMA BENGOECHEA, EVGENIY ZORIN
+
+When D is the sequence (pn )n∈N , where p is a prime number, then | · |D
+is the usual p-adic value | · |p , normalised such that |p|p = p−1 , and
+de Mathan and Teullié’s conjecture is then known as p-adic Littlewood
+Conjecture.
+Mixed Littlewood Conjecture. For every real number α and every
+pseudo-absolute sequence D, we have
+(2)                         inf q · kqαk · |q|D = 0.
+                            q≥1
+
+   This conjecture obviously holds when α is rational or has unbounded
+partial quotients. Thus one only has to consider the case when α is a
+badly approximable number (that is irrational α with bounded partial
+quotients). From a metric point of view, the set of badly approximable
+numbers is moderately small: it has Lebesgue measure 0 but Hausdorff
+dimension 1.
+   In 2007, Einsiedler and Kleinbock [11] established that, for every
+given prime number p, the set of counterexamples α to the p-adic Lit-
+tlewood Conjecture has Hausdorff dimension 0, so this set is much
+smaller than the set of all badly approximable numbers. In an oppo-
+site direction, Badziahin and Velani [3] proved that, for every given
+pseudo-absolute sequence D, the set of real numbers α satisfying
+(3)             inf q · log q · log log q · kqαk · |q|D > 0
+                q≤3
+
+has full Hausdorff dimension.
+   However, the first contribution to de Mathan and Teullié’s conjecture
+goes back to themselves in [9]. A natural family of badly approximable
+numbers are the quadratic irrational numbers, since their continued
+fraction expansion is periodic. Using machinery from p-adic analysis,
+de Mathan and Teullié proved (2) for any such α when D is bounded
+(i.e. the ratio of two consecutive terms of D is bounded). Moreover, for
+any quadratic irrational number α and any bounded pseudo-absolute
+sequence D, let S be the set of positive integers defined by
+                                                 
+                                                1
+(4)                    S := q ∈ N : kqαk ≪          ,
+                                                q
+they proved a stronger statement
+(5)               lim inf q · log q · kqαk · |q|D < ∞.
+                      q∈S
+
+Later, in the same direction as (3), de Mathan [8] showed that this
+result can not be significantly improved: for any quadratic irrational
+                     MIXED LITTLEWOOD CONJECTURE                           3
+
+number α there exists a positive constant λ (depending only on α) such
+that
+(6)                 lim inf q · (log q)λ · kqαk · |q|D > 0,
+                      q∈S
+
+where the set S is defined by (4). The common belief is that (6) holds
+for any λ ≥ 1, also when the lim inf is taken over the set q ∈ N of all
+positive integers, and not only on the set q ∈ S.
+   In this paper we give a new proof of (5) by using a recent result of Aka
+and Shapira [2] on the evolution of the continued fraction expansions
+of tα, where α is a fixed quadratic irrationality and t belongs to the
+                       ×
+group of M-units OM       for a fixed set of primes M. Their result allows
+us to estimate accurately the geometric mean of the partial quotients
+in the period of tα in terms of the length of the period and a constant
+depending only on α and the set of prime divisors of t. Then we
+find, when α is a quadratic irrationality, an explicit subset S ′ of de
+Mathan’s set S for which there exists a positive constant c such that,
+for all q ∈ S ′ , we have
+(7)                         q · log q · kqαk · |q|D ≤ c.
+   There is a substantial difference between the Mixed Littlewood Con-
+jecture and its restrictive bounded form: for every given bounded
+pseudo-absolute sequence, the set of all primes dividing one of the terms
+of the sequence is finite, whereas it can be infinite if the sequence is
+not bounded. This discrepancy between the general conjecture and its
+bounded form was already palpable in [9], as it was the obstruction to
+extend the proof of (5) to the general Mixed Littlewood Conjecture.
+The same happens in this article again. Although Lemma 2.3 gives
+a very simple proof of the Mixed Litlewood Conjecture for irrational
+quadratics, for the stronger result (7) we need the set of all primes
+dividing one of the terms of the given pseudo-absolute sequence to be
+finite. This condition is due to Aka-Shapira’s result [2], which we use
+more than once.
+   The link between Aka-Shapira’s result and the bounded Mixed Lit-
+tlewood Conjecture is particularly interesting because their results and
+methods seem to be extendable to continued fractions which are not
+exactly periodic. This approach, if developed, could provide a uni-
+form way to establish the bounded Mixed Littlewood Conjecture or
+the p-adic Littlewood Conjecture in a vast variety of cases.
+   We assume that the reader is familiar with the classical results from
+the theory of continued fractions1.
+1Will the reader need a reference on this subject, we recommend him [5].
+4                 PALOMA BENGOECHEA, EVGENIY ZORIN
+
+                      2. Main result and proofs
+   Throughout the paper α denotes a quadratic irrational number (so
+the continued fraction expansion of α is periodic) and D = (un )n∈N
+denotes a sequence of positive integers such that u1 = 1 and un |un+1
+for all n ∈ N. For n ≥ 0, we denote by l(n) the length of the period
+                                                   (n)
+of the continued fraction expansion of un α, by ak the k-th partial
+                                               (n)
+quotient of this continued fraction, and by rk the denominator of the
+k-th convergent of un α. We denote by cα ∈ (0, 1) a Markov constant
+of α, so
+                           inf q · kqαk ≥ cα .
+                                q≥1
+
+We use the following additional hypothesis on the sequence D = (un )n∈N .
+Hypothesis 1. Assume thereQexists a finite set of primes M such that
+for all n ∈ N, we have un = p∈M pmp , with mp ≥ 0 (in other terms,
+                                                    ×
+all the integers un belong to the group of M-units OM ).
+  We define the set of positive integers
+                    n                               o
+                                             (n)
+(8)           S ′ = q ∈ N : ∃n ≥ 0 | q = un rl(n) −1 .
+
+For this concrete set S ′ we have the following result.
+Theorem 2.1. Assume Hypothesis 1. Then, for every quadratic irra-
+tional number α there exists a constant c > 0 such that
+(9)                          q · log q · kqαk · |q|D ≤ c
+for all q ∈ S ′ . In particular,
+(10)                 lim inf q · log q · kqαk · |q|D < ∞.
+                       q∈S′
+
+
+Remark 2.2. The constant c in the statement of Theorem 2.1 depends
+on the sequence D. In fact, we will see in the proof that this constant
+depends only on the finite set of primes M from Hypothesis 1 rather
+than on the sequence D itself.
+   In order to prove Theorem 2.1, we need some information on the
+growth of the partial quotients in the period of un α. All the results we
+need are stated in Lemma 2.3 and Proposition 2.5.
+   In Lemma 2.3 we study the partial quotients of tα, for t ∈ N. We
+provide a uniform upper bound for all of them and a lower bound
+for the last partial quotient in the period of the continued fraction
+expansion of tα. This lower bound agrees with the upper bound up to
+a multiplicative constant independent of t, so the uniform upper bound
+                    MIXED LITTLEWOOD CONJECTURE                           5
+
+in Lemma 2.3 is the best possible up to a multiplicative constant which
+only depends on α.
+   However, Proposition 2.5 ensures that, under Hypothesis 1, most
+of the partial quotients of un α are actually much smaller than the
+uniform upper bound from Lemma 2.3 which depends on α and n.
+Indeed, we show in Proposition 2.5 that the geometric mean of the
+partial quotients in the period of un α is bounded above by an absolute
+constant independent of n.
+   This proposition is analoguous to a result of Khintchine, which states
+that, for any subset X of R with full measure, the geometric mean of
+the first N partial quotients of any x ∈ X converges to a constant γ
+independent of x as N → ∞. The constant γ was calculated later by
+Lévy [13].
+   Proposition 2.5 follows from a recent result of Aka and Shapira [2]
+which, informally speaking, shows that under Hypothesis 1 the con-
+tinued fractions of the numbers un α, where α is fixed, behave like a
+generic continued fraction as n tends to infinity. This means that the
+results about statistics of the continued fractions of elements in a set of
+full measure (like Khintchine’s) should have their analogues when we
+consider the continued fractions of the numbers un α, with fixed α and
+n ∈ N sufficiently large. Aka and Shapira give the rate of convergence
+of the evolution of the continued fractions of un α toward the “aver-
+age” behaviour as n → ∞, as well as an error term which prevents us
+from transferring Khintchine-Lévy’s result in its exact form (the error
+term leads in Proposition 2.5 to a constant κ, which does not appear
+in Khintchine-Lévy’s result).
+Lemma 2.3. Let α be a quadratic irrational number and let t ≥ 2 be
+an integer. Then
+                                                         t
+  (i) the partial quotients of tα are bounded above by ,
+                                                        cα
+ (ii) the last partial quotient of the period of tα is bounded below by
+      ⌊tα⌋.
+  Proof. From the theory of continued fractions, we have
+                 (1)  (1)         1
+(11)            rk krk tαk < (1)         (k ≥ 0).
+                                ak+1
+Multiplying both sides of the inequality by t we obtain
+                      (1)  (1)          t
+(12)          cα < t rk krk tαk < (1)          (k ≥ 0),
+                                      ak+1
+which proves (i).
+6                      PALOMA BENGOECHEA, EVGENIY ZORIN
+
+   In order to show (ii), we can assume that the continued fraction
+expansion of α is purely periodic, i.e. α > 1 and its Galois conjugate
+α belongs to the interval (−1, 0). Therefore the continued fraction
+expansion of the number β = tα − ⌈tα⌉ that we denote by [b0 , b1 . . . , bs ]
+is also purely periodic, and we have
+(13)               tα = β + ⌈tα⌉ = [b0 + ⌈tα⌉, b1 , . . . , bs , b0 ]
+with b0 = ⌊β⌋ ≥ ⌊tα⌋.
+                                                                                          
+Remark 2.4. The Mixed Littlewood Conjecture for quadratic irra-
+tionals follows directly from Lemma 2.3. Indeed, if a quadratic irra-
+tional number α is a counterexample to the conjecture, then all the
+partial quotients of {un α}n∈N are uniformly bounded (i.e bounded from
+above by a constant not depending on n). By Lemma 2.3 (ii), such a
+situation is not possible.
+   In the estimates of the following proposition there appears an ex-
+ponent δ0 , which exact value is not known (although according to the
+Ramanujan conjecture δ0 = 21 ). This constant comes from [2] and, as
+                                                           25
+it is mentioned there, the best results up to the date are 64 ≤ δ0 ≤ 21 .
+Proposition 2.5. Let α be a quadratic irrational number, D = (un )n∈N
+be a sequence of integers satisfying Hypothesis 1. Fix a sufficiently large
+                                                                         (n)
+index n ∈ N, more precisely satisfying un > c−1      α . Denote by l = l     the
+length of the period of un α and by b1 , . . . , bl the partial quotients in the
+period of un α. We have
+                               l
+                                   !
+                             Y
+(14)                             bi ≤ eκ(γ+δ)l ,
+                                    i=1
+                  π2                                                                  −δ /24
+where γ := 12 log(2) is a so called Lévy’s constant, κ = 24δ0
+                                                                    ˙ un 0
+                                                              and δ =
+(the symbol =˙ means equal up to a constant independent of n). More-
+over,
+                                  l
+                                            !
+                                Y
+(15)               e(γ−δ)l ≤        (bi + 1) ≤ 2l eκ(γ+δ)l .
+                                     i=1
+
+  Proof. Let x1 = [0, b1 , . . . , bl ] and for 2 ≤ i ≤ l, let xi := [0, bi , . . . , bl , . . . , bi−1 ]
+be the (i − 1)-shift of x1 .
+  Define f : (0, 1) → R by
+                       (
+                                                           −δ /12
+                         log(un )δ0 /12 if x ∈ (0, un 0 )
+              f (x) =                                   −δ /12
+                         − log(x)              if x ∈ [un 0 , 1).
+                       MIXED LITTLEWOOD CONJECTURE                               7
+
+                                           δ /12
+Note that the function f (x) is un0 -Lipschitz and satisfies kf k∞ =
+                                                            δ0
+log(un )δ0 /12. Theorem 2.8 from [2] applied with ǫ = 24        and q = un
+(and taking into account Hypothesis 1) guarantees that
+               Z 1                l
+                               1X                       0 /24
+(16)               f dνGauss −       f (xi ) ≪α,S,δ0 u−δ
+                                                      n       ,
+                0              l i=1
+
+where νGauss denotes the Gauss-Kuzmin measure on the unit interval
+[0, 1], that is a measure equivalent to the Lebesgue measure νLebesgue
+                                          1
+with the relative density dνGauss = log(2)(1+x) dνLebesgue .
+   The integral in the left hand side of (16) can be estimated using the
+following equality:
+(17)
+                                                   δ
+ Z 1                  Z 1                    Z un− 120 
+                                                         log(un )δ0         
+      f (x)dνGauss =       − log(x)dνGauss +                        + log(x) dνGauss .
+   0                    0                      0             12
+
+Indeed, on the one hand
+       Z 1                 Z 1
+                                     log(x)
+(18)       log(x)dνGauss =                     dνLebesgue
+         0                     0 log(2)(1 + x)
+                                     Li2 (−1)        π2
+                                  =            =           ≈ 1.18567,
+                                      log(2)     12 log(2)
+                                                                      zk
+where νLebesgue denotes the Lebesgue measure on R and Li2 (z) = ∞
+                                                                P
+                                                                  k=1 k 2
+is a so called dilogarithm function. On the other hand,
+                   δ
+             Z un− 120                                    − 0
+                                                               δ
+                           log(un )δ0                    un 12
+(19)                                  + log(x) dνGauss ≤        .
+              0               12                         log(2)
+
+  Thus (16) implies
+                                       l
+                              1X
+(20)                    γ−δ ≤       f (xi ) ≤ γ + δ,
+                              l i=1
+              π2                  −δ /24
+where γ = 12 log(2)       ˙ un 0
+                    and δ =                .
+  Since
+                                                      1                       
+f (xi ) = min (− log(xi ), log(un )δ0 /12) = min log          , log(un )δ0 /12
+                                                         xi
+and x1i < bi + 1, we have that f (xi ) ≤ log(bi + 1). Thus we infer the
+lower bound (15) from the lower bound in (20).
+8                   PALOMA BENGOECHEA, EVGENIY ZORIN
+
+  To obtain the upper bound (15), we split the argument in two cases,
+according to the two cases in the definition of f (x). Since bi < x1i , if
+       −δ /12
+xi ∈ [un 0      , 1), we have
+(21)                              log(bi ) < f (xi )
+(because in this case f (xi ) = − log(xi )).
+                                                   −δ /12
+   In the complimentary case, when xi ∈ (0, un 0 ), Lemma 2.3 (i)
+gives
+                                       un
+                                  bi ≤    ,
+                                       cα
+hence
+                            12                    24
+(22)             log(bi ) < f (xi ) − log(cα ) < f (xi )
+                             δ0                   δ0
+                −1
+(because un > cα ).
+   We deduce (14) with κ = 24   δ0
+                                    from (21), (22) and the upper bound
+in (20).
+                                                                        
+   Proof of Theorem 2.1. Let α be a quadratic irrational number
+and D = (un )n∈N a sequence satisfying Hypothesis 1. Recall that we
+want to prove that there exists c > 0 such that for all q ∈ S ′ , where S ′
+is defined by (8),
+(23)                       q · log q · kqαk · |q|D ≤ c.
+The inequality (23) will follow from the stronger asymptotic equality
+                                            
+          (n)            (n)                      (n)
+(24)     rl(n) −1 · log(rl(n) −1 ) + log(un ) · krl(n) −1 un αk ≍ 1.
+Just by the definition of S ′ , it is clear that (24) implies (23). In the
+rest of the proof we focus on proving (24).
+   We can assume, without loss of generality, that the continued fraction
+of α is purely periodic, i.e. α > 1 and its Galois conjugate α belongs
+to the interval (−1, 0). Thus the continued fraction expansion of un α
+is almost purely periodic:
+                                      (n)   (n)        (n)
+                         un α = [a0 , a1 , . . . , al(n) ].
+From the theory of continued fractions, we have
+                      (n)       (n)             1
+(25)                 rl(n) −1 krl(n) −1 un αk ≍ (n) ,
+                                               al(n)
+so, in order to prove (24), it is enough to show
+                                (n)                     (n)
+(26)                     log(rl(n) −1 ) + log(un ) ≍ al(n) .
+                    MIXED LITTLEWOOD CONJECTURE                                      9
+
+To this end, note that from the recurrence satisfied by the denominators
+of the convergents of un α,
+       (n)           (n)      (n)           (n)          (n) (n)    (n)
+(27) r0 = 1,        r1 = a1 ,              rk     = ak rk−1 + rk−2        (k ≥ 2),
+we deduce that
+                              (n)         (n)           (n)
+(28)                        rk ≤ (ak + 1)rk−1
+
+for all k ∈ N.
+   Applying (28) recursively for k = 1, . . . , l(n) − 1 we find
+                                        l(n) −1
+                            (n)                   (n)
+                                          Y
+                           rl(n) −1 ≤           (ak + 1)
+                                          k=0
+
+and so, by Proposition 2.5, we have
+                                    (n)
+(29)                         log(rl(n) −1 ) ≪α l(n) .
+
+On the other hand, by comparing the recurrence (27) with the Fi-
+bonacci series (giving the denominators of the convergents of the golden
+ratio [1]), we have
+                                    (n)
+(30)                          log(rl(n) −1 ) ≫ l(n) .
+
+The inequalities (29) and (30) prove
+                                     (n)
+(31)                          log(rl(n) −1 ) ≍ l(n) .
+
+In [2], Theorem 2.12 (1), Aka and Shapira show that l(n) ≍ un . Then,
+applying this result to (31) we obtain
+                                     (n)
+(32)                           log(rl(n) −1 ) ≍ un .
+
+By a trivial asymptotic comparison we infer from (32)
+                              (n)
+                        log(rl(n) −1 ) + log(un ) ≍ un .
+                                                  (n)
+Finally, by Lemma 2.3 we have un ≍ al(n) , thus
+                             (n)                              (n)
+                       log(rl(n) −1 ) + log(un ) ≍ al(n) .
+
+This establishes (26) and concludes the proof of the theorem.
+                                                                                 
+10                 PALOMA BENGOECHEA, EVGENIY ZORIN
+
+                                  References
+ [1] B. Adamczewski, Y. Bugeaud, On the Littlewood conjecture in simultaneous
+     Diophantine approximation, J. London Math. Soc. (2) 73 (2006), no. 2, 355-
+     366.
+ [2] M. Aka, U. Shapira, On the evolution of continued fractions in a fixed quadratic
+     field, arXiv:1201.1280 [math.DS].
+ [3] D. Badziahin, S. Velani, Multiplicatively badly approximable numbers and gen-
+     eralised Cantor sets, Adv. Math. 228 (2011), no. 5, 276-2796.
+ [4] Y. Bugeaud, M. Drmota, B. de Mathan, On a mixed Littlewood conjecture in
+     Diophantine approximation, Acta Arith. 128 (2007), no. 2, 107-124.
+ [5] J.W.S. Cassels (1957). An introduction to Diophantine approximation. Cam-
+     bridge Tracts in Mathematics and Mathematical Physics 45. Cambridge Uni-
+     versity Press.
+ [6] J. W. S. Cassels, H. P. F. Swinnerton-Dyer, On the product of three homoge-
+     neous linear forms and the indefinite ternary quadratic forms, Philos. Trans.
+     Roy. Soc. London. Ser. A. 248, (1955) 73-96.
+ [7] B. de Mathan, Conjecture de Littlewood et récurrences linéaires, (French) [The
+     Littlewood conjecture and linear recurrences] Les XXIIèmes Journées Arith-
+     métiques (Lille, 2001). J. Théor. Nombres Bordeaux 15 (2003), no. 1, 249-266.
+ [8] B. de Mathan, On a mixed Littlewood conjecture for quadratic numbers, J.
+     Théor. Nombres Bordeaux 17 (2005), no. 1, 207-215.
+ [9] B. de Mathan, O. Teulié, Problèmes diophantiens simultanés, (French) [Si-
+     multaneous Diophantine approximations] Monatsh. Math. 143 (2004), no. 3,
+     229-245.
+[10] M. Einsiedler, A. Katok, E. Lindenstrauss, Invariant measures and the set
+     of exceptions to Littlewood’s conjecture, Ann. of Math. (2) 164 (2006), no. 2,
+     513-560.
+[11] M. Einsiedler, D. Kleinbock, Measure rigidity and p-adic Littlewood-type prob-
+     lems, Compos. Math. 143 (2007), no. 3, 689-702.
+[12] A. Khintchine, Zur metrischen Kettenbruchtheorie Compos. Math., 3 (1936),
+     no.2, 275-285
+[13] P. Lévy, Théorie de l’addition des variables aléatoires, Paris, 1937, p. 320
+[14] L. G. Peck, Simultaneous rational approximations to algebraic numbers, Bull.
+     Amer. Math. Soc. 67 (1961) 197-201.
+[15] A. D. Pollington, S. Velani, On a problem in simultaneous Diophantine ap-
+     proximation: Littlewood’s conjecture, Acta Math. 185 (2000), no. 2, 287-306.
+
+  Department of Mathematics, University of York, York, YO10 5DD,
+United Kingdom
+  E-mail address: paloma.bengoechea@york.ac.uk, evgeniy.zorin@york.ac.uk
+

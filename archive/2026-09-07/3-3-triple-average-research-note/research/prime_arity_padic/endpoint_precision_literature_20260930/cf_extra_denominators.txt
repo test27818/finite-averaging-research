@@ -1,0 +1,1748 @@
+
+[PDF PAGE 1]
+ON P-ADIC CONTINUED FRACTIONS WITH EXTRANEOUS
+DENOMINATORS: SOME EXPLICIT FINITENESS RESULTS
+LAURA CAPUANO, SARA CHECCOLI, MARZIO MULA, AND LEA TERRACINI
+Abstract. Let K be a number field. We show that, up to allowing a finite set
+of denominators in the partial quotients, it is possible to define algorithms for
+P-adic continued fractions satisfying the finiteness property on K for every prime
+ideal P of sufficiently large norm. This provides, in particular, a new algorithmic
+approach to the construction of division chains in number fields.
+1. Introduction
+Let K be a field. A (finite) continued fraction in K is an expression of the form
+[a0, a1, . . . , an] = a0 +
+1
+a1 +
+1
+... + 1
+an
+, with a1, . . . , an ∈K.
+The elements a0, a1, . . . are called the partial quotients of the continued fraction.
+When K is endowed with a topology, one can also define infinite continued fractions
+as
+[a0, a1, . . . , an, . . .] = lim
+n→∞[a0, a1, . . . , an],
+provided that this limit exists in the completion of K.
+Continued fractions are
+a classical and fascinating topic which has been investigated in many branches of
+mathematics and beyond, ranging from Diophantine approximation [AA15] to the
+study of astronomy [RS92, §4.1] and the tuning of musical instruments [DM99].
+An approach to generating continued fraction expansions involves an iterative
+procedure that employs a floor function s : K →K.
+Given α ∈K, a typical
+algorithm works as follows:
+(1)
+
+
+
+
+
+α0 = α
+an = s(αn)
+αn+1 =
+1
+αn−an
+if αn −an̸ = 0,
+and it stops if αn = an.
+In this case, an only depends on αn.
+However, there
+are examples in the literature of more complex algorithms taking into account also
+previous steps of the computation (see for example the second algorithm proposed
+in [Bro00]).
+In the classical case, K is the real field R and the floor function is nothing else
+than the integral part of a real number. For classical real continued fractions there
+are many results that relate algebraic properties of real numbers to the form of their
+continued fraction expansion.
+For example, the Euclidean algorithm shows that
+rational numbers correspond to finite continued fractions, and Lagrange’s theorem
+Date: March 13, 2026.
+2020 Mathematics Subject Classification. 11J70, 11D88, 11Y65.
+Key words and phrases. p-adic continued fractions, finiteness, Weil height, division chains.
+1
+arXiv:2311.14034v2  [math.NT]  12 Mar 2026
+
+
+[PDF PAGE 2]
+2
+characterizes quadratic irrationals as those real numbers having a periodic continued
+fraction expansion.
+Since the 1970s, several different definitions of p-adic continued fractions were
+proposed, for example in [Rub70; Sch70; Bro78; Bro00], and many authors studied
+the finiteness and periodicity properties in the p-adic setting which seem to be very
+different with respect to the real case (see for example [Bed90; Oot17; CVZ19;
+CMT23; BCM21; MRS23]).
+Recently, in [CMT22], the authors proposed a unifying approach for continued
+fractions over the non-Archimedean completions of a number field K, based on the
+notion of type.
+A type is a triple (K, P, s) where K is a number field, P is a prime ideal of K, and s
+is a P-adic floor function for K, that is a function s on KP (the P-adic completion of
+K) satisfying analogous properties of the classical real floor function. More precisely,
+following [CMT22, Definition 3.1], we say that a P-adic floor function for K is a
+function s : KP →K such that
+(a) |α −s(α)|P < 1 for every α ∈KP;
+(b) |s(α)|v ≤1 for every non-archimedean place | · |v of K such that v̸ = P;
+(c) s(0) = 0;
+(d) s(α) = s(β) if |α −β|P < 1
+where |·|P denotes the absolute value attached to the ideal P. In particular, s takes
+values which are integral outside P.
+Each type determines an algorithm of the form (1), which produces a P-adically
+convergent continued fraction for every input α ∈KP. Obviously, if the algorithm
+stops then α ∈K, but the converse is not necessarily true.
+One says that K
+has the P-adic CFF (Continued Fraction Finiteness) property when there exists a
+type τ = (K, P, s) such that the corresponding algorithm stops for any given input
+α ∈K.
+In [CMT22, Theorem 4.5] the authors give a criterion for a type τ to satisfy the P-
+adic CFF property. They use this to show that, for instance, when K has Euclidean
+minimum strictly less than 1, then K has the P-adic CFF property for almost all
+primes P and, more generally, for all primes belonging to a norm Euclidean class of
+ideals (see [CMT22, Theorem 5.6 and Theorem 7.4]).
+The criterion in [CMT22] involves the boundedness of some quantity ντ attached
+to the field K and to the chosen type. This is, in general, not easy to compute, but
+types τ with small ντ can be found under certain arithmetical conditions on K. On
+the other hand, it is known that the validity of the P-adic CFF property for a field
+K implies certain conditions on the class group of K (see Corollary 7.4).
+In order to establish a generalized version of the P-adic CFF property for every
+number field, one needs to enlarge the set of values taken by the floor function,
+allowing new extraneous denominators. This will be our framework.
+We first generalize the definitions of floor functions and types given in [CMT22]
+in order to include this new set of denominators T (see Definitions 3.1 and 3.2):
+this gives rise to the new notions of (P, T )-CFF properties for types and fields (see
+Definition 3.4).
+We now describe the main contributions of our article. Firstly, in Theorem 4.1,
+we establish a criterion for a type to satisfy the (P, T )-CFF property, which is a
+generalization of [CMT22, Theorem 4.5]. In particular we prove that a certain bound
+on some quantity ντ (depending on the type τ) gives a bound on the Weil height of
+the complete quotients appearing in the CF-expansion, which in turn implies either
+
+
+[PDF PAGE 3]
+3
+finiteness or periodicity. This criterion serves then as the key ingredient to prove
+our main result, which is the following:
+Theorem 1.1. Let K be a number field. There exists a finite set T such that the
+field K satisfies the (P, T )-adic CFF-property for all prime ideals P outside a finite
+set P0. Moreover, the sets T and P0 can be explicitly determined in terms of K.
+This result is an immediate consequence of Theorem 5.8, where the sets T and P0
+are explicitly determined and their cardinality depends in particular on the degree
+and the discriminant of the field K and on the covering radius of the image of the
+group of units O×
+K via the logarithmic embedding. Using this, we are able to compute
+the involved constants in some explicit cases: one of them is the field K = Q(
+√
+14),
+i.e. the real quadratic field with the smallest discriminant which is Euclidean but
+not norm Euclidean. For Q(
+√
+14) we also show how it is possible to decrease the
+size of the set of denominators T needed to ensure the finiteness result, at the cost
+of a larger set P0. This strategy could also be applied to larger classes of fields; we
+provide a table of examples of non-CM fields with degree ≥3 over Q and having
+rank of unity strictly larger than 1 for which we compute the explicit constants of
+Theorem 5.8.
+In the final part of the paper we compare the floor-function-based approach to
+continued fraction expansions with a different one, based on division chains. It is
+easy to see that, if a pair a, b ∈K has a terminating division chain of length k with
+coefficients in a certain subring R of K, then a/b has a continued fraction expansion
+with partial quotients in R of the same length, even if it does not come from any
+floor function s : K →K. The existence of a finite division chain with coefficients
+in R for every pair of elements of K is also related to the fact that the group SL2(R)
+can be generated by elementary matrices (see [O’M65; Coh66; CZZ18]). In this
+setting, a result of Morgan, Rapinchuck and Sury [MRS18] ensures that, if R = OS
+(i.e. the ring of S-integers of K, where S is a finite set of places) has infinitely many
+units, then a/b has a CF-expansion of length at most 5. Although this approach
+leads to a uniform bound on the lengths of the CF-expansions of every element in
+a fixed number field K, to the best of our knowledge there is no efficient algorithm
+to compute the division chains. Moreover, the continued fractions obtained by this
+approach do not satisfy the convergence conditions ensured by the floor-function-
+based approach. For these reasons we believe that floor-function-based continued
+fractions are worth considering.
+The paper is organized as follows.
+After recalling the classical properties of
+heights, embeddings of number fields, lattices and covering radii, in Section 3 we
+introduce the new notion of P-adic T -floor function for K, which is a natural gener-
+alization of the P-adic floor function from [CMT22] – obtained by introducing more
+denominators – and the associated notions of type and CFF and CFP-properties.
+Section 4 is devoted to proving a criterion for a type to satisfy the (P, T )-CFF and
+CFP properties (see Theorem 4.1). This criterion, together with certain explicit
+bounds involving the covering radius of the image of the group of units via the loga-
+rithmic embedding, allows us to prove Theorem 5.8, which provides an explicit way
+of constructing sets T for which the (P, T )-adic CFF property holds for all ideals of
+sufficiently large norm. In Section 6 we give some examples of computations of the
+constants involved in Theorem 5.8 and we describe a possible strategy to decrease
+the size of the set of denominators used in the CF-expansions. Finally, in Section 7
+we analyse the relation between continued fractions and division chains, making
+
+
+[PDF PAGE 4]
+4
+a comparison between floor-function-based continued fractions and those obtained
+using division chains.
+2. Notation and preliminaries on valuations and heights
+2.1. Absolute values, valuations and the Weil height. In this article all num-
+ber fields are assumed to be subfields of a fixed, once and for all, algebraic closure
+Q of Q. Given a number field K, we denote by OK its ring of integers and by Cl(K)
+the ideal class group of K. We also denote by MK the set of places of K and by
+M0
+K the subset of the non-Archimedean ones.
+Given a place w ∈MK, we denote by Kw the completion of K with respect to
+the w-adic valuation and by | · |w the corresponding absolute value. If w ∈M0
+K
+and P ⊂OK is the corresponding prime ideal, we usually write KP instead of Kw
+and we denote by OP its ring of integers. With a slight abuse of notation, we shall
+also denote by P the extended ideal in OP. If K = Q, then | · |v is chosen so that
+|p|v = 1/p if v ∈M0
+Q corresponds to the prime number p, while | · |v is either the
+(usual) real or complex absolute value if v ∈MQ \ M0
+Q.
+For a general number field K and w ∈MK, the normalization of | · |w is chosen
+so that, for every x ∈K×, the product formula
+Y
+w∈MK
+|x|dw
+w = 1
+holds, where dw = [Kw : Qv] is the local degree of K at w and v ∈MQ is such
+that w | v. More precisely, given v ∈MQ, we have that |x|w = |N Kw
+Qv (x)|1/dw
+v
+is the
+unique extension of | · |v to Kw.
+Recall that, for x ∈Q, its absolute Weil height is the non-negative real
+H(x) =
+Y
+w∈MK
+sup(1, |x|w),
+where K is any number field containing x. This function satisfies several important
+properties as the following proposition shows.
+Proposition 2.1. The function H satisfies the following:
+(i) (Kronecker’s theorem) H(x) = 1 if and only if x is either 0 or a root of
+unity in Q.
+(ii) (Northcott’s theorem) For any integer d ≥1 and any real B ≥0 the set
+of all algebraic numbers of degree at most d and height at most B is finite
+and can be effectively determined.
+We refer to [BG06, Theorems 1.5.9 and 1.6.8] for a proof of these results and for
+more details on height functions.
+2.2. Embeddings. We recall some notation and definitions from [CMT22, §5].
+Given a number field K, we denote its signature by (r1, r2) and its degree by
+d = r1 + 2r2. Then K has r1 real embeddings σ1, . . . , σr1 and r2 pairs of complex
+conjugated embeddings (τ1, ¯τ1), . . . , (τr2, ¯τr2). We let
+ι: K ,→Rr1 × Cr2
+be the Euclidean embedding defined as
+ι(x) = (σ1(x), . . . , σr1(x), τ1(x), . . . , τr2(x)).
+
+
+[PDF PAGE 5]
+5
+We will also consider the embedding λ: K ,→Rd obtained by composing ι with
+the isomorphism of real vector spaces
+f : Rr1 × Cr2 →Rd
+(x1, . . . , xr1, y1, . . . , yr2) 7→(x1, . . . , xr1, y1, ¯y1, . . . , yr2, ¯yr2).
+We let N : Rr1 × Cr2 →R be the norm map defined as
+N(x1, . . . , xr1, z1, . . . , zr2) = x1 · · · xr1z1¯z1 · · · zr2¯zr2
+where ¯z denotes as usual the complex conjugate of a complex number z. Notice that
+N is the extension to Rr1 × Cr2 of the field norm on K, i.e. N(ι(x)) = NK/Q(x).
+We also denote by
+ℓ: K× ,→Rr1+r2
+the logarithmic embedding defined as
+ℓ(x) = (log |σ1(x)|, . . . , log |σr1(x)|, 2 log |τ1(x)|, . . . , 2 log |τr2(x)|)
+for every x ∈K×, where |z| = (z¯z)1/2 denotes the usual complex absolute value of
+a complex number z.
+2.3. Lattices and covering radius. We further need to recall some terminology
+from lattice theory. Let Λ be a lattice in Rn and, for a real number p ∈[1, ∞)∪{∞},
+let ||·||p be the Lp norm on Rn. The distance function relatively to p is by definition
+ρp(v, Λ) = min
+w∈Λ ||v −w||p.
+The covering radius of Λ with respect to || · ||p is the number
+ρp(Λ) =
+sup
+v∈Span(Λ)
+ρp(v, Λ).
+Equivalently, it is the smallest number ρ, such that closed balls of radius ρ (with
+respect to the Lp norm) centered on all lattice points in Λ cover the entire space
+Span(Λ).
+Remark 2.2 (Naive upper bound for the covering radius). Let Λ ⊆Rn be a lattice
+of rank r with basis e1, . . . , er, with ei = (ei,1, . . . , ei,n). Then, the set
+D =
+(
+r
+X
+i=1
+aiei | |ai| ≤1
+2
+)
+is a translate of the fundamental parallelepiped of Λ. Therefore
+ρ∞(Λ) ≤sup
+x∈D
+(||x||∞) ≤1
+2
+r
+X
+i=1
+||ei||∞= 1
+2
+r
+X
+i=1
+max
+j
+|ei,j|,
+where | · | is the usual real absolute value.
+Given a number field K, we define ΛK = ℓ(O×
+K) to be the image of the group of
+units in OK via the logarithmic embedding. Then, ΛK is a lattice in Rr1+r2 and, for
+p ∈[1, ∞) ∪{∞}, we denote its covering radius by ρp(K) = ρp(ΛK).
+Notice that Span(ΛK) is the hyperplane defined by
+{(x1, . . . , xr1, y1, . . . , yr2) ∈Rr1+r2 | x1 + ... + xr1 + y1 + ... + yr2 = 0}.
+
+
+[PDF PAGE 6]
+6
+3. T -floor functions and types
+Given a finite set S of places in K, the ring of S-integers is
+OS = {α ∈K | vQ(α) ≥0 for each Q /∈S}.
+By definition, OS consists of the elements of K which are integers outside the places
+in S. We will be particularly interested in the case S = {P} where P is a prime
+over p.
+The following definition is modeled upon [CMT22, Definition 3.1] and provides a
+generalization of it.
+Definition 3.1. Let K be a number field, T a finite subset of OK \ {0} and P a
+prime ideal of OK. A P-adic T -floor function for K is any function s: KP →K
+such that
+(i) α −s(α) ∈P for every α ∈KP;
+(ii) for every α ∈KP, there exists t ∈T such that ts(α) ∈O{P};
+(iii) s(0) = 0;
+(iv) if α −β ∈P, then s(α) = s(β).
+The only difference with [CMT22, Definition 3.1] lies in condition (ii). In [CMT22],
+this condition was stated as s(α) ∈O{P}; this is precisely the special case of our
+formulation obtained by taking T = {1}.
+As a natural generalization of [CMT22] we also have:
+Definition 3.2. A type is a quadruple τ = (K, P, T , s) where K is a number field,
+T ⊂OK \ {0} is a finite subset, P ⊂OK is a prime ideal and s : KP →K is a
+P-adic T -floor function for K.
+3.1. Continued fraction expansion associated with a type. In this short sec-
+tion we recall some definitions and results from [CMT22, §3.3] on continued fraction
+expansions associated to types.
+Let τ = (K, P, T , s) be a type. We denote by w0 the place of K corresponding
+to the prime P and by | · |w0 the corresponding absolute value.
+As in [CMT22, Definition 3.5], for a given type τ = (K, P, T , s) we say that a
+continued fraction of type τ is a (possibly infinite) sequence [a0, a1, . . .] of elements
+of s(KP) such that |an|w0 > 1 for every n ≥1.
+Remark 3.3. As remarked in [CMT22, §3.3] the following facts hold true:
+(1) The sequence of n-th convergents
+Qn = a0 +
+1
+a1 +
+1
+... + 1
+an
+of a continued fraction [a0, a1, . . .] converges P-adically.
+(2) Conversely, every α ∈KP is the limit of the sequence of convergents of the
+continued fraction [a0, a1, . . .] given by an = s(αn), where the sequence (αn)n
+is defined recursively as α0 = α and αn+1 = 1/(αn −s(αn)) if αn̸ = s(αn)
+(otherwise the algorithm stops at index n). For a fixed type τ, the sequence
+(a0, a1, . . .) obtained in this way is uniquely determined. We call [a0, a1, . . .]
+the continued fraction expansion of type τ for α.
+(3) Given the continued fraction expansion [a0, a1, . . .] of type τ for α, for n ≥−1
+consider the sequence (Vn)n of elements of K defined as V−1 = 1, V0 = a0 −α
+
+
+[PDF PAGE 7]
+7
+and Vn+1 = an+1Vn + Vn−1. The sequence (Vn)n satisfies many interesting
+properties, collected for instance in [CMT22, Proposition 3.6].
+We also recall the following definitions (see [CMT22, Definition 4.1]):
+Definition 3.4. Given a type τ = (K, P, T , s), we say that τ satisfies the CFF
+(Continued Fraction Finiteness) property ( respectively, CFP (Continued Fraction
+Periodicity) property) if every α ∈K has a finite (respectively, finite or periodic)
+expansion of type τ.
+We say that the field K satisfies the (P, T )-adic CFF (respectively, CFP) property
+if there is a type τ = (K, P, T , s) satisfying the CFF (respectively, CFP) property.
+4. A criterion for the CFF and CFP properties for types
+As in [CMT22, §4.1], for x ∈C we define
+(2)
+θ(x) = 1
+2
+
+|x| +
+p
+|x|2 + 4
+
+where | · | denotes the usual complex absolute value. It is easy to see that
+(3)
+|x| ≤θ(x) ≤|x| + 1.
+The following generalization of [CMT22, Theorem 4.5] provides a sufficient condition
+for a type τ to satisfy the CFP and CFF properties.
+Theorem 4.1. Let τ = (K, P, T , s) be a type. Denote by w0 ∈M0
+K the place
+corresponding to the prime P. Let Σ be the set of embeddings of K in C and set
+ντ = sup
+
+
+|a|
+−dw0
+w0
+Y
+σ∈Σ
+θ(σ(a))
+Y
+w∈M0
+K\{w0}
+max(|a|w, 1)dw
+
+a ∈s(KP), |a|w0 > 1
+
+
+.
+Then
+(a) if ντ ≤1, then τ satisfies the CFP property;
+(b) if ντ < 1, then τ satisfies the CFF property.
+More precisely, in both cases, for every α ∈K the continued fraction expansion of
+type τ of α has either length or period length bounded by
+Cα = d
+
+2d+1
+
+
+p
+|s(α) −α|2 + 1
+Y
+w∈M0
+K\{w0}
+sup(|s(α) −α|w, 1)
+
+
++ 1
+
+
+d+1
+,
+where d = [K : Q].
+Remark 4.2. Before proving the result we notice that, if a ∈s(KP) then, from
+Definition 3.1.(ii), there exists t ∈T such that |ta|w ≤1 for every w ∈M 0
+K \ {w0}.
+So the product Q
+w∈M0
+K\{w0} max(|a|w, 1) is finite and bounded, independently of a,
+by the quantity Q
+t∈T
+Q
+w∈M0
+K\{w0} |t|−1
+w .
+Proof. Let α ∈K, let [a0, a1, . . .] be its continued fraction expansion of type τ and
+let (αn)n be the sequence defined in Remark 3.3(2). Let H be the absolute Weil
+height on Q. We first want to show that, for every n ≥1, one has
+(4)
+H(αn+1)d ≤C νn
+τ ,
+
+
+[PDF PAGE 8]
+8
+where d = [K : Q] and C > 0 is a constant only depending on α.
+If (Vn)n is the sequence defined in Remark 3.3(3), then αn+1 = −Vn−1/Vn for all
+n ≥1 by [CMT22, Proposition 3.6(b)], and since Vn ∈K we have
+(5)
+H(αn+1)d = H
+
+−Vn−1
+Vn
+d
+=
+Y
+w∈MK
+sup
+ 
+Vn−1
+Vn
+
+dw
+w
+, 1
+!
+=
+Y
+w∈MK
+sup(|Vn|dw
+w , |Vn−1|dw
+w ).
+Let w be an Archimedean place of K and let σ ∈Σ be the corresponding embedding.
+Notice that, for each such σ, the sequence σ(Vn) satisfies the recurrence formula
+σ(Vn) = σ(an)σ(Vn−1) + σ(Vn−2),
+for every n ≥1. Therefore, by [CMT22, Lemma 4.4] we have
+(6)
+Y
+w∈MK\M0
+K
+sup(|Vn|dw
+w , |Vn−1|dw
+w ) =
+Y
+σ∈Σ
+sup(|σ(Vn)|, |σ(Vn−1)|) ≤C∞
+n
+Y
+j=1
+Y
+σ∈Σ
+θ(σ(aj))
+where C∞=
+p
+|a0 −α|2 + 1.
+Let now w ∈M0
+K \ {w0}. Then, since for all n ≥1 one has
+sup(|Vn|w, |Vn−1|w) ≤sup(|Vn−1|w, |Vn−2|w) sup(|an|w, 1),
+iterating one gets
+(7)
+sup(|Vn|w, |Vn−1|w) ≤Cw
+n
+Y
+j=1
+sup(|aj|v, 1)
+where Cw = sup(|w0|w, |V1|w) = sup(|a0 −α|w, 1) and clearly Cw = 1 for almost
+all w.
+Finally, if w = w0, from [CMT22, Proposition 3.6, points (c) and (g)] one has
+that for every n ≥1,
+|Vn|w0 =
+n+1
+Y
+i=1
+1
+|ai|w0
+,
+and |an|w0 ≥1. Hence
+(8)
+sup(|Vn|
+dw0
+w0 , |Vn−1|
+dw0
+w0 ) = |Vn−1|
+dw0
+w0 .
+But now, by (5) and (8) we have
+H(αn+1)d = |Vn−1|
+dw0
+w0
+Y
+σ∈Σ
+max(|σ(Vn)|, |σ(Vn−1)|)
+Y
+w∈M0
+K\{w0}
+max(|Vn|w, |Vn−1|w)dw.
+Therefore, using (6) and (7) and rearranging the factors we get
+H(αn+1)d ≤C · |Vn−1|
+dw0
+w0
+n
+Y
+j=1
+
+Y
+σ∈Σ
+θ(σ(aj))
+Y
+w∈M0
+K\{w0}
+sup(|aj|w, 1)dw
+
+
+≤C · |Vn−1|
+dw0
+w0 νn
+τ
+n
+Y
+j=1
+|aj|
+dw0
+w0 ,
+where
+C = C∞·
+Y
+w∈M0
+K\{w0}
+Cw
+
+
+[PDF PAGE 9]
+9
+is an explicit constant depending only on α. Finally, by [CMT22, Proposition 3.6.(d),
+(g)], we have
+|Vn−1|w0 =
+(−1)n
+n
+Y
+j=1
+1
+αj
+
+w0
+=
+n
+Y
+j=1
+
+1
+aj
+
+w0
+so that
+H(αn+1)d ≤C νn
+τ
+and (4) is proven, as desired.
+Suppose now that ντ ≤1. In view of (4), for every n ≥1
+αn ∈Sd,C := {α ∈Q | [Q(α) : Q] ≤d, H(α) ≤C1/d}.
+The set Sd,C is finite by Northcott’s theorem and, by [BG06, proof of Theorem 1.6.8]
+its cardinality can be bounded as
+|Sd,C| ≤Cα := d(2d+1⌈C⌉+ 1)d+1.
+Therefore either the continued fraction expansion of type τ for α is finite, of length
+at most Cα, or there exist m, n ∈N such that αm = αn, so that the expansion is
+periodic of period length at most Cα. If moreover ντ < 1, then H(αn+1) < H(αn)
+for all n and, by Northcott’s theorem, this can happen only for finitely many n, so
+the expansion of α must be finite.
+□
+5. The CFF property for fields
+5.1. A bound involving the covering radius. We have the following effective
+version of Lemma 5.5 of [CMT22].
+Lemma 5.1. Let K be a number field, let Σ be the set of embeddings of K in C and
+denote by O×
+K the units in OK. Set T0 = eρ∞(K), where ρ∞(K) denotes the covering
+radius as in Section 2.3. Then, for every a ∈K×, there exists u ∈O×
+K such that
+|σ(ua)| ≤T0
+dq
+|NK/Q(a)|
+for every σ ∈Σ, where | · | is the usual complex absolute value.
+Proof. For a ∈K×, consider the vector
+b = ℓ(a) −log |NK/Q(a)|
+d
+(1, . . . , 1, 2, . . . , 2)
+where d = [K : Q].
+By construction, b ∈Span(ΛK).
+Hence, by definition of the covering radius,
+there exists u ∈O×
+K such that ||b + ℓ(u)||∞≤ρ∞(K).
+But now, denoting by
+σ1, . . . , σr1 ∈Σ the real embeddings of K and by (τ1, ¯τ1), . . . , (τr2, ¯τr2) the r2 pairs
+of complex conjugated embeddings, we have that
+b + ℓ(u) = (v1, . . . , vr1, w1, . . . , wr2)
+where, for all 1 ≤i ≤r1 and 1 ≤j ≤r2, one has
+vi = log
+|σi(a)|
+dp
+|NK/Q(a)| + log(|σi(u)|) = log
+|σi(au)|
+dp
+|NK/Q(a)|
+and
+wj = 2 log
+|τj(a)|
+dp
+|NK/Q(a)| + 2 log(|τj(u)|) = 2 log
+|τj(au)|
+dp
+|NK/Q(a)|.
+
+
+[PDF PAGE 10]
+10
+Therefore
+ρ∞(K) ≥||b + ℓ(u)||∞= max(|v1|, . . . , |vr1|, |w1|, . . . , |wr2|) ≥
+log
+|σ(au)|
+dp
+|NK/Q(a)|
+
+for every σ ∈Σ. Thus, for every σ ∈Σ, one has |σ(au)| ≤T0
+dp
+|NK/Q(a)|, where
+T0 = eρ∞(K), as wanted.
+□
+5.2. A criterion for (P, T )-adic CFF-property for a field. Let K be a number
+field of degree d and let ι : K ,→Rr1 × Cr2 and N : Rr1 × Cr2 →R be, respectively,
+be the Euclidean embedding and the norm map defined in Section 2.2. For an ideal
+I ⊂OK, we denote by N(I) = |OK/I| its (ideal) norm while, for an element x ∈K,
+we denote by NK/Q(x) its (field) norm.
+Definition 5.2. Let A be a non-zero ideal of OK, let T ⊆OK \{0} be a finite subset
+and let 0 < δ < 1. We say that property (⋆) holds for the triple (A, T , δ) if, for each
+ξ ∈Rr1 × Cr2, there exists ω ∈ι(A) and x ∈ι(T ) such that |N(xξ −ω)| < δN(A).
+Notice that property (⋆) holds for the triple (A, T , δ) if and only if it holds for
+any triple (B, T , δ), where B is any element of the ideal class of A. Therefore we
+have the following definition:
+Definition 5.3. Let C be an ideal class in OK, let T ⊆OK be a finite subset and
+let 0 < δ ≤1. We say that property (⋆) holds for the triple (C, T , δ) if one of the
+following equivalent conditions is satisfied:
+(i) property (⋆) holds for one triple (A, T , δ) with A ∈C;
+(ii) property (⋆) holds for all triples (A, T , δ) with A ∈C.
+Theorem 5.4. Let K be a number field, T ⊂OK \ {0} be a finite set, C an ideal
+class of OK and 0 < δ < 1. Suppose that property (⋆) holds for the triple (C, T , δ).
+Then K satisfies the (P, T )-adic CFF-property for all but finitely many prime ideals
+P of C.
+Proof. As usual, we denote by || · ||∞the sup norm of a vector and by | · | the usual
+complex absolute value.
+We fix an integral ideal A ∈C and we denote by D ⊆Rr1 × Cr2 a compact
+fundamental domain for ι(A). From the fact that Property (⋆) holds for (C, T , δ),
+that D is compact and that N is continuous, we deduce that there exists a finite
+number of pairs (x1, γ1), . . . , (xt, γt) with xi ∈ι(T ), γi ∈ι(A) such that the open
+sets
+Ui = {α ∈D | |N(xiα + γi)| < δN(A)}
+form a finite covering of D.
+Moreover, for every α ∈D, we also have that ||xiα + γi||∞< Γ, where
+Γ = max
+i
+||xi||∞max
+α∈D ||α||∞+ max
+i
+||γi||∞
+is a well-defined positive constant only depending on the finitely many pairs (xi, γi)
+and on A.
+Let now P be a prime ideal in C and suppose that P ∩T = ∅. Since T is finite,
+this will be true for all but finitely many P ∈C. We want to show that, for all
+but finitely many of such ideals P, there is a type (K, P, T , s) satisfying the CFF
+property.
+To this aim, we now construct a suitable P-adic T -floor function s: KP →K.
+Let η ∈KP and suppose that η belongs to the coset α + POP ⊆KP. By strong
+
+
+[PDF PAGE 11]
+11
+approximation, such coset contains an element α′ ∈K such that |α′|v ≤1 for every
+non-Archimedean v ∈MK \ {w0}, where w0 is the place of K corresponding to P.
+Also, by Lemma 5.1, we can take an element γP ∈K such that γPA = P and
+|σ(γP)| ≤T0
+dp
+|NK/Q(γP)| for every embedding σ of K in C, where T0 = eρ∞(K) and
+d = [K : Q].
+Now, take y ∈A such that the translate
+β = α′
+γP
++ y
+of the element α′/γP satisfies ι(β) ∈D.
+Furthermore, by previous considerations, there exist xi ∈ι(T ) and γi ∈ι(A) such
+that |N(xiι(β) −γi)| < δN(A), and ||xiι(β) −γi||∞< Γ. Finally, writing xi = ι(ti)
+with ti ∈T and γi = ι(ai) with ai ∈A, we set
+s(η) = γP
+
+β −ai
+ti
+
+.
+We now want to verify that the function s : KP →K so defined is indeed a P-adic
+T -floor function for K, as in Definition 3.1.
+First notice that condition (iii) clearly holds, as well as condition (iv), as, by
+construction, s(η) only depends on the class of η modulo P. So we are left to verify
+conditions (i) and (ii).
+For every η ∈KP, we have that
+s(η) −η = γPy −γP
+ai
+ti
+mod P.
+As both γPy, γPai ∈γPA = P, we have ti(s(η)−η) ∈P. But now notice that ti̸ ∈P
+(indeed ti ∈T and, by hypothesis, T ∩P = ∅). This implies that s(η) −η ∈P,
+condition (i) is satisfied.
+As for condition (ii), let η ∈KP. We want to show that there exists t ∈T such
+that xs(η) is Q-integral for every prime Q̸ = P and we claim that we can take t = ti.
+Indeed, if v is the place corresponding to Q, we have
+|tis(η)|v = |tiγPβ −γPai|v = |tiα′ + tiγPy −γPai|v
+≤max(|ti|v|α′|v, |tiγPy −γPai|v) ≤1
+(9)
+as |α′|v ≤1 and both ti and tiγPy −γPai are in OK.
+We want now to apply Theorem 4.1 to show that the type (K, P, T , s) associated
+to the floor function s constructed above satisfies the CFF property for all but
+finitely many prime ideals P ∈C. To this aim we have to show that for every
+a ∈s(KP) such that |a|w0 > 1 we have
+(10)
+|a|
+−dw0
+w0
+Y
+σ∈Σ
+θ(σ(a))
+Y
+w∈M0
+K\{w0}
+max(|a|w, 1)dw < 1
+where θ was defined in (2).
+Let us set a = s(η) with η ∈KP as before. We first give a bound for the factor
+Q
+σ∈Σ θ(σ(a)). Notice that we have
+|N(xiι(a))| = |N(ι(γP))N(xiι(β) −γi)| < δ|NK/Q(γP)|N(A) = δN(P)
+so, setting q = N(P), we get
+(11)
+|N(ι(a))| <
+δq
+|N(xi)|.
+
+
+[PDF PAGE 12]
+12
+Also, we have ||xiι(a)||∞= ||ι(γP)||∞||xiι(β) −γi||∞<
+ T0
+dp
+|NK/Q(γP)|
+
+Γ, so
+that
+(12)
+||ι(a)||∞< T0Γ dp
+|NK/Q(γP)|
+||xi||∞
+.
+Denoting by Σ the embeddings of K into C, for every subset S ⊊Σ we have
+(13)
+Y
+σ∈S
+|σ(a)| ≤(Γ0T0)|S| dp
+q|S|
+where Γ0 = Γ/ mini ||xi||∞depends on A and T . Therefore, using also (3), we get
+Y
+σ∈Σ
+θ(σ(a)) ≤
+Y
+σ∈Σ
+(1 + |σ(a)|) ≤
+X
+S⊆Σ
+Y
+σ∈S
+|σ(a)| = |N(ι(a))| +
+X
+S⊊Σ
+Y
+σ∈S
+|σ(a)|
+<
+δq
+|N(xi)| +
+d−1
+X
+i=0
+d
+i
+
+(Γ0T0
+d√q)i ≤
+δq
+|N(xi)| + Γ1
+dp
+qd−1
+where for instance one can take
+Γ1 = (2 max(1, Γ0T0))d−1
+which depends only on K, A and T , but not on P. Hence, for all δ < ϵ < 1, if
+(14)
+q >
+Γ1|N(xi)|
+(ϵ −δ)
+d
+we obtain
+(15)
+Y
+σ∈Σ
+θ(σ(a)) <
+ϵq
+|N(xi)|.
+Let w̸ = w0 be a non-Archimedean place of K. By (9), we have that |a|w ≤
+1
+|ti|w
+and ti ∈OK \ P, so that |ti|w ≤1 and |ti|w0 = 1. Putting this together with the
+product formula gives
+(16)
+Y
+w∈M0
+K\{w0}
+max(|a|w, 1)dw ≤
+Y
+w∈M0
+K\{w0}
+max
+ 1
+|ti|w
+, 1
+dw
+=
+Y
+w∈M0
+K
+1
+|ti|dw
+w
+= |NK/Q(ti)|.
+Since by hypothesis |a|w0 > 1, then |a|
+dw0
+w0 ≥|a|w0 ≥q. This, together with (15)
+and (16) (recalling also that N(xi) = N(ι(ti)) = NK/Q(ti)), gives that the left-hand
+side in (10) is bounded above by ϵ < 1 for any q satisfying (14), so Theorem 4.1
+applies and concludes the proof.
+□
+Remark 5.5. Although the validity of property (⋆) for C is independent from the
+choice of the ideal A, it is important to highlight that the bound for the norm of
+the ideals P satisfying the theorem does depend on the specific choice of the ideal
+A (as well as on the set T and the field K) and on the chosen covering for D.
+5.3. Explicit realization of the (P, T )-adic CFF-property. The goal of this
+section is to prove Theorem 5.8, which provides an explicit way of constructing sets
+T for which the (P, T )-adic CFF-property holds on all ideals of sufficiently large
+norm.
+At first glance, this statement might seem stronger than Theorem 5.4 from the
+previous section. However, while we gain an explicit lower bound for the norm of the
+ideals for which it holds, we lose flexibility in the choice of the set of denominators T .
+The heart of the proof of Theorem 5.8 is the following effective and slightly more
+general version of a result originally proven by Hurwitz [Hur19] and based on its
+
+
+[PDF PAGE 13]
+13
+ideas. We also refer the reader to [Len76, Theorem 1.4] and [LT16, Theorem 2.1]
+for a detailed description of the original proof.
+Theorem 5.6. Let K be a number field with signature (r1, r2) and let ∆be the
+absolute discriminant of K. Let A be an integral ideal in OK of norm N(A) and let
+(17)
+c(A, K) = max
+ 2
+π
+r2 p
+|∆|N(A), 1
+
+.
+Then, for every rational integer M > c(A, K), there exists a real number ϵ = ϵ(A)
+with 0 < ϵ < 1 satisfying the following property: for each ξ ∈K, there is τ ∈A and
+a rational integer 0 < j < M for which |σ(jξ −τ)| < ϵ for every embedding σ of K
+in C. In particular we have
+|NK/Q(jξ −τ)| < ϵd.
+Proof. We consider the embedding λ = f ◦ι : K →Rd defined in Section 2.2 and
+we denote as usual by ||x||∞= maxi(|xi|) the sup norm of a vector x ∈Rd, where
+| · | is the usual absolute value on R. For every ϵ > 0, we consider the open ball
+Uϵ =
+n
+x ∈Rd | ||x||∞< ϵ
+2
+o
+.
+Then for every x, y ∈Uϵ one has
+(18)
+||x −y||∞< ϵ.
+Moreover
+Vol(Uϵ) = ϵd π
+4
+r2 .
+Let D ⊆Rd be a compact fundamental parallelepiped for λ(A). It is known that
+Vol(D) =
+p
+|∆|N(A)
+2r2
+,
+(see for example [Sam67, §4.2, Proposition 2]); therefore, by hypothesis, there exists
+0 < ϵ < 1 such that
+(19)
+M > Vol(D)
+Vol(Uϵ).
+Let φD : Rd →D be the map sending a vector to its representative (modulo the
+ideal A) lying in D. Let ξ ∈K and for r ∈{1, . . . , M} consider the set
+Vr = φD(rλ(ξ) + Uϵ).
+We now show that φD is injective on rλ(ξ) + Uϵ. Suppose that rλ(ξ) + u1 = rλ(ξ) +
+u2 + λ(τ) for some u1, u2 ∈Uϵ and τ ∈A. Then λ(τ) ∈Uϵ and ||λ(τ)||∞≤ϵ/2,
+hence
+|NK/Q(τ)| ≤
+ϵ
+2
+d
+< 1.
+As τ ∈OK we get τ = 0, and u1 = u2 as wanted.
+Therefore Vol(Vr) = Vol(φD(rλ(ξ) + Uϵ) = Vol(Uϵ) for every r. By our choice of ϵ
+and (19), the Vr’s cannot be disjoint in pairs. Therefore there exist 1 ≤r < s ≤M
+such that Vr ∩Vs̸ = ∅, that is sλ(ξ) + u1 + λ(τ) = rλ(ξ) + u2 for some u1, u2 ∈Uϵ
+and τ ∈A. Then
+(s −r)λ(ξ) + λ(τ) = u2 −u1
+so that, by (18), for every embedding σ of K in C we have
+|σ((s −r)λ(ξ) + λ(τ))| ≤||λ((s −r)ξ + τ)||∞= ||u1 −u2||∞< ϵ
+and the statement is proven taking j = s −r.
+□
+
+
+[PDF PAGE 14]
+14
+Corollary 5.7. Let K be a number field of degree d and signature (r1, r2) and let
+∆be the absolute discriminant of K. Let
+(20)
+c(K) = max
+
+|∆|
+ 8
+π2
+r2 d!
+dd, 1
+
+.
+Then, for every rational integer M ≥c(K), there exists a real number ϵ with
+0 < ϵ < 1 such that every ideal class C in Cl(K) contains an integral ideal A = A(C)
+with the following property: for each ξ ∈K, there is τ ∈A and a rational integer
+0 < j < M for which |σ(jξ −τ)| < ϵ for every embedding σ of K in C. In particular
+we have
+|NK/Q(jξ −τ)| < ϵd.
+Proof. Let Cl(K) = {C1, . . . , Cm} be the ideal class group of K. By Minkowski’s
+bound (see for example [Sam67, §4.3, Corollaire 1]), every class Ci in Cl(K) contains
+an integral ideal Ai of norm
+N(Ai) < d!
+dd
+ 4
+π
+r2 p
+|∆|.
+But then we can apply Theorem 5.6 as, by hypothesis, M > c(Ai, K), where c(A, K)
+is the constant defined in (17). Choosing ϵ(Ai) > 0 as in Theorem 5.6, the proof is
+concluded by setting ϵ = mini ϵ(Ai).
+□
+Theorem 5.8. Let K be a number field of degree d, let ∆be its the absolute dis-
+criminant and let ρ∞(K) be the covering radius as in Section 2.3. Let c(K) be the
+constant defined in (20), let M > c(K) be a rational integer, let ϵ = ϵ(M) > 0 be as
+in the statement of Corollary 5.7 and, for T0 = eρ∞(K), define
+(21)
+c(M, K) =
+
+
+M
+ϵT0
+
+dq
+1−ϵd
+ϵdT d
+0 + 1 −1
+
+
+
+d
+.
+Then, setting T = {1, . . . , M}, the field K satisfies the (P, T )-adic CFF-property
+for every prime ideal P of OK of norm N(P) > c(M, K).
+Remark 5.9. The constant c(M, K) defined in (21) is strictly larger than Md. To
+prove this, we use the facts that 0 < ϵ < 1 and
+d√
+a + b ≤
+d√a +
+d√
+b for any a, b ≥0.
+The following inequalities hold for the denominator in (21):
+ϵT0
+ 
+d
+s
+1 −ϵd
+ϵdT d
+0
++ 1 −1
+!
+< T0
+ 
+d
+s
+1
+T d
+0
++ 1 −1
+!
+≤T0
+ 
+d
+s
+1
+T d
+0
+!
+= 1.
+In particular, the condition N(P) > c(M, K) implies that no element in T lies in P.
+Proof. The proof is similar to that of Theorem 5.4, but now the main new ingredient
+is the explicit Corollary 5.7.
+Let P be a prime ideal of OK of norm N(P) = q > c(M, K). We now construct a
+suitable P-adic T -floor function s: KP →K such that the type (K, P, T , s) satisfies
+the CFF property.
+Let C be the class of P in Cl(K) and let A = A(C) be the integral ideal in C from
+the statement of Corollary 5.7.
+Let η ∈KP. If η = 0, we set s(η) = 0.
+Otherwise, by strong approximation, the coset of η modulo POP contains an
+element α′ ∈K such that |α′|v ≤1 for every non-Archimedean v ∈MK \ {w0},
+where w0 is the place of K corresponding to P.
+
+
+[PDF PAGE 15]
+15
+Also, by Lemma 5.1, there exists γP ∈K such that |σ(γP)| ≤T0
+dp
+|NK/Q(γP)| for
+every σ ∈Σ (where Σ is, as usual, the set of embeddings of K in C) and γPA = P.
+In particular,
+(22)
+|NK/Q(γP)| ≤q.
+By Corollary 5.7, setting ξ = α′
+γP, there exist j ∈T and τ ∈A such |σ(jξ −τ)| < ϵ
+for every σ ∈Σ. We finally set
+s(η) = γP
+
+ξ −τ
+j
+
+.
+One can easily verify, in the same way as in the proof of Theorem 5.4, that the
+function s : KP →K so constructed satisfies all conditions in Definition 3.1. Notice
+that condition (i) follows from Remark 5.9.
+The proof now goes on by showing that we can apply Theorem 4.1 to deduce that
+the type (K, P, T , s) satisfies the CFF property, i.e. that for every a ∈s(KP) such
+that |a|w0 > 1 we have
+(23)
+|a|
+−dw0
+w0
+Y
+σ∈Σ
+θ(σ(a))
+Y
+w∈M0
+K\{w0}
+max(|a|w, 1)dw < ϵ′,
+for some ϵ′ ∈(0, 1), where θ was defined in (2).
+Let us set a = s(η) where η ∈KP is as above. As already noticed in the proof of
+Theorem 5.4 one has:
+(24)
+Y
+σ∈Σ
+θ(σ(a)) < |NK/Q(a)| +
+X
+S⊊Σ
+Y
+σ∈S
+|σ(a)|.
+Now notice that for every σ ∈Σ one has
+|σ(a)| < ϵ|σ(γP)|
+j
+≤ϵT0 d√q
+j
+.
+Hence, for every subset S ⊊Σ,
+(25)
+Y
+σ∈S
+|σ(a)| ≤
+ϵT0
+j
+|S|
+dp
+q|S|
+and
+(26)
+|NK/Q(a)| < ϵd|NK/Q(γP)|
+|NK/Q(j)|
+≤ϵdq
+jd ,
+where the latter inequality follows from (22).
+Plugging (25) and (26) into (24) we obtain
+
+
+[PDF PAGE 16]
+16
+Y
+σ∈Σ
+θ(σ(a)) ≤ϵdq
+jd +
+d−1
+X
+i=0
+d
+i
+ϵT0
+j
+i
+dp
+qi
+= ϵdq
+jd +
+"ϵT0 d√q
+j
++ 1
+d
+−q
+ϵT0
+j
+d#
+= ϵdq
+jd + q
+jd
+"
+ϵdT d
+0
+ 
+1 +
+j
+ϵT0 d√q
+d
+−1
+!#
+= q
+jd · ϵd
+ 
+1 + T d
+0
+ 
+1 +
+j
+ϵT0 d√q
+d
+−1
+!!
+≤q
+jd · ϵd
+ 
+1 + T d
+0
+ 
+1 +
+M
+ϵT0 d√q
+d
+−1
+!!
+|
+{z
+}
+ϵ′
+.
+(27)
+The quantity ϵ′ tends to 0 as q tends to infinity. Furthermore, the choice of q in
+(21) ensures that ϵ′ < 1.
+Let w̸ = w0 be a non-Archimedean place of K.
+By the choice of α′ one has
+|a|w ≤
+1
+|j|w and j ∈OK \ P by Remark 5.9. So, using also the product formula, we
+get
+(28)
+Y
+w∈M0
+K\{w0}
+max(|a|w, 1)dw ≤
+Y
+w∈M0
+K\{w0}
+max
+ 1
+|j|w
+, 1
+dw
+=
+Y
+w∈M0
+K
+1
+|j|dw
+w
+= |NK/Q(j)| = jd.
+Since by hypothesis |a|w0 > 1, then |a|
+dw0
+w0 ≥|a|w0 ≥q. This, together with (27)
+and (28), implies that the left-hand side in (23) is always at most ϵ′ < 1, hence
+Theorem 4.1 applies to conclude.
+□
+6. Explicit examples and possible refinements
+In this section, we apply Theorem 5.8 and compute the involved constants in some
+explicit examples. We also consider a general strategy that can be used to (possibly)
+reduce the values of M and c(M, K).
+Let us start with the field K = Q(
+√
+14). This field has received attention by
+many authors since it is the real quadratic field of smallest discriminant which is
+Euclidean [Har04], but not norm Euclidean [MC95]. Performing the computations
+with ∆= 56 and r2 = 0, we find that M = ∆/2 = 28, and, from (19),
+ϵ =
+q√
+∆/M = 1/
+4√
+14 ≈0.516973.
+Since the unit rank of K is 1, the naive upper bound for the covering radius given
+in Remark 2.2 is, in fact, exactly equal to the covering radius, so ρ ≈1.70 and
+T0 ≈5.48. Finally, the constant c(M, K) from Theorem 5.8 equals 48896.
+We will now see how the value of M can be decreased using a result by Bedoc-
+chi [Bed85, page 202]: he proved that the elements a, b ∈Z[
+√
+14] such that b̸ = 0
+and |NK/Q(a −bq)| ≥|NK/Q(b)| for all τ ∈Z[
+√
+14] are exactly those of the form
+a = (1 +
+√
+14 + 2s)t and b = 2t for some s, t ∈Z[
+√
+14]. Equivalently, there exists
+ϵ < 1 with the following property: for any element ξ = a/b ∈Q(
+√
+14) there exists
+j ∈{1, 2} and τ ∈OK such that NK/Q(jξ −τ) ≤ϵ. This is in fact the property
+needed to construct the floor function in the proof of Theorem 5.8, since having
+
+
+[PDF PAGE 17]
+17
+class number 1 allows us to choose A = OK as a representative of the ideal class of
+P. Therefore, we can actually take M = 2.
+In order to conclude the computation of c(M, K) for this new value of M, we still
+need to compute the exact value of ϵ – which in this case is the second Euclidean
+minimum of K. This has been done by Bedocchi in a later work [Bed89, Proposition
+3.8], where he found ϵ = 31/32. Plugging this value in (21) yields c(M, K) = 119008.
+So, for this example, we have obtained a smaller set of denominators at the price of
+a way larger constant.
+In general, however, it is reasonable to expect – in the light of Remark 5.9 –
+that smaller values of M might lead to smaller values of c(K, M), and the strategy
+used to refine M in Q(
+√
+14) can be indeed generalized to a wider family of number
+fields. To this end, consider Table 6, which displays various values of M for different
+number fields together with the corresponding constants c(M, K) obtained applying
+Theorem 5.8.
+Minimal polynomial of α
+# Cl(K)
+Signature
+|∆|
+M
+c(M, K)
+x3 −x2 −2x + 1
+1
+(3, 0)
+72
+11
+40926432
+x3 −3x −1
+1
+(3, 0)
+34
+18
+187030596
+x3 −x2 −3x + 1
+1
+(3, 0)
+22 · 37
+33
+2446455004
+x3 −x2 −6x + 1
+1
+(3, 0)
+5 · 197
+219
+2626003081902
+x4 −x3 + 2x −1
+1
+(2, 1)
+52 · 11
+21
+208540588019
+x4 −x −1
+1
+(2, 1)
+283
+22
+187169288265
+x4 −x3 + x2 + x −1
+1
+(2, 1)
+331
+26
+165348251296
+Table 1. Some values of the constants from Theorem 5.8 for K = Q(α).
+The choice of these number fields is not random. Specifically, all the selected
+fields satisfy the following three conditions:
+• they are non-CM fields,
+• they have degree at least 3,
+• the rank of their unit group is strictly larger than 1 (more precisely, it is 2).
+It is proven by Cerri [Cer06, Theorem 5] (see also subsequent work of McGown
+[McG12]) that, if a field K satisfies the three conditions above, then the number
+of cosets in K/OK having Euclidean minimum greater or equal than ϵ is finite for
+every ϵ > 0. Suppose that we define Tϵ as the set of the norms of the denominators
+appearing in these cosets: in this way, for every ξ ∈K, there exist j ∈Tϵ and
+τ ∈OK satisfying NK/Q(jξ −τ) < ϵ. Thus, as long as the class number of K is 1
+(that is, as long as we further require P to be principal), the proof of Theorem 5.8
+can be adapted to this choice of Tϵ by simply setting M = max(Tϵ).
+The restriction on P being principal, highlighted above, can be in fact dropped
+thanks to a suitable generalization of [Cer06, Theorem 5]. To this end, for each
+x ∈K we consider the Euclidean minimum of x with respect to (the class of) A
+mA(x) =
+1
+N(A) inf
+τ∈A NK/Q(x −τ),
+as defined in [McG12]. The map mA extends to an upper semicontinuous function
+on Rd, whose properties in Cerri’s setting (i.e. when A = OK) can be generalized as
+follows:
+Proposition 6.1. Let K be a non-CM number field of degree at least 3 and rank of
+unit group strictly larger than 1, and let A be an integral ideal of K. Let λ be the
+
+
+[PDF PAGE 18]
+18
+embedding K →Rd defined in Section 2.2. For each ϵ > 0, the set
+Sϵ = {x ∈Rd/λ(A) | mA(x) ≥ϵ}
+is finite.
+Proof. The proof is based on [Cer06, Theorem 2], where it is proven that if T is an
+n-dimensional torus and Σ is a commutative semigroup of endomorphisms of T, then
+every proper closed Σ-invariant subset of T is finite if and only if the the following
+three conditions hold:
+(1) there exists σ ∈Σ such that, for every integer n, the characteristic polyno-
+mial of σn is irreducible;
+(2) every eigenvector of Σ possesses an eigenvalue of modulus strictly bigger
+than 1;
+(3) Σ has at least two elements which are rationally independent.
+Consider now the torus T = Rd/λ(A) and Σ = λ(O×), where Σ is seen as a commu-
+tative semigroup of endomorphisms on T via the action given by the multiplication
+by units.
+In this setting one can check that the three conditions above are satisfied following
+verbatim the proof of the first part [Cer06, Theorem 5], replacing the ring of integers
+of K with A. This concludes the proof as the set Sϵ is clearly Σ-invariant.
+□
+To sum up, one can proceed as follow:
+• List all the successive minima ϵ1, . . . , ϵn+1 until ϵn+1 < 1.
+• Compute Tϵn.
+• Set ϵ = ϵn and T = Tϵn.
+When P is principal, these steps can be performed using an algorithm by Lezowski [Lez14].1
+It would be interesting to generalize Lezowski’s algorithm for computing the succes-
+sive minima of a non-trivial ideal class, but we are not aware of such a result.
+Finally, we remark that there are of course cases in which the three conditions
+required by [Cer06, Theorem 5] are not met. For instance, in degree 3, while the
+non-CM assumption is always met, the condition that the rank of the unit group be
+strictly greater than 1 (which, in this case, is equivalent to the field having signature
+(3, 0)) is presumably rare for the splitting field of polynomials of degree 3 produced
+via certain random processes (see for instance [EK95]).
+7. Related work: continued fractions without floor functions
+Throughout the previous sections, we managed to construct types τ = (K, P, T , s)
+that satisfy the CFF property. In other words, we managed to encode any element
+α ∈K as a finite sequence [a0, a1, . . . , ak] of elements belonging to some smaller set,
+namely
+s(K) ⊆
+a
+j
+ a ∈O{P}, j ∈T
+
+,
+so that
+(29)
+α = a0 +
+1
+a1 +
+1
+... + 1
+ak
+.
+1Code available at https://www.math.u-bordeaux.fr/~plezowsk/recherche.php.
+
+
+[PDF PAGE 19]
+19
+The only part of our construction which is not fully explicit – and therefore not easy
+to convert into an actual CF-algorithm – is the T -floor function s. It is then natural
+to ask whether an expression of the form (29) can be computed without resorting
+to any floor function. The answer is positive: there are some strong results on the
+existence of short expansions of the form (29). This, of course, comes with a price,
+which essentially amounts to losing the P-adic convergence of CF-expansions of the
+elements in KP \ K. In this section we will briefly survey these short expansions
+and compare them with our floor-function-based CF-expansions.
+7.1. Continued fractions and division chains. Most of the results we will con-
+sider are in fact referred to division chains rather than continued fractions. It is
+well-known that these notions are closely related, as we will review in this section.
+Let K be a number field and let R be a subring of K. Given a, b ∈R, a division
+chain of length k for the pair a, b is a sequence of quotients q1, . . . , qk ∈R and
+residues r1, . . . , rk ∈R such that
+a = q1b + r1
+b = q2r1 + r2
+...
+rk−2 = qkrk−1 + rk.
+(30)
+A division chain is terminating if rk = 0.
+Suppose that the pair a, b has a terminating division chain of length k. Then,
+using (30), we can write
+a
+b = q1 +
+1
+b/r1
+= q1 +
+1
+q2 +
+1
+r1/r2
+= · · · = q1 +
+1
+q2 +
+1
+... + 1
+qk
+.
+In other words, [q1, . . . , qn] is a continued fraction expansion of a/b. We stress that,
+in general, it is not obtained via algorithm (1) (in particular, the elements qi may
+not lie in the image of any floor function on K).
+Remark 7.1. The CFF property for (K, R) is also related to the fact that the group
+SL2(R) (or SLn(R)) can be generated by elementary matrices (see [O’M65; Coh66;
+CZZ18]).
+We can now rephrase the CFF property in the language of division chains.
+Definition 7.2. Let K be a number field and R be any subring of K.
+• R satisfies the Euclidean chain condition [O’M65] if every pair of elements
+a, b ∈R admits a terminating division chain.
+• R is k-stage Euclidean if it satisfies the Euclidean chain condition and each
+division chain has length at most k [Coo76].
+It is well-known that the Euclidean chain condition, which is exactly the CFF
+property seen in the context of division chains, holds for (Q, Z) and, more generally,
+for (K, R) when R is an Euclidean ring and K = Frac(R).
+The property of being k-stage Euclidean, on the other hand, seems much harder
+to satisfy, since it dictates the maximum length allowed for division chains. Never-
+theless, in many relevant cases it does hold for remarkably small values of k, as we
+will see in Section 7.3.
+
+
+[PDF PAGE 20]
+20
+7.2. Euclidean chain condition and ideal class group. Let us focus again on
+the case R = OS, where S is a finite set of places of K. An essential prerequisite for
+the Euclidean chain condition (and therefore, in particular, the CFF property) arises
+from the very structure of the ideals of OS. It is proven in [Coo76, Prop. 2] that,
+if (K, OS) satisfies the Euclidean chain condition, then OS is a unique factorization
+domain. In particular, if the Euclidean chain condition holds for (K, OK), then the
+class number of K is 1. Furthermore, when the group of units O×
+K is infinite, the
+converse also holds [Coo76, Theorem 1].
+A more general necessary condition is motivated by the following result, which is
+based on [CMT22, Cor. 7.2].
+Proposition 7.3. Let K be a number field, let S be a finite set of places of K, and
+assume that the pair a, b ∈OS has a terminating division chain with quotients in
+OS. Then, the class in Cl(K) of the fractional ideal (a, b) belongs to the subgroup
+generated by the classes of the ideals in S.
+Proof. Let a0, . . . , an ∈OS be the quotients in the division chain of the pair a, b.
+One can prove, by induction on n, that the continued fraction [a0, . . . , an] = a/b is
+equal to the ratio of two elements An, Bn ∈OS, which can be defined recursively as
+A−1 = 1, A0 = a0, An = anAn−1 + An−2,
+B−1 = 0, B0 = 1,
+Bn = anBn−1 + Bn−2,
+for n ≥1. Moreover, An and Bn are coprime since they satisfy AnBn−1+An−1Bn = 1.
+Therefore, the ideal (An, Bn) = (a, b) belongs to the kernel of the natural projection
+of Cl(K) into the class group of OS. The kernel of this projection is generated by
+the classes of the ideals in S [NSW13, p. 452].
+□
+Corollary 7.4. Suppose that R satisfies the Euclidean chain condition and let S be
+the set of the prime ideals P of OK such that vP(a) < 0 for some a ∈R. Then
+Cl(K) is generated by the classes of the ideals in S.
+Corollary 7.4 is one of our motivations for introducing extraneous denominators:
+classic P-adic continued fractions may have the CFF only when the class group is
+generated by the class of P, while P-adic continued fractions of type τ = (K, P, T , s)
+may have the CFF when the class group is generated by the classes of P and the
+ideals generated by T .
+7.3. Some results on k-stage Euclideanity. In terms of continued fractions, say-
+ing that OS is k-stage Euclidean means that every element in K can be expressed as
+a continued fraction with length k and partial quotients in OS. It is surprising that,
+if OS contains enough units and S meets the necessary condition of Corollary 7.4,
+one can set k to be as low as 5 [MRS18].
+Theorem 7.5. Assume that there are infinite units in OS.
+Let a, b be coprime
+elements in OS. Then the pair a, b has a division chain of length 5.
+The same result was proven – under GRH – in [CW75, Thms. 2.2 and 2.9], with
+the further observation that a/b has a CF-expansion of length 4 if S contains at
+least one finite place. The following algorithm, introduced by Cooke, Lenstra and
+Weinberger, can be used to compute these CF-expansions whenever a finite principal
+place P = (p) belongs to S:
+
+
+[PDF PAGE 21]
+21
+• Choose q1 and r1 such that
+a = q1b + r1
+and
+|r1|p = 1.
+This ensures that the next step can be done within a finite amount of time.
+• Check each principal prime ideal (p′) not in S until the following conditions
+are met:
+– b ≡p′ mod r1,
+– r1 ≡u mod p′, where u is a unit.
+We remark that it is sufficient to check the latter condition only on a finite
+number of units, since OS/(p′) is finite.
+• For the p′ found at the previous step, complete the chain
+b =
+b −p′
+r1
+
+|
+{z
+}
+q2
+r1 + p′
+|{z}
+r2
+,
+r1 =
+r1 −u
+p′
+
+|
+{z
+}
+q3
+p′ +
+u
+|{z}
+r3
+r2 = u−1r2
+| {z }
+q4
+u
+The above strategy can be implemented and allowed us to successfully find, for
+example, a 5-adic CF-expansion of 7/3 in the field Q(z) where z is a root of x3+x+1:
+7
+3 = −1 +
+1
+1−z
+5 +
+1
+−12z2 + 6z −15 +
+1
+2z + 1
+.
+In general, though, the algorithm runs indefinitely due to the hardness of finding
+p′. However, as far as we know, there is still no efficient algorithm for calculating
+the corresponding division chains. This is a further reason for considering the floor-
+function-based approach, which seems easier to implement and, as already remarked,
+has the further property of providing converging approximations of the elements in
+KP \ K.
+Acknowledgements
+The authors thank Denis Simon for suggesting a more compact proof of Proposi-
+tion 7.3. They also thank the anonymous reviewers for their feedback and comments.
+They all acknowledge the IEA (International Emerging Action) project PAriAlPP
+(Problèmes sur l’Arithmétique et l’Algèbre des Petits Points) of the CNRS for the
+financial support.
+Laura Capuano, Marzio Mula and Lea Terracini are members of the INdAM group
+GNSAGA.
+Sara Checcoli’s work has been also supported by the French National Research
+Agency in the framework of the Investissements d’avenir program (ANR-15-IDEX-
+02).
+
+
+[PDF PAGE 22]
+22
+References
+[AA15]
+T. Andreescu and D. Andrica. “Continued Fractions, Diophantine Ap-
+proximation, and Quadratic Rings”. In: Quadratic Diophantine Equa-
+tions. New York, NY: Springer New York, 2015, pp. 9–29.
+[BCM21]
+S. Barbero, U. Cerruti, and N. Murru. “Periodic representations for qua-
+dratic irrationals in the field of p-adic numbers”. In: Math. Comp. 90.331
+(2021), pp. 2267–2280.
+[Bed85]
+E. Bedocchi. “L’anneau Z[
+√
+14] et l’algorithme euclidien”. In: Manuscr.
+Math. 53.3 (1985), pp. 199–216.
+[Bed89]
+E. Bedocchi. “On the second minimum of a quadratic form and its appli-
+cations”. In: Riv. Mat. Univ. Parma (4) 15 (1989), pp. 175–190.
+[Bed90]
+E. Bedocchi. “Sur le developpement de √m en fraction continue p-adique”.
+In: Manuscripta Mathematica 67 (1990), pp. 187–195.
+[BG06]
+E. Bombieri and W. Gubler. Heights in Diophantine geometry. Vol. 4.
+New Mathematical Monographs. Cambridge University Press, Cambridge,
+2006.
+[Bro00]
+J. Browkin. “Continued fractions in local fields II”. In: Mathematics of
+Computation 70 (2000), pp. 1281–1292.
+[Bro78]
+J. Browkin. “Continued fractions in local fields I”. In: Demonstratio Math-
+ematica 11 (1978), pp. 67–82.
+[Cer06]
+J.-P. Cerri. “Inhomogeneous and Euclidean spectra of number fields with
+unit rank strictly greater than 1”. In: J. Reine Angew. Math. 592 (2006),
+pp. 49–62.
+[CMT22]
+L. Capuano, N. Murru, and L. Terracini. “On the finiteness of P-adic
+continued fractions for number fields”. In: Bull. Soc. Math. France 150.4
+(2022), pp. 743–772.
+[CMT23]
+L. Capuano, N. Murru, and L. Terracini. “On periodicity of p-adic Browkin
+continued fractions”. In: Math. Z. 35.7 (2023), pp. 1–24.
+[Coh66]
+P. M. Cohn. “On the structure of the GL2 of a ring”. In: Inst. Hautes
+Études Sci. Publ. Math. 30 (1966), pp. 5–53.
+[Coo76]
+G. E. Cooke. “A weakening of the Euclidean property for integral domains
+and applications to algebraic number theory. I”. In: J. Reine Angew.
+Math. 282 (1976), pp. 133–156.
+[CVZ19]
+L. Capuano, F. Veneziano, and U. Zannier. “An effective criterion for pe-
+riodicity of ℓ-adic continued fractions”. In: Mathematics of Computation
+88 (2019), pp. 1851–1882.
+[CW75]
+G. Cooke and P. J. Weinberger. “On the construction of division chains
+in algebraic number rings, with applications to SL2”. In: Comm. Algebra
+3 (1975), pp. 481–524.
+[CZZ18]
+L. Cossu, P. Zanardo, and U. Zannier. “Products of elementary matrices
+and non-Euclidean principal ideal domains”. In: J. Algebra 501 (2018),
+pp. 182–205.
+[DM99]
+E. Dunne and M. McConnell. “Pianos and Continued Fractions”. In:
+Mathematics Magazine 72.2 (1999), pp. 104–115.
+[EK95]
+A. Edelman and E. Kostlan. “How many zeros of a random polynomial
+are real?” In: Bull. Amer. Math. Soc. (N.S.) 32.1 (1995), pp. 1–37.
+[Har04]
+M. Harper. “Z[14] is Euclidean”. In: Canadian Journal of Mathematics
+56.1 (2004), 55–70.
+
+
+[PDF PAGE 23]
+23
+[Hur19]
+A. Hurwitz. “Der Euklidische Divisionssatz in einem endlichen algebrais-
+chen Zahlkörper”. In: Math. Z. 3.1 (1919), pp. 123–126.
+[Len76]
+H. W. Lenstra Jr. “Euclidean number fields of large degree”. In: Invent.
+Math. 38.3 (1976/77), pp. 237–254.
+[Lez14]
+P. Lezowski. “Computation of the Euclidean minimum of algebraic num-
+ber fields”. In: Math. Comp. 83.287 (2014), pp. 1397–1426.
+[LT16]
+D. D. Long and M. B. Thistlethwaite. “Lenstra-Hurwitz cliques and the
+class number one problem”. In: J. Number Theory 162 (2016), pp. 564–
+577.
+[MC95]
+M. R. Murty and D. A. Clark. “The Euclidean algorithm for Galois ex-
+tensions of Q.” In: 1995.459 (1995), pp. 151–162.
+[McG12]
+K. J. McGown. “Norm-Euclidean cyclic fields of prime degree”. In: Int.
+J. Number Theory 8.1 (2012), pp. 227–254.
+[MRS18]
+A. V. Morgan, A. S. Rapinchuk, and B. Sury. “Bounded generation of
+SL2 over rings of S-integers with infinitely many units”. In: Algebra &
+Number Theory 12.8 (2018), pp. 1949 –1974.
+[MRS23]
+N. Murru, G. Romeo, and G. Santilli. “On the periodicity of an algorithm
+for p-adic continued fractions”. In: Ann. Math. Pur. Appl. 206.6 (2023),
+pp. 2971–2984.
+[NSW13]
+J. Neukirch, A. Schmidt, and K. Wingberg. Cohomology of Number Fields.
+Grundlehren der mathematischen Wissenschaften. Springer Berlin Hei-
+delberg, 2013.
+[O’M65]
+O. T. O’Meara. “On the finite generation of linear groups over Hasse
+domains”. In: J. Reine Angew. Math. 217 (1965), pp. 79–108.
+[Oot17]
+T. Ooto. “Transcendental p-adic continued fractions”. In: Mathematische
+Zeitschrift 287.3 (2017), pp. 1053–1064.
+[RS92]
+A. M. Rockett and P. Szüsz. Continued Fractions. River Edge, NJ: World
+Scientific Publishing Co., Inc., 1992.
+[Rub70]
+A. A. Ruban. “Certain metric properties of the p-adic numbers”. In:
+Sibirsk. Mat. Ž. 11 (1970), pp. 222–227.
+[Sam67]
+P. Samuel. Théorie algébrique des nombres. Hermann, Paris, 1967.
+[Sch70]
+T. Schneider. “Über p-adische Kettenbrüche”. In: Symposia Mathemat-
+ica, Vol. IV (INDAM, Rome, 1968/69). Academic Press, London, 1970,
+pp. 181–189.
+(Laura Capuano) Dipartimento di Matematica e Fisica, Università degli Studi di
+Roma Tre
+Email address: laura.capuano@uniroma3.it
+(Sara Checcoli) Univ. Grenoble Alpes, CNRS, IF, 38000 Grenoble, France
+Email address: sara.checcoli@univ-grenoble-alpes.fr
+(Marzio Mula) Research Institute CODE, Universität der Bundeswehr München
+Email address: marzio.mula@unibw.de
+(Lea Terracini) Dipartimento di Informatica, Università di Torino
+Email address: lea.terracini@unito.it

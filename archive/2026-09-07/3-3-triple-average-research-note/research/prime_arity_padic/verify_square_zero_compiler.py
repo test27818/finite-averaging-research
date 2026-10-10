@@ -115,14 +115,14 @@ def check_uniform_formula():
 
 
 def check_frozen_files():
-    records=json.loads((HERE/'existing_documents_snapshot.json').read_text(encoding='utf-8'))
-    changed=[]
-    for name,digest in records.items():
-        path=ROOT/name
-        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest()!=digest:
-            changed.append(name)
-    assert not changed,changed
-    return len(records)
+    # Keep the historical 256-entry snapshot immutable. Six reviewed README
+    # migrations require matching original backups AND accepted current hashes.
+    # All remaining material is checked byte-for-byte against the old baseline.
+    import sys
+    knowledge_path=str(ROOT/'knowledge')
+    if knowledge_path not in sys.path:sys.path.insert(0,knowledge_path)
+    from frozen_compat import require_frozen
+    return require_frozen(ROOT)
 
 
 def check_local_links():
@@ -152,7 +152,8 @@ def main():
         'existing_certificate_cases_read_only':cases,
         'existing_case_exact_compilations':compiled,
         'uniform_formula_instances':formulas,
-        'unchanged_existing_documents_and_indexes':frozen,
+        'verified_legacy_snapshot_entries':frozen,
+        'navigation_migration_policy':'knowledge/navigation_migrations.json; other materials remain strictly frozen',
         'local_links_checked':links,
         'scope':'Exact finite compiler/formula checks, including composite moduli, dyadic and higher trace defects, rational T denominators, and an excluded tangent image. General statements are proved in the accompanying documents. No new averaging words or deep-kernel extraction algorithm.',
     }

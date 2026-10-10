@@ -1,0 +1,142 @@
+
+Let $A\ingroundset\integers$ with $\average(A)=\mu_A\in\integers$ and 
+$\nofdroplets{A}=n_A$ be an arbitrary configuration (that is, a multiset of integers).
+We define $\min(A)$ and $\max(A)$ as the lowest and highest concentrations in $A$, respectively.
+We also define the diameter of $A$ as $\diameter(A) = \max(A) - \min(A)$.
+Recall that the size of $A$ is defined as $s(A)=\sum_{a\in A} \log(|a|+2)$. 
+We denote by $A_{even}$ and $A_{odd}$ two disjoint multisets containing
+all even and odd concentrations in $A$, respectively.
+We use notation $\pi\in\braced{even,odd}$ for a parity value, with
+$\barpi\in\braced{even,odd}$ standing for the opposite parity (that is $\barpi\neq\pi$),
+and we use these for subscripts, as in  $A_\pi$ and $A_{\barpi}$.   
+In the contexts when $A$ is subjected to some mixing sequence,
+we will use notation $\potential_{A,0}$ as the initial value of $\potential(A)$,
+before any mixing has been performed on $A$.
+
+The following observations show that repeatedly mixing two droplets with concentrations 
+that are sufficiently far apart eventually decreases $\potential(A)$ at least by a factor of $\half$.
+
+%%%%%%%%%%%%%
+
+\begin{observation}\label{obs: far-appart mix}
+Let $x,y\in A$ be two different concentrations with the same parity, and let $A'$ be
+obtained from $A$ by mixing $x$ and $y$. Then:
+%
+\begin{description}
+	
+	\item{(a)} $\potential(A') < \potential(A)$.
+
+	\item{(b)} If $\gamma\in\posintegers$ is a constant and
+	$|x-y|\geq\diameter(A)/\gamma$, then
+	$\potential(A') \;\leq\; \big(1 - \frac{1}{2\gamma^2n_A} \big)\potential(A)$.
+	
+\end{description}
+
+\end{observation}
+
+\begin{proof}
+Without loss of generality we can assume that $\mu_A= 0$, so that $\potential(A)=\sum_{a\in A}a^2$.
+Note that we then also have $\average(A')=\mu_{A'} = 0$.
+Part~(a) now follows by simple calculation:
+%
+	\begin{equation*}
+			\potential(A) - \potential(A')
+			\;=\; x^2+y^2-2\Big(\frac{x+y}{2}\Big)^2 
+			\;=\; \frac{(x-y)^2}{2} > 0.
+	\end{equation*}
+
+\noindent
+To prove~(b), we use the above calculation and inequality $\potential(A)\le n_A \diameter(A)^2$
+(that follows directly from the definition of $\potential(A)$):
+%
+	\begin{equation*}
+			\potential(A) - \potential(A')
+			\;=\; \frac{(x-y)^2}{2} 
+			\;\geq\; \frac{\diameter(A)^2}{2\gamma^2} 
+			\;\geq\; \frac{\potential(A)}{2\gamma^2n_A},
+	\end{equation*}
+
+\noindent
+completing the proof.
+\end{proof}
+
+
+%%%%%%%%%%%%%
+
+\begin{observation}\label{obs: far-appart constant mix}
+	Let $\gamma\in\posintegers$ be a constant.   
+	Let $A'$ be obtained from $A$ by a sequence of $2\gamma^2n_A$ mixing operations,
+	each involving droplets $x,y\in A$ that satisfy $|x-y|\geq\diameter(A)/\gamma$.  
+	Then $\potential(A') \le \potential(A)/2$.
+\end{observation}
+
+\begin{proof}
+	Applying Observation~\ref{obs: far-appart mix}(b) repeatedly, for each of the
+	$2\gamma^2n_A$ mixing steps, we obtain
+	%
+	\begin{equation*}
+		\potential(A')
+		\leq \potential(A)\Big(1 - \frac{1}{2\gamma^2n_A}\Big)^{2\gamma^2n_A}
+		\leq \frac{\potential(A)}{2},
+	\end{equation*}
+	%
+	where the last inequality holds because $(1-1/k)^k \leq 1/2$ for $k\geq 2$.
+\end{proof}
+
+
+%%%%%%%%%%%%%
+
+We state two more observations that will be used later in the proof, typically
+without an explicit reference.
+
+\begin{observation}\label{obs: logPotential <= 2s(A)}
+	$\log{\potential(A)}\leq 2s(A)$.
+\end{observation}
+
+\begin{proof}
+	Let $\psi_A(x) =  \sum_{a\in A}(a-x)^2$. By calculus, we have that
+	$\psi_A(x)$ is minimized for $x = \mu_A$, and thus
+	%
+	\begin{equation*}
+		 \potential(A) \;=\; \psi_A(\mu_A)
+						\;\le\; \psi_A(0)
+						\; = \;  \sum_{a\in A}a^2
+						\;\le    \Big(\,\sum_{a\in A} |a| \,\Big)^2.
+	\end{equation*}   
+	%
+	Therefore 
+	%
+	\begin{align*}
+		\log\potential(A) &\leq\; \log\Big(\,\sum_{a\in A} |a| \,\Big)^2
+		\\
+		&\leq\; 2\log\prod_{a\in A}\big(|a|+2\big)
+		\;=\; 2\sum_{a\in A}\log(|a|+2)
+		\;=\; 2s(A),
+	\end{align*}	
+	%
+completing the proof.
+\end{proof}
+
+\begin{observation}\label{obs: psi(A') <= psi(A) for A' subseteq A}
+	Let $A'\subseteq A$. Then $\potential(A')\leq\potential(A)$.
+\end{observation}      
+
+\begin{proof}  
+Using the properties of the 
+function $\psi_A(x)$ from the proof of Observation~\ref{obs: logPotential <= 2s(A)},
+we have
+%
+\begin{equation*}	 
+	 \potential(A') \;=\; \psi_{A'}(\mu_{A'})
+	 				\;\leq\; \psi_{A'}(\mu_{A})   
+	 				\;\leq\; \psi_{A}(\mu_{A})  
+	   				\;=\; \potential(A),
+\end{equation*}	
+%
+where the second inequality follows from $A'\subseteq A$.  	
+\end{proof}
+
+
+
+
+

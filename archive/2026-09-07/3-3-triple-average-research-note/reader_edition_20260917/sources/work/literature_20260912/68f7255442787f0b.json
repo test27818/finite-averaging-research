@@ -1,0 +1,6 @@
+{
+  "url": "https://api.openalex.org/works?filter=title.search%3Aaddition+theorem+maximal+zero-sum-free&per-page=5&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "status": 429,
+  "retrieved": "2026-09-12",
+  "body": "{\"error\":\"Rate limit exceeded\",\"message\":\"Anonymous search is temporarily rate-limited while the search cluster is under elevated load. Please retry in 15s, or use a free API key for uninterrupted access: https://openalex.org/rest-api.\",\"retryAfter\":15}"
+}

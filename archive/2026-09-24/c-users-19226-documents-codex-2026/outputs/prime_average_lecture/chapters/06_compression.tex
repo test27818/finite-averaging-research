@@ -1,0 +1,165 @@
+\chapter{从一般配置到三块核心}\label{sec:compression}
+
+\section{压缩的目标与困难}
+本讲始终保留原来的 $n$ 个位置，但逐渐减少不同数值的数目。
+目标形状是
+\[
+(A^p,B^p,C^r),\qquad n=2p+r,
+\]
+并保留全部必要的同余见证。随意分组平均虽然能制造等值块，
+却可能把原来可解的输入送入共同非零余数类，因此需要先安排见证的位置。
+
+这里允许分母为 $p$ 的幂。对每个 $\ell\mid n$，因为 $p\nmid n$，
+模 $\ell$ 的分母仍可逆。压缩阶段关注的是见证是否消失，不要求整数能量下降。
+“块”指同值位置的集合；“单点”指暂未归入块的位置角色，其实际值允许相同。
+
+本节对 $p\nmid n$ 的配置在 $\Z[1/p]$ 中保留全部模 $\ell\mid n$ 非恒定见证。
+
+
+\section{同时避开若干坏配比}
+将两个 $p$ 块作互补混合时，第一个新值随整数配比 $k$ 作一次变化。
+在某个素数处，一个非恒定的一次式至多有一个零点。
+所以问题变成：在短区间 $1,\ldots,p-1$ 中，同时避开若干素数各禁止的一个余数类。
+以下引理用 $n<4p$ 对危险素因子的总数量作限制。
+
+\begin{lemma}[短区间中的同时避让]\label{lem:short-choice}
+若 $p\ge5$、$2p<n<4p$，对 $n$ 的任意一组不同素因子，各禁止一个剩余类，则 $1,\ldots,p-1$ 中存在同时避开的整数。
+\end{lemma}
+\begin{proof}
+设素因子数为 $h$，乘积为 $M$，$\rho=\varphi(M)/M$。对 $h\le4$，长度 $2^h$ 足够：含 $2$ 时先留一种奇偶类，其余奇素数至多删去 $0,1,3,7$ 项，对应剩余 $1,2,4,8$ 项；不含 $2$ 时至多删去 $1,3,7,15$ 项。$h=3,4$ 时 $M\ge30,210$，从 $M\le n<4p$ 得 $2^h\le p-1$，较小 $h$ 直接成立。
+若 $h\ge5$，CRT 将禁止类写成某个整数 $b$ 的各模余数。容斥给避开数目大于 $(p-1)\rho-(2^h-1)$。五个最小素数给 $\varphi(M)\ge480>2^{h+2}$，每增加素因子仍保持此界。因此
+\[(p-1)\rho>(n/4-1)\rho\ge\varphi(M)/4-\rho>2^h-1.
+\]
+\end{proof}
+
+两个 $p$ 块的互补配比给
+\begin{equation}\label{eq:mix-pair}
+a_k=a+\frac{k}{p}(b-a),\qquad b_k=b+\frac{k}{p}(a-b).
+\end{equation}
+相对于固定值 $w$，只要 $a-w,b-w$ 不同时为零，$a_k-w$ 模每个危险素数至多禁止一个 $k$ 类。引理\ref{lem:short-choice}因此能合并两差的全部见证。
+
+
+\section{把分散的见证合并到一个差分}
+说“$a-w$ 有完整支持”，是指对每个危险素数 $\ell$ 都有 $a\not\equiv w\pmod\ell$。
+假设某个素数的差异还在另一个块或单点里，我们可以先把它移入当前两个块，
+再用互补混合使同一个差分同时在所有已处理素数处非零。
+已获得的支持不会丢掉，而每轮至少增加一个新的素数；因而这里只需有限轮。
+
+\begin{lemma}[把同余见证集中到一个差分]\label{lem:concentrate}
+已有两个 $p$ 块及单点时，可以固定一个单点 $w$，使某个块值 $a$ 在全部危险素数处不同于 $w$。
+\end{lemma}
+\begin{proof}
+若某个缺失素数处第二块 $b\ne w$，用式\eqref{eq:mix-pair}合并支持。否则 $a=b=w$，另有单点 $x\ne w$。平均 $(b^{p-1},x)$，留下旧 $b$ 一份作为新单点，再混合两块。这一阶段至多三次平均，严格增加支持。块--单点变换
+\begin{equation}\label{eq:exchange}
+(b,x)\longmapsto(((p-1)b+x)/p,b)
+\end{equation}
+在每个危险素数处可逆且保持常值方向，故保持整体见证。至多 $d_p(n)$ 个阶段完成。
+\end{proof}
+
+
+\section{只在有限余数上反向，仍然只做正向平均}
+一次块--单点交换，把旧块中的一份位置留给新的单点角色：
+\[
+(a^p,c_i)\longmapsto
+\left(\left(\frac{(p-1)a+c_i}{p}\right)^p,a\right).
+\]
+这已经说明角色为什么会移动：新的单点是某个旧块位置，
+而原来的单点已经加入新块。操作不需要真正移动一个数值。
+
+模 $\ell\mid n$，这个交换是有限集合上的可逆变换。
+如果它的阶整除 $L$，重复 $L-1$ 次便具有逆的\emph{模作用}。
+这不意味着有理数上的逆也能这样实现。
+例如 $p=3$ 时，交换两次把 $(a,c)=(0,1)$ 送到 $(2/9,1/3)$；
+形式逆送到 $(1,-2)$。模 $7$ 两者相同，实际有理数却不同。
+入口只需要模见证正确，这种有限逆已经够用。
+
+\begin{lemma}[保留见证的双块入口]\label{lem:two-block-entry}
+设 $1\le r<p$、$n=2p+r$、$\gcd(p,n)=1$。任意合法输入可进入具有完整见证的两个 $p$ 块及 $r$ 个单点。
+\end{lemma}
+\begin{proof}
+固定一个位置并为每个危险素数保留一个不同余位置。保护数至多 $d+1\le p+r$：否则 $n\ge2^d\ge2^{p+r}>n$。保护集外平均一个 $p$ 组，写剩余单点为 $c_i$、$m=p+r$、$\delta_i=c_i-a$。令 $\lambda=-1/p$，式\eqref{eq:exchange}在差分中的矩阵为
+\[
+A_i=I+v_i e_i^T,\qquad v_i=\lambda\mathbf1-e_i.
+\]
+
+为了说明交换子的由来，取互异 $i,j,k$，置
+\[
+w=e_k-e_j,\qquad h=e_j^T+\lambda e_k^T,
+\qquad T=A_k^{-1}A_jA_k.
+\]
+秩一矩阵公式给出 $A_k^{-1}v_j=w$、$e_j^TA_k=h$，故 $T=I+wh$。
+另外 $e_i^Tw=0$、$hv_i=\lambda(1+\lambda)$。
+将这两个等式用于共轭，再乘 $A_i^{-1}$，得到
+\begin{equation}\label{eq:entry-commutator}
+[A_k^{-1}A_jA_k,A_i]
+=I+(1+\lambda)(e_k-e_j)e_i^T.
+\end{equation}
+取 $L$ 为各模 $\ell$ 的 $2\times2$ 可逆矩阵群阶的公倍数。
+这里 $\rad(n)$ 是 $n$ 的全部不同素因子的乘积。
+按实际时间顺序，用下面八段正向操作实现交换子的模作用：
+\[
+ A_i^{L-1},\ A_k,\ A_j^{L-1},\ A_k^{L-1},\
+ A_i,\ A_k,\ A_j,\ A_k^{L-1}.
+\]
+这些段一共含 $4L$ 次块--单点交换。
+交換矩阵模 $\rad(n)$ 的逆可由 $L-1$ 次正向交换实现，故式\eqref{eq:entry-commutator}的任意非负幂可用真实交换实现其模作用。
+系数 $(p-1)/p$ 失效的素数整除 $\gcd(p-1,n)=\gcd(p-1,r+2)$，其数量至多 $r$。
+确实，若有 $r+1$ 个这样的素数，则其乘积至少为 $2^{r+1}$，又整除 $r+2$，
+与 $2^{r+1}>r+2$ 矛盾。这个小计数解释了保留 $r$ 个单点为什么足够：
+不能用交换子移动的素数，恰好可以逐个留一个原有见证。为这些素数分别选一个非零差分单点，补足为 $r$ 个保留角色，固定其中一个目标 $j$。对每个其余素数 $\ell$，若目标差为零，选 $\delta_i\ne0$、$k\notin\{i,j\}$，用 CRT 选指数在模 $\ell$ 为 $1$、其他非失效素数模下为 $0$。式\eqref{eq:entry-commutator}使目标差新增非零值，并保留已处理支持和全部失效处数据。最终保留这 $r$ 个单点，将另外 $p$ 个单点平均。旧块和保留单点已提供全部见证。
+\end{proof}
+
+
+\section{下半带、上半带及核心参数}
+下半带先制造两个 $p$ 块，再让两个块之间的差分具有全部见证。
+上半带多一整块，先压成 $(2p,p,s)$ 的加权形状，再用本讲末尾的两次平均改为 $(p,p,p+s)$。
+这样，后面的所有临界带都可以使用同一个核心记号。
+
+\begin{proposition}[一般输入的三块归约]\label{prop:entry}
+若 $p\ge5$、$2p<n<4p$、$n\ne3p$，每个合法输入可进入
+\begin{equation}\label{eq:core}
+K_{p,r}(a,z)=(a^p,(rz-a)^p,(-pz)^r),\qquad r=n-2p.
+\end{equation}
+本原参数满足 $\gcd(a,z)=1$，且合法性为 $\gcd(a+pz,n)=1$。当 $p=3,n=7$ 时该结论仍成立。
+\end{proposition}
+\begin{proof}
+\par\noindent\textbf{第一步：下半带两轮修复。} 先设 $r<p$。由引理\ref{lem:two-block-entry}及\ref{lem:concentrate}取得 $a^p,b^p$ 和单点 $w$，其中 $a-w$ 在全部危险处非零。混合两块后将 $b_k$ 与 $w$ 交换，得到
+\[
+a_1=a_k,\quad b_1=((p-1)b_k+w)/p,\quad w_1=b_k.
+\]
+新块差乘 $p$ 为 $D(k)=pa-(p-1)b-w+(2p-1)k(b-a)/p$。在 $\ell\nmid2p-1$ 处选 $k$ 使它非零；在 $\ell\mid2p-1$ 处选 $k$ 使下一轮常数
+\[E(k)=pa_1-(p-1)b_1-w_1=w+(a-3b)/2+4k(b-a)
+\]
+非零。两种条件均至多禁止一个类。第二轮的差为 $E(k)+(2p-1)h(b_1-a_1)/p$，再由引理\ref{lem:short-choice}同时避零。现在两块差在全部危险处非零。平均全部 $r$ 单点及第一块的 $p-r$ 份，留下 $r$ 份旧第一块和完整第二块，即得合法形状\eqref{eq:core}。
+
+\par\noindent\textbf{第二步：上半带的三块折叠。}
+若 $n=3p+s$、$1\le s<p$，先保护单点 $w$ 及至多 $d$ 个见证，在其外制造两个 $p$ 块。$d<p$ 由 $2^p>4p>n$ 保证容量。用引理\ref{lem:concentrate}取得 $a-w$ 的全支持，再避开 $w$ 制造第三块。混合第二、第三块以保留已好素数的差，再将第二块与 $w$ 交换，可使三个块自身提供全部见证。将单点与第一块折叠，得到 $(a^p,b^p,c^p,d_0^s)$。
+零和模危险素数给 $(a-d_0)+(b-d_0)+(c-d_0)=0$。先混合使 $a-d_0$ 全支持。写 $p=3m+\epsilon$，平均两组同组成 $(m+\epsilon,m,m)$ 的位置，再平均余下的 $p$ 个，得到 $(A^{2p},B^p,C^s)$，其中
+\[
+A=[m(a+b+c)+\epsilon a]/p,\quad B=a+b+c-2A,\quad C=d_0.
+\]
+模危险素数有 $A-C=\epsilon(a-d_0)/p\ne0$。写 $A=a,B=-2a+sz,C=-pz$，再应用引理\ref{lem:shape-change}的两次平均，得到 $(p,p,p+s)$ 核心。
+\par\noindent\textbf{第三步：把块值写成两个整数参数。}
+对整数本原核心，由 $p(A+B)+rC=0$ 及 $\gcd(p,r)=1$ 得 $C=-pz$，进而 $B=rz-a$。坐标公因子为 $\gcd(a,z)$，而差分为 $a+pz$ 和 $nz-2(a+pz)$，所以 $G=\gcd(a+pz,n)$。
+当 $p=3,n=7$ 时，引理\ref{lem:two-block-entry}已经给两个三块与一个单点。保留单点与旧块的全见证便给所需合法核心，不需后续两轮修复。
+\end{proof}
+
+
+\section{补足上半带的两次换形}
+前一个证明得到 $2p$ 份 $A$、$p$ 份 $B$、$s$ 份 $C$。
+这里先从三种值中取出一个 $p$ 元组，随后保留 $p+s$ 份旧 $A$，
+把其余位置平均为另一个 $p$ 块。于是总重数正好成为 $p,p,p+s$。
+唯一需要安排的是第一个组的计数，使所得见证仍然是模 $n$ 的单位。
+
+\begin{lemma}[用两次平均改换块重数]\label{lem:shape-change}
+设 $p\ge5$、$1\le s<p$、$n=3p+s$。合法核心 $(a^{2p},(-2a+sz)^p,(-pz)^s)$ 可用两次平均进入合法 $K_{p,p+s}$。
+\end{lemma}
+\begin{proof}
+记三个块值为 $A,B,C$。选 $0\le u\le s$、$s\le t+u\le p$，令 $q=3t+u$ 与 $n$ 互素。先平均 $(A^{p-t-u},B^t,C^u)$，从剩余旧 $A$ 保留 $p+s$ 份，再平均其余的 $p$ 个位置。返回为
+\[
+\frac1p\begin{pmatrix}p-q&st-pu\\-1&0\end{pmatrix}.
+\]
+可取 $(t,u)=(s,0)$（$3\nmid s$）；若 $3\mid s$，令 $\rho=p\bmod3$，取 $u=s-3+\rho,t=(p-u)/3$，此时 $q=p$。容量 $t+u\ge s$ 等价于 $p-s\ge6-2\rho$；唯一例外为 $\rho=1,s=p-1$，改取 $t=(p+1)/2,u=(p-3)/2$，此时 $q=2p$。三种选择均合法且 $\gcd(q,n)=1$。
+若 $y=a+pz$，新见证满足 $y'\equiv-qy/p\pmod n$，行列式为 $st-pu\equiv-pq\pmod n$。故在每个危险素数处保持本原性及见证。
+\end{proof}
+

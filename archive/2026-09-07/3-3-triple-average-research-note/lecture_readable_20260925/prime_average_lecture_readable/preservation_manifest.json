@@ -1,0 +1,363 @@
+{
+  "original_formal_blocks": 65,
+  "included_formal_blocks": 65,
+  "original_tables": 4,
+  "included_tables": 4,
+  "copied_table_groups": [
+    {
+      "source": "16_three.tex",
+      "sha256": "49639c350feb0f5658af7652b65cc4cbeb081aaa2034f4eb3e952b016a4255e6"
+    },
+    {
+      "source": "17_five_seven.tex",
+      "sha256": "ee5cf0107be142a0ed9d89ced497bbb8ce5cf7a1c64ad93058e97fc444d24baa"
+    },
+    {
+      "source": "17_five_seven.tex",
+      "sha256": "19d135e29362add85b51e78b4386f0aae806dac1c40a6ade623c6d26a6f320a5"
+    },
+    {
+      "source": "19_tables.tex",
+      "sha256": "40047a8f476ec993be28784f19021d17ba32312aa7a3efaa6b1c84ec573dab0e"
+    }
+  ],
+  "missing_original_labels": [],
+  "unresolved_references": [],
+  "duplicate_labels": [],
+  "explicit_typesetting_changes": [
+    {
+      "block": "prop:wide",
+      "kind": "typesetting typo",
+      "before": "n=4p+s,quad1",
+      "after": "n=4p+s,\\quad1"
+    }
+  ],
+  "claim": "Formal statements and attached proofs preserved verbatim except listed typesetting correction; explanatory prose rewritten.",
+  "blocks": [
+    {
+      "key": "thm:prime",
+      "source": "01_problem.tex",
+      "sha256": "987120ef1f93c263d691c2e01ee8f84cd5a189991643370046bbd75201710796"
+    },
+    {
+      "key": "01_problem-unit1",
+      "source": "01_problem.tex",
+      "sha256": "d7fe7f629dd8257108ba68233606efe655c799dfaedce6d805deabb0fbbd4907"
+    },
+    {
+      "key": "cor:threshold",
+      "source": "01_problem.tex",
+      "sha256": "062c2649604d0a42e81741fa7deeb10b56333a83e5846669860146dfdac90675"
+    },
+    {
+      "key": "lem:affine",
+      "source": "02_obstruction.tex",
+      "sha256": "aa98ad82ec93ae021cd2147de76947d376d7e8ed7376f2778fdac93dc9cb3d3e"
+    },
+    {
+      "key": "lem:obstruction",
+      "source": "02_obstruction.tex",
+      "sha256": "39d99b9553774eeb15c4a81fb27c9b2afdadb6ab91628c7dba16b09260da6575"
+    },
+    {
+      "key": "lem:fraction",
+      "source": "02_obstruction.tex",
+      "sha256": "c2f15bde450eb893a60b8b47136e0960ab2da89a3ff6d3d7c815838e7af3f96c"
+    },
+    {
+      "key": "prop:lower",
+      "source": "02_obstruction.tex",
+      "sha256": "36a7eb068505b61504a1e2658fe50845ab91542a90d0ecfc790f8fa7160006e7"
+    },
+    {
+      "key": "03_descent_tools-unit1",
+      "source": "03_descent_tools.tex",
+      "sha256": "2e31f2beef51704682d2eb7ac15eddb75f705995cb54a234c064aa75880d752f"
+    },
+    {
+      "key": "lem:safety",
+      "source": "03_descent_tools.tex",
+      "sha256": "961825b2028cd16873264c9dc7dfefd51d17256dc5468a2d0d230e3104431cac"
+    },
+    {
+      "key": "lem:initialize",
+      "source": "03_descent_tools.tex",
+      "sha256": "f4b25dcb4eb600fdc19c5d0fa13861a9a8c93e97b7b6f6da4f1aff1ba919c9ff"
+    },
+    {
+      "key": "03_descent_tools-unit4",
+      "source": "03_descent_tools.tex",
+      "sha256": "f4f26d350a84307c859bc3f9e8683d517aff88176a6152470a15d0ab0098d98a"
+    },
+    {
+      "key": "lem:egz",
+      "source": "03_descent_tools.tex",
+      "sha256": "543969e9a8011f0fa75f27a3452264eb66cd5372f838f28e5b55910fcc877f68"
+    },
+    {
+      "key": "lem:background",
+      "source": "04_descent_complete.tex",
+      "sha256": "13f8168dc75e8978722a5ef603680d3cde17b8b9d718f2fd4d89f39fac84f613"
+    },
+    {
+      "key": "lem:heavy",
+      "source": "04_descent_complete.tex",
+      "sha256": "1f1d50ef0c31098dbdc8bd27472fb915dfc7e4c2798bea307d8b00202bebba38"
+    },
+    {
+      "key": "lem:two-heavy",
+      "source": "04_descent_complete.tex",
+      "sha256": "11175246acabfb1b1228ee57e197adf878a8c479a92dd9c97ad9ed8b2e79d7c3"
+    },
+    {
+      "key": "lem:integer-range",
+      "source": "04_descent_complete.tex",
+      "sha256": "fe12677064b5cccae99dd51be3a0cc37ce423777b5e5ef8c1f5ca0fe0f1d8e0d"
+    },
+    {
+      "key": "prop:threep",
+      "source": "05_zero_tail.tex",
+      "sha256": "3777e799999323881484a8bbec75c5b6fa20a17190e0a27d462161f5279ea49c"
+    },
+    {
+      "key": "lem:zero-base",
+      "source": "05_zero_tail.tex",
+      "sha256": "1badcf7fa0c424f495b3add7eeea4e195015b6bcef5a4cfffdfabe3f68018fcc"
+    },
+    {
+      "key": "lem:zero-tail",
+      "source": "05_zero_tail.tex",
+      "sha256": "21dfd88ddd873bbe22a404065a804a2fe8c99e341d6a2a619672a4acd87a15c2"
+    },
+    {
+      "key": "lem:short-choice",
+      "source": "06_compression.tex",
+      "sha256": "46422a22a0b41c32543b578ea533857c00266a6df1a8a2153b912f7c890654e2"
+    },
+    {
+      "key": "lem:concentrate",
+      "source": "06_compression.tex",
+      "sha256": "9c065c555bb3629aeaccb79acd22ebf2682134a76fff909d3e0b3294691fc0e2"
+    },
+    {
+      "key": "lem:two-block-entry",
+      "source": "06_compression.tex",
+      "sha256": "b90503dd8f5823670c8dd114e399889f1792a86d36518ee9cc4bbe15debfa829"
+    },
+    {
+      "key": "prop:entry",
+      "source": "06_compression.tex",
+      "sha256": "ce22f6ff1a7d35b7a8b1c2af2589ba2331a1ee73cc21785ba051f7e013a2ac49"
+    },
+    {
+      "key": "lem:shape-change",
+      "source": "06_compression.tex",
+      "sha256": "df6a45e505a375b2d490f5ced0031085503fd334a382cea94e82b0fc698f6421"
+    },
+    {
+      "key": "def:return",
+      "source": "07_returns.tex",
+      "sha256": "f3fd5c832902cdba23247f2cfa9e4ea0b828339edcc225829981c0ddb5201984"
+    },
+    {
+      "key": "07_returns-unit2",
+      "source": "07_returns.tex",
+      "sha256": "604687899321f8a7b26d296868719b5470bcfc4ff81bbcd40e68427d383c4caa"
+    },
+    {
+      "key": "07_returns-unit3",
+      "source": "07_returns.tex",
+      "sha256": "3fbf78244c131acba035311a077e2faf350a9013bdf3837563f6bc2ef0b76784"
+    },
+    {
+      "key": "lem:localize",
+      "source": "07_returns.tex",
+      "sha256": "5eb437a370a50a85c1f39dc6698fc9a74838ae193f834bb2d5db0fd4bcdcfe3d"
+    },
+    {
+      "key": "thm:arithmetic-external",
+      "source": "08_congruence.tex",
+      "sha256": "5fa68861e5cee99313b43e4485d45ad6054d1ccc037765037562e06d85455ed8"
+    },
+    {
+      "key": "lem:deep",
+      "source": "08_congruence.tex",
+      "sha256": "4b7de40733d02befd171330c03a51b3b278d0b8eaeae046110cadab86e04eb70"
+    },
+    {
+      "key": "lem:transverse",
+      "source": "08_congruence.tex",
+      "sha256": "620ef53186e6d4e01697440381c8cef60dad3c301ca8d899cc0b48ab006ebd40"
+    },
+    {
+      "key": "08_congruence-unit4",
+      "source": "08_congruence.tex",
+      "sha256": "03f7241f566775a9b4f96e2965e3b5238f2588f5b6f4ce8fae1464bed3026ac1"
+    },
+    {
+      "key": "lem:fiber",
+      "source": "08_congruence.tex",
+      "sha256": "0fa5ae392f7a3b9cca2e02da3e70c35efde2f0c814c9d2cdefb12ff7aaafc1e1"
+    },
+    {
+      "key": "lem:inverse",
+      "source": "08_congruence.tex",
+      "sha256": "7dc7f50dc52d92f1df7b0e55002fb0fe737c7e929252d5627ad687ab11e91027"
+    },
+    {
+      "key": "09_terminal-unit2",
+      "source": "09_terminal.tex",
+      "sha256": "3b62a3b871d06745590ca12dbc5a067c0b55b240579b733c92e045c272b8d997"
+    },
+    {
+      "key": "lem:content",
+      "source": "09_terminal.tex",
+      "sha256": "a3229715e14ea602264bd78853630df9e471061f27de696368e1f12fc64c63ec"
+    },
+    {
+      "key": "cor:finite-group",
+      "source": "09_terminal.tex",
+      "sha256": "5746c4d70e54042d6cb3df794406653c82b511f3b610c4552abd94a40a49c292"
+    },
+    {
+      "key": "09_terminal-unit4",
+      "source": "09_terminal.tex",
+      "sha256": "4f166664a494274b1b67e9eadbe6f77237e95a7d5e5e0c9d542098d38794bac7"
+    },
+    {
+      "key": "lem:local-cycle",
+      "source": "09_terminal.tex",
+      "sha256": "509ca687534c717445a09a78e399d46edd639e9633397d345a58d2eec11ec7b2"
+    },
+    {
+      "key": "lem:small-units",
+      "source": "09_terminal.tex",
+      "sha256": "85a6c57fa775a2af59f2e96f133819de167fe5b8df8b3c8588afbc0a55476f1b"
+    },
+    {
+      "key": "thm:terminal",
+      "source": "09_terminal.tex",
+      "sha256": "a1f6ac80f199ec71b4000397b24f3a46b791bae6f46f65cca191d0a4f4a72be5"
+    },
+    {
+      "key": "prop:odd",
+      "source": "10_odd.tex",
+      "sha256": "2f8c9c1a7256691e803dd8c213d12656077f9f917bd19fa80dce4d4df6c3b058"
+    },
+    {
+      "key": "prop:r2",
+      "source": "11_two.tex",
+      "sha256": "711b4c8b68a2aa45dd378ebe048f2b3af3c90c1d942f291130b225a89106fc32"
+    },
+    {
+      "key": "lem:two-carrier",
+      "source": "11_two.tex",
+      "sha256": "61696d00fd4925668bd9f36037e87a6849de05f06da49e04fa1e0e8d31b8ea41"
+    },
+    {
+      "key": "prop:even",
+      "source": "12_even.tex",
+      "sha256": "e3a5b2459459f9a7055f5a085ab6fa3b96d1debf38865fdb9253cfd25ba41b7b"
+    },
+    {
+      "key": "lem:binary-depth",
+      "source": "12_even.tex",
+      "sha256": "682f059a8059eb36b2c3f899a428ba18a2b11498333dad03d10fc919c15df481"
+    },
+    {
+      "key": "lem:even-core",
+      "source": "12_even.tex",
+      "sha256": "bc0821c8b33bd412cb7c543e8f16a7f7e4fd4e25a01d790a7ca4d2254cd5e28a"
+    },
+    {
+      "key": "lem:upper-boundary",
+      "source": "12_even.tex",
+      "sha256": "3343e20eb395e486d27bf09ed065cd7ae7b9560e7764b873928ebc4507b422b2"
+    },
+    {
+      "key": "lem:count-interface",
+      "source": "13_counting.tex",
+      "sha256": "cf10bf0603328eeee04d16304d45d8eb3168545a2b562f61cff59be97febec45"
+    },
+    {
+      "key": "cor:resource",
+      "source": "13_counting.tex",
+      "sha256": "71545c8c493826786943e4658621096e3fcdb81e466524acf557fe16555a0710"
+    },
+    {
+      "key": "prop:upper",
+      "source": "14_upper.tex",
+      "sha256": "5f60e85d2b24dc93fc3e4792509d26b8b8d5ad77fedb5152b8d8d3e910dcf3ce"
+    },
+    {
+      "key": "lem:upper-supply",
+      "source": "14_upper.tex",
+      "sha256": "1af7be65514630dcdbe46c711eabc8926b465aa799746a2f52170af8315a39f2"
+    },
+    {
+      "key": "lem:upper-small",
+      "source": "14_upper.tex",
+      "sha256": "8f67e7757b493dc2a2bb858a71c76ffc3d0fca5227d2b334e21e7cf351c32fb2"
+    },
+    {
+      "key": "lem:small-supply",
+      "source": "14_upper.tex",
+      "sha256": "b17d2c8f82219cd5ad3a087f1366fc8ae3222848d793788f2bb685a4f83ce2fd"
+    },
+    {
+      "key": "prop:wide",
+      "source": "15_wide.tex",
+      "sha256": "51f352f7cf1f7d49f04f39b7146e89d8edb473f3c3fed03a9fbb20f90a02c27b"
+    },
+    {
+      "key": "lem:triple-large",
+      "source": "16_three.tex",
+      "sha256": "629dd33dd835a807c4317ea197b9ea7daaa637955441d5155ed56096d5eb2596"
+    },
+    {
+      "key": "lem:eight",
+      "source": "16_three.tex",
+      "sha256": "10f35f2591b9b974983bbed41f8ec77850d53f187107e54d06899ab35c43efdc"
+    },
+    {
+      "key": "lem:ten",
+      "source": "16_three.tex",
+      "sha256": "4fe0bde52c6eab1c101595808b0343f33234b56f0f9700845056e9be750ef7c6"
+    },
+    {
+      "key": "prop:ten-certificate",
+      "source": "16_three.tex",
+      "sha256": "3d48abed9867c1a483ca1147190aa2d5cc68c91b85413ddf7a82bfcbfa42743e"
+    },
+    {
+      "key": "lem:collision-small",
+      "source": "17_five_seven.tex",
+      "sha256": "30ef6eac27b1f2b56794e5196864c6b4e1cae72f8f6373a89bc4d454f9d5ad49"
+    },
+    {
+      "key": "prop:collision-certificate",
+      "source": "17_five_seven.tex",
+      "sha256": "f2095b74f1a1900803f8c8b3e9429a85359bc17d114685c348ff9cb2a407cd6f"
+    },
+    {
+      "key": "lem:seven22",
+      "source": "17_five_seven.tex",
+      "sha256": "60eea65274c57cd57ea3bbd56669629f79eaae96e1b00b96df068a28860c962d"
+    },
+    {
+      "key": "prop:seven-certificate",
+      "source": "17_five_seven.tex",
+      "sha256": "9afe464834e2c3c8f5e50e605af7245a456b1f8b575f4b2487a9267fe2efd693"
+    },
+    {
+      "key": "main-proof",
+      "source": "18_completion.tex",
+      "sha256": "8e19a354afd435395f18ddbfa8a32e0f7d240061e9b4f042ba143d57267acc68"
+    },
+    {
+      "key": "prop:root-certificate",
+      "source": "19_tables.tex",
+      "sha256": "787aecd8048107e372f155f679677beec4a0de488ffe63a8d5ea42afc7d8e7aa"
+    }
+  ]
+}

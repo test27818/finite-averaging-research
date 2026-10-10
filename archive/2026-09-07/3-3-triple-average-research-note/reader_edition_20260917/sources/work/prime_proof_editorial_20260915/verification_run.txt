@@ -1,0 +1,23 @@
+PASS means that the listed program exited successfully and emitted every expected marker. Its mathematical force is limited by evidence_scope and does not automatically prove the whole claim.
+
+[nine-offsets-large-symmetric-carrier] All prime-arity dimensions n=3p+s,1<=s<=9 satisfy the complete G criterion. Together with the completed lower band, n>=3p+10 and the n=2p obstruction, this establishes N(p)=2p+1 for every odd prime p; N(2)=4 remains separate. A common (p,p,p+s) carrier shape restores block exchange, gives paired physical reflections, transverse roots, full unit lifts and exact terminal transport.
+  evidence=theorem-certificate  status=proved-all-nine-offsets-and-optimal-prime-threshold-with-stated-Morris-Serre-dependencies-and-complete-finite-parameter-certificate  runtime=short
+  $ python work/check_large_symmetric_carrier_certificate.py
+    large symmetric carrier finite parameter certificate: PASS 522 2206
+    large symmetric carrier uniform formulas and local lifts: PASS 1440
+    large symmetric carrier completion interfaces: PASS
+  command PASS (2.02s)
+[nine-offsets-large-symmetric-carrier] PASS (2.02s)
+
+[prime-final-independent-audit] Independent fixed-certificate audit for the final nine offsets: reconstructs literal means, checks principal-level divisibility, identifies necessary extra binary localizations, and verifies the auxiliary group at 13.
+  evidence=theorem-certificate  status=supports-final-prime-theorem-with-explicit-supplementary-multiplier-localization  runtime=short
+  $ python work/audit_prime_final_certificate_20260915.py
+    independent physical-mean certificate audit: PASS 522 3540
+    ordinary principal-level divisibility: PASS 521
+    binary ratios needing additional legitimate localization: 99
+    first extra unit example: (11, 1, '-39/29', 13)
+    independent auxiliary13 full group: PASS 2184
+  command PASS (0.93s)
+[prime-final-independent-audit] PASS (0.93s)
+
+SUMMARY PASS=2 FAIL=0 SKIP=0 TIME=2.95s

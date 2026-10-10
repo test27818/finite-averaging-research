@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "exact_matrix_equalities": 16,
+  "examples": [
+    "Missing primitive scale at R=Z[1/5],Q=24",
+    "Binary n=3 lower-bound initial condition (-3,1,2)"
+  ],
+  "scope": "Exact Fraction spot checks, deliberately including rational and nonunimodular bases. General identities and fiber theorem are established in the written proof, not by these samples.",
+  "symbolic_library_check": "Not run: sympy is not installed in the current runtime."
+}

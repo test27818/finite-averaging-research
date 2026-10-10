@@ -1,0 +1,40 @@
+[
+  [
+    "fan_elsevier",
+    {
+      "url": "https://api.elsevier.com/content/article/PII:S0001870814000577?httpAccept=text/plain",
+      "error": "400 Client Error: Bad Request for url: https://api.elsevier.com/content/article/PII:S0001870814000577?httpAccept=text/plain"
+    }
+  ],
+  [
+    "fan_hal_auth",
+    {
+      "url": "https://api.archives-ouvertes.fr/search/?q=authFullName_t:%22Lingmin%20Liao%22%20AND%20title_t:%22decomposition%22&fl=title_s,uri_s,fileMain_s&wt=json",
+      "status": 200,
+      "bytes": 330,
+      "saved": "fan_hal_auth.txt",
+      "response": {
+        "numFound": 1,
+        "start": 0,
+        "maxScore": 16.866398,
+        "numFoundExact": true,
+        "docs": [
+          {
+            "title_s": [
+              "On minimal decomposition of $p$-adic polynomial dynamical systems"
+            ],
+            "uri_s": "https://hal.science/hal-00529905v2",
+            "fileMain_s": "https://hal.science/hal-00529905/document"
+          }
+        ]
+      }
+    }
+  ],
+  [
+    "fan_citeseer",
+    {
+      "url": "https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=10.1.1.743.6914",
+      "error": "HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /web/20251230112235/https://citeseerx.ist.psu.edu//document?repid=rep1&type=pdf&doi=10.1.1.743.6914 (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x22e9b754290>, 'Connection to web.archive.org timed out. (connect timeout=5)'))"
+    }
+  ]
+]

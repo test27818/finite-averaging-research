@@ -1,0 +1,1434 @@
+{
+  "status": "PASS",
+  "general_strip": {
+    "primitive_nonzero_exponent_pairs": 70176,
+    "solvable_pairs": 412,
+    "coordinate_box": [
+      -240,
+      240
+    ]
+  },
+  "root_labels": {
+    "moduli_through": 500,
+    "primitive_representations": 292,
+    "only_common_sign_collisions": 146
+  },
+  "minus11_base_table": [
+    {
+      "m": 5,
+      "all_G_legal_representatives_up_to_sign": [
+        {
+          "pair": [
+            1,
+            -1
+          ],
+          "root": 4,
+          "distance": 1
+        }
+      ]
+    },
+    {
+      "m": 25,
+      "all_G_legal_representatives_up_to_sign": [
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "root": 9,
+          "distance": 2
+        }
+      ]
+    },
+    {
+      "m": 55,
+      "all_G_legal_representatives_up_to_sign": [
+        {
+          "pair": [
+            7,
+            3
+          ],
+          "root": 39,
+          "distance": 4
+        }
+      ]
+    },
+    {
+      "m": 115,
+      "all_G_legal_representatives_up_to_sign": [
+        {
+          "pair": [
+            1,
+            -6
+          ],
+          "root": 19,
+          "distance": 3
+        },
+        {
+          "pair": [
+            8,
+            -3
+          ],
+          "root": 74,
+          "distance": 4
+        }
+      ]
+    },
+    {
+      "m": 125,
+      "all_G_legal_representatives_up_to_sign": [
+        {
+          "pair": [
+            11,
+            4
+          ],
+          "root": 34,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "m": 155,
+      "all_G_legal_representatives_up_to_sign": [
+        {
+          "pair": [
+            8,
+            7
+          ],
+          "root": 134,
+          "distance": null
+        },
+        {
+          "pair": [
+            13,
+            2
+          ],
+          "root": 84,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "m": 185,
+      "all_G_legal_representatives_up_to_sign": [
+        {
+          "pair": [
+            7,
+            8
+          ],
+          "root": 24,
+          "distance": null
+        },
+        {
+          "pair": [
+            14,
+            1
+          ],
+          "root": 14,
+          "distance": null
+        }
+      ]
+    },
+    {
+      "m": 235,
+      "all_G_legal_representatives_up_to_sign": [
+        {
+          "pair": [
+            1,
+            9
+          ],
+          "root": 209,
+          "distance": 3
+        },
+        {
+          "pair": [
+            13,
+            -3
+          ],
+          "root": 74,
+          "distance": null
+        }
+      ]
+    }
+  ],
+  "minus11_complete_shells": [
+    {
+      "m": 5,
+      "k": 0,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "m": 5,
+      "k": 1,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 5,
+      "k": 2,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 5,
+      "k": 3,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 5,
+      "k": 4,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 5,
+      "k": 5,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 5,
+      "k": 6,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 5,
+      "k": 7,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 5,
+      "k": 8,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 5,
+      "k": 9,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 5,
+      "k": 10,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 5,
+      "k": 11,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 5,
+      "k": 12,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 0,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 1,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 2,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 3,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 4,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 5,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 6,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 7,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 8,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 9,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 10,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 11,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 25,
+      "k": 12,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 0,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 1,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 2,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 3,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 4,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 5,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 6,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 7,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 8,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 9,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 10,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 11,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 55,
+      "k": 12,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 115,
+      "k": 0,
+      "primitive_representations": 8,
+      "accepted": 4
+    },
+    {
+      "m": 115,
+      "k": 1,
+      "primitive_representations": 16,
+      "accepted": 4
+    },
+    {
+      "m": 115,
+      "k": 2,
+      "primitive_representations": 16,
+      "accepted": 4
+    },
+    {
+      "m": 115,
+      "k": 3,
+      "primitive_representations": 16,
+      "accepted": 4
+    },
+    {
+      "m": 115,
+      "k": 4,
+      "primitive_representations": 16,
+      "accepted": 4
+    },
+    {
+      "m": 115,
+      "k": 5,
+      "primitive_representations": 16,
+      "accepted": 4
+    },
+    {
+      "m": 115,
+      "k": 6,
+      "primitive_representations": 16,
+      "accepted": 4
+    },
+    {
+      "m": 115,
+      "k": 7,
+      "primitive_representations": 16,
+      "accepted": 4
+    },
+    {
+      "m": 115,
+      "k": 8,
+      "primitive_representations": 16,
+      "accepted": 4
+    },
+    {
+      "m": 115,
+      "k": 9,
+      "primitive_representations": 16,
+      "accepted": 4
+    },
+    {
+      "m": 115,
+      "k": 10,
+      "primitive_representations": 16,
+      "accepted": 4
+    },
+    {
+      "m": 115,
+      "k": 11,
+      "primitive_representations": 16,
+      "accepted": 4
+    },
+    {
+      "m": 115,
+      "k": 12,
+      "primitive_representations": 16,
+      "accepted": 4
+    },
+    {
+      "m": 125,
+      "k": 0,
+      "primitive_representations": 4,
+      "accepted": 0
+    },
+    {
+      "m": 125,
+      "k": 1,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 125,
+      "k": 2,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 125,
+      "k": 3,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 125,
+      "k": 4,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 125,
+      "k": 5,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 125,
+      "k": 6,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 125,
+      "k": 7,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 125,
+      "k": 8,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 125,
+      "k": 9,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 125,
+      "k": 10,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 125,
+      "k": 11,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 125,
+      "k": 12,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 0,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 1,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 2,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 3,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 4,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 5,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 6,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 7,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 8,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 9,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 10,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 11,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 155,
+      "k": 12,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 0,
+      "primitive_representations": 8,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 1,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 2,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 3,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 4,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 5,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 6,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 7,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 8,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 9,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 10,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 11,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 185,
+      "k": 12,
+      "primitive_representations": 16,
+      "accepted": 0
+    },
+    {
+      "m": 235,
+      "k": 0,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "m": 235,
+      "k": 1,
+      "primitive_representations": 16,
+      "accepted": 2
+    },
+    {
+      "m": 235,
+      "k": 2,
+      "primitive_representations": 16,
+      "accepted": 2
+    },
+    {
+      "m": 235,
+      "k": 3,
+      "primitive_representations": 16,
+      "accepted": 2
+    },
+    {
+      "m": 235,
+      "k": 4,
+      "primitive_representations": 16,
+      "accepted": 2
+    },
+    {
+      "m": 235,
+      "k": 5,
+      "primitive_representations": 16,
+      "accepted": 2
+    },
+    {
+      "m": 235,
+      "k": 6,
+      "primitive_representations": 16,
+      "accepted": 2
+    },
+    {
+      "m": 235,
+      "k": 7,
+      "primitive_representations": 16,
+      "accepted": 2
+    },
+    {
+      "m": 235,
+      "k": 8,
+      "primitive_representations": 16,
+      "accepted": 2
+    },
+    {
+      "m": 235,
+      "k": 9,
+      "primitive_representations": 16,
+      "accepted": 2
+    },
+    {
+      "m": 235,
+      "k": 10,
+      "primitive_representations": 16,
+      "accepted": 2
+    },
+    {
+      "m": 235,
+      "k": 11,
+      "primitive_representations": 16,
+      "accepted": 2
+    },
+    {
+      "m": 235,
+      "k": 12,
+      "primitive_representations": 16,
+      "accepted": 2
+    }
+  ],
+  "minus59_base_table": [
+    {
+      "norm": 35,
+      "all_G_legal_representatives_up_to_sign": [
+        [
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "norm": 105,
+      "all_G_legal_representatives_up_to_sign": [
+        [
+          6,
+          -1
+        ]
+      ]
+    },
+    {
+      "norm": 315,
+      "all_G_legal_representatives_up_to_sign": [
+        [
+          23,
+          2
+        ]
+      ]
+    }
+  ],
+  "minus59_complete_shells": [
+    {
+      "k": 0,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "k": 1,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "k": 2,
+      "primitive_representations": 4,
+      "accepted": 0
+    },
+    {
+      "k": 3,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "k": 4,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "k": 5,
+      "primitive_representations": 4,
+      "accepted": 0
+    },
+    {
+      "k": 6,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "k": 7,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "k": 8,
+      "primitive_representations": 4,
+      "accepted": 0
+    },
+    {
+      "k": 9,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "k": 10,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "k": 11,
+      "primitive_representations": 4,
+      "accepted": 0
+    },
+    {
+      "k": 12,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "k": 13,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "k": 14,
+      "primitive_representations": 4,
+      "accepted": 0
+    },
+    {
+      "k": 15,
+      "primitive_representations": 8,
+      "accepted": 2
+    },
+    {
+      "k": 16,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "k": 17,
+      "primitive_representations": 4,
+      "accepted": 0
+    },
+    {
+      "k": 18,
+      "primitive_representations": 8,
+      "accepted": 2
+    }
+  ],
+  "independent_physical_three_step_replays": 236,
+  "general_prime_slices": [
+    {
+      "p": 3,
+      "exponents": [
+        0,
+        6
+      ],
+      "checked": 52,
+      "accepted": 14
+    },
+    {
+      "p": 5,
+      "exponents": [
+        0,
+        6
+      ],
+      "checked": 52,
+      "accepted": 14
+    },
+    {
+      "p": 7,
+      "exponents": [
+        0,
+        6
+      ],
+      "checked": 52,
+      "accepted": 14
+    },
+    {
+      "p": 11,
+      "exponents": [
+        0,
+        6
+      ],
+      "checked": 52,
+      "accepted": 14
+    },
+    {
+      "p": 13,
+      "exponents": [
+        0,
+        6
+      ],
+      "checked": 52,
+      "accepted": 14
+    },
+    {
+      "p": 17,
+      "exponents": [
+        0,
+        6
+      ],
+      "checked": 52,
+      "accepted": 14
+    },
+    {
+      "p": 31,
+      "exponents": [
+        0,
+        6
+      ],
+      "checked": 52,
+      "accepted": 14
+    }
+  ],
+  "global_norm_restriction": {
+    "primitive_pairs": 79040,
+    "solvable_pairs": 630,
+    "coordinate_box": [
+      -180,
+      180
+    ],
+    "necessary_condition": "m=5 or m=25 mod 30",
+    "nonmonotone_successful_step": {
+      "from": [
+        41,
+        9
+      ],
+      "to": [
+        38,
+        -3
+      ],
+      "m_before": 1555,
+      "m_after": 1585
+    }
+  },
+  "root_couplings": [
+    {
+      "m": 9145,
+      "varying_primes": [
+        31,
+        59
+      ],
+      "all_G_legal_representations": [
+        {
+          "pair": [
+            43,
+            57
+          ],
+          "root_labels": [
+            10,
+            8
+          ],
+          "path": [
+            [
+              43,
+              57
+            ],
+            [
+              24,
+              -19
+            ],
+            [
+              -8,
+              -27
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              -2,
+              -3
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          "letters": "BABBB",
+          "distance": 6
+        },
+        {
+          "pair": [
+            77,
+            48
+          ],
+          "root_labels": [
+            10,
+            52
+          ],
+          "path": [
+            [
+              77,
+              48
+            ],
+            [
+              61,
+              -16
+            ]
+          ],
+          "letters": "B",
+          "distance": null
+        },
+        {
+          "pair": [
+            97,
+            3
+          ],
+          "root_labels": [
+            22,
+            52
+          ],
+          "path": [
+            [
+              97,
+              3
+            ],
+            [
+              96,
+              -1
+            ],
+            [
+              -32,
+              -33
+            ],
+            [
+              -21,
+              11
+            ],
+            [
+              7,
+              18
+            ],
+            [
+              1,
+              -6
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          "letters": "BABABBA",
+          "distance": 8
+        },
+        {
+          "pair": [
+            98,
+            27
+          ],
+          "root_labels": [
+            22,
+            8
+          ],
+          "path": [
+            [
+              98,
+              27
+            ],
+            [
+              89,
+              -9
+            ],
+            [
+              92,
+              3
+            ],
+            [
+              91,
+              -1
+            ]
+          ],
+          "letters": "BBB",
+          "distance": null
+        }
+      ]
+    },
+    {
+      "m": 21235,
+      "varying_primes": [
+        31,
+        137
+      ],
+      "all_G_legal_representations": [
+        {
+          "pair": [
+            16,
+            -81
+          ],
+          "root_labels": [
+            22,
+            59
+          ],
+          "path": [
+            [
+              16,
+              -81
+            ],
+            [
+              43,
+              27
+            ],
+            [
+              34,
+              -9
+            ],
+            [
+              37,
+              3
+            ],
+            [
+              36,
+              -1
+            ],
+            [
+              -12,
+              -13
+            ],
+            [
+              4,
+              -9
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              6,
+              -1
+            ],
+            [
+              -2,
+              -3
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          "letters": "BBBBAABBAB",
+          "distance": 11
+        },
+        {
+          "pair": [
+            23,
+            87
+          ],
+          "root_labels": [
+            22,
+            79
+          ],
+          "path": [
+            [
+              23,
+              87
+            ],
+            [
+              -6,
+              -29
+            ],
+            [
+              2,
+              -27
+            ],
+            [
+              11,
+              9
+            ],
+            [
+              8,
+              -3
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              -3,
+              -2
+            ],
+            [
+              1,
+              -1
+            ]
+          ],
+          "letters": "BABBBAA",
+          "distance": 8
+        },
+        {
+          "pair": [
+            107,
+            -42
+          ],
+          "root_labels": [
+            10,
+            79
+          ],
+          "path": [
+            [
+              107,
+              -42
+            ],
+            [
+              121,
+              14
+            ]
+          ],
+          "letters": "B",
+          "distance": null
+        },
+        {
+          "pair": [
+            131,
+            -21
+          ],
+          "root_labels": [
+            10,
+            59
+          ],
+          "path": [
+            [
+              131,
+              -21
+            ],
+            [
+              138,
+              7
+            ],
+            [
+              -46,
+              -39
+            ],
+            [
+              -33,
+              13
+            ],
+            [
+              11,
+              24
+            ],
+            [
+              3,
+              -8
+            ],
+            [
+              -1,
+              -9
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              -1
+            ]
+          ],
+          "letters": "BABABABB",
+          "distance": 9
+        }
+      ]
+    }
+  ],
+  "generic_elliptic_macros": {
+    "all_word_lengths": [
+      1,
+      7
+    ],
+    "elliptic_macros": 104,
+    "complete_admissible_projective_classes": 144744,
+    "unique_integrality_roots": 104,
+    "independent_physical_macro_replays": 312,
+    "scope": "All lengths beyond 7 are covered by the written Z_3 eigenlattice proof, not by this finite enumeration."
+  },
+  "minus971_complete_shells": [
+    {
+      "k": 0,
+      "primitive_representations": 2,
+      "accepted": 2
+    },
+    {
+      "k": 1,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 2,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 3,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 4,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 5,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "k": 6,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 7,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 8,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 9,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 10,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "k": 11,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 12,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 13,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 14,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 15,
+      "primitive_representations": 4,
+      "accepted": 2
+    },
+    {
+      "k": 16,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 17,
+      "primitive_representations": 0,
+      "accepted": 0
+    },
+    {
+      "k": 18,
+      "primitive_representations": 0,
+      "accepted": 0
+    }
+  ],
+  "scope": "All listed integer norm shells are completely enumerated. Finite exponent checks and the prior exact oracle detect mistakes; all-exponent claims, root-label uniqueness, Euclideanity and the ideal-class interpretation are proved in the accompanying note. No all-five-entry static criterion claimed."
+}

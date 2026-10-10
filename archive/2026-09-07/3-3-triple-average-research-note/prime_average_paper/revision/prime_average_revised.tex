@@ -1,0 +1,1428 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[xetex,margin=27mm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+\setCJKsansfont{Microsoft YaHei}
+\setCJKmonofont{SimSun}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,fancyvrb}
+\usepackage[unicode,bookmarks=false,colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\F}{\mathbb F}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\cont}{\operatorname{cont}}
+\newcommand{\Um}{\operatorname{Um}}
+\newcommand{\ord}{\operatorname{ord}}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{proposition}[theorem]{命题}
+\newtheorem{corollary}[theorem]{推论}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{remark}[theorem]{注}
+\renewcommand{\proofname}{证明}
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\contentsname}{目录}
+\renewcommand{\refname}{参考文献}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{1}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt}
+\emergencystretch=2em
+\title{素数元平均的算术判据与最优最终阈值}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+一次 $p$ 平均把有理配置中任意 $p$ 个位置同时替换为其算术平均。对非恒定输入，减去全局均值并取本原整数代表 $X$，记 $G(X)=\gcd_{i<j}|X_i-X_j|$。本文证明：若 $p$ 为奇素数且位置数 $n\ge2p+1$，有限步达到全等的充要条件是 $G(X)$ 为 $p$ 的幂；在 $n=2p$ 存在满足 $G=1$ 的不可达配置，因此最终阈值恰为 $2p+1$。证明结合整数能量下降、等值块上的矩阵作用及 $\SL_2$ 的同余子群性质。部分小参数构造使用精确有限证书，包括五平均和七平均的碰撞分类、七平均二十二元的有限轨道及三平均十元的二次覆盖。二平均的相应阈值为 $4$。
+\end{abstract}
+\tableofcontents
+
+\section{主定理与证明结构}
+配置是一个有序列 $x=(x_1,\ldots,x_n)\in\Q^n$。对 $p$ 元位置集 $S$，令
+\[
+(T_Sx)_i=\begin{cases}p^{-1}\sum_{j\in S}x_j,&i\in S,\\x_i,&i\notin S.\end{cases}
+\]
+这些映射称为 $p$ 平均。其共同固定的线性泛函是总和，故全等终点只能是 $\bar x\mathbf1$，其中 $\bar x=n^{-1}\sum_i x_i$。
+
+若 $x$ 非恒定，选择 $c\in\Q^\times$，使
+\[
+X=c(x-\bar x\mathbf1)\in\Z^n,qquad \sum_iX_i=0,qquad \gcd_iX_i=1.
+\]
+$X$ 唯一至整体符号，称为 $x$ 的本原中心化代表。定义
+\begin{equation}
+G(x)=G(X)=\gcd_{i<j}|X_i-X_j|.
+\end{equation}
+
+\begin{theorem}\label{thm:prime}
+设 $p$ 为奇素数，$n\ge2p+1$。非恒定配置 $x\in\Q^n$ 可经有限次 $p$ 平均达到全等，当且仅当 $G(x)=p^e$，其中 $e\ge0$。对每个奇素数 $p$，在 $n=2p$ 存在 $G=1$ 的不可达配置。
+\end{theorem}
+
+\begin{corollary}\label{cor:threshold}
+记 $N(p)$ 为使上述充要条件对所有 $n\ge N(p)$ 成立的最小整数。则奇素数满足 $N(p)=2p+1$；二平均满足 $N(2)=4$。
+\end{corollary}
+
+本文采用如下约定。上标 $a^m$ 表示 $m$ 个取值为 $a$ 的位置；矩阵作用于列向量，复合从右至左。位置始终带标签；交换两个等大块的名称仅改变参数表示。固定平均词与整体仿射变换交换，因而可以在分析中选取本原代表。下文的矩阵返回均覆盖所讨论配置的全部位置。
+
+充分性证明的依赖顺序如下。引理\ref{lem:integer-range}独立处理 $n\ge4p-2+d_p(n)$；命题\ref{prop:threep}独立处理 $n=3p$。二者推出引理\ref{lem:zero-tail}的含零收尾。临界带的入口由命题\ref{prop:entry}给出，核内完成使用定理\ref{thm:terminal}以及命题\ref{prop:odd}, \ref{prop:r2}, \ref{prop:even}, \ref{prop:upper}。不满足整数下降容量的宽维数由命题\ref{prop:wide}补齐。最后在第\ref{sec:completion}节合并各范围。
+
+矩阵部分使用两个已发表结果：Morris 的有限指数定理\cite[Theorem 6.1(2)]{morris}，以及有理 $S$ 整数上 $\SL_2$ 的强同余子群性质\cite{serre,prasad}。它们的精确代入见定理\ref{thm:arithmetic-external}。有限证书的输入全集及检验条件见附录\ref{app:certificates}。
+
+
+\section{算术障碍与阈值下界}\label{sec:obstruction}
+\begin{lemma}\label{lem:affine}
+任一平均词 $W$ 满足 $W(a\mathbf1+bx)=a\mathbf1+bWx$。因此配置达到均值，等价于其本原中心化代表达到零。
+\end{lemma}
+\begin{proof}
+每个 $T_S$ 线性且固定 $\mathbf1$，对词长归纳即可。
+\end{proof}
+
+\begin{lemma}\label{lem:obstruction}
+非零本原整数零和配置满足 $G\mid n$。若素数 $\ell\ne p$ 整除 $G$，则配置不可归零。
+\end{lemma}
+\begin{proof}
+模 $G$ 的全部坐标同余于某个 $a$。本原性给出 $\gcd(a,G)=1$，零和给出 $na\equiv0\pmod G$，所以 $G\mid n$。若 $\ell\mid G$，共同余数模 $\ell$ 非零。所有中间值属于 $\Z[1/p]$，该环可约化至 $\F_\ell$；每次平均保持这个非零共同余数，故不能归零。
+\end{proof}
+
+称一个整数零和配置是\emph{合法的}，如果它在每个素数 $\ell\mid n$、$\ell\ne p$ 处不全同余。这个定义在未取本原代表时比 $G=p^e$ 更强；从本原输入出发二者相同。称保持合法性的操作为\emph{安全操作}。记
+\[
+d_p(n)=\#\{\ell:\ell\mid n,\ \ell\ne p\text{ 为素数}\}.
+\]
+
+\begin{lemma}\label{lem:fraction}
+设 $p$ 为奇素数，$p\le n\le2p$。整数零和配置的一条成功平均路径不可能首次产生非整数。
+\end{lemma}
+\begin{proof}
+首次非整数平均后，最低 $p$ 进赋值 $h<0$ 恰由一个等值的 $p$ 块承担。若下一选择与此块交于 $k$ 个位置，$1\le k<p$，则其和的赋值为 $h$，新均值的赋值为 $h-1$，并形成新的最低 $p$ 块。选整个最低块时操作恒等。若选择与之不交，则只能 $n=2p$ 且选中补集；零和迫使结果成为 $(a^p,(-a)^p)$。按引理\ref{lem:affine}，它等价于 $(1^p,(-1)^p)$，被模 $2$ 的共同非零余数阻碍。故最低负赋值既不能消失，也不能通过不交操作进入可解配置。
+\end{proof}
+
+\begin{proposition}\label{prop:lower}
+对奇素数 $p$，配置 $(-p,0^{p-1},1^p)$ 本原、零和、$G=1$，但不可归零。
+\end{proposition}
+\begin{proof}
+由引理\ref{lem:fraction}，成功路径必须始终采用整数平均。若一次选择包含 $j$ 份 $1$ 和 $e$ 份 $-p$，整性要求 $j-ep\equiv0\pmod p$，故 $j=0$ 或 $p$。唯一非恒等可能是选择 $(-p,0^{p-1})$，得到 $((-1)^p,1^p)$；引理\ref{lem:obstruction}排除该配置。
+\end{proof}
+
+二平均使用\cite{mixing}引言的完全混合刻画定理。其条件 MC 是：对每个正奇数 $b$，若整数配置模 $b$ 全同余，则均值也属于这个余数类。代入本原零和 $X$ 后，MC 等价于 $G$ 无奇素因子，故给出 $n\ge4$ 的判据。混合图按拓扑顺序执行时，每个二入二出节点可用两个原位置实现。另一方面，$(-3,1,2)$ 的 $G=1$，任意首次二平均产生 $(a,a,-2a)$、$a\ne0$；后继非恒等操作只把参数变成 $-a/2$，故三元不可归零。这证明推论\ref{cor:threshold}的二平均部分。
+
+
+\section{返回矩阵与同余输送}
+\begin{definition}
+设 $E_\pi:\Q^2\to\Q^n$ 按分组 $\pi$ 将两个参数展开为等值块配置。若平均词 $W$ 满足
+\begin{equation}\label{eq:return}
+WE_\pi=\lambda E_{\pi'}M,\qquad \lambda\in\Q^\times,
+\end{equation}
+且 $\pi'$ 与 $\pi$ 具有相同块重数，称 $M$ 是一个可实现返回。构造须对每个同形状分组适用。可逆矩阵的可实现性按非零共同标量识别。
+\end{definition}
+各返回的分组将由非负整数计数给出。式\eqref{eq:return}允许组合返回；如果 $M^j=cI$、$c\ne0$，其 $j-1$ 次返回实现 $M^{-1}$。
+
+记 $U(t)=\left(\begin{smallmatrix}1&t\\0&1\end{smallmatrix}\right)$、$L(t)=\left(\begin{smallmatrix}1&0\\t&1\end{smallmatrix}\right)$，以及
+\[
+R_D=\Z[1/D],\qquad
+\Gamma(q,R_D)=\ker(\SL_2(R_D)\to\SL_2(R_D/qR_D)).
+\]
+以下每次扩张 $R_D$ 均由引理\ref{lem:localize}给出；$D$ 的素因子不与相应配置的危险素数相交。
+
+\begin{lemma}\label{lem:localize}
+假设 $U(hR)$ 全部可实现，且上三角矩阵 $T=\left(\begin{smallmatrix}1&b\\0&\kappa\end{smallmatrix}\right)$ 及其逆可实现。则 $U(hR[\kappa,\kappa^{-1}])$ 全部可实现。若 $\kappa=A/B$ 约分，则新环为 $R[1/(AB)]$。
+\end{lemma}
+\begin{proof}
+使用 $TU(t)T^{-1}=U(t/\kappa)$、$T^{-1}U(t)T=U(\kappa t)$ 和 $U(s)U(t)=U(s+t)$。新环中每个元素是有限个 $r_i\kappa^i$ 的和。裴蜀等式 $uA+vB=1$ 给出 $u\kappa+v=1/B$；对逆倍率同理得到 $1/A$。
+\end{proof}
+
+\begin{theorem}[Morris；Serre]\label{thm:arithmetic-external}
+设 $D>1$、$R=R_D$。对于 $\SL_2(R)$ 的任一有限指数子群 $H$：
+\begin{enumerate}
+\item $H$ 中的上下初等矩阵生成 $H$ 的一个有限指数子群；
+\item $H$ 包含某个非零层的主同余子群 $\Gamma(q,R)$。
+\end{enumerate}
+\end{theorem}
+第一项为\cite[Theorem 6.1(2)]{morris}的二维无限单位特例。第二项用\cite{serre}在 $S=\{\infty\}\cup\{\ell:\ell\mid D\}$ 上的结论：$|S|>1$ 且包含实处，同余核平凡。此版本的陈述见\cite[pp.308--309, Proposition 1 and Section 2.3]{prasad}。
+
+\begin{lemma}\label{lem:deep}
+若 $D>1$、$h\ne0$，则
+\[
+\Gamma(h^2,R_D)\subseteq\langle U(hR_D),L(hR_D)\rangle.
+\]
+\end{lemma}
+\begin{proof}
+记右侧为 $H$。定理\ref{thm:arithmetic-external}先给出 $H$ 有限指数，再给出 $\Gamma(q_0,R_D)\subseteq H$。令 $q=h^2q_0$、$B=R_D/qR_D$。
+对 $g=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)\in\Gamma(h^2,R_D)$ 的模 $q$ 像，用 CRT 选 $k\in B$，使 $u=a+hkc$ 为单位：剩余特征整除 $h$ 时 $a=1$；其余分量若 $c\ne0$ 只排除一个 $k$ 类，若 $c=0$ 则 $a$ 已为单位。置 $v=b+hkd$，有
+\[
+g=U(-hk)L(c/u)\diag(u,u^{-1})U(v/u).
+\]
+取 $t\in hB$ 使 $ht=u-1$。恒等式
+\[
+\diag(u,u^{-1})=U(h)L(t)U(-h/u)L(-tu)
+\]
+把中间项也分解为参数属于 $hB$ 的根。提升各参数至 $hR_D$，得到 $e\in H$ 与 $g$ 模 $q$ 相同。于是 $e^{-1}g\in\Gamma(q,R_D)\subseteq H$。
+\end{proof}
+
+\begin{lemma}\label{lem:transverse}
+假设 $U(hR)$ 以及 $J,J^{-1}$ 可实现，其中 $J=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)\in M_2(R)$、$c\det J\ne0$。写 $c=g\epsilon$、$\epsilon\in R^\times$、$g\in\Z\setminus\{0\}$。则 $\Gamma(g^3h^2,R)$ 可实现。若有多个这样的 $g_i$，可将其层合并为 $\gcd(g_i)^3h^2$。
+\end{lemma}
+\begin{proof}
+令 $P=(e_1,Je_1)=\left(\begin{smallmatrix}1&a\\0&c\end{smallmatrix}\right)$。相乘得
+\[
+P^{-1}U(t)P=U(ct),\qquad
+P^{-1}JU(t)J^{-1}P=L(-ct/\det J).
+\]
+取 $t=hs$ 和 $t=\det J\,hs$，在 $P$ 基下得到两条完整 $ghR$ 根。引理\ref{lem:deep}给 $P\Gamma(g^2h^2,R)P^{-1}$。因 $P,gP^{-1}$ 整于 $R$，该群包含 $\Gamma(g^3h^2,R)$。
+合并时先约化到各层的公倍数。在每个素数幂分量上，主同余条件嵌套，两个像生成较浅的条件；CRT 及初等矩阵提升给出各分量的乘积。接上已知公倍数层的核，即得最大公因子层。
+\end{proof}
+
+\begin{lemma}\label{lem:fiber}
+若 $v,w\in R^2$ 本原且 $v\equiv w\pmod q$，则存在 $\gamma\in\Gamma(q,R)$ 使 $\gamma v=w$。
+\end{lemma}
+\begin{proof}
+取 $x$ 使 $\det(v,x)=1$，写 $\det(w,x)=1+qk$。本原性使 $z\mapsto\det(w,z)$ 满射，故取 $z$ 使其值为 $-k$。令 $y=x+qz$，则 $(w,y)\equiv(v,x)\pmod q$，两矩阵行列式皆为 $1$。取 $\gamma=(w,y)(v,x)^{-1}$。
+\end{proof}
+
+\begin{lemma}\label{lem:inverse}
+若 $\Gamma(q,R)$ 可实现，则每个可实现 $Z\in\SL_2(R)$ 的逆可实现。若整数满秩返回 $A$ 满足 $\gcd(\det A,q)=1$，则 $A^{-1}$ 亦有射影实现。
+\end{lemma}
+\begin{proof}
+第一项取 $m$ 使 $Z^m\equiv I\pmod q$，用 $Z^{-1}=Z^{m-1}(Z^m)^{-1}$。
+第二项取偶数 $m$ 使 $P=A^m\equiv I\pmod q$，令 $\Delta=\det P>0$。选 $L,R'\in\SL_2(\Z)$ 使 $LPR'=\diag(a,b)$、$ab=\Delta$。置 $J_0=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)$、$g_*=R'J_0L$，则 $Pg_*P$ 各项被 $\Delta$ 整除。
+利用 CRT 及 $\SL_2(\Z)$ 对有限模数的满射，取 $g\equiv g_*\pmod\Delta$、$g\equiv I\pmod q$。则 $H=\Delta^{-1}PgP\in\Gamma(q,\Z)$，而 $gPH^{-1}=\Delta P^{-1}$。接上 $A^{m-1}$ 得结论。所用约化满射由有限局部环上的初等消元、CRT 和整数参数提升得到。
+\end{proof}
+
+\begin{lemma}\label{lem:content}
+设 $A\in M_2(\Z)$ 满秩，条目最大公因子为 $1$，$d=|\det A|$、$\gcd(d,q)=1$。固定模 $q$ 本原列 $x$，则所有整数本原提升的本原输出模 $q$ 恰为
+\begin{equation}
+\{g^{-1}Ax:g\mid d,\ g>0\}.
+\end{equation}
+若 $\Gamma(q,\Z)$ 已实现，每个分支都能从当前列实现。
+\end{lemma}
+\begin{proof}
+伴随恒等式说明 $\cont(Av)\mid d$。写 Smith 分解 $A=U\diag(1,d)V$；对本原 $Vv=(s,t)$，内容为 $\gcd(s,d)$。给定 $g\mid d$，在每个 $\ell^e\Vert d$ 指定 $s\equiv\ell^{v_\ell(g)}\pmod{\ell^e}$（指数为 $e$ 时取 $0$）、$t\equiv1\pmod{\ell^e}$。与模 $q$ 数据用 CRT 合并。所得本原剩余列可提升为本原整数列：固定非零第二坐标后，在第一坐标的等差类中避开第二坐标所含的其余有限素因子。其内容恰为 $g$。最后用引理\ref{lem:fiber}实现准备。
+\end{proof}
+
+\begin{corollary}\label{cor:finite-group}
+设若干返回 $A_i$ 满足引理\ref{lem:content}，并在模 $q$ 保持一个对单位标量封闭的合法列集。它们的正向内容对应轨道等于
+\[
+\langle A_i\bmod q,\ \ell I:\ell\mid\prod_i\det A_i\text{ 为素数}\rangle
+\]
+的群轨道。
+\end{corollary}
+\begin{proof}
+每个分支 $g^{-1}A_i$ 是有限集上的置换。内容 $1$ 分支给 $A_i$，其逆为某个非负幂。若 $A_i$ 的阶为 $m$，一次内容 $g$ 分支后接 $m-1$ 次内容 $1$ 分支，给标量 $g^{-1}I$。这些恰生成所示群。
+\end{proof}
+
+\begin{lemma}\label{lem:local-cycle}
+设 $T$ 在 $\Z_{(\ell)}$ 上整可逆，模 $\ell$ 的射影作用为非平凡平移。写 $T=a(I+N)$、$N^2=cI$。若 $\ell\ge5$，或 $\ell=3$ 且 $c\not\equiv6\pmod9$，则其在每个 $\Z/\ell^b\Z$ 的仿射方向上为单循环。对 $\ell=2$，同一结论在 $a$ 为奇单位、$c$ 为偶数时成立。
+\end{lemma}
+\begin{proof}
+此时 $c\in\ell\Z_{(\ell)}$。展开 $(I+N)^\ell=A I+B N$；$A$ 为单位，$v_\ell(B)=1$。在 $\ell=3$ 时 $B=3+c$，在 $\ell=2$ 时 $A=1+c,B=2$。反复取 $\ell$ 次幂后，规范化的 $N$ 系数赋值每次增加一。一般幂的系数赋值因而等于指数的 $\ell$ 进赋值。其在任一方向 $x$ 上的位移还乘一个模 $\ell$ 等于原平移步长的单位。因此固定 $x\bmod\ell^b$ 的指数恰为 $\ell^b$ 的倍数，轨道长度为 $\ell^b$。
+\end{proof}
+
+
+\section{安全整数下降}
+本节设 $p\ge5$，$d=d_p(n)$。称重数至少为 $p$ 的实际数值为重值。构造维持整数、零和、合法以及至少两个不同重值。
+
+\begin{lemma}\label{lem:safety}
+设 $n>2p$。若模危险素数 $\ell$ 存在大小至少 $n-p$ 的余类，其补集 $F_\ell$ 唯一，且 $2\le|F_\ell|\le p$。不包含任何完整 $F_\ell$ 的整数平均安全。以下整数选择也安全：
+\begin{enumerate}
+\item $(a^{p-1},x)$，其中至少一份 $a$ 未选；
+\item 由若干份 $a,b$ 及一份第三值 $x$ 组成，且 $a,b$ 均有未选副本；
+\item 每种被选数值均有未选副本。
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+$n-p>n/2$ 给出主类唯一性。例外数不能为 $1$，否则零和模 $\ell$ 迫使唯一例外仍属主类。避开完整 $F_\ell$ 时，未选位置保留主类及例外。对后三种选择，若输出全同余，未选副本及选中和为 $p$ 倍新均值依次迫使全部被选值也属于共同余类，矛盾。
+\end{proof}
+
+\begin{lemma}\label{lem:initialize}
+若 $n\ge3p+d$，从 $pX$ 出发至多两次整数平均可建立两个不同重值。
+\end{lemma}
+\begin{proof}
+在任一候选池中，为仍完整包含在池内的每个 $F_\ell$ 留出一个位置，至多留出 $d$ 个。若池内所有值同余模 $p$、每种实际值不足 $p$ 份，余下 $p$ 个位置给安全非恒等整数平均；余下 $p+1$ 个位置时还可避开一个指定均值，因为所有删一子集同和会迫使这 $p+1$ 个值全相等。
+已有两个重值时无须操作。仅一个重值 $a$ 且重数至少 $2p-1$ 时，选择 $(a^{p-1},b)$，留下 $p$ 份 $a$ 并生成另一重值。若重数至多 $2p-2$，在 $a$ 外的池中避开均值 $a$。若初始没有重值，先制造一个；它的重数至多 $2p-1$，其外至少 $d+p+1$ 个未改变的初值仍被 $p$ 整除，故第二次可制造不同重值。
+\end{proof}
+
+\begin{lemma}[素数零和选择及逆边界]\label{lem:egz}
+任意 $2p-1$ 个 $\F_p$ 元素包含 $p$ 项零和。长度 $2p-2$ 的序列没有 $p$ 项零和，当且仅当它为 $u^{p-1}v^{p-1}$、$u\ne v$。
+\end{lemma}
+\begin{proof}
+先说明有限域计数：若 $m$ 元多项式 $F_i$ 的次数和小于 $m$，其共同零点数模 $p$ 等于
+\[\sum_{z\in\F_p^m}\prod_i(1-F_i(z)^{p-1})=0.
+\]
+展开后每个单项式的总次数小于 $m(p-1)$，至少一个变量的指数不是正的 $p-1$ 倍数，对它求和为零。应用于
+\[\sum_{i=1}^{2p-1}z_i^{p-1}=0,\qquad
+\sum_{i=1}^{2p-1}a_i z_i^{p-1}=0.
+\]
+非零解的支持恰有 $p$ 项，零点数为 $1+(p-1)^p M$，故 $M\equiv1\pmod p$。
+
+证明逆命题。出现 $p$ 次同一余数时已有零和；仅两类时只能为所示形式。若至少三类且各重数至多 $p-1$，可选两对不交位置，使两对的差非零且不互为正负。取重数最大的类 $a$，它至少有两份；若两个其他类对 $a$ 的差不互为正负即可。否则仅有 $a,b,c$ 三类，且 $b,c$ 关于 $a$ 对称；$b,c$ 至少一类有两份，改用 $(a,b),(b,c)$，两差相差倍率 $2$。
+余下 $2p-6$ 项最大重数至多 $p-2$，可再配 $p-4$ 对不同余数，留下两个单点。所用匹配事实为：多重数序列的异类最大匹配数是 $\min(\lfloor M/2\rfloor,M-f_{\max})$。若某类超过一半，将其与其余类配对；否则将各类连续排成一列，前后半列配对即达到该界。
+前两对各取一项的和集有四个元素。以后每加一对，和集至少增大一，除非已为 $\F_p$：一个真子集不能在非零平移下不变。故 $p-2$ 对的选择和遍历 $\F_p$，加上两个单点得到 $p$ 项零和。
+\end{proof}
+
+\begin{lemma}\label{lem:background}
+有两个不同重值且其中一个重数至少为 $2p-1$ 时，存在保持不变量的安全非恒等整数平均，或配置可由相反值消去完成。
+\end{lemma}
+\begin{proof}
+取背景 $b$、另一重值 $a=b+\delta$。若 $p\mid\delta$，选择 $(b^{p-1},a)$。否则对每个第三值 $x$，唯一选 $0\le i<p$ 使 $(a^i,b^{p-1-i},x)$ 整数平均。若均值不是 $b$，即告成功；否则 $x=b-i\delta$。因而失败时所有值属于 $b+\delta\{1,0,-1,\ldots,-(p-1)\}$，合法性给 $\gcd(\delta,n)=1$。
+若另一个值也有 $2p-1$ 份，用两个这样的值调节一份第三值，两个旧重值均保留。因此设非 $b$ 重数均至多 $2p-2$，记正系数 $1$ 的重数为 $A$、负系数 $-j$ 的重数为 $c_j$，$S=\sum j c_j$。
+若 $S<p$，零和给 $n\mid A-S$，而 $0<A-S<n$，矛盾。若有 $j\ge2$，将负系数降序排列，取首次跨过 $p$ 的前缀 $j_1,\ldots,j_s$，总和 $T$。有 $2\le s\le p-1$，且 $T+s\le2p$：由 $(s-1)j_s\le p-1$ 和 $(s-2)(p-s)\ge0$ 得 $j_s+s\le p+1$，再用 $T\le p-1+j_s$。选择
+\[(b-j_1\delta,\ldots,b-j_s\delta,a^{T-p},b^{2p-s-T})
+\]
+得到均值 $b-\delta$，留下至少 $p$ 份 $b$ 以及一份 $a$；二者在所有危险处不同余，故安全。
+剩下仅有负系数 $-1$。若其重数为 $C$，则 $n\mid A-C$，且 $|A-C|<n$，故 $A=C,b=0$。反复选择 $(\delta,-\delta,0^{p-2})$ 完成。
+\end{proof}
+
+\begin{lemma}\label{lem:heavy}
+当 $n\ge3p+2$ 时，至少三个不同重值的配置具有保持不变量的安全整数平均或相反值终端。两个重值同余模 $p$ 的情形在 $n\ge3p+d$ 时同样成立。
+\end{lemma}
+\begin{proof}
+至少四个重值时，取 $a_1<a_2<a_3<b$。前三者同余则选 $(a_1^{p-1},a_2)$；否则以两个不同余值调节第三个，选 $i$ 使 $(a^i,c^{p-1-i},x)$ 整数平均。新均值小于未动的 $b$，并由引理\ref{lem:safety}安全。
+恰三重值 $a<b<c$ 时，两者同余可用两个相反配比，均值之差为 $(p-2)(a-b)/p\ne0$，至少一个避开第三重值。三者不同余且有轻值 $x$ 时，以位于 $x$ 同侧的两重值调节，保留另一极端；若某极端有 $p+1$ 份，则只取它一份，用另两者调节。
+只剩 $(a^p,b^{p+r},c^p)$，$r\ge2$。取 $i$ 使 $(a^i,c^{p-1-i},b)$ 整数平均。若均值为 $b$，则
+\[i(a-b)+(p-1-i)(c-b)=0,\qquad1\le i\le p-2.
+\]
+令 $j\equiv2i\pmod p$。$j\le p-2$ 时改取 $(a^j,c^{p-2-j},b^2)$；再次碰撞会给 $(p-1)j=(p-2)i$，与 $j=2i$ 或 $2i-p$ 矛盾。若 $j=p-1$，则 $i=(p-1)/2$，从而 $a+c=2b$，零和给 $b=0,a=-c$。
+最后设仅有同余重值 $a,b$。有富余副本时用 $(a^{p-1},b)$。否则二者各 $p$ 份，保护后的轻值池至少有 $p$ 个位置；对其减去 $a$ 的部分和取碰撞，得到非空 $T$、$s=|T|\le p$、$\sum_{x\in T}(x-a)\equiv0\pmod p$。分别用 $a,b$ 补足 $p$ 项，所得均值之差为 $(p-s)(a-b)/p$，不可能同时碰撞到另一个重值，否则 $s=2p$。至少一个选择保持不变量。
+\end{proof}
+
+\begin{lemma}\label{lem:two-heavy}
+若恰有两个不同余重值，其重数为 $p+\alpha,p+\beta$，$0\le\alpha,\beta\le p-2$、$\alpha+\beta\ge p-2$，则存在安全整数续步。
+\end{lemma}
+\begin{proof}
+令 $\delta=a-b$。所有单轻值调节失败时，其他值被迫为
+\[
+b-i\delta\quad(\alpha+1\le i<p),\qquad
+a+j\delta\quad(\beta+1\le j<p).
+\]
+故 $\gcd(\delta,n)=1$。设上下侧系数和为 $H,L$，上侧位置数为 $C$。零和给 $n\mid f(a)+C+H-L$；若 $H,L<p$，右式严格介于 $0,n$，矛盾。设下侧总和至少 $p$，取引理\ref{lem:background}的跨越前缀，平均
+\[(b-i_1\delta,\ldots,b-i_s\delta,a^{T-p},b^{2p-s-T}).
+\]
+系数全为 $1$ 且总和达到 $p$ 会产生第三重值，故 $s\le p-1$。两锚点总消耗为 $p-s\le p-2\le\alpha+\beta$，至少一者保留 $p$ 份；新均值为 $b-\delta$，不同于二者。各锚点均留副本，保证安全。上侧情形对称。
+\end{proof}
+
+\begin{lemma}\label{lem:integer-range}
+若 $p\ge5$ 且 $n\ge4p-2+d_p(n)$，则每个合法本原输入可归零。特别所有 $n\ge4p+\lceil\log_2p\rceil$ 均满足判据。
+\end{lemma}
+\begin{proof}
+引理\ref{lem:initialize}建立不变量。由引理\ref{lem:background}、\ref{lem:heavy}和\ref{lem:two-heavy}，只剩两个不同余重值、$\alpha+\beta\le p-3$ 的情形。若轻值 $x\equiv a\pmod p$，选择 $(a^{p-1},x)$；碰撞只可能 $x=pb-(p-1)a$。若它有两份，改用 $(a^{p-2},x^2)$，均值为 $2b-a$，仍安全。故每个锚点余类至多有一个轻值位置。
+预留 $p$ 份 $a,b$ 及至多 $d$ 个危险见证，在余池取 $2p-2$ 项并包含全部锚点富余副本。若有 $p$ 项零和，则其平均完成续步。否则引理\ref{lem:egz}给两个各有 $p-1$ 项的余类。$\alpha>0$ 会强迫 $\alpha\ge p-2$，矛盾；同理 $\beta=0$。故池的两类都不同于锚点余类。
+取一份 $a$，由两池余类补足为整数平均；两类选取数均在 $1,p-2$ 内。如果所有此类选择均碰撞到 $b$，交换同类的选中与未选位置，说明两类各为实际常值 $u,v$，且 $a+iu+(p-1-i)v=pb$。若 $i\ne(p-1)/2$，用两份 $a$ 和 $j\equiv2i\pmod p$ 份 $u$，余下取 $v$，均值为 $2b-u$ 或 $2b-v$，不再碰撞。否则从 $b$ 端重复构造；两端的 $i$ 不可能相同，因为 $a\not\equiv b\pmod p$。
+每次非终端操作都是非恒等整数平均，且
+\[\sum_i x_i^2-\sum_i(T_Sx)_i^2=\sum_{i\in S}(x_i-\bar x_S)^2>0.
+\]
+因此整数能量有限下降，最终进入已给出的相反值终端。对 $pX$ 执行所得词，再由引理\ref{lem:affine}回到 $X$。
+令 $b=\lceil\log_2p\rceil$。因 $4p+b<2^{b+3}$，有 $4p+b-\lfloor\log_2(4p+b)\rfloor\ge4p-2$。函数 $n-\lfloor\log_2n\rfloor$ 不减，而 $d_p(n)\le\lfloor\log_2n\rfloor$，得到最后结论。
+\end{proof}
+
+
+\section{等大三块与含零收尾}
+\begin{proposition}\label{prop:threep}
+若 $p\ge5$ 为素数，则 $3p$ 个位置满足定理\ref{thm:prime}的判据。
+\end{proposition}
+\begin{proof}
+先将位置分为三个 $p$ 组。若其和模 $3$ 全相等，交换不同组中一对不同余值，组和变为 $s+\delta,s-\delta,s$，其中 $\delta\ne0$。这样的跨组数对必存在，否则原配置模 $3$ 全相等。分别平均后得到 $(a^p,b^p,c^p)$，$a+b+c=0$，且模 $3$ 不全相等。
+
+写 $p=3m+\epsilon$，$\epsilon=\pm1$、$m\ge2$。令 $J$ 为三阶全一矩阵，
+\[
+D=\begin{pmatrix}1&-1&0\\1&-1&0\\-2&2&0\end{pmatrix},\qquad
+K_\pm=mJ+\epsilon(I\pm D).
+\]
+两表非负且行列和为 $p$。每个输出组按一行从三个旧块取数，三次平均实现 $K_\pm/p$。在零和空间上，它们等于 $\epsilon(I\pm D)/p$。由于 $D^2=0$，两作用互为射影逆。
+改用 $(x,y)=(a,a-b)$，它们分别为 $U(1),U(-1)$。块角色交换给
+\[
+\Sigma=\begin{pmatrix}1&-1\\0&-1\end{pmatrix},\qquad
+P=\begin{pmatrix}-2&1\\-3&2\end{pmatrix},\qquad
+L(-3)=U(-1)P\Sigma.
+\]
+因此 $U(\Z),L(3\Z)$ 可实现。
+
+这些矩阵射影生成 $\Gamma_0(3,\Z)$。为验证，取 $S=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)$、$T=U(1)$，右陪集代表为 $I,ST^{-1},S,ST$，由模 $3$ 底行的四个射影类区分。对生成元 $S,T,T^{-1}$，Schreier 回路 $rg(r')^{-1}$ 如下：
+\[
+\begin{array}{c|ccc}
+r&S&T&T^{-1}\\\hline
+I&I&T&T^{-1}\\
+ST^{-1}&-T&I&L(3)\\
+S&-I&I&I\\
+ST&T^{-1}&L(-3)&I
+\end{array}
+\]
+欧几里得消元证明 $S,T$ 生成 $\SL_2(\Z)$，上述表便给所需子群；中央符号不影响式\eqref{eq:return}。
+
+本原三块的 $G=\gcd(y,3)$。合法性给 $3\nmid y$，可在 $\alpha x+\beta y=1$ 的裴蜀解中令 $3\mid\alpha$。矩阵
+\[
+\begin{pmatrix}y&-x\\\alpha&\beta\end{pmatrix}\in\Gamma_0(3,\Z)
+\]
+将 $(x,y)$ 送到 $(0,1)$，故得到 $(0^p,s^p,(-s)^p)$。取 $h=(p-1)/2$，连续两次平均 $(s^h,(-s)^h,0)$，最后平均 $(s,-s,0^{p-2})$。
+\end{proof}
+
+\begin{lemma}\label{lem:zero-base}
+对奇数 $p$，$2p+1$ 元零和配置若含一个零，则至多五次 $p$ 平均归零。
+\end{lemma}
+\begin{proof}
+保留零，将其余位置分成两个 $p$ 组并平均，得到 $(a^p,(-a)^p,0)$。用命题\ref{prop:threep}末尾所列的三次相反值操作完成。
+\end{proof}
+
+\begin{lemma}\label{lem:zero-tail}
+若 $p\ge5$，$n\ge2p+1$ 的零和配置含一个零和 $p$ 元组，则可归零。对任意奇数 $p$，此结论在 $2p+1\le n\le3p$ 同样成立。
+\end{lemma}
+\begin{proof}
+先平均该组，产生 $p$ 个零。若某个已解决的维数 $m\le n$ 满足非零支持数小于 $m$，就选一个 $m$ 元子系统包含全部非零位置及一个零。它自身零和，本原化后的差分公因子为 $1$，可在该子系统归零。
+对 $n\le3p$，使用引理\ref{lem:zero-base}中的 $m=2p+1$。对 $3p<n<4p$，使用命题\ref{prop:threep}。对 $4p\le n<5p$，使用引理\ref{lem:integer-range}在 $m=4p$ 的结论，因为 $d_p(4p)=1$。对 $n\ge5p$，同一引理的最终上界已适用。
+\end{proof}
+
+
+\section{任意输入的安全压缩}
+本节对 $p\nmid n$ 的配置在 $\Z[1/p]$ 中保留全部模 $\ell\mid n$ 非恒定见证。
+
+\begin{lemma}\label{lem:short-choice}
+若 $p\ge5$、$2p<n<4p$，对 $n$ 的任意一组不同素因子，各禁止一个剩余类，则 $1,\ldots,p-1$ 中存在同时避开的整数。
+\end{lemma}
+\begin{proof}
+设素因子数为 $h$，乘积为 $M$，$\rho=\varphi(M)/M$。对 $h\le4$，长度 $2^h$ 足够：含 $2$ 时先留一种奇偶类，其余奇素数至多删去 $0,1,3,7$ 项，对应剩余 $1,2,4,8$ 项；不含 $2$ 时至多删去 $1,3,7,15$ 项。$h=3,4$ 时 $M\ge30,210$，从 $M\le n<4p$ 得 $2^h\le p-1$，较小 $h$ 直接成立。
+若 $h\ge5$，CRT 将禁止类写成某个整数 $b$ 的各模余数。容斥给避开数目大于 $(p-1)\rho-(2^h-1)$。五个最小素数给 $\varphi(M)\ge480>2^{h+2}$，每增加素因子仍保持此界。因此
+\[(p-1)\rho>(n/4-1)\rho\ge\varphi(M)/4-\rho>2^h-1.
+\]
+\end{proof}
+
+两个 $p$ 块的互补配比给
+\begin{equation}\label{eq:mix-pair}
+a_k=a+\frac{k}{p}(b-a),\qquad b_k=b+\frac{k}{p}(a-b).
+\end{equation}
+相对于固定值 $w$，只要 $a-w,b-w$ 不同时为零，$a_k-w$ 模每个危险素数至多禁止一个 $k$ 类。引理\ref{lem:short-choice}因此能合并两差的全部见证。
+
+\begin{lemma}\label{lem:concentrate}
+已有两个 $p$ 块及单点时，可以固定一个单点 $w$，使某个块值 $a$ 在全部危险素数处不同于 $w$。
+\end{lemma}
+\begin{proof}
+若某个缺失素数处第二块 $b\ne w$，用式\eqref{eq:mix-pair}合并支持。否则 $a=b=w$，另有单点 $x\ne w$。平均 $(b^{p-1},x)$，留下旧 $b$ 一份作为新单点，再混合两块。这一阶段至多三次平均，严格增加支持。块--单点变换
+\begin{equation}\label{eq:exchange}
+(b,x)\longmapsto(((p-1)b+x)/p,b)
+\end{equation}
+在每个危险素数处可逆且保持常值方向，故保持整体见证。至多 $d_p(n)$ 个阶段完成。
+\end{proof}
+
+\begin{lemma}\label{lem:two-block-entry}
+设 $1\le r<p$、$n=2p+r$、$\gcd(p,n)=1$。任意合法输入可进入具有完整见证的两个 $p$ 块及 $r$ 个单点。
+\end{lemma}
+\begin{proof}
+固定一个位置并为每个危险素数保留一个不同余位置。保护数至多 $d+1\le p+r$：否则 $n\ge2^d\ge2^{p+r}>n$。保护集外平均一个 $p$ 组，写剩余单点为 $c_i$、$m=p+r$、$\delta_i=c_i-a$。令 $\lambda=-1/p$，式\eqref{eq:exchange}在差分中的矩阵为
+\[
+A_i=I+v_i e_i^T,\qquad v_i=\lambda\mathbf1-e_i.
+\]
+对互异 $i,j,k$，直接相乘得到
+\begin{equation}\label{eq:entry-commutator}
+[A_k^{-1}A_jA_k,A_i]
+=I+(1+\lambda)(e_k-e_j)e_i^T.
+\end{equation}
+取 $L$ 为各模 $\ell$ 的 $2\times2$ 可逆矩阵群阶的公倍数。交换矩阵模 $\rad(n)$ 的逆可由 $L-1$ 次正向交换实现，故式\eqref{eq:entry-commutator}的任意非负幂可用真实交换实现其模作用。
+系数 $(p-1)/p$ 失效的素数整除 $\gcd(p-1,n)=\gcd(p-1,r+2)$，其数量至多 $r$。为这些素数分别选一个非零差分单点，补足为 $r$ 个保留角色，固定其中一个目标 $j$。对每个其余素数 $\ell$，若目标差为零，选 $\delta_i\ne0$、$k\notin\{i,j\}$，用 CRT 选指数在模 $\ell$ 为 $1$、其他非失效素数模下为 $0$。式\eqref{eq:entry-commutator}使目标差新增非零值，并保留已处理支持和全部失效处数据。最终保留这 $r$ 个单点，将另外 $p$ 个单点平均。旧块和保留单点已提供全部见证。
+\end{proof}
+
+\begin{proposition}\label{prop:entry}
+若 $p\ge5$、$2p<n<4p$、$n\ne3p$，每个合法输入可进入
+\begin{equation}\label{eq:core}
+K_{p,r}(a,z)=(a^p,(rz-a)^p,(-pz)^r),\qquad r=n-2p.
+\end{equation}
+本原参数满足 $\gcd(a,z)=1$，且合法性为 $\gcd(a+pz,n)=1$。当 $p=3,n=7$ 时该结论仍成立。
+\end{proposition}
+\begin{proof}
+先设 $r<p$。由引理\ref{lem:two-block-entry}及\ref{lem:concentrate}取得 $a^p,b^p$ 和单点 $w$，其中 $a-w$ 在全部危险处非零。混合两块后将 $b_k$ 与 $w$ 交换，得到
+\[
+a_1=a_k,\quad b_1=((p-1)b_k+w)/p,\quad w_1=b_k.
+\]
+新块差乘 $p$ 为 $D(k)=pa-(p-1)b-w+(2p-1)k(b-a)/p$。在 $\ell\nmid2p-1$ 处选 $k$ 使它非零；在 $\ell\mid2p-1$ 处选 $k$ 使下一轮常数
+\[E(k)=pa_1-(p-1)b_1-w_1=w+(a-3b)/2+4k(b-a)
+\]
+非零。两种条件均至多禁止一个类。第二轮的差为 $E(k)+(2p-1)h(b_1-a_1)/p$，再由引理\ref{lem:short-choice}同时避零。现在两块差在全部危险处非零。平均全部 $r$ 单点及第一块的 $p-r$ 份，留下 $r$ 份旧第一块和完整第二块，即得合法形状\eqref{eq:core}。
+
+若 $n=3p+s$、$1\le s<p$，先保护单点 $w$ 及至多 $d$ 个见证，在其外制造两个 $p$ 块。$d<p$ 由 $2^p>4p>n$ 保证容量。用引理\ref{lem:concentrate}取得 $a-w$ 的全支持，再避开 $w$ 制造第三块。混合第二、第三块以保留已好素数的差，再将第二块与 $w$ 交换，可使三个块自身提供全部见证。将单点与第一块折叠，得到 $(a^p,b^p,c^p,d_0^s)$。
+零和模危险素数给 $(a-d_0)+(b-d_0)+(c-d_0)=0$。先混合使 $a-d_0$ 全支持。写 $p=3m+\epsilon$，平均两组同组成 $(m+\epsilon,m,m)$ 的位置，再平均余下的 $p$ 个，得到 $(A^{2p},B^p,C^s)$，其中
+\[
+A=[m(a+b+c)+\epsilon a]/p,\quad B=a+b+c-2A,\quad C=d_0.
+\]
+模危险素数有 $A-C=\epsilon(a-d_0)/p\ne0$。写 $A=a,B=-2a+sz,C=-pz$，再应用引理\ref{lem:shape-change}的两次平均，得到 $(p,p,p+s)$ 核心。
+对整数本原核心，由 $p(A+B)+rC=0$ 及 $\gcd(p,r)=1$ 得 $C=-pz$，进而 $B=rz-a$。坐标公因子为 $\gcd(a,z)$，而差分为 $a+pz$ 和 $nz-2(a+pz)$，所以 $G=\gcd(a+pz,n)$。
+当 $p=3,n=7$ 时，引理\ref{lem:two-block-entry}已经给两个三块与一个单点。保留单点与旧块的全见证便给所需合法核心，不需后续两轮修复。
+\end{proof}
+
+\section{临界带的共同终端与返回构造}
+对核心\eqref{eq:core}，使用列 $(z,y)^T$，其中 $y=a+pz$。终端列取为
+\begin{equation}\label{eq:terminal}
+t_j=(1,p^2-nj)^T,\qquad
+\max(0,\lceil(p-1-r)/2\rceil)\le j\le(p-1)/2.
+\end{equation}
+其零和 $p$ 元组含 $j+1$ 份第一块、$j$ 份第二块及 $p-1-2j$ 份载体。
+
+\begin{lemma}\label{lem:small-units}
+设 $p\ge5$、$2p<n<4p$、$\gcd(p,n)=1$。$-1$ 和所有 $1\le b\le p$、$\gcd(b,n)=1$ 的类生成 $(\Z/n\Z)^\times$。若 $n$ 偶，还存在安全奇数 $b\le p$ 满足 $b\equiv3$ 或 $5\pmod8$。
+\end{lemma}
+\begin{proof}
+记第一项的生成群为 $H$。$n$ 奇时，若 $H$ 不满，取最小正缺失单位 $p<a<n/2$。$a<n/3$ 时取 $4a-n$，$a>n/3$ 时取 $n-2a$，均为更小的正缺失单位，矛盾。
+若 $n=2m$、$m$ 奇，选奇数 $b=(m\pm1)/2\le p$，则 $H$ 模 $m$ 包含 $2$ 及其逆。每个模 $m$ 单位的平衡代表绝对值小于 $p$，除尽 $2$ 因子后即是已知奇单位。
+若 $4\mid n$，单位在 $(0,n/2)$ 中由 $a\mapsto n/2-a$ 配对，所以 $(0,n/4)$ 恰有 $\varphi(n)/4$ 个单位。它们及负数已属于 $H$，再加 $\pm p$，得到 $|H|>\varphi(n)/2$。
+
+第二项先检查 $3,5,11,13$。$p=5,7$ 时若 $3,5$ 都不安全，则 $30\mid n<4p$，矛盾；$p=11$ 时同理由 $165\mid n$ 排除。若 $p\ge13$ 且四者均不安全，记 $n$ 的不同奇素因子数为 $d\ge4$，$\rho=\prod_{\ell\mid n,\ell\text{奇}}(1-1/\ell)$。等差列 $3+8t\le p$ 的项数 $L\ge(p-4)/8$，容斥给安全项数至少 $L\rho-2^d$。而
+\[
+L\rho>n\rho/32-1/2\ge60\cdot6^{d-4}-1/2>2^d.
+\]
+这里 $n\rho\ge1920\cdot6^{d-4}$，由四个指定素因子及其余奇素因子得到。
+\end{proof}
+
+\begin{theorem}\label{thm:terminal}
+在\eqref{eq:core}上，令 $h=\delta n$、$q=h^2$，其中 $\delta=1$（$n$ 奇）或 $\delta\in\{2,4\}$（$n$ 偶）。假设：
+\begin{enumerate}
+\item $L(h\Z)$ 和 $\Gamma(q,\Z)$ 可实现；
+\item 若干条目本原的整数满秩返回，其行列式与 $q$ 互素，模 $q$ 保持合法域，且有限内容群包含 $V\equiv U(-p^{-2})\pmod n$；
+\item $n$ 奇时该群包含标量 $2I$；$n$ 偶时\eqref{eq:terminal}的 $j$ 区间含 $\delta$ 个连续整数。
+\end{enumerate}
+则全部合法核心可归零。$p=3,n=7$ 时同样成立。
+\end{theorem}
+\begin{proof}
+保留载体，两个 $p$ 块互补混合给 $(a,z)$ 坐标中的
+\[
+p^{-1}P_b,\qquad P_b=\begin{pmatrix}b&r(p-b)/2\\0&p\end{pmatrix},
+\quad b\text{ 奇},\quad1\le b\le p.
+\]
+当 $\gcd(b,n)=1$ 时，$P_b$ 的行列式与 $q$ 互素，且 $y'\equiv by\pmod n$。$b<p$ 时条目本原，故推论\ref{cor:finite-group}提供 $p,b$ 的素因子标量；$P_1$ 已提供 $p$。结合假设中的 $2I$ 及引理\ref{lem:small-units}，有限标量模 $n$ 满射。
+对当前列，取 $k\equiv p^2zy^{-1}-1\pmod n$，用 $V^k$ 后再乘一个可用有限标量，得到 $(z,y)\equiv(1,p^2)\pmod n$。
+
+$n$ 偶时写 $n=2^a m$、$m$ 奇，令 $B=2^{2v_2(h)}$。有限群中的 $P_bP_1^{-1}$ 及标量给
+\begin{equation}\label{eq:split}
+D_b=\begin{pmatrix}b^{-1}&0\\n(b^{-1}-1)/2&1\end{pmatrix}.
+\end{equation}
+引理\ref{lem:small-units}选出 $b\equiv3,5\pmod8$，因 $v_2(b^2-1)=3$，$-1,b$ 生成每个有限二进单位群。用\eqref{eq:split}及 $D_{-1}$ 使 $z=1\pmod B$，同时保持 $y\pmod n$。$V\bmod2$ 为上幺幂，逐次平方给 $V^B\equiv I\pmod B$；使用 $V$ 的 $B$ 倍次数恢复模 $m$ 的首坐标。于是 $z=1\pmod h$。
+按 $y$ 选 $j\bmod\delta$，使当前列与 $t_j$ 模 $h$ 相同。置 $E=E_{21}$、$X=VEV^{-1}$，则模 $n$
+\[
+Et_j=(0,1)^T,\qquad Xt_j=(-2/p^2,2)^T.
+\]
+两列的行列式 $2/p^2$ 是模 $m$ 单位。用 $L(hk)$ 及其有限 $V$ 共轭，解一次二维线性同余，将两坐标修正到 $t_j\pmod{m^2}$；参数用 CRT 保持模 $B$。随后一次 $L(hk)$ 修正第二坐标模 $B$，并取 $k\equiv0\pmod m$。最终列与 $t_j$ 模 $q$ 相同。
+每条有限内容分支由引理\ref{lem:content}提升，最后用引理\ref{lem:fiber}精确送到 $t_j$。平均其零和组，再用引理\ref{lem:zero-tail}收尾。$p=3,n=7$ 时，模 $7$ 的单位由 $-1,2$ 生成，其余步骤相同，收尾用引理\ref{lem:zero-base}。
+\end{proof}
+
+\begin{proposition}\label{prop:odd}
+若 $p\ge3$ 为奇素数、$1\le r<p$ 为奇数，则全部合法 $K_{p,r}$ 可归零。
+\end{proposition}
+\begin{proof}
+采用 $u=z,v=a-rz/2$。写 $p-r=4k+2\epsilon$，$\epsilon\in\{0,1\}$。取 $\alpha_0=-r,\alpha_1=4-r$。第一步从 $A,B$ 各取 $(p+\alpha)/2,(p-\alpha)/2$ 份，产生 $p$ 份 $D$，保留 $r$ 份作载体；第二步按
+\[
+(x,y,c,v_D)=\left(\frac{p+2r-\alpha-2\epsilon}{4},\frac{p+\alpha-2\epsilon}{4},\epsilon,\frac{p-r}{2}\right)
+\]
+选择输出，第三步平均其 $p$ 元补集。两组输出分别为 $(r+k,k,\epsilon,2k+\epsilon)$ 和 $(r+k-1,k+1,\epsilon,2k+\epsilon)$；剩余库存分别为 $(r+2k+\epsilon,2k+\epsilon,r,4k+2\epsilon)$ 和 $(r+2k+\epsilon-2,2k+\epsilon+2,r,4k+2\epsilon)$。唯一紧的条件是 $k+\epsilon\ge1$，由 $p-r>0$ 保证。
+返回的实际尺度为 $p^{-2}$，矩阵为
+\[
+J_\alpha=\begin{pmatrix}-rp/2&-\alpha\\pn(r-2\epsilon)/4&rp/2\end{pmatrix},
+\quad J_\alpha^2=pF_\alpha I,quad F_\alpha=\frac{pr^2-n(r-2\epsilon)\alpha}{4}.
+\]
+平方标量模 $n$ 为 $p^4$，故非零且安全。令 $c_\epsilon=r$（$\epsilon=0$）或 $1$（$\epsilon=1$），$f_i=F_{\alpha_i}/c_\epsilon$。若 $\epsilon=0$，则 $f_0=r(3p+r)/4,f_1=f_0-n$；若 $\epsilon=1$，则 $f_0=r[pr+n(r-2)]/4,f_1=f_0-n(r-2)$。这给出
+\[
+\gcd(f_0,f_1)=\gcd(f_0f_1,n)=1,\qquad r\mid f_0,
+\]
+且二者奇偶相反。第二种情形的互素性由模 $n$、模 $r-2$ 的等式 $4f_0\equiv pr^2$ 得出。
+在 $R=\Z[1/|f_0f_1|]$ 中，$2,r$ 为单位，故 $R$ 的单位无限。令 $S=\diag(1,-1)$，则
+\begin{gather*}
+T=J_{\alpha_1}J_{\alpha_0}^{-1}
+=\begin{pmatrix}f_1/f_0&-2r/(c_\epsilon f_0)\\0&1\end{pmatrix},\\
+[S,T]=U\left(\frac{4r}{c_\epsilon f_0}\right).
+\end{gather*}
+根参数为 $R$ 单位，引理\ref{lem:localize}给 $U(R)$。
+保留 $r$ 份旧 $B$，平均两组
+\[
+(A^{(p+r)/2},B^{(p-r)/2}),\qquad
+(A^{(p-r)/2},B^{(p-r)/2},C^r),
+\]
+得到
+\[
+K=\begin{pmatrix}-r/2&1\\rn/4&r/2\end{pmatrix},\quad K^2=r(p+r)I/2.
+\]
+若 $H=KU(2/r)$，则 $[S,H]=L(n)$。置 $P=\left(\begin{smallmatrix}1&-2\\0&n\end{smallmatrix}\right)$，有
+\[
+P^{-1}U(t)P=U(nt),\quad
+P^{-1}KU(8(p+r)t/r)K^{-1}P=L(nt).
+\]
+引理\ref{lem:deep}先给 $\Gamma(n^3,R)$。对 $t\in R$ 选整数 $k\equiv t\pmod{n^2R}$，分解 $L(nt)=L(nk)L(n(t-k))$，得到 $L(nR)$，再得 $\Gamma(n^2,R)$。
+换到 $(z,y)$ 的矩阵 $C=\left(\begin{smallmatrix}1&0\\n/2&1\end{smallmatrix}\right)$。选 $4\mid k$ 且 $k\equiv-p^{-2}\pmod n$，则 $CU(k)C^{-1}$ 整数且满足定理\ref{thm:terminal}的方向条件。至少一个整数反射的行列式为偶数，而条目公因子为奇数（其左下项 $-\alpha_i$ 奇）；引理\ref{lem:content}提供有限标量 $2I$。定理\ref{thm:terminal}完成证明。
+\end{proof}
+
+\begin{proposition}\label{prop:r2}
+若 $p\ge5$，全部合法 $K_{p,2}$ 可归零。
+\end{proposition}
+\begin{proof}
+引理\ref{lem:two-carrier}给出 $U(\Z[1/p])$ 和一个明确整数深核。其两次 CRT 数字返回使第二坐标等于 $\pm1$ 模该深核层，再由引理\ref{lem:fiber}精确送入相反值终端。
+\end{proof}
+
+\begin{proposition}\label{prop:even}
+若 $p\ge5$、$2<r<p$ 为偶数，则全部合法 $K_{p,r}$ 可归零。
+\end{proposition}
+\begin{proof}
+$4\le r\le p-3$ 使用引理\ref{lem:even-core}；$r=p-1$ 使用引理\ref{lem:upper-boundary}。两引理的根、局部化环和终端均在附录\ref{app:lower}给出。
+\end{proof}
+
+\begin{proposition}\label{prop:upper}
+若 $p\ge11$、$3p<n<4p$，全部合法输入可归零。
+\end{proposition}
+\begin{proof}
+$p\ge83$ 时，由引理\ref{lem:upper-supply}得到定理\ref{thm:terminal}的资源。$11\le p<83$ 且 $n=3p+s$、$s\le9$ 时用引理\ref{lem:small-supply}；其余小参数由引理\ref{lem:upper-small}处理。三者都接命题\ref{prop:entry}的入口及引理\ref{lem:zero-tail}的收尾。
+\end{proof}
+
+\section{宽维数中的剩余容量}
+\begin{proposition}\label{prop:wide}
+对 $p\ge5$ 的每个素数，所有 $n\ge4p$ 满足定理\ref{thm:prime}的判据。
+\end{proposition}
+\begin{proof}
+由引理\ref{lem:integer-range}，只须考虑
+\begin{equation}
+n=4p+s,quad1\le s<\lceil\log_2p\rceil,quad d=\omega(n)\ge s+3.
+\end{equation}
+$n$ 奇时至少含四个不同奇素数，$n\ge1155,\varphi(n)\ge480$；$n$ 偶时 $s$ 为正偶数，至少含五个素数，$n\ge2310,\varphi(n)\ge480$。每增加一个不同素因子，最小乘积至少乘 $13$，最小欧拉函数至少乘 $12$。归纳给
+\begin{equation}\label{eq:tail-estimates}
+p\ge16s+21,\qquad \varphi(n)>8\cdot2^d+7s+36.
+\end{equation}
+例如可先证 $n\ge65d-111$ 和 $\varphi(n)>8\cdot2^d+7d+15$，再代入 $s\le d-3$。容斥从而给
+\[(p-1)\varphi(n)/n\ge[\varphi(n)-s-4]/4>2^d-1.
+\]
+故引理\ref{lem:short-choice}的配比选择在这些宽维数仍有效。
+
+保护单点 $w$ 及见证，建立两个块，用引理\ref{lem:concentrate}集中 $a-w$ 的支持，再避开 $w$ 建立第三、第四个块。按命题\ref{prop:entry}的见证修复，使前三块不全同余。写 $p=3m+\epsilon$。先混合 $b,c$，再混合 $a,b$，使 $m(a+b+c)+\epsilon a-pd_0$ 在全部危险处非零；各条件至多禁止一个配比。三行折叠后得到 $(A^{2p},B^p,d_0^p,x_1,\ldots,x_s)$ 且 $A-d_0$ 全支持。平均 $p-s$ 份 $A$ 与全部单点，留下 $p+s$ 份 $A$ 作载体；将其余三个 $p$ 块再折叠一次，进入
+\begin{equation}
+(a^{2p},(-2a+rz)^p,(-pz)^r),\qquad r=p+s.
+\end{equation}
+本原参数的合法性仍为 $\gcd(a+pz,n)=1$。
+
+取 $\epsilon=\pm1$、$p\equiv\epsilon\pmod4$，$t_0=(p-\epsilon)/4,t_1=t_0+s$。对 $t=t_0,t_1$，令 $b=p-s-3t$、$\beta=nt-p^2+ps$。先平均两组 $(A^{p-b-t},B^t,C^b)$，产生 $2p$ 份 $D=(sa+\beta z)/p$，保留 $r$ 份。再平均两组
+\[
+(A^{2h+t-b},B^h,C^{p-2t+b-3h},D^t)
+\]
+及全部余下 $p$ 份。五次操作给 $J_{t,h}/p^2$，其中
+\begin{equation}
+J_{t,h}=\begin{pmatrix}\beta&prh-p^2(p-2t+b-3h)+t\beta\\-s&-\beta\end{pmatrix},
+\quad J_{t,h}^2=pf_{t,h}I,
+\end{equation}
+\[
+f_{t,h}=p^3+n[4t^2+(s-2p)t-sh].
+\]
+容量允许
+\[
+\max(0,\lceil(5p-5s-16t)/6\rceil)\le h\le b.
+\]
+写 $t=t_0+\delta$、$\delta=0,s$，未截断端点差为 $(p+\epsilon-2s-4\delta)/12>2$，且 $b\ge4$；故有相邻 $h,h+1$。代入还得 $b-t\le0$、$b\le(p-2t)/2$，这些不等式正好保证两阶段所有库存约束。
+
+保留旧 $A$ 的三步反射为
+\[
+A_j=\begin{pmatrix}0&-d_j\\-1&0\end{pmatrix},\quad d_j=p^2-nj,\qquad
+\lceil(p-s)/6\rceil\le j\le\lfloor(p-s)/4\rfloor.
+\]
+其两重复组各取 $(A^{2j},B^j,C^{p-3j})$，余组取补集，保留 $r$ 份 $A$。因 $p-s\ge36$，可取三个相邻 $j$，记标量 $d_0,d_1,d_2$。对固定 $t$，相邻 $h$ 的标量为 $f,g_t=f-sn$，且互素：$f\equiv p(p-4t)^2\pmod s$，而 $p-4t\equiv\epsilon\pmod s$。
+相邻反射商与 $A_j^{-1}A_{j+1}$ 的交换子给
+\[
+U\left(\frac{\beta_t n^2}{d_1g_t}\right),\qquad
+\gcd(\beta_{t_0},\beta_{t_1})=\gcd(n,5)=g.
+\]
+后式用差为 $ns$、$\gcd(\beta_{t_0},s)=1$ 以及 $\beta_t\equiv p(s-p)\pmod n$。相邻倍率及引理\ref{lem:localize}给 $R_0$，其反演素数来自这些互素标量且不除 $n$。于是有双向 $gn^2R_0$ 根和
+\begin{equation}\label{eq:tail-level}
+\Gamma(M,R_0),\qquad M=g^2n^4.
+\end{equation}
+$R_0$ 含绝对值不同于 $1$ 的相邻标量，所以满足定理\ref{thm:arithmetic-external}的单位条件。保载体返回以 $p-3j=\pm1$ 激活 $p$，第三个 $A$ 的倍率激活 $d_2$。
+
+一般保留 $A$ 的三步返回为
+\[
+M_{q,j}=\begin{pmatrix}p-q&nj-pq\\-1&0\end{pmatrix},\qquad q=3j+k,
+\]
+其中 $0\le j\le\lfloor p/2\rfloor$、$0\le k\le\lfloor r/2\rfloor$、$\lceil r/2\rceil\le j+k\le p$。这些计数覆盖全部整数区间
+\[
+I=[L,2p-1],\qquad L=r/2+2\ (r\text{偶}),\quad L=(r+9)/2\ (r\text{奇}).
+\]
+固定 $j$ 所给区间为 $[2j+\lceil r/2\rceil,\min(3j+\lfloor r/2\rfloor,2j+p)]$，相邻区间相接即证覆盖。安全 $q$ 的行列式与 $M$ 互素，引理\ref{lem:inverse}和\ref{lem:localize}允许将其加入最终环 $R$，并重建\eqref{eq:tail-level}。由\eqref{eq:tail-estimates}及 $|I|\ge(3n-7s-36)/8$，$I$ 中单位数超过 $\varphi(n)/4$。正负代表超过单位群一半，故每个模 $n$ 单位是其中两者之比，$R^\times$ 模 $n$ 满射。
+
+在 $(z,y)=(z,a+pz)$ 中，$V=J_{t,h}A_j/p^3$ 满足
+\[
+V\equiv U(-5/p)\pmod n,\quad
+\operatorname{tr}V=2-\frac n{p^3}(pt+t^2+ph+sj).
+\]
+若 $n\equiv2\pmod4$，选偶 $h$，则迹为 $2\pmod4$；$4\mid n$ 时自动成立。若 $v_3(n)=1$，规范化平方参数满足
+\[
+\frac c3\equiv\frac{n/3}{p^3}[(p-s)(j+t-h)-5t^2]\pmod3.
+\]
+相邻 $j$ 避开引理\ref{lem:local-cycle}的唯一坏类。若 $5\mid n$，先在 $I$ 选安全 $q\equiv-p\pmod5$；固定该类的容斥主项为 $|I|\rho/4$，误差小于 $2^{d-1}$，而\eqref{eq:tail-estimates}使主项更大。其 $M_{q,j}$ 模 $5$ 给非平凡平移，先完成五进方向；$V\bmod5=I$，随后使其指数为完整五进阶的倍数，再用 CRT 完成其余局部方向。得到 $z/y=0\pmod M$。
+单位 $d_1/d_0=1-n/d_0$ 和 $d_2/d_0=1-2n/d_0$ 生成模 $M$ 到模 $n$ 的单位核。奇素数处由二项式展开逐层升位；$n\equiv2\pmod4$ 时第二个单位生成 $1\pmod4$ 的部分，第一个补另一个类。于是 $R^\times$ 模 $M$ 满射。引理\ref{lem:fiber}将列精确送到 $(0,\epsilon)$。最终配置为 $(\epsilon^{2p},(-2\epsilon)^p,0^{p+s})$；选全部非零位置和 $p$ 个零，使用引理\ref{lem:integer-range}已独立证明的 $4p$ 维结论。
+\end{proof}
+
+
+\section{全部参数的覆盖}\label{sec:completion}
+\begin{proof}[定理\ref{thm:prime}的证明]
+必要性由引理\ref{lem:obstruction}给出，下界由命题\ref{prop:lower}给出。对于充分性，$p\ge11$ 时：$n\ge4p$ 用命题\ref{prop:wide}；$n=3p$ 用命题\ref{prop:threep}；其余临界带先用命题\ref{prop:entry}压缩，再按下表完成。
+\begin{center}
+\begin{tabular}{ll}
+\toprule 参数范围 & 核内结论\\\midrule
+$n=2p+r,\ 1\le r<p,\ r$ 奇 & 命题\ref{prop:odd}\\
+$r=2$ & 命题\ref{prop:r2}\\
+$4\le r<p,\ r$ 偶 & 命题\ref{prop:even}\\
+$3p<n<4p$ & 命题\ref{prop:upper}\\\bottomrule
+\end{tabular}
+\end{center}
+$p=5$ 时，$11\le n\le15$ 已由上述下半带及等块结论处理；$n=16,17,18$ 用引理\ref{lem:collision-small}；$n=19$ 满足引理\ref{lem:integer-range}；$n\ge20$ 用命题\ref{prop:wide}。
+$p=7$ 时，下半带处理 $15\le n\le21$；$n=22$ 用引理\ref{lem:seven22}；$23\le n\le26$ 用引理\ref{lem:collision-small}；$n=27$ 满足引理\ref{lem:integer-range}；更大维数用命题\ref{prop:wide}。
+$p=3$ 时，$n=7$ 用命题\ref{prop:entry}及\ref{prop:odd}，$n=8,10$ 用引理\ref{lem:eight}、\ref{lem:ten}，$n\ge11$ 用引理\ref{lem:triple-large}。$n=9$ 将位置排成 $3\times3$，先平均各行再平均各列，六次操作即达到全局均值。
+这些范围覆盖全部奇素数及全部 $n\ge2p+1$。推论\ref{cor:threshold}随定理和第\ref{sec:obstruction}节的二平均论证成立。
+\end{proof}
+
+
+\appendix
+\section{偶数下半带的返回计算}\label{app:lower}
+\begin{lemma}\label{lem:two-carrier}
+在 $((u+v)^p,(u-v)^p,(-pu)^2)$ 上，合法本原参数满足 $\gcd(u,v)=\gcd(v,p+1)=1$。全部合法参数可送到 $(u,v)=(0,1)$ 的射影方向。
+\end{lemma}
+\begin{proof}
+记 $m=p+1$。保留两份 $A=u+v$，平均
+\[(A^{(p-3)/2},B^{(p+1)/2},C),\qquad
+(A^{(p-1)/2},B^{(p-1)/2},C)
+\]
+实现 $-U(1)/p$；换块给 $U(-1)$。互补平衡混合给 $F=\diag(1,1/p)$。其逆由四次平均实现：先平均两组 $(A^{(p-1)/2},B^{(p-1)/2},C)$，产生 $2p$ 份 $D=-u/p$；保留两份 $D$，分别平均一份剩余 $A$ 或 $B$ 与 $p-1$ 份 $D$。输出为 $(u/p^2,v/p)$。因此 $U(\Z[1/p])$ 可实现。
+再平均 $(A^{(p+1)/2},B^{(p-3)/2},C)$。保留两份新值，按 $(x,x+1,b,(p-3)/2)$ 选下一组，其中 $b=1$（$p\equiv1\pmod4$）或 $0$（$p\equiv3\pmod4$），$x=(p-b-(p-1)/2)/2$，再平均补组。返回为 $J/p^2$，
+\[
+J=\begin{pmatrix}1&-2\\c&-1\end{pmatrix},\qquad
+c=\begin{cases}-(p^2-1)/2,&p\equiv1\pmod4,\\(p+1)^2/2,&p\equiv3\pmod4.
+\end{cases}
+\]
+两类计数分别是 $(k,k+1,1,2k-1)$ 和 $(k+1,k+2,0,2k)$，均在库存内。$J^2=(1-2c)I$。若 $S=\diag(1,-1)$、$H=JU(2)$，则 $[S,H]=L(-2c)$。借 $F$ 共轭得到完整 $L(2cR)$，$R=\Z[1/p]$。令 $q=(2c)^2$，引理\ref{lem:deep}给 $\Gamma(q,R)$；$m\mid2c$ 且 $\gcd(p,q)=1$。
+
+对 $2\le b\le p$，保留两份 $A$，平均 $(A^{b-2},B^{p-b},C^2)$ 和 $(A^{p-b},B^b)$，实现
+\[
+p^{-1}M_b,\qquad M_b=\begin{pmatrix}-1&-1\\-m&2b-m\end{pmatrix}.
+\]
+由于 $v$ 奇，先用整数上平移把 $u$ 改成 $2a-v$，即选 $2a\equiv u\pmod v$。执行 $M_p$ 后本原分析列为 $(-a,pv-ma)$。对 $\ell\mid q$，若 $\ell\mid m$，第二项自动非零；若 $\ell\mid v$，$a$ 自动非零；其余素数指定 $a=(pv-1)/m\pmod\ell$。再令 $p\nmid a$。CRT 给出本原输出 $(u_1,v_1)$ 且 $\gcd(v_1,q)=1$。
+取 $v_1^{-1}\pmod m$ 的代表 $b_0\in[1,p]$；若 $b_0=1$，改取 $b=p,\epsilon=-1$，否则取 $b=b_0,\epsilon=1$。于是 $b$ 奇、$2\le b\le p$、$bv_1\equiv\epsilon\pmod m$。选
+\[
+2a_1\equiv u_1\pmod{v_1},\qquad
+a_1\equiv(bv_1-\epsilon)/m\pmod{q/m},\qquad \gcd(a_1,b)=1.
+\]
+前两个模数互素；$b$ 的素因子若整除其中一个模数，相应条件已使 $a_1$ 非零，其余处由 CRT 补齐。平移后执行 $M_b$，得到本原列 $(-a_1,bv_1-ma_1)$，第二项为 $\epsilon\pmod q$。再用上平移使第一项为零模 $q$，由引理\ref{lem:fiber}精确到 $(0,\epsilon)$。相反值收尾完成。
+\end{proof}
+
+\begin{lemma}\label{lem:binary-depth}
+设 $r<p$ 为正偶数。在合法 $K_{p,r}(a,z)$ 上，若 $az\ne0$，可使本原参数满足 $v_2(az)=1$。
+\end{lemma}
+\begin{proof}
+合法性使 $a,z$ 奇偶相反。若深度 $\nu=v_2(az)\ge2$ 且 $a$ 奇，先用
+\[
+(a,z)\mapsto p^{-1}(dz,-a),\qquad d=[pr-n(r-1)]/2
+\]
+将偶坐标放在 $a$；该两组平均是下文\eqref{eq:even-reflection}取 $s=r-1$ 的返回，$d$ 奇且与 $n$ 互素。于是 $4\mid a,z$ 奇。
+保留 $r$ 份旧 $A$，平均组成 $(p-j-s,j,s)$ 的一组及其补组，给
+\[
+M_{j,s}=\begin{pmatrix}p-2j-s&rj-ps\\-1&0\end{pmatrix}.
+\]
+若 $r\equiv2\pmod4$，取 $(j,s)=(p,0)$。若 $4\mid r$，令 $Q_0=\lfloor n/3\rfloor$，在 $Q_0,Q_0-1,Q_0-2$ 中按顺序取与 $n$ 奇部互素的 $b$：$3\nmid n$ 时取 $Q_0$，否则取不被 $3$ 整除的 $Q_0-1$ 或 $Q_0-2$。有 $r-1\le b\le p-1$；令 $(j,s)=(b-1,2)$。后一范围由 $p-r>0$，以及 $3\mid n$ 时 $p-r\ge3$ 得出。
+两种选择都使 $D=rj-ps$ 恰含一个 $2$，且与 $n$ 奇部互素；后一种用 $D\equiv-2pb\pmod\ell$。整数输出为 $((p-2j-s)a+Dz,-a)$，两项的二进赋值为 $1,\nu$，故本原化后深度减一。见证坐标的输出为 $njz-(2j+s)(a+pz)$，奇素数处保持单位，模 $2$ 亦保持合法。迭代完成。
+\end{proof}
+
+\begin{lemma}\label{lem:even-core}
+对 $p\ge7$、偶数 $4\le r\le p-3$，全部合法 $K_{p,r}$ 可归零。
+\end{lemma}
+\begin{proof}
+写 $r=2t,m=p+t$，用 $a=tu+v,z=u$。合法性为 $\gcd(v,m)=1$；$t$ 偶时还要求 $u+v$ 奇。保留 $r$ 份旧 $A$，对可行奇数 $\max(1,4t-p)\le s\le2t$，平均
+\begin{equation}\label{eq:even-reflection}
+(A^i,B^i,C^s),\quad(A^{p-r-i},B^{p-i},C^{r-s}),\qquad i=(p-s)/2.
+\end{equation}
+所得矩阵为 $J_s/p$，
+\[
+J_s=\begin{pmatrix}-t&-1\\m(t-s)&t\end{pmatrix},\qquad
+J_s^2=-d_sI,\quad d_s=pt-ms.
+\]
+取 $s_0=r-1,s_1=r-3$，对应 $d,e=d+n$ 互素且为奇数，与 $n$ 互素。在 $(a,z)$ 坐标中，同一反射为 $\left(\begin{smallmatrix}0&d_s\\-1&0\end{smallmatrix}\right)$，相邻商为 $\diag(1,e/d)$，与换块 $\Sigma=\left(\begin{smallmatrix}-1&r\\0&1\end{smallmatrix}\right)$ 的交换子为 $U(rn/e)$。因此在 $R_0=\Z[1/|de|]$ 上有双向 $rnR_0$ 根。$|de|>1$，引理\ref{lem:deep}适用。
+
+互补混合给 $F_c=\diag(1,c/p)$，$c$ 为 $|c|\le p$ 的奇数。引理\ref{lem:inverse}先激活 $F_1^{-1}$，得到 $C_c=\diag(1,c)$。若奇数 $c\mid t$，则
+\[
+H=c^{-1}C_cJ_{s_0}C_c
+=\begin{pmatrix}-t/c&-1\\m(t-s_0)&tc\end{pmatrix},\quad
+HJ_{s_0}^{-1}\in\SL_2(R_0).
+\]
+引理\ref{lem:inverse}使 $H^{-1}$ 可实现，而 $J_{s_0}C_cH^{-1}=cC_c^{-1}$。写 $t=2^a t_0$，由引理\ref{lem:localize}可取 $R=R_0[1/(pt_0)]$ 并得到
+\begin{equation}
+\Gamma((2^{a+2}m)^2,R).
+\end{equation}
+以后任何与 $n$ 互素的小奇数字均可由引理\ref{lem:inverse}激活；同一根共轭在扩环后保留此层。
+
+若 $t$ 奇，已有 $U(2nR)$ 及 $\Gamma(4n^2,R)$。在 $(z,y)$ 基下，标准反射规范化模 $n$ 为 $\left(\begin{smallmatrix}1&-1/p\\0&-1\end{smallmatrix}\right)$，乘换块后取适当整数幂得到定理\ref{thm:terminal}的 $V$。规范化所需的标量 $p$ 由 $P_1$ 的内容分支提供，故该定理适用。
+
+设 $t$ 偶且 $8\le r\le p-5$。第三反射 $s_2=r-5$ 亦可用，将 $d+n,d+2n$ 的素因子一并加入 $R$。取奇数 $c_*=(m+\sigma)/2$、$\sigma=\pm1$，则 $c_*\le p$、$\gcd(c_*,n)=1$，而单位 $\epsilon_2=\sigma/c_*$ 模 $m$ 等于 $2$。引理\ref{lem:binary-depth}先令 $v_2(az)=1$；必要时再用标准反射，使 $a$ 奇、$u=z$ 恰含一个 $2$，故 $v$ 奇。取 $v^{-1}\pmod m$ 的平衡代表 $2^h c$，$c$ 奇、$|c|<p$；用 $U(Qk)$ 使第一坐标与 $c$ 互素后施加 $C_c$，便使 $v\bmod m$ 属于实际单位像。这里 $Q=(2^{a+2}m)^2$。
+比值 $(d+n)/d,(d+2n)/(d+n)$ 模 $8$ 分别为 $3,7$；取其中的 $\kappa\equiv3$。它作用于 $x=z/a$ 为乘 $\kappa$，换块作用为 $x/(-1+rx)\equiv-x\pmod{16}$。因此覆盖赋值一的全部模 $16$ 方向；$v_2(\kappa^2-1)=3$ 又给全部高层提升。可将二进方向送到
+\[
+u_T=2,\quad a_T=p-r(p-3)/2,\quad v_T=a_T-2t.
+\]
+奇素数处用 $G_s=-\diag(1,-1)J_s$。其 $G_s/t=I+N$ 满足 $N^2=m(t-s)I/t^2$；相邻 $s$ 可避开引理\ref{lem:local-cycle}的模 $9$ 例外。$G_s$ 的二进矩阵阶为 $2$ 幂，故 CRT 选择幂可在保持二进方向时命中所有奇素数方向。
+尺度模 $m$ 的变化由 $R$ 单位给出，其中 $t$ 的类可用 $\epsilon_2^a t_0$ 表示，且 $v_T\equiv t^2\pmod m$。剩余单位核由 $(d+n)/d$ 和 $(d+2n)/d$ 生成：后者在 $2$ 处从深度 $2$ 开始，在各奇处从 $v_\ell(m)$ 开始；前者补模 $4$ 的另一个类。逐次取素数幂并用指数 CRT 完成所有精度。引理\ref{lem:fiber}精确送到该终端。取 $(p+1)/2$ 份 $A$、$(p-3)/2$ 份 $B$ 和一份 $C$ 即得零和组。
+
+剩下 $r=4$，或 $r=p-3$ 且 $p\equiv3\pmod4$。保留旧 $A$ 的返回 $M=\left(\begin{smallmatrix}a_0&D\\-1&0\end{smallmatrix}\right)$ 可按下表选择，其中第一组为 $(p-j-s,j,s)$、第二组为补集：
+\[
+\begin{array}{c|rrrr}
+&s&j&a_0&D\\\hline
+r=4,p\ge11&1&(p-3)/2&2&p-6\\
+r=p-3,p\equiv1\ (3)&p-4&1&2&-p^2+5p-3\\
+r=p-3,p\equiv2\ (3)&p-6&4&-2&-p^2+10p-12
+\end{array}
+\]
+$p=7,r=4$ 用第二行。代入可验容量非负及 $\gcd(D,rn)=1$。由引理\ref{lem:inverse}取得 $M^{-1}$，相邻商局部化 $D$；与换块的交换子给
+\[U\bigl(2a_0+r(1-D/d_s)\bigr).
+\]
+该参数属于 $nR$，二进赋值恰为 $2$。与原根 $2^{a+1}nR$ 合并得到 $U(2nR)$，标准反射给另一方向，故有 $\Gamma(4n^2,R)$。标准反射仍提供前述有限 $V$，直接应用定理\ref{thm:terminal}。这覆盖全部偶数内部参数。
+\end{proof}
+
+\begin{lemma}\label{lem:upper-boundary}
+若 $p\ge5$、$r=p-1$，全部合法 $K_{p,r}$ 可归零。
+\end{lemma}
+\begin{proof}
+置 $n=3p-1,d=p^2-n$，标准两步反射为 $A=\left(\begin{smallmatrix}0&-d\\-1&0\end{smallmatrix}\right)$。先平均 $(A^{p-\sigma},C^\sigma)$，保留 $r$ 份新值，再平均 $(A^{h-\sigma},B^h,C^{p+\sigma-2h})$ 及其补集，给
+\[
+J_{\sigma,h}=\begin{pmatrix}-p\sigma&p[nh-p(p+\sigma)]\\-(p-\sigma)&p\sigma\end{pmatrix},
+\quad J_{\sigma,h}^2=pf_{\sigma,h}I,quad f_{\sigma,h}=p^3-n(p-\sigma)h.
+\]
+$p\ge7$ 时取 $(\sigma,h)=(2,3),(2,4),(3,4),(3,5)$；容量等价于 $0\le h-\sigma\le\sigma$、$0\le p+\sigma-2h\le p-1-\sigma$，均成立。记相邻标量 $f_\sigma,g_\sigma$，它们互素且与 $n$ 互素。相邻商与换块的交换子给 $U(n(n\sigma-pr)/g_\sigma)$。两整数系数的最大公因子为 $\gcd(2n-pr,3n-pr)=2$，故在 $R_0=\Z[1/|f_2g_2f_3g_3|]$ 上有 $U(2nR_0)$。由 $AU(dx)A^{-1}=L(x)$ 得双向根和 $\Gamma(4n^2,R_0)$。
+$A/p$ 在 $(z,y)$ 坐标中模 $n$ 为 $\left(\begin{smallmatrix}1&-1/p\\0&-1\end{smallmatrix}\right)$。与换块组合及有限标量 $p^{-1}$ 提供定理\ref{thm:terminal}所需方向，因此完成 $p\ge7$。
+对 $p=5,n=14$，取
+\[
+A=\begin{pmatrix}0&-11\\-1&0\end{pmatrix},\quad
+S=\begin{pmatrix}-1&4\\0&1\end{pmatrix},\quad
+J=\begin{pmatrix}-5&-10\\-4&5\end{pmatrix}.
+\]
+$A^2=11I,J^2=65I$，且 $W=ASASJ=\left(\begin{smallmatrix}-121&330\\0&65\end{smallmatrix}\right)$，$[S,W]=U(84/65)$。于是 $R_0=\Z[1/(5\cdot11\cdot13)]$ 上有双向 $84R_0$ 根及 $\Gamma(7056,R_0)$。由 $F_1$ 激活 $C_3=\left(\begin{smallmatrix}3&-4\\0&1\end{smallmatrix}\right)$；
+\[
+H=C_3JC_3/3=\begin{pmatrix}1&-18\\-4&7\end{pmatrix},\quad
+\det H=\det J=-65.
+\]
+$HJ^{-1}\in\SL_2(R_0)$，故 $H^{-1}$ 可实现，继而 $JC_3H^{-1}=3C_3^{-1}$。局部化 $3$ 后 $84R=28R$，给 $\Gamma(784,R)$。同一标准反射 $A$ 提供有限方向，仍接定理\ref{thm:terminal}。
+\end{proof}
+
+
+\section{上半带的统一计数与小参数资源}
+\begin{lemma}\label{lem:shape-change}
+设 $p\ge5$、$1\le s<p$、$n=3p+s$。合法核心 $(a^{2p},(-2a+sz)^p,(-pz)^s)$ 可用两次平均进入合法 $K_{p,p+s}$。
+\end{lemma}
+\begin{proof}
+记三个块值为 $A,B,C$。选 $0\le u\le s$、$s\le t+u\le p$，令 $q=3t+u$ 与 $n$ 互素。先平均 $(A^{p-t-u},B^t,C^u)$，从剩余旧 $A$ 保留 $p+s$ 份，再平均其余的 $p$ 个位置。返回为
+\[
+\frac1p\begin{pmatrix}p-q&st-pu\\-1&0\end{pmatrix}.
+\]
+可取 $(t,u)=(s,0)$（$3\nmid s$）；若 $3\mid s$，令 $\rho=p\bmod3$，取 $u=s-3+\rho,t=(p-u)/3$，此时 $q=p$。容量 $t+u\ge s$ 等价于 $p-s\ge6-2\rho$；唯一例外为 $\rho=1,s=p-1$，改取 $t=(p+1)/2,u=(p-3)/2$，此时 $q=2p$。三种选择均合法且 $\gcd(q,n)=1$。
+若 $y=a+pz$，新见证满足 $y'\equiv-qy/p\pmod n$，行列式为 $st-pu\equiv-pq\pmod n$。故在每个危险素数处保持本原性及见证。
+\end{proof}
+
+\begin{lemma}\label{lem:count-interface}
+在 $K_{p,r}$ 上，选择 $q_0\in\{1,2\}$ 组不交且组成相同的来源 $(i,j,k)$，$i+j+k=p$，保留 $r$ 份新值作载体。剩余库存为
+\begin{equation}\label{eq:stock}
+(p-q_0i,p-q_0j,r-q_0k,q_0p-r).
+\end{equation}
+若输出 $(x,y,u,v)$ 在库存内、和为 $p$，再平均其补集，返回矩阵为 $J/p^2$，其中
+\begin{equation}\label{eq:count-matrix}
+J=\begin{pmatrix}p(x-y)+\alpha v&pry-p^2u+\beta v\\-\alpha&-\beta\end{pmatrix},
+\quad \alpha=i-j,\quad\beta=rj-pk.
+\end{equation}
+若 $p(x-y)+\alpha v=\beta$，则 $J^2=pfI$，$pf\equiv p^4\pmod n$。若一组这样的表与其相邻输出 $(x-1,y-1,u+2,v)$ 同时可用，记相邻标量为 $pf,pg$，则
+\begin{equation}\label{eq:root-count}
+g-f=\alpha n,\qquad
+[\Sigma,J_f^{-1}J_g]=U(nH/g),\quad H=n(2j+\alpha)-2p^2,
+\end{equation}
+其中 $\Sigma=\left(\begin{smallmatrix}-1&r\\0&1\end{smallmatrix}\right)$。
+\end{lemma}
+\begin{proof}
+新值为 $D=(\alpha a+\beta z)/p$，新参数 $z'=-D/p$；将输出组的和除以 $p$ 给出\eqref{eq:count-matrix}。迹零即得标量平方；代入 $r\equiv-2p\pmod n$ 得其模 $n$ 值。相邻输出使右上项减少 $pn$，故 $g-f=\alpha n$。相乘得到
+\[
+J_f^{-1}J_g=\begin{pmatrix}1&-\beta n/f\\0&g/f\end{pmatrix},
+\]
+再与 $\Sigma$ 作交换子即得\eqref{eq:root-count}。
+\end{proof}
+
+\begin{corollary}\label{cor:resource}
+设 $p\ge11$、$p<r<2p$。若有限组相邻表满足引理\ref{lem:count-interface}，$0<\alpha<p$，所有 $\alpha$ 的最大公因子为 $1$，所有 $H$ 的最大公因子为 $\delta$，其中 $\delta=1$（$n$ 奇）或 $\delta\in\{2,4\}$（$n$ 偶），则全部合法核心可归零。
+\end{corollary}
+\begin{proof}
+令 $R$ 为所有约分倍率 $g/f$ 及其逆生成的整数环。它是有限局部化环，反演素数均不除 $n$。某一倍率必不为 $\pm1$：$g=f$ 与 $\alpha\ne0$ 矛盾，而 $g=-f$ 与 $g-f=\alpha n$、$\gcd(f,n)=1$、$n>2$ 矛盾。因此 $R$ 有无限单位。
+由\eqref{eq:root-count}先取整数倍得到 $U(nH)$，再作倍率共轭及裴蜀合并，取得 $U(\delta nR)$。引理\ref{lem:transverse}及 $\gcd(\alpha)=1$ 给 $\Gamma(\delta^2n^2,R)$。换到 $(z,y)$，上根变为下根。
+规范反射 $J/p^2$ 模 $n$ 为 $\left(\begin{smallmatrix}1&-\alpha/p^2\\0&-1\end{smallmatrix}\right)$。其条目公因子整除 $\alpha<p$；所需有限标量由安全小数字提供。换块、反射和 $\alpha$ 的裴蜀组合给 $V\equiv U(-p^{-2})$。$n$ 奇时，选奇 $\alpha$；相邻 $f,g$ 奇偶相反，而条目公因子为奇数，所以引理\ref{lem:content}给 $2I$。因 $r>p$，终端的 $j$ 区间包含至少六个整数，覆盖 $\delta$ 个连续值。定理\ref{thm:terminal}适用。
+\end{proof}
+
+\begin{lemma}\label{lem:upper-supply}
+若 $p\ge83$、$p<r<2p$，则存在满足推论\ref{cor:resource}且 $\delta=\gcd(n,2)$ 的相邻表。
+\end{lemma}
+\begin{proof}
+全部取 $q_0=2$。按下列三种范围选计数。
+
+\emph{靠近 $4p$。} 若 $r>3p/2$，置 $d=2p-r$，取 $\alpha=\lceil d/2\rceil+2,\lceil d/2\rceil+3$，来源 $(\alpha,0,p-\alpha)$，输出
+\[(l,p-\alpha+l,\alpha-2l,0).
+\]
+其精确区间为 $L\le l\le U$，其中
+\[L=\max(0,\lceil(d-\alpha)/2\rceil),\qquad
+U=\min(\lfloor\alpha/2\rfloor,p-2\alpha).
+\]
+取 $l=L+1,L$。有 $L+1\le\lfloor\alpha/2\rfloor$；由 $2\alpha\le d+7$、$L+1\le d/4+1$，另一约束由 $p\ge5d/4+8$ 保证。$d\le(p-1)/2,p\ge83$ 足够。
+
+\emph{中部。} 写 $r=p+s$、$10\le s\le(p-1)/2$。取 $\alpha=\lceil p/6\rceil,\lceil p/6\rceil+1$，来源 $(2\alpha,\alpha,p-3\alpha)$，输出
+\[(\alpha-e,p-3\alpha-e,2\alpha-s+2e,s).
+\]
+可行区间为 $L\le e\le U$，
+\[L=\max(5\alpha-p,\lceil s/2\rceil-\alpha),\qquad
+U=\min(\alpha,2\alpha+s-\lceil p/2\rceil).
+\]
+取 $e=L,L+1$。$L+1\le U$ 的四个比较是
+\begin{align*}
+4\alpha&\le p-1,&3\alpha&\le\lfloor p/2\rfloor+s-1,\\
+\lceil s/2\rceil+1&\le2\alpha,&\lceil p/2\rceil+1&\le3\alpha+\lfloor s/2\rfloor.
+\end{align*}
+由 $p/6\le\alpha\le(p+11)/6$、$s\ge10$ 逐项成立，且保证来源库存。
+
+\emph{九个低偏移。} 若 $1\le s\le9$，令 $a_0=\lfloor s/3\rfloor+1$，取 $\alpha=a_0,a_0+1$、$h=\lfloor p/(3\alpha)\rfloor-1,\lfloor p/(3\alpha)\rfloor$。令 $t=p-3\alpha h$，来源和输出为
+\[
+(\alpha(h+1),\alpha h,p-\alpha(2h+1)),\quad
+(\alpha h-e,p-\alpha(2h+1)-e,(\alpha-s)h+\alpha+2e,sh).
+\]
+输出区间为
+\[
+L=\max(0,2\alpha-t,\lceil((s-\alpha)h-\alpha)/2\rceil),\quad
+U=\min(\alpha h,\alpha h+t-\alpha,\lfloor(sh+\alpha+s-t)/2\rfloor).
+\]
+可取 $e=L,L+1$，事实上 $L+2\le U$。逐项移项，充分条件是
+\[
+\begin{gathered}
+h\ge4,quad(3\alpha-s)h\ge\max(s,\alpha+4),\\
+sh\ge\max(5\alpha+3-s,3\alpha+4-s),\\
+\alpha h\ge\max(4\alpha+4-s,3\alpha+2).
+\end{gathered}
+\]
+对 $\alpha=1,2,3,4,5$，所需 $h$ 下界依次为 $7,12,8,4,4$；$p\ge83$ 时实际最小值为 $26,12,8,5,4$。这同时保证来源及 $sh\le p-s$ 的库存。
+
+三种公式均满足迹零条件。第一种的 $H=n\alpha-2p^2$，第二种为 $3n\alpha-2p^2$，相邻 $\alpha$ 给 $\gcd(H)=\gcd(n,2)$。第三种相邻 $h$ 的差为 $2\alpha n$，相邻 $\alpha$ 互素；再用 $H\equiv-2p^2\pmod n$ 及奇偶性得到同一结论。所有横向系数含两个相邻整数。
+\end{proof}
+
+\begin{lemma}\label{lem:upper-small}
+若 $p\ge11$、$10\le s<p$，引理\ref{lem:upper-supply}的前两种计数已提供推论\ref{cor:resource}的全部资源。
+\end{lemma}
+\begin{proof}
+中部 $s\le(p-1)/2$ 时，四个容量比较对 $p\ge29$ 成立：第一项只需 $p\ge25$；第二项由 $s\ge10$ 保证；第三项只需 $p\ge15$；第四项由 $3\alpha\ge\lceil p/2\rceil$ 保证。唯一较小素数是 $p=23,s=10,11$，此时 $\alpha=4,5$，直接代入四式均成立。
+靠近 $4p$ 时，$d=p-s\le(p-1)/2$。充分条件 $p\ge5d/4+8$ 对 $p\ge23$ 成立。若 $p=11,13,17$，还可用 $d\le p-10$，分别得到右侧上界 $9.25,11.75,16.75$。若 $p=19$，$d\le8$ 同样成立；仅余 $d=9$，其 $\alpha=7,8$ 均有 $L=1,U=3$。故两张相邻输出仍在库存内。根和横向系数的最大公因子计算与引理\ref{lem:upper-supply}相同。
+\end{proof}
+
+\begin{lemma}\label{lem:small-supply}
+若 $11\le p<83$、$1\le s\le9$，则全部合法 $K_{p,p+s}$ 可归零。
+\end{lemma}
+\begin{proof}
+先给五返回公式。令 $a=\lceil s/2\rceil$，对 $\alpha=a,a+1$ 写 $p=3\alpha d+\rho$，$0\le\rho<3\alpha$。来源为 $(\alpha(d+1),\alpha d,\alpha d+\rho-\alpha)$，输出为
+\[
+o_e=(\alpha d-e,\alpha d+\rho-\alpha-e,(\alpha-s)d+\alpha+2e,sd).
+\]
+对于第一组 $\alpha=a$，还使用 $o_e+\Delta$，其中 $\Delta=(3\alpha-\rho,-\rho,2\rho-3\alpha-s,s)$。可同时容纳 $o_e,o_{e+1},o_e+\Delta$ 的区间是
+\begin{align*}
+L={}&\max\left(0,5\alpha-2\rho,
+\left\lceil\frac{(s-\alpha)d-\alpha}{2}\right\rceil,
+\left\lceil\frac{(s-\alpha)d+2\alpha+s-2\rho}{2}\right\rceil\right),\\
+U={}&\min\left(\alpha d-\alpha-\mathbf1_{\rho=0},
+\left\lfloor\frac{sd+\alpha+s-\rho-2}{2}\right\rfloor,
+\left\lfloor\frac{sd+4\alpha+2s-3\rho}{2}\right\rfloor\right).
+\end{align*}
+逐项比较给充分条件 $d\ge7,sd\ge9\alpha+2-s,(3\alpha-s)d\ge4\alpha+s+2$。例如最紧的三式是 $5\alpha\le\alpha d-\alpha-1$、$10\alpha\le sd+\alpha+s-2$、$(s-\alpha)d+2\alpha+s\le2(\alpha d-\alpha-1)$；其余比较的余量至少分别为 $\alpha d+2\alpha+s-\rho-3$ 和 $\alpha d+2\alpha+s-\rho-1$。第二组只需相邻输出，条件降为 $d\ge4,sd\ge3\alpha+2-s$。由此得到九个充分截点
+\[
+T_s=(42,24,42,42,63,63,84,84,105).
+\]
+当 $p\ge T_s$ 时，以上计数直接可用。守恒关系 $pA+pB+rC=0$ 使沿 $\Delta$ 的输出和增加 $nD$，故两返回之商为 $U(-n)$。相邻倍率扩展为 $U(nR)$，两横向系数 $a,a+1$ 由引理\ref{lem:transverse}给 $\Gamma(n^2,R)$，接定理\ref{thm:terminal}。
+
+余下的114组参数及233对相邻表完整列在附录\ref{app:certificates}。它们的非负库存、迹零等式、$\alpha$ 的最大公因子和 $H$ 的最大公因子由命题\ref{prop:root-certificate}核对。除 $(p,s)=(11,3)$ 外均满足推论\ref{cor:resource}。
+在此例，来源 $(4,2,5)$、输出 $(2,5,1,3)$ 与 $(3,0,2,6)$ 给
+\[
+J=\begin{pmatrix}-27&568\\-2&27\end{pmatrix},\quad
+M=\begin{pmatrix}45&-404\\-2&27\end{pmatrix},\quad MJ^{-1}=U(-36).
+\]
+库存为 $(3,7,4,8)$，两输出均可用；$J^2=-407I$。相邻输出 $(1,4,3,3)$ 的反射 $G$ 满足
+\[J^{-1}G=\begin{pmatrix}1&-972/37\\0&-35/37\end{pmatrix}.
+\]
+故 $R_0=\Z[1/(5\cdot7\cdot37)]$ 上有 $U(36R_0)$。另一个表 $(4,1,6;2,7,1,1)$ 给 $K=\left(\begin{smallmatrix}-52&905\\-3&52\end{smallmatrix}\right)$、$K^2=-11I$。横向系数 $2,3$ 合并给 $\Gamma(36^2,R_0)$，再取其子群 $\Gamma(4\cdot36^2,R_0)$ 接定理\ref{thm:terminal}。
+\end{proof}
+
+
+\section{小元数的补充证明}
+\begin{lemma}\label{lem:triple-large}
+三平均在全部 $n\ge11$ 上满足 $G$ 为三幂的充要条件。
+\end{lemma}
+\begin{proof}
+记 $d=d_3(n)$。有 $n\ge d+10$：$d\le1$ 时直接成立，$d=2$ 时 $n\ge14$，$d\ge3$ 时 $n\ge2\cdot5^{d-1}$。引理\ref{lem:safety}及\ref{lem:initialize}的保护池论证适用于三平均，从 $3X$ 至多两步建立两个三重值。
+至少四个三重值时选两个同余值平均 $(a,a,b)$，另两重值保留。恰三个时，同余的两种配比至少一个避开第三值；三者各占一个模三类且有轻值 $x$ 时选 $(a,a,x)$，其中 $a\equiv x$。若只有三个实际值，选 $(a,b,c)$：除非仅一值重数超过三，否则保留两重值。余下为 $(a^3,b^3,c^{n-6})$；若均值碰撞到 $c$，则 $a+b=2c$，零和给 $c=0,a=-b$。
+仅两个同余三重值时，有富余副本即可用 $(a,a,b)$。否则两者各三份，余池大小至少 $d+4$。若有同余轻值，两个锚点的选择不可能同时碰撞；若余池单一模三类，使用保护池。若余池占另外两类，跨类位置对至少 $n-7>d$ 个，至多 $d$ 个由某个二元危险集阻塞。取未阻塞的 $(c,e)$，$(a,c,e)$ 和 $(b,c,e)$ 安全，不可能同时碰撞到另一锚点。
+仅两个不同余三重值时，轻值 $x\equiv a$ 的选择 $(a,a,x)$ 失败只可能 $x=3b-2a$、$f(a)\le4$。若 $x$ 有两份，改用 $(a,x,x)$；未选 $a,b$ 和这一仿射关系保证安全。故两锚点余类至多各有一个额外单点 $x=3b-2a,y=3a-2b$，其余池 $Z$ 在第三余类。
+两单点都存在时 $Z\ne\varnothing$，选 $(x,y,z)$。仅 $x$ 存在时也有 $Z\ne\varnothing$，否则安全操作后得到不同余的两值状态，而零和及合法性会迫使 $n\mid f(a)$。选 $(x,b,z)$；$f(b)=3$ 时 $|Z|\ge3$、每值至多两份，可避开 $z=5a-4b$。无额外单点时，两锚点各三份则保护池完成；两者均至少四份则选 $(a,b,z)$。若 $f(a)=3,f(b)\ge4$，选 $z\ne2b-a$。不存在这种 $z$ 时，$Z$ 为一至两份 $2b-a$，零和给 $(3-|Z|)(a-b)+nb=0$，而 $\gcd(a-b,n)=1$，矛盾。
+以上安全性均由未选锚点和整数仿射关系给出。非终端步骤严格降低整数平方能量，唯一终端 $(a^3,(-a)^3,0^{n-6})$ 用三次 $(a,-a,0)$ 消去。
+\end{proof}
+
+\begin{lemma}\label{lem:eight}
+三平均八元的合法配置均可归零。
+\end{lemma}
+\begin{proof}
+若无五重值，存在安全非恒等整数三元组。奇偶分布为 $4+4$ 或 $2+6$；前者任意三元组补集都保留奇偶见证。若没有非恒等整三元组，则至多两个模三类，且每个至少三项的类实际常值；无五重值迫使 $(a^4,b^4)$，由零和得 $b=-a$，违反合法性。在 $2+6$ 情形，若多数池没有整三元组，无五重值迫使它的两模三类各至少两项；其两项和覆盖全部模三类，任一少数位置可与其中两项配成安全整三元组。
+整数能量下降至五重值 $u$ 后，写例外为 $a,b,c$，选 $c-u$ 奇。平均 $(u,a,b)$，得到合法 $B_8(u,v)=(u^4,v^3,-4u-3v)$。
+令 $x=u,y=u+v$，本原参数满足 $y$ 奇。下列实际返回给三个作用：
+\[
+R:(x,y)\mapsto(x+y,-y),\quad
+S:(x,y)\mapsto(y-x,y),\quad
+F:(x,y)\mapsto(3x+3y,2x-4y).
+\]
+为列出操作，置 $w=-4u-3v$、$a_0=(u+2v)/3$、$b_0=(2u+v)/3$、$q_0=-u-2v/3$、$h_0=-u/3-4v/9$、$k_0=u/3-2v/9$。三个词依次为
+\begin{align*}
+R:&\ (v,v,u),(v,u,u),(w,a_0,b_0),(a_0,b_0,u);\\
+S:&\ (w,v,u),(q_0,q_0,u),(q_0,u,u),
+(h_0,v,k_0),(h_0,v,k_0),(v/9,v/9,k_0);\\
+F:&\ (v,u,u),(w,b_0,b_0),(v,u,u).
+\end{align*}
+逐次代入可核对库存及最终重数 $4,3,1$。$SR,RS$ 给平移 $x\mapsto x\pm2y$。若 $|y|>1$，先用 $S$ 使 $x$ 奇，再平移至 $|x_0-2y|<|y|$；等号仅在 $y\mid x$ 时发生，与本原性矛盾。施加 $F$ 后两坐标均偶，约去 $2$ 后第二坐标奇，故本原输出满足 $|y'|\le|x_0-2y|<|y|$。最终 $|y|=1$，平移和 $S$ 送到 $(0,\pm1)$。配置 $(0^4,1^3,-3)$ 先平均 $(-3,0,0)$，再三次平均 $(-1,0,1)$。
+\end{proof}
+
+\begin{lemma}\label{lem:ten}
+三平均十元的合法配置均可归零。
+\end{lemma}
+\begin{proof}
+先证明无六重值时有安全整三元组。危险奇偶集只能有两项，记为 $P$；危险模五集有两或三项，记为 $F$。若二者均不存在，任意整三元组安全；不存在整三元组会迫使 $(a^5,b^5)$，违反合法性。仅有一种危险集时，在多数池内用模三两类的两项和；若无法配出安全三元组，多数池中至少六项为同一实际值。
+两危险集同时存在时，令 $K=(P\cup F)^c$。其内部整三元组安全。若 $|K|\ge7$，无六重值使两个模三类均至少两项，与任一外部位置配对即得安全选择。$|K|=6$ 时只剩 $r^5s$，全部外部余数必须为 $s$；从 $P\setminus F,F\setminus P$ 各取一项，连同 $K$ 中的 $s$ 即可。$|K|=5$ 时 $P,F$ 不交，只剩 $r^4s$ 或 $r^5$；前者同理。后者若 $P,F$ 有跨类余数，配一项 $K$ 得三类各一；否则外部五项同余，取一项 $P$、两项 $F$。每种选择补集均保留两种见证。
+
+能量下降至 $(u^6,a,b,c,d)$。令 $e_a=a-u$ 等，和为 $-10u$。若某个例外差是模 $10$ 单位，平均其余三个例外，一步进入合法 $B_{10}(u,v)=(u^6,v^3,-6u-3v)$。否则四个差模 $10$ 为两份 $5$ 及一对相反非零偶数，故有单位和的跨类配对，设为 $e_a+e_b$。令
+\[q=(-5u-a-b)/3,\quad r=(-5u+2a+2b)/9,\quad s=(-11u-a-b)/27.
+\]
+词 $(u,c,d),(q,a,b),(u,q,r),(u,q,r)$ 给 $u^3r s^6=B_{10}(s,u)$，且 $s-u=-(40u+e_a+e_b)/27$ 是模 $10$ 单位。
+
+在本原 $(X,Y)$ 方向 $X=u,Y=3u+2v$ 上，合法类型为：两者奇且 $X+Y\equiv0\pmod4$，取 $h=1$；或奇偶相反，取 $h=2$。另要求 $5\nmid Y$。整数势能为 $h^2(5X^2+Y^2)$。命题\ref{prop:ten-certificate}给七个实际返回及十二个完整二次覆盖：除 $X=0$ 外，总有返回严格降低该势能。$X=0$ 时已有零坐标，固定一个零，对其余九个位置采用两层三进网络。由整数下降完成。
+\end{proof}
+
+\begin{lemma}\label{lem:collision-small}
+五平均的 $n=16,17,18$ 及七平均的 $n=23,24,25,26$ 均满足判据。
+\end{lemma}
+\begin{proof}
+引理\ref{lem:initialize}适用。引理\ref{lem:background}、\ref{lem:heavy}、\ref{lem:two-heavy}只留下不同余的两个重值 $a,b$，$f(a)=p+\alpha,f(b)=p+\beta$、$\alpha\ge\beta\ge0$、$\alpha+\beta\le p-3$。五平均十六元另有三值 $(a^5,b^6,c^5)$：一次调节若碰撞，$i=1,3$ 会使三值同奇偶，$i=2$ 给 $b=0,a=-c$，因此也已处理。
+从需要保护的轻值危险集选一个包含极小横截集 $T$，$h=|T|\le d_p(n)$。每个 $v\in T$ 有私人素数 $\ell$，其危险支持与 $T$ 恰交于 $v$；此处 $a=b\pmod\ell$，其余保护位置与 $b$ 同余。故未保护部分相对 $b$ 的总和不可能为 $0\pmod\ell$。
+令 $\Delta=a-b$、$t_i=(x_i-b)/\Delta$、$z_i=t_i\pmod p$。锚点同余修复后，余数 $0,1$ 各至多一个，实际参数为 $p,1-p$；各余类重数小于 $p$。对轻值子集 $S$，$k=|S|\le p$，若 $i\equiv-\sum_{S}z\pmod p$ 满足 $i\le\min(\alpha,p-k)$，碰撞要求
+\begin{equation}\label{eq:collision}
+\sum_{S}t=p-i;
+\end{equation}
+若还满足 $p-k-i\le\beta$，两个旧重值均保留，因而该模式不可能失败。从另一锚点，$j\equiv\sum_S z-k\pmod p$、$j\le\min(\beta,p-k)$ 时，碰撞要求 $\sum_S t=k+j-p$。
+命题\ref{prop:collision-certificate}穷尽这些线性系统。五平均令 $c=n-10-h\in\{5,6,7,8\}$。$c=7,8$ 无解；$c=6$ 的两个解均为整数且 $D=5+\alpha+\sum t_i=15$；$c=5$ 时所有 $D$ 的分母为奇数。对 $n=17,18$，有保护时私人素数整除 $\Delta$，而 $D=15$ 给总和矛盾；无保护时没有相容模式。对 $n=16,h=0$，$16b+15\Delta=0$ 迫使 $\Delta$ 偶，全部整数参数使配置同奇偶；$h=1$ 时 $\Delta$ 偶而 $D$ 分母奇，同样违反私人素数 $2$ 的总和条件。
+七平均可在每个余数类内对\eqref{eq:collision}取对称平均，压缩为变量 $y_r$、重数 $f_r$；总和保持。某类在一个方程中部分选取时，交换位置进一步强迫该类实际常值。令 $n-h=21+e$，则 $1\le e\le5$。证书给十一种相容模式，每个实际参数均为整数，且 $0<D=7+\alpha+\sum f_ry_r<21+e$。$h>0$ 时私人素数给总和矛盾；$h=0$ 时所有值属于 $b+\Delta\Z$，合法性给 $\gcd(\Delta,n)=1$，零和迫使 $n\mid D$，又矛盾。因此总有安全续步，整数能量下降完成。
+\end{proof}
+
+\begin{lemma}\label{lem:seven22}
+七平均二十二元的合法配置均可归零。
+\end{lemma}
+\begin{proof}
+入口使用命题\ref{prop:entry}证明中转换前的 $(a^{14},(-2a+z)^7,-7z)$。三条三步返回为
+\[
+A=\begin{pmatrix}4&1\\-1&0\end{pmatrix},\quad
+F=\begin{pmatrix}1&2\\0&7\end{pmatrix},\quad
+J=\begin{pmatrix}1&2\\2&-1\end{pmatrix}.
+\]
+$A$ 保留一份旧 $A$、平均两组 $(A^6,B)$ 再平均 $(A,B^5,C)$；$F$ 保留 $C$、平均两组 $(A^5,B^2)$ 再平均 $(A^4,B^3)$；$J$ 保留一份旧 $B$、平均两组 $(A^5,B^2)$ 再平均 $(A^4,B^2,C)$。实际尺度均为 $1/7$。有 $(FA^2)^2=-7I,J^2=5I$，故各逆可实现。
+令 $H=AFJA^{-1}=\left(\begin{smallmatrix}-7&-62\\0&5\end{smallmatrix}\right)$，则 $[F,H]=U(396/35)$。倍率生成 $R=\Z[1/35]$；用 $C=\left(\begin{smallmatrix}1&4\\0&-1\end{smallmatrix}\right)$ 换基，$CU(t)C=U(-t)$、$CAU(t)A^{-1}C=L(t)$，得到 $\Gamma(396^2,R)$。
+记 $M=1936$、$X=F^2/7$。命题\ref{prop:seven-certificate}给 $A^{440}=X^{440}=I\pmod M$，且两者模 $9$ 生成全部 $\SL_2(\Z/9\Z)$。其中三个方向 $I+3E_{12},I+3E_{21},I+3\diag(1,-1)$ 的立方逐层生成模 $81$ 的高层核。因此对任意 $g\in\Gamma(M,R)$，可选可实现 $w\equiv I\pmod M$、$w\equiv g\pmod{81}$；由 $396^2=81M$ 得 $w^{-1}g$ 已在深核中，故 $\Gamma(M,R)$ 可实现。
+同一证书给 $R^\times$ 模 $M$ 的像 $U$ 有 $440$ 个元素，全部单位为 $U\sqcup3U$。合法列 $(z,y)=(z,a+7z)$ 的有限标记是 $(z/y,\epsilon)$，$\epsilon$ 记录 $y$ 所属单位陪集。证书证明全部 $3872$ 个标记都能到 $(0,0)$。引理\ref{lem:fiber}再精确送到 $(0,s)$，其中 $s\in R^\times$。配置 $(s^{14},(-2s)^7,0)$ 中，四份 $s$、两份 $-2s$ 和一个零组成零和七元组，接引理\ref{lem:zero-tail}。
+\end{proof}
+
+
+\section{有限证书及复核规范}\label{app:certificates}
+本附录的输入均为有限的计数、剩余类或整系数多项式。三个证书命题在正文中分别通过引理\ref{lem:small-supply}、\ref{lem:collision-small}、\ref{lem:seven22}和\ref{lem:ten}使用。补充程序采用整数及有理数运算。
+
+\begin{proposition}[根计数证书]\label{prop:root-certificate}
+对 $11\le p<83$ 的十八个素数及 $1\le s\le9$，共有162组参数。其中48组满足引理\ref{lem:small-supply}的五返回截点；余下114组在表\ref{tab:root-data}中给出233对相邻输出。各表满足\eqref{eq:stock}及\eqref{eq:count-matrix}的迹零条件。除 $(11,3)$ 外，横向系数的最大公因子为 $1$，根系数的最大公因子为推论\ref{cor:resource}允许的 $\delta$。
+\end{proposition}
+\begin{proof}
+每行七元组为 $(i,j,k,x,y,u,v)$。对两表分别验证
+\[
+i+j+k=x+y+u+v=p,quad
+0\le(x,y,u,v)\le(p-2i,p-2j,p+s-2k,p-s),
+\]
+以及 $p(x-y)+(i-j)v=(p+s)j-pk$。第二输出与第一输出相差 $(-1,-1,2,0)$。随后按\eqref{eq:root-count}计算 $H$ 并取最大公因子；这些均为表列整数的直接运算。对每个参数检查它恰属于“达到截点”或“表内”之一，证明覆盖无遗漏。例外 $(11,3)$ 已由引理\ref{lem:small-supply}中的显式矩阵处理。
+\end{proof}
+
+\begingroup\small
+\begin{longtable}{rrll}
+\caption{114组参数的相邻反射计数}\label{tab:root-data}\\
+\toprule $p$&$s$&第一输出&相邻输出\\\midrule\endfirsthead
+\toprule $p$&$s$&第一输出&相邻输出\\\midrule\endhead
+11&1&$(4,3,4,3,4,1,3)$&$(4,3,4,2,3,3,3)$\\
+11&2&$(4,3,4,2,3,0,6)$&$(4,3,4,1,2,2,6)$\\
+11&2&$(4,2,5,3,6,0,2)$&$(4,2,5,2,5,2,2)$\\
+11&3&$(4,2,5,2,5,1,3)$&$(4,2,5,1,4,3,3)$\\
+11&4&$(4,3,4,3,3,4,1)$&$(4,3,4,2,2,6,1)$\\
+11&4&$(4,2,5,2,5,0,4)$&$(4,2,5,1,4,2,4)$\\
+11&5&$(4,3,4,3,3,1,4)$&$(4,3,4,2,2,3,4)$\\
+11&5&$(4,2,5,1,4,1,5)$&$(4,2,5,0,3,3,5)$\\
+11&6&$(3,2,6,3,6,1,1)$&$(3,2,6,2,5,3,1)$\\
+11&6&$(3,1,7,1,7,0,3)$&$(3,1,7,0,6,2,3)$\\
+11&7&$(3,2,6,2,5,1,3)$&$(3,2,6,1,4,3,3)$\\
+11&7&$(5,2,4,1,2,7,1)$&$(5,2,4,0,1,9,1)$\\
+11&8&$(4,3,4,3,2,4,2)$&$(4,3,4,2,1,6,2)$\\
+11&8&$(3,0,8,1,9,1,0)$&$(3,0,8,0,8,3,0)$\\
+11&9&$(2,0,9,1,10,0,0)$&$(2,0,9,0,9,2,0)$\\
+11&9&$(3,0,8,1,9,1,0)$&$(3,0,8,0,8,3,0)$\\
+13&1&$(5,4,4,3,3,3,4)$&$(5,4,4,2,2,5,4)$\\
+13&1&$(5,3,5,1,4,0,8)$&$(5,3,5,0,3,2,8)$\\
+13&2&$(4,3,6,2,5,0,6)$&$(4,3,6,1,4,2,6)$\\
+13&2&$(5,4,4,2,2,1,8)$&$(5,4,4,1,1,3,8)$\\
+13&3&$(5,2,6,3,7,1,2)$&$(5,2,6,2,6,3,2)$\\
+13&3&$(5,1,7,1,8,0,4)$&$(5,1,7,0,7,2,4)$\\
+13&4&$(5,4,4,3,2,5,3)$&$(5,4,4,2,1,7,3)$\\
+13&4&$(4,2,7,2,7,0,4)$&$(4,2,7,1,6,2,4)$\\
+13&5&$(4,3,6,4,6,1,2)$&$(4,3,6,3,5,3,2)$\\
+13&5&$(5,4,4,3,2,1,7)$&$(5,4,4,2,1,3,7)$\\
+13&6&$(4,3,6,3,5,0,5)$&$(4,3,6,2,4,2,5)$\\
+13&6&$(4,2,7,1,6,0,6)$&$(4,2,7,0,5,2,6)$\\
+13&7&$(3,2,8,3,8,1,1)$&$(3,2,8,2,7,3,1)$\\
+13&7&$(5,4,4,3,1,7,2)$&$(5,4,4,2,0,9,2)$\\
+13&8&$(3,2,8,2,7,1,3)$&$(3,2,8,1,6,3,3)$\\
+13&8&$(5,2,6,3,6,3,1)$&$(5,2,6,2,5,5,1)$\\
+13&9&$(4,3,6,5,6,1,1)$&$(4,3,6,4,5,3,1)$\\
+17&1&$(6,5,6,5,6,1,5)$&$(6,5,6,4,5,3,5)$\\
+17&1&$(7,6,4,3,1,7,6)$&$(7,6,4,2,0,9,6)$\\
+17&2&$(5,4,8,2,6,1,8)$&$(5,4,8,1,5,3,8)$\\
+17&2&$(6,5,6,3,4,0,10)$&$(6,5,6,2,3,2,10)$\\
+17&3&$(6,4,7,4,7,0,6)$&$(6,4,7,3,6,2,6)$\\
+17&3&$(6,3,8,4,9,1,3)$&$(6,3,8,3,8,3,3)$\\
+17&4&$(6,5,6,5,5,4,3)$&$(6,5,6,4,4,6,3)$\\
+17&4&$(5,3,9,2,8,1,6)$&$(5,3,9,1,7,3,6)$\\
+17&4&$(6,4,7,3,6,0,8)$&$(6,4,7,2,5,2,8)$\\
+17&5&$(5,4,8,5,8,1,3)$&$(5,4,8,4,7,3,3)$\\
+17&5&$(6,5,6,4,4,1,8)$&$(6,5,6,3,3,3,8)$\\
+17&6&$(4,3,10,5,11,0,1)$&$(4,3,10,4,10,2,1)$\\
+17&6&$(5,4,8,3,6,1,7)$&$(5,4,8,2,5,3,7)$\\
+17&7&$(4,3,10,3,9,1,4)$&$(4,3,10,2,8,3,4)$\\
+17&7&$(6,5,6,5,4,7,1)$&$(6,5,6,4,3,9,1)$\\
+17&8&$(4,3,10,2,8,0,7)$&$(4,3,10,1,7,2,7)$\\
+17&8&$(6,5,6,5,4,2,6)$&$(6,5,6,4,3,4,6)$\\
+17&9&$(5,4,8,6,8,1,2)$&$(5,4,8,5,7,3,2)$\\
+17&9&$(5,3,9,3,8,1,5)$&$(5,3,9,2,7,3,5)$\\
+19&1&$(6,5,8,5,8,1,5)$&$(6,5,8,4,7,3,5)$\\
+19&1&$(7,6,6,5,5,3,6)$&$(7,6,6,4,4,5,6)$\\
+19&2&$(6,5,8,3,6,0,10)$&$(6,5,8,2,5,2,10)$\\
+19&2&$(7,6,6,3,3,1,12)$&$(7,6,6,2,2,3,12)$\\
+19&3&$(6,4,9,4,9,0,6)$&$(6,4,9,3,8,2,6)$\\
+19&3&$(8,6,5,3,2,5,9)$&$(8,6,5,2,1,7,9)$\\
+19&3&$(7,4,8,5,9,1,4)$&$(7,4,8,4,8,3,4)$\\
+19&4&$(6,5,8,7,9,2,1)$&$(6,5,8,6,8,4,1)$\\
+19&4&$(7,6,6,5,4,5,5)$&$(7,6,6,4,3,7,5)$\\
+19&5&$(5,4,10,6,11,1,1)$&$(5,4,10,5,10,3,1)$\\
+19&5&$(6,5,8,5,7,1,6)$&$(6,5,8,4,6,3,6)$\\
+19&6&$(5,4,10,4,9,1,5)$&$(5,4,10,3,8,3,5)$\\
+19&6&$(6,5,8,3,5,0,11)$&$(6,5,8,2,4,2,11)$\\
+19&7&$(5,4,10,2,7,1,9)$&$(5,4,10,1,6,3,9)$\\
+19&7&$(7,6,6,5,3,7,4)$&$(7,6,6,4,2,9,4)$\\
+19&8&$(4,3,12,3,11,0,5)$&$(4,3,12,2,10,2,5)$\\
+19&8&$(6,5,8,7,8,2,2)$&$(6,5,8,6,7,4,2)$\\
+19&9&$(4,3,12,1,9,1,8)$&$(4,3,12,0,8,3,8)$\\
+19&9&$(6,5,8,5,6,1,7)$&$(6,5,8,4,5,3,7)$\\
+23&1&$(7,6,10,6,10,1,6)$&$(7,6,10,5,9,3,6)$\\
+23&1&$(8,7,8,7,8,1,7)$&$(8,7,8,6,7,3,7)$\\
+23&2&$(7,6,10,3,7,1,12)$&$(7,6,10,2,6,3,12)$\\
+23&2&$(8,7,8,4,5,0,14)$&$(8,7,8,3,4,2,14)$\\
+23&3&$(8,6,9,5,8,1,9)$&$(8,6,9,4,7,3,9)$\\
+23&3&$(8,5,10,6,11,1,5)$&$(8,5,10,5,10,3,5)$\\
+23&4&$(7,6,10,8,11,3,1)$&$(7,6,10,7,10,5,1)$\\
+23&4&$(8,7,8,7,7,4,5)$&$(8,7,8,6,6,6,5)$\\
+23&5&$(6,5,12,7,13,1,2)$&$(6,5,12,6,12,3,2)$\\
+23&5&$(7,6,10,6,9,1,7)$&$(7,6,10,5,8,3,7)$\\
+23&6&$(6,5,12,5,11,0,7)$&$(6,5,12,4,10,2,7)$\\
+23&6&$(7,6,10,3,6,1,13)$&$(7,6,10,2,5,3,13)$\\
+23&7&$(6,5,12,2,8,1,12)$&$(6,5,12,1,7,3,12)$\\
+23&7&$(8,7,8,7,6,7,3)$&$(8,7,8,6,5,9,3)$\\
+23&8&$(5,4,14,2,11,1,9)$&$(5,4,14,1,10,3,9)$\\
+23&8&$(7,6,10,9,11,1,2)$&$(7,6,10,8,10,3,2)$\\
+23&9&$(7,6,10,6,8,1,8)$&$(7,6,10,5,7,3,8)$\\
+23&9&$(5,3,15,5,16,0,2)$&$(5,3,15,4,15,2,2)$\\
+29&1&$(9,8,12,8,12,1,8)$&$(9,8,12,7,11,3,8)$\\
+29&1&$(10,9,10,9,10,1,9)$&$(10,9,10,8,9,3,9)$\\
+29&3&$(10,8,11,7,10,0,12)$&$(10,8,11,6,9,2,12)$\\
+29&3&$(12,10,7,5,2,7,15)$&$(12,10,7,4,1,9,15)$\\
+29&3&$(9,6,14,7,15,1,6)$&$(9,6,14,6,14,3,6)$\\
+29&4&$(9,8,12,10,13,3,3)$&$(9,8,12,9,12,5,3)$\\
+29&4&$(10,9,10,9,9,4,7)$&$(10,9,10,8,8,6,7)$\\
+29&5&$(8,7,14,8,14,1,6)$&$(8,7,14,7,13,3,6)$\\
+29&5&$(9,8,12,7,10,1,11)$&$(9,8,12,6,9,3,11)$\\
+29&6&$(7,6,16,6,15,1,7)$&$(7,6,16,5,14,3,7)$\\
+29&6&$(8,7,14,5,11,0,13)$&$(8,7,14,4,10,2,13)$\\
+29&7&$(7,6,16,3,12,1,13)$&$(7,6,16,2,11,3,13)$\\
+29&7&$(8,7,14,1,7,1,20)$&$(8,7,14,0,6,3,20)$\\
+29&8&$(9,8,12,10,12,1,6)$&$(9,8,12,9,11,3,6)$\\
+29&8&$(10,9,10,8,7,0,14)$&$(10,9,10,7,6,2,14)$\\
+29&9&$(8,7,14,9,14,1,5)$&$(8,7,14,8,13,3,5)$\\
+29&9&$(9,8,12,6,8,1,14)$&$(9,8,12,5,7,3,14)$\\
+31&1&$(9,8,14,8,14,1,8)$&$(9,8,14,7,13,3,8)$\\
+31&1&$(10,9,12,9,12,1,9)$&$(10,9,12,8,11,3,9)$\\
+31&3&$(10,8,13,7,12,0,12)$&$(10,8,13,6,11,2,12)$\\
+31&3&$(12,10,9,7,6,3,15)$&$(12,10,9,6,5,5,15)$\\
+31&3&$(10,7,14,8,15,1,7)$&$(10,7,14,7,14,3,7)$\\
+31&4&$(9,8,14,10,15,5,1)$&$(9,8,14,9,14,7,1)$\\
+31&4&$(10,9,12,11,13,2,5)$&$(10,9,12,10,12,4,5)$\\
+31&5&$(8,7,16,9,17,1,4)$&$(8,7,16,8,16,3,4)$\\
+31&5&$(9,8,14,8,13,1,9)$&$(9,8,14,7,12,3,9)$\\
+31&6&$(8,7,16,6,14,0,11)$&$(8,7,16,5,13,2,11)$\\
+31&6&$(9,8,14,4,9,1,17)$&$(9,8,14,3,8,3,17)$\\
+31&7&$(8,7,16,2,10,1,18)$&$(8,7,16,1,9,3,18)$\\
+31&7&$(10,9,12,11,12,7,1)$&$(10,9,12,10,11,9,1)$\\
+31&8&$(7,6,18,1,12,1,17)$&$(7,6,18,0,11,3,17)$\\
+31&8&$(9,8,14,11,15,3,2)$&$(9,8,14,10,14,5,2)$\\
+31&9&$(8,7,16,10,17,3,1)$&$(8,7,16,9,16,5,1)$\\
+31&9&$(9,8,14,8,12,1,10)$&$(9,8,14,7,11,3,10)$\\
+37&1&$(11,10,16,10,16,1,10)$&$(11,10,16,9,15,3,10)$\\
+37&1&$(12,11,14,11,14,1,11)$&$(12,11,14,10,13,3,11)$\\
+37&3&$(10,8,19,7,18,0,12)$&$(10,8,19,6,17,2,12)$\\
+37&3&$(12,10,15,8,13,1,15)$&$(12,10,15,7,12,3,15)$\\
+37&3&$(11,8,18,9,19,1,8)$&$(11,8,18,8,18,3,8)$\\
+37&4&$(11,10,16,12,17,5,3)$&$(11,10,16,11,16,7,3)$\\
+37&4&$(12,11,14,13,15,2,7)$&$(12,11,14,12,14,4,7)$\\
+37&5&$(10,9,18,10,18,1,8)$&$(10,9,18,9,17,3,8)$\\
+37&5&$(11,10,16,9,14,1,13)$&$(11,10,16,8,13,3,13)$\\
+37&6&$(9,8,20,7,18,1,11)$&$(9,8,20,6,17,3,11)$\\
+37&6&$(10,9,18,6,14,0,17)$&$(10,9,18,5,13,2,17)$\\
+37&7&$(9,8,20,3,14,1,19)$&$(9,8,20,2,13,3,19)$\\
+37&7&$(10,9,18,1,9,1,26)$&$(10,9,18,0,8,3,26)$\\
+37&8&$(11,10,16,13,17,1,6)$&$(11,10,16,12,16,3,6)$\\
+37&8&$(12,11,14,11,12,0,14)$&$(12,11,14,10,11,2,14)$\\
+37&9&$(10,9,18,11,18,1,7)$&$(10,9,18,10,17,3,7)$\\
+37&9&$(11,10,16,8,12,1,16)$&$(11,10,16,7,11,3,16)$\\
+41&1&$(12,11,18,11,18,1,11)$&$(12,11,18,10,17,3,11)$\\
+41&1&$(13,12,16,12,16,1,12)$&$(13,12,16,11,15,3,12)$\\
+41&3&$(12,10,19,8,17,1,15)$&$(12,10,19,7,16,3,15)$\\
+41&3&$(14,12,15,10,13,0,18)$&$(14,12,15,9,12,2,18)$\\
+41&3&$(12,9,20,10,21,1,9)$&$(12,9,20,9,20,3,9)$\\
+41&4&$(12,11,18,13,19,6,3)$&$(12,11,18,12,18,8,3)$\\
+41&4&$(13,12,16,14,17,3,7)$&$(13,12,16,13,16,5,7)$\\
+41&5&$(11,10,20,11,20,1,9)$&$(11,10,20,10,19,3,9)$\\
+41&5&$(12,11,18,10,16,1,14)$&$(12,11,18,9,15,3,14)$\\
+41&6&$(10,9,22,8,20,0,13)$&$(10,9,22,7,19,2,13)$\\
+41&6&$(11,10,20,6,15,1,19)$&$(11,10,20,5,14,3,19)$\\
+41&7&$(10,9,22,3,15,1,22)$&$(10,9,22,2,14,3,22)$\\
+41&7&$(11,10,20,1,10,1,29)$&$(11,10,20,0,9,3,29)$\\
+41&8&$(12,11,18,14,19,2,6)$&$(12,11,18,13,18,4,6)$\\
+41&8&$(13,12,16,12,14,1,14)$&$(13,12,16,11,13,3,14)$\\
+41&9&$(11,10,20,12,20,1,8)$&$(11,10,20,11,19,3,8)$\\
+41&9&$(12,11,18,9,14,1,17)$&$(12,11,18,8,13,3,17)$\\
+43&5&$(11,10,22,12,23,1,7)$&$(11,10,22,11,22,3,7)$\\
+43&5&$(12,11,20,11,19,1,12)$&$(12,11,20,10,18,3,12)$\\
+43&6&$(11,10,22,7,18,1,17)$&$(11,10,22,6,17,3,17)$\\
+43&6&$(12,11,20,6,14,0,23)$&$(12,11,20,5,13,2,23)$\\
+43&7&$(11,10,22,2,13,1,27)$&$(11,10,22,1,12,3,27)$\\
+43&7&$(14,13,16,15,16,7,5)$&$(14,13,16,14,15,9,5)$\\
+43&8&$(12,11,20,14,21,6,2)$&$(12,11,20,13,20,8,2)$\\
+43&8&$(13,12,18,14,18,1,10)$&$(13,12,18,13,17,3,10)$\\
+43&9&$(11,10,22,13,23,3,4)$&$(11,10,22,12,22,5,4)$\\
+43&9&$(12,11,20,11,18,1,13)$&$(12,11,20,10,17,3,13)$\\
+47&5&$(12,11,24,13,25,1,8)$&$(12,11,24,12,24,3,8)$\\
+47&5&$(13,12,22,12,21,1,13)$&$(13,12,22,11,20,3,13)$\\
+47&6&$(12,11,24,8,20,0,19)$&$(12,11,24,7,19,2,19)$\\
+47&6&$(13,12,22,6,15,1,25)$&$(13,12,22,5,14,3,25)$\\
+47&7&$(12,11,24,2,14,1,30)$&$(12,11,24,1,13,3,30)$\\
+47&7&$(15,14,18,17,19,7,4)$&$(15,14,18,16,18,9,4)$\\
+47&7&$(16,15,16,15,14,7,11)$&$(16,15,16,14,13,9,11)$\\
+47&8&$(13,12,22,15,23,7,2)$&$(13,12,22,14,22,9,2)$\\
+47&8&$(14,13,20,16,21,0,10)$&$(14,13,20,15,20,2,10)$\\
+47&9&$(12,11,24,14,25,3,5)$&$(12,11,24,13,24,5,5)$\\
+47&9&$(13,12,22,12,20,1,14)$&$(13,12,22,11,19,3,14)$\\
+53&5&$(14,13,26,14,26,1,12)$&$(14,13,26,13,25,3,12)$\\
+53&5&$(15,14,24,13,22,1,17)$&$(15,14,24,12,21,3,17)$\\
+53&6&$(13,12,28,9,24,1,19)$&$(13,12,28,8,23,3,19)$\\
+53&6&$(14,13,26,8,20,0,25)$&$(14,13,26,7,19,2,25)$\\
+53&7&$(13,12,28,3,18,1,31)$&$(13,12,28,2,17,3,31)$\\
+53&7&$(14,13,26,1,13,1,38)$&$(14,13,26,0,12,3,38)$\\
+53&8&$(15,14,24,17,25,5,6)$&$(15,14,24,16,24,7,6)$\\
+53&8&$(16,15,22,17,22,0,14)$&$(16,15,22,16,21,2,14)$\\
+53&9&$(14,13,26,15,26,1,11)$&$(14,13,26,14,25,3,11)$\\
+53&9&$(15,14,24,12,20,1,20)$&$(15,14,24,11,19,3,20)$\\
+59&5&$(15,14,30,16,31,1,11)$&$(15,14,30,15,30,3,11)$\\
+59&5&$(16,15,28,15,27,1,16)$&$(16,15,28,14,26,3,16)$\\
+59&6&$(15,14,30,9,24,1,25)$&$(15,14,30,8,23,3,25)$\\
+59&6&$(16,15,28,8,20,0,31)$&$(16,15,28,7,19,2,31)$\\
+59&7&$(15,14,30,2,17,1,39)$&$(15,14,30,1,16,3,39)$\\
+59&7&$(18,17,24,20,25,13,1)$&$(18,17,24,19,24,15,1)$\\
+59&7&$(19,18,22,21,23,7,8)$&$(19,18,22,20,22,9,8)$\\
+59&8&$(17,16,26,19,27,3,10)$&$(17,16,26,18,26,5,10)$\\
+59&8&$(18,17,24,18,23,0,18)$&$(18,17,24,17,22,2,18)$\\
+59&9&$(15,14,30,17,31,3,8)$&$(15,14,30,16,30,5,8)$\\
+59&9&$(16,15,28,15,26,1,17)$&$(16,15,28,14,25,3,17)$\\
+61&5&$(16,15,30,16,30,1,14)$&$(16,15,30,15,29,3,14)$\\
+61&5&$(17,16,28,15,26,1,19)$&$(17,16,28,14,25,3,19)$\\
+61&6&$(15,14,32,10,27,1,23)$&$(15,14,32,9,26,3,23)$\\
+61&6&$(16,15,30,9,23,0,29)$&$(16,15,30,8,22,2,29)$\\
+61&7&$(15,14,32,3,20,1,37)$&$(15,14,32,2,19,3,37)$\\
+61&7&$(16,15,30,1,15,1,44)$&$(16,15,30,0,14,3,44)$\\
+61&8&$(17,16,28,19,29,7,6)$&$(17,16,28,18,28,9,6)$\\
+61&8&$(18,17,26,20,27,0,14)$&$(18,17,26,19,26,2,14)$\\
+61&9&$(16,15,30,17,30,1,13)$&$(16,15,30,16,29,3,13)$\\
+61&9&$(17,16,28,14,24,1,22)$&$(17,16,28,13,23,3,22)$\\
+67&7&$(17,16,34,2,19,1,45)$&$(17,16,34,1,18,3,45)$\\
+67&7&$(21,20,26,23,27,11,6)$&$(21,20,26,22,26,13,6)$\\
+67&8&$(19,18,30,21,31,5,10)$&$(19,18,30,20,30,7,10)$\\
+67&8&$(20,19,28,21,28,0,18)$&$(20,19,28,20,27,2,18)$\\
+67&9&$(17,16,34,19,35,3,10)$&$(17,16,34,18,34,5,10)$\\
+67&9&$(18,17,32,17,30,1,19)$&$(18,17,32,16,29,3,19)$\\
+71&7&$(18,17,36,2,20,1,48)$&$(18,17,36,1,19,3,48)$\\
+71&7&$(22,21,28,24,29,13,5)$&$(22,21,28,23,28,15,5)$\\
+71&8&$(20,19,32,22,33,6,10)$&$(20,19,32,21,32,8,10)$\\
+71&8&$(21,20,30,22,30,1,18)$&$(21,20,30,21,29,3,18)$\\
+71&9&$(18,17,36,20,37,3,11)$&$(18,17,36,19,36,5,11)$\\
+71&9&$(19,18,34,18,32,1,20)$&$(19,18,34,17,31,3,20)$\\
+73&7&$(18,17,38,3,23,1,46)$&$(18,17,38,2,22,3,46)$\\
+73&7&$(19,18,36,1,18,1,53)$&$(19,18,36,0,17,3,53)$\\
+73&8&$(20,19,34,22,35,10,6)$&$(20,19,34,21,34,12,6)$\\
+73&8&$(21,20,32,23,33,3,14)$&$(21,20,32,22,32,5,14)$\\
+73&9&$(19,18,36,20,36,1,16)$&$(19,18,36,19,35,3,16)$\\
+73&9&$(20,19,34,17,30,1,25)$&$(20,19,34,16,29,3,25)$\\
+79&7&$(20,19,40,2,22,1,54)$&$(20,19,40,1,21,3,54)$\\
+79&7&$(24,23,32,26,33,17,3)$&$(24,23,32,25,32,19,3)$\\
+79&8&$(22,21,36,24,37,8,10)$&$(22,21,36,23,36,10,10)$\\
+79&8&$(23,22,34,25,35,1,18)$&$(23,22,34,24,34,3,18)$\\
+79&9&$(20,19,40,22,41,3,13)$&$(20,19,40,21,40,5,13)$\\
+79&9&$(21,20,38,20,36,1,22)$&$(21,20,38,19,35,3,22)$\\
+\bottomrule\end{longtable}
+\endgroup
+
+\begin{proposition}[碰撞分类证书]\label{prop:collision-certificate}
+在引理\ref{lem:collision-small}的方程下，五平均的903个无序模式恰有表\ref{tab:five-data}所列22个相容解；七平均的57026个压缩模式恰有表\ref{tab:seven-data}所列11个相容解。每个相容系统满秩。
+\end{proposition}
+\begin{proof}
+五平均遍历 $(\alpha,\beta)=(0,0),(1,0),(1,1),(2,0)$、$c=5,6,7,8$，以及长度 $c-\alpha-\beta$ 的非降余数列。删除含五个相同余数、或余数 $0,1$ 各出现超过一次的列。对每个非空至多五项子集，写入\eqref{eq:collision}及另一锚点方程；同时保留两个旧重值时写入矛盾方程 $0=1$。按最左非零元逐列消元，每次整数行消元后约去最大公因子，最后以有理数回代。所得全部相容解如下表。
+七平均遍历 $1\le e\le5$、$0\le\beta\le\alpha$、$\alpha+\beta\le4$，长度为 $7+e-\alpha-\beta$。每类重数小于七，余数 $0,1$ 各至多一次。按各类选择数 $0\le k_r\le f_r$、$1\le\sum k_r\le7$ 建立压缩方程，用同一消元。每个重复类都出现在至少一条部分选取方程中，故其实际值等于表列解。程序逐行回代并比较整个解集，得到所述计数及完整表。
+\end{proof}
+
+\begingroup\small
+\begin{longtable}{rrrlll}
+\caption{五平均的全部相容系统}\label{tab:five-data}\\
+\toprule $c$&$\alpha$&$\beta$&余数列&唯一解&$D$\\\midrule\endfirsthead
+\toprule $c$&$\alpha$&$\beta$&余数列&唯一解&$D$\\\midrule\endhead
+5&0&0&$(0,2,2,2,2)$&$(5,-8,-8,-8,-8)$&$-22$\\
+5&0&0&$(0,3,3,3,3)$&$(5,-2,-2,-2,-2)$&$2$\\
+5&0&0&$(0,4,4,4,4)$&$(5,\frac{-7}{2},\frac{-7}{2},\frac{-7}{2},\frac{-7}{2})$&$-4$\\
+5&0&0&$(1,2,2,2,2)$&$(-4,\frac{9}{2},\frac{9}{2},\frac{9}{2},\frac{9}{2})$&$19$\\
+5&0&0&$(1,3,3,3,3)$&$(-4,3,3,3,3)$&$13$\\
+5&0&0&$(1,4,4,4,4)$&$(-4,9,9,9,9)$&$37$\\
+5&0&0&$(2,2,2,2,3)$&$(-3,-3,-3,-3,8)$&$1$\\
+5&0&0&$(2,2,2,2,4)$&$(7,7,7,7,-16)$&$17$\\
+5&0&0&$(2,3,3,3,3)$&$(12,-7,-7,-7,-7)$&$-11$\\
+5&0&0&$(2,4,4,4,4)$&$(17,-6,-6,-6,-6)$&$-2$\\
+5&0&0&$(3,3,3,3,4)$&$(8,8,8,8,-11)$&$26$\\
+5&0&0&$(3,4,4,4,4)$&$(-7,4,4,4,4)$&$14$\\
+5&1&0&$(2,2,2,2)$&$(2,2,2,2)$&$14$\\
+5&1&0&$(3,3,3,3)$&$(\frac{4}{3},\frac{4}{3},\frac{4}{3},\frac{4}{3})$&$\frac{34}{3}$\\
+5&1&0&$(3,4,4,4)$&$(-7,4,4,4)$&$11$\\
+5&1&0&$(4,4,4,4)$&$(4,4,4,4)$&$22$\\
+6&1&0&$(3,4,4,4,4)$&$(-7,4,4,4,4)$&$15$\\
+5&1&1&$(0,3,3)$&$(5,-7,-7)$&$-3$\\
+5&1&1&$(1,3,3)$&$(-4,8,8)$&$18$\\
+5&2&0&$(2,2,2)$&$(2,2,2)$&$13$\\
+5&2&0&$(2,2,3)$&$(2,2,3)$&$14$\\
+6&2&0&$(2,2,2,2)$&$(2,2,2,2)$&$15$\\
+\bottomrule\end{longtable}\endgroup
+\begingroup\small
+\begin{longtable}{rrrllll}
+\caption{七平均的全部相容系统}\label{tab:seven-data}\\
+\toprule $e$&$\alpha$&$\beta$&余数&重数&唯一解&$D$\\\midrule\endfirsthead
+\toprule $e$&$\alpha$&$\beta$&余数&重数&唯一解&$D$\\\midrule\endhead
+1&2&0&$(2)$&$(6)$&$(2)$&$21$\\
+1&3&0&$(2)$&$(5)$&$(2)$&$20$\\
+1&3&0&$(2,3)$&$(4,1)$&$(2,3)$&$21$\\
+1&4&0&$(2)$&$(4)$&$(2)$&$19$\\
+1&4&0&$(2,3)$&$(3,1)$&$(2,3)$&$20$\\
+1&4&0&$(2,4)$&$(3,1)$&$(2,4)$&$21$\\
+1&4&0&$(2,3)$&$(2,2)$&$(2,3)$&$21$\\
+2&3&0&$(2)$&$(6)$&$(2)$&$22$\\
+2&4&0&$(2)$&$(5)$&$(2)$&$21$\\
+2&4&0&$(2,3)$&$(4,1)$&$(2,3)$&$22$\\
+3&4&0&$(2)$&$(6)$&$(2)$&$23$\\
+\bottomrule\end{longtable}\endgroup
+
+\begin{proposition}[二十二元有限轨道证书]\label{prop:seven-certificate}
+引理\ref{lem:seven22}中的 $A^{440},(F^2/7)^{440}$ 模 $1936$ 均为恒等，模 $9$ 生成 $648$ 个行列式一矩阵。环 $\Z[1/35]$ 的单位像模 $1936$ 为 $440$ 元子群 $U$，单位群为 $U\sqcup3U$。三个返回及其逆在 $1936\times2$ 个方向--尺度标记上作用传递，最大父边深度为八。
+\end{proposition}
+\begin{proof}
+快速整数模幂检查前一等式。从恒等矩阵出发，逐个乘两个模九生成元，保留尚未出现的矩阵，闭包大小为648；逐项检查行列式为一。因 $|\SL_2(\Z/9\Z)|=3^3(3^2-1)3=648$，这就是全群。
+同理从 $1$ 乘 $-1,5,7$ 得 $U$，并检查 $U,3U$ 不交且并为全部880个单位。令 $\chi$ 为其二元商标记。在 $(z,y)$ 坐标中使用
+\[
+A=\begin{pmatrix}7&-1\\22&-3\end{pmatrix},\quad
+F=\begin{pmatrix}7&0\\44&1\end{pmatrix},\quad
+J=\begin{pmatrix}-15&2\\-110&15\end{pmatrix}.
+\]
+矩阵 $(a,b;c,d)$ 对标记的作用是
+\[
+(x,\epsilon)\longmapsto((ax+b)(cx+d)^{-1},\epsilon+\chi(cx+d)).
+\]
+从 $(0,0)$ 对 $A,A^{-1},F,F^{-1},J$ 逐层闭包，得到全部3872个状态，最深层为八。对每个状态的全部边重新检查分母可逆及目标在集合内，即给完整有限证书。
+\end{proof}
+
+\begin{proposition}[十元二次覆盖证书]\label{prop:ten-certificate}
+引理\ref{lem:ten}的合法本原方向上，以下七个矩阵中至少一个严格降低 $h^2(5X^2+Y^2)$，唯一相容例外为 $X=0$：
+\[
+\begin{gathered}
+M_1=\begin{pmatrix}1&1\\-5&-1\end{pmatrix},\quad
+M_2=\begin{pmatrix}1&0\\-5&2\end{pmatrix},\quad
+M_3=\begin{pmatrix}1&-2\\0&3\end{pmatrix},\quad
+M_4=\begin{pmatrix}1&1\\5&-3\end{pmatrix},\\
+M_5=\begin{pmatrix}4&1\\0&-3\end{pmatrix},\quad
+M_6=\begin{pmatrix}1&-2\\5&2\end{pmatrix},\quad
+M_7=\begin{pmatrix}1&0\\-10&-1\end{pmatrix}.
+\end{gathered}
+\]
+\end{proposition}
+\begin{proof}
+置 $U=u,V=v,W=-6u-3v$，$Q=(-5u-2v)/3,R=(u+2v)/3,S=(2u+v)/3,T=-2u-v/3$。返回依次平均的当前三元组为
+\begin{center}\small
+\begin{tabular}{cl}\toprule
+矩阵&平均词\\\midrule
+$M_1$&$(W,V,U),(V,U,U),(V,U,U)$\\
+$M_2$&$(W,V,U),(Q,U,U),(V,V,U),(Q,R,U),(Q,R,U)$\\
+$M_3$&$(W,U,U),(V,U,U),(V,S,U),(V,S,U)$\\
+$M_4$&$(W,U,U),(V,U,U),(V,U,U)$\\
+$M_5$&$(W,V,U),(V,V,U),(R,U,U),(R,U,U)$\\
+$M_6$&$(V,U,U),(W,S,U),(V,S,U),(V,S,U)$\\
+$M_7$&$(W,V,V),(V,U,U),(T,S,U),(T,S,U),(S,U,U)$\\\bottomrule
+\end{tabular}\end{center}
+代入两个独立参数可核对全部线性形式和库存。行列式为 $4,2,3,-8,-12,12,-1$，所以本原化内容只含 $2,3$。模 $96$ 记录各内容及输出模四类型，得到5120个合法局部类和12种签名。
+若 $M_i=(a,b;c,d)$、内容为 $g_i$、输出尺度为 $h_i$，下降条件是
+\[
+g_i^2h^2(5+t^2)-h_i^2[5(a+bt)^2+(c+dt)^2]>0,qquad t=Y/X.
+\]
+表\ref{tab:ten-data}列出所有系数。每行各多项式的实根把实直线分成有限区间，逐区间及逐根检查符号；二次项检查无穷方向。剩余的有限点只可能为 $0$，被 $5\nmid Y$ 排除；两行留下无穷方向，其中仅一行与 $(0,1)$ 的局部签名相容，正是终端 $X=0$。由此得到完整覆盖。
+\end{proof}
+
+\begingroup\small
+\begin{longtable}{r r l p{83mm} p{24mm}}
+\caption{十二个二次覆盖：$i:(a,b,c)$ 表示 $a+bt+ct^2>0$}\label{tab:ten-data}\\
+\toprule 类&个数&代表&$i:(a,b,c)$&未严格覆盖\\\midrule\endfirsthead
+\toprule 类&个数&代表&$i:(a,b,c)$&未严格覆盖\\\midrule\endhead
+1&768&$(0,1)$&1:(-10,-20,-2); 2:(-40,80,0); 3:(0,80,-112); 6:(50,0,-8); 7:(-400,-80,0)&$\infty$\\
+2&768&$(1,0)$&1:(-10,-20,-2); 2:(-10,20,0); 3:(0,80,-112); 5:(0,-160,8); 7:(-400,-80,0)&0\\
+3&256&$(1,2)$&1:(-10,-20,-2); 2:(-10,20,0); 3:(160,80,-80); 5:(640,-40,130); 7:(-400,-80,0)&$\varnothing$\\
+4&384&$(1,3)$&1:(-40,-80,-8); 3:(0,20,-28); 4:(50,20,2); 7:(-100,-20,0)&$\varnothing$\\
+5&768&$(1,6)$&1:(-10,-20,-2); 2:(-10,20,0); 3:(0,80,-112); 5:(0,-40,2); 7:(-400,-80,0)&0\\
+6&384&$(1,7)$&1:(-40,-80,-8); 3:(0,20,-28); 4:(200,80,8); 7:(-100,-20,0)&$\varnothing$\\
+7&256&$(1,8)$&1:(-10,-20,-2); 2:(-10,20,0); 3:(160,80,-80); 5:(2560,-160,520); 7:(-400,-80,0)&$\varnothing$\\
+8&128&$(1,11)$&1:(-40,-80,-8); 3:(40,20,-20); 4:(50,20,2); 7:(-100,-20,0)&$\varnothing$\\
+9&128&$(1,23)$&1:(-40,-80,-8); 3:(40,20,-20); 4:(200,80,8); 7:(-100,-20,0)&$\varnothing$\\
+10&256&$(2,1)$&1:(-10,-20,-2); 2:(-40,80,0); 3:(160,80,-80); 6:(2760,0,480); 7:(-400,-80,0)&$\varnothing$\\
+11&768&$(2,3)$&1:(-10,-20,-2); 2:(-40,80,0); 3:(0,80,-112); 6:(200,0,-32); 7:(-400,-80,0)&$\infty$\\
+12&256&$(4,5)$&1:(-10,-20,-2); 2:(-40,80,0); 3:(160,80,-80); 6:(690,0,120); 7:(-400,-80,0)&$\varnothing$\\
+\bottomrule\end{longtable}
+\endgroup
+
+有限消元及轨道程序作为补充材料 \texttt{finite\_checks.py} 提供；根计数及新容量衔接的独立核对为 \texttt{verify\_revision.py}。十元表中给出了全部二次系数，实符号判定可直接由该表复核。
+
+
+\begin{thebibliography}{9}
+\bibitem{mixing} M. Coviello Gonzalez and M. Chrobak,
+\emph{Towards a Theory of Mixing Graphs: A Characterization of Perfect Mixability},
+arXiv:1806.08875v4. 所用为引言的完全混合刻画定理(a)及条件MC。
+\bibitem{morris} D. W. Morris,
+\emph{Bounded generation of $\mathrm{SL}(n,A)$ (after D. Carter, G. Keller and E. Paige)},
+New York Journal of Mathematics \textbf{13} (2007), 383--421.
+所用为 Theorem 6.1(2), pp.416--417。
+\bibitem{serre} J.-P. Serre,
+\emph{Le probl\`eme des groupes de congruence pour $\mathrm{SL}_2$},
+Annals of Mathematics (2) \textbf{92} (1970), 489--527.
+\bibitem{prasad} G. Prasad and A. S. Rapinchuk,
+\emph{Developments on the congruence subgroup problem after the work of Bass, Milnor and Serre},
+in \emph{Collected Papers of John Milnor, Vol. V: Algebra}, AMS, 2010, 307--325.
+所用强同余子群性质见 pp.308--309 的 Proposition 1 与 Section 2.3。
+\end{thebibliography}
+\end{document}

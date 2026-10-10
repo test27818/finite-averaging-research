@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "updated": "2026-09-15",
+  "entry": "outputs/prime_arity/README.md",
+  "scope": "Navigation DAG of consolidated prime theorem interfaces; not an exhaustive formal dependency extraction. Source theorems retain their technical dependencies. Composite GRH work is excluded.",
+  "theorem": {
+    "odd_prime_threshold": "2*p+1",
+    "binary_threshold": 4,
+    "criterion": "G of primitive centered integer deviations is a nonnegative power of p",
+    "conditional_on_GRH": false,
+    "external_dependencies": [
+      "Morris 2007 Theorem 6.1(2)",
+      "Strong CSP for SL2(Z[1/D]), D>1"
+    ],
+    "finite_certificate": "work/large_symmetric_carrier_shallow_certificate.json",
+    "certificate_sha256": "1d7d71e8e6ecaf39d6e1a042f8f89137d44cfa7b7d6212febaf2878960857271",
+    "historical_certificate": "work/large_symmetric_carrier_small_certificate.json",
+    "historical_certificate_sha256": "045073eb4ef5ccbad41f57835fdfd31d92a3a49dbc4b22750f88e0676b4e0223",
+    "finite_case_count": 162,
+    "uniform_formula_lower_prime": 83,
+    "previous_180_certificate": "work/large_symmetric_carrier_reduced_certificate.json",
+    "previous_180_certificate_sha256": "ada0d98d0b3006c96bfeb273504e4a540d97807f729262edc51397dbb7020de8"
+  },
+  "coverage": [
+    {
+      "p": "2",
+      "n": "n>=4",
+      "node": "small_prime_bases"
+    },
+    {
+      "p": "3",
+      "n": "n>=7",
+      "node": "small_prime_bases"
+    },
+    {
+      "p": "prime>=5",
+      "n": "2*p+1<=n<=3*p",
+      "nodes": [
+        "endpoint",
+        "odd",
+        "even",
+        "boundary2",
+        "boundary_pm1",
+        "three_p"
+      ]
+    },
+    {
+      "p": "prime>=5",
+      "n": "3*p+1<=n<=3*p+9",
+      "node": "low_offsets"
+    },
+    {
+      "p": "prime>=5",
+      "n": "n>=3*p+10",
+      "node": "upper_aggregate"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "external",
+      "kind": "external-theorem",
+      "scope": "Morris finite index and rational S-integer SL2 strong CSP; D>1.",
+      "documents": [
+        "outputs/prime_arity/audits/prime_arity_lower_band_external_theorems_audit_20260915.md"
+      ],
+      "depends_on": [],
+      "verification_ids": []
+    },
+    {
+      "id": "toolkit",
+      "kind": "proved-lemma-interface",
+      "scope": "True scalar cycles, root localization, deep congruence, inverse activation and exact fibers. No physical capacity conclusion.",
+      "documents": [
+        "outputs/prime_arity/arithmetic_toolkit.md"
+      ],
+      "depends_on": [
+        "external"
+      ],
+      "verification_ids": []
+    },
+    {
+      "id": "lower_entry",
+      "kind": "source-theorem",
+      "scope": "All legal inputs n=2p+r,1<=r<p enter the legal weighted core.",
+      "documents": [
+        "outputs/prime_arity/proofs/lower_band/prime_arity_unrestricted_endpoint_and_odd_band.md",
+        "outputs/prime_arity/tools/prime_arity_unified_weighted_core_theorem.md"
+      ],
+      "depends_on": [],
+      "verification_ids": [
+        "unrestricted-endpoint-entry"
+      ]
+    },
+    {
+      "id": "endpoint",
+      "kind": "source-theorem",
+      "scope": "n=2p+1, arbitrary factorization of the dimension.",
+      "documents": [
+        "outputs/prime_arity/proofs/lower_band/prime_arity_endpoint_congruence_completion.md"
+      ],
+      "depends_on": [
+        "lower_entry",
+        "toolkit"
+      ],
+      "verification_ids": [
+        "endpoint-congruence-completion"
+      ]
+    },
+    {
+      "id": "odd",
+      "kind": "source-theorem",
+      "scope": "n=2p+r, odd 3<=r<=p-2.",
+      "documents": [
+        "outputs/prime_arity/proofs/lower_band/prime_arity_uniform_odd_middle_cores.md"
+      ],
+      "depends_on": [
+        "lower_entry",
+        "toolkit"
+      ],
+      "verification_ids": [
+        "uniform-odd-middle-cores"
+      ]
+    },
+    {
+      "id": "even",
+      "kind": "source-theorem",
+      "scope": "n=2p+r, even 4<=r<=p-3.",
+      "documents": [
+        "outputs/prime_arity/proofs/lower_band/prime_arity_even_interior_completion.md"
+      ],
+      "depends_on": [
+        "lower_entry",
+        "toolkit"
+      ],
+      "verification_ids": [
+        "even-interior-completion"
+      ]
+    },
+    {
+      "id": "boundary2",
+      "kind": "source-theorem",
+      "scope": "n=2p+2.",
+      "documents": [
+        "outputs/prime_arity/proofs/lower_band/prime_arity_two_p_plus_two_uniform.md"
+      ],
+      "depends_on": [
+        "lower_entry",
+        "toolkit"
+      ],
+      "verification_ids": [
+        "two-p-plus-two-uniform"
+      ]
+    },
+    {
+      "id": "boundary_pm1",
+      "kind": "source-theorem",
+      "scope": "n=3p-1, including p=5.",
+      "documents": [
+        "outputs/prime_arity/proofs/lower_band/prime_arity_three_p_minus_one_completion.md"
+      ],
+      "depends_on": [
+        "lower_entry",
+        "toolkit"
+      ],
+      "verification_ids": [
+        "three-p-minus-one-completion"
+      ]
+    },
+    {
+      "id": "three_p",
+      "kind": "source-theorem",
+      "scope": "n=3p with the p-power G condition.",
+      "documents": [
+        "outputs/prime_arity/proofs/lower_band/prime_arity_middle_band_structure.md"
+      ],
+      "depends_on": [
+        "toolkit"
+      ],
+      "verification_ids": [
+        "prime-arity-middle-band"
+      ]
+    },
+    {
+      "id": "upper_entry",
+      "kind": "source-theorem",
+      "scope": "Upper-band legal three-value reduction with its stated range.",
+      "documents": [
+        "outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_three_value_reduction.md"
+      ],
+      "depends_on": [],
+      "verification_ids": [
+        "upper-band-three-value-reduction"
+      ]
+    },
+    {
+      "id": "upper_interior",
+      "kind": "source-theorem",
+      "scope": "Upper interior under the exact capacity bounds in source.",
+      "documents": [
+        "outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_four_return_congruence.md",
+        "outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_unrestricted_completion.md"
+      ],
+      "depends_on": [
+        "upper_entry",
+        "toolkit"
+      ],
+      "verification_ids": [
+        "upper-band-four-return-congruence",
+        "upper-band-unrestricted-completion"
+      ]
+    },
+    {
+      "id": "upper_edge",
+      "kind": "source-theorem",
+      "scope": "Overlapping upper edge with the stated p ranges.",
+      "documents": [
+        "outputs/prime_arity/proofs/upper_band/prime_arity_upper_band_overlap_completion.md"
+      ],
+      "depends_on": [
+        "upper_interior",
+        "toolkit"
+      ],
+      "verification_ids": [
+        "upper-band-overlap-completion"
+      ]
+    },
+    {
+      "id": "energy_tail",
+      "kind": "source-theorem",
+      "scope": "Old inverse EGZ range; all n>=4p after tail repairs.",
+      "documents": [
+        "outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_inverse_egz_threshold.md",
+        "outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_four_p_tail_completion.md"
+      ],
+      "depends_on": [
+        "upper_interior",
+        "upper_edge"
+      ],
+      "verification_ids": [
+        "inverse-egz-threshold",
+        "four-p-tail-completion"
+      ]
+    },
+    {
+      "id": "upper_aggregate",
+      "kind": "source-theorem",
+      "scope": "Every p>=5, n>=3p+10; includes small-prime repairs.",
+      "documents": [
+        "outputs/prime_arity/proofs/upper_band/prime_arity_all_prime_three_p_plus_ten.md"
+      ],
+      "depends_on": [
+        "upper_interior",
+        "upper_edge",
+        "energy_tail",
+        "toolkit"
+      ],
+      "verification_ids": [
+        "upper-band-small-prime-interface"
+      ]
+    },
+    {
+      "id": "low_offsets",
+      "kind": "source-theorem-with-finite-certificate",
+      "scope": "3p+s,1<=s<=9: p>=83 uniform three-row formulas;162 retained cases11<=p<83. Three-conjugate tangent lifting gives shallow kernels, eliminating odd high-depth orbits and reducing even corrections to at most8 classes.",
+      "documents": [
+        "outputs/prime_arity/structure/transverse_root_lifting_without_long_orbits.md",
+        "outputs/prime_arity/structure/carrier_interval_and_unit_descent.md",
+        "outputs/prime_arity/proofs/upper_band/prime_arity_nine_offsets_large_symmetric_carrier_completion.md",
+        "outputs/prime_arity/audits/prime_arity_optimal_threshold_independent_audit_20260915.md"
+      ],
+      "depends_on": [
+        "upper_entry",
+        "toolkit",
+        "endpoint",
+        "three_p",
+        "energy_tail",
+        "small_prime_bases"
+      ],
+      "verification_ids": [
+        "transverse-root-shallow-lifting"
+      ]
+    },
+    {
+      "id": "small_prime_bases",
+      "kind": "source-theorem",
+      "scope": "Binary and ternary independent proofs; p=5 sharp completion and p=7 sharp theorem.",
+      "documents": [
+        "outputs/literature/triple_average_binary_source_reassessment_2026-09-11.md",
+        "outputs/triple_average/proofs/triple_average_all_dimensions_double_triple_invariant.md",
+        "outputs/triple_average/proofs/triple_average_seven_eight_complete.md",
+        "outputs/triple_average/proofs/triple_average_ten_complete.md",
+        "outputs/prime_arity/examples/seven_average_sharp_threshold_complete.md"
+      ],
+      "depends_on": [
+        "boundary_pm1"
+      ],
+      "verification_ids": [
+        "seven-average-sharp-completion",
+        "all-dimensions-double-triple-invariant"
+      ]
+    },
+    {
+      "id": "lower_bound",
+      "kind": "source-theorem",
+      "scope": "Odd p counterexample at n=2p; binary n=3 counterexample in consolidated proof.",
+      "documents": [
+        "outputs/prime_arity/proofs/tail_and_lower_bound/prime_arity_linear_threshold.md",
+        "outputs/prime_arity/proof.md"
+      ],
+      "depends_on": [],
+      "verification_ids": [
+        "prime-arity-linear-threshold"
+      ]
+    },
+    {
+      "id": "prime_final",
+      "kind": "consolidated-theorem",
+      "scope": "N(p)=2p+1 for odd primes, N(2)=4; iff G is a p power above threshold.",
+      "documents": [
+        "outputs/prime_arity/proof.md"
+      ],
+      "depends_on": [
+        "endpoint",
+        "odd",
+        "even",
+        "boundary2",
+        "boundary_pm1",
+        "three_p",
+        "low_offsets",
+        "upper_aggregate",
+        "small_prime_bases",
+        "lower_bound"
+      ],
+      "verification_ids": []
+    },
+    {
+      "id": "geometry",
+      "kind": "explanatory-not-needed-for-main-theorem",
+      "scope": "Marked lattices, coarse modular curve caveats, S-arithmetic environment and existing weight-one theta connection.",
+      "documents": [
+        "outputs/prime_arity/geometry.md",
+        "outputs/prime_arity/tools/prime_power_endpoint_and_critical_geometry.md",
+        "outputs/prime_arity/tools/prime_arity_interpolation_and_lattice_structure.md"
+      ],
+      "depends_on": [],
+      "verification_ids": []
+    }
+  ],
+  "verification_profile": "prime-proof",
+  "profile_verification_ids": [
+    "transverse-root-shallow-lifting",
+    "two-p-plus-two-uniform",
+    "three-p-minus-one-completion",
+    "upper-band-small-prime-interface",
+    "four-p-tail-completion",
+    "upper-band-overlap-completion",
+    "upper-band-unrestricted-completion",
+    "even-interior-completion",
+    "unrestricted-endpoint-entry",
+    "seven-average-sharp-completion",
+    "upper-band-four-return-congruence",
+    "uniform-odd-middle-cores",
+    "endpoint-congruence-completion",
+    "upper-band-three-value-reduction",
+    "inverse-egz-threshold",
+    "prime-arity-middle-band",
+    "prime-arity-linear-threshold",
+    "all-dimensions-double-triple-invariant"
+  ],
+  "audits": [
+    "outputs/prime_arity/audits/prime_arity_lower_band_external_theorems_audit_20260915.md",
+    "outputs/prime_arity/audits/prime_arity_three_p_plus_ten_audit_20260915.md",
+    "outputs/prime_arity/audits/prime_arity_optimal_threshold_independent_audit_20260915.md"
+  ],
+  "exclusions": [
+    "Uniform polynomial word length",
+    "Efficient generic group-word extraction",
+    "All inputs below the threshold",
+    "General composite optimal final threshold",
+    "New all-parameter certificate-free capacity formula"
+  ]
+}

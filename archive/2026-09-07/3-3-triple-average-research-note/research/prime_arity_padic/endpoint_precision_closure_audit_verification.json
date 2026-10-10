@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "selection_generator_independent_cases": 40,
+  "stagnation_family_primes": [
+    7,
+    37,
+    67,
+    97,
+    127,
+    157,
+    277,
+    307,
+    337,
+    367,
+    397,
+    457,
+    487
+  ],
+  "unique_greedy_counter": {
+    "p": 7,
+    "unique_max_drop_scaled": 29834,
+    "first_group_scaled": [
+      -98,
+      -49,
+      -49,
+      63,
+      63,
+      63,
+      63
+    ],
+    "trap_G_values": [
+      3,
+      5
+    ],
+    "second_best_drop_scaled": 28266
+  },
+  "actual_carrier_recurrence_cases": 837,
+  "padic_nondecreasing_precision_cases": 2855,
+  "browkin_marking_obstruction": {
+    "cases": 72,
+    "examples": [
+      {
+        "p": 7,
+        "n": 15,
+        "input_column": [
+          22,
+          1
+        ],
+        "formal_output": [
+          1,
+          21
+        ],
+        "output_G": 3
+      }
+    ]
+  },
+  "positive_one_digit_replays": [
+    {
+      "file": "probe_3_core.json",
+      "p": 3,
+      "length": 9,
+      "precision": 1
+    },
+    {
+      "file": "probe_3_near_bad.json",
+      "p": 3,
+      "length": 13,
+      "precision": 1
+    },
+    {
+      "file": "probe_5_core.json",
+      "p": 5,
+      "length": 7,
+      "precision": 1
+    },
+    {
+      "file": "probe_5_near_bad.json",
+      "p": 5,
+      "length": 10,
+      "precision": 1
+    },
+    {
+      "file": "probe_5_two-exception.json",
+      "p": 5,
+      "length": 7,
+      "precision": 1
+    },
+    {
+      "file": "probe_7_greedy_repaired.json",
+      "p": 7,
+      "length": 8,
+      "precision": 1
+    },
+    {
+      "file": "probe_7_near_bad.json",
+      "p": 7,
+      "length": 14,
+      "precision": 1
+    }
+  ],
+  "scope": "General family and obstructions have written proofs. Positive probes are finite examples; no new full endpoint proof or all-input precision bound."
+}

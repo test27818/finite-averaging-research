@@ -1,0 +1,33 @@
+{
+  "index": 42,
+  "query": "Bruhat Tits tree elementary",
+  "url": "https://api.openalex.org/works?filter=title.search%3ABruhat+Tits+tree+elementary&per-page=7&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "count": 1,
+  "results": [
+    {
+      "id": "https://openalex.org/W2152687202",
+      "title": "THE STABILIZERS IN A DRINFELD MODULAR GROUP OF THE VERTICES OF ITS BRUHAT–TITS TREE: AN ELEMENTARY APPROACH",
+      "date": "2013-11-01",
+      "doi": "https://doi.org/10.1142/s0218196713500410",
+      "citations": 7,
+      "authors": [
+        "A. W. Mason",
+        "Andreas Schweizer"
+      ],
+      "abstract": "Let K be an algebraic function field of one variable with constant field k and let [Formula: see text] be the Dedekind domain consisting of all those elements of K which are integral outside a fixed place ∞ of K. When k is finite the group [Formula: see text] plays a central role in the theory of Drinfeld modular curves analogous to that played by SL2(ℤ) in the classical theory of modular forms. When k is finite (respectively, infinite) we refer to a group [Formula: see text] as an arithmetic (respectively, non-arithmetic) Drinfeld modular group. Associated with [Formula: see text] is its Bruhat–Tits tree, [Formula: see text]. The structure of the group is derived from that of the quotient graph [Formula: see text]. Using an elementary approach which refers explicitly to matrices we determine the structure of all the vertex stabilizers of [Formula: see text]. This extends results of Serre, Takahashi and the authors. We also determine all possible valencies of the vertices of [Formula: see text] for the important special case where ∞ has degree 1.",
+      "locations": [
+        {
+          "url": "https://doi.org/10.1142/s0218196713500410",
+          "pdf": null,
+          "source": "International Journal of Algebra and Computation"
+        },
+        {
+          "url": "http://arxiv.org/abs/1203.3617",
+          "pdf": "https://arxiv.org/pdf/1203.3617",
+          "source": "arXiv (Cornell University)"
+        }
+      ],
+      "reference_count": 13
+    }
+  ]
+}

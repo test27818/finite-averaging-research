@@ -1,0 +1,80 @@
+{
+  "query": "gossip finite convergence",
+  "url": "https://api.openalex.org/works?filter=title.search%3Agossip+finite+convergence&per-page=5&select=id%2Ctitle%2Cdoi%2Cpublication_year%2Copen_access%2Clocations",
+  "results": [
+    {
+      "id": "https://openalex.org/W1950835436",
+      "title": "When Do Gossip Algorithms Converge in Finite Time",
+      "doi": null,
+      "publication_year": 2014,
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/1206.0992v6",
+        "any_repository_has_fulltext": true
+      },
+      "locations": [
+        {
+          "id": "pmh:oai:openresearch-repository.anu.edu.au:1885/24695",
+          "is_oa": false,
+          "landing_page_url": "http://hdl.handle.net/1885/24695",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306402539",
+            "display_name": "ANU Open Research (Australian National University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I118347636",
+            "host_organization_name": "Australian National University",
+            "host_organization_lineage": [
+              "https://openalex.org/I118347636"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Proc. 21st International Symposium on Mathematical Theory of Networks and Systems",
+          "raw_type": "Conference paper"
+        },
+        {
+          "id": "mag:1950835436",
+          "is_oa": true,
+          "landing_page_url": "https://arxiv.org/pdf/1206.0992v6",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": "arXiv (Cornell University)",
+          "raw_type": null
+        }
+      ]
+    }
+  ]
+}

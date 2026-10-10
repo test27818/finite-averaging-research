@@ -1,0 +1,126 @@
+\appendix
+\section{偶数下半带的返回计算}\label{app:lower}
+\begin{lemma}\label{lem:two-carrier}
+在 $((u+v)^p,(u-v)^p,(-pu)^2)$ 上，合法本原参数满足 $\gcd(u,v)=\gcd(v,p+1)=1$。全部合法参数可送到 $(u,v)=(0,1)$ 的射影方向。
+\end{lemma}
+\begin{proof}
+记 $m=p+1$。保留两份 $A=u+v$，平均
+\[(A^{(p-3)/2},B^{(p+1)/2},C),\qquad
+(A^{(p-1)/2},B^{(p-1)/2},C)
+\]
+实现 $-U(1)/p$；换块给 $U(-1)$。互补平衡混合给 $F=\diag(1,1/p)$。其逆由四次平均实现：先平均两组 $(A^{(p-1)/2},B^{(p-1)/2},C)$，产生 $2p$ 份 $D=-u/p$；保留两份 $D$，分别平均一份剩余 $A$ 或 $B$ 与 $p-1$ 份 $D$。输出为 $(u/p^2,v/p)$。因此 $U(\Z[1/p])$ 可实现。
+再平均 $(A^{(p+1)/2},B^{(p-3)/2},C)$。保留两份新值，按 $(x,x+1,b,(p-3)/2)$ 选下一组，其中 $b=1$（$p\equiv1\pmod4$）或 $0$（$p\equiv3\pmod4$），$x=(p-b-(p-1)/2)/2$，再平均补组。返回为 $J/p^2$，
+\[
+J=\begin{pmatrix}1&-2\\c&-1\end{pmatrix},\qquad
+c=\begin{cases}-(p^2-1)/2,&p\equiv1\pmod4,\\(p+1)^2/2,&p\equiv3\pmod4.
+\end{cases}
+\]
+两类计数分别是 $(k,k+1,1,2k-1)$ 和 $(k+1,k+2,0,2k)$，均在库存内。$J^2=(1-2c)I$。若 $S=\diag(1,-1)$、$H=JU(2)$，则 $[S,H]=L(-2c)$。借 $F$ 共轭得到完整 $L(2cR)$，$R=\Z[1/p]$。令 $q=(2c)^2$，引理\ref{lem:deep}给 $\Gamma(q,R)$；$m\mid2c$ 且 $\gcd(p,q)=1$。
+
+对 $2\le b\le p$，保留两份 $A$，平均 $(A^{b-2},B^{p-b},C^2)$ 和 $(A^{p-b},B^b)$，实现
+\[
+p^{-1}M_b,\qquad M_b=\begin{pmatrix}-1&-1\\-m&2b-m\end{pmatrix}.
+\]
+由于 $v$ 奇，先用整数上平移把 $u$ 改成 $2a-v$，即选 $2a\equiv u\pmod v$。执行 $M_p$ 后本原分析列为 $(-a,pv-ma)$。对 $\ell\mid q$，若 $\ell\mid m$，第二项自动非零；若 $\ell\mid v$，$a$ 自动非零；其余素数指定 $a=(pv-1)/m\pmod\ell$。再令 $p\nmid a$。CRT 给出本原输出 $(u_1,v_1)$ 且 $\gcd(v_1,q)=1$。
+取 $v_1^{-1}\pmod m$ 的代表 $b_0\in[1,p]$；若 $b_0=1$，改取 $b=p,\epsilon=-1$，否则取 $b=b_0,\epsilon=1$。于是 $b$ 奇、$2\le b\le p$、$bv_1\equiv\epsilon\pmod m$。选
+\[
+2a_1\equiv u_1\pmod{v_1},\qquad
+a_1\equiv(bv_1-\epsilon)/m\pmod{q/m},\qquad \gcd(a_1,b)=1.
+\]
+前两个模数互素；$b$ 的素因子若整除其中一个模数，相应条件已使 $a_1$ 非零，其余处由 CRT 补齐。平移后执行 $M_b$，得到本原列 $(-a_1,bv_1-ma_1)$，第二项为 $\epsilon\pmod q$。再用上平移使第一项为零模 $q$，由引理\ref{lem:fiber}精确到 $(0,\epsilon)$。相反值收尾完成。
+\end{proof}
+
+\begin{lemma}\label{lem:binary-depth}
+设 $r<p$ 为正偶数。在合法 $K_{p,r}(a,z)$ 上，若 $az\ne0$，可使本原参数满足 $v_2(az)=1$。
+\end{lemma}
+\begin{proof}
+合法性使 $a,z$ 奇偶相反。若深度 $\nu=v_2(az)\ge2$ 且 $a$ 奇，先用
+\[
+(a,z)\mapsto p^{-1}(dz,-a),\qquad d=[pr-n(r-1)]/2
+\]
+将偶坐标放在 $a$；该两组平均是下文\eqref{eq:even-reflection}取 $s=r-1$ 的返回，$d$ 奇且与 $n$ 互素。于是 $4\mid a,z$ 奇。
+保留 $r$ 份旧 $A$，平均组成 $(p-j-s,j,s)$ 的一组及其补组，给
+\[
+M_{j,s}=\begin{pmatrix}p-2j-s&rj-ps\\-1&0\end{pmatrix}.
+\]
+若 $r\equiv2\pmod4$，取 $(j,s)=(p,0)$。若 $4\mid r$，令 $Q_0=\lfloor n/3\rfloor$，在 $Q_0,Q_0-1,Q_0-2$ 中按顺序取与 $n$ 奇部互素的 $b$：$3\nmid n$ 时取 $Q_0$，否则取不被 $3$ 整除的 $Q_0-1$ 或 $Q_0-2$。有 $r-1\le b\le p-1$；令 $(j,s)=(b-1,2)$。后一范围由 $p-r>0$，以及 $3\mid n$ 时 $p-r\ge3$ 得出。
+两种选择都使 $D=rj-ps$ 恰含一个 $2$，且与 $n$ 奇部互素；后一种用 $D\equiv-2pb\pmod\ell$。整数输出为 $((p-2j-s)a+Dz,-a)$，两项的二进赋值为 $1,\nu$，故本原化后深度减一。见证坐标的输出为 $njz-(2j+s)(a+pz)$，奇素数处保持单位，模 $2$ 亦保持合法。迭代完成。
+\end{proof}
+
+\begin{lemma}\label{lem:even-core}
+对 $p\ge7$、偶数 $4\le r\le p-3$，全部合法 $K_{p,r}$ 可归零。
+\end{lemma}
+\begin{proof}
+写 $r=2t,m=p+t$，用 $a=tu+v,z=u$。合法性为 $\gcd(v,m)=1$；$t$ 偶时还要求 $u+v$ 奇。保留 $r$ 份旧 $A$，对可行奇数 $\max(1,4t-p)\le s\le2t$，平均
+\begin{equation}\label{eq:even-reflection}
+(A^i,B^i,C^s),\quad(A^{p-r-i},B^{p-i},C^{r-s}),\qquad i=(p-s)/2.
+\end{equation}
+所得矩阵为 $J_s/p$，
+\[
+J_s=\begin{pmatrix}-t&-1\\m(t-s)&t\end{pmatrix},\qquad
+J_s^2=-d_sI,\quad d_s=pt-ms.
+\]
+取 $s_0=r-1,s_1=r-3$，对应 $d,e=d+n$ 互素且为奇数，与 $n$ 互素。在 $(a,z)$ 坐标中，同一反射为 $\left(\begin{smallmatrix}0&d_s\\-1&0\end{smallmatrix}\right)$，相邻商为 $\diag(1,e/d)$，与换块 $\Sigma=\left(\begin{smallmatrix}-1&r\\0&1\end{smallmatrix}\right)$ 的交换子为 $U(rn/e)$。因此在 $R_0=\Z[1/|de|]$ 上有双向 $rnR_0$ 根。$|de|>1$，引理\ref{lem:deep}适用。
+
+互补混合给 $F_c=\diag(1,c/p)$，$c$ 为 $|c|\le p$ 的奇数。引理\ref{lem:inverse}先激活 $F_1^{-1}$，得到 $C_c=\diag(1,c)$。若奇数 $c\mid t$，则
+\[
+H=c^{-1}C_cJ_{s_0}C_c
+=\begin{pmatrix}-t/c&-1\\m(t-s_0)&tc\end{pmatrix},\quad
+HJ_{s_0}^{-1}\in\SL_2(R_0).
+\]
+引理\ref{lem:inverse}使 $H^{-1}$ 可实现，而 $J_{s_0}C_cH^{-1}=cC_c^{-1}$。写 $t=2^a t_0$，由引理\ref{lem:localize}可取 $R=R_0[1/(pt_0)]$ 并得到
+\begin{equation}\label{eq:even-deep}
+\Gamma((2^{a+2}m)^2,R).
+\end{equation}
+以后任何与 $n$ 互素的小奇数字均可由引理\ref{lem:inverse}激活；同一根共轭在扩环后保留此层。
+
+若 $t$ 奇，已有 $U(2nR)$ 及 $\Gamma(4n^2,R)$。在 $(z,y)$ 基下，标准反射规范化模 $n$ 为 $\left(\begin{smallmatrix}1&-1/p\\0&-1\end{smallmatrix}\right)$，乘换块后取适当整数幂得到定理\ref{thm:terminal}的 $V$。规范化所需的标量 $p$ 由 $P_1$ 的内容分支提供，故该定理适用。
+
+设 $t$ 偶且 $8\le r\le p-5$。第三反射 $s_2=r-5$ 亦可用，将 $d+n,d+2n$ 的素因子一并加入 $R$。取奇数 $c_*=(m+\sigma)/2$、$\sigma=\pm1$，则 $c_*\le p$、$\gcd(c_*,n)=1$，而单位 $\epsilon_2=\sigma/c_*$ 模 $m$ 等于 $2$。引理\ref{lem:binary-depth}先令 $v_2(az)=1$；必要时再用标准反射，使 $a$ 奇、$u=z$ 恰含一个 $2$，故 $v$ 奇。取 $v^{-1}\pmod m$ 的平衡代表 $2^h c$，$c$ 奇、$|c|<p$；用 $U(Qk)$ 使第一坐标与 $c$ 互素后施加 $C_c$，便使 $v\bmod m$ 属于实际单位像。这里 $Q=(2^{a+2}m)^2$。
+比值 $(d+n)/d,(d+2n)/(d+n)$ 模 $8$ 分别为 $3,7$；取其中的 $\kappa\equiv3$。它作用于 $x=z/a$ 为乘 $\kappa$，换块作用为 $x/(-1+rx)\equiv-x\pmod{16}$。因此覆盖赋值一的全部模 $16$ 方向；$v_2(\kappa^2-1)=3$ 又给全部高层提升。可将二进方向送到
+\[
+u_T=2,\quad a_T=p-r(p-3)/2,\quad v_T=a_T-2t.
+\]
+奇素数处用 $G_s=-\diag(1,-1)J_s$。其 $G_s/t=I+N$ 满足 $N^2=m(t-s)I/t^2$；相邻 $s$ 可避开引理\ref{lem:local-cycle}的模 $9$ 例外。$G_s$ 的二进矩阵阶为 $2$ 幂，故 CRT 选择幂可在保持二进方向时命中所有奇素数方向。
+尺度模 $m$ 的变化由 $R$ 单位给出，其中 $t$ 的类可用 $\epsilon_2^a t_0$ 表示，且 $v_T\equiv t^2\pmod m$。剩余单位核由 $(d+n)/d$ 和 $(d+2n)/d$ 生成：后者在 $2$ 处从深度 $2$ 开始，在各奇处从 $v_\ell(m)$ 开始；前者补模 $4$ 的另一个类。逐次取素数幂并用指数 CRT 完成所有精度。引理\ref{lem:fiber}精确送到该终端。取 $(p+1)/2$ 份 $A$、$(p-3)/2$ 份 $B$ 和一份 $C$ 即得零和组。
+
+剩下 $r=4$，或 $r=p-3$ 且 $p\equiv3\pmod4$。保留旧 $A$ 的返回 $M=\left(\begin{smallmatrix}a_0&D\\-1&0\end{smallmatrix}\right)$ 可按下表选择，其中第一组为 $(p-j-s,j,s)$、第二组为补集：
+\[
+\begin{array}{c|rrrr}
+&s&j&a_0&D\\\hline
+r=4,p\ge11&1&(p-3)/2&2&p-6\\
+r=p-3,p\equiv1\ (3)&p-4&1&2&-p^2+5p-3\\
+r=p-3,p\equiv2\ (3)&p-6&4&-2&-p^2+10p-12
+\end{array}
+\]
+$p=7,r=4$ 用第二行。代入可验容量非负及 $\gcd(D,rn)=1$。由引理\ref{lem:inverse}取得 $M^{-1}$，相邻商局部化 $D$；与换块的交换子给
+\[U\bigl(2a_0+r(1-D/d_s)\bigr).
+\]
+该参数属于 $nR$，二进赋值恰为 $2$。与原根 $2^{a+1}nR$ 合并得到 $U(2nR)$，标准反射给另一方向，故有 $\Gamma(4n^2,R)$。标准反射仍提供前述有限 $V$，直接应用定理\ref{thm:terminal}。这覆盖全部偶数内部参数。
+\end{proof}
+
+\begin{lemma}\label{lem:upper-boundary}
+若 $p\ge5$、$r=p-1$，全部合法 $K_{p,r}$ 可归零。
+\end{lemma}
+\begin{proof}
+置 $n=3p-1,d=p^2-n$，标准两步反射为 $A=\left(\begin{smallmatrix}0&-d\\-1&0\end{smallmatrix}\right)$。先平均 $(A^{p-\sigma},C^\sigma)$，保留 $r$ 份新值，再平均 $(A^{h-\sigma},B^h,C^{p+\sigma-2h})$ 及其补集，给
+\[
+J_{\sigma,h}=\begin{pmatrix}-p\sigma&p[nh-p(p+\sigma)]\\-(p-\sigma)&p\sigma\end{pmatrix},
+\quad J_{\sigma,h}^2=pf_{\sigma,h}I,quad f_{\sigma,h}=p^3-n(p-\sigma)h.
+\]
+$p\ge7$ 时取 $(\sigma,h)=(2,3),(2,4),(3,4),(3,5)$；容量等价于 $0\le h-\sigma\le\sigma$、$0\le p+\sigma-2h\le p-1-\sigma$，均成立。记相邻标量 $f_\sigma,g_\sigma$，它们互素且与 $n$ 互素。相邻商与换块的交换子给 $U(n(n\sigma-pr)/g_\sigma)$。两整数系数的最大公因子为 $\gcd(2n-pr,3n-pr)=2$，故在 $R_0=\Z[1/|f_2g_2f_3g_3|]$ 上有 $U(2nR_0)$。由 $AU(dx)A^{-1}=L(x)$ 得双向根和 $\Gamma(4n^2,R_0)$。
+$A/p$ 在 $(z,y)$ 坐标中模 $n$ 为 $\left(\begin{smallmatrix}1&-1/p\\0&-1\end{smallmatrix}\right)$。与换块组合及有限标量 $p^{-1}$ 提供定理\ref{thm:terminal}所需方向，因此完成 $p\ge7$。
+对 $p=5,n=14$，取
+\[
+A=\begin{pmatrix}0&-11\\-1&0\end{pmatrix},\quad
+S=\begin{pmatrix}-1&4\\0&1\end{pmatrix},\quad
+J=\begin{pmatrix}-5&-10\\-4&5\end{pmatrix}.
+\]
+$A^2=11I,J^2=65I$，且 $W=ASASJ=\left(\begin{smallmatrix}-121&330\\0&65\end{smallmatrix}\right)$，$[S,W]=U(84/65)$。于是 $R_0=\Z[1/(5\cdot11\cdot13)]$ 上有双向 $84R_0$ 根及 $\Gamma(7056,R_0)$。由 $F_1$ 激活 $C_3=\left(\begin{smallmatrix}3&-4\\0&1\end{smallmatrix}\right)$；
+\[
+H=C_3JC_3/3=\begin{pmatrix}1&-18\\-4&7\end{pmatrix},\quad
+\det H=\det J=-65.
+\]
+$HJ^{-1}\in\SL_2(R_0)$，故 $H^{-1}$ 可实现，继而 $JC_3H^{-1}=3C_3^{-1}$。局部化 $3$ 后 $84R=28R$，给 $\Gamma(784,R)$。同一标准反射 $A$ 提供有限方向，仍接定理\ref{thm:terminal}。
+\end{proof}
+

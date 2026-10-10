@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper,oneside,openany]{book}
+\input{preamble}
+\begin{document}
+\frontmatter
+\begin{titlepage}
+\centering
+\vspace*{25mm}
+{\sffamily\Large 数学讲义\par}
+\vspace{15mm}
+{\Huge\bfseries 素数平均\par}
+\vspace{7mm}
+{\LARGE 从例子到完整证明\par}
+\vspace{16mm}
+{\large 面向数学本科生的逐步讲解\par}
+\vfill
+\begin{minipage}{.79\textwidth}
+\large
+对奇素数 $p$，当 $n\ge 2p+1$ 时，\par
+有限次 $p$ 元平均可达全等\par
+\hfill 当且仅当\quad $G$ 是 $p$ 的幂。
+\end{minipage}
+\vfill
+{\large 通俗展开版\quad 2026年9月\par}
+\end{titlepage}
+\input{preface}
+\tableofcontents
+\mainmatter
+\input{chapters/01_problem}
+\input{chapters/02_obstruction}
+\input{chapters/03_descent_tools}
+\input{chapters/04_descent_complete}
+\input{chapters/05_zero_tail}
+\input{chapters/06_compression}
+\input{chapters/07_returns}
+\input{chapters/08_congruence}
+\input{chapters/09_terminal}
+\input{chapters/10_odd}
+\input{chapters/11_two}
+\input{chapters/12_even}
+\input{chapters/13_counting}
+\input{chapters/14_upper}
+\input{chapters/15_wide}
+\input{chapters/16_three}
+\input{chapters/17_five_seven}
+\input{chapters/18_completion}
+\appendix
+\input{chapters/19_tables}
+\backmatter
+\input{references}
+\end{document}

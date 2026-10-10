@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="theme-color" content="#d9d8d1">
+
+<title>Tags explained&mdash;The Stacks project</title>
+
+<meta name="description" content="an open source textbook and reference work on algebraic geometry">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/print.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ['tex2jax.js'],
+    jax: ['input/TeX','output/HTML-CSS'],
+    TeX: {
+      extensions: ['AMSmath.js', 'AMSsymbols.js', '/static/XyJax/extensions/TeX/xypic.js'],
+      Macros: {
+        linebreak: ["", 1, ""],
+        },
+      TagSide: 'left'
+    },
+    tex2jax: {
+      inlineMath: [['$','$']],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    },
+    'HTML-CSS': {
+    	scale: 100,
+	availableFonts: [],
+    }
+  });
+</script>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" integrity="sha384-yBEPaZw444dClEfen526Q6x4nwuzGO6PreKpbRVSLFCci3oYGE5DnD1pNsubCxYW" crossorigin="anonymous">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js" integrity="sha384-cd07Jx5KAMCf7qM+DveFKIzHXeCSYUrai+VWCPIXbYL7JraHMFL/IXaCKbLtsxyB" crossorigin="anonymous"></script>
+
+<link rel="icon" type="image/vnd.microsoft.icon" href="/static/stacks.ico">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/static/stacks.ico">
+
+
+
+</head>
+
+<body>
+<div class="container-fluid bounded">
+  <div id="first-bar" class="row topbar inner-top top">
+    <header class="col">
+      <h1><a href="/">The Stacks project</a></h1>
+    </header>
+
+    <nav id="header">
+      <ul id="quicklinks">
+        <li><a href="/bibliography">bibliography</a>
+        <li><a href="https://www.math.columbia.edu/~dejong/wordpress/">blog</a>
+      </ul>
+
+      <form id="quicksearch" action="/search">
+        <span id="search-icon"><img src="/static/images/search.svg"></span>
+        <input type="search" name="query" size="16" placeholder="keywords or a tag" value="">
+      </form>
+    </nav>
+  </div>
+
+  <nav id="second-bar" class="row topbar sticky-top">
+    
+      <ul class="col-11 col-sm-11 col-md-11 col-lg-12 col-xl-12" id="crumbs">
+        <li><a href="/browse">Table of contents</a></li>
+        
+  <li><a href="/tags">Tags explained</a>
+
+      </ul>
+    
+
+    
+
+    
+  </nav>
+
+  <div class="row" id="content">
+    <section id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+      
+  <h2>The tag system</h2>
+  <p>Each tag refers to a unique item (section, lemma, theorem, etc.) in order for this project to be referenceable. These tags don't change even if the item moves within the text.
+
+  <h2>How to use it?</h2>
+  <p>To find the tag for an item, hover/click on the item in the <a href="/download/book.pdf">pdf file</a> or find the item from the <a href="/browse">table of contents</a>. See below for LaTeX instructions on how to reference a tag.
+  <!-- TODO don't mention the pdf as a means to search for a tag! -->
+
+  <h2>More information</h2>
+  <p>The tag system provides <strong>stable</strong> references to definitions, lemmas, propositions, theorems, remarks, examples, exercises, situations and even equations, sections and items. As the project grows, each of these gets a tag which will always point to the same mathematical result. The place of the lemma in the document may change, the lemma may be moved to a different chapter, but its tag always keeps pointing to it.</p>
+  <p>If it ever turns out that a lemma, theorem, etc. was wrong then we may remove it from the project. However, we will keep the tag, and there will be an explanation for its disappearance (in the file tags mentioned below).
+
+  <h2 id="reference">How to reference tags</h2>
+  <p>In your BibTeX file put
+  <pre><code>@misc{stacks-project,
+    shorthand    = {Stacks},
+    author       = {The {Stacks Project Authors}},
+    title        = {\textit{Stacks Project}},
+    howpublished = {\url{https://stacks.math.columbia.edu}},
+    year         = {2018},
+  }</code></pre>
+  <p>Then you can use the citation code we provide for every tag to <em>cite</em> and <em>link</em> the corresponding tag, for example by
+  <pre><code>\cite[\href{https://stacks.math.columbia.edu/tag/0123}{Tag 0123}]{stacks-project}</code></pre>
+  <p>This can be changed according to your tastes. In order to make the <code>\url</code> and <code>\href</code> commands to work, one should use the <a href="https://ctan.org/pkg/hyperref"><code>hyperref</code></a> package.
+
+  <h2>Technical information</h2>
+  <p>There is a file called <a href="https://github.com/stacks/stacks-project/blob/master/tags/tags"><span class="filename">tags</span></a> (in the <a href="https://github.com/stacks/stacks-project/tree/master/tags">tags subdirectory</a> of the Stacks project) which has on each line the tag followed by an identifier. Example:
+  <pre><code>01MB,constructions-lemma-proj-scheme</code></pre>
+  <p>Here the tag is <span class="tag">01MB</span> and the identifier is <var>constructions-lemma-proj-scheme</var>. This means that the tag points to a lemma from the file <var>constructions.tex</var>. It currently has the label <var>lemma-proj-scheme</var>. If we ever change the lemma's label, or move the lemma to a different file, then we will change the corresponding line in the file <span class="filename">tags</a> by changing the identifier correspondingly. But we will <strong>never change the tag</strong>.
+  <p>A tag is a four character string made up out of digits and capital letters. They are ordered lexicographically between <var>0000</var> and <var>ZZZZ</var> originally giving 1679616 possible tags. But as there might arise confusion from the similarities between <span class="tag">0</span> and <span class="tag">O</span> it was decided to stop using the letter <var>O</var>. The last tag using <var>O</var> is <a href="/tag/04DO">tag <span class="tag">04DO</span></a>. Thus from <span class="tag">04DP</span> on there are only 35 values per position. The 302 tags assigned before this new guideline will remain, as tags are constant.
+
+  <h2 id="stacks-epoch">Stacks epoch</h2><p>The first 3026 tags were introduced in the Stacks project on <a href="https://github.com/stacks/stacks-project/commit/fad2e125112d54e1b53a7e130ef141010f9d151d">May 16, 2009</a>. New tags are assigned by the maintainer of the Stacks project every once in a while using a script. As the Stacks project is always under construction the available tags on the website, in the Git repository, and the available results in the Stacks project can sometimes be a little bit out of sync.
+
+    </section>
+	  <div class="col-lg-4 col-xl-4">
+	    <section id="meta" class="row topbar sticky-top">
+        
+  
+  <ul>
+    <li><a href="/about">about</a>
+    <li><a href="/acknowledgements">acknowledgements</a>
+    <li><a href="/statistics">statistics</a>
+    <li><a href="/tags">tags explained</a>
+    <li><a href="/contribute">how to contribute</a>
+    <li><a href="/contributors">contributors</a>
+    <li><a href="/api"><abbr title='Application Programming Interface'>API</abbr></a>
+  </ul>
+
+
+      </section>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js" integrity="sha384-3ziFidFTgxJXHMDttyPJKDuTlmxJlwbSkojudK/CkRqKDOmeSbN6KLrGdrBQnT2n" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

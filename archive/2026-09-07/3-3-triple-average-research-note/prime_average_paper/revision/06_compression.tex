@@ -1,0 +1,73 @@
+\section{任意输入的安全压缩}\label{sec:compression}
+本节对 $p\nmid n$ 的配置在 $\Z[1/p]$ 中保留全部模 $\ell\mid n$ 非恒定见证。
+
+\begin{lemma}\label{lem:short-choice}
+若 $p\ge5$、$2p<n<4p$，对 $n$ 的任意一组不同素因子，各禁止一个剩余类，则 $1,\ldots,p-1$ 中存在同时避开的整数。
+\end{lemma}
+\begin{proof}
+设素因子数为 $h$，乘积为 $M$，$\rho=\varphi(M)/M$。对 $h\le4$，长度 $2^h$ 足够：含 $2$ 时先留一种奇偶类，其余奇素数至多删去 $0,1,3,7$ 项，对应剩余 $1,2,4,8$ 项；不含 $2$ 时至多删去 $1,3,7,15$ 项。$h=3,4$ 时 $M\ge30,210$，从 $M\le n<4p$ 得 $2^h\le p-1$，较小 $h$ 直接成立。
+若 $h\ge5$，CRT 将禁止类写成某个整数 $b$ 的各模余数。容斥给避开数目大于 $(p-1)\rho-(2^h-1)$。五个最小素数给 $\varphi(M)\ge480>2^{h+2}$，每增加素因子仍保持此界。因此
+\[(p-1)\rho>(n/4-1)\rho\ge\varphi(M)/4-\rho>2^h-1.
+\]
+\end{proof}
+
+两个 $p$ 块的互补配比给
+\begin{equation}\label{eq:mix-pair}
+a_k=a+\frac{k}{p}(b-a),\qquad b_k=b+\frac{k}{p}(a-b).
+\end{equation}
+相对于固定值 $w$，只要 $a-w,b-w$ 不同时为零，$a_k-w$ 模每个危险素数至多禁止一个 $k$ 类。引理\ref{lem:short-choice}因此能合并两差的全部见证。
+
+\begin{lemma}\label{lem:concentrate}
+已有两个 $p$ 块及单点时，可以固定一个单点 $w$，使某个块值 $a$ 在全部危险素数处不同于 $w$。
+\end{lemma}
+\begin{proof}
+若某个缺失素数处第二块 $b\ne w$，用式\eqref{eq:mix-pair}合并支持。否则 $a=b=w$，另有单点 $x\ne w$。平均 $(b^{p-1},x)$，留下旧 $b$ 一份作为新单点，再混合两块。这一阶段至多三次平均，严格增加支持。块--单点变换
+\begin{equation}\label{eq:exchange}
+(b,x)\longmapsto(((p-1)b+x)/p,b)
+\end{equation}
+在每个危险素数处可逆且保持常值方向，故保持整体见证。至多 $d_p(n)$ 个阶段完成。
+\end{proof}
+
+\begin{lemma}\label{lem:two-block-entry}
+设 $1\le r<p$、$n=2p+r$、$\gcd(p,n)=1$。任意合法输入可进入具有完整见证的两个 $p$ 块及 $r$ 个单点。
+\end{lemma}
+\begin{proof}
+固定一个位置并为每个危险素数保留一个不同余位置。保护数至多 $d+1\le p+r$：否则 $n\ge2^d\ge2^{p+r}>n$。保护集外平均一个 $p$ 组，写剩余单点为 $c_i$、$m=p+r$、$\delta_i=c_i-a$。令 $\lambda=-1/p$，式\eqref{eq:exchange}在差分中的矩阵为
+\[
+A_i=I+v_i e_i^T,\qquad v_i=\lambda\mathbf1-e_i.
+\]
+对互异 $i,j,k$，直接相乘得到
+\begin{equation}\label{eq:entry-commutator}
+[A_k^{-1}A_jA_k,A_i]
+=I+(1+\lambda)(e_k-e_j)e_i^T.
+\end{equation}
+取 $L$ 为各模 $\ell$ 的 $2\times2$ 可逆矩阵群阶的公倍数。交换矩阵模 $\rad(n)$ 的逆可由 $L-1$ 次正向交换实现，故式\eqref{eq:entry-commutator}的任意非负幂可用真实交换实现其模作用。
+系数 $(p-1)/p$ 失效的素数整除 $\gcd(p-1,n)=\gcd(p-1,r+2)$，其数量至多 $r$。为这些素数分别选一个非零差分单点，补足为 $r$ 个保留角色，固定其中一个目标 $j$。对每个其余素数 $\ell$，若目标差为零，选 $\delta_i\ne0$、$k\notin\{i,j\}$，用 CRT 选指数在模 $\ell$ 为 $1$、其他非失效素数模下为 $0$。式\eqref{eq:entry-commutator}使目标差新增非零值，并保留已处理支持和全部失效处数据。最终保留这 $r$ 个单点，将另外 $p$ 个单点平均。旧块和保留单点已提供全部见证。
+\end{proof}
+
+\begin{proposition}\label{prop:entry}
+若 $p\ge5$、$2p<n<4p$、$n\ne3p$，每个合法输入可进入
+\begin{equation}\label{eq:core}
+K_{p,r}(a,z)=(a^p,(rz-a)^p,(-pz)^r),\qquad r=n-2p.
+\end{equation}
+本原参数满足 $\gcd(a,z)=1$，且合法性为 $\gcd(a+pz,n)=1$。当 $p=3,n=7$ 时该结论仍成立。
+\end{proposition}
+\begin{proof}
+先设 $r<p$。由引理\ref{lem:two-block-entry}及\ref{lem:concentrate}取得 $a^p,b^p$ 和单点 $w$，其中 $a-w$ 在全部危险处非零。混合两块后将 $b_k$ 与 $w$ 交换，得到
+\[
+a_1=a_k,\quad b_1=((p-1)b_k+w)/p,\quad w_1=b_k.
+\]
+新块差乘 $p$ 为 $D(k)=pa-(p-1)b-w+(2p-1)k(b-a)/p$。在 $\ell\nmid2p-1$ 处选 $k$ 使它非零；在 $\ell\mid2p-1$ 处选 $k$ 使下一轮常数
+\[E(k)=pa_1-(p-1)b_1-w_1=w+(a-3b)/2+4k(b-a)
+\]
+非零。两种条件均至多禁止一个类。第二轮的差为 $E(k)+(2p-1)h(b_1-a_1)/p$，再由引理\ref{lem:short-choice}同时避零。现在两块差在全部危险处非零。平均全部 $r$ 单点及第一块的 $p-r$ 份，留下 $r$ 份旧第一块和完整第二块，即得合法形状\eqref{eq:core}。
+
+若 $n=3p+s$、$1\le s<p$，先保护单点 $w$ 及至多 $d$ 个见证，在其外制造两个 $p$ 块。$d<p$ 由 $2^p>4p>n$ 保证容量。用引理\ref{lem:concentrate}取得 $a-w$ 的全支持，再避开 $w$ 制造第三块。混合第二、第三块以保留已好素数的差，再将第二块与 $w$ 交换，可使三个块自身提供全部见证。将单点与第一块折叠，得到 $(a^p,b^p,c^p,d_0^s)$。
+零和模危险素数给 $(a-d_0)+(b-d_0)+(c-d_0)=0$。先混合使 $a-d_0$ 全支持。写 $p=3m+\epsilon$，平均两组同组成 $(m+\epsilon,m,m)$ 的位置，再平均余下的 $p$ 个，得到 $(A^{2p},B^p,C^s)$，其中
+\[
+A=[m(a+b+c)+\epsilon a]/p,\quad B=a+b+c-2A,\quad C=d_0.
+\]
+模危险素数有 $A-C=\epsilon(a-d_0)/p\ne0$。写 $A=a,B=-2a+sz,C=-pz$，再应用引理\ref{lem:shape-change}的两次平均，得到 $(p,p,p+s)$ 核心。
+对整数本原核心，由 $p(A+B)+rC=0$ 及 $\gcd(p,r)=1$ 得 $C=-pz$，进而 $B=rz-a$。坐标公因子为 $\gcd(a,z)$，而差分为 $a+pz$ 和 $nz-2(a+pz)$，所以 $G=\gcd(a+pz,n)$。
+当 $p=3,n=7$ 时，引理\ref{lem:two-block-entry}已经给两个三块与一个单点。保留单点与旧块的全见证便给所需合法核心，不需后续两轮修复。
+\end{proof}

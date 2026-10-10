@@ -1,0 +1,993 @@
+manuscripta math. 170, 147–165 (2023)                                 © The Author(s) 2021
+
+
+
+Gennadiy Averkov · Johannes Hofscheier · Benjamin Nill
+
+Generalized flatness constants, spanning lattice
+polytopes, and the Gromov width
+Received: 2 July 2021 / Accepted: 18 November 2021 /
+Published online: 31 December 2021
+
+Abstract. In this paper we motivate some new directions of research regarding the lattice
+width of convex bodies. We show that convex bodies of sufficiently large width contain a
+unimodular copy of a standard simplex. Following an argument of Eisenbrand and Shmonin,
+we prove that every lattice polytope contains a minimal generating set of the affine lattice
+spanned by its lattice points such that the number of generators (and the lattice width of
+their convex hull) is bounded by a constant which only depends on the dimension. We also
+discuss relations to recent results on spanning lattice polytopes and how our results could be
+viewed as the beginning of the study of generalized flatness constants. Regarding symplectic
+geometry, we point out how the lattice width of a Delzant polytope is related to upper and
+lower bounds on the Gromov width of its associated symplectic toric manifold. Throughout,
+we include several open questions.
+
+
+
+Key words. Lattice polytopes · Spanning lattice polytopes · Lattice width ·
+Flatness constant · Gromov width · Symplectic toric manifolds
+
+
+1. Overview
+In this paper we discuss open problems related to the lattice width (and generaliza-
+tions) motivated by questions on lattice polytopes and symplectic manifolds. Let
+us shortly explain how this paper is organized and where to find its main results.
+In Sect. 2 we present applications and questions emerging from Theorem 2.1, that
+gives an upper bound on the width of lattice polytopes that that do not contain
+unimodular copies of the standard simplex. In this context, we discuss ‘small’
+lattice-generating subsets (Theorem 2.6) and show that lattice polytopes of arbi-
+trarily large width are not necessarily very ample (Theorem 2.10). Open questions
+
+G. Averkov: BTU Cottbus-Senftenberg, Platz der Deutschen Einheit 1, 03046 Cottbus, Ger-
+many
+e-mail: averkov@b-tu.de
+J. Hofscheier: School of Mathematical Sciences, University of Nottingham, Nottingham
+NG7 2RD, UK
+e-mail: johannes.hofscheier@nottingham.ac.uk
+B. Nill (B): Faculty of Mathematics, Otto-von-Guericke-Universität Magdeburg, Univer-
+sitätsplatz 2, 39106 Magdeburg, Germany
+e-mail: benjamin.nill@ovgu.de
+Mathematics Subject Classification: Primary: 52B20 · Secondary: 53D05
+
+
+https://doi.org/10.1007/s00229-021-01363-x
+148                                                                          G. Averkov et al.
+
+
+are collected in Sect. 2.6. In Sect. 3 we investigate the relations of the Gromov
+width of symplectic toric manifolds to the lattice width of their moment polytopes.
+As a consequence of Theorem 2.1 we can give a lower bound on the Gromov width
+in terms of the lattice width (Corollary 3.2), while on the other hand we formulate
+the conjecture that the lattice width is always an upper bound for the Gromov width
+(Conjecture 3.12). Finally, Sects. 4 and 5 contain the proofs of Theorems 2.1 and
+2.10.
+
+
+2. The main results from the viewpoint of the geometry of numbers
+
+2.1. Convex bodies of large lattice width
+
+In order to formulate the main result of this section, let us fix some notation. Recall
+that a non-empty compact and convex subset K ⊆ Rd is called a convex body.
+         ∗ of a convexd body K ⊆ R with respect to a non-zero linear functional
+The width                            d
+
+u∈ R   d    = Hom(R , R) is given as
+
+                          widthu (K ) := max |u(x) − u(y)|,
+                                            x,y∈K
+
+and the (lattice) width1 of K is defined as
+
+                          width(K ) :=        min∗       widthu (K ),
+                                          u∈(Zd ) \{0}
+
+where (Zd )∗ = Hom(Zd , Z) denotes the dual lattice.
+   Here is the classical definition of the flatness constant in dimension d:
+                                                                        
+        Flt(d) := sup width(K ) : K ⊆ Rd convex body, K ∩ Zd = ∅ .
+
+                                  4
+It is known that Flt(d) ≤ O(d 3 loga d) for a constant a by Rudelson
+                                                                   [37] (see also
+[11]). An explicit upper bound of order O(d 2 ) is given by Flt(d) ≤ (d+1)(2d+1)
+                                                 5                                             3
+                                                                           6     d2
+[7, Theorem (7.4), (8.3)]. Clearly, Flt(1) = 1 while in higher dimensions it is
+known that Flt(2) = 1 + √2 by [28] and Flt(3) ≤ 3.972 by [3]. The most recent
+                             3
+result known to√the authors is [14, Conjecture 1.2] where it is conjectured that
+Flt(3) = 2 + 2. In [3] evidence is provided in support for this conjecture by
+finding a local maximizer (with respect to the Hausdorff distance), which attains
+the conjectured bound such that all other polytopes in a small neighbourhood have
+strictly smaller width.
+     Let us recall some more notation. The set GL(d, Z) consists of the d × d-
+matrices with integer coefficients and determinant ±1. We will call a map T : Rd →
+Rd , x → Ax + b with A ∈ GL(d, Z) and b ∈ Zd an (affine) unimodular trans-
+formation, respectively, for b ∈ Rd an (affine) R-unimodular transformation. For
+
+  1 The reader should be aware that there are other notions sometimes called ‘lattice width’
+in the literature such as the facet width (used in Sect. 3.3) or the max-facet width [6,36].
+Generalized flatness constants                                                      149
+
+
+X ⊆ Rd , we call T (X ) a unimodular copy, respectively, an R-unimodular copy of
+X.
+   We define the d-dimensional standard simplex as
+                             d := conv(0, e1 , . . . , ed ),
+where e1 , . . . , ed is the standard basis of Rd . Here is our main observation.
+
+Theorem 2.1. Let K ⊆ Rd be a convex body.
+(1) If width(K ) ≥ 2Flt(d)d, then K contains a unimodular copy of the standard
+    simplex.
+(2) If width(K ) ≥ Flt(d)d, then K contains an R-unimodular copy of the standard
+    simplex.
+
+   The proof will be given in Sect. 4. Let us note the following version of Theo-
+                         Flt(d)d
+rem 2.1(2) (apply it to width(K  ) · K ).
+
+Corollary 2.2. Any convex body K ⊆ Rd contains an R-unimodular copy of
+width(K )
+ Flt(d)d · d .
+
+Remark 2.3. Theorem 2.1 is wrong when one only allows translations of the stan-
+dard simplex instead of unimodular copies. For instance, consider in dimension two
+any large multiple of the standard triangle. By shearing it horizontally sufficiently
+far (by the unimodular transformation e1 → e1 , e2 → ke1 + e2 for some large
+positive integer k), we get a triangle of the same large lattice width such that every
+vertical line intersects it in a segment of length < 1. Hence, this triangle, which is
+itself a unimodular copy of a multiple of the standard triangle, does not contain a
+translation of the standard triangle.
+
+
+2.2. Lattice-generating subsets of bounded size
+
+To a lattice polytope P, one associates the semigroup of lattice points in Zd+1 in
+the cone over P × {1}. In this case, there is a unique minimal set of generators
+of this semigroup, called its Hilbert basis (we refer to the book [9] as a pointer to
+the extensive literature on this topic). Clearly, the size of the Hilbert basis does not
+accept a bound which only depends upon the dimension. However, if one replaces
+this semigroup by the subgroup of Zd+1 generated by the lattice points of P × {1},
+then Theorem 2.6 below shows that the size of a minimal generating subset of the
+lattice points of P × {1} is bounded by a function in the dimension.
+     In [10,40], the Carathéodory rank of a cone is defined as the minimal n ∈ N
+such that every lattice point in the semigroup of lattice points in the cone can be
+written as a nonnegative integral combination of at most n Hilbert basis elements.
+In [22], Gubeladze extends the Carathéodory rank to polytopes by considering
+the cone over the polytope and then reducing the study to the cone case. Passing
+from nonnegative integers to all integral numbers, we give the following related
+definitions (where we use the linear instead of the affine setting in order to stress
+the analogy).
+150                                                                      G. Averkov et al.
+
+
+Definition 2.4. Let P ⊆ Rd be a d-dimensional lattice polytope, and  ⊆ Zd+1
+the lattice spanned by the lattice points in P × {1}.
+ • The integer linear rank ILR(P) of P is defined as the minimal n ∈ N such that
+   every lattice point in  can be written as an integer combination of at most n
+   lattice points in P × {1}.
+ • The integer linear complexity ILC(P) of P is defined as the minimal size of a
+   lattice generating set of  contained in P × {1}.
+Similar to the flatness constant Flt(d), we introduce the (maximal) integer linear
+complexity rank in dimension d, ILC(d), as the maximal integer linear complexity
+ILC(P) of d-dimensional lattice polytopes (it follows from Theorem 2.6 below that
+this definition is well-defined). Analogously, we define ILR(d).
+
+Remark 2.5. In the previous definition, we adopt notation and terminology that
+were independently introduced in [1,2]. There ILR(A) = ILR(P) and ILC(A) =
+ILC(P), where A is the matrix whose columns are the lattice points of P × {1}.
+
+     We remark that ILR(P) ≤ ILC(P) ≤ (d +1)ILR(P) (for the second inequality
+consider a lattice basis of ). Clearly, ILC(1) = 2 and ILC(2) = 3 where the second
+equality follows from the fact that empty lattice triangles are unimodular copies of
+the standard triangle (recall that a lattice polytope is called empty if the vertices are
+its only lattice points). In dimension d = 3, it can be seen from [15, Theorem 1.7]
+that ILC(3) = 5 (and ILR(3) = 5). By taking lattice pyramids, it follows that
+ILC(d) ≥ ILR(d) ≥ d + 2 for d ≥ 3.
+     We point out that an exponential bound on ILR(d) (and thus on ILC(d)) can
+be deduced from an argument of Eisenbrand and Shmonin [18]:
+
+Theorem 2.6. ILR(d) ≤ 2d+1 .
+
+Proof. For an arbitrary d-dimensional lattice polytope P ⊆ Rd we show ILR(P) ≤
+2d+1 . Let p1 , . . . , pm be all lattice points of P × {1} and  be the lattice generated
+mp1 , . . . , pm . Consider an arbitrary p ∈ . We choose a representation p =
+by
+   i=1 λi pi of p (with λ1 , . . . , λm ∈ Z), for which the sum
+
+                                           
+                                           m
+                                    S :=         λi pi
+                                           i=1
+
+of the Euclidean norms of the vectors λ1 p1 , . . . , λm pm is minimized. We claim
+that at most 2d+1 of the coefficients λ1 , . . . , λm are not equal to zero. Assume
+the contrary. Then there are more than 2d positive coefficients or more than 2d
+negative coefficients. Both cases are similar, so assume that there are more than
+2d positive coefficients. This implies the existence of coefficients λs , λt > 0 with
+s = t for which the respective ps and pt are congruent modulo 2. This means
+( ps + pt )/2 ∈ Zd+1 so that ( ps + pt )/2 = pk for some k ∈ {1, . . . , m}. Making
+both λs and λt smaller by 1 and λk larger by 2, the sum S gets smaller. Indeed, the
+triangle inequality implies
+Generalized flatness constants                                                      151
+
+
+           (λs − 1) ps + (λt − 1) pt + (λk + 2) pk ≤ (λs − 1) ps
+            + (λt − 1) pt + λk pk + 2 pk
+             < (λs − 1) ps + (λt − 1) pt + λk pk + ps + pt
+             = λs p s + λt p t + λk p k .
+
+This yields a contradiction to the choice of λ1 , . . . , λm and proves the assertion. 
+                                                                                       
+
+    It is not clear if the bound ILR(d) ≤ 2d+1 is tight asymptotically. The bound
+ILR(d) ≤ 2d+1 implies ILC(d) ≤ (d + 1)2d+1 . By Theorem 2.1, the convex hull
+of any lattice generating set of  of size ILC(P) has width bounded by 2Flt(d)d.
+Moreover, also the width of d-dimensional lattice polytopes P (for d ≥ 3) satisfying
+ILC(P) = ILC(d) is bounded by 2Flt(d)d.
+
+
+2.3. Bounding the lattice width of non-spanning lattice polytopes
+
+A lattice polytope P ⊆ Rd is called spanning if every lattice point in Zd is an affine
+integral combination of lattice points in P. In the notation of Definition 2.4, this
+is equivalent to  = Zd+1 . Spanning lattice polytopes are in the focus of current
+research in classifications and Ehrhart theory of lattice polytopes as they form a
+large class of lattice polytopes that have nice Ehrhart-theoretic properties [15,24,
+25]. On the other hand, non-spanning lattice polytopes are quite exceptional, for
+instance, they include the much-studied class of empty lattice simplices (excluding
+unimodular copies of the standard simplex). In [15] building upon [13], a complete
+classification of all non-spanning three-dimensional lattice polytopes was achieved.
+In particular, it follows from their main result ([15, Theorem 1.3]) that the width
+of a non-spanning lattice polytope of dimension d = 3 is at most 3 (compare
+this with the maximal width 1 of empty lattice tetrahedra). Here, it follows from
+Theorem 2.1(1) that such an upper bound exists in any dimension.2
+
+Corollary 2.7. Any d-dimensional lattice polytope P ⊆ Rd with width(P) ≥
+2Flt(d)d is spanning.
+
+Remark 2.8. Containing a unimodular copy of the standard simplex is in general
+stronger than being spanning, however, at least in lower dimensions surprisingly
+not by much. Theorem 1.7 in [15] shows that there are only two spanning lattice
+3-polytopes that do not contain a unimodular copy of the standard simplex.
+
+   We remark that the more classical situation of large dilations (instead of large
+width) is much easier and completely understood.
+
+Proposition 2.9. Let P ⊆ Rd be a d-dimensional lattice polytope. Then k P is
+                    2 .
+spanning for k ≥  d+1
+
+ 2 It has been recently proven by Ambro and Ito [4, Theorem 5.2(c)] using algebro-
+geometric methods that one can replace Flt(d) in Corollary 2.7 by d.
+152                                                                      G. Averkov et al.
+
+
+Proof. We may assume that P is a lattice simplex (otherwise triangulate P and
+use one of the simplices in the triangulation). Consider the closed parallelepiped 
+spanned by P × {1} ⊆ Rd+1 (see e.g. [12]). The lattice Zd+1 is spanned by all the
+lattice points in  which includes the vertices v0 , . . . , vd of P × {1}. As  has the
+symmetry x → v0 + · · · + vd − x, we see that Zd+1 is already spanned by all the
+                                             2 . From this the statement follows. 
+lattice points in  with last coordinate ≤ d+1                                         
+    The previous bound is sharp in any odd dimension d ≥ 3: consider for instance
+the unique empty lattice simplex of normalized volume 2 (e.g., see [27]).
+
+
+2.4. Further properties of lattice polytopes of large lattice width?
+
+It is tempting to conjecture that lattice polytopes of large width satisfy even stronger
+properties than spanning such as IDP (sometimes also called integrally-closed) or
+very ample (we refer to [9] for the precise definitions). However, this is not true.
+Theorem 2.10. For any dimension d ≥ 3 and any integer k ≥ 3 there exists a
+d-dimensional lattice polytope P ⊆ Rd of width k such that for any integer t ≥ 2
+there is a lattice point in t P that is not the sum of t lattice points in P.
+      The proof will be given in Sect. 5.
+
+
+2.5. Generalized flatness constants
+
+Finally, we would like to rephrase Theorem 2.1 in terms of generalized flatness
+constants, as this seems to us a promising unifying approach to several of the above
+questions.
+Definition 2.11. For a bounded subset X ⊆ Rd , we define the flatness constant
+with respect to X by
+ Flt d (X ) := sup
+                                                                         
+  width(K ) : K ⊆Rd convex body, K does not contain a unimodular copy of X ,
+
+and the R-flatness constant with respect to X by
+                FltR (X ) := sup
+                  d
+                   width(K ) : K ⊆ Rd convex body,
+                     K does not contain an R-unimodular copy of X { .
+      For X = {0} ⊆ Rd , we recover the usual flatness constant, i.e.,
+                                  Flt d ({0}) = Flt(d).
+We remark that FltR  d (X ) ≤ Flt d (X ), and both generalized flatness constants are
+monotone with respect to inclusion. Fltd is invariant under unimodular transforma-
+tions while Flt R
+                d is invariant under R-unimodular transformations. Moreover, it is
+Generalized flatness constants                                                         153
+
+
+straightforward to show that Flt R               R
+                                 d (n X ) = nFlt d (X ) for any positive real number n
+while the analogous statement for Fltd (·) is a priori not clear.
+    Theorem 2.1 implies that these generalized flatness constants are real numbers.
+
+Corollary 2.12. Let X ⊆ Rd be a bounded subset which fits in a unimodular copy
+of n · d . Then Flt d (X ) ≤ 2nd · Flt(d) and Flt R
+                                                   d (X ) ≤ nd · Flt(d).
+
+    Let us show how determining Flt R
+                                    d (X ) would allow to find the order of Flt d (n ·
+X ), cf. Questions 6 and 7 below. The following lemma will be crucial in this
+explanation:
+
+Lemma 2.13. For any X ⊆ Rd , we have Flt d (X ) ≤ Flt R
+                                                      d (X + [0, 1] ).
+                                                                   d
+
+
+Proof. We show that any convex body K ⊆ Rd which contains an R-unimodular
+copy of X + [0, 1]d does also contain a unimodular copy of X . Suppose A · (X +
+[0, 1]d + b) ⊆ K for some A ∈ GLd (Z) and b ∈ Rd . We can write b = b − b
+for b ∈ Zd and b ∈ [0, 1]d . Then A · (X + b ) ⊆ A · (X + b + [0, 1]d ) ⊆ K , i.e.,
+K contains a unimodular copy of X .                                                  
+                                                                                     
+
+Remark 2.14. In general the inequality in the previous lemma is strict. For example,
+Flt1 ({ 13 }) = 23 while FltR
+                            1 ({ 3 } + [0, 1]) = 1.
+                                 1
+
+
+   Suppose that X ⊆ Rd is a full-dimensional convex body, so that there is λ > 0
+such that an R-translate of λ−1 [0, 1]d is contained in X . Then by the previous
+lemma, we obtain
+
+          n · Flt R            R                                 R
+                  d (X ) = Flt d (n · X ) ≤ Flt d (n · X ) ≤ Flt d (n · X + [0, 1] )
+                                                                                  d
+
+            ≤ FltR                                R
+                 d ((n + λ) · X ) = (n + λ) · Flt d (X ).
+
+We divide this inequality by n and get
+
+                     FltR                                     R
+                        d (X ) ≤ n · Flt d (n · X ) ≤ n · Flt d (X )
+                                 1                   n+λ
+
+
+Hence, in order to determine the order of Flt d (n · X ) as n → ∞, it suffices to
+determine Flt R
+              d (X ).
+
+
+
+2.6. Open questions
+
+Question 1. What is the asymptotical order of ILC(d)?
+
+Question 2. Is there an efficient algorithm to find ILC(P) (resp. ILR(P)) for a
+given lattice polytope P?
+
+   We refer to [2, Theorem 6] for an answer when the number of lattice points in
+P is fixed.
+
+Question 3. What is the maximal width of a non-spanning lattice polytope in dimen-
+sion d?
+154                                                                     G. Averkov et al.
+
+
+     Note that for d = 3, Corollary 2.7 implies that the width of a non-spanning
+lattice polytope is at most 23 by using the bound from [3]. Compare this to the
+sharp bound of 3.
+Question 4. Is there a constant N (d) such that any d-dimensional Delzant lattice
+polytope with width at least N (d) is IDP?
+    For this, let us recall that a polytope is Delzant if all its normal cones are
+unimodular. Question 4 is a weaker version of Oda’s conjecture, which asks whether
+all Delzant lattice polytopes are IDP. Note also Gubeladze’s work [23] where he
+proved that lattice polytopes with sufficiently long edges are IDP. Theorem 2.10
+shows that this cannot be generalized to lattice polytopes of sufficiently large width.
+Question 5. Is there an infinite family of d-dimensional lattice polytopes with arbi-
+trarily large widths that all have a non-unimodal h ∗ -vector?
+     This question is motivated by another main conjecture in this field, namely
+the question whether IDP implies unimodality of the h ∗ -vector (we refer to [41]).
+It is generally expected that lattice polytopes with sufficiently long edges have a
+unimodal h ∗ -vector.
+Question 6. What is the order of Fltd (n · d )?
+Question 7. What are the orders of FltR               R
+                                      d (d ) and Flt d (♦d ), respectively?
+      Here, we denote the d-dimensional standard crosspolytope by
+                             ♦d := conv(±e1 , . . . , ±ed ).
+    This question is of interest in order to find lower bounds on the Gromov width
+(see Theorems 3.1 and 3.4, where one should recall that Flt R                    R
+                                                            d (n · X ) = n · Flt d (X )).
+
+
+3. The relation of the lattice width to the Gromov width of symplectic
+manifolds
+3.1. Background and notation
+The Gromov width of a 2d-dimensional symplectic manifold (M, ω) is defined as
+the supremum of the set of capacities πr 2 of balls of radii r that can be symplecti-
+cally embedded in (M, ω) (see [21]). We follow the convention in [32,33] and use
+the identification S 1 = R/Z. There is a large interest in finding lower and upper
+bounds for the Gromov width, see e.g. [5,19,29,31–35,39]. One should remark
+that even for symplectic toric manifolds it is not known how to read off the Gromov
+width from the moment polytope. Here, we observe how closely the Gromov width
+and the lattice width of the moment polytope are related.
+    Let X be a complex projective manifold of dimension d, L an ample line bundle
+on X and ω a Kähler form on X representing the Chern class c1 (L). In [29, Section
+4], Kaveh constructs Zd -valued valuations on the field of rational functions C(X ) to
+obtain associated Newton-Okounkov bodies  ⊆ Rd , i.e., d-dimensional convex
+bodies. We refer to [29] for the precise definition and choices involved. In the
+toric case,  is a Delzant polytope, i.e., a polytope whose normal fan consists of
+unimodular cones.
+Generalized flatness constants                                                         155
+
+
+
+
+                                 –
+                                                    –
+
+                  Fig. 1. A 2-dimensional diamond of size 3 with x = 0
+
+
+3.2. Lower bounds on the Gromov width of symplectic manifolds
+
+The following result (see [29, Corollary 11.4]) is closely related to similar results
+in [19,32,33].
+Theorem 3.1. ([29, Corollary 11.4]) If  contains an R-unimodular copy of R ·d
+(for R > 0), then the Gromov width of (X, ω) is at least R.
+   Note that under the assumption of the theorem, we also have width() ≥ R.
+As an immediate application of Corollary 2.2, we see that the Gromov width of a
+symplectic manifold and the lattice width of its moment body are related.
+Corollary 3.2. The Gromov width of (X, ω) is bounded from below by width()
+                                                                    Flt(d)d .
+
+    In particular, for d = 2, we get that 0.232 · width() is a lower bound on
+the Gromov width.3 This bound is surely not sharp. We note that the lower bound
+in Corollary 3.2 is monotone with respect to inclusion of , a property that is
+conjectured to hold also for the Gromov width.
+    As we will need it later, let us describe a more general construction which has
+been used to give lower bounds for the Gromov width.
+Definition 3.3. Let b1 , . . . , bd be a lattice basis of Zd , x ∈ Rd , a ∈ Z≥1 , and
+k1 , l1 , . . . , kd , ld ∈ R≥0 with k1 + l1 = a, . . . , kd + ld = a. Then
+                      x + conv(k1 b1 , −l1 b1 , . . . , kd bd , −ld bd )
+will be called a diamond of size a. Note that k1 = · · · = kd = 1 and l1 = · · · =
+ld = 0 yields a unimodular simplex, while for k1 = l1 = 1, . . . , kd = ld = 1 we
+get the standard crosspolytope. See Fig. 1 for an illustration.
+    The following result generalizes Theorem 3.1. It is strictly speaking only proven
+in the toric situation, see [32,35,39], however, the proof of [29, Corollary 11.4]
+should carry through to the general case.
+
+  3 It follows from a recent result on Seshadri constants by Ambro and Ito [4, Theorem 0.1]
+that Flt(d) can even be omitted in Corollary 3.2, hence, 0.5 · width() would be a (sharp?)
+lower bound in dimension two.
+156                                                                     G. Averkov et al.
+
+
+Theorem 3.4. If  contains an R-unimodular copy of a diamond of size R (for
+R > 0), then the Gromov width of (X, ω) is at least R.
+
+   Again, in this case we also have width() ≥ R. We refer to [26], in particular
+Example 5.4 therein, for the question how sharp such lower bound constructions
+can be.
+
+
+3.3. A conjectural upper bound on the Gromov width of symplectic manifolds
+
+The only nontrivial upper bound on the Gromov width of a symplectic toric manifold
+known to the authors was given by Lu (see [33]). For this, let us recall the following
+two definitions from [33].
+
+Definition 3.5. Let  be a Delzant polytope with primitive inner facet normals
+uk ∈ (Rd )∗ and facets {x ∈  : uk (x) = −φk } for φk ∈ R. We define two
+numbers:
+ • ()
+   m is defined as the maximum over positive finitesums              of the form
+                                                                m
+   mk=1 a k φ k , where a k are nonnegative integers such that k=1 a k uk = 0, and
+     k=1 ak ≤ d + 1.
+ • ϒ()
+   m is defined as the minimum over positive finitesums              of the form
+                                                                m
+     k=1 ak φk , where ak are nonnegative integers such that    k=1 ak uk = 0.
+
+Remark 3.6. Note that () is a well-defined finite number (cf. [33] or [8,
+Prop. 3.2]). Furthermore, it is straightforward to show that both () and ϒ()
+are invariant under translations by real vectors. After an appropriate translation, we
+may assume that the origin is in the interior of the polytope , and    thus all φk are
+positive. From this it straightforwardly follows that a finite sum m      k=1 ak φk as in
+Definition 3.5 is positive if and only if at least one ak is positive. Furthermore, note
+that in general ϒ() ≤ ().
+
+      Lu proves the following two results.
+
+Theorem 3.7. ([33, Theorem 1.1]) The Gromov width of (X, ω) is bounded from
+above by ().
+
+Theorem 3.8. ([33, Theorem 1.2], see also [26, Theorem 5.5]) If X is a toric Fano
+manifold, then the Gromov width of (X, ω) is bounded from above by ϒ().
+
+      We observe that Lu’s sharper upper bound ϒ() is simply the lattice width.
+
+Proposition 3.9. If  is a Delzant polytope, then ϒ() = width().
+
+    The proof follows by combining the next two lemmata. For this, let us define the
+facet width of a polytope  ⊆ Rd as the minimum of widthu () where u ∈ (Zd )∗
+ranges over all facet normals of .
+
+Lemma 3.10. Let  ⊆ Rd be a Delzant polytope. Then ϒ() equals the facet
+width of .
+Generalized flatness constants                                                                      157
+
+
+Proof. Let ak , uk , φk be given as in the definition of ϒ() (see Definition 3.5).
+     We first show that ϒ() is bounded from below               by the facet width of . For this,
+it suffices to show that, for any positive finite sum m               k=1 ak φk  as in Definition 3.5,
+there is an inner facet normal u of  such that widthu () ≤ m                        ak φk . Suppose
+                                                                                    k=1
+a1 = 0 and define b1 := a1 − 1, bk := ak for k >                1. Hence, u1 + m          bmk uk = 0.
+                                                                                         k=1
+                                                                     m
+For x ∈ , we have      u 1 (x)  ≥   −φ    1  and  −u   1 (x) =     k=1b k u k (x)  ≥  − k=1   bk φk ,
+so that u1 (x) ≤ m     k=1  b k φ k . Thus,     width u 1 ()  ≤ φ 1 +     m
+                                                                           k=1    bk φ k =   m
+                                                                                             k=1 k φk .
+                                                                                                  a
+     For the reverse inequality, suppose um ∈ (Zd )∗ is a primitive inner facet normal
+of  for which the facet width is attained, i.e., width          um () = facet width of . It
+suffices to show that there is a positive finite sum m                k=1 ak φk as in Definition 3.5
+which bounds widthum () from below. Note that both the facet width and ϒ()
+are invariant under translations by real vectors. Hence, we may assume that 0
+is an element of the facet corresponding to um , and thus, φm = 0. There exist
+primitive inner facet normals, say u1 , . . . , ud (up to reordering the rays),            that span
+a unimodular cone σ of the inner normal fan of  such that −um = dk=1 ak uk
+with ak ∈ Z≥0 . Let the remaining ak vanish, i.e., ad+1 = · · · = am = 0, and let x
+be the vertex of  corresponding
+                             d             to σ . In particular, uk (x) = −φk for k = 1, . . . , d.
+Then m    k=1  a k φ k = −      k=1    a k u k (x) = um (x) ≤ widthum ().                            
+                                                                                                      
+    It remains to observe the following.
+Lemma 3.11. The lattice width of a Delzant polytope coincides with its facet width.
+Proof. Let  ⊆ Rd be a Delzant polytope. Clearly, the lattice width of  is less
+than or equal to the facet width of .
+    For the reverse inequality, let u ∈ (Zd )∗ with widthu () = width().  As  is a
+                                                                              d
+Delzant polytope, we can replace  by a unimodular copy such that u = i=1         k i ei
+for ki ∈ Z≥0 , where the standard basis e1 , . . . , ed of Z spans a cone in the inner
+                                                            d
+
+normal fan of . Suppose k1 ≥ 1 and let v be the vertex of  corresponding to the
+cone spanned by e1 , . . . , ed . By translating by a real vector we may assume that
+v = 0. Let w1 be a vertex of  maximizing e1 on , so that widthe1 () = e1 (w1 ).
+We have
+            u(w1 ) ≤ widthu () = width() ≤ widthe1 () = e1 (w1 ).
+                                           
+Hence, 0 ≥ (u − e1 )(w1 ) = ((k1 − 1)e1 + dk=2 ki ei )(w1 ) ≥ 0, i.e., u(w1 ) =
+e1 (w1 ). The statement follows.                                              
+                                                                              
+   This motivates the question whether Lu’s sharper upper bound also holds in
+general.
+Conjecture 3.12. 4 The Gromov width of (X, ω) is bounded from above by the
+lattice width of .
+    This is also formulated as a question in [26, Question 5.10].
+
+  4 A proof of Conjecture 3.12 in dimension 2 has been subsequently found by Chaidez
+and Wormleighton [17]. It also follows from [16, Prop. 2.8] that Conjecture 3.12 holds for
+a large class of Delzant polytopes that includes graph associahedra.
+158                                                                     G. Averkov et al.
+
+
+Remark 3.13. Here is a heuristical argument in favor of this conjecture. Put a uni-
+modular copy  of  between two parallel coordinate hyperplanes whose distance
+equals the lattice width. Then clearly  is included in a large rectangular box of
+the same lattice width. It is expected (but wide open) that the Gromov width should
+respect inclusion of the moment polytopes. Therefore, the Gromov width should
+be at most as large as that of the symplectic toric manifold corresponding to the
+rectangular box, i.e., a product of projective lines. However, in this case the Gromov
+width is known (e.g., by Gromov’s proof of the non-squeezing theorem) and equals
+the smallest size of an edge, which is the lattice width of .
+   The reader should be aware that the Gromov width may differ from the lattice
+width as is shown in [26, Example 5.6]. We remark that it seems not to be even
+known whether fixing the lattice width of  imposes any bounds on the Gromov
+width.
+Remark 3.14. Lu claims in [33, Remark 1.5] that his upper bound ϒ() (which
+by above results equals the lattice width of ) does not hold in the non-Fano
+case by exhibiting an explicit example of a polygon space. This would contradict
+Conjecture 3.12 and the argument in Remark 3.13 would show that the Gromov
+width were not monotone with respect to inclusions. However, we couldn’t verify
+his claim, his computations seem to be wrong. In fact, we get ϒ() = 2 while Lu
+claims ϒ() = 16 . In particular, ϒ() = 2 coincides with the Gromov width by
+[35, Theorem 1].
+Remark 3.15. The reader may wonder why we expressed Conjecture 3.12 in terms
+of the lattice width instead of the facet width. This was to make the relation to
+the other results in this paper more apparent and to stress the fact that while the
+lattice width of convex bodies is monotone with respect to inclusion (as is also
+conjectured for the Gromov width), this is not true for the facet width of (non-
+Delzant) polytopes. For instance, for a natural number k ≥ 1, the lattice triangle
+with vertices (0, 0), (k, −1), and (k + 1, 1) is contained in the lattice rectangle
+[0, k + 1] × [−1, 1]. While the rectangle has facet width 2, the facet width of the
+triangle is linearly increasing in k (indeed it equals 2k + 1).
+
+
+3.4. Dimension 2
+
+As in dimension 2 any smooth complete toric surface is obtained from P2 , P1 × P1
+or a Hirzebruch surface Ha (for a ∈ Z≥1 ) by a sequence of blows-ups at toric fixed
+points (e.g., see [20, page 43]), a proof5 of the 2-dimensional case of Conjecture
+3.12 could be achieved by an appropriate generalization of [33, Theorem 6.2],
+where Lu studies how the upper bound ϒ() behaves under blow-ups of toric
+Fano manifolds at toric fixed points.
+    Let us note the folklore fact that for these minimal toric surfaces the Gromov
+width indeed equals the lattice width.
+
+ 5 The proof of Conjecture 3.12 in dimension 2 by Chaidez and Wormleighton [17] showed
+the stronger monotonicity property and then followed the heuristics in Remark 3.13.
+Generalized flatness constants                                                      159
+
+
+Lemma 3.16. If X is P2 , P1 × P1 or Ha , then the Gromov width of (X, ω) equals
+the lattice width of .
+
+Proof. The cases X = P2 and X = P1 × P1 are straightforwardly verified. It
+remains to check the case of Hirzebruch surfaces.
+                                                        0       x     0          x
+    We may assume that  is a 4-gon with vertices           ,      ,     ,
+                                                        0       0     y      y − ax
+with y > ax > 0. As y > x, the facet width (hence, the lattice width by
+Lemma 3.11) of  equals x. As  contains x2 , Theorem 3.1 implies that the
+Gromov width is at least x. For the reverse inequality, we distinguish two cases. If
+a = 1, then X is Fano, hence, the statement follows by Theorem 3.8 and Proposi-
+tion 3.9 (this was also proven in [39, p. 206]). If a > 1, we use Theorem 3.7 to bound
+the Gromov width from above. Indeed, the only nontrivial linear combination (with
+nonnegative integer coefficients) of ray generators in the inner normal fan of  that
+              0                                             −1        1        0
+sum up to         and have at most three summands, is             +      =         , and
+              0                                               0       0        0
+thus, () = x by Definition 3.5.                                                      
+                                                                                       
+
+   We couldn’t find the following observation on toric surfaces of small Gromov
+width in the literature.
+
+Proposition 3.17. If (X, ω) is a symplectic toric surface whose moment polytope
+ is a Delzant lattice polygon, then its Gromov width equals 1 if and only if the
+                                             = P2 , X ∼
+lattice width of  equals 1. In this case, X ∼        = P1 ×P1 or X is a Hirzebruch
+surface.
+
+Proof. If  has no interior lattice points, then it is well known (e.g., see [38,
+Theorem 2]) that there are two cases. Either,  ∼= 22 , so lattice width and Gromov
+width are both 2 (e.g. by Theorems 3.1 and 3.8 together with Proposition 3.9). Or,
+                 0       1       0         1
+ ∼ = conv           ,      ,        ,              with y ≥ a ≥ 0, i.e., X ∼   = P2 ,
+                 0       0       y      y−a
+X ∼= P1 × P1 , or X is a Hirzebruch surface (note that we only consider the case
+where  is a smooth polygon). Hence, the lattice width and the Gromov width both
+equal 1 (see Lemma 3.16).
+    Suppose that  has an interior lattice point. We may assume that 0 is a vertex of
+ with edge directions e1 , e2 . As  is a Delzant lattice polygon with interior lattice
+                                    1                                               1
+points, convexity implies that           ∈ . Moreover, it is easy to see that
+                                    1                                               1
+cannot be on the boundary, so it is a lattice point in the interior of . Consider the
+edge with vertex 0 and edge direction e1 . Let w1 be the other vertex on that edge.
+As  is a Delzant lattice polygon, there exists a lattice point w1 of  that lies in a
+                                                                                  1
+common edge with w1 and has second coordinate 1. By convexity and as                  is
+                                                                                  1
+not on the boundary of , this implies that (2, 1) ∈ . In the same way, one proves
+                                                            1      1      2       0
+that (1, 2) ∈ . This shows that the diamond conv              ,       ,      ,
+                                                            0      2      1       1
+of size 2 is in , and thus the Gromov width is at least 2 by Theorem 3.4.             
+                                                                                       
+160                                                                     G. Averkov et al.
+
+
+4. Proof of Theorem 2.1
+
+The proof uses general results on successive minima and covering minima to reduce
+the problem to translates of parallelepipeds.
+    Let us recall the following standard notions in discrete geometry. The Minkowski
+sum of two subsets A, B ⊆ Rd is given by A + B = {a + b : a ∈ A, b ∈ B} and it
+can be recursively extended to finite families A1 , . . . , Ak ⊆ Rd in which case we
+         k
+write i=1    Ai . For a convex body K ⊆ Rd , the d-th successive minimum of its
+difference body K − K = {x − y : x, y ∈ K } is defined as follows:
+                                                                         
+         λd (K − K ) := inf λ > 0 : dim span λ(K − K ) ∩ Zd = d ,
+
+while the definition of the d-th covering minimum of K is given by:
+                                                          
+                     μd (K ) := inf μ > 0 : μK + Zd = Rd .
+
+                                                                    Flt(d)
+Lemma 4.1. Let K ⊆ Rd be a convex body. Then we have λd (K − K ) ≤ width(K ).
+
+                       Flt(d)
+Proof. We set τ := width(K     ) . By [30, Lemma 2.4], λd (K − K ) ≤ μd (K ). It
+suffices
+       to show μd (K ) ≤    τ . For this, let x ∈ Rd and set K  := τ K − x. As
+width K  = Flt(d), there is a lattice point y in K  , i.e. y = z − x for some z ∈ τ K .
+Thus x ∈ τ K + Zd .
+
+   Given two points v, w ∈ Rd , we write [v, w] for the line segment between those
+two points, i.e., [v, w] = conv(v, w).
+   The following result is folklore for lattice parallelepipeds.
+
+Lemma 4.2. Let v1 , . . . , vd ∈ Zd be linearly
+                                              independent.   If a ∈ Zd (resp. a ∈
+                                                d
+Rd ), then the lattice parallelepiped P := a + i=1    v
+                                                   [0, i ] (resp. the parallelepiped
+            d
+P := a + i=1 [0, 2vi ]) contains a unimodular copy of the standard simplex d .
+
+Note the stronger assumptions in the case of real translates of lattice parallelepipeds.
+Proof. We proceed by induction on the dimension d. The crucial difference in the
+argument is evident in dimension d = 1: If a ∈ Zd , then it suffices to observe
+that any interval with integral endpoints contains two consecutive integer points.
+However, if a ∈ Rd , then one needs to assume that P is a segment of length at least
+2 to ensure that P contains two consecutive integer points.
+    Now, let d ≥ 2. By applying an appropriate (linear) unimodular transformation,
+we may assume v1 , . . . , vd−1 ∈ Zd−1 × {0}. Consider the projection π : Rd → R
+onto the last coordinate, i.e., given by π(x1 , . . . , xd ) = xd . Now, we distinguish
+the two cases.
+d−1If a ∈ Zd , then we apply the induction hypothesis to P  := a +
+                    d−1 × {π(a)} and deduce in P  the existence of a unimodu-
+   i=1 [0, vi ] ⊆ R
+                 
+lar copy conv(p0 , . . . , pd−1 ) of d−1 . Next, we observe that the intersection of P
+                                                                        d−1
+with Rd−1 ×{π(a)+1} is a translation of the lattice parallelepiped         i=1 [0, vi ] ×
+Generalized flatness constants                                                              161
+
+
+{π(a)+1}. Hence, it must contain a lattice point p ∈ Zd−1 ×{π(a)+1}. Therefore,
+conv(p0 , . . . , pd−1 , p ) is a unimodular copy of d contained in P.
+    Let a ∈  / Zd . We have π(P) = π(a) + [0, 2π (vd )] with 0 = π (vd ) ∈ Z. As
+π(P) is a segment, it follows by the base case of the induction that it contains two
+consecutive integers, say k and k + 1. Thus (as        v1 , . . . , vd−1
+                                                                         havelast coordinate 0)
+there are v , v ∈ [0, 2vd ] such that π a + v = k and π a + v = k +1. We note
+that a + v , a + v needd−1   not to be lattice points. We apply the induction hypothesis
+to P  := a + v + i=1             [0, 2vi ] ⊆ Rd−1 × {k} and deduce in P  the existence
+of a unimodular copy conv(p0 , . . . , pd−1 ) of d−1 . Analogously, the induction
+                                                           d−1
+hypothesis yields that the set P  := a + v + i=1                  [0, 2vi ] ⊆ Rd−1 × {k + 1}
+                                                            
+also contains a unimodular copy conv(p0 , . . . , pd−1 ) of d−1 . By construction,
+for any i ∈ {0, . . . , d − 1} the convex hull of the vectors p0 , . . . , pd−1 , pi form a
+unimodular copy of d contained in P.                                                          
+                                                                                               
+     Clearly, the previous proof implies more than what we need. For instance, it
+can be easily modified to show that any such parallelepiped P has at least 2d many
+lattice points. However, the reader is cautioned not to jump to the conclusion that
+it proves the existence of a unimodular copy of the unit cube [0, 1]d in P.
+Proof of Theorem 2.1. (1) By Lemma 4.1, λd (K − K ) ≤ 2d         1
+                                                                   , i.e., there exist d
+   segments Ii = [ai , bi ] with i ∈ {1, . . . , d} contained in 2d K such that the d
+                                                                  1
+
+   vectors vi := bi − ai are linearly independent and belong to Zd . This implies
+   I1 + · · · + Id ⊆ 21 K . Hence,
+                                     2(I1 + · · · + Id ) ⊆ K .
+    The latter inclusion can be written as
+                                           
+                                           d
+                                      a+          [0, 2vi ] ⊆ K
+                                            i=1
+
+    with a := 2(a1 + · · · + ad ). The statement follows from Lemma 4.2.
+(2) Again by Lemma 4.1, λd (K − K ) ≤ d1 , i.e., there exist d segments Ii = [ai , bi ]
+    with i ∈ {1, . . . , d} contained in d1 K such that the d vectors vi := bi − ai are
+    linearly independent and belong to Zd . This implies I1 + · · · + Id ⊆ K . Hence,
+
+                                            
+                                            d
+                                       a+     [0, vi ] ⊆ K
+                                            i=1
+
+    with a := a1 + · · · + ad . The statement follows from Lemma 4.2.
+                                                                                               
+                                                                                               
+
+
+5. Proof of Theorem 2.10
+
+For given k ∈ N with k ≥ 3, we define the three-dimensional lattice polytope
+            P := conv({(3, 0, −1), (0, 2, −1)} ∪ [0, k]3 )            (see Fig. 2).
+162                                                                          G. Averkov et al.
+
+
+
+
+           Fig. 2. The polytope P for k = 5 (as seen from below the x-y-plane)
+
+
+    We will show that P has the desired property. Then for d > 3, one simply takes
+the Cartesian product of P with [0, k]d−3 . Let us first observe that P has lattice
+width k, as the width is at most k in the direction (1, 0, 0), while on the other hand
+it has to be at least k, because P contains [0, k]3 .
+    Let t ∈ N with t ≥ 2. Let us abbreviate Z 1 := Z3 ∩ P, and
+
+                                  Z t := Z 1 + · · · + Z 1 .
+                                                       
+                                               t times
+
+We will show that the lattice point
+
+                                  p := (3t − 4, 1, 1 − t)
+
+satisfies p ∈ conv(Z t ) = t P but p ∈
+                                     / Zt .
+    For this, we consider
+                                                         
+                         Z t := x ∈ Z2 : (x, 1 − t) ∈ Z t .
+
+In order to determine Z t , we observe that the last coordinates of the points in Z 1
+comprise the set {−1, 0, . . . , k}. We thus need to determine the possibilities for
+values s1 , . . . , st ∈ {−1, 0, . . . , k} such that the sum s1 + · · · + st is equal to
+1 − t. It is easily seen that one of the values s1 , . . . , st has to be equal to 0 and the
+remaining ones to −1 for the latter to be fulfilled. Since (3, 0, −1) and (0, 2, −1)
+are the only two points in Z 1 with last component −1 and {0, . . . , k}2 × {0} is the
+set of all points of Z 1 with last component 0, we get
+
+             Z t = {(3, 0), (0, 2)} + · · · + {(3, 0), (0, 2)} +{0, . . . , k}2 .        (1)
+                                                            
+                                    (t−1) times
+
+      We observe that
+                                     1                            1
+                    (3t − 4, 1) =      ((t − 1)(3, 0) + (0, 0)) +
+                                     2                            2
+                        ((t − 2)(3, 0) + (0, 2) + (1, 0)) ∈ conv(Z t ).
+
+Thus, p ∈ conv(Z t ).
+Generalized flatness constants                                                              163
+
+
+    Finally, we notice that (3t − 4, 1) = (3(t − 1) − 1, 1) ∈      / Z t . Otherwise, it
+could be expressed as a sum as on the right side of (1). However, as the second
+component of {0, . . . , k}2 is nonnegative, no (0, 2) would be allowed as a summand,
+so it would be a sum of (t − 1)(3, 0) and a point in {0, . . . , k}2 , a contradiction.
+Therefore, p ∈/ Zt .                                                                   
+                                                                                       
+
+Acknowledgements We are particularly grateful to Milena Pabiniak for introducing us to
+combinatorial problems regarding the Gromov width and patiently answering our questions.
+We would also like to thank Gabriele Balletti for useful discussions and computations regard-
+ing non-spanning lattice polytopes. We are thankful to the anonymous referee for several
+suggestions and corrections.
+
+Funding The first and last authors are PIs in the Research Training Group Mathemati-
+cal Complexity Reduction funded by the Deutsche Forschungsgemeinschaft (DFG, German
+Research Foundation)—314838170, GRK 2297 MathCoRe. The last author was also par-
+tially supported by the Vetenskapsrådet grant NT:2014-3991 (as an affiliated researcher with
+Stockholm University). The second author is supported by a Nottingham Research Fellow-
+ship from the University of Nottingham.
+
+Open Access This article is licensed under a Creative Commons Attribution 4.0 Interna-
+tional License, which permits use, sharing, adaptation, distribution and reproduction in any
+medium or format, as long as you give appropriate credit to the original author(s) and the
+source, provide a link to the Creative Commons licence, and indicate if changes were made.
+The images or other third party material in this article are included in the article’s Creative
+Commons licence, unless indicated otherwise in a credit line to the material. If material is not
+included in the article’s Creative Commons licence and your intended use is not permitted by
+statutory regulation or exceeds the permitted use, you will need to obtain permission directly
+from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/
+licenses/by/4.0/.
+
+Declarations
+
+Conflict of interest The authors declare that they have no conflict of interest.
+
+Funding Open Access funding enabled and organized by Projekt DEAL.
+
+
+
+References
+
+[1] Aliev, I., Averkov, G., Loera, J. A. De., Oertel, T.: Optimizing sparsity over lattices and
+    semigroups. In: Integer Programming and Combinatorial Optimization, Lecture Notes
+    in Computer Science, vol. 12125, Springer, Cham, pp. 40–51 (2020)
+[2] Aliev, I., Averkov, G., Loera, J. A. De, Oertel, T.: Sparse representation of vectors in
+    lattices and semigroups. In: Mathematical Programming (2021)
+[3] Averkov, G., Codenotti, G., Macchia, A., Santos, F.: A local maximizer for lattice width
+    of 3-dimensional hollow bodies (2019). arXiv preprint arXiv:1907.06199
+[4] Ambro, F., Ito, A.: Successive minima of line bundles. Adv. Math. 365, 38 (2020)
+[5] Arezzo, C., Loi, A., Zuddas, F.: Some remarks on the symplectic and Kähler geometry
+    of toric varieties. Ann. Mat. Pura Appl. 195(4), 1287–1304 (2016)
+164                                                                          G. Averkov et al.
+
+
+ [6] Averkov, G.: On finitely generated closures in the theory of cutting planes. Discrete
+     Optim. 9(4), 209–215 (2012)
+ [7] Barvinok, A.: A Course in Convexity, Graduate Studies in Mathematics, vol. 54. Amer-
+     ican Mathematical Society, Providence (2002)
+ [8] Batyrev, V.V.: On the classification of smooth projective toric varieties. Tohoku Math.
+     J. 43(4), 569–585 (1991)
+ [9] Bruns, W., Gubeladze, J.: Polytopes, Rings, and K -theory. Springer Monographs in
+     Mathematics, Springer, Dordrecht (2009)
+[10] Bruns, W., Gubeladze, J., Henk, M., Martin, A., Weismantel, R.: A counterexample to
+     an integer analogue of Carathéodory’s theorem. J. Reine Angew. Math. 510, 179–185
+     (1999)
+[11] Banaszczyk, W., Litvak, A.E., Pajor, A., Szarek, S.J.: The flatness theorem for nonsym-
+     metric convex bodies via the local theory of Banach spaces. Math. Oper. Res. 24(3),
+     728–750 (1999)
+[12] Beck, M., Robins, S.: Computing the continuous discretely. In: Undergraduate Texts
+     in Mathematics, 2nd edn., Integer-Point Enumeration in Polyhedra, With Illustrations
+     by David Austin, Springer, New York (2015)
+[13] Blanco, M., Santos, F.: Enumeration of lattice 3-polytopes by their number of lattice
+     points. Discrete Comput. Geom. 60(3), 756–800 (2018)
+[14] Codenotti, G., Santos, F.: Hollow polytopes of large width. Proc. Am. Math. Soc.
+     148(2), 835–850 (2020)
+[15] Codenotti, G., Santos, F.: Non-spanning lattice 3-polytopes. J. Combin. Theory Ser. A
+     161, 112–133 (2019)
+[16] Choi, S., Hwang, T.: Gromov Width of Symplectic Toric Manifolds Associated With
+     Graphs, vol. 09729 (2011)
+[17] Chaidez, J., Wormleighton, B.: ECH embedding obstructions for rational surfaces
+     (2020). arXiv preprint arXiv:2008.10125
+[18] Eisenbrand, F., Shmonin, G.: Carathéodory bounds for integer cones. Oper. Res. Lett.
+     34(5), 564–568 (2006)
+[19] Fang, X., Littelmann, P., Pabiniak, M.: Simplices in Newton–Okounkov bodies and the
+     Gromov width of coadjoint orbits. Bull. Lond. Math. Soc. 50(2), 202–218 (2018)
+[20] Fulton, W.: Introduction to toric varieties. In: Annals of Mathematics Studies, The
+     William H. Roever Lectures in Geometry, vol. 131, Princeton University Press, Prince-
+     ton (1993)
+[21] Gromov, M.: Pseudo holomorphic curves in symplectic manifolds. Invent. Math. 82(2),
+     307–347 (1985)
+[22] Gubeladze, J.: Normal polytopes. In: Proceedings of 22nd International Conference on
+     Formal Power Series and Algebraic Combinatorics, San Francisco, pp. 4–8 (2010)
+[23] Gubeladze, J.: Convex normality of rational polytopes with long edges. Adv. Math.
+     230(1), 372–389 (2012)
+[24] Hofscheier, J., Katthän, L., Nill, B.: Spanning lattice polytopes and the uniform position
+     principle (2017). arXiv preprint arXiv:1711.09512
+[25] Hofscheier, J., Katthän, L., Nill, B.: Ehrhart theory of spanning lattice polytopes. Int.
+     Math. Res. Not. IMRN 19, 5947–5973 (2018)
+[26] Hwang, T., Lee, E., Suh, D. Y.: The Gromov width of generalized Bott manifolds. In:
+     International Mathematics Research Notices, vol. rnz066 (2019)
+[27] Hibi, T., Tsuchiya, A.: Classification of lattice polytopes with small volume (2017).
+     arXiv preprint arXiv:1708.00413
+[28] Hurkens, C.A.J.: Blowing up convex sets in the plane. Linear Algebra Appl. 134, 121–
+     128 (1990)
+Generalized flatness constants                                                         165
+
+
+[29] Kaveh, K.: Toric degenerations and symplectic geometry of smooth projective varieties.
+     J. Lond. Math. Soc. 99(2), 377–402 (2019)
+[30] Kannan, R., Lovász, L.: Covering minima and lattice-point-free convex bodies. Ann.
+     Math. 128(3), 577–602 (1988)
+[31] Karshon, Y., Tolman, S.: The Gromov width of complex Grassmannians. Algebraic
+     Geom. Topol. 5, 911–922 (2005)
+[32] Latschev, J., McDuff, D., Schlenk, F.: The Gromov width of 4-dimensional tori. Geom.
+     Topol. 17(5), 2813–2853 (2013)
+[33] Lu, G.: Symplectic capacities of toric manifolds and related results. Nagoya Math. J.
+     181, 149–184 (2006)
+[34] Marinković, A., Pabiniak, M.: Every symplectic toric orbifold is a centered reduction
+     of a Cartesian product of weighted projective spaces. Int. Math. Res. Not. IMRN 23,
+     12432–12458 (2015)
+[35] Mandini, A., Pabiniak, M.: On the Gromov width of polygon spaces. Transform. Groups
+     23(1), 149–183 (2018)
+[36] Pia, A., DelWeismantel, R.: On convergence in mixed integer programming. Math.
+     Program. Ser. A 135(1–2), 397–412 (2012)
+[37] Rudelson, M.: Distances between non-symmetric convex bodies and the M M ∗ -
+     estimate. Positivity 4(2), 161–178 (2000)
+[38] Schicho, J.: Simplification of surface parametrizations—a lattice polygon approach. J.
+     Symb. Comput. 36(3–4), 535–554 (2003)
+[39] Schlenk, F.: Embedding Problems in Symplectic Geometry, De Gruyter Expositions in
+     Mathematics, vol. 40. Walter de Gruyter GmbH & Co. KG, Berlin (2005)
+[40] Sebö, A.: Hilbert bases, Caratheodorys theorem and combinatorial optimization. In:
+     Proceedings of the IPCO Conference, Waterloo, Canada (1990)
+[41] Schepers, J., Van Langenhoven, L.: Unimodality questions for integrally closed lattice
+     polytopes. Ann. Comb. 17(3), 571–589 (2013)
+
+Publisher’s Note Springer Nature remains neutral with regard to jurisdictional claims in
+published maps and institutional affiliations.
+

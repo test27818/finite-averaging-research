@@ -1,0 +1,6 @@
+{
+  "url": "https://api.openalex.org/works?filter=title.search%3Ainverse+weighted+zero+sum+cyclic%2Cfrom_publication_date%3A2018-01-01%2Cto_publication_date%3A2026-09-12&per-page=15&select=id%2Ctitle%2Cpublication_date%2Cdoi%2Ccited_by_count%2Cauthorships%2Cabstract_inverted_index%2Clocations%2Creferenced_works",
+  "status": 200,
+  "retrieved": "2026-09-12",
+  "body": "{\"meta\": {\"count\": 0, \"db_response_time_ms\": 12, \"page\": 1, \"per_page\": 15, \"groups_count\": null, \"x_query\": {\"oql\": \"works where title has (inverse weighted zero sum cyclic)\\n  and date >= (2018-01-01)\\n  and date <= (2026-09-12)\", \"oqo\": {\"get_rows\": \"works\", \"filter_rows\": [{\"column_id\": \"display_name.search\", \"value\": \"inverse weighted zero sum cyclic\", \"operator\": \"has\"}, {\"column_id\": \"from_publication_date\", \"value\": \"2018-01-01\"}, {\"column_id\": \"to_publication_date\", \"value\": \"2026-09-12\"}]}, \"url\": \"/works?filter=display_name.search:inverse weighted zero sum cyclic,from_publication_date:2018-01-01,to_publication_date:2026-09-12&per_page=15\"}, \"cost_usd\": 0.001}, \"results\": [], \"group_by\": []}"
+}

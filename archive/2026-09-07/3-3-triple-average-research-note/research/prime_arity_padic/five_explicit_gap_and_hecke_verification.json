@@ -1,0 +1,82 @@
+{
+  "explicit_gap": {
+    "explicit_constants": [
+      {
+        "runs": 1,
+        "C": 7,
+        "Kmax": 7
+      },
+      {
+        "runs": 2,
+        "C": 10,
+        "Kmax": 40
+      },
+      {
+        "runs": 3,
+        "C": 13,
+        "Kmax": 169
+      },
+      {
+        "runs": 4,
+        "C": 15,
+        "Kmax": 600
+      },
+      {
+        "runs": 5,
+        "C": 18,
+        "Kmax": 2178
+      },
+      {
+        "runs": 6,
+        "C": 21,
+        "Kmax": 7644
+      }
+    ],
+    "gap_rounding_instances": 258
+  },
+  "common_hecke_form": {
+    "levels": [
+      {
+        "word_length": 0,
+        "unit_projective_orbit_size": 4,
+        "words": 1
+      },
+      {
+        "word_length": 1,
+        "unit_projective_orbit_size": 12,
+        "words": 2
+      },
+      {
+        "word_length": 2,
+        "unit_projective_orbit_size": 36,
+        "words": 4
+      },
+      {
+        "word_length": 3,
+        "unit_projective_orbit_size": 108,
+        "words": 8
+      },
+      {
+        "word_length": 4,
+        "unit_projective_orbit_size": 324,
+        "words": 16
+      },
+      {
+        "word_length": 5,
+        "unit_projective_orbit_size": 972,
+        "words": 32
+      },
+      {
+        "word_length": 6,
+        "unit_projective_orbit_size": 2916,
+        "words": 64
+      }
+    ],
+    "unimodular_reductions_checked": 127
+  },
+  "D1_first_run": {
+    "Pell_valuation_instances": 1000,
+    "scope": "Exact first-run formula only; not full D1 classification."
+  },
+  "scope": "General proofs in accompanying note; finite checks do not prove arbitrary-switch fixed-D finiteness."
+}

@@ -1,0 +1,112 @@
+\chapter{上半带：计数表怎样产生剪切}\label{app:upper}
+
+\section{把所有计数公式放进同一个模型}
+上半带为 $n=3p+s$、$1\le s<p$，即 $r=p+s$。
+此时载体有多于 $p$ 个位置，只平均一组不足以制造这么多相同新值，
+所以通常先平均两组组成相同、位置不交的来源。
+本讲把“来源—库存—输出—返回矩阵”一次讲清楚，下一讲只需填写计数。
+
+设旧核心的三种数值为 $A=a$、$B=rz-a$、$C=-pz$。
+一组来源取 $i,j,k$ 份三种值，$i+j+k=p$，产生的新值为
+\[
+D=\frac{iA+jB+kC}{p}
+ =\frac{(i-j)a+(rj-pk)z}{p}.
+\]
+若做 $q_0$ 组相同组成的不交平均，就产生 $q_0p$ 个 $D$。
+保留 $r$ 份作载体以后，剩余总数恰是 $2p$，可分成一个输出组及其补组。
+所有自由度只剩第一输出组的四个计数。
+
+\section{逐项读懂库存与返回公式}
+
+\begin{lemma}[由库存表计算返回矩阵]\label{lem:count-interface}
+在 $K_{p,r}$ 上，选择 $q_0\in\{1,2\}$ 组不交且组成相同的来源 $(i,j,k)$，$i+j+k=p$，保留 $r$ 份新值作载体。剩余库存为
+\begin{equation}\label{eq:stock}
+(p-q_0i,p-q_0j,r-q_0k,q_0p-r).
+\end{equation}
+若输出 $(x,y,u,v)$ 在库存内、和为 $p$，再平均其补集，返回矩阵为 $J/p^2$，其中
+\begin{equation}\label{eq:count-matrix}
+J=\begin{pmatrix}p(x-y)+\alpha v&pry-p^2u+\beta v\\-\alpha&-\beta\end{pmatrix},
+\quad \alpha=i-j,\quad\beta=rj-pk.
+\end{equation}
+若 $p(x-y)+\alpha v=\beta$，则 $J^2=pfI$，$pf\equiv p^4\pmod n$。若一组这样的表与其相邻输出 $(x-1,y-1,u+2,v)$ 同时可用，记相邻标量为 $pf,pg$，则
+\begin{equation}\label{eq:root-count}
+g-f=\alpha n,\qquad
+[\Sigma,J_f^{-1}J_g]=U(nH/g),\quad H=n(2j+\alpha)-2p^2,
+\end{equation}
+其中 $\Sigma=\left(\begin{smallmatrix}-1&r\\0&1\end{smallmatrix}\right)$。
+\end{lemma}
+\begin{proof}
+
+新载体值满足 $-pz'=D$，所以
+\[
+z'=-\frac{\alpha a+\beta z}{p^2}.
+\]
+第一输出组的均值为
+\begin{align*}
+a'&=\frac{xA+yB+uC+vD}{p}\\
+&=\frac{p(x-y)+\alpha v}{p^2}a
+ +\frac{pry-p^2u+\beta v}{p^2}z.
+\end{align*}
+这分别给出矩阵的第二行与第一行；将输出组的和除以 $p$ 给出\eqref{eq:count-matrix}。迹零即得标量平方；代入 $r\equiv-2p\pmod n$ 得其模 $n$ 值。相邻输出使右上项减少 $pn$，故 $g-f=\alpha n$。相乘得到
+\[
+J_f^{-1}J_g=\begin{pmatrix}1&-\beta n/f\\0&g/f\end{pmatrix},
+\]
+再与 $\Sigma$ 作交换子即得\eqref{eq:root-count}。
+\end{proof}
+
+\section{完整算例：读出十一平均的一对返回}
+取 $p=11,s=1$，所以 $r=12,n=34$。
+附录第一行给出来源 $(i,j,k)=(4,3,4)$，
+以及两个输出 $(3,4,1,3)$、$(2,3,3,3)$。
+先做两次不交的十一平均，每次从 $A,B,C$ 分别取 $4,3,4$ 份，
+产生二十二份 $D$。保留十二份 $D$ 后，库存为
+\[
+(11-8,11-6,12-8,22-12)=(3,5,4,10).
+\]
+第一个输出取三份 $A$、四份 $B$、一份 $C$、三份 $D$，
+第二个输出方案取两份 $A$、三份 $B$、三份 $C$、三份 $D$。
+两方案分别构成一条四次平均的返回；它们是同一核心上可选的两条词，
+不要求在同一轮同时执行。
+
+有 $\alpha=1,\beta=12\cdot3-11\cdot4=-8$。
+两返回矩阵为
+\[
+J_f=\begin{pmatrix}-8&383\\-1&8\end{pmatrix},\qquad
+J_g=\begin{pmatrix}-8&9\\-1&8\end{pmatrix}.
+\]
+其实际尺度均为 $1/121$。平方分别为 $-319I$ 和 $55I$，
+即 $f=-29,g=5$，而 $g-f=34=\alpha n$。
+于是相邻商给倍率 $-5/29$，参数环为 $\Z[1/145]$。
+最后
+\[
+H=34(2\cdot3+1)-2\cdot11^2=-4,
+\]
+所以这对表给出 $U(-136/5)$，对应根理想 $4nR$。
+横向系数为 $1$，无需合并其他表。这说明同一张有限计数表同时记录了
+真实位置容量、可逆返回、允许分母和最终控制层。
+
+
+
+\section{为什么相邻输出产生剪切}
+输出从 $(x,y,u,v)$ 改为 $(x-1,y-1,u+2,v)$，
+总项数不变，$x-y$ 也不变，所以两张表仍然迹零。
+右上项的变化为 $-pr-2p^2=-pn$；这个倍数恰好让两反射的商成为三角矩阵。
+随后与交换前两个块的 $\Sigma$ 作交换子，便消去对角部分，留下上剪切。
+
+对同一个参数 $(p,r)$，如果数对 $(\alpha,H)$ 有几组，
+上剪切参数可以用裴蜀等式合并，而横向系数也可以合并。
+下面的推论明确说明计数表需要提供哪两个最大公因子，因而下一讲的任务成为有限整数计数。
+
+\begin{corollary}[相邻输出表的充分条件]\label{cor:resource}
+设 $p\ge11$、$p<r<2p$。若有限组相邻表满足引理\ref{lem:count-interface}，$0<\alpha<p$，所有 $\alpha$ 的最大公因子为 $1$，所有 $H$ 的最大公因子为 $\delta$，其中 $\delta=1$（$n$ 奇）或 $\delta\in\{2,4\}$（$n$ 偶），则全部合法核心可归零。
+\end{corollary}
+\begin{proof}
+
+\par\noindent\textbf{根与控制层。}
+令 $R$ 为所有约分倍率 $g/f$ 及其逆生成的整数环。它是有限局部化环，反演素数均不除 $n$。某一倍率必不为 $\pm1$：$g=f$ 与 $\alpha\ne0$ 矛盾，而 $g=-f$ 与 $g-f=\alpha n$、$\gcd(f,n)=1$、$n>2$ 矛盾。因此 $R$ 有无限单位。
+由\eqref{eq:root-count}先取整数倍得到 $U(nH)$，再作倍率共轭及裴蜀合并，取得 $U(\delta nR)$。引理\ref{lem:transverse}及 $\gcd(\alpha)=1$ 给 $\Gamma(\delta^2n^2,R)$。换到 $(z,y)$，上根变为下根。
+
+\par\noindent\textbf{有限方向与尺度。}
+规范反射 $J/p^2$ 模 $n$ 为 $\left(\begin{smallmatrix}1&-\alpha/p^2\\0&-1\end{smallmatrix}\right)$。其条目公因子整除 $\alpha<p$；所需有限标量由安全小数字提供。换块、反射和 $\alpha$ 的裴蜀组合给 $V\equiv U(-p^{-2})$。$n$ 奇时，选奇 $\alpha$；相邻 $f,g$ 奇偶相反，而条目公因子为奇数，所以引理\ref{lem:content}给 $2I$。因 $r>p$，终端的 $j$ 区间包含至少六个整数，覆盖 $\delta$ 个连续值。定理\ref{thm:terminal}适用。
+\end{proof}
+

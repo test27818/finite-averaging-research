@@ -1,0 +1,84 @@
+\section{有限证书及复核规范}\label{app:certificates}
+本附录的输入均为有限的计数、剩余类或整系数多项式。三个证书命题在正文中分别通过引理\ref{lem:small-supply}、\ref{lem:collision-small}、\ref{lem:seven22}和\ref{lem:ten}使用。补充程序采用整数及有理数运算。
+
+\begin{proposition}[根计数证书]\label{prop:root-certificate}
+对 $11\le p<83$ 的十八个素数及 $1\le s\le9$，共有162组参数。其中48组满足引理\ref{lem:small-supply}的五返回截点；余下114组在表\ref{tab:root-data}中给出233对相邻输出。各表满足\eqref{eq:stock}及\eqref{eq:count-matrix}的迹零条件。除 $(11,3)$ 外，横向系数的最大公因子为 $1$，根系数的最大公因子为推论\ref{cor:resource}允许的 $\delta$。
+\end{proposition}
+\begin{proof}
+每行七元组为 $(i,j,k,x,y,u,v)$。对两表分别验证
+\[
+i+j+k=x+y+u+v=p,quad
+0\le(x,y,u,v)\le(p-2i,p-2j,p+s-2k,p-s),
+\]
+以及 $p(x-y)+(i-j)v=(p+s)j-pk$。第二输出与第一输出相差 $(-1,-1,2,0)$。随后按\eqref{eq:root-count}计算 $H$ 并取最大公因子；这些均为表列整数的直接运算。对每个参数检查它恰属于“达到截点”或“表内”之一，证明覆盖无遗漏。例外 $(11,3)$ 已由引理\ref{lem:small-supply}中的显式矩阵处理。
+\end{proof}
+
+% ROOT_TABLE
+
+\begin{proposition}[碰撞分类证书]\label{prop:collision-certificate}
+在引理\ref{lem:collision-small}的方程下，五平均的903个无序模式恰有表\ref{tab:five-data}所列22个相容解；七平均的57026个压缩模式恰有表\ref{tab:seven-data}所列11个相容解。每个相容系统满秩。
+\end{proposition}
+\begin{proof}
+五平均遍历 $(\alpha,\beta)=(0,0),(1,0),(1,1),(2,0)$、$c=5,6,7,8$，以及长度 $c-\alpha-\beta$ 的非降余数列。删除含五个相同余数、或余数 $0,1$ 各出现超过一次的列。对每个非空至多五项子集，写入\eqref{eq:collision}及另一锚点方程；同时保留两个旧重值时写入矛盾方程 $0=1$。按最左非零元逐列消元，每次整数行消元后约去最大公因子，最后以有理数回代。所得全部相容解如下表。
+七平均遍历 $1\le e\le5$、$0\le\beta\le\alpha$、$\alpha+\beta\le4$，长度为 $7+e-\alpha-\beta$。每类重数小于七，余数 $0,1$ 各至多一次。按各类选择数 $0\le k_r\le f_r$、$1\le\sum k_r\le7$ 建立压缩方程，用同一消元。每个重复类都出现在至少一条部分选取方程中，故其实际值等于表列解。程序逐行回代并比较整个解集，得到所述计数及完整表。
+\end{proof}
+
+% COLLISION_TABLES
+
+\begin{proposition}[二十二元有限轨道证书]\label{prop:seven-certificate}
+引理\ref{lem:seven22}中的 $A^{440},(F^2/7)^{440}$ 模 $1936$ 均为恒等，模 $9$ 生成 $648$ 个行列式一矩阵。环 $\Z[1/35]$ 的单位像模 $1936$ 为 $440$ 元子群 $U$，单位群为 $U\sqcup3U$。三个返回及其逆在 $1936\times2$ 个方向--尺度标记上作用传递，最大父边深度为八。
+\end{proposition}
+\begin{proof}
+快速整数模幂检查前一等式。从恒等矩阵出发，逐个乘两个模九生成元，保留尚未出现的矩阵，闭包大小为648；逐项检查行列式为一。因 $|\SL_2(\Z/9\Z)|=3^3(3^2-1)3=648$，这就是全群。
+同理从 $1$ 乘 $-1,5,7$ 得 $U$，并检查 $U,3U$ 不交且并为全部880个单位。令 $\chi$ 为其二元商标记。在 $(z,y)$ 坐标中使用
+\[
+A=\begin{pmatrix}7&-1\\22&-3\end{pmatrix},\quad
+F=\begin{pmatrix}7&0\\44&1\end{pmatrix},\quad
+J=\begin{pmatrix}-15&2\\-110&15\end{pmatrix}.
+\]
+矩阵 $(a,b;c,d)$ 对标记的作用是
+\[
+(x,\epsilon)\longmapsto((ax+b)(cx+d)^{-1},\epsilon+\chi(cx+d)).
+\]
+从 $(0,0)$ 对 $A,A^{-1},F,F^{-1},J$ 逐层闭包，得到全部3872个状态，最深层为八。对每个状态的全部边重新检查分母可逆及目标在集合内，即给完整有限证书。
+\end{proof}
+
+\begin{proposition}[十元二次覆盖证书]\label{prop:ten-certificate}
+引理\ref{lem:ten}的合法本原方向上，以下七个矩阵中至少一个严格降低 $h^2(5X^2+Y^2)$，唯一相容例外为 $X=0$：
+\[
+\begin{gathered}
+M_1=\begin{pmatrix}1&1\\-5&-1\end{pmatrix},\quad
+M_2=\begin{pmatrix}1&0\\-5&2\end{pmatrix},\quad
+M_3=\begin{pmatrix}1&-2\\0&3\end{pmatrix},\quad
+M_4=\begin{pmatrix}1&1\\5&-3\end{pmatrix},\\
+M_5=\begin{pmatrix}4&1\\0&-3\end{pmatrix},\quad
+M_6=\begin{pmatrix}1&-2\\5&2\end{pmatrix},\quad
+M_7=\begin{pmatrix}1&0\\-10&-1\end{pmatrix}.
+\end{gathered}
+\]
+\end{proposition}
+\begin{proof}
+置 $U=u,V=v,W=-6u-3v$，$Q=(-5u-2v)/3,R=(u+2v)/3,S=(2u+v)/3,T=-2u-v/3$。返回依次平均的当前三元组为
+\begin{center}\small
+\begin{tabular}{cl}\toprule
+矩阵&平均词\\\midrule
+$M_1$&$(W,V,U),(V,U,U),(V,U,U)$\\
+$M_2$&$(W,V,U),(Q,U,U),(V,V,U),(Q,R,U),(Q,R,U)$\\
+$M_3$&$(W,U,U),(V,U,U),(V,S,U),(V,S,U)$\\
+$M_4$&$(W,U,U),(V,U,U),(V,U,U)$\\
+$M_5$&$(W,V,U),(V,V,U),(R,U,U),(R,U,U)$\\
+$M_6$&$(V,U,U),(W,S,U),(V,S,U),(V,S,U)$\\
+$M_7$&$(W,V,V),(V,U,U),(T,S,U),(T,S,U),(S,U,U)$\\\bottomrule
+\end{tabular}\end{center}
+代入两个独立参数可核对全部线性形式和库存。行列式为 $4,2,3,-8,-12,12,-1$，所以本原化内容只含 $2,3$。模 $96$ 记录各内容及输出模四类型，得到5120个合法局部类和12种签名。
+若 $M_i=(a,b;c,d)$、内容为 $g_i$、输出尺度为 $h_i$，下降条件是
+\[
+g_i^2h^2(5+t^2)-h_i^2[5(a+bt)^2+(c+dt)^2]>0,qquad t=Y/X.
+\]
+表\ref{tab:ten-data}列出所有系数。每行各多项式的实根把实直线分成有限区间，逐区间及逐根检查符号；二次项检查无穷方向。剩余的有限点只可能为 $0$，被 $5\nmid Y$ 排除；两行留下无穷方向，其中仅一行与 $(0,1)$ 的局部签名相容，正是终端 $X=0$。由此得到完整覆盖。
+\end{proof}
+
+% TEN_TABLE
+
+有限消元及轨道程序作为补充材料 \texttt{finite\_checks.py} 提供；根计数及新容量衔接的独立核对为 \texttt{verify\_revision.py}。十元表中给出了全部二次系数，实符号判定可直接由该表复核。
+

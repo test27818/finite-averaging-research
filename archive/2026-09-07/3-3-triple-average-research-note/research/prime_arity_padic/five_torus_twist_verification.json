@@ -1,0 +1,39 @@
+{
+  "rational_torus_points": 4407,
+  "exact_branch_identities": 8812,
+  "trace_conic_and_gluing_checks": 4405,
+  "ramified_prime5_checks": 4407,
+  "inert_prime3_principal_unit_checks": 3295,
+  "local_contraction_checks": 2300,
+  "iterated_component_checks": [
+    {
+      "depth": 1,
+      "endpoint_map_double_cosets": 1
+    },
+    {
+      "depth": 2,
+      "endpoint_map_double_cosets": 2
+    },
+    {
+      "depth": 3,
+      "endpoint_map_double_cosets": 4
+    },
+    {
+      "depth": 4,
+      "endpoint_map_double_cosets": 8
+    },
+    {
+      "depth": 5,
+      "endpoint_map_double_cosets": 16
+    },
+    {
+      "depth": 6,
+      "endpoint_map_double_cosets": 32
+    },
+    {
+      "depth": 7,
+      "endpoint_map_double_cosets": 64
+    }
+  ],
+  "scope": "Full common torus structure; no assertion of a closed gcd criterion or torus-group orbit equivalence."
+}

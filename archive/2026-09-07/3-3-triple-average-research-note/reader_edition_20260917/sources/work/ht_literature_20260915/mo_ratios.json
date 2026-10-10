@@ -1,0 +1,35 @@
+{
+  "items": [
+    {
+      "tags": [
+        "nt.number-theory",
+        "analytic-number-theory",
+        "prime-numbers"
+      ],
+      "owner": {
+        "account_id": 28918349,
+        "reputation": 1105,
+        "user_id": 507773,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/6d5218eabef1d707c6c21377419e0c87?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Denis Shatrov",
+        "link": "https://mathoverflow.net/users/507773/denis-shatrov"
+      },
+      "is_answered": true,
+      "view_count": 453,
+      "answer_count": 2,
+      "score": 9,
+      "last_activity_date": 1690532137,
+      "creation_date": 1690270666,
+      "last_edit_date": 1690532137,
+      "question_id": 451422,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://mathoverflow.net/questions/451422/representation-of-a-residue-modulo-prime-as-a-specific-product",
+      "title": "Representation of a residue modulo prime as a specific product",
+      "body": "<blockquote>\n<p>Let <span class=\"math-container\">$p$</span> be a prime number. For every integer  <span class=\"math-container\">$m$</span>, there are integers <span class=\"math-container\">$u_1$</span>, <span class=\"math-container\">$u_2$</span>, such that <span class=\"math-container\">$\\lvert u_1\\rvert, \\lvert u_2\\rvert &lt; \\sqrt{p}$</span> and\n<span class=\"math-container\">$$m \\equiv u_1u_2^{-1} \\pmod{p}.$$</span></p>\n</blockquote>\n<p>Proof of this statement is at the end. I'm interested in generalizing this statement. For example,</p>\n<blockquote>\n<p>Let <span class=\"math-container\">$p$</span> be a prime number, <span class=\"math-container\">$f = \\sqrt[3]{p}$</span>. For every integer   <span class=\"math-container\">$m$</span>, there are integers <span class=\"math-container\">$u_1$</span>, <span class=\"math-container\">$u_2$</span>, <span class=\"math-container\">$u_3$</span>, such that <span class=\"math-container\">$\\lvert u_1\\rvert, \\lvert u_2\\rvert, \\lvert u_3\\rvert &lt; f$</span> and\n<span class=\"math-container\">$$m \\equiv u_1^{\\pm 1}u_2^{\\pm 1}u_3^{\\pm 1} \\pmod{p}.$$</span></p>\n</blockquote>\n<p>But this is false. The question is, how large should <span class=\"math-container\">$f$</span> be to make the statement true? Can we choose <span class=\"math-container\">$f = c\\sqrt[3]{p}$</span> for some constant <span class=\"math-container\">$c$</span>? Probably, no. I think, something like <span class=\"math-container\">$f = \\log(p)\\sqrt[3]{p}$</span> should work. The same question for the products of the form <span class=\"math-container\">$u_1^{\\pm 1}u_2^{\\pm 1}\\dotsm u_n^{\\pm 1}$</span>.</p>\n<p><strong>Proof.</strong></p>\n<p>Consider the pairs <span class=\"math-container\">$(a, b)$</span> such that <span class=\"math-container\">$0 \\le a, b &lt; \\sqrt{p}$</span>. There are <span class=\"math-container\">$(\\lfloor\\sqrt{p}\\rfloor + 1)^2 &gt; p$</span> such pairs. Hence, we can choose two distinct pairs <span class=\"math-container\">$(a_1, b_1)$</span>, <span class=\"math-container\">$(a_2, b_2)$</span> such that\n<span class=\"math-container\">$$a_1m + b_1 \\equiv a_2m + b_2 \\pmod{p}.$$</span> Let <span class=\"math-container\">$u_2 = a_1 - a_2$</span>, <span class=\"math-container\">$u_1 = b_2 - b_1$</span>.  Then\n<span class=\"math-container\">$$m \\equiv u_1u_2^{-1} \\pmod{p}.$$</span>\nI tried to generalize this proof, but did not succeed.</p>\n<p><strong>Update</strong></p>\n<p><a href=\"https://arxiv.org/abs/1408.4515\" rel=\"nofollow noreferrer\">This</a> article deals with a similar problem. Theorem 1 implies that <span class=\"math-container\">$f = p^{\\beta + o(1)}$</span> works if <span class=\"math-container\">$n \\ge 14$</span>, where <span class=\"math-container\">$\\beta = \\frac{1}{4}e^{-1/2} \\approx 0.1516$</span>. This result is the best possible (in term of <span class=\"math-container\">$\\beta$</span>) until at least the Burgess bound on the\nsmallest quadratic nonresidue is improved.</p>\n"
+    }
+  ],
+  "has_more": false,
+  "quota_max": 300,
+  "quota_remaining": 290
+}

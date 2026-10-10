@@ -1,0 +1,1162 @@
+{
+  "items": [
+    {
+      "tags": [
+        "abstract-algebra",
+        "gaussian-integers"
+      ],
+      "owner": {
+        "account_id": 2245093,
+        "reputation": 18795,
+        "user_id": 58294,
+        "user_type": "registered",
+        "accept_rate": 71,
+        "profile_image": "https://i.sstatic.net/bZyT9neU.png?s=256",
+        "display_name": "Sidharth Ghoshal",
+        "link": "https://math.stackexchange.com/users/58294/sidharth-ghoshal"
+      },
+      "is_answered": true,
+      "view_count": 107,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1570846189,
+      "creation_date": 1570835721,
+      "question_id": 3390140,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3390140/examples-of-small-multiplicative-subgroups-of-big-quotient-rings-of-the-gaussian",
+      "title": "Examples of small multiplicative subgroups of BIG quotient rings of the gaussian integers",
+      "body": "<h2>Setup:</h2>\n\n<p>One can study the ring of integers <span class=\"math-container\">$\\mathbb{Z}$</span> by looking at its quotient rings <span class=\"math-container\">$\\mathbb{Z}/k\\mathbb{Z}$</span> often called \"the Integers mod K\". These quotient rings contain multiplicative subgroups that can sometimes have very small exponent, </p>\n\n<p>A striking example is the multiplicative subgroup of the integers modulo 24, which we denote as <span class=\"math-container\">$ \\left( \\mathbb{Z}/24\\mathbb{Z} \\right)^\\times$</span>.  This group has only 8 elements contained in it, and very remarkably it has exponent 2. Meaning that for any element <span class=\"math-container\">$a \\in \\left( \\mathbb{Z}/24\\mathbb{Z} \\right)^\\times, a^2 = 1$</span> </p>\n\n<p>Yet the original ring has 24 elements in it, which is a whole lot more than 2. By studying the <a href=\"https://en.wikipedia.org/wiki/Carmichael_function\" rel=\"nofollow noreferrer\">Carmichael Function</a> one can uncover other numerical gold where a VERY big ring contains a multiplicative subgroup with a very small exponent. (For example <span class=\"math-container\">$ \\left( \\mathbb{Z}/240\\mathbb{Z} \\right)^\\times $</span> where the original ring has 240 elements and yet the exponent here is only 4).</p>\n\n<p>I'm interested in finding the bigger finite-commutative-rings whose multiplicative subgroups have very small exponents. </p>\n\n<h2>Question:</h2>\n\n<p>If we turn our attention to the gaussian integers <span class=\"math-container\">$\\mathbb{Z}[i]$</span> and look at quotient rings <span class=\"math-container\">$R$</span>. What is an example of the LARGEST finite quotient ring whose multiplicative subgroup has exponent 2?</p>\n"
+    },
+    {
+      "tags": [
+        "modular-arithmetic",
+        "inverse",
+        "euclidean-algorithm"
+      ],
+      "owner": {
+        "account_id": 7768723,
+        "reputation": 403,
+        "user_id": 376105,
+        "user_type": "registered",
+        "accept_rate": 71,
+        "profile_image": "https://www.gravatar.com/avatar/478421b5e7c954c79befbce44b90feb5?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Elias",
+        "link": "https://math.stackexchange.com/users/376105/elias"
+      },
+      "is_answered": true,
+      "view_count": 222,
+      "accepted_answer_id": 2147838,
+      "answer_count": 5,
+      "score": 1,
+      "last_activity_date": 1487280816,
+      "creation_date": 1487280456,
+      "last_edit_date": 1487280739,
+      "question_id": 2147830,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/2147830/a-small-question-about-multiplicative-inverses",
+      "title": "A small question about multiplicative inverses",
+      "body": "<p>I wan't to find the multiplivative inverse of $[22]^{-1}_{12} $ in $Z_{12}$</p>\n\n<p>But when I do the euclidean algorithm on 22 and 12 I get : gcd(22, 12) = 2\nDoes that mean there are no multiplicative inverses? I only know how to get the multiplicative inverse if gcd(22, 12) = 1.</p>\n\n<p>Are there any other ways to get the multiplicative inverse of $[22]^{-1}_{12} $ in $Z_{12}$</p>\n"
+    },
+    {
+      "tags": [
+        "number-theory",
+        "proof-verification",
+        "prime-numbers",
+        "algebraic-number-theory"
+      ],
+      "owner": {
+        "account_id": 14404419,
+        "reputation": 13,
+        "user_id": 596379,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/1892256517561699/picture?type=large",
+        "display_name": "Omar Alaskandranii",
+        "link": "https://math.stackexchange.com/users/596379/omar-alaskandranii"
+      },
+      "is_answered": true,
+      "view_count": 273,
+      "accepted_answer_id": 2928138,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1537735584,
+      "creation_date": 1537732171,
+      "last_edit_date": 1537733785,
+      "question_id": 2928114,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/2928114/facing-a-small-obstacle-while-trying-to-proof-wolstenholmes-theorem-1-using-mul",
+      "title": "facing a small obstacle while trying to proof Wolstenholme&#39;s theorem 1 using multiplicative inverse in (mod p)",
+      "body": "<blockquote>\n  <p>Wolstenholme's theorem states that for a prime <span class=\"math-container\">$p&gt;3$</span>\n  and\n  <span class=\"math-container\">$$ \\frac{1}{1^2}+\\frac{1}{2^2}+\\frac{1}{3^2}+......+\\frac{1}{(p-1)^2}=\\frac{a}{b}.$$</span> \n  <span class=\"math-container\">$ a\\equiv 0\\pmod p $</span></p>\n</blockquote>\n\n<p>I think that I found a reasonable way to prove this theorem but I face a small obstacle at the end of the proof.</p>\n\n<p>My solution steps are as follows.</p>\n\n<ol>\n<li>make common factor for the fractions.</li>\n<li>for each term in the numerator take (mod p) and simplify the result using the multiplicative inverse in (mod p) \nfor example the first term in numerator is \n<span class=\"math-container\">$ 2^2 \\times 3^2 \\times ..... \\times (p-1)^2 $</span>\nin this quantity each term has its multiplicative inverse (mod p) multiplied by it so this quantity is only <span class=\"math-container\">$ \\equiv 1\\pmod p $</span>.\nand after doing the same thing to other terms you get at the end that\nthe numerator is <span class=\"math-container\">$ \\equiv (1^2+1^2+2^2+3^2+....(p-2)^2)\\pmod p $</span> .\nafter using the formula for summing n squared numbers and simplifying I got \n<span class=\"math-container\">$$a  \\equiv \\frac{2p^3-9p^2+13p}{6}\\pmod p $$</span></li>\n</ol>\n\n<p>this is the question :\nfor p>3 (p is a prime number)</p>\n\n<p>how to prove that this quantity : \n <span class=\"math-container\">$$ \\frac{2p^3-9p^2+13p}{6} $$</span> is divisible by p .</p>\n\n<p>or equivalently \n<span class=\"math-container\">$$ \\frac{2p^2-9p+13}{6} $$</span> is Integer ( belongs to Z ) .</p>\n\n<p>I appreciate any attempts for help.</p>\n"
+    },
+    {
+      "tags": [
+        "number-theory",
+        "elementary-number-theory",
+        "analytic-number-theory"
+      ],
+      "owner": {
+        "account_id": 4494633,
+        "reputation": 2053,
+        "user_id": 152169,
+        "user_type": "registered",
+        "accept_rate": 61,
+        "profile_image": "https://www.gravatar.com/avatar/3a7ff32da6fb6ea854cf170ff3cec230?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "user152169",
+        "link": "https://math.stackexchange.com/users/152169/user152169"
+      },
+      "is_answered": false,
+      "view_count": 58,
+      "answer_count": 0,
+      "score": 2,
+      "last_activity_date": 1620256826,
+      "creation_date": 1620256826,
+      "question_id": 4128685,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/4128685/given-a-fixed-integer-a-1-what-is-the-amount-of-integers-1-leq-n-leq-x",
+      "title": "Given a fixed integer $a &gt; 1$, what is the amount of integers $1 \\leq n \\leq x$ such that the multiplicative order of $a \\pmod{n}$ is small?",
+      "body": "<p>Let <span class=\"math-container\">$x &gt; 1$</span> be a large real variable and let <span class=\"math-container\">$a &gt; 1$</span> be a fixed integer. For an integer <span class=\"math-container\">$n$</span> coprime to <span class=\"math-container\">$a$</span>, let <span class=\"math-container\">$\\text{ord}_n(a)$</span> denote the multiplicative order of <span class=\"math-container\">$a$</span> modulo <span class=\"math-container\">$n$</span>. Fix an <span class=\"math-container\">$0 &lt; \\epsilon &lt; 1$</span> small. Can we give a good upper bound for the size of the following set?\n<span class=\"math-container\">$$\n\\left\\{1 \\leq n \\leq x \\ : \\ (n,a)=1 \\text{ and } \\text{ord}_n(a) \\leq x^\\epsilon\\right\\}\n$$</span></p>\n"
+    },
+    {
+      "tags": [
+        "elementary-number-theory",
+        "polynomials",
+        "recreational-mathematics",
+        "number-systems",
+        "multiplicative-function"
+      ],
+      "owner": {
+        "account_id": 1787227,
+        "reputation": 803,
+        "user_id": 424408,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/I2BqY.jpg?s=256",
+        "display_name": "BCA",
+        "link": "https://math.stackexchange.com/users/424408/bca"
+      },
+      "is_answered": true,
+      "view_count": 4377,
+      "accepted_answer_id": 2181310,
+      "answer_count": 5,
+      "score": 96,
+      "last_activity_date": 1710381390,
+      "creation_date": 1489194029,
+      "last_edit_date": 1709146055,
+      "question_id": 2181291,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/2181291/reversing-an-integers-digits-is-multiplicative-for-small-digits",
+      "title": "Reversing an integer&#39;s digits is multiplicative for small digits",
+      "body": "<p>So my 7 year old son pointed out to me something neat about the number 12: if you multiply it by itself, the result is the same as if you took 12 <em>backwards</em> multiplied by itself, then flipped the result backwards. In other words: $$12 × 12 = 144$$$$21 × 21 = 441$$</p>\n\n<p>I confidently explained to him that this was merely a coincidence.</p>\n\n<p>But he then casually pointed out that the same holds true for 10, 11 and 13 (as long as you use leading zeros), $$10 × 10 = 100$$$$01 × 01 = 001$$</p>\n\n<p>As if this wasn't enough, he also went on to mention that the same holds true for <em>addition</em> for those same four numbers! $$12 + 12 = 24$$ $$21+21 = 42$$</p>\n\n<p>So needless to say, this is hard to chalk up to mere coincidence. Is there some non-coincidental reason for these strange findings?</p>\n"
+    },
+    {
+      "tags": [
+        "probability",
+        "binomial-distribution",
+        "concentration-of-measure"
+      ],
+      "owner": {
+        "account_id": 151804,
+        "reputation": 4901,
+        "user_id": 32765,
+        "user_type": "registered",
+        "accept_rate": 25,
+        "profile_image": "https://www.gravatar.com/avatar/d5074328ceead389c8b715da3ee32e8d?s=256&d=identicon&r=PG",
+        "display_name": "lily",
+        "link": "https://math.stackexchange.com/users/32765/lily"
+      },
+      "is_answered": true,
+      "view_count": 91,
+      "accepted_answer_id": 5070326,
+      "answer_count": 1,
+      "score": 3,
+      "last_activity_date": 1748246472,
+      "creation_date": 1748240617,
+      "question_id": 5070310,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/5070310/weakness-of-usual-multiplicative-chernoff-bound-for-very-small-probabilities",
+      "title": "Weakness of usual multiplicative Chernoff bound for very small probabilities",
+      "body": "<p>Let <span class=\"math-container\">$X \\sim \\text{Bin}(k, \\frac1n)$</span> be binomially distributed with <span class=\"math-container\">$k$</span> trials and trial probability <span class=\"math-container\">$\\frac1n$</span>.  We want to bound <span class=\"math-container\">$\\Pr[X \\ge \\frac k2] \\le O(n^{-k/2})$</span>, where the big-O is in terms of <span class=\"math-container\">$n$</span> (i.e. <span class=\"math-container\">$k$</span> is held constant).  One way to think of this is that we have a randomized yes-or-no decision procedure which almost always gives the correct answer (only <span class=\"math-container\">$\\frac1n$</span> chance of failing) and we want to reduce this failure probability to an even smaller inverse polynomial <span class=\"math-container\">$n^{-c}$</span> by repeating the procedure a constant <span class=\"math-container\">$k$</span> number of times and taking the majority vote.</p>\n<p>A simple way to obtain such a bound is to observe that in the sum\n<span class=\"math-container\">$$\\Pr\\left[X \\ge \\frac k2\\right] = \\sum_{j=\\lceil k/2 \\rceil}^k \\binom{k}{j} \\left(\\frac1n\\right)^{j}\\left(1-\\frac1n\\right)^{k-j},$$</span> each term is <span class=\"math-container\">$O(n^{-k/2})$</span> and there are a constant number of terms.</p>\n<hr />\n<p>We can also get this result from the Cramér-Chernoff bound\n<span class=\"math-container\">$$\\Pr\\left[X \\ge t\\right] \\le \\exp\\left(-k d\\left(\\frac t k \\middle\\| \\frac1n\\right)\\right)\\qquad\\forall t \\ge \\frac kn$$</span>\nwhere <span class=\"math-container\">$d(p \\| q)$</span> is KL-divergence of Bernoulli random variables, which for <span class=\"math-container\">$t = \\frac k2$</span> gives\n<span class=\"math-container\">\\begin{align*}\n\\Pr\\left[X \\ge \\frac k2\\right] &amp;\\le \\exp\\left(-k d\\left(\\frac 12 \\middle\\| \\frac1n\\right)\\right) \\\\\n&amp;= \\exp\\left(-k \\left(\\frac12 \\log \\frac{1/2}{1/n} + \\frac12 \\log \\frac{1/2}{1-1/n}\\right) \\right) \\\\\n&amp;\\le \\exp\\left(-k \\left(\\frac12 \\log \\frac{1/2}{1/n} + \\frac12 \\log \\frac{1/2}{1}\\right) \\right) \\\\\n&amp;= \\exp\\left(-k \\left(\\frac12 \\log n + \\log \\frac12\\right) \\right) \\\\\n&amp;= 2^k n^{-k/2} = O(n^{-k/2})\n\\end{align*}</span></p>\n<hr />\n<p>However, suppose we try to apply a very commonly-used &quot;multiplicative Chernoff bound&quot; to this problem, which is often the form taught in computer science classes:</p>\n<p><span class=\"math-container\">$$\\Pr\\left[X \\ge (1+b)\\frac kn\\right] \\le e^{-\\frac{b^2}{2 + b} \\cdot \\frac kn}\\qquad\\forall b \\ge 0$$</span></p>\n<p>Here we can immediately see that we will have <span class=\"math-container\">$b \\in \\Theta(n)$</span>\nand thus the RHS will be of the form <span class=\"math-container\">$e^{-\\Theta(1)}$</span> which is constant in <span class=\"math-container\">$n$</span>, so we fail to obtain the desired bound.</p>\n<p>My question is: what accounts for the weakness of this commonly-used bound in this regime?  How can we recognize ahead of time that this bound is not an appropriate tool for the problem?</p>\n"
+    },
+    {
+      "tags": [
+        "number-theory",
+        "elementary-number-theory",
+        "prime-numbers",
+        "modular-arithmetic",
+        "chinese-remainder-theorem"
+      ],
+      "owner": {
+        "account_id": 12434767,
+        "reputation": 1735,
+        "user_id": 541513,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/66aeb9b65c8086a48787435b2dbc09a0?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Jim",
+        "link": "https://math.stackexchange.com/users/541513/jim"
+      },
+      "is_answered": true,
+      "view_count": 290,
+      "answer_count": 3,
+      "score": 0,
+      "last_activity_date": 1633659229,
+      "creation_date": 1633101507,
+      "question_id": 4265212,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/4265212/small-lemma-on-moving-up-multiplicative-inverses-of-powers-needs-explanation",
+      "title": "Small lemma on moving up multiplicative inverses of powers needs explanation",
+      "body": "<p>I am reading about a lemma that shows how to lift up a multiplicative inverse. I.e. if we  know that <span class=\"math-container\">$3\\cdot 3 \\equiv 1 \\pmod {2^3}$</span> then we know that <span class=\"math-container\">$3\\cdot 43 \\equiv \\pmod {2^6}$</span><br />\nTo go from <span class=\"math-container\">$\\pmod {2^3}$</span> to <span class=\"math-container\">$\\pmod {2^6}$</span> we use the formula:<br />\nif <span class=\"math-container\">$xy \\equiv 1\\pmod {p^e}$</span> then <span class=\"math-container\">$xz \\equiv 1\\pmod {p^{2e}}$</span> where <span class=\"math-container\">$z = y- yrp^e$</span> and <span class=\"math-container\">$r$</span> is the from <span class=\"math-container\">$xy = 1 + rp^e$</span><br />\nThere are two parts I don't understand and would like some help.</p>\n<ol>\n<li>First of all, is such a proof usually &quot;discovered&quot; from the result? I mean if I work backwards and replacing I can see that I can get back to <span class=\"math-container\">$xy \\equiv 1 \\pmod {p^e}$</span>.<br />\nAnd I can apply the formula to solve a problem of this type. But I don't have any intuitive &quot;feel&quot; of that <span class=\"math-container\">$y- yrp^e$</span> that we multiply <span class=\"math-container\">$x$</span> instead of <span class=\"math-container\">$y$</span> to move to the higher power i.e. from <span class=\"math-container\">$p^e$</span> to <span class=\"math-container\">$p^{2e}$</span>. Is there a way to understand this better?</li>\n<li>The lemma as part of the steps/proof sates that:</li>\n</ol>\n<blockquote>\n<p>We need a <span class=\"math-container\">$z \\equiv y \\pmod {p^e} \\implies z = y + tp^e$</span> and we need\n<span class=\"math-container\">$xz \\equiv 1\\pmod {p^{2e}} \\implies x(y + tp^e) \\equiv 1 \\pmod\n&gt; {p^{2e}}$</span>. Since <span class=\"math-container\">$xy = 1 + rp^e$</span> we know that <span class=\"math-container\">$1 + rp^e + xtp^e \\equiv\n&gt; 1 \\pmod {p^{2e}}$</span>. Since <span class=\"math-container\">$xy \\equiv 1 \\pmod p^e$</span> setting <span class=\"math-container\">$t = -yr$</span>\nsolves the congruence</p>\n</blockquote>\n<p>The last sentence is what I don't understand. We want to solve <span class=\"math-container\">$1 + rp^e + xtp^e \\equiv 1 \\pmod {p^{2e}} \\implies 1 + (r + xt)p^e \\equiv 1 \\pmod {p^{2e}}$</span><br />\nBut <span class=\"math-container\">$xy \\equiv 1$</span> in <span class=\"math-container\">$\\pmod p^e$</span> and not by <span class=\"math-container\">$\\pmod {p^{2e}}$</span>so how can we solve it like it says using the inverse?</p>\n"
+    },
+    {
+      "tags": [
+        "prime-numbers",
+        "finite-fields",
+        "average",
+        "upper-lower-bounds",
+        "multiplicative-order"
+      ],
+      "owner": {
+        "account_id": 165561,
+        "reputation": 6033,
+        "user_id": 2626,
+        "user_type": "registered",
+        "accept_rate": 61,
+        "profile_image": "https://www.gravatar.com/avatar/db3e724a2931a015c2488fac9b229a0f?s=256&d=identicon&r=PG",
+        "display_name": "Matt Groff",
+        "link": "https://math.stackexchange.com/users/2626/matt-groff"
+      },
+      "is_answered": false,
+      "view_count": 131,
+      "answer_count": 0,
+      "score": 3,
+      "last_activity_date": 1577051200,
+      "creation_date": 1577051200,
+      "question_id": 3484890,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3484890/is-the-average-multiplicative-order-of-a-finite-field-often-small",
+      "title": "Is the average multiplicative order of a finite field often small?",
+      "body": "<p>It's possible to collect together all of the elements in a finite field of size <span class=\"math-container\">$p$</span>, <span class=\"math-container\">$p$</span> prime, that have multiplicative order <span class=\"math-container\">$\\le \\log{(p)}$</span>, and put them in a set <span class=\"math-container\">$s$</span>.  My question is, how often is the size of this set, <span class=\"math-container\">$|S| \\ge \\log{(p)}$</span>?</p>\n\n<p>I found <a href=\"https://math.dartmouth.edu/~carlp/PDF/ordertalk.pdf\" rel=\"nofollow noreferrer\">this PDF</a> that addresses the multiplicative order modulo <span class=\"math-container\">$p$</span>, on average, but I couldn't find out how to address my question from that paper.  The rest of the literature seems fairly scarce, so I'm hoping someone else can resolve this.</p>\n"
+    },
+    {
+      "tags": [
+        "linear-algebra",
+        "quaternions"
+      ],
+      "owner": {
+        "account_id": 11553002,
+        "reputation": 51,
+        "user_id": 472014,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/066465b7e5ed72912dade94bd32490da?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Gabriel Fanini",
+        "link": "https://math.stackexchange.com/users/472014/gabriel-fanini"
+      },
+      "is_answered": true,
+      "view_count": 330,
+      "answer_count": 1,
+      "score": 2,
+      "last_activity_date": 1522936728,
+      "creation_date": 1522936293,
+      "question_id": 2723391,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/2723391/division-algebra-without-multiplicative-inverse",
+      "title": "Division Algebra without Multiplicative Inverse",
+      "body": "<p>We can construct a division algebra without multiplicative inverses?</p>\n\n<p>In the article the octonions (<a href=\"http://math.ucr.edu/home/baez/octonions/node2.html\" rel=\"nofollow noreferrer\">http://math.ucr.edu/home/baez/octonions/node2.html</a>), this is possible by taking the quaternions and modifying the product slightly, setting $i^2 = -1 + \\epsilon j$ for some small nonzero real number $\\epsilon$ while leaving the rest of the multiplication table unchanged.</p>\n"
+    },
+    {
+      "tags": [
+        "discrete-mathematics",
+        "modular-arithmetic"
+      ],
+      "owner": {
+        "account_id": 16464411,
+        "reputation": 23,
+        "user_id": 737689,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/91Obq.jpg?s=256",
+        "display_name": "m6rtin503",
+        "link": "https://math.stackexchange.com/users/737689/m6rtin503"
+      },
+      "is_answered": true,
+      "view_count": 136,
+      "accepted_answer_id": 3810819,
+      "answer_count": 2,
+      "score": 1,
+      "last_activity_date": 1670254836,
+      "creation_date": 1598955537,
+      "last_edit_date": 1598977759,
+      "question_id": 3810435,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3810435/problem-with-modular-multiplicative-inverse",
+      "title": "Problem with modular multiplicative inverse.",
+      "body": "<p>I'm trying my best to solve one of my prep-exam exercises. I've got thesis that seems to be right (I've checked it on small numbers), but I cannot prove it ... . So here it is: <span class=\"math-container\">$x \\perp n $</span> and <span class=\"math-container\">$x+1 \\perp n.\\, $</span> Let <span class=\"math-container\">$\\,x' = x^{-1}\\bmod n.\\,$</span> Prove that <span class=\"math-container\">$ x' \\perp n $</span> and <span class=\"math-container\">$ x' + 1 \\perp n $</span>. First part with <span class=\"math-container\">$ x' \\perp n $</span> is easy, but second I cannot prove. Thanks for all help!</p>\n"
+    },
+    {
+      "tags": [
+        "computational-complexity"
+      ],
+      "owner": {
+        "account_id": 6343662,
+        "reputation": 529,
+        "user_id": 249263,
+        "user_type": "registered",
+        "accept_rate": 81,
+        "profile_image": "https://www.gravatar.com/avatar/55f9238a93ca3ba729b62e1102099c1b?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Aurelio",
+        "link": "https://math.stackexchange.com/users/249263/aurelio"
+      },
+      "is_answered": false,
+      "view_count": 82,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1525629671,
+      "creation_date": 1525629265,
+      "last_edit_date": 1525629671,
+      "question_id": 2769502,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/2769502/generating-all-multiplicative-partitions-of-n-in-time-2o-log-n",
+      "title": "Generating all multiplicative partitions of $n$ in time $2^{o(\\log n)}$",
+      "body": "<p>Is it possible to generate all <a href=\"https://en.wikipedia.org/wiki/Multiplicative_partition\" rel=\"nofollow noreferrer\">multiplicative partitions</a> of $n$ in time $2^{o(\\log n)}$?</p>\n\n<p>$o(\\cdot)$ is <a href=\"https://en.wikipedia.org/wiki/Big_O_notation\" rel=\"nofollow noreferrer\"><em>\"small O\"</em> notation</a>.</p>\n"
+    },
+    {
+      "tags": [
+        "elementary-number-theory",
+        "divisibility",
+        "inverse"
+      ],
+      "owner": {
+        "account_id": 8616510,
+        "reputation": 455,
+        "user_id": 348160,
+        "user_type": "registered",
+        "accept_rate": 96,
+        "profile_image": "https://www.gravatar.com/avatar/3d699d0929605a1b47ac890a3956f36a?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "berndgr",
+        "link": "https://math.stackexchange.com/users/348160/berndgr"
+      },
+      "is_answered": true,
+      "view_count": 5811,
+      "accepted_answer_id": 2000867,
+      "answer_count": 4,
+      "score": 1,
+      "last_activity_date": 1478369256,
+      "creation_date": 1478368444,
+      "last_edit_date": 1478369256,
+      "question_id": 2000860,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/2000860/which-elements-in-mathbbz-5-have-multiplicative-inverses",
+      "title": "Which elements in $\\mathbb{Z}_5$ have multiplicative inverses?",
+      "body": "<p>Which elements in $\\mathbb{Z}_5$ have multiplicative inverses?</p>\n\n<p>I have drawn this in a small table:</p>\n\n<pre><code>*|0 1 2 3 4\n-----------\n0|0 0 0 0 0\n1|0 1 2 3 4\n2|0 2 4 1 3\n3|0 3 1 4 2\n4|0 4 3 2 1\n</code></pre>\n\n<p>Everywhere in table where we see a $1$ we have multiplicative inverse I think, so in total we have $4$ multiplicative inverses, is that right?</p>\n\n<p>Is there a more efficient way answering this question? Because making table is too exhausting.</p>\n"
+    },
+    {
+      "tags": [
+        "modular-arithmetic"
+      ],
+      "owner": {
+        "account_id": 21111828,
+        "reputation": 19,
+        "user_id": 947911,
+        "user_type": "registered",
+        "profile_image": "https://lh5.googleusercontent.com/-yjKM0QUs-ac/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucnSW47SnHu9wK9W_0fAQZ71Cea2cA/s96-c/s256-rj/photo.jpg",
+        "display_name": "Bobby Lefto",
+        "link": "https://math.stackexchange.com/users/947911/bobby-lefto"
+      },
+      "is_answered": true,
+      "view_count": 129,
+      "closed_date": 1625724115,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1630436633,
+      "creation_date": 1625634389,
+      "question_id": 4192298,
+      "link": "https://math.stackexchange.com/questions/4192298/better-way-of-finding-multiplicative-inverse",
+      "closed_reason": "Duplicate",
+      "title": "Better way of finding multiplicative inverse?",
+      "body": "<p>This summer I am taking a cryptology class and a common task we need to do is finding the modular inverse. When finding the modular inverse for the following I would do it like so:</p>\n<ol>\n<li>12 mod 23</li>\n<li>23 mod 101</li>\n</ol>\n<p>I just start at 1 and count by the modulo until I find a number that is divisible by the first number.\n<a href=\"https://i.sstatic.net/8bfmj.png\" rel=\"nofollow noreferrer\">how I do it</a></p>\n<p>This strategy works well when the numbers are small but sometimes it takes forever. Is there a better way I should be doing this? If so can you play do so using these examples given? Thanks and have a great day.</p>\n"
+    },
+    {
+      "tags": [
+        "algebra-precalculus",
+        "elementary-number-theory",
+        "divisibility",
+        "inverse"
+      ],
+      "owner": {
+        "account_id": 8616510,
+        "reputation": 455,
+        "user_id": 348160,
+        "user_type": "registered",
+        "accept_rate": 96,
+        "profile_image": "https://www.gravatar.com/avatar/3d699d0929605a1b47ac890a3956f36a?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "berndgr",
+        "link": "https://math.stackexchange.com/users/348160/berndgr"
+      },
+      "is_answered": true,
+      "view_count": 3122,
+      "accepted_answer_id": 2008503,
+      "answer_count": 2,
+      "score": 2,
+      "last_activity_date": 1478811526,
+      "creation_date": 1478810252,
+      "question_id": 2008500,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/2008500/which-elements-in-mathbbz-12-have-multiplicative-inverses",
+      "title": "Which elements in $\\mathbb{Z}_{12}$ have multiplicative inverses?",
+      "body": "<blockquote>\n  <p>Which elements in $\\mathbb{Z}_{12}$ have multiplicative inverses?\n  What's the multiplicative inverse of $7$ and $11$?</p>\n</blockquote>\n\n<p>I'm currently practicing for a small test tomorrow and I'd like to know if I did this right?</p>\n\n<p>The following elements in $\\mathbb{Z}_{12}$ have multiplicative inverses (because they are relatively prime to $12$):</p>\n\n<p>$$\\left\\{5;7;11\\right\\}$$</p>\n\n<p>\"What's the multiplicative inverse of $7$?\"</p>\n\n<p>We have to find an element, if we multiply it with $7$ we get $1$ as result. It's $\\frac{1}{7}$...?</p>\n"
+    },
+    {
+      "tags": [
+        "estimation",
+        "upper-lower-bounds"
+      ],
+      "owner": {
+        "account_id": 9281687,
+        "reputation": 179,
+        "user_id": 735934,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/99a402102bf91bf962b146fe682481e5?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "keyboardAnt",
+        "link": "https://math.stackexchange.com/users/735934/keyboardant"
+      },
+      "is_answered": true,
+      "view_count": 49,
+      "answer_count": 2,
+      "score": 0,
+      "last_activity_date": 1594994099,
+      "creation_date": 1594993474,
+      "question_id": 3760187,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3760187/two-sided-additive-error-to-one-sided-multiplicative-error",
+      "title": "two-sided additive error to one-sided multiplicative error",
+      "body": "<p>Consider an algorithm with a two-sided additive error, i.e. the algorithm outputs an estimator <span class=\"math-container\">$\\hat Y$</span> for some value <span class=\"math-container\">$Y$</span>, s.t.\n<span class=\"math-container\">$$\n(1 - \\epsilon) Y \\le \\hat Y \\le (1 + \\epsilon) Y\n$$</span>\nwhich is equivalent to the following one-sided multiplicative error\n<span class=\"math-container\">$$\nY \\le \\frac {1} {1 - \\epsilon} \\hat Y \\le \\frac {1 + \\epsilon} {1 - \\epsilon} Y\n$$</span>\nIs this possible to show that for a small constant <span class=\"math-container\">$\\epsilon$</span>, the following holds?\n<span class=\"math-container\">$$\n\\frac {1 + \\epsilon} {1 - \\epsilon} \\le 1 + 2 \\epsilon\n$$</span></p>\n<p>Best regards</p>\n"
+    },
+    {
+      "tags": [
+        "complex-numbers",
+        "real-numbers",
+        "functional-equations",
+        "roots-of-unity"
+      ],
+      "owner": {
+        "account_id": 24514149,
+        "reputation": 5892,
+        "user_id": 1160448,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/rU0fg9Lk.png?s=256",
+        "display_name": "youthdoo",
+        "link": "https://math.stackexchange.com/users/1160448/youthdoo"
+      },
+      "is_answered": false,
+      "view_count": 63,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1706580779,
+      "creation_date": 1706580779,
+      "question_id": 4853564,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/4853564/find-multiplicative-function-f-bbb-r-to-pth-roots-of-unity",
+      "title": "Find multiplicative function $f:\\Bbb R\\to$ $p$th roots of unity",
+      "body": "<blockquote>\n<p>For prime number <span class=\"math-container\">$p$</span>, find all functions <span class=\"math-container\">$f:\\Bbb R\\setminus\\{0\\}\\to\\left\\{\\mathrm e^{\\frac{2k\\pi\\mathrm i}p}\\mid k\\in\\Bbb Z_+\\right\\}$</span> such that <span class=\"math-container\">$f(ab)=f(a)f(b)$</span> for all real numbers <span class=\"math-container\">$a$</span>, <span class=\"math-container\">$b$</span>.</p>\n</blockquote>\n<p>This problem is very hard, even for small <span class=\"math-container\">$p$</span>. I tried <span class=\"math-container\">$f(a)=f(1)f(a)$</span>, so <span class=\"math-container\">$f(1)=1$</span>. Therefore,\n<span class=\"math-container\">$$f(a)f\\left(\\frac1a\\right)=f(1)=1,~\\forall a\\in\\Bbb R\\setminus\\{0\\}.$$</span>\nI can't derive anything more.</p>\n"
+    },
+    {
+      "tags": [
+        "group-theory"
+      ],
+      "owner": {
+        "account_id": 19061,
+        "reputation": 3355,
+        "user_id": 120,
+        "user_type": "registered",
+        "accept_rate": 49,
+        "profile_image": "https://www.gravatar.com/avatar/dd5a7ef1476fb01998a215b1642dfd07?s=256&d=identicon&r=PG",
+        "display_name": "Jason S",
+        "link": "https://math.stackexchange.com/users/120/jason-s"
+      },
+      "is_answered": true,
+      "view_count": 295,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1499318217,
+      "creation_date": 1499312319,
+      "question_id": 2347981,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/2347981/generating-set-for-multiplicative-group-of-integers-modulo-2k-1",
+      "title": "generating set for multiplicative group of integers modulo $2^k-1$",
+      "body": "<p>Is there an easy way to construct a generating set ${2,g_2,g_3,g_4,...}$ for the group $(\\mathbb{Z}/(2^k-1)\\mathbb{Z})^\\times$ (multiplicative group of integers modulo $2^k-1$)? Is the minimum number elements in the generating set bounded?</p>\n\n<p><a href=\"https://oeis.org/A046072\" rel=\"nofollow noreferrer\">OEIS A046072</a> lists a minimum number of generators $a(n)$ for $(\\mathbb{Z}/n\\mathbb{Z})^\\times$ and it seems to be a very small number with occasional spikes (the only number less than 10000 with $a(n) = 6$ is $n=9240$) but nothing to say that you can't find $n$ that requires any given number of elements in a generating set.</p>\n"
+    },
+    {
+      "tags": [
+        "modular-arithmetic",
+        "inverse"
+      ],
+      "owner": {
+        "account_id": 81992,
+        "reputation": 133,
+        "user_id": 11725,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/a07907d1d5962d947d1a414362d4331c?s=256&d=identicon&r=PG",
+        "display_name": "CppLearner",
+        "link": "https://math.stackexchange.com/users/11725/cpplearner"
+      },
+      "is_answered": true,
+      "view_count": 41629,
+      "answer_count": 3,
+      "score": 1,
+      "last_activity_date": 1347259919,
+      "creation_date": 1347250886,
+      "question_id": 193446,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/193446/find-the-multiplicative-inverse-of-23-in-z26",
+      "title": "Find the multiplicative inverse of 23 in Z26",
+      "body": "<p>I have no number theory training, but I did many google reading prior coming here. There are so many ways to solve this problem but I am lost.</p>\n\n<p>How would you find the answer to the question</p>\n\n<p>Find the multiplicative inverse of 23 in $Z_{26}$?</p>\n\n<p>Can someone please explain to me (step by step) the quickest and most general way that can be understood by someone who has no rigorous training doing Euclidean algorithm, etc? I think this will benefit the rest of the community out there who are yelled at by their instructors assuming their students would know these things by doing Google search.</p>\n\n<p>I don't mean to make such request, but I am pretty confused. \nThank you!</p>\n\n<hr>\n\n<p>I've seen people coming up with solutions like a war machine. There must be quicker way for small m other than doing Euclidean or solving as diophantine equation.</p>\n"
+    },
+    {
+      "tags": [
+        "abstract-algebra",
+        "group-theory",
+        "finite-groups"
+      ],
+      "owner": {
+        "account_id": 4796691,
+        "reputation": 6834,
+        "user_id": 166180,
+        "user_type": "registered",
+        "accept_rate": 66,
+        "profile_image": "https://www.gravatar.com/avatar/c5d5c9fa71ce4de6fd5bc6dd29956979?s=256&d=identicon&r=PG",
+        "display_name": "Poperton",
+        "link": "https://math.stackexchange.com/users/166180/poperton"
+      },
+      "is_answered": true,
+      "view_count": 819,
+      "accepted_answer_id": 1357973,
+      "answer_count": 3,
+      "score": 2,
+      "last_activity_date": 1436657714,
+      "creation_date": 1436654022,
+      "question_id": 1357942,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/1357942/which-inverse-multiplicative-groups-modulo-n-are-cyclic-or-not",
+      "title": "Which inverse multiplicative groups modulo $n$ are cyclic or not",
+      "body": "<p>I've found nothing about this in my book neither in the internet. Also the wikipedia article about inverse multiplicative modulo $n$ is poor.</p>\n\n<p>So, I need prove that </p>\n\n<p>$$\\mathbb Z_n^*$$</p>\n\n<p>is cyclic for $n = 5,9,17$ and it's not cyclic for $n = 8,20$</p>\n\n<p>For the cyclic case, I tried to see if any og the groups have prime order. For example:</p>\n\n<p>$$\\mathbb Z_5 = \\{0,1,2,3,4\\} \\implies \\mathbb Z_5^* = \\{1,2,3,4\\} \\implies |\\mathbb Z_5^*| = 4 \\ \\ :($$</p>\n\n<p>Also we have $|\\mathbb Z_9^*|=6$ and $|\\mathbb Z_{17}^*| = 14$</p>\n\n<p>So none of them are prime, so I can't use the theorem.</p>\n\n<p>The other technique I would try was to raise each term of $|\\mathbb Z_5^*|$, for example, and see if it generates the entire group. However it would consume a lot of time even for small groups.</p>\n\n<p>So, what's a good strategy to prove that $|\\mathbb Z_n^*|$ is or isn't cyclic? Am I missing something important?</p>\n"
+    },
+    {
+      "tags": [
+        "mixing"
+      ],
+      "owner": {
+        "account_id": 9865212,
+        "reputation": 5947,
+        "user_id": 399787,
+        "user_type": "registered",
+        "accept_rate": 25,
+        "profile_image": "https://www.gravatar.com/avatar/949ebbe38938f3f326b8b73d80442645?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Anonymous",
+        "link": "https://math.stackexchange.com/users/399787/anonymous"
+      },
+      "is_answered": false,
+      "view_count": 71,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1481934774,
+      "creation_date": 1481934774,
+      "question_id": 2061841,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/2061841/mixing-time-with-multiplicative-rather-than-additive-error",
+      "title": "Mixing time with multiplicative rather than additive error?",
+      "body": "<p>First of all: I'm talking about Markov chains over finite spaces.\nSecond: my grasp of formal notation is rather weak, and in general I'm pretty ignorant, so please bear with me. That said...</p>\n\n<p>All the (admittedly not too many) definitions of mixing time I've seen, including the total variation distance mixing time and Cesaro mixing time, consider measures of deviation from the stationary probability that are essentially <em>additive</em>. So, if an event has a really small probability in the stationary distribution, convergence is still considered to occur even with a disproportionally large <em>relative</em> error. \nThis is a problem if I am considering e.g. Monte Carlo simulations of catastrophic events: there's a lot of \"difference\" from my point of view between an event occurring with probability $10^{-60}$ and one occurring with probability $10^{-6}$; there is far less \"difference\" between an event occurring with probability 0.1 and one occurring with probability 0.1001.</p>\n\n<p>Is there any well known definition of mixing time that uses <em>multiplicative</em> error, such as the time after which the probability of each state has converged within a factor $2$ of the stationary probability?</p>\n"
+    },
+    {
+      "tags": [
+        "abstract-algebra",
+        "group-theory"
+      ],
+      "owner": {
+        "account_id": 181410,
+        "reputation": 1622,
+        "user_id": 26904,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/ad2350087df08ded7827f447f986ed2e?s=256&d=identicon&r=PG",
+        "display_name": "gilleain",
+        "link": "https://math.stackexchange.com/users/26904/gilleain"
+      },
+      "is_answered": true,
+      "view_count": 581,
+      "accepted_answer_id": 3677913,
+      "answer_count": 3,
+      "score": 3,
+      "last_activity_date": 1589650177,
+      "creation_date": 1589646497,
+      "last_edit_date": 1589649485,
+      "question_id": 3677907,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3677907/is-this-really-a-multiplicative-group-subgroups-of-bbb-z-15",
+      "title": "Is this really a multiplicative group? [subgroups of $\\Bbb Z/15$]",
+      "body": "<p>When looking at some small multiplicative groups of integers modulo n, such as for 15, I found something that confused me. Due to a miscalculation, I had what looks like another set of integers less than 15 that are closed under multiplication. My question is whether this is really a group and if so, is it the only example or is it just another group in disguise?</p>\n\n<p>Specifically, the actual group elements are {1, 2, 4, 7, 8, 11, 13, 14} which are the integers coprime to 15. The set I'm interested in is {1, 2, 3, 4, 6, 8, 9, 12}, which looks like as Cayley graphs:</p>\n\n<p><a href=\"https://i.sstatic.net/Dd7Cs.png\" rel=\"nofollow noreferrer\"><img src=\"https://i.sstatic.net/Dd7Cs.png\" alt=\"enter image description here\"></a> </p>\n\n<p>So both images here show the groups arranged as <span class=\"math-container\">$\\mathbb{Z}_4\\times\\mathbb{Z}_2$</span> where one group is generated by &lt;2> and &lt;7> and the other by &lt;2> and &lt;3>. Is the one on the right actually a group? </p>\n"
+    },
+    {
+      "tags": [
+        "ring-theory",
+        "algebraic-number-theory",
+        "diophantine-equations",
+        "multiplicative-function"
+      ],
+      "owner": {
+        "account_id": 1804732,
+        "reputation": 20135,
+        "user_id": 39261,
+        "user_type": "registered",
+        "accept_rate": 64,
+        "profile_image": "https://i.sstatic.net/CbaQk2Br.jpg?s=256",
+        "display_name": "mick",
+        "link": "https://math.stackexchange.com/users/39261/mick"
+      },
+      "is_answered": true,
+      "view_count": 304,
+      "accepted_answer_id": 4724830,
+      "answer_count": 2,
+      "score": 0,
+      "last_activity_date": 1687640024,
+      "creation_date": 1687637140,
+      "question_id": 4724828,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/4724828/when-is-the-norm-of-a-ring-bbb-z-sqrt-p-multiplicative",
+      "title": "When is the norm of a ring $\\Bbb Z[\\sqrt{-p}]$ multiplicative?",
+      "body": "<p>I got inspired by quadratic rings and zeta functions. I know for instance that the norm <span class=\"math-container\">$a^2 + 17 b^2$</span> for the ring <span class=\"math-container\">$\\Bbb Z[\\sqrt{-17}]$</span> is multiplicative yet the ring <span class=\"math-container\">$\\Bbb Z[\\sqrt{-17}]$</span> is not a UFD !!</p>\n<p>So I wonder, for an integer <span class=\"math-container\">$n&gt;0$</span> :</p>\n<p>When is the norm of a ring <span class=\"math-container\">$\\Bbb Z[\\sqrt{-n}]$</span> multiplicative ?</p>\n<p>And in particular when <span class=\"math-container\">$p$</span> is a prime :</p>\n<p>When is the norm of a ring <span class=\"math-container\">$\\Bbb Z[\\sqrt{-p}]$</span> multiplicative ?</p>\n<p>Im not sure what the best way is to test it for a given <span class=\"math-container\">$n$</span> or <span class=\"math-container\">$p$</span> but I can imagine it is doable with basic modular arithmetic ( quadratic residue , generator , fermats little etc ) and/or testing some small cases.</p>\n<p>But I am not (only) interested in a specific case, I wonder about the set of them.\nAre there infinitely many and do they have a closed form or a good asymptotic ?\nDo they have number theoretical properties apart from satisfying the above ?</p>\n"
+    },
+    {
+      "tags": [
+        "finite-fields",
+        "cryptography",
+        "primitive-roots"
+      ],
+      "owner": {
+        "account_id": 15113919,
+        "reputation": 588,
+        "user_id": 783364,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/8RaD0.png?s=256",
+        "display_name": "scribe",
+        "link": "https://math.stackexchange.com/users/783364/scribe"
+      },
+      "is_answered": true,
+      "view_count": 399,
+      "accepted_answer_id": 3658063,
+      "answer_count": 2,
+      "score": 1,
+      "last_activity_date": 1588825221,
+      "creation_date": 1588566408,
+      "question_id": 3657689,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3657689/confusion-about-the-choice-of-primitive-root-multiplicative-generator-in-diffie",
+      "title": "Confusion about the choice of primitive root/multiplicative generator in Diffie-Hellman Key Exchange.",
+      "body": "<p>I was reading \"Jeffrey Hoffstein, Jill Pipher, Joseph H. Silverman, An Introduction to Mathematical Cryptography, Second Edition\". I understand the basic Diffie-Hellman Key Exchange. Though, I was interested in reading about what is wrong with picking a primitive root/multiplicative generator <span class=\"math-container\">$g$</span> with a small order. The book on page 68, second line, says:</p>\n\n<blockquote>\n  <p>For various reasons to be discussed later, it is best if they (Alice and Bob) choose <span class=\"math-container\">$g$</span> such that its order in <span class=\"math-container\">$\\mathbb F_p$</span> is a large prime.</p>\n</blockquote>\n\n<p>I don't understand this. By definition, a primitive root is an element of <span class=\"math-container\">$\\mathbb F_p$</span> with order <span class=\"math-container\">$\\varphi(p) = p - 1$</span>. Here <span class=\"math-container\">$p$</span> is a large prime and <span class=\"math-container\">$\\varphi$</span> is the Euler's phi function. So, if the order of <span class=\"math-container\">$g \\mod p$</span> is <span class=\"math-container\">$p-1$</span> how can it ever be a \"large prime\"?</p>\n"
+    },
+    {
+      "tags": [
+        "probability",
+        "stochastic-processes"
+      ],
+      "owner": {
+        "account_id": 6272118,
+        "reputation": 2937,
+        "user_id": 238708,
+        "user_type": "registered",
+        "accept_rate": 75,
+        "profile_image": "https://www.gravatar.com/avatar/4f96de1921f2a6c8a64e75a9345b259f?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "Ricardo770",
+        "link": "https://math.stackexchange.com/users/238708/ricardo770"
+      },
+      "is_answered": false,
+      "view_count": 159,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1555202113,
+      "creation_date": 1555199563,
+      "last_edit_date": 1555202113,
+      "question_id": 3186861,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3186861/gambler%c2%b4s-ruin-for-a-binomial-multiplicative-process",
+      "title": "Gambler&#180;s ruin for a Binomial multiplicative process",
+      "body": "<p>I would like to calculate the gambler´s ruin probability in a generalization of the classic gambler´s ruin problem. In the classical model, the gambler´s wealth could be modeled by an additive random walk with an absorving barrier at <span class=\"math-container\">$x=0$</span>. In this generalization, the gambler´s wealth follows a multiplicative random walk instead.</p>\n\n<p>His initial wealth is <span class=\"math-container\">$W_{0}$</span> and his opponent is infinitely wealthy, so he never goes bankrupt.\nWith probability <span class=\"math-container\">$p$</span> he wins the game and his current wealth is multiplied by the factor <span class=\"math-container\">$(1+r_{1})$</span>, with <span class=\"math-container\">$r_{1}$</span> fixed and  <span class=\"math-container\">$0&lt;r_{1}&lt;\\infty$</span>. \nWith probability <span class=\"math-container\">$1-p$</span>, he loses the game and his current wealth is multiplied by <span class=\"math-container\">$(1+r_{2})$</span> for <span class=\"math-container\">$-1\\leq r_{2}&lt;0$</span>.</p>\n\n<p>If <span class=\"math-container\">$W_{n}\\leq0$</span>, for any <span class=\"math-container\">$n$</span>, the gambler is ruined and the game is over.</p>\n\n<p>After N trials, his wealth will be given by <span class=\"math-container\">$$W_{N}=W_{0}(1+r_{1})^{S}(1+r_{2})^{N-S}$$</span>\nwhere <span class=\"math-container\">$S$</span> is the numbers of success (wins), and <span class=\"math-container\">$N-S$</span> is the numbers of loses.</p>\n\n<p>As well pointed out below by @Minus One-Twelfth, ruin in the technical sense, <span class=\"math-container\">$W_{n}\\leq0$</span> is not possible to happen, for strictly positive <span class=\"math-container\">$r_{2}$</span>.\nSo, lets define ruin for an arbitrary positive small <span class=\"math-container\">$\\epsilon$</span> as being <span class=\"math-container\">$W_{n}\\leq\\epsilon$</span>.</p>\n\n<p>What is the probability that he is ruined after playing this game consecutively N times? In other words, what is <span class=\"math-container\">$P(W_{n}\\leq\\epsilon)$</span>?</p>\n\n<p>Thank you in advance.</p>\n"
+    },
+    {
+      "tags": [
+        "number-theory",
+        "elementary-number-theory",
+        "functions",
+        "summation",
+        "algorithms"
+      ],
+      "owner": {
+        "account_id": 15839337,
+        "reputation": 1042,
+        "user_id": 669646,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/8d555921e5e180565f61ac9a2ac7a678?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "MC From Scratch",
+        "link": "https://math.stackexchange.com/users/669646/mc-from-scratch"
+      },
+      "is_answered": false,
+      "view_count": 210,
+      "answer_count": 0,
+      "score": 2,
+      "last_activity_date": 1559022697,
+      "creation_date": 1558962597,
+      "last_edit_date": 1559022697,
+      "question_id": 3241455,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3241455/sum-i-1x-sum-j-1xfi-cdot-j-double-summing-a-not-completely-multipli",
+      "title": "$\\sum_{i=1}^x\\sum_{j=1}^xf(i\\cdot j)$ Double Summing a (Not Completely) Multiplicative Function",
+      "body": "<p>Let <span class=\"math-container\">$f(n)$</span> be a multiplicative function that is <strong>not</strong> completely multiplicative, i.e <span class=\"math-container\">$f(m)\\cdot f(n)= f(m\\cdot n)$</span> only if <span class=\"math-container\">$gcd(m,n)=1$</span>. Let <span class=\"math-container\">$S(x)$</span> be the double sum over <span class=\"math-container\">$f$</span>, that is:</p>\n\n<p><span class=\"math-container\">$$S(x)=\\sum_{i=1}^x\\sum_{j=1}^xf(i\\cdot j)$$</span></p>\n\n<p>It is not difficult to see that if <span class=\"math-container\">$f(n)$</span> were completely multiplicative, then <span class=\"math-container\">$S(x)$</span> could be simplified: </p>\n\n<p><span class=\"math-container\">$$S(x)=\\sum_{i=1}^x\\sum_{j=1}^xf(i\\cdot j)= \\sum_{i=1}^xf(i)\\sum_{j=1}^xf(j)= \\biggl(\\sum_{k=1}^xf(k)\\biggr)^2$$</span></p>\n\n<p>But since <span class=\"math-container\">$f(n)$</span> is not completely multiplicative, this simplification is not completely true, and it fails every time <span class=\"math-container\">$gcd(i,j)\\neq1$</span>. Hence, <span class=\"math-container\">$S(x)$</span> can be written this way provided we add some additional error term, let's call it <span class=\"math-container\">$E$</span>:</p>\n\n<p><span class=\"math-container\">$$S(x)=\\sum_{i=1}^x\\sum_{j=1}^xf(i\\cdot j)= \\biggl(\\sum_{k=1}^xf(k)\\biggr)^2+E$$</span></p>\n\n<p><span class=\"math-container\">$E$</span> is either negative or positive, I'm not sure. Obviously, <span class=\"math-container\">$E$</span> is comprised of all the small errors generated by the initial sum term, when <span class=\"math-container\">$gcd(i,j)\\neq1$</span>. I am mainly interested in the cases where <span class=\"math-container\">$f(n)$</span> takes the form of:</p>\n\n<ol>\n<li>Euler totient function: <span class=\"math-container\">$$S_{\\varphi}(x)=\\sum_{i=1}^x\\sum_{j=1}^x\\varphi(i\\cdot j)$$</span></li>\n<li>Sum of divisors function: <span class=\"math-container\">$$S_{\\sigma_1}(x)=\\sum_{i=1}^x\\sum_{j=1}^x\\sigma_1(i\\cdot j)$$</span></li>\n<li>Moebius function: <span class=\"math-container\">$$S_{\\mu}(x)=\\sum_{i=1}^x\\sum_{j=1}^x\\mu(i\\cdot j)$$</span></li>\n</ol>\n\n<p>My question is, what is this error term <span class=\"math-container\">$E$</span> exactly? how can I calculate it? How can I properly sum all those small errors to get a correct evaluation of <span class=\"math-container\">$S(x)$</span>? For clarification, I am concerned with evaluating <span class=\"math-container\">$S(x)$</span>, but I think I must evaluate <span class=\"math-container\">$E$</span> first in order to do it. I am taking this approach because I can compute <span class=\"math-container\">$\\biggl(\\sum_{k=1}^xf(k)\\biggr)^2$</span> very efficiently, and so, finding the error term <span class=\"math-container\">$E$</span> will solve my question.</p>\n"
+    },
+    {
+      "tags": [
+        "ring-theory",
+        "commutative-algebra",
+        "localization"
+      ],
+      "owner": {
+        "account_id": 16969599,
+        "reputation": 1028,
+        "user_id": 718627,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/468c11e3e54ecca351623f6b6255bd03?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "LinearAlgebruh",
+        "link": "https://math.stackexchange.com/users/718627/linearalgebruh"
+      },
+      "is_answered": true,
+      "view_count": 842,
+      "accepted_answer_id": 3940915,
+      "answer_count": 2,
+      "score": 0,
+      "last_activity_date": 1607499404,
+      "creation_date": 1607353347,
+      "last_edit_date": 1607353590,
+      "question_id": 3938560,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3938560/localization-is-finitely-generated-implies-that-multiplicative-group-only-conta",
+      "title": "Localization is finitely generated implies, that multiplicative group only contains invertible elements",
+      "body": "<p>I am currently stuck on this problem:</p>\n<p>&quot;Let <span class=\"math-container\">$R$</span> be an integral domain, let <span class=\"math-container\">$0 \\notin S \\subseteq R$</span> be a multiplicative group of <span class=\"math-container\">$R$</span>. If <span class=\"math-container\">$S^{-1}R$</span> is finitely generated as a <span class=\"math-container\">$R$</span>-module, then every element of <span class=\"math-container\">$S$</span> is invertible (in <span class=\"math-container\">$R$</span>)&quot;</p>\n<p>I just started doing Algebra last month and I have some difficulties grasping these abstract concepts. So let's assume, that <span class=\"math-container\">$S^{-1}R$</span> is finally generated by <span class=\"math-container\">$\\frac{1}{s_1}, ... , \\frac{1}{s_n}$</span> with <span class=\"math-container\">$s_1, ... , s_n \\in S$</span>. What can I do now? My first guess, that <span class=\"math-container\">$S$</span> has to be finite as well, because if I understood it right, the localization <span class=\"math-container\">$S^{-1}R$</span> describes a Ring, that is a little bit bigger than <span class=\"math-container\">$R$</span> that also contains the multiplicative inverses of all Elements of <span class=\"math-container\">$S$</span>. So for example, if <span class=\"math-container\">$R = \\mathbb{Z}$</span> and <span class=\"math-container\">$S = \\mathbb{N}$</span>, then <span class=\"math-container\">$S^{-1}R = \\mathbb{Q}$</span>.\nIs that so far correct? But in this case, <span class=\"math-container\">$\\mathbb{Q}$</span> is not a finitely generated <span class=\"math-container\">$\\mathbb{Z}$</span>-module, so it's not a very good example, I tried it on <span class=\"math-container\">$Z_{11}$</span>, and as a field it obviously contains multiplicative inverses, so every multiplicative group is a unit. Also, it looks like if all such Rings <span class=\"math-container\">$R$</span> would already satisfy <span class=\"math-container\">$R = S^{-1}R$</span>, is that true?</p>\n<p>Nevertheless, I still don't know how to formally prove it, can someone maybe give me a small tip, because right now I don't even know where to start.</p>\n"
+    },
+    {
+      "tags": [
+        "differential-geometry",
+        "algebraic-geometry",
+        "transformation",
+        "canonical-transformation"
+      ],
+      "owner": {
+        "account_id": 10287960,
+        "reputation": 2019,
+        "user_id": 435527,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/810ede1b28ad9ce7cdf109246e5de31f?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "AmorFati",
+        "link": "https://math.stackexchange.com/users/435527/amorfati"
+      },
+      "is_answered": false,
+      "view_count": 39,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1546550344,
+      "creation_date": 1546550344,
+      "question_id": 3061013,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3061013/canonical-multiplicative-maps-between-m-dimensional-spaces-to-n-dimensio",
+      "title": "Canonical (Multiplicative) maps between $m$--dimensional spaces to $n$--dimensional spaces, $n \\leq m$.",
+      "body": "<p>Let <span class=\"math-container\">$M$</span> and <span class=\"math-container\">$N$</span> be two smooth manifolds which we may assume are <span class=\"math-container\">$\\mathbb{R}^m$</span> and <span class=\"math-container\">$\\mathbb{R}^n$</span> respectively, with <span class=\"math-container\">$n \\leq m$</span>. In fact, assume <span class=\"math-container\">$M = \\mathbb{R}^m - \\{ 0 \\}$</span> and <span class=\"math-container\">$N = \\mathbb{R}^n - \\{ 0 \\}$</span>.</p>\n\n<p>This is a very small part in a larger problem I am working on, but it is something that I am surprised I have never thought about. </p>\n\n<p>I am wondering if there are <em>canonical maps</em> between <span class=\"math-container\">$M $</span> and <span class=\"math-container\">$N$</span> that are multiplicative. By this, I mean that I am looking for a generalisation of the map <span class=\"math-container\">$\\mathbb{R}^n - \\{ 0 \\} \\to \\mathbb{R} - \\{ 0 \\}$</span> given by <span class=\"math-container\">$$(x_1, ..., x_n) \\mapsto x_1 \\cdots x_n.$$</span> I am also happy with maps of this form: <span class=\"math-container\">$$(x_1, ..., x_n) \\mapsto \\left( \\frac{x_1}{x_n}, ..., \\frac{x_{n-1}}{x_n} \\right).$$</span> But other than these simple examples from <span class=\"math-container\">$\\dim(M) \\to \\dim(M)-1$</span> or <span class=\"math-container\">$\\dim(M) \\to 1$</span>, I cannot construct a map that does not require a choice of ordering. </p>\n\n<p>The following concrete problem should suffice: </p>\n\n<p><strong>Concrete question:</strong> Construct a surjective map <span class=\"math-container\">$\\mathbb{R}^4 - \\{ 0 \\} \\longrightarrow \\mathbb{R}^2 - \\{ 0 \\}$</span> that does not depend on the ordering of the coordinate functions on <span class=\"math-container\">$\\mathbb{R}^4 - \\{ 0 \\}$</span>. </p>\n\n<p><em>Note that this is possibly a trivial problem.</em></p>\n\n<p>Thanks in advance, and please let me know if the question needs further clarification. </p>\n"
+    },
+    {
+      "tags": [
+        "group-theory",
+        "finite-groups",
+        "prime-numbers",
+        "modular-arithmetic"
+      ],
+      "owner": {
+        "account_id": 8613216,
+        "reputation": 309,
+        "user_id": 346972,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/6927fc09abe845246c8afc183525d381?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "ribbcastle",
+        "link": "https://math.stackexchange.com/users/346972/ribbcastle"
+      },
+      "is_answered": true,
+      "view_count": 1763,
+      "accepted_answer_id": 2217138,
+      "answer_count": 2,
+      "score": 8,
+      "last_activity_date": 1753233800,
+      "creation_date": 1491241970,
+      "question_id": 2216347,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/2216347/recursive-relation-of-multiplicative-orders-for-integers-modulo-a-prime-power",
+      "title": "Recursive relation of multiplicative orders for integers modulo a prime power",
+      "body": "<p>I was recently fiddling around with multiplicative orders of elements in $(\\mathbb{Z} / p^k\\mathbb{Z})^\\times$ (p odd), and found that they seem to satisfy the property that </p>\n\n<p>$ O_{p^k}(n) = pO_{p^{k-1}}(n)$, $   $  for $k&gt;1$.</p>\n\n<p>where $O_{p^k}(n)$ is the multiplicative order of $n$ modulo $p^k$, that is, the smallest $r&gt;0$ such that $n^r \\equiv 1 \\mod p^k $.</p>\n\n<p>My question comprises two parts: </p>\n\n<p>1) Is this true? It seems like it probably is, there's a certain pleasing symmetry to it, and I couldn't find any small counter examples</p>\n\n<p>2) If it's true, how would one go about proving it? I thought maybe by constructing a homomorphism $\\theta:(\\mathbb{Z} / p^{k-1}\\mathbb{Z})^\\times \\to (\\mathbb{Z} / p^k\\mathbb{Z})^\\times$, where $\\theta(n) = n^p$, I could use the order-preserving property of $\\theta$ to get that $O_{p^k}(n^p) = O_{p^{k-1}}(n)$, then use that to get that the LHS of the desired relation divides the RHS. After that, maybe another homomorphism in reverse to get the other division? </p>\n\n<p>However, $\\theta$ is only order-preserving if it is injective, which I've run into trouble proving (and suspect is, in fact, equivalent to the original statement) So, any ideas on how to prove $\\theta$ is injective are welcome, as well as any other methods an undergraduate will understand that prove the relation. If it's true. </p>\n\n<p>And if it's not true, any books with material covering why this relation appears to hold are also very welcome. </p>\n\n<p>Thanks! </p>\n"
+    },
+    {
+      "tags": [
+        "number-theory",
+        "summation",
+        "analytic-number-theory",
+        "multiplicative-function"
+      ],
+      "owner": {
+        "account_id": 227804,
+        "reputation": 7033,
+        "user_id": 1491,
+        "user_type": "registered",
+        "accept_rate": 59,
+        "profile_image": "https://www.gravatar.com/avatar/395fbf4afdb7b2ce8bf44e8f35845856?s=256&d=identicon&r=PG",
+        "display_name": "Tony",
+        "link": "https://math.stackexchange.com/users/1491/tony"
+      },
+      "is_answered": true,
+      "view_count": 510,
+      "answer_count": 1,
+      "score": 6,
+      "last_activity_date": 1737845844,
+      "creation_date": 1393267280,
+      "last_edit_date": 1737845679,
+      "question_id": 688857,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/688857/bounding-the-multiplicative-function-sum-sum-n-leq-x-frac-mun2-varph",
+      "title": "Bounding the Multiplicative Function Sum $\\sum_{n \\leq x} \\frac{\\mu(n)^2}{\\varphi(n)}$.",
+      "body": "<p>I am interesting in bounding the arithmetic sum</p>\n<p><span class=\"math-container\">$$ \\sum_{n \\leq x} \\frac{\\mu(n)^2}{\\varphi(n)}$$</span></p>\n<p>(The motivation is that this is a sum that comes up a lot in sieving primes, in particular in the Selberg sieve.) It is not too hard to show that this is <span class=\"math-container\">$\\geq \\sum_{n \\leq x} \\frac{1}{n} \\approx \\log x$</span>, and in fact the difference be described succinctly as follows: if <span class=\"math-container\">$s(m)$</span> denotes the largest squarefree factor of <span class=\"math-container\">$m$</span>, then</p>\n<p><span class=\"math-container\">$$\\sum_{n \\leq x} \\frac{\\mu(n)^2}{\\varphi(n)} = \\sum_{s(m) \\leq x} \\frac{1}{m}$$</span></p>\n<p>In particular, one sees that the difference</p>\n<p><span class=\"math-container\">$$ \\sum_{n \\leq x} \\frac{\\mu(n)^2}{\\varphi(n)} - \\sum_{n \\leq x} \\frac{1}{n} = \\sum_{m &gt; x, s(m) \\leq x} \\frac{1}{m}. $$</span></p>\n<p>I would like to be able to bound how small this actually is. Montgomery-Vaughan cites an unpublished result of De Bruijn that is is actually <span class=\"math-container\">$O(1)$</span>, so I would certainly like to see that.</p>\n<p>The closeness of these sums is rather unintuitive to me (apart from the vague comment that <span class=\"math-container\">$\\varphi(n) \\approx n$</span> unless <span class=\"math-container\">$n$</span> has a lot of distinct prime factors, which should be relatively rare), so I would also appreciate any insight into why we could expect this.</p>\n"
+    },
+    {
+      "tags": [
+        "group-theory",
+        "finite-groups",
+        "modular-arithmetic"
+      ],
+      "owner": {
+        "account_id": 13376486,
+        "reputation": 5261,
+        "user_id": 552998,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/87205a63897e788152b507faba45a1c7?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "William",
+        "link": "https://math.stackexchange.com/users/552998/william"
+      },
+      "is_answered": false,
+      "view_count": 64,
+      "closed_date": 1639881314,
+      "answer_count": 0,
+      "score": 2,
+      "last_activity_date": 1639866556,
+      "creation_date": 1639864839,
+      "last_edit_date": 1639866556,
+      "question_id": 4337137,
+      "link": "https://math.stackexchange.com/questions/4337137/how-to-find-the-order-of-elements-in-the-multiplicative-group-of-integers-modulo",
+      "closed_reason": "Duplicate",
+      "title": "How to find the order of elements in the multiplicative group of integers modulo $n$?",
+      "body": "<p>I have the group <span class=\"math-container\">$\\mathbb{Z}_n^{\\times}= \\{\\bar{a}\\mid 1≤a≤n, \\gcd(a,n)=1\\}$</span> along with multiplication modulo <span class=\"math-container\">$n$</span>.</p>\n<p>I understand how to find the inverse here, in this case. Here's my reasoning, please let me know if there's anything wrong.</p>\n<p>Since <span class=\"math-container\">$\\gcd(a,n)=1 \\iff \\exists x,y \\in \\mathbb{Z}$</span> such that <span class=\"math-container\">$ax + ny = 1 \\iff \\exists x \\in \\mathbb{Z}$</span> such that <span class=\"math-container\">$ax \\equiv 1 \\ (\\bmod n)$</span> hence the multiplicative inverse exists and it's <span class=\"math-container\">$\\bar{x}$</span>. To find it, all I have to do is use Euclidean algorithm to find <span class=\"math-container\">$x$</span> and <span class=\"math-container\">$y$</span> that make the linear combination. Is this right?</p>\n<p>Now for the next part, here's where I'm confused. How do I find the order of each member of that group? Again, <span class=\"math-container\">$\\gcd(a,n)=1$</span> so by Euler's theorem I have that <span class=\"math-container\">$a^{\\phi(n)}\\equiv 1 \\ (\\bmod n)$</span> hence order of <span class=\"math-container\">$a$</span> must be a divisor of <span class=\"math-container\">$\\phi(n)$</span>. So for a small <span class=\"math-container\">$\\phi(n)$</span>, I can manually calculate the order. However, I'm not sure what to do if <span class=\"math-container\">$\\phi(n)$</span> has lots of divisors. Surely, it is very impractical to check it manually for each divisor. Is there a nice short algorithm or a slick trick which can help calculate order faster, in exams, where I have about a minute or two for such questions?</p>\n"
+    },
+    {
+      "tags": [
+        "terminology",
+        "gcd-and-lcm",
+        "divisor-sum",
+        "arithmetic-functions",
+        "multiplicative-function"
+      ],
+      "owner": {
+        "account_id": 1396240,
+        "reputation": 8546,
+        "user_id": 28816,
+        "user_type": "registered",
+        "accept_rate": 92,
+        "profile_image": "https://i.sstatic.net/4lkol.jpg?s=256",
+        "display_name": "Jose Arnaldo Bebita Dris",
+        "link": "https://math.stackexchange.com/users/28816/jose-arnaldo-bebita-dris"
+      },
+      "is_answered": true,
+      "view_count": 389,
+      "accepted_answer_id": 3643774,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1587845949,
+      "creation_date": 1587816491,
+      "last_edit_date": 1587816918,
+      "question_id": 3643139,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3643139/if-an-arithmetic-function-f-satisfies-fmn-leq-fmfn-whenever-gcdm",
+      "title": "If an arithmetic function $f$ satisfies $f(mn) \\leq f(m)f(n)$ (whenever $\\gcd(m,n)=1$), is $f$ weakly multiplicative or submultiplicative?",
+      "body": "<p>From the preprint <a href=\"https://arxiv.org/pdf/1910.11835.pdf\" rel=\"nofollow noreferrer\">On sums of the small divisors of a natural number (Lemma 1, page 2)</a> by Douglas E. Iannucci:</p>\n\n<blockquote>\n  <p>We observe here that the function <span class=\"math-container\">$a(n)$</span> is not multiplicative.  It is, however, <strong>supermultiplicative</strong>:</p>\n</blockquote>\n\n<ul>\n<li><strong>Lemma 1:</strong> If <span class=\"math-container\">$m$</span> and <span class=\"math-container\">$n$</span> are relatively prime natural numbers, then <span class=\"math-container\">$a(mn) \\geq a(m)a(n)$</span>.</li>\n</ul>\n\n<p>Here is my question:</p>\n\n<blockquote>\n  <p>If an arithmetic function <span class=\"math-container\">$f$</span> satisfies <span class=\"math-container\">$f(mn) \\leq f(m)f(n)$</span> (whenever <span class=\"math-container\">$\\gcd(m,n)=1$</span>), is <span class=\"math-container\">$f$</span> <strong>weakly multiplicative</strong> or <strong>submultiplicative</strong>?</p>\n</blockquote>\n\n<p>For example, the divisor sum <span class=\"math-container\">$\\sigma_1$</span>, the abundancy index <span class=\"math-container\">$I(x)=\\sigma_1(x)/x$</span>, and the deficiency function <span class=\"math-container\">$D(x)=2x-\\sigma_1(x)$</span> all satisfy\n<span class=\"math-container\">$$\\sigma_1(ab) \\leq \\sigma_1(a)\\sigma_1(b)$$</span>\n<span class=\"math-container\">$$I(ab) \\leq I(a)I(b)$$</span>\n<span class=\"math-container\">$$D(ab) \\leq D(a)D(b),$$</span>\nwhere equality holds in the first two inequalities, and the last inequality holds, if <span class=\"math-container\">$\\gcd(a,b)=1$</span>.</p>\n"
+    },
+    {
+      "tags": [
+        "number-theory",
+        "elementary-number-theory",
+        "prime-numbers",
+        "totient-function",
+        "multiplicative-function"
+      ],
+      "owner": {
+        "account_id": 314145,
+        "reputation": 36117,
+        "user_id": 1714,
+        "user_type": "registered",
+        "accept_rate": 73,
+        "profile_image": "https://i.sstatic.net/MBP5uPjp.png?s=256",
+        "display_name": "Gottfried Helms",
+        "link": "https://math.stackexchange.com/users/1714/gottfried-helms"
+      },
+      "is_answered": true,
+      "view_count": 163,
+      "answer_count": 1,
+      "score": 2,
+      "last_activity_date": 1501021621,
+      "creation_date": 1500966526,
+      "last_edit_date": 1500983501,
+      "question_id": 2370917,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/2370917/how-to-reformulate-a-multiplicative-formula-with-two-primes-perhaps-like-totie",
+      "title": "How to reformulate a multiplicative formula (with two primes, perhaps like totient-function)?",
+      "body": "<p>In the work on <a href=\"https://math.stackexchange.com/q/2365906/\">another question in MSE</a> I have a formula $f(n)$ whose pattern depending on $n \\in \\Bbb N$ I want decode into an algebraical formula (see a short rationale of $f(n) at the end).         </p>\n\n<p>Beginning with the most simple $n$ - namely that which consist of pairs of primes $p,q$ with $n=pq$ - it seems (for the first dozen primes $q,p$) that the following does correctly reproduce the found pattern of $f(n)$\n$$x_{p,q}={(p-1)(q-1) \\over \\gcd(q-1,p-1)} \\cdot \\text{div}(p-1,q,1/q,1) \\cdot \\text{div}(q-1,p,1/p,1) \\tag 1$$\nI thought that it might be a better handling of the formula not to write a <code>case{}</code> clause but a function instead: \n$$\\text{div}(n,m,w_\\text{true},w_\\text{false} ) = \n \\left\\{ \\begin{matrix} \n   w_\\text{true} &amp; \\text{if } m \\mid n \\\\ \n   w_\\text{false} &amp; \\text{if } m \\not \\mid n \\\\ \n \\end{matrix} \\right. $$\nwhich, in words, means, that the left fraction in $x_{p,q}$ is additionally divided by $p$ if $p$ divides $q-1$ or divided by $q$ if $q$ divides $p-1$ (it cannot happen that both conditions are true).<br>\nAs mentioned, for some small $p,q$ this formula works, but because it is an ungly one and difficult to handle, I hope there is a way to express it more concisely/to remove possible redundancy or what.\n<hr>\n<strong><em>(Update)</em></strong> This is another notation:\nLet\n$$  w_{p,q} =  {(p-1)(q-1) \\over \\gcd(q-1,p-1)} \\qquad $$\nthen\n$$ \nf(n) \\underset{\\text{hypothesis}}= x_{p,q} =\\left\\{ \\begin{array} {} \n &amp; w_{p,q} / p  &amp;\\text{ if } p \\mid q-1 \\\\\n &amp; w_{p,q} / q  &amp;\\text{ if } q \\mid p-1 \\\\\n &amp; w_{p,q}      &amp;\\text{ else }  \\\\\n\\end{array} \\right. \\tag 2\n$$\n<hr>\n<strong><em>Update 2</em></strong> It seems an equivalent formula to <em>(1)</em> in a more algebraic form is</p>\n\n<p>$$ f(n)\\underset{\\text{hypothesis}}=x_{p,q}={(p-1)(q-1) \\over \\gcd(q-1,p-1)\\gcd(q-1,p)\\gcd(q,p-1)}  \\tag 3$$</p>\n\n<p>It seems even to be a generalization of <em>(1)</em> because it fits the pattern of my function even when $p^A \\mid q-1$ with some $A&gt;1$ . </p>\n\n<p><em>(I have not yet the analoguous pattern when more primefactors are involved, but I think it shall be helpful to have already some reduction in this version of exactly $2$ primefactors)</em>         </p>\n\n<blockquote>\n  <p>Q: Can the formula <em>(3)</em> for $x_{p,q}$ be compactified even more?           </p>\n</blockquote>\n\n<p><hr>\nHere is a small table (I've tested this also with a $48 \\times 48$-table).     </p>\n\n<p>Let $n=p \\cdot q$ where $p,q \\in \\Bbb P$ then my function $f(n)$  gives the values:</p>\n\n<pre><code>   p\\q |   2   3    5    7   11   13   17   19   23   29   31   37  |\n   -   +   -   -    -    -    -    -    -    -    -    -    -    -  +\n   2   |   1   1    2    3    5    6    8    9   11   14   15   18  |\n   3   |   1   2    4    2   10    4   16    6   22   28   10   12  |\n   5   |   2   4    4   12    4   12   16   36   44   28   12   36  |\n   7   |   3   2   12    6   30   12   48   18   66   12   30   36  |\n  11   |   5  10    4   30   10   60   80   90   10  140   30  180  |\n  13   |   6   4   12   12   60   12   48   36  132   84   60   36  |\n  17   |   8  16   16   48   80   48   16  144  176  112  240  144  |\n  19   |   9   6   36   18   90   36  144   18  198  252   90   36  |\n  23   |  11  22   44   66   10  132  176  198   22  308  330  396  |\n  29   |  14  28   28   12  140   84  112  252  308   28  420  252  |\n  31   |  15  10   12   30   30   60  240   90  330  420   30  180  |\n  37   |  18  12   36   36  180   36  144   36  396  252  180   36  |\n   -   +   -   -    -    -    -    -    -    -    -    -    -    -  +\n</code></pre>\n\n<p>That values $f(pq)$ are nicely reproduced by $x_{p,q}$ according to the formula <em>(3)</em> up to $p,q \\le 223$ and $p,q \\in \\Bbb P$</p>\n\n<p><hr>\n(Numbertheoretical) <strong><em>background</em></strong><br>\nThe function $f(n)$ stems from the problem to determine periodicity in the sequence $ S_n =\\{k^k \\}_{ k \\gt 0} \\pmod n$ depending on $n$. It is relatively easy to find that we'll have a period of length $L=\\varphi(n^2)$ . But in many cases $n$ we find that there is a smaller period length, however it is always a divisor of $L$. The function $f(n)$ is that minimal period length (I determine that by analyzing the sequence $S_n$ empirically (only using Euler's totient function to simplify computation)). This is an analogon to the Carmichael function and to the \"order of multiplicative cyclic subgroups\".        </p>\n\n<p>For the basic problem see the MSE-question which I've linked already in the beginning of the post (they used \"m\" where I use \"n\" here).</p>\n"
+    },
+    {
+      "tags": [
+        "characters",
+        "quadratic-residues",
+        "exponential-sum",
+        "riemann-hypothesis"
+      ],
+      "owner": {
+        "account_id": 19841837,
+        "reputation": 93,
+        "user_id": 842810,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/da082c4d2abcf4aa1cd118541d2ed4cc?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "CarloReed",
+        "link": "https://math.stackexchange.com/users/842810/carloreed"
+      },
+      "is_answered": true,
+      "view_count": 147,
+      "answer_count": 1,
+      "score": 2,
+      "last_activity_date": 1749255178,
+      "creation_date": 1749112161,
+      "question_id": 5072911,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/5072911/a-corollary-of-the-riemann-hypothesis-for-one-variable-multiplicative-sums-a-w",
+      "title": "A Corollary of the Riemann Hypothesis for one-variable multiplicative sums (A. Weil)",
+      "body": "<p>I am having difficulties into understanding the last part of the proof of Hasse Corollary of the Riemann hypothesis over finite fields:\nLet <span class=\"math-container\">$g \\in \\mathbb{Z}[X]$</span> be a cubic polynomial with no multiple root in <span class=\"math-container\">$\\mathbb{C}$</span>, or in other words, such that the discriminant of g is non-zero (for instance, take <span class=\"math-container\">$g =X^3+aX+b$</span>, where <span class=\"math-container\">$\\triangle= a^3-27b^2 \\neq 0$</span>), then we have\n<span class=\"math-container\">\\begin{equation*}\n    \\left|\\sum\\limits_{0 \\leq x \\leq p-1}\\left(\\frac{g(x)}{p}\\right)\\right| \\ll \\sqrt{p}\n\\end{equation*}</span>\nfor all primes <span class=\"math-container\">$p$</span>, where the implied constant depends only on g.</p>\n<p>Here the proof from the notes I am reading:\nLet's first define the cubic polynomial (g) as\n<span class=\"math-container\">\\begin{equation*}\n    g = a_3X^3+a_2X^2+a_1X+a_0\n\\end{equation*}</span>\nWe want to apply the Riemann hyp. to <span class=\"math-container\">$\\mathbb{F}_{q}$</span> and to the reduction of g modulo <span class=\"math-container\">$p$</span> with the character <span class=\"math-container\">$\\chi$</span> given by the Legendre character.\nWe claim that there exists a prime <span class=\"math-container\">$p_0$</span> such that the Riemann hyp. does apply for &quot;large&quot; primes <span class=\"math-container\">$p\\ge p_0$</span>. This part is clear to me, it turns out that we can take <span class=\"math-container\">$p \\geq p_0 = \\max(3,p_1,p_2)$</span>, where <span class=\"math-container\">$p_1$</span> is the largest prime divisor of <span class=\"math-container\">$a_3$</span> and <span class=\"math-container\">$p_2$</span> the largest prime divisor of <span class=\"math-container\">$\\triangle$</span>. It follows that\n<span class=\"math-container\">\\begin{equation*}\n    \\left|\\sum\\limits_{0 \\leq x \\leq p-1}\\left(\\frac{g(x)}{p}\\right)\\right| \\leq (3-1)\\sqrt{p}= 2\\sqrt{p}\n\\end{equation*}</span>\nfor those &quot;large primes&quot;.\nFor the &quot;small&quot; primes (<span class=\"math-container\">$p&lt;p_0$</span>), we can apply a &quot;trick&quot; and obtain\n<span class=\"math-container\">\\begin{equation*}\n    \\left|\\sum\\limits_{0\\leq x \\leq p-1}\\left(\\frac{g(x)}{p}\\right)\\right|\\leq 2\\sqrt{p_0}\\sqrt{p}\n\\end{equation*}</span>\nWe then have the statement for all primes.\nHow does the last inequality is obtained?</p>\n"
+    },
+    {
+      "tags": [
+        "functions",
+        "proof-writing",
+        "functional-equations",
+        "arithmetic-functions",
+        "multiplicative-function"
+      ],
+      "owner": {
+        "account_id": 21264885,
+        "reputation": 4088,
+        "user_id": 941643,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/iGSIK.jpg?s=256",
+        "display_name": "Oshawott",
+        "link": "https://math.stackexchange.com/users/941643/oshawott"
+      },
+      "is_answered": true,
+      "view_count": 552,
+      "accepted_answer_id": 4254069,
+      "answer_count": 1,
+      "score": 1,
+      "last_activity_date": 1632063616,
+      "creation_date": 1631990114,
+      "last_edit_date": 1632063616,
+      "question_id": 4254027,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/4254027/find-the-values-of-f2-for-which-f-cannot-be-a-strictly-increasing-and-comp",
+      "title": "Find the values of $f(2)$ for which $f$ cannot be a strictly increasing and completely multiplicative function",
+      "body": "<p>I was solving some problems on functional equations especially on multiplicative functions today. I noticed that a strictly increasing <a href=\"https://en.wikipedia.org/wiki/Completely_multiplicative_function\" rel=\"nofollow noreferrer\">completely multiplicative</a> function <span class=\"math-container\">$f:\\mathbb N \\to\\mathbb N$</span> depends much on the value of <span class=\"math-container\">$f(2)$</span>. And there are some values of <span class=\"math-container\">$f(2)$</span> (such as <span class=\"math-container\">$f(2)=3$</span>) for which such functions can not exist. So the following question came to my mind:</p>\n<blockquote>\n<p>Let <span class=\"math-container\">$f:\\mathbb N\\to\\mathbb N$</span> be a strictly increasing <a href=\"https://en.wikipedia.org/wiki/Completely_multiplicative_function\" rel=\"nofollow noreferrer\">completely multiplicative</a> function with <span class=\"math-container\">$f(2)=k$</span>. Find the values of <span class=\"math-container\">$k$</span> for which there cannot exist the function <span class=\"math-container\">$f$</span> with the given properties.</p>\n</blockquote>\n<p>I tried the problem for small values of <span class=\"math-container\">$f(2)$</span> and here are the results (I will skip some of the proofs as they have been proved before in this site):</p>\n<ul>\n<li><p><strong><span class=\"math-container\">$f(2)=1$</span>:</strong> Since <span class=\"math-container\">$f(1)&lt;f(2)=1$</span>, there cannot exist the function.</p>\n</li>\n<li><p><strong><span class=\"math-container\">$f(2)=2$</span>:</strong> In this case, <span class=\"math-container\">$f(n)=n\\ \\forall n\\in\\mathbb N$</span>.<br />\n(<a href=\"https://math.stackexchange.com/questions/3331675/let-a-n-be-a-strictly-increasing-sequence-of-positive-integers-such-that-a\">Proof</a>)</p>\n</li>\n<li><p><strong><span class=\"math-container\">$f(2)=3$</span>:</strong> We have <span class=\"math-container\">$f(3^2)&gt;f(2^3)=27$</span> or <span class=\"math-container\">$f(3)&gt;5$</span> and <span class=\"math-container\">$f(3^8)&lt;f(2^{13})=3^{13}$</span> or <span class=\"math-container\">$f(3)&lt;6$</span>. Since <span class=\"math-container\">$5&lt;f(3)&lt;6$</span>, the function cannot exist.</p>\n</li>\n<li><p><strong><span class=\"math-container\">$f(2)=4$</span>:</strong> In this case, <span class=\"math-container\">$f(n)=n^2\\ \\forall n\\in\\mathbb N$</span>.<br />\n(<a href=\"https://math.stackexchange.com/questions/4253798/prove-that-fn-n2-where-f-is-a-strictly-increasing-multiplicative-function\">Proof</a>)</p>\n</li>\n</ul>\n<p>So we have found two values of <span class=\"math-container\">$k$</span>. What are the other values? Are they the set of odd numbers or powers of <span class=\"math-container\">$2$</span>? How to prove in general?</p>\n"
+    },
+    {
+      "tags": [
+        "number-theory",
+        "prime-numbers",
+        "analytic-number-theory",
+        "multiplicative-function",
+        "liouville-function"
+      ],
+      "owner": {
+        "account_id": 5791101,
+        "reputation": 321,
+        "user_id": 215578,
+        "user_type": "registered",
+        "profile_image": "https://i.sstatic.net/wDyVz.jpg?s=256",
+        "display_name": "ikbuzsak",
+        "link": "https://math.stackexchange.com/users/215578/ikbuzsak"
+      },
+      "is_answered": false,
+      "view_count": 197,
+      "answer_count": 0,
+      "score": 4,
+      "last_activity_date": 1496995041,
+      "creation_date": 1493251837,
+      "last_edit_date": 1496995041,
+      "question_id": 2253982,
+      "content_license": "CC BY-SA 3.0",
+      "link": "https://math.stackexchange.com/questions/2253982/minimal-value-of-summatory-function-of-completely-multiplicative-functions-takin",
+      "title": "Minimal value of summatory function of completely multiplicative functions taking values -1 and 1",
+      "body": "<p>Here is a very nice paper <a href=\"http://www.ams.org/journals/tran/2010-362-12/S0002-9947-2010-05235-3/S0002-9947-2010-05235-3.pdf\" rel=\"nofollow noreferrer\">http://www.ams.org/journals/tran/2010-362-12/S0002-9947-2010-05235-3/S0002-9947-2010-05235-3.pdf</a> which led me to thinking about the problems below.</p>\n\n<p>Define the Liouville function for $A \\subseteq \\mathbb{P}$ by $\\lambda_{A}(n) = (-1)^{\\Omega_A(n)}$, where $\\Omega_A(n)$ is the number of prime factors of $n$ coming from $A$ counting multiplicity. Now denote $L_A(x) := \\sum_{n \\leq x} \\lambda_A(n)$.</p>\n\n<p>Now let's define another function $F$ by $F(n) = \\min \\{L_A(n) : A \\subseteq \\mathbb{P}\\}$. First few values of $F$ are $1, 0, -1, 0, -1, 0, -1, -2, -1, 0, -1, -2, -3, -4, -3, -2, -3, -4, -5, -4, -5, -4, -5, -6, -5, -6, -7, -8, -9$\nAnd here is a graph for small values:</p>\n\n<p><a href=\"https://i.sstatic.net/aytHx.png\" rel=\"nofollow noreferrer\"><img src=\"https://i.sstatic.net/aytHx.png\" alt=\"graph2\"></a>\nMy algorithm for calculating $F$ is as follows:\nConsider all possible values on prime numbers not bigger than $\\sqrt{n}$. For every other prime we know whether we want to set $-1$ or $1$ on it, because it depends only on sum of values on numbers smaller than $\\sqrt{n}$.\nSo the complexity is $O\\left(n 2^{\\frac{2\\sqrt{n}}{\\log{n}}}\\right)$.</p>\n\n<p>Here are my questions regarding this function:</p>\n\n<blockquote>\n  <ul>\n  <li>is $F$ always non-positive for $n &gt; 1$? [Edit: Yes, it is]</li>\n  <li>does it reach $0$ infinitely many times? [Edit: No, it doesn't]</li>\n  <li>what is $F$'s asymptotic? Is it better than $O(\\frac{n}{\\log n})$?</li>\n  <li>how to calculate $F$ efficiently?</li>\n  <li>what is relation between $F$ and Riemann Hypothesis?</li>\n  </ul>\n</blockquote>\n\n<p>I am also interested in function $L_{\\mathbb{P} \\setminus \\{2\\}}$. All questions above can be applied also to this function, but answers to the fourth and fifth are the same as for the standard $L$.\nI believe this function should be much easier to investigate, because we can use similar methods as in investigating Polya's conjecture. \nHere is a graph of $L$ (green), $L_{\\mathbb{P} \\setminus \\{3\\}}$ (light blue), $L_{\\mathbb{P} \\setminus \\{2\\}}$ (red) and $L_{\\mathbb{P} \\setminus \\{2, 3\\}}$ (dark blue):\n<a href=\"https://i.sstatic.net/uwxKH.png\" rel=\"nofollow noreferrer\"><img src=\"https://i.sstatic.net/uwxKH.png\" alt=\"X,2,3,(2,3)\"></a></p>\n"
+    },
+    {
+      "tags": [
+        "real-analysis",
+        "calculus",
+        "algebra-precalculus",
+        "functional-equations"
+      ],
+      "owner": {
+        "account_id": 17433335,
+        "reputation": 1135,
+        "user_id": 852976,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/-uQbUZu4fj1o/AAAAAAAAAAI/AAAAAAAAAAA/AKF05nBuvY25_oF5_h4-K-AQAQIbF5dsnA/s256-rj/photo.jpg",
+        "display_name": "Gord452",
+        "link": "https://math.stackexchange.com/users/852976/gord452"
+      },
+      "is_answered": false,
+      "view_count": 153,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1662988003,
+      "creation_date": 1662912040,
+      "last_edit_date": 1662988003,
+      "question_id": 4529369,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/4529369/prove-that-the-graph-of-a-multiplicative-function-is-dense-on-0-infty2",
+      "title": "prove that the graph of a multiplicative function is dense on $(0,\\infty)^2$",
+      "body": "<blockquote>\n<p>Show that if <span class=\"math-container\">$f$</span> is a nonzero function satisfying the equation below for all real numbers <span class=\"math-container\">$a,b,c, f(0) = 0,$</span> and if <span class=\"math-container\">$f(x)\\neq x^\\tau$</span> for any <span class=\"math-container\">$\\tau &gt; 0$</span> (i.e. <span class=\"math-container\">$f$</span> is not identically equal to <span class=\"math-container\">$x^\\tau$</span> as functions of <span class=\"math-container\">$x$</span>), then <span class=\"math-container\">$f$</span>'s graph is dense in <span class=\"math-container\">$(0,\\infty)^2$</span>.</p>\n</blockquote>\n<p><span class=\"math-container\">$(f(a)-f(b))(f(b)-f(c)) (f(c)-f(a)) = f(ab^2 + bc^2 + ca^2)-f(a^2 b + b^2 c + c^2 a)$</span>.</p>\n<blockquote>\n<p>One may use the following properties of <span class=\"math-container\">$f$</span> without proof:</p>\n</blockquote>\n<ol>\n<li><span class=\"math-container\">$f$</span> is injective</li>\n<li><span class=\"math-container\">$f(ax)=f(a)f(x)$</span> for all real numbers a,x, and as a corollary <span class=\"math-container\">$f(a)\\ge 0$</span> for all <span class=\"math-container\">$a\\ge 0$</span></li>\n<li><span class=\"math-container\">$f$</span> is odd.</li>\n</ol>\n<p>One may assume <span class=\"math-container\">$f(1) = 1$</span> (by replacing <span class=\"math-container\">$f$</span> with <span class=\"math-container\">$-f$</span>).</p>\n<p>I need to show that for any <span class=\"math-container\">$\\epsilon &gt; 0, (a,b) \\in (0,\\infty)^2$</span>, there exists <span class=\"math-container\">$x&gt;0$</span> so that <span class=\"math-container\">$\\lVert (x,f(x)) - (a,b)\\rVert_2 &lt; \\epsilon.$</span> Assume the graph is not dense. Then there exists <span class=\"math-container\">$\\epsilon &gt; 0$</span> and <span class=\"math-container\">$(a,b)\\in (0,\\infty)^2$</span> so that for all <span class=\"math-container\">$x&gt;0, \\lVert (x,f(x)) - (a,b)\\rVert_2 \\ge \\epsilon.$</span> We may obviously ignore all <span class=\"math-container\">$x$</span> that differ from <span class=\"math-container\">$a$</span> by at least <span class=\"math-container\">$\\epsilon$</span>. Using property 2, we have <span class=\"math-container\">$f(a^2) = f(a)^2$</span> and <span class=\"math-container\">$f(ax)=f(a)f(x)$</span>. If <span class=\"math-container\">$f$</span> is bounded on the positive reals, with a supremum of <span class=\"math-container\">$M &gt; 0$</span>,  <span class=\"math-container\">$M$</span> must be at most <span class=\"math-container\">$1$</span> because otherwise we can choose <span class=\"math-container\">$\\epsilon$</span> sufficiently small so that <span class=\"math-container\">$(M-\\epsilon)^2 &gt; M$</span> and <span class=\"math-container\">$f(x^2) = f(x)^2 = (M-\\epsilon)^2 &gt; M.$</span> <span class=\"math-container\">$M$</span> must actually equal <span class=\"math-container\">$1$</span> because <span class=\"math-container\">$f(1)=1$</span> by assumption. So <span class=\"math-container\">$f$</span> must map the positive real numbers to the interval <span class=\"math-container\">$(0,1]$</span>. But one can prove that <span class=\"math-container\">$f(x^{m/n}) = f(x)^{m/n}$</span> for any positive integers <span class=\"math-container\">$m,n$</span>, since <span class=\"math-container\">$f(x^n) = f(x)^n$</span> for any positive integer n by multiplicativity (property 2). So if each value of <span class=\"math-container\">$f$</span> is less than one, then for all positive x, <span class=\"math-container\">$f(x^{1/n}) = \\sqrt[n]{f(x)}$</span> tends to 1 as <span class=\"math-container\">$x\\to \\infty.$</span> But since this applies for any real number <span class=\"math-container\">$x$</span>, this contradicts the injectivity of <span class=\"math-container\">$f$</span>. However, this proof is informal in some sense as the last statement requires more justification. Hence <span class=\"math-container\">$f$</span> cannot be bounded.</p>\n"
+    },
+    {
+      "tags": [
+        "number-theory",
+        "ring-theory",
+        "finite-groups",
+        "modular-arithmetic",
+        "conjectures"
+      ],
+      "owner": {
+        "account_id": 15058956,
+        "reputation": 2726,
+        "user_id": 631681,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/78c818ee70c17be720b66014c95fce98?s=256&d=identicon&r=PG&f=y&so-version=2",
+        "display_name": "CardioidAss22",
+        "link": "https://math.stackexchange.com/users/631681/cardioidass22"
+      },
+      "is_answered": false,
+      "view_count": 130,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1550652568,
+      "creation_date": 1547403179,
+      "last_edit_date": 1550652568,
+      "question_id": 3072341,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3072341/multiplicative-order-of-a-bmod-ck1",
+      "title": "Multiplicative order of $a\\bmod c^{k+1}$",
+      "body": "<p>I have some questions about moving from <span class=\"math-container\">$\\mathbb Z_{c^k}$</span> into <span class=\"math-container\">$\\mathbb Z_{c^{k+1}}$</span>-specifically, with regard to the order of elements.  </p>\n\n<p>Suppose <span class=\"math-container\">$a$</span> (which is coprime to <span class=\"math-container\">$c$</span>) has multiplicative order <span class=\"math-container\">$b$</span> in <span class=\"math-container\">$\\mathbb Z_{c^k}$</span>.</p>\n\n<p>Now if <span class=\"math-container\">$a$</span> has multiplicative order <span class=\"math-container\">$p$</span> in <span class=\"math-container\">$\\mathbb Z_{c^{k+1}}$</span>, then, <span class=\"math-container\">$c^{k+1}\\mid (a^p-1)\\implies c^k\\mid(a^p-1)\\implies b\\mid p$</span>  </p>\n\n<p>So <span class=\"math-container\">$p=bn$</span> for some positive integer <span class=\"math-container\">$n$</span>.</p>\n\n<p><span class=\"math-container\">$$\\require{cancel}a^b\\equiv 1\\mod c^k\\implies a^{bn}\\equiv 1\\mod c^{k+1}$$</span></p>\n\n<p><span class=\"math-container\">$$(a^b)^n\\equiv 1\\mod c^{k+1}\\implies ((a^b-1)+1)^n\\equiv 1 \\mod c^{k+1}$$</span>  </p>\n\n<p><span class=\"math-container\">$$\\sum_{i=0}^n\\Biggl(\\binom{n}{i}(a^b-1)^i1^{n-i}\\Biggr)\\equiv 1 \\mod c^{k+1}$$</span><br>\nSince <span class=\"math-container\">$c^k|(a^b-1):$</span>\n<span class=\"math-container\">$$\\binom{n}{0}(a^b-1)^01^{n-0}+\\binom{n}{1}(a^b-1)^11^{n-1}+\\sum_{i=2}^n\\cancelto{0}{\\Biggl(\\binom{n}{i}(a^b-1)^i1^{n-i}\\Biggr)}\\equiv 1\\mod c^{k+1}$$</span>  </p>\n\n<p><span class=\"math-container\">$$1+n(a^b-1)\\equiv 1\\mod c^{k+1}$$</span><br>\nSo, finally:\n<span class=\"math-container\">$$n(a^b-1)\\equiv 0\\mod\\ c^{k+1}$$</span><br>\nThis gives us that <span class=\"math-container\">$n|c$</span>. More specifically, if <span class=\"math-container\">$g.c.d.\\Bigl(\\frac{a^b-1}{c^k},c\\Bigr)=d$</span>, then <span class=\"math-container\">$n=\\frac{c}{d}$</span>.  </p>\n\n<p>Now, looking at something like the base-<span class=\"math-container\">$a$</span> Wieferich primes, there are clearly examples when <span class=\"math-container\">$n\\neq c$</span> (technically, Wieferich primes don't care specifically about the multiplicative order of the bases, but it happens frequently enough that <span class=\"math-container\">$p-1$</span> is the base's order).</p>\n\n<p>I have two main questions. For any non-perfect power, <span class=\"math-container\">$c$</span>, can we always find an <span class=\"math-container\">$a$</span> and a <span class=\"math-container\">$k$</span> such that, if <span class=\"math-container\">$ \\operatorname{ord}(a)=b$</span> in <span class=\"math-container\">$\\mathbb Z_c$</span> and <span class=\"math-container\">$ \\operatorname{ord}(a)=n$</span> in <span class=\"math-container\">$Z_{c^k}$</span>, <span class=\"math-container\">$n\\neq bc^{k-1}$</span>? And, second, (with <span class=\"math-container\">$c$</span> still being a non-perfect power<span class=\"math-container\">$\\neq2$</span>) is it possible that, if, for some given <span class=\"math-container\">$a$</span>, that <span class=\"math-container\">$ \\operatorname{ord}(a)=b$</span> in <span class=\"math-container\">$\\mathbb Z_c$</span> and <span class=\"math-container\">$ \\operatorname{ord}(a)=bc$</span> in <span class=\"math-container\">$\\mathbb Z_{c^2}$</span>, but for some <span class=\"math-container\">$k&gt;2$</span>, <span class=\"math-container\">$ \\operatorname{ord}(a)\\neq bc^{k-1}$</span> in <span class=\"math-container\">$\\mathbb Z_{c^k}$</span>?</p>\n\n<p><strong>Edit</strong>: I think I have an answer to the first question-it looks to be a bit more general.</p>\n\n<p>If we look at the set of elements in <span class=\"math-container\">$\\mathbb Z_{c^{k+1}}$</span> that are invertible, we have a group under the operation of multiplication- denote it by <span class=\"math-container\">$V_{c^{k+1}}$</span>. Of course, these are exactly the elements that are coprime to <span class=\"math-container\">$c^{k+1}$</span> so the order of this group is <span class=\"math-container\">$$\\phi(c^{k+1})=c^{k+1}\\prod_{p:p=prime,p\\mid c^{k+1}}\\Bigl(1-\\frac{1}{p}\\Bigr)=c^{k+1}\\prod_{p:p=prime,p\\mid c}\\Bigl(1-\\frac{1}{p}\\Bigr)=\\\\\\frac{c^{k+1}}{\\prod_{p:p=prime,p\\mid c}p}\\prod_{p:p=prime,p\\mid c}(p-1)=d\\prod_{p:p=prime,p\\mid c}(p-1)$$</span>  </p>\n\n<p>where <span class=\"math-container\">$d$</span> is clearly an integer. Now, consider any prime factor, <span class=\"math-container\">$q$</span>, of <span class=\"math-container\">$p_{min}-1$</span> (where <span class=\"math-container\">$p_{min}$</span> is the smallest prime that divides <span class=\"math-container\">$c$</span>).</p>\n\n<p><span class=\"math-container\">$$q\\mid (p_{min}-1)\\mid\\biggl(\\prod_{p:p=prime,p\\mid c}(p-1)\\biggr)\\mid \\phi(c^{k+1})=\\Bigl|V_{c^{k+1}}\\Bigr|$$</span>  </p>\n\n<p>So <span class=\"math-container\">$q\\mid \\Bigl|V_{c^{k+1}}\\Bigr|$</span>. But by Cauchy's theorem for groups, this means that <span class=\"math-container\">$V_{c^{k+1}}$</span> has an element of order <span class=\"math-container\">$q$</span>- denote it by <span class=\"math-container\">$x$</span>. Clearly the multiplicative of order of <span class=\"math-container\">$x$</span> in <span class=\"math-container\">$\\mathbb Z_{c^{k+1}}$</span> is also <span class=\"math-container\">$q$</span>. Referring back to the way <span class=\"math-container\">$q$</span> was defined, it's clear that <span class=\"math-container\">$q$</span> and <span class=\"math-container\">$c$</span> are coprime (since <span class=\"math-container\">$q$</span> must be less than any prime factor of <span class=\"math-container\">$c$</span>). But, if <span class=\"math-container\">$x$</span> has order <span class=\"math-container\">$b$</span> in <span class=\"math-container\">$\\mathbb Z_{c^k}$</span>, then the order of <span class=\"math-container\">$x$</span> in <span class=\"math-container\">$\\mathbb Z_{c^{k+1}}$</span> is (as shown before) of the form <span class=\"math-container\">$bn$</span> where <span class=\"math-container\">$n$</span> is some divisor of <span class=\"math-container\">$c$</span>.</p>\n\n<p>That means <span class=\"math-container\">$bn=q$</span>. Since <span class=\"math-container\">$q$</span> and <span class=\"math-container\">$c$</span> are coprime, <span class=\"math-container\">$n=1$</span>, and <span class=\"math-container\">$b=q$</span>, i.e., the order of <span class=\"math-container\">$x$</span> is the same in <span class=\"math-container\">$\\mathbb Z_{c^{k+1}}$</span> as it is in <span class=\"math-container\">$\\mathbb Z_{c^k}$</span>. </p>\n\n<p>The reason this seems more general is that it works for any <span class=\"math-container\">$k$</span>. Of course, there's a small flaw when it comes to <span class=\"math-container\">$c$</span> being even, i.e. that <span class=\"math-container\">$p_{min}-1=2-1=1$</span> always. But, the above argument could still easily be extended to any even numbers where the <span class=\"math-container\">$2^{nd}$</span> smallest prime divisor isn't a Fermat prime (just let <span class=\"math-container\">$q$</span> be some prime other than <span class=\"math-container\">$2$</span> that divides the second smallest prime-1). Even if the second smallest prime divisor is Fermat, we'll still have <span class=\"math-container\">$\\operatorname{ord}(a)=2b\\neq bc^k$</span> (I just can't guarantee an element with the same order in <span class=\"math-container\">$\\mathbb Z_{c^k}$</span> and <span class=\"math-container\">$\\mathbb Z_{c^{k+1}}$</span> exists). That seems to just leave <span class=\"math-container\">$c=2$</span>. Still have no clue how to deal with the second question.  </p>\n\n<p><strong>Edit 2:</strong> The above argument (in the <strong>Edit</strong>) can be tweaked a bit- once we have an <span class=\"math-container\">$x$</span> of order <span class=\"math-container\">$q$</span> in <span class=\"math-container\">$\\mathbb Z_{c^{k+1}}$</span>, instead of returning to <span class=\"math-container\">$\\mathbb Z_{c^k}$</span> and examining <span class=\"math-container\">$x$</span>'s order there, we can look directly at <span class=\"math-container\">$\\mathbb Z_c$</span> instead. If the order of <span class=\"math-container\">$x$</span> in <span class=\"math-container\">$\\mathbb Z_c$</span> is <span class=\"math-container\">$b$</span>, then by extending the reasoning presented above, the order of <span class=\"math-container\">$x$</span> in <span class=\"math-container\">$\\mathbb Z_{c^{k+1}}$</span> is <span class=\"math-container\">$bN$</span>, where <span class=\"math-container\">$N$</span> is a divisor of <span class=\"math-container\">$c^k$</span>. That means <span class=\"math-container\">$bN=q$</span> and (since <span class=\"math-container\">$q$</span> and <span class=\"math-container\">$c$</span> are coprime) <span class=\"math-container\">$b=q$</span> but now <span class=\"math-container\">$b$</span> is the order of <span class=\"math-container\">$x$</span> in <span class=\"math-container\">$\\mathbb Z_c$</span>. This reasoning can be extended so that for every <span class=\"math-container\">$1\\leq h\\leq k+1$</span>, the order of <span class=\"math-container\">$x$</span> in <span class=\"math-container\">$\\mathbb Z_{c^h}$</span> is the same. This seems to be suggesting that the answer to the second question is generally no- but that would be to assume that elements that do not have order <span class=\"math-container\">$bc^k$</span> in <span class=\"math-container\">$\\mathbb Z_{c^{k+1}}$</span> are only constructed by the method in the first <strong>Edit</strong> (it also isn't true in the case when <span class=\"math-container\">$c=2$</span> just by the fact that all odd numbers have order 1 in <span class=\"math-container\">$\\mathbb Z_2$</span>).</p>\n"
+    },
+    {
+      "tags": [
+        "sequences-and-series",
+        "group-theory",
+        "number-theory",
+        "power-series",
+        "subgroup-growth"
+      ],
+      "owner": {
+        "account_id": 2136288,
+        "reputation": 8862,
+        "user_id": 52694,
+        "user_type": "registered",
+        "accept_rate": 92,
+        "profile_image": "https://www.gravatar.com/avatar/f816c0bd5b9723812eeee9934c490fc8?s=256&d=identicon&r=PG",
+        "display_name": "Mike Battaglia",
+        "link": "https://math.stackexchange.com/users/52694/mike-battaglia"
+      },
+      "is_answered": true,
+      "view_count": 151,
+      "accepted_answer_id": 3222866,
+      "answer_count": 2,
+      "score": 3,
+      "last_activity_date": 1620097053,
+      "creation_date": 1557629900,
+      "last_edit_date": 1557635230,
+      "question_id": 3222815,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3222815/a-useful-invariant-representing-the-size-of-a-multiplicative-subgroup-of-bbb",
+      "title": "A useful invariant representing the &quot;size&quot; of a multiplicative subgroup of $\\Bbb Q^+$",
+      "body": "<p>For any rational <span class=\"math-container\">$r=n/d$</span>, define</p>\n\n<p><span class=\"math-container\">$$h_s(r) = (nd)^s$$</span></p>\n\n<p>where <span class=\"math-container\">$s &gt; 0$</span> is a free parameter. The intent is for this to be a representation of how \"simple\" each rational is; simpler rationals are ranked lower.</p>\n\n<p>Now, suppose <span class=\"math-container\">$S$</span> is a finitely-generated subgroup of the multiplicative group of strictly positive rationals <span class=\"math-container\">$\\Bbb Q^+$</span>. Then we can use our <span class=\"math-container\">$h_s$</span> to define a useful notion of the \"size\" of the subgroup as follows:</p>\n\n<p><span class=\"math-container\">$$h_s(S) = \\sum_{r \\in S} \\frac{1}{h_s(r)}$$</span></p>\n\n<p>This is guaranteed to converge whenever <span class=\"math-container\">$s&gt;0$</span>. Furthermore, whenever we have <span class=\"math-container\">$s \\in \\Bbb N^+$</span>, it even seems to converge to a rational number. Let's call this the <strong>rational associated with <span class=\"math-container\">$S$</span></strong> for some value of <span class=\"math-container\">$s$</span>.</p>\n\n<p><strong>QUESTION:</strong> is there some closed-form expression for each sum which gives the rational associated with an arbitrary subgroup, at least for <span class=\"math-container\">$s=1$</span>? Has this been studied and does it hav ea name?</p>\n\n<hr>\n\n<p>Here are some examples for <span class=\"math-container\">$s=1$</span>, ranked from \"largest\" to \"smallest.\"</p>\n\n<p>For the following examples, I know how to get a closed-form expression:</p>\n\n<p><span class=\"math-container\">$$ \\begin{align}\nh_1(\\langle 2,3,5,7 \\rangle) &amp;= 12 \\\\\nh_1(\\langle 2,3,5 \\rangle) &amp;= 9 \\\\\nh_1(\\langle 2,3,7 \\rangle) &amp;= 8 \\\\\nh_1(\\langle 2,3,25 \\rangle) &amp;= 13/2 = 6.5 \\\\\nh_1(\\langle 2,9,5 \\rangle) &amp;= 45/8 = 5.625 \\\\\nh_1(\\langle 3/2, 7/5 \\rangle) &amp;= 126/85 \\approx 1.482\n\\end{align}$$</span></p>\n\n<p>Here are some examples of subgroups for which I don't have a closed form expression, but which are fairly easy to evaluate numerically, and which can easily be seen to lead to a rational value</p>\n\n<p><span class=\"math-container\">$$ \\begin{align}\nh_1(\\langle 2,9,5/3 \\rangle) &amp;= 5 \\\\\nh_1(\\langle 4,3/2,5 \\rangle) &amp;= 37/8 \\approx 4.625 \\\\\nh_1(\\langle 6,10 \\rangle) &amp;= 584/315 \\approx 1.854 \\\\\nh_1(\\langle 3/2,5/2 \\rangle) &amp;= 584/315 \\approx 1.854 \\\\\nh_1(\\langle 6,15/2 \\rangle) &amp;= 3459/2090 \\approx 1.655\n\\end{align}$$</span></p>\n\n<p>These sums are easy to play with, since they converge relatively quickly, at least for small-rank subgroups. Taking them to 1000 terms can be done in a few seconds, and for all of these you get a relatively short continued fraction that suddenly \"almost terminates\" with some enormous number in the billions or so.</p>\n\n<hr>\n\n<p>The first list is easy to get in closed form because each subgroup has a basis of pairwise-coprime rationals, which makes things pretty easy to get. To see this, first, note that we have the following for our <span class=\"math-container\">$h_s(r)$</span>:</p>\n\n<ul>\n<li>For any rational <span class=\"math-container\">$r \\neq 1$</span> and <span class=\"math-container\">$s&gt;0$</span>, we have <span class=\"math-container\">$h_s(r) &gt; 1$</span>.</li>\n<li>For any rational <span class=\"math-container\">$r$</span> and any integer <span class=\"math-container\">$z$</span>, we have <span class=\"math-container\">$h_s(r^z) = h_s(r)^{|z|}$</span></li>\n<li>For any two coprime rationals <span class=\"math-container\">$r_1, r_2$</span>, we have <span class=\"math-container\">$h_s(r_1 \\cdot r_2) = h_s(r_1) \\cdot h_s(r_2)$</span>.</li>\n</ul>\n\n<p>Then if we have <span class=\"math-container\">$S = \\langle r_1, r_2, \\ldots, r_n \\rangle$</span>, and all the <span class=\"math-container\">$r_i$</span> are coprime, then we can write any rational <span class=\"math-container\">$r$</span> as <span class=\"math-container\">${r_1}^{a_1} \\cdot {r_2}^{a_2} \\cdot \\ldots {r_n}^{a_n}$</span>, so that we have <span class=\"math-container\">$h_s(r) = h_s(r_1)^{|a_1|} \\cdot h_s(r_2)^{|a_2|} \\cdot \\ldots \\cdot h_s(r_n)^{|a_n|}$</span>. As a result, we can write our summation as</p>\n\n<p><span class=\"math-container\">$$h_s(\\langle r_1, r_2, \\ldots, r_n \\rangle) = \\sum_{a_1, a_2, \\ldots, a_n \\in \\Bbb Z^n} \\left( \\frac{1}{{h_s(r_1)}^{|a_1|}} \\cdot \\frac{1}{{h_s(r_2)}^{|a_2|}} \\cdot \\ldots \\cdot \\frac{1}{{h_s(r_n)}^{|a_n|}}\\right)$$</span></p>\n\n<p>which we can factor into a product of sums:</p>\n\n<p><span class=\"math-container\">$$h_s(\\langle r_1, r_2, \\ldots, r_n \\rangle) = \\left( \\sum_{a_1 \\in \\Bbb Z} \\frac{1}{{h_s(r_1)}^{|a_1|}} \\right) \\left( \\sum_{a_2 \\in \\Bbb Z}  \\frac{1}{{h_s(r_2)}^{|a_2|}} \\right) \\ldots \\left( \\sum_{a_n \\in \\Bbb Z} \\frac{1}{{h_s(r_n)}^{|a_n|}} \\right)$$</span></p>\n\n<p>which, as long as <span class=\"math-container\">$s&gt;0$</span>, converges via some simple power series manipulations to</p>\n\n<p><span class=\"math-container\">$$h_s(\\langle r_1, r_2, \\ldots, r_n \\rangle) = \\left( \\frac{h_s(r_1)+1}{h_s(r_1)-1} \\right) \\left( \\frac{h_s(r_2)+1}{h_s(r_2)-1} \\right) \\ldots \\left( \\frac{h_s(r_n)+1}{h_s(r_n)-1} \\right)$$</span></p>\n\n<p>Any subgroup generated by prime numbers will be of the above form. So since this expression converges for all such subgroups, we know it will converge for any multiplicative subgroup of <span class=\"math-container\">$\\Bbb Q^+$</span>.</p>\n"
+    },
+    {
+      "tags": [
+        "finite-fields",
+        "computational-complexity",
+        "roots-of-unity",
+        "primitive-roots"
+      ],
+      "owner": {
+        "account_id": 4308890,
+        "reputation": 1111,
+        "user_id": 224436,
+        "user_type": "registered",
+        "accept_rate": 67,
+        "profile_image": "https://graph.facebook.com/100007039774516/picture?type=large",
+        "display_name": "stanley dodds",
+        "link": "https://math.stackexchange.com/users/224436/stanley-dodds"
+      },
+      "is_answered": false,
+      "view_count": 58,
+      "answer_count": 0,
+      "score": 1,
+      "last_activity_date": 1558903715,
+      "creation_date": 1558896716,
+      "last_edit_date": 1558903715,
+      "question_id": 3240674,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/3240674/upper-bound-on-or-fast-algorithm-to-find-an-order-2n-element-in-the-multipl",
+      "title": "upper bound on, or fast algorithm to find, an order $2^n$ element in the multiplicative group modulo prime $q(2^n)+1$",
+      "body": "<p>I have a program which (in its current implementation) requires, for a given <span class=\"math-container\">$N=2^n$</span>, some <span class=\"math-container\">$\\omega$</span> in some field such that <span class=\"math-container\">$\\omega^N=1$</span> and <span class=\"math-container\">$\\omega^i\\ne1$</span> for each <span class=\"math-container\">$0&lt;i&lt;N$</span>.</p>\n\n<p>Complex roots of unity are not viable, due to imperfect precision when represented in Cartesian form on a computer. Even if represented accurately in polar form, now it is addition of complex numbers which is slow and imprecise, requiring trigonometric functions.</p>\n\n<p>The method that I have implemented is to first find a prime in the form <span class=\"math-container\">$P=qN+1$</span> (which heuristically should be fast; we can \"expect\" to find such <span class=\"math-container\">$q$</span> within <span class=\"math-container\">$\\mathcal{O}(\\log (q_0N))$</span> of some <span class=\"math-container\">$q_0$</span>, and we can test candidate <span class=\"math-container\">$P$</span> for primality quickly) and then work in the field of integers modulo <span class=\"math-container\">$P$</span>. Since <span class=\"math-container\">$P$</span> is prime, is has a primitive root <span class=\"math-container\">$g$</span>, and hence <span class=\"math-container\">$g^q$</span> has the desired properties. We therefore know that such <span class=\"math-container\">$\\omega$</span> does indeed exist in this field.</p>\n\n<p>However, my best method for finding <span class=\"math-container\">$\\omega$</span> so far is to simply check <span class=\"math-container\">$\\omega=2,3,4,\\dots$</span> (see edit for much better method for choosing trial <span class=\"math-container\">$\\omega$</span>) for the property <span class=\"math-container\">$\\omega^{N/2}\\equiv-1\\mod P$</span> (which holds iff <span class=\"math-container\">$\\omega^N\\equiv1$</span> and <span class=\"math-container\">$\\omega^i\\not\\equiv1$</span> for each <span class=\"math-container\">$0&lt;i&lt;N$</span>, since the only prime dividing <span class=\"math-container\">$N$</span> is <span class=\"math-container\">$2$</span>). This works fine, but the problem is that I don't know if this is definitely fast, and there may be a better method.</p>\n\n<p>For reasons that shouldn't be important, my program requires that <span class=\"math-container\">$P\\approx{N^2\\over2}$</span>, so a possible worst case may require checking <span class=\"math-container\">$\\mathcal{O}(N^2)$</span> candidates - this would be too slow. I therefore either need a good upper bound on the least such <span class=\"math-container\">$\\omega$</span>, or a faster method of finding one.</p>\n\n<p>The odd powers of <span class=\"math-container\">$g^q$</span> cover exactly all such <span class=\"math-container\">$\\omega$</span>. This is simple to prove by considering all cases for powers of <span class=\"math-container\">$g$</span>, which covers everything, as <span class=\"math-container\">$g$</span> is a primitive root modulo <span class=\"math-container\">$P$</span>. Therefore we know there are exactly <span class=\"math-container\">$N/2$</span> valid roots of unity, distributed among roughly <span class=\"math-container\">$N^2\\over2$</span> integers. Randomly searching will therefore take roughly <span class=\"math-container\">$N$</span> checks on average. This is good, but the worst case is still <span class=\"math-container\">$\\mathcal{O}(N^2)$</span>. Any method better than this, but preferably one taking at most <span class=\"math-container\">$\\mathcal{O}(N)$</span> time, would be great.</p>\n\n<p>EDIT: I've realised there is quite a trivial algorithm that finds <span class=\"math-container\">$\\omega$</span> very quickly on average. Pick some <span class=\"math-container\">$a$</span>, then compute <span class=\"math-container\">$a^q\\mod P$</span>. There is a 50% chance that this has order <span class=\"math-container\">$N$</span>. The reason is that <span class=\"math-container\">$a\\equiv g^k\\mod P$</span> for some <span class=\"math-container\">$k$</span>. By the above, if <span class=\"math-container\">$k$</span> is odd, then <span class=\"math-container\">$a^q\\equiv (g^q)^k\\mod P$</span> has exactly order <span class=\"math-container\">$N$</span> as required. <span class=\"math-container\">$k$</span> is odd for half of the powers of <span class=\"math-container\">$g$</span> (which are half the integers from <span class=\"math-container\">$1$</span> to <span class=\"math-container\">$P-1$</span>), so each <span class=\"math-container\">$a$</span> gives a 50% chance. Hence we now only expect to have to check 2 values on average. I would bet there is a proof somewhere that checking <span class=\"math-container\">$2^q,3^q,\\dots$</span> finds <span class=\"math-container\">$\\omega$</span> in a very small number of trials as a function of <span class=\"math-container\">$N$</span> or <span class=\"math-container\">$P$</span>.</p>\n"
+    },
+    {
+      "tags": [
+        "elementary-number-theory",
+        "arithmetic-functions",
+        "prime-gaps",
+        "twin-primes",
+        "multiplicative-function"
+      ],
+      "owner": {
+        "account_id": 1300508,
+        "reputation": 23263,
+        "user_id": 26327,
+        "user_type": "registered",
+        "accept_rate": 92,
+        "profile_image": "https://i.sstatic.net/KESs5ZGy.png?s=256",
+        "display_name": "TotoposDiagramChaseApp",
+        "link": "https://math.stackexchange.com/users/26327/totoposdiagramchaseapp"
+      },
+      "is_answered": false,
+      "view_count": 112,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1652675827,
+      "creation_date": 1652648471,
+      "last_edit_date": 1652675827,
+      "question_id": 4451240,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://math.stackexchange.com/questions/4451240/full-derivation-inside-of-twin-prime-statement-in-terms-of-multiplicative-arithm",
+      "title": "Full derivation inside of twin prime statement in terms of multiplicative arithmetic functions. How can the last formula be rearranged?",
+      "body": "<p>Let <span class=\"math-container\">$(\\cdot\\mid\\cdot) : \\Bbb{N}\\times\\Bbb{N} \\to \\Bbb{Z}_2$</span> be the <em>divisibility function</em> which takes on the value <span class=\"math-container\">$(x|y) = 1$</span> whenever <span class=\"math-container\">$x$</span> <em>divides</em> <span class=\"math-container\">$y$</span> and the value <span class=\"math-container\">$(x|y) = 0$</span> whenever it does not divide.  We define the <em>non-divisibility function</em> <span class=\"math-container\">$(x\\nmid y) = 1 - (x|y)$</span>.  Clearly, it equals <span class=\"math-container\">$1$</span> if and only if <span class=\"math-container\">$x$</span> <em>does not divide</em> <span class=\"math-container\">$y$</span>.</p>\n<p>Define <span class=\"math-container\">$\\chi(n) = \\prod_{i = 1}^{\\pi(\\sqrt{n+2})} (p_i \\nmid n(n+2))$</span>.  Clearly <span class=\"math-container\">$\\chi: \\Bbb{N} \\to \\Bbb{Z}_2$</span> and is <span class=\"math-container\">$1$</span> if and only if <span class=\"math-container\">$n(n+2)$</span> is coprime to <em>all</em> primes <span class=\"math-container\">$\\leq \\sqrt{n+2}$</span>.  That is the same thing as saying <span class=\"math-container\">$\\chi(n)$</span> is <span class=\"math-container\">$1$</span> if and only if <span class=\"math-container\">$n$</span> is the first in a twin prime pair.  Put <span class=\"math-container\">$m = n(n+2)$</span>.  Let's see what happens when we expand <span class=\"math-container\">$\\chi(n) = (1 - (p_1| m))(1-(p_2|m)) \\cdots (1-(p_{\\pi(\\sqrt{n+2})}|m))$</span>.</p>\n<p>For example: <span class=\"math-container\">$$(1 - (2|m))(1-(3|m))(1-(5|m)) = \\\\ 1 - (2|m) - (3|m) - (5|m) + (2\\cdot 3|m) + (2\\cdot 5|m) + (3\\cdot 5|m) - (2\\cdot 3\\cdot 5 |m)$$</span></p>\n<p>After some becoming comfortable with such expansions, you will eventually be a natural at concluding:</p>\n<p><span class=\"math-container\">$$\n\\chi(n) = \\sum_{d \\mid \\sqrt{n+2}\\#}(-1)^{\\omega(d)}(d \\mid m)\n$$</span></p>\n<p>So now define <span class=\"math-container\">$\\phi(n,m) = \\sum_{d \\mid n}(-1)^{\\omega(d)}(d \\mid m)$</span>.  Because <span class=\"math-container\">$((-1)^x)^2 = 1$</span> we can rewrite this as:</p>\n<p><span class=\"math-container\">$$\n\\phi(n, m) = (-1)^{\\omega(n)}\\sum_{d\\mid n}(-1)^{\\omega(\\frac{n}{d})}(d\\mid m)\n$$</span></p>\n<p>which is a Dirichlet convolution of two multiplicative functions: <span class=\"math-container\">$(-1)^{\\omega(\\cdot)}$</span> and <span class=\"math-container\">$(\\cdot \\mid m)$</span>, all multiplied (pointwise) by <span class=\"math-container\">$(-1)^{\\omega(\\cdot)}$</span>, which makes <span class=\"math-container\">$\\phi(n, m)$</span> a multiplicative function in <span class=\"math-container\">$n$</span>.  But more interestingly, if we define:</p>\n<p><span class=\"math-container\">$$\n\\psi(n,m) = \\mu(n)\\sum_{d\\mid n}\\mu(\\frac{n}{d})(d\\mid m)\n$$</span></p>\n<p>Then <span class=\"math-container\">$\\psi(n, m) = \\phi(n,m)$</span> whenever <span class=\"math-container\">$n$</span> is square-free by this note here at top of the article: <a href=\"https://en.wikipedia.org/wiki/Liouville_function\" rel=\"nofollow noreferrer\">&quot;It is related to the Mobius...&quot;</a>.</p>\n<hr />\n<p>Now we're getting somewhere, because then by the converse of <a href=\"https://en.wikipedia.org/wiki/M%C3%B6bius_inversion_formula#Statement_of_the_formula\" rel=\"nofollow noreferrer\">Mobius inversion</a>, we have that <span class=\"math-container\">$(\\cdot, m)$</span>, or the function that was convolved with <span class=\"math-container\">$\\mu$</span>, must be equal to:</p>\n<p><span class=\"math-container\">$$\n(n\\mid m) =\\sum_{d \\mid n} \\mu(d) \\psi(d,m)\n$$</span></p>\n<p>for any <span class=\"math-container\">$n, m \\in \\Bbb{N}$</span>.  Now we assume the opposite of the twin prime conjecture.</p>\n<hr />\n<p>Suppose there were only a finite number of twin primes <span class=\"math-container\">$n, n+2$</span>.  Then <span class=\"math-container\">$\\chi(n)$</span> eventually will vanish, meaning for all <span class=\"math-container\">$n \\gt N$</span>, for some constant <span class=\"math-container\">$N \\in \\Bbb{N}$</span>, we must have <span class=\"math-container\">$\\chi(n) = 0 = \\psi(\\sqrt{n+2}\\#, n(n+2))$</span>.</p>\n<p>Since <span class=\"math-container\">$(\\sqrt{n+2}\\#| n(n+2)) = 0$</span> for sufficiently large <span class=\"math-container\">$n$</span>, we have that eventually:</p>\n<p><span class=\"math-container\">$$\n0 = \\sum_{d \\mid \\sqrt{n+2}\\#} \\mu(d)\\psi(d, n(n+2))=\\\\\n\\sum_{d \\mid \\sqrt{n+2}\\#}\\sum_{c \\mid d}\\mu(\\dfrac{d}{c})(c\\mid n(n+2)) = ? \\\\\n\\tag{1}\n$$</span>\nBut we can take out of the outter summation range <span class=\"math-container\">$d = \\sqrt{n+2}\\#$</span> because by assumption of finite twin primes, <span class=\"math-container\">$\\psi(\\sqrt{n+2}\\#, n(n+2))$</span> vanishes eventually when <span class=\"math-container\">$n$</span> is sufficiently large enough.</p>\n<hr />\n<h2>Question</h2>\n<p>My question is the question mark at (1).  I'm not sure how to &quot;play&quot; with this expression.    I've tried converting it back into a product to see &quot;exactly what it means&quot;.  I've tried swapping the summation ranges with the summand divisibility functions because they're each of the form <span class=\"math-container\">$x\\mid y$</span> in the summation range or <span class=\"math-container\">$(x\\mid y)$</span> in the summand area, so that you can swap them where appropriate.  I've checked all the above statements (verified for small examples) using Python code, so I'm 99% sure (1) is correct.   I just need help getting to the next step, if there is one.</p>\n<hr />\n<p>Note that, wherever you see <span class=\"math-container\">$\\sqrt{n+2}\\#$</span> this can be replaced with <span class=\"math-container\">$a\\#$</span> for any <span class=\"math-container\">$\\sqrt{n+2} \\leq a \\leq n-1$</span> by Sieve of Eratosthenes.  Also note that although I tried, I was not able to convert the formula in (1) to an equivalent product expression (i.e. similar to our derivation of the summation of <span class=\"math-container\">$\\chi(n)$</span> but in the other direction).</p>\n<hr />\n<p>The general form of the summation in quesiton is just a sum over divisors of a Dirichlet convolution at each given divisor, or:</p>\n<p><span class=\"math-container\">$$\n\\varphi(n,m) = \\sum_{d \\mid n}(\\mu * (\\cdot | m))(d)\n$$</span></p>\n"
+    }
+  ],
+  "has_more": false,
+  "quota_max": 300,
+  "quota_remaining": 293
+}

@@ -1,0 +1,142 @@
+\section{上半带的统一计数与小参数资源}\label{app:upper}
+\begin{lemma}\label{lem:shape-change}
+设 $p\ge5$、$1\le s<p$、$n=3p+s$。合法核心 $(a^{2p},(-2a+sz)^p,(-pz)^s)$ 可用两次平均进入合法 $K_{p,p+s}$。
+\end{lemma}
+\begin{proof}
+记三个块值为 $A,B,C$。选 $0\le u\le s$、$s\le t+u\le p$，令 $q=3t+u$ 与 $n$ 互素。先平均 $(A^{p-t-u},B^t,C^u)$，从剩余旧 $A$ 保留 $p+s$ 份，再平均其余的 $p$ 个位置。返回为
+\[
+\frac1p\begin{pmatrix}p-q&st-pu\\-1&0\end{pmatrix}.
+\]
+可取 $(t,u)=(s,0)$（$3\nmid s$）；若 $3\mid s$，令 $\rho=p\bmod3$，取 $u=s-3+\rho,t=(p-u)/3$，此时 $q=p$。容量 $t+u\ge s$ 等价于 $p-s\ge6-2\rho$；唯一例外为 $\rho=1,s=p-1$，改取 $t=(p+1)/2,u=(p-3)/2$，此时 $q=2p$。三种选择均合法且 $\gcd(q,n)=1$。
+若 $y=a+pz$，新见证满足 $y'\equiv-qy/p\pmod n$，行列式为 $st-pu\equiv-pq\pmod n$。故在每个危险素数处保持本原性及见证。
+\end{proof}
+
+\begin{lemma}\label{lem:count-interface}
+在 $K_{p,r}$ 上，选择 $q_0\in\{1,2\}$ 组不交且组成相同的来源 $(i,j,k)$，$i+j+k=p$，保留 $r$ 份新值作载体。剩余库存为
+\begin{equation}\label{eq:stock}
+(p-q_0i,p-q_0j,r-q_0k,q_0p-r).
+\end{equation}
+若输出 $(x,y,u,v)$ 在库存内、和为 $p$，再平均其补集，返回矩阵为 $J/p^2$，其中
+\begin{equation}\label{eq:count-matrix}
+J=\begin{pmatrix}p(x-y)+\alpha v&pry-p^2u+\beta v\\-\alpha&-\beta\end{pmatrix},
+\quad \alpha=i-j,\quad\beta=rj-pk.
+\end{equation}
+若 $p(x-y)+\alpha v=\beta$，则 $J^2=pfI$，$pf\equiv p^4\pmod n$。若一组这样的表与其相邻输出 $(x-1,y-1,u+2,v)$ 同时可用，记相邻标量为 $pf,pg$，则
+\begin{equation}\label{eq:root-count}
+g-f=\alpha n,\qquad
+[\Sigma,J_f^{-1}J_g]=U(nH/g),\quad H=n(2j+\alpha)-2p^2,
+\end{equation}
+其中 $\Sigma=\left(\begin{smallmatrix}-1&r\\0&1\end{smallmatrix}\right)$。
+\end{lemma}
+\begin{proof}
+新值为 $D=(\alpha a+\beta z)/p$，新参数 $z'=-D/p$；将输出组的和除以 $p$ 给出\eqref{eq:count-matrix}。迹零即得标量平方；代入 $r\equiv-2p\pmod n$ 得其模 $n$ 值。相邻输出使右上项减少 $pn$，故 $g-f=\alpha n$。相乘得到
+\[
+J_f^{-1}J_g=\begin{pmatrix}1&-\beta n/f\\0&g/f\end{pmatrix},
+\]
+再与 $\Sigma$ 作交换子即得\eqref{eq:root-count}。
+\end{proof}
+
+\begin{corollary}\label{cor:resource}
+设 $p\ge11$、$p<r<2p$。若有限组相邻表满足引理\ref{lem:count-interface}，$0<\alpha<p$，所有 $\alpha$ 的最大公因子为 $1$，所有 $H$ 的最大公因子为 $\delta$，其中 $\delta=1$（$n$ 奇）或 $\delta\in\{2,4\}$（$n$ 偶），则全部合法核心可归零。
+\end{corollary}
+\begin{proof}
+令 $R$ 为所有约分倍率 $g/f$ 及其逆生成的整数环。它是有限局部化环，反演素数均不除 $n$。某一倍率必不为 $\pm1$：$g=f$ 与 $\alpha\ne0$ 矛盾，而 $g=-f$ 与 $g-f=\alpha n$、$\gcd(f,n)=1$、$n>2$ 矛盾。因此 $R$ 有无限单位。
+由\eqref{eq:root-count}先取整数倍得到 $U(nH)$，再作倍率共轭及裴蜀合并，取得 $U(\delta nR)$。引理\ref{lem:transverse}及 $\gcd(\alpha)=1$ 给 $\Gamma(\delta^2n^2,R)$。换到 $(z,y)$，上根变为下根。
+规范反射 $J/p^2$ 模 $n$ 为 $\left(\begin{smallmatrix}1&-\alpha/p^2\\0&-1\end{smallmatrix}\right)$。其条目公因子整除 $\alpha<p$；所需有限标量由安全小数字提供。换块、反射和 $\alpha$ 的裴蜀组合给 $V\equiv U(-p^{-2})$。$n$ 奇时，选奇 $\alpha$；相邻 $f,g$ 奇偶相反，而条目公因子为奇数，所以引理\ref{lem:content}给 $2I$。因 $r>p$，终端的 $j$ 区间包含至少六个整数，覆盖 $\delta$ 个连续值。定理\ref{thm:terminal}适用。
+\end{proof}
+
+\begin{lemma}\label{lem:upper-supply}
+若 $p\ge83$、$p<r<2p$，则存在满足推论\ref{cor:resource}且 $\delta=\gcd(n,2)$ 的相邻表。
+\end{lemma}
+\begin{proof}
+全部取 $q_0=2$。按下列三种范围选计数。
+
+\emph{靠近 $4p$。} 若 $r>3p/2$，置 $d=2p-r$，取 $\alpha=\lceil d/2\rceil+2,\lceil d/2\rceil+3$，来源 $(\alpha,0,p-\alpha)$，输出
+\[(l,p-\alpha+l,\alpha-2l,0).
+\]
+其精确区间为 $L\le l\le U$，其中
+\[L=\max(0,\lceil(d-\alpha)/2\rceil),\qquad
+U=\min(\lfloor\alpha/2\rfloor,p-2\alpha).
+\]
+取 $l=L+1,L$。有 $L+1\le\lfloor\alpha/2\rfloor$；由 $2\alpha\le d+7$、$L+1\le d/4+1$，另一约束由 $p\ge5d/4+8$ 保证。$d\le(p-1)/2,p\ge83$ 足够。
+
+\emph{中部。} 写 $r=p+s$、$10\le s\le(p-1)/2$。取 $\alpha=\lceil p/6\rceil,\lceil p/6\rceil+1$，来源 $(2\alpha,\alpha,p-3\alpha)$，输出
+\[(\alpha-e,p-3\alpha-e,2\alpha-s+2e,s).
+\]
+可行区间为 $L\le e\le U$，
+\[L=\max(5\alpha-p,\lceil s/2\rceil-\alpha),\qquad
+U=\min(\alpha,2\alpha+s-\lceil p/2\rceil).
+\]
+取 $e=L,L+1$。$L+1\le U$ 的四个比较是
+\begin{align*}
+4\alpha&\le p-1,&3\alpha&\le\lfloor p/2\rfloor+s-1,\\
+\lceil s/2\rceil+1&\le2\alpha,&\lceil p/2\rceil+1&\le3\alpha+\lfloor s/2\rfloor.
+\end{align*}
+由 $p/6\le\alpha\le(p+11)/6$、$s\ge10$ 逐项成立，且保证来源库存。
+
+\emph{九个低偏移。} 若 $1\le s\le9$，令 $a_0=\lfloor s/3\rfloor+1$，取 $\alpha=a_0,a_0+1$、$h=\lfloor p/(3\alpha)\rfloor-1,\lfloor p/(3\alpha)\rfloor$。令 $t=p-3\alpha h$，来源和输出为
+\[
+(\alpha(h+1),\alpha h,p-\alpha(2h+1)),\quad
+(\alpha h-e,p-\alpha(2h+1)-e,(\alpha-s)h+\alpha+2e,sh).
+\]
+输出区间为
+\[
+L=\max(0,2\alpha-t,\lceil((s-\alpha)h-\alpha)/2\rceil),\quad
+U=\min(\alpha h,\alpha h+t-\alpha,\lfloor(sh+\alpha+s-t)/2\rfloor).
+\]
+可取 $e=L,L+1$，事实上 $L+2\le U$。逐项移项，充分条件是
+\[
+\begin{gathered}
+h\ge4,quad(3\alpha-s)h\ge\max(s,\alpha+4),\\
+sh\ge\max(5\alpha+3-s,3\alpha+4-s),\\
+\alpha h\ge\max(4\alpha+4-s,3\alpha+2).
+\end{gathered}
+\]
+对 $\alpha=1,2,3,4,5$，所需 $h$ 下界依次为 $7,12,8,4,4$；$p\ge83$ 时实际最小值为 $26,12,8,5,4$。这同时保证来源及 $sh\le p-s$ 的库存。
+
+三种公式均满足迹零条件。第一种的 $H=n\alpha-2p^2$，第二种为 $3n\alpha-2p^2$，相邻 $\alpha$ 给 $\gcd(H)=\gcd(n,2)$。第三种相邻 $h$ 的差为 $2\alpha n$，相邻 $\alpha$ 互素；再用 $H\equiv-2p^2\pmod n$ 及奇偶性得到同一结论。所有横向系数含两个相邻整数。
+\end{proof}
+
+\begin{lemma}\label{lem:upper-small}
+若 $p\ge11$、$10\le s<p$，引理\ref{lem:upper-supply}的前两种计数已提供推论\ref{cor:resource}的全部资源。
+\end{lemma}
+\begin{proof}
+中部 $s\le(p-1)/2$ 时，四个容量比较对 $p\ge29$ 成立：第一项只需 $p\ge25$；第二项由 $s\ge10$ 保证；第三项只需 $p\ge15$；第四项由 $3\alpha\ge\lceil p/2\rceil$ 保证。唯一较小素数是 $p=23,s=10,11$，此时 $\alpha=4,5$，直接代入四式均成立。
+靠近 $4p$ 时，$d=p-s\le(p-1)/2$。充分条件 $p\ge5d/4+8$ 对 $p\ge23$ 成立。若 $p=11,13,17$，还可用 $d\le p-10$，分别得到右侧上界 $9.25,11.75,16.75$。若 $p=19$，$d\le8$ 同样成立；仅余 $d=9$，其 $\alpha=7,8$ 均有 $L=1,U=3$。故两张相邻输出仍在库存内。根和横向系数的最大公因子计算与引理\ref{lem:upper-supply}相同。
+\end{proof}
+
+\begin{lemma}\label{lem:small-supply}
+若 $11\le p<83$、$1\le s\le9$，则全部合法 $K_{p,p+s}$ 可归零。
+\end{lemma}
+\begin{proof}
+先给五返回公式。令 $a=\lceil s/2\rceil$，对 $\alpha=a,a+1$ 写 $p=3\alpha d+\rho$，$0\le\rho<3\alpha$。来源为 $(\alpha(d+1),\alpha d,\alpha d+\rho-\alpha)$，输出为
+\[
+o_e=(\alpha d-e,\alpha d+\rho-\alpha-e,(\alpha-s)d+\alpha+2e,sd).
+\]
+对于第一组 $\alpha=a$，还使用 $o_e+\Delta$，其中 $\Delta=(3\alpha-\rho,-\rho,2\rho-3\alpha-s,s)$。可同时容纳 $o_e,o_{e+1},o_e+\Delta$ 的区间是
+\begin{align*}
+L={}&\max\left(0,5\alpha-2\rho,
+\left\lceil\frac{(s-\alpha)d-\alpha}{2}\right\rceil,
+\left\lceil\frac{(s-\alpha)d+2\alpha+s-2\rho}{2}\right\rceil\right),\\
+U={}&\min\left(\alpha d-\alpha-\mathbf1_{\rho=0},
+\left\lfloor\frac{sd+\alpha+s-\rho-2}{2}\right\rfloor,
+\left\lfloor\frac{sd+4\alpha+2s-3\rho}{2}\right\rfloor\right).
+\end{align*}
+逐项比较给充分条件 $d\ge7,sd\ge9\alpha+2-s,(3\alpha-s)d\ge4\alpha+s+2$。例如最紧的三式是 $5\alpha\le\alpha d-\alpha-1$、$10\alpha\le sd+\alpha+s-2$、$(s-\alpha)d+2\alpha+s\le2(\alpha d-\alpha-1)$；其余比较的余量至少分别为 $\alpha d+2\alpha+s-\rho-3$ 和 $\alpha d+2\alpha+s-\rho-1$。第二组只需相邻输出，条件降为 $d\ge4,sd\ge3\alpha+2-s$。由此得到九个充分截点
+\[
+T_s=(42,24,42,42,63,63,84,84,105).
+\]
+当 $p\ge T_s$ 时，以上计数直接可用。守恒关系 $pA+pB+rC=0$ 使沿 $\Delta$ 的输出和增加 $nD$，故两返回之商为 $U(-n)$。相邻倍率扩展为 $U(nR)$，两横向系数 $a,a+1$ 由引理\ref{lem:transverse}给 $\Gamma(n^2,R)$，接定理\ref{thm:terminal}。
+
+余下的114组参数及233对相邻表完整列在附录\ref{app:certificates}。它们的非负库存、迹零等式、$\alpha$ 的最大公因子和 $H$ 的最大公因子由命题\ref{prop:root-certificate}核对。除 $(p,s)=(11,3)$ 外均满足推论\ref{cor:resource}。
+在此例，来源 $(4,2,5)$、输出 $(2,5,1,3)$ 与 $(3,0,2,6)$ 给
+\[
+J=\begin{pmatrix}-27&568\\-2&27\end{pmatrix},\quad
+M=\begin{pmatrix}45&-404\\-2&27\end{pmatrix},\quad MJ^{-1}=U(-36).
+\]
+库存为 $(3,7,4,8)$，两输出均可用；$J^2=-407I$。相邻输出 $(1,4,3,3)$ 的反射 $G$ 满足
+\[J^{-1}G=\begin{pmatrix}1&-972/37\\0&-35/37\end{pmatrix}.
+\]
+故 $R_0=\Z[1/(5\cdot7\cdot37)]$ 上有 $U(36R_0)$。另一个表 $(4,1,6;2,7,1,1)$ 给 $K=\left(\begin{smallmatrix}-52&905\\-3&52\end{smallmatrix}\right)$、$K^2=-11I$。横向系数 $2,3$ 合并给 $\Gamma(36^2,R_0)$，再取其子群 $\Gamma(4\cdot36^2,R_0)$ 接定理\ref{thm:terminal}。
+\end{proof}
+

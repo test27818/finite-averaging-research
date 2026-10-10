@@ -1,0 +1,53 @@
+\section{参数覆盖与主定理的完成}\label{sec:finish}
+各构造的使用范围如下。任何行的结论都依赖其文中列出的容量与正向实现，不能仅由区间端点内插。
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+范围 & 所用构造\\\midrule
+$p=3,\ n\ge11$ & 双三重值整数下降\\
+$p=3,\ n=7,8,9,10$ & 奇数反射、八元下降、三进网络、十元覆盖\\
+$p\ge5,\ 2p<n<3p,\ r\text{ 奇}$ & 安全入口及统一反射铅笔\\
+$p\ge5,\ r=2$ & 两次状态相关 CRT 返回\\
+$p\ge7,\ 4\le r\le p-3,\ r\text{ 偶}$ & 偶数内部返回及二进列提升\\
+$p\ge5,\ r=p-1$ & 上边界重叠反射\\
+$p\ge5,\ n=3p$ & 等大三块运输\\
+$p\ge83,\ 3p<n<4p$ & 共同来源计数及共同有限终端\\
+$11\le p<83,\ n=3p+s,\ 1\le s\le9$ & 五返回公式或表列根资源\\
+$p\ge5,\ n\ge3p+10$ & 上半带一般构造、小参数容量及宽尾部\\
+$p=5,7$ 的余下维数 & 明列小元数基例\\
+\bottomrule
+\end{tabular}
+\end{center}
+三平均九元的固定网络如下：把位置标为 $(i,j)\in\{1,2,3\}^2$，先平均每一行，再平均每一列。行操作后每个位置等于该行均值，故列操作后每个位置等于三行均值的平均，即全局均值。这给出六次三平均。
+
+必要性由引理\ref{lem:G} 给出。充分性按表中互补的参数范围组合；每个非恒定合法输入或者经整数下降直接完成，或者经安全入口进入全系统核心，再进入零和 $p$ 元组，最后使用独立的含零收尾。命题\ref{prop:lower} 说明奇素数的阈值不能小于 $2p+1$。二平均部分由\cite{mixing} 与第三元反例合成。因此得到定理\ref{thm:main}。
+
+\begin{thebibliography}{9}
+\bibitem{mixing}
+M. Coviello Gonzalez and M. Chrobak,
+\emph{Towards a Theory of Mixing Graphs: A Characterization of Perfect Mixability},
+arXiv:1806.08875v4.
+本文只引用 $n\ge4$ 的完全混合判据；该文的顺序混合器模型与两个原位置同时取平均的模型相同。
+\bibitem{morris}
+D. W. Morris,
+\emph{Bounded generation of $\mathrm{SL}(n,A)$ (after D. Carter, G. Keller and E. Paige)},
+New York Journal of Mathematics \textbf{13} (2007), 383--421.
+所用为 Theorem 6.1(2), pp.416--417，以及其初等矩阵记号。
+\bibitem{serre}
+J.-P. Serre,
+\emph{Le probl\`eme des groupes de congruence pour $\mathrm{SL}_2$},
+Annals of Mathematics (2) \textbf{92} (1970), 489--527.
+所用有理 $S$ 整数强版本的陈述通过下列正式综述核对。
+\bibitem{prasad}
+G. Prasad and A. S. Rapinchuk,
+\emph{Developments on the congruence subgroup problem after the work of Bass, Milnor and Serre},
+in \emph{Collected Papers of John Milnor, Vol. V: Algebra},
+American Mathematical Society, 2010, 307--325.
+参见 pp.308--309 的 Proposition 1、Section 2.3 及其参考文献 [49]。
+\bibitem{egz}
+P. Erd\H{o}s, A. Ginzburg and A. Ziv,
+\emph{Theorem in the additive number theory},
+Bulletin of the Research Council of Israel, Section F \textbf{10F} (1961), 41--43.
+素数情形的零和选择在正文中由有限域计数给出。
+\end{thebibliography}
+\end{document}
