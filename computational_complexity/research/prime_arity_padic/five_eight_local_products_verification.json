@@ -1,0 +1,350 @@
+{
+  "scope": "Exact representation of all local S1/S2/D prefixes from equal exceptions; scalar-product membership remains unresolved.",
+  "literal_words": {
+    "cases": 26232,
+    "literal_atoms": 170592,
+    "return_order_checks": 26232,
+    "exact_G_rejections": 10699
+  },
+  "complete_state_sets": [
+    {
+      "a": 2,
+      "L": 1,
+      "safe_local_states": 3,
+      "safe_outside_exits": 1,
+      "return_product_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "a": 3,
+      "L": 1,
+      "safe_local_states": 2,
+      "safe_outside_exits": 1,
+      "return_product_counts": [
+        1,
+        0
+      ]
+    },
+    {
+      "a": 2,
+      "L": 2,
+      "safe_local_states": 8,
+      "safe_outside_exits": 2,
+      "return_product_counts": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "a": 3,
+      "L": 2,
+      "safe_local_states": 5,
+      "safe_outside_exits": 1,
+      "return_product_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "a": 2,
+      "L": 3,
+      "safe_local_states": 20,
+      "safe_outside_exits": 8,
+      "return_product_counts": [
+        1,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "a": 3,
+      "L": 3,
+      "safe_local_states": 11,
+      "safe_outside_exits": 4,
+      "return_product_counts": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "a": 2,
+      "L": 4,
+      "safe_local_states": 48,
+      "safe_outside_exits": 11,
+      "return_product_counts": [
+        1,
+        1,
+        2,
+        4,
+        8
+      ]
+    },
+    {
+      "a": 3,
+      "L": 4,
+      "safe_local_states": 25,
+      "safe_outside_exits": 9,
+      "return_product_counts": [
+        1,
+        0,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "a": 2,
+      "L": 5,
+      "safe_local_states": 109,
+      "safe_outside_exits": 45,
+      "return_product_counts": [
+        1,
+        1,
+        2,
+        4,
+        7,
+        15
+      ]
+    },
+    {
+      "a": 3,
+      "L": 5,
+      "safe_local_states": 54,
+      "safe_outside_exits": 16,
+      "return_product_counts": [
+        1,
+        0,
+        1,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "a": 2,
+      "L": 6,
+      "safe_local_states": 256,
+      "safe_outside_exits": 55,
+      "return_product_counts": [
+        1,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ]
+    },
+    {
+      "a": 3,
+      "L": 6,
+      "safe_local_states": 119,
+      "safe_outside_exits": 47,
+      "return_product_counts": [
+        1,
+        0,
+        1,
+        1,
+        3,
+        4,
+        11
+      ]
+    },
+    {
+      "a": 2,
+      "L": 7,
+      "safe_local_states": 556,
+      "safe_outside_exits": 228,
+      "return_product_counts": [
+        1,
+        1,
+        2,
+        4,
+        7,
+        15,
+        30,
+        60
+      ]
+    },
+    {
+      "a": 3,
+      "L": 7,
+      "safe_local_states": 255,
+      "safe_outside_exits": 67,
+      "return_product_counts": [
+        1,
+        0,
+        1,
+        1,
+        3,
+        4,
+        11,
+        17
+      ]
+    },
+    {
+      "a": 2,
+      "L": 8,
+      "safe_local_states": 1271,
+      "safe_outside_exits": 273,
+      "return_product_counts": [
+        1,
+        1,
+        2,
+        4,
+        8,
+        15,
+        32,
+        62,
+        131
+      ]
+    },
+    {
+      "a": 3,
+      "L": 8,
+      "safe_local_states": 551,
+      "safe_outside_exits": 244,
+      "return_product_counts": [
+        1,
+        0,
+        1,
+        1,
+        3,
+        4,
+        11,
+        17,
+        41
+      ]
+    },
+    {
+      "a": 2,
+      "L": 9,
+      "safe_local_states": 2723,
+      "safe_outside_exits": 1108,
+      "return_product_counts": [
+        1,
+        1,
+        2,
+        4,
+        7,
+        15,
+        30,
+        60,
+        123,
+        253
+      ]
+    },
+    {
+      "a": 3,
+      "L": 9,
+      "safe_local_states": 1176,
+      "safe_outside_exits": 280,
+      "return_product_counts": [
+        1,
+        0,
+        1,
+        1,
+        3,
+        4,
+        11,
+        17,
+        41,
+        74
+      ]
+    }
+  ],
+  "arbitrary_targets": {
+    "targets": 31370,
+    "reachable": 174,
+    "scalar_queries": 213,
+    "partial_algorithm_yes": 110,
+    "partial_algorithm_no": 31195
+  },
+  "scalar_analysis": {
+    "mod4_orbit": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "comparison": {
+      "queries": 52013,
+      "yes": 26,
+      "no": 49277,
+      "unresolved": 2710
+    },
+    "large_constructive_instances": [
+      {
+        "b": 100,
+        "cost": 100,
+        "height_bits": 234
+      },
+      {
+        "b": 100,
+        "cost": 250,
+        "height_bits": 582
+      },
+      {
+        "b": 100,
+        "cost": 400,
+        "height_bits": 930
+      },
+      {
+        "b": 500,
+        "cost": 1250,
+        "height_bits": 2904
+      }
+    ]
+  },
+  "restored_counterexample_prefix": {
+    "source": [
+      2,
+      390627,
+      390627,
+      -781264
+    ],
+    "blocks": [
+      [
+        1,
+        1
+      ],
+      [],
+      []
+    ],
+    "tail": [
+      1,
+      1,
+      2
+    ],
+    "scalar": -88,
+    "return_cost": 5,
+    "local_state": [
+      111144,
+      112552,
+      112992,
+      -781264
+    ],
+    "successful_E1_exit": [
+      -67056,
+      111144,
+      111144,
+      112992
+    ],
+    "two_adic_budget": 4
+  }
+}

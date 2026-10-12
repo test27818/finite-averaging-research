@@ -1,0 +1,84 @@
+{
+  "scope": "Polynomial decision of any prescribed proper periodic policy; not free policy synthesis.",
+  "integer_policy_cases": 8100,
+  "replayed_atoms": 1844,
+  "recurrence_cases": 2880,
+  "large_recurrence_roots": [
+    {
+      "root_index": 100,
+      "input_height_bits": 233
+    },
+    {
+      "root_index": 1000,
+      "input_height_bits": 2322
+    }
+  ],
+  "mixed_towers": [
+    {
+      "tower_increment": 20,
+      "input_height_bits": 24,
+      "steps": 21
+    },
+    {
+      "tower_increment": 200,
+      "input_height_bits": 234,
+      "steps": 201
+    }
+  ],
+  "singleton_towers": [
+    {
+      "period": [
+        1
+      ],
+      "inverse_repetitions": 20,
+      "input_height_bits": 47,
+      "steps": 21
+    },
+    {
+      "period": [
+        1
+      ],
+      "inverse_repetitions": 200,
+      "input_height_bits": 465,
+      "steps": 201
+    },
+    {
+      "period": [
+        1,
+        2
+      ],
+      "inverse_repetitions": 20,
+      "input_height_bits": 48,
+      "steps": 41
+    },
+    {
+      "period": [
+        1,
+        2
+      ],
+      "inverse_repetitions": 200,
+      "input_height_bits": 467,
+      "steps": 401
+    },
+    {
+      "period": [
+        1,
+        2,
+        4
+      ],
+      "inverse_repetitions": 20,
+      "input_height_bits": 57,
+      "steps": 61
+    },
+    {
+      "period": [
+        1,
+        2,
+        4
+      ],
+      "inverse_repetitions": 200,
+      "input_height_bits": 550,
+      "steps": 601
+    }
+  ]
+}

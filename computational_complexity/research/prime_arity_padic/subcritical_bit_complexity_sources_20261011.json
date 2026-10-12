@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-11",
+  "sources": [
+    {
+      "authors": "Bernard Chazelle; Kritkorn Karntikoon",
+      "title": "The s-Energy and Its Applications",
+      "version": "arXiv:2410.22341v2, 2026-02-21",
+      "url": "https://arxiv.org/html/2410.22341v2",
+      "actually_read": "Section 2 model and normalization definitions, Theorem 2.1, Theorem 2.2 and its s-optimization proof; introductory scope statements.",
+      "not_read_or_audited": "The complete proofs of Theorem 2.1 and all applications were not independently audited.",
+      "substitution": "Each p-average has a symmetric doubly stochastic matrix. Set q_i=p, M_t=p P_t, rho=1/p. The graph has one p-clique and r isolated vertices, hence r+1 connected components. Scale initial variance as required by Section 2.",
+      "use": "External cross-check only. This theorem does not imply deterministic polynomial reachability. The local largest-gap theorem is proved directly and does not rely on this external source.",
+      "local_evidence": "research/prime_arity_padic/subcritical_bit_complexity_frontier_20261011.md, Sections 1 and 5"
+    }
+  ]
+}

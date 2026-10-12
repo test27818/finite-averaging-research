@@ -1,0 +1,37 @@
+{
+  "scope": "Exact polynomial disjunctive reduction to seven-position clusters with two differences divisible by 5 and one unit. This does not decide the remaining cluster problems in polynomial time.",
+  "residue_table": {
+    "equal": 5,
+    "collision": 60,
+    "distinct": 60
+  },
+  "independent": {
+    "counts": {
+      "cluster_reductions": 2549,
+      "cores": 2549,
+      "collision": 1232,
+      "distinct": 1239,
+      "equal": 78,
+      "full_inputs_and_affine_checks": 360,
+      "oracle_states": 8932
+    },
+    "largest_exit_list": {
+      "core": [
+        -128,
+        55,
+        81
+      ],
+      "target_count": 3,
+      "stats": {
+        "distinct_visits": 6,
+        "singleton_steps": 5,
+        "pair_candidates": 3
+      }
+    }
+  },
+  "algebra": {
+    "checks": 1504,
+    "long_spine_steps": 2000,
+    "long_spine_coordinate_bits": 4644
+  }
+}

@@ -1,0 +1,415 @@
+{
+  "scope": "Polynomial first nonidentity outside interaction with integer and primitive G=1 prefixes. This is strictly weaker than full consensus reachability.",
+  "small": {
+    "cases": 775,
+    "no_first_escape": 60,
+    "replayed_atoms": 1605,
+    "oracle_states": 2370,
+    "largest_search_nodes": 14,
+    "full_oracle_states": 5812,
+    "integrated_solver_stats": {
+      "queries": 3701,
+      "first_escape_queries": 1428,
+      "first_escape_nodes": 4330,
+      "branch_nodes": 1469,
+      "forced_atoms": 1057,
+      "batched_atoms": 188,
+      "first_escape_rejections": 163
+    }
+  },
+  "arbitrary_outside": {
+    "cases": 380,
+    "outside_divisible_by_5": 71,
+    "replayed_atoms": 345
+  },
+  "deep": {
+    "arbitrary_deep_clusters": 117,
+    "replayed_atoms": 5302,
+    "large_duplicate_examples": [
+      {
+        "depth": 6,
+        "atoms": 7,
+        "height_bits": 15
+      },
+      {
+        "depth": 7,
+        "atoms": 8,
+        "height_bits": 18
+      },
+      {
+        "depth": 8,
+        "atoms": 9,
+        "height_bits": 20
+      },
+      {
+        "depth": 30,
+        "atoms": 31,
+        "height_bits": 71
+      },
+      {
+        "depth": 300,
+        "atoms": 301,
+        "height_bits": 698
+      },
+      {
+        "depth": 1000,
+        "atoms": 1001,
+        "height_bits": 2323
+      }
+    ]
+  },
+  "long_spine": {
+    "input_exponent": 1000,
+    "word_length": 1001,
+    "stats": {
+      "visited_nodes": 2500,
+      "spine_steps": 999,
+      "direct_outside_exits": 1
+    }
+  },
+  "strictness": {
+    "state": [
+      3,
+      8,
+      8,
+      -31
+    ],
+    "outside_word": [
+      "S1",
+      "E0"
+    ],
+    "full_reachability": false,
+    "independent_full_oracle_states": 5
+  },
+  "representative_counterexample": {
+    "source": [
+      -12,
+      15613,
+      15613,
+      -31166
+    ],
+    "full_distance": 17,
+    "all_template_targets": [
+      [
+        -7481,
+        -7481,
+        -7478
+      ],
+      [
+        -7307,
+        -7127,
+        -7118
+      ],
+      [
+        -7169,
+        -7169,
+        -5606
+      ]
+    ],
+    "all_template_targets_unsolvable": true,
+    "independent_full_oracle_states": 1135,
+    "literal_success_choices": [
+      [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        7
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        7
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        7
+      ],
+      [
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        0,
+        2,
+        3,
+        4,
+        7
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        6
+      ],
+      [
+        0,
+        2,
+        3,
+        4,
+        7
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        6,
+        7
+      ]
+    ],
+    "literal_success_path": [
+      [
+        -31166,
+        -12,
+        -12,
+        -12,
+        -12,
+        -12,
+        15613,
+        15613
+      ],
+      [
+        -31166,
+        -12,
+        3113,
+        3113,
+        3113,
+        3113,
+        3113,
+        15613
+      ],
+      [
+        -31166,
+        2488,
+        2488,
+        2488,
+        2488,
+        2488,
+        3113,
+        15613
+      ],
+      [
+        -31166,
+        2488,
+        2613,
+        2613,
+        2613,
+        2613,
+        2613,
+        15613
+      ],
+      [
+        -31166,
+        2613,
+        2613,
+        5188,
+        5188,
+        5188,
+        5188,
+        5188
+      ],
+      [
+        -31166,
+        4158,
+        4158,
+        4158,
+        4158,
+        4158,
+        5188,
+        5188
+      ],
+      [
+        -31166,
+        4158,
+        4364,
+        4364,
+        4364,
+        4364,
+        4364,
+        5188
+      ],
+      [
+        -2742,
+        -2742,
+        -2742,
+        -2742,
+        -2742,
+        4158,
+        4364,
+        5188
+      ],
+      [
+        -2742,
+        -1362,
+        -1362,
+        -1362,
+        -1362,
+        -1362,
+        4364,
+        5188
+      ],
+      [
+        -2742,
+        -1362,
+        -52,
+        -52,
+        -52,
+        -52,
+        -52,
+        4364
+      ],
+      [
+        -2742,
+        -314,
+        -314,
+        -314,
+        -314,
+        -314,
+        -52,
+        4364
+      ],
+      [
+        -314,
+        -314,
+        -52,
+        136,
+        136,
+        136,
+        136,
+        136
+      ],
+      [
+        -314,
+        -52,
+        46,
+        46,
+        46,
+        46,
+        46,
+        136
+      ],
+      [
+        -52,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        46,
+        46
+      ],
+      [
+        -8,
+        -8,
+        -6,
+        -6,
+        -6,
+        -6,
+        -6,
+        46
+      ],
+      [
+        -8,
+        -6,
+        -6,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      [
+        -8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  }
+}

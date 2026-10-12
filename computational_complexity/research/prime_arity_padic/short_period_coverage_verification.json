@@ -1,0 +1,70 @@
+{
+  "scope": "A finite all-short-period counterexample and exact ingredients; the linear-period lower bound is proved in the paper.",
+  "hyperplane_counts": [
+    {
+      "length": 1,
+      "different_success_hyperplanes": 3
+    },
+    {
+      "length": 2,
+      "different_success_hyperplanes": 9
+    },
+    {
+      "length": 3,
+      "different_success_hyperplanes": 27
+    },
+    {
+      "length": 4,
+      "different_success_hyperplanes": 81
+    },
+    {
+      "length": 5,
+      "different_success_hyperplanes": 243
+    },
+    {
+      "length": 6,
+      "different_success_hyperplanes": 729
+    },
+    {
+      "length": 7,
+      "different_success_hyperplanes": 2187
+    },
+    {
+      "length": 8,
+      "different_success_hyperplanes": 6561
+    }
+  ],
+  "primitive_lattice_and_witness_checks": 300,
+  "short_period_counterexample": {
+    "core": [
+      -14499189653022,
+      25049625636965,
+      97
+    ],
+    "source": [
+      -1318804498005,
+      -1318804498005,
+      -1318804498005,
+      -1318804498005,
+      -1318804498005,
+      -15817994151027,
+      23730821138960,
+      -1318804497908
+    ],
+    "successful_word": [
+      2,
+      1,
+      2,
+      1,
+      4,
+      1,
+      2,
+      4,
+      4,
+      4,
+      7
+    ],
+    "periods_rejected_for_all_repetitions": 258,
+    "maximum_period_length": 3
+  }
+}

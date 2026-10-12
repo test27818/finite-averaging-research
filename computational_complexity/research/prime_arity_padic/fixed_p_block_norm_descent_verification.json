@@ -1,0 +1,186 @@
+{
+  "scope": "Complete polynomial decision only for the stated positive-definite norm shells; mixed-run compression and p+3 forced-prefix reduction are exact, but boundary means unresolved, not no.",
+  "shell_oracles": {
+    "totals": {
+      "directions": 558,
+      "shells": 265,
+      "parameter_pairs": 53,
+      "oracle_states": 860
+    },
+    "special_bases": [
+      {
+        "p": 7,
+        "m": 5,
+        "D": 3,
+        "bases": [
+          {
+            "pair": [
+              1,
+              -5
+            ],
+            "distance": 1
+          },
+          {
+            "pair": [
+              4,
+              -7
+            ],
+            "distance": 4
+          },
+          {
+            "pair": [
+              3,
+              -2
+            ],
+            "distance": 2
+          }
+        ]
+      },
+      {
+        "p": 13,
+        "m": 7,
+        "D": 3,
+        "bases": [
+          {
+            "pair": [
+              5,
+              -14
+            ],
+            "distance": null
+          },
+          {
+            "pair": [
+              4,
+              -7
+            ],
+            "distance": 2
+          },
+          {
+            "pair": [
+              1,
+              -7
+            ],
+            "distance": 1
+          }
+        ]
+      },
+      {
+        "p": 17,
+        "m": 8,
+        "D": 4,
+        "bases": [
+          {
+            "pair": [
+              5,
+              -14
+            ],
+            "distance": null
+          },
+          {
+            "pair": [
+              1,
+              -8
+            ],
+            "distance": 1
+          }
+        ]
+      },
+      {
+        "p": 31,
+        "m": 11,
+        "D": 3,
+        "bases": [
+          {
+            "pair": [
+              1,
+              -11
+            ],
+            "distance": 1
+          },
+          {
+            "pair": [
+              7,
+              -34
+            ],
+            "distance": null
+          },
+          {
+            "pair": [
+              6,
+              -23
+            ],
+            "distance": 2
+          }
+        ]
+      },
+      {
+        "p": 43,
+        "m": 13,
+        "D": 3,
+        "bases": [
+          {
+            "pair": [
+              8,
+              -47
+            ],
+            "distance": null
+          },
+          {
+            "pair": [
+              7,
+              -34
+            ],
+            "distance": 2
+          },
+          {
+            "pair": [
+              1,
+              -13
+            ],
+            "distance": 1
+          }
+        ]
+      }
+    ]
+  },
+  "literal_tower_atoms": 5160,
+  "double_core_reductions": {
+    "counts": {
+      "no": 1080,
+      "inputs": 1309,
+      "boundary": 224,
+      "yes": 5,
+      "oracle_states": 2793
+    },
+    "maximum_runs_in_samples": 3
+  },
+  "algebraic_checks": {
+    "identity_checks": 1360,
+    "large_cases": [
+      {
+        "p": 5,
+        "m": 2,
+        "L": 2000,
+        "coordinate_bits": 2324,
+        "yes_distance": 2001,
+        "conjugate_rejected": true
+      },
+      {
+        "p": 5,
+        "m": 3,
+        "L": 1000,
+        "coordinate_bits": 1163,
+        "yes_distance": 1001,
+        "conjugate_rejected": true
+      },
+      {
+        "p": 137,
+        "m": 20,
+        "L": 500,
+        "coordinate_bits": 1779,
+        "yes_distance": 501,
+        "conjugate_rejected": true
+      }
+    ]
+  }
+}

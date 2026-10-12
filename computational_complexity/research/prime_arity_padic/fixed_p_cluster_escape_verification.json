@@ -1,0 +1,292 @@
+{
+  "scope": "Exact finite checks. The multiplicative-coset escape obstruction and exponential lower bound for the previous compression are proved in the note. The solver still has no polynomial worst-case bound.",
+  "groups": [
+    {
+      "p": 5,
+      "H": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "H_union_3H": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "p": 7,
+      "H": [
+        1,
+        2,
+        4
+      ],
+      "H_union_3H": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "p": 23,
+      "H": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        9,
+        12,
+        13,
+        16,
+        18
+      ],
+      "H_union_3H": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        9,
+        12,
+        13,
+        16,
+        18
+      ]
+    },
+    {
+      "p": 31,
+      "H": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "H_union_3H": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        12,
+        16,
+        17,
+        24
+      ]
+    }
+  ],
+  "leading_coefficients": {
+    "literal_local_atoms": 3510,
+    "filtered_random_paths": 336
+  },
+  "oracle_comparison": {
+    "cores": 1750,
+    "cluster_cases": 420,
+    "verified_filter_rejections": 210,
+    "full_inputs": 240,
+    "affine_rational_checks": 240,
+    "oracle_states": 8729
+  },
+  "exponential_prefixes": [
+    {
+      "L": 4,
+      "k": 1,
+      "boundary_nodes": 2,
+      "checked_prefix_atoms": 5,
+      "source_height_bits": 21
+    },
+    {
+      "L": 6,
+      "k": 2,
+      "boundary_nodes": 4,
+      "checked_prefix_atoms": 13,
+      "source_height_bits": 31
+    },
+    {
+      "L": 8,
+      "k": 3,
+      "boundary_nodes": 8,
+      "checked_prefix_atoms": 29,
+      "source_height_bits": 41
+    },
+    {
+      "L": 10,
+      "k": 4,
+      "boundary_nodes": 16,
+      "checked_prefix_atoms": 61,
+      "source_height_bits": 51
+    },
+    {
+      "L": 12,
+      "k": 5,
+      "boundary_nodes": 32,
+      "checked_prefix_atoms": 125,
+      "source_height_bits": 61
+    },
+    {
+      "L": 14,
+      "k": 6,
+      "boundary_nodes": 64,
+      "checked_prefix_atoms": 253,
+      "source_height_bits": 71
+    },
+    {
+      "L": 16,
+      "k": 7,
+      "boundary_nodes": 128,
+      "checked_prefix_atoms": 509,
+      "source_height_bits": 81
+    },
+    {
+      "L": 18,
+      "k": 8,
+      "boundary_nodes": 256,
+      "checked_prefix_atoms": 1021,
+      "source_height_bits": 91
+    },
+    {
+      "L": 20,
+      "k": 9,
+      "boundary_nodes": 512,
+      "checked_prefix_atoms": 2045,
+      "source_height_bits": 101
+    }
+  ],
+  "no_family_counts": [
+    {
+      "L": 1,
+      "height_bits": 8,
+      "without_escape": {
+        "queries": 1,
+        "batched_atoms": 0,
+        "forced_atoms": 1
+      },
+      "with_escape": {
+        "queries": 1,
+        "escape_rejections": 1
+      }
+    },
+    {
+      "L": 2,
+      "height_bits": 11,
+      "without_escape": {
+        "queries": 5,
+        "batched_atoms": 0,
+        "forced_atoms": 1,
+        "branch_nodes": 1
+      },
+      "with_escape": {
+        "queries": 1,
+        "escape_rejections": 1
+      }
+    },
+    {
+      "L": 3,
+      "height_bits": 16,
+      "without_escape": {
+        "queries": 10,
+        "batched_atoms": 0,
+        "forced_atoms": 2,
+        "branch_nodes": 3
+      },
+      "with_escape": {
+        "queries": 1,
+        "escape_rejections": 1
+      }
+    },
+    {
+      "L": 4,
+      "height_bits": 21,
+      "without_escape": {
+        "queries": 24,
+        "batched_atoms": 0,
+        "forced_atoms": 3,
+        "branch_nodes": 8
+      },
+      "with_escape": {
+        "queries": 1,
+        "escape_rejections": 1
+      }
+    },
+    {
+      "L": 5,
+      "height_bits": 26,
+      "without_escape": {
+        "queries": 51,
+        "batched_atoms": 0,
+        "forced_atoms": 6,
+        "branch_nodes": 19
+      },
+      "with_escape": {
+        "queries": 1,
+        "escape_rejections": 1
+      }
+    },
+    {
+      "L": 6,
+      "height_bits": 31,
+      "without_escape": {
+        "queries": 115,
+        "batched_atoms": 0,
+        "forced_atoms": 10,
+        "branch_nodes": 44
+      },
+      "with_escape": {
+        "queries": 1,
+        "escape_rejections": 1
+      }
+    },
+    {
+      "L": 7,
+      "height_bits": 36,
+      "without_escape": {
+        "queries": 243,
+        "batched_atoms": 0,
+        "forced_atoms": 21,
+        "branch_nodes": 98
+      },
+      "with_escape": {
+        "queries": 1,
+        "escape_rejections": 1
+      }
+    },
+    {
+      "L": 8,
+      "height_bits": 41,
+      "without_escape": {
+        "queries": 530,
+        "batched_atoms": 0,
+        "forced_atoms": 37,
+        "branch_nodes": 217
+      },
+      "with_escape": {
+        "queries": 1,
+        "escape_rejections": 1
+      }
+    },
+    {
+      "L": 9,
+      "height_bits": 46,
+      "without_escape": {
+        "queries": 1124,
+        "batched_atoms": 0,
+        "forced_atoms": 75,
+        "branch_nodes": 471
+      },
+      "with_escape": {
+        "queries": 1,
+        "escape_rejections": 1
+      }
+    }
+  ],
+  "resource_semantics": "resource limit raises SearchLimit; no false negative returned"
+}

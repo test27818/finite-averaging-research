@@ -1,0 +1,824 @@
+{
+  "snapshot_date": "2026-10-12",
+  "source_timezone": "Asia/Shanghai",
+  "new_research_counts": {
+    "md": 12,
+    "py": 24,
+    "json": 18,
+    "total": 54
+  },
+  "prior_runtime_dependencies": 1,
+  "files": [
+    {
+      "path": "research/prime_arity_padic/five_eight_complete_local_products_20261011.md",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_complete_local_products_20261011.md",
+      "source_modified_local": "2026-10-11T21:56:57",
+      "timezone": "Asia/Shanghai",
+      "bytes": 13023,
+      "claims": [
+        "FIVE-EIGHT-LOCAL-PRODUCTS"
+      ],
+      "sha256": "43dba311c696d5968130ff783806f613e762df1750c2acdd7c348a356df7f71e",
+      "git_blob_sha1": "19e37a8fd5a06dee066524047359ca3682d6b7d2"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_deep_no_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_deep_no_verification.json",
+      "source_modified_local": "2026-10-11T21:55:32",
+      "timezone": "Asia/Shanghai",
+      "bytes": 809,
+      "claims": [
+        "FIVE-EIGHT-FIRST-ESCAPE"
+      ],
+      "sha256": "c0a1e83bf3cc6fcdce545ccdf4a0be6dd99e80a02fecdd7d96a394480d464faf",
+      "git_blob_sha1": "b6eb6f84aa65a7a2d588ff177eafbe0f6e156a2f"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_earliest_exit_language_20261011.md",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_earliest_exit_language_20261011.md",
+      "source_modified_local": "2026-10-11T20:12:07",
+      "timezone": "Asia/Shanghai",
+      "bytes": 12005,
+      "claims": [
+        "FIVE-EIGHT-EXIT-LANGUAGE"
+      ],
+      "sha256": "fa1f7ad2de4fe29ef0b43f51f6cc930ceba673acbe7c4bc079fb1cc8a13a6605",
+      "git_blob_sha1": "8a9731b92da0563d6c756ec4106b9037bfe9ddb7"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_exit_language.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_exit_language.py",
+      "source_modified_local": "2026-10-11T20:04:38",
+      "timezone": "Asia/Shanghai",
+      "bytes": 7284,
+      "claims": [
+        "FIVE-EIGHT-EXIT-LANGUAGE"
+      ],
+      "sha256": "fcadc66f51a065978ff0f2237e2aa42187f6436394b7a6c4f7c97115c4a7e958",
+      "git_blob_sha1": "6c663bf6791731ee2e92711953b7f80d465b8fc3"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_exit_language_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_exit_language_verification.json",
+      "source_modified_local": "2026-10-11T20:06:34",
+      "timezone": "Asia/Shanghai",
+      "bytes": 9985,
+      "claims": [
+        "FIVE-EIGHT-EXIT-LANGUAGE"
+      ],
+      "sha256": "5c461ee946399af71cf96ff8895f1c783e69917f80a7ff3e910275d4d647736e",
+      "git_blob_sha1": "a961730c86a4f1d1a3028b76ed7163cf97c5b03f"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_first_escape.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_first_escape.py",
+      "source_modified_local": "2026-10-11T19:17:38",
+      "timezone": "Asia/Shanghai",
+      "bytes": 5230,
+      "claims": [
+        "FIVE-EIGHT-FIRST-ESCAPE"
+      ],
+      "sha256": "30f87e8e59627c7d7618646ac2945476830d37712392cb6a2276dac9d80850b7",
+      "git_blob_sha1": "d9d0bc385e23ba046247b11b2c92825be8fd2731"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_first_escape_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_first_escape_verification.json",
+      "source_modified_local": "2026-10-11T19:51:29",
+      "timezone": "Asia/Shanghai",
+      "bytes": 6083,
+      "claims": [
+        "FIVE-EIGHT-FIRST-ESCAPE"
+      ],
+      "sha256": "854bd7a2c83ed7d24620d71be902ffe45164e09712db732314300ea4087fc82d",
+      "git_blob_sha1": "8d23e40b6ac4e767f59afa109ffea5b32020b029"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_first_external_interaction_20261011.md",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_first_external_interaction_20261011.md",
+      "source_modified_local": "2026-10-11T21:56:57",
+      "timezone": "Asia/Shanghai",
+      "bytes": 11567,
+      "claims": [
+        "FIVE-EIGHT-FIRST-ESCAPE"
+      ],
+      "sha256": "099956952b21aa920ffd621ea09e345d86161121ee309ba45e375500f5b648e2",
+      "git_blob_sha1": "ad3c68640b378bf27f8a157285a42ee6639c9897"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_local_products.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_local_products.py",
+      "source_modified_local": "2026-10-11T21:51:06",
+      "timezone": "Asia/Shanghai",
+      "bytes": 8964,
+      "claims": [
+        "FIVE-EIGHT-LOCAL-PRODUCTS"
+      ],
+      "sha256": "f30b0a092c2fc4502dce57b7c097beff25a8dced2cbe5cd3f996a7a9798a5854",
+      "git_blob_sha1": "9c3ed0d1523af9292edb7ba9dc8c053728a578a6"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_local_products_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_local_products_verification.json",
+      "source_modified_local": "2026-10-11T21:53:18",
+      "timezone": "Asia/Shanghai",
+      "bytes": 5784,
+      "claims": [
+        "FIVE-EIGHT-LOCAL-PRODUCTS"
+      ],
+      "sha256": "a9e2d90259c5fd1de549c2d3aac0b0b38692f13484d9133d86a29541e646a6c0",
+      "git_blob_sha1": "624b4498dcd44a2ad966ef1633fc0d8dd0984593"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_polynomial_cluster_reduction_20261011.md",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_polynomial_cluster_reduction_20261011.md",
+      "source_modified_local": "2026-10-11T18:36:26",
+      "timezone": "Asia/Shanghai",
+      "bytes": 9233,
+      "claims": [
+        "FIVE-EIGHT-CLUSTER-REDUCTION"
+      ],
+      "sha256": "39fe1c106a79f3edec785b53a087ea74cebfff9d0f4346de2f10097364cd539f",
+      "git_blob_sha1": "082f304596e84634d5c3584a02058900d81f0f07"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_rank_clock.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_rank_clock.py",
+      "source_modified_local": "2026-10-11T22:35:16",
+      "timezone": "Asia/Shanghai",
+      "bytes": 4493,
+      "claims": [
+        "SUBCRITICAL-RANK-CLOCK"
+      ],
+      "sha256": "f3aa861b6d14c5d996b73e5982d5ccd406ad4adf7a660a4084ba6b84e517a35e",
+      "git_blob_sha1": "c3d07f764f1519bea0ac4cf8e6b093adbec7618b"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_rank_clock_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_rank_clock_verification.json",
+      "source_modified_local": "2026-10-11T22:36:52",
+      "timezone": "Asia/Shanghai",
+      "bytes": 3099,
+      "claims": [
+        "SUBCRITICAL-RANK-CLOCK"
+      ],
+      "sha256": "32dff5f4f72bff02405af3590fc0b68e54f7bddfd75b8d39aeef9ff48b9ab71b",
+      "git_blob_sha1": "cb23d1d4dbf871cf9bde0bdbac109866686dac7a"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_residue_reduction.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_residue_reduction.py",
+      "source_modified_local": "2026-10-11T18:36:26",
+      "timezone": "Asia/Shanghai",
+      "bytes": 7859,
+      "claims": [
+        "FIVE-EIGHT-CLUSTER-REDUCTION"
+      ],
+      "sha256": "ef5ab04291e17f81cc1241db0dfb53b7ae1c2fc7e7803c4561d608212866576d",
+      "git_blob_sha1": "aa9682a23db136c953b4392455c3e001220ed9ba"
+    },
+    {
+      "path": "research/prime_arity_padic/five_eight_residue_reduction_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/five_eight_residue_reduction_verification.json",
+      "source_modified_local": "2026-10-11T19:20:22",
+      "timezone": "Asia/Shanghai",
+      "bytes": 909,
+      "claims": [
+        "FIVE-EIGHT-CLUSTER-REDUCTION"
+      ],
+      "sha256": "d55e64487300cf5cafc77657da642f7011ca2e409bd4bb6cbabe64658421afad",
+      "git_blob_sha1": "24dd6def8751ff49417161ce0a40af0dcf1b8502"
+    },
+    {
+      "path": "research/prime_arity_padic/fixed_p_block_norm_descent_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/fixed_p_block_norm_descent_verification.json",
+      "source_modified_local": "2026-10-11T14:47:02",
+      "timezone": "Asia/Shanghai",
+      "bytes": 3577,
+      "claims": [
+        "SUBCRITICAL-BLOCK-NORM"
+      ],
+      "sha256": "9f8034886020a4563fb242a168a4a7b02942e25c4292840489095b5608c0d8d5",
+      "git_blob_sha1": "b77480005bf217a059b8f1ac08fa70759c2e7c6b"
+    },
+    {
+      "path": "research/prime_arity_padic/fixed_p_cluster_escape_and_compressed_solver_20261011.md",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/fixed_p_cluster_escape_and_compressed_solver_20261011.md",
+      "source_modified_local": "2026-10-11T19:27:50",
+      "timezone": "Asia/Shanghai",
+      "bytes": 11421,
+      "claims": [
+        "SUBCRITICAL-CLUSTER-ESCAPE"
+      ],
+      "sha256": "6da204dd411e5e98110e46fca863c969fa96abfc494dbbfdbe016e8130a4b179",
+      "git_blob_sha1": "af1164ec0a3b969d4bf2be044117c0b9fab783e1"
+    },
+    {
+      "path": "research/prime_arity_padic/fixed_p_cluster_escape_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/fixed_p_cluster_escape_verification.json",
+      "source_modified_local": "2026-10-11T19:20:21",
+      "timezone": "Asia/Shanghai",
+      "bytes": 5570,
+      "claims": [
+        "SUBCRITICAL-CLUSTER-ESCAPE"
+      ],
+      "sha256": "715f53a46f3f58a9f9ff2058c0aa5cd6f42aa45e5dc1e521db8daa8c470a8237",
+      "git_blob_sha1": "6d59511aab55c9570ca568143650ea4f85525b4e"
+    },
+    {
+      "path": "research/prime_arity_padic/fixed_p_dual_normal_decoding_20261011.md",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/fixed_p_dual_normal_decoding_20261011.md",
+      "source_modified_local": "2026-10-11T14:09:30",
+      "timezone": "Asia/Shanghai",
+      "bytes": 10703,
+      "claims": [
+        "SUBCRITICAL-DUAL-NORMALS"
+      ],
+      "sha256": "643e91180e0a5478fd5c88c7e7e1c2e1ec8178f03145db6535785a1a7ea42366",
+      "git_blob_sha1": "b7f89d7256dac48c595e0811b3c851dfdee862a3"
+    },
+    {
+      "path": "research/prime_arity_padic/fixed_p_dual_normal_sources_20261011.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/fixed_p_dual_normal_sources_20261011.json",
+      "source_modified_local": "2026-10-11T14:09:30",
+      "timezone": "Asia/Shanghai",
+      "bytes": 997,
+      "claims": [
+        "SUBCRITICAL-DUAL-NORMALS"
+      ],
+      "sha256": "06a26c8ef3e9cca59b04c66023407da65158e576fb4b4ecd0c3a01356bd1ee79",
+      "git_blob_sha1": "8a81138c26fe2f60c51e8d0c729fbc236244e64b"
+    },
+    {
+      "path": "research/prime_arity_padic/fixed_p_dual_normals_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/fixed_p_dual_normals_verification.json",
+      "source_modified_local": "2026-10-11T14:07:51",
+      "timezone": "Asia/Shanghai",
+      "bytes": 1638,
+      "claims": [
+        "SUBCRITICAL-DUAL-NORMALS"
+      ],
+      "sha256": "894ea01140ad953b065ab36479b91585d25fab4a904c6395457cbd84bedbecf9",
+      "git_blob_sha1": "53554debde30a9d094981ce16c31cc983ec73e1d"
+    },
+    {
+      "path": "research/prime_arity_padic/fixed_p_local_precision.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/fixed_p_local_precision.py",
+      "source_modified_local": "2026-10-11T16:21:54",
+      "timezone": "Asia/Shanghai",
+      "bytes": 3396,
+      "claims": [
+        "SUBCRITICAL-LOCAL-PRECISION"
+      ],
+      "sha256": "9fd28341435faf78250ef73639ef7528807449cb573bde5eecd786e94c0011ca",
+      "git_blob_sha1": "37f6343564326405f208c3bd24bccaa84a4d6436"
+    },
+    {
+      "path": "research/prime_arity_padic/fixed_p_local_precision_and_real_obstruction_20261011.md",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/fixed_p_local_precision_and_real_obstruction_20261011.md",
+      "source_modified_local": "2026-10-11T16:26:32",
+      "timezone": "Asia/Shanghai",
+      "bytes": 10928,
+      "claims": [
+        "SUBCRITICAL-LOCAL-PRECISION"
+      ],
+      "sha256": "3c3e201127611686ff04155914b51e6d4b9d42a27aeedd9272a5a71cc0f4926f",
+      "git_blob_sha1": "aabb5fd48982d7753f6479a071253a5b19d0185b"
+    },
+    {
+      "path": "research/prime_arity_padic/fixed_p_local_precision_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/fixed_p_local_precision_verification.json",
+      "source_modified_local": "2026-10-11T16:22:29",
+      "timezone": "Asia/Shanghai",
+      "bytes": 1676,
+      "claims": [
+        "SUBCRITICAL-LOCAL-PRECISION"
+      ],
+      "sha256": "4a0372e66db804b4d500282768877cb273b455220b7f96f532e1915449deb8db",
+      "git_blob_sha1": "d09bd8c03d27f9bd917394528f799d810f1e3096"
+    },
+    {
+      "path": "research/prime_arity_padic/fixed_p_plus_three_solver.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/fixed_p_plus_three_solver.py",
+      "source_modified_local": "2026-10-11T19:11:04",
+      "timezone": "Asia/Shanghai",
+      "bytes": 6953,
+      "claims": [
+        "SUBCRITICAL-CLUSTER-ESCAPE"
+      ],
+      "sha256": "567fd8776f2623394d17510e497c2cc394b1d94b2d8710e591147638b83e302e",
+      "git_blob_sha1": "8915404dbb827b6afac328d0f13d2cea846f862e"
+    },
+    {
+      "path": "research/prime_arity_padic/fixed_p_three_value_norm_descent_20261011.md",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/fixed_p_three_value_norm_descent_20261011.md",
+      "source_modified_local": "2026-10-11T14:49:47",
+      "timezone": "Asia/Shanghai",
+      "bytes": 11834,
+      "claims": [
+        "SUBCRITICAL-BLOCK-NORM"
+      ],
+      "sha256": "3d9622060318ea0672fb9f8bae925284256fa178beff91e741c3b6a23bbea38a",
+      "git_blob_sha1": "571ed6715df0286da6c1f0a1604a881d1800d77a"
+    },
+    {
+      "path": "research/prime_arity_padic/p_plus_three_periodic_policy.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/p_plus_three_periodic_policy.py",
+      "source_modified_local": "2026-10-12T10:46:58",
+      "timezone": "Asia/Shanghai",
+      "bytes": 7601,
+      "claims": [
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "sha256": "646f471712e6504d318afb6e8c65151860726544f053793c63693f53e675a0b8",
+      "git_blob_sha1": "2328f4172443393bdd9d43b352cfb3bbf41ba2ee"
+    },
+    {
+      "path": "research/prime_arity_padic/p_plus_three_periodic_policy_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/p_plus_three_periodic_policy_verification.json",
+      "source_modified_local": "2026-10-12T10:47:02",
+      "timezone": "Asia/Shanghai",
+      "bytes": 1554,
+      "claims": [
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "sha256": "43cd56942827fb5738e6d8d7c8c65dd8434f78ca3923b238bdcf8d54e54e094f",
+      "git_blob_sha1": "d865b673757d969b95b7442a61794ddcdd64b253"
+    },
+    {
+      "path": "research/prime_arity_padic/p_plus_three_rank_clock_and_plane_decoding_20261011.md",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/p_plus_three_rank_clock_and_plane_decoding_20261011.md",
+      "source_modified_local": "2026-10-11T22:44:15",
+      "timezone": "Asia/Shanghai",
+      "bytes": 11787,
+      "claims": [
+        "SUBCRITICAL-RANK-CLOCK"
+      ],
+      "sha256": "dc39ea07cb67656041d97825a0b906bc1a4f8daab14bae069b50fb43cae09ba9",
+      "git_blob_sha1": "9955df98dac9152fbfe137f355a0b26b7ecd70e9"
+    },
+    {
+      "path": "research/prime_arity_padic/p_plus_three_rational_returns.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/p_plus_three_rational_returns.py",
+      "source_modified_local": "2026-10-11T23:11:08",
+      "timezone": "Asia/Shanghai",
+      "bytes": 2606,
+      "claims": [
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "sha256": "d9f966d8d187920ad7bd6d67ae50d91adf6fa7f79cf641f9cc8894be9dae8a86",
+      "git_blob_sha1": "886859b3e134d7f58ea4a124e1f131d65a74871f"
+    },
+    {
+      "path": "research/prime_arity_padic/p_plus_three_rational_returns_and_periodic_policy_20261011.md",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/p_plus_three_rational_returns_and_periodic_policy_20261011.md",
+      "source_modified_local": "2026-10-12T10:56:57",
+      "timezone": "Asia/Shanghai",
+      "bytes": 16756,
+      "claims": [
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "sha256": "a77cbe2516aebbc4b4aef50b6953f435d2b3af7187f59f5d0e4085ea4c8c3612",
+      "git_blob_sha1": "fdafb5479dd47f6b96afc47bd5450a704caebc1b"
+    },
+    {
+      "path": "research/prime_arity_padic/p_plus_three_rational_returns_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/p_plus_three_rational_returns_verification.json",
+      "source_modified_local": "2026-10-11T23:11:15",
+      "timezone": "Asia/Shanghai",
+      "bytes": 1697,
+      "claims": [
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "sha256": "61d37fd112b03b7b610076db4d45381a90b7ec97f3ae16c0cc46e1f130b75a99",
+      "git_blob_sha1": "6d7eda4f29dd86944969cf9d40bc4d74112ba533"
+    },
+    {
+      "path": "research/prime_arity_padic/short_period_coverage_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/short_period_coverage_verification.json",
+      "source_modified_local": "2026-10-12T10:47:02",
+      "timezone": "Asia/Shanghai",
+      "bytes": 1401,
+      "claims": [
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "sha256": "97d865f5f8d55cd71d8429fd6bfbbd7b02f8b793b999a1db0de4494282b4348f",
+      "git_blob_sha1": "0aacf60777a02c1810d8003d4b2dfde94c4df9ba"
+    },
+    {
+      "path": "research/prime_arity_padic/subcritical_bit_complexity_frontier_20261011.md",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/subcritical_bit_complexity_frontier_20261011.md",
+      "source_modified_local": "2026-10-11T12:49:00",
+      "timezone": "Asia/Shanghai",
+      "bytes": 13212,
+      "claims": [
+        "SUBCRITICAL-BIT-COMPLEXITY"
+      ],
+      "sha256": "0b3bbc4757995ca7d6fe1d156aa5891e094f87ee255ecac38b6ddc2b9c6ca550",
+      "git_blob_sha1": "84fdf3f8892c2fa9690ee252b92e00a32af674bd"
+    },
+    {
+      "path": "research/prime_arity_padic/subcritical_bit_complexity_frontier_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/subcritical_bit_complexity_frontier_verification.json",
+      "source_modified_local": "2026-10-11T12:21:28",
+      "timezone": "Asia/Shanghai",
+      "bytes": 8459,
+      "claims": [
+        "SUBCRITICAL-BIT-COMPLEXITY"
+      ],
+      "sha256": "4112659f52ca80ed0c53995c73999d69e51d301d6f7922fd624f675cabfd487f",
+      "git_blob_sha1": "1d8f89e1a7414b7cff3ac9945633342919a151db"
+    },
+    {
+      "path": "research/prime_arity_padic/subcritical_bit_complexity_sources_20261011.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/subcritical_bit_complexity_sources_20261011.json",
+      "source_modified_local": "2026-10-11T12:22:52",
+      "timezone": "Asia/Shanghai",
+      "bytes": 1118,
+      "claims": [
+        "SUBCRITICAL-BIT-COMPLEXITY"
+      ],
+      "sha256": "73bd5009192f100f6572fdd0aa11f4d89e6fd3f4bd800e7364cf93068ce39813",
+      "git_blob_sha1": "fc8f3d5a0844fa7c6402a7ee0dc6db357bf2dfd0"
+    },
+    {
+      "path": "research/prime_arity_padic/subcritical_np_hard_sources_20261011.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/subcritical_np_hard_sources_20261011.json",
+      "source_modified_local": "2026-10-11T12:49:00",
+      "timezone": "Asia/Shanghai",
+      "bytes": 1641,
+      "claims": [
+        "SUBCRITICAL-NP-HARD"
+      ],
+      "sha256": "cae407d4b6851409aa2b47fec540e7111fce13b8a70afbb8079f6f1abfaa12a1",
+      "git_blob_sha1": "cba9678d0c12d622b0012792486512bd5c1dbe38"
+    },
+    {
+      "path": "research/prime_arity_padic/subcritical_uniform_np_hard_verification.json",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/subcritical_uniform_np_hard_verification.json",
+      "source_modified_local": "2026-10-11T12:47:04",
+      "timezone": "Asia/Shanghai",
+      "bytes": 3616,
+      "claims": [
+        "SUBCRITICAL-NP-HARD"
+      ],
+      "sha256": "f074538027149e8a65f16120e6f55308303c827ba9b76292f76dc66e5817fe67",
+      "git_blob_sha1": "6d478d715ac005b3b236beb875e97da37b3a53c4"
+    },
+    {
+      "path": "research/prime_arity_padic/subcritical_uniform_reachability_np_hard_20261011.md",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/subcritical_uniform_reachability_np_hard_20261011.md",
+      "source_modified_local": "2026-10-11T12:51:04",
+      "timezone": "Asia/Shanghai",
+      "bytes": 14720,
+      "claims": [
+        "SUBCRITICAL-NP-HARD"
+      ],
+      "sha256": "6523e6d1b3a4bced54d8a22a5ea6bbcfa14f7b38e7ca51b437499f3348815117",
+      "git_blob_sha1": "5fd0731b64ba05d478861e609c4a1fa348ded102"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_five_eight_deep_no.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_five_eight_deep_no.py",
+      "source_modified_local": "2026-10-11T21:55:27",
+      "timezone": "Asia/Shanghai",
+      "bytes": 3104,
+      "claims": [
+        "FIVE-EIGHT-FIRST-ESCAPE",
+        "FIVE-EIGHT-FIRST-ESCAPE"
+      ],
+      "sha256": "05e5d5e257235eb6e0c27777fd9c69a84d9e7c6639629a3f20e23534a2c559c8",
+      "git_blob_sha1": "b77bf5889f9eeea8a42644de1ae4c66d65f593fa"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_five_eight_exit_language.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_five_eight_exit_language.py",
+      "source_modified_local": "2026-10-11T20:06:30",
+      "timezone": "Asia/Shanghai",
+      "bytes": 10178,
+      "claims": [
+        "FIVE-EIGHT-EXIT-LANGUAGE",
+        "FIVE-EIGHT-EXIT-LANGUAGE"
+      ],
+      "sha256": "2b4552cfa159e7af5899f4d69c3deb9742bd800eb5b043484cab61f327fca3d5",
+      "git_blob_sha1": "89b7139d58d300a8e9ad1a41881a8524f048a746"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_five_eight_first_escape.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_five_eight_first_escape.py",
+      "source_modified_local": "2026-10-11T19:20:19",
+      "timezone": "Asia/Shanghai",
+      "bytes": 8444,
+      "claims": [
+        "FIVE-EIGHT-FIRST-ESCAPE"
+      ],
+      "sha256": "acf01b6d29fdbb734223c39829cc3613b07e70abba7e2c84f518cbd44fb516f2",
+      "git_blob_sha1": "7a8529f941c0f8cfea893d8c70152a66e1e6b7d2"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_five_eight_local_products.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_five_eight_local_products.py",
+      "source_modified_local": "2026-10-11T21:53:15",
+      "timezone": "Asia/Shanghai",
+      "bytes": 11268,
+      "claims": [
+        "FIVE-EIGHT-LOCAL-PRODUCTS",
+        "FIVE-EIGHT-LOCAL-PRODUCTS"
+      ],
+      "sha256": "4c7a7ee34ee84c7b81c6b344a01159b1485eb3a0f508dd5f88304baa2ddc54a1",
+      "git_blob_sha1": "1162a2c713dfcc32442c9d9350d3ed9e693a9570"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_five_eight_rank_clock.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_five_eight_rank_clock.py",
+      "source_modified_local": "2026-10-11T22:36:46",
+      "timezone": "Asia/Shanghai",
+      "bytes": 8433,
+      "claims": [
+        "SUBCRITICAL-RANK-CLOCK",
+        "SUBCRITICAL-RANK-CLOCK"
+      ],
+      "sha256": "02f37fef37ecb4a0ac641b7b6c0f4b70ac91e56b8daec13c68eda9355fced701",
+      "git_blob_sha1": "97baf02b70cf16a1632c9f0e8c1a5e79248cf290"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_five_eight_residue_reduction.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_five_eight_residue_reduction.py",
+      "source_modified_local": "2026-10-11T18:32:16",
+      "timezone": "Asia/Shanghai",
+      "bytes": 4758,
+      "claims": [
+        "FIVE-EIGHT-CLUSTER-REDUCTION"
+      ],
+      "sha256": "141f5ec58728ee9ccf7d45eba88e2f9ccb4300636dd367c20b827dea12fb84a4",
+      "git_blob_sha1": "d6abfff257fa816c307cd88d0cedced253ef8679"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_fixed_p_block_norm_descent.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_fixed_p_block_norm_descent.py",
+      "source_modified_local": "2026-10-11T14:47:01",
+      "timezone": "Asia/Shanghai",
+      "bytes": 10162,
+      "claims": [
+        "SUBCRITICAL-BLOCK-NORM"
+      ],
+      "sha256": "46c42bef68d3b205d14bda830abe6a2253097ac4b1fe1fa936f4daea9844d15c",
+      "git_blob_sha1": "68f6359112ca7229dc75a185f722315dc621ce2b"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_fixed_p_cluster_escape.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_fixed_p_cluster_escape.py",
+      "source_modified_local": "2026-10-11T16:20:10",
+      "timezone": "Asia/Shanghai",
+      "bytes": 8090,
+      "claims": [
+        "SUBCRITICAL-CLUSTER-ESCAPE"
+      ],
+      "sha256": "fe04c47875f110888c7bac31f19706bf4a16734fa56431d7659b3187dcf4a326",
+      "git_blob_sha1": "22408ca6055a0bd17bf10423ec9be0ebbc22c7e7"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_fixed_p_dual_normals.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_fixed_p_dual_normals.py",
+      "source_modified_local": "2026-10-11T14:07:49",
+      "timezone": "Asia/Shanghai",
+      "bytes": 8483,
+      "claims": [
+        "SUBCRITICAL-DUAL-NORMALS"
+      ],
+      "sha256": "91cfbdd6045a5c9fb0aad21aae75f5424669bea6e16fcdc1613732bf311c4418",
+      "git_blob_sha1": "99bc54b2a9aafc50a288809778f3c59e9064c53a"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_fixed_p_local_precision.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_fixed_p_local_precision.py",
+      "source_modified_local": "2026-10-11T16:21:54",
+      "timezone": "Asia/Shanghai",
+      "bytes": 5079,
+      "claims": [
+        "SUBCRITICAL-LOCAL-PRECISION"
+      ],
+      "sha256": "38d45351a71bf5140ff23a120ad71404ea30bba136f30e9aec7a782e192c260c",
+      "git_blob_sha1": "7fcd4dbda941e8bf3d9ed51c938cfe542128f773"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_p_plus_three_periodic_policy.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_p_plus_three_periodic_policy.py",
+      "source_modified_local": "2026-10-11T23:46:06",
+      "timezone": "Asia/Shanghai",
+      "bytes": 5481,
+      "claims": [
+        "SUBCRITICAL-PERIODIC-POLICY",
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "sha256": "8991d636435af9e78fec4b51d7197c2aebc4d97894ee42c8736fa53fa499913d",
+      "git_blob_sha1": "e0c236443ae23372829f3b6a0a2b2a2c8be28acc"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_p_plus_three_rational_returns.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_p_plus_three_rational_returns.py",
+      "source_modified_local": "2026-10-11T23:11:08",
+      "timezone": "Asia/Shanghai",
+      "bytes": 4801,
+      "claims": [
+        "SUBCRITICAL-PERIODIC-POLICY",
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "sha256": "9361a06c962d5742baaab32a9b7109b71df2ebb0832fa3d1e551bed310745ede",
+      "git_blob_sha1": "38141971cdf49df1d67187b4026c32442cac25b6"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_short_period_coverage.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_short_period_coverage.py",
+      "source_modified_local": "2026-10-12T00:01:02",
+      "timezone": "Asia/Shanghai",
+      "bytes": 3287,
+      "claims": [
+        "SUBCRITICAL-PERIODIC-POLICY",
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "sha256": "3790aa55c319ba108e059ac96a6d137fadbf24c902096c9436ee29a0267faf8d",
+      "git_blob_sha1": "257ce66cb9552026c5d7f2eb9d757af02d60e88e"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_subcritical_bit_complexity_frontier.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_subcritical_bit_complexity_frontier.py",
+      "source_modified_local": "2026-10-11T12:21:24",
+      "timezone": "Asia/Shanghai",
+      "bytes": 6315,
+      "claims": [
+        "SUBCRITICAL-BIT-COMPLEXITY"
+      ],
+      "sha256": "48d962d8f90b2565a634b97c517a6c1c6495cfc38f82533561c6fe2bdacb5f4d",
+      "git_blob_sha1": "67a6f44ec4cf380689185e2d513bb82ac2aee2ac"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_subcritical_complement_dynamics.py",
+      "kind": "prior-runtime-dependency",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_subcritical_complement_dynamics.py",
+      "source_modified_local": "2026-09-16T19:34:50",
+      "timezone": "Asia/Shanghai",
+      "bytes": 7117,
+      "claims": [],
+      "sha256": "46cafd7a87cb20b5bb5c39143355e457d9c2e0ae2b79af31034ef4ef9bbdda99",
+      "git_blob_sha1": "ad5cd49b748120857046ca97ee113c13ac4b81e8"
+    },
+    {
+      "path": "research/prime_arity_padic/verify_subcritical_uniform_np_hard.py",
+      "kind": "new-research",
+      "source_workspace": "2026-09-07/3-3-triple-average-research-note",
+      "source_path": "research/prime_arity_padic/verify_subcritical_uniform_np_hard.py",
+      "source_modified_local": "2026-10-11T12:47:03",
+      "timezone": "Asia/Shanghai",
+      "bytes": 10679,
+      "claims": [
+        "SUBCRITICAL-NP-HARD"
+      ],
+      "sha256": "c212b991e78cef890e3605f50f4116094941d508e5af9549159c92444f54924c",
+      "git_blob_sha1": "fa4078c4ce9810c287816b441f67ff13117b96c3"
+    },
+    {
+      "path": "README.md",
+      "kind": "publication-navigation",
+      "bytes": 7677,
+      "sha256": "e3893e0e4872f5da51683e1352fda4c5e3ecdf61279e76c79daea45ca1059ccc",
+      "git_blob_sha1": "c1979385cee7be0bcb07d5dcdd26ab8b1f72d591"
+    },
+    {
+      "path": "INVENTORY.md",
+      "kind": "publication-navigation",
+      "bytes": 10508,
+      "sha256": "27bca13bfd8e07493b08a2fd9dfb4f9c9dff3ba7fde17ca04699a396c2968a21",
+      "git_blob_sha1": "2bb51296a5343439a45bc5273e6b1805ca116f2d"
+    },
+    {
+      "path": "knowledge/claims_snapshot.json",
+      "kind": "publication-navigation",
+      "bytes": 57248,
+      "sha256": "392f139eb0a36416fc734313779900345a49ee9571253411aba746a804320f22",
+      "git_blob_sha1": "308a15c5fa5338fee8e10cfd73eab48bbe2ca8c5"
+    },
+    {
+      "path": "check_snapshot.py",
+      "kind": "publication-navigation",
+      "bytes": 1845,
+      "sha256": "abeec6d64372cf3d7c0e86c3f7956de81028eebca618e5ae1f2adbf7952418c6",
+      "git_blob_sha1": "1d3bd805d9f71ad1f26512e706b5842cf98668b6"
+    }
+  ],
+  "excluded_self_records": [
+    "manifest.json",
+    "publication_check.json"
+  ],
+  "notes": [
+    "Original research copied byte for byte.",
+    "No mathematical claim is certified by this manifest."
+  ]
+}

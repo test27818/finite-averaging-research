@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-11",
+  "sources": [
+    {
+      "title": "MIT 6.1400 (2025), Lecture 19: Finish NP-Completeness, coNP and Friends",
+      "url": "https://people.csail.mit.edu/rrw/6.1400-2025/lec19-before-class.pdf",
+      "actual_reading": "Pages 1-3: definition of NP-completeness and the theorem that SUBSET-SUM for positive integers and a positive target is NP-complete.",
+      "application": "Use positive-integer binary SUBSET-SUM as the source of the explicit many-one reduction in Sections 2-3 of the local note.",
+      "limits": "The classical Cook-Levin theorem and the complete chain of reductions are not re-proved or independently re-audited here. The new averaging reduction is given in full in the local note.",
+      "local_evidence": "research/prime_arity_padic/subcritical_uniform_reachability_np_hard_20261011.md"
+    },
+    {
+      "title": "Bertrand's Postulate, Stanford Math152A10 lecture note",
+      "url": "https://math.stanford.edu/~ksound/Math152A10/Bertrand.pdf",
+      "actual_reading": "All three pages, including the prime-in-[n+1,2n] theorem and its binomial-coefficient proof.",
+      "application": "A prime p of size O(m), or O_alpha(m), can be found by elementary polynomial-time search over a numerical interval of that size. This bounds the number of positions and the entire reduction output length.",
+      "limits": "No GRH or randomized prime generation is used. The result supplies only the prime size bound, not any averaging reachability assertion.",
+      "local_evidence": "research/prime_arity_padic/subcritical_uniform_reachability_np_hard_20261011.md, Sections 3 and 4.1"
+    }
+  ]
+}

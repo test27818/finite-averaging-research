@@ -1,0 +1,189 @@
+{
+  "snapshot_date": "2026-10-12",
+  "status": "PASS",
+  "scope": "File publication and selected deterministic verifier reruns; not independent mathematical review.",
+  "snapshot_checks": {
+    "status": "PASS",
+    "hashes": 59,
+    "python_parsed": 26,
+    "json_parsed": 19,
+    "python_imported": 25,
+    "errors": [],
+    "scope": "Snapshot hashes, parseability and imports; not proof certification."
+  },
+  "rerun_checks": [
+    {
+      "command": "python -B -X utf8 research/prime_arity_padic/verify_p_plus_three_periodic_policy.py",
+      "exit_code": 0,
+      "record": {
+        "scope": "Polynomial decision of any prescribed proper periodic policy; not free policy synthesis.",
+        "integer_policy_cases": 8100,
+        "replayed_atoms": 1844,
+        "recurrence_cases": 2880,
+        "large_recurrence_roots": [
+          {
+            "root_index": 100,
+            "input_height_bits": 233
+          },
+          {
+            "root_index": 1000,
+            "input_height_bits": 2322
+          }
+        ],
+        "mixed_towers": [
+          {
+            "tower_increment": 20,
+            "input_height_bits": 24,
+            "steps": 21
+          },
+          {
+            "tower_increment": 200,
+            "input_height_bits": 234,
+            "steps": 201
+          }
+        ],
+        "singleton_towers": [
+          {
+            "period": [
+              1
+            ],
+            "inverse_repetitions": 20,
+            "input_height_bits": 47,
+            "steps": 21
+          },
+          {
+            "period": [
+              1
+            ],
+            "inverse_repetitions": 200,
+            "input_height_bits": 465,
+            "steps": 201
+          },
+          {
+            "period": [
+              1,
+              2
+            ],
+            "inverse_repetitions": 20,
+            "input_height_bits": 48,
+            "steps": 41
+          },
+          {
+            "period": [
+              1,
+              2
+            ],
+            "inverse_repetitions": 200,
+            "input_height_bits": 467,
+            "steps": 401
+          },
+          {
+            "period": [
+              1,
+              2,
+              4
+            ],
+            "inverse_repetitions": 20,
+            "input_height_bits": 57,
+            "steps": 61
+          },
+          {
+            "period": [
+              1,
+              2,
+              4
+            ],
+            "inverse_repetitions": 200,
+            "input_height_bits": 550,
+            "steps": 601
+          }
+        ]
+      }
+    },
+    {
+      "command": "python -B -X utf8 research/prime_arity_padic/verify_short_period_coverage.py",
+      "exit_code": 0,
+      "record": {
+        "scope": "A finite all-short-period counterexample and exact ingredients; the linear-period lower bound is proved in the paper.",
+        "hyperplane_counts": [
+          {
+            "length": 1,
+            "different_success_hyperplanes": 3
+          },
+          {
+            "length": 2,
+            "different_success_hyperplanes": 9
+          },
+          {
+            "length": 3,
+            "different_success_hyperplanes": 27
+          },
+          {
+            "length": 4,
+            "different_success_hyperplanes": 81
+          },
+          {
+            "length": 5,
+            "different_success_hyperplanes": 243
+          },
+          {
+            "length": 6,
+            "different_success_hyperplanes": 729
+          },
+          {
+            "length": 7,
+            "different_success_hyperplanes": 2187
+          },
+          {
+            "length": 8,
+            "different_success_hyperplanes": 6561
+          }
+        ],
+        "primitive_lattice_and_witness_checks": 300,
+        "short_period_counterexample": {
+          "core": [
+            -14499189653022,
+            25049625636965,
+            97
+          ],
+          "source": [
+            -1318804498005,
+            -1318804498005,
+            -1318804498005,
+            -1318804498005,
+            -1318804498005,
+            -15817994151027,
+            23730821138960,
+            -1318804497908
+          ],
+          "successful_word": [
+            2,
+            1,
+            2,
+            1,
+            4,
+            1,
+            2,
+            4,
+            4,
+            4,
+            7
+          ],
+          "periods_rejected_for_all_repetitions": 258,
+          "maximum_period_length": 3
+        }
+      }
+    }
+  ],
+  "knowledge_registry": {
+    "claims": 77,
+    "research_documents_registered": 65,
+    "errors": [],
+    "frozen_materials": {
+      "legacy_total": 256,
+      "strictly_unchanged": 250,
+      "reviewed_navigation_migrations": 6
+    }
+  },
+  "other_verification_records": "Preserved from the research runs of 2026-10-11 and 2026-10-12, not rerun in this publication task."
+}

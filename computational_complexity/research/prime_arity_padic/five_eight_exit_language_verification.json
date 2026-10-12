@@ -1,0 +1,637 @@
+{
+  "scope": "Earliest G=1 outside-exit family, not full consensus decision.",
+  "levels": [
+    {
+      "k": 0,
+      "distinct_earliest_endpoints": 1,
+      "prefix_length": 2
+    },
+    {
+      "k": 1,
+      "distinct_earliest_endpoints": 2,
+      "prefix_length": 4
+    },
+    {
+      "k": 2,
+      "distinct_earliest_endpoints": 4,
+      "prefix_length": 6
+    },
+    {
+      "k": 3,
+      "distinct_earliest_endpoints": 8,
+      "prefix_length": 8
+    },
+    {
+      "k": 4,
+      "distinct_earliest_endpoints": 16,
+      "prefix_length": 10
+    },
+    {
+      "k": 5,
+      "distinct_earliest_endpoints": 32,
+      "prefix_length": 12
+    },
+    {
+      "k": 6,
+      "distinct_earliest_endpoints": 64,
+      "prefix_length": 14
+    },
+    {
+      "k": 7,
+      "distinct_earliest_endpoints": 128,
+      "prefix_length": 16
+    },
+    {
+      "k": 8,
+      "distinct_earliest_endpoints": 256,
+      "prefix_length": 18
+    }
+  ],
+  "total_literal_atoms": 10398,
+  "singleton_levels": [
+    {
+      "length": 1,
+      "distinct_earliest_endpoints": 1,
+      "prefix_length": 2
+    },
+    {
+      "length": 2,
+      "distinct_earliest_endpoints": 2,
+      "prefix_length": 3
+    },
+    {
+      "length": 3,
+      "distinct_earliest_endpoints": 4,
+      "prefix_length": 4
+    },
+    {
+      "length": 4,
+      "distinct_earliest_endpoints": 8,
+      "prefix_length": 5
+    },
+    {
+      "length": 5,
+      "distinct_earliest_endpoints": 16,
+      "prefix_length": 6
+    },
+    {
+      "length": 6,
+      "distinct_earliest_endpoints": 32,
+      "prefix_length": 7
+    },
+    {
+      "length": 7,
+      "distinct_earliest_endpoints": 64,
+      "prefix_length": 8
+    },
+    {
+      "length": 8,
+      "distinct_earliest_endpoints": 128,
+      "prefix_length": 9
+    },
+    {
+      "length": 9,
+      "distinct_earliest_endpoints": 256,
+      "prefix_length": 10
+    },
+    {
+      "length": 10,
+      "distinct_earliest_endpoints": 512,
+      "prefix_length": 11
+    },
+    {
+      "length": 11,
+      "distinct_earliest_endpoints": 1024,
+      "prefix_length": 12
+    },
+    {
+      "length": 12,
+      "distinct_earliest_endpoints": 2048,
+      "prefix_length": 13
+    },
+    {
+      "length": 13,
+      "distinct_earliest_endpoints": 4096,
+      "prefix_length": 14
+    }
+  ],
+  "singleton_literal_atoms": 106496,
+  "general_pair_checks": [
+    {
+      "p": 3,
+      "candidates": 90601,
+      "orbit_members": 359
+    },
+    {
+      "p": 5,
+      "candidates": 90601,
+      "orbit_members": 37
+    },
+    {
+      "p": 7,
+      "candidates": 90601,
+      "orbit_members": 19
+    },
+    {
+      "p": 9,
+      "candidates": 90601,
+      "orbit_members": 13
+    },
+    {
+      "p": 11,
+      "candidates": 90601,
+      "orbit_members": 11
+    },
+    {
+      "p": 15,
+      "candidates": 90601,
+      "orbit_members": 5
+    },
+    {
+      "p": 31,
+      "candidates": 90601,
+      "orbit_members": 5
+    }
+  ],
+  "long_singleton_word_length": 2000,
+  "long_singleton_pair_bits": 4292,
+  "bounded_pair_candidates": 250000,
+  "bounded_pair_members": 5,
+  "large": [
+    {
+      "k": 100,
+      "encoded_exits": "2^100",
+      "endpoint_height_bits": 465,
+      "decoded_letters": 100,
+      "literal_atoms": 202
+    },
+    {
+      "k": 1000,
+      "encoded_exits": "2^1000",
+      "endpoint_height_bits": 4645,
+      "decoded_letters": 1000,
+      "literal_atoms": 2002
+    }
+  ],
+  "mixed_outcomes": [
+    {
+      "word": [
+        1
+      ],
+      "endpoint": [
+        -35,
+        -35,
+        -35,
+        -35,
+        -35,
+        23,
+        24,
+        128
+      ],
+      "full_distance": null
+    },
+    {
+      "word": [
+        2
+      ],
+      "endpoint": [
+        -19,
+        -19,
+        -19,
+        -19,
+        -19,
+        3,
+        44,
+        48
+      ],
+      "full_distance": 6,
+      "unscaled_success_path": [
+        [
+          -19,
+          -19,
+          -19,
+          -19,
+          -19,
+          3,
+          44,
+          48
+        ],
+        [
+          -19,
+          -19,
+          -2,
+          -2,
+          -2,
+          -2,
+          -2,
+          48
+        ],
+        [
+          -19,
+          -19,
+          -2,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          -19,
+          -19,
+          6,
+          6,
+          6,
+          6,
+          6,
+          8
+        ],
+        [
+          -4,
+          -4,
+          -4,
+          -4,
+          -4,
+          6,
+          6,
+          8
+        ],
+        [
+          -4,
+          -4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "family_not_complete": {
+    "k": 2,
+    "source": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3128,
+      3128,
+      -6271
+    ],
+    "source_distance": 15,
+    "all_four_family_exits_unsolvable": true,
+    "unscaled_success_path": [
+      [
+        -6271,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3128,
+        3128
+      ],
+      [
+        -6271,
+        3,
+        628,
+        628,
+        628,
+        628,
+        628,
+        3128
+      ],
+      [
+        -6271,
+        503,
+        503,
+        503,
+        503,
+        503,
+        628,
+        3128
+      ],
+      [
+        -6271,
+        503,
+        528,
+        528,
+        528,
+        528,
+        528,
+        3128
+      ],
+      [
+        -6271,
+        523,
+        523,
+        523,
+        523,
+        523,
+        528,
+        3128
+      ],
+      [
+        -6271,
+        523,
+        528,
+        1044,
+        1044,
+        1044,
+        1044,
+        1044
+      ],
+      [
+        -419,
+        -419,
+        -419,
+        -419,
+        -419,
+        523,
+        528,
+        1044
+      ],
+      [
+        -419,
+        -419,
+        62,
+        62,
+        62,
+        62,
+        62,
+        528
+      ],
+      [
+        -419,
+        59,
+        59,
+        59,
+        59,
+        59,
+        62,
+        62
+      ],
+      [
+        -36,
+        -36,
+        -36,
+        -36,
+        -36,
+        59,
+        59,
+        62
+      ],
+      [
+        -36,
+        -36,
+        2,
+        2,
+        2,
+        2,
+        2,
+        62
+      ],
+      [
+        -36,
+        -36,
+        2,
+        14,
+        14,
+        14,
+        14,
+        14
+      ],
+      [
+        -36,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        14
+      ],
+      [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        2,
+        4,
+        4
+      ],
+      [
+        -2,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "singleton_family_not_complete": {
+    "length": 8,
+    "source": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      390627,
+      390627,
+      -781264
+    ],
+    "source_distance": 15,
+    "rejected_family_exits": 128,
+    "unscaled_success_path": [
+      [
+        -781264,
+        2,
+        2,
+        2,
+        2,
+        2,
+        390627,
+        390627
+      ],
+      [
+        -781264,
+        2,
+        78127,
+        78127,
+        78127,
+        78127,
+        78127,
+        390627
+      ],
+      [
+        -781264,
+        62502,
+        62502,
+        62502,
+        62502,
+        62502,
+        78127,
+        390627
+      ],
+      [
+        -781264,
+        62502,
+        62502,
+        131252,
+        131252,
+        131252,
+        131252,
+        131252
+      ],
+      [
+        -781264,
+        103752,
+        103752,
+        103752,
+        103752,
+        103752,
+        131252,
+        131252
+      ],
+      [
+        -781264,
+        103752,
+        103752,
+        114752,
+        114752,
+        114752,
+        114752,
+        114752
+      ],
+      [
+        -781264,
+        103752,
+        112552,
+        112552,
+        112552,
+        112552,
+        112552,
+        114752
+      ],
+      [
+        -781264,
+        103752,
+        112552,
+        112992,
+        112992,
+        112992,
+        112992,
+        112992
+      ],
+      [
+        -781264,
+        111144,
+        111144,
+        111144,
+        111144,
+        111144,
+        112552,
+        112992
+      ],
+      [
+        -67056,
+        -67056,
+        -67056,
+        -67056,
+        -67056,
+        111144,
+        111144,
+        112992
+      ],
+      [
+        -67056,
+        -67056,
+        4224,
+        4224,
+        4224,
+        4224,
+        4224,
+        112992
+      ],
+      [
+        -67056,
+        -10032,
+        -10032,
+        -10032,
+        -10032,
+        -10032,
+        4224,
+        112992
+      ],
+      [
+        -10032,
+        -10032,
+        3168,
+        3168,
+        3168,
+        3168,
+        3168,
+        4224
+      ],
+      [
+        -2112,
+        -2112,
+        -2112,
+        -2112,
+        -2112,
+        3168,
+        3168,
+        4224
+      ],
+      [
+        -2112,
+        -2112,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4224
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "independent_full_oracle_states": 4544
+}

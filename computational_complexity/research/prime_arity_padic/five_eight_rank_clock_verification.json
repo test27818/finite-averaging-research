@@ -1,0 +1,158 @@
+{
+  "scope": "All-word rank and p-adic clock structure, not full P or NP-hardness.",
+  "exhaustive": [
+    {
+      "p": 5,
+      "distinct_symbolic_prefix_matrices_checked": 29994,
+      "matrices_at_length_six": 23997
+    },
+    {
+      "p": 7,
+      "distinct_symbolic_prefix_matrices_checked": 29907,
+      "matrices_at_length_six": 23921
+    },
+    {
+      "p": 11,
+      "distinct_symbolic_prefix_matrices_checked": 29994,
+      "matrices_at_length_six": 23997
+    }
+  ],
+  "random_and_long": {
+    "literal_column_replays": 10000,
+    "long_plane_decodings": [
+      {
+        "p": 5,
+        "given_letters": 1800,
+        "nonstationary_letters": 1500,
+        "normal_height_bits": 3481,
+        "decoded_runs": 2
+      },
+      {
+        "p": 5,
+        "given_letters": 2000,
+        "nonstationary_letters": 2000,
+        "normal_height_bits": 2316,
+        "decoded_runs": 1344
+      },
+      {
+        "p": 7,
+        "given_letters": 1800,
+        "nonstationary_letters": 1500,
+        "normal_height_bits": 4208,
+        "decoded_runs": 2
+      },
+      {
+        "p": 7,
+        "given_letters": 2000,
+        "nonstationary_letters": 1999,
+        "normal_height_bits": 2809,
+        "decoded_runs": 1376
+      }
+    ]
+  },
+  "plane_membership": [
+    {
+      "p": 5,
+      "height_bound": 20,
+      "plane_candidates": 68921,
+      "projective_orbit_planes": 99
+    },
+    {
+      "p": 7,
+      "height_bound": 20,
+      "plane_candidates": 68921,
+      "projective_orbit_planes": 33
+    }
+  ],
+  "global_kernel": {
+    "rank_two_kernel_checks": 17726,
+    "full_words": 300
+  },
+  "same_kernel_different_outcome": {
+    "rows": [
+      {
+        "word": [
+          1,
+          1,
+          1,
+          4
+        ],
+        "matrix": [
+          [
+            16,
+            -125
+          ],
+          [
+            541,
+            -125
+          ],
+          [
+            21,
+            -125
+          ]
+        ],
+        "kernel": {
+          "clock": 4,
+          "modulus": 625,
+          "row": [
+            1,
+            500
+          ]
+        },
+        "endpoint": [
+          -35,
+          -35,
+          -35,
+          -35,
+          -35,
+          23,
+          24,
+          128
+        ],
+        "full_distance": null
+      },
+      {
+        "word": [
+          1,
+          2,
+          2,
+          4
+        ],
+        "matrix": [
+          [
+            -164,
+            -125
+          ],
+          [
+            61,
+            -125
+          ],
+          [
+            41,
+            -125
+          ]
+        ],
+        "kernel": {
+          "clock": 4,
+          "modulus": 625,
+          "row": [
+            1,
+            500
+          ]
+        },
+        "endpoint": [
+          -19,
+          -19,
+          -19,
+          -19,
+          -19,
+          3,
+          44,
+          48
+        ],
+        "full_distance": 6
+      }
+    ],
+    "independent_oracle_states": 25
+  }
+}

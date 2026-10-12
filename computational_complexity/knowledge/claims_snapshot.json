@@ -1,0 +1,908 @@
+{
+  "snapshot_date": "2026-10-12",
+  "source_catalog_updated": "2026-10-12",
+  "scope": "12 new computational-complexity claim cards and 3 prior dependency cards; navigation, not formal proof certification.",
+  "new_claims": [
+    {
+      "id": "SUBCRITICAL-BIT-COMPLEXITY",
+      "title": "亚临界位复杂度：固定余量短证书与指数状态族",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "p≤n=p+r<2p 的任意非恒等整数路径长至多 (O(n^3(1+log n+log H)))^r；每个固定 r 的可达性属于 NP。固定 p≥5、n=p+3 已有位长 O(k) 而 2^k 个不同本原 G=1 可达状态的显式族。两个五平均八元反例否定单例外优先、双例外优先和最大能量下降规则。六元无分支算法与旧整数路径界组合后得到位长多项式判定。",
+      "boundary": "固定r短证书不自动给P算法；固定p=5,n=8的指数状态族本身只排除显式全图多项式规模。可变p的统一问题已由SUBCRITICAL-NP-HARD另证不限步数NP-hard；固定p/r的P问题仍未完成。六元结论不覆盖p≥5的p+3情况。",
+      "documents": [
+        "research/prime_arity_padic/subcritical_bit_complexity_frontier_20261011.md"
+      ],
+      "depends_on": [
+        "SUBCRITICAL-COMPLETE",
+        "ALG-LENGTH",
+        "SIX-EXPLICIT"
+      ],
+      "related": [
+        "SUBCRITICAL-LIMITS",
+        "SUBCRITICAL-NP-HARD",
+        "SUBCRITICAL-DUAL-NORMALS",
+        "SUBCRITICAL-BLOCK-NORM",
+        "SUBCRITICAL-CLUSTER-ESCAPE",
+        "FIVE-EIGHT-EXIT-LANGUAGE",
+        "SUBCRITICAL-RANK-CLOCK"
+      ],
+      "updates": [
+        {
+          "id": "SIX-EXPLICIT",
+          "scope": "仅替代旧稿“全六元位长多项式界未证明”字段：既有确定后继算法与任意固定维整数三平均长度界已经足够；不新增最短路径或静态总公式。"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_subcritical_bit_complexity_frontier.py"
+          ],
+          "level": "general-proof / exact-finite-check",
+          "scope": "书面一般证明；48个指数族层数实例、130848次原位置整数宏核验、最大4096个互异状态、两个反例的15态未本原化完整整数DAG、1441次精确间隙不等式。有限检查不替代全参数证明，未独立重审。",
+          "records": [
+            "research/prime_arity_padic/subcritical_bit_complexity_frontier_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "短证书结论使用奇素数亚临界成功路径整数性。路径长度定理本身不需要素性。外部 s-energy 文献仅作适用范围核对，不是本页证明依赖。"
+      ],
+      "next_step": "研究固定p或固定余量的隐式状态表示及安全分支压缩；全区间可变p统一P已有P=NP障碍，见SUBCRITICAL-NP-HARD。",
+      "aliases": [
+        "p+3 位长 多项式 polynomial NP 指数 搜索 状态 分支 合流 最大间隙 short certificate exponential frontier",
+        "五平均 八元 五平均八元 p+r 固定余量 r 六元 多项式"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/subcritical_bit_complexity_sources_20261011.json"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/subcritical_bit_complexity_frontier_20261011.md": "0b3bbc4757995ca7d6fe1d156aa5891e094f87ee255ecac38b6ddc2b9c6ca550"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/subcritical_bit_complexity_sources_20261011.json": "73bd5009192f100f6572fdd0aa11f4d89e6fd3f4bd800e7364cf93068ce39813",
+        "research/prime_arity_padic/verify_subcritical_bit_complexity_frontier.py": "48d962d8f90b2565a634b97c517a6c1c6495cfc38f82533561c6fe2bdacb5f4d",
+        "research/prime_arity_padic/subcritical_bit_complexity_frontier_verification.json": "4112659f52ca80ed0c53995c73999d69e51d301d6f7922fd624f675cabfd487f"
+      }
+    },
+    {
+      "id": "SUBCRITICAL-NP-HARD",
+      "title": "可变素数元数的亚临界不限步数可达性 NP 困难",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "p随输入变化时，p+2≤n≤2p−1的不限步数可达性NP-hard；可限制n=(3p−1)/2，乃至任意预先固定有理0<α<1下的n=p+floor(αp)。输入可全为不同正整数、均值整数，中心化后本原G=1。构造族yes恰两步可解，no任意长路径均失败；该可识别受限族NP-complete。",
+      "boundary": "不证明P≠NP；精确结论为全区间统一P算法将推出P=NP。不证明固定p、固定r=n−p或固定2p−n的NP困难性，不否定这些参数固定后的P可能性。整体只证明NP-hard，未证明整体属于NP或强NP-hard。",
+      "documents": [
+        "research/prime_arity_padic/subcritical_uniform_reachability_np_hard_20261011.md"
+      ],
+      "depends_on": [
+        "SUBCRITICAL-COMPLETE"
+      ],
+      "related": [
+        "SUBCRITICAL-BIT-COMPLEXITY",
+        "SUBCRITICAL-LIMITS",
+        "ALG-LENGTH",
+        "SUBCRITICAL-DUAL-NORMALS"
+      ],
+      "updates": [
+        {
+          "id": "SUBCRITICAL-BIT-COMPLEXITY",
+          "scope": "可变p的统一判定复杂度由只知指数状态障碍推进为不限步数NP-hard；不改变固定余量短证书、固定p开放问题或指数族本身的证据范围。"
+        },
+        {
+          "id": "SUBCRITICAL-COMPLETE",
+          "scope": "补充严格亚临界区间的统一复杂度下界；原有限判定、p+2统一P算法与几何说明继续有效。"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_subcritical_uniform_np_hard.py"
+          ],
+          "level": "general-reduction / exact-independent-oracle",
+          "scope": "书面全输入归约；1109组余数参数，396个小输入及1884个首步补集，638态完整oracle；5个不同整数归约实例、2622态oracle；6个固定比例编码；4组大整数原位置两步证书。无深度截断、无G剪枝，有限核验不替代归约证明或独立同行审稿。",
+          "records": [
+            "research/prime_arity_padic/subcritical_uniform_np_hard_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "标准正整数二进制SUBSET-SUM为NP-complete；Bertrand定理给O(m)规模素数；素数严格亚临界成功路径整数性在新稿中重给短证明。排除统一P算法的推论采用P≠NP。"
+      ],
+      "next_step": "固定p或固定余量/固定上端缺口的位长P问题仍可研究；若继续整体复杂度分类，需另证上界或更强下界。不要把此定理写成固定五平均八元已NP-hard。",
+      "aliases": [
+        "NP hard NP-hard NP困难 NP完全 子集和 subset sum 不限步数 reachability uniform polynomial 可变p 位长 多项式",
+        "n=(3p-1)/2 n=p+floor(alpha*p) 严格内部比例 两两不同 正整数 G1"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/subcritical_np_hard_sources_20261011.json"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/subcritical_uniform_reachability_np_hard_20261011.md": "6523e6d1b3a4bced54d8a22a5ea6bbcfa14f7b38e7ca51b437499f3348815117"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/subcritical_np_hard_sources_20261011.json": "cae407d4b6851409aa2b47fec540e7111fce13b8a70afbb8079f6f1abfaa12a1",
+        "research/prime_arity_padic/verify_subcritical_uniform_np_hard.py": "c212b991e78cef890e3605f50f4116094941d508e5af9549159c92444f54924c",
+        "research/prime_arity_padic/subcritical_uniform_np_hard_verification.json": "f074538027149e8a65f16120e6f55308303c827ba9b76292f76dc66e5817fe67"
+      }
+    },
+    {
+      "id": "SUBCRITICAL-DUAL-NORMALS",
+      "title": "固定p对偶法向量与单例外多项式解析",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "完整补集可达性等价于整数关系格与对偶正词法向量轨道相交，且法向量证书自动提供真实整数路径。给定候选法向量，单例外子轨道成员可由唯一模p支撑解析，O(log H)压缩段、O(log²H)展开字母，位长多项式。r=2只剩一个候选方向，恢复已有p+2判定。",
+      "boundary": "给定法向量的多项式成员检验不是秩≥2格中的存在性判定；多例外输出父向量也不唯一。未证明固定p一般亚临界可达性在P，亦未证明固定p NP-hard。不得把固定维数、给定证书快速验证或候选最短格关系当成完整P算法。",
+      "documents": [
+        "research/prime_arity_padic/fixed_p_dual_normal_decoding_20261011.md"
+      ],
+      "depends_on": [
+        "SUBCRITICAL-COMPLETE",
+        "SUBCRITICAL-BIT-COMPLEXITY"
+      ],
+      "related": [
+        "SUBCRITICAL-NP-HARD",
+        "FIVE-NORMAL-FORM",
+        "SUBCRITICAL-BLOCK-NORM",
+        "SUBCRITICAL-CLUSTER-ESCAPE",
+        "FIVE-EIGHT-EXIT-LANGUAGE",
+        "FIVE-EIGHT-LOCAL-PRODUCTS",
+        "SUBCRITICAL-RANK-CLOCK",
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_fixed_p_dual_normals.py"
+          ],
+          "level": "general-proof / exact-finite-oracle",
+          "scope": "91532个本原法向量与完整有界高度单例外轨道；20160个r=2对照；700个法向量的9056次原位置重放；长运行段及多例外边界反例。有限检查不替代全参数证明或独立审稿。",
+          "records": [
+            "research/prime_arity_padic/fixed_p_dual_normals_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "p为奇素数，2≤r<p；多项式解析仅针对给定法向量的单例外轨道成员问题。外部矩阵可达性论文仅核对量词边界。"
+      ],
+      "next_step": "直接研究秩r−1整数格与对偶轨道的相交判定；或构造固定生成元的困难性归约。多例外边界可能等价地返回原双例外核心问题，不能免费接受。",
+      "aliases": [
+        "固定p fixed p 位长 P 多项式 对偶 法向量 normal lattice orbit 格交 单例外 反向解析 batched runs p+3 五平均八元"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/fixed_p_dual_normal_sources_20261011.json"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/fixed_p_dual_normal_decoding_20261011.md": "643e91180e0a5478fd5c88c7e7e1c2e1ec8178f03145db6535785a1a7ea42366"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/fixed_p_dual_normal_sources_20261011.json": "06a26c8ef3e9cca59b04c66023407da65158e576fb4b4ecd0c3a01356bd1ee79",
+        "research/prime_arity_padic/verify_fixed_p_dual_normals.py": "91cfbdd6045a5c9fb0aad21aae75f5424669bea6e16fcdc1613732bf311c4418",
+        "research/prime_arity_padic/fixed_p_dual_normals_verification.json": "894ea01140ad953b065ab36479b91585d25fab4a904c6395457cbd84bedbecf9"
+      }
+    },
+    {
+      "id": "SUBCRITICAL-BLOCK-NORM",
+      "title": "三值核心正定范数层的P判定与强制多例外压缩",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "对形状(a^p,(a+u)^m,a+v)、2≤m≤p−2，有Q=(p−m+1)u²+(m−2)uv+v²及真实混合动作Q除p。m²<4p时，Q=(p+m+1)p^L的全部本原合法输入已完整多项式判定，含D=3/4基底例外并给最少步数。固定p,n可强制L次非终端多例外操作、最短L+1。p+3一般三值核心的S/T强制段可统一多项式压缩到接受、拒绝或显式分裂边界。",
+      "boundary": "范数层之外不得判否。强制段到达p|u时仍可能有两个候选，或进入三个不同例外的四值核心；全固定p判定仍未证明在P。无界多例外次数与P相容，不是复杂度下界。D≤0只保留范数剥离及强制塔结论，不套用正定有限基底表。",
+      "documents": [
+        "research/prime_arity_padic/fixed_p_three_value_norm_descent_20261011.md"
+      ],
+      "depends_on": [
+        "SUBCRITICAL-COMPLETE"
+      ],
+      "related": [
+        "SUBCRITICAL-DUAL-NORMALS",
+        "SUBCRITICAL-BIT-COMPLEXITY",
+        "FIVE-NORM-SLICE",
+        "SUBCRITICAL-CLUSTER-ESCAPE",
+        "FIVE-EIGHT-LOCAL-PRODUCTS",
+        "SUBCRITICAL-RANK-CLOCK",
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_fixed_p_block_norm_descent.py"
+          ],
+          "level": "general-proof / exact-independent-oracle",
+          "scope": "53组参数、265完整范数层、558方向/860态oracle；5160原位置动作；1309预处理输入/2793态oracle，保留224未解决边界；1360恒等式与L=2000大整数。全参数证明在正文；未独立重审。",
+          "records": [
+            "research/prime_arity_padic/fixed_p_block_norm_descent_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "p≥5为素数；本原差值及n|mu+v。完整范数层分类另外要求m²<4p；一般混合运行段剥离不要求正定。使用既有亚临界整数性引理，没有新外部定理。"
+      ],
+      "next_step": "攻p+3的p|u分裂边界及三个不同例外核心；可在完整搜索中调用已证强制段压缩，但仍需证明分支压缩规模。",
+      "aliases": [
+        "固定p 五平均八元 五平均九元 三值核心 范数 多例外 无界 polynomial p+3 p+4 Q p-1 混合 强制段",
+        "(p,m,1) D=3 D=4 norm shell positive definite min steps"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/fixed_p_three_value_norm_descent_20261011.md": "3d9622060318ea0672fb9f8bae925284256fa178beff91e741c3b6a23bbea38a"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_fixed_p_block_norm_descent.py": "46c42bef68d3b205d14bda830abe6a2253097ac4b1fe1fa936f4daea9844d15c",
+        "research/prime_arity_padic/fixed_p_block_norm_descent_verification.json": "9f8034886020a4563fb242a168a4a7b02942e25c4292840489095b5608c0d8d5"
+      }
+    },
+    {
+      "id": "SUBCRITICAL-CLUSTER-ESCAPE",
+      "title": "局部块首位逃逸与完整p+3压缩判定器",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "在p+3三值分支u=p^Lq处，首次使用外部位置的首位受(−1)^(L−1){1,2,3}{2^s:0≤s≤L}限制；q∤a或局部公共值实数范围排除0时可删去因子3。不满足即可无步数限制判否。固定p=31、n=34有本原G=1不可解族，旧强制段压缩仍需指数多个真实分支，新过滤一次拒绝。已实现任意p+3有理输入的完整有限压缩判定及最少步数。 五平均八元还可调用已证多项式的首次外部交互否定过滤，仍继续完整搜索判断YES。",
+      "boundary": "新过滤仅必要，通过不代表可解；p=5且L≥2时增强条件仍退化为全体单位。指数下界针对旧枚举方法，不是固定p NP困难或非P证明。带新过滤的完整求解器仍无多项式最坏时间证明；资源超限抛异常，不能作为不可解。",
+      "documents": [
+        "research/prime_arity_padic/fixed_p_cluster_escape_and_compressed_solver_20261011.md"
+      ],
+      "depends_on": [
+        "SUBCRITICAL-COMPLETE",
+        "SUBCRITICAL-BLOCK-NORM",
+        "SUBCRITICAL-BIT-COMPLEXITY"
+      ],
+      "related": [
+        "SUBCRITICAL-DUAL-NORMALS",
+        "SUBCRITICAL-NP-HARD",
+        "SUBCRITICAL-LOCAL-PRECISION",
+        "FIVE-EIGHT-CLUSTER-REDUCTION",
+        "FIVE-EIGHT-FIRST-ESCAPE",
+        "FIVE-EIGHT-EXIT-LANGUAGE"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_fixed_p_cluster_escape.py"
+          ],
+          "level": "general-proof / exact-independent-oracle",
+          "scope": "1750核心、420局部块、240完整输入及240有理仿射变换，与8729态完整oracle一致；加实数范围后210增强过滤拒绝；3510局部动作与范围检查；L=20的512个未压缩边界；完整no族比较到L=9；L=10000只验证已证明的符号过滤。无限结论由正文证明。",
+          "records": [
+            "research/prime_arity_padic/fixed_p_cluster_escape_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "素数p≥5，n=p+3；使用已证整数性、G必要条件、S/T强制段。逃逸过滤要求u=p^Lq且p∤aq，三值G=1分支自动满足。没有新外部定理。"
+      ],
+      "next_step": "固定p整体P仍未解决；当前五平均八元首交互存在性已在P，不能等同全等可达。继续处理具有成功后续的出口选择，见FIVE-EIGHT-FIRST-ESCAPE。",
+      "aliases": [
+        "固定p 压缩 判定器 solver 首位 逃逸 有限群 群过滤 subgroup cluster no-instance 指数分支 p31 n34",
+        "p+3 五平均八元 高精度 2的乘法子群 真实分支 位长 P"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/fixed_p_plus_three_solver.py"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/fixed_p_cluster_escape_and_compressed_solver_20261011.md": "6da204dd411e5e98110e46fca863c969fa96abfc494dbbfdbe016e8130a4b179"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/fixed_p_plus_three_solver.py": "567fd8776f2623394d17510e497c2cc394b1d94b2d8710e591147638b83e302e",
+        "research/prime_arity_padic/verify_fixed_p_cluster_escape.py": "fe04c47875f110888c7bac31f19706bf4a16734fa56431d7659b3187dcf4a326",
+        "research/prime_arity_padic/fixed_p_cluster_escape_verification.json": "715f53a46f3f58a9f9ff2058c0aa5cd6f42aa45e5dc1e521db8daa8c470a8237"
+      }
+    },
+    {
+      "id": "SUBCRITICAL-LOCAL-PRECISION",
+      "title": "五与七平均的局部精度合成及实数范围判否",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "p=5、7的局部(0^p,1,1)块，长度L≥T_d=O_p(d²)时公共分子模p^d恰覆盖首位在(−1)^(L−1)<2>中的全部余数；有等长词逐位多项式构造，可嵌入p+3整数态保持每个前缀本原G=1。统一实数范围(p−1)/p²≤公共值≤2/p加强逃逸过滤。p=7、n=10的((-1)^7,(7^L−1)^2,9−2·7^L)对奇数L≥3全部不可解，却对每个d可选L=T_d+1并用G合法整数路径使局部公共值为0 mod7^d。",
+      "boundary": "精度反例的输入随d变化，位长Θ(d²)，不是同一输入通过所有精度。不排除输入相关的更高精度方法，不是非P或NP困难证明。合成只控制局部公共分子，非全状态到零；固定p整体P仍未解决。具体完整精度覆盖只证明p=5、7。",
+      "documents": [
+        "research/prime_arity_padic/fixed_p_local_precision_and_real_obstruction_20261011.md"
+      ],
+      "depends_on": [
+        "SUBCRITICAL-COMPLETE",
+        "SUBCRITICAL-CLUSTER-ESCAPE"
+      ],
+      "related": [
+        "SUBCRITICAL-BIT-COMPLEXITY",
+        "SUBCRITICAL-DUAL-NORMALS",
+        "SUBCRITICAL-BLOCK-NORM",
+        "FIVE-EIGHT-CLUSTER-REDUCTION",
+        "FIVE-EIGHT-LOCAL-PRODUCTS"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_fixed_p_local_precision.py"
+          ],
+          "level": "general-proof / literal-replay / independent-oracle",
+          "scope": "930返回与精度槽检查；168余数词及90780原位置局部动作；七平均no族L=3、5、7由690态独立完整oracle确认；d=1至5路径逐步核对本原G=1。无限量词由正文证明，本地未独立重审。",
+          "records": [
+            "research/prime_arity_padic/fixed_p_local_precision_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "局部实数范围与逃逸加强要求素数p≥5、n=p+3、u=p^Lq且p∤aq；完整精度合成只对p=5或7。使用已有亚临界整数性及两块陷阱，无新外部定理。"
+      ],
+      "next_step": "求解p+3一般三差值核心的精确存在性，尤其结合局部实数范围、整除与p进信息压缩分支；不能把允许余数全覆盖替代精确命中。",
+      "aliases": [
+        "固定p 局部精度 等长返回词 逐位合成 实数范围 七平均十元 五平均八元 p-adic G=1 quadratic precision real obstruction"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/fixed_p_local_precision.py"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/fixed_p_local_precision_and_real_obstruction_20261011.md": "3c3e201127611686ff04155914b51e6d4b9d42a27aeedd9272a5a71cc0f4926f"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/fixed_p_local_precision.py": "9fd28341435faf78250ef73639ef7528807449cb573bde5eecd786e94c0011ca",
+        "research/prime_arity_padic/verify_fixed_p_local_precision.py": "38d45351a71bf5140ff23a120ad71404ea30bba136f30e9aec7a782e192c260c",
+        "research/prime_arity_padic/fixed_p_local_precision_verification.json": "4a0372e66db804b4d500282768877cb273b455220b7f96f532e1915449deb8db"
+      }
+    },
+    {
+      "id": "FIVE-EIGHT-CLUSTER-REDUCTION",
+      "title": "五平均八元到七位置同余块的多项式等价归约",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "任意八个有理输入可在位长多项式时间内化为多项式多个(a^5,a+5s,a+5t,−7a−5s−5t)、5∤a且本原G=1输入的或。因此全五平均八元在P当且仅当该七位置同余块子问题在P。证明使用K=8Σu²−(Σu)²模5的E/C/D三类：全相等拒绝，恰两项同余类封闭，三项互异类只有一条单项链并有多项式多个双项出口。恰两项同余核心进一步化为至多两个七位置块。",
+      "boundary": "归约不是剩余七位置块的P算法；其中仍有指数多合法状态族。不能把同余两项相等偷换成实际两项相等，也不能把多项式多个未解决出口当成已决定。完整包装器仍调用旧指数最坏界未知求解器；资源超限不得判否。只针对p=5,n=8，不推广一般p。",
+      "documents": [
+        "research/prime_arity_padic/five_eight_polynomial_cluster_reduction_20261011.md"
+      ],
+      "depends_on": [
+        "SUBCRITICAL-COMPLETE",
+        "SUBCRITICAL-BIT-COMPLEXITY",
+        "SUBCRITICAL-BLOCK-NORM"
+      ],
+      "related": [
+        "SUBCRITICAL-CLUSTER-ESCAPE",
+        "SUBCRITICAL-LOCAL-PRECISION",
+        "SUBCRITICAL-DUAL-NORMALS",
+        "FIVE-EIGHT-FIRST-ESCAPE",
+        "FIVE-EIGHT-EXIT-LANGUAGE",
+        "FIVE-EIGHT-LOCAL-PRODUCTS"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_eight_residue_reduction.py"
+          ],
+          "level": "general-proof / exact-independent-oracle",
+          "scope": "125余数组合全检；2549核心及两层归约、180完整输入及180有理仿射输入，与8932态独立整数oracle一致；1500精确能量恒等式及4确定链，最长2000步4644位。P等价由正文证明，未独立重审。",
+          "records": [
+            "research/prime_arity_padic/five_eight_residue_reduction_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "恰好5平均8位置，有理输入。复用亚临界整数性、G必要条件、固定余量长度界和三值S/T强制段；没有新增外部定理依赖。"
+      ],
+      "next_step": "只需解决七位置同余块的位长P判定即可完成全五平均八元目标。研究其内部二选一/双项返回及首次外部交互的隐式表示；纯单项阶段保持唯一的模5同余例外配对，但尚无完整分支合并。",
+      "aliases": [
+        "五平均 八元 5平均8元 七位置同余块 mod5 collision sector distinct residues K energy 单向类别 确定单项链 polynomial disjunctive reduction"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/five_eight_residue_reduction.py"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/five_eight_polynomial_cluster_reduction_20261011.md": "39fe1c106a79f3edec785b53a087ea74cebfff9d0f4346de2f10097364cd539f"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/five_eight_residue_reduction.py": "ef5ab04291e17f81cc1241db0dfb53b7ae1c2fc7e7803c4561d608212866576d",
+        "research/prime_arity_padic/verify_five_eight_residue_reduction.py": "141f5ec58728ee9ccf7d45eba88e2f9ccb4300636dd367c20b827dea12fb84a4",
+        "research/prime_arity_padic/five_eight_residue_reduction_verification.json": "d55e64487300cf5cafc77657da642f7011ca2e409bd4bb6cbabe64658421afad"
+      }
+    },
+    {
+      "id": "FIVE-EIGHT-FIRST-ESCAPE",
+      "title": "五平均八元首次外部交互的完整P子程序",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "对零和核心(a^5,b,c,d)、d非零，在所有前缀整数且本原G=1的要求下，首次选择指定外部位置d参与非恒等操作的存在性在P，并可构造词。局部共同5进精度e≥8时统一显式安全出口；相等局部例外L≥6时用(S1D)^s S1^(L−2s)、s∈0..3，恰L+1步交互。浅精度搜索化为O(B²)长唯一链及常数深度树。NO是全问题的可靠否定条件，已可选接入完整求解器。",
+      "boundary": "首交互YES不等于全等YES；(3^5,8²,−31)可安全交互却不可解。枚举所有标准前缀(S1D)^s S1^(L−2s)仍不完备：显式17步可解输入的全部这类出口均NO。没有证明全五平均八元属于P或NP-hard；子程序不是目标的替代。交互定义为外部位置参加非恒等操作，不要求其值立即改变；深层构造另外保证改变。 另有精度14的本原G=1不可解输入，独立103252态原位置图证明NO且有15步首交互；只排除C≤14的统一成功门槛，不是任意深NO族。",
+      "documents": [
+        "research/prime_arity_padic/five_eight_first_external_interaction_20261011.md"
+      ],
+      "depends_on": [
+        "FIVE-EIGHT-CLUSTER-REDUCTION",
+        "SUBCRITICAL-CLUSTER-ESCAPE",
+        "SUBCRITICAL-BIT-COMPLEXITY"
+      ],
+      "related": [
+        "SUBCRITICAL-LOCAL-PRECISION",
+        "SUBCRITICAL-BLOCK-NORM",
+        "FIVE-EIGHT-EXIT-LANGUAGE",
+        "FIVE-EIGHT-LOCAL-PRODUCTS",
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_eight_first_escape.py"
+          ],
+          "level": "general-proof / literal-independent-oracle",
+          "scope": "775同余块对2370态原位置首交互oracle；380一般核心含71个外部5倍数；117深块及6大重复例，共5302原位置动作。775完整最短距离对5812态全问题oracle；1000指数长链访问2500节点；指定标准前缀反例由1135态完整oracle及17步未缩放重放核对。无穷结论由正文证明，未独立重审。",
+          "records": [
+            "research/prime_arity_padic/five_eight_first_escape_verification.json"
+          ]
+        },
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_eight_deep_no.py"
+          ],
+          "level": "finite-exact-independent-physical-graph",
+          "scope": "固定q=1350498525211,L=14输入。独立原位置补集枚举103252态、113205保留边、35013次G拒绝，最长G合法整数路径55步，无零终态；15步首交互未缩放重放。仅有限反例，不是无限族或NP-hard。",
+          "records": [
+            "research/prime_arity_padic/five_eight_deep_no_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "固定5平均8位置；零和整数五重核心，指定外部值非零；不合法G初态拒绝。复用亚临界整数性、G必要条件、七位置整数路径O(B²)界、相等例外的首位公式；无新增外部定理。"
+      ],
+      "next_step": "首交互存在性已在P，仍需决定具有全等成功后续的出口。FIVE-EIGHT-EXIT-LANGUAGE证明最早出口也可有指数多个，并实现完整纯单项E0族的多项式成员解析；该族仍会漏掉全部成功路径。下一步须同时容纳双例外前缀并处理成功后续的存在性。",
+      "aliases": [
+        "五平均 八元 首次外部交互 首次逃逸 first escape polynomial G-safe 深同余 精度8 精度6 唯一不下降后继 出口表示"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/five_eight_first_escape.py",
+        "research/prime_arity_padic/verify_five_eight_deep_no.py"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/five_eight_first_external_interaction_20261011.md": "099956952b21aa920ffd621ea09e345d86161121ee309ba45e375500f5b648e2"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/five_eight_first_escape.py": "30f87e8e59627c7d7618646ac2945476830d37712392cb6a2276dac9d80850b7",
+        "research/prime_arity_padic/verify_five_eight_deep_no.py": "05e5d5e257235eb6e0c27777fd9c69a84d9e7c6639629a3f20e23534a2c559c8",
+        "research/prime_arity_padic/verify_five_eight_first_escape.py": "acf01b6d29fdbb734223c39829cc3613b07e70abba7e2c84f518cbd44fb516f2",
+        "research/prime_arity_padic/five_eight_first_escape_verification.json": "854bd7a2c83ed7d24620d71be902ffe45164e09712db732314300ea4087fc82d",
+        "research/prime_arity_padic/five_eight_deep_no_verification.json": "c0a1e83bf3cc6fcdce545ccdf4a0be6dd99e80a02fecdd7d96a394480d464faf"
+      }
+    },
+    {
+      "id": "FIVE-EIGHT-EXIT-LANGUAGE",
+      "title": "五平均八元最早出口的指数规模与单项词解析",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "输入X_k=(3^5,(3+5^(2k+1))²,−21−2·5^(2k+1))位长Θ(k)，在最早第2k+2步已有至少4^k个不同本原G=1首出口。完整的纯单项前缀加外部单项出口族有紧凑矩阵表示，给定出口的成员判定及词恢复为位长多项式。任意奇p≥3的二元单项解析通过Q共轭复用既有对偶轨道定理，提供模p²及整段剥离实现。",
+      "boundary": "指数下界只排除显式列出全部最早出口，不排除其他P算法或成功代表压缩。给定出口的成员判定不等于存在成功出口的判定。X=(2^5,390627²,−781264)最少15步可解，而全部128个纯单项最早E0出口均不可解。双例外前缀及完整全等P问题未解决；尚未独立重审。",
+      "documents": [
+        "research/prime_arity_padic/five_eight_earliest_exit_language_20261011.md"
+      ],
+      "depends_on": [
+        "FIVE-EIGHT-FIRST-ESCAPE",
+        "SUBCRITICAL-DUAL-NORMALS",
+        "SUBCRITICAL-BIT-COMPLEXITY"
+      ],
+      "related": [
+        "FIVE-EIGHT-CLUSTER-REDUCTION",
+        "SUBCRITICAL-CLUSTER-ESCAPE",
+        "FIVE-EIGHT-LOCAL-PRODUCTS",
+        "SUBCRITICAL-RANK-CLOCK"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_eight_exit_language.py"
+          ],
+          "level": "general-proof / exact-independent-oracle",
+          "scope": "L=1..13完整单项E0族，最大4096不同出口，106496原位置动作；7个奇p的634207有序候选与完整有界轨道核对；2000字母解析；小宏族及k=100/1000路径；250000正锥候选。4544态独立完整DAG证明混合结局和128出口反例，成功词未缩放逐步重放。无限结论由正文证明。",
+          "records": [
+            "research/prime_arity_padic/five_eight_exit_language_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "全局出口定理固定5平均8位置，整数零和且G=1。单项对解析对任意奇整数p≥3成立；这是旧对偶解析的明确共轭应用，不是完整全局可达性判定。无新增外部定理。"
+      ],
+      "next_step": "FIVE-EIGHT-LOCAL-PRODUCTS已在相等例外源接口覆盖任意局部S1/S2/D词并化为返回乘积。下一步须解决带成本标量乘积及全局成功后续的存在性；原单项成员解析仍不足以判定全等。",
+      "aliases": [
+        "最早 首次 出口 指数 4^k earliest exit language singleton 模25 模p平方 紧凑表示 成员判定 polynomial decoding"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/five_eight_exit_language.py",
+        "research/prime_arity_padic/verify_five_eight_exit_language.py"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/five_eight_earliest_exit_language_20261011.md": "fa1f7ad2de4fe29ef0b43f51f6cc930ceba673acbe7c4bc079fb1cc8a13a6605"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/five_eight_exit_language.py": "fcadc66f51a065978ff0f2237e2aa42187f6436394b7a6c4f7c97115c4a7e958",
+        "research/prime_arity_padic/verify_five_eight_exit_language.py": "2b4552cfa159e7af5899f4d69c3deb9742bd800eb5b043484cab61f327fca3d5",
+        "research/prime_arity_padic/five_eight_exit_language_verification.json": "5c461ee946399af71cf96ff8895f1c783e69917f80a7ff3e910275d4d647736e"
+      }
+    },
+    {
+      "id": "FIVE-EIGHT-LOCAL-PRODUCTS",
+      "title": "五平均八元任意局部前缀的返回乘积表示",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "对(a^5,(a+5^Lq)^2,d)、L≥1、5∤aq、q奇且gcd(a,q)=1，全部局部S1/S2/D词都有精确返回乘积R加唯一单项尾段h的表示：(u,v)=5^(L−t)qRh。任意重排返回片段保持实际终态及全前缀G合法性；合法性恰为v2(R)≤v2(d)。任意首次外部交互恰在L+1步。给定局部目标可多项式归约到一个有符号乘积及一个总成本M(R,c)，完整包含双例外词。 新增完整模4原子轨道：奇返回因子为1 mod4，偶因子二赋值恰1，给出返回次数的多项式必要过滤。|R|=2^b且b≤c≤4b时有完整P判据c≡b mod3且R=(−1)^c2^b，并直接构造。",
+      "boundary": "一般M(R,c)未证明在P或NP-hard；二幂区间P判据只覆盖b≤c≤4b，超过4b不据此判否。单项向量成员解析、模4与计数过滤均不自动解决一般标量存在性。完整五平均八元仍未解决，局部目标算法保留明确的未决结果。",
+      "documents": [
+        "research/prime_arity_padic/five_eight_complete_local_products_20261011.md"
+      ],
+      "depends_on": [
+        "FIVE-EIGHT-EXIT-LANGUAGE",
+        "FIVE-EIGHT-FIRST-ESCAPE",
+        "SUBCRITICAL-LOCAL-PRECISION"
+      ],
+      "related": [
+        "SUBCRITICAL-DUAL-NORMALS",
+        "SUBCRITICAL-BLOCK-NORM",
+        "FIVE-EIGHT-CLUSTER-REDUCTION",
+        "SUBCRITICAL-RANK-CLOCK",
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "updates": [
+        {
+          "id": "FIVE-EIGHT-EXIT-LANGUAGE",
+          "scope": "在相等例外源接口补入任意局部双例外步骤，取代只覆盖纯单项前缀的表示限制；不改变原指数下界、成员算法或全问题未解状态。"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_eight_local_products.py"
+          ],
+          "level": "general-proof / literal-independent-local-oracle",
+          "scope": "26232局部词、170592原位置动作、10699精确G拒绝与26232返回重排；L=1..9,a=2,3全部局部状态集对照；31370任意目标、174可达及213标量查询与完整表一致；恢复旧15步反例的八步前缀及E1成功出口。无限范围由正文证明。 新增52013标量查询对c≤12完整表；模4三点轨道闭合；二幂构造到b=500,c=1250及2904位状态。31370局部目标中110接受、31195拒绝、65保留未决，接受词逐步重放。",
+          "records": [
+            "research/prime_arity_padic/five_eight_local_products_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "固定5平均8位置，整数零和相等局部例外，工作状态不作中途缩放。复用单项词解析和G必要条件；新G公式及任意返回表示均自足证明，无新增外部定理。"
+      ],
+      "next_step": "一般标量原子σ(w)的指定值存在性仍未解决，特别是σ=±2是否还有更大成本不能靠有限枚举判断；还须处理一般乘积及全局成功出口。深度14已有独立NO，不能将深精度直接作为成功充分条件。目标仍为完整P或NP-hard。",
+      "aliases": [
+        "任意 局部 双例外 返回 乘积 正规形 正规形式 product normal form signed scalar cost 2进 G 片段交换"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/five_eight_local_products.py",
+        "research/prime_arity_padic/verify_five_eight_local_products.py"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/five_eight_complete_local_products_20261011.md": "43dba311c696d5968130ff783806f613e762df1750c2acdd7c348a356df7f71e"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/five_eight_local_products.py": "f30b0a092c2fc4502dce57b7c097beff25a8dced2cbe5cd3f996a7a9798a5854",
+        "research/prime_arity_padic/verify_five_eight_local_products.py": "4c7a7ee34ee84c7b81c6b344a01159b1485eb3a0f508dd5f88304baa2ddc54a1",
+        "research/prime_arity_padic/five_eight_local_products_verification.json": "a9e2d90259c5fd1de549c2d3aac0b0b38692f13484d9133d86a29541e646a6c0"
+      }
+    },
+    {
+      "id": "SUBCRITICAL-RANK-CLOCK",
+      "title": "p加三核心的秩稳定性与像平面解析",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "固定素数p≥5、三差值核心的任意单项/双项proper字，第一次双项后秩恒为2且右核不再变化。任意三值核心自然3×2嵌入起算，长度t的原始清分母矩阵二阶子式gcd的p赋值恰t，Smith因子为1,p^t。给定历史像平面，其最后双项后的非静止单项尾段可由模p²唯一解析并在位长多项式恢复；只遗漏根平面初始静止字母的重复数。",
+      "boundary": "给定像平面的成员解析不是寻找成功平面的算法。相同p本原输入的所有同长度整数历史本来就共享同一整性核；显式同核四步出口一NO一六步YES，故不能仅按核/时钟合并。秩只降一次不限制双项次数。时钟计符号字，具体输入上的恒等步也计入。没有证明完整固定p问题在P或NP-hard。",
+      "documents": [
+        "research/prime_arity_padic/p_plus_three_rank_clock_and_plane_decoding_20261011.md"
+      ],
+      "depends_on": [
+        "SUBCRITICAL-COMPLETE",
+        "SUBCRITICAL-BIT-COMPLEXITY"
+      ],
+      "related": [
+        "SUBCRITICAL-DUAL-NORMALS",
+        "SUBCRITICAL-BLOCK-NORM",
+        "FIVE-EIGHT-EXIT-LANGUAGE",
+        "FIVE-EIGHT-LOCAL-PRODUCTS",
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "updates": [
+        {
+          "id": "SUBCRITICAL-BIT-COMPLEXITY",
+          "scope": "补出r=3的准确全词秩行为：首次双项后恒秩2。保留旧任意多次必要双项操作族；不以秩稳定性替代分支复杂度证明。"
+        }
+      ],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_five_eight_rank_clock.py"
+          ],
+          "level": "general-proof / symbolic-exhaustion / literal-column-replay",
+          "scope": "p=5,7,11长度至6的89895个不同符号矩阵；10000次原位置有理列重放；300完整三维字的17726次秩二/右核核对；137842候选平面对完整有界轨道；尾段2000字母和4208位法向量；同核异结局由25态独立oracle核对。无限结论由正文证明，未独立重审。",
+          "records": [
+            "research/prime_arity_padic/five_eight_rank_clock_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "固定素数p≥5,n=p+3；proper字仅含选1或2个例外的操作。全例外非终端两值陷阱仍采用已证边界。秩与时钟是符号矩阵结论，不以某个输入保持整数为前提；整性核结论另要求p本原输入。无新增外部定理。"
+      ],
+      "next_step": "在强制p进核链之上处理不同像平面与整数矩阵数据的成功存在性，或构造固定平均矩阵的困难性编码。已证常坐标和的固定proper字编码不可行，但不排除其他编码；不得将形式二维化或平面成员P当成完整算法。",
+      "aliases": [
+        "p+3 五平均八元 rank stabilization 秩二 右核 像平面 p-adic clock Smith 整性核 geodesic 单项尾段 模p平方"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/five_eight_rank_clock.py",
+        "research/prime_arity_padic/verify_five_eight_rank_clock.py"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/p_plus_three_rank_clock_and_plane_decoding_20261011.md": "dc39ea07cb67656041d97825a0b906bc1a4f8daab14bae069b50fb43cae09ba9"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/five_eight_rank_clock.py": "f3aa861b6d14c5d996b73e5982d5ccd406ad4adf7a660a4084ba6b84e517a35e",
+        "research/prime_arity_padic/verify_five_eight_rank_clock.py": "02f37fef37ecb4a0ac641b7b6c0f4b70ac91e56b8daec13c68eda9355fced701",
+        "research/prime_arity_padic/five_eight_rank_clock_verification.json": "32dff5f4f72bff02405af3590fc0b68e54f7bddfd75b8d39aeef9ff48b9ab71b"
+      }
+    },
+    {
+      "id": "SUBCRITICAL-PERIODIC-POLICY",
+      "title": "p加三有理返回分类与给定周期策略的P判定",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "固定p≥5,n=p+3：三值proper返回的四条有理方向完整分类。给定任意非空proper核心周期，包括纯单项周期，重复任意次数和任意周期内停点的归零判定在P。純单项周期特征根赋值0,m,m，用二次/三次域范数与判别式界完整检查零点；成功前缀O(m+log H)。另证明无限YES输入族的最短成功核心周期为Ω(B)，故固定周期库或O(log B)周期穷举不覆盖全体YES。",
+      "boundary": "自由选步的完整P或NP-hard仍未证明。线性周期下界限制从当前核心直接执行的周期，不允许任意未计入的预处理前缀；不排除按输入计算长策略的P算法，不是NP-hard结论。指定周期P不能替代策略综合。共享有理线的非交换仿射返回编码不可行，但其他编码未排除。",
+      "documents": [
+        "research/prime_arity_padic/p_plus_three_rational_returns_and_periodic_policy_20261011.md"
+      ],
+      "depends_on": [
+        "SUBCRITICAL-RANK-CLOCK",
+        "SUBCRITICAL-COMPLETE",
+        "SUBCRITICAL-DUAL-NORMALS"
+      ],
+      "related": [
+        "SUBCRITICAL-BLOCK-NORM",
+        "FIVE-EIGHT-LOCAL-PRODUCTS",
+        "SUBCRITICAL-DUAL-NORMALS",
+        "FIVE-EIGHT-FIRST-ESCAPE"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_p_plus_three_rational_returns.py"
+          ],
+          "level": "general-proof / symbolic-exhaustion / literal-physical-replay",
+          "scope": "207515个p=5/7/11不同符号矩阵，102601混合返回均无有理方向；1000原位置标号重放，长返回词至500步。全范围由整数根、p时钟及物理能量证明。",
+          "records": [
+            "research/prime_arity_padic/p_plus_three_rational_returns_verification.json"
+          ]
+        },
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_p_plus_three_periodic_policy.py"
+          ],
+          "level": "general-proof / exact-independent-periodic-integer-oracle",
+          "scope": "8100任意周期/整数输入与独立直接执行一致，含全部纯单项类型；2880二阶递推核对，1844见证动作；纯单项逆塔至601步、550位初态；k=1000与2322位递推。新一般复杂度由正文证明，未独立审稿。",
+          "records": [
+            "research/prime_arity_padic/p_plus_three_periodic_policy_verification.json"
+          ]
+        },
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_short_period_coverage.py"
+          ],
+          "level": "general-counting-proof / finite-periodic-oracles / integer-lattice-identities",
+          "scope": "9840单项成功方向对3^L计数；300本原核格与原位置见证；固定11步YES实例的全部258个长度≤3周期，对所有重复次数由周期P算法及独立直接整数执行双重判否。无限Ω(B)周期下界由正文计数证明，不由该有限实例扩大。",
+          "records": [
+            "research/prime_arity_padic/short_period_coverage_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "固定素数p≥5、n=p+3；proper选择1或2个例外，停止后采用已证全例外终端步骤。有理返回分类要求符号末态回到三值形状；周期P算法不要求末态三值，也不要求周期含双项，包含纯单项周期。例外槽位按F_J固定更新，不允许自适应重新命名把非周期选择隐藏在固定标签下。复用整数性、G必要条件和秩稳定性，无新外部定理。"
+      ],
+      "next_step": "固定周期库和短周期穷举已被全范围排除；须按输入综合线性长或更复杂策略，或给出真正混合返回的NP-hard归约。长见证与P相容，不从周期下界宣称自由判定非P。",
+      "aliases": [
+        "periodic policy 周期策略 rational returns 有理特征方向 affine 非交换 仿射 二阶递推 Hensel 唯一候选 给定周期 P"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/p_plus_three_rational_returns.py",
+        "research/prime_arity_padic/verify_p_plus_three_rational_returns.py",
+        "research/prime_arity_padic/p_plus_three_periodic_policy.py",
+        "research/prime_arity_padic/verify_p_plus_three_periodic_policy.py",
+        "research/prime_arity_padic/verify_short_period_coverage.py"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/p_plus_three_rational_returns_and_periodic_policy_20261011.md": "a77cbe2516aebbc4b4aef50b6953f435d2b3af7187f59f5d0e4085ea4c8c3612"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/p_plus_three_rational_returns.py": "d9f966d8d187920ad7bd6d67ae50d91adf6fa7f79cf641f9cc8894be9dae8a86",
+        "research/prime_arity_padic/verify_p_plus_three_rational_returns.py": "9361a06c962d5742baaab32a9b7109b71df2ebb0832fa3d1e551bed310745ede",
+        "research/prime_arity_padic/p_plus_three_periodic_policy.py": "646f471712e6504d318afb6e8c65151860726544f053793c63693f53e675a0b8",
+        "research/prime_arity_padic/verify_p_plus_three_periodic_policy.py": "8991d636435af9e78fec4b51d7197c2aebc4d97894ee42c8736fa53fa499913d",
+        "research/prime_arity_padic/verify_short_period_coverage.py": "3790aa55c319ba108e059ac96a6d137fadbf24c902096c9436ee29a0267faf8d",
+        "research/prime_arity_padic/p_plus_three_rational_returns_verification.json": "61d37fd112b03b7b610076db4d45381a90b7ec97f3ae16c0cc46e1f130b75a99",
+        "research/prime_arity_padic/p_plus_three_periodic_policy_verification.json": "43cd56942827fb5738e6d8d7c8c65dd8434f78ca3923b238bdcf8d54e54e094f",
+        "research/prime_arity_padic/short_period_coverage_verification.json": "97d865f5f8d55cd71d8429fd6bfbbd7b02f8b793b999a1db0de4494282b4348f"
+      }
+    }
+  ],
+  "prior_dependency_claims": [
+    {
+      "id": "ALG-LENGTH",
+      "title": "构造长度与最短路径的不同状态",
+      "topic": "algorithms",
+      "status": "partial",
+      "scope": "三平均直接算法有数值界和固定n位长多项式界；原求解器、精确IDA*和最短路径困难分别登记。",
+      "boundary": "可变n统一多项式构造长度未证；最短性NP困难不否定非最优多项式路径可能性。",
+      "documents": [
+        "outputs/algorithms/triple_average_sequence_length_analysis.md",
+        "outputs/algorithms/pair_triple_solver_comparison_and_optimality.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "SUBCRITICAL-BIT-COMPLEXITY",
+        "SUBCRITICAL-NP-HARD"
+      ],
+      "updates": [],
+      "verification_ids": [
+        "double-triple-sequence-length",
+        "pair-triple-solver-optimality"
+      ],
+      "local_checks": [],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "操作数 最短 长度 polynomial NP complete IDA* 复杂度"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "outputs/algorithms/triple_average_sequence_length_analysis.md": "304a97f1b65db481ed8a1544f84badca192275f3235a5e4659de8d170f49ff3c",
+        "outputs/algorithms/pair_triple_solver_comparison_and_optimality.md": "8a60ec5c74d84fa5bd64b930ce929a7eaa52ff688ad3f672cca90c1b8922b311"
+      },
+      "evidence_hashes": {}
+    },
+    {
+      "id": "SIX-EXPLICIT",
+      "title": "六元三重核心G=3与唯一后继",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "三重核心G=3且无四重值可解；四重值有模9条件；一般G=1失败出口后剩唯一后继。与旧固定维整数路径界组合，六元可达性判定为位长多项式；详见SUBCRITICAL-BIT-COMPLEXITY第4节。",
+      "boundary": "一般G=1尚未压成一次性公式；不是所有六元G合法都可解；无分支出口算法不宣称求出最短路径。",
+      "documents": [
+        "research/prime_arity_padic/six_triple_block_explicit_G3_20260916.md",
+        "research/prime_arity_padic/subcritical_bit_complexity_frontier_20261011.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "SUBCRITICAL-BIT-COMPLEXITY"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_six_triple_block_explicit.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "核对本文恒等式、接口或有限实例；一般量词由书面证明及注明的外部定理承担。不是独立审稿。",
+          "records": [
+            "research/prime_arity_padic/six_triple_block_explicit_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [],
+      "next_step": "",
+      "aliases": [
+        "六元 6元 G3 四重 模9"
+      ],
+      "source_records": [],
+      "source_hashes": {
+        "research/prime_arity_padic/six_triple_block_explicit_G3_20260916.md": "bf89d403887a3185dcb2a80513c48f1493f941f6992c02d4730c039d90dba080",
+        "research/prime_arity_padic/subcritical_bit_complexity_frontier_20261011.md": "0b3bbc4757995ca7d6fe1d156aa5891e094f87ee255ecac38b6ddc2b9c6ca550"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/verify_six_triple_block_explicit.py": "612e79b163d59e2a03b15c550a5e4ae3ed151e33132ec8b086799d94b1dfe6ec",
+        "research/prime_arity_padic/six_triple_block_explicit_verification.json": "eb7c4d0c90bb4e923ef7fa43558aea566620aec6ceaed1ca222f9320ee86223e"
+      }
+    },
+    {
+      "id": "SUBCRITICAL-COMPLETE",
+      "title": "p至2p统一补集判定；p+2强制递归与p进二叉结构",
+      "topic": "subcritical",
+      "status": "proved-local",
+      "scope": "奇p的p+2强制判定与最短词完整，环面为Q(√(p²−4))范数一曲线，固定S一步对应四穿孔P¹。p+3完整像为P²，含自同构、到直线的投影及终端直线；单例外两端坐标单位条件为两个三穿孔P¹的乘积。一般p+r有整数能量图与G公式。",
+      "boundary": "固定S一步整点不等于全轨道分类；一般补集图给有限判定。可变p的严格亚临界统一问题已另证NP-hard，见SUBCRITICAL-NP-HARD；固定p或固定余量r≥3的P问题仍开放。实际整数尺度不能随意丢掉。p=2四穿孔模型退化。",
+      "documents": [
+        "research/prime_arity_padic/subcritical_complement_dynamics_20260916.md",
+        "research/prime_arity_padic/subcritical_prime_uniform_arithmetic_20260917.md"
+      ],
+      "depends_on": [],
+      "related": [
+        "SUBCRITICAL-LIMITS",
+        "FIVE-FRACTAL",
+        "SIX-EXPLICIT",
+        "FIVE-TORUS",
+        "SUBCRITICAL-BIT-COMPLEXITY",
+        "SUBCRITICAL-NP-HARD",
+        "SUBCRITICAL-DUAL-NORMALS",
+        "SUBCRITICAL-BLOCK-NORM",
+        "SUBCRITICAL-CLUSTER-ESCAPE",
+        "SUBCRITICAL-RANK-CLOCK",
+        "SUBCRITICAL-PERIODIC-POLICY"
+      ],
+      "updates": [],
+      "verification_ids": [],
+      "local_checks": [
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_subcritical_complement_dynamics.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "把强制递归与独立整数能量DAG对照，检查补集公式、实际操作和长词族；完整停机／最短性及位长界来自书面证明。",
+          "records": [
+            "research/prime_arity_padic/subcritical_complement_dynamics_verification.json"
+          ]
+        },
+        {
+          "argv": [
+            "python",
+            "research/prime_arity_padic/verify_subcritical_prime_uniform_structure.py"
+          ],
+          "level": "symbolic-check / finite-sanity",
+          "scope": "补集G、模类计数与反例；1792个环面点及3584条分支；p+3的5130次原位置重放、1710个投影核和1058个开曲面图坐标。一般量词及ESS有限性不由样本承担。",
+          "records": [
+            "research/prime_arity_padic/subcritical_prime_uniform_structure_verification.json"
+          ]
+        }
+      ],
+      "assumptions": [
+        "仅固定S相邻边及开曲面整点有限性使用ESS定理1.1；算法、p进分类及一般p坐标公式不依赖ESS"
+      ],
+      "next_step": "固定p/r的算术压缩仍有意义；可变p全区间统一P算法将推出P=NP。曲面模型仍须同时控制自同构与真子集投影。",
+      "aliases": [
+        "五元 5元 p+2 补集 最短 BFS forced",
+        "p平均p+2元 p到2p p+r r维 K_p log2/logp 全区间 补集G",
+        "p+2 Pell conic 环面 四穿孔 曲线 S整点 S单位 ESS p²-4 p-1",
+        "p+3 射影平面 P² 曲面 五直线补集 三穿孔直线乘积 hyperplane arrangement 秩 投影"
+      ],
+      "source_records": [
+        "research/prime_arity_padic/five_torus_literature_20260917/source.json"
+      ],
+      "source_hashes": {
+        "research/prime_arity_padic/subcritical_complement_dynamics_20260916.md": "b58553b3deae814c946ac393469c2caa2b4482e0d7e0c6b01e253033c79cf14e",
+        "research/prime_arity_padic/subcritical_prime_uniform_arithmetic_20260917.md": "5855252ae758e5bf72d1937c9b9ffeb01c4fbe8d013393ad126aeba43b4212c3"
+      },
+      "evidence_hashes": {
+        "research/prime_arity_padic/five_torus_literature_20260917/source.json": "4b1335cc9f7cdd70f5a75ba1976b3fe64dc7b78efade936ceb997621eb7d9730",
+        "research/prime_arity_padic/verify_subcritical_complement_dynamics.py": "46cafd7a87cb20b5bb5c39143355e457d9c2e0ae2b79af31034ef4ef9bbdda99",
+        "research/prime_arity_padic/subcritical_complement_dynamics_verification.json": "2f1bd0417521554076490ab4baabb222a6104ef6c074d41b020453cd9f395d99",
+        "research/prime_arity_padic/verify_subcritical_prime_uniform_structure.py": "fd1e36182036872375dfc8bc16a9d8803514ea8271b6896233e717959da0b09b",
+        "research/prime_arity_padic/subcritical_prime_uniform_structure_verification.json": "60983ca7ee6634a31b356e936c216d83e75f829b9b1954a75e4bd83212dc2412"
+      }
+    }
+  ]
+}

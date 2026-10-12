@@ -1,0 +1,80 @@
+{
+  "scope": "The given-normal singleton membership problem is polynomial. This does not solve the existence of a suitable normal in a rank>=2 relation lattice, nor full fixed-p averaging reachability.",
+  "exhaustive_membership": [
+    {
+      "p": 3,
+      "r": 2,
+      "height_L1": 40,
+      "primitive_candidates": 1960,
+      "orbit_normals": 90
+    },
+    {
+      "p": 5,
+      "r": 3,
+      "height_L1": 30,
+      "primitive_candidates": 31106,
+      "orbit_normals": 8
+    },
+    {
+      "p": 5,
+      "r": 4,
+      "height_L1": 14,
+      "primitive_candidates": 27360,
+      "orbit_normals": 2
+    },
+    {
+      "p": 7,
+      "r": 3,
+      "height_L1": 30,
+      "primitive_candidates": 31106,
+      "orbit_normals": 8
+    }
+  ],
+  "p_plus_two_comparisons": 20160,
+  "normal_lifts": {
+    "single_normals": 350,
+    "general_normals": 350,
+    "literal_atoms": 9056
+  },
+  "long_runs": [
+    {
+      "p": 5,
+      "r": 3,
+      "letters": 2000,
+      "compressed_runs": 1,
+      "maximum_coordinate_bits": 4644
+    },
+    {
+      "p": 5,
+      "r": 3,
+      "letters": 750,
+      "compressed_runs": 750,
+      "maximum_coordinate_bits": 1215
+    },
+    {
+      "p": 13,
+      "r": 8,
+      "letters": 500,
+      "compressed_runs": 500,
+      "maximum_coordinate_bits": 1851
+    }
+  ],
+  "boundary": {
+    "nonmember_normal": [
+      1,
+      1,
+      65
+    ],
+    "equivalent_core_difference": [
+      13,
+      13,
+      14
+    ],
+    "single_greedy_counterexample": [
+      -175,
+      185,
+      214
+    ],
+    "known_success_length": 7
+  }
+}

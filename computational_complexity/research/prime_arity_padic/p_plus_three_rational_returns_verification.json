@@ -1,0 +1,77 @@
+{
+  "scope": "All-length proof of rational fixed-direction classification for proper three-value returns. This is not full averaging complexity classification.",
+  "exhaustive": [
+    {
+      "p": 5,
+      "maximum_length": 7,
+      "symbolic_matrices": 147614,
+      "return_classes": {
+        "local_only": 129,
+        "outside_only": 7,
+        "mixed": 72596
+      }
+    },
+    {
+      "p": 7,
+      "maximum_length": 6,
+      "symbolic_matrices": 29907,
+      "return_classes": {
+        "local_only": 60,
+        "outside_only": 6,
+        "mixed": 14973
+      }
+    },
+    {
+      "p": 11,
+      "maximum_length": 6,
+      "symbolic_matrices": 29994,
+      "return_classes": {
+        "local_only": 64,
+        "outside_only": 6,
+        "mixed": 15032
+      }
+    }
+  ],
+  "random_and_long": {
+    "literal_physical_words": 1000,
+    "return_words": 599,
+    "long_return_words": [
+      {
+        "p": 5,
+        "length": 500,
+        "kind": "outside_only",
+        "matrix_height_bits": 1161
+      },
+      {
+        "p": 5,
+        "length": 400,
+        "kind": "local_only",
+        "matrix_height_bits": 929
+      },
+      {
+        "p": 5,
+        "length": 300,
+        "kind": "mixed",
+        "matrix_height_bits": 516
+      },
+      {
+        "p": 7,
+        "length": 500,
+        "kind": "outside_only",
+        "matrix_height_bits": 1404
+      },
+      {
+        "p": 7,
+        "length": 400,
+        "kind": "local_only",
+        "matrix_height_bits": 1123
+      },
+      {
+        "p": 7,
+        "length": 300,
+        "kind": "mixed",
+        "matrix_height_bits": 623
+      }
+    ]
+  }
+}

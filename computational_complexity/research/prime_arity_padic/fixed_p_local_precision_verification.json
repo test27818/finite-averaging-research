@@ -1,0 +1,72 @@
+{
+  "scope": "Finite literal and independent-oracle checks. Quadratic precision synthesis and the infinite no family are proved in the note; general fixed-p P remains unresolved.",
+  "identity_checks": 930,
+  "residues": {
+    "words": 168,
+    "literal_local_atoms": 90780
+  },
+  "global_no": {
+    "small_independent_no_instances": [
+      {
+        "L": 3,
+        "unfiltered_states": {
+          "queries": 9,
+          "batched_atoms": 0,
+          "forced_atoms": 1,
+          "branch_nodes": 3
+        }
+      },
+      {
+        "L": 5,
+        "unfiltered_states": {
+          "queries": 50,
+          "batched_atoms": 0,
+          "forced_atoms": 5,
+          "branch_nodes": 19
+        }
+      },
+      {
+        "L": 7,
+        "unfiltered_states": {
+          "queries": 188,
+          "batched_atoms": 0,
+          "forced_atoms": 13,
+          "branch_nodes": 79
+        }
+      }
+    ],
+    "oracle_states": 690,
+    "precision_no_examples": [
+      {
+        "d": 1,
+        "L": 17,
+        "g_checked_literal_atoms": 17,
+        "source_height_bits": 49
+      },
+      {
+        "d": 2,
+        "L": 161,
+        "g_checked_literal_atoms": 161,
+        "source_height_bits": 453
+      },
+      {
+        "d": 3,
+        "L": 1169,
+        "g_checked_literal_atoms": 1169,
+        "source_height_bits": 3283
+      },
+      {
+        "d": 4,
+        "L": 8225,
+        "g_checked_literal_atoms": 8225,
+        "source_height_bits": 23092
+      },
+      {
+        "d": 5,
+        "L": 8321,
+        "g_checked_literal_atoms": 8321,
+        "source_height_bits": 23362
+      }
+    ]
+  }
+}

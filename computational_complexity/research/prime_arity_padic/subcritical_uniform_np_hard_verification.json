@@ -1,0 +1,192 @@
+{
+  "scope": "Exact finite implementation checks. The unlimited-path exclusion and polynomial reduction are proved in the accompanying note; no fixed-p hardness is claimed.",
+  "residue_parameter_pairs": 1109,
+  "small_gate_checks": {
+    "first_complements": 1884,
+    "instances": 396,
+    "no": 272,
+    "yes": 124,
+    "oracle_states": 638
+  },
+  "distinct_input_complete_oracles": [
+    {
+      "source": [
+        1,
+        3
+      ],
+      "target": 2,
+      "p": 11,
+      "n": 16,
+      "r": 5,
+      "answer": false,
+      "max_input_bits": 21,
+      "distinct_values": 16,
+      "valid_first_groups": 252,
+      "oracle_states": 255
+    },
+    {
+      "source": [
+        1,
+        3
+      ],
+      "target": 3,
+      "p": 11,
+      "n": 16,
+      "r": 5,
+      "answer": true,
+      "max_input_bits": 21,
+      "distinct_values": 16,
+      "valid_first_groups": 252,
+      "oracle_states": 256
+    },
+    {
+      "source": [
+        2,
+        4
+      ],
+      "target": 6,
+      "p": 11,
+      "n": 16,
+      "r": 5,
+      "answer": true,
+      "max_input_bits": 22,
+      "distinct_values": 16,
+      "valid_first_groups": 252,
+      "oracle_states": 256
+    },
+    {
+      "source": [
+        1,
+        2,
+        5
+      ],
+      "target": 4,
+      "p": 13,
+      "n": 19,
+      "r": 6,
+      "answer": false,
+      "max_input_bits": 24,
+      "distinct_values": 19,
+      "valid_first_groups": 924,
+      "oracle_states": 927
+    },
+    {
+      "source": [
+        1,
+        2,
+        5
+      ],
+      "target": 7,
+      "p": 13,
+      "n": 19,
+      "r": 6,
+      "answer": true,
+      "max_input_bits": 24,
+      "distinct_values": 19,
+      "valid_first_groups": 924,
+      "oracle_states": 928
+    }
+  ],
+  "alpha_encoding_checks": [
+    {
+      "alpha": "1/3",
+      "source": [
+        1,
+        3
+      ],
+      "target": 2,
+      "p": 13,
+      "n": 17,
+      "answer": false
+    },
+    {
+      "alpha": "1/3",
+      "source": [
+        1,
+        3
+      ],
+      "target": 3,
+      "p": 13,
+      "n": 17,
+      "answer": true
+    },
+    {
+      "alpha": "1/2",
+      "source": [
+        1,
+        3
+      ],
+      "target": 2,
+      "p": 13,
+      "n": 19,
+      "answer": false
+    },
+    {
+      "alpha": "1/2",
+      "source": [
+        1,
+        3
+      ],
+      "target": 3,
+      "p": 13,
+      "n": 19,
+      "answer": true
+    },
+    {
+      "alpha": "2/3",
+      "source": [
+        1,
+        3
+      ],
+      "target": 2,
+      "p": 19,
+      "n": 31,
+      "answer": false
+    },
+    {
+      "alpha": "2/3",
+      "source": [
+        1,
+        3
+      ],
+      "target": 3,
+      "p": 19,
+      "n": 31,
+      "answer": true
+    }
+  ],
+  "large_positive_certificates": [
+    {
+      "source_count": 2,
+      "source_bits": 32,
+      "p": 11,
+      "n": 16,
+      "output_max_bits": 51,
+      "raw_and_positive_shift_certificates": true
+    },
+    {
+      "source_count": 6,
+      "source_bits": 128,
+      "p": 19,
+      "n": 28,
+      "output_max_bits": 157,
+      "raw_and_positive_shift_certificates": true
+    },
+    {
+      "source_count": 32,
+      "source_bits": 256,
+      "p": 71,
+      "n": 106,
+      "output_max_bits": 334,
+      "raw_and_positive_shift_certificates": true
+    },
+    {
+      "source_count": 64,
+      "source_bits": 512,
+      "p": 137,
+      "n": 205,
+      "output_max_bits": 647,
+      "raw_and_positive_shift_certificates": true
+    }
+  ]
+}
